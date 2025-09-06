@@ -31,7 +31,7 @@ export default function HomePage() {
       </section>
 
       <section className="py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Card 
             title="Micro SaaS" 
             href="/services/micro-saas" 
@@ -49,6 +49,24 @@ export default function HomePage() {
             href="/services/it-services" 
             description="Cloud migration, DevOps, SRE, security hardening and cost optimization." 
             icon="⚙️" 
+          />
+          <Card 
+            title="Blockchain Solutions" 
+            href="/services/blockchain" 
+            description="Smart contracts, DeFi protocols, NFT platforms, and Web3 applications." 
+            icon="⛓️" 
+          />
+          <Card 
+            title="Automation Services" 
+            href="/services/automation" 
+            description="RPA, workflow automation, and AI-powered business process optimization." 
+            icon="⚡" 
+          />
+          <Card 
+            title="Technology Consulting" 
+            href="/services/consulting" 
+            description="Digital transformation, technology strategy, and architecture consulting." 
+            icon="📋" 
           />
         </div>
       </section>

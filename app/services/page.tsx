@@ -19,33 +19,53 @@ export default function ServicesOverviewPage() {
           outcomes for your business.{" "}
         </p>{" "}
       </div>{" "}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        {" "}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <ServiceCard
           href="/services/micro-saas"
           title="Micro SaaS"
-          description="End-to-end product development with billing,auth,and analytics"
+          description="End-to-end product development with billing, auth, and analytics"
           bullets={[
             "Foundational architecture",
             "Billing + subscriptions",
             "Growth analytics",
           ]}
           icon="🚀"
-        />{" "}
+        />
         <ServiceCard
           href="/services/ai-services"
           title="AI Services"
-          description="LLM applications,RAG systems,and MLOps pipelines"
+          description="LLM applications, RAG systems, and MLOps pipelines"
           bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
           icon="🤖"
-        />{" "}
+        />
         <ServiceCard
           href="/services/it-services"
           title="IT Services"
-          description="Cloud migration,DevOps,and security solutions"
+          description="Cloud migration, DevOps, and security solutions"
           bullets={["Cloud migration", "DevOps + SRE", "Security"]}
           icon="⚙️"
-        />{" "}
+        />
+        <ServiceCard
+          href="/services/blockchain"
+          title="Blockchain Solutions"
+          description="Smart contracts, DeFi protocols, and Web3 applications"
+          bullets={["Smart contracts", "DeFi development", "NFT platforms"]}
+          icon="⛓️"
+        />
+        <ServiceCard
+          href="/services/automation"
+          title="Automation Services"
+          description="RPA, workflow automation, and business process optimization"
+          bullets={["Process automation", "RPA implementation", "AI-powered automation"]}
+          icon="⚡"
+        />
+        <ServiceCard
+          href="/services/consulting"
+          title="Technology Consulting"
+          description="Digital transformation, strategy, and architecture consulting"
+          bullets={["Digital transformation", "Technology strategy", "Architecture design"]}
+          icon="📋"
+        />
       </div>{" "}
       <CTA />{" "}
     </div>;
