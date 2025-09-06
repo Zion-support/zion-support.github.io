@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+
+interface LazyComponentProps {
+  fallback?: React.ReactNode;
+  children: React.ReactNode;
+}
+
+const LazyComponent: React.FC<LazyComponentProps> = ({ 
+  fallback = <div className="flex items-center justify-center p-4">Loading...</div>, 
+  children 
+}) => {
+  return (
+    <Suspense fallback={fallback}>
+      {children}
+    </Suspense>
+  );
 };
-export const "LazyComponent": React.FC<LazyComponentProps> = ({;
-  component,
-  fallback = <div>Loading...</div>;
-  ...props
-}) => {,
-  const LazyLoadedComponent = lazy(component),
-  return (,
-    <Suspense fallback={fallback}>,
-      <LazyLoadedComponent {...props} />,
-    </Suspense>)
-};
-export default LazyComponent,
+
+export default LazyComponent;

@@ -1,60 +1,127 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
-interface Notification {
+export interface Notification {
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
-  message: string;
   title?: string;
+  message: string;
+  duration?: number;
 }
 
 interface NotificationSystemProps {
   notifications: Notification[];
-  onDismiss?: (notificationId: string) => void;
-  className?: string;
+  onDismiss?: (id: string) => void;
+  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
 }
 
 const NotificationSystem: React.FC<NotificationSystemProps> = ({
-  notifications;
-  onDismiss;
-  className
+  notifications,
+  onDismiss,
+  position = 'top-right',
 }) => {
+  const [visibleNotifications, setVisibleNotifications] = useState<Notification[]>([]);
+
+  const handleDismiss = (id: string) => {
+    setVisibleNotifications(prev => prev.filter(n => n.id !== id));
+    onDismiss?.(id);
+  };
+
+  useEffect(() => {
+    setVisibleNotifications(notifications);
+  }, [notifications]);
+
+  useEffect(() => {
+    const timers: NodeJS.Timeout[] = [];
+    
+    notifications.forEach(notification => {
+      if (notification.duration && notification.duration > 0) {
+        const timer = setTimeout(() => {
+          handleDismiss(notification.id);
+        }, notification.duration);
+        timers.push(timer);
+      }
+    });
+
+    return () => {
+      timers.forEach(timer => clearTimeout(timer));
+    };
+  }, [notifications, handleDismiss]);
+
   const getNotificationStyles = (type: Notification['type']) => {
+    const baseStyles = 'border-l-4';
+    
     switch (type) {
       case 'success':
-        return 'bg-green-50 border-green-200 text-green-800';
+        return `${baseStyles} border-green-500 bg-green-50 text-green-800`;
       case 'error':
-        return 'bg-red-50 border-red-200 text-red-800';
+        return `${baseStyles} border-red-500 bg-red-50 text-red-800`;
       case 'warning':
-        return 'bg-yellow-50 border-yellow-200 text-yellow-800';
+        return `${baseStyles} border-yellow-500 bg-yellow-50 text-yellow-800`;
       case 'info':
-        return 'bg-blue-50 border-blue-200 text-blue-800';
+        return `${baseStyles} border-blue-500 bg-blue-50 text-blue-800`;
       default:
-        return 'bg-gray-50 border-gray-200 text-gray-800';
+        return `${baseStyles} border-gray-500 bg-gray-50 text-gray-800`;
     }
   };
 
+  const getIcon = (type: Notification['type']) => {
+    switch (type) {
+      case 'success':
+        return <CheckCircle className="h-5 w-5 text-green-500" />;
+      case 'error':
+        return <AlertCircle className="h-5 w-5 text-red-500" />;
+      case 'warning':
+        return <AlertTriangle className="h-5 w-5 text-yellow-500" />;
+      case 'info':
+        return <Info className="h-5 w-5 text-blue-500" />;
+      default:
+        return <Info className="h-5 w-5 text-gray-500" />;
+    }
+  };
+
+  const getPositionStyles = () => {
+    switch (position) {
+      case 'top-left':
+        return 'top-4 left-4';
+      case 'top-right':
+        return 'top-4 right-4';
+      case 'bottom-left':
+        return 'bottom-4 left-4';
+      case 'bottom-right':
+        return 'bottom-4 right-4';
+      default:
+        return 'top-4 right-4';
+    }
+  };
+
+  if (visibleNotifications.length === 0) return null;
+
   return (
-    <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>
-      {notifications.map((notification) => (
+    <div className={`fixed ${getPositionStyles()} z-50 space-y-2`}>
+      {visibleNotifications.map(notification => (
         <div
           key={notification.id}
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
         >
           <div className="flex items-start justify-between">
             <div className="flex-1">
-              {notification.title && (
-                <h4 className="font-medium mb-1">{notification.title}</h4>
-              )}
-              <p className="text-sm">{notification.message}</p>
+              <div className="flex items-start space-x-2">
+                {getIcon(notification.type)}
+                <div className="flex-1">
+                  {notification.title && (
+                    <h4 className="font-medium mb-1">{notification.title}</h4>
+                  )}
+                  <p className="text-sm">{notification.message}</p>
+                </div>
+              </div>
             </div>
             {onDismiss && (
               <button
-                onClick={() => onDismiss(notification.id)}
-                className="ml-4 text-gray-400 hover:text-gray-600"
+                onClick={() => handleDismiss(notification.id)}
+                className="ml-2 text-gray-400 hover:text-gray-600 transition-colors"
               >
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
+                <X className="h-4 w-4" />
               </button>
             )}
           </div>

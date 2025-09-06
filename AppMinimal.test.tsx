@@ -9,13 +9,4 @@ describe('AppMinimal', () => {
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
 
-  it('displays correct content', () => {
-    render(<AppMinimal />);
-    // Add content tests here
-  });
-
-  it('handles user interactions', () => {
-    render(<AppMinimal />);
-    // Add interaction tests here
-  });
 });

@@ -1,12 +1,31 @@
- <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8"> <div className="max-w-7xl mx-auto"> {
-  /* Header */ 
-}<div className="text-center mb-12"> <h1 className="text-4xl font-bold mb-4">📊 Manage Your Instances</h1> <p className="text-xl text-white/70 max-w-2xl mx-auto"> Monitor and manage your deployed digital economies, track performance, and access configuration settings. </p> </div> {
-  /* Error State */ 
-}{
-  error && (<div className="mb-8 p-6 bg-red-900/20 border border-red-500/20 rounded-xl text-center"> <div className="text-red-400 mb-2">⚠️ Database Connection Error</div> <p className="text-white/70 mb-4"> {
-  error 
-}</p> <p className="text-sm text-white/50"> Please ensure your database is properly configured and the DATABASE URL environment variable is set. </p> </div>) 
-}{
+"use client";
+
+export default function InstancesPage() {
+  const error = null; // This should be managed with state
+  
+  return (
+    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4">📊 Manage Your Instances</h1>
+          <p className="text-xl text-white/70 max-w-2xl mx-auto">
+            Monitor and manage your deployed digital economies, track performance, and access configuration settings.
+          </p>
+        </div>
+        
+        {/* Error State */}
+        {error && (
+          <div className="mb-8 p-6 bg-red-900/20 border border-red-500/20 rounded-xl text-center">
+            <div className="text-red-400 mb-2">⚠️ Database Connection Error</div>
+            <p className="text-white/70 mb-4">{error}</p>
+            <p className="text-sm text-white/50">
+              Please ensure your database is properly configured and the DATABASE URL environment variable is set.
+            </p>
+          </div>
+        )}
+        
+        {
   /* Stats Overview */ 
 }<div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8"> <div className="glass-effect rounded-xl p-6 text-center"> <div className="text-3xl font-bold text-blue-400 mb-2"> {
   instances.length 
