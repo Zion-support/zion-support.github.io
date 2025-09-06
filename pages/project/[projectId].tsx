@@ -1,29 +1,34 @@
-import { useEffect, useState } from "react",;
-import { useRouter } from "next/router",;
-import FeedbackModal from "../../components/ui/FeedbackModal",;
+<<<<<<< HEAD
+import { useEffect, useState } from "react",
+import { useRouter } from "next/router";
+import FeedbackModal from "../../components/ui/FeedbackModal";
 export default function ProjectPage() {
-  const router = useRouter(),
-  const { projectId } = router.query as { projectId?: string },
-  const [project, setProject] = useState<any | null>(null),
-  const [loading, setLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
-  const [note, setNote] = useState(""),
-
+  const router = null;
+=======
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import FeedbackModal from "../../components/ui/FeedbackModal";
+export default function ProjectPage() {
+  const router = useRouter()
+  const { projectId } = router.query as { projectId?: string }
+  const [project, setProject] = useState<any | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const [note, setNote] = useState("")
   const headers = {
-    "x-demo-user-role": "client",
-    "x-demo-user-id": "client-1",
+    "x-demo-user-role": "client"
+    "x-demo-user-id": "client-1"
     // For talent view demo, swap role and provide slug
-    // "x-demo-user-role": "talent",
-    // "x-demo-talent-slug": "ava-chen"} as Record<string, string>,
-
+    // "x-demo-user-role": "talent"
+    // "x-demo-talent-slug": "ava-chen"} as Record<string, string>
   useEffect(() => {
     async function load() {
-      if (!projectId) return,
+      if (!projectId) return
       try {
-        setLoading(true),
-        const res = await fetch(`/api/marketplace/projects?id=${projectId}`, { headers }),
-        const json = await res.json(),
-        if (!json.ok) throw new Error(json.error || "Failed to load project"),
+        setLoading(true)
+        const res = await fetch(`/api/marketplace/projects?id=${projectId}`, { headers })
+        const json = await res.json()
+        if (!json.ok) throw new Error(json.error |"Failed to load project")
         setProject(json.project)
       } catch (e: any) {
         setError(e.message)
@@ -32,35 +37,32 @@ export default function ProjectPage() {
       }
     }
     load()
-  }, [projectId]),
-
-  const [showFeedback, setShowFeedback] = useState(false),
-
+  }, [projectId])
+  const [showFeedback, setShowFeedback] = useState(false)
   async function addNote() {
     const res = await fetch(`/api/marketplace/projects`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json", ...headers },
-      body: JSON.stringify({ id: projectId, action: "add_note", content: note })}),
-    const json = await res.json(),
+      method: "PATCH"
+      headers: { "Content-Type": "application/json", ...headers }
+      body: JSON.stringify({ id: projectId, action: "add_note", content: note })})
+    const json = await res.json()
     if (json.ok) {
-      setProject(json.project),
-      setNote(""),
+      setProject(json.project)
+      setNote("")
       setShowFeedback(true)
     }
   }
-
   async function markCompleted() {
     const res = await fetch(`/api/marketplace/projects`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json", ...headers },
-      body: JSON.stringify({ id: projectId, action: "mark_completed" })}),
-    const json = await res.json(),
+      method: "PATCH"
+      headers: { "Content-Type": "application/json", ...headers }
+      body: JSON.stringify({ id: projectId, action: "mark_completed" })})
+    const json = await res.json()
     if (json.ok) {
-      setProject(json.project),
+      setProject(json.project)
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
       setShowFeedback(true)
     }
   }
-
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
       {loading && <div>Loading…</div>}
@@ -73,7 +75,6 @@ export default function ProjectPage() {
               {project.status}
             </span>
           </div>
-
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Project Summary</h2>
             <div className="text-sm">
@@ -83,7 +84,6 @@ export default function ProjectPage() {
               <div className="mt-2">{project.summary}</div>
             </div>
           </section>
-
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Timeline</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
@@ -101,7 +101,6 @@ export default function ProjectPage() {
               )}
             </ul>
           </section>
-
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Documents</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
@@ -121,7 +120,6 @@ export default function ProjectPage() {
               )}
             </ul>
           </section>
-
           <section className="rounded border p-4 space-y-3">
             <h2 className="font-medium">Shared notes/messages</h2>
             <div className="space-y-2">
@@ -141,7 +139,6 @@ export default function ProjectPage() {
               <button onClick={addNote} className="px-3 py-2 rounded bg-gray-900 text-white">Add</button>
             </div>
           </section>
-
           <div className="flex justify-end">
             {project.status !== "COMPLETED" && (
               <button onClick={markCompleted} className="px-4 py-2 rounded bg-emerald-600 text-white">Mark as Completed</button>
@@ -157,4 +154,4 @@ export default function ProjectPage() {
       />
     </div>
   )
-};
+}

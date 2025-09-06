@@ -1,21 +1,24 @@
 
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {CheckCircle, FileDown, FileText, PieChart, Users} from "lucide-react";
-import {useState} from "react";
-import {PartnerRegistrationForm} from "@/components/partners/PartnerRegistrationForm";
-import {PartnerReferralLinks} from "@/components/partners/PartnerReferralLinks";
-import {PartnerDashboard} from "@/components/partners/PartnerDashboard";
-import {PartnerLeaderboard} from "@/components/partners/PartnerLeaderboard";
-import {PartnerResources} from "@/components/partners/PartnerResources";
-import {useAuth} from "@/hooks/useAuth";
-import {useNavigate} from "react-router-dom";
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { CheckCircle, FileDown, FileText, PieChart, Users } from "lucide-react",
+import { useState } from "react",
+import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm",
+import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks",
+import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
+import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
+import { PartnerResources } from "@/components/partners/PartnerResources",
+import { useAuth } from "@/hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 export default function Partners() {
   const [activeTab, setActiveTab] = useState("overview");
   const { user, isAuthenticated } = useAuth();
+<<<<<<< HEAD
+  const navigate = null;
+=======
   const navigate = useNavigate();
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
     return (
@@ -24,7 +27,6 @@ export default function Partners() {
           <h1 className="text-4xl font-bold tracking-tight text-white mb-2">Zion AI Partner Program</h1>
           <p className="text-xl text-zion-slate-light">Earn rewards by referring AI talent and clients to our marketplace</p>
         </div>
-
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <Card className="bg-zion-blue-dark border-zion-blue-light">
             <CardHeader>
@@ -55,7 +57,6 @@ export default function Partners() {
               </div>
             </CardContent>
           </Card>
-
           <Card className="bg-zion-blue-dark border-zion-blue-light">
             <CardHeader>
               <CardTitle className="text-white">For AI Organizations</CardTitle>
@@ -86,7 +87,6 @@ export default function Partners() {
             </CardContent>
           </Card>
         </div>
-
         <div className="text-center mb-12">
           <h2 className="text-2xl font-bold text-white mb-4">How It Works</h2>
           <div className="grid md:grid-cols-3 gap-6">
@@ -101,7 +101,6 @@ export default function Partners() {
                 <p>Sign up and get approved as a Zion AI partner with your own dashboard</p>
               </CardContent>
             </Card>
-            
             <Card className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
@@ -113,7 +112,6 @@ export default function Partners() {
                 <p>Generate custom referral links and promote to your audience</p>
               </CardContent>
             </Card>
-            
             <Card className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
@@ -127,18 +125,17 @@ export default function Partners() {
             </Card>
           </div>
         </div>
-
         <div className="flex justify-center gap-4">
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="bg-zion-purple hover:bg-zion-purple-dark"
             onClick={() => navigate('/signup')}
           >
             Apply to Join
           </Button>
-          <Button 
-            size="lg" 
-            variant="outline" 
+          <Button
+            size="lg"
+            variant="outline"
             className="text-zion-cyan border-zion-cyan"
             onClick={() => navigate('/login')}
           >
@@ -148,7 +145,6 @@ export default function Partners() {
       </div>
     )
   }
-
   // Authenticated user view - Partner Dashboard
   return (
     <div className="container max-w-7xl py-10">
@@ -164,7 +160,6 @@ export default function Partners() {
           </Button>
         </div>
       </div>
-
       <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
         <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-4">
           <TabsTrigger value="overview">Overview</TabsTrigger>
@@ -173,15 +168,12 @@ export default function Partners() {
           <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>
           <TabsTrigger value="resources">Resources</TabsTrigger>
         </TabsList>
-        
         <TabsContent value="overview" className="space-y-4">
           <PartnerDashboard />
         </TabsContent>
-        
         <TabsContent value="referrals" className="space-y-4">
           <PartnerReferralLinks />
         </TabsContent>
-        
         <TabsContent value="earnings" className="space-y-4">
           <Card>
             <CardHeader>
@@ -194,11 +186,9 @@ export default function Partners() {
             </CardContent>
           </Card>
         </TabsContent>
-        
         <TabsContent value="leaderboard" className="space-y-4">
           <PartnerLeaderboard />
         </TabsContent>
-        
         <TabsContent value="resources" className="space-y-4">
           <PartnerResources />
         </TabsContent>
@@ -206,4 +196,3 @@ export default function Partners() {
     </div>
   )
 }
-;

@@ -1,9 +1,37 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
-import {motion} from 'framer-motion';
-import {quantumCybersecurityServices} from '../data/2026-quantum-cybersecurity-services';
+import { motion  } from 'framer-motion';
+import { quantumCybersecurityServices  } from '../data/2026-quantum-cybersecurity-services';
 import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackground2026';
 import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServiceCard2026';
+export default function QuantumCybersecurityServices() {
+  return (
+    <>
+      <Head>
+        <title>Quantum Cybersecurity Services - ZionTech Group | Unbreakable Security Solutions</title>
+        <meta name="description" content="Protect your business with unbreakable quantum cybersecurity. Quantum encryption, threat detection, identity verification, and network security powered by quantum computing. Contact us at +1 302 464 0950" />
+        <meta name="keywords" content="quantum cybersecurity, quantum encryption, quantum threat detection, quantum identity verification, quantum network security, ZionTech Group" />
+        <meta name="author" content="ZionTech Group" />
+        <meta name="robots" content="index, follow" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Quantum Cybersecurity Services - ZionTech Group" />
+        <meta property="og:description" content="Unbreakable security powered by quantum computing and advanced AI algorithms." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/quantum-cybersecurity-services" />
+        <meta property="og:site_name" content="ZionTech Group" />
+        
+        {/* Contact Information */}
+        <meta name="contact:phone" content="+1 302 464 0950" />
+        <meta name="contact:email" content="kleber@ziontechgroup.com" />
+        <meta name="contact:address" content="364 E Main St STE 1008 Middletown DE 19709" />
+        <meta name="contact:website" content="https://ziontechgroup.com" />
+      </Head>
+
+      <UltraFuturisticBackground2026 intensity="high" theme="cyberpunk">
+        {/* Hero Section */}
+        <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
+          <div className="text-center z-10 max-w-6xl mx-auto">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -22,7 +50,6 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
             >
               Unbreakable security powered by quantum computing and advanced AI
               algorithms. Protect your business from tomorrow's threats today.            </motion.p>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -40,7 +67,6 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
                 Get Started
               </a>
             </motion.div>
-
             {/* Key Benefits */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -79,7 +105,6 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
             </motion.div>
           </div>
         </section>
-
         {/* Services Section */}
         <section id='services' className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div
@@ -98,7 +123,6 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
                 technology available, powered by quantum computing and AI.
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {quantumCybersecurityServices.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -116,7 +140,6 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
             </div>
           </div>
         </section>
-
         {/* Why Quantum Security Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20'>
           <div className='max-w-7xl mx-auto'>            <motion.div
@@ -130,7 +153,6 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
                 </span>
               </h2>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>              <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -151,7 +173,6 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
                   <li>• Financial systems exposed</li>
                 </ul>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -175,7 +196,6 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
             </div>
           </div>
         </section>
-
         {/* Security Features Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div
@@ -189,7 +209,6 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
                 </span>
               </h2>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -204,7 +223,6 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
                 <p className='text-gray-400 text-sm'>
                   Never trust, always verify approach to security.
                 </p>              </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -219,7 +237,6 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
                 <p className='text-gray-400 text-sm'>
                   24/7 threat detection and response.
                 </p>              </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -234,7 +251,6 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
                 <p className='text-gray-400 text-sm'>
                   Automated threat response and incident resolution.
                 </p>              </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -252,7 +268,6 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
@@ -270,7 +285,6 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
                 Don't wait for quantum computers to break your security. Contact
                 us now to implement quantum-resistant protection.
               </p>
-
               <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
                 <div className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6'>
                   <div className='text-3xl mb-4'>📱</div>
@@ -307,7 +321,6 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
                   </p>
                 </div>
               </div>
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <a
                   href='mailto:kleber@ziontechgroup.com'

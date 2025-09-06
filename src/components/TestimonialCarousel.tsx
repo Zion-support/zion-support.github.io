@@ -1,27 +1,44 @@
-import {  Carousel,  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,;
-} from '@/components/ui/carousel';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
-import { Avatar } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
-import { Quote } from 'lucide-react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { CASE_STUDIES } from '@/data/case-studies';
-const testimonials = CASE_STUDIES;
+<<<<<<< HEAD
+
+import {
+  Carousel;
+  CarouselContent;
+  CarouselItem;
+  CarouselNext;
   CarouselPrevious} from "@/components/ui/carousel",
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Avatar } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Quote } from 'lucide-react';
-import Link from "next/link";
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import { Avatar } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Quote } from 'lucide-react'
+import Link from "next/link",
 import Image from "next/image";
 import { CASE_STUDIES } from "@/data/case-studies";
-const testimonials = CASE_STUDIES,
-
+const testimonials = null;
+              loop: true}}
+            className="w-full"
+=======
+import {  Carousel,  Carousel
+  CarouselContent
+  CarouselItem
+  CarouselNext
+  CarouselPrevious
+} from '@/components/ui/carousel'
+import { Card, CardContent, CardFooter } from '@/components/ui/card'
+import { Avatar } from '@/components/ui/avatar'
+import { Button } from '@/components/ui/button'
+import { Quote } from 'lucide-react'
+import Link from 'next/link'
+import Image from 'next/image'
+import { CASE_STUDIES } from '@/data/case-studies'
+const testimonials = CASE_STUDIES
+  CarouselPrevious} from "@/components/ui/carousel"
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { Avatar } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import Image from "next/image"
+import { CASE_STUDIES } from "@/data/case-studies"
+const testimonials = CASE_STUDIES
 export function TestimonialCarousel() {
   return (
     <section className='py-20 bg-zion-blue-dark'>
@@ -35,14 +52,14 @@ export function TestimonialCarousel() {
             ecosystem
           </p>
         </div>
-
         <div className='max-w-5xl mx-auto px-8'>
           <Carousel
             opts={{
-              align: 'start',
-              loop: true,
+              align: 'start'
+              loop: true
             }}
             className='w-full'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
           >
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
@@ -139,6 +156,5 @@ export function TestimonialCarousel() {
         </div>
       </div>
     </section>
-  );
+  )
 }
-;

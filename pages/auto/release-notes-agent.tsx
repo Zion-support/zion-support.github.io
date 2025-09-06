@@ -1,6 +1,9 @@
-import type { NextPage } from 'next',;
-import Head from 'next/head',;
-import Link from 'next/link',;
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+<<<<<<< HEAD
+const ReleaseNotesAgent: NextPage;
+=======
 const ReleaseNotesAgent: NextPage = () => {
   return (
     <div>
@@ -15,6 +18,6 @@ const ReleaseNotesAgent: NextPage = () => {
       </main>
     </div>
   )
-},
-
-export default ReleaseNotesAgent,;
+}
+export default ReleaseNotesAgent;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

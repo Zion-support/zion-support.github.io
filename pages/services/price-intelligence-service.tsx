@@ -1,7 +1,10 @@
-import type { NextPage } from 'next',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import UseTokensButton from '../../components/tokens/UseTokensButton',;
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+import UseTokensButton from '../../components/tokens/UseTokensButton';
+<<<<<<< HEAD
+const PriceIntelligenceService: NextPage;
+=======
 const PriceIntelligenceService: NextPage = () => {
   return (
     <div>
@@ -9,7 +12,6 @@ const PriceIntelligenceService: NextPage = () => {
         <title>PriceIntelligenceService - Zion Tech Solutions</title>
         <meta name="description" content="PriceIntelligenceService service" />
       </Head>
-      
       <main className="space-y-4">
         <h1>PriceIntelligenceService</h1>
         <p>Service details coming soon...</p>
@@ -18,6 +20,6 @@ const PriceIntelligenceService: NextPage = () => {
       </main>
     </div>
   )
-},
-
-export default PriceIntelligenceService,;
+}
+export default PriceIntelligenceService;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

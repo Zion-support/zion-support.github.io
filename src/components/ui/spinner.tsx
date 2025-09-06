@@ -1,11 +1,13 @@
-Spinner.displayName = 'Spinner';
-export default Spinner;import React from 'react';
-import { Loader2 } from 'lucide-react';
+import React from 'react';
+import { Loader2 } from 'lucide-react'
 import { cn } from '@/lib/utils';
 export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string
 }
+<<<<<<< HEAD
 
+const Spinner = null;
+=======
 const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
   ({ className, size = 24, ...props }, ref,) => (
     <Loader2
@@ -16,7 +18,7 @@ const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
       height = {size,}
     />
   )
-),
-Spinner.displayName = 'Spinner',
-export default Spinner,
-;
+)
+Spinner.displayName = 'Spinner'
+export default Spinner;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

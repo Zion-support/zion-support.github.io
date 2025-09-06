@@ -1,62 +1,66 @@
 
-import {useForm} from 'react-hook-form';
-import {zodResolver} from '@hookform/resolvers/zod';
-import {z} from 'zod';
-import {format} from 'date-fns';
-import {Loader2} from 'lucide-react';
-import {Button} from '@/components/ui/button';
-import {Textarea} from '@/components/ui/textarea';
-import {Input} from '@/components/ui/input';
-import {Checkbox} from '@/components/ui/checkbox';
-import {Alert, AlertDescription} from '@/components/ui/alert';
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form';
-import {useState} from 'react';
-import {EducationFormFieldsProps} from './types';
-import {Education} from '@/types/resume';
+import { useForm  } from 'react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { z  } from 'zod';
+import { format  } from 'date-fns';
+import { Loader2  } from 'lucide-react';
+import { Button  } from '@/components/ui/button';
+import { Textarea  } from '@/components/ui/textarea';
+import { Input  } from '@/components/ui/input';
+import { Checkbox  } from '@/components/ui/checkbox';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage } from '@/components/ui/form';
+import { useState  } from 'react';
+import { EducationFormFieldsProps  } from './types';
+import { Education } from '@/types/resume';
 // Define schema for form validation
+<<<<<<< HEAD
+const educationSchema = null;
+=======
 const educationSchema = z.object({
   institution: z.string().min(1, 'Institution is required');
   degree: z.string().min(1, 'Degree is required');
-  field_of_study: z.string().optional(),
+  field_of_study: z.string().optional()
   start_date: z.string().min(1, 'Start date is required');
-  end_date: z.string().optional(),
-  is_current: z.boolean().default(false),
-  description: z.string().optional(),
-  location: z.string().optional()}),
-
+  end_date: z.string().optional()
+  is_current: z.boolean().default(false)
+  description: z.string().optional()
+  location: z.string().optional()})
 type EducationFormValues = z.infer<typeof educationSchema>;
-
-export function EducationFormFields({ 
-  isEditing, 
-  onSubmit, 
-  onCancel 
+export function EducationFormFields({
+  isEditing
+  onSubmit
+  onCancel
 }: EducationFormFieldsProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
   const form = useForm<EducationFormValues>({
-    resolver: zodResolver(educationSchema),
+    resolver: zodResolver(educationSchema)
     defaultValues: {
-      institution: '',
-      degree: '',
-      field_of_study: '',
+      institution: ''
+      degree: ''
+      field_of_study: ''
       start_date: format(new Date(), 'yyyy-MM-dd');
-      is_current: false,
-      description: '',
-      location: ''}}),
-
+      is_current: false
+      description: ''
+      location: ''}})
   const handleSubmit = async (data: EducationFormValues) => {
     setIsLoading(true);
-    setError(null),
+    setError(null)
     try {
       await onSubmit(data)
     } catch (err: any) {
-      setError(err.message || 'An error occurred')
+      setError(err.message |'An error occurred')
     } finally {
       setIsLoading(false)
     }
-  };
-
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
@@ -74,7 +78,6 @@ export function EducationFormFields({
               </FormItem>
             )}
           />
-
           <FormField
             control={form.control}
             name="degree"
@@ -89,7 +92,6 @@ export function EducationFormFields({
             )}
           />
         </div>
-
         <FormField
           control={form.control}
           name="field_of_study"
@@ -103,7 +105,6 @@ export function EducationFormFields({
             </FormItem>
           )}
         />
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
@@ -112,17 +113,16 @@ export function EducationFormFields({
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
                 <FormControl>
-                  <Input 
-                    type="date" 
+                  <Input
+                    type="date"
                     {...field}
-                    value={field.value || ''} 
+                    value={field.value |''}
                   />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-
           <div className="space-y-4">
             <FormField
               control={form.control}
@@ -141,7 +141,6 @@ export function EducationFormFields({
                 </FormItem>
               )}
             />
-
             {!form.watch('is_current') && (
               <FormField
                 control={form.control}
@@ -150,10 +149,10 @@ export function EducationFormFields({
                   <FormItem>
                     <FormLabel>End Date</FormLabel>
                     <FormControl>
-                      <Input 
-                        type="date" 
-                        {...field} 
-                        value={field.value || ''} 
+                      <Input
+                        type="date"
+                        {...field}
+                        value={field.value |''}
                       />
                     </FormControl>
                     <FormMessage />
@@ -163,7 +162,6 @@ export function EducationFormFields({
             )}
           </div>
         </div>
-
         <FormField
           control={form.control}
           name="location"
@@ -177,7 +175,6 @@ export function EducationFormFields({
             </FormItem>
           )}
         />
-
         <FormField
           control={form.control}
           name="description"
@@ -195,9 +192,7 @@ export function EducationFormFields({
             </FormItem>
           )}
         />
-
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-
         <div className="flex justify-between pt-2">
           <Button
             type="button"
@@ -206,7 +201,6 @@ export function EducationFormFields({
           >
             {isEditing ? 'Cancel' : 'Back'}
           </Button>
-
           <Button type="submit" disabled={isLoading}>
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
             {isEditing ? 'Update' : 'Add'} Education
@@ -216,4 +210,3 @@ export function EducationFormFields({
     </Form>
   )
 }
-;

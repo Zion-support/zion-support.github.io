@@ -1,9 +1,17 @@
-import React from 'react',;
-import SEO from '../components/SEO',;
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
-import Link from 'next/link',;
+<<<<<<< HEAD
+import React from 'react',
+import SEO from '../components/SEO',
+=======
+import React from 'react';
+import SEO from '../components/SEO';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Link from 'next/link';
 export default function ResourcesPage() {
   return (
+<<<<<<< HEAD
+    <UltraFuturisticBackground intensity;
+=======
     <UltraFuturisticBackground intensity="high" variant="quantum">
       <SEO title="Resources | Zion Tech Group" description="Guides, case studies, support, training, and market pricing links." canonical="https://ziontechgroup.com/resources/" />
       <div className="container mx-auto px-4 py-16 text-white">
@@ -13,11 +21,11 @@ export default function ResourcesPage() {
         </div>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' },
-            { name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' },
-            { name: 'Market Pricing', href: '/market-pricing', blurb: 'Vendor links and typical budgets.' },
-            { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' },
-            { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },
+            { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' }
+            { name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' }
+            { name: 'Market Pricing', href: '/market-pricing', blurb: 'Vendor links and typical budgets.' }
+            { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' }
+            { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' }
             { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
           ].map((it) => (
             <Link key={it.href} href={it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover:border-cyan-500/50 transition-colors block">
@@ -31,8 +39,7 @@ export default function ResourcesPage() {
       </div>
     </UltraFuturisticBackground>
   )
-},
-
+}
       {/* Whitepapers */}
       <section id="whitepapers" className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
@@ -47,7 +54,6 @@ export default function ResourcesPage() {
               In-depth research and comprehensive guides on the latest technology trends and best practices.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {whitepapers.map((paper, index) => (
               <motion.div
@@ -67,7 +73,6 @@ export default function ResourcesPage() {
                   <h3 className="text-2xl font-bold text-white mb-3 leading-tight">{paper.title}</h3>
                   <p className="text-blue-100 leading-relaxed">{paper.description}</p>
                 </div>
-                
                 <div className="p-8">
                   <div className="flex items-center justify-between mb-6">
                     <span className="text-slate-600 text-sm">
@@ -87,7 +92,6 @@ export default function ResourcesPage() {
           </div>
         </div>
       </section>
-
       {/* Case Studies */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -102,7 +106,6 @@ export default function ResourcesPage() {
               Real-world examples of how our solutions have transformed businesses across industries.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div
@@ -115,14 +118,11 @@ export default function ResourcesPage() {
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6">
                   <FileText className="w-8 h-8 text-white" />
                 </div>
-                
                 <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
                   {study.industry}
                 </span>
-                
                 <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight">{study.title}</h3>
                 <p className="text-slate-600 leading-relaxed mb-6">{study.description}</p>
-                
                 <div className="mb-6">
                   <h4 className="font-semibold text-slate-900 mb-3">Key Results:</h4>
                   <ul className="space-y-2">
@@ -134,7 +134,6 @@ export default function ResourcesPage() {
                     ))}
                   </ul>
                 </div>
-                
                 <a
                   href={study.readUrl}
                   className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
@@ -147,7 +146,6 @@ export default function ResourcesPage() {
           </div>
         </div>
       </section>
-
       {/* Videos */}
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-6">
@@ -162,7 +160,6 @@ export default function ResourcesPage() {
               Visual learning resources and expert insights on technology trends and implementations.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {videos.map((video, index) => (
               <motion.div
@@ -178,15 +175,12 @@ export default function ResourcesPage() {
                     {video.category}
                   </span>
                 </div>
-                
                 <div className="p-6">
                   <h3 className="text-lg font-bold text-white mb-3 leading-tight">{video.title}</h3>
                   <p className="text-white/70 text-sm leading-relaxed mb-4">{video.description}</p>
-                  
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-white/60 text-sm">{video.duration}</span>
                   </div>
-                  
                   <a
                     href={video.watchUrl}
                     className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
@@ -199,7 +193,6 @@ export default function ResourcesPage() {
           </div>
         </div>
       </section>
-
       {/* Documentation */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -214,7 +207,6 @@ export default function ResourcesPage() {
               Technical documentation, implementation guides, and best practices for our solutions.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {documentation.map((doc, index) => (
               <motion.div
@@ -227,19 +219,15 @@ export default function ResourcesPage() {
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6">
                   <BookOpen className="w-8 h-8 text-white" />
                 </div>
-                
                 <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
                   {doc.type}
                 </span>
-                
                 <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight">{doc.title}</h3>
                 <p className="text-slate-600 leading-relaxed mb-6">{doc.description}</p>
-                
                 <div className="flex items-center justify-between mb-6 text-sm text-slate-500">
                   <span>{doc.pages} pages</span>
                   <span>Updated {doc.lastUpdated}</span>
                 </div>
-                
                 <a
                   href={doc.downloadUrl}
                   className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
@@ -251,7 +239,6 @@ export default function ResourcesPage() {
           </div>
         </div>
       </section>
-
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -262,7 +249,8 @@ export default function ResourcesPage() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Need More Resources?</h2>
             <p className="text-xl text-blue-100 mb-8">
-              Can't find what you're looking for? Our team is here to help with custom research, 
+              Can't find what you're looking for? Our team is here to help with custom research
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
               personalized consultations, and tailored solutions for your specific needs.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -282,7 +270,6 @@ export default function ResourcesPage() {
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </>
   )

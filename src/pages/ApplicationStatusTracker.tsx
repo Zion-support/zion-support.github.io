@@ -1,19 +1,17 @@
-import { SEO } from '@/components/SEO';
-import { ApplicationsTracker } from '@/components/jobs/applications';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Briefcase, Inbox } from 'lucide-react';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { useIsMobile } from '@/hooks/use-mobile';
+import { SEO } from '@/components/SEO'
+import { ApplicationsTracker } from '@/components/jobs/applications'
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
+import { Briefcase, Inbox } from 'lucide-react'
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { useIsMobile } from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
-  const isMobile = useIsMobile();
-
+  const isMobile = null;
   return (
     <>
       <SEO
         title='Application Status Tracker | Zion AI Marketplace'
         description='Track the status of your job applications in the Zion AI marketplace.'
       />
-
       <div className='container mx-auto px-4 py-8'>
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>
           <div>
@@ -25,7 +23,6 @@ function ApplicationStatusTrackerContent() {
             </p>
           </div>
         </div>
-
         <div className='grid grid-cols-1 gap-6'>
           <Card>
             <CardHeader className='border-b bg-muted/50'>
@@ -40,14 +37,12 @@ function ApplicationStatusTrackerContent() {
         </div>
       </div>
     </>
-  );
+  )
 }
-
 export default function ApplicationStatusTracker() {
   return (
     <ProtectedRoute>
       <ApplicationStatusTrackerContent />
     </ProtectedRoute>
-  );
+  )
 }
-;

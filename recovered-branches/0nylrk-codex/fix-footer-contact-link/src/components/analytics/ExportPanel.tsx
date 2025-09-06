@@ -1,31 +1,39 @@
+<<<<<<< HEAD
+
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+=======
 import React from "react";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
 } from "@/components/ui/card";
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 export function ExportPanel() {
   const { toast } = useToast();
-
+<<<<<<< HEAD
+  const handleExport = null;
+=======
   const handleExport = (format: "csv" | "json") => {
     // Placeholder for actual export functionality
     (toast({
-      title: `Exporting as ${format.toUpperCase()}`,
-      description: "Your export is being prepared and will download shortly.",
-    }),
+      title: `Exporting as ${format.toUpperCase()}`
+      description: "Your export is being prepared and will download shortly."
+    })
       // In a real implementation, this would trigger an API call to generate and download the export
       setTimeout(() => {
         toast({
-          title: `${format.toUpperCase()} Export Ready`,
-          description: "Your export has been downloaded.",
+          title: `${format.toUpperCase()} Export Ready`
+          description: "Your export has been downloaded."
         });
       }, 1500));
-  };
-
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
@@ -59,4 +67,3 @@ export function ExportPanel() {
     </Card>
   );
 }
-;

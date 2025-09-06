@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const DevopsAutomationChat: NextPage;
+=======
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -11,7 +17,6 @@ const DevopsAutomationChat: NextPage = () => {
           content="DevopsAutomationChat blog post"
         />{" "}
       </Head>
-
       <main>
         <h1>DevopsAutomationChat</h1>
         <p>Blog content coming soon...</p>
@@ -19,6 +24,6 @@ const DevopsAutomationChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
+}
 export default DevopsAutomationChat;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

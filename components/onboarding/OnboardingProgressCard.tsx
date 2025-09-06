@@ -1,5 +1,9 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link';
+<<<<<<< HEAD
+import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
+export type OnboardingStep = any;
+=======
 import {CheckCircle2, Circle, PartyPopper} from 'lucide-react';
 export type OnboardingStep = {
   id: string;
@@ -7,50 +11,42 @@ export type OnboardingStep = {
   completed: boolean;
   ctaLabel?: string;
   ctaHref?: string;
-};
-
+}
 export type OnboardingProgressCardProps = {
   title: string;
   steps: OnboardingStep[];
-  highlightColorClass?: string;};
-
+  highlightColorClass?: string;}
 function computePercentage(steps: OnboardingStep[]): number {
-  if (!steps || steps.length === 0) return 0;
+  if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
   return Math.round((completedCount / steps.length) * 100);  ctaLabel?: string;
   ctaHref?: string
-};
-
+}
 export type OnboardingProgressCardProps = {
-  title: string,
-  steps: OnboardingStep[],
+  title: string
+  steps: OnboardingStep[]
   highlightColorClass?: string
-};
-
+}
 function computePercentage(steps: OnboardingStep[]): number {
-  if (!steps || steps.length === 0) return 0;
+  if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
   return Math.round((completedCount / steps.length) * 100);
-
 export default function OnboardingProgressCard({
-  title,
-  steps,
-  highlightColorClass = 'from-neon-green to-neon-blue',
+  title
+  steps
+  highlightColorClass = 'from-neon-green to-neon-blue'
 }: OnboardingProgressCardProps) {
   const percentage = computePercentage(steps);
   const allDone = percentage === 100;
-
   const firstIncomplete = steps.find(
     s => !s.completed && s.ctaHref && s.ctaLabel
   );
-
   return (
     <div className='rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm'>
       <div className='flex items-center justify-between'>
         <h3 className='text-lg font-semibold'>{title}</h3>
         <div className='text-sm opacity-75'>{percentage}% complete</div>
       </div>
-
       {/* Progress Bar */}
       <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>
         <div
@@ -58,16 +54,14 @@ export default function OnboardingProgressCard({
 export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {
   const percentage = computePercentage(steps);
   const allDone = percentage === 100;
-
   const firstIncomplete = steps.find((s) => !s.completed && s.ctaHref && s.ctaLabel);
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm">
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-semibold">{title}</h3>
         <div className="text-sm opacity-75">{percentage}% complete</div>
       </div>
-
       {/* Progress Bar */}
       <div className="mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden">
         <div
@@ -77,19 +71,16 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
           style={{ width: `${percentage}%` }}
         />
       </div>
-
       {allDone ? (
         <div className='mt-4 flex items-center gap-2 text-green-600 dark:text-green-400'>
           <PartyPopper size={18} />
           <span className='text-sm'>All steps completed — great job!</span>        </div>
       ) : null}
-
       {/* Checklist */}        <div className="mt-4 flex items-center gap-2 text-green-600 dark:text-green-400">
           <PartyPopper size={18} />
           <span className="text-sm">All steps completed — great job!</span>
         </div>
       ) : null}
-
       {/* Checklist */}
       <ul className='mt-4 space-y-2'>
         {steps.map(step => (
@@ -116,7 +107,6 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
           </li>
         ))}
       </ul>
-
       {/* Primary CTA for next step */}
       {!allDone && firstIncomplete ? (
         <div className='mt-5'>

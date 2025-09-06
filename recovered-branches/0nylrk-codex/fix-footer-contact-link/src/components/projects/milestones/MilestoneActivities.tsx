@@ -1,72 +1,94 @@
 
 import React, { useState, useEffect } from 'react';
-import {supabase} from '@/integrations/supabase/client';
-import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
-import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
-import {format} from 'date-fns';
-import {Skeleton} from '@/components/ui/skeleton';
+import { supabase  } from '@/integrations/supabase/client';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
+import { format  } from 'date-fns';
+import { Skeleton } from '@/components/ui/skeleton';
 interface MilestoneActivitiesProps {
   projectId: string
 }
-
 interface Activity {
-  id: string,
-  milestone_id: string,
-  user_id: string,
-  action: string,
-  previous_status: string | null,
-  new_status: string,
-  comment: string | null,
-  created_at: string,
+<<<<<<< HEAD
+  id: string;
+  milestone_id: string;
+  user_id: string;
+  action: string;
+  previous_status: string | null;
+  new_status: string;
+  comment: string | null;
+  created_at: string;
+=======
+  id: string
+  milestone_id: string
+  user_id: string
+  action: string
+  previous_status: string | null
+  new_status: string
+  comment: string | null
+  created_at: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   milestone: {
     title: string
-  };
+  }
   created_by_profile: {
-    display_name: string,
+<<<<<<< HEAD
+    display_name: string;
+=======
+    display_name: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     avatar_url: string | null
   }
 }
-
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
-  const [activities, setActivities] = useState<Activity[]>([]);
+  const [activities, setActivities] = useState<Activity[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     async function fetchActivities() {
       try {
         setIsLoading(true);
-        
         const { data, error } = await supabase
           .from('milestone_activities')
           .select(`
-            *;
-            milestone: milestone_id(title),
+<<<<<<< HEAD
+            *,
+            milestone:milestone_id(title);
             created_by_profile:profiles!user_id(display_name, avatar_url)
           `)
           .eq('project_id', projectId)
-          .order('created_at', { ascending: false }),
-
+          .order('created_at', { ascending: false });
         if (error) throw error;
-        
         setActivities(data || [])
+=======
+            *;
+            milestone: milestone_id(title)
+            created_by_profile:profiles!user_id(display_name, avatar_url)
+          `)
+          .eq('project_id', projectId)
+          .order('created_at', { ascending: false })
+        if (error) throw error;
+        setActivities(data |[])
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
       } catch (err) {
         console.error('Error fetching milestone activities:', err)
       } finally {
         setIsLoading(false)
       }
     }
-
     if (projectId) {
       fetchActivities()
     }
   }, [projectId]);
-
   function getActivityDescription(activity: Activity): string {
     switch (activity.action) {
       case 'created':
-        return 'created a new milestone',
+<<<<<<< HEAD
+        return 'created a new milestone';
+=======
+        return 'created a new milestone'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
       case 'status_changed':
-        return `changed status from ${activity.previous_status || 'none'} to ${activity.new_status}`;
+        return `changed status from ${activity.previous_status |'none'} to ${activity.new_status}`;
       case 'updated':
         return 'updated milestone details';
       case 'deliverable_added':
@@ -75,7 +97,6 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
         return activity.action.replace(/_/g, ' ')
     }
   }
-
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -95,7 +116,6 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
       </div>
     )
   }
-
   if (activities.length === 0) {
     return (
       <Card>
@@ -105,7 +125,6 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
       </Card>
     )
   }
-
   return (
     <div className="space-y-4">
       <Card>
@@ -117,9 +136,9 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
             {activities.map((activity) => (
               <div key={activity.id} className="flex items-start space-x-4">
                 <Avatar className="h-10 w-10">
-                  <AvatarImage src={activity.created_by_profile?.avatar_url || ''} alt="User" />
+                  <AvatarImage src={activity.created_by_profile?.avatar_url |''} alt="User" />
                   <AvatarFallback>
-                    {activity.created_by_profile?.display_name?.charAt(0) || '?'}
+                    {activity.created_by_profile?.display_name?.charAt(0) |'?'}
                   </AvatarFallback>
                 </Avatar>
                 <div className="space-y-1">
@@ -147,4 +166,3 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
     </div>
   )
 }
-;

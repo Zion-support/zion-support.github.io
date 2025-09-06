@@ -1,22 +1,28 @@
-</div>) ) 
+<<<<<<< HEAD
+import fs from 'fs',
+import path from 'path';
+import { TALENT_PROFILES } from '../../data/talent';
+type TalentSummary = any;
+=======
+</div>) )
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 import {TALENT_PROFILES} from '../../data/talent';
-type TalentSummary = { slug: string, summary: string },
+type TalentSummary = { slug: string, summary: string }
 export async function getServerSideProps() {
   const file = path.join(process.cwd(), 'datatalent_ai.json');
   let generatedAt = '';
   let summaries: TalentSummary[] = [];  try {
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
-    generatedAt = json.generatedAt || '';
-    summaries = json.summaries || []
+    generatedAt = json.generatedAt |'';
+    summaries = json.summaries |[]
   } catch {}
-  return { props: { generatedAt, summaries } };
+  return { props: { generatedAt, summaries } }
 }
-
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
   const map = new Map(summaries.map(s => [s.slug, s.summary]));
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Talent Summaries</h1>
@@ -26,7 +32,7 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
         {TALENT_PROFILES.map(t => (
           <div key={t.slug} className="border rounded p-4 space-y-1">
             <div className="font-medium">{t.name} — {t.title}</div>
-            <div className="text-sm text-gray-700">{map.get(t.slug) || 'No AI summary yet.'}</div>
+            <div className="text-sm text-gray-700">{map.get(t.slug) |'No AI summary yet.'}</div>
           </div>
         ))}
       </div>

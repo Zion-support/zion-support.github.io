@@ -1,317 +1,183 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { Search, Filter, Star, ShoppingCart, Heart, Truck, Shield, RotateCcw } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-
-interface Equipment {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  rating: number;
-  reviewCount: number;
-  image: string;
-  category: string;
-  brand: string;
-  inStock: boolean;
-  features: string[];
-}
-
-const EquipmentPage: React.FC = () => {
-  const [equipment, setEquipment] = useState<Equipment[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
-
-  useEffect(() => {
-    // Mock data - in real app, this would come from API
-    const mockEquipment: Equipment[] = [
-      {
-        id: '1',
-        name: 'Dell PowerEdge R750 Server',
-        description: 'High-performance rack server for enterprise workloads',
-        price: 2500,
-        rating: 4.8,
-        reviewCount: 24,
-        image: '/api/placeholder/300/200',
-        category: 'servers',
-        brand: 'Dell',
-        inStock: true,
-        features: ['Intel Xeon', '32GB RAM', '1TB SSD', 'Redundant PSU']
-      },
-      {
-        id: '2',
-        name: 'Cisco Catalyst 9300 Switch',
-        description: 'Enterprise-grade network switch with advanced features',
-        price: 1800,
-        rating: 4.6,
-        reviewCount: 18,
-        image: '/api/placeholder/300/200',
-        category: 'networking',
-        brand: 'Cisco',
-        inStock: true,
-        features: ['48 Ports', 'PoE+', 'Stackable', 'Management']
-      },
-      {
-        id: '3',
-        name: 'HP ProLiant DL380 Gen10',
-        description: 'Reliable server for small to medium businesses',
-        price: 3200,
-        rating: 4.7,
-        reviewCount: 31,
-        image: '/api/placeholder/300/200',
-        category: 'servers',
-        brand: 'HP',
-        inStock: false,
-        features: ['Intel Xeon', '64GB RAM', '2TB HDD', 'iLO']
-      }
-    ];
-
-    setEquipment(mockEquipment);
-    setLoading(false);
-  }, []);
-
-  const filteredEquipment = equipment.filter(item => {
-    const matchesSearch = item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    
-    return matchesSearch && matchesCategory;
-  });
-
-  const sortedEquipment = [...filteredEquipment].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
-        return a.price - b.price;
-      case 'price-high':
-        return b.price - a.price;
-      case 'rating':
-        return b.rating - a.rating;
-      default:
-        return a.name.localeCompare(b.name);
-    }
-  });
-
-  if (loading) {
+import { useRouter  } from 'next/router';
+import { useState, useEffect, useCallback, useMemo  } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
+import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
+import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment  } from '@/utils/equipmentAutoFeedAlgorithm';
+import { ProductListing  } from '@/types/listings';
+import { SkeletonCard  } from '@/components/ui/skeleton';
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
+import { EquipmentErrorBoundary  } from '@/components/EquipmentErrorBoundary';
+import { useCurrency  } from '@/hooks/useCurrency';
+import {logErrorToProduction} from '@/utils/productionLogger';
+// Enhanced initial equipment with more variety
+const INITIAL_EQUIPMENT: ProductListing[] = [
+  {
+    id: "nvidia-a100-server";
+    title: "NVIDIA A100 GPU Training Server";
+    description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
+    category: "AI Hardware";
+    price: 85000;
+    currency: "$";
+    brand: "NVIDIA";
+    specifications: ["8x A100 GPUs", "2TB HBM2e", "NVLink"],
+    tags: ["AI", "Machine Learning", "GPU"],
+    author: { name: "NVIDIA", id: "nvidia" },
+    images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto;
+  // Loading state
+  if (loading && equipment.length === 0) {
     return (
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-8">
-          <div className="animate-pulse">
-            <div className="h-8 bg-gray-300 rounded w-1/3 mb-4"></div>
-            <div className="grid md:grid-cols-3 gap-6">
-              {Array.from({ length: 6 }).map((_, i) => (
-                <div key={i} className="bg-white rounded-lg p-6">
-                  <div className="h-4 bg-gray-300 rounded mb-2"></div>
-                  <div className="h-4 bg-gray-300 rounded w-3/4 mb-4"></div>
-                  <div className="h-8 bg-gray-300 rounded w-1/2"></div>
-                </div>
-              ))}
-            </div>
+      <div className="container py-8">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
+          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Datacenter Equipment
+          </h1>
+          <p className="text-muted-foreground text-lg">Professional hardware for modern IT infrastructure</p>
+        </motion.div>
+        <EquipmentLoadingGrid />
+      </div>
+    )
+  }
+
+<<<<<<< HEAD
+  // Error state
+  if (error && equipment.length === 0) {
+    return (
+      <div className="container py-8">
+        <div className="text-center space-y-4">
+          <AlertTriangle className="mx-auto h-12 w-12 text-red-500" />
+          <h2 className="text-2xl font-bold">Unable to load equipment</h2>
+          <p className="text-muted-foreground max-w-md mx-auto">{error}</p>
+          <div className="flex gap-2 justify-center">
+            <Button onClick={refresh} variant="outline">
+              <RefreshCw className="h-4 w-4 mr-2" />
+              Try Again
+            </Button>
+            <Button onClick={() => window.location.reload()}>
+              Refresh Page
+            </Button>
           </div>
         </div>
       </div>
-    );
+    )
   }
 
   return (
-    <>
-      <Head>
-        <title>IT Equipment | Zion Tech Group</title>
-        <meta name="description" content="Browse our selection of high-quality IT equipment including servers, networking gear, and enterprise hardware." />
-      </Head>
+    <div className="container py-8">
+      <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          Datacenter Equipment
+        </h1>
+        <p className="text-muted-foreground text-lg">Professional hardware for modern IT infrastructure and AI workloads</p>
+      </motion.div>
 
-      <div className="min-h-screen bg-gray-50">
-        {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">IT Equipment</h1>
-              <p className="text-xl text-blue-100 mb-8">
-                Professional-grade IT equipment for your business needs
-              </p>
-            </div>
-          </div>
-        </div>
+      {marketStats && (
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
+          <EquipmentMarketInsights stats={marketStats} />
+        </motion.div>
+      )}
 
-        <div className="container mx-auto px-4 py-8">
-          {/* Filters */}
-          <div className="bg-white rounded-lg p-6 mb-8">
-            <div className="grid md:grid-cols-4 gap-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Search
-                </label>
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-                  <Input
-                    placeholder="Search equipment..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="pl-10"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Category
-                </label>
-                <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="All Categories" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">All Categories</SelectItem>
-                    <SelectItem value="servers">Servers</SelectItem>
-                    <SelectItem value="networking">Networking</SelectItem>
-                    <SelectItem value="storage">Storage</SelectItem>
-                    <SelectItem value="security">Security</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+        <EquipmentFilterControls
+          sortBy={sortBy}
+          setSortBy={setSortBy}
+          filterCategory={filterCategory}
+          setFilterCategory={setFilterCategory}
+          categories={categories}
+          showRecommended={showRecommended}
+          setShowRecommended={setShowRecommended}
+          loading={isFetching}
+        />
+      </motion.div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Sort By
-                </label>
-                <Select value={sortBy} onValueChange={setSortBy}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Sort by" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="name">Name</SelectItem>
-                    <SelectItem value="price-low">Price: Low to High</SelectItem>
-                    <SelectItem value="price-high">Price: High to Low</SelectItem>
-                    <SelectItem value="rating">Rating</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+        <AnimatePresence mode="popLayout">
+          {equipment.map((item, index) => (
+            <motion.div
+              key={item.id} 
+              ref={index === equipment.length - 1 ? lastElementRef : null}
+              initial={{ opacity: 0, scale: 0.9 }} 
+              animate={{ opacity: 1, scale: 1 }} 
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ delay: Math.min(index * 0.03, 0.5) }} 
+              whileHover={{ scale: 1.02 }}
+            >
+              <EquipmentCard
+                equipment={item}
+                onViewDetails={() => {
+                  if (typeof window !== 'undefined') {
+                    try {
+                      sessionStorage.setItem(`equipment:${item.id}`, JSON.stringify(item))
+                    } catch {
+                      // ignore storage errors
+                    }
+                  }
+                  router.push(`/equipment/${item.id}`)
+                }}
+              />
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </motion.div>
 
-              <div className="flex items-end">
-                <Button className="w-full">
-                  <Filter className="h-4 w-4 mr-2" />
-                  Apply Filters
-                </Button>
-              </div>
-            </div>
-          </div>
+      {(isFetching || loading) && equipment.length > 0 && (
+        <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <EquipmentLoadingGrid count={4} />
+        </motion.div>
+      )}
 
-          {/* Results */}
-          <div className="mb-4">
-            <p className="text-gray-600">
-              {sortedEquipment.length} items found
+      {hasMore && !loading && (
+        <div className="text-center mt-8">
+          {isFetching ? (
+            <Spinner className="mx-auto h-6 w-6" />
+          ) : (
+            <Button onClick={loadMore} variant="outline" size="lg">
+              Load More Equipment
+            </Button>
+          )}
+          {total !== undefined && (
+            <p className="mt-2 text-sm text-muted-foreground">
+              Showing {equipment.length} of {total} items
             </p>
-          </div>
-
-          {/* Equipment Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {sortedEquipment.map((item) => (
-              <Card key={item.id} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="aspect-video bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-full h-full object-cover rounded-lg"
-                    />
-                  </div>
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <CardTitle className="text-lg mb-2">{item.name}</CardTitle>
-                      <CardDescription className="mb-3">
-                        {item.description}
-                      </CardDescription>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-2xl font-bold text-blue-600">
-                        ${item.price.toLocaleString()}
-                      </div>
-                      {!item.inStock && (
-                        <Badge variant="destructive" className="mt-1">
-                          Out of Stock
-                        </Badge>
-                      )}
-                    </div>
-                  </div>
-                </CardHeader>
-                
-                <CardContent>
-                  <div className="flex items-center mb-3">
-                    <div className="flex items-center">
-                      {Array.from({ length: 5 }).map((_, i) => (
-                        <Star
-                          key={i}
-                          className={`h-4 w-4 ${
-                            i < Math.floor(item.rating)
-                              ? 'text-yellow-400 fill-current'
-                              : 'text-gray-300'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                    <span className="ml-2 text-sm text-gray-600">
-                      {item.rating} ({item.reviewCount} reviews)
-                    </span>
-                  </div>
-
-                  <div className="flex items-center text-sm text-gray-600 mb-3">
-                    <span className="font-medium">{item.brand}</span>
-                    <span className="mx-2">•</span>
-                    <span className="capitalize">{item.category}</span>
-                  </div>
-
-                  <div className="flex flex-wrap gap-1 mb-4">
-                    {item.features.slice(0, 3).map((feature) => (
-                      <Badge key={feature} variant="secondary" className="text-xs">
-                        {feature}
-                      </Badge>
-                    ))}
-                    {item.features.length > 3 && (
-                      <Badge variant="outline" className="text-xs">
-                        +{item.features.length - 3} more
-                      </Badge>
-                    )}
-                  </div>
-
-                  <div className="flex space-x-2">
-                    <Button 
-                      className="flex-1" 
-                      disabled={!item.inStock}
-                    >
-                      <ShoppingCart className="h-4 w-4 mr-2" />
-                      Add to Cart
-                    </Button>
-                    <Button variant="outline" size="sm">
-                      <Heart className="h-4 w-4" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {sortedEquipment.length === 0 && (
-            <div className="text-center py-12">
-              <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-lg font-medium text-gray-900 mb-2">No equipment found</h3>
-              <p className="text-gray-600 mb-4">
-                Try adjusting your search criteria or browse all categories.
-              </p>
-              <Button asChild>
-                <Link href="/equipment">Browse All Equipment</Link>
-              </Button>
-            </div>
           )}
         </div>
-      </div>
-    </>
-  );
-};
+      )}
 
-export default EquipmentPage;
+      {!hasMore && equipment.length > 0 && (
+        <motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <div className="text-muted-foreground text-lg mb-2">🏭 You've explored all available equipment!</div>
+          <div className="text-sm text-muted-foreground">Showing {equipment.length} datacenter equipment items</div>
+        </motion.div>
+      )}
+
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.button 
+            onClick={scrollToTop} 
+            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
+            initial={{ opacity: 0, scale: 0 }} 
+            animate={{ opacity: 1, scale: 1 }} 
+            exit={{ opacity: 0, scale: 0 }}
+            whileHover={{ scale: 1.1 }} 
+            whileTap={{ scale: 0.9 }}
+          >
+            <ArrowUp className="h-5 w-5 text-primary-foreground" />
+          </motion.button>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+}
+// Main export with error boundary
+export default function EquipmentPage() {
+  return (
+    <EquipmentErrorBoundary>
+      <EquipmentPageContent />
+    </EquipmentErrorBoundary>
+  )
+}

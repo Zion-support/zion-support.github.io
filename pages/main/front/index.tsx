@@ -1,8 +1,13 @@
-import Head from 'next/head';
+import Head from 'next/head',
 import Link from 'next/link';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 export default function FrontLanding() {
   return (
+<<<<<<< HEAD
+    <div className;
+              { title: 'Content & SEO', desc: 'Curates content, updates promotions, and tunes metadata for reach.' }].map((c) => (
+              <motion.article
+=======
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>
       <Head>
         <title>Zion — Autonomous Cloud Automations</title>
@@ -11,7 +16,6 @@ export default function FrontLanding() {
           content='Futuristic, cloud-native autonomous automations that innovate, optimize, and sync changes to the repo continuously.'
         />
       </Head>
-
       {/* Animated background layers */}
       <div aria-hidden className='pointer-events-none absolute inset-0 -z-10'>
         <div className='absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float' />
@@ -21,7 +25,6 @@ export default function FrontLanding() {
         <div className='absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]'>
           <div className='twinkle-field absolute inset-0' />        </div>
       </div>
-
       {/* Header */}
       <header className='relative z-10'>
         <nav className='mx-auto flex max-w-7xl items-center justify-between px-6 py-6'>
@@ -47,7 +50,6 @@ export default function FrontLanding() {
             </Link>          </div>
         </nav>
       </header>
-
       {/* Hero */}
       <main className='relative z-10'>
         <section className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'>
@@ -59,7 +61,6 @@ export default function FrontLanding() {
             >
               <span className='h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />              Autonomous agents running continuous improvements
             </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
@@ -69,7 +70,6 @@ export default function FrontLanding() {
               <span className='gradient-text'>
                 Autonomous Cloud Automations
               </span>            </motion.h1>
-
             <motion.p
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
@@ -79,7 +79,6 @@ export default function FrontLanding() {
               Self-improving, cloud-native agents that invent, generate, and run
               new automation factories—fixing, optimizing, and syncing changes
               to the repository continuously.            </motion.p>
-
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -100,14 +99,13 @@ export default function FrontLanding() {
                 Live Meta Factory
               </a>
             </motion.div>
-
             {/* Quick stats */}
             <div className='mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4'>
               {[
-                ['24/7', 'Autonomous'],
-                ['Main', 'Direct Sync'],
-                ['0 Ops', 'Cloud‑Native'],
-                ['Safety', 'Guardrails'],
+                ['24/7', 'Autonomous']
+                ['Main', 'Direct Sync']
+                ['0 Ops', 'Cloud‑Native']
+                ['Safety', 'Guardrails']
               ].map(([k, v]) => (                <motion.div
                   key={k}
                   initial={{ opacity: 0, y: 6 }}
@@ -122,7 +120,6 @@ export default function FrontLanding() {
             </div>
           </div>
         </section>
-
         {/* Features */}
         <section className='mx-auto max-w-7xl px-6 pb-14'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -131,29 +128,29 @@ export default function FrontLanding() {
           <div className='mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3'>
             {[
               {
-                title: 'Self‑Improving',
-                desc: 'Agents continuously analyze, invent, and evolve automations.',
-              },
+                title: 'Self‑Improving'
+                desc: 'Agents continuously analyze, invent, and evolve automations.'
+              }
               {
-                title: 'Repo Sync',
-                desc: 'Changes are committed and pushed automatically to main.',
-              },
+                title: 'Repo Sync'
+                desc: 'Changes are committed and pushed automatically to main.'
+              }
               {
-                title: 'Zero Ops',
-                desc: 'Runs fully in the cloud—no servers or manual intervention.',
-              },
+                title: 'Zero Ops'
+                desc: 'Runs fully in the cloud—no servers or manual intervention.'
+              }
               {
-                title: 'Safety‑First',
-                desc: 'Conservative edits with logs, reports, and guardrails.',
-              },
+                title: 'Safety‑First'
+                desc: 'Conservative edits with logs, reports, and guardrails.'
+              }
               {
-                title: 'Scalable',
-                desc: 'Generates domain‑specific factories on demand.',
-              },
+                title: 'Scalable'
+                desc: 'Generates domain‑specific factories on demand.'
+              }
               {
-                title: 'Observability',
-                desc: 'Dashboards, reports, and GitHub Actions artifacts.',
-              },
+                title: 'Observability'
+                desc: 'Dashboards, reports, and GitHub Actions artifacts.'
+              }
             ].map(f => (              <motion.article
                 key={f.title}
                 initial={{ opacity: 0, y: 8 }}
@@ -168,7 +165,6 @@ export default function FrontLanding() {
             ))}
           </div>
         </section>
-
         {/* Capabilities */}
         <section className='mx-auto max-w-7xl px-6 pb-14'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -177,18 +173,19 @@ export default function FrontLanding() {
           <div className='mt-6 grid grid-cols-1 gap-5 md:grid-cols-3'>
             {[
               {
-                title: 'Code Quality & Refactors',
-                desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.',
-              },
+                title: 'Code Quality & Refactors'
+                desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.'
+              }
               {
-                title: 'Performance & A11y',
-                desc: 'Optimizes bundles, assets, and accessibility with continuous checks.',
-              },
+                title: 'Performance & A11y'
+                desc: 'Optimizes bundles, assets, and accessibility with continuous checks.'
+              }
               {
-                title: 'Content & SEO',
-                desc: 'Curates content, updates promotions, and tunes metadata for reach.',
-              },
+                title: 'Content & SEO'
+                desc: 'Curates content, updates promotions, and tunes metadata for reach.'
+              }
             ].map(c => (              <motion.article
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                 key={c.title}
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -202,7 +199,6 @@ export default function FrontLanding() {
             ))}
           </div>
         </section>
-
         {/* Benefits */}
         <section className='mx-auto max-w-7xl px-6 pb-20'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -210,10 +206,10 @@ export default function FrontLanding() {
           </h2>
           <div className='mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md:grid-cols-2'>
             {[
-              '24/7 progress without human intervention',
-              'Rapid feedback loop with safe, incremental edits',
-              'Continuous delivery directly to main branch',
-              'Fewer regressions via layered checks and reports',
+              '24/7 progress without human intervention'
+              'Rapid feedback loop with safe, incremental edits'
+              'Continuous delivery directly to main branch'
+              'Fewer regressions via layered checks and reports'
             ].map(b => (              <motion.div
                 key={b}
                 initial={{ opacity: 0, y: 6 }}
@@ -227,7 +223,6 @@ export default function FrontLanding() {
             ))}
           </div>
         </section>
-
         {/* CTA */}
         <section className='mx-auto max-w-7xl px-6 pb-24'>          <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
@@ -256,7 +251,6 @@ export default function FrontLanding() {
               </Link>            </div>
           </motion.div>
         </section>
-
         {/* Explore more */}
         <section className='mx-auto max-w-7xl px-6 pb-16'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
