@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from "react"
 import { ElementRef, ComponentPropsWithoutRef } from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
@@ -6,12 +7,16 @@ import { ChevronDown } from 'lucide-react'
 import { cn } from "@/lib/utils"
 
 const Accordion = AccordionPrimitive.Root
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 const AccordionItem = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Item>,
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
+<<<<<<< HEAD
 <<<<<<< HEAD
     ref={ref}
     className={cn("border-b", className)}
@@ -23,14 +28,19 @@ AccordionItem.displayName = "AccordionItem"
 
 =======
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 AccordionItem.displayName = "AccordionItem"
 
 AccordionItem.displayName = "AccordionItem"
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const AccordionTrigger = React.forwardRef<
 =======
 
@@ -46,6 +56,7 @@ AccordionItem.displayName = "AccordionItem"
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
         "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
         className
@@ -90,6 +101,9 @@ const AccordionTrigger = React && React.forwardRef<;
         className;
 
       )}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </AccordionPrimitive>  {...props}
     >
       {children}
@@ -98,11 +112,15 @@ const AccordionTrigger = React && React.forwardRef<;
     >;
       {children}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </AccordionPrimitive.Trigger>
 =======
       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />    </AccordionPrimitive.Trigger>
@@ -113,6 +131,7 @@ AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -120,11 +139,14 @@ AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const AccordionContent = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Content>,
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
+<<<<<<< HEAD
     ref={ref}
     className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
@@ -151,3 +173,6 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 ;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

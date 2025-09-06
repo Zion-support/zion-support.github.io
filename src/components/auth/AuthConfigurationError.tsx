@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',;
 import Link from 'next/link',;
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
@@ -38,10 +39,18 @@ import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React from 'react'
 import Link from 'next/link'
 import {
+<<<<<<< HEAD
+=======
+
+  AlertTriangle,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ExternalLink,
   RefreshCw,
   Settings,;
@@ -54,6 +63,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+<<<<<<< HEAD
 interface AuthConfigurationErrorProps {
   onRetry?: () => void;
 <<<<<<< HEAD
@@ -67,10 +77,14 @@ export function AuthConfigurationError(): any ({;
   showSetupButton = true,;
 }: AuthConfigurationErrorProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleRefresh = () => {;
     if (onRetry) {;
       onRetry();
     } else {;
+<<<<<<< HEAD
 <<<<<<< HEAD
       window.location.reload();
     }
@@ -162,6 +176,9 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
         {/* Main Error Card */}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
           <div className="text-center mb-6">
             <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center">
@@ -176,6 +193,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
           </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -183,6 +201,8 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Alert variant="destructive" className="mb-6">
             <AlertTriangle className="h-4 w-4" />
             <AlertDescription>
@@ -193,12 +213,16 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
 
           {/* Technical Details */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="bg-gray-50 rounded-lg p-4 mb-6">
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>• AUTH0_SECRET</li>
@@ -207,6 +231,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               <li>• AUTH0_CLIENT_ID</li>
               <li>• AUTH0_CLIENT_SECRET</li>
             </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
 
@@ -245,15 +270,20 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                 onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
 
 
+=======
+          </div>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
               >
                 <Settings className="w-4 h-4 mr-2" />
                 Setup Guide
               </Button>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   };
   return (;
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">;
@@ -272,11 +302,14 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Alert variant="destructive" className="mb-6">;
             <AlertTriangle className="h-4 w-4" />;
             <AlertDescription>;
               <strong>Critical Issue #1:</strong> Auth0 environment variables are not configured.;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           <Alert variant="destructive" className="mb-6">;
 =======
@@ -355,6 +388,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
             <ul className='text - sm text - gray - 700 space - y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg - gray - 50 rounded - lg p - 4 mb - 6">;
             <h3 className="font - semibold text - gray - 900 mb - 2">Missing Configuration:</h3>;
             <ul className="text - sm text - gray - 700 space - y-1">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <li>• AUTH0_SECRET</li>;
               <li>• AUTH0_BASE_URL</li>;
@@ -377,6 +411,9 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                 Setup Guide;
               </Button>;
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             )}
 =======
             <ul className='text - sm text - gray - 700 space - y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg - gray - 50 rounded - lg p - 4 mb-6">;
@@ -387,6 +424,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               onClick={handleRefresh}
               variant='outline'
 
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
             {showSetupButton && (
               <Button 
@@ -400,11 +438,14 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
             )}
 ;
             <Button;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               onClick={handleRefresh}
               variant="outline" 
               className="flex-1"
             >
               <RefreshCw className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -415,6 +456,20 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
 
           {/* Quick Setup Steps */}
 <<<<<<< HEAD
+=======
+
+              Check Again
+            </Button>
+          </div>
+              className='flex-1'>;
+              <RefreshCw className='w-4 h-4 mr-2' />              Check Again              <RefreshCw className="w-4 h-4 mr-2" />;
+              Check Again;
+            </Button>;
+          </div>;
+
+          {/* Quick Setup Steps */}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="border-t pt-6">
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -441,6 +496,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                 </div>
               </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               
 =======
@@ -451,6 +507,8 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                     className="text-blue-600 hover:underline inline-flex items-center gap-1"
                   >
                     Visit Auth0 Dashboard <ExternalLink className="w-3 h-3" />
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <li className="flex items-start gap-3">
@@ -462,6 +520,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                 </div>
               </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -470,6 +529,9 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">3</span>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <div>
                   <strong>Configure Environment:</strong>
                   <br />
@@ -591,11 +653,14 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                     npm run dev;
                   </code>{' '}
 
+<<<<<<< HEAD
               
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">3</span>
                 <div>
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <strong>Configure Environment:</strong>
                   <br />
                   Copy credentials to <code className="bg-gray-100 px-1 rounded">.env.local</code> file
@@ -603,21 +668,29 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               </li>
               <li className="flex items-start gap-3">
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               
               <li className="flex items-start gap-3">
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">4</span>
                 <div>
                   <strong>Restart Application:</strong>
                   <br />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   Run <code className="bg-gray-100 px-1 rounded">npm run dev</code> to apply changes
                 </div>
               </li>
             </ol>
           </div>
         </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -694,17 +767,18 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
             <Link 
               href="/marketplace" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             >
               <span>Browse Marketplace</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
-<<<<<<< HEAD
-            
-            <Link 
-              href="/talent" 
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
 =======
                 <div>
@@ -727,8 +801,11 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Link 
               href="/help" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
@@ -745,11 +822,14 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               <span>Browse Marketplace</span>;
               <ExternalLink className="w-4 h-4" />;
             </Link>;
+<<<<<<< HEAD
             
 
             
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -759,6 +839,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
             >
               <span>System Status</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <ExternalLink className="w-4 h-4" />
             </Link>
@@ -807,6 +888,9 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="mt-6 text-center">
 =======
         {showSetupButton && (          <div className="mt-6 text-center">
@@ -818,7 +902,10 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </div>
               <p className="text-sm text-green-600 mb-3">
                 Run the setup script to configure Auth0 interactively:
@@ -826,13 +913,17 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <code className="bg-green-100 text-green-800 px-3 py-1 rounded text-sm">
                 npm run setup:auth0
               </code>
             </div>
           </div>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
         {/* Footer */}
@@ -853,6 +944,9 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               AUTH0_SETUP_GUIDE_ISSUE_1.md
             </button>
           </p>
@@ -860,8 +954,11 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
 
@@ -871,7 +968,10 @@ export default AuthConfigurationError;
 }
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="mt-6 text-center text-sm text-gray-500">;
           <p>;
             For detailed instructions, see{' '}
@@ -884,16 +984,21 @@ export default AuthConfigurationError;
 =======
 
               className="text-blue-600 hover: underline";
+<<<<<<< HEAD
               AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </button>;
           </p>;
         </div>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1015,3 +1120,6 @@ export default AuthConfigurationError;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

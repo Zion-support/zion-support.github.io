@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -7,6 +8,8 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 }
@@ -15,6 +18,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function SecurityAudit({ report }: Props) {
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 </pre> </div>) ;
 export default function SecurityAudit(): any ({ report }: Props) {;
@@ -25,10 +29,14 @@ export default function SecurityAudit(): any ({ report }: Props) {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 </pre> </div>)
  
 };
 </pre> </div>) 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -39,6 +47,11 @@ export default function SecurityAudit(): any ({ report }: Props) {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function SecurityAudit({ report }: Props) {
+=======
+
+export default function SecurityAudit({ report }: Props) {
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="space-y-4">
       <header className="space-y-1">
@@ -49,6 +62,7 @@ export default function SecurityAudit({ report }: Props) {
       {report.generatedAt && (
         <div className="text-sm text-gray-500">Generated at: {new Date(report.generatedAt).toLocaleString()}</div>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">
@@ -67,14 +81,14 @@ export default function SecurityAudit({ report }: Props) {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+    </div>;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 );
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
       <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -85,6 +99,7 @@ export default function SecurityAudit({ report }: Props) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -92,16 +107,22 @@ export default function SecurityAudit({ report }: Props) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   );
 }
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 </pre> </div>);
 export default /**
@@ -123,6 +144,7 @@ function SecurityAudit() {
     </div>);
 }
 
+<<<<<<< HEAD
 }
 </pre> </div>)
 
@@ -165,3 +187,5 @@ export default function SecurityAudit({ report }: Props) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

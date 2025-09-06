@@ -1,4 +1,21 @@
 
+<<<<<<< HEAD
+=======
+
+  return (
+    <div className='enhanced-card flex items-center justify-between'>import React from 'react';
+import React from 'react';
+import type { ReviewsSummary } from '../../types/reviews';
+</div> </div> </div>) }
+;
+const ReviewSummary: React.FC < Props> = ({ summary }) => {
+  return (
+    <div className='enhanced - card flex items - center justify - between'>import React from 'react';
+import type { ReviewsSummary } from '../../types / reviews';
+import StarRating from './StarRating';
+import {Star} from 'lucide-react';
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className='enhanced-card flex items-center justify-between'>;
       <div>;
@@ -17,6 +34,7 @@
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
   )
 };
 
@@ -28,6 +46,21 @@ export default ReviewSummary
 };
 
 export default ReviewSummary;
+=======
+  );
+
+        <div className="flex items-center gap-3">
+          <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>
+          <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />
+        </div>
+        <div className="text-sm text-gray-600 mt-1">
+          <span className="mr-3">{summary.totalReviews} reviews</span>
+          <span>{summary.totalCompletedProjects} completed projects</span>
+        </div>
+      </div>
+    </div>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   summary: ReviewsSummary;
 const ReviewSummary: React.FC < Props> = ({ summary }) => {
   return (
@@ -68,3 +101,7 @@ export default ReviewSummary);
 ;
 export default ReviewSummary;
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

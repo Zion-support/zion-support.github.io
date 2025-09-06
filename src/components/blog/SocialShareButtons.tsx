@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';
@@ -27,10 +28,15 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
   const shareUrl =
   const shareToTwitter = () => {    window.open(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    window.open(
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
       '_blank'
     )
 
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';
@@ -62,6 +68,8 @@ function SocialShareButtons() {
       '_blank');
 
   }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const copy_link = () =>: any {
     // Check condition
 if (return) {
@@ -148,6 +156,11 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
           <span>{btn && btn.label}</span>;
         </Button>;
       ))}
+<<<<<<< HEAD
+=======
+
+      icon: <Twitter className='h - 4 w - 4' />,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       label: 'Twitter',
       on_click: shareToTwitter,
     },
@@ -184,10 +197,13 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
 
   const shareToFacebook = () => {
@@ -200,6 +216,7 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 
   const copyLink = () => {
     if (typeof window === 'undefined') return,
+<<<<<<< HEAD
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
       .catch(() => toast.error('Failed to copy link'))
@@ -255,6 +272,14 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
           <span>{btn.label}</span>;
         </Button>;
       ))}
+=======
+
+    navigator.clipboard
+      .writeText(window.location.href)
+      .then(() => toast.success('Link copied to clipboard'))
+      .catch(() => toast.error('Failed to copy link'))
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </div>;
 <<<<<<< HEAD
   );
@@ -320,3 +345,7 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

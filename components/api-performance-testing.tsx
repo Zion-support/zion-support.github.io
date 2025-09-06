@@ -24,12 +24,16 @@ class ErrorBoundary extends React.Component {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -78,6 +82,9 @@ import { Check, ExternalLink } from "lucide-react";
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function ApiPerformanceTestingPage() {
 
   const features = [
@@ -93,11 +100,16 @@ export default function ApiPerformanceTestingPage() {
   const features = [
     "k6/Gatling-compatible test runner",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "SLO-aware latency reports",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    "SLO-aware latency reports",
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
     "Synthetic traffic for staging",
@@ -179,6 +191,7 @@ export default function ApiPerformanceTestingPage() {
               rel="noreferrer";
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text-cyan-300";
             >;
+<<<<<<< HEAD
               <ExternalLink className="w-4 h-4" /> Gatling OSS;
             </a>;
           </div>;
@@ -187,6 +200,10 @@ export default function ApiPerformanceTestingPage() {
 
 <<<<<<< HEAD
     </>);
+=======
+              <ExternalLink className="w - 4 h - 4" /> Gatling OSS;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <>;
       <SEO;
@@ -205,6 +222,7 @@ export default function ApiPerformanceTestingPage() {
           <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
             {features.map ((f) => (
               <div;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -220,6 +238,9 @@ return (
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <>
       <SEO
         title="API Performance Testing"
@@ -277,6 +298,7 @@ return (
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -461,11 +483,18 @@ return (
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </a>;
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

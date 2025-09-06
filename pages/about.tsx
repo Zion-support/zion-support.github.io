@@ -1,12 +1,152 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 =======
 import Head from 'next/head';
 import Link from 'next/link';
 
+=======
+
+import Layout from '../components/Layout';
+import Layout from '../components/Layout';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { 
+  Brain,
+  Shield,
+  Users,
+  Zap,
+  Target,
+  Award,
+  ChevronRight,
+  CheckCircle,
+  Star,
+  Globe,
+  Code,
+  Database,
+  Cloud,
+  Smartphone,
+  BarChart3,
+  Heart,
+  Lightbulb,
+  Rocket,
+  Lock,
+  TrendingUp;
+} from 'lucide-react';
+
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Brain, Zap, Shield, Users, Target, Globe, Heart, CheckCircle } from 'lucide-react';
+const AboutPage: React.FC = () => {
+  const values = [
+    {
+      icon: Brain,
+      title: "Innovation First",
+      description: "We push the boundaries of what's possible through cutting-edge technology and creative problem-solving.",
+      color: "from-purple-500 to-pink-500"
+    };
+    {
+      icon: Shield,
+      title: "Trust & Security",
+      description: "Building secure, reliable solutions that our clients can depend on for their most critical operations.";
+      color: "from-red-500 to-orange-500"
+    };
+    {
+      icon: Users,
+      title: "Human-Centric",
+      description: "Technology should serve humanity, enhancing human capabilities and improving quality of life.";
+      color: "from-blue-500 to-cyan-500"
+    };
+    {
+      icon: Globe,
+      title: "Global Impact",
+      description: "Creating solutions that address global challenges and benefit communities worldwide.",
+      color: "from-green-500 to-emerald-500"
+    };
+    {
+      icon: Rocket,
+      title: "Excellence",
+      description: "Maintaining the highest standards of quality and performance in everything we deliver.",
+      color: "from-indigo-500 to-purple-500"
+    };
+    {
+      icon: Heart,
+      title: "Integrity",
+      description: "Operating with transparency, honesty, and ethical principles in all our business relationships.";
+      color: "from-pink-500 to-rose-500"
+  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
+  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon;
+  ArrowRight, ChevronRight, MapPin, Mail, Phone, Globe as GlobeIcon
+} from 'lucide-react';
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
+export default function AboutPage() {
+  const stats = [
+    { number: '500+', label: 'Projects Delivered', icon: CheckCircle, color: 'from-blue-500 to-cyan-500' },
+    { number: '50+', label: 'Enterprise Clients', icon: Users, color: 'from-purple-500 to-pink-500' },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield, color: 'from-green-500 to-emerald-500' },
+  const values = [
+    {
+      icon: Brain,
+      title: 'Innovation First',
+    {
+      icon: Shield,
+      title: 'Trust & Security',
+      description: 'Security is at the core of everything we do. We build solutions that protect your business and data with quantum-resistant technology.',
+      color: 'from-red-500 to-orange-500'
+    {
+      icon: Rocket,
+      title: 'Excellence',
+      description: 'We strive for excellence in every project, delivering solutions that exceed expectations and drive measurable business value.',
+    {
+      icon: Users,
+      title: 'Client Success',
+      description: 'Your success is our success. We partner with you to understand your needs and deliver solutions that transform your business.',
+      color: 'from-emerald-500 to-teal-500'
+  const technologies = [
+    { name: 'Artificial Intelligence', icon: Brain, description: 'Advanced AI and machine learning solutions', color: 'from-purple-500 to-pink-500' },
+    { name: 'Quantum Computing', icon: Atom, description: 'Quantum-powered computing and cryptography', color: 'from-blue-500 to-cyan-500' },
+    { name: 'Cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions', color: 'from-red-500 to-orange-500' },
+    { name: 'Edge Computing', icon: Network, description: 'Intelligent edge orchestration platforms', color: 'from-yellow-500 to-orange-500' },
+    { name: 'Space Technology', icon: Rocket, description: 'AI-powered space exploration solutions', color: 'from-indigo-500 to-purple-500' },
+
+    { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  const team = [
+    {
+      name: 'Kleber',
+      role: 'Founder & CEO',
+      description: 'Visionary leader driving innovation in AI and quantum technologies',
+      image: '/api/placeholder/150/150',
+      color: 'from-cyan-500 to-blue-500'
+    },
+    {
+      name: 'AI Team',
+      role: 'AI Research & Development',
+      description: 'Expert engineers and researchers pushing the boundaries of artificial intelligence',
+      image: '/api/placeholder/150/150',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+import React from "react";
+import Layout from "../components/Layout";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function About() {
   return (
+<<<<<<< HEAD
+=======
+    </Layout>;
+
+  );
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <>
       <Head>
         <title>About Us - Zion Tech Group</title>
@@ -203,6 +343,10 @@ export default function About() {
         </section>
       </div>
     </>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -16,7 +16,6 @@ import { useAuth } from "@/hooks/useAuth",
 import { Availability } from "@/types/profile",
 =======
 
-
 import React from 'react';
 import { Handshake, MessageSquare, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -36,7 +35,6 @@ interface TalentProfileProps {;
   profile: TalentProfileType;
   onRequestHire: () => void;
   onMessageTalent?: () => void
-
 
 export function TalentProfile(): any ({;
   profile,;
@@ -84,7 +82,6 @@ export function TalentProfile(): any ({;
         rating={profile && profile.average_rating}
         reviewCount={profile && profile.rating_count}      />;
 
-
       {/* Main content area */}
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8'>;
         {/* Left Column - Skills & Info */}
@@ -97,7 +94,6 @@ export function TalentProfile(): any ({;
             profileName={profile && profile.full_name}
             profileType='talent'          />;
         </div>;
-
 
         {/* Right Column - Bio & Projects */}
         <div className='lg:col-span-2 space-y-8'>;
@@ -133,6 +129,7 @@ export function TalentProfile({
   
   // Create proper availability object from talent profile
   const availability: Availability = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -236,22 +233,14 @@ export function TalentProfile({;
   return (;
     <div className="container mx-auto px-4 py-8">;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Profile Header */}
       <ProfileHero;
         name={profile.full_name}
         title={profile.professional_title}
-<<<<<<< HEAD
-        avatar_url={profile.profile_picture_url}
-        profile_type='talent';
-        rating={profile.average_rating}
-        review_count={profile.rating_count}      />;
-=======
-        avatarUrl={profile.profile_picture_url}
-        profileType="talent"
-        rating={profile.average_rating}
-        reviewCount={profile.rating_count}
-      />;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       {/* Main content area */}
 <<<<<<< HEAD
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
@@ -291,7 +280,6 @@ export function TalentProfile({;
 
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />;
-
 
           {/* Ratings Section */}
           <div className='bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6'>
@@ -385,8 +373,11 @@ export function TalentProfile({
   onMessageTalent
 }: TalentProfileProps) {
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {/* Left Column - Skills & Info */}
         <div className="space-y-8">
           <ProfileSkills skills={skillsArray} />
@@ -438,8 +429,11 @@ export function TalentProfile({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <div className="flex flex-wrap gap-4 justify-center">
                   <Button 
                     size="lg" 
@@ -468,9 +462,12 @@ export function TalentProfile({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>;
       </div>;
     </div>;
@@ -478,8 +475,6 @@ export function TalentProfile({
 }
 <<<<<<< HEAD
 =======
-
-
 
                 </p>;
                 <div className='flex flex - wrap gap - 4 justify - center'>;

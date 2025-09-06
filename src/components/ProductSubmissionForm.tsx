@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import {
 
@@ -222,6 +223,9 @@ try {
       // Create the product listing;
       const product_data = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         title: values.title,
 =======
       const productData = {        title: values.title,
@@ -362,17 +366,21 @@ import Image from 'next/image'; // Import next/image;
 import { logErrorToProduction } from '@/utils/productionLogger';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       const { data: productRecord, error: productError } = await supabase
         .from('product_listings')
         .insert([productData])
         .select('id')
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         .single(),
 =======
           name: user.displayName || "Anonymous Creator",
@@ -400,6 +408,7 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
+<<<<<<< HEAD
   FormMessage} from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
@@ -436,10 +445,14 @@ export function ProductSubmissionForm() {;
   const [isSubmitting, setIsSubmitting] = React.useState(false),;
   const [imagePreview, setImagePreview] = React.useState(null as string | null),;
   const [activeTab, setActiveTab] = React.useState("manual"),;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
     resolver: zodResolver(productSchema),;
     defaultValues: {;
+<<<<<<< HEAD
 <<<<<<< HEAD
       title: "",;
       description: "",;
@@ -506,12 +519,16 @@ export function ProductSubmissionForm() {;
           name: user.displayName || "Anonymous Creator",;
           id: user.id},;
         createdAt: new Date().toISOString()},;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       const { data: productRecord, error: productError } = await supabase;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         .from('product_listings');
         .insert([productData]);
         .select('id');
+<<<<<<< HEAD
         .single(),;
       if (productError) {;
 <<<<<<< HEAD
@@ -558,10 +575,14 @@ export function ProductSubmissionForm() {;
         imagePublicUrl = publicUrlData && publicUrlData.publicUrl;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         // Update the product with the image URL;
         const { error: updateError } = await supabase;
           .from('product_listings');
           .update({;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             images: [imagePublicUrl];
@@ -696,30 +717,40 @@ export function ProductSubmissionForm() {;
             sellerId: user && user.id,;
           },;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         });
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       } catch (err) {;
         logErrorToProduction('Error invoking moderation:', { data: err });
       }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Show success message
       toast({
         title: "Product Published!",
         description: "Your product has been successfully published on Zion."}),
+<<<<<<< HEAD
       
+=======
+
+      // Redirect to product page
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       router.push(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
       toast({
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
         title: 'Publication Failed',
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         description:
           error instanceof Error ? error.message : 'An unknown error occurred'
         variant: 'destructive'
@@ -738,6 +769,7 @@ export function ProductSubmissionForm() {;
   },
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -840,6 +872,13 @@ export function ProductSubmissionForm() {;
                         onChange={onChange}
                         onBlur={onBlur}
                         value={value}
+=======
+
+                  <FormItem>
+                    <FormLabel>Product Title</FormLabel>
+                    <FormControl>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         ref={ref}
 =======
 
@@ -878,7 +917,10 @@ export function ProductSubmissionForm() {;
 <<<<<<< HEAD
                       className="min-h-32";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       {...field}
                     />;
                   </FormControl>;
@@ -888,6 +930,7 @@ export function ProductSubmissionForm() {;
                   <FormMessage />;
                 </FormItem>;
               )}
+<<<<<<< HEAD
             />
 <<<<<<< HEAD
 =======
@@ -904,6 +947,9 @@ export function ProductSubmissionForm() {;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <FormLabel>Price (USD)</FormLabel>
                     <FormControl>
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />
@@ -913,9 +959,8 @@ export function ProductSubmissionForm() {;
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             />;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
@@ -923,6 +968,8 @@ export function ProductSubmissionForm() {;
                 control={form.control}
                 name="price";
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <FormItem>;
                     <FormLabel>Price (USD)</FormLabel>;
 =======
@@ -997,6 +1044,7 @@ export function ProductSubmissionForm() {;
                   </FormItem>;
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               />;
 
@@ -1035,6 +1083,10 @@ export function ProductSubmissionForm() {;
               />;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+              />;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <FormField;
                 control={form.control}
                 name="category"
@@ -1060,9 +1112,13 @@ export function ProductSubmissionForm() {;
                   </FormItem>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 name="category";
 =======
             <FormField
@@ -1092,6 +1148,7 @@ export function ProductSubmissionForm() {;
               />;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <FormField;
               control={form.control}
               name="tags"
@@ -1110,6 +1167,8 @@ export function ProductSubmissionForm() {;
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "tags"> }) => (;
                 <FormItem>;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             <FormField
               control={form && form.control}
@@ -1119,12 +1178,16 @@ export function ProductSubmissionForm() {;
             </div>;
             <FormField;
 <<<<<<< HEAD
+<<<<<<< HEAD
               control={form.control}
 
               name="tags"
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "tags"> }) => (
                 <FormItem>
 
+=======
+              control={form.control}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                   <FormLabel>Tags</FormLabel>
                   <FormControl>
@@ -1135,6 +1198,7 @@ export function ProductSubmissionForm() {;
                   </FormControl>
                   <FormDescription>
 
+<<<<<<< HEAD
                 field: ControllerRenderProps<ProductFormValues, 'tags'>;
               }) => (                <FormItem>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1144,11 +1208,14 @@ export function ProductSubmissionForm() {;
                   </FormControl>;
                   <FormDescription>;
                     Add relevant tags to help users find your product (e.g., ai, productivity, design);
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </FormDescription>;
                   <FormMessage />;
                 </FormItem>;
               )}
             />;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <FormField;
               control={form.control}
@@ -1175,10 +1242,14 @@ export function ProductSubmissionForm() {;
                 </FormItem>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               render={() => (
                 <FormItem>
                   <FormLabel>Product Image</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1194,6 +1265,10 @@ export function ProductSubmissionForm() {;
                       accept='image/*'
                       onChange={handleImageChange}                    <Input 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+                    <Input 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       type="file" 
                       accept="image/*" 
                       onChange={handleImageChange}
@@ -1203,10 +1278,13 @@ export function ProductSubmissionForm() {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </FormControl>
                   <FormDescription>
                     Upload a high-quality image of your product (recommended size: 1200x800px)
@@ -1214,11 +1292,14 @@ export function ProductSubmissionForm() {;
                   <FormMessage />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   
                   {imagePreview && (
                     <div className="mt-2 w-full max-w-md border rounded overflow-hidden">
                       <AspectRatio ratio={3/2}>
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         <Image
 =======
                   {imagePreview && (
@@ -1226,6 +1307,7 @@ export function ProductSubmissionForm() {;
                       <AspectRatio ratio={3/2}>                        <Image
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           src={imagePreview}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1249,6 +1331,9 @@ export function ProductSubmissionForm() {;
                       </AspectRatio>
 <<<<<<< HEAD
                     </div>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   )}
 =======
                     </div>                  )}
@@ -1382,6 +1467,7 @@ export function ProductSubmissionForm() {;
                 disabled={isSubmitting}
                 className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {isSubmitting ? 'Publishing...' : 'Publish Product'}
 
 
@@ -1396,6 +1482,10 @@ export function ProductSubmissionForm() {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                {isSubmitting ? 'Publishing...' : 'Publish Product'}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <FormItem>
                   <FormLabel>Product Video (MP4)</FormLabel>
                   <FormControl>
@@ -1407,10 +1497,11 @@ export function ProductSubmissionForm() {;
                   <FormMessage />
                 </FormItem>
               )}
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             />;
             <FormField;
               control={form.control}
@@ -1430,6 +1521,7 @@ export function ProductSubmissionForm() {;
             />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="flex justify-end">
               <Button 
                 type="submit" 
@@ -1443,11 +1535,14 @@ export function ProductSubmissionForm() {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </Button>
             </div>
           </form>
         </Form>
       </TabsContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
       
       <TabsContent value="ai">
@@ -1651,6 +1746,8 @@ const {
 const {
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   error: update_error ';
 }= await supabase .from ('product listings');
@@ -1665,8 +1762,6 @@ const {
 }finally {
   setIsSubmitting (false);
 
-
-      
       <TabsContent value="ai">
         <AIListingGenerator 
           onApplyGenerated={handleApplyGenerated}
@@ -1679,7 +1774,9 @@ const {
     </Tabs>;
   );
 
+}
 
+<<<<<<< HEAD
 }
 }className="w - full"> <TabsList className="grid grid - cols - 2 mb - 6" > <TabsTrigger value="manual" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple" > ai"className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple"> <Sparkles className="h - 4 w - 4 mr - 2"/> AI - Powered Creation </TabsTrigger> </TabsList>;
 }";
@@ -1709,3 +1806,5 @@ const {
 =======
                 {isSubmitting ? 'Publishing...' : 'Publish Product'}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

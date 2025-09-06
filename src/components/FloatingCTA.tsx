@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
-import { Button } from "@/components/ui/button",
 
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -10,12 +8,15 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { X } from 'lucide-react'
 
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
   // TODO: Add dependencies if needed
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -69,6 +70,21 @@ import { useState, useEffect } from "react"export function FloatingCTA() {
   const [isClosed, setIsClosed] = useState(false),
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+
+export function FloatingCTA() {
+
+import { Button } from "@/components/ui/button",
+import Link from "next/link",
+import { useState, useEffect } from "react",
+import { X } from 'lucide-react'
+
+export function FloatingCTA() {
+  const [isVisible, setIsVisible] = useState(false),
+  const [isClosed, setIsClosed] = useState(false),
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY,
@@ -76,11 +92,14 @@ import { useState, useEffect } from "react"export function FloatingCTA() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       if (scrollPosition > threshold && !isClosed) {
         setIsVisible(true)
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       } else {
         setIsVisible (false);
       }
@@ -94,9 +113,12 @@ import { useState, useEffect } from "react"export function FloatingCTA() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">
@@ -113,17 +135,22 @@ import { useState, useEffect } from "react"export function FloatingCTA() {
           >
             <Link href="/signup">Register Now</Link>
           </Button>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <button 
             onClick={handleClose}
             className="text-zion-slate hover: text-white p-1"
             aria-label="Close"
           >
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <X className="w-5 h-5" />
           </button>
         </div>
@@ -131,6 +158,16 @@ import { useState, useEffect } from "react"export function FloatingCTA() {
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+            aria-label='Close'           aria-label="Button">;
+            <X className='w-5 h-5' />          </button>;
+            <X className="w-5 h-5" />;
+
+;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Button } from "@/components/ui/button",;
 import Link from "next/link",;
 import { useState, useEffect } from "react",;
@@ -179,11 +216,15 @@ export function FloatingCTA() {;
             className="text-zion-slate hover: text-white p-1";
             aria-label="Close";
           >;
+<<<<<<< HEAD
             <X className="w-5 h-5" />;
 =======
 
             aria-label='Close'           aria-label="Button">;
             <X className='w-5 h-5' />          </button>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <X className="w-5 h-5" />;
 
 ;
@@ -258,6 +299,7 @@ export function FloatingCTA() {;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 
@@ -330,3 +372,6 @@ return (<div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

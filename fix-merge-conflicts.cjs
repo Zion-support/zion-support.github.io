@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,78 +67,26 @@ function resolveMergeConflicts(filePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+const fs = require('fs');
+const path = require('path');
+
+function fixMergeConflicts(filePath) {
+  try {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD')) {
-      return false;
-    }
-    
-    console.log(`Fixing merge conflicts in: ${filePath}`);
-    
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Remove merge conflict markers and keep the second version (after =======)
-=======
-<<<<<<< HEAD
-    // Remove merge conflict markers and keep the content after the last =======
->>>>>>> main
-=======
-    // Remove merge conflict markers and keep the second version (after =======)
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
-    const lines = content.split('\n');
-    const fixedLines = [];
-    let inConflict = false;
-    let keepContent = false;
-
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
-      if (line.includes('<<<<<<< HEAD')) {
-        inConflict = true;
-        keepVersion = false;
-        continue;
-      }
-      
-      if (line.includes('=======')) {
-        keepVersion = true;
-        continue;
-      }
-      
-      if (line.includes('>>>>>>>')) {
-        inConflict = false;
-        keepVersion = false;
-        continue;
-      }
-      
-      if (!inConflict || keepVersion) {
-        fixedLines.push(line);
-      }
-    }
-    
-    const fixedContent = fixedLines.join('\n');
-    fs.writeFileSync(filePath, fixedContent, 'utf8');
-    return true;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-<<<<<<< HEAD
-=======
-=======
-    // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/<<<<<<< HEAD\n?/g, '');
-    content = content.replace(/=======.*?\n?/g, '');
-    content = content.replace(/>>>>>>> [a-f0-9]+.*?\n?/g, '');
+    // Remove all merge conflict markers and keep the first version
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
     
     // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< .*?\n?/g, '');
-    content = content.replace(/=======.*?\n?/g, '');
-    content = content.replace(/>>>>>>> .*?\n?/g, '');
+    content = content.replace(/<<<<<<< HEAD/g, '');
+    content = content.replace(/=======/g, '');
+    content = content.replace(/>>>>>>> [^\n]+/g, '');
     
+<<<<<<< HEAD
     // Write the cleaned content back
     fs.writeFileSync(filePath, content, 'utf8');
     return true;
@@ -368,9 +317,20 @@ function findFilesWithConflicts(dir) {
       console.log(`✅ Fixed merge conflicts in: ${filePath}`);
       return true;
     }
+=======
+    // Clean up multiple empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
-    return false;
+    // Clean up any orphaned text
+    content = content.replace(/^\s*origin\/[^\n]+\n/gm, '');
+    content = content.replace(/^\s*cursor\/[^\n]+\n/gm, '');
+    content = content.replace(/^\s*main\n/gm, '');
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
   } catch (error) {
+<<<<<<< HEAD
     console.error(`❌ Error processing ${filePath}:`, error.message);
     return false;
   }
@@ -436,12 +396,34 @@ function processDirectory(dir) {
           // Skip files/directories that can't be accessed
           console.log(`⚠️  Skipping ${fullPath}: ${error.message}`);
         }
+=======
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
+
+function findAndFixFiles(dir) {
+  const files = fs.readdirSync(dir);
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      if (!['node_modules', '.git', '.next', 'backup', 'pages_backup_conflict'].includes(file)) {
+        findAndFixFiles(filePath);
+      }
+    } else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
+      const content = fs.readFileSync(filePath, 'utf8');
+      if (content.includes('<<<<<<< HEAD')) {
+        fixMergeConflicts(filePath);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
     } catch (error) {
       // Skip directories that can't be read
       console.log(`⚠️  Skipping directory ${currentPath}: ${error.message}`);
     }
   }
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -622,3 +604,12 @@ console.log('Merge conflict fixing completed!');
   console.log('\n✅ No merge conflicts found in the codebase.');
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+
+console.log('Fixing merge conflicts...');
+findAndFixFiles('./pages');
+findAndFixFiles('./components');
+findAndFixFiles('./src');
+console.log('Done!');
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

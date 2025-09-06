@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -59,22 +60,29 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
   }
 =======
 "feedback": {
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     id: "feedback"
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
     adminOnly: false
     icon: "FileText"
 
+<<<<<<< HEAD
 
   },
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   "announcements": {
     id: "announcements"
     name: "Announcements"
     description: "Official announcements from the Zion team."
     adminOnly: true
     icon: "Megaphone"
+<<<<<<< HEAD
 import { log_info } from '@/utils / production_logger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 // Mock category data;
@@ -108,33 +116,44 @@ function CategoryContent({
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   user}: {
   categoryId: string,
   category: ForumCategoryInfo,
   IconComponent: React.ComponentType<any>,
   user: any
 }) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [searchQuery, setSearchQuery] = useState(""),
   const { featuredPosts, recentPosts } = useCommunity(),
 
   // Filter posts by category from context data
   const categoryPosts = [
     ...featuredPosts.filter(post => post.categoryId === categoryId),
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self) => 
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   // Apply search filter
   const filteredPosts = searchQuery 
@@ -143,10 +162,11 @@ function CategoryContent({
         post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
+
 <<<<<<< HEAD
+
 =======
-
-
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
@@ -158,9 +178,12 @@ function CategoryContent({
   const { isFollowed, follow, unfollow } = useFollowedCategories(),
   const { toast } = useToast(),
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
@@ -168,14 +191,16 @@ function CategoryContent({
 <<<<<<< HEAD
 =======
 
-
 import React from 'react';
 import { logInfo } from '@/utils/productionLogger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 import { logInfo } from '@/utils/productionLogger';
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect } from "react",;
 import Link from "next/link",;
 import { useRouter } from "next/router",;
@@ -203,13 +228,18 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {;
     description: "Tips, strategies, and questions about getting hired on the platform.",;
     adminOnly: false,;
     icon: "Briefcase";
+<<<<<<< HEAD
   },;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   "project-help": {;
     id: "project-help",;
     name: "Project Help",;
     description: "Get help with your ongoing projects and collaboration.",;
     adminOnly: false,;
     icon: "MessageSquare";
+<<<<<<< HEAD
   },;
   "ai-tools": {;
     id: "ai-tools",;
@@ -218,13 +248,20 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {;
     adminOnly: false,;
     icon: "Code";
   },;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   "feedback": {;
     id: "feedback",;
     name: "Feedback & Feature Requests",;
     description: "Share your feedback and suggest new features.",;
     adminOnly: false,;
     icon: "FileText";
+<<<<<<< HEAD
   },;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   "announcements": {;
     id: "announcements",;
     name: "Announcements",;
@@ -232,6 +269,7 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {;
     adminOnly: true,;
     icon: "Megaphone";
   }
+<<<<<<< HEAD
 },;
 const iconMap = {;
   "Briefcase": Briefcase,;
@@ -293,6 +331,9 @@ function CategoryContent({;
 
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     if (isFollowed(categoryId)) {
       unfollow(categoryId)
@@ -300,16 +341,20 @@ function CategoryContent({;
       follow(categoryId)
     }
 
+<<<<<<< HEAD
   };
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   logInfo('CategoryContent - categoryId:', { data: categoryId }),;
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),;
   logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const category = categoryId ? categoriesInfo[categoryId] : null;
   const IconComponent = category ? iconMap[category && category.icon as keyof typeof iconMap] : null;
 
 }
+<<<<<<< HEAD
 =======
 import React from "react";
 import MainLayout from "../components/layout/MainLayout";
@@ -456,3 +501,9 @@ export default function ForumCategoryPage() {;
 =======
 export default ForumCategoryPage;
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+  );
+
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

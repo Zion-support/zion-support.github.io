@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Download } from 'lucide-react';
 
+<<<<<<< HEAD
 interface Resume {
   id: string;
   title: string,
@@ -30,9 +24,12 @@ interface ResumePreviewCardProps {
 }
 
 export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePreviewCardProps) {
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
       <CardContent className="p-4">
+<<<<<<< HEAD
         <div className="flex justify-between items-start mb-2">
           <div>
             <h4 className="font-medium text-white">{resume.basic_info.title}</h4>
@@ -185,3 +182,6 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
 };
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

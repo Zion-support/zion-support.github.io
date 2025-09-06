@@ -156,6 +156,7 @@ export function MobileConversationList({
               activeConversation === conversation.id && "bg-primary/5"
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
             onClick={() => onSelectConversation(conversation.id)}
           >
             <div className="flex items-center gap-3 py-3 cursor-pointer">
@@ -170,6 +171,10 @@ export function MobileConversationList({
             <div className='flex items-center gap-3 py-3 cursor-pointer'>;
               <Avatar>;                <AvatarImage
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+                <AvatarImage
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <AvatarFallback>
@@ -219,12 +224,15 @@ export function MobileConversationList({
           </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="flex-1 min-w-0">
                 <div className="flex justify-between items-baseline">
                   <h3 className="font-medium truncate">{conversation.name}</h3>
@@ -241,7 +249,10 @@ export function MobileConversationList({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </p>
                   
                   {conversation.unreadCount > 0 && (
@@ -249,17 +260,23 @@ export function MobileConversationList({
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   )}
                 </div>
               </div>
@@ -269,10 +286,13 @@ export function MobileConversationList({
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className="border-t border-border ml-12"></div>
           </div>
         ))}

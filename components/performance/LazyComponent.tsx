@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Suspense } from 'react';
 
 interface LazyComponentProps {
@@ -19,17 +20,23 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 export default LazyComponent;
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 <<<<<<< HEAD
 =======
 import React from 'react'
 }
 import React, { Suspense, lazy } from 'react';
+<<<<<<< HEAD
 =======
 import React, { Suspense, ReactNode } from 'react';
 import LoadingSpinner from '../LoadingSpinner';
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -44,6 +51,7 @@ import LoadingSpinner from '../LoadingSpinner';
 interface LazyComponentProps {
   children: ReactNode;
   fallback?: ReactNode;
+<<<<<<< HEAD
   [key: string]: unknown
 }
 
@@ -154,3 +162,8 @@ export default LazyComponent;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  return (
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

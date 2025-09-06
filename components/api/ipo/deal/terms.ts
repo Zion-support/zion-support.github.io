@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -13,12 +14,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     target: '$10,000,000',
     valuationCap: '$80,000,000',
     discount: '20%',
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   });
   res && res.status(200).json(terms);export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
     target: '$10,000,000';
     valuationCap: '$80,000,000';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     discount: '20%'
 <<<<<<< HEAD
@@ -54,6 +59,10 @@ leadInvestor: 'TBD'});
     leadInvestor: 'TBD'});
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    leadInvestor: 'TBD'});
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { readJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 export default /**
@@ -84,6 +93,7 @@ function handler() {
     discount: '20%',
     lead_investor: 'TBD'});
   res.status (200).json (terms);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -143,3 +153,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     discount: '20%'    leadInvestor: 'TBD'});
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

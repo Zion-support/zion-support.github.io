@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { GradientHeading } from "./GradientHeading",
 import Link from "next/link",
@@ -24,6 +25,9 @@ interface CategoryType {
 
 // Default static categories with translation keys
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
   {
     title: "Comprehensive Services"
@@ -35,11 +39,14 @@ interface CategoryType {
 }
 // Default static categories with translation keys
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const getDefaultCategories = (t: any) => [
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     id: "services",
     name: t('categories.services'),
@@ -57,6 +64,7 @@ const getDefaultCategories = (t: any) => [
     link: "/services",
     color: "from-purple-500 to-indigo-600", // Keep color for styling
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -67,6 +75,9 @@ const getDefaultCategories = (t: any) => [
   },
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     id: "talents",
     name: t('categories.talents'),
@@ -82,6 +93,7 @@ const getDefaultCategories = (t: any) => [
     link: "/equipment",
     color: "from-amber-500 to-orange-600"},
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -301,6 +313,8 @@ export function CategoriesSection({
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -318,6 +332,7 @@ export function CategoriesSection({
         color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
 <<<<<<< HEAD
+<<<<<<< HEAD
         ...cat,
 =======
 
@@ -327,6 +342,9 @@ export function CategoriesSection({
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         title: cat.name,
         icon: getIcon(cat.iconName)})),
 
@@ -347,7 +365,6 @@ export function CategoriesSection({
       </section>;
     );
 =======
-
 
 import React from 'react';
         color: defaultCategories && defaultCategories.find(dc => dc && dc.id === cat && cat.id)?.color || "from-gray-500 to-gray-600"}));
@@ -504,14 +521,19 @@ export function CategoriesSection(): any ({;
             {t('home && home.no_categories_desc')}
           </p>;
           <p className="text-zion-slate-light text-md">;
+<<<<<<< HEAD
             {t('home && home.no_categories_support')}
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </p>;
         </div>;
       </section>;
     );
 
+<<<<<<< HEAD
 
 
 
@@ -542,6 +564,21 @@ export function CategoriesSection(): any ({;
             <Link
               key={category.id}
               href={category.link || '#'}
+=======
+  }
+  return (
+    <section className={cn("py-20 bg-zion-blue", className)} style={style}>;
+      <div className="container mx-auto px-4">;
+        {showTitle && (;
+          <div className="text-center mb-16">;
+            <GradientHeading>{t('home && home.categories_title')}</GradientHeading>;
+            <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">;
+              {t('home && home.categories_subtitle')}
+            </p>;
+          </div>;
+        )}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             >
               <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
@@ -556,15 +593,20 @@ export function CategoriesSection(): any ({;
             </Link>
           ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {/* Special services section with translations */}
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
           <div className="flex flex-wrap justify-center gap-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -592,6 +634,9 @@ export function CategoriesSection(): any ({;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="mt-12 flex justify-center">
           <Link 
             href="/categories/all"
@@ -599,6 +644,7 @@ export function CategoriesSection(): any ({;
           >
 <<<<<<< HEAD
             {t('home.view_all_categories')}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </Link>;
         </div>;
@@ -609,12 +655,18 @@ export function CategoriesSection(): any ({;
 =======
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   t ;
 }= useTranslation ();
 const defaultCategories = getDefaultCategories (t);
 //Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: cat.id;"
 title: cat.name,  //Map name to title description: cat.description |"No description available."
 icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {
@@ -642,6 +694,7 @@ icon: getIcon (cat.iconName)
 }</Link> </div> </div> </section>)
 }'"}
 
+<<<<<<< HEAD
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
           {displayCategories && displayCategories.map((category,) => (;
             <Link
@@ -833,3 +886,5 @@ if ( {) {
 =======
             {t('home.view_all_categories')}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

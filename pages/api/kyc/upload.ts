@@ -38,13 +38,15 @@ const FILE = path.join(DATA_DIR, 'profiles.json');
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-
 const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'kyc');const FILE = path && path.join(DATA_DIR, 'profiles && profiles.json');
 const DATA_DIR = path.join(process.cwd(), 'datakyc');
 const FILE = path.join(DATA_DIR, 'profiles.json');
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
@@ -82,6 +84,7 @@ function load(): Record<string, KycProfile> {
 
   const uploadedAt = new Date().toISOString();
   const doc: KycDocumentMeta = {
+<<<<<<< HEAD
     id
     kind
     filename
@@ -110,6 +113,8 @@ const db = load();
     id,
     kind,
     filename,
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     uploadedAt};
   // Replace or add

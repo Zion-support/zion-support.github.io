@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -29,21 +30,22 @@ import {
   Users, 
   CheckCircle, 
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Calendar,
   Clock,
   Users,
   CheckCircle,
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
   ArrowRight,
   Phone,
   Mail,
   MapPin,
   Video,
   MessageSquare,
-<<<<<<< HEAD
-  Building
-} from 'lucide-react';
 
+<<<<<<< HEAD
 const timeSlots = [
   { time: "9:00 AM", available: true, type: "Video Call" },
   { time: "9:30 AM", available: true, type: "Phone Call" },
@@ -541,10 +543,13 @@ const consultationTypes = [
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   {
     title: "Technical Consultation",
     duration: "60 minutes",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -580,10 +585,14 @@ const consultationTypes = [
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   {
     title: "Strategy Session",
     duration: "90 minutes",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -631,10 +640,14 @@ const teamMembers = [
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     name: "Sarah Johnson",
     role: "CEO & Founder",
     expertise: "Strategic Planning, AI Strategy",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     image: "/images / team / sarah - johnson.jpg",
@@ -656,6 +669,9 @@ const teamMembers = [
     available: true,
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   {
     name: "Michael Chen",
@@ -663,6 +679,7 @@ const teamMembers = [
     expertise: "Cloud Architecture, Quantum Computing",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     image: "/images / team / michael - chen.jpg",
     available: true,
 =======
@@ -682,6 +699,9 @@ const teamMembers = [
     available: true,
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   {
     name: "Dr. Emily Rodriguez",
@@ -689,6 +709,7 @@ const teamMembers = [
     expertise: "Machine Learning, AI Research",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     image: "/images / team / emily - rodriguez.jpg",
     available: false,
 =======
@@ -708,11 +729,15 @@ const teamMembers = [
     available: false,
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   {
     name: "David Kim",
     role: "Head of Cybersecurity",
     expertise: "Cybersecurity, Risk Management",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1785,4 +1810,7 @@ function CalendarPage() {
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }

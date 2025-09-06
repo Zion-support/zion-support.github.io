@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import { format } from "date-fns",
 import { Calendar } from "@/components/ui/calendar",
@@ -12,6 +16,7 @@ interface TimelineStepProps {
   updateFormData: (data: Partial<QuoteFormData>) => void
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
@@ -79,6 +84,11 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
             </div>
             
             <div 
+=======
+export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
+  return (
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.timeline === "flexible" 
                   ? "bg-zion-purple/20 border-zion-purple" 
@@ -100,6 +110,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
 =======
               onClick={() => updateFormData({ timeline: 'flexible' })}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -167,6 +178,45 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
               </p>;
             </div>;
           </div>;              <div>
+=======
+          {formData.timeline === "fixed" && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+
+              <div>
+                <Label className='block mb-2 text-zion-slate-light'>
+                  Start Date
+                </Label>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button
+
+                I'm flexible on the timing;
+              </p>;
+            </div>;
+          </div>;
+
+                      )}
+                    >
+                      <CalendarIcon className="mr-2 h-4 w-4" />
+                      {formData.startDate ? format(formData.startDate, "PPP") : <span>Pick a date</span>}
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0 bg-zion-blue-dark border border-zion-blue-light" align="start">
+                    <Calendar
+
+                      mode="single"
+                      selected={formData.startDate}
+                      onSelect={(date) => updateFormData({ startDate: date })}
+                      initialFocus
+                      className="p-3 pointer-events-auto"
+
+                    />
+                  </PopoverContent>
+                </Popover>
+              </div>
+
+              <div>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Label className='block mb-2 text-zion-slate-light'>
                   End Date
                 </Label>
@@ -211,6 +261,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                 </Popover>;
               </div>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       variant="outline"
                       className={cn(
@@ -254,6 +305,9 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
 };
 }                      className="p-3 pointer-events-auto"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                      className="p-3 pointer-events-auto"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { format } from "date-fns",;
 import { Calendar } from "@/components/ui/calendar",;
 import { Button } from "@/components/ui/button",;
@@ -392,12 +446,20 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                   </PopoverContent>;
                 </Popover>;
               </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </div>)}
         </div>;
       </div>;
     </div>);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+<<<<<<< HEAD
                       selected={formData.endDate}
                       onSelect={date => updateFormData({ endDate: date })}
                       initialFocus
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card",
@@ -5,6 +6,20 @@ import { Badge } from "@/components/ui/badge",
 import { ProfileProject } from "@/types/profile",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 =======
+=======
+<img
+                  src={project && project.imageUrl}
+                  alt={project && project.title}
+                  className='w-full h-full object-cover'
+                  loading='lazy'                />;
+              </AspectRatio>;
+            ) : (;
+              <div className='h-40 w-full flex items-center justify-center bg-zion-blue'>;
+                <FileText className='text-zion-purple h-12 w-12 opacity-50' />;
+              </div>;
+            )}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <CardContent className='p-4'>;
               <h4 className='text-white font-medium mb-2'>{project && project.title}</h4>;
               <p className='text-zion-slate text-sm mb-3 line-clamp-2'>;
@@ -49,10 +64,13 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
             {project.imageUrl ? (
               <AspectRatio ratio={16/9}>
@@ -66,10 +84,13 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </AspectRatio>
             ) : (
               <div className="h-40 w-full flex items-center justify-center bg-zion-blue">
@@ -77,7 +98,10 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
               </div>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             <CardContent className='p-4'>
               <h4 className='text-white font-medium mb-2'>{project.title}</h4>
@@ -129,7 +153,10 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   src={project.imageUrl}
                   alt={project.title}
                   className="w-full h-full object-cover";
@@ -144,8 +171,6 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 <<<<<<< HEAD
 =======
 
-            
-
             <CardContent className="p-4">
               <h4 className="text-white font-medium mb-2">{project.title}</h4>
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>
@@ -158,6 +183,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
             <CardContent className="p-4">;
+<<<<<<< HEAD
               <h4 className="text-white font-medium mb-2">{project && project.title}</h4>;
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project && project.description}</p>;
 
@@ -180,6 +206,17 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 
               
 
+=======
+
+                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
+                      {tag}
+                    </Badge>;
+
+                  ))}
+
+              )}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className='text-xs text-zion-slate-light mt-2'>                {project.date}              
 
               <div className="text-xs text-zion-slate-light mt-2">

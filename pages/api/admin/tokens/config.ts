@@ -22,6 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json(getConfig())
   }
   if (req.method === "POST") {
+<<<<<<< HEAD
     const body = req.body || {},
     const current = tokenStore.getConfig(),
     const updated = { ...current, ...body },
@@ -123,3 +124,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(405).json({ error: "Method not allowed" })
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+    return res.status(200).json(updated)
+  }
+  return res.status(405).json({ error: "Method not allowed" })
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

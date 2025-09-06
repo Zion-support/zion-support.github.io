@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -169,6 +170,9 @@ export const getTypeIcon = (type: NotificationType) => {;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return <span className="text-gray-500">📣</span>;
   }
 },;
@@ -191,6 +195,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
     if (notification.action_url) {;
       router.push(notification.action_url), // Changed to router.push;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -422,6 +427,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
           )}
           
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
@@ -437,6 +445,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
               <p>Dismiss</p>
             </TooltipContent>
           </Tooltip>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -528,3 +537,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

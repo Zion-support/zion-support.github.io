@@ -3,6 +3,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 =======
@@ -585,6 +586,9 @@ const Home: React.FC = () => {
         <Footer />
         <BackToTopButton />
       </motion.div>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </div>
 =======
     { number: "500+", label: "Projects Completed" },
@@ -595,7 +599,11 @@ const Home: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+const Home: React.FC = () => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const features = [
     {
       icon: <Zap className="w-6 h-6" />,
@@ -664,6 +672,7 @@ const Home: React.FC = () => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
   return (
+<<<<<<< HEAD
     <>
       <SEO
         title="Zion Tech Group - AI & Technology Solutions"
@@ -891,6 +900,9 @@ const Home: React.FC = () => {
 =======
       </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </div>
 =======
       </div>
@@ -908,8 +920,11 @@ const Home: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Home;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 export default Home;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

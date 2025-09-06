@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
 
@@ -6,6 +7,9 @@ import { randomUUID } from 'crypto';
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from 'next',;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { randomUUID } from 'crypto',;
 type Note = {
   id: string,
@@ -14,6 +18,7 @@ type Note = {
   text: string,
   authorId: string,
   createdAt: number
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 const notesStore: Note[] = []
@@ -251,3 +256,7 @@ export function getAllNotes(): Note[] {
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt)
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

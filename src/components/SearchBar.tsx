@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react',;
 import { useRouter } from 'next/router',;
 =======
 import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react'; import { Input } from '@/components/ui/input'; import { Search, X } from 'lucide-react'
 import { Input } from '@/components/ui/input'
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import { Search, X } from 'lucide-react'
 import { Input  } from '@/components/ui/input';
@@ -13,6 +16,11 @@ import { fireEvent  } from '@/lib/analytics';
 import { SearchSuggestion  } from '@/types/search';
 import { slugify  } from '@/lib/slugify';
 import { useDebounce  } from '@/hooks/useDebounce';
+<<<<<<< HEAD
+=======
+
+import { useOnClickOutside } from '@/hooks/useOnClickOutside';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 /**
  * SearchBar component props
  */
@@ -30,16 +38,20 @@ interface SearchBarProps {
    * @param {string} val - The new value of the search input
    */
 
+<<<<<<< HEAD
   onChange: (val: string) => void;  /**
    * Function to call when a suggestion is selected
    * @param {SearchSuggestion} suggestion - The selected suggestion
    */  onChange: (val: string,) => void
   onChange: (val: string) => void
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   /**
    * Function to call when a suggestion is selected
    * @param {SearchSuggestion} suggestion - The selected suggestion
    */
 
+<<<<<<< HEAD
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void
   /**
    * The placeholder text for the search input
@@ -48,19 +60,30 @@ interface SearchBarProps {
 /**
  * SearchBar component that allows users to search for content.
  */  onSelectSuggestion?: (suggestion: SearchSuggestion) => void
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   /**
    * The placeholder text for the search input
    */
   placeholder?: string
 }
+<<<<<<< HEAD
 /**
  * SearchBar component that allows users to search for content.
  */
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   value,
   onChange,
   onSelectSuggestion,;
   placeholder = 'Search...';
+<<<<<<< HEAD
 export function SearchBar({}: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
+=======
+
+}: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const router = useRouter()
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([])
   const [focused, setFocused] = useState(false)
@@ -91,6 +114,7 @@ export function SearchBar({}: SearchBarProps) {  const router = useRouter(); exp
     if (!debounced) {
       setSuggestions([])
 <<<<<<< HEAD
+<<<<<<< HEAD
       setHighlightedIndex(-1)
 
 /**
@@ -113,6 +137,10 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
       setSuggestions([]);
       setHighlightedIndex(-1);
       return
+=======
+      setHighlightedIndex(-1)
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     const controller = new AbortController()
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, { signal: controller.signal })
@@ -150,6 +178,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
     inputRef.current?.blur()
       aria-expanded={focused && suggestions.length > 0}
       aria-haspopup='listbox'
+<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react';import { Input } from '@/components/ui/input';import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
@@ -162,6 +191,9 @@ import { SearchSuggestion } from '@/types/search',;
 import { slugify } from '@/lib/slugify',;
 import { useDebounce } from '@/hooks/useDebounce',;
 import { useOnClickOutside } from '@/hooks/useOnClickOutside',;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 /**;
  * SearchBar component props;
  */;
@@ -169,11 +201,19 @@ interface SearchBarProps {;
   /**;
    * The current value of the search input;
    */;
+<<<<<<< HEAD
   value: string,;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   /**;
    * Function to call when the search input changes;
    * @param {string} val - The new value of the search input;
    */;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   onChange: (val: string) => void,;
 =======
       setHighlightedIndex(-1)  /**;
@@ -185,12 +225,17 @@ interface SearchBarProps {;
    * Function to call when a suggestion is selected;
    * @param {SearchSuggestion} suggestion - The selected suggestion;
    */;
+<<<<<<< HEAD
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void,;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   /**;
    * The placeholder text for the search input;
    */;
   placeholder?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 /**;
@@ -325,6 +370,9 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
               e && e.target.value && value.length,;
               e && e.target.value && value.length;
             );
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -337,13 +385,19 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
             ) {;
               setFocused(false);
               setHighlightedIndex(-1);
+<<<<<<< HEAD
             }
           }}
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"          aria-autocomplete="list"
+=======
+
+          aria-autocomplete="list"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="search"
           onKeyDown={(e) => {
 
+<<<<<<< HEAD
           autoComplete='search';
           onKeyDown={e => {            if (!focused || suggestions && suggestions.length === 0) {;
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate";
@@ -357,6 +411,8 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
                 setFocused(false);
                 setHighlightedIndex(-1);
                 inputRef && inputRef.current?.blur();
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               }
               // If Enter is pressed and there's a value, navigate with query parameter;
               if (e && e.key === 'Enter' && value && value.trim()) {                e && e.preventDefault(); // Prevent form submission if SearchBar is in a form;
@@ -394,6 +450,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
               }
               return;
             }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             switch (e.key) {
@@ -514,6 +571,9 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             aria-label="Clear search"
 =======
           <button            aria-label="Clear search"
@@ -523,7 +583,10 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
           </button>
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 ;
 }
@@ -540,6 +603,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
         visible={focused}
         highlightedIndex={highlightedIndex}
         listId={listId}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       />;
@@ -896,3 +960,6 @@ if ( {) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

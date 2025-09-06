@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+
+  talent: TalentProfile;
+  onClose: () => void;
+  userDetails?: UserProfile
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -70,11 +78,14 @@ interface InterviewRequestFormProps {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const formSchema = z.object({
   date: z.date({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
@@ -88,6 +99,7 @@ const formSchema = z.object({
   title: z.string().min(3, "Please provide a brief title for the interview."),
   notes: z.string().optional()}),
 
+<<<<<<< HEAD
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
   const { requestInterview } = useInterviews(),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -121,6 +133,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       const durationMinutes = parseInt(values.duration),
 =======
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -341,7 +355,10 @@ export function InterviewRequestForm(): any ({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>
           <div>
             <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>
@@ -414,12 +431,15 @@ export function InterviewRequestForm(): any ({;
             }: {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Popover>
                   <PopoverTrigger asChild>
                     <FormControl>
@@ -427,7 +447,10 @@ export function InterviewRequestForm(): any ({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         variant="outline"
                         className={cn(
                           "w-full pl-3 text-left font-normal",
@@ -437,11 +460,15 @@ export function InterviewRequestForm(): any ({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         {field.value ? (
                           format(field.value, "PPP")
                         ) : (
                           <span>Pick a date</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
                         )}
                         <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />;
@@ -464,6 +491,9 @@ export function InterviewRequestForm(): any ({;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     />
                   </PopoverContent>
                 </Popover>
@@ -727,6 +757,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
               <FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <FormLabel>Duration</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
@@ -745,6 +776,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               </FormItem>
             )}
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           <FormField
             control={form.control}
@@ -753,7 +786,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               field,
             }: {
               field: ControllerRenderProps<
+<<<<<<< HEAD
                 <FormLabel>Duration</FormLabel>                <Select
+=======
+
+                <Select
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   onValueChange={field && field.onChange}
                   defaultValue={field && field.value}>;
               field: ControllerRenderProps<;
@@ -790,6 +828,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           <FormField;
             control={form.control}
 <<<<<<< HEAD
+<<<<<<< HEAD
             name='platform';
             render={({
               field
@@ -823,6 +862,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             )}
 =======
 
+=======
+            name='platform';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                 <FormLabel>Platform</FormLabel>
                 z && z.infer<typeof formSchema>,;
@@ -874,6 +916,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           <FormField;
             control={form.control}
             name='meeting_link';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             render={({
               field
             }: {
@@ -901,8 +947,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 </FormControl>;
                 <FormMessage />;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           />;
         </div>;
         {form.watch('platform') !== 'in-app' && (;
@@ -911,7 +960,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             name="meetingLink"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "meetingLink"> }) => (
               <FormItem>
-
 
                 <FormLabel>Meeting Link (Optional)</FormLabel>
                 <FormControl>
@@ -925,6 +973,25 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             )}
           />;
         )}
+<<<<<<< HEAD
+=======
+
+        <FormField
+
+          render={({
+            field
+          }: {
+
+            field: ControllerRenderProps<z && z.infer<typeof formSchema>, 'notes'>;
+          }) => (            <FormItem>;
+              <FormLabel>Notes (Optional)</FormLabel>;
+              <FormControl>;
+
+                <Textarea
+                  placeholder="Share what you'd like to discuss in this interview"
+                  className='h-20'
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 =======
             name='platform';;
@@ -949,12 +1016,16 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         <div className="flex justify-end gap-4 pt-4">
           <Button variant="outline" onClick={onClose} type="button">
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             Cancel
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -967,7 +1038,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
     </Form>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 toast ({;
 }finally {;
@@ -1011,6 +1085,7 @@ toast ({;
 }/> </Button> </div> </form> </Form>)
 }'"}
 
+<<<<<<< HEAD
             </FormItem>)}
         />;
         <div className='flex justify - end gap - 4 pt - 4'>;
@@ -1071,3 +1146,5 @@ toast ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

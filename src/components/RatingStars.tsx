@@ -20,9 +20,8 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
             />
           )
         }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -32,6 +31,8 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
           return (;
             <StarHalf;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               key={i}
               className="h-4 w-4 fill-zion-cyan text-zion-cyan"
             />
@@ -41,6 +42,7 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
       })}
       {typeof count === 'number' && (
         <span className="text-xs ml-1">({count})</span>
+<<<<<<< HEAD
       )}
 <<<<<<< HEAD
     </div>;
@@ -68,3 +70,6 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

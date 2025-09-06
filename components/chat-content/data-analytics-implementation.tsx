@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -8,6 +9,9 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Data Analytics Implementation</h1>;
@@ -21,6 +25,7 @@
       <h1 className="text-2xl font-semibold">Data Analytics Implementation</h1>;
       <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 <<<<<<< HEAD
@@ -47,6 +52,12 @@ import React from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  );
+
+import React from 'react';
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function DataAnalyticsImplementationPage() {
   return (
     <div className='container mx-auto px-4 py-10'>
@@ -85,11 +96,14 @@ function DataAnalyticsImplementationPage() {
     </div>);
 }
 
+<<<<<<< HEAD
   )
 }
 
 import React from 'react';
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function DataAnalyticsImplementationPage() {
   return (
     <div className='container mx-auto px-4 py-10'>
@@ -104,6 +118,7 @@ export default function DataAnalyticsImplementationPage() {
       <h1 className="text-2xl font-semibold">Data Analytics Implementation</h1>
       <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>
 
+<<<<<<< HEAD
     </div>
   );
 
@@ -134,3 +149,5 @@ export default function DataAnalyticsImplementationPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

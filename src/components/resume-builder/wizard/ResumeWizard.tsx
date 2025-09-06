@@ -76,8 +76,11 @@ if (isLoading) {
     );
   }
 
+<<<<<<< HEAD
   
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (error) {
 
   if (error) {;
@@ -88,6 +91,7 @@ if (isLoading) {
       </div>
     )
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   
   if (error) {
@@ -101,6 +105,8 @@ if (isLoading) {
 =======
 
   
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
@@ -123,11 +129,14 @@ if (isLoading) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
@@ -142,6 +151,7 @@ if (isLoading) {
       />;
     );
   }
+<<<<<<< HEAD
   
 
 <<<<<<< HEAD
@@ -163,6 +173,12 @@ if (isLoading) {
         <h1 className="text-2xl font-bold">Resume Builder</h1>;
         <div className="flex gap-4 flex-wrap items-center">;          {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  return (
+
+          {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Button;
@@ -178,11 +194,14 @@ if (isLoading) {
         </div>
       </div>
 
+<<<<<<< HEAD
       
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card>
         <CardContent className="pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -190,12 +209,16 @@ if (isLoading) {
             <ResumeProgress resume={resume} progress={progress} />
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           
 =======
 
           
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Tabs value={activeTab} onValueChange={setActiveTab}>
 <<<<<<< HEAD
             <ResumeSteps 

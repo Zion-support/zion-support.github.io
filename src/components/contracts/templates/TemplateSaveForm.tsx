@@ -182,6 +182,7 @@ if ( {) {
 }
       return;
     }
+<<<<<<< HEAD
     set_saving (true);
     try {
       // Check condition
@@ -228,11 +229,15 @@ if ( {) {
   },
   
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -241,6 +246,9 @@ if ( {) {
           name="title"
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <FormLabel>Template Name</FormLabel>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -286,6 +294,7 @@ if ( {) {
                   aria-label='Default template'
                   checked={field && field.value}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   onCheckedChange={field && field.onChange}                />;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -305,10 +314,15 @@ if ( {) {
               <FormLabel>Template Name</FormLabel>;
               <FormControl>;
                 <Input {...field} placeholder="Enter template name" />;
+=======
+                  onCheckedChange={field && field.onChange}                />;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </FormControl>;
               <FormMessage />;
             </FormItem>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
         />;
         <FormField;
@@ -342,14 +356,23 @@ if ( {) {
           </Button>
           <Button type="submit" disabled={saving}>
             {saving ? (
+=======
+
+            Cancel
+          </Button>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Saving...
               </>
             ) : (
 <<<<<<< HEAD
+<<<<<<< HEAD
               `${editTemplate ? "Update" : "Save"} Template`
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   editTemplate ? "Update" : "Save" 
 }Template`) ;
@@ -358,11 +381,15 @@ if ( {) {
 
               `${editTemplate ? "Update" : "Save"} Template`
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             )}
           </Button>;
         </div>;
       </form>;
+<<<<<<< HEAD
     </Form>;
   );
 <<<<<<< HEAD
@@ -399,3 +426,6 @@ if ( {) {
               </>
             ) : (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -35,16 +35,20 @@ export default function handler($2) {;
     });
     return res.status(201).json(created);
 
+<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies.ts
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/enterprise/companies.ts
     return res.status (201).json (created);
   }
   res.set_header ("Allow", "GET, POST");
   return res.status (405).end ("Method Not Allowed");
 }
+<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies.ts
 =======
 
 
@@ -53,6 +57,8 @@ export default function handler($2) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/enterprise/companies.ts
 
     const companies = store.listCompanies();
     return res.status(200).json(companies);
@@ -146,6 +152,7 @@ export default function handler($2) {;
   }
 }
 }
+<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies.ts
 =======
 <<<<<<< HEAD
 =======
@@ -161,3 +168,6 @@ export default function handler($2) {;
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/enterprise/companies.ts

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link',;
 import { Heart } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist',;
@@ -50,10 +51,14 @@ const stockStatus =;
   const isMobile = useMediaQuery('(max-width: 768px)'),;
   const isTablet = useMediaQuery('(max-width: 1200px)'),;
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
 
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   );
@@ -274,3 +279,6 @@ const stockStatus =;
   );
 }
 ;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

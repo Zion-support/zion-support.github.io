@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { requireSuperadminApi } from '../../../utils/api/auth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -19,6 +20,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -32,6 +36,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const rows = [
     ['MetricValueTrend%'];
 
+<<<<<<< HEAD
 import { requireSuperadminApi } from '../../../utils/api/auth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -41,6 +46,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const rows = [
     ['MetricValueTrend%'];
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ['Monthly Recurring Revenue (MRR)$220,4508.2'];
     ['GMV$4,800,0005.1'];
     ['Active users (monthly)184523.9'];
@@ -50,6 +57,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Dispositionattachment, filename="ipo-metrics.csv"');
 
   res.status(200).send(csv)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -100,6 +108,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { requireSuperadminApi } from '../../../utils / api / auth';
 export default /**
  * handler - Function description
@@ -109,6 +120,7 @@ function handler() {
   $2
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -129,3 +141,6 @@ function handler() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

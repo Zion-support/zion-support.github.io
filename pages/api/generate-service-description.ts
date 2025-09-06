@@ -82,7 +82,10 @@ export type GenerateServiceDescriptionRequest = {
   title: string;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 =======
 const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY });
@@ -121,6 +124,7 @@ Key Features:
     });
     let description = "";
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 - ${keyFeatures && keyFeatures.join("\n- ")}
@@ -155,6 +159,8 @@ Requirements:
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       model: 'gpt-4o-mini', input: prompt,
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       temperature: 0.7
       });
 

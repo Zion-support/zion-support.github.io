@@ -1,8 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 method: string;
 endpoint: string,
   description: string;
+=======
+
+endpoint: string;
+description: string;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 note?: string;
 params?: EndpointParam[];
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -22,6 +28,7 @@ function ApiDocumentation() {
 }response_examples= {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
   success: ` {";
   " data": [ {
@@ -33,6 +40,10 @@ function ApiDocumentation() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' 
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",
 import { BookOpen, Terminal } from 'lucide-react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -83,11 +94,14 @@ export function ApiDocumentation() {
         </CardDescription>
       </CardHeader>
 
+<<<<<<< HEAD
       
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <CardContent>
         <Alert className="bg-blue-900/30 border-blue-800 mb-6">
           <Terminal className="h-4 w-4" />
@@ -96,7 +110,10 @@ export function ApiDocumentation() {
           </AlertDescription>
         </Alert>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 }` 
 
@@ -203,6 +220,7 @@ function ApiDocumentation() {
                 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         <Tabs defaultValue="jobs" className="space-y-4">
@@ -215,6 +233,8 @@ function ApiDocumentation() {
           </TabsList>
           
           <TabsContent value="jobs" className="space-y-6">
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <EndpointSection
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -223,15 +243,17 @@ function ApiDocumentation() {
               description="List all available jobs with optional filtering."
               note=""
               params={[
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
                 { name: "category", type: "string", description: "Filter by job category" },
                 { name: "skills", type: "string[]", description: "Filter by required skills (comma-separated)" },
                 { name: "status", type: "string", description: "Filter by job status (new, active, closed)" }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               ]}
@@ -268,12 +290,16 @@ function ApiDocumentation() {
 })
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }` ;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }';
 }/> <EndpointSection deadline: '2025-06-30T23:59:59Z' ;
 }) ;
+<<<<<<< HEAD
               ]}
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs?limit=10&category=development" \\
@@ -295,6 +321,10 @@ headers=headers) data = response.json () print (data) `
 }responseExamples= {
   {
   success: ` {});'
+=======
+
+});'
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 'deadline': '2025-06-30T23:59:59Z' '
 }response = requests.post ('https: //api.ziontechgroup.com/v1/jobs'
 headers=headers
@@ -305,6 +335,7 @@ data=json.dumps (payload) ) data = response.json () print (data) `
 }`
 }"
 }/> </TabsContent> <TabsContent value=" talent"className=" space-y-6"> <EndpointSection headers=headers) data = response.json () print (data) `
+<<<<<<< HEAD
 const data = await response && response.json ()
 logInfo (data), `
 python: `import requests headers = {'
@@ -312,6 +343,9 @@ python: `import requests headers = {'
 }job id '
 }'
 headers=headers) data = response && response.json () print (data) ` 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }responseExamples= {
   {
   success: ` {
@@ -401,6 +435,11 @@ data = response.json ();
 print (data)`,
 
 print(data)`,
+<<<<<<< HEAD
+=======
+
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }),;
@@ -418,6 +457,7 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -444,6 +484,10 @@ print(data)`;
 
   ],
 
+=======
+
+              }}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   "meta": {
 =======
@@ -453,6 +497,7 @@ print(data)`;
     "page": 1
     "limit": 10
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         "min": 5000,
         "max": 10000,
@@ -471,16 +516,24 @@ print(data)`;
   }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }`
   }
 
 }`,
+<<<<<<< HEAD
               }}
             />            <EndpointSection
+=======
+
+            <EndpointSection
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               method='GET'
               endpoint='/api/jobs/:id'
               description='Get detailed information about a specific job.'
               note=''
+<<<<<<< HEAD
 <<<<<<< HEAD
               params={[
             />;
@@ -490,6 +543,10 @@ print(data)`;
               description='Get detailed information about a specific job.';
               note='';
               params={[;
+=======
+              params={[
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {
                   name: 'id'
                   type: 'string'
@@ -497,7 +554,10 @@ print(data)`;
                   required: true
                 },              ]}
 
+<<<<<<< HEAD
   -H "Content-Type: application/json"`,
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 javascript: `const jobId = 'job_abc123'
 const response = await fetch(\`https://api && api.ziontechgroup.com/v1/jobs/\${jobId}\`, {
               code_examples={{
@@ -544,8 +604,11 @@ response = requests.get (
 data = response.json ();
 print (data)`,
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }`;
 =======
               params={[}`;
@@ -564,7 +627,10 @@ print (data)`,
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -611,7 +677,10 @@ data = response.json();
 print(data)`;
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               }}
               responseExamples={{
                 success: `{
@@ -629,7 +698,10 @@ print(data)`;
 =======
       "currency": "USD";
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     "status": "active",
     "client_id": "user_xyz789",
@@ -646,13 +718,17 @@ print(data)`;
 
             />;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <EndpointSection
               method="POST"
               endpoint="/api/jobs"
               description="Create a new job listing."
               note="Requires jobs:write scope"
               params={[
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -665,6 +741,9 @@ print(data)`;
               note='Requires jobs:write scope';
               params={[;
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -693,6 +772,7 @@ print(data)`;
                 }
                 {
 
+<<<<<<< HEAD
                   name: 'budget && budget.min',
                   type: 'number',
                   description: 'Minimum budget',
@@ -708,11 +788,14 @@ print(data)`;
                   description: 'Currency code (default: USD)',
                 },
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {
                   name: 'deadline'
                   type: 'string'
                   description: 'Job deadline (ISO date string)'
                 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -834,6 +917,8 @@ print(data)`;
       "max": 10000
       "currency": "USD"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 const data = await response && response.json()
 logInfo(data)`,
@@ -846,13 +931,15 @@ headers = {
 });
 const data = await response.json();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 logInfo(data);`,
 
 }),
 
 const data = await response.json(),
 logInfo(data),`,
-
 
                 python: `import requests
 import json
@@ -861,7 +948,6 @@ headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
 
     'Content-Type': 'application/json'
-
 
 }` 
 }'"
@@ -910,7 +996,10 @@ print (data)`,
 
 print(data)`,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 =======
 logInfo(data);`,    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
@@ -935,11 +1024,14 @@ response = requests.post(;
 data = response.json();
 print(data)`;
 <<<<<<< HEAD
+<<<<<<< HEAD
               }}
               responseExamples={{
                 success: `{
   "data": {
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               }}
               response_examples={{
@@ -991,17 +1083,19 @@ print(data)`;
           <TabsContent value='talent' className='space-y-6'>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <EndpointSection
               method="GET"
               endpoint="/api/talent"
               description="List talent profiles with optional filtering."
               note=""
               params={[
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
             />;
           </TabsContent>;
           <TabsContent value='talent' className='space - y-6'>;
@@ -1012,6 +1106,8 @@ print(data)`;
               note='';
               params={[;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {
 =======
       "min": 5000
@@ -1029,6 +1125,7 @@ print(data)`;
                   description: 'Page number for pagination (default: 1)'
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {
 
                   name: 'limit',
@@ -1042,12 +1139,17 @@ print(data)`;
                   description: 'Filter by skills (comma - separated)',
                 },
 
+=======
+                {
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {
                   name: 'availability'
                   type: 'string'
                   description: 'Filter by availability status'
                 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
@@ -1084,10 +1186,13 @@ logInfo(data)`,
 const data = await response.json();
 logInfo(data);`,
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
+<<<<<<< HEAD
 
 response = requests && requests.get(
     'https://api && api.ziontechgroup.com/v1/talent',
@@ -1108,6 +1213,14 @@ print(data)`,
 const data = await response.json(),;
 logInfo(data),`,;
                 python: `import requests;headers = {;
+=======
+
+print(data)`,
+
+print(data)`,
+
+headers = {;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
 }
 ;
@@ -1120,6 +1233,7 @@ data = response.json();
 print(data)`;
 
               }}
+<<<<<<< HEAD
               responseExamples={{
                 success: `{
   "data": [
@@ -1140,10 +1254,15 @@ print(data)`;
   }
               }}
             />            <EndpointSection
+=======
+
+            <EndpointSection
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               method='GET'
               endpoint='/api/talent/:id'
               description='Get detailed information about a specific talent profile.'
               note=''
+<<<<<<< HEAD
 <<<<<<< HEAD
               params={[
             />;
@@ -1153,6 +1272,10 @@ print(data)`;
               description='Get detailed information about a specific talent profile.';
               note='';
               params={[;
+=======
+              params={[
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {
                   name: 'id'
                   type: 'string'
@@ -1160,7 +1283,10 @@ print(data)`;
                   required: true
                 },              ]}
 
+<<<<<<< HEAD
   -H "Content-Type: application/json"`,
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 javascript: `const talentId = 'talent_abc123'
 const response = await fetch(\`https://api && api.ziontechgroup.com/v1/talent/\${talentId}\`, {
               code_examples={{
@@ -1173,7 +1299,30 @@ const response = await fetch (\`https://api.ziontechgroup.com / v1 / talent/\${t
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   method: 'GET',
   headers: {
+<<<<<<< HEAD
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+=======
+
+const data = await response && response.json()
+logInfo(data)`,
+
+                python: `import requests
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEY'
+    'Content-Type': 'application/json'
+talent_id = 'talent_abc123'
+
+response = requests && requests.get(
+    f'https://api && api.ziontechgroup.com/v1/talent/{talent_id}',
+    headers=headers
+)
+
+data = response && response.json()
+print(data)`,
+
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content - Type': 'application / json';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }),;
 const data = await response.json(),;
@@ -1214,8 +1363,11 @@ print(data)`;
 =======
               response_examples = {{
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }`;
               }}
             />
@@ -1228,10 +1380,15 @@ print(data)`;
               params={[
                 { name: "id", type: "string", description: "The talent ID", required: true }
               ]}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent/talent_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
+<<<<<<< HEAD
                 javascript: `const talentId = 'talent_abc123',
 const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talentId}\`, {
   method: 'GET',
@@ -1273,6 +1430,9 @@ data = response.json();
 print(data)`;
               }}
               responseExamples={{
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 success: `{
   "data": {
     "id": "talent_abc123",
@@ -1302,6 +1462,7 @@ print(data)`;
         "issuing_organization": "Amazon Web Services",
         "issue_date": "2024-01-15"
       }
+<<<<<<< HEAD
     ];
   }
 }`;
@@ -1310,15 +1471,22 @@ print(data)`;
           </TabsContent>
           
           <TabsContent value="quotes" className="space-y-6">
+=======
+
+            />;
+          </TabsContent>;
+
+          <TabsContent value='quotes' className='space-y-6'>;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <EndpointSection
               method="POST"
               endpoint="/api/quotes"
               description="Create a quote request for a talent."
               note="Requires quotes:write scope"
               params={[
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
             />;
           </TabsContent>;
           <TabsContent value='quotes' className='space - y-6'>;
@@ -1329,6 +1497,8 @@ print(data)`;
               note='Requires quotes:write scope';
               params={[;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {
 =======
               params={[                {
@@ -1383,6 +1553,7 @@ print(data)`;
                   description: 'Email of the requester'
                   required: true
                 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1439,6 +1610,9 @@ print(data)`;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },
   body: JSON.stringify({
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     talent_id: 'talent_abc123',
     project_name: 'E-commerce Website Redesign',
     project_summary: 'Redesign our outdated e-commerce website with modern UI',
@@ -1451,6 +1625,7 @@ print(data)`;
     budget_min: 8000,
     budget_max: 12000,
     requester_name: 'John Doe',
+<<<<<<< HEAD
     requester_email: 'john@example.com'
   })
 }),
@@ -1513,6 +1688,17 @@ payload = {
     requester_email: 'john@example.com'
   })
 
+=======
+
+    requester_email: 'john@example.com';
+  });
+});
+const data = await response.json ();
+log_info (data);`,
+                python: `import requests;
+headers = {
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 python: `import requests
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -1521,10 +1707,13 @@ import json
 headers = {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 success: `{
   "data": {
     "id": "quote_def456",
@@ -1543,12 +1732,16 @@ headers = {
     "created_at": "2025-05-16T14:30:15Z"
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }`;
               }}
             />
             
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <EndpointSection
               method="GET"
               endpoint="/api/quotes"
@@ -1556,9 +1749,8 @@ headers = {
 <<<<<<< HEAD
               note=""
               params={[
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
             <EndpointSection;
               method='GET';
               endpoint='/api / quotes';
@@ -1566,6 +1758,8 @@ headers = {
               note='';
               params={[;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {
                   name: 'page'
                   type: 'integer'
@@ -1573,6 +1767,7 @@ headers = {
                 }
                 {
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
@@ -1631,11 +1826,14 @@ logInfo(data)`,
 const data = await response.json();
 logInfo(data);`,
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
 
+<<<<<<< HEAD
 response = requests && requests.get(
     'https://api && api.ziontechgroup.com/v1/quotes',
     headers=headers
@@ -1656,6 +1854,8 @@ log_info (data);`,
                 python: `import requests;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 headers = {;
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
 }
@@ -1671,9 +1871,8 @@ print(data)`;
               responseExamples={{
 =======
 
-
-
               }}
+<<<<<<< HEAD
               response_examples={{
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 success: `{
@@ -1686,11 +1885,15 @@ print(data)`;
   ],
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   "meta": {
     "total": 5
     "page": 1
     "limit": 20
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       "id": "quote_def456",
       "talent_id": "talent_abc123",
@@ -1711,6 +1914,8 @@ print(data)`;
   }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }`
 =======
               note=''
@@ -1719,6 +1924,7 @@ print(data)`;
   }
 
 }`,
+<<<<<<< HEAD
               }}
 <<<<<<< HEAD
 
@@ -1755,6 +1961,10 @@ function verifyWebhookSignature(payload, signature, secret) {
   const hmac = crypto.createHmac('sha256', secret)
   const expectedSignature = hmac.update(payload).digest('hex')}`;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+}`;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               }}
             />
           </TabsContent>
@@ -1781,6 +1991,7 @@ function verifyWebhookSignature(payload, signature, secret) {
 function verifyWebhookSignature(payload, signature, secret) {
   const hmac = crypto.createHmac('sha256', secret),
   const expectedSignature = hmac.update(payload).digest('hex'),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1824,6 +2035,14 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
               
               <h4 className="text-md font-semibold mt-6 mb-2">Event Types</h4>
               <table className="w-full border-collapse mt-2">
+=======
+
+  return crypto.timingSafeEqual(
+    Buffer.from(signature)
+    Buffer.from(expectedSignature)
+  )
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <thead>
                   <tr className="border-b border-zinc-800">
                     <th className="py-2 px-4 text-left">Event Type</th>
@@ -1849,9 +2068,8 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
                   </tr>
                 </tbody>
               </table>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
             />;
           </TabsContent>;
 
@@ -1966,17 +2184,22 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
               </p>;
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <CodeBlock
                 code = {`{
   "event_type": "new_application"
   "event_id": "evt_abc123def456"
   "timestamp": "2025-05-16T15:30:00Z"
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <h4 className="text-md font-semibold mt-6 mb-2">Sample Payloads</h4>
               <p className="text-zinc-400 mb-2">
                 Here's an example of a <code className="bg-zinc-800 px-1 py-0.5 rounded">new_application</code> webhook payload:
@@ -1998,10 +2221,14 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
 }`}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 language="json"
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -2023,7 +2250,10 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <thead>
                   <tr className="border-b border-zinc-800">
                     <th className="py-2 px-4 text-left">Status Code</th>
@@ -2321,20 +2551,26 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
               </table>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <h4 className="text-md font-semibold mt-6 mb-2">Error Response Format</h4>
               <p className="text-zinc-400 mb-2">
                 Error responses include a consistent JSON object with the following format:
               </p>
+<<<<<<< HEAD
               
 <<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -2346,6 +2582,7 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
     "message": "The request was invalid",
     "details": [
       {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "field": "project_name",
@@ -2706,6 +2943,10 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
                 <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Remaining</code>: Number of requests remaining in the current window</li>
                 <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Reset</code>: Unix timestamp when the rate limit resets</li>              </ul>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+              </ul>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </div>
           </TabsContent>
         </Tabs>
@@ -2715,6 +2956,7 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
 <<<<<<< HEAD
 }
 
+<<<<<<< HEAD
 =======
 
 }
@@ -2725,6 +2967,10 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Helper component for API endpoint documentation
 function EndpointSection({
   method,
@@ -2735,6 +2981,7 @@ function EndpointSection({
   codeExamples,
   responseExamples
 }: EndpointSectionProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [activeTab, setActiveTab] = useState("curl"),
   
@@ -2756,6 +3003,9 @@ function EndpointSection({
 =======
 
                 response.;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </p>;
 
               <p className='text-zinc-400 mb-2'>;
@@ -2787,6 +3037,7 @@ function EndpointSection({
   }
 }`}
                 language='json';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -2844,6 +3095,9 @@ function EndpointSection({
                 <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Remaining</code>: Number of requests remaining in the current window</li>;
 <<<<<<< HEAD
                 <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Reset</code>: Unix timestamp when the rate limit resets</li>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </ul>;
 =======
                 <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Reset</code>: Unix timestamp when the rate limit resets</li>;              </ul>;
@@ -2852,6 +3106,7 @@ function EndpointSection({
           </TabsContent>;
         </Tabs>;
       </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2922,6 +3177,12 @@ function EndpointSection({;
       
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+        <p className="mt-2 text-zinc-400">{description}</p>
+      </div>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {params.length > 0 && (
         <div className="border-t border-zinc-800 p-4">
           <h4 className="font-medium mb-2">Parameters</h4>
@@ -2936,9 +3197,8 @@ function EndpointSection({;
             <tbody>
 <<<<<<< HEAD
               {params.map((param, index) => (
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
         </div>;
 
         <p className='mt-2 text-zinc-400'>{description}</p>;
@@ -2958,6 +3218,8 @@ function EndpointSection({;
             <tbody>;
               {params && params.map((param, index) => (;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <tr
                   key={index}
                   className={
@@ -2972,6 +3234,7 @@ function EndpointSection({;
                   </td>;
                 </tr>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <tr key={index} className={index < params.length - 1 ? "border-b border-zinc-800" : ""}>
                   <td className="py-2 font-mono text-sm">
@@ -2984,6 +3247,8 @@ function EndpointSection({;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </tr>
               ))}
             </tbody>;
@@ -2991,11 +3256,14 @@ function EndpointSection({;
         </div>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       {codeExamples && (
 =======
@@ -3007,6 +3275,7 @@ function EndpointSection({;
             <div className='ml-auto flex border border-zinc-700 rounded-md overflow-hidden'>
               {Object.keys(codeExamples).map(lang => (                <button
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {codeExamples && (;
         <div className='border-t border-zinc-800 p-4'>;
@@ -3033,29 +3302,39 @@ function EndpointSection({;
                   }`}
                   onClick={() => setActiveTab(lang)}
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   className={`px-3 py-1 text-xs font-medium ${
                     activeTab === lang
                       ? 'bg-zinc-700 text-white'
                       : 'text-zinc-400 hover:bg-zinc-800'
+<<<<<<< HEAD
                   }`}                  onClick={() => setActiveTab(lang)}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  }`}
+
+                  onClick={() => setActiveTab(lang)}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 >
                   {lang === "curl" ? "cURL" : lang === "javascript" ? "JavaScript" : "Python"}
                 </button>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <CodeBlock 
             code={codeExamples[activeTab] || "// Code example not available"}
             language={activeTab === "curl" ? "bash" : activeTab}
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           />
         </div>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
       
       {responseExamples && (
@@ -3093,3 +3372,6 @@ function EndpointSection({;
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

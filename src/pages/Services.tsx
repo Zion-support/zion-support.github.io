@@ -3,6 +3,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Link } from 'react-router-dom';
 import { 
@@ -614,11 +615,32 @@ import {
   BarChart3,
   Users,
   Settings,
+=======
+
+  Lock,
+  Zap,
+  BarChart3,
+  Users,
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { 
+  Code, 
+  Database, 
+  Smartphone, 
+  Shield, 
+  Cloud, 
+  Globe,
+  Zap,
+  Users,
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ArrowRight,
   CheckCircle,
   Star,
   Award,
   Clock,
+<<<<<<< HEAD
   Target,
   Rocket,
   Cpu,
@@ -631,6 +653,9 @@ import {
   Wrench,
   Headphones,
 } from 'lucide-react';
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import SEOHead from '../components/SEOHead';
 import { motion } from 'framer-motion';
 
@@ -807,10 +832,15 @@ const Services = () => {
         </motion.div>
 
         {/* Services Grid */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {services.map((service, index) => (
             <motion.div
               key={index}
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -819,6 +849,15 @@ const Services = () => {
               <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-6`}>
                 <service.icon className="h-8 w-8 text-white" />
               </div>
+=======
+
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+            >
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
               <p className="text-gray-600 mb-6">{service.description}</p>
@@ -841,6 +880,10 @@ const Services = () => {
                   Get Started
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </div>
             </motion.div>
           ))}
@@ -899,6 +942,7 @@ const Services = () => {
             </button>
           </div>
         </motion.div>
+<<<<<<< HEAD
 >>>>>>> main
 =======
           </section>
@@ -968,3 +1012,12 @@ export default Services;
 =======
 export default Services;
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+
+      </div>
+    </div>
+
+  );
+};
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

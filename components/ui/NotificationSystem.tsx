@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 
 export interface Notification {
@@ -21,6 +22,9 @@ export interface Notification {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -30,10 +34,15 @@ import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
   type: "success" | "error" | "warning" | "info";
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   title?: string;
   message: string;
   duration?: number;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -129,6 +138,8 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
     <div className={`fixed ${getPositionStyles()} z-50 space-y-2`}>
       {visibleNotifications.map(notification => (
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
@@ -183,12 +194,7 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
   return `${baseStyles} ${typeStyles[type]}`;
 };
 
-
 import React from 'react';
-=======
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
->>>>>>> main
 
 interface Notification {
   id: string;
@@ -222,6 +228,7 @@ interface NotificationContextType {
   removeNotification: (id: string) => void;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
@@ -275,6 +282,8 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
     setNotifications(prev => prev.filter(notification => notification.id !== id));
   };
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <NotificationContext.Provider value={{ notifications, addNotification, removeNotification }}>
       {children}
@@ -290,47 +299,13 @@ const NotificationContainer: React.FC = () => {
     <div className="fixed top-4 right-4 z-50 space-y-2">
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       {notifications.map((notification) => (
-<<<<<<< HEAD
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
-        <div
-          key={notification.id}
-          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
-        >
-          <div className="flex items-start justify-between">
-            <div className="flex-1">
-<<<<<<< HEAD
-              <div className="flex items-start space-x-2">
-                {getIcon(notification.type)}
-                <div className="flex-1">
-                  {notification.title && (
-                    <h4 className="font-medium mb-1">{notification.title}</h4>
-                  )}
-                  <p className="text-sm">{notification.message}</p>
-                </div>
-              </div>
-            </div>
-            {onDismiss && (
-              <button
-                onClick={() => handleDismiss(notification.id)}
-                className="ml-2 text-gray-400 hover:text-gray-600 transition-colors"
-              >
-                <X className="h-4 w-4" />
-              </button>
-            )}
-          </div>
-        </div>
-=======
-        <NotificationItem
-          key={notification.id}
-          notification={notification}
-          onRemove={removeNotification}
-        />
->>>>>>> main
+
       ))}
     </div>
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default NotificationSystem;
 =======
@@ -377,6 +352,8 @@ const NotificationItem: React.FC<{
     info: Info,
   };
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const colors = {
     success: 'bg-green-500',
     error: 'bg-red-500',
@@ -385,6 +362,7 @@ const NotificationItem: React.FC<{
   };
 
   const Icon = icons[notification.type];
+<<<<<<< HEAD
 >>>>>>> main
 
 <<<<<<< HEAD
@@ -443,6 +421,9 @@ if (return null) {
 }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className={colors[notification.type] + ' text-white p-4 rounded-lg shadow-lg max-w-sm'}>
       <div className="flex items-start">
@@ -464,6 +445,7 @@ if (return null) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
@@ -482,3 +464,5 @@ export const useNotifications = () => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

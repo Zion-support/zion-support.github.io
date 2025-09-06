@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -20,6 +21,10 @@ interface FraudStatsCardsProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
   return (
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
       <Card>
         <CardHeader className="pb-2">
@@ -28,11 +33,14 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
         </CardHeader>
       </Card>
 
+<<<<<<< HEAD
       
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -44,8 +52,11 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
       </Card>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -58,11 +69,14 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
         </CardHeader>
       </Card>
 
+<<<<<<< HEAD
       
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -74,8 +88,11 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
       </Card>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -85,11 +102,14 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
         </CardHeader>
       </Card>
 
+<<<<<<< HEAD
       
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.false_positives}</CardTitle>
@@ -97,6 +117,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
         </CardHeader>
       </Card>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
@@ -182,6 +203,15 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) =
       <Card>;
         <CardHeader className="pb-2">;
           <CardTitle className="text - 2xl font-bold">{stats.total_flags}</CardTitle>;
+=======
+
+export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) => {
+  return (
+    <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 4 mb - 8">;
+      <Card>;
+        <CardHeader className="pb - 2">;
+          <CardTitle className="text - 2xl font - bold">{stats.total_flags}</CardTitle>;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <CardDescription > Total Flags</CardDescription>;
         </CardHeader>;
       </Card>;
@@ -244,9 +274,13 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) =
 }
 ";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   )
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -52,11 +52,15 @@ const Button: React.FC<ButtonProps> = ({
     outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ghost: 'text-blue-600 hover:bg-blue-50 focus:ring-blue-500'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     ghost: 'text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   };
 =======
     ghost: 'text-blue-600 hover:bg-blue-50 focus:ring-blue-500'  };

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import Link from "next/link",
@@ -139,6 +140,10 @@ function QuickAccess() {
         </div>
           {quickLinks.map((link, index) => (
             <Link              key={index}
+=======
+
+              key={index}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               href={link.link}
 
               </p>;
@@ -652,8 +657,12 @@ export default QuickAccess;
     </section>);
 export default QuickAccess }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default QuickAccess;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

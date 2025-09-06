@@ -38,10 +38,13 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -56,6 +59,7 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
+<<<<<<< HEAD
   FormMessage,;
 } from '@/components/ui/form';import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
 import { PortfolioProject } from '@/types/resume';
@@ -136,17 +140,33 @@ export function ProjectForm(): any ({;
       if (success) {;
         onSuccess();
         form && form.reset();      }
+=======
+
+  const form = useForm<ProjectFormValues>({;
+    resolver: zodResolver(projectSchema),;
+    defaultValues: {;
+      title: project?.title || '',;
+      description: project?.description || '',;
+
+      }
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (error) {;
       logErrorToProduction('Error saving project:', { data: error });
     } finally {;
       setIsLoading(false);
     }
   },
+<<<<<<< HEAD
   
 <<<<<<< HEAD
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+=======
+
+  return (
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <FormField
           control={form.control}
 <<<<<<< HEAD
@@ -161,8 +181,13 @@ export function ProjectForm(): any ({;
         />;
 
         <FormField
+<<<<<<< HEAD
           control={form && form.control}          name='description'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+          name='description'
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Project Description</FormLabel>
               <FormControl>
@@ -206,7 +231,12 @@ export function ProjectForm(): any ({;
         />;
 
         <FormField
+<<<<<<< HEAD
           control={form && form.control}          name='technologies'
+=======
+
+          name='technologies'
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           render={({ field }: { field: any }) => (;
             <FormItem>;
               <FormLabel>Technologies Used</FormLabel>;
@@ -352,11 +382,14 @@ export function ProjectForm(): any ({;
             )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   GitHub URL
                 </FormLabel>
                 <FormControl>
@@ -393,7 +426,12 @@ export function ProjectForm(): any ({;
         </div>;
 
         <FormField
+<<<<<<< HEAD
           control={form && form.control}          name='image_url'
+=======
+
+          name='image_url'
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel className='flex items-center gap-2'>;
                 <FileImage className='h-4 w-4' />;
@@ -440,11 +478,14 @@ export function ProjectForm(): any ({;
         </div>
       </form>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Form>
   )
 }
 ;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     </Form>
   )

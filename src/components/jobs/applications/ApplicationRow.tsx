@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns",
 import { Calendar, User, FileText, BarChart } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -20,6 +21,9 @@ interface ApplicationRowProps {
   processingId: string | null
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function ApplicationRow({
 
   application
@@ -31,6 +35,7 @@ export function ApplicationRow({
   const [avatarError, setAvatarError] = useState(false)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 interface ApplicationRowProps {
@@ -40,6 +45,8 @@ interface ApplicationRowProps {
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,
   onViewScore: (application: JobApplication) => void
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { formatDistanceToNow } from 'date-fns';
 import { Calendar, User, FileText, BarChart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -70,6 +77,7 @@ interface ApplicationRowProps {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
+<<<<<<< HEAD
 export function ApplicationRow({
   application,
   processingId,
@@ -86,23 +94,38 @@ export function ApplicationRow({
   const talentName = application.talent_profile?.full_name |'Unknown'
 
   const talentName = application.talent_profile?.full_name || 'Unknown'    <TableRow key={application.id}>
+=======
+export function ApplicationRow(): any ({;
+  application,;
+  processingId,;
+  onViewApplication,;
+  onStatusChange,;
+  onViewScore,;
+}: ApplicationRowProps) {;
+  const [avatarError, setAvatarError] = useState(false);
+  const talentName = application && application.talent_profile?.full_name || 'Unknown';
+
+    <TableRow key={application.id}>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <TableCell>
         <div className="flex items-center gap-3">
           <AvatarPrimitive className="h-9 w-9"> {/* Using renamed AvatarPrimitive */}
             {application.talent_profile?.profile_picture_url && !avatarError ? (
 <<<<<<< HEAD
               <Image
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 src={application.talent_profile.profile_picture_url} 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 alt={talentName}
                 width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
                 height={36} // Corresponds to h-9 w-9
                 className="rounded-full object-cover" // Ensure rounded and object-cover
                 onError={() => setAvatarError(true)}
+<<<<<<< HEAD
                 priority={false}
               />
 
@@ -124,14 +147,20 @@ export function ApplicationRow({
               {application.talent_profile?.professional_title || "Talent"}
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </div>
           </div>
         </div>
       </TableCell>
       <TableCell>
+<<<<<<< HEAD
         <div className="flex items-center gap-1">
           <Calendar className="h-4 w-4 text-muted-foreground" />
           <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         </div>
 =======
@@ -144,9 +173,13 @@ export function ApplicationRow({
       <TableCell>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Button 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -301,6 +334,7 @@ export function ApplicationRow({;
         </div>;
       </TableCell>;
       <TableCell>;
+<<<<<<< HEAD
         <div className="flex items-center gap-1">;
           <Calendar className="h-4 w-4 text-muted-foreground" />;
           <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>;
@@ -317,15 +351,22 @@ export function ApplicationRow({;
           className="flex items-center gap-1";
         >;
           <BarChart className="h-4 w-4 mr-1" />;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <ScoreBadge application={application} />;
         </Button>;
       </TableCell>;
       <TableCell>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         {application.resume ? (;
           <Button variant="ghost" size="sm" asChild>;
             <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">;
               <FileText className="h-4 w-4 mr-1" /> View;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </a>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -334,6 +375,7 @@ export function ApplicationRow({;
           <span className="text-muted-foreground text-sm">No resume</span>;
         )}
       </TableCell>;
+<<<<<<< HEAD
       <TableCell className="text-right">;
         <ApplicationActions;
           application={application}
@@ -376,3 +418,6 @@ export function ApplicationRow({;
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

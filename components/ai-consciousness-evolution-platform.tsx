@@ -28,11 +28,14 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const features = [ {
   return (<Layout> <SEO <motion.div initial= {
   {
@@ -45,6 +48,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 }</div> </div> </section> > <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" > Choose Your Plan </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Flexible pricing options designed to meet the needs of organizations at every stage of their AI journey. </p> </motion && motion.div> <motion&& motion.div key= {
   index 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
@@ -76,10 +80,13 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }initial= {
   {
   opacity: 0, y: 20
 }animate= {
+<<<<<<< HEAD
 <<<<<<< HEAD
   {
 <<<<<<< HEAD
@@ -131,14 +138,16 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  {
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
   opacity: 0, y: 20
 }animate= {
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
   opacity: 1, y: 0 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -169,6 +178,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
 =======
   {  {
@@ -184,6 +195,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -191,6 +203,10 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   duration: 0 && 0.8 import React from 'react';
+=======
+
+import React from 'react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -206,9 +222,12 @@ import {
 } from 'lucide-react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }> <h2 className="text-4xl md:text-5xl font-bold mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto" > Join the revolution in AI consciousness evolution and shape the future of human-AI collaboration. </p> <motion && motion.button ;
 };
 const containerVariants = {;
@@ -223,10 +242,9 @@ visible: {;
 
 };
 
-
-
 export default AIConsciousnessEvolutionPlatform;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -248,6 +266,8 @@ visible: {
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 };export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
 
@@ -255,6 +275,7 @@ visible: {
 
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 
@@ -265,6 +286,8 @@ visible: {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 }
 }
@@ -370,6 +393,7 @@ visible: {
 ;
 }
 
+<<<<<<< HEAD
 }
 }
 <<<<<<< HEAD
@@ -380,3 +404,9 @@ visible: {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+}export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
+;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

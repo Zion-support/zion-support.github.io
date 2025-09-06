@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
@@ -285,6 +286,23 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
           type: selectedResume.type
         } : null
       let full_message = message;}
+=======
+
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Loader2 } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useJobApplications } from '@/hooks/useJobApplications';
+import { useMessaging } from '@/context/MessagingContext';
+import { toast } from '@/hooks/use-toast';
+import { ResumeSelector, ResumeOption } from '../resume-selector';
+import { MessageTab } from './MessageTab';
+import { ResumeTab } from './ResumeTab';
+import { Job } from './types';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
   const [activeTab, setActiveTab] = useState('message');
@@ -305,6 +323,7 @@ export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
       return;
     }
 
+<<<<<<< HEAD
   return (
     <>
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -361,6 +380,8 @@ export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
         <TabsContent value="message">;
 <<<<<<< HEAD
           <MessageTab;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             message={message}
             setMessage={setMessage}
             proposalLink={proposalLink}
@@ -381,6 +402,7 @@ export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
           />
         </TabsContent>
       </Tabs>
+<<<<<<< HEAD
 <<<<<<< HEAD
       
 =======
@@ -405,6 +427,9 @@ export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
           onClick={handleSubmit}
           disabled={isSubmitting || !selectedResume}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         >
 =======
           className="bg-zion-purple hover:bg-zion-purple-dark text-white"        >
@@ -417,6 +442,7 @@ export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
           ) : (
             'Submit Application'
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         </Button>;
@@ -492,3 +518,6 @@ return (<> <Tabs value= {
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

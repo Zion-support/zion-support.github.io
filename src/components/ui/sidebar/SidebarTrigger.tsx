@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Menu, X } from 'lucide-react'
@@ -27,6 +28,8 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
       size="icon"
 import React from "react",;
 import { Button } from "@/components/ui/button",;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Menu, X } from 'lucide-react';
 import { useSidebar } from "./sidebar-context",;
 import { cn } from "@/lib/utils",;
@@ -49,6 +52,7 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
     </Button>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -59,3 +63,6 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

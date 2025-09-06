@@ -25,10 +25,13 @@ function TalentCardAvailability() {
   } return 'bg - gray - 500 / 20 text - gray - 400';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Clock } from 'lucide-react'
 
 interface TalentCardAvailabilityProps {
@@ -89,7 +92,12 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       case 'full-time':;
         return 'bg-green-500/20 text-green-400',;
       case 'part-time':;
+<<<<<<< HEAD
         return 'bg-yellow-500/20 text-yellow-400';      case 'project-based':;
+=======
+
+      case 'project-based':;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         return 'bg-blue-500/20 text-blue-400',;
       default:;
         return 'bg-gray-500/20 text-gray-400';
@@ -115,6 +123,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
         return 'Project';
       default:;
 <<<<<<< HEAD
+<<<<<<< HEAD
         return status;
     }
   },
@@ -128,6 +137,9 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
 =======
         return status
 };
+=======
+        return status;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const getAvailabilityLabel = (status: string, ) =>: any {
     switch (status) {

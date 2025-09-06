@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -787,29 +788,15 @@ function ApiDocsPage() {
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 ];
 
 export default function APIDocsPage() {
-<<<<<<< HEAD
-  return (
-    <MainLayout
-      title="API Documentation - Zion Tech Group"
-      description="Comprehensive API documentation for Zion Tech Group services. Learn how to integrate with our APIs."
-      keywords="API documentation, REST API, integration, developer resources"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              API Documentation
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive API documentation for integrating with Zion Tech Group services. 
-              Build powerful applications with our robust APIs.
-            </p>
-          </div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {apiEndpoints.map((endpoint, index) => (
               <div
@@ -1054,3 +1041,5 @@ export default function ApiDocsPage(req, res) {
 
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

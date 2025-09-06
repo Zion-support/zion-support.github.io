@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Trophy } from 'lucide-react'
 
 export interface LeaderboardEntry {
@@ -41,9 +44,13 @@ interface UserLeaderboardProps {;
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Trophy className="h-5 w-5" /> Leaderboard
         </CardTitle>
         <CardDescription>Top users by points</CardDescription>
@@ -52,18 +59,26 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="space-y-2">
           {entries.map((e, idx) => (
             <div
               key={e.name}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50"
             >
               <span className="font-medium">
                 {idx + 1}. {e.name}
               </span>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <span className="text-sm">{e.points} pts</span>
             </div>
@@ -127,3 +142,6 @@ function UserLeaderboard() {
     <Card>
       <CardHeader>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

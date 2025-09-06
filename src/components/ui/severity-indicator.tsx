@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6,6 +7,9 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { cn } from "@/lib/utils",
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
@@ -19,10 +23,13 @@ interface SeverityIndicatorProps {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   className?: string
 }
 
@@ -30,6 +37,7 @@ export function SeverityIndicator({
   severity, 
   showIcon = true, 
   showText = true, 
+<<<<<<< HEAD
 <<<<<<< HEAD
   size = "md",
   className 
@@ -51,6 +59,9 @@ export function SeverityIndicator({
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
           "text-green-500"
         )} />
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   },
 
@@ -81,10 +92,13 @@ export function SeverityIndicator({
   }
 
   return (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     <div className={cn("flex items-center gap-1", className)}>
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -93,6 +107,7 @@ export function SeverityIndicator({
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from "react",;
 import { cn } from "@/lib/utils",;
@@ -165,3 +180,6 @@ export function SeverityIndicator({;
     </div>
   );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

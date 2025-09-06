@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,9 @@ import { Interface } from 'ethers';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next',;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Interface } from 'ethers',;
 // Simple ABI for demonstration (release/refund)
 const abi = [
@@ -25,6 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { bytecode, constructorArgs } = req.body |{}
   if (!bytecode |!constructorArgs) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -36,6 +41,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return res.status(400).json({ error: 'bytecode and constructorArgs are required' })
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
@@ -121,6 +129,7 @@ import { Interface } from 'ethers';
     return res.status(500).json({ error: "Internal server error" });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
 <<<<<<< HEAD
@@ -138,6 +147,8 @@ import { Interface } from 'ethers',
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const abi = [;
   'constructor (address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release () externalfunction refund () externalfunction client () view returns (address)function talent () view returns (address)function total_amount () view returns (uint256)';
 ],
@@ -168,6 +179,7 @@ if ( {) {
     return res.status (200).json ({ abi, tx });
   } catch (e: any) {
     return res.status (400).json ({ error: e?.message || 'Failed to prepare deployment tx' });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -235,10 +247,17 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+
+  }
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -289,3 +308,5 @@ export default async function handler(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

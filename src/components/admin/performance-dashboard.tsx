@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -43,6 +44,9 @@ interface PerformanceMetrics {;
   bundleSize: number;
   loadTime: number;
   performanceScore: number;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   chunkCount: number;
 =======
 import React, { useState, useEffect } from 'react'
@@ -57,6 +61,7 @@ import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Progress } from '@/components / ui / progress';
 import {
+<<<<<<< HEAD
   Activity
   Zap
   Package
@@ -263,6 +268,9 @@ export function PerformanceDashboard() {;
         bundleSize: 0, // This would need to be calculated separately;
 <<<<<<< HEAD
         loadTime: navigationEntry ? navigationEntry.loadEventEnd - navigationEntry.fetchStart : 0,;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         performanceScore: 0, // This would need to be calculated;
 =======
         loadTime: navigationEntry ? navigationEntry.loadEventEnd - navigationEntry.fetchStart : 0,;        performanceScore: 0, // This would need to be calculated;
@@ -272,6 +280,7 @@ export function PerformanceDashboard() {;
         fcp: 0, // First Contentful Paint - would need Performance Observer;
         lcp: 0, // Largest Contentful Paint - would need Performance Observer;
         cls: 0, // Cumulative Layout Shift - would need Performance Observer;
+<<<<<<< HEAD
         fid: 0  // First Input Delay - would need Performance Observer;
       },;
       setMetrics(performanceMetrics),;
@@ -279,6 +288,9 @@ export function PerformanceDashboard() {;
         loadTime: performanceMetrics.loadTime,;
 <<<<<<< HEAD
         resourceCount: performanceMetrics.chunkCount;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       });
 =======
         resourceCount: performanceMetrics.chunkCount;      });
@@ -286,9 +298,13 @@ export function PerformanceDashboard() {;
     } catch (error) {;
       logErrorToProduction('Failed to collect performance metrics', error, {;
         component: 'PerformanceDashboard',;
+<<<<<<< HEAD
         action: 'collectMetrics';
 <<<<<<< HEAD
       }),;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Set fallback metrics;
 =======
       }),;      // Set fallback metrics;
@@ -303,7 +319,11 @@ export function PerformanceDashboard() {;
         lcp: 0,;
         cls: 0,;
 <<<<<<< HEAD
+<<<<<<< HEAD
         fid: 0;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       });
 =======
         fid: 0;      });
@@ -347,6 +367,7 @@ export function PerformanceDashboard() {;
           observer.disconnect(),;
           resolve(vitals);
         }, 2000);
+<<<<<<< HEAD
       });
     }
     
@@ -408,6 +429,9 @@ export function PerformanceDashboard() {;
 
     return () => clearInterval(interval)
   }, []),
+=======
+      });    }
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
     <div className="space-y-6">
@@ -420,12 +444,13 @@ export function PerformanceDashboard() {;
           </p>
         </div>
         <Button onClick={collectMetrics} disabled={isLoading}>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
 ;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return vitals;
   },;
   const collectChunkData = async (): Promise<BundleChunk[]> => {;
@@ -573,6 +598,7 @@ export function PerformanceDashboard() {;
         </div>;
         <Button onClick={collectMetrics} disabled={isLoading}>;
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />;
+<<<<<<< HEAD
 <<<<<<< HEAD
           {isLoading ? 'Collecting...' : 'Refresh'}
         </Button>;
@@ -783,6 +809,10 @@ export function PerformanceDashboard() {;
         </div>
       )}
       {/* Bundle Chunks */}      <Card>
+=======
+
+      <Card>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Package className="w-5 h-5" />
@@ -791,9 +821,8 @@ export function PerformanceDashboard() {;
         </CardHeader>
         <CardContent>
           {chunks.length > 0 ? (
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="space-y-2">
               {chunks.slice(0, 10).map((chunk, index) => (
@@ -802,6 +831,8 @@ export function PerformanceDashboard() {;
                     <span className="text-sm font-mono text-muted-foreground">
                       {index + 1}
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     </span>
                     <div>
                       <p className="font-medium text-sm">{chunk.name}</p>
@@ -826,12 +857,16 @@ export function PerformanceDashboard() {;
                 </div>
               ))}
 
+<<<<<<< HEAD
               
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {chunks.length > 10 && (
                 <p className="text-sm text-muted-foreground text-center pt-2">
                   ... and {chunks.length - 10} more chunks
                 </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -873,6 +908,9 @@ export function PerformanceDashboard() {;
               </div>
             </div>
             
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
               <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
               <div>
@@ -886,6 +924,7 @@ export function PerformanceDashboard() {;
             </div>
 =======
 
+<<<<<<< HEAD
 
             
 =======
@@ -901,16 +940,28 @@ export function PerformanceDashboard() {;
                 </p>
                 <p className="text-sm text-blue-700 dark:text-blue-300">
                   Your bundle is properly split into framework, vendor, and application chunks
+=======
+              <div>
+                <p className='font-medium text-green-900 dark:text-green-100'>
+                  Performance monitoring active
+                </p>
+                <p className='text-sm text-green-700 dark:text-green-300'>
+                  Real-time performance tracking is helping optimize your
+                  application
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </p>
               </div>
             </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
               <div className="flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded">
                 <AlertTriangle className="w-5 h-5 text-yellow-600 mt-0.5" />
@@ -1088,8 +1139,12 @@ export function PerformanceDashboard() {;
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -39,6 +40,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { readJson, writeJson } from '../../../utils/fsDb';
+=======
+
+;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { articleId, helpful } = req.body as { articleId: string, helpful: boolean }
@@ -47,6 +53,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   feedback.push({ articleId, helpful, ts: Date.now() })
   writeJson('support/feedback.json', feedback)
 
+<<<<<<< HEAD
   return res.status(200).json({ ok: true })
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -94,3 +101,5 @@ export default async function handler(req, res) {
   return res.status(200).json({ ok: true })
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

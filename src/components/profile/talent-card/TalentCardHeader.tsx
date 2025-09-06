@@ -40,11 +40,14 @@ export function TalentCardHeader(): any ({;
           <h3 className='text-lg font-semibold text-white flex items-center gap-1'>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="flex-1">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">
@@ -83,7 +86,10 @@ interface TalentCardHeaderProps {;
   )
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 ;
 export function TalentCardHeader({;
@@ -108,12 +114,19 @@ export function TalentCardHeader({;
           <TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
 
+<<<<<<< HEAD
         <p className='text-zion-cyan text-sm'>{professionalTitle}</p>;      </div>;
     </div>;
   );
 }
 <<<<<<< HEAD
 =======
+=======
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React from 'react';
 import { BadgeCheck } from 'lucide-react';

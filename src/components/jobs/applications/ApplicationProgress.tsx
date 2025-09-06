@@ -15,6 +15,7 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
 
   const getProgressValue = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ApplicationStatus  } from '@/types / jobs';
 import { Progress  } from '@/components / ui / progress';
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn  } from '@/lib / utils';
@@ -52,6 +53,9 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -80,9 +84,8 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
 
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
   // Helper to determine if this step is active, completed, or inactive
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -98,6 +101,8 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
 
   const currentRank = statusRank[current],
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const statusRank_ = statusRank[status],
 
   const currentRank = statusRank[current],
@@ -114,6 +119,7 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
   } else {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // This step is upcoming
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
 import { ApplicationStatus } from "@/types/jobs",;
@@ -124,6 +130,9 @@ import { cn } from "@/lib/utils",;
 
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn } from "@/lib/utils";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ApplicationProgressProps {;
 =======
 import { ApplicationStatus } from "@/types/jobs",;
@@ -134,6 +143,7 @@ import { cn } from "@/lib/utils",;interface ApplicationProgressProps {;
   status: ApplicationStatus,;
   className?: string;
 }
+<<<<<<< HEAD
 ;
 export function ApplicationProgress({ status, className }: ApplicationProgressProps) {;
   // Define the progress value based on status;
@@ -274,3 +284,6 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

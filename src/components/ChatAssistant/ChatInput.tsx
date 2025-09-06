@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
 import { Send } from 'lucide-react'
@@ -41,6 +42,10 @@ interface ChatInputProps {
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Send } from 'lucide-react';
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
 import { Send } from 'lucide-react'
@@ -52,16 +57,43 @@ interface ChatInputProps {
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Send } from 'lucide-react';
+<<<<<<< HEAD
+=======
+
+interface ChatInputProps {;
+  onSend: (message: string) => void;
+disabled?: boolean ;
+}export function ChatInput(): any ({;
+  onSend, disabled = false ;
+}: ChatInputProps) {';
+  const [message, setMessage] = useState ('');
+const inputRef = useRef<HTMLTextAreaElement> (null);
+//Focus input when component mounts ;
+export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) {;
+
+  const [ message, setMessage ] = useState(''),;
+  const inputRef = useRef<HTMLTextAreaElement>(null),;
+
+  useEffect(() => {    // Focus input when component mounts;
+    inputRef && inputRef.current?.focus();  }, []);
+    inputRef && inputRef.current?.focus();
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ChatInputProps {;
   onSend: (message: string) => void,;
   disabled?: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
   const [message, setMessage] = useState(''),;
   const inputRef = useRef<HTMLTextAreaElement>(null),;
 =======
+=======
+
+export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) {;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [message, setMessage] = useState('');
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
@@ -137,6 +169,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         type='submit';
         className='bg - zion - purple hover:bg - zion - purple - light text - white rounded - full p - 2 h - 10 w - 10 flex items - center justify - center'        on_change={(e) => set_message (e.target.value)}
 
+<<<<<<< HEAD
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
@@ -145,6 +178,8 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         disabled={!message.trim() |disabled}
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
       <textarea
@@ -177,12 +212,16 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         disabled={!message.trim() || disabled}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
       >
         <Send className="h-5 w-5" />
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </Button>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -198,6 +237,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
       </Button>
     </form>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -221,3 +261,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

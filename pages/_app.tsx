@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -319,10 +320,15 @@ export default function App({ Component, pageProps }: AppProps) {
 }
 <<<<<<< HEAD
 =======
+=======
+import React from 'react';
+import type { AppProps } from 'next/app';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import '../styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -372,3 +378,6 @@ export default function App({ Component, pageProps }: AppProps) {
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -20,9 +20,12 @@ export const InstallPrompt: React.FC = () => {
     const hasShown = safeSessionStorage.getItem(SHOWN_KEY)
     // Do not show prompt if already installed (standalone mode)
 
+<<<<<<< HEAD
     if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
       return;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     const handler = (e: BeforeInstallPromptEvent,) => {
       e.preventDefault()
@@ -52,6 +55,7 @@ export const InstallPrompt: React.FC = () => {
     if (outcome === 'accepted') {
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('eventpwa_install_accepted')
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
@@ -210,6 +214,12 @@ export default InstallPrompt,
 },;
 
 export default InstallPrompt,;
+=======
+
+  return (
+    <>;
+      {/* Styles can be moved to a CSS file or a styled-components block if preferred */}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       <div className="fixed bottom - 4 right - 4 z-[1000] pwa - install - button-container"> {/* Added a container for styling */}
         <div className="bg - zion - blue - dark text - white p - 3 rounded - lg shadow - lg flex items - center space-x-3">;
@@ -225,6 +235,7 @@ export default InstallPrompt,;
 export default InstallPrompt,
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     </>
   )
@@ -232,3 +243,6 @@ export default InstallPrompt,
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,7 +1,12 @@
 import { useState, useEffect } from 'react',;
 import { Search } from 'lucide-react';
+<<<<<<< HEAD
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';import {;
+=======
+
+import {;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Pagination,;
   PaginationContent,;
   PaginationItem,;
@@ -26,10 +31,13 @@ import { CountryServiceCard } from '@/components/services/CountryServiceCard';
 import { CountryPricing } from '@/data/onsiteServicePricing';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   setSearchQuery: (query: string) => void;
 }
 
@@ -99,9 +107,12 @@ export function CountryTabs({
           value='featured'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <TabsContent value="featured" className="mt-0">
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-white text-center">
@@ -110,7 +121,10 @@ export function CountryTabs({
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-white text-center">
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             Featured Service Locations
           </h2>
           <p className='text-zion-slate-light text-center mt-2'>
@@ -222,6 +236,7 @@ export function CountryTabs({
           ))}
         </div>
 
+<<<<<<< HEAD
         {totalPages > 1 && (
           <div className="mt-8">
             <Pagination className="justify-center">
@@ -235,6 +250,8 @@ export function CountryTabs({
                     }}
 =======
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCountries
             .filter((country) => popularCountries.includes(country.country))
@@ -291,6 +308,7 @@ export function CountryTabs({
                     }}
                   />;
                 </PaginationItem>;
+<<<<<<< HEAD
                 {Array && Array.from({ length: totalPages }, (_, i) => i + 1).map(;
                   page => (;
                     <PaginationItem key={page}>;
@@ -312,6 +330,9 @@ export function CountryTabs({
                       setCurrentPage(Math && Math.min(totalPages, currentPage + 1));                    }}
                   />;
                 </PaginationItem>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </PaginationContent>;
             </Pagination>;
           </div>;
@@ -469,6 +490,7 @@ function CountryTabs() {
                         page={page}
                         isActive={page === currentPage}
 <<<<<<< HEAD
+<<<<<<< HEAD
                         onClick={(e) => {;
                           e.preventDefault();
                           setCurrentPage(page);
@@ -496,6 +518,8 @@ function CountryTabs() {
 }
 ;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                 )}
                 <PaginationItem>;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React, { useEffect, useState } from 'react';
 <<<<<<< HEAD
@@ -117,6 +118,24 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {;
         </CardContent>
       </Card>
     )
+=======
+
+    return (
+      <Card className='w-full max-w-sm'>;
+        <CardHeader>;
+          <CardTitle className='flex items-center gap-2'>;
+            <User className='h-5 w-5' />;
+            Not Signed In;
+          </CardTitle>;
+        </CardHeader>;
+        <CardContent>;
+
+            Sign In;
+          </Button>;
+        </CardContent>;
+      </Card>;
+    );
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
   if (!user) {
@@ -139,6 +158,7 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {;
   }
 
   return (
+<<<<<<< HEAD
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -228,6 +248,10 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {;
             </span>
           </div>
         </div>          Sign Out
+=======
+
+          Sign Out
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </Button>;
       </CardContent>;
     </Card>;
@@ -235,7 +259,6 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {;
 }
 }
 
-        
         <Button onClick={handleSignOut} variant="outline" className="w-full">
           <LogOut className="h-4 w-4 mr-2" />
 
@@ -340,8 +363,12 @@ if ( {) {
         </Button>;
       </CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Card>);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

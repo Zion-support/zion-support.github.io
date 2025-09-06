@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>;
@@ -10,6 +11,8 @@ import { CalendarIcon } from 'lucide-react'
 import { UseFormReturn, ControllerRenderProps } from "react-hook-form",
 import { 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   FormField,
   FormItem, 
   FormLabel, 
@@ -17,6 +20,7 @@ import {
   FormDescription, 
   FormMessage 
 } from "@/components/ui/form",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -57,6 +61,12 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+        name="projectName"
+        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> }) => (
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Button } from "@/components/ui/button",
@@ -92,22 +102,29 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
       <FormField;
         control={form.control}
 <<<<<<< HEAD
+<<<<<<< HEAD
         name="projectName"
         render={({ field }: { field: ControllerRenderProps<ContractFormValues "projectName"> }) => (
+=======
+        name="projectName"
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <FormItem>
             <FormLabel>Project Name</FormLabel>
             <FormControl>
               <Input placeholder="AI Website Development" {...field} />
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
             </FormControl>
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <FormMessage />
           </FormItem>
         )}
       />
 
+<<<<<<< HEAD
           field: ControllerRenderProps<ContractFormValues, 'projectName'>;
         }) => (;
           <FormItem>;
@@ -136,6 +153,8 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           field: ControllerRenderProps < ContractFormValues, 'project_name'>;
 =======
         name="projectName"          field: ControllerRenderProps < ContractFormValues, 'project_name'>;
@@ -243,6 +262,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                       ) : (;
                         <span>Pick a date</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       
       <FormField
@@ -259,12 +279,16 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <FormItem>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <FormLabel>Scope Summary</FormLabel>
             <FormControl>
               <Textarea
+<<<<<<< HEAD
                 placeholder="Describe the project scope, deliverables, and expectations..."
                 className="min-h-[120px]"
         name="scopeSummary";
@@ -276,6 +300,9 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                 placeholder="Describe the project scope, deliverables, and expectations...";
 <<<<<<< HEAD
                 className="min-h-[120px]";
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {...field}
 =======
                 className="min-h-[120px]";                {...field}
@@ -286,6 +313,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
               Be specific about what is included and any limitations;
             </FormDescription>;
             <FormMessage />;
+<<<<<<< HEAD
           </FormItem>;
 <<<<<<< HEAD
 =======
@@ -296,12 +324,16 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         )}
       />
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
           control={form.control}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           name="startDate"
@@ -312,10 +344,14 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -323,6 +359,9 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       {field.value ? (
                         format(field.value, "PPP")
                       ) : (
@@ -334,13 +373,14 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-0" align="start">
                   <Calendar
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     mode="single"
       />;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <FormField;
           control={form.control}
           name="startDate";
@@ -396,7 +436,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
 
         />;
 
-
         <FormField
           control={form && form.control}
           name='endDate'
@@ -424,7 +463,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                 <PopoverContent className='w-auto p-0' align='start'>
                   <Calendar
 
-
                     initialFocus
                   />
                 </PopoverContent>
@@ -433,12 +471,16 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
             </FormItem>
           )}
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
@@ -459,6 +501,9 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                   <FormControl>
                     <Button
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       {field.value ? (
                         format(field.value, "PPP")
                       ) : (
@@ -544,10 +589,16 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                 <PopoverContent className='w-auto p-0' align='start'>;
                   <Calendar
                     mode='single'
+<<<<<<< HEAD
+=======
+
+                    >
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       {field.value ? (
                         format(field.value, "PPP")
                       ) : (
                         <span>Pick a date</span>
+<<<<<<< HEAD
                     selected={field && field.value || undefined}
                     onSelect={field && field.onChange}
                     disabled={date => date < form && form.getValues('startDate')}                    initialFocus                    mode="single";
@@ -559,6 +610,8 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                         format(field && field.value, "PPP");
                       ) : (;
                         <span>Pick a date</span>;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
@@ -568,6 +621,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                 <PopoverContent className="w-auto p-0" align="start">;
                   <Calendar
                     mode="single"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -585,3 +639,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

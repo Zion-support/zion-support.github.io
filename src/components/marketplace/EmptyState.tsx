@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import * as React from 'react';
@@ -48,6 +49,9 @@ export interface EmptyStateProps {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import * as React from 'react',;
 =======
   type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading';
@@ -69,10 +73,15 @@ export interface EmptyStateProps {;
   description?: string,;
   action?: {;
     label: string,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     onClick: () => void;
   },;
   icon?: React.ReactNode;
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80,6 +89,8 @@ export interface EmptyStateProps {;
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -116,6 +127,7 @@ const defaultContent = {
   loading: {
     icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,
     title: 'Loading...',
+<<<<<<< HEAD
 <<<<<<< HEAD
     description: 'We\'re fetching the latest data for you. This should only take a moment.'}},
 
@@ -181,12 +193,16 @@ export function EmptyState({
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {type === 'error' && (
         <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       
@@ -302,13 +318,14 @@ export function ProductsEmptyState ({
   onAddProduct,
   is_authenticated = false,
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }: {
   onRetry?: () => void
   onAddProduct?: () => void
   isAuthenticated?: boolean }) {
   const action = onAddProduct
     ? {
-
 
       {type === 'error' && (;
         <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>;
@@ -380,6 +397,7 @@ export function ProductsEmptyState({;
   const action = onAddProduct;
     ? {;
         label: isAuthenticated ? 'Add Product' : 'Login to Add Product',;
+<<<<<<< HEAD
         onClick: onAddProduct;
       }
     : onRetry;
@@ -411,6 +429,10 @@ export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
   return (
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+  return (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <EmptyState
       type="categories"
       action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}
@@ -418,15 +440,19 @@ export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
   );
 }
 
+<<<<<<< HEAD
 export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
   return (
     <EmptyState
       type="talent"
       action={onRetry ? { label: 'Reset Filters', onClick: onRetry } : undefined}
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     />;
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
@@ -483,6 +509,8 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         label: is_authenticated ? 'Add Product' : 'Login to Add Product',
         on_click: onAddProduct,
       }
@@ -507,8 +535,12 @@ export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
       />);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

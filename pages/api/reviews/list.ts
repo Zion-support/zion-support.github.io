@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readReviews, readProjects } from "../../../utils/dataStore";
 import type { PublicReview, ReviewsSummary } from "../../../types/reviews";
@@ -69,11 +69,14 @@ export default async function handler(
     if (targetType !== "talent" && targetType !== "client") {
       return res.status(400).json({ error: "Invalid targetType" });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
 
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
 
+<<<<<<< HEAD
 
     const filtered = all && all.filter((r) => {
       if (r && r.removed || !r && r.approved) return false;
@@ -91,10 +94,14 @@ export default async function handler(
       const matchesTarget = r.toRole === (targetType as 'talent' | 'client') && r.toId === targetId;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      const matchesTarget =
+        r && r.toRole === (targetType as "talent" | "client") && r && r.toId === targetId;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       if (!matchesTarget) return false;
       const counterpartExists = all && all.some(
         (x) =>
-
 
           x && x.projectId === r && r.projectId &&
           x && x.fromRole !== r && r.fromRole &&
@@ -102,6 +109,7 @@ export default async function handler(
           x && x.approved &&
           !x && x.removed,
 
+<<<<<<< HEAD
 
 =======
 import type { NextApiRequest, NextApiResponse } from './next';
@@ -197,6 +205,11 @@ export default async function handler(
 >>>>>>> main
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      );
+      return counterpart_exists;
+    });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     if (!targetType || !targetId) {
       return res.status(400).json({ error: "Missing targetType or targetId" });
@@ -208,7 +221,10 @@ export default async function handler(
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 try {
     const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
     if (!targetType || !targetId) {
@@ -236,6 +252,7 @@ const { targetType, targetId } = req.query as {
 
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
+<<<<<<< HEAD
 <<<<<<< HEAD
     const filtered = all.filter((r) => {
     const filtered = all.filter((r) => {
@@ -324,6 +341,9 @@ const { targetType, targetId } = req.query as {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       .map((r) => {
         let authorName = r && r.fromId;
         if (r && r.fromRole === "talent") {
@@ -331,6 +351,7 @@ const { targetType, targetId } = req.query as {
           authorName = t ? t && t.name : r && r.fromId;
         }
         if (r && r.anonymous) authorName = "Anonymous";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -416,6 +437,13 @@ if (author_name = "Anonymous") {
       total_reviews,
       totalCompletedProjects,
 
+=======
+
+    const summary: ReviewsSummary = {
+      average_rating
+      total_reviews
+      totalCompletedProjects
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 <<<<<<< HEAD
 =======
@@ -435,6 +463,7 @@ if (author_name = "Anonymous") {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -445,10 +474,12 @@ if (author_name = "Anonymous") {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
@@ -461,6 +492,9 @@ if (author_name = "Anonymous") {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
   }
@@ -492,9 +526,13 @@ if (author_name = "Anonymous") {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

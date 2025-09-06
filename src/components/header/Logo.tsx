@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react',;
 import Link from 'next/link',;
@@ -21,6 +22,8 @@ return (
         <img src={logoToUse} alt={`${brand_name} Logo`} className="h-8" width={32} height={32} />;
       </Link>);
   }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 <<<<<<< HEAD
 
@@ -35,6 +38,7 @@ return (
     )
   }
 
+<<<<<<< HEAD
   
   return (
 <<<<<<< HEAD
@@ -45,6 +49,9 @@ return (
 }
 ;
 =======
+=======
+  return (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 interface LogoProps {;
   customLogo?: string;
@@ -123,9 +130,13 @@ if ( {) {
     </Link>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

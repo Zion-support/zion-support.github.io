@@ -49,6 +49,7 @@ interface ActiveFiltersProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function ActiveFilters({
   selectedSkills,
   toggleSkill,
@@ -73,6 +74,8 @@ export function ActiveFilters({
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const hasActiveFilters = null;
     selectedSkills.length > 0 ||
     selectedAvailability.length > 0 ||
@@ -83,7 +86,10 @@ export function ActiveFilters({
     experienceRange[1] !== 15 ||
     priceRange[0] !== 50 ||
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     selectedRegions.length > 0 ||
     experienceRange[0] !== 0 ||
@@ -108,6 +114,7 @@ import { ClickableBadge } from "@/components/ui/clickable-badge",;
 import { Button } from "@/components/ui/button",;
 import { X } from 'lucide-react';
 interface ActiveFiltersProps {;
+<<<<<<< HEAD
   selectedSkills: string[];
   toggleSkill: (skill: string) => void;
   selectedAvailability: string[];
@@ -133,6 +140,10 @@ interface ActiveFiltersProps {;
 }
 
 export function ActiveFilters(): any ({;  selectedSkills,;
+=======
+
+  selectedSkills,;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   toggleSkill,;
   selectedAvailability,;
   toggleAvailability,;
@@ -142,6 +153,7 @@ export function ActiveFilters(): any ({;  selectedSkills,;
   setPriceRange,;
   experienceRange,;
   setExperienceRange,;
+<<<<<<< HEAD
   clearFilters,;
 }: ActiveFiltersProps) {;
   // Check if any filters are active;
@@ -153,6 +165,14 @@ export function ActiveFilters(): any ({;  selectedSkills,;
     priceRange[0] !== 50 ||;
     priceRange[1] !== 200;
 <<<<<<< HEAD
+=======
+
+    experienceRange[0] !== 0 ||;
+    experienceRange[1] !== 15 ||;
+    priceRange[0] !== 50 ||;
+    priceRange[1] !== 200;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (!hasActiveFilters) return null;
   return (;
     <div className="mb-6 flex flex-wrap gap-2 items-center">;
@@ -160,6 +180,7 @@ export function ActiveFilters(): any ({;  selectedSkills,;
       {selectedSkills.map(skill => (;
         <ClickableBadge;
           key={skill}
+<<<<<<< HEAD
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
           onClick={() => toggleSkill(skill)}
         >;
@@ -174,12 +195,17 @@ export function ActiveFilters(): any ({;  selectedSkills,;
       {selectedAvailability.map(status => (;
         <ClickableBadge;
 =======
+=======
+
+      ))}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       {selectedAvailability && selectedAvailability.map(status => (;
 
         <ClickableBadge
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           key={status}
+<<<<<<< HEAD
 <<<<<<< HEAD
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => toggleAvailability(status)}
@@ -216,14 +242,23 @@ export function ActiveFilters(): any ({;  selectedSkills,;
               : 'Project-based'}
           <X className='h-3 w-3' />;
         </ClickableBadge>;      ))}
+=======
+
+      ))}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       {selectedRegions && selectedRegions.map(region => (;
 
         <ClickableBadge
           key={region}
+<<<<<<< HEAD
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
           onClick={() => toggleRegion(region)}        >;          {region}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+          {region}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (;
 
@@ -240,9 +275,12 @@ export function ActiveFilters(): any ({;  selectedSkills,;
         </ClickableBadge>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
       
       {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (;
 
@@ -272,7 +310,6 @@ export function ActiveFilters(): any ({;  selectedSkills,;
         </ClickableBadge>
       )}
 
-      
       {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
 
           {experienceRange[0]}-{experienceRange[1]} years
@@ -292,8 +329,11 @@ export function ActiveFilters(): any ({;  selectedSkills,;
 };
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Button 
         variant="ghost" 
         size="sm" 
@@ -311,10 +351,13 @@ export function ActiveFilters(): any ({;  selectedSkills,;
         className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
@@ -352,7 +395,10 @@ export function ActiveFilters(): any ({;  selectedSkills,;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React from 'react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';

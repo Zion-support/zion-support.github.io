@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -6,6 +7,8 @@ import { Check, X } from 'lucide-react'
 import {
   Table,
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Check, X } from 'lucide-react'
 
 export function EnterprisePricingTable() {
@@ -29,11 +32,17 @@ export function EnterprisePricingTable() {
         { name: "Dedicated success manager", included: false }]},
     {
       name: "Business",
+<<<<<<< HEAD
       price: "$1,999",      billing: "/month",
+=======
+
+      billing: "/month",
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       description: "Ideal for growing companies",
       users: "Up to 50 users",
       popular: true,
       features: [
+<<<<<<< HEAD
         { name: 'Private hiring portal', included: true }
         { name: 'Dedicated talent pool', included: true }
         { name: 'Enhanced SLA (8h)', included: true }
@@ -53,10 +62,33 @@ export function EnterprisePricingTable() {
       users: 'Unlimited users'
       popular: false
       features: [      <div className="container mx-auto max-w-7xl">
+=======
+
+        { name: "Private hiring portal", included: true },
+        { name: "Dedicated talent pool", included: true },
+        { name: "Enhanced SLA (8h)", included: true },
+        { name: "Advanced branding", included: true },
+        { name: "Admin dashboard", included: true },
+        { name: "Team collaboration", included: true },
+        { name: "API access", included: true },
+        { name: "Custom integrations", included: false },
+        { name: "Dedicated success manager", included: false }]},
+    {
+      name: "Enterprise",
+      price: "Custom",
+      billing: "",
+      description: "For large organizations",
+      users: "Unlimited users",
+      popular: false,
+      features: [
+
+      <div className="container mx-auto max-w-7xl">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
 
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Check, X } from 'lucide-react';
@@ -207,6 +239,17 @@ export function EnterprisePricingTable() {;
                     </div>
                   </TableHead>
                 ))}      </div>
+=======
+          </p>
+        </div>
+
+                      </Button>
+                    </div>
+                  </TableHead>
+                ))}
+
+      </div>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </section>
 
       </div>;
@@ -249,6 +292,7 @@ export function EnterprisePricingTable() {;
     </section>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   );
@@ -510,3 +554,6 @@ export function EnterprisePricingTable() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

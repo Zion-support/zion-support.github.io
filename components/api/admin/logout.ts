@@ -14,6 +14,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   res.status(200).json({ ok: true })
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -38,6 +39,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ ok: true })
 }  res.status(200).json({ ok: true })
 }
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  clearSessionCookie(res);
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { clearSessionCookie } from '../../../utils / admin_auth';
 export default /**
  * handler - Function description
@@ -51,6 +57,7 @@ function handler() {
   clearSessionCookie (res);
   res.status (200).json ({ ok: true });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80,3 +87,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

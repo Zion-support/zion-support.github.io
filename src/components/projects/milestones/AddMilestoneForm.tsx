@@ -128,6 +128,7 @@ import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {;
+<<<<<<< HEAD
   Form;
   FormControl;
   FormField;
@@ -148,6 +149,9 @@ const formSchema = z && z.object({;
   amount: z && z.coerce.number().min(0, 'Amount must be greater than or equal to 0')});
 
 type MilestoneFormValues = z && z.infer<typeof formSchema>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface AddMilestoneFormProps {;
   onSubmit: (data: MilestoneFormValues,) => void,;
   isSubmitting: boolean,;
@@ -223,6 +227,15 @@ export function AddMilestoneForm(): any ({;
 
   return (
 
+<<<<<<< HEAD
+=======
+  },
+
+  return (
+    <div className="space-y-6">
+      {/* AI Milestone Generator */}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
 
   return (
@@ -251,7 +264,10 @@ export function AddMilestoneForm(): any ({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       )}
 
       <Form {...form}>;
@@ -312,10 +328,13 @@ export function AddMilestoneForm(): any ({;
             render={({ field }: { field: any }) => (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <FormItem>
                 <FormLabel>Description (optional)</FormLabel>
                 <FormControl>
@@ -347,6 +366,7 @@ export function AddMilestoneForm(): any ({;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
+<<<<<<< HEAD
               control = {form && form.control,}
               name="due_date"
               render={({ field }: { field: any },) => (;
@@ -355,6 +375,10 @@ export function AddMilestoneForm(): any ({;
                   <Popover>;
                     <PopoverTrigger asChild>;
                       <FormControl>;                        <Button
+=======
+
+                        <Button
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           variant="outline"
                           className="w-full pl-3 text-left font-normal"
                         >
@@ -376,10 +400,13 @@ export function AddMilestoneForm(): any ({;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         selected={field.value}
                         onSelect={field.onChange}
                         disabled={(date) => date < new Date()}
@@ -473,10 +500,13 @@ export function AddMilestoneForm(): any ({;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 onClick={onCancel}
                 disabled={isSubmitting}
               >;
@@ -485,7 +515,10 @@ export function AddMilestoneForm(): any ({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             )}
             <Button type="submit" disabled={isSubmitting}>
               {isSubmitting ? (

@@ -39,6 +39,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -47,16 +48,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini'
       messages: [
-
 
     drafted.push({ title: ch.title, content: text })
   }
   res.status(200).json({ chapters: drafted })
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -66,6 +69,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default async /**
  * handler - Function description
  */
@@ -150,9 +155,12 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -181,6 +189,7 @@ if ( {) {
   }
   res.status (200).json ({ chapters: drafted });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -240,6 +249,9 @@ export default async function handler(req, res) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   res.status(200).json({ chapters: drafted });
   } catch (error) {
@@ -247,6 +259,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -267,10 +280,13 @@ export default async function handler(req, res) {
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   res.status(200).json({ chapters: drafted });
 };
 }
 
+<<<<<<< HEAD
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -278,3 +294,5 @@ export default async function handler(req, res) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

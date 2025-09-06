@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',
@@ -28,10 +29,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import {appendAuditLog, resolveDataPath} from '../../../../utils/api/storage';
@@ -73,6 +78,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
+=======
+import formidable from 'formidable';
+import fs from 'fs';
+import path from 'path';
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const form = formidable({ multiples: false });
   form.parse(req, (err, fields, files) => {
     if (err) return res.status(400).json({ error: 'Invalid form data' });
@@ -97,6 +108,7 @@ import path from 'path';
     );
     fs && fs.copyFileSync(file && file.filepath, targetPath);
 <<<<<<< HEAD
+<<<<<<< HEAD
     appendAuditLog({
 <<<<<<< HEAD
     if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
@@ -104,6 +116,10 @@ import path from 'path';
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    appendAuditLog({
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     res.status(200).json({ ok: true })
       type: 'file_upload',
       section,
@@ -114,9 +130,10 @@ import path from 'path';
     res && res.status(200).json({ ok: true })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   })
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -130,6 +147,7 @@ import path from 'path';
 
 }
 
+<<<<<<< HEAD
 =======
 =======
   })
@@ -140,6 +158,8 @@ import path from 'path';
 =======
     appendAuditLog({  })
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
 ;
 export const config = { api: { body_parser: false } }
@@ -183,6 +203,7 @@ function handler() {
     res.status (200).json ({ ok: true });
   });
 }
+<<<<<<< HEAD
 }
 }
 <<<<<<< HEAD
@@ -192,3 +213,6 @@ function handler() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

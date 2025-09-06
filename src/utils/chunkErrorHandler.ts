@@ -230,10 +230,13 @@ class ChunkErrorHandler {;
     window.location.href = window.location.href + '?_t=' + Date.now()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       });
     } catch (error) {;
       logErrorToProduction('Failed to clear caches', error as Error, {;
@@ -254,7 +257,10 @@ class ChunkErrorHandler {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
   private showFatalErrorMessage(): void {
@@ -278,10 +284,13 @@ class ChunkErrorHandler {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     errorDiv.innerHTML = `
       <div style="text-align: center, padding: 2rem, max-width: 500px,">
         <h2 style="margin-bottom: 1rem,">Connection Issue</h2>
@@ -314,10 +323,13 @@ class ChunkErrorHandler {;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         ">
           Go Home
         </button>
@@ -429,7 +441,10 @@ class ChunkErrorHandler {;
     return this.errorStats.get(sessionKey)!;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   // Public method to manually trigger recovery
   public triggerRecovery(): void {
@@ -492,6 +507,7 @@ export default chunkErrorHandler
           margin - right: 1rem;        ">;
           Try Again;
         </button>;
+<<<<<<< HEAD
         <button onclick="window.location.href='/'" style=";
           background: #666;
           color: white;
@@ -561,6 +577,14 @@ export default chunkErrorHandler;
         </button>;
         <button onclick="window.location.href='/'" style=";
 export default chunkErrorHandler;
+=======
+
+        <button onclick="window.location.href='/'" style=";
+export default chunkErrorHandler;
+}
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   // Public method to manually trigger recovery;
   public triggerRecovery(): void {;

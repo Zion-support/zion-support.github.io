@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { Briefcase, Star, User } from 'lucide-react'
@@ -73,6 +74,9 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const userTypes: UserTypeOption[] = [
     {
       id: "serviceProvider",
@@ -87,6 +91,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       icon: Star
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -106,6 +111,8 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
 <<<<<<< HEAD
@@ -130,7 +137,6 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
         {userTypes && userTypes.map(type => {;
           const Icon = type && type.icon;
           const isSelected = selectedType === type && type.id;
-
 
               onClick={() => onSelect(type && type.id)}
               variant='outline'              className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${;
@@ -189,8 +195,11 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 
                 />;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="grid gap-4 md: grid-cols-3">
         {userTypes.map((type) => {
           const Icon = type.icon,
@@ -205,23 +214,16 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
                 isSelected 
                   ? "border-zion-purple bg-zion-purple/10 text-zion-purple" 
                   : "border-zion-blue-light hover:border-zion-cyan/50 text-white"
-<<<<<<< HEAD
-    <div className="space-y-6">
-      <div className="text-center mb-6">
-        <h3 className="text-2xl font-bold text-white">Choose your role</h3>
-        <p className="text-zion-slate-light mt-2">
-          This helps us personalize your experience
-        </p>
-      </div>
-=======
 
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               }`}
             >
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>
                 <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="text-center">
                 <h4 className="font-medium">{type.name}</h4>
                 <p className="text-sm text-zion-slate-light mt-1">
@@ -234,6 +236,7 @@ interface UserTypeOption {;
   description: string,;
   icon: React.ElementType;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ;
@@ -308,13 +311,15 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         })}
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
 
       </div>;
@@ -325,3 +330,5 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

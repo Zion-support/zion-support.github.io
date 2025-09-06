@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -41,6 +42,12 @@ import { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ensureDemoUsers, generateUser, setUserCookie, upsertUser } from '../../../utils/auth';
 import { UserRole } from '../../../utils/messaging/types';
+=======
+
+import { ensureDemoUsers, generateUser, setUserCookie, upsertUser } from '../../../utils/auth',;
+import { UserRole } from '../../../utils/messaging/types',;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { name, role } = req.body as { name: string, role: UserRole }
@@ -50,6 +57,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   upsertUser(user)
   setUserCookie(res, user)
   res.status(200).json({ user })
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -90,3 +98,6 @@ export default function handler(req, res) {
   res.status(200).json({ user })
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

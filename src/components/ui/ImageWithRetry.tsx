@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-=======
-import React, { useState } from 'react'
-import Image, { type ImageProps } from 'next/image'
-import { cn } from '@/lib/utils';
-interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {;
-  src: string;  alt?: string
-  /** Source to use if the main src fails */
-  fallbackSrc?: string
-  /** CSS class for the retry button */
-  retryClassName?: string;interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
 
+<<<<<<< HEAD
   src: string,
   alt?: string;
   /** Source to use if the main src fails */
   fallbackSrc?: string
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   /** CSS class for the retry button */
 
   retryClassName?: string;  retryClassName?: string
@@ -32,13 +24,17 @@ interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 /**
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.
  */
 export function ImageWithRetry({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   src,
@@ -145,12 +141,17 @@ export function ImageWithRetry(): any ({;
   const fill = !('width' in props) && !('height' in props)
   return (
     <div className='relative inline-block'>      <Image    <div className="relative inline-block">      <Image
+=======
+
+      <Image
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {...props}
         src = {currentSrc,}
         alt = {alt,}
         onError = {handleError,}
         className = {cn(className),}
         fill = {fill,}
+<<<<<<< HEAD
   );
   )
   ...props
@@ -169,6 +170,8 @@ export function ImageWithRetry(): any ({;
   },
 
   const fill = !('width' in props) && !('height' in props),
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const fill = !('width' in props) && !('height' in props);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -195,6 +198,7 @@ export function ImageWithRetry(): any ({;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default ImageWithRetry;
@@ -237,3 +241,6 @@ export default ImageWithRetry;
     </div>);
 export default ImageWithRetry;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

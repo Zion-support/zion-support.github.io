@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -66,6 +67,10 @@ import { ShieldAlert } from 'lucide-react'
 
 interface RaiseDisputeButtonProps {  projectId: string,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  projectId: string,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   milestoneId?: string,
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
   size?: "default" | "sm" | "lg" | "icon",
@@ -80,6 +85,7 @@ export function RaiseDisputeButton({
   size,
   className 
 }: RaiseDisputeButtonProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const router = useRouter(),
@@ -112,6 +118,8 @@ export function RaiseDisputeButton({
 =======
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className='sm:max-w-[550px]'>
@@ -162,6 +170,7 @@ export function RaiseDisputeButton({
             project_id={project_id}
             milestone_id={milestone_id}
             onDisputeCreated={handleDisputeCreated}
+<<<<<<< HEAD
             on_cancel={() => setIsDialogOpen (false)}          />;
         </DialogContent>;
       </Dialog>;
@@ -193,6 +202,9 @@ export function RaiseDisputeButton({
       </Button>
                 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <DisputeForm 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -257,6 +269,7 @@ export function RaiseDisputeButton({;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -265,3 +278,6 @@ export function RaiseDisputeButton({;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

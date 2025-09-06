@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
@@ -37,10 +38,15 @@ import {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 interface AIEnhancementPanelProps {  title: string;
+=======
+
+  title: string;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   defaultOptions: AIEnhancementOptions;
   onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
+<<<<<<< HEAD
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -94,6 +100,9 @@ if ( {) {
 }
 ;
 export function AIEnhancementPanel({;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   title,;
 =======
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
@@ -113,6 +122,7 @@ export function AIEnhancementPanel({;  title,;
   onClose,;
   showInstructions = true,;
 <<<<<<< HEAD
+<<<<<<< HEAD
   initialContent = '';
 }: AIEnhancementPanelProps) {;
   const [options, setOptions] = useState<AIEnhancementOptions>({;
@@ -130,11 +140,15 @@ export function AIEnhancementPanel({;  title,;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
+<<<<<<< HEAD
 <<<<<<< HEAD
       ...options,
       [field]: e.target.value})
@@ -187,6 +201,9 @@ export function AIEnhancementPanel({;  title,;
     setCopied(true),
     setTimeout(() => setCopied(false), 2000)
   },
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
@@ -200,10 +217,11 @@ export function AIEnhancementPanel({;  title,;
         <div className="space-y-2">
           <label className="text-sm font-medium">Content to enhance</label>
           <Textarea
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
             value={options.content}
@@ -248,6 +266,7 @@ export function AIEnhancementPanel({;  title,;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Generate button */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Button 
           onClick={handleGenerate} 
           className="w-full" 
@@ -262,6 +281,8 @@ export function AIEnhancementPanel({;  title,;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           {isEnhancing ? (
             <>
@@ -282,6 +303,7 @@ export function AIEnhancementPanel({;  title,;
               Generate Enhanced Content
             </>
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
         </Button>
           disabled={isEnhancing || (!options && options.content && !options && options.context)}>;
@@ -317,6 +339,10 @@ export function AIEnhancementPanel({;  title,;
               >
 
 
+=======
+        </Button>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {copied ? (
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
                 ) : (
@@ -330,17 +356,20 @@ export function AIEnhancementPanel({;  title,;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 onChange={(e) => setGeneratedContent(e.target.value)}
                 className="min-h-[200px]"
               />
-
 
             </div>
           </div>
         )}
 
+<<<<<<< HEAD
 
       
 <<<<<<< HEAD
@@ -354,12 +383,15 @@ export function AIEnhancementPanel({;  title,;
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {generatedContent && (
         <CardFooter className='flex justify-between'>
           {onClose && (
             <Button variant='outline' onClick={onClose}>
               Cancel
             </Button>
+<<<<<<< HEAD
       </CardContent>;
 
       {generatedContent && (;
@@ -372,6 +404,9 @@ export function AIEnhancementPanel({;  title,;
 
     </Card>;
   );
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 =======
         </Button>}
@@ -482,3 +517,7 @@ export function AIEnhancementPanel({;  title,;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

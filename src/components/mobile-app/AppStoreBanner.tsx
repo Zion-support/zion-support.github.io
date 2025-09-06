@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from "react",
 import { safeStorage } from "@/utils/safeStorage",
@@ -33,6 +34,9 @@ export const AppStoreBanner: React.FC = () => {
   
 <<<<<<< HEAD
   return (
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">
 =======
   return (    <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">
@@ -60,6 +64,7 @@ export const AppStoreBanner: React.FC = () => {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
@@ -100,6 +105,9 @@ export const AppStoreBanner: React.FC = () => {;
   // Only render on mobile devices;
   if (!isMobile || !isVisible) return null;
   return (;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">;
 =======
 export const AppStoreBanner: React.FC = () => {;    <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">;
@@ -111,6 +119,7 @@ export const AppStoreBanner: React.FC = () => {;    <div className="fixed bottom
           <p className="text-xs text-gray-300">Get the full experience on our app</p>;
         </div>;
         <div className="flex items-center gap-3">;
+<<<<<<< HEAD
           <a;
             href="/open-app";
             className="px-4 py-1 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium";
@@ -122,6 +131,9 @@ export const AppStoreBanner: React.FC = () => {;    <div className="fixed bottom
             className="text-gray-400 focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded";
             aria-label="Dismiss banner";
           >;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <X className="h-5 w-5" />;
           </button>;
         </div>;
@@ -166,3 +178,7 @@ if (return null) {
 '"},
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

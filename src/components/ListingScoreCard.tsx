@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -58,6 +59,21 @@ interface ListingScoreCardProps {
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { cn } from '@/lib / utils';
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+import { StarIcon } from 'lucide-react';
+
+interface ListingScoreCardProps {
+  title: string;
+  description: string;
+  image?: string;
+  category: string;
+  tags?: string[];
+  author?: string;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   tags,
 =======
 export function ListingScoreCard({ 
@@ -73,6 +89,7 @@ export function ListingScoreCard({
   reviewCount = 0,
   className
 }: ListingScoreCardProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const [mainImageError, setMainImageError] = useState(false),
@@ -104,12 +121,17 @@ export function ListingScoreCard({
         <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
           <Image            src={image} 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+            src={image} 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             alt={title} 
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             onError={() => setMainImageError(true)}
             priority={false}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // General sizes
           />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -119,6 +141,9 @@ export function ListingScoreCard({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>
       )}
       {(!image || mainImageError) && ( // Fallback if no image or error
@@ -146,6 +171,10 @@ export function ListingScoreCard({
           )}
         </div>
 
+<<<<<<< HEAD
+=======
+        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>
         
         {rating > 0 && (
@@ -180,7 +209,23 @@ interface ListingScoreCardProps {;
 }
 ;
 export function ListingScoreCard({;
+<<<<<<< HEAD
 export function ListingScoreCard(): any ({;  author_image?: string;
+=======
+
+  title,;
+  description,;
+  image,;
+  category,;
+  tags,;
+  author,;
+  authorImage,;
+  aiScore,;
+  rating = 0,;
+  reviewCount = 0,;
+
+  author_image?: string;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ai_score?: number;
   rating?: number;
   review_count?: number;
@@ -342,6 +387,7 @@ export function ListingScoreCard({;
 
         </p>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               ))}
             </div>
@@ -410,6 +456,13 @@ export function ListingScoreCard({;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              </Badge>;
+            ))}
+          </div>;
+        )}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {author && (
           <div className="flex items-center mt-4 pt-4 border-t border-zion-blue-light">
 =======
@@ -493,23 +546,30 @@ export function ListingScoreCard({;
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {author.charAt(0)}
               </div>;
             )}
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                 {author.charAt(0)}
               </div>
             )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <span className="text-sm text-zion-slate-light">{author}</span>
           </div>
         )}
       </div>;
     </div>;
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 =======
@@ -522,3 +582,6 @@ export function ListingScoreCard({;
               </div>
             )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

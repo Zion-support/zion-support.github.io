@@ -21,6 +21,7 @@ function ClientOnboardingSteps() {
   const onboarding_status = useOnboardingStatus ();
   const steps: OnboardingStep[] = [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
@@ -56,6 +57,10 @@ import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react'
       link: "/talent",
       action: "Find Talent"},    {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       id: 'response',
       label: 'Receive your first application',
       completed: onboarding_status.response_received,
@@ -65,10 +70,14 @@ import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react'
   ];
   return <OnboardingTracker steps={steps} title='Get Started With Hiring' />;      link: "/client - dashboard",
       action: "Check Dashboard"}],
+<<<<<<< HEAD
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
 }
 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       link: "/client-dashboard",
       action: "Check Dashboard"}],
   
@@ -102,10 +111,14 @@ export function ClientOnboardingSteps() {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const steps: OnboardingStep[] = [
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -124,8 +137,12 @@ export function ClientOnboardingSteps() {;
     {
       id: "response",
       label: "Receive your first application",
+<<<<<<< HEAD
       completed: onboardingStatus.responseReceived,
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

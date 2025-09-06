@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
@@ -69,6 +70,9 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000,
   const longDescription = watch("longDescription"),
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
 =======
   const { control, register, watch, setValue } = form
@@ -105,6 +109,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
               control={control}
               name="appTitle"
 <<<<<<< HEAD
+<<<<<<< HEAD
               render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel>App Title</FormLabel>
@@ -116,6 +121,10 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                   <FormLabel>App Title</FormLabel>
                   <FormControl>                    <Input
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+                    <Input
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       placeholder="Enter app title"
                       maxLength={platform === "ios" ? 30 : 50}
                       {...field}
@@ -193,6 +202,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                       placeholder="Enter app title";
                       maxLength={platform === "ios" ? 30 : 50}
                       {...field}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     />;
                   </FormControl>;
@@ -286,16 +296,29 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
             <div>
               <FormLabel htmlFor="keywords">Keywords</FormLabel>
               <Input 
+=======
+
+                    <Textarea
+                      placeholder="Detailed description of your app"
+                      className="min-h-32"
+                      maxLength = {maxDescriptionLength,}
+
+              <Input
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 id="keywords"
                 placeholder="Add keywords (press Enter or comma to add)"
                 onKeyDown={addKeyword}
                 className="mb-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
               />
               
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
                   <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     {keyword}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -309,6 +332,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                     </button>
                   </Badge>
                 ))}
+<<<<<<< HEAD
               </div>
               <FormDescription className="mt-2">
                 Add keywords to improve discoverability (max 100 characters total)
@@ -354,11 +378,15 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                     <Input
                       placeholder="e && e.g., 1 && 1.0.0"
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       {...field}
                     />
                   </FormControl>
                 </FormItem>
               )}
+<<<<<<< HEAD
             />
           </div>
         </Form>
@@ -370,3 +398,6 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Badge } from "@/components/ui/badge",
 import { X } from 'lucide-react'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

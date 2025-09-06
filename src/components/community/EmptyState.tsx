@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',;
 import Link from 'next/link',;
 =======
 import React from 'react'
 import Link from 'next/link'
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import { MessageSquare } from 'lucide-react'
 
@@ -17,6 +20,7 @@ import {
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 
 interface EmptyStateProps {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
@@ -68,12 +72,16 @@ import {
 } from '@/components / ui / tooltip';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
 interface EmptyStateProps {
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   title: string;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   subtitle: string;
   cta: string;
   href: string;
+<<<<<<< HEAD
   hasSession: boolean
 
 const EmptyState: React.FC<EmptyStateProps> = ({
@@ -122,6 +130,9 @@ interface EmptyStateProps {;
   hasSession: boolean;
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {
   return (
     <div className="text-center py-16">
@@ -142,6 +153,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
               <Button disabled>{cta}</Button>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
 <<<<<<< HEAD
@@ -149,6 +161,8 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -157,6 +171,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
       </TooltipProvider>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -204,3 +219,6 @@ export default EmptyState;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

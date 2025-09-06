@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import Head from 'next/head';
 import Link from 'next/link';
@@ -28,6 +29,9 @@ const Page = () => {
 
 export default Page;
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function FAQ() {
   const contact = {
     phone: "+1 302 464 0950"
@@ -262,6 +266,7 @@ export default function FAQPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
       </main>
     </>
   );
@@ -272,3 +277,12 @@ export default function FAQPage() {
 }
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      </div>
+    </Layout>
+
+  );
+}
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

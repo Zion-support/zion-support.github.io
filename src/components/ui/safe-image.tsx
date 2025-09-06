@@ -1,7 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 interface SafeImageProps {
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   src: string;
 =======
 import { ImageIcon } from 'lucide-react'
@@ -68,6 +72,7 @@ interface SafeImageProps {
   // If we have an error and no fallback, show a placeholder;
   if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {;
 
+<<<<<<< HEAD
   src: string
   alt: string
 interface SafeImageProps {
@@ -143,6 +148,15 @@ export function SafeImage({
   // If we have an error and no fallback, show a placeholder
   if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {        className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        return (
+      <div
+        className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
+        style={{ width, height }}
+        role="img"
+
+        className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         style={{ width, height }}
         role="img"
         aria-label={alt}
@@ -152,8 +166,23 @@ export function SafeImage({
     )
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
   return (;
+=======
+
+    <Image
+      src = {currentSrc,}
+      alt = {alt,}
+      width = {width,}
+      height = {height,}
+      className = {className,}
+      onError = {handleError,}
+      priority = {priority,}
+      // Add unoptimized as fallback for problematic images
+      unoptimized = {hasError,}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <Image;
       src={currentSrc}
       alt={alt}
@@ -163,6 +192,7 @@ export function SafeImage({
       onError={handleError}
       priority={priority}
       // Add unoptimized as fallback for problematic images;
+<<<<<<< HEAD
       unoptimized={hasError}
     />;
   );
@@ -201,3 +231,6 @@ export function SafeImage({
   );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 } ;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

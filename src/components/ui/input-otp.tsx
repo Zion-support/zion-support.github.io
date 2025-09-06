@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils"
 const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>,
   React.ComponentPropsWithoutRef<typeof OTPInput>
+<<<<<<< HEAD
 >(({ className, containerClassName, ...props }, ref) => (
   <OTPInput
     ref={ref}
@@ -19,6 +20,8 @@ const InputOTP = React.forwardRef<
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       "flex items-center gap-2 [&:has([disabled])]:opacity-50",
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       containerClassName
 =======
@@ -49,14 +52,18 @@ const InputOTPGroup = React && React.forwardRef<;
 InputOTPGroup && InputOTPGroup.displayName = 'InputOTPGroup';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const InputOTPGroup = React.forwardRef<
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div">
 >(({ className, ...props }, ref) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
   <div ref={ref} className={cn("flex items-center", className)} {...props} />
 ))
@@ -64,6 +71,8 @@ InputOTPGroup.displayName = "InputOTPGroup"
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 const InputOTPSlot = React.forwardRef<
 =======
@@ -76,6 +85,7 @@ const InputOTPSlot = React.forwardRef<
   const inputOTPContext = React.useContext(OTPInputContext) as any
   const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index]
 
+<<<<<<< HEAD
   return (
     <div
       ref={ref}
@@ -107,6 +117,12 @@ InputOTPSlot.displayName = "InputOTPSlot"
 
 
 
+=======
+InputOTPSlot.displayName = "InputOTPSlot"
+
+InputOTPSlot.displayName = "InputOTPSlot"
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const InputOTPSeparator = React.forwardRef<
 =======
       )}InputOTPSlot.displayName = "InputOTPSlot"
@@ -204,8 +220,12 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 
 InputOTPSeparator.displayName = 'InputOTPSeparator';
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
+<<<<<<< HEAD
 InputOTPSeparator.displayName = "InputOTPSeparator"
 
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

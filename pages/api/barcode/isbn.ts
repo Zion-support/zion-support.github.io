@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -18,6 +19,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from 'next',;
 const bwipjs = require('bwip-js'),
 
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const code = (req.query.code as string) || '',
   if (!code) {
@@ -27,16 +32,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const png = await bwipjs.toBuffer({
+<<<<<<< HEAD
       bcid: 'ean13',
       text: code.replace(/[^0-9]/g, ''),
       scale: 3,
       height: 10,
       includetext: false}),
     res.setHeader('Content-Typeimage/png'),
+=======
+      bcid: 'ean13'
+      text: code.replace(/[^0-9]/g, '')
+      scale: 3
+      height: 10
+      includetext: false})
+    res.setHeader('Content-Typeimage/png')
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     res.status(200).send(png)
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Failed to render barcode' })
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -85,3 +101,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

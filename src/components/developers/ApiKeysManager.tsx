@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react'
@@ -43,6 +44,10 @@ export function ApiKeysManager() {
   // Load keys on mount
   useState(() => {
     fetchApiKeys()    await createApiKey(keyName, selectedScopes)
+=======
+
+    await createApiKey(keyName, selectedScopes)
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     setShowCreateDialog(false)
     setKeyName('')
     setSelectedScopes([]) }
@@ -53,8 +58,11 @@ export function ApiKeysManager() {
   })
   const handleCreateKey = async () => {
 
+<<<<<<< HEAD
     if (keyName.trim() === "" || selectedScopes.length === 0) return;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     await createApiKey(keyName, selectedScopes)
     setShowCreateDialog(false)
     setKeyName("")
@@ -155,6 +163,7 @@ function ApiKeysManager() {
     setShowCreateDialog (false);
     setKeyName ("");
     setSelectedScopes ([]);
+<<<<<<< HEAD
   }
   const handleRegenerateKey = async (keyId: string) => {
     await regenerateApiKey(keyId)
@@ -177,6 +186,10 @@ function ApiKeysManager() {
     label: string
     description: string
   }[] = [    {
+=======
+
+    {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       value: 'jobs:read'
       label: 'Read Jobs'
       description: 'Access to view job listings'
@@ -196,6 +209,7 @@ function ApiKeysManager() {
       label: 'Write Quotes'
       description: 'Create and manage quotes'
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     {
 
@@ -231,11 +245,16 @@ function ApiKeysManager() {
         ? prev.filter(s => s !== scope) 
         : [...prev, scope]
 
+=======
+    {
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )
   }
   const getExampleCode = (key: string) => {    return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer ${key}" \\
 
+<<<<<<< HEAD
       value: 'webhooks:manage',
       label: 'Manage Webhooks',
       description: 'Set up and manage webhook endpoints',
@@ -312,6 +331,8 @@ import {;
 } from '@/components/ui/alert-dialog';
 
 import CodeBlock from './CodeBlock';
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function ApiKeysManager() {;
   const {;
     keys,;
@@ -321,6 +342,7 @@ export function ApiKeysManager() {;
     createApiKey,;
     regenerateApiKey,;
     revokeApiKey,;
+<<<<<<< HEAD
     clearNewApiKey,;
   } = useApiKeys();
 
@@ -538,6 +560,9 @@ export function ApiKeysManager() {;
   // Load keys on mount
   useState(() => {
     fetchApiKeys()
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }),
   
   const handleCreateKey = async () => {
@@ -546,6 +571,7 @@ export function ApiKeysManager() {;
     await createApiKey(keyName, selectedScopes),
     setShowCreateDialog(false),
     setKeyName(""),
+<<<<<<< HEAD
     setSelectedScopes([])
   },
 
@@ -645,12 +671,15 @@ export function ApiKeysManager() {;
   }
   // Scope options
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <Label>Scopes</Label>
                   <div className="grid gap-2 pt-2">
                     {scopeOptions.map((scope) => (
                       <div key={scope.value} className="flex items-center space-x-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <Checkbox 
                           id={scope.value} 
@@ -782,16 +811,20 @@ export function ApiKeysManager() {;
                           id={scope.value} 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           onCheckedChange={() => toggleScope(scope.value)}
                         />;
                         <Label;
                           htmlFor={scope.value}
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
 =======
     {                          onCheckedChange={() => toggleScope(scope.value)}
@@ -804,13 +837,17 @@ export function ApiKeysManager() {;
                           <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>
                         </Label>
 <<<<<<< HEAD
+<<<<<<< HEAD
                       </div>
                     ))}
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                       </div>
                     ))}
 
+<<<<<<< HEAD
                       </div>
                     ))}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -823,11 +860,14 @@ export function ApiKeysManager() {;
                 <Button onClick={handleCreateKey} disabled={keyName.trim() === "" || selectedScopes.length === 0}>
 <<<<<<< HEAD
                   Create Key
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </Button>
               </DialogFooter>
             </DialogContent>
           </Dialog>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         
         {/* New API Key Alert */}
@@ -929,6 +969,9 @@ export function ApiKeysManager() {;
                 <Button variant="outline" on_click={handleDialogClose}>Cancel</Button>;
                 <Button on_click={handleCreateKey} disabled={key_name.trim () === "" || selected_scopes.length === 0}>;
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </Button>;
 =======
                   Create Key                </Button>;
@@ -938,7 +981,6 @@ export function ApiKeysManager() {;
           </Dialog>;
         </div>;
 
-        
         {/* New API Key Alert */}
 
         {newApiKey && (
@@ -948,8 +990,6 @@ export function ApiKeysManager() {;
                 <Check size={16} className="mr-2 text-green-500" /> New API Key Generated;
               </span>;
               <Button
-
-        
 
         {/* New API Key Alert */}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -963,12 +1003,16 @@ export function ApiKeysManager() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
                 onClick={clearNewApiKey}
 
+<<<<<<< HEAD
         {/* API Keys List */}
         <div className="space-y-4">;
           {loading ? (
@@ -988,16 +1032,22 @@ export function ApiKeysManager() {;
                         <span className="text - sm text - zinc - 400 font-mono">{key.key_prefix}••••••••••••</span>;
                         {key.is_active ? (
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               >
                 <X size={14} />
               </Button>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <p className="text-sm text-zinc-300 mb-2">
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               This key will only be displayed once. Please save it securely.
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -1010,10 +1060,13 @@ export function ApiKeysManager() {;
           </div>
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
         {/* API Keys List */}
         <div className="space-y-4">
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         {/* API Keys List */}
         <div className='space-y-4'>
@@ -1022,10 +1075,13 @@ export function ApiKeysManager() {;
         <div className="space-y-4">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {loading ? (
             <div className="text-center py-8 text-zinc-500">Loading API keys...</div>
           ) : keys.length === 0 ? (
@@ -1035,6 +1091,7 @@ export function ApiKeysManager() {;
               <p className="text-sm mt-1">Create one to access the Zion APIs.</p>
             </div>
           ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1052,6 +1109,10 @@ export function ApiKeysManager() {;
             </div>
           ) : (            keys.map((key) => (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+            keys.map((key) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div key={key.id} className="p-4 border border-zinc-800 rounded-lg">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
@@ -1064,10 +1125,14 @@ export function ApiKeysManager() {;
                         ) : (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
 =======
                         {key.is_active ? (
@@ -1078,6 +1143,7 @@ export function ApiKeysManager() {;
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   
@@ -1165,6 +1231,10 @@ export function ApiKeysManager() {;
                         onClick={() => setShowRegenerateConfirm(key.id)}
                         className='cursor-pointer'
                         disabled={!key.is_active}                      <DropdownMenuItem
+=======
+
+                      <DropdownMenuItem
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       </DropdownMenuItem>
@@ -1172,9 +1242,8 @@ export function ApiKeysManager() {;
                   </DropdownMenu>
 <<<<<<< HEAD
                 </div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
                 
 
                 <div className="mt-3 flex flex-wrap gap-2">
@@ -1201,11 +1270,14 @@ export function ApiKeysManager() {;
                   {key && key.scopes.map((scope,) => (;
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <Badge
                       key = {scope,}
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 
@@ -1276,18 +1348,24 @@ export function ApiKeysManager() {;
                     </PopoverTrigger>
                     <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       <p className="text-sm mb-1">Last Used</p>
                       <p className="text-xs text-zinc-400">
                         {key.last_used_at
                           ? format(new Date(key.last_used_at), 'MMM d, yyyy HH:mm:ss')
 
+<<<<<<< HEAD
                           : 'This API key has never been used'}
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       </p>
                     </PopoverContent>
                   </Popover>
                   {key.expires_at && (
 
+<<<<<<< HEAD
                     </PopoverTrigger>;
                     <PopoverContent className='bg-zinc-900 border-zinc-800 text-white w-64 p-3'>;
                       <p className='text-sm mb-1'>Last Used</p>;
@@ -1323,6 +1401,8 @@ export function ApiKeysManager() {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
 =======
                 </div>                      </p>
@@ -1334,6 +1414,7 @@ export function ApiKeysManager() {;
           Keep your API keys secure. They have the same permissions as your account.
         </div>
         <Button variant="outline" size="sm" onClick={fetchApiKeys}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           Refresh
@@ -1352,6 +1433,10 @@ export function ApiKeysManager() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </Button>
       </CardFooter>      >
+=======
+
+      >
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <AlertDialogHeader>
             <AlertDialogTitle>Regenerate API Key?</AlertDialogTitle>
@@ -1373,6 +1458,7 @@ export function ApiKeysManager() {;
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+<<<<<<< HEAD
               onClick={() =>
                 showDeleteConfirm && handleRevokeKey(showDeleteConfirm)
               }
@@ -1432,10 +1518,15 @@ export function ApiKeysManager() {;
         open={showRegenerateConfirm !== null} ;
         onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}      >;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      >;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
             <AlertDialogTitle>Regenerate API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text-zinc-400">;
+<<<<<<< HEAD
               This action will invalidate the existing key and generate a new one.;
               Any applications using this key will need to be updated.;
             </AlertDialogDescription>;
@@ -1462,12 +1553,15 @@ export function ApiKeysManager() {;
           <AlertDialogHeader>;
             <AlertDialogTitle > Regenerate API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text - zinc-400">;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               This action will invalidate the existing key and generate a new one.;
               Any applications using this key will need to be updated.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1480,12 +1574,17 @@ export function ApiKeysManager() {;
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
               className="bg-blue-600 hover:bg-blue-700";            >;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+            >;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               Regenerate;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
 <<<<<<< HEAD
       </AlertDialog>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Delete Key Confirmation Dialog */}
       <AlertDialog;
@@ -1502,14 +1601,16 @@ export function ApiKeysManager() {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       >;
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
             <AlertDialogTitle>Revoke API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text-zinc-400">;
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
             <AlertDialogCancel className='bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700'>;
               Cancel;
             </AlertDialogCancel>;
@@ -1528,17 +1629,23 @@ export function ApiKeysManager() {;
             <AlertDialogDescription className="text - zinc - 400">;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               This action will revoke the API key and it can no longer be used to access the API.;
               This action cannot be undone.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
+<<<<<<< HEAD
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;
               Cancel;
             </AlertDialogCancel>;
             <AlertDialogAction;
               onClick={() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700";
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             >;
 =======
       </AlertDialog>;            >;
@@ -1548,6 +1655,7 @@ export function ApiKeysManager() {;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     </Card>;
@@ -1561,3 +1669,6 @@ export function ApiKeysManager() {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

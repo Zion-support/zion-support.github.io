@@ -26,9 +26,12 @@ import {
   TableCell
   TableHead
   TableHeader
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export default function OrdersPage() {;
 
@@ -36,6 +39,7 @@ export default function OrdersPage() {;
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
 
   const formatDate = (date: string) => new Date(date).toLocaleDateString();
+<<<<<<< HEAD
 
   const getStatusBadge = (status: string,) => {;
     switch (status) {;
@@ -87,9 +91,12 @@ import { EmptyState } from '@/components/ui/empty-state',
 export default function OrdersPage() {
   const { user } = useAuth(),
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id),
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const formatDate = (date: string) => new Date(date).toLocaleDateString(),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const getStatusBadge = (status: string) => {
 =======
@@ -324,3 +331,5 @@ function OrdersPage() {
 =======
 export default Orders;
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

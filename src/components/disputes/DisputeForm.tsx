@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -132,6 +133,9 @@ export function DisputeForm({
 =======
 if (onDisputeCreated) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           onDisputeCreated(dispute.id)
 =======
         toast.success('Your dispute has been submitted')
@@ -144,9 +148,12 @@ if (onDisputeCreated) {
       }
     } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
@@ -162,6 +169,7 @@ if (onDisputeCreated) {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="space-y-6">
       <div className="flex items-center space-x-2">
         <FileText className="h-5 w-5 text-primary" />
@@ -171,10 +179,14 @@ if (onDisputeCreated) {
       
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
             control={form.control}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -182,6 +194,9 @@ if (onDisputeCreated) {
             name="reason_code"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => (
               <FormItem>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <FormLabel>Reason for dispute</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
@@ -192,9 +207,13 @@ if (onDisputeCreated) {
                   <SelectContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -211,13 +230,18 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
+<<<<<<< HEAD
   FormMessage} from "@/components/ui/form",;
 import { Textarea } from "@/components/ui/textarea",;
 import {;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Select,;
   SelectContent,;
   SelectItem,;
   SelectTrigger,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   SelectValue} from "@/components/ui/select",;
 import { Input } from "@/components/ui/input",;
@@ -299,6 +323,10 @@ export function DisputeForm({;
         <FileText className="h-5 w-5 text-primary" />;
         <h2 className="text-xl font-semibold">Report an Issue</h2>;
 =======
+=======
+
+    <div className='space-y-6'>;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className='flex items-center space-x-2'>;
         <FileText className='h-5 w-5 text-primary' />;
         <h2 className='text-xl font-semibold'>Report an Issue</h2>;
@@ -522,6 +550,7 @@ if ( {) {
                             type='button'
                             variant='ghost'
                             size='sm'
+<<<<<<< HEAD
                             onClick={() => removeFile(index)}                          >;
                             Remove;
                           </Button>;
@@ -529,6 +558,8 @@ if ( {) {
                   <Textarea
                     placeholder="Please provide specific details about the issue..."
                     className="min-h-[150px]"
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                     {...field}
                   />
@@ -543,7 +574,10 @@ if ( {) {
                   </div>;
                 )}
 
+<<<<<<< HEAD
           
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="flex justify-end space-x-2">
 
             {onCancel && (
@@ -561,6 +595,7 @@ if ( {) {
                   multiple;
                   on_change={handleFileChange}
                   className='cursor - pointer'                />;
+<<<<<<< HEAD
               <div className='space-y-4'>
                 <Input
                   type='file'
@@ -619,6 +654,10 @@ if ( {) {
               <Button type='button' variant='outline' onClick={onCancel}>
                 Cancel
               </Button>}value= {
+=======
+
+}value= {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   value 
 }> {;
   label ;
@@ -628,8 +667,11 @@ if ( {) {
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) ;
 
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) 
+<<<<<<< HEAD
 }</ul> </div>) ;
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) ;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   setIsSubmitting (true);
 const dispute = await create_dispute ({
@@ -656,6 +698,7 @@ if ( {) {
   value;
 }> {
 <<<<<<< HEAD
+<<<<<<< HEAD
   label;
 }</SelectItem>) );
 }</SelectContent> </Select> <FormMessage /> </FormItem>);
@@ -668,3 +711,6 @@ if ( {) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

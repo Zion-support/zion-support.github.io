@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,3 +63,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(200).json({ notes: getAllNotes() })
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+  return res.status(200).json({ notes: getAllNotes() })
+};
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

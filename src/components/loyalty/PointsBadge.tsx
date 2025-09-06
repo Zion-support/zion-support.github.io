@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     }
   }
@@ -35,6 +36,9 @@ if ( {) {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Gift, RefreshCw } from 'lucide-react';
 import { usePoints } from '@/hooks/usePoints',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -75,6 +79,7 @@ export function PointsBadge() {;
       logErrorToProduction('Failed to refresh points:', { data: error });
     } finally {;
       setIsRefreshing(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -123,20 +128,24 @@ export function PointsBadge() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <TooltipProvider>
       <div className="flex items-center gap-1">
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               href={isAuthenticated ? "/points" : "#"}
               onClick={handleClick}
               title={isAuthenticated ? "View points" : "Earn points by participating"}
@@ -170,30 +179,7 @@ export function PointsBadge() {;
               <>;
                 <p className='text-sm font-medium'>Zion Rewards Program</p>;
                 <p className='text-xs mt-1 text-muted-foreground'>;
-<<<<<<< HEAD
-                   Sign up: 50 pts;
-=======
-            {is_authenticated ? (
-              <>;
-                <p className='text - sm font - medium'>Point Breakdown</p>;
-                {points === 0 && (
-                  <p className='text - xs text - muted - foreground'>;
-                    You haven't earned any points yet.;
-                  </p>)}
-                <ul className='text - xs mt - 1 space - y-0.5'>;
-                  <li > Purchases: {breakdown.purchase}</li>;
-                  <li > Posts: {breakdown.post}</li>;
-                  <li > Referrals: {breakdown.referral}</li>;
-                </ul>;
-                <p className='text - xs mt - 2 text - muted - foreground border - t pt - 1'>;
-                  Click to view full rewards program;
-                </p>;
-              </>) : (
-              <>;
-                <p className='text - sm font - medium'>Zion Rewards Program</p>;
-                <p className='text - xs mt - 1 text - muted - foreground'>;
-                  • Sign up: 50 pts;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                   <br />;
                   • First purchase: 100 pts;
                   <br />;
@@ -201,6 +187,7 @@ export function PointsBadge() {;
                   <br />• Refer friends: 200 pts each;
                 </p>;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -238,10 +225,13 @@ export function PointsBadge() {;
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -276,6 +266,9 @@ export function PointsBadge() {;
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 variant="ghost"
                 size="sm"
                 onClick={handleRefresh}
@@ -283,12 +276,7 @@ export function PointsBadge() {;
                 className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
                 aria-label="Refresh points"
               >
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
@@ -300,10 +288,7 @@ export function PointsBadge() {;
             </TooltipContent>
           </Tooltip>
         )}
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -314,9 +299,8 @@ export function PointsBadge() {;
     </TooltipProvider>;
   );
 }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 }
 
 
@@ -336,3 +320,5 @@ export function PointsBadge() {;
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

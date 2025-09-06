@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from 'react',
 import { WifiOff, Wifi } from 'lucide-react'
 import { Alert, AlertDescription } from '@/components/ui/alert',
@@ -41,6 +42,9 @@ export const OfflineIndicator = () => {
       setIsOnline(online),
 <<<<<<< HEAD
       
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       if (!online) {
 =======
             if (!online) {
@@ -48,22 +52,35 @@ export const OfflineIndicator = () => {
         setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
         // Show brief "back online" message then hide
+<<<<<<< HEAD
         setTimeout(() => setShowOfflineAlert(false), 3000)
 import { useState, useEffect } from 'react',;
 import { WifiOff, Wifi } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert',;
+=======
+
+      }
+import { Alert, AlertDescription } from '@/components/ui/alert';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const OfflineIndicator = () => {;
   const [isOnline, setIsOnline] = useState(true),;
   const [showOfflineAlert, setShowOfflineAlert] = useState(false),;
   useEffect(() => {;
     const updateOnlineStatus = () => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
       const online = navigator.onLine,;
       setIsOnline(online),;
+=======
+      const online = navigator && navigator.onLine;
+      setIsOnline(online);
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       if (!online) {;
         setShowOfflineAlert(true);
       } else if (showOfflineAlert) {;
         // Show brief "back online" message then hide;
+<<<<<<< HEAD
         setTimeout(() => setShowOfflineAlert(false), 3000);
 <<<<<<< HEAD
       }
@@ -114,6 +131,9 @@ export const OfflineIndicator = () => {;
   if (!showOfflineAlert) return null;
   if (!showOfflineAlert) return null,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="fixed top-4 right-4 z-50 max-w-sm pointer-events-none">
       <Alert variant={isOnline ? "default" : "destructive"}>
@@ -122,6 +142,7 @@ export const OfflineIndicator = () => {;
             <Wifi className="h-4 w-4" />
           ) : (
             <WifiOff className="h-4 w-4" />
+<<<<<<< HEAD
           )}
           <AlertDescription>;
             {isOnline ? (;
@@ -131,10 +152,14 @@ export const OfflineIndicator = () => {;
             )}
 <<<<<<< HEAD
           </AlertDescription>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>;
       </Alert>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -171,3 +196,6 @@ export const OfflineIndicator = () => {;
   )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,13 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { default } from "../milestones";
 export { default } from '../milestones';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-export { default } from '../milestones';
 
+<<<<<<< HEAD
 =======
 export { default } from "../milestones";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -18,3 +21,5 @@ export { default } from "../milestones";
 
 export { default } from '../milestones';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

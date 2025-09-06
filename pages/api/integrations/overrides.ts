@@ -25,6 +25,7 @@ import { readState, writeState } from '[^']*';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     });
     return res && res.status(200).json({
+<<<<<<< HEAD
       ok: true,
       override: updated && updated.overrides.find((o) => o && o.jobId === jobId),
 <<<<<<< HEAD
@@ -45,6 +46,9 @@ import { readState, writeState } from '[^']*';
   return res.status(405).json({ error: 'Method not allowed' });
   } catch (error) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -109,7 +113,6 @@ if (state.overrides[idx] = entry) {
 }
 <<<<<<< HEAD
 
-
   }
   }
 }
@@ -156,9 +159,12 @@ return res.status(405).json({ error: "Method not allowed" });
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

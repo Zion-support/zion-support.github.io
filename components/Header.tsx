@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     </header>
   );
 }
@@ -167,6 +168,10 @@ export default function Header() {;
         </div>
         {/* Mobile Menu */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -211,14 +216,44 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
+<<<<<<< HEAD
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
+=======
+
+      {/* Top Bar */}
+      <div className="bg-blue-900 text-white py-2">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm">
+            <div className="flex items-center space-x-6 mb-2 md:mb-0">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-4 h-4" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+            </div>
+            <div className="flex items-center space-x-2">
+              <MapPin className="w-4 h-4" />
+              <span>364 E Main St STE 1008, Middletown, DE 19709</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Main Navigation */}
+      <nav className="container mx-auto px-4 py-4">
+        <div className="flex justify-between items-center">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold text-blue-600">
             Zion Tech Group
           </Link>
 
           {/* Desktop Navigation */}
+<<<<<<< HEAD
           <nav className="hidden md:flex space-x-8">
 =======
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -228,6 +263,8 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           <div className="hidden lg:flex items-center space-x-8">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -393,6 +430,7 @@ import React, { useState, useEffect } from 'react';
                         </Link>
                       ))}
                     </div>
+<<<<<<< HEAD
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -672,6 +710,30 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       </div>;
     </header>);import React, { useState, useEffect } from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+                  )}
+                </div>
+              ))}
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <Link
+                  href="/contact"
+                  className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Get Started
+                </Link>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
+    </header>
+  );
+};
+
+import React, { useState, useEffect } from 'react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -818,6 +880,7 @@ export default function Header() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -922,3 +985,6 @@ export default Header;
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

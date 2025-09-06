@@ -7,11 +7,13 @@ import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
 import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { KycProfile, KycRole } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
@@ -90,6 +92,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     businessName
     businessRegistrationNumber
   } = req.body as {
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -100,6 +103,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     business_name,
     businessRegistrationNumber,
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     userId?: string;
 =======
 <<<<<<< HEAD
@@ -292,7 +298,6 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 
 }
   const db = load ();

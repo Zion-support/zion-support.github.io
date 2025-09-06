@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
@@ -334,3 +335,6 @@ export function TenantsList() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

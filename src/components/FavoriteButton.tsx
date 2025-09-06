@@ -20,6 +20,7 @@ return (
       <TooltipProvider>;
         <Tooltip>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 )}              />;
             </button>;
@@ -208,6 +209,10 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
       // Add to favorites`
       // console.log(`Added ${itemType} ${itemId} to favorites`)}  }
   return ()    <button
+=======
+
+    <button
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       onClick = {handleToggleFavorite}`
       className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 ${isFavorited'
           ? 'bg-red-500 hover:bg-red-600 text-white''
@@ -215,6 +220,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
 } ${className}`}
       aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <>
@@ -244,6 +250,8 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
 =======
      aria-label="Button">;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Heart`
         className={`w-4 h-4 transition-all duration-300 ${
           isFavorited ? 'fill-current' : ''`
@@ -257,6 +265,7 @@ className: {`w-4 h-4 transition-all duration-300 ${
     </button>;) }
 '`
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <TooltipTrigger as_child>;
@@ -302,6 +311,9 @@ className: {`w-4 h-4 transition-all duration-300 ${
     </>;
 <<<<<<< HEAD
   );
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 <<<<<<< HEAD
 ;
@@ -339,8 +351,12 @@ class_name: {`w - 4 h - 4 transition - all duration - 300 ${
         <Tooltip>
           <TooltipTrigger asChild>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <button
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

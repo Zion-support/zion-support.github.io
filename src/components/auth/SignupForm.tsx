@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from '@hookform/resolvers/zod',
@@ -28,6 +29,9 @@ const signupSchema = z.object({
   path: ["confirmPassword"]}),
 =======
 passwordStrength.strength >= 4 ? 'text-green-600' :
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
 =======
                 passwordStrength.strength >= 4 ? 'text-green-600' :                passwordStrength.strength >= 3 ? 'text-blue-600' :
@@ -46,6 +50,7 @@ passwordStrength.strength >= 4 ? 'text-green-600' :
             <div className="text-xs text-gray-600 space-y-1">
               <div className="grid grid-cols-2 gap-1">
                 <span className={watchedFields.password?.length >= 8 ? 'text-green-600' : 'text-gray-400'}>
+<<<<<<< HEAD
                    8+ characters
                 </span>
                 <span className={/[A-Z]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
@@ -59,6 +64,10 @@ passwordStrength.strength >= 4 ? 'text-green-600' :
                 </span>
                 <span className={/[^A-Za-z0-9]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
                    Special character                </span>
+=======
+
+                </span>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </div>
             </div>
           </div>
@@ -71,8 +80,11 @@ passwordStrength.strength >= 4 ? 'text-green-600' :
           </p>
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   path: ["confirmPassword"]}),;
 
@@ -247,8 +259,11 @@ type SignupFormData = z && z.infer<typeof signupSchema>;
               <span className={cn('font-medium', passwordStrength && passwordStrength.strength >= 4 ? 'text-green-600' :}
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   path: ["confirm_password"]}),
 =======
       </div>  path: ["confirm_password"]}),
@@ -265,6 +280,7 @@ type SignupFormData = z.infer < typeof signup_schema>;
     const is_touched = touched_fields[field_name as keyof SignupFormData];
       return <AlertCircle className="h - 4 w - 4 text - red-500" />;
     }
+<<<<<<< HEAD
     return null
   }
   const getFieldClasses = (fieldName: string) => {
@@ -278,6 +294,10 @@ type SignupFormData = z.infer < typeof signup_schema>;
       const errorMessage = 'An unexpected error occurred during signup. Please try again.'
       setError('root', { message: errorMessage })
               <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :}}
+=======
+
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </div>;
@@ -347,4 +367,8 @@ type SignupFormData = z.infer < typeof signup_schema>;
     </form>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

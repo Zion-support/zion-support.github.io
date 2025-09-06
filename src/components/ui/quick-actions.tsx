@@ -17,10 +17,14 @@ import {;
   Monitor,;
 } from 'lucide-react';
 interface QuickAction {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string;
   label: string,
   description: string;
-  icon: React && React.ReactNode;
+  icon: React.ReactNode;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
 
@@ -30,23 +34,8 @@ interface QuickAction {;
       logErrorToProduction(`Failed to execute action ${actionId}:`, {
         data: error
       })
-import React, { useState } from 'react'
-import { useAuth } from '@/hooks/useAuth'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { logErrorToProduction } from '@/utils/productionLogger'
-import {
-  Zap
-  Download
-  Trash2
-  RefreshCw
-  Settings
-  Activity
-  Package
-  Monitor
-} from 'lucide-react'
 
+<<<<<<< HEAD
 interface QuickAction {    setIsProcessing(actionId);    try {
       await action()
     } catch (error) {
@@ -99,6 +88,8 @@ if ( {) {
       logErrorToProduction (`Failed to execute action ${action_id}:`, {
         data: error,
       });
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } finally {
       setIsProcessing(null)
     }
@@ -107,10 +98,13 @@ if ( {) {
       id: 'enable - performance - monitor',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
@@ -149,6 +143,10 @@ export function QuickActions() {;
     }
   },
 
+<<<<<<< HEAD
+=======
+  const actions: QuickAction[] = [
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // Performance Actions
     {
       id: 'enable-performance-monitor',
@@ -157,6 +155,7 @@ export function QuickActions() {;
       icon: <Activity className="w-4 h-4" />,
       category: 'performance',
       action: () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
         localStorage.setItem('performance-monitoringtrue'),
         window.location.reload()
@@ -170,6 +169,9 @@ export function QuickActions() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
@@ -177,6 +179,7 @@ export function QuickActions() {;
       icon: <Package className="w-4 h-4" />,
       category: 'performance',
       action: () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         localStorage.setItem('bundle-analyzertrue'),
@@ -188,6 +191,9 @@ export function QuickActions() {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -204,7 +210,10 @@ export function QuickActions() {;
           })
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       },
     },
@@ -213,6 +222,7 @@ export function QuickActions() {;
         sessionStorage.clear(),
         window.location.reload()
       }},
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -273,6 +283,18 @@ export function QuickActions() {;
         },
 
   dangerous?: boolean;
+=======
+
+    {
+      id: 'preload-critical-resources'
+      label: 'Preload Critical Resources'
+      description: 'Preload fonts, images, and critical assets'
+      icon: <Zap className='w-4 h-4' />
+      category: 'performance'
+      action: () => {
+        // Preload critical fonts
+        const criticalFonts = [
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         // Preload critical images
         const criticalImages = [
@@ -328,6 +350,11 @@ export function QuickActions() {;
       category: 'development',
       dangerous: true,
       action: () => {
+<<<<<<< HEAD
+=======
+
+    {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       id: 'refresh-app',
       label: 'Hard Refresh',
       description: 'Force reload with cache bypass',
@@ -347,6 +374,7 @@ export function QuickActions() {;
     development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
     maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         const blob = new Blob([JSON && JSON.stringify(metrics, null, 2)], {;
@@ -405,6 +433,8 @@ export function QuickActions() {;
 
   if (!isVisible) {;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       id: 'download-performance-report',
       label: 'Download Performance Report',
@@ -440,18 +470,23 @@ export function QuickActions() {;
       action: () => {
         window.location.reload()
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (!isVisible) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return (
       <div className="fixed bottom-4 left-4 z-50">
         <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -474,10 +509,14 @@ export function QuickActions() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           Quick Actions
         </Button>
       </div>
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 
@@ -497,6 +536,8 @@ export function QuickActions() {;
               className="h-6 w-6 p-0"
             >
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               ✕
             </Button>
@@ -507,7 +548,10 @@ export function QuickActions() {;
           </div>
         </CardHeader>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <CardContent className="pt-0 space-y-4">
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
             <div key={category}>
@@ -545,8 +589,12 @@ export function QuickActions() {;
                   </div>;
                 ))}
               </div>;
+<<<<<<< HEAD
             </div>;
           ))}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </CardContent>;
       </Card>;
     </div>;
@@ -743,8 +791,12 @@ if ( {) {
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
@@ -403,6 +404,10 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
         value={selectedOption} 
         onValueChange={(value) => handleOptionChange(value as 'recent' | 'select' | 'upload')}
         className="space-y-3"      >
+=======
+
+      >
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="recent" id="recent" />
           <Label htmlFor="recent">Use most recent resume</Label>
@@ -576,6 +581,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 }
 ;
@@ -587,3 +593,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
   )
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

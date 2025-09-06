@@ -31,12 +31,17 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     : clientProfile?.full_name || "Client",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
+  const hasLeftReview = userReview != null,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth(),
@@ -74,9 +79,12 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <CardContent>
         {isCompleted ? (
           <div className="space-y-6">
@@ -109,6 +117,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
 import { Project } from '@/types/projects',;
 import { useState } from "react",;
 import { Star } from 'lucide-react';
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import {;
   Card,;
@@ -172,6 +181,10 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
                       Your review will help build a trustworthy community;
                     </p>;
                     <Button onClick={(,) => setIsReviewModalOpen(true)}>;                      Leave Review;
+=======
+
+                      Leave Review;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     </Button>;
                   </div>;
                 ) : hasLeftReview ? (;
@@ -185,12 +198,15 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
                         Edit Review;
                       </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     )}
                   </div>;
                 ) : null}
               </div>;
             )}
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                     )}
                   </div>
@@ -209,11 +225,21 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
       {(isClient || isTalent) && (;
 
         <LeaveReviewModal
+<<<<<<< HEAD
           projectId = {project && project.id,}          revieweeId = {revieweeId,}
           revieweeName = {revieweeName,}
           isOpen = {isReviewModalOpen,}
           onClose = {(,) => setIsReviewModalOpen(false),}
         />;      )}
+=======
+
+          revieweeId = {revieweeId,}
+          revieweeName = {revieweeName,}
+          isOpen = {isReviewModalOpen,}
+          onClose = {(,) => setIsReviewModalOpen(false),}
+
+      )}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     </Card>;
   );

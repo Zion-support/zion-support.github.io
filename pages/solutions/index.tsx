@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21,14 +22,14 @@ export default function SolutionsPage() {
 }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
 import Link from 'next/link';
 ursor/integrate-build-improve-and-re-verify-8f7d
-
-origin/main
-origin/automation-improvements-final
 
 import { motion } from 'framer-motion';
 import { 
@@ -57,7 +58,6 @@ import { ;
 
 } from 'lucide-react';
 import Layout from '../../components/Layout';
-
 
 const solutions = [
   {
@@ -407,7 +407,6 @@ const SolutionsPage: NextPage = () => {
 
                 From startups to enterprises, we provide tailored technology solutions that drive growth, 
 
-
                 efficiency, and innovation across all industries.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -671,7 +670,6 @@ const SolutionsPage: NextPage = () => {
                 );
               })}
 
-
         {/* Industries Section */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -679,7 +677,6 @@ const SolutionsPage: NextPage = () => {
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
 
                   key={index}
                   className="text-center p-6 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group cursor-pointer"
@@ -696,7 +693,6 @@ const SolutionsPage: NextPage = () => {
                   </div>;
                 </motion && motion.div>;
               ))}
-
 
         {/* Stats Section */}
         <section className="py-20 bg-gray-900 text-white">;
@@ -716,7 +712,6 @@ const SolutionsPage: NextPage = () => {
                   <div className="text-gray-300 font-medium">{stat && stat.label}</div>;
                 </motion && motion.div>;
               ))}
-
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
@@ -747,7 +742,6 @@ const SolutionsPage: NextPage = () => {
     </Layout>;
   );
 }
-
 
 };
 
@@ -1284,10 +1278,10 @@ export default SolutionsPage,
   );
 },;
 
-
 export default SolutionsPage;
 
 export default SolutionsPage;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1316,3 +1310,6 @@ export default function SolutionsPage() {
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

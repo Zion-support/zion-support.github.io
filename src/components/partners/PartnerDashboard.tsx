@@ -23,6 +23,7 @@ import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
 
+<<<<<<< HEAD
   const stats = {
     totalReferrals: 42
     pendingReferrals: 8
@@ -43,6 +44,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button",
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -51,11 +54,14 @@ export function PartnerDashboard() {
     completedReferrals: 34,
     conversionRate: 18.5,
 <<<<<<< HEAD
+<<<<<<< HEAD
     totalRevenue: 850.00,
     pendingRevenue: 200.00
   },
   
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     totalRevenue: 850.00,
     pendingRevenue: 200.00
@@ -77,10 +83,13 @@ export function PartnerDashboard() {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="space-y-6">
       {/* Stats Overview */}
@@ -92,8 +101,11 @@ export function PartnerDashboard() {
           </CardHeader>
           <CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
 
@@ -105,8 +117,11 @@ export function PartnerDashboard() {
         </Card>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>
@@ -120,6 +135,10 @@ export function PartnerDashboard() {
           </CardContent>
         </Card>
 
+<<<<<<< HEAD
+=======
+            <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout        
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -130,17 +149,24 @@ export function PartnerDashboard() {
             <div className="text-2xl font-bold">${stats.totalRevenue}</div>
             <p className="text-xs text-zion-slate-light">
 
+<<<<<<< HEAD
               ${stats.pendingRevenue} pending payout
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </p>
           </CardContent>
         </Card>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
       {/* Performance Chart */}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Performance Overview</CardTitle>
@@ -152,6 +178,7 @@ export function PartnerDashboard() {
             <p className="text-zion-slate-light">Detailed analytics will be available soon</p>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </CardContent>
       </Card>
 =======
@@ -162,6 +189,9 @@ export function PartnerDashboard() {
       {/* Recent Referrals */}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader className="flex flex-row items-center justify-between">
           <div>
@@ -172,7 +202,10 @@ export function PartnerDashboard() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </CardHeader>
         <CardContent>
           <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
@@ -184,6 +217,7 @@ export function PartnerDashboard() {
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     </div>
@@ -281,6 +315,9 @@ export function PartnerDashboard() {;
 =======
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </CardContent>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -292,6 +329,7 @@ export function PartnerDashboard() {;
             <CardTitle>Recent Referrals</CardTitle>
             <CardDescription>Your latest partner referrals</CardDescription>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <Button variant="outline" size="sm">View All</Button>
@@ -322,3 +360,6 @@ export function PartnerDashboard() {;
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

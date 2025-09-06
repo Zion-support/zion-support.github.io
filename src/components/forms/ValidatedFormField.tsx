@@ -28,9 +28,13 @@ import { cn } from '@/lib/utils';
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+<<<<<<< HEAD
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 interface ValidationRule {  required?: boolean;
+=======
+  required?: boolean;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
@@ -97,6 +101,7 @@ export function ValidatedFormField({
       setValidationState(error ? 'invalid' : 'valid')
     }, debounceMs)
     setDebounceTimer(timer)
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import {
   FormField,
@@ -223,6 +228,9 @@ if ( {) {
       return validation.custom (value);
     }
     return null;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   const getValidationIcon = () =>: any {
     // Check condition
@@ -365,6 +373,7 @@ export function ValidatedFormField({;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getValidationIcon = () => {
     if (!showValidIcon || !isTouched || validationState === 'idle') return null,
 
@@ -417,15 +426,23 @@ export function ValidatedFormField({;
   const getValidationIcon = () => {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const getValidationIcon = () => {
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     switch (type) {
       case 'textarea':
         return (
           <div className="relative">
             <Textarea
 <<<<<<< HEAD
+<<<<<<< HEAD
               disabled={disabled}
               className={baseClasses}
               rows={4}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {...form.register(name)}
             />
             <div className="absolute top-2 right-2">
@@ -480,7 +497,11 @@ export function ValidatedFormField({;
                   </SelectItem>
                 ))}
 
+<<<<<<< HEAD
       case 'checkbox':        return (
+=======
+        return (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className='flex items-center space-x-2'>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <Checkbox
@@ -492,6 +513,7 @@ export function ValidatedFormField({;
             <label;
               htmlFor={name}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
               {label}
@@ -499,6 +521,8 @@ export function ValidatedFormField({;
             {getValidationIcon()}
           </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
@@ -508,11 +532,14 @@ export function ValidatedFormField({;
             {getValidationIcon()}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         ),
 
       case 'password':
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         return (
 =======
       case 'password':        return (
@@ -523,10 +550,13 @@ export function ValidatedFormField({;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               type={showPassword ? 'text' : 'password'}
               disabled={disabled}
               className={cn(baseClasses, 'pr-20')}
@@ -536,6 +566,7 @@ export function ValidatedFormField({;
             <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
               {getValidationIcon()}
               <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -551,6 +582,9 @@ export function ValidatedFormField({;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {showPassword ? (
                   <EyeOff className="h-4 w-4" />
                 ) : (
@@ -562,6 +596,7 @@ export function ValidatedFormField({;
           </div>
         ),
 
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -602,16 +637,25 @@ export function ValidatedFormField({;
                 {fieldError && (
                   <FormMessage className="text-sm text-red-500">
 
+=======
+        return (
+          <div className='relative'>;
+            <Input
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                     {fieldError.message}
                   </FormMessage>;
                 )}
                 {description && !fieldError && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <p className="text-sm text-muted-foreground">{description}</p>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 )}
               </div>;
             )}
@@ -728,6 +772,7 @@ if ( {) {
             {label}
             {validation.required && (
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -755,15 +800,18 @@ if ( {) {
                   <AlertCircle className="h-3 w-3" />
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {fieldError.message}
                 </FormMessage>;
               )}
               {description && !fieldError && (
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <p className="text-sm text-muted-foreground">{description}</p>
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               )}
 =======
       default:        return (
@@ -917,6 +965,7 @@ export const commonValidations = {;
   password: {;
     required: true,;
     minLength: 8,;
+<<<<<<< HEAD
     custom: (value: string,) => {;
       if (value && !validationPatterns && validationPatterns.strongPassword.test(value)) {;
         return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character';
@@ -940,3 +989,6 @@ export const commonValidations = {;
 =======
   }};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

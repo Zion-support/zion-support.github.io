@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages/api-disabled/api/wallet/burn.ts
 <<<<<<< HEAD:pages/api/wallet/burn.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -113,3 +114,6 @@ import { burnTokens, burnForFeature } from "../../../utils/token/service"
   }
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/wallet/burn.ts

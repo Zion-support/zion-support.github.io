@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Facebook } from 'lucide-react';
@@ -56,6 +57,12 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => handleSignIn('google')}
+=======
+
+
+  return (
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           disabled={loadingProvider !== null}
 =======
   return (
@@ -82,6 +89,7 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
         <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -90,6 +98,9 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => handleSignIn('github')}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           disabled={loadingProvider !== null}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -109,6 +120,7 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
         <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -126,6 +138,10 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
           ) : (
             <Facebook className='h-5 w-5' />          type="button"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+          type="button"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => handleSignIn('facebook')}
@@ -139,7 +155,10 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           )}
         </Button>;
       )}
@@ -231,7 +250,13 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
             <>Email Login</>)}
         </Button>)}
     </div>);
+<<<<<<< HEAD
 }          ) : (
+=======
+}
+
+          ) : (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <>Email Login</>
           )}
         </Button>
@@ -242,7 +267,10 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           type="button"
           variant="outline"
           className="col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
@@ -252,6 +280,7 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
           {loadingProvider === 'credentials' ? (
             <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
 
+<<<<<<< HEAD
 
           ) : (
 =======
@@ -273,6 +302,9 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
       {providers.includes('credentials') && (
         <Button          ) : (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          ) : (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <>Email Login</>
           )}
         </Button>;
@@ -280,6 +312,7 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -289,3 +322,9 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
   );
 }
 ;
+=======
+    </div>;
+  );
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

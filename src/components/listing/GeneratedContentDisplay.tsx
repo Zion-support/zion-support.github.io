@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { ArrowRight } from 'lucide-react'
@@ -36,6 +37,9 @@ import { Badge } from "@/components/ui/badge",
 import { ArrowRight } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 interface GeneratedContent {
 <<<<<<< HEAD
@@ -73,9 +77,8 @@ interface GeneratedContentDisplayProps {;
 }
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -83,6 +86,8 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -96,6 +101,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -110,11 +116,14 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
           <div className="flex flex-wrap gap-2">
             {content.tags.map((tag, index) => (
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
                 {tag}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               </Badge>;
@@ -124,22 +133,15 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-
-
-              </Badge>;
-            ))}
-
-        
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
           <p className="text-white">
             ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
         <div>
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
@@ -168,10 +170,13 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
           <ul className="list-disc pl-5 text-white space-y-1">
             {content.keyPoints.map((point, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -266,10 +271,14 @@ function GeneratedContentDisplay() {
               <li key={index}>{point}</li>))}
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </ul>;
         </div>;
       </CardContent>;
       <CardFooter>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Button;
           onClick={onApply}
@@ -280,6 +289,9 @@ function GeneratedContentDisplay() {
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
         >
           Apply to My Listing
@@ -287,6 +299,7 @@ function GeneratedContentDisplay() {
         </Button>
       </CardFooter>
     </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   )
@@ -325,3 +338,6 @@ function GeneratedContentDisplay() {
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

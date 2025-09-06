@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
@@ -31,6 +32,10 @@ interface ListingCardProps {;
 =======
 id?: string,;
   title: string,,
+=======
+
+  title: string,;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   description: string,;
   images?: string[],;
   category: string,;
@@ -39,6 +44,7 @@ id?: string,;
   className?: string,;
   profileType?: 'service' | 'talent';
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 interface ListingCardProps {;
@@ -55,6 +61,9 @@ interface ListingCardProps {;
 }
 ;
 export function ListingCard({;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id,;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -65,6 +74,7 @@ export function ListingCard({;
   tags,;
   author,;
   className,;
+<<<<<<< HEAD
   profileType = 'service';
 }: ListingCardProps) {;
   // Generate a profile ID based on the listing data;
@@ -79,12 +89,15 @@ export function ListingCard({;
         className
       )}
     >
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       {images && images.length > 0 && images[0] && (
         <div className="h-48 w-full overflow-hidden relative">
           <Image
             src={images[0]}
             alt={title}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
@@ -99,6 +112,9 @@ export function ListingCard({;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -109,6 +125,7 @@ export function ListingCard({;
             {category}
           </Badge>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -126,10 +143,14 @@ export function ListingCard({;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
+<<<<<<< HEAD
 <<<<<<< HEAD
               </Badge>;
             ))}
@@ -143,6 +164,9 @@ export function ListingCard({;
         )}
         
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {author.avatarUrl ? (
@@ -150,6 +174,7 @@ export function ListingCard({;
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
@@ -162,13 +187,19 @@ export function ListingCard({;
         )}
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+            <span className="text-sm text-zion-slate-light">{author.name}</span>
+          </div>
+        )}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </div>;
     </Link>;
   );
 }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 ;"}) })"
   );
 }
@@ -273,3 +304,5 @@ function ListingCard() {
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

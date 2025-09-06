@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages/api-disabled/api/autoheal/webhook.ts
 <<<<<<< HEAD:pages/api/autoheal/webhook.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,11 +23,21 @@ import { Octokit } from '@octokit/rest';
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
 const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/autoheal/webhook.ts
+=======
+
+import { Octokit } from '@octokit/rest',;
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || ''
+const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/autoheal/webhook.ts
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') {;
     res.setHeader('AllowPOST');
     return res.status(405).json({ error: 'Method not allowed' })
+<<<<<<< HEAD:pages/api-disabled/api/autoheal/webhook.ts
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/autoheal/webhook.ts
   }
 ;
   try {;
@@ -49,6 +60,7 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
 
     const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['autohealbug'] })
 
+<<<<<<< HEAD:pages/api-disabled/api/autoheal/webhook.ts
     // trigger workflow dispatch;
     try {;
       await octokit.actions.createWorkflowDispatch({;
@@ -114,11 +126,18 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    // trigger workflow dispatch
+    try {
+      await octokit.actions.createWorkflowDispatch({
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/autoheal/webhook.ts
     } catch (e) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       // ignore if missing;
     }
 
+<<<<<<< HEAD:pages/api-disabled/api/autoheal/webhook.ts
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -202,3 +221,5 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
 =======
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/autoheal/webhook.ts

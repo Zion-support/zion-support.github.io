@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -75,6 +76,10 @@ export function ContactSection() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
@@ -107,6 +112,7 @@ const ContactSection: React.FC = () => {
     console.log('Form submitted:', formData);
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -114,6 +120,9 @@ const ContactSection: React.FC = () => {
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 fetch("/api/contact", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -151,6 +160,10 @@ fetch("/api/contact", {
       .catch((err) => {
         setIsSubmitting(false),
         toast({
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           title: "Submission Error",
           description: err.message,
           variant: "destructive"})
@@ -167,6 +180,7 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -183,6 +197,8 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <section className="py-16 px-4 bg-gray-50">
       <div className="container mx-auto max-w-6xl">
@@ -283,6 +299,7 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address
                   </label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -750,6 +767,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf89
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 =======
               </div>
@@ -774,6 +793,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 <<<<<<< HEAD
@@ -781,6 +801,8 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
 <<<<<<< HEAD
@@ -866,6 +888,7 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ContactSection;
 <<<<<<< HEAD
 =======
@@ -894,6 +917,8 @@ export default ContactSection;
 =======
 =======
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
@@ -906,9 +931,6 @@ export default ContactSection;
           </div>;
         </div>;
       </div>;
-
-
-
 
     </section>);
 }set_errors (field_errors);
@@ -936,6 +958,7 @@ description: err.message;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -949,3 +972,6 @@ export default ContactSection;
 =======
 export default ContactSection;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

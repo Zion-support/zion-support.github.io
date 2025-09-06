@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
@@ -50,6 +51,12 @@ const handleSaveNotes = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // For now, we'll just show a toast
     toast({
+=======
+
+    // Here you would save the notes to the database
+    // For now, we'll just show a toast
+    toast({
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       title: 'Notes saved',
       description: 'Your notes have been saved',
@@ -218,7 +225,11 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                     </p>
                   </div>
                 </div>
+<<<<<<< HEAD
                 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
@@ -227,6 +238,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
+<<<<<<< HEAD
 <<<<<<< HEAD
                       {showNotes ? "Hide notes" : "Add notes"}
                     </DropdownMenuItem>
@@ -357,6 +369,9 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   <div className='mb-2'>;
                     <ScoreBadge application={application} />;
                   </div>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 )}
               {/* Notes Section */}
               {showNotes && (;
@@ -387,10 +402,13 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <Link href={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
                   </Link>
@@ -399,11 +417,14 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Button 
                   variant="outline" 
                   size="sm" 
@@ -413,7 +434,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {application.resume?.file_url ? (
                     <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
                       <FileText className="h-3 w-3 mr-1" /> Resume
@@ -442,8 +466,11 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 }'"};
 ;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Button 
                   variant="default" 
                   size="sm" 
@@ -456,6 +483,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
             </CardContent>;
           </Card>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -855,6 +883,10 @@ function CandidateCard() {
       </Draggable>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      </Draggable>;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
         isOpen={showHireModal}
@@ -865,4 +897,8 @@ function CandidateCard() {
     </>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

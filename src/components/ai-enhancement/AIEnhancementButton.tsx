@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
@@ -17,6 +18,9 @@ interface AIEnhancementButtonProps {
 }
 =======
 const handleEnhance = async () => {
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if ((!options.content |options.content.trim().length < contentLength) &&
 =======
 }
@@ -28,6 +32,7 @@ export function AIEnhancementButton({
         title: "Not enough content"
         description: `Please enter at least ${contentLength} characters before enhancing.`
         variant: "destructive"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export function AIEnhancementButton({
@@ -173,6 +178,8 @@ export function AIEnhancementButton({;
       onEnhanced(generatedContent),
       setShowActions(false),
       setGeneratedContent(null),
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       toast({
         title: "Content applied",
@@ -181,7 +188,10 @@ export function AIEnhancementButton({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   
   const handleRegenerate = async () => {
@@ -192,15 +202,24 @@ export function AIEnhancementButton({;
     setShowActions(false),
     setGeneratedContent(null)
   },
+<<<<<<< HEAD
   
 <<<<<<< HEAD
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">
+=======
+
+  if (showActions) {
+    return (
+      <div className="flex gap-2 items-center">;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Button
           type="button"
           variant="ghost"
           size="sm"
+<<<<<<< HEAD
           onClick={handleAccept}
           className="text-green-500 hover:text-green-700 hover:bg-green-100/20"
         >
@@ -286,10 +305,15 @@ export function AIEnhancementButton({;
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">        <Button
+=======
+
+        <Button
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           type="button"
           variant="ghost"
           size="sm"
           onClick = {handleRegenerate,}
+<<<<<<< HEAD
 <<<<<<< HEAD
           className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
           disabled = {isEnhancing,}>;
@@ -372,20 +396,29 @@ if ( {) {
 }
     return (
       <div className="flex gap - 2 items - center">;
+=======
+          className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Button;
           type="button";
           variant="ghost";
           size="sm";
+<<<<<<< HEAD
           on_click = {handle_accept, }
           className="text - green - 500 hover:text - green - 700 hover:bg - green - 100 / 20";
         >;
           <Check className="h - 4 w - 4 mr - 1" />;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           Apply;
         </Button>;
         <Button;
           type="button";
           variant="ghost";
           size="sm";
+<<<<<<< HEAD
           on_click = {handle_regenerate, }
           className="text - blue - 500 hover:text - blue - 700 hover:bg - blue - 100 / 20";
           disabled = {is_enhancing, }
@@ -393,6 +426,9 @@ if ( {) {
           {is_enhancing ? (
             <Loader2 className="h - 4 w - 4 mr - 1 animate - spin" />) : (
             <RefreshCw className="h - 4 w - 4 mr - 1" />)}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           Regenerate;
 =======
           className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"          Regenerate;
@@ -434,14 +470,18 @@ if ( {) {
 }"}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     >
       {isEnhancing ? (
         <Loader2 className="h-4 w-4 animate-spin" />
       ) : (
         <Sparkles className="h-4 w-4" />
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <span className="text-xs">{buttonText}</span>
     </Button>
@@ -458,3 +498,6 @@ if ( {) {
       onClick={handleEnhance}
       disabled={isEnhancing}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -264,6 +265,9 @@ if ( {) {
 <<<<<<< HEAD
       operator,
       access,
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     });
 
 =======
@@ -366,10 +370,11 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: err.message || 'Internal error' })
   }
 }
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+
   try {
     const body = req.body || {};
     const {
+<<<<<<< HEAD
       instanceName,
 <<<<<<< HEAD
       tokenActivation
@@ -385,6 +390,9 @@ export default async function handler(req, res) {
       governanceMode,
       branding,
       modules = {},
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       bonusModules = {  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -419,7 +427,7 @@ export default async function handler(req, res) {
     // Simulated provisioning operations – replace with real infra hooks later
     const now = new Date().toISOString();
     const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+
     const outputActions = {
       zionGPT: {
         initialized: true,
@@ -442,8 +450,8 @@ export default async function handler(req, res) {
       },
       publicPages: []
     };
-<<<<<<< HEAD
 
+<<<<<<< HEAD
     res.status(200).json({
       success: true,
       provisionId,
@@ -641,3 +649,5 @@ export default async function handler(req, res) {
 =======
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

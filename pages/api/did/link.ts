@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -17,6 +18,9 @@ const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {},
 <<<<<<< HEAD
 =======
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -36,6 +40,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (req.method !== 'POST') return res.status(405).end(),
   const { payload, message, signature } = req.body || {},
   if (!payload || !payload.address) return res.status(400).json({ error: 'Missing payload' }),
@@ -53,6 +58,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!payload || !payload.address) return res.status(400).json({ error: 'Missing payload' }),
   const key = `${payload.address}`,
   store[key] = { payload, message, signature, updatedAt: Date.now() },
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return res.status(200).json({ ok: true });
 };
 

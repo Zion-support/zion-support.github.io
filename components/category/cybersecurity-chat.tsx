@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,6 +32,9 @@ const CybersecurityChat: NextPage = () => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -40,6 +44,7 @@ const CybersecurityChat: NextPage = () => {;
     <div>;
       <Head>;
         <title>CybersecurityChat - Zion Tech Solutions</title>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <meta name="description" content="CybersecurityChat blog post" />{" "}
 <<<<<<< HEAD
@@ -63,6 +68,12 @@ const CybersecurityChat: NextPage = () => {
       </Head>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+        <meta name="description" content="CybersecurityChat blog post" />{" "}
+
+      </Head>;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <main>
         <h1>CybersecurityChat</h1>
         <p>Blog content coming soon...</p>
@@ -70,11 +81,11 @@ const CybersecurityChat: NextPage = () => {
       </main>
     </div>
       </Head>;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <main>;
         <h1>CybersecurityChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -84,6 +95,7 @@ const CybersecurityChat: NextPage = () => {
   );
 }
 export default CybersecurityChat;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -105,6 +117,9 @@ export default CybersecurityChat;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextPage } from './next';
 =======
         <meta name="description" content="CybersecurityChat blog post" />{" "}import type { NextPage } from './next';
@@ -128,6 +143,7 @@ const CybersecurityChat: NextPage = () => {
 ;
 export default CybersecurityChat;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -183,3 +199,6 @@ export default CybersecurityChat;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

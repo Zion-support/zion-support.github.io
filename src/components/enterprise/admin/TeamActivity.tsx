@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import {
@@ -143,16 +144,22 @@ export function TeamActivity() {
 =======
 jobs: { variant: "default" },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       candidates: { variant: "outline" },
       team: { variant: "secondary" },
       billing: { variant: "destructive" }},
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     const style = categoryStyles[category] || { variant: "default" as const },
     return <Badge variant={style.variant}>{category}</Badge>
   },
 =======
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return <Badge variant={style && style.variant}>{category}</Badge>;
   };
 =======
@@ -256,12 +263,18 @@ export function TeamActivity() {;
       team: { variant: "secondary" },;
       billing: { variant: "destructive" }},;
     const style = categoryStyles[category] || { variant: "default" as const },;
+<<<<<<< HEAD
     return <Badge variant={style && style.variant}>{category}</Badge>
 };
+=======
+    return <Badge variant={style && style.variant}>{category}</Badge>;
+  };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     const style = categoryStyles[category] || { variant: "default" as const },
     return <Badge variant={style.variant}>{category}</Badge>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -270,6 +283,8 @@ export function TeamActivity() {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -520,8 +535,11 @@ const getCategoryBadge = (category: string) =>: any {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous
@@ -532,6 +550,7 @@ const getCategoryBadge = (category: string) =>: any {
         <Button variant="outline" size="sm">
           Next
         </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       </div>
@@ -545,3 +564,6 @@ const getCategoryBadge = (category: string) =>: any {
 =======
       </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* eslint-env node */
 
 module.exports = {
@@ -25,9 +26,13 @@ module.exports = {
 module.exports = {
 module && module.exports = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+module.exports = {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   env: {
     node: true,
-    es2021: true
+    es2021: true,
+    browser: true
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -39,6 +44,7 @@ module && module.exports = {
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
+<<<<<<< HEAD
 /* eslint-env node */
 module.exports = {
 
@@ -141,8 +147,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "no-unused-vars": "off",
+=======
+  rules: {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "off",
     "no-console": "off",
+<<<<<<< HEAD
     "no-undef": "off",
     "react/no-unescaped-entities": "off",
     "@typescript-eslint/no-explicit-any": "warn"
@@ -929,3 +943,8 @@ module.exports = {;
 },;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    "react/no-unescaped-entities": "warn"
+  }
+};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -22,6 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
   res.status(200).json({ vendors })
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -32,6 +33,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }  const vendors = listVendors();
   res.status(200).json({ vendors })
 }
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { list_vendors } from '../../../utils / vendor - store';
 export default /**
  * handler - Function description
@@ -45,6 +50,7 @@ function handler() {
   const vendors = list_vendors ();
   res.status (200).json ({ vendors });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -82,3 +88,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

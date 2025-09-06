@@ -20,21 +20,28 @@ export function ActiveProjectsCard() {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       const active = projects.filter(p => 
         ['offer_acceptedin_progress'].includes(p.status)
       ).slice(0, 3), // Limit to 3 most recent projects
       setActiveProjects(active)
     }
   }, [projects, isLoading]),
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (isLoading) {
 <<<<<<< HEAD
     return (
@@ -73,10 +80,13 @@ export function ActiveProjectsCard() {;
     return (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <BriefcaseIcon className="h-5 w-5 text-primary" />
             <span>Active Projects</span>
           </CardTitle>
@@ -85,8 +95,11 @@ export function ActiveProjectsCard() {;
         <CardContent>
           <div className="space-y-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
             {[1, 2].map(idx => (
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                 className='h-16 animate-pulse bg-muted rounded'></div>            ))}
           </div>;
@@ -97,10 +110,13 @@ export function ActiveProjectsCard() {;
             {[1, 2].map(idx => (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
 import { useEffect, useState } from "react",;
 import Link from "next/link",;
@@ -164,14 +180,20 @@ export function ActiveProjectsCard() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <BriefcaseIcon className="h-5 w-5 text-primary" />
             <span>Active Projects</span>
           </CardTitle>
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   if (activeProjects && activeProjects.length === 0) {;
     return (
@@ -201,10 +223,13 @@ export function ActiveProjectsCard() {;
     );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <CardContent className="text-center py-6">
           <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>
           <Button variant="outline" asChild>
@@ -216,9 +241,12 @@ export function ActiveProjectsCard() {;
     )
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   
   return (
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
   }
@@ -234,6 +262,7 @@ export function ActiveProjectsCard() {;
       <CardContent className='space-y-4'>  ;
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <Card>
@@ -286,6 +315,10 @@ export function ActiveProjectsCard() {;
             <div className='flex justify-between items-start mb-2'>;
               <h3 className='font-medium text-sm'>{project && project.job?.title}</h3>;              <Badge
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+              <Badge
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 variant={
                   project.status === 'in_progress' ? 'default' : 'outline'
                 }

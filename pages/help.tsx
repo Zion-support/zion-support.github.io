@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,6 +21,9 @@ export default function HelpPage() {
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -40,7 +44,6 @@ import { motion, AnimatePresence } from 'framer-motion';
   ExternalLink
   ChevronDown
   Cloud
-
 
 import {
 
@@ -103,15 +106,12 @@ export default function HelpPage() {
 
 ];
 
-
-
     color: 'blue',
     articles: helpArticles
   }
 ];
 
 export default function HelpPage() {;
-
 
 import {;
   Search,;
@@ -322,6 +322,7 @@ function HelpPage() {
       </div>;
     </>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
@@ -345,4 +346,7 @@ export default function HelpPage() {
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }

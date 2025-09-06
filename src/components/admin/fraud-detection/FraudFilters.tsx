@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Input } from "@/components/ui/input",
@@ -26,6 +27,10 @@ resetFilters: () => void
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 export const FraudFilters: React.FC<FraudFiltersProps> = ({  searchQuery
+=======
+
+  searchQuery
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   setSearchQuery
   statusFilter
   setStatusFilter
@@ -33,6 +38,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({  searchQuery
   setSeverityFilter
   contentTypeFilter
   setContentTypeFilter
+<<<<<<< HEAD
 import React from 'react'
 };
 
@@ -62,10 +68,14 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   return (
     <div className="flex flex-col md:flex-row gap-4 mb-6">
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="relative flex-1">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
         <Input
           placeholder="Search by user or content..."
+<<<<<<< HEAD
 <<<<<<< HEAD
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
@@ -83,6 +93,11 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
         />
       </div>
             <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
+=======
+          value = {searchQuery,}
+
+      <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Status" />
         </SelectTrigger>
@@ -99,12 +114,15 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Severity" />
@@ -121,12 +139,15 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Content Type" />
@@ -142,13 +163,22 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       </Select>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Button variant="outline" onClick={resetFilters} className="md: w-auto">
         <Filter className="h-4 w-4 mr-2" /> Reset Filters
       </Button>
     </div>
   )
+<<<<<<< HEAD
+=======
+
+          onChange = {(e,) => setSearchQuery(e && e.target.value),}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 },
 import React from "react",;
 import { Input } from "@/components/ui/input",;
@@ -165,6 +195,7 @@ interface FraudFiltersProps {;
   contentTypeFilter: string | null,;
   setContentTypeFilter: (value: string | null) => void,;
   resetFilters: () => void;
+<<<<<<< HEAD
 
 }
 ;
@@ -172,6 +203,9 @@ interface FraudFiltersProps {;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   searchQuery,;
   setSearchQuery,;
@@ -193,12 +227,13 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           className="pl-10";
         />;
       </div>;
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Status" />;
@@ -213,9 +248,13 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
       </Select>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -229,10 +268,11 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="dangerous">Dangerous</SelectItem>;
         </SelectContent>;
       </Select>;
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>;
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Content Type" />;
@@ -248,9 +288,13 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
       </Select>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Button variant="outline" onClick={resetFilters} className="md: w-auto">;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -260,7 +304,10 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   )
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   search_query: string,
   setSearchQuery: (value: string, ) => void,
@@ -334,6 +381,7 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
     </div>);
 }
 '"},
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -341,3 +389,6 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
 '"},
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

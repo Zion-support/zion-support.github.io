@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD
 
@@ -13,6 +14,9 @@
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/resolve.ts
 
 export default async function handler(;
   req: NextApiRequest;
@@ -20,6 +24,7 @@ export default async function handler(;
 ) {;
   const { id } = req && req.query;
 
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 =======
 <<<<<<< HEAD:pages/api/disputes/[id]/resolve.ts
 =======
@@ -35,12 +40,18 @@ export default async function handler(;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/disputes/[id]/resolve.ts
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/resolve.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import { parseUserFromRequest, ensureAdmin } from "../../../../utils/auth";
 export default async function handler(
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/resolve.ts
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -72,12 +83,19 @@ export default async function handler(
   if (typeof id !== "string");
     return res && res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req);
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 ;
 
   if (req && req.method === "POST") {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
     try {;
+=======
+
+  if (req && req.method === "POST") {
+
+    try {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/resolve.ts
       ensureAdmin(user);
     } catch (e: any) {;
       return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
@@ -85,14 +103,17 @@ export default async function handler(
     const dispute = await getDisputeById(id);
     if (!dispute) return res && res.status($1).json({ $2 });
     const { resolutionSummary, status } = req && req.body || {};
-=======
 
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/resolve.ts
     const now = new Date().toISOString();
 ;
     if (status && !["Resolved", "Under Review", "Open"].includes(status)) {;
       return res && res.status(400).json({ error: "Invalid status" });
     }
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD
 =======
@@ -217,6 +238,9 @@ req: NextApiRequest;
       (dispute.resolvedAt = dispute.status === "Resolved" ? now : undefined));
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/resolve.ts
     dispute.resolutionSummary = resolutionSummary |dispute.resolutionSummary;
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler($2) {;
@@ -299,6 +323,7 @@ export default async function handler(req, res) {;
     dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
 ;
 
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -306,6 +331,11 @@ export default async function handler(req, res) {;
     dispute.updatedAt = now;
     await upsertDispute(dispute);
 ;
+=======
+    dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
+    dispute.updatedAt = now;
+    await upsertDispute(dispute);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/resolve.ts
 
   res && res.setHeader("Allow", "POST");
   return res && res.status(405).end("Method Not Allowed");
@@ -313,8 +343,11 @@ export default async function handler(req, res) {;
 }
 ;
 
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/resolve.ts
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById, upsert_dispute  } from '../../../../utils / fsdb';
 import { parseUserFromRequest, ensure_admin  } from '../../../../utils / auth';
@@ -335,6 +368,7 @@ function handler() {;
 if ( {) {
   $2
 }
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD
 =======
@@ -391,3 +425,6 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/disputes/[id]/resolve.ts
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/resolve.ts

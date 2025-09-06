@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,6 +27,9 @@ const Page = () => {
 export default Page;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from './components/Layout';
@@ -66,7 +70,6 @@ import {;
 } from "lucide-react";
   Clock
 } from 'lucide-react';
-origin/automation-improvements-final
 
   ArrowRight
   Users
@@ -165,10 +168,8 @@ export default function NewsletterPage() {
   }
 ];
 
-
 export default function NewsletterPage() {;
   const [email, setEmail] = useState("");
-
 
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -188,8 +189,6 @@ export default function NewsletterPage() {;
 
                 Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
               </p>
-              
-
 
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
@@ -619,8 +618,6 @@ function NewsletterPage() {
 
                 Subscribe now and start receiving valuable insights delivered to your inbox every week.
               </p>
-              
-
 
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
@@ -664,6 +661,7 @@ function NewsletterPage() {
                   </div>;
                 </form>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -784,3 +782,6 @@ export default Page;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

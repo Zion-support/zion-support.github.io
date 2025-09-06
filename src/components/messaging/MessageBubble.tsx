@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',;
 import { format } from 'date-fns',;
 import { PaperclipIcon } from 'lucide-react';
@@ -17,6 +18,9 @@ interface MessageBubbleProps {
   isUserMessage: boolean;
 }
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
 =======
   message: Message
@@ -71,6 +75,7 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         
         <div className="text-xs opacity-70 text-right mt-1">
           {format(new Date(message.created_at), 'h:mm a')}
+<<<<<<< HEAD
         </div>;
       </div>;
     </div>;
@@ -196,3 +201,6 @@ function MessageBubble() {
     </div>));
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

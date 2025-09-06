@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 status: 'open' | 'under_review' | 'resolved' | 'closed';
 
 <<<<<<< HEAD
@@ -136,6 +137,9 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
           <ShieldAlert className="h-3 w-3" />;
 <<<<<<< HEAD
           <span>Under Dispute</span>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </Badge>;
 =======
           <span>Under Dispute</span>;        </Badge>;
@@ -144,6 +148,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     </Tooltip>;
@@ -166,3 +171,6 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

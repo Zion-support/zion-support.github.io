@@ -10,6 +10,7 @@ interface RewardsCardProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralReward } from "@/types/referrals",
 import { formatDate } from "@/utils/referralUtils",
@@ -19,6 +20,8 @@ import { BadgeDollarSign, Badge } from 'lucide-react'
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {;
   Card,;
   CardContent,;
@@ -48,22 +51,28 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface RewardsCardProps {
   rewards: ReferralReward[],
   isLoading: boolean
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
   if (isLoading) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return (
 <<<<<<< HEAD
       <Card>
@@ -79,7 +88,13 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <CardTitle className="flex items-center gap-2">
+            <BadgeDollarSign className="h-5 w-5" />
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             Your Rewards
           </CardTitle>
           <CardDescription>Rewards earned from successful referrals</CardDescription>
@@ -93,7 +108,10 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )
   }
 
@@ -105,6 +123,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <CardTitle className="flex items-center gap-2">
@@ -114,6 +133,11 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
             <BadgeDollarSign className="h-5 w-5" />
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <CardTitle className="flex items-center gap-2">
+            <BadgeDollarSign className="h-5 w-5" />
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             Your Rewards
           </CardTitle>
 <<<<<<< HEAD
@@ -136,7 +160,10 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="flex flex-col items-center justify-center p-4 text-center">
             <p className="text-muted-foreground">No rewards yet</p>
             <p className="text-sm text-muted-foreground mt-1">
@@ -149,10 +176,13 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )
 
   }
@@ -291,6 +321,7 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 
+<<<<<<< HEAD
   if (rewards && rewards.length === 0) {;
     return (
       <Card>;
@@ -307,6 +338,9 @@ if ( {) {
           <div className='flex flex-col items-center justify-center p-4 text-center'>;
             <p className='text-muted-foreground'>No rewards yet</p>;
             <p className='text-sm text-muted-foreground mt-1'>              Refer users to earn rewards once they complete onboarding            Your Rewards;          </CardTitle>;
+=======
+          </CardTitle>;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <CardDescription>Rewards earned from successful referrals</CardDescription>;
         </CardHeader>;
         <CardContent>;
@@ -379,9 +413,13 @@ if ( {) {
                 <p className="text-xs text-muted-foreground mt-1">;
                   Earned on {formatDate(reward.created_at)}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </p>;
                 {reward.expires_at && (;
                   <p className="text-xs text-muted-foreground">;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     Expires on {formatDate(reward.expires_at)}
 <<<<<<< HEAD
                   </p>;

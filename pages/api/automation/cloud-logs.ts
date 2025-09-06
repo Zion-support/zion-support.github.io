@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -7,10 +8,16 @@
 
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',;
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next',;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import fs from 'fs',;
 import path from 'path',;
 async function fetchFromGitHub(): Promise<any[]> {
   try {
+<<<<<<< HEAD
     const repoUrl = require('../../../package.json').repository?.url || '',
     const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i),
     const owner = process.env.GITHUB_OWNER || (match ? match[1] : ''),
@@ -163,6 +170,11 @@ export default async function handler(req, res) {
         // ignore
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+      } catch {
+        // ignore;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
     }
     return results
@@ -170,6 +182,7 @@ export default async function handler(req, res) {
     return [];
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default async /**
@@ -330,3 +343,11 @@ const remote = await fetchFromGitHub (),
   return res.status(200).json({ logs: remote })
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  }
+const remote = await fetchFromGitHub()
+
+  return res.status(200).json({ logs: remote })
+};
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

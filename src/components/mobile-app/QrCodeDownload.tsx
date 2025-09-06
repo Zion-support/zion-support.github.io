@@ -1,5 +1,6 @@
 export const QrCodeDownload: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { QrCode } from 'lucide-react'
@@ -28,6 +29,8 @@ export const QrCodeDownload: React.FC = () => {
               </p>
 <<<<<<< HEAD
               
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               <AppStoreButtons 
 =======
@@ -38,7 +41,10 @@ export const QrCodeDownload: React.FC = () => {
                 googlePlayUrl={googlePlayUrl}
               />
 
+<<<<<<< HEAD
               
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="flex gap-2 items-center text-sm text-gray-400">
                 <span className="block h-1 w-1 rounded-full bg-zion-purple"></span>
                 <span>Compatible with iOS 14+ and Android 8.0+</span>
@@ -46,12 +52,16 @@ export const QrCodeDownload: React.FC = () => {
             </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className="flex-shrink-0">
               <div className="bg-white dark:bg-zion-blue-dark p-6 rounded-xl shadow-lg">
                 <div className="w-48 h-48 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
                   <QrCode className="w-full h-full p-4" />
+<<<<<<< HEAD
 <<<<<<< HEAD
                   {/* This would be replaced with an actual QR code in production */}
                 </div>
@@ -119,6 +129,9 @@ import { AppStoreButtons } from "./AppStoreButtons",;
 import React from "react";
 import { QrCode } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const QrCodeDownload: React.FC = () => {;
 =======
               <div className="bg-white dark:bg-zion-blue-dark p-6 rounded-xl shadow-lg">
@@ -143,7 +156,11 @@ import { AppStoreButtons } from "./AppStoreButtons",;export const QrCodeDownload
   // App store links - these would come from environment variables in production;
   const appStoreUrl = "#", // Replace with actual App Store URL;
   const googlePlayUrl = "#", // Replace with actual Google Play URL;
+<<<<<<< HEAD
   return (;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="max-w-5xl mx-auto">;
@@ -155,6 +172,11 @@ import { AppStoreButtons } from "./AppStoreButtons",;export const QrCodeDownload
               <p className="text-lg text-gray-300 mb-8">;
                 Scan the QR code with your phone camera to download the app instantly, or use the buttons below to get it from your app store of choice.;
               </p>;
+<<<<<<< HEAD
+=======
+
+                <div className="w-48 h-48 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <QrCode className="w-full h-full p-4" />;
                   {/* This would be replaced with an actual QR code in production */}
                 </div>;
@@ -185,4 +207,7 @@ import { AppStoreButtons } from "./AppStoreButtons",;export const QrCodeDownload
       </div>
     </section>
 
+<<<<<<< HEAD
   )
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

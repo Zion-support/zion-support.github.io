@@ -78,11 +78,16 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
     const errorId = this.generateErrorId()
     // Enhanced error logging
     const enhancedError = {
+<<<<<<< HEAD
       scope.setLevel('error');      scope.setContext('errorInfo', {
         componentStack: errorInfo.componentStack
         retryCount: this.state.retryCount
       })
       Sentry.captureException(error)    })
+=======
+
+    })
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
   componentWillUnmount() {
@@ -256,6 +261,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       errorId: null,;
       retryCount: 0,;
       userFeedback: '',;
+<<<<<<< HEAD
       showDetails: false,
 };  }    ,}
       showDetails: false;
@@ -479,12 +485,20 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
         retryCount: this.state.retryCount + 1,
 
         showDetails: false
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       })
     }, retryDelay)
     this.retryTimeouts.push(timeout)
   };        showDetails: false
       })
     }, retryDelay)
+<<<<<<< HEAD
+=======
+
+      if (response.ok) {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         // Show success message
   private report_error = async () => {
     // Check condition
@@ -517,12 +531,17 @@ if ( {) {
   $2
 }
         // Show success message;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
     } catch (err) {
       logErrorToProduction ('Failed to report error:', { data: err });
     }    }
   }
 
+<<<<<<< HEAD
     if (this.props.onError) {;
       this.props.onError(error, errorInfo);
     }
@@ -677,6 +696,11 @@ if ( {) {
   $2
 }
         // Show success message;  private goHome = () => {
+=======
+    }
+
+  private goHome = () => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (typeof window !== 'undefined') {
       window.location.href = '/'
     }
@@ -690,6 +714,7 @@ if ( {) {
         return this.props.fallback;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   private getBuildInfo() {;
@@ -699,6 +724,8 @@ if ( {) {
       buildTime: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown';
     }
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   private getBuildInfo() {;
     return {;
       version: process && process.env.NEXT_PUBLIC_APP_VERSION || 'unknown',;
@@ -832,11 +859,14 @@ if ( {) {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
 
       const severity = this.getErrorSeverity(this.state.error)
@@ -854,11 +884,14 @@ if ( {) {
             transition={{ duration: 0.3 }}
           >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             transition={{ duration: 0.3 }}
           >
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -872,10 +905,13 @@ if ( {) {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </div>
                 <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100">
                   Oops! Something went wrong
@@ -941,6 +977,7 @@ if ( {) {
                     Go Home
                   </Button>
 
+<<<<<<< HEAD
                   <Button 
                     onClick={() => this.setState({ showDetails: !this.state.showDetails })}
                     variant="ghost" 
@@ -954,6 +991,8 @@ if ( {) {
 =======
 =======
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {/* Action Buttons */}
                 <div className='flex flex-col sm:flex-row gap-3 justify-center'>;
                   {canRetry && (;
@@ -986,7 +1025,12 @@ if ( {) {
                       <RefreshCw className="h-4 w-4" />;
                       Try Again;
                     </Button>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+                  )}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
                     </p>;
@@ -1004,16 +1048,21 @@ if ( {) {
                     </Button>
                   )}
 
+<<<<<<< HEAD
                   <Button 
                     onClick={() => this.setState({ showDetails: !this.state.showDetails })}
                     variant="ghost" 
                     size="sm"
                     className="flex items-center gap-2"
                   >                    <Bug className="h-4 w-4" />
+=======
+                    <Bug className="h-4 w-4" />
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     {this.state.showDetails ? 'Hide' : 'Show'} Details
                   </Button>
                 </div>
 
+<<<<<<< HEAD
                   <Button onClick={this && this.goHome} variant="outline" className="flex items-center gap-2">;
                     <Home className="h-4 w-4" />;
                     Go Home;
@@ -1038,6 +1087,8 @@ if ( {) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {/* Error Details */}
                 <AnimatePresence>;
                   {this.state.showDetails && (;
@@ -1046,7 +1097,10 @@ if ( {) {
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                     >
                       <div className='space-y-4'>
@@ -1059,6 +1113,10 @@ if ( {) {
                       <div className="space-y-4">
                         <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           <h4 className="font-semibold text-sm mb-2">Error Message:</h4>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -1068,6 +1126,7 @@ if ( {) {
                         </div>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 
                         {process.env.NODE_ENV === 'development' &&
@@ -1240,6 +1299,10 @@ if ( {) {
                           </code>;
                         </div>;
                         {process.env.NODE_ENV === 'development' &&;
+=======
+                        {process.env.NODE_ENV === 'development' &&
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           this.state.error.stack && (
                             <div>;
                               <h4 className='font - semibold text - sm mb - 2'>;
@@ -1295,10 +1358,13 @@ if ( {) {
                               variant='outline'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         {process.env.NODE_ENV === 'development' && this.state.error.stack && (
                           <div>
                             <h4 className="font-semibold text-sm mb-2">Stack Trace:</h4>
@@ -1310,11 +1376,14 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         <div className="flex gap-2">
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
                             <Clipboard className="h-4 w-4 mr-2" />
@@ -1324,6 +1393,7 @@ if ( {) {
                           {this.props.showReportButton !== false && (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -1334,20 +1404,15 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                             <Button onClick={this.reportError} variant="outline" size="sm">
                               <Send className="h-4 w-4 mr-2" />
                               Report Issue
                             </Button>
-<<<<<<< HEAD
-=======
-                              size='sm'>;
-                              <Send className='h-4 w-4 mr-2' />                              Report Issue;
-                        <div className="flex gap-2">;
-                          <Button onClick={this && this.copyErrorDetails} variant="outline" size="sm">;
-                            <Clipboard className="h-4 w-4 mr-2" />;
-                            Copy Details;
-                          </Button>;
 
+<<<<<<< HEAD
                           {this && this.props.showReportButton !== false && (;
                             <Button onClick={this && this.reportError} variant="outline" size="sm">;
                               <Send className="h-4 w-4 mr-2" />;
@@ -1356,6 +1421,8 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           )}
 =======
                         <div className="flex gap-2">
@@ -1375,6 +1442,7 @@ if ( {) {
                       </div>;
                     </motion.div>;
                   )}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </AnimatePresence>;
               </CardContent>;
@@ -1418,6 +1486,8 @@ export const withErrorBoundary = <P extends object>(;
 ;
 export default GlobalErrorBoundary;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return WrappedComponent;
 }
@@ -1448,6 +1518,7 @@ export default GlobalErrorBoundary;
 
   }
 // Hook for programmatic error boundary
+<<<<<<< HEAD
 export const useErrorBoundary = () => {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1513,3 +1584,6 @@ export const withErrorBoundary = <P extends object>(;
 ;
 export default GlobalErrorBoundary;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

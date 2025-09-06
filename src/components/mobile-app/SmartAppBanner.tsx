@@ -18,31 +18,8 @@ interface SmartAppBannerProps {
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
-<<<<<<< HEAD
-}
-export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
-}
-export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
-  const [isVisible, setIsVisible] = useState(false),
-  const isMobile = useIsMobile(),
-  
-  useEffect(() => {
-    // Only show banner on mobile devices and if it hasn't been dismissed
-    if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
-      const timer = setTimeout(() => {
-        setIsVisible(true)
-      return () => clearTimeout(timer)
-    }
-    return undefined
-  }, [isMobile, delay])
-  const dismissBanner = () => {
-    setIsVisible(false)
-    safeStorage.setItem("smartBannerDismissed", "true")
-  }
-  const resetBanner = () => {
-    safeStorage.removeItem("smartBannerDismissed")
-    setIsVisible(true)
 
+<<<<<<< HEAD
 
   // Only render on mobile devices
     return process.env.NODE_ENV === 'development' ? (
@@ -551,3 +528,5 @@ if ( {) {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

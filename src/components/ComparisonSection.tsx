@@ -29,6 +29,7 @@ export function ComparisonSection() {
                 {[                <TableRow className="border-b border-zion-purple/20">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { GradientHeading } from "./GradientHeading";
 import { Button } from "./ui/button";
@@ -51,10 +52,17 @@ export function ComparisonSection() {
             <Table>
               <TableHeader>
                 <TableRow className="border-b border-zion-purple/20">
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <TableHead className="text-white">Service</TableHead>
                   <TableHead className="text-white text-center">Traditional Providers</TableHead>
                   <TableHead className="text-white text-center">With Zion</TableHead>
                   <TableHead className="text-white text-center">Savings</TableHead>
+<<<<<<< HEAD
+=======
+
+                  {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     service: 'IT Equipment'
                     traditional: 'Full Purchase'
                     zion: 'Flexible Rental'
@@ -62,6 +70,7 @@ export function ComparisonSection() {
                   }
                   {
 
+<<<<<<< HEAD
                     service: '24 / 7 Support',
                     traditional: '$2, 500 / mo',
                     zion: '$950 / mo',
@@ -83,6 +92,8 @@ export function ComparisonSection() {
                   <TableRow key={index} className='border - b border - zion - blue'>;
                     <TableCell className='font - medium text - white'>;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       {item.service}
                     </TableCell>;
                     <TableCell className='text - center text - zion - slate - light'>;
@@ -99,6 +110,10 @@ export function ComparisonSection() {
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
                     <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </TableRow>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -143,24 +158,29 @@ export function ComparisonSection() {
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
                   </TableRow>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                   </TableRow>
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 ))}
               </TableBody>
             </Table>
           </div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
           <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className="flex items-start">
               <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />
               <p className="text-white">
@@ -178,15 +198,19 @@ export function ComparisonSection() {
 
               Calculate Your Savings
 
+<<<<<<< HEAD
               Calculate Your Savings
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </Button>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     </section>
@@ -225,10 +249,14 @@ export function ComparisonSection() {;
               <TableHeader>;
 <<<<<<< HEAD
                 <TableRow className="border-b border-zion-purple/20">;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <TableHead className="text-white">Service</TableHead>;
                   <TableHead className="text-white text-center">Traditional Providers</TableHead>;
                   <TableHead className="text-white text-center">With Zion</TableHead>;
                   <TableHead className="text-white text-center">Savings</TableHead>;
+<<<<<<< HEAD
                 </TableRow>;
               </TableHeader>;
               <TableBody>;
@@ -244,10 +272,14 @@ export function ComparisonSection() {;
                     <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>;
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>;
                   </TableRow>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 ))}
               </TableBody>;
             </Table>;
           </div>;
+<<<<<<< HEAD
           <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">;
             <div className="flex items-start">;
               <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />;
@@ -259,10 +291,14 @@ export function ComparisonSection() {;
             </div>;
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">;
               Calculate Your Savings;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </Button>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </section>;
   );
 }
@@ -289,3 +325,6 @@ export function ComparisonSection() {;
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

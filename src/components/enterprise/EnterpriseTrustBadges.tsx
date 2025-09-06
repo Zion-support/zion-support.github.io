@@ -28,6 +28,7 @@ export function EnterpriseTrustBadges() {
             <span className='font-medium'>HIPAA Compliant</span>          </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -48,6 +49,8 @@ import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function EnterpriseTrustBadges() {
   return (
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">
@@ -77,6 +80,7 @@ export function EnterpriseTrustBadges() {
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     </section>
   )
 import React from "react";
@@ -92,6 +96,9 @@ import React from 'react';
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
 export function EnterpriseTrustBadges() {;
   return (;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">;
 =======
 import React from "react";
@@ -125,6 +132,7 @@ export function EnterpriseTrustBadges() {;
       </div>;
     </section>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -204,3 +212,6 @@ function EnterpriseTrustBadges() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

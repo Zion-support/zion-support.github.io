@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -474,6 +475,9 @@ export default function About() {;
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Award, Target, CheckCircle } from 'lucide-react';
@@ -490,11 +494,15 @@ import MainLayout from "../components/layout/MainLayout";
 
 const About: React.FC = () => {
   return (
+<<<<<<< HEAD
     <MainLayout title="About Us - Zion Tech Group" description="Learn about our mission to transform businesses through innovative technology solutions.">
       <div className="container mx-auto px-4 py-16">
 <<<<<<< HEAD
         <div className="text-center mb-16">
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Card from '../components/Card';
@@ -564,11 +572,12 @@ const About: React.FC = () => {
     >
       <div className="container mx-auto px-4 py-16">
         <motion.div className="text-center mb-16" variants={itemVariants}>
->>>>>>> main
+
           <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             About Zion Tech Group
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
 <<<<<<< HEAD
             We are a leading technology company specializing in AI solutions, cybersecurity, 
             and cloud infrastructure. Our mission is to transform businesses through 
@@ -841,11 +850,18 @@ const About: React.FC = () => {
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
       </div>
     </MainLayout>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   );
 };
 
 export default About;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

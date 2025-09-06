@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -119,29 +120,12 @@ function InteractiveFeatures() {
   const handle_toggle = (index: number) =>: any {
     setOpenIndex (prev => (prev === index ? null : index));
   }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
+  style?: React.CSSProperties;
 }
+<<<<<<< HEAD
 import React from 'react';
 import {;
   Card,;
@@ -172,6 +156,11 @@ import { cn } from "@/lib/utils",
 interface InteractiveFeaturesProps {
   className?: string,
   style?: React.CSSProperties}
+=======
+interface InteractiveFeaturesProps {
+
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface InteractiveFeaturesProps {;
@@ -260,6 +249,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
           {features.map((feature, index) => (;
             <Card;
 
+<<<<<<< HEAD
     <section className={cn("py-16 bg-zion-blue-dark", className)} style={style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
@@ -271,6 +261,9 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
           </p>
         </div>              key={index}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              key={index}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               onMouseEnter={() => setOpenIndex(index)}
               onMouseLeave={() => setOpenIndex(null)}
               onClick={() => handleToggle(index)}
@@ -278,10 +271,13 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg"
             >
               <CardHeader className="flex flex-row items-start space-x-3">
@@ -348,6 +344,7 @@ export default InteractiveFeatures;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -364,3 +361,6 @@ export default InteractiveFeatures;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

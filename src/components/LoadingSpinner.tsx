@@ -34,6 +34,7 @@ interface LoadingSpinnerProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
@@ -58,6 +59,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   className = '',
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -66,6 +69,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className={`flex justify-center items-center ${className}`}>
       <div 
@@ -85,6 +89,9 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       {text && (
         <p className="mt-2 text-sm text-gray-600 animate-pulse">{text}</p>
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-54a3
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </div>

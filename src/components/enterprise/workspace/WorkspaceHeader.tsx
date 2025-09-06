@@ -8,10 +8,13 @@ interface WorkspaceHeaderProps {;
   company: Company;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { type Company } from "./CompanyDashboard",
@@ -29,7 +32,10 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">
             <img
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               src={company.logoUrl || '/placeholder.svg'}
 
@@ -48,6 +54,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
 
+<<<<<<< HEAD
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { type Company } from "./CompanyDashboard";
@@ -118,6 +125,8 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
             <img
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               src={company.logoUrl || "/placeholder.svg"}
               alt={company.name}
               className="max-h-10 max-w-10"
@@ -136,11 +145,14 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
           </div>
           <div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
               {company.plan} Plan · {company.teamSize} team members
@@ -152,12 +164,15 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="flex items-center gap-2">
           <Button variant="outline" size="icon" aria-label="Notifications">
             <Bell className="h-4 w-4" />
@@ -167,11 +182,14 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Button variant="outline" size="icon" aria-label="Team members">
             <Users className="h-4 w-4" />
           </Button>
@@ -181,6 +199,7 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       
 =======
 
@@ -191,6 +210,9 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Active Job Listings</div>
@@ -206,6 +228,7 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 import React from "react",;
@@ -241,6 +264,8 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
             <Bell className="h-4 w-4" />;
           </Button>;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 }          </Button>
           <Button variant="outline" size="icon" aria-label="Team members">
@@ -351,6 +376,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   );
@@ -441,3 +467,6 @@ function WorkspaceHeader() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

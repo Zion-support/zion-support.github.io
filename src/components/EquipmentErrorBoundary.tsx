@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',;
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -150,6 +151,10 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
                   <RefreshCw className="h-4 w-4 mr-2" />
                   Try Again
                 </Button>                <Button onClick={() => window.location.reload()} variant="default">
+=======
+
+                <Button onClick={() => window.location.reload()} variant="default">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   Refresh Page
                 </Button>
               </div>
@@ -158,12 +163,16 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
         </div>
       )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     return this.props.children
   }      )
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
     return this.props.children;
@@ -177,6 +186,14 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 } ;
+=======
+
+    return this.props.children;
+  };
+} ;
+
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   onClick={() => window && window.location.reload()}
                   variant='default';
                 >                  Refresh Page;
@@ -205,8 +222,13 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
 
     }
 
+<<<<<<< HEAD
     return this && this.props.children
 };
+=======
+    return this && this.props.children;
+  };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   static getDerivedStateFromError (error: Error): State {
     return { has_error: true, error }
@@ -265,6 +287,7 @@ if ( {) {
     return this.props.children;
   }      );
     }
+<<<<<<< HEAD
     return this.props.children;
   }
 
@@ -274,3 +297,6 @@ if ( {) {
 =======
 } ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

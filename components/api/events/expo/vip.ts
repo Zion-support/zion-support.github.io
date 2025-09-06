@@ -1,11 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   [(process && process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const allowlist = new Set<string>(
   [(process.env.EXPO_VIP_ADDRESS |'').toLowerCase()].filter(Boolean)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -14,6 +18,9 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   if (!address) return res.status(400).json({ allowed: false });
   res.status(200).json({ allowed: allowlist.has(address) })
@@ -50,6 +57,7 @@ function handler() {
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -75,6 +83,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 ) {;
   const address = String(req.query.address || '').toLowerCase();
@@ -86,6 +96,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res.status(200).json({ allowed: allowlist.has(address) })
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -121,3 +132,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

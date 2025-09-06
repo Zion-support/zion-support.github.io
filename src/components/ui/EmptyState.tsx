@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Package, RefreshCw } from 'lucide-react';
 import { Button } from './button',;
 interface EmptyStateProps {;
@@ -33,6 +34,9 @@ interface EmptyStateProps {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   icon
 =======
   showRetry = false,  icon
@@ -44,6 +48,7 @@ interface EmptyStateProps {
         {icon || <Package className="h-16 w-16" />}
       </div>
       <h3 className="text-xl font-semibold text-white mb-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { Package, RefreshCw } from 'lucide-react';
@@ -73,6 +78,14 @@ function EmptyState() {
 ;
 export function EmptyState({;
   text = "No items available",;
+=======
+
+  icon?: React && React.ReactNode;
+
+export function EmptyState(): any ({;
+  text = 'No items available',;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   description,;
 =======
       <h3 className="text - xl font - semibold text - white mb-2">;
@@ -128,9 +141,13 @@ export function EmptyState(): any ({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {description}
         </p>;
+<<<<<<< HEAD
       )}
       {showRetry && onRetry && (;
         <Button;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           onClick={onRetry}
           variant="outline"
           className="flex items-center gap-2"
@@ -139,7 +156,10 @@ export function EmptyState(): any ({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           Try Again
 
         </Button>
@@ -190,8 +210,12 @@ export function EmptyState(): any ({;
         </Button>)}
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

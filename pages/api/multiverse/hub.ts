@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,6 +28,9 @@ import { readState } from "../../../utils/sync/storage",;
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState } from "../../../utils/sync/storage",;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const state = readState()
@@ -40,6 +44,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       paused: state.config.paused
 lastSyncedAt: state.lastSyncedAt})
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   return res.status(405).json({ error: "Method not allowed" })
@@ -70,6 +75,10 @@ lastSyncedAt: state.lastSyncedAt})
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state  } from '../../../utils / sync / storage';,
+=======
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default async /**
  * handler - Function description
  */
@@ -90,6 +99,7 @@ if ( {) {
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -190,6 +200,8 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 
   return res.status(405).json({ error: "Method not allowed" })
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -219,14 +231,28 @@ export default async function handler(req, res) {
   const state = readState(),
   if (req.method === "GET") {
     return res.status(200).json({
+<<<<<<< HEAD
       route: "/multiverse/hub",
       instanceId: state.config.instanceId,
+=======
+      route: "/multiverse/hub"
+      instanceId: state.config.instanceId
+
+      route: "/multiverse/hub",
+      instanceId: state.config.instanceId,
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       peers: state.config.peers,
       scope: state.config.scope,
       optIn: state.config.optIn,
       paused: state.config.paused,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 lastSyncedAt: state.lastSyncedAt})
+=======
+
+      lastSyncedAt: state.lastSyncedAt})
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
   return res.status(405).json({ error: "Method not allowed" });
@@ -248,6 +274,7 @@ lastSyncedAt: state.lastSyncedAt})
   }
 }
   return res.status(405).json({ error: "Method not allowed" })
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../utils/sync/storage";
 export default async function handler(req, res) {
@@ -313,3 +340,6 @@ export default async function handler(req, res) {
 =======
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

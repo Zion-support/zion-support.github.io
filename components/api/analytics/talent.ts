@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default async function handler(
   req: NextApiRequest
@@ -13,6 +14,8 @@ export default async function handler(
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       supabase
         .from('profile_views')
         .select('id, talent_id')
@@ -87,6 +90,7 @@ topTags: Object && Object.entries(tagCounts)
         { label: 'node', value: 1 }
         { label: 'ai', value: 1 }
       ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { createServerClient } from '../../../utils / supabase / server';
@@ -176,12 +180,14 @@ function handler() {
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     });
 
-
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -196,11 +202,19 @@ function handler() {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
 }
 
+<<<<<<< HEAD
 }import { createServerClient } from '../../../utils / supabase / server';
+=======
+}
+
+import { createServerClient } from '../../../utils / supabase / server';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export default async /**
  * handler - Function description
@@ -287,6 +301,7 @@ function handler() {
   }
 }
 }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -296,3 +311,6 @@ function handler() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

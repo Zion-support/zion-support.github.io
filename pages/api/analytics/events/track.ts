@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -17,6 +18,14 @@ function ensureLogFile() {
   if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR, { recursive: true }),
   if (!fs.existsSync(LOG_FILE)) fs.writeFileSync(LOG_FILE, '')
 }
+=======
+
+import fs from 'fs',;
+import path from 'path',;
+const LOG_DIR = path.join(process.cwd(), 'dataanalytics')
+const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl')
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
@@ -76,10 +85,9 @@ function handler() {
     ua: req.headers['user-agent'] || '',
     ip: (req.headers['x-forwarded-for'] || req.socket.remoteAddress || '') as string},
 
-
     fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n')
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 res.status(200).json({ ok: true });
@@ -104,10 +112,13 @@ ip: (req.headers['x - forwarded - for'] || req.socket.remote_address || '') as s
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch (e) {
     // ignore file errors in serverless;
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { ensureAdmin } from '../../../utils/auth';
 
@@ -159,3 +170,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ ok: true })
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  res.status(200).json({ ok: true })
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

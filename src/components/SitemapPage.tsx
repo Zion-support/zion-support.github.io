@@ -18,10 +18,13 @@ const path_map: Record < string, string> = {
 const resolve_path = (path: string): string => path_map[path] ?? path,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react',
 import { completeSitemap, dynamicPaths } from '@/config/sitemap',
 import Link from 'next/link',
@@ -32,6 +35,7 @@ import { SEO } from './SEO',
 const pathMap: Record<string string> = {
   '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'},
 
+<<<<<<< HEAD
 const resolvePath = (path: string): string => pathMap[path] ?? path,
 
 export const SitemapPage: React.FC = () => {
@@ -67,6 +71,9 @@ export const SitemapPage: React.FC = () => {
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />                      {route.label}
+=======
+                      {route.label}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     </Link>;
 <<<<<<< HEAD
                   </li>;
@@ -77,6 +84,7 @@ export const SitemapPage: React.FC = () => {
               }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </ul>;
@@ -86,6 +94,8 @@ export const SitemapPage: React.FC = () => {
           </div>;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
@@ -105,10 +115,14 @@ export const SitemapPage: React.FC = () => {
                       <ChevronRight className="h-4 w-4 mr-2" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                       {route.label}
 =======
             </ul>;
           </div>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {/* Talent Routes */}
           <div className="bg - zion - blue - dark p - 6 rounded - lg">;
             <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Talent Pages</h2>;
@@ -136,9 +150,12 @@ export const SitemapPage: React.FC = () => {
                   </li>));
               }
 
+<<<<<<< HEAD
             </ul>;
           </div>;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>
@@ -156,10 +173,19 @@ export const SitemapPage: React.FC = () => {
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
+<<<<<<< HEAD
           <div className="bg - zion - blue - dark p - 6 rounded-lg">;
             <h2 className="text - xl font - bold mb - 4 text - zion-cyan">Client Pages</h2>;
             <p className="text - sm text - zion - slate mb-4">Requires employer or buyer account</p>;
             <ul className="space-y-2">;
+=======
+
+          {/* Client Routes */}
+          <div className="bg - zion - blue - dark p - 6 rounded - lg">;
+            <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Client Pages</h2>;
+            <p className="text - sm text - zion - slate mb - 4">Requires employer or buyer account</p>;
+            <ul className="space - y-2">;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {complete_sitemap;
                 .filter (route =>;
                   route.required_roles?.includes ('employer') ||;
@@ -176,9 +202,12 @@ export const SitemapPage: React.FC = () => {
                   </li>));
               }
 
+<<<<<<< HEAD
             </ul>;
           </div>;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>
@@ -196,10 +225,19 @@ export const SitemapPage: React.FC = () => {
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
+<<<<<<< HEAD
           <div className="bg - zion - blue - dark p - 6 rounded-lg">;
             <h2 className="text - xl font - bold mb - 4 text - zion-cyan">Authenticated User Pages</h2>;
             <p className="text - sm text - zion - slate mb-4">Requires any account type</p>;
             <ul className="space-y-2">;
+=======
+
+          {/* Shared Routes */}
+          <div className="bg - zion - blue - dark p - 6 rounded - lg">;
+            <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Authenticated User Pages</h2>;
+            <p className="text - sm text - zion - slate mb - 4">Requires any account type</p>;
+            <ul className="space - y-2">;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {complete_sitemap;
                 .filter (route =>;
                   route.required_auth &&;
@@ -212,10 +250,15 @@ export const SitemapPage: React.FC = () => {
                     >;
                       <ChevronRight className="h - 4 w - 4 mr-2" />;
                       {route.label}
+<<<<<<< HEAD
                     </Link>
                   </li>
                 ))
               }          {/* Admin Routes */}
+=======
+
+          {/* Admin Routes */}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires admin account</p>
@@ -231,6 +274,7 @@ export const SitemapPage: React.FC = () => {
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
+<<<<<<< HEAD
 <<<<<<< HEAD
             </ul>;
           </div>;
@@ -370,6 +414,9 @@ export const SitemapPage: React.FC = () => {
         { name: 'Digital Transformation', url: '/services / digital - transformation' }
       ]
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       title: 'Solutions'
       links: [{ name: 'Enterprise', url: '/solutions / enterprise' }
@@ -385,6 +432,7 @@ export const SitemapPage: React.FC = () => {
         { name: 'API Reference', url: '/api' }
       ]}
 
+<<<<<<< HEAD
         { name: 'Case Studies', url: '/case - studies' }, ';
         { name: 'White Papers', url: '/white - papers' }, ';
         { name: 'Webinars', url: '/webinars' }, ';
@@ -423,11 +471,14 @@ export const SitemapPage: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>
             <ul className="space-y-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               {Object.entries(dynamicPaths).map(([key, path]) => (
@@ -436,6 +487,9 @@ export const SitemapPage: React.FC = () => {
               {Object.entries(dynamicPaths).map(([key, path]) => (
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <li key={key}>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -445,14 +499,15 @@ export const SitemapPage: React.FC = () => {
                   </div>
                 </li>
               ))}
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </ul>;
           </div>;
         </div>;
@@ -490,8 +545,11 @@ export const SitemapPage: React.FC = () => {
 '";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

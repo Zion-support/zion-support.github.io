@@ -1,13 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { default } from "./complete";
 export { default } from './complete';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-export { default } from './complete';
 
+<<<<<<< HEAD
 =======
 export { default } from "./complete";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -18,3 +21,5 @@ export { default } from "./complete";
 
 export { default } from './complete';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,6 +23,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+  if (req.method === "GET") {
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../utils/sync/storage";
 import { filterEventsByScope } from "../../../utils/sync/storage";
@@ -79,9 +86,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState(),
   if (req.method === "GET") {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const scope = state.config.scope,
     const scopedEvents = filterEventsByScope(state.events, scope),
     return res.status(200).json({
+=======
+
+    const scope = state.config.scope
+    const scoped_events = filterEventsByScope (state.events, scope)
+    return res.status (200).json ({
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       status: "ok",
       instanceId: state.config.instanceId,
       config: state.config,
@@ -116,6 +131,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       counts: {
 
         totalEvents: scopedEvents.length,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -155,10 +171,14 @@ proposals: scopedEvents.filter((e) => e.type === "proposal").length,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         tokenTransfers: scopedEvents.filter((e) => e.type === "token_transfer").length,
         talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length,
         daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length,
         leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -262,3 +282,13 @@ export default function handler(req, res) {
   return res.status(405).json({ error: "Method not allowed" })
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+        totalEvents: scopedEvents.length
+        proposals: scopedEvents.filter((e) => e.type === "proposal").length
+        tokenTransfers: scopedEvents.filter((e) => e.type === "token_transfer").length
+        talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length
+        daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length
+        leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

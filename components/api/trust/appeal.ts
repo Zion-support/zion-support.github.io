@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -50,6 +51,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const appeal: TrustAppeal = {
     userId;
     message;
@@ -59,6 +63,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     await supabase && supabase.from('trust_appeals').insert(appeal)
   } catch {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -86,6 +91,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { TrustAppeal } from '../../../utils / types / trust';
 import { supabase } from '../../../utils / supabase / client';
 ;
@@ -137,6 +145,7 @@ if ( {) {
   } catch {}
 return res.status (200).json ({ ok: true, appeal });
 }
+<<<<<<< HEAD
 return res.status(200).json({ ok: true, appeal });
 }
 
@@ -149,3 +158,6 @@ return res.status(200).json({ ok: true, appeal });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

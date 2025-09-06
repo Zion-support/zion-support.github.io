@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState } from 'react',;
@@ -42,6 +43,9 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {;
 =======
 import { Textarea } from '@/components/ui/textarea',;import {;
@@ -104,10 +108,15 @@ export default function GuestCheckoutModal(): any ({;
       onSubmit({ email, address });
     } finally {;
       setIsSubmitting(false);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   },
 
   return (
+<<<<<<< HEAD
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-cyan/20 max-w-md">
         <DialogHeader>
@@ -136,6 +145,9 @@ export default function GuestCheckoutModal(): any ({;
           <div className='space-y-2'>;
 
             <Label
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               htmlFor='guest-email'
 =======
         )}              htmlFor='guest-email'
@@ -147,6 +159,7 @@ export default function GuestCheckoutModal(): any ({;
             <Input
               id='guest-email'
               type='email'
+<<<<<<< HEAD
               value={email || ''}
               onChange={(e) => setEmail(e.target.value || '')}
               placeholder="your.email@example.com"
@@ -307,6 +320,9 @@ export default function GuestCheckoutModal(): any ({;
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {isSubmitting ? (
 =======
           <DialogFooter className="space-x-2">
@@ -352,6 +368,7 @@ export default function GuestCheckoutModal(): any ({;
                 </>;
               )}
 
+<<<<<<< HEAD
 }
 };            </Button>;
           </DialogFooter>;
@@ -362,3 +379,13 @@ export default function GuestCheckoutModal(): any ({;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+};
+};
+
+            </Button>;
+          </DialogFooter>;
+        </form>;
+      </DialogContent>;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

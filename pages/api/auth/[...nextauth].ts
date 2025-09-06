@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 =======
@@ -136,12 +137,17 @@ export default function handler(req, res) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
     return
+=======
+
+    return
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   // TODO: Implement authentication logic here
   res.status(200).json({ message: 'Auth endpoint placeholder' })
 
 } 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
@@ -158,3 +164,5 @@ export default function handler(req, res) {
 =======
 } 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

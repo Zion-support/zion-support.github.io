@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,6 +28,9 @@ export default function handler(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { getShared } from './share',;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -34,6 +38,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!id || Array.isArray(id)) return res.status(400).json({ error: 'Missing id' }),
   const entry = getShared(id),
   if (!entry) return res.status(404).json({ error: 'Not found' }),
+<<<<<<< HEAD
   res.status(200).json({ markdown: entry.markdown, public: entry.public, createdAt: entry.createdAt })
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -151,3 +156,8 @@ export default function handler(req, res) {
 =======
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+  res.status(200).json({ markdown: entry.markdown, public: entry.public, createdAt: entry.createdAt })
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

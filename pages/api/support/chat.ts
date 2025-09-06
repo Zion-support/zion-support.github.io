@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,11 +14,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import OpenAI from 'openai';
 import { readJson } from '../../../utils/fsDb';
 import { HelpArticle, matchIntent } from '../../../utils/support';
 import { logSupportEventToOperator } from '../../../utils/operator';
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -84,6 +90,8 @@ export default async function handler(
 >>>>>>> main
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const { sessionId, messages } = req.body as {
     sessionId?: string;
@@ -114,6 +122,7 @@ export default async function handler(
       SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : ""),
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -163,6 +172,12 @@ function handler() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  try {
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini"
+      messages: [sysMessage, ...messages]
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   if ()) {
   $2
@@ -193,6 +208,7 @@ function handler() {
 ;
   try {
     const completion = await openai.chat.completions.create ({
+<<<<<<< HEAD
       model: "gpt - 4o - mini",
       messages: [sys_message, ...messages],
 =======
@@ -202,6 +218,13 @@ function handler() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       temperature: 0.2,
+=======
+      model: "gpt - 4o - mini"
+      messages: [sys_message, ...messages]
+
+      temperature: 0.2
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     });
 
     const assistantMessage =
@@ -213,6 +236,7 @@ function handler() {
       sessionId: sessionId ?? "unknown",
       payload: { intent },
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -228,6 +252,9 @@ function handler() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      meta: {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 =======
 
@@ -238,6 +265,7 @@ function handler() {
         intentMatched: intent.intentMatched,
         matchedArticleIds: intent.matchedArticleIds,
         links: matchedArticles.map((a) => ({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -263,6 +291,16 @@ function handler() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+          title: a.title
+          href: `/help/${a.slug}`
+        }))
+      }
+
+  } catch (e: any) {
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     });
   } catch (e: any) {
 =======
@@ -285,6 +323,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -293,3 +332,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

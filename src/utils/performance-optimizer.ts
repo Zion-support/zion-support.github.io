@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Performance optimizer utilities
 export const optimizeImages = () => {
   console.log('Optimizing images...');
@@ -33,15 +34,9 @@ export const optimizeImages = () => {;
 // Performance optimization utilities
 export const preloadCriticalResources = () => {
   const criticalResources = ['/fonts/main.woff2', '/css/critical.css'];
-
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
-    document.head.appendChild(link);
 =======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
 const images = document && document.querySelectorAll('img');
   images && images.forEach(img => {
     if (!img && img.loading) {
@@ -50,7 +45,6 @@ const images = document && document.querySelectorAll('img');
     if (!img && img.decoding) {
       img && img.decoding = 'async';
 
->>>>>>> main
     }
 
 export const preloadCriticalResources = () => {
@@ -62,25 +56,13 @@ export const preloadCriticalResources = () => {
     link && link.as = resource && resource.endsWith('.css') ? 'style' : 'font';
     document && document.head.appendChild(link);
 
-<<<<<<< HEAD
-  criticalResources.forEach((resource) => {
-    const link = document.createElement("link");
-    link.rel = "preload";
-    link.href = resource;
-    link.as = resource.endsWith(".css") ? "style" : "font";
-    document.head.appendChild(link);
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
   });
 };
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
-<<<<<<< HEAD
-  return Promise.resolve();
-};
 
+<<<<<<< HEAD
 export const optimizeImages = () => {
   const images = document.querySelectorAll('img');
   
@@ -184,3 +166,5 @@ link.rel = "preload";
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

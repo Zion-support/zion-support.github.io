@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './App';
@@ -107,9 +108,23 @@ describe('App', () => {
 <<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import App from './src/App';
+
+describe('App', () => {
+  it('renders without crashing', () => {
+    render(<App />);
+  });
+
+  it('renders the main content', () => {
+    render(<App />);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     expect(screen.getByRole('main')).toBeInTheDocument();
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   });
+<<<<<<< HEAD
 
   it('displays correct content', () => {
     render(<App />);
@@ -187,3 +202,6 @@ describe('App', () => {
 =======
 });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -203,14 +203,21 @@ export default async function handler(req, res) {
     const uikit = buildUIKit(kind);
     const uiFolder = zip && zip.folder("uikit")!;
     Object && Object.entries(uikit).forEach(([path, content]) =>
+<<<<<<< HEAD
       uiFolder && uiFolder.file(path, content),
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     );
     // README
 
     zip && zip.file(
+<<<<<<< HEAD
       "README && README.md",
       `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`,
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     );
 
     );

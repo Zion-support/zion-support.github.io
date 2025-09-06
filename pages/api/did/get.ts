@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 =======
@@ -6,6 +11,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+<<<<<<< HEAD
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
   // Mock DID store data
   const store: Record<string, any> = {
@@ -34,15 +40,31 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from 'next',;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {},
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+  const { address } = req.query as { address?: string }
+  if (!address) return res.status(400).json({ error: 'Missing address' })
+  const data = store[String(address).toLowerCase()] |null
 
-
-
+  return res.status(200).json({ data })
+  const { address } = req.query as { address?: string }
+  if (!address) return res.status(400).json({ error: 'Missing address' })
+  const data = store[String(address).toLowerCase()] || null
+  return res.status(200).json({ data });
+};
+const store: Record<string, any> = (global as any).ZION_DID_STORE || {};
+export default function handler(req: any, res: any) {
+  res.status(200).json({ store });
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {};
 
@@ -128,6 +150,7 @@ const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {};
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { address } = req.query as { address?: string };
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
   } catch (error) {
     console.error("Error:", error);
@@ -149,10 +172,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 }
@@ -185,3 +212,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -56,10 +56,14 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -68,6 +72,7 @@ import { ShieldAlert } from 'lucide-react';
 interface EmptyFraudStateProps {;
   hasFilters: boolean,;
   onResetFilters: () => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -97,6 +102,9 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ ;
 },) => {;
 
   return (
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="text-center py-12">;
       <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
       <h3 className="text-lg font-medium">No fraud flags found</h3>;
@@ -170,8 +178,12 @@ export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
         <Button variant="outline" on_click={onResetFilters}>Clear Filters</Button>)}
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

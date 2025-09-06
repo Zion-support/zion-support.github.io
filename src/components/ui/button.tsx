@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 =======
@@ -110,6 +111,10 @@ const Button: React.FC<ButtonProps> = ({
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   children,
   href,
   onClick,
@@ -120,6 +125,7 @@ const Button: React.FC<ButtonProps> = ({
   disabled = false,
   style,
 }) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -132,6 +138,8 @@ const Button: React.FC<ButtonProps> = ({
 >>>>>>> main
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -183,9 +191,12 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   const baseClasses =
     "px-4 py-2 rounded-md font-medium transition-colors duration-200";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const baseClasses = "px-4 py-2 rounded-md font-medium transition-colors duration-200";
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const sizeClasses = {
     sm: "px-3 py-1.5 text-sm",
@@ -196,13 +207,18 @@ const Button: React.FC<ButtonProps> = ({
   const variantClasses = {
     primary: "bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-400",
     secondary: "bg-gray-600 text-white hover:bg-gray-700 disabled:bg-gray-400",
+<<<<<<< HEAD
     outline: "border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:bg-gray-100",
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   };
 
   const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
 
   const content = <>{children}</>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -258,39 +274,17 @@ if ( {) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
-<<<<<<< HEAD
-=======
-  const base_classes = "px - 4 py - 2 rounded - md font - medium transition - colors duration - 200";
-  const size_classes = {
-    sm: "px - 3 py - 1.5 text - sm",
-    md: "px - 4 py - 2 text - base",
-    lg: "px - 6 py - 3 text - lg",
-  }
-  const variant_classes = {
-    primary: "bg - blue - 600 text - white hover:bg - blue - 700 disabled:bg - gray - 400",
-    secondary: "bg - gray - 600 text - white hover:bg - gray - 700 disabled:bg - gray - 400",
-    outline: "border border - gray - 300 text - gray - 700 hover:bg - gray - 50 disabled:bg - gray - 100",
-  }
-  const classes = `${base_classes} ${size_classes[size]} ${variant_classes[variant]} ${class_name}`;
-  const content = <>{children}</>;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <Link href={href} className={classes} style={style}>;
-        {content}
-      </Link>);
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-54a3
   return (
     <button
       type={type}
       className={classes}
       onClick={onClick}
       disabled={disabled}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -309,10 +303,16 @@ if ( {) {
 =======
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    </button>;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       style={style}
     >
       {content}
     </button>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 };
@@ -321,15 +321,13 @@ export default Button;
 =======
 <<<<<<< HEAD
 =======
-
-    </button>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-54a3
 =======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export { Button };
 <<<<<<< HEAD
@@ -362,3 +360,5 @@ export default Button;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

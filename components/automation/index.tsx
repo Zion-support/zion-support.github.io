@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -21,12 +22,17 @@ import React from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function AutomationPage() {
   return (
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Automation</h1>
       <p className="mt-2 text-gray-600 dark: text-gray-300">Automation tools overview coming soon.</p>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -45,6 +51,10 @@ export default function AutomationPage() {;
       <p className="mt-2 text-gray-600 dark: text-gray-300">Automation tools overview coming soon.</p>;
     </div>;
   ),;}
+=======
+
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default /**
  * AutomationPage - Function description
  */
@@ -57,6 +67,7 @@ function AutomationPage() {
 }
 
   ),
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -80,3 +91,7 @@ function AutomationPage() {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

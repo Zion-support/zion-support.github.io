@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from 'lucide-react'
@@ -21,10 +22,14 @@ import {
 =======
 Dialog,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   Dialog,  DialogContent,
@@ -392,6 +397,9 @@ export function ReviewsModerationTable(): any ({;
             <TableHead className="text-right">Actions</TableHead>;
 =======
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return (
 =======
   if (reviews.length === 0) {    return (
@@ -403,6 +411,7 @@ export function ReviewsModerationTable(): any ({;
         </p>
       </div>
     )
+<<<<<<< HEAD
     updateReviewStatus({ reviewId, status: 'approved' })
   }
   const handleReject = (reviewId: string) => {
@@ -435,12 +444,19 @@ export function ReviewsModerationTable(): any ({;
     setSelectedReview(review),
     setViewDetailsOpen(true)
   },
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     )}
                   </div>;
                 </div>;
               </TableCell>;
+<<<<<<< HEAD
     updateReviewStatus({ reviewId, status: "approved" })
   },
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           onClick={() =>;
                             updateReviewStatus({;
                               reviewId: review && review.id,;
@@ -475,6 +491,7 @@ export function ReviewsModerationTable(): any ({;
           </TableRow>;
         </TableHeader>;
         <TableBody>;
+<<<<<<< HEAD
           {reviews.map((review) => (;
             <TableRow key={review.id}>;
               <TableCell>;
@@ -571,6 +588,9 @@ export function ReviewsModerationTable(): any ({;
                   </div>
                 </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </TableCell>
               <TableCell>{renderStars(review.rating)}</TableCell>
               <TableCell>
@@ -594,9 +614,8 @@ export function ReviewsModerationTable(): any ({;
                   {review.status === "pending" && (
                     <>
                       <Button
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         size="sm"
                         variant="outline"
@@ -615,6 +634,8 @@ export function ReviewsModerationTable(): any ({;
                       >
                         <X className="h-4 w-4 text-red-500" />
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       </Button>
                     </>
                   )}
@@ -634,9 +655,13 @@ export function ReviewsModerationTable(): any ({;
                       </DropdownMenuItem>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       {review.status === "approved" && (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -678,11 +703,14 @@ export function ReviewsModerationTable(): any ({;
           ))}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -690,14 +718,18 @@ export function ReviewsModerationTable(): any ({;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <Avatar>
                     {selectedReview.reviewer_profile?.avatar_url ? (
                       <AvatarImage
                         src={selectedReview.reviewer_profile.avatar_url}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                         alt={selectedReview.reviewer_profile.display_name || ""}
@@ -708,6 +740,9 @@ export function ReviewsModerationTable(): any ({;
                         alt={selectedReview.reviewer_profile.display_name || ''}                      />
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     ) : (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -718,6 +753,7 @@ export function ReviewsModerationTable(): any ({;
                           )
                         ) : (
                           <User className='h-4 w-4' />
+<<<<<<< HEAD
         </TableBody>;
       </Table>;
 
@@ -748,20 +784,20 @@ export function ReviewsModerationTable(): any ({;
                           : <User className="h-4 w-4" />}
                       </AvatarFallback>;
 <<<<<<< HEAD
-                    )}
-<<<<<<< HEAD
-                  </Avatar>
-                  <div>
-                    <div className="font-medium">
-                      {selectedReview.is_anonymous
 =======
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+                    )}
+
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         ? "Anonymous"
                         : selectedReview.reviewer_profile?.display_name || "User"}
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     </div>
                     <Badge variant="outline">
                       {selectedReview.status}
@@ -780,6 +816,7 @@ export function ReviewsModerationTable(): any ({;
                 <div>{renderStars(selectedReview.rating)}</div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -793,10 +830,14 @@ export function ReviewsModerationTable(): any ({;
               <div className="space-y-2">
                 <h4 className="text-sm font-medium">Additional Ratings</h4>
                 <div className="flex flex-wrap gap-2">
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {selectedReview.communication_rating && (
                     <Badge variant="outline">
                       Communication: {selectedReview.communication_rating}/5
                     </Badge>
+<<<<<<< HEAD
                   )}
                   {selectedReview && selectedReview.quality_rating && (;
                     <Badge variant='outline'>;
@@ -895,6 +936,9 @@ export function ReviewsModerationTable(): any ({;
 
                   }
                   disabled={isPending}                >;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   Mark as Rejected;
                 </Button>;
               )}
@@ -912,13 +956,18 @@ export function ReviewsModerationTable(): any ({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Mark as Approved;
                 </Button>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               )}
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     </>;
@@ -946,9 +995,19 @@ export function ReviewsModerationTable(): any ({;
       )}
 };"
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {  reviews.map ( (review) => (<TableRow key= {
+=======
+
+  [1, 2, 3,  4, 5].map ( (star) => (<Star key= {;
+  star ;
+}/>) ) ;
+}</div>) ;
+
+  reviews.map ( (review) => (<TableRow key= {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   review.id ";
 }> <TableCell> <div className="flex items - center gap-2"> <Avatar className="h - 8 w-8"> {
   review.reviewer profile?.avatar url ? (<AvatarImage src= {
+<<<<<<< HEAD
   review.reviewer profile.avatar url
 }alt= {"
   review.reviewer profile.display name |""
@@ -977,6 +1036,10 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
   selectedReview.reviewer profile.display name |""
 }/>) : (<AvatarFallback> {"
   selectedReview.reviewer profile?.display name ? getInitials (selectedReview.reviewer profile.display name) : <User className="h-4 w-4"/>}</Avatar> <div> </Badge> </div> </div> <div> {
+=======
+
+}</Avatar> <div> </Badge> </div> </div> <div> {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   renderStars (selectedReview.rating) "
 }</div> </div> <div className="border rounded-md p-3 bg-muted/20"> <p className="whitespace-pre-wrap"> {
   selectedReview.review text "
@@ -1005,6 +1068,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }</DialogFooter> </DialogContent> </Dialog>)
 }</>)
 }"}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   );
@@ -1062,3 +1126,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -10,6 +10,7 @@ const NavigationMenu = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
 >(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Root
+<<<<<<< HEAD
     ref={ref}
     className={cn(
 <<<<<<< HEAD
@@ -21,12 +22,15 @@ const NavigationMenu = React.forwardRef<
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       "relative z-10 flex w-full flex-1 items-center justify-center sm:max-w-max",
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       className
     )}
     {...props}
   >;
     {children}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -42,10 +46,14 @@ const NavigationMenuList = React && React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <NavigationMenuPrimitive&& NavigationMenuPrimitive.List
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ref={ref}
     className={cn(
       'group flex flex-1 list-none items-center justify-center space-x-1'
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -53,6 +61,8 @@ const NavigationMenuList = React && React.forwardRef<;
       'group flex flex-1 list-none items-center justify-center space-x-1'
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <NavigationMenuViewport />;
   </NavigationMenuPrimitive.Root>;
 ));
@@ -66,14 +76,18 @@ const NavigationMenuList = React.forwardRef<;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ref={ref}
     className={cn(
       "group flex flex-1 list-none items-center justify-center space-x-1",
       className
+<<<<<<< HEAD
     )}
     {...props}
 <<<<<<< HEAD
@@ -85,6 +99,9 @@ const NavigationMenuList = React.forwardRef<;
 NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 
 const NavigationMenuItem = NavigationMenuPrimitive.Item
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const navigationMenuTriggerStyle = cva(
   "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
 )
@@ -120,6 +137,7 @@ const NavigationMenuTrigger = React && React.forwardRef<;
     <ChevronDown
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       className="relative top-[1px] ml-1 h-4 w-4 transition duration-200 group-data-[state=open]:rotate-180 pointer-events-none"
@@ -140,11 +158,18 @@ NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+      className='relative top-[1px] ml-1 h-4 w-4 transition duration-200 group-data-[state=open]:rotate-180 pointer-events-none'
+      aria-hidden='true'
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const NavigationMenuContent = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Content>
 >(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.Content
+<<<<<<< HEAD
     ref={ref}
     className={cn(
 <<<<<<< HEAD
@@ -152,12 +177,15 @@ const NavigationMenuContent = React.forwardRef<
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      "left-0 top-0 z-50 w-full rounded-md border bg-popover text-popover-foreground shadow-lg ring-1 ring-border/20 data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto dark:bg-secondary dark:text-foreground",
+=======
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+      "left-0 top-0 z-50 w-full rounded-md border bg-popover text-popover-foreground shadow-lg ring-1 ring-border/20 data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto dark:bg-secondary dark:text-foreground",
 
       className
     )}
     {...props}
+<<<<<<< HEAD
   />
 ))
 NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName
@@ -167,6 +195,11 @@ const NavigationMenuLink = NavigationMenuPrimitive.Link
 
 
 
+=======
+
+const NavigationMenuLink = NavigationMenuPrimitive.Link
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const NavigationMenuViewport = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>
@@ -174,9 +207,8 @@ const NavigationMenuViewport = React.forwardRef<
   <div className={cn("absolute left-0 top-full z-50 flex justify-center")}>
     <NavigationMenuPrimitive.Viewport
       className={cn(
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
   />;
 ));
 NavigationMenuContent && NavigationMenuContent.displayName = NavigationMenuPrimitive && NavigationMenuPrimitive.Content.displayName;
@@ -195,6 +227,8 @@ const NavigationMenuViewport = React && React.forwardRef<;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         "origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className
       )}
       ref={ref}
@@ -209,7 +243,10 @@ NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayNamec
       ref={ref}
       {...props}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     />;
   </div>;
 ));
@@ -228,6 +265,10 @@ const NavigationMenuIndicator = React.forwardRef<;
     )}
     {...props}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   >
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -239,11 +280,14 @@ NavigationMenuIndicator.displayName =
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const NavigationMenuIndicator = React && React.forwardRef<;
   React && React.ElementRef<typeof NavigationMenuPrimitive && NavigationMenuPrimitive.Indicator>,;
   React && React.ComponentPropsWithoutRe</typeof>f<typeof NavigationMenuPrimitive && NavigationMenuPrimitive.Indicator>;
@@ -262,12 +306,15 @@ NavigationMenuIndicator && NavigationMenuIndicator.displayName =;
   NavigationMenuPrimitive && NavigationMenuPrimitive.Indicator.displayName;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export {
   navigationMenuTriggerStyle,
   NavigationMenu,
@@ -275,9 +322,8 @@ export {
   NavigationMenuItem,
   NavigationMenuContent,
   NavigationMenuTrigger,
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -287,3 +333,5 @@ export {
   NavigationMenuIndicator,
   NavigationMenuViewport}
 ;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

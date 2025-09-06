@@ -21,11 +21,15 @@ export default async function handler(
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+<<<<<<< HEAD:pages/api-disabled/api/proposals/comment.ts
 
   req: NextApiRequest,
   res: NextApiResponse,
+=======
+  req: NextApiRequest
+  res: NextApiResponse
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/proposals/comment.ts
 ) {;
-
 
   await ensure();
 <<<<<<< HEAD
@@ -62,9 +66,13 @@ export default async function handler(;
       text: body.text |"";
       createdAt: new Date().toISOString()
     }
+<<<<<<< HEAD:pages/api-disabled/api/proposals/comment.ts
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/proposals/comment.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -92,6 +100,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   }
     const data = await fs.readJson(FILE_PATH);
+<<<<<<< HEAD:pages/api-disabled/api/proposals/comment.ts
     const comment = {;
       id: Date.now().toString(), proposalId: body.proposalId;
       region: body.region || 'Global', author: body.author || 'anon'
@@ -102,6 +111,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       author: body.author || 'anon'
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
       text: body.text || '';
+=======
+    const comment = {
+
+      text: body.text || ''
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/proposals/comment.ts
       createdAt: new Date().toISOString()
     };
     data.comments.push(comment);
@@ -184,6 +199,7 @@ if ( {) {
   }
   res.status (405).json ({ error: "Method not allowed" });
 }
+<<<<<<< HEAD:pages/api-disabled/api/proposals/comment.ts
 =======;
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
@@ -307,3 +323,6 @@ export default async function handler(req, res) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/comment.ts
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/proposals/comment.ts

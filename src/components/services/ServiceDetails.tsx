@@ -91,17 +91,27 @@ function ServiceDetails() {
       'United Kingdom': 'GMT / BST',
       Germany: 'CET / CEST',
       Japan: 'JST',
+<<<<<<< HEAD
       Australia: 'AEST / ACDT / AWST depending on location',      Singapore: 'SGT',
+=======
+
+      Singapore: 'SGT',
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       default: 'Local timezone',
     }
     const timezone =;
       time_zones[country] || time_zones['default'] || 'Local timezone';
 
     return (
+<<<<<<< HEAD
       `Our technicians in ${country} operate during business hours (8AM - 6PM ${timezone}). ` +;
       `Response times are typically within 4 hours for metropolitan areas. ` +;
       `Please have site access permissions and contact details ready for our technicians. ` +;
       `For remote locations, additional travel fees may apply.`);  }
+=======
+
+  }
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import {;
   Card,;
@@ -176,10 +186,13 @@ import {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
@@ -203,8 +216,11 @@ import {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="space-y-4">
           <div>
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">
@@ -223,6 +239,7 @@ import {;
                 >
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Server, Clock, MapPin } from 'lucide-react';
+<<<<<<< HEAD
 import Image from 'next/image';
 interface ServiceDetailsProps {;
   country: string;
@@ -304,10 +321,14 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
       `For remote locations, additional travel fees may apply.`;
     )
 };
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const datacenters = getDatacenters(country);
   return (;
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardHeader>;
+<<<<<<< HEAD
         <CardTitle className='text-white flex items-center'>;
           <Server className='mr-2 h-5 w-5 text-zion-cyan' />;
           IT Onsite Service in {country}
@@ -321,6 +342,9 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
         <div className="overflow-hidden rounded-lg mb-4 relative h-48">;
           <Image;
             src={getRegionalImage(country)}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             alt={`Datacenter in ${country}`}
             className="object-cover transform transition-transform duration-500 hover:scale-110";
             loading="lazy";
@@ -336,10 +360,14 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
           />;
         </div>;
 
+<<<<<<< HEAD
         <div className='space-y-4'>;
           <div>;
             <h4 className='text-lg font-medium text-white mb-2 flex items-center'>;
               <MapPin className='mr-2 h-4 w-4 text-zion-purple' />;              Service Locations;
+=======
+              Service Locations;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </h4>;
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">;
               {datacenters.map((dc, idx) => (;
@@ -351,11 +379,14 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
                 </div>;
               ))}
 
+<<<<<<< HEAD
           
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div>
             <h4 className='text-lg font-medium text-white mb-2 flex items-center'>
               <Clock className='mr-2 h-4 w-4 text-zion-purple' />
@@ -369,18 +400,24 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light">
             <h4 className="text-lg font-medium text-white mb-2">What's Included</h4>
             <ul className="list-disc list-inside text-zion-slate-light space-y-1">
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <li>Transportation to your site</li>
               <li>First hour of onsite technical support</li>
               <li>Basic hardware diagnosis</li>
@@ -394,10 +431,13 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <CardFooter className="border-t border-zion-blue-light pt-4">
         <p className="text-sm text-zion-slate-light">
           For custom enterprise needs or multi-site services in {country}, please contact our enterprise team for tailored pricing.

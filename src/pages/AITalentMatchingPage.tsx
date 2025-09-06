@@ -20,13 +20,17 @@ export default function AITalentMatchingPage() {;
     }
   ];
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
 import { Bot, Users, TrendingUp } from 'lucide-react'
 
 export default function AITalentMatchingPage() {
+<<<<<<< HEAD
   const benefits = [
     {
 
@@ -35,6 +39,9 @@ export default function AITalentMatchingPage() {
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
 <<<<<<< HEAD
       icon: <Bot className="h-8 w-8" />},
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       title: "Streamlined Hiring Workflow",
       description: "Automated screening and ranking saves your team valuable time.",
@@ -44,6 +51,7 @@ export default function AITalentMatchingPage() {
       description: "Access a global network of vetted professionals ready for your projects.",
       icon: <TrendingUp className="h-8 w-8" />}],
 
+<<<<<<< HEAD
 =======
       icon: <Bot className = "h-8 w-8" />},
     {
@@ -55,20 +63,27 @@ export default function AITalentMatchingPage() {
       description: "Access a global network of vetted professionals ready for your projects.",
       icon: <TrendingUp className = "h-8 w-8" />}],
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const testimonials = [
     {
       name: "Emily Stone",
       role: "HR Director",
 <<<<<<< HEAD
+<<<<<<< HEAD
       text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.",
 =======
       text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.";
 >>>>>>> main
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       avatar: "/placeholder.svg"},
     {
       name: "Raj Patel",
       role: "Startup Founder",
       text: "The quality of candidates has improved dramatically since using Zion's platform.",
+<<<<<<< HEAD
       avatar: "/placeholder.svg"}],
 
 <<<<<<< HEAD
@@ -106,19 +121,27 @@ function AITalentMatchingPage() {
       description:
         "Advanced algorithms match the right talent with the right opportunities",
 >>>>>>> main
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     {
       icon: Users,
       title: "Verified Professionals",
 <<<<<<< HEAD
+<<<<<<< HEAD
       description: "All candidates are pre - screened and verified for quality";
 =======
       description: "All candidates are pre-screened and verified for quality",
 >>>>>>> main
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     {
       icon: TrendingUp,
       title: "Success Tracking",
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "Monitor performance and success rates of placements";
     }
@@ -126,6 +149,9 @@ function AITalentMatchingPage() {
       description: "Monitor performance and success rates of placements",
     },
 >>>>>>> main
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ];
   const features = [;
     "Machine learning - based candidate matching",
@@ -134,18 +160,26 @@ function AITalentMatchingPage() {
     "Automated interview scheduling",
     "Performance analytics dashboard",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "Custom matching criteria";
 =======
     "Custom matching criteria",
 >>>>>>> main
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ];
   const stats = [;
     { label: "Successful Placements", value: "95%" },
     { label: "Client Satisfaction", value: "98%" },
 <<<<<<< HEAD
+<<<<<<< HEAD
     { label: "Time to Hire", value: "50% faster" }
   ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"
@@ -195,6 +229,7 @@ export default function AITalentMatchingPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       benefits={benefits}
       testimonials={testimonials}
       ctaText="Find Your AI Talent";
@@ -216,11 +251,15 @@ export default function AITalentMatchingPage() {;
       description="Our advanced AI technology analyzes skills, experience, and cultural fit to match the right candidates with the right opportunities, ensuring successful placements and satisfied clients.";
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       benefits={benefits}
       features={features}
       stats={stats}
 
     />;
+<<<<<<< HEAD
 =======
 import React from "react";
 import MainLayout from "../components/layout/MainLayout";
@@ -249,3 +288,7 @@ const AITalentMatchingPage: React.FC = () => {
 =======
 export default AITalentMatchingPage;
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+  );
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

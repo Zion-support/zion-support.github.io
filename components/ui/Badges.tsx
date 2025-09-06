@@ -2,6 +2,7 @@ import React from 'react';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -29,6 +30,8 @@ export function MicroTestimonial({
   author,
 }: {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   quote: string;
   author: string;
 }) {;
@@ -37,6 +40,15 @@ export function MicroTestimonial({
       <blockquote className='italic opacity-90'>“{quote}”</blockquote>;
       <figcaption className='mt-2 font-medium opacity-80'>;
         — {author}
+<<<<<<< HEAD
+=======
+
+export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' }) {
+  const colorMap = {
+    Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',
+    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const,
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export /**
  * TrustBadge - Function description
@@ -58,6 +70,10 @@ export /**
  * MicroTestimonial - Function description
  */
 function MicroTestimonial() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <figure className='border rounded - md p - 3 text - sm'>;
       <blockquote className='italic opacity - 90'>“{quote}”</blockquote>;
@@ -67,26 +83,41 @@ function MicroTestimonial() {
     </figure>);  const color_map = {
     Verified: 'bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200',
     Pro: 'bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200Top Rated': 'bg - amber - 100 text - amber - 800 dark:bg - amber - 900 / 40 dark:text - amber - 200'} as const,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <span className={`inline - flex items - center gap - 1 px - 2 py - 1 text - xs font - medium rounded ${color_map[type]}`}>;
       <span className="leading-none">{type}</span>;
     </span>);
 }
+<<<<<<< HEAD
+=======
+
+      </figcaption>;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </figure>;
   );  const colorMap = {;
     Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',;
     Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const,;
   return (
+<<<<<<< HEAD
     <span className={`inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded ${colorMap[type]}`}>;
       <span className="leading-none">{type}</span>;
     </span>;
   );
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export /**
  * MicroTestimonial - Function description
  */
 function MicroTestimonial() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <figure className="border rounded - md p - 3 text - sm">;
       <blockquote className="italic opacity - 90">“{quote}”</blockquote>;
@@ -98,19 +129,18 @@ function MicroTestimonial() {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    <figure className="border rounded - md p - 3 text - sm">;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   );
 }
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     </figure>
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -143,6 +173,8 @@ export function TrustBadge({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   type: 'Verified' | 'Pro' | 'Top Rated';
 =======
     <figure className="border rounded - md p-3 text-sm">;  type: 'Verified' | 'Pro' | 'Top Rated';
@@ -240,6 +272,7 @@ export /**
  */
 function MicroTestimonial() {
   return (
+<<<<<<< HEAD
     <figure className="border rounded - md p-3 text-sm">;
     </figure>
   );
@@ -254,3 +287,11 @@ function MicroTestimonial() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    <figure className="border rounded - md p - 3 text - sm">;
+
+    </figure>
+  );
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

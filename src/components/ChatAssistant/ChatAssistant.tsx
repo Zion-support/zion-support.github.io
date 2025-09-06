@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 useState
   useEffect
@@ -154,6 +155,10 @@ export function ChatAssistant({;
 
   useState  useEffect
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  useEffect
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   useRef
   ReactNode
   useContext} from 'react'
@@ -226,6 +231,7 @@ export function ChatAssistant({
       if (initialMessages && initialMessages.length > 0) {
         setDisplayGuestMessages(initialMessages)
         setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided
+<<<<<<< HEAD
   const is_guest = !auth?.is_authenticated;
   const handleSendMessage = async (message_content: string) => {
     if () return) {
@@ -303,10 +309,14 @@ if ( {) {
 }
         setDisplayGuestMessages (initial_messages),
         setStoredGuestMessages (initial_messages), // Persist if initial_messages are provided;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       } else {
         setDisplayGuestMessages (storedGuestMessages);
       }
     }
+<<<<<<< HEAD
   }, [
     isGuest
     initialMessages
@@ -333,6 +343,10 @@ if ( {) {
       setDisplayGuestMessages(newMessages)
       setStoredGuestMessages(newMessages), // Always update localStorage for guests
     } else {      setLoggedInMessages(newMessages)
+=======
+
+      setLoggedInMessages(newMessages)
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   }
   const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000)
@@ -392,6 +406,7 @@ if ( {) {
     document.addEventListener('keydown', handleKeyDown)
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose])
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (!isOpen) return null
   const isGuest = !auth?.isAuthenticated;
@@ -568,15 +583,22 @@ export function ChatAssistant({;
   }, [isOpen, onClose]),
 
   if (!isOpen) return null,
+=======
+  if (!isOpen) return null
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
     <div
       className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
+<<<<<<< HEAD
       aria-labelledby="chat-assistant-title"
     >
       <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {/* Header */}
         <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">
           <div className="flex items-center space-x-3">
@@ -593,18 +615,26 @@ export function ChatAssistant({;
               {recipient.role && (
                 <div className="text-xs text-zion-slate">{recipient.role}</div>
               )}
+<<<<<<< HEAD
             </div>
           </div>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Button
             variant="ghost"
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             onClick={onClose}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             aria-label="Close chat"
 =======
   if (!isOpen) return null            aria-label="Close chat"
@@ -614,17 +644,25 @@ export function ChatAssistant({;
           </Button>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         {/* Context Header (Optional) */}
         {contextHeader && (
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">
             {contextHeader}
+<<<<<<< HEAD
           </div>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         )}
 ;
         {/* Messages */}
         <div
           className="flex-1 overflow-y-auto p-4 space-y-4"
+<<<<<<< HEAD
           aria-live="polite"
         >
           {currentMessages.length === 0 ? (
@@ -674,10 +712,14 @@ export function ChatAssistant({;
       </div>
 
       {showGuestModal && guestMessage && (
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
           role="dialog"
           aria-modal="true"
+<<<<<<< HEAD
           aria-labelledby="confirm-message-title"
         >
           <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">
@@ -933,6 +975,9 @@ if (return null, ) {
                 onClick={handleModalCancel}
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
 =======
                 variant="outline"                className="text-white border-zion-purple hover:bg-zion-purple/10"
@@ -942,10 +987,14 @@ if (return null, ) {
               </Button>
               <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 onClick={handleModalSendConfirm}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
                 Send
@@ -956,6 +1005,7 @@ if (return null, ) {
       )}
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -977,3 +1027,6 @@ if (return null, ) {
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

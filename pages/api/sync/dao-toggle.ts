@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,6 +13,9 @@
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
 ;
@@ -24,6 +28,7 @@ import { readState, writeState } from "../../../utils/sync/storage",;
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",
 import { readState, writeState } from "../../../utils/sync/storage",
 
@@ -138,3 +143,11 @@ export default function handler(req, res) {
   return res.status(200).json({ paused: state.config.paused })
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  return res.status(200).json({ paused: state.config.paused })
+};
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

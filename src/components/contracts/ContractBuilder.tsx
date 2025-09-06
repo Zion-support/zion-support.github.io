@@ -112,6 +112,7 @@ isOpen;
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
 
+<<<<<<< HEAD
   const handleLoadTemplate = (templateData: ContractFormValues,) => {;
     setFormValues(templateData)
 };
@@ -130,10 +131,13 @@ isOpen;
         onClose={() => {;
           setShowSmartContractBuilder(false);          onClose();
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }}
         talent = {talent,}
         clientName = {clientName,}
         onContractGenerated = {onContractGenerated,}
+<<<<<<< HEAD
 <<<<<<< HEAD
       />;
     );
@@ -170,6 +174,8 @@ import { ContractPreview } from "./components/ContractPreview",
               <TabsTrigger value="form">Contract Details</TabsTrigger>
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <div className="flex gap-2">
@@ -183,6 +189,7 @@ import { ContractPreview } from "./components/ContractPreview",
                 Templates
 <<<<<<< HEAD
               </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
               
               <Button
@@ -237,6 +244,9 @@ import { ContractPreview } from "./components/ContractPreview",
 
             <div className="flex gap-2">;
               <Button
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 variant="outline" 
 =======
               </Button>                variant="outline" 
@@ -249,6 +259,7 @@ import { ContractPreview } from "./components/ContractPreview",
                 Templates;
               </Button>;
 
+<<<<<<< HEAD
               
 
               <Button
@@ -266,10 +277,18 @@ import { ContractPreview } from "./components/ContractPreview",
             <ContractForm
 
             <ContractForm               talent = {talent,}
+=======
+              <Button
+                variant="secondary"
+                size="sm"
+
+              talent = {talent,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               clientName = {clientName,}
               initialValues = {formValues,}
               onFormValuesChange = {setFormValues,}
               onContractGenerated = {handleContractGenerated,}
+<<<<<<< HEAD
             />
           </TabsContent>
           <TabsContent value="preview" className="pt-4">
@@ -284,10 +303,20 @@ import { ContractPreview } from "./components/ContractPreview",
             )}
           </TabsContent>
         </Tabs>        <TemplateManager
+=======
+
+                contractContent = {generatedContract,}
+                talent = {talent,}
+                onClose = {onClose,}
+                status="ready"
+
+        <TemplateManager
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}
           onSelectTemplate = {handleLoadTemplate,}
           currentValues = {formValues,}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -372,3 +401,11 @@ import { ContractPreview } from "./components/ContractPreview",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
+=======
+
+        />;
+      </DialogContent>;
+    </Dialog>;
+  );
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

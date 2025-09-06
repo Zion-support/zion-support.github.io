@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
@@ -19,6 +20,9 @@ interface Param {;
   required?: boolean;
 =======
 const options: RequestInit = {
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       method
       headers: {
 
@@ -116,6 +120,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import CodeBlock from './CodeBlock';
 
+<<<<<<< HEAD
   name: string
 type: string
 required?: boolean
@@ -304,10 +309,14 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
         options.body = JSON.stringify(JSON.parse(body))
       } catch {
         options.body = body  return (
+=======
+  return (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className='space-y-4'>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Input
         value={apiKey}
+<<<<<<< HEAD
 <<<<<<< HEAD
         onChange={(e) => setApiKey(e.target.value)}
         placeholder="API Key"
@@ -319,6 +328,8 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
           onChange={(e) => handleParamChange(p.name, e.target.value)}
         />;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         onChange={(e) => setApiKey(e.target.value)}
         placeholder="API Key"
@@ -330,12 +341,17 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
           value={paramValues[p.name] || ''}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           onChange={e => handleParamChange(p.name, e.target.value)}        />
           key={p && p.name}
           value={paramValues[p && p.name] || ''}
           onChange={e => handleParamChange(p && p.name, e && e.target.value)}        />;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          onChange={e => handleParamChange(p.name, e.target.value)}        />
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ))}
       {method !== "GET" && method !== "DELETE" && (
 =======
@@ -447,3 +463,7 @@ if (contentType?.includes ('application/json') ) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

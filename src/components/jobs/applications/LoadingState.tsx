@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Loader2 } from 'lucide-react'
 
@@ -26,15 +27,18 @@ export function LoadingState() {;
     </div>
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className='flex justify-center items-center p-8'>;
       <Loader2 className='h-8 w-8 animate-spin text-primary' />;
     </div>;
   );
 
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -60,10 +64,10 @@ function LoadingState() {
     </div>;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   );
 };
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import { Loader2 } from 'lucide-react'
 
@@ -75,6 +79,7 @@ export function LoadingState() {
   ),
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 =======
@@ -83,3 +88,6 @@ export function LoadingState() {
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

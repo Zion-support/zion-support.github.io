@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -89,6 +90,9 @@ import { v4 as uuidv4 } from "uuid",;
 <<<<<<< HEAD
 =======
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
 import { Peer } from "../../../utils/sync/types",;
@@ -100,6 +104,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
     peers: []
   });
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",
 import { readState, writeState } from "../../../utils/sync/storage",
 import { Peer } from "../../../utils/sync/types",
@@ -126,11 +131,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const id = peer.id || uuidv4(),
   const existing = state.config.peers.find((p) => p.baseUrl === peer.baseUrl),
+=======
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
+  const state = readState()
+  const peer = req.body as Partial<Peer>
+  if (!peer.baseUrl) return res.status(400).json({ error: "baseUrl required" })
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (existing) {
     existing.scope = peer.scope || existing.scope,
     existing.paused = typeof peer.paused === "boolean" ? peer.paused : existing.paused
   } else {
     state.config.peers.push({ id, baseUrl: peer.baseUrl, scope: peer.scope || state.config.scope, paused: false })
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 
@@ -202,3 +217,6 @@ export default function handler(req, res) {
   return res.status(200).json({ peers: state.config.peers })
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

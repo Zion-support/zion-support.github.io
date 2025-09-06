@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { GradientHeading } from "./GradientHeading",
 import { FeatureCard } from "./FeatureCard",
@@ -167,6 +168,10 @@ export default BenefitsSection;
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const getBenefits = (t: any) => [
 <<<<<<< HEAD
 =======
@@ -175,7 +180,6 @@ import { Bot, Clock, Globe, TrendingDown } from 'lucide-react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf89
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
-
 
   {
 
@@ -299,12 +303,14 @@ const BenefitsSection: React.FC = () => {
           </p>
         </div>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (        
-
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
@@ -366,7 +372,6 @@ const getBenefits = (t: any,) => [;
 export function BenefitsSection(): any ({ className, style }: BenefitsSectionProps) {;
   const { t } = useTranslation();
   const benefits = getBenefits(t);
-
 
     >;
       <div className='container mx-auto px-4'>;
@@ -432,6 +437,7 @@ function BenefitsSection() {
           {benefits.map((benefit, index) => (;
             <FeatureCard;
 
+<<<<<<< HEAD
 
               key={index}
 
@@ -525,3 +531,7 @@ export default BenefitsSection;
 =======
 export default BenefitsSection;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              key={index}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

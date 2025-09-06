@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -18,51 +19,16 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface SearchResult {
   title: string;
   description: string;
   url: string;
   type: 'service' | 'page' | 'category';
 }
-<<<<<<< HEAD
-const SearchBar: React.FC = () => {
-interface SearchResult {;
-  title: string, description: string,;
-  url: string, type: 'service' | 'page' | 'category',;
-}
-=======
 
-const SearchBar: React.FC = () => {
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [isOpen, setIsOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const searchRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  // Mock search data - in a real app, this would come from an API
-  const searchData: SearchResult[] = [
-    {
-      title: 'Micro SaaS Products',
-      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
-      url: '/micro-saas',
-      type: 'category',
-    },
-    {
-      title: 'AI Services',
-      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
-      url: '/ai-services',
-      type: 'category',
-    },
-    {
-      title: 'IT Services',
-      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
-      url: '/it-services',
-      type: 'category',
-    },
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: 'Cloud Cost Guard',
       description: 'FinOps Assistant for anomaly detection and cost optimization',
@@ -211,6 +177,7 @@ const SearchBar: React.FC = () => {
 };
 
 export default SearchBar;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface SearchResult {
@@ -218,18 +185,17 @@ interface SearchResult {
   url: string, type: 'service' | 'page' | 'category'
 =======
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from 'react';
 import { Search, X } from 'lucide-react';
-=======
-import { useState, useEffect, useCallback, useMemo } from 'react';
-import Link from 'next/link';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0a01
 
 interface SearchBarProps {
   onSearch?: (query: string) => void;
   placeholder?: string;
   className?: string;
->>>>>>> main
+
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({
@@ -238,8 +204,8 @@ const SearchBar: React.FC<SearchBarProps> = ({
   className = ''
 }) => {
   const [query, setQuery] = useState('');
-<<<<<<< HEAD
 
+<<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (onSearch && query.trim()) {
@@ -496,6 +462,8 @@ export default SearchBar;
               aria-selected={index === selectedIndex}
               tabIndex={-1}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0a01
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             >
               <X className="w-4 h-4" />
             </button>
@@ -507,9 +475,13 @@ export default SearchBar;
 };
 
 export default SearchBar;
+<<<<<<< HEAD
 >>>>>>> main
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

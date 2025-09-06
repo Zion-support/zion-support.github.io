@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,6 +28,9 @@ const Page = () => {
 
 export default Page;
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Brain,
   Network,
   Cloud,
@@ -344,10 +348,6 @@ const serviceCategories = [;
   },;
 ];
 
-          
-
-
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -489,16 +489,11 @@ function ServicesOverviewPage() {
                   <div className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center`}>
                     <category.icon className="w-16 h-16 text-white" />
                   </div>
-                  
-
 
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {category.title}
                     </h3>
-
-
-
 
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
@@ -532,9 +527,6 @@ function ServicesOverviewPage() {
                 all your business needs.;
               </p>;
             </motion && motion.div>;
-
-                    
-
 
                     <Link
                       href={category && category.link}
@@ -738,6 +730,7 @@ function ServicesOverviewPage() {
     </Layout>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
@@ -768,3 +761,6 @@ export default Page;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

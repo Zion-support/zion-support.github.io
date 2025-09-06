@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -78,6 +79,10 @@ import { useRouter } from 'next/router';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function GlobalSearchBar() {
 
 export default function GlobalSearchBar() {;
@@ -92,12 +97,15 @@ export default function GlobalSearchBar() {;
 <<<<<<< HEAD
       return;      return
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -321,7 +329,6 @@ import { useEffect, useMemo, useRef, useState } from 'react';
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
 
-
     rec.start()
   }
 <<<<<<< HEAD
@@ -356,8 +363,12 @@ import { useEffect, useMemo, useRef, useState } from 'react';
               <li key={i}>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     
     return this.props.children;
@@ -378,7 +389,7 @@ export default function GlobalSearchBar() {
       return;      return;
       setSuggestions([]);
       return
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
     }
 =======
       return;      return    }
@@ -435,6 +446,7 @@ export default function GlobalSearchBar() {
           type='button'
           onClick={startVoice}
           className='inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
+<<<<<<< HEAD
           aria-label='Voice search'
         >
           🎤
@@ -482,12 +494,17 @@ export default function GlobalSearchBar() {
           <ul className="max-h-64 overflow-auto py-1 text-sm">
             {suggestions.map((s, i) => (
               <li key={i}>
+=======
+
+                <button
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   type="button"
                   onClick={() => {;
                     setQuery(s);
                     setOpen(false);
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -512,6 +529,8 @@ export default function GlobalSearchBar() {
                 >
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
                 >;
                   {s}
@@ -522,6 +541,7 @@ export default function GlobalSearchBar() {
         </div>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
                   {s}
@@ -529,16 +549,23 @@ export default function GlobalSearchBar() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
                 >
                   {s}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </button>
               </li>
             ))}
@@ -546,6 +573,7 @@ export default function GlobalSearchBar() {
         </div>
       )}
     </form>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -559,6 +587,9 @@ export default function GlobalSearchBar() {
   )
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { use_router } from 'next / router';
 =======
                 >import { use_router } from 'next / router';
@@ -732,6 +763,7 @@ if (return) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -752,3 +784,6 @@ if (return) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

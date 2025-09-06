@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 return (
     <div className='flex items-center justify-end gap-2'>;
       <Button
@@ -50,6 +51,9 @@ return (
             className='text-red-600'          >            onClick={() => onStatusChange(application.id, "hired")}
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Link from "next/link",
 import { 
   DropdownMenu,
@@ -122,11 +126,15 @@ export function ApplicationActions({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             Reject
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
+<<<<<<< HEAD
 
       
 <<<<<<< HEAD
@@ -138,6 +146,9 @@ export function ApplicationActions({
       
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Button 
         variant="default" 
         size="sm"
@@ -238,24 +249,39 @@ export function ApplicationActions({;
             Shortlist;
           </DropdownMenuItem>;
           <DropdownMenuItem;
+<<<<<<< HEAD
             Schedule Interview;
           </DropdownMenuItem>;
           <DropdownMenuItem;
             onClick={() => onStatusChange(application.id, "hired")}
+=======
+
+          >;
+            Schedule Interview;
+          </DropdownMenuItem>;
+          <DropdownMenuItem;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           >;
             Hire;
           </DropdownMenuItem>;
           <DropdownMenuItem;
+<<<<<<< HEAD
 <<<<<<< HEAD
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600";
           >;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+          >;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             Reject;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Button;
         variant="default";
@@ -290,3 +316,6 @@ export function ApplicationActions({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

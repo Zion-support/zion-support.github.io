@@ -9,6 +9,7 @@ import fs from "fs";
 import path from "path";
 import { getDisputeById } from "../../../../utils/fsdb";
 import {
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/download.ts
 <<<<<<< HEAD
 =======
@@ -25,6 +26,11 @@ import {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
   parseUserFromRequest;
+=======
+
+  parseUserFromRequest
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/download.ts
   ensureInvolvedOrAdmin,;
 } from "../../../../utils/auth";
 ;
@@ -37,6 +43,7 @@ export default async function handler(
 } from "../../../../utils/auth";
 
 export default async function handler(
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
   req: NextApiRequest
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
@@ -110,6 +117,21 @@ export default async function handler(;
     return res.status(400).json({ error: "Invalid parameters" });
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+  req: NextApiRequest
+  res: NextApiResponse
+) {;
+  const { id, fileName } = req.query as { id?: string; fileName?: string };
+
+  if (
+    !id |
+    !fileName |
+    typeof id !== "string" |
+    typeof fileName !== "string"
+  ) {
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/download.ts
   }
 ;
   const user = parseUserFromRequest(req);
@@ -129,6 +151,7 @@ export default async function handler(;
     "Content-Disposition"
     `attachment; filename="${path.basename(att.fileName)}"`
   );
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 =======
 <<<<<<< HEAD:pages/api/disputes/[id]/download.ts
 =======
@@ -144,6 +167,9 @@ export default async function handler(;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/disputes/[id]/download.ts
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/download.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -154,6 +180,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { id, fileName } = req.query as { id?: string, fileName?: string };
   if (!id || !fileName || typeof id !== 'string' || typeof fileName !== 'string') {;
     return res.status(400).json({ error: 'Invalid parameters' })
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/download.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -167,6 +194,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/download.ts
   }
 ;
   const user = parseUserFromRequest(req);
@@ -175,6 +205,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
   if (!dispute) return res && res.status($1).json({ $2 });
   try {
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 =======;
     ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
   } catch (e: any) {;
@@ -338,3 +369,6 @@ export default async function handler(req, res) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/disputes/[id]/download.ts
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/download.ts

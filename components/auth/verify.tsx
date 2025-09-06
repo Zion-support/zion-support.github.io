@@ -1,11 +1,15 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Verify Email</h1>;
@@ -20,6 +24,7 @@
       <p className="mt-2 text-gray-600 dark: text-gray-300">Please verify your email to continue.</p>;
     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 
@@ -33,6 +38,10 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  );
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -78,7 +87,14 @@ function VerifyEmailPage() {
       <h1 className="text-2xl font-semibold">Verify Email</h1>;
       <p className="mt - 2 text - gray - 600 dark: text-gray-300">Please verify your email to continue.</p>;
     </div>);
+<<<<<<< HEAD
 }  return (
+=======
+}
+
+export default function VerifyEmailPage() {
+  return (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className='container mx-auto px-4 py-10'>
       <h1 className='text-2xl font-semibold'>Verify Email</h1>
       <p className='mt-2 text-gray-600 dark:text-gray-300'>
@@ -91,6 +107,7 @@ function VerifyEmailPage() {
       <h1 className="text-2xl font-semibold">Verify Email</h1>
       <p className="mt-2 text-gray-600 dark: text-gray-300">Please verify your email to continue.</p>
 
+<<<<<<< HEAD
     </div>
   );
 
@@ -121,3 +138,5 @@ function VerifyEmailPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

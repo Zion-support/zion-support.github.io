@@ -1,8 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
@@ -10,6 +14,7 @@ import { useContractTemplates } from "@/hooks/useContractTemplates",
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
+<<<<<<< HEAD
 
 
 =======
@@ -18,6 +23,11 @@ import { useAuth } from "@/hooks/useAuth",
 <<<<<<< HEAD
 =======
 
+=======
+
+import { useAuth } from "@/hooks/useAuth",
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // useRouter replaces the old useLocation hook from react-router
 
   AlertDialog
@@ -49,6 +59,7 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle} from "@/components/ui/alert-dialog",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from "react",
@@ -125,6 +136,9 @@ export function TemplateList({;
 
 // use_router replaces the old use_location hook from react - router;
 import { use_router } from 'next / router';
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -152,6 +166,7 @@ import { use_auth  } from '@/hooks / use_auth';
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
+<<<<<<< HEAD
 import { useState } from "react"
 interface TemplateListProps {
   templates: ContractTemplate[]
@@ -204,6 +219,10 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { useAuth } from "@/hooks/useAuth",;
 // useRouter replaces the old useLocation hook from react-router;
 import { useRouter } from 'next/router',;import {;
+=======
+
+import {;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   AlertDialog,;
   AlertDialogAction,;
   AlertDialogCancel,;
@@ -212,6 +231,7 @@ import { useRouter } from 'next/router',;import {;
   AlertDialogFooter,;
   AlertDialogHeader,;
   AlertDialogTitle} from "@/components/ui/alert-dialog",;
+<<<<<<< HEAD
 import { useState } from "react",;
 interface TemplateListProps {;
   templates: ContractTemplate[],;
@@ -377,6 +397,9 @@ export function TemplateList({;
                     <StarOff className="h-4 w-4" />;
                   </Button>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 )}
 =======
                     </Tooltip>
@@ -401,6 +424,7 @@ export function TemplateList({;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -418,6 +442,11 @@ export function TemplateList({;
             
             <Separator className="my-3" />
                         <Button 
+=======
+            <Separator className="my-3" />
+
+            <Button 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               onClick={() => onSelect(template)} 
               variant="outline" 
               className="w-full"
@@ -428,11 +457,15 @@ export function TemplateList({;
         </Card>
       ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 
       
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -461,6 +494,11 @@ const handleSetDefault = async (templateId: string) => {
 router.push (`/auth/login?returnTo=$ {
   encodeURIComponent (currentPath)
 }`)
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 <CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {
   template.title
 }</h3> {"
@@ -499,6 +537,7 @@ router.push (`/auth/login?returnTo=$ {
             </Button>;
           </CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         </Card>;
       ))}
 
@@ -510,6 +549,9 @@ router.push (`/auth/login?returnTo=$ {
 ;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
 =======
 ;      <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
@@ -525,6 +567,7 @@ router.push (`/auth/login?returnTo=$ {
             <AlertDialogCancel>Cancel</AlertDialogCancel>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <AlertDialogAction;
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
               onClick={handleDeleteConfirm}
@@ -534,6 +577,9 @@ router.push (`/auth/login?returnTo=$ {
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
               onClick = {handleDeleteConfirm,}>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               Delete;
 =======
             <AlertDialogAction;
@@ -547,6 +593,7 @@ router.push (`/auth/login?returnTo=$ {
       </AlertDialog>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -698,3 +745,6 @@ return;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

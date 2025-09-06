@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -299,11 +300,16 @@ export function SmartContractBuilder(): any ({;
   // For generating Solidity(existing logic, adapted)
       return}        throw error}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+        throw error}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       if(data && data.markdownContent) { // Assuming your Supabase func returns { markdownContent: "..." }
         setGeneratedMarkdownContract(data.markdownContent)
         if(onLegalDraftGenerated) {
           onLegalDraftGenerated(data.markdownContent)}
 
+<<<<<<< HEAD
       const { data, error } = await supabase.functions.invoke ('generate - contract', {
         body: payload, ,
 });
@@ -330,6 +336,8 @@ if ( {) {
       toast.error (err.message || "Failed to generate legal draft.")} finally {
       setIsLoadingLegalDraft (false)}
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
       toast.info ("Generating PDF...");
       html2pdf ().from (element).set (opt).save ();
@@ -340,6 +348,7 @@ if ( {) {
       toast.warn ("No draft content available to download or form values missing.")}
   }
       return}
+<<<<<<< HEAD
         throw new Error("No content received from draft generator.")}
     } catch(err: any) {
       console.error("Error generating legal draft:", err)
@@ -482,6 +491,10 @@ if ( {) {
           </TabsContent>
 import { toast } from "sonner",
 import {logErrorToProduction} from '@/utils/productionLogger',      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
+=======
+
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <DialogHeader>;
           <DialogTitle>Smart Contract Builder</DialogTitle>;
           <DialogDescription>;
@@ -490,6 +503,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',      <DialogConte
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
           <div className="flex justify-between items-center mb-4">;
             <TabsList className="grid grid-cols-3"> {/* Added new tab */}
+<<<<<<< HEAD
 <<<<<<< HEAD
               <TabsTrigger value="form">1 && 1.Details</TabsTrigger>;
               <TabsTrigger value="preview_markdown" disabled={!generatedMarkdownContract}>2 && 2.Legal Draft</TabsTrigger>;
@@ -639,10 +653,14 @@ if ( { // Chain not added) {
               >;
 <<<<<<< HEAD
                 <Save className="h-4 w-4" />;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 Templates;
               </Button>;
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 <Save className="h-4 w-4" />;                Templates;
@@ -671,26 +689,54 @@ if ( { // Chain not added) {
               <div>;
 
                 <ContractPreview
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   generatedContract = {generatedContract,}
 =======
                             generatedContract = {generatedContract,}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   talent = {talent,}
                   onClose = {onClose,}
+<<<<<<< HEAD
                   deploymentInfo = {deploymentInfo,}          </TabsContent>;
+=======
+                  deploymentInfo = {deploymentInfo,}
+
+                      onClick = {handleDeployContract,}
+                      disabled = {deployStatus === 'deploying',}
+                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">;
+                      {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
+                    </Button>;
+                  </div>                )}
+              </div>;
+            )}
+
+        <TemplateManager
+          isOpen = {templateManagerOpen,}
+          onClose = {() => setTemplateManagerOpen(false),}
+          onSelectTemplate = {handleLoadTemplate,}
+          currentValues = {formValues,}
+
+          </TabsContent>;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </Tabs>;
 
         <TemplateManager
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <div>
                 <ContractPreview 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   generatedContract={generatedContract}
@@ -723,6 +769,9 @@ if ( { // Chain not added) {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           isOpen={templateManagerOpen}
 =======
             {!generatedMarkdownContract && !isLoadingLegalDraft && <p>Generate a legal draft to preview and download.</p>}
@@ -733,6 +782,7 @@ if ( { // Chain not added) {
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
+<<<<<<< HEAD
 <<<<<<< HEAD
         />;
       </DialogContent>;
@@ -753,3 +803,8 @@ if ( { // Chain not added) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
+=======
+
+;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

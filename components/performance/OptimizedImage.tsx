@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -74,6 +75,9 @@ import Image from 'next/image';
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -84,11 +88,7 @@ interface OptimizedImageProps {
   quality?: number;
   sizes?: string;
 }
-<<<<<<< HEAD
-=======
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   src,
   alt,
   width,
@@ -98,39 +98,15 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   quality = 75,
   sizes = "100vw",
 }) => {
-<<<<<<< HEAD
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <Image;
-        src={src}
-        alt={alt}
-        fill;
-        className={class_name}
-        priority={priority}
-        sizes={sizes}
-        quality={quality}
-        style={style}
-=======
-  return (
-    <Image
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       src={src}
       alt={alt}
       width={width}
       height={height}
       className={className}
       priority={priority}
-<<<<<<< HEAD
-      sizes={sizes}
-  );
-}
-export default OptimizedImage;
-      quality={quality}
-      style={style}
 
+<<<<<<< HEAD
 quality={quality}
       style={style}
   );
@@ -155,3 +131,5 @@ export default OptimizedImage;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

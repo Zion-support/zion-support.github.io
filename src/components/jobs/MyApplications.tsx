@@ -1,4 +1,9 @@
+<<<<<<< HEAD
       default:        return <Badge variant="outline">{status}</Badge>
+=======
+
+        return <Badge variant="outline">{status}</Badge>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
 
 <<<<<<< HEAD
@@ -112,6 +117,7 @@ export function MyApplications() {;
   const { applications, isLoading, error } = useJobApplications(),;
   const getStatusBadge = (status: ApplicationStatus) => {;
     switch (status) {;
+<<<<<<< HEAD
       case "new": return <Badge variant="secondary">New</Badge>,;
       case "viewed":;
         return <Badge variant="outline">Viewed</Badge>,;
@@ -129,6 +135,10 @@ export function MyApplications() {;
   };
   if (isLoading) {;
     return (;
+=======
+      case "new": return <Badge variant="secondary">New</Badge>;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="flex justify-center items-center p-8">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
       </div>;
@@ -138,7 +148,10 @@ export function MyApplications() {;
 ;
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (error) {;
     return (;
       <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">;
@@ -147,10 +160,13 @@ export function MyApplications() {;
     );
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
   if (applications.length === 0) {;
     return (;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   if (applications && applications.length === 0) {;
 
@@ -195,13 +211,20 @@ export function MyApplications() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="flex justify-between items-center">
                 <Button 
                   variant="outline" 
                   size="sm" 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   className="text-xs"
                   asChild
                 >
@@ -212,7 +235,6 @@ export function MyApplications() {;
 <<<<<<< HEAD
                 
 =======
-
 
   return (
     <div className="grid gap-4 md:grid-cols-2">;
@@ -250,9 +272,12 @@ export function MyApplications() {;
 
                 <Button
 
+<<<<<<< HEAD
                 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Button 
                   variant="default" 
                   size="sm"
@@ -371,6 +396,7 @@ if ( {) {
   );
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 =======
@@ -379,3 +405,6 @@ if ( {) {
                 </p>
               )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

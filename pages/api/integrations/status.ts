@@ -22,6 +22,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     connections[p.id] = conn |{ providerId: p.id, status: 'disconnected' }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 }
@@ -31,6 +32,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { read_state } from '../../../lib / integrations / file_store',
 import { PROVIDERS } from '../../../lib / integrations / registry',
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default /**
  * handler - Function description
  */
@@ -48,6 +51,7 @@ function handler() {
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -62,3 +66,5 @@ function handler() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

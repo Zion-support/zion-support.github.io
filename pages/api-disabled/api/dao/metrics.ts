@@ -1,17 +1,25 @@
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD
 =======
 
 ;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 ;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
 
 const configPath = path && path.join(process && process.cwd(), "data", "dao", "config && config.json");
 const cachePath = path && path.join(process && process.cwd(), "data", "dao", "metrics && metrics.json");
 ;
 
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 
 async function fetchJson(url: string) {;
   const resp = await fetch(url);
@@ -22,6 +30,8 @@ async function fetchJson(url: string) {;
 ;
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
 <<<<<<< HEAD:pages/api/dao/metrics.ts
@@ -56,13 +66,17 @@ async function fetchJson(url: string) {;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 ;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
 
 const configPath = path && path.join(process && process.cwd(), "data", "dao", "config && config.json");
 const cachePath = path && path.join(process && process.cwd(), "data", "dao", "metrics && metrics.json");
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/dao/metrics.ts
 
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 function readJson(p: string) {
 
 }
@@ -74,6 +88,11 @@ function writeJson(p: string, v: any) {
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+=======
+  const resp = await fetch(url);
+  if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
   return resp.json();
 <<<<<<< HEAD:pages/api/dao/metrics.ts
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -81,6 +100,7 @@ function writeJson(p: string, v: any) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -97,6 +117,8 @@ function writeJson(p: string, v: any) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
 
 function readJson(p: string) {
 =======
@@ -109,7 +131,7 @@ function readJson(p: string) {
 function readJson(p: string) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/dao/metrics.ts
   return JSON.parse(fs.readFileSync(p, "utf-8"));
-=======
+
 ;
 function readJson(p: string) {;
   return JSON.parse(fs.readFileSync(p, 'utf-8'));
@@ -117,6 +139,7 @@ function readJson(p: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -163,6 +186,9 @@ function readJson(p: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
 }
 function writeJson(p: string, v: any) {;
   fs.writeFileSync(p, JSON.stringify(v, null, 2));
@@ -172,6 +198,7 @@ function writeJson(p: string, v: any) {;
   }
 }
 
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api/dao/metrics.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -202,6 +229,8 @@ function writeJson(p: string, v: any) {;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/dao/metrics.ts
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
 export default async function handler(
   _req: NextApiRequest;
   res: NextApiResponse
@@ -236,6 +265,7 @@ export default async function handler(req, res) {
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
   return resp.json()
 }
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 ;
 function readJson(p: string) {;
   return JSON.parse(fs.readFileSync(p, 'utf-8'))
@@ -250,25 +280,37 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
 
 ;
 export default async function handler(req, res) {
 
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
   try {
 =======;
+=======
+  try {
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
   try {;
 ;
 export default async function handler(req, res) {;
   try {
 ;
 export default async function handler(req, res) {
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
   try {;
 ;
 export default async function handler(req, res) {;
   try {
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api/dao/metrics.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -279,10 +321,14 @@ export default async function handler(req, res) {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/dao/metrics.ts
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date && Date.now();
     const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api/dao/metrics.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -330,6 +376,9 @@ export default async function handler(req, res) {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
 =======
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.;
@@ -340,6 +389,7 @@ export default async function handler(req, res) {;
     const txs = transfersJson?.result || [];
 ;
     const holderToDelta: Record<string, bigint> = {};
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 =======;
     const txs = transfersJson?.result || [];
 ;
@@ -347,10 +397,14 @@ export default async function handler(req, res) {;
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
     const entries = Object && Object.entries(holderToDelta)
       .map(([address, delta]) => ({ address, netDelta: delta }))
       .sort((a, b) => (b && b.netDelta > a && a.netDelta ? 1 : -1))
       .slice(0, 10);
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
     const total = entries && entries.reduce(
       (acc, e) => acc + (BigInt(e && e.amount) > 0n ? BigInt(e && e.amount) : 0n)
       0n
@@ -369,12 +423,15 @@ export default async function handler(req, res) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
     }));
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.;
     const activeProposals: any[] = [];
 
-
     // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
         .flatMap((t: any) => [t && t.from?.toLowerCase(), t && t.to?.toLowerCase()])
         .filter(Boolean)
     );
@@ -386,6 +443,9 @@ export default async function handler(req, res) {;
           )
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
         )
       : 0;
     const result = {;
@@ -396,11 +456,15 @@ export default async function handler(req, res) {;
       governanceParticipationRate: participationRate
     }
     writeJson(cachePath, result);
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 import { NextApiRequest, NextApiResponse  } from './next';
 import fs from './fs';
 import path from './path';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
 ;
 const config_path = path.join (process.cwd (), "data", "dao", "config.json");
 const cache_path = path.join (process.cwd (), "data", "dao", "metrics.json");
@@ -501,6 +565,7 @@ if ( {) {
     write_json (cache_path, result);
     return res.status (200).json (result);
   } catch (e: any) {
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
   }
 }
 <<<<<<< HEAD
@@ -615,3 +680,6 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/dao/metrics.ts
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts

@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "target": "es5",
     "lib": ["dom", "dom.iterable", "es6"],
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     "target": "ES2020",
     "lib": [
       "dom",
@@ -16,14 +19,22 @@
       "es2021",
       "es2022"
     ],
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
+<<<<<<< HEAD
     "moduleResolution": "bundler",
+=======
+    "moduleResolution": "node",
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -35,6 +46,7 @@
     ],
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,6 +89,8 @@
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
       "@/pages/*": ["./pages/*"],
@@ -85,6 +99,7 @@
       "@/types/*": ["./types/*"]
     }
   },
+<<<<<<< HEAD
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
@@ -93,6 +108,8 @@
       "@/types/*": ["./src/types/*"]
     }
   },
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   "include": [
     "next-env.d.ts",
     "**/*.ts",
@@ -102,5 +119,9 @@
   "exclude": [
     "node_modules"
   ]
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -20,6 +21,8 @@ describe("App Smoke Tests", () => {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
@@ -29,8 +32,9 @@ describe('App Smoke Tests', () => {
     expect(() => render(<App />)).not.toThrow();
   });
 
-  it('should render a basic structure', () => {
+  it('should render the main app component', () => {
     const { container } = render(<App />);
+<<<<<<< HEAD
     expect(container.firstChild).toBeTruthy();
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -38,6 +42,8 @@ describe('App Smoke Tests', () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+    expect(container).toBeInTheDocument();
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   });
-});
 });

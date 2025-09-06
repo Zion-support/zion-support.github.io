@@ -216,21 +216,34 @@ export default function Contact() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Button from '../components/Button';
 import Card from '../components/Card';
 
 const Contact: React.FC = () => {
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
 const Contact = () => {
+<<<<<<< HEAD
 >>>>>>> main
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     phone: '',
+<<<<<<< HEAD
 <<<<<<< HEAD
     message: ''
   });
@@ -255,12 +268,14 @@ const Contact = () => {
     service: '',
     message: '',
   });
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = e => {
->>>>>>> main
+
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -597,6 +612,7 @@ const Contact = () => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     e.preventDefault();
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Handle form submission
     console.log('Form submitted:', formData);
     alert('Thank you for your message! We will get back to you soon.');
@@ -731,6 +747,8 @@ const Contact: React.FC = () => {
               </div>
             </div>
           </div>
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           {/* Contact Form */}
           <div className="bg-white rounded-2xl shadow-lg p-8">
@@ -756,12 +774,17 @@ const Contact: React.FC = () => {
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                       Full Name *
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     </label>
                     <input
                       type="text"
                       id="name"
                       name="name"
                       value={formData.name}
+<<<<<<< HEAD
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -772,24 +795,38 @@ const Contact: React.FC = () => {
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                       Email Address *
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     </label>
                     <input
                       type="email"
                       id="email"
                       name="email"
                       value={formData.email}
+<<<<<<< HEAD
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       placeholder="your@email.com"
                     />
                   </div>
                 </div>
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       Company
                     </label>
                     <input
@@ -797,6 +834,7 @@ const Contact: React.FC = () => {
                       id="company"
                       name="company"
                       value={formData.company}
+<<<<<<< HEAD
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Your company name"
@@ -806,12 +844,16 @@ const Contact: React.FC = () => {
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                       Phone Number
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     </label>
                     <input
                       type="tel"
                       id="phone"
                       name="phone"
                       value={formData.phone}
+<<<<<<< HEAD
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="(555) 123-4567"
@@ -821,12 +863,19 @@ const Contact: React.FC = () => {
 
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     Service Interest
                   </label>
                   <select
                     id="service"
                     name="service"
                     value={formData.service}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
@@ -837,11 +886,16 @@ const Contact: React.FC = () => {
                     <option value="cybersecurity">Cybersecurity</option>
                     <option value="data-analytics">Data Analytics</option>
                     <option value="digital-transformation">Digital Transformation</option>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <option value="consulting">Consulting</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="mt-8">
               <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
@@ -933,12 +987,18 @@ const Contact: React.FC = () => {
 =======
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     Message *
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     value={formData.message}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     onChange={handleChange}
                     required
                     rows={6}
@@ -966,9 +1026,15 @@ const Contact: React.FC = () => {
                 </button>
               </form>
             )}
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           </div>
+=======
+
+          </div>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>
 =======
           {/* Contact Form & Info */}
@@ -1122,6 +1188,7 @@ const Contact: React.FC = () => {
 <<<<<<< HEAD
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1175,3 +1242,9 @@ const Contact: React.FC = () => {
 
 export default Contact;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+
+  );
+};
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

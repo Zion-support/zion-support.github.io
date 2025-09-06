@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import Link from "next/link",
@@ -30,6 +31,10 @@ export const MobileLaunchHero: React.FC = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               In Your Pocket
             </h1>              message candidates, and get AI-powered matches instantly with our
+=======
+
+              message candidates, and get AI-powered matches instantly with our
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               mobile app.
             </p>
             <div className='mb-8'>
@@ -39,8 +44,11 @@ export const MobileLaunchHero: React.FC = () => {
             </div>
             <div className="mb-8">
 
+<<<<<<< HEAD
               <AppStoreButtons 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}              />
             </div>
@@ -89,6 +97,7 @@ export const MobileLaunchHero: React.FC = () => {
               In Your Pocket
             </h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                 >                  See Features              
@@ -99,6 +108,11 @@ export const MobileLaunchHero: React.FC = () => {
             
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+                >                  See Features              
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <p className="text-lg md:text-xl opacity-90 mb-8">
               Find top AI talent or global IT jobs on the go. Track projects, message candidates, and get AI-powered matches instantly with our mobile app.
             </p>
@@ -117,6 +131,7 @@ export const MobileLaunchHero: React.FC = () => {
                   <ArrowRight size={20} />
                 </Button>
               </Link>
+<<<<<<< HEAD
               
 <<<<<<< HEAD
 =======
@@ -128,6 +143,9 @@ export const MobileLaunchHero: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Link href="#features">
                 <Button variant="ghost" size="lg" className="text-white hover:bg-white/10">
                   See Features
@@ -139,6 +157,7 @@ export const MobileLaunchHero: React.FC = () => {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           
           <div className="flex-1 flex justify-center md:justify-end">
@@ -148,15 +167,18 @@ export const MobileLaunchHero: React.FC = () => {
               
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Card className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3">
                 <CardContent className="p-0">
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
                     <Smartphone className="w-40 h-40 text-white opacity-40" />
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
                     {/* In production, replace with actual app screenshot */}
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </div>
                 </CardContent>
               </Card>
@@ -168,12 +190,18 @@ export const MobileLaunchHero: React.FC = () => {
   )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import Link from 'next/link';
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React from 'react';
+import Link from 'next/link';
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",;
 import Link from "next/link",;
 import { ArrowRight, Smartphone } from 'lucide-react';
@@ -216,10 +244,14 @@ export const MobileLaunchHero: React.FC = () => {;
               </Link>;
             </div>;
           </div>;
+<<<<<<< HEAD
           <div className="flex-1 flex justify-center md:justify-end">;
             <div className="relative">;
               {/* Phone mockup with glow effect */}
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Card className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3">;
 =======
 }
@@ -337,8 +369,12 @@ export const MobileLaunchHero: React.FC = () => {
 }
 "  );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import * as React from &quot;react & quot;
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
@@ -102,6 +103,8 @@ type PaginationLinkProps = {
 } & React.ComponentProps<"a">
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 interface PaginationButtonProps
 =======
@@ -122,6 +125,7 @@ interface PaginationButtonProps
   isActive?: boolean
 }
 
+<<<<<<< HEAD
 const PaginationLink = ({
 <<<<<<< HEAD
 =======
@@ -137,6 +141,8 @@ const PaginationLink = ({
   isActive,
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ...props
 }: PaginationLinkProps) => (
   <a
@@ -148,10 +154,13 @@ const PaginationLink = ({
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         variant: isActive ? "outline" : "ghost",
 
         size}),
@@ -162,6 +171,7 @@ const PaginationLink = ({
 )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -170,6 +180,9 @@ PaginationLink.displayName = "PaginationLink"
 
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -181,6 +194,7 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
       aria-current={isActive ? 'page' : undefined}
       className={cn(;
 <<<<<<< HEAD
+<<<<<<< HEAD
         buttonVariants({ variant: 'ghost', size: 'icon' }),;
         isActive && 'bg-green-600 text-white',;
 =======
@@ -193,6 +207,9 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className;
       )}
       {...props}
@@ -219,6 +236,7 @@ const PaginationPrevious = ({
 )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -227,6 +245,9 @@ PaginationPrevious.displayName = "PaginationPrevious"
 
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const PaginationNext = ({
   className,
 =======
@@ -244,9 +265,8 @@ const PaginationNext = ({
     <ChevronRight className="h-4 w-4" />
   </PaginationLink>
 )
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -254,6 +274,8 @@ const PaginationNext = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 PaginationNext.displayName = "PaginationNext"
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const PaginationEllipsis = ({
   className,
   ...props
@@ -267,6 +289,7 @@ const PaginationEllipsis = ({
     <span className="sr-only">More pages</span>
   </span>
 )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 PaginationEllipsis.displayName = "PaginationEllipsis"
@@ -390,3 +413,6 @@ export {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

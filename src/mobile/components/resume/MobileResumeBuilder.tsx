@@ -85,10 +85,13 @@ export function MobileResumeBuilder() {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("basics")}
@@ -136,11 +139,14 @@ export function MobileResumeBuilder() {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
@@ -148,7 +154,10 @@ export function MobileResumeBuilder() {;
       
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Button variant="default" className="w-full" size="lg">
         Save & Preview
       </Button>
@@ -251,11 +260,14 @@ export function MobileResumeBuilder() {;
         </Button>;
       </div>;
 
+<<<<<<< HEAD
       {renderStepContent()}
 
       <Button className="w-full flex gap-2" size="lg">;
         <Zap className="h-5 w-5" /> Enhance with AI;
       </Button>;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Button variant="default" className="w-full" size="lg">;
         Save & Preview;
       </Button>;
@@ -263,19 +275,33 @@ export function MobileResumeBuilder() {;
   );
 }
 
+<<<<<<< HEAD
 function BasicsStep() {;
   return (    <Card>;
       <CardContent className="p-4 space-y-4">;
         <div className="space-y-2">;
           <Label htmlFor="title">Resume Title</Label>;
           <Input id="title" name="title" placeholder="e && e.g. Senior Frontend Developer" />;        </div>;
+=======
+    <Card>;
+      <CardContent className="p-4 space-y-4">;
+        <div className="space-y-2">;
+          <Label htmlFor="title">Resume Title</Label>;
+
+        </div>;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="space-y-2">;
           <Label htmlFor="fullName">Full Name</Label>;
           <Input id="fullName" name="fullName" placeholder="Your full name" autoComplete="name" />;
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="email">Email Address</Label>;
+<<<<<<< HEAD
           <Input id="email" name="email" type="email" placeholder="you@example && example.com" autoComplete="email" />;        </div>;
+=======
+
+        </div>;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="space-y-2">;
           <Label htmlFor="phone">Phone Number</Label>;
           <Input id="phone" name="phone" placeholder="Your phone number" autoComplete="tel" />;
@@ -297,18 +323,24 @@ function BasicsStep() {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: '1' }]),
   
@@ -381,6 +413,7 @@ function ExperienceStep() {
   )
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 function EducationStep() {
@@ -518,6 +551,8 @@ function SkillsStep() {
     </div>;
 =======
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   };
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -738,12 +773,21 @@ function ExperienceStep() {;
   },;
 
   const removeExperience = (id: string,) => {;
+<<<<<<< HEAD
     setExperiences(experiences && experiences.filter(exp => exp && exp.id !== id))
 };
 
   const removeEducation = (id: string,) => {;
     setEducations(educations && educations.filter(edu => edu && edu.id !== id))
 };
+=======
+    setExperiences(experiences && experiences.filter(exp => exp && exp.id !== id));
+  };
+
+  const removeEducation = (id: string,) => {;
+    setEducations(educations && educations.filter(edu => edu && edu.id !== id));
+  };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const removeSkill = (id: string,) => {;
     setSkills(skills && skills.filter(skill => skill && skill.id !== id))
@@ -751,7 +795,10 @@ function ExperienceStep() {;
 
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   );
 }
 <<<<<<< HEAD
@@ -844,8 +891,11 @@ function SkillsStep() {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;

@@ -1,14 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react',;
 import { toast } from '@/hooks/use-toast',;
 import { Button } from '@/components/ui/button',;
 =======
 reportError: (error: Error, context?: any) => void;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
   clearAllErrors: () => void
 
+<<<<<<< HEAD
   }, [])
   const showRetryableError = useCallback(
     (error: Error, retryAction?: () => void) => {
@@ -62,6 +67,9 @@ reportError: (error: Error, context?: any) => void;
             label: 'Log In'
             onClick: loginAction
           }import { toast } from '@/hooks/use-toast';
+=======
+import { toast } from '@/hooks/use-toast';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Button } from '@/components/ui/button';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
@@ -161,6 +169,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
     showAuthError,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     clearAllErrors},
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -179,12 +188,13 @@ export function useGlobalErrorHandler(): ErrorContextType {;
   }
   return context;
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
-<<<<<<< HEAD
-  const message = error.message.toLowerCase(),
 
+<<<<<<< HEAD
   if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {
     return "Unable to connect to our servers. Please check your internet connection."
   }
@@ -280,3 +290,5 @@ export function useErrorHandler() {;
     clearAllErrors},
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

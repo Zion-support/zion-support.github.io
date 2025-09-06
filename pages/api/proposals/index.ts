@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
@@ -29,6 +30,9 @@ const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json');
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -55,6 +59,7 @@ async function ensureStore() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -63,6 +68,9 @@ async function ensureStore() {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
@@ -84,6 +92,7 @@ async function ensureStore() {;
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
+<<<<<<< HEAD
 ) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -109,6 +118,8 @@ export default async function handler(
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ) {;
   await ensureStore();
   if (req.method === "GET") {
@@ -118,6 +129,7 @@ export default async function handler(
   if (req.method === "POST") {
     const body = req.body |{}
     const data = await fs.readJson(FILE_PATH);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -139,11 +151,26 @@ export default async function handler(
       type: body && body.type,
       status: body && body.status || "Draft",
       createdAt: new Date().toISOString(),
+=======
+
+  if (req && req.method === "POST") {
+    const body = req && req.body || {};
+    const data = await fs && fs.readJson(FILE_PATH);
+    const item = {
+      id: body && body.id
+      title: body && body.title
+      targetInstitution: body && body.targetInstitution
+      regionalScope: body && body.regionalScope
+      type: body && body.type
+      status: body && body.status || "Draft"
+      createdAt: new Date().toISOString()
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     };
     data && data.items.unshift(item);
     await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res && res.status(201).json(item);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -227,10 +254,15 @@ function ensure_store() {
     if (await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 })) {
   $2
 }
+=======
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch {
     await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 });
   }
 }
+<<<<<<< HEAD
 export default async /**
  * handler - Function description
  */
@@ -289,6 +321,8 @@ export default async function handler(req, res) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   } catch (error) {
     console.error("Error:", error);
@@ -330,12 +364,16 @@ export default async function handler(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -352,6 +390,7 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -362,3 +401,6 @@ export default async function handler(req, res) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

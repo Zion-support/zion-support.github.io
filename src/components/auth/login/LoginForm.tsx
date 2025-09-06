@@ -16,6 +16,7 @@ import { LogIn, User, Eye, EyeOff } from 'lucide-react'
 import { fireEvent  } from '@/lib/analytics';
 import { useAuth } from "@/context/auth/AuthProvider",
 
+<<<<<<< HEAD
 import { useState } from 'react';
 import { use_router } from 'next / router';
 import { use_form, ControllerRenderProps } from 'react - hook - form';
@@ -33,6 +34,8 @@ import { z  } from './zod';
 import { use_auth  } from '@/context / auth / AuthProvider';
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {
   Form,
   FormControl,
@@ -117,6 +120,7 @@ import {
   FormItem,
   FormLabel,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema) as any
@@ -133,12 +137,18 @@ import {
       // Pass email and password to the login function
       const result = await login(data.email, data.password, data.rememberMe)
       if (result?.error) {        let errorMessage = 'Login failed. Please try again.'; // Default generic error
+=======
+  const form = useForm<LoginFormValues>({
+
+        let errorMessage = 'Login failed. Please try again.'; // Default generic error
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         if (result?.error && result?.error?.message) {
           if (
             result.error.message.toLowerCase().includes('email not confirmed')
           ) {
             errorMessage =
               'Your email is not confirmed. Please check your inbox for a confirmation link.'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -165,6 +175,10 @@ export function LoginForm() {
   const [verificationMessage, setVerificationMessage] = useState('')
   const router = useRouter()  FormMessage} from "@/components/ui/form",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  FormMessage} from "@/components/ui/form",
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import Link from "next/link",
 import { Checkbox } from "@/components/ui/checkbox",
@@ -188,10 +202,11 @@ export function LoginForm() {
 <<<<<<< HEAD
     resolver: zodResolver(loginSchema) as any,
     defaultValues: {
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       email: "",
       password: "",
       rememberMe: false}}),
@@ -199,10 +214,10 @@ export function LoginForm() {
   const onSubmit = async (data: LoginFormValues) => {
     if (isSubmitting) return,
 
-
     try {
       setIsSubmitting(true),
       // Pass email and password to the login function
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -213,6 +228,9 @@ export function LoginForm() {
         if (result?.error && result?.error?.message) {
           if (result.error.message.toLowerCase().includes("email not confirmed")) {
             errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link."
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           } else {
             errorMessage = result.error.message
           }
@@ -255,6 +273,7 @@ if ( {) {
     router.push (`/verify - status?email=${encodeURIComponent (email)}`);
   }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         form.setError("root", { message: errorMessage })
       } else {
@@ -269,6 +288,8 @@ import { fireEvent } from '@/lib/analytics',;
 import { useAuth } from "@/context/auth/AuthProvider",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {;
 =======
     resolver: zodResolver(loginSchema) as any
@@ -279,6 +300,7 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   FormMessage} from "@/components/ui/form",;
 import { Alert, AlertDescription } from "@/components/ui/alert",;
@@ -319,6 +341,9 @@ export function LoginForm() {;
           }
         }
         form.setError("root", { message: errorMessage });
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       } else {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -327,6 +352,7 @@ export function LoginForm() {;
     } finally {;
       setIsSubmitting(false);
     }
+<<<<<<< HEAD
   },;
   const handleResendEmail = async () => {;
     const email = form.getValues('email'),;
@@ -336,10 +362,14 @@ export function LoginForm() {;
     }
     setIsResending(true),;
     setVerificationMessage(''),;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     try {;
       const response = await fetch('/api/auth/resend-verification-email', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
+<<<<<<< HEAD
 <<<<<<< HEAD
         body: JSON.stringify({ email });
       }),;
@@ -348,6 +378,9 @@ export function LoginForm() {;
         setVerificationMessage('Verification email sent. Please check your inbox.');
       } else {;
         setVerificationMessage(data.message || 'Failed to resend verification email.');
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -356,6 +389,7 @@ export function LoginForm() {;
     } finally {;
       setIsResending(false);
     }
+<<<<<<< HEAD
   },;
   const handleCheckStatus = () => {;
     const email = form.getValues('email'),;
@@ -415,6 +449,9 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Form {...form}>
       {form.formState.errors.root && (
@@ -424,9 +461,13 @@ if ( {) {
       )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <form;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -445,6 +486,7 @@ if ( {) {
             <FormItem>
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
               <FormControl>
+<<<<<<< HEAD
                 <div className="relative">
                   <Input
 <<<<<<< HEAD
@@ -472,16 +514,20 @@ if ( {) {
                     {...field}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   />
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                 </div>
               </FormControl>
               <FormMessage className="text-red-400" />
             </FormItem>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className="space-y-6";
       >;
         <FormField;
@@ -514,8 +560,12 @@ if ( {) {
               <FormMessage className='text-red-400' />
             </FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           )}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -590,6 +640,7 @@ if ( {) {
                   </Button>;
                 </div>;
               </FormControl>;
+<<<<<<< HEAD
               <FormMessage className="text-red-400" />;
             </FormItem>;
           )}
@@ -617,6 +668,15 @@ if ( {) {
                 />
 
 
+=======
+
+              <FormControl>
+            field: ControllerRenderProps<LoginFormValues, 'rememberMe'>;
+          }) => (;
+            <FormItem className='flex flex-row items-start space-x-3 space-y-0'>;
+              <FormControl>;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </FormControl>
 =======
             field: ControllerRenderProps<LoginFormValues, 'rememberMe'>;
@@ -633,12 +693,16 @@ if ( {) {
               </div>
             </FormItem>
           )}
+<<<<<<< HEAD
         />
         <div className="flex items-center justify-between">
           <div className="text-sm">
             {/* "Remember me" checkbox is now above, this div can be used for "Forgot Password" if it's still needed */}
 <<<<<<< HEAD
             {/* If "Remember me" was previously here, it's moved. */}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>
 =======
             {/* If "Remember me" was previously here, it's moved. */}          </div>
@@ -650,6 +714,7 @@ if ( {) {
           </div>
         </div>
         <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -715,6 +780,10 @@ if ( {) {
             type='button'
             variant='outline'
             className='w-1/2 ml-2'            Check status
+=======
+
+            Check status
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </Button>
         </div>
         <p className="text-sm text-center mt-4">
@@ -726,6 +795,7 @@ if ( {) {
     </Form>
 <<<<<<< HEAD
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
           </Button>;
           <Button;
@@ -745,6 +815,9 @@ if ( {) {
 return;
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }setIsResending (true);'
 setVerificationMessage ('')
 try {'
@@ -774,10 +847,13 @@ if (!email) {'
   message: 'Please enter your email address.'
 })
 
+<<<<<<< HEAD
 
 return;
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }router.push (`/verify-status?email=$ {
   encodeURIComponent (email)
 }`)
@@ -798,12 +874,17 @@ return;
   isResending ? 'Sending...': 'Resend / Verify e-mail'
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>)
 }'"}
+<<<<<<< HEAD
             className='font-medium text-zion-cyan hover:text-zion-cyan-light'>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             Create account;
           </Link>;
         </p>;
       </form>;
+<<<<<<< HEAD
     </Form>;
   );
 <<<<<<< HEAD
@@ -930,3 +1011,6 @@ return;
       </form>;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

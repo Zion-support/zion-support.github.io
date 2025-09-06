@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -80,6 +81,10 @@ export function WebhookManager() {
     webhooks,
     loading,     error,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    error,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React, { useEffect, useState } from 'react';
 import {;
@@ -215,10 +220,13 @@ export function WebhookManager() {;
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     
     await createWebhook(
@@ -232,10 +240,13 @@ export function WebhookManager() {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // Reset form
     setNewWebhook({
       name: "",
@@ -254,10 +265,13 @@ export function WebhookManager() {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="space-y-8">
       <Card>
@@ -325,12 +339,15 @@ export function WebhookManager() {;
               <Select
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className="space-y-2">
               <Label htmlFor="webhook-url">URL</Label>
               <Input 
@@ -459,6 +476,7 @@ export function WebhookManager() {;
                   {eventOptions.find(e => e.value === event)?.label || event}
                 </ClickableBadge>;
               ))}
+<<<<<<< HEAD
             </div>;
             <div className="flex space-x-2">;
               <Select;
@@ -468,6 +486,9 @@ export function WebhookManager() {;
                 <SelectTrigger className="w-full">
 <<<<<<< HEAD
                   <SelectValue placeholder="Select event" />
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </SelectTrigger>
 =======
                   <SelectValue placeholder="Select event" />                </SelectTrigger>
@@ -759,7 +780,10 @@ export function WebhookManager() {;
                           variant='outline'
                           size='sm'
 
+<<<<<<< HEAD
           
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret (optional)</Label>
 
@@ -770,10 +794,13 @@ export function WebhookManager() {;
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         {webhook.url}
                       </CardDescription>
                     </div>
@@ -795,7 +822,10 @@ export function WebhookManager() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           {webhook.is_active ? 'Disable' : 'Enable'}
                         </Button>
                       </div>
@@ -920,7 +950,10 @@ export function WebhookManager() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     variant="outline"
                     size="sm"
                     onClick={() => deleteWebhook(webhook.id)}
@@ -937,6 +970,7 @@ export function WebhookManager() {;
                       <SelectItem value="test_event">Test (generic)</SelectItem>
                       {webhook.event_types.map((event: WebhookEventType) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <SelectItem key={event} value={event}>
                           Test {eventOptions.find(e => e.value === event)?.label || event}
                         </SelectItem>;
@@ -949,6 +983,8 @@ export function WebhookManager() {;
           </div>;
         )}
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                         <SelectItem key={event} value={event}>
                           Test {eventOptions.find(e => e.value === event)?.label || event}
@@ -974,6 +1010,7 @@ export function WebhookManager() {;
                 <div className='flex justify-between'>
                   <span className='font-medium'>Status:</span>
 
+<<<<<<< HEAD
         {testResult && (;
           <Card className='mt-4 border-blue-200'>;
             <CardHeader>;
@@ -983,6 +1020,8 @@ export function WebhookManager() {;
               <div className='space-y-2'>;
                 <div className='flex justify-between'>;
                   <span className='font-medium'>Status:</span>;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <span
                     className={
                       testResult && testResult.status>= 200 && testResult && testResult.status < 300;
@@ -991,9 +1030,12 @@ export function WebhookManager() {;
                     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
         {testResult && (;
           <Card className="mt-4 border-blue-200">;
@@ -1014,8 +1056,6 @@ export function WebhookManager() {;
 <<<<<<< HEAD
                     {testResult.responseBody || '<empty>'}
 =======
-
-
 
                     {testResult.responseBody || '<empty>'}
                   </pre>
@@ -1120,6 +1160,7 @@ newWebhook && newWebhook.secret || undefined);";
 
 }
 
+<<<<<<< HEAD
 }newWebhook.url
 newWebhook.eventTypes
 newWebhook.secret |undefined);"
@@ -1247,3 +1288,5 @@ event_types: [...new_webhook.event_types, new_webhook.selected_event];
                   <span className='font-medium'>Response:</span>
                   <pre className='mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto'>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

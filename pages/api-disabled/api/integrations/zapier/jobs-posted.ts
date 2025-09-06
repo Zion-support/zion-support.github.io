@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages/api-disabled/api/integrations/zapier/jobs-posted.ts
 <<<<<<< HEAD:pages/api/integrations/zapier/jobs-posted.ts
 <<<<<<< HEAD
 =======
@@ -10,6 +11,9 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/integrations/zapier/jobs-posted.ts
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -42,6 +46,7 @@ export default function handler($2) {;
   );
   res.status(200).json({ events });
 }
+<<<<<<< HEAD:pages/api-disabled/api/integrations/zapier/jobs-posted.ts
 <<<<<<< HEAD:pages/api/integrations/zapier/jobs-posted.ts
 <<<<<<< HEAD
 =======
@@ -78,6 +83,9 @@ export default function handler($2) {;
   if (req.method !== "GET");
     return res.status(405).json({ error: "Method not allowed" });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/integrations/zapier/jobs-posted.ts
   const { since } = req.query as { since?: string }
   const state = readState();
   const sinceTs = since ? Number(since) : 0;
@@ -87,12 +95,15 @@ const events = state && state.events.filter(
   res && res.status(200).json({ events });
 }
 
+<<<<<<< HEAD:pages/api-disabled/api/integrations/zapier/jobs-posted.ts
 
 
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/integrations/zapier/jobs-posted.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler($2) {;
   res.status(200).json({ message: 'API endpoint' });
@@ -108,8 +119,11 @@ export default function handler($2) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD:pages/api-disabled/api/integrations/zapier/jobs-posted.ts
 ;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/integrations/zapier/jobs-posted.ts
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state  } from '../../../../lib / integrations / file_store';
@@ -131,6 +145,7 @@ function handler() {;
   );
   res.status (200).json ({ events });
 }
+<<<<<<< HEAD:pages/api-disabled/api/integrations/zapier/jobs-posted.ts
 <<<<<<< HEAD:pages/api/integrations/zapier/jobs-posted.ts
 <<<<<<< HEAD
 =======
@@ -151,3 +166,6 @@ function handler() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/integrations/zapier/jobs-posted.ts
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/integrations/zapier/jobs-posted.ts

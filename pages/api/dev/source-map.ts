@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -17,6 +18,10 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
 import { getGitStatus, requireRoles } from "../../../utils/devAccess";
@@ -30,10 +35,17 @@ import { getGitStatus, requireRoles } from "../../../utils/devAccess",;
 ;
 export default function handler(req: any, res: any) {
   res.status(200).json({ message: 'Source map endpoint' });
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap",
 import { getGitStatus, requireRoles } from "../../../utils/devAccess",
 <<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from "next"
+import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap"
+import { getGitStatus, requireRoles } from "../../../utils/devAccess"
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const identity = requireRoles(req, res, ["admin", "maintainer"]),
   if (!identity) return,
@@ -64,6 +76,40 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';
+import { getGitStatus, require_roles  } from '../../../utils / dev_access';
+
+;
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  const identity = require_roles (req, res, ["admin", "maintainer"])
+  // Check condition
+if (return, ) {
+  $2
+}
+  // Check condition
+if ( {) {
+  $2
+}
+    const nodes = getSourceMapWithExistence ()
+    const git = getGitStatus ()
+    res.status (200).json ({ nodes, status: { git_connected: git.connected, git_branch: git.branch } })
+    return;
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    const { path: repoRelativePath } = req.body || {}
+
+    if (typeof repoRelativePath !== "string" || !repoRelativePath.startsWith("/")) {
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return;
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
@@ -352,6 +398,7 @@ export default function handler(req, res) {
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
@@ -379,3 +426,6 @@ export default function handler(req, res) {
 =======
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

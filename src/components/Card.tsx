@@ -1,15 +1,7 @@
 import React from 'react';
 
 interface CardProps {
-<<<<<<< HEAD
-  children?: React.ReactNode;
-=======
-  children: React.ReactNode;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+
   title?: string;
   description?: string;
   className?: string;
@@ -36,6 +28,7 @@ const Card: React.FC<CardProps> = ({
   onClick 
 }) => {
   return (
+<<<<<<< HEAD
     <div 
       className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow ${className}`}
       onClick={onClick}
@@ -46,6 +39,9 @@ const Card: React.FC<CardProps> = ({
 <<<<<<< HEAD
     <div 
       className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 ${className}`}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       onClick={onClick}
     >
       {title && (
@@ -54,12 +50,13 @@ const Card: React.FC<CardProps> = ({
       {description && (
         <p className="text-gray-600 mb-4">{description}</p>
       )}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       {children}
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default Card;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -95,3 +92,5 @@ export default Card;
 =======
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

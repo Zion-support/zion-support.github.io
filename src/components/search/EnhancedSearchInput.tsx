@@ -19,12 +19,15 @@ import { logInfo, logWarn } from '@/utils/productionLogger',
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -91,6 +94,7 @@ export function EnhancedSearchInput({
   const [loading, setLoading] = useState(false),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const debounced = useDebounce(value, 200),
 =======
 
@@ -99,6 +103,10 @@ export function EnhancedSearchInput({
   const debouncedFetchSuggestions = useMemo(
     () =>
       debounce(async (query: string) => {
+=======
+  const debouncedFetchSuggestions = useMemo(
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         if (!query.trim()) {
 <<<<<<< HEAD
           setApiSuggestions([]),
@@ -131,6 +139,7 @@ interface EnhancedSearchInputProps {
   on_change: (value: string, ) => void,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   /**;
+<<<<<<< HEAD
   * Optional callback when a suggestion is selected. This allows parent;
   * components to perform actions such as navigation.;
   */;
@@ -172,6 +181,10 @@ function EnhancedSearchInput() {
   $2
 }
           setApiSuggestions ([]),          return;
+=======
+
+          return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }
 <<<<<<< HEAD
 ;
@@ -255,10 +268,13 @@ if ( {) {
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }, 300),;
     [];
   ),;
@@ -314,10 +330,13 @@ if ( {) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (onSelectSuggestion) {
       logInfo('Calling onSelectSuggestion with:', { data: suggestionObj }),
       onSelectSuggestion(suggestionObj)
@@ -420,10 +439,15 @@ if ( {) {
 
   return () => {
     // Cleanup function;
+<<<<<<< HEAD
 }
 }, []); []);
     debouncedFilterSuggestions (value, search_suggestions);
     setHighlightedIndex (-1);    return () => {
+=======
+
+    return () => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       debouncedFilterSuggestions.cancel()
 }
 }, [value, searchSuggestions, debouncedFilterSuggestions])
@@ -838,6 +862,7 @@ if ( {) {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   },
   
 =======
@@ -987,6 +1012,72 @@ if ( {) {
           }}
           onBlur={(e) => {;
             const relatedTarget = e && e.relatedTarget as HTMLElement;            if (!containerRef && containerRef.current || !containerRef && containerRef.current.contains(relatedTarget as Node)) {;              setIsFocused(false);
+=======
+
+  };
+
+      // Provide a sensible default navigation if the parent did not supply a handler
+
+      logWarn('onSelectSuggestion callback not provided'),
+
+      if (suggestionObj.id) {
+        router.push(`/marketplace/listing/${suggestionObj.id}`)
+      } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
+        router.push(suggestionObj.slug)
+      } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {
+        router.push(`/blog/${suggestionObj.slug}`)
+      } else {
+
+        router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
+
+  return (
+
+      aria-expanded = {isFocused && filteredSuggestions && filteredSuggestions.length> 0,}
+      aria-haspopup="listbox";
+      aria-controls="autocomplete-suggestions-list" // Added aria-controls;
+      onClick = {(,) => inputRef && inputRef.current?.focus(),}
+    >;
+      <div className="relative flex items-center w-full">;
+        <Search
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
+        />;
+
+        <Input
+
+          ref={inputRef}
+
+          type="text"
+          id="enhanced-search-input"
+          name="search"
+          value={value}
+
+    <div;
+      className="relative w - full";
+      ref = {container_ref, }
+      role="combobox";
+      aria - expanded = {is_focused && filtered_suggestions.length > 0, }
+      aria - haspopup="listbox";
+      aria - controls="autocomplete - suggestions - list" // Added aria - controls;
+      on_click = {(, ) => input_ref.current?.focus (), }
+    >;
+      <div className="relative flex items - center w - full">;
+        <Search;
+          className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate";
+        />;
+        <Input;
+          ref = {input_ref, }
+          type="text";
+          id="enhanced - search - input";
+          name="search";
+          value={value}
+          on_change={(e) => {
+            on_change (e.target.value);
+            setEnterHandledPostFocus (false);
+
+          onChange={(e) => {;
+
+              setIsFocused(false);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               setHighlightedIndex(-1);
             }
             setValueOnFocus(null);
@@ -1003,11 +1094,15 @@ if ( {) {
           <button
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
 <<<<<<< HEAD
+<<<<<<< HEAD
             onClick={() => onChange('')}
             aria-label="Clear search"
           >
             <X className="h-4 w-4" />
           </button>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         )}
 <<<<<<< HEAD
 =======

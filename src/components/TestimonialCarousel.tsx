@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from 'react';
@@ -22,17 +23,11 @@ import React from 'react';
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-interface Testimonial {
-  id: number;
-  name: string;
-  company: string;
-  role: string;
-  content: string;
-  rating: number;
-  avatar?: string;
-}
 
+<<<<<<< HEAD
 const TestimonialCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -227,6 +222,8 @@ export default TestimonialCarousel;
 =======
 >>>>>>> main
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {  Carousel,  Carousel
   CarouselContent
   CarouselItem
@@ -350,9 +347,12 @@ const TestimonialCarousel: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {  Carousel,  Carousel,;
   CarouselContent,;
   CarouselItem,;
@@ -500,7 +500,6 @@ function TestimonialCarousel() {
               loop: true
             }}
 
-
             className='w - full';
           >;
             <CarouselContent>;
@@ -541,7 +540,6 @@ function TestimonialCarousel() {
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 
-
                             width={80}
                             height={80}
 
@@ -549,11 +547,14 @@ function TestimonialCarousel() {
                           />
                           <Image;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                             src={testimonial.avatar}
                             alt={testimonial.author}
                             width={80}
@@ -594,9 +595,6 @@ function TestimonialCarousel() {
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 
-
-
-
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-4">
                           <Image
@@ -605,11 +603,14 @@ function TestimonialCarousel() {
                             width={32}
                             height={32}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         </div>
                         <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />
                         <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>
@@ -618,10 +619,13 @@ function TestimonialCarousel() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <CardFooter className="p-6 pt-0">
                       <Button variant="link" className="text-zion-cyan p-0" asChild>
                         <Link href={`/case-studies/${testimonial.slug}`}>Read Case Study →</Link>
@@ -640,11 +644,13 @@ function TestimonialCarousel() {
             <div className="flex justify-center mt-8 gap-2">
 =======
 
-
             <div className="flex justify-center mt-8 gap-2">
 
+<<<<<<< HEAD
 
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
             </div>
@@ -665,6 +671,7 @@ function TestimonialCarousel() {
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>
     </section>
@@ -837,3 +844,9 @@ export default TestimonialCarousel;
 =======
 export default TestimonialCarousel;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      </div>
+    </section>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

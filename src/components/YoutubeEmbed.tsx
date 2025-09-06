@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Image from 'next/image',;
 import { Loader2 } from 'lucide-react';
 import { useState } from 'react',;
@@ -23,11 +24,16 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
         <>
           <div className="absolute inset-0 flex items-center justify-center bg-black/30">            <Loader2 className="h-8 w-8 animate-spin text-white" />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+            <Loader2 className="h-8 w-8 animate-spin text-white" />
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>
         </>
       )}
       <iframe
         className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
+<<<<<<< HEAD
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'        allowFullScreen
       />
     </div>
@@ -49,11 +55,16 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
   )
         loading="lazy";
         onLoad={() => setLoaded(true)}        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
+=======
+
+        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         allowFullScreen;
       />;
     </div>;
   );
 
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -103,3 +114,5 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
   );
 }
 ;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

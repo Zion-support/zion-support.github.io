@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from 'react',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -46,6 +47,8 @@ export function PortfolioBuilder() {;
   
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -63,12 +66,15 @@ export function PortfolioBuilder() {;
           Add Project
         </Button>
       </div>
+<<<<<<< HEAD
       
 <<<<<<< HEAD
       {/* Edit or Add Form */}
       {(showAddProject || editingProject) && (
         <Card>
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           Add Project
         </Button>
@@ -147,7 +153,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
   const [ showAddProject, setShowAddProject ] = useState(false),
   const [ editingProject, setEditingProject ] = useState<PortfolioProject | null>(null),
 
-  
   useEffect(() => {
     fetchProjects()
   }, [fetchProjects]);
@@ -203,6 +208,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
         <Card>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -218,6 +224,12 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
 <<<<<<< HEAD
               onCancel={() => {;
+=======
+          <CardContent className="pt-6">
+            <h2 className="text-xl font-semibold mb-6">
+              {editingProject ? 'Edit Project' : 'Add New Project'}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 setShowAddProject(false);
                 setEditingProject(null);
               }}
@@ -232,12 +244,18 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
                 setEditingProject(null)
 
               }}
+<<<<<<< HEAD
             />
           </CardContent>
         </Card>      )}
 
       
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      )}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Projects List */}
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -260,10 +278,13 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
               project={project}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <CardContent>
               <div className="flex flex-col items-center gap-4">
                 <div className="bg-muted/50 p-6 rounded-full">
@@ -278,11 +299,14 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Button 
                   onClick={() => setShowAddProject(true)} 
                   className="mt-2"

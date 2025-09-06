@@ -110,7 +110,10 @@ import { AlertCircle } from 'lucide-react';
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
+<<<<<<< HEAD
 export function SignUpForm() {;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 ;
 import { use_router } from 'next / router';
@@ -159,8 +162,13 @@ function SignUpForm() {
     try {;
       setShowVerificationMessage(false), // Reset verification message;
       if (signupMode) {;
+<<<<<<< HEAD
         const result = await signUp(formData && formData.email, formData && formData.password, {;
           name: formData && formData.name}),;        if (result?.error) {;
+=======
+
+        if (result?.error) {;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           throw new Error(result.error as any), // Cast to any if type is AuthError;
         }
 
@@ -174,10 +182,14 @@ function SignUpForm() {
           setShowVerificationMessage(true);
         } else {;
           // Only navigate if email verification is not required;
+<<<<<<< HEAD
           router && router.push("/mobile")
 };
       } else {;
         const { error } = await login(formData && formData.email, formData && formData.password);
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         if (error) {;
           throw new Error(error);
         }
@@ -201,8 +213,18 @@ function SignUpForm() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   };
+<<<<<<< HEAD
+=======
+
+  const handleGoogleLogin = async () => {;
+    try {;
+      await loginWithGoogle();
+    } catch (err: any) {;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   },
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 =======
@@ -215,6 +237,11 @@ function SignUpForm() {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  return (
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="space-y-2">
         <Button 
           variant="outline" 
@@ -232,6 +259,7 @@ function SignUpForm() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Button 
           variant="outline" 
 =======
@@ -246,6 +274,11 @@ function SignUpForm() {
           variant="outline" 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        <Button 
+          variant="outline" 
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -315,12 +348,15 @@ function SignUpForm() {
       </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Error Alert */}
       {error && (
         <Alert variant="destructive" className="mb-4">
@@ -341,6 +377,7 @@ function SignUpForm() {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -348,6 +385,10 @@ function SignUpForm() {
       )}
 
       
+=======
+      )}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <form onSubmit={handleSubmit} className="space-y-4">
         {signupMode && (
           <div className="space-y-2">
@@ -367,10 +408,13 @@ function SignUpForm() {
               name="name"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               value={formData.name}
               onChange={handleInputChange}
               required;
@@ -379,10 +423,13 @@ function SignUpForm() {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               placeholder="Enter your full name"
             />
             {fieldErrors.name && (
@@ -405,10 +452,13 @@ function SignUpForm() {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             value={formData.email}
             onChange={handleInputChange}
             required;
@@ -416,7 +466,10 @@ function SignUpForm() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             placeholder="Enter your email"
           />
           {fieldErrors.email && (
@@ -434,10 +487,13 @@ function SignUpForm() {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             value={formData.password}
             onChange={handleInputChange}
             required;
@@ -445,7 +501,10 @@ function SignUpForm() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             placeholder="Create a password"
           />
           <PasswordStrengthMeter password={formData.password} />
@@ -459,12 +518,15 @@ function SignUpForm() {
         </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Button
           type="submit"
           className="w-full py-6"
@@ -479,11 +541,14 @@ function SignUpForm() {
             signupMode ? "Create Account" : "Sign In"
           )}
 
+<<<<<<< HEAD
       
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <p className="text-center text-sm">
         {signupMode
           ? "Already have an account? "
@@ -585,7 +650,10 @@ function SignUpForm() {
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   error;
 }= await login (form_data.email, form_data.password);

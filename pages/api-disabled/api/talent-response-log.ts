@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages/api-disabled/api/talent-response-log.ts
 <<<<<<< HEAD:pages/api/talent-response-log.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28,6 +29,10 @@ export default function handler($2) {;
   if (req.method !== 'POST') {;
     res.setHeader('AllowPOST');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/talent-response-log.ts
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/talent-response-log.ts
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
   const { talentId, action } = req.body |{}
@@ -52,6 +57,7 @@ export default function handler($2) {;
   const payload = { talentId, action, at: new Date().toISOString() }
 ;
   return res.status(200).json({ ok: true, data: payload })
+<<<<<<< HEAD:pages/api-disabled/api/talent-response-log.ts
 <<<<<<< HEAD
   const payload = { talentId, action, at: new Date().toISOString() },
   return res.status(200).json({ ok: true, data: payload });
@@ -133,3 +139,6 @@ if ( {) {
 =======
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/talent-response-log.ts

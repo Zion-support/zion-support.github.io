@@ -13,6 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const cookie = clearSessionCookie();
   res.setHeader('Set-Cookie', cookie);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   res.status(200).json({ ok: true })
@@ -25,11 +26,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 }
 
+=======
+  res.status(200).json({ ok: true })
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const cookie = clearSessionCookie();
   res.setHeader('Set-Cookie', cookie);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   res.status(200).json({ ok: true })
+<<<<<<< HEAD
 }import { clearSessionCookie } from '../../../utils / auth - utils';
+=======
+}
+
+import { clearSessionCookie } from '../../../utils / auth - utils';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export default /**
  * handler - Function description
@@ -45,6 +56,7 @@ function handler() {
   res.set_header ('Set - Cookie', cookie);
   res.status (200).json ({ ok: true });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -86,3 +98,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

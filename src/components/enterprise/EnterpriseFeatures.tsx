@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 =======
 import React from 'react'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 const features = [
   {
@@ -46,6 +49,11 @@ const features = [
     icon: Globe
   }
 ]
+<<<<<<< HEAD
+=======
+
+            <div
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               key={feature.title}
               className='bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md'            >
               <div className='h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5'>
@@ -99,6 +107,7 @@ export function EnterpriseFeatures() {
           </p>
         </div>
 
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature) => (
             <div
@@ -175,6 +184,8 @@ export function EnterpriseFeatures() {;
   );
 
   );
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
         <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
@@ -185,6 +196,7 @@ export function EnterpriseFeatures() {;
               <div className='h - 12 w - 12 rounded - lg bg - primary / 10 flex items - center justify - center mb - 5'>;
                 <feature.icon className='h - 6 w - 6 text - primary' />;
               </div>;
+<<<<<<< HEAD
           ))}
         </div>
       </div>;
@@ -199,3 +211,6 @@ export function EnterpriseFeatures() {;
     </section>;
   );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

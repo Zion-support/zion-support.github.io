@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -22,6 +23,8 @@ const NotFoundPage = () => {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import MainLayout from '../components/layout/MainLayout';
 
 const Page = () => {
@@ -43,6 +46,7 @@ const Page = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Page;
 =======
 <<<<<<< HEAD
@@ -205,3 +209,6 @@ const NotFoundPage: NextPage = () => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+export default Page;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -96,7 +96,10 @@ import React from 'react';
             </nav>;
           </div>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">
             <button
@@ -104,10 +107,13 @@ import React from 'react';
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded={mobileMenuOpen}
@@ -132,7 +138,10 @@ import React from 'react';
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
@@ -154,10 +163,13 @@ import React from 'react';
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 aria-label={t('auth.signup')}
 
                 data-testid="signup-nav-link"
@@ -1245,11 +1257,16 @@ import React from 'react';
               </div>;
 
               {/* Mobile Services */}
+<<<<<<< HEAD
               <div className="space-y-2">;
                 <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">;
                   Services;
                 </div>;
                 {services && services.map((service) => (;                  <Link
+=======
+
+                  <Link
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     key={service.name}
                     to={service.href}
                     onClick={closeMobileMenu}

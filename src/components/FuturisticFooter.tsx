@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-=======
-</ArrowRight>;
-                      </Link>;
-                    </li>;
-                </ul>;
-              </div>;
-          </div>";
 
+<<<<<<< HEAD
           <div className="pt - 8 border - t border - slate-800 / 50">";
 </div>";
             <div className="flex flex - col md: flex - row justify - between items - center space - y-4 md:space-y-0">", </div>",
@@ -441,3 +434,5 @@ export default function FuturisticFooter() {
 =======
     </footer>",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

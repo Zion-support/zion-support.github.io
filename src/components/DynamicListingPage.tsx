@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { GradientHeading } from "@/components/GradientHeading",
@@ -8,6 +9,8 @@ import { Input } from "@/components/ui/input",
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 =======
 export function DynamicListingPage({
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   title,
   description,
@@ -20,6 +23,7 @@ export function DynamicListingPage({
         ? prev.filter(c => c !== category)
         : [...prev, category]
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -229,12 +233,18 @@ export function DynamicListingPage({
         : [...prev, category]
     )  // Swap icons to match action
   const ToggleViewIcon = isGrid ? (
+=======
+
+  // Swap icons to match action
+  const ToggleViewIcon = isGrid ? (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <List className='h-4 w-4' />
   ) : (
 
     if (min == null || max == null || isNaN(min) || isNaN(max)) return;
 
     setCurrentPriceFilter([min, max])
+<<<<<<< HEAD
   }
   },
   const clearCategories = () => setSelectedCategories([]),
@@ -249,6 +259,10 @@ export function DynamicListingPage({
   let filteredListings: ProductListing[] = []
   try {
     filteredListings = allListings.filter(listing => {      const matchesSearch = null;    <LayoutGrid className="h-4 w-4" />
+=======
+
+    <LayoutGrid className="h-4 w-4" />
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),
   const [isLoading, setIsLoading] = useState(false),
   const [priceRange, setPriceRange] = useState<PriceRange>({
@@ -291,26 +305,31 @@ export function DynamicListingPage({
     filteredListings = allListings.filter((listing) => {
 <<<<<<< HEAD
       const matchesSearch =
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         !searchQuery ||
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         (listing.tags &&
           listing.tags.some((tag: string) =>
+<<<<<<< HEAD
             tag.toLowerCase().includes(searchQuery.toLowerCase()))),
 
       const matchesBrand =
         selectedBrand === "all" ||
         (listing.brand && listing.brand === selectedBrand),
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       const matchesSpecs =
         !specQuery ||
         (listing.specifications &&
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -343,6 +362,9 @@ export function DynamicListingPage({
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         selectedRating === null ||
         (listing.rating !== undefined && listing.rating >= selectedRating),
 
@@ -355,6 +377,7 @@ export function DynamicListingPage({
         matchesSpecs &&
         matchesAvailability
       )
+<<<<<<< HEAD
 <<<<<<< HEAD
     }),
     filteredListings.sort((a, b) => {
@@ -419,6 +442,9 @@ export function DynamicListingPage({
         default:;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           return (
             new Date(b.createdAt).getTime() -
             new Date(a.createdAt).getTime()
@@ -550,6 +576,7 @@ export function DynamicListingPage({;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleRequestQuote = (listingId: string) => {
     setIsLoading(true),
 
@@ -565,6 +592,8 @@ export function DynamicListingPage({;
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleRequestQuote = (listingId: string) => {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -578,13 +607,18 @@ export function DynamicListingPage({;
           description: `Your quote request for ${listing.title} has been sent.`
         })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         router.push ('/request - quote');
 
       }
     }, 500);
   }
+<<<<<<< HEAD
     const listing = allListings.find((item) => item.id === listingId),
 
     setTimeout(() => {
@@ -827,6 +861,13 @@ export function DynamicListingPage(): any ({;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+        // Store quote data in sessionStorage for the request-quote page
+        const quoteData = {
+          serviceType: categorySlug
+          specificItem: {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -840,31 +881,41 @@ export function DynamicListingPage(): any ({;
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   Categories
                 </label>
                 <div className="space-y-2">
                   {categoryFilters.map(filter => (
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <div key={filter.value} className="flex items-center">
                       <Checkbox
                         id={`cat-${filter.value}`}
                         checked={selectedCategories.includes(filter.value)}
                         onCheckedChange={() => toggleCategory(filter.value)}
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
                       />
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       <label
                         htmlFor={`cat-${filter.value}`}
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer"
                       >
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 =======
 
@@ -931,8 +982,12 @@ export function DynamicListingPage(): any ({;
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer";
                       >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         {filter.label}
                       </label>;
                     </div>;
@@ -959,10 +1014,13 @@ export function DynamicListingPage(): any ({;
                         </SelectItem>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     value={selectedBrand}
                     onValueChange={(value: string) => setSelectedBrand(value)}
                   >
@@ -983,6 +1041,7 @@ export function DynamicListingPage(): any ({;
                 </div>;
               )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -1018,6 +1077,13 @@ export function DynamicListingPage(): any ({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="bg-zion-blue border border-zion-blue-light text-white"
                 />
+=======
+                  value={specQuery}
+                  onChange={(e: React && React.ChangeEvent<HTMLInputElement>) =>;
+                    setSpecQuery(e && e.target.value);
+                  }
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </div>
 
 =======
@@ -1027,6 +1093,7 @@ export function DynamicListingPage(): any ({;
                   <label className="text-sm font-medium text-zion-slate-light block mb-2">
                     Availability
                   </label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1050,6 +1117,9 @@ export function DynamicListingPage(): any ({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   >
                     <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                       <SelectValue placeholder="Select Availability" />
@@ -1058,15 +1128,17 @@ export function DynamicListingPage(): any ({;
                       <SelectItem value="all" className="text-white">
                         All
                       </SelectItem>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       {availabilityOptions.map((a) => (
                         <SelectItem key={a || 'unknown-availability'} value={a || ''} className="text-white">
                           {a || 'N/A'}
                         </SelectItem>;
                       ))}
+<<<<<<< HEAD
                     </SelectContent>
                   </Select>
                 </div>
@@ -1120,14 +1192,19 @@ export function DynamicListingPage(): any ({;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+                    value={currentPriceFilter}
+                    onValueChange={handleSliderChange}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <span>${currentPriceFilter[0].toLocaleString()}</span>
                     <span>${currentPriceFilter[1].toLocaleString()}</span>
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
                     className='mb-4'                  />;
                   <div className='flex justify-between text-sm text-zion-slate-light'>;
                     <span>${currentPriceFilter[0].toLocaleString()}</span>;
@@ -1143,11 +1220,14 @@ export function DynamicListingPage(): any ({;
                 <div className='flex flex-wrap gap-2'>;
                   {[null, 3, 4, 5].map(rating => (;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <Button
                       key={rating === null ? 'any' : rating}
                       variant='outline'
                       size='sm'
 
+<<<<<<< HEAD
                       onClick={() => {;
                         logInfo('Rating selected:', { data: rating });
                         setSelectedRating(rating);                      }}
@@ -1160,6 +1240,8 @@ export function DynamicListingPage(): any ({;
                     onValueChange={handleSliderChange}
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       aria-pressed = {selectedRating === rating,}
                       className={`{;
                         selectedRating === rating;
@@ -1176,6 +1258,7 @@ export function DynamicListingPage(): any ({;
                               key={i}
                               className='h-3 w-3 fill-zion-cyan text-zion-cyan'                            />;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -1198,6 +1281,8 @@ export function DynamicListingPage(): any ({;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       className={`{
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -1209,10 +1294,11 @@ export function DynamicListingPage(): any ({;
                       {rating === null ? (
                         "Any"
                       ) : (
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         <div className="flex items-center">
                           {[...Array(rating)].map((_, i) => (
                             <Star
@@ -1220,6 +1306,7 @@ export function DynamicListingPage(): any ({;
                               className="h-3 w-3 fill-zion-cyan text-zion-cyan"
                             />
                           ))}
+<<<<<<< HEAD
                           <span className="ml-1">& Up</span>
                         </div>
                       )}
@@ -1238,6 +1325,9 @@ export function DynamicListingPage(): any ({;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   logInfo("Clearing filters"),
 =======
                 </div>
@@ -1257,7 +1347,10 @@ export function DynamicListingPage(): any ({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 }}
               >
                 Clear All
@@ -1265,9 +1358,8 @@ export function DynamicListingPage(): any ({;
             </div>
 <<<<<<< HEAD
           </div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
                 </div>;
               </div>;
 
@@ -1478,11 +1570,14 @@ export function DynamicListingPage(): any ({;
                   setSpecQuery(""),;
                   setSelectedAvailability("all");
                 }}
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               >;
                 Clear All;
               </Button>;
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1508,6 +1603,8 @@ export function DynamicListingPage(): any ({;
 
                 <div className="flex items-center gap-2 ml-auto">
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                   <Select value={sortOption} onValueChange={setSortOption}>
                     <SelectTrigger className='w-[150px] bg-zion-blue border border-zion-blue-light text-white'>
@@ -1529,6 +1626,7 @@ export function DynamicListingPage(): any ({;
                     </SelectContent>
                   </Select>
 
+<<<<<<< HEAD
                     onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => {;
                       logInfo('Search query:', { data: e && e.target.value });
                       setSearchQuery(e && e.target.value);                    }}
@@ -1587,6 +1685,8 @@ export function DynamicListingPage(): any ({;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     variant="outline"
 =======
           </div>                    variant="outline"
@@ -1597,6 +1697,7 @@ export function DynamicListingPage(): any ({;
                     title={isGrid ? "List view" : "Grid view"}
                     className="border-zion-blue-light text-zion-slate-light focus-visible:ring-zion-purple"
                   >
+<<<<<<< HEAD
 <<<<<<< HEAD
                     {ToggleViewIcon}
                     <span className="sr-only">
@@ -1626,6 +1727,10 @@ export function DynamicListingPage(): any ({;
                 </div>
               </div>
             </div>
+=======
+
+                    {ToggleViewIcon}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 Showing {filteredListings.length} results
@@ -1637,6 +1742,7 @@ export function DynamicListingPage(): any ({;
 <<<<<<< HEAD
 
             {isLoading ? (
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div
                 className={
@@ -1697,15 +1803,19 @@ export function DynamicListingPage(): any ({;
                     : "flex flex-col gap-6"
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 }
               >;
                 {[1, 2, 3, 4].map((i) => (;
                   <div;
                     key={i}
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     className="rounded-lg overflow-hidden border border-zion-blue-light"
                   >
                     <Skeleton height={192} width="100%" />
@@ -1725,6 +1835,7 @@ export function DynamicListingPage(): any ({;
                     </div>
                   </div>
                 ))}
+<<<<<<< HEAD
               </div>
             ) : filteredListings.length > 0 ? (
               <div
@@ -1777,6 +1888,11 @@ export function DynamicListingPage(): any ({;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+                <Button
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   variant="outline"
                   onClick={() => {
                     setSearchQuery(""),
@@ -1788,10 +1904,15 @@ export function DynamicListingPage(): any ({;
                     setSelectedAvailability("all")
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 >
                   Clear All
                 </Button>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               </div>;
             ) : (;
@@ -1830,6 +1951,9 @@ export function DynamicListingPage(): any ({;
                   Clear All;
                 </Button>;
               </div>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             )}
 =======
             {isLoading ? (            )}
@@ -1839,6 +1963,7 @@ export function DynamicListingPage(): any ({;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -2066,3 +2191,6 @@ setSelectedRating (null);
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

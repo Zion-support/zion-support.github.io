@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { createContext, useContext, useState, ReactNode } from "react";
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -43,6 +44,9 @@ interface AccessibilityContextType {
   announceToScreenReader: (message: string) => void;
   setFocus: (elementId: string) => void;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 <<<<<<< HEAD
 const AccessibilityContext = createContext<
@@ -64,6 +68,7 @@ interface AccessibilityProviderProps {
   children: ReactNode;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
   children,
@@ -149,39 +154,15 @@ const AccessibilityContext = createContext<;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>
       {children}
     </AccessibilityContext.Provider>
   );
-<<<<<<< HEAD
-  return context;
-}
-;
-interface AccessibilityProviderProps {
-  children: React.ReactNode;
-}
-export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
-  children,
-}) => {
-  const [high_contrast, setHighContrast] = useState (false);
-  const [large_text, setLargeText] = useState (false);
-  const [reduced_motion, setReducedMotion] = useState (false);
-;
-  const toggleHighContrast = () =>: any setHighContrast (!high_contrast);
-  const toggleLargeText = () =>: any setLargeText (!large_text);
-  const toggleReducedMotion = () =>: any setReducedMotion (!reduced_motion);
-;
-  const value = {
-    high_contrast,
-    large_text,
-    reduced_motion,
-    toggleHighContrast,
-    toggleLargeText,
-    toggleReducedMotion,
-=======
-};
 
+<<<<<<< HEAD
 export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
@@ -252,3 +233,5 @@ export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

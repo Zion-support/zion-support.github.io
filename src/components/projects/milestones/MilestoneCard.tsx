@@ -74,9 +74,14 @@ import { Button } from "@/components/ui/button";
 import { format } from 'date-fns';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Check, ArrowDown, X } from 'lucide-react';
+<<<<<<< HEAD
 import { useDisputeCheck } from '@/hooks/useDisputeCheck';
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';interface MilestoneCardProps {;
+=======
+
+interface MilestoneCardProps {;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string,;
   projectId: string,;
   title: string,;
@@ -84,11 +89,16 @@ import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';in
   amount: number,;
   status: string,;
   dueDate?: string,;
+<<<<<<< HEAD
   onApprove?: (id: string,) => Promise<void>,;
   onReject?: (id: string,) => Promise<void>;
 }
 
 export function MilestoneCard(): any ({;  id,;
+=======
+
+  id,;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   projectId,;
   title,;
   description,;
@@ -97,7 +107,11 @@ export function MilestoneCard(): any ({;  id,;
   dueDate,;
   onApprove,;
 <<<<<<< HEAD
+<<<<<<< HEAD
   onReject;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }: MilestoneCardProps) {;
   const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id),;
   function getStatusBadgeColor() {;
@@ -111,6 +125,7 @@ export function MilestoneCard(): any ({;  id,;
         return 'bg-green-500';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       case 'in_progress':;
+<<<<<<< HEAD
         return 'bg-blue-500';      case 'pending':;
         return 'bg-yellow-500';
       case 'rejected':;
@@ -121,6 +136,13 @@ export function MilestoneCard(): any ({;  id,;
   }
   
 =======
+=======
+
+      case 'pending':;
+        return 'bg-yellow-500';
+      case 'rejected':;
+        return 'bg-red-500';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React from 'react';
 import {
@@ -181,10 +203,13 @@ interface MilestoneCardProps {
   dueDate?: string,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Card>
       <CardHeader className="pb-2">
@@ -195,7 +220,10 @@ interface MilestoneCardProps {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <p className="text-sm text-muted-foreground">
                 Due: {format(new Date(dueDate), 'MMM d, yyyy')}
               </p>;
@@ -225,25 +253,33 @@ interface MilestoneCardProps {
 
           </div>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="flex gap-2">
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>
               {status.replace('_ ')}
             </Badge>
 
-            
             {isUnderDispute && disputeStatus && (
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <DisputeStatusBadge status={disputeStatus} />
             )}
           </div>
         </div>
       </CardHeader>
 
+<<<<<<< HEAD
       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <CardContent className="pb-2">
         {description && (
           <p className="text-muted-foreground">{description}</p>
@@ -254,10 +290,13 @@ interface MilestoneCardProps {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>
       </CardContent>
       
@@ -312,19 +351,26 @@ interface MilestoneCardProps {
           )}
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           {status === 'pending' && onReject && !isUnderDispute && (
             <Button variant='outline' size='sm' onClick={() => onReject(id)}>
               <X className='h-4 w-4 mr-1' /> Reject            </Button>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="flex gap-2">
           {status === 'pending' && onReject && !isUnderDispute && (
             <Button variant="outline" size="sm" onClick={() => onReject(id)}>
               <X className="h-4 w-4 mr-1" /> Reject
             </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
           )}
           
@@ -333,12 +379,17 @@ interface MilestoneCardProps {
               <Check className="h-4 w-4 mr-1" /> Approve
             </Button>
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           )}
           
           {status === 'pending' && onApprove && !isUnderDispute && (
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           )}
           
           {isUnderDispute && (
@@ -356,6 +407,7 @@ interface MilestoneCardProps {
           </div>;
         </div>;
 
+<<<<<<< HEAD
         <div className='flex gap-2'>;
           {status === 'pending' && onReject && !isUnderDispute && (;
             <Button variant='outline' size='sm' onClick={() => onReject(id)}>;
@@ -369,6 +421,9 @@ interface MilestoneCardProps {
 
           {isUnderDispute && (;
             <Button variant='outline' size='sm' disabled>              Actions frozen due to dispute            <Button variant="outline" size="sm" disabled>;              Actions frozen due to dispute;
+=======
+              Actions frozen due to dispute;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </Button>;
           )}
         </div>;

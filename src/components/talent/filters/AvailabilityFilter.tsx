@@ -43,8 +43,11 @@ function AvailabilityFilter() {
           <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
       </button>;
 
+<<<<<<< HEAD
       
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {expanded && (
         <div className='mt - 4 space - y-2'>;
           {AVAILABILITY_OPTIONS.map (option => (
@@ -57,7 +60,10 @@ function AvailabilityFilter() {
   { id: "full_time", label: "Full-time" },
   { id: "part_time", label: "Part-time" },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       {expanded && (;
         <div className='mt-4 space-y-2'>;
@@ -76,7 +82,11 @@ const AVAILABILITY_OPTIONS = [;
   { id: "part_time", label: "Part-time" },;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   { id: "project", label: "Project-based" }
+<<<<<<< HEAD
 ]
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">

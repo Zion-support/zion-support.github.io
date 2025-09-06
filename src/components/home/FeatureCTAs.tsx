@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface FeatureCTAsProps {;
   className?: string;
   style?: React && React.CSSProperties;
@@ -185,6 +186,9 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
 
   const features = [
     {
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       key: 'ai_talent_matching',
       descriptionKey: 'ai_talent_matching_desc',
       detailsKey: 'ai_talent_matching_details',
@@ -266,12 +270,17 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
       badge: 'premium'
     }
 
+<<<<<<< HEAD
+=======
+  return (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <section
       className={cn(
         "py-16 bg-gradient-to-b from-background to-background/90"
 
         className
       )}
+<<<<<<< HEAD
       style={style}
     >
       <div className="container mx-auto px-4">
@@ -287,6 +296,10 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
                     </Badge>
                   )}
                 </div>                )}
+=======
+
+                )}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </CardHeader>
               <CardContent>
                 {feature.detailsKey && (
@@ -303,6 +316,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
                   <Link
                     href={feature.link}
                     aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
+<<<<<<< HEAD
                     <span>
                       {t('general.explore')} {t(`features.${feature.key}`)}
                     </span>
@@ -312,6 +326,10 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
                     className="cursor-pointer"
                     {...(feature.key === 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta" })}
                   >                    <span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
+=======
+
+                    <span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
@@ -319,6 +337,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
             </Card>
           ))}
 
+<<<<<<< HEAD
 ;
 }
 }
@@ -345,6 +364,8 @@ import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
 import Link from 'next/link';
 import { use_translation } from 'react - i18next';
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ArrowRight,
   Users,
   Zap,
@@ -881,8 +902,12 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
     </section>));
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

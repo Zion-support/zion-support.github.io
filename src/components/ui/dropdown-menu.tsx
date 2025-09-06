@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import * as React from "react"
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
 import { Check, ChevronRight, Circle } from 'lucide-react'
 
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const DropdownMenu = DropdownMenuPrimitive.Root
 
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger
@@ -41,6 +46,7 @@ const DropdownMenuSubTrigger = React.forward_ref<;
   <DropdownMenuPrimitive.SubTrigger;
     ref={ref}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -49,6 +55,9 @@ const DropdownMenuSubTrigger = React.forward_ref<;
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",
       inset && "pl-8",
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -56,6 +65,7 @@ const DropdownMenuSubTrigger = React.forward_ref<;
     {...props}
   >;
     {children}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -67,6 +77,9 @@ const DropdownMenuSubTrigger = React.forward_ref<;
     <ChevronRight className="ml-auto h-4 w-4" />
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   </DropdownMenuPrimitive.SubTrigger>
 ))
 DropdownMenuSubTrigger.displayName =
@@ -80,12 +93,16 @@ const DropdownMenuSubContent = React.forwardRef<
     ref={ref}
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       "z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -97,6 +114,7 @@ DropdownMenuSubContent.displayName =;
   DropdownMenuPrimitive.SubContent.displayName;
 const DropdownMenuContent = React.forwardRef<;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -107,12 +125,16 @@ const DropdownMenuContent = React.forwardRef<;
   React.ElementRef<typeof DropdownMenuPrimitive.Content>,;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content>;
 >(({ className, sideOffset = 4, ...props }, ref) => (;
   <DropdownMenuPrimitive.Portal>;
     <DropdownMenuPrimitive.Content;
       ref={ref}
       sideOffset={sideOffset}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -121,6 +143,9 @@ const DropdownMenuContent = React.forwardRef<;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       className={cn(
         "z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -177,14 +202,21 @@ const DropdownMenuItem = React.forward_ref<;
   React.ElementRef < typeof DropdownMenuPrimitive.Item>,
   React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Item> & {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,;
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,;  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {;
+=======
+  React.ElementRef<typeof DropdownMenuPrimitive.Item>,;
+
+  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     inset?: boolean;
   }
 >(({ className, inset, ...props }, ref) => (;
   <DropdownMenuPrimitive.Item;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -200,6 +232,9 @@ const DropdownMenuItem = React.forward_ref<;
       inset && "pl-8",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -208,12 +243,16 @@ const DropdownMenuItem = React.forward_ref<;
 DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName;
 const DropdownMenuCheckboxItem = React.forwardRef<;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>,;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.CheckboxItem>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -221,6 +260,7 @@ const DropdownMenuCheckboxItem = React.forwardRef<;
   <DropdownMenuPrimitive.CheckboxItem;
     ref={ref}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -233,6 +273,9 @@ const DropdownMenuCheckboxItem = React.forwardRef<;
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
 <<<<<<< HEAD
@@ -264,6 +307,7 @@ className={cn (
     </span>
     {children}
 <<<<<<< HEAD
+<<<<<<< HEAD
   </DropdownMenuPrimitive.CheckboxItem>;
 ));
 DropdownMenuCheckboxItem.displayName =;
@@ -275,12 +319,16 @@ const DropdownMenuRadioItem = React.forwardRef<;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>,;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.RadioItem>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 >(({ className, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.RadioItem;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -294,6 +342,9 @@ const DropdownMenuRadioItem = React.forwardRef<;
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -305,11 +356,14 @@ const DropdownMenuRadioItem = React.forwardRef<;
     </span>
     {children}
 <<<<<<< HEAD
+<<<<<<< HEAD
   </DropdownMenuPrimitive.RadioItem>;
 ));
 DropdownMenuRadioItem.displayName = DropdownMenuPrimitive.RadioItem.displayName;
 const DropdownMenuLabel = React.forwardRef<;
   React.ElementRef<typeof DropdownMenuPrimitive.Label>,;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
 =======
@@ -320,6 +374,7 @@ const DropdownMenuLabel = React.forwardRef<;
   <DropdownMenuPrimitive.Label;
     ref={ref}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -334,6 +389,9 @@ const DropdownMenuLabel = React.forwardRef<;
       inset && "pl-8",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -342,18 +400,23 @@ const DropdownMenuLabel = React.forwardRef<;
 DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName;
 const DropdownMenuSeparator = React.forwardRef<;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   React.ElementRef<typeof DropdownMenuPrimitive.Separator>,;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 >(({ className, ...props }, ref) => (;
   <DropdownMenuPrimitive.Separator;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -420,3 +483,6 @@ export {
     />);
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

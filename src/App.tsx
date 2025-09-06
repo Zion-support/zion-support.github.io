@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -11,6 +12,10 @@
 =======
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react';
 
 export default function App() {
@@ -87,31 +92,7 @@ import Pricing from './pages/Pricing';
 function App() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-<<<<<<< HEAD
-    <Router>
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
-  );
-}
 
-<<<<<<< HEAD
-export default App;
-=======
-export default App;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import React, { Suspense, lazy } from 'react';
 import Footer from './components/Footer';
 // Enhanced Components
@@ -128,15 +109,7 @@ const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ d
           <Sidebar />
           <main className="flex-1 lg:ml-80">
             <Suspense fallback={<LoadingSpinner />}>
-=======
-    <ThemeProvider>
-      <ErrorBoundary>
-        <Router>
-          <ScrollToTop />
-          <div className="min-h-screen flex flex-col">
-            <Header />
-            <main className="flex-1">
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
@@ -158,6 +131,7 @@ const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ d
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default App;
@@ -217,3 +191,5 @@ export default function App() {
 export default App;
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

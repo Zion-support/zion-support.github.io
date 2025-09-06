@@ -11,9 +11,8 @@ interface ChangelogManagerProps {
 }
 
 type ChangelogEntry = {
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
   id: string;
   version: string;
   date: string;
@@ -26,6 +25,12 @@ type ChangelogEntry = {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+    })
+  }
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string,
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -65,6 +70,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
       changes: ""
     })
   },
+<<<<<<< HEAD
   
   const handleRemoveEntry = (id: string) => {
 <<<<<<< HEAD
@@ -72,6 +78,10 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     setEntries(entries.filter(entry => entry.id !== id))
   }
   )  const handleRemoveEntry = (id: string) => {
+=======
+
+  const handleRemoveEntry = (id: string) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     setEntries(entries.filter(entry => entry.id !== id)),
   };
   )
@@ -83,8 +93,13 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target,
     setNewEntry(prev => ({ ...prev, [name]: value }))
+<<<<<<< HEAD
   },
   
+=======
+  }
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -99,6 +114,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 name="version"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -106,14 +122,15 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 onChange={handleInputChange}
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               />
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <Input
                 type="date"
                 name="date"
-<<<<<<< HEAD
-=======
 
               disabled = {!newEntry.version || !newEntry.changes,}
 
@@ -128,6 +145,7 @@ import { AppPlatform } from "./MetadataManager",;
 interface ChangelogManagerProps {;
   platform: AppPlatform;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 type ChangelogEntry = {;
@@ -171,6 +189,9 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     setNewEntry(prev => ({ ...prev, [name]: value }));
   };
   return (;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <Card className="bg-zion-blue border-zion-purple/30">;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -181,12 +202,16 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
         <div className="space-y-4">;
           <div className="flex flex-col md:flex-row gap-3">;
             <div className="flex-1 grid grid-cols-2 gap-3">;
+<<<<<<< HEAD
               <Input;
                 placeholder="Version (e.g. 1.0.1)";
                 name="version";
                 value={newEntry.version}
                 onChange={handleInputChange}
               />;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Input;
                 type="date";
                 name="date";
@@ -200,12 +225,16 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             >
               <Plus className="mr-2 h-4 w-4" />
               Add
             </Button>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           
           <Textarea
@@ -226,6 +255,8 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               <div 
                 key={entry.id}
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"
@@ -236,6 +267,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                     <span className="text-sm text-gray-400">{entry.date}</span>
 <<<<<<< HEAD
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Button
                     variant="ghost"
@@ -262,6 +294,9 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                     onClick={() => handleRemoveEntry(entry.id)}
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     className="text-gray-400 hover:text-red-400 p-1 h-auto"
                   >
                     <Trash2 className="h-4 w-4" />
@@ -270,6 +305,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 <p className="text-sm whitespace-pre-wrap">{entry.changes}</p>
               </div>
             ))}
+<<<<<<< HEAD
             
             {entries.length === 0 && (
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
@@ -281,14 +317,16 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
   const handleRemoveEntry = (id: string) =>: any {
     set_entries (entries.filter (entry => entry.id !== id)),
@@ -373,3 +411,5 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 =======
                   </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

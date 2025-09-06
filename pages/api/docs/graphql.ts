@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 v1 && v1.sections.forEach((section) => {
@@ -57,6 +58,8 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from './next';
 import v1 from "../../../data / api - docs / v1";
 /**
@@ -77,6 +80,7 @@ function toSDL() {
   });
   return typedefs.join ("\n");
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,6 +107,11 @@ function handler() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+
+  res.status(200).send(toSDL());
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 =======
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {;

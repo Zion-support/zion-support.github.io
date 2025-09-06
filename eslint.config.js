@@ -1,5 +1,5 @@
-import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,6 +26,9 @@ const compat = new FlatCompat({
   recommendedConfig: js.configs.recommended,
   allConfig: js.configs.all,
 });
+=======
+import globals from 'globals';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export default [
   ...compat.extends('next/core-web-vitals'),
@@ -36,6 +39,7 @@ export default [
       ecmaVersion: 2020,
       globals: {
         ...globals.browser,
+<<<<<<< HEAD
         ...globals.node,
         jest: 'readonly',
         describe: 'readonly',
@@ -630,14 +634,18 @@ export default [
         __filename: "readonly",
         Buffer: "readonly",
         global: "readonly"
+=======
+        ...globals.node
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
     },
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'warn',
-      'no-undef': 'error'
+      'prefer-const': 'error'
     }
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 =======
@@ -1181,3 +1189,6 @@ export default [
 >>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 ];
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+];
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

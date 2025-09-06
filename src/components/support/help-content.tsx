@@ -8,7 +8,12 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     id: "getting-started",
     name: "Getting Started",
     description: "Learn the basics of using the Zion AI Marketplace",
+<<<<<<< HEAD
     icon: <HelpCircle className = "h-6 w-6 text-zion-purple" />,    articles: [
+=======
+
+    articles: [
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {
         id: "create-account",
         title: "Creating your account",
@@ -187,10 +192,13 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
     ];
   },;
@@ -258,7 +266,10 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         tags: ["portfolio", "projects", "showcase"];
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React from 'react';
 import { HelpCategory } from './types';
@@ -309,6 +320,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
   },;
   {;
 <<<<<<< HEAD
+<<<<<<< HEAD
     id: "disputes",;
     name: "Disputes",;
     description: "How to handle and resolve contract disputes",;
@@ -351,6 +363,12 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         tags: ['ai', 'matching', 'recruitment'],;      },;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {;
+=======
+
+      },;
+      {;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         id: "dispute-prevention",;
         title: "Tips for preventing disputes",;
         content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.",;
@@ -360,7 +378,10 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
     ];
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 ];
 

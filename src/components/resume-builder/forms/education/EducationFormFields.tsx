@@ -80,6 +80,7 @@ function EducationFormFields() {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -88,6 +89,8 @@ function EducationFormFields() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
@@ -181,10 +184,13 @@ function EducationFormFields() {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
@@ -222,6 +228,7 @@ function EducationFormFields() {
               </FormItem>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -256,6 +263,17 @@ function EducationFormFields() {
                     <FormLabel>I am currently studying here</FormLabel>
                   </div>
                 </FormItem>
+=======
+            )}
+
+          <div className='space-y-4'>;
+            <FormField
+
+              control={form.control}
+
+                    <Checkbox
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               )}
 <<<<<<< HEAD
 =======
@@ -280,10 +298,13 @@ function EducationFormFields() {
                 name='end_date'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             />;
             {!form.watch('is_current') && (;
               <FormField;
@@ -292,13 +313,19 @@ function EducationFormFields() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>End Date</FormLabel>
                     <FormControl>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
 
@@ -312,14 +339,20 @@ function EducationFormFields() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <FormMessage />
                   </FormItem>
                 )}
               />;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           </div>;
         </div>;
@@ -382,7 +415,12 @@ function EducationFormFields() {
         />;
 
         <FormField
+<<<<<<< HEAD
           control={form && form.control}          name='description'
+=======
+
+          name='description'
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Description (Optional)</FormLabel>
               <FormControl>
@@ -460,6 +498,7 @@ function EducationFormFields() {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 
@@ -468,6 +507,8 @@ function EducationFormFields() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {isEditing ? 'Update' : 'Add'} Education
           </Button>
         </div>

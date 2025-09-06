@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
@@ -79,6 +80,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   url
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -111,6 +115,10 @@ export default function MainLayout({
   keywords = "AI solutions, IT services, micro SaaS, technology consulting",
   canonical 
 }: MainLayoutProps) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <>
       <Head>
@@ -118,6 +126,7 @@ export default function MainLayout({
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
         <title>{title}</title>
         <meta name="description" content={description} />
+<<<<<<< HEAD
 <<<<<<< HEAD
         {keywords && <meta name="keywords" content={keywords} />}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -141,8 +150,13 @@ export default function MainLayout({
         {nofollow && <meta name="robots" content="nofollow" />}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+        <meta name="keywords" content={keywords} />
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {canonical && <link rel="canonical" href={canonical} />}
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="min-h-screen bg-gray-50">
 =======
@@ -162,6 +176,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
   return (
     <>
       <SEOHead title={title} description={description} />
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="min-h-screen flex flex-col">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Header />
@@ -173,6 +190,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
       </div>
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -205,3 +223,6 @@ export default MainLayout;
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

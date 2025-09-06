@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,6 +27,9 @@ const Page = () => {
 export default Page;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { 
   Newspaper;
   Calendar, 
@@ -91,12 +95,9 @@ const NewsPage: React.FC = () => {
     }
   ]
 
-
 const NewsPage: React.FC = () => {
   const news_articles = [;
     {
-
-
 
 import React from 'react';
 import Head from 'next/head';
@@ -454,8 +455,6 @@ const NewsPage: React.FC = () => {;
                 <button;
                   key={category}
 
-
-
               className="flex flex-wrap justify-center gap-4"
             >
               {categories.map((category, index) => (
@@ -703,9 +702,6 @@ export default function NewsPage() {
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Discover the latest developments in AI, quantum computing, and technology
-
-
-
 
               innovation from Zion Tech Group and our global team.
             </p>
@@ -1400,7 +1396,6 @@ const NewsPage: React.FC = () => {;
               </h2>
               <p className="text-xl text-gray-300 mb-8">
 
-
                 For press inquiries, media interviews, or additional information,
 
                 For press inquiries, media interviews, or additional information, 
@@ -1465,18 +1460,12 @@ const NewsPage: React.FC = () => {;
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
 
-
-
-
                 href="/blog"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Explore Our Blog
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-
-
-
 
                 href="/contact"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
@@ -1704,7 +1693,6 @@ const NewsPage: React.FC = () => {;
                     </div>;
                     <a;
 
-
                       className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                     >
                       Download
@@ -1846,7 +1834,6 @@ const NewsPage: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
 };
 ;
 }
@@ -1865,6 +1852,7 @@ const NewsPage: React.FC = () => {;
 }
 
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1899,3 +1887,6 @@ export default Page;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

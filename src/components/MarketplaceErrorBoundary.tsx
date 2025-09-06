@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',;
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary',;
 import * as Sentry from '@sentry/nextjs',;
@@ -11,11 +12,14 @@ import {logErrorToProduction} from '@/utils/productionLogger',;
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import { RefreshCcw, AlertCircle } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface MarketplaceErrorFallbackProps extends FallbackProps {
   // Additional props if needed
+<<<<<<< HEAD
     } catch (retryError) {
       logErrorToProduction('Error during retry:', { data: retryError })
       Sentry.captureException(retryError)
@@ -57,6 +61,20 @@ interface MarketplaceErrorFallbackProps extends FallbackProps {;
 }
 ;
 function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {;
+=======
+
+      resetErrorBoundary()
+    } catch (retryError) {
+      logErrorToProduction('Error during retry:', { data: retryError })
+      Sentry.captureException(retryError)
+
+import { mutate } from 'swr';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { RefreshCcw, AlertCircle } from 'lucide-react';
+
+  return (function MarketplaceErrorFallback(): any ({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleRetry = async () => {;
     try {;
       // Re-call SWR mutate('*') to refresh all cached data;
@@ -64,6 +82,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
       resetErrorBoundary();
     } catch (retryError) {;
       logErrorToProduction('Error during retry:', { data: retryError }),;
+<<<<<<< HEAD
 <<<<<<< HEAD
       Sentry.captureException(retryError);
     }
@@ -101,6 +120,10 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      Sentry && Sentry.captureException(retryError);
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             onClick={() => window.location.reload()}
 =======
           <Button             onClick={() => window.location.reload()}
@@ -113,11 +136,15 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
 <<<<<<< HEAD
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
 
         
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="text-center text-sm text-muted-foreground">
 =======
         </div>        <div className="text-center text-sm text-muted-foreground">
@@ -129,10 +156,13 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
 
           >
 
+<<<<<<< HEAD
         
         
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
           <a 
@@ -142,7 +172,10 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
           >
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             contact support
           </Link>
         </div>
@@ -217,6 +250,7 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
             className="w-full";
             on_click={() => window.location.reload ()}
             variant="outline";
+<<<<<<< HEAD
             className="w-full";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface MarketplaceErrorBoundaryProps {
@@ -239,6 +273,11 @@ export function MarketplaceErrorBoundary({
     })
   }
     <ErrorBoundary   },;
+=======
+            className="w - full";
+
+  },;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (;
     <div className="flex items-center justify-center min-h-[400px] p-6">;
       <div className="max-w-md w-full space-y-4">;
@@ -249,6 +288,7 @@ export function MarketplaceErrorBoundary({
             {error?.message || 'An unexpected error occurred while loading marketplace content.'}
           </AlertDescription>;
         </Alert>;
+<<<<<<< HEAD
         <div className="flex flex-col space-y-2">;
           <Button;
             onClick={handleRetry}
@@ -260,11 +300,16 @@ export function MarketplaceErrorBoundary({
           </Button>;
           <Button;
             onClick={() => window.location.reload()}            variant="outline";
+=======
+
+            variant="outline";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             className="w-full";
           >;
             Reload Page;
           </Button>;
         </div>;
+<<<<<<< HEAD
         <div className="text-center text-sm text-muted-foreground">;
           If the problem persists, please{' '}
           <a;
@@ -272,12 +317,59 @@ export function MarketplaceErrorBoundary({
             className="text-primary hover:underline";
           >;
             contact support;          </a>;
+=======
+
+          </a>;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
+=======
+
+interface MarketplaceErrorBoundaryProps {;
+  children: React && React.ReactNode;
+
+export function MarketplaceErrorBoundary(): any ({;
+  children,;
+}: MarketplaceErrorBoundaryProps) {;
+  const handleError = (error: Error, errorInfo: React && React.ErrorInfo) => {;
+    // Log boundary errors to Sentry;
+    logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, {;
+      componentStack: errorInfo && errorInfo.componentStack,;
+    });
+    Sentry && Sentry.withScope(scope => {;
+      scope && scope.setTag('errorBoundary', 'marketplace');
+      scope && scope.setContext('errorInfo', {;
+        componentStack: errorInfo && errorInfo.componentStack || undefined,;
+      });
+      scope && scope.setLevel('error');
+      Sentry && Sentry.captureException(error);
+    });
+  };
+
+      >;
+
+      {children}
+    </ErrorBoundary>;
+  );
+}   return (
+    <ErrorBoundary
+
+      FallbackComponent={MarketplaceErrorFallback}
+      onError={handleError}>;
+      {children}
+
+    </ErrorBoundary>;
+  );
+} ;
+
+  );
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode,
@@ -296,6 +388,7 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
       Sentry.captureException(error);
     });
   };
+<<<<<<< HEAD
   return (;
     <ErrorBoundary;
       FallbackComponent={MarketplaceErrorFallback}
@@ -316,3 +409,6 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

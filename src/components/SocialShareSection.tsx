@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Button } from "./ui/button",
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
@@ -76,6 +77,9 @@ export function SocialShareSection() {
 =======
 return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <section className="py-12 bg-zion-blue">
 =======
   return (    <section className="py-12 bg-zion-blue">
@@ -86,8 +90,6 @@ return (
             <h3 className="text-xl font-bold text-white mb-2">Share Zion with Your Network</h3>
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>
           </div>
-<<<<<<< HEAD
-=======
 
 };
 }</div> </div> </div> </section>) ;
@@ -169,6 +171,7 @@ export function SocialShareSection() {;
 <<<<<<< HEAD
 =======
           <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <h3 className="text-xl font-bold text-white mb-2">Share Zion with Your Network</h3>;
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>;
@@ -275,11 +278,16 @@ export function SocialShareSection() {;
 ;
 =======
             <h3 className='text-xl font-bold text-white mb-2'>;              Share Zion with Your Network;
+=======
+
+              Share Zion with Your Network;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </h3>;
             <p className='text - zion - slate - light'>;
               Help others discover the future of AI & tech marketplace;
             </p>;
           </div>;
+<<<<<<< HEAD
           <div className='flex flex-wrap gap-3'>;
             {shareLinks && shareLinks.map((link, index) => (              <Button
                 key = {index,}
@@ -294,3 +302,6 @@ export function SocialShareSection() {;
               </Button>;
             ))}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

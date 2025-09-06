@@ -28,6 +28,7 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                 <Star
                   key={i}
                   className={`h-4 w-4 ${
+<<<<<<< HEAD
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
 import { Star } from 'lucide-react';
 import { Progress } from "@/components/ui/progress",;
@@ -56,15 +57,22 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                 <Star;
                   key={i}
                   className={`h-4 w-4 ${;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   }`}
                 />;
               ))}
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <span className="text-sm text-muted-foreground">
 =======
@@ -76,6 +84,11 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+            <span className="text-sm text-muted-foreground">
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
             </span>
           </div>
@@ -84,7 +97,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
 <<<<<<< HEAD
 =======
 
-      
       {ratingDistribution && (
         <div className="space-y-2">
           {[5, 4, 3, 2, 1].map((rating) => (
@@ -156,6 +168,7 @@ if (return 0) {
       </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -163,13 +176,18 @@ if (return 0) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {ratingDistribution && (
         <div className="space-y-2">
           {[5, 4, 3, 2, 1].map((rating) => (
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div key={rating} className="flex items-center gap-2">
               <div className="w-6 text-sm text-right">{rating}</div>
               <Star className="h-3 w-3 text-yellow-400" />
@@ -184,7 +202,10 @@ if (return 0) {
             </div>;
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           ))}
         </div>;
       )}

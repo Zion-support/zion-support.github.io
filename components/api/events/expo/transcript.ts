@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -28,14 +29,21 @@ import { agendaItems } from '../../../../data/expo/agenda';
   const { id } = req.query as { id?: string };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const item = agendaItems.find(i => i.id === id);
   if (!item) return res.status(404).send('Not found');
   const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
@@ -43,10 +51,15 @@ export default async function handler(
 
   res.status(200).send(transcript)
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 =======
 
+=======
+
+  try {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { id } = req && req.query as { id?: string };
   const item = agendaItems && agendaItems.find(i => i && i.id === id);
   if (!item) return res && res.status(404).send('Not found');
@@ -60,7 +73,13 @@ export default async function handler(
   const transcript = `Transcript for ${item && item.title} (Track: ${item && item.track}, Time: ${item && item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
   res && res.setHeader('Content-Typetext/plain'),
   res && res.status(200).send(transcript)
+<<<<<<< HEAD
 }import { agenda_items } from '../../../../data / expo / agenda';
+=======
+}
+
+import { agenda_items } from '../../../../data / expo / agenda';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export default async /**
  * handler - Function description
@@ -86,6 +105,7 @@ function handler() {
   const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q & A...`;
   res.set_header ('Content - Typetext / plain'),
   res.status (200).send (transcript);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -133,3 +153,8 @@ function handler() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

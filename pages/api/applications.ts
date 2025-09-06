@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -11,10 +12,16 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from 'next',;
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { v4 as uuidv4 } from 'uuid',;
 import { readJsonFile, writeJsonFile } from '../../utils/db',;
 import type { Application } from '../../utils/types',;
 import { rateLimit } from '../../utils/rateLimit',;
+<<<<<<< HEAD
 const FILE = 'applications.json',
 
 <<<<<<< HEAD
@@ -28,10 +35,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (jobId) apps = apps.filter((a) => a.jobId === String(jobId)),
     if (talentSlug) apps = apps.filter((a) => a.talentSlug === String(talentSlug)),
     res.status(200).json({ applications: apps }),
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return
   }
 
   if (req.method === 'POST') {
+<<<<<<< HEAD
     const { jobId, talentSlug, action } = req.body || {},
     if (!jobId || !talentSlug || !['applyskip'].includes(action)) {
       res.status(400).json({ error: 'Invalid request' }),
@@ -46,10 +57,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       existing.status = action === 'apply' ? 'applied' : 'skipped',
       writeJsonFile<Application[]>(FILE, apps),
       res.status(200).json({ application: existing }),
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return
     }
 
     const app: Application = {
+<<<<<<< HEAD
       id: uuidv4(),
       jobId: String(jobId),
       talentSlug: String(talentSlug),
@@ -125,10 +140,14 @@ createdAtIso: now}
     apps.push(app)
     writeJsonFile<Application[]>(FILE, apps)
     res.status(201).json({ application: app })
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return
   }
   res.setHeader('AllowGET, POST')
   res.status(405).end('Method Not Allowed')
+<<<<<<< HEAD
 }
 
 
@@ -226,3 +245,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(405).end('Method Not Allowed')
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

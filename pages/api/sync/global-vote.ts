@@ -6,6 +6,7 @@ import axios from "axios",;
 import { v4 as uuidv4 } from "uuid",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
 <<<<<<< HEAD
 =======
@@ -28,6 +29,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   if (!state.config.optIn |state.config.paused) {
@@ -40,6 +44,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const merkleRoot = computeMerkleRootFromVotes(votes)
   const version = (state.latestVersionByEntityId[proposalId] |0) + 1
   const event = {
+<<<<<<< HEAD
     eventId: uuidv4(),
     type: "proposal" as const,
     payload: { id: proposalId, proposalId, title, votes },
@@ -47,6 +52,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     version,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     timestamp: Date.now(),
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     merkleRoot};
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -56,6 +64,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           // ignore
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -68,6 +77,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
@@ -324,6 +335,7 @@ export default async function handler(req, res) {
   ),
   return res.status(200).json({ status: "created", merkleRoot, version, eventId: event.eventId })
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle";
@@ -433,3 +445,6 @@ export default async function handler(req, res) {
 =======
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

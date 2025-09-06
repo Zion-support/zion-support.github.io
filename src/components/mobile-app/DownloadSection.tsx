@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { QrCodeIcon } from 'lucide-react'
@@ -52,19 +53,30 @@ export const DownloadSection: React.FC = () => {
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.
               </p>
                             <AppStoreButtons 
+=======
+
+
+              <AppStoreButtons 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 className="mb-8" 
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
                 onAppStoreClick={() => logInfo("App Store button clicked")}
                 onGooglePlayClick={() => logInfo("Google Play button clicked")}
 <<<<<<< HEAD
+<<<<<<< HEAD
               />
               
+=======
+              />
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="text-sm text-gray-400">
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
                 <p>Free download, in-app purchases available</p>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             
             <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
@@ -99,6 +111,9 @@ export const DownloadSection: React.FC = () => {;
             <div className="flex-1">;
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Get The App Today</h2>;
               <p className="text-lg text-gray-300 mb-8">;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.;
               </p>;
               <AppStoreButtons;
@@ -108,12 +123,16 @@ export const DownloadSection: React.FC = () => {;
                 onAppStoreClick={() => logInfo("App Store button clicked")}
                 onGooglePlayClick={() => logInfo("Google Play button clicked")}
               />;
+<<<<<<< HEAD
               <div className="text-sm text-gray-400">;
                 <p>Compatible with iOS 14+ and Android 8.0+</p>;
                 <p>Free download, in-app purchases available</p>;
               </div>;
             </div>;
             <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">;
 =======
               />              <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">;
@@ -132,7 +151,9 @@ export const DownloadSection: React.FC = () => {;
 
 ";
 
-            
             <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -6,11 +6,14 @@
 =======
 
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { NextApiRequest, NextApiResponse } from "next";
 import { randomUUID } from "crypto";
 import { promises as fs } from "fs";
@@ -18,6 +21,7 @@ import { Epub } from "epub-gen";
 export const config = {
   api: {
     bodyParser: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       sizeLimit: "10mb"
@@ -29,6 +33,9 @@ export const config = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       sizeLimit: "10mb",
     },
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },;
 };
 <<<<<<< HEAD
@@ -92,6 +99,7 @@ export default async function handler(
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -101,6 +109,9 @@ export default async function handler(
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     title: project.meta.title, author: project.meta.author,
     publisher: project.meta.publisher || 'Zion',
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))};
 
 <<<<<<< HEAD
@@ -149,8 +160,6 @@ export default async function handler(req, res) {
     res.setHeader('Content-Typeapplication/epub+zip'),
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.epub"'),
     res.status(200).send(buf)
-
-
 
   } catch (e: any) {
     res.status(500).json({ error: e?.message |"Failed to build EPUB" });

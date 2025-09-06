@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export default function Placeholder() {
   return (
@@ -21,6 +24,7 @@ export default function Placeholder() {
         </Link>
       </div>
 
+<<<<<<< HEAD
   );export default function Placeholder() {
   return (
     <main className="min-h-screen p-8">
@@ -52,6 +56,8 @@ export default function Placeholder() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function Placeholder() {
   return (
     <main className='min-h-screen p-8'>
@@ -71,12 +77,16 @@ export default function Placeholder() {
   );export default function Placeholder() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function Placeholder() {;
 export default function Placeholder() {
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <main className='min-h-screen p-8'>;
       <Head>;
@@ -109,6 +119,7 @@ export default function Placeholder() {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 
@@ -131,6 +142,9 @@ export default function Placeholder() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Head from 'next / head';
 import Link from 'next / link';
 export default /**
@@ -169,6 +183,7 @@ function Placeholder() {
       </div>;
     </main>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -258,3 +273,6 @@ export default function Placeholder() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

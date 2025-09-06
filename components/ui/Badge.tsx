@@ -5,6 +5,7 @@
   style: { [key: string]: string }
 }
 
+<<<<<<< HEAD
 import React from './react';
 import { cva, type VariantProps  } from './class - variance - authority';
 import { cn  } from '../../lib / utils';
@@ -47,6 +48,8 @@ export interface BadgeProps;
     VariantProps<typeof badgeVariants> {}
 function Badge(): any ({ className, variant, ...props }: BadgeProps) {;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className={cn(badgeVariants({ variant }), className)} {...props} />;
   );
@@ -83,6 +86,7 @@ function Badge() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 export { Badge, badge_variants }
@@ -97,3 +101,6 @@ export { Badge, badgeVariants };
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

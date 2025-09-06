@@ -96,7 +96,6 @@ import {
   DialogHeader,
   DialogTitle,
 
-
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
 import { Star, Flag, User } from 'lucide-react'
@@ -114,8 +113,11 @@ import {
           />
         ))}
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <AvatarFallback className="bg-muted">
                 <User className="h-4 w-4" />
               </AvatarFallback>
@@ -187,6 +189,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
       .toUpperCase();
       .substring(0, 2);
   };
+<<<<<<< HEAD
   return (;
     <div className="border rounded-lg p-4 bg-card">;
       <div className="flex justify-between items-start mb-3">;
@@ -206,6 +209,11 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                   {review.reviewer_profile?.display_name ?;
                     getInitials(review.reviewer_profile.display_name) : "??"}
                 </AvatarFallback>;
+=======
+
+  return (
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               )}
             </Avatar>;
           )}
@@ -239,14 +247,10 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
             </Avatar>
           )}
 
-
         review.would_work_again !== undefined) && (
         <div className='border-t pt-3 mt-3'>
           <div className='flex flex-wrap gap-2'>
             {review.communication_rating && (
-
-
-      
 
               </Badge>
             )}
@@ -289,28 +293,17 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 </span>;
               </Badge>)}
             {review.would_work_again !== undefined && (
-<<<<<<< HEAD
-              <Badge;
-                variant={review.would_work_again ? 'default' : 'secondary'}
-                className={`${review.would_work_again ? 'bg - green - 100 text - green - 800 hover:bg - green - 200' : 'bg - gray - 100 text - gray - 800 hover:bg - gray - 200'}`}              >;
-                {review.would_work_again;
-                  ? 'Would work again';
-                  : 'Would not work again'}              </Badge>;
-=======
-              <Badge
-                variant={review.would_work_again ? 'default' : 'secondary'}
-                className={`${review.would_work_again ? 'bg-green-100 text-green-800 hover:bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}              >
-                {review.would_work_again
-                  ? 'Would work again'
-                  : 'Would not work again'}              </Badge>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                {review.would_work_again ? "Would work again" : "Would not work again"}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           
           <div>
             <div className="font-medium">
               {review.is_anonymous ? "Anonymous" : review.reviewer_profile?.display_name || "User"}
+=======
+                {review.would_work_again ? "Would work again" : "Would not work again"}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </div>
             <div className="text-sm text-muted-foreground">
               {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
@@ -325,7 +318,11 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
+<<<<<<< HEAD
       
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
@@ -413,8 +410,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 <<<<<<< HEAD
               </Badge>
 =======
-
-
 
           <div>;
             <div className='font-medium'>;
@@ -535,10 +530,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 <<<<<<< HEAD
 =======
 
-
-
-
-
       <div className='mt-3 flex justify-end'>
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
@@ -552,6 +543,12 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
             <Button variant="ghost" size="sm" className="text-muted-foreground">
               <Flag className="h-3 w-3 mr-1" />
               Report
+<<<<<<< HEAD
+=======
+
+              Report
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </Button>
           </DialogTrigger>
           <DialogContent>
@@ -561,9 +558,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 <<<<<<< HEAD
 =======
 
-
                 If you believe this review violates our community guidelines,
-
 
                 please provide details below.
               </DialogDescription>
@@ -614,9 +609,12 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 
               onChange = {(e,) => setReportReason(e.target.value),}
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 If you believe this review violates our community guidelines, please provide details below.
               </DialogDescription>
             </DialogHeader>
@@ -625,6 +623,10 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               placeholder="Why are you reporting this review?"
               value={reportReason}
               onChange={(e) => setReportReason(e.target.value)}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className="min-h-[100px]"
             />
             
@@ -642,14 +644,21 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Button 
                 onClick={handleReport} 
                 disabled={!reportReason.trim() || isReporting}
               >
                 {isReporting ? "Submitting..." : "Submit Report"}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </Button>
             </DialogFooter>
           </DialogContent>

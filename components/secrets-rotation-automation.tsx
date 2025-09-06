@@ -27,6 +27,7 @@ import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,6 +64,8 @@ import { Check, ExternalLink } from "lucide-react";
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function SecretsRotationAutomationPage() {
 
   const features = [
@@ -77,9 +80,13 @@ export default function SecretsRotationAutomationPage() {
 export default function SecretsRotationAutomationPage() {
   const features = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     "Automated key and secret rotation",
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -144,6 +151,7 @@ export default function SecretsRotationAutomationPage() {
               rel="noreferrer";
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text-cyan-300";
             >;
+<<<<<<< HEAD
               <ExternalLink className="w-4 h-4" /> Google Cloud KMS;
 
             </a>;
@@ -152,6 +160,10 @@ export default function SecretsRotationAutomationPage() {
       </main>;
 
     </>);
+=======
+              <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <>;
       <SEO;
@@ -171,6 +183,7 @@ export default function SecretsRotationAutomationPage() {
             {features.map ((f) => (
 <<<<<<< HEAD
               <div;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -186,6 +199,9 @@ return (
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <>
 =======
               <div;  return (
@@ -245,7 +261,17 @@ return (
             </a>;
           </div>;
         </section>;
+<<<<<<< HEAD
       </main>;            </a>;
           </div>;
         </section>;
       </main>;
+=======
+      </main>;
+
+            </a>;
+          </div>;
+        </section>;
+      </main>;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

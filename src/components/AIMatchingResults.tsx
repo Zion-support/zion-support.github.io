@@ -19,6 +19,7 @@ interface AIMatchingResultsProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function AIMatchingResults({
   matches,
   onSelectMatch,
@@ -58,6 +59,8 @@ function AIMatchingResults() {
   const [active_tab, setActiveTab] = useState ('all');
   // Group matches by category;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const categories = {
     all: matches,
     talent: matches.filter(match => match.category.toLowerCase().includes("talent")),
@@ -85,6 +88,7 @@ function AIMatchingResults() {
       </div>
     )
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   
   if (matches.length === 0) {
@@ -175,6 +179,60 @@ export function AIMatchingResults({;
   
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  }
+  return (
+    <div className='space-y-4'>;
+      <Tabs
+        defaultValue='all'
+        value={activeTab}
+        onValueChange={setActiveTab}
+
+                            ? 'bg-zion-cyan'
+                            : match && match.category.toLowerCase().includes('service')
+                              ? 'bg-zion-purple'
+                              : 'bg-green-500'
+                        )}
+
+                      />;
+                      <div className='flex-1 p-4'>;
+                        <div className='flex items-start gap-4'>;
+                          <Avatar className='h-12 w-12 border border-zion-blue-light'>;
+                            {match && match.image ? (;
+
+                              <AvatarImage
+                                src={match && match.image}
+                                alt={match && match.title}
+                              />;
+                            ) : (;
+                              <AvatarFallback className='bg-zion-purple/20'>;
+                                <CategoryIcon className='h-6 w-6 text-zion-purple' />;
+                              </AvatarFallback>;
+                            )}
+
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <Card className='bg - zion - blue - dark border - zion - blue - light text - center p - 6'>;
+        <CardContent className='pt - 6'>;
+          <BarChart3 className='h - 12 w - 12 mx - auto text - zion - slate - light mb - 3' />;
+          <p className='text - white font - medium mb - 2'>No matches found</p>;
+          <p className='text - zion - slate - light text - sm mb - 4'>;
+            Try adjusting your search criteria or description for better;
+            results.;
+          </p>;
+          {project_description && (
+            <div className='bg - zion - blue - light / 20 p - 3 rounded - md text - left'>;
+              <p className='text - xs text - zion - slate - light'>Your search:</p>;
+              <p className='text - sm text - white'>{project_description}</p>;
+            </div>)}
+        </CardContent>;
+      </Card>);
+  }
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="space-y-4">
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -289,6 +347,7 @@ export function AIMatchingResults({;
                               )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -298,10 +357,13 @@ export function AIMatchingResults({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                                   </div>
                                 </div>
                               )}
                             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -318,6 +380,9 @@ export function AIMatchingResults({;
                                 </Badge>;
                               ))}
                             </div>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           </div>;
                         </div>;
                       </div>;
@@ -334,6 +399,7 @@ export function AIMatchingResults({;
                       </div>;
                     </div>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             )}
           </TabsContent>;
@@ -347,6 +413,12 @@ export function AIMatchingResults({;
 };
 ;
 
+=======
+            )}
+          </TabsContent>;
+        ))}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
       </Tabs>;
     </div>;
@@ -362,8 +434,12 @@ export function AIMatchingResults({;
       </Tabs>;
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

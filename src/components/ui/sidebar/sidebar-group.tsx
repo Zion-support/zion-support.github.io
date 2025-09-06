@@ -8,6 +8,7 @@ import { SafeRef } from "@/types/ref-types",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 <<<<<<< HEAD
+<<<<<<< HEAD
   title?: string,
   icon?: React.ReactNode,
   defaultExpanded?: boolean,
@@ -38,10 +39,14 @@ import { cn } from '@/lib/utils';
 import { SafeRef } from '@/types/ref-types';
 interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   title?: string;
   icon?: React.ReactNode;
   defaultExpanded?: boolean;
   showChevron?: boolean
+<<<<<<< HEAD
 <<<<<<< HEAD
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
   (
@@ -83,6 +88,9 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         ref={ref as SafeRef<HTMLDivElement>}
         className={cn("px-3 py-2", className)}
         {...props}
@@ -98,13 +106,12 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
 =======
             type='button'
             className='flex w-full items-center justify-between rounded-md px-2 py-1 text-sm font-medium text-muted-foreground hover:bg-secondary/30'
-<<<<<<< HEAD
-=======
-            onClick={() => setExpanded(!expanded)}          >;
-            <div className='flex items-center gap-2'>;
 
+<<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {icon}
               <span>{title}</span>
             </div>
@@ -113,6 +120,7 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -258,3 +266,5 @@ export { SidebarGroup };
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

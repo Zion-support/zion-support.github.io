@@ -1,12 +1,20 @@
+<<<<<<< HEAD
 'use client';
 import React, { Suspense, lazy, useState, useEffect, ComponentType } from 'react';
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { motion, AnimatePresence } from 'framer-motion';
 import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {logErrorToProduction} from '@/utils/productionLogger',;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface LoadingState {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -14,6 +22,7 @@ interface LoadingState {;
   error: Error | null;
   retryCount: number;
   isOnline: boolean;
+<<<<<<< HEAD
 }
 ;
 interface DynamicLoaderProps {;
@@ -27,10 +36,14 @@ interface DynamicLoaderProps {;
   errorFallback?: React && React.ComponentType<{ error: Error; retry: () => void }>;
   loadingComponent?: React && React.ComponentType;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   enableRetry?: boolean;
   maxRetries?: number;
   prefetch?: boolean;
   className?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   children?: React.ReactNode;
@@ -46,6 +59,8 @@ const EnhancedLoading: React.FC<{
 =======
   children?: React && React.ReactNode;
   [key: string]: any;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -74,6 +89,7 @@ const EnhancedLoading: React.FC<{;
 }> = ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   progress = 0,
+<<<<<<< HEAD
   message = 'Loading component...', 
   showProgress = true 
 }) => (
@@ -84,18 +100,25 @@ const EnhancedLoading: React.FC<{;
         <div className="relative">
           <Loader2 className="h-8 w-8 animate-spin text-primary" />
           {showProgress && (
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
               style={{
+<<<<<<< HEAD
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               }}
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
               transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             />;
           )}
@@ -114,6 +137,8 @@ const EnhancedLoading: React.FC<{;
 )
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 // Enhanced Error Component
 const EnhancedError: React.FC<{
@@ -123,6 +148,7 @@ const EnhancedError: React.FC<{
   retryCount: number
   maxRetries: number
 }> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -159,15 +185,19 @@ const EnhancedError: React.FC<{
           </p>
           {retryCount > 0 && (
             <p className="text-xs text-red-600 dark:text-red-300 mt-2">
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               Retry {retryCount}/{maxRetries}
             </p>;
           )}
         </div>
         {retryCount < maxRetries && (
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Button 
 =======
 
@@ -181,6 +211,7 @@ const EnhancedError: React.FC<{
             className="border-red-300 text-red-700 hover:bg-red-100"
           >
             <RefreshCw className="h-4 w-4 mr-2" />
+<<<<<<< HEAD
             Try Again
           </Button>
         )}
@@ -249,6 +280,9 @@ const useNetworkStatus = () =>: any {
     window.addEventListener ('online', updateOnlineStatus);
     window.addEventListener ('offline', updateOnlineStatus);
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return () => {
 =======
       </div>
@@ -261,6 +295,7 @@ const useNetworkStatus = () =>: any {
   }, []);
   return is_online;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 
@@ -268,6 +303,10 @@ const useNetworkStatus = () =>: any {
 ;
 
 
+=======
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return () => {}; // Return empty cleanup function for other paths
   }, [loadingState.isLoading, loadingState.error])
   // Load component
@@ -342,6 +381,7 @@ const useNetworkStatus = () =>: any {
       })
     }
           >
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </div>;
     </CardContent>;
@@ -481,6 +521,9 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
         className={cn("flex items-center justify-center p-8", className)}
       >
         <EnhancedError
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           error={loadingState.error}
           retry={retry}
           isOnline={loadingState.isOnline}
@@ -489,6 +532,10 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
         />;
       </motion.div>;
     );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 ;
   // Success state;
@@ -501,9 +548,8 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
         />;
       </motion && motion.div>;
     );
@@ -550,6 +596,8 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
       {...(options || {})}
 =======
   return (props: React && React.ComponentProps<T> & { children?: React && React.ReactNode },) => (;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <DynamicComponentLoader
 =======
 }    <DynamicComponentLoader
@@ -558,6 +606,7 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
       {...(options |{})}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {...(props as any)}
+<<<<<<< HEAD
 <<<<<<< HEAD
     />;
   );
@@ -579,6 +628,13 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 
 // export const DynamicChartComponent = createDynamicComponent(
 //   () => import('recharts').then(module => ({ default: module.LineChart })),
+=======
+
+// Predefined dynamic loaders for common heavy components
+// Note: These are examples - uncomment and install types as needed
+// export const DynamicChartComponent = createDynamicComponent(
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 //   {
 =======
 // Predefined dynamic loaders for common heavy components
@@ -595,6 +651,7 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 // )
 
 // export const DynamicThreeComponent = createDynamicComponent(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 //   () => import('three').then(module => ({ default: module.WebGLRenderer })),
@@ -850,3 +907,6 @@ export default DynamicComponentLoader;
 export default DynamicComponentLoader; export default DynamicComponentLoader
 // );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -2,6 +2,7 @@ import {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   Carousel;
   CarouselContent;
@@ -60,6 +61,9 @@ export function EnterpriseTestimonials() {
           <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>            See how enterprise teams are transforming their hiring process
           </p>
         </div>export function EnterpriseTestimonials() {
+=======
+export function EnterpriseTestimonials() {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <section id="testimonials" className="py-20 px-4 md:px-6">
       <div className="container mx-auto max-w-6xl">
@@ -87,7 +91,10 @@ export function EnterpriseTestimonials() {
                   </blockquote>
                   <div className='flex items-center gap-4'>
                     <div className='h-12 w-12 rounded-full overflow-hidden bg-muted'>
+<<<<<<< HEAD
                       <img
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             <CarouselNext />
           </div>
@@ -115,6 +122,9 @@ import {
   CarouselPrevious} from "@/components/ui/carousel",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const testimonials = [
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -135,7 +145,10 @@ const testimonials = [
     author: "Elena Rodriguez",
     title: "CTO",
     company: "FutureTech Systems",
+<<<<<<< HEAD
     image: "/placeholder.svg"}],
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export function EnterpriseTestimonials() {
   return (
@@ -151,9 +164,12 @@ export function EnterpriseTestimonials() {
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Carousel className="w-full">
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -162,6 +178,7 @@ export function EnterpriseTestimonials() {
                   <blockquote className="text-xl mb-6 italic">
                     "{testimonial.quote}"
                   </blockquote>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <div className="flex items-center gap-4">
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">
@@ -180,12 +197,16 @@ import React from "react",;
 
 import React from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Quote } from 'lucide-react';
 import {;
   Carousel,;
   CarouselContent,;
   CarouselItem,;
   CarouselNext,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   CarouselPrevious} from "@/components/ui/carousel",;
 const testimonials = [;
@@ -209,6 +230,9 @@ const testimonials = [;
     image: "/placeholder.svg"}];
 export function EnterpriseTestimonials() {;
   return (;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <section id="testimonials" className="py-20 px-4 md:px-6">;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -221,13 +245,18 @@ export function EnterpriseTestimonials() {;
             See how enterprise teams are transforming their hiring process;
           </p>;
         </div>;
+<<<<<<< HEAD
         <Carousel className="w-full">;
           <CarouselContent>;
             {testimonials.map((testimonial, index) => (;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;
                 <div className="bg-card rounded-xl p-8 border border-border h-full">;
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />;
                   <blockquote className="text-xl mb-6 italic">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -254,6 +283,9 @@ export function EnterpriseTestimonials() {;
             ))}
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <CarouselNext />
 =======
                       <p className="text-sm text-muted-foreground">;            <CarouselNext />
@@ -262,6 +294,7 @@ export function EnterpriseTestimonials() {;
         </Carousel>
       </div>
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           </CarouselContent>;
@@ -403,3 +436,6 @@ function EnterpriseTestimonials() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

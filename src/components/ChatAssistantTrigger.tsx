@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { MessageSquare } from 'lucide-react'
@@ -14,6 +15,9 @@ export function ChatAssistantTrigger() {
 =======
 // Handle sending messages to the AI chat assistant
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleSendMessage = async (message: string): Promise<void> => {
 =======
   // Handle sending messages to the AI chat assistant  const handleSendMessage = async (message: string): Promise<void> => {
@@ -23,6 +27,7 @@ export function ChatAssistantTrigger() {
         method: "POST",
         headers: {
 <<<<<<< HEAD
+<<<<<<< HEAD
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
@@ -31,6 +36,8 @@ export function ChatAssistantTrigger() {
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         body: JSON.stringify({ ;
           messages: [{ role: "user", content: message }] ;
@@ -87,6 +94,7 @@ export function ChatAssistantTrigger() {;
         throw new Error("Failed to get response from AI assistant");
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
       return Promise.resolve();
     } catch (error) {;
@@ -110,12 +118,23 @@ export function ChatAssistantTrigger() {;
     <>;
       <Button;
         onClick={() => setIsOpen(true)}        size="icon"
+=======
+
+  },;
+  return (;
+    <>;
+      <Button;
+        onClick={() => setIsOpen(true)}
+
+        size="icon"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         variant="outline"
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
         aria-label="Open chat assistant"
       >
         <MessageSquare className="h-5 w-5" />
       </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -126,6 +145,9 @@ export function ChatAssistantTrigger() {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return Promise.resolve()
     } catch (error) {
       logErrorToProduction('Error in AI chat:', { data: error }),
@@ -133,6 +155,7 @@ export function ChatAssistantTrigger() {;
     }
   },
 
+<<<<<<< HEAD
         size="icon"
         variant="outline"
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
@@ -140,6 +163,9 @@ export function ChatAssistantTrigger() {;
       >
         <MessageSquare className="h-5 w-5" />
       </Button>        <ChatAssistant
+=======
+        <ChatAssistant
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           isOpen = {isOpen,}
           onClose = {(,) => setIsOpen(false),}
 
@@ -152,12 +178,16 @@ export function ChatAssistantTrigger() {;
             avatarUrl: 'https://placehold.co/64x64?text=AI';
             role: 'Virtual Assistant';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }}
           onSendMessage={handleSendMessage}
         />;
@@ -225,10 +255,13 @@ if ( {) {
             avatar_url: 'https://placehold.co / 64x64?text = AI',
             role: 'Virtual Assistant';
           }}
+<<<<<<< HEAD
           onSendMessage = {handleSendMessage, }
         />)}
     </>);
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     </>;
 =======
@@ -240,8 +273,11 @@ if ( {) {
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

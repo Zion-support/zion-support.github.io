@@ -43,6 +43,7 @@ interface PerformanceMetrics {
   healthStatus: 'healthy' | 'warning' | 'error'
 interface Improvement {
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -90,6 +91,8 @@ interface PerformanceMetrics {;
   healthStatus: 'healthy' | 'warning' | 'error';
 
 interface Improvement {;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string;
   title: string,
   description: string;
@@ -97,6 +100,7 @@ interface Improvement {;
   impact: 'high' | 'medium' | 'low';
   category: 'performance' | 'security' | 'ux' | 'build'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React, { useState } from 'react';
@@ -329,6 +333,8 @@ const PerformanceDashboard: React.FC = () => {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="space-y-6 p-6">
       <div className="flex items-center justify-between">
@@ -339,12 +345,15 @@ const PerformanceDashboard: React.FC = () => {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Metrics Overview */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
 =======
         
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Build Size</CardTitle>
@@ -353,11 +362,38 @@ const PerformanceDashboard: React.FC = () => {
             <div className="text-2xl font-bold">{metrics.buildSize}</div>
             <p className="text-xs text-gray-500">Total build output</p>
           </CardContent>
+<<<<<<< HEAD
         </Card>            </div>
+=======
+        </Card>
+
+        <Card>
+          <CardHeader className='pb-2'>
+            <CardTitle className='text-sm font-medium text-gray-600'>
+              Load Time
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className='text-2xl font-bold'>{metrics.loadTime}s</div>
+            <p className='text-xs text-gray-500'>Average page load</p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className='pb-2'>
+            <CardTitle className='text-sm font-medium text-gray-600'>
+              Health Status
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+
+            </div>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </CardContent>
         </Card>
       </div>
 
+<<<<<<< HEAD
   }
   const completedImprovements = improvements.filter(
     imp => imp.status === 'completed'
@@ -536,6 +572,43 @@ interface Improvement {;
         </Card>
       </div>
 
+=======
+const PerformanceDashboard: React.FC = () => {;
+  const [metrics] = useState<PerformanceMetrics>({;
+    buildSize: '959 MB',;
+    pageCount: 166,;
+
+  const improvements: Improvement[] = [;
+    {;
+      id: '1',;
+      title: 'Fixed Search Bar Issues',;
+
+    },;
+    {;
+      id: '2',;
+      title: 'Environment Validation System',;
+
+    },;
+    {;
+      id: '3',;
+      title: 'NextAuth Configuration Fix',;
+
+    },;
+    {;
+      id: '4',;
+      title: 'API Client Error Handling',;
+
+    },;
+    {;
+      id: '5',;
+      title: 'Bundle Analyzer Integration',;
+
+    },;
+    {;
+      id: '6',;
+      title: 'Health Check Endpoint',;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Completed Improvements */}
 =======
             </div>
@@ -555,17 +628,21 @@ interface Improvement {;
         </CardHeader>
 <<<<<<< HEAD
         <CardContent>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="space-y-4">
             {completedImprovements.map((improvement) => (
               <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
                 <div className="flex-shrink-0 mt-1">
                   {getCategoryIcon(improvement.category)}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between">
@@ -579,10 +656,11 @@ interface Improvement {;
                       {getStatusIcon(improvement.status)}
                     </div>
                   </div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <p className="text-sm text-gray-600 mt-1">
 =======
         <CardContent>                  <p className="text-sm text-gray-600 mt-1">
@@ -596,6 +674,7 @@ interface Improvement {;
       case 'build': return <TrendingUp className="h-4 w-4" />,;
       default: return <CheckCircle className="h-4 w-4" />;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   },;
   const completedImprovements = improvements.filter(imp => imp.status === 'completed'),;
@@ -644,12 +723,19 @@ interface Improvement {;
             <div className="flex items-center space-x-2">;
               <CheckCircle className="h-5 w-5 text-green-500" />;
               <span className="text-sm font-semibold text-green-600">Healthy</span>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </div>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </CardContent>;
         </Card>;
       </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Completed Improvements */}
       <Card>;
         <CardHeader>;
@@ -662,6 +748,7 @@ interface Improvement {;
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="space-y-4">;
             {completedImprovements.map((improvement) => (;
@@ -687,6 +774,8 @@ interface Improvement {;
                     </div>
                   </div>
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                   <p className='text-sm text-gray-600 mt-1'>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -697,6 +786,7 @@ interface Improvement {;
                 </div>;
               </div>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>;
         </CardContent>;
@@ -711,6 +801,8 @@ interface Improvement {;
         <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">
           <Shield className="h-4 w-4 mr-2" />
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           Check Health Status
 =======
@@ -808,6 +900,7 @@ export default PerformanceDashboard,
 },;
 export default PerformanceDashboard;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default PerformanceDashboard,
 <<<<<<< HEAD
@@ -816,3 +909,7 @@ export default PerformanceDashboard,
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export default PerformanceDashboard,
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

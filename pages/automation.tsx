@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1095,6 +1096,9 @@ export default function AutomationPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react';
 import Head from 'next / head';
 import {
@@ -1134,7 +1138,6 @@ function AutomationPage() {
     }
   ];
   const benefits = [
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -1238,8 +1241,6 @@ export default function AutomationPage() {
               AI-powered workflow automation platform that streamlines your business processes and increases efficiency.
             </p>
 
-
-
               <a
                 href="/contact" className="shadow-2xl shadow-blue-500/25">
                 Start Automating
@@ -1253,16 +1254,12 @@ export default function AutomationPage() {
           </div>
         </section>
 
-
-
                 Automation Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Powerful tools to automate any business process
               </p>
             </div>
-
-
 
               {features.map((feature, index) => (
                 <div
@@ -1344,7 +1341,6 @@ export default function AutomationPage() {
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
 
-
               Ready to Automate Your Workflows?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -1364,7 +1360,6 @@ export default function AutomationPage() {
         </section>
       </div>
     </>
-
 
 }
 
@@ -1520,18 +1515,20 @@ export default function AutomationPage() {
               </a>;
               <a
 
-
               </a>;
             </div>;
           </div>;
         </section>;
       </div>;
 
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

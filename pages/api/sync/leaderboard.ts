@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from "uuid",;
 import { nextVersionFor } from "../../../utils/sync/versioning",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
 <<<<<<< HEAD
 =======
@@ -32,6 +33,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   if (!state.config.optIn |state.config.paused) {
@@ -46,6 +50,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const entityKey = `${subjectId}:${period |"global"}:${category}`
   const version = nextVersionFor(state, entityKey)
   const event = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -66,6 +71,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     version,
     timestamp: Date.now()},
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   upsertEvent(state, event);
   writeState(state);
@@ -88,6 +95,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .filter((p) => !p.paused)
       .map(async (peer) => {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -367,6 +375,12 @@ export default async function handler(req, res) {
 =======
 <<<<<<< HEAD
 =======
+=======
+        try {
+          await axios.post(url, body, { headers, timeout: 5000 })
+        } catch {}
+      })
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -375,4 +389,8 @@ export default async function handler(req, res) {
 =======
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

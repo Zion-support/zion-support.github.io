@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import dynamic from 'next/dynamic',
 import { useAuth } from "@/hooks/useAuth",
@@ -570,3 +571,6 @@ const Dashboard: React.FC = () => {
 
 export default Dashboard;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

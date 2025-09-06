@@ -47,7 +47,6 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
     const encoded = encodeURIComponent(prompt && prompt.text);
     window && window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
 
-
   return (
     <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>
       <p className='mb-4 text-sm'>{prompt.text}</p>
@@ -60,6 +59,7 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
         >
           {copied ? 'Copied' : <Copy className='w-4 h-4' />}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
@@ -75,14 +75,13 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
       </div>
     </div>
   )
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 <<<<<<< HEAD
 =======
   );
-<<<<<<< HEAD
-=======
-};
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 }
 
 import { useState } from 'react';

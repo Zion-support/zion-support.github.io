@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
   const { email } = req.body |{}
@@ -29,6 +30,9 @@ export default async function handler(
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   try {
 =======
 
@@ -75,6 +79,7 @@ export default async function handler(
       .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -84,6 +89,8 @@ export default async function handler(
     }
     const { data, error } = await supabase
       .from('email_signups')
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const { email } = req.body |{}
   if (!email |typeof email !== 'string')
@@ -118,21 +125,30 @@ export default async function handler(
         source: 'mobile-launch'
         created_at: new Date().toISOString()
 <<<<<<< HEAD
+<<<<<<< HEAD
       })      .select('*')      .insert({ email: normalized, source: 'mobile-launch', created_at: new Date().toISOString() })
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      })      .select('*')      .insert({ email: normalized, source: 'mobile-launch', created_at: new Date().toISOString() })
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       .select('*')
       .single();
 
     if (error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 import { supabase } from '../../utils / supabase / client';
 ;
@@ -206,6 +222,7 @@ if ( {) {
     return res.status (200).json ({ ok: true, data });
   } catch (e: any) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res.status(500).send(e?.message |'Unexpected error');
     return res.status(500).send(e?.message || 'Unexpected error');
 =======
@@ -244,6 +261,9 @@ if ( {) {
     return res.status(500).send(e?.message |'Unexpected error');
     return res.status(500).send(e?.message || 'Unexpected error');
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return res.status (500).send (e?.message || 'Unexpected error');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }      }
@@ -256,6 +276,7 @@ if ( {) {
   } catch (e: any) {
     return res.status (500).send (e?.message || 'Unexpected error');
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -272,3 +293,7 @@ if ( {) {
 
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

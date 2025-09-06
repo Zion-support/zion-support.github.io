@@ -110,6 +110,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const headers: Record<string, string> = {}
 =======
 
+<<<<<<< HEAD:pages/api-disabled/api/sync/token-transfer.ts
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======;
@@ -127,11 +128,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (sig) headers["x-zion-signature"] = sig;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
   await Promise.all(;
+=======
+  await Promise.all(
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/sync/token-transfer.ts
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {;
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
+<<<<<<< HEAD:pages/api-disabled/api/sync/token-transfer.ts
 =======;
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state, upsert_event  } from '../../../utils / sync / storage';
@@ -290,6 +295,18 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   return res.status(200).json({_status: "created", _version, _eventId: event.eventId});
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+=======
+
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
+import { signPayload } from "../../../utils/sync/signature",;
+import axios from "axios",;
+import { v4 as uuidv4 } from "uuid",;
+import { nextVersionFor } from "../../../utils/sync/versioning",;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/sync/token-transfer.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 import { signPayload } from "../../../utils/sync/signature";
@@ -369,6 +386,13 @@ export default async function handler(req, res) {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD:pages/api-disabled/api/sync/token-transfer.ts
+=======
+  await Promise.all(
+    state.config.peers
+      .filter((p) => !p.paused)
+      .map(async (peer) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/sync/token-transfer.ts
   if (!txId || !token || typeof amount !== "number" || !fromSubnet || !toSubnet) {
     return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
     } catch (error) {
@@ -485,10 +509,17 @@ export default async function handler(req, res) {;
   );
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
+<<<<<<< HEAD:pages/api-disabled/api/sync/token-transfer.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
         const url = new URL("/api/sync/publish", peer.baseUrl).toString();
         try {;
+=======
+
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString()
+
+        try {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/sync/token-transfer.ts
           await axios.post(url, body, { headers, timeout: 5000 })
         } catch {  } catch (error) {;
     console.error("Error:", error);
@@ -506,6 +537,7 @@ export default async function handler(req, res) {;
       })
   );
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
+<<<<<<< HEAD:pages/api-disabled/api/sync/token-transfer.ts
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
@@ -624,3 +656,6 @@ export default async function handler(req, res) {
 =======
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/sync/token-transfer.ts

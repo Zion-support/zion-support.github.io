@@ -79,6 +79,7 @@ export default function ITServices() {
           <div className="text-center">
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -105,19 +106,18 @@ import {
   Smartphone,
   Monitor,
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import MainLayout from '../components/layout/MainLayout';
-=======
-import Layout from '../components/Layout';
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
 import { 
   Server, 
   Shield, 
   Cloud, 
+<<<<<<< HEAD
 <<<<<<< HEAD
   Database, 
   Network, 
@@ -172,10 +172,14 @@ import {
   FileText,
   Cpu;
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 } from 'lucide-react';
 
 const itServices = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     category: "Managed IT Services",
     icon: Server,
@@ -500,11 +504,15 @@ const processSteps = [
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 ];
 
 const stats = [
   { number: "99.9%", label: "Uptime Guarantee" },
+<<<<<<< HEAD
 <<<<<<< HEAD
   { number: "15min", label: "Response Time" },
   { number: "500+", label: "IT Projects Completed" },
@@ -985,3 +993,6 @@ export default function ITServicesPage() {
 }
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

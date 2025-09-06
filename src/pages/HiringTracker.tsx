@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { useRouter } from "next/router",
@@ -37,22 +38,33 @@ return (
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+        title='Hiring Tracker | Zion AI Marketplace'
+        description='Manage your candidate pipeline in the Zion AI Marketplace.'
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <p className="text-muted-foreground mt-1">
               Track and manage your candidates through the hiring process
             </p>
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <TabsList>
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
+<<<<<<< HEAD
 <<<<<<< HEAD
           
           <TabsContent value="kanban" className="mt-6">
@@ -65,6 +77,9 @@ return (
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
           <TabsList>
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
@@ -72,6 +87,7 @@ return (
             <KanbanBoard jobId={jobId} />
           </TabsContent>
 
+<<<<<<< HEAD
           
           <TabsContent value="kanban" className="mt-6">
             <KanbanBoard jobId={jobId} />
@@ -79,12 +95,15 @@ return (
           
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <TabsContent value="analytics" className="mt-6">
             <HiringAnalytics jobId={jobId} />
           </TabsContent>
         </Tabs>
       </main>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 =======
@@ -177,10 +196,13 @@ export default function HiringTracker() {;
 }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   );
 }
 
+<<<<<<< HEAD
 import { useState } from 'react';
 import { use_router } from 'next / router';
 import { KanbanBoard } from '@/components / hiring - tracker / KanbanBoard';
@@ -284,3 +306,9 @@ const HiringTracker: React.FC = () => {
 
 export default HiringTracker;
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+export default function HiringTracker() {
+  return (
+    <ProtectedRoute>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

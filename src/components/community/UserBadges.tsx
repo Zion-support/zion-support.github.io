@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react'
 import { Badge } from "@/types/community",
@@ -23,6 +24,9 @@ const iconMap = {
 const iconMap = {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Trophy,
 =======
 
@@ -42,6 +46,7 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <div className="flex flex-wrap gap-2">
       {badges.map((badge) => {
@@ -50,6 +55,9 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
 
   return (
 
+=======
+  return (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
 export default UserBadges;
@@ -57,6 +65,7 @@ export default UserBadges;
 }
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
 =======
@@ -65,6 +74,9 @@ export default UserBadges;
       {badges.map((badge) => {
         // Get the correct icon component based on the badge's icon name        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         
         return (
           <TooltipProvider key={badge.id}>
@@ -102,6 +114,7 @@ const iconMap = {;
   BadgeCheck,;
   Star,;
   MessageSquare;
+<<<<<<< HEAD
 <<<<<<< HEAD
 },;
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
@@ -188,3 +201,6 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default UserBadges;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

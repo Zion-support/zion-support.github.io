@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ...formData;            startDate: startDate?.toISOString(),
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             endDate: endDate?.toISOString()}
         }
@@ -17,11 +21,14 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 ;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from 'react',
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -200,6 +207,7 @@ interface ServiceQuoteModalProps {;
   service: ProductListing | null;
 }
 ;
+<<<<<<< HEAD
 const BUDGET_RANGES = [;
   { label: "Less than $5,000", value: "0-5000" },;
   { label: "$5,000 - $10,000", value: "5000-10000" },;
@@ -502,3 +510,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   );
 }
 ;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

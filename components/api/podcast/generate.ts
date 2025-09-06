@@ -5,6 +5,7 @@ import path from 'path';
 import OpenAI from 'openai';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EPISODES_PATH = path && path.join(
   process && process.cwd(),
   'data',
@@ -69,6 +70,9 @@ export default async function handler(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 function readEpisodes(): any[] {
   ensureStorage();
   return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8'))
@@ -77,6 +81,7 @@ function writeEpisodes(episodes: any[]) {
   ensureStorage();
   fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -109,6 +114,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 
@@ -124,7 +132,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         questions: [
           'What is the vision behind Zion as a global decentralized talent protocol?'
           'How does Zion practically onboard talent and organizations?'
@@ -154,7 +166,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
         .status(500)
         .json({ error: 'Failed to generate structured content' });    }
     const episodes = readEpisodes();
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     const episode = {      return res && res.status(500).json({ error: 'Failed to generate structured content' });
     const episode = {
@@ -175,6 +186,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
   };
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -501,6 +513,8 @@ time_markers: generated.time_markers || {
     const episode = {
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       transcript: generated.transcript,
 =======
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;      transcript: generated.transcript,
@@ -528,6 +542,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const episode = {
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -551,3 +566,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,15 +16,23 @@ import type { NextApiRequest, NextApiResponse } from 'next',;
 import type { NextApiRequest, NextApiResponse } from 'next',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 ;
+=======
+
+;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST'),
     return res.status(405).end('Method Not Allowed')
   }
 
+<<<<<<< HEAD
   const { prompt } = req.body || {},
   if (!prompt) return res.status(400).json({ error: 'prompt required' }),
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   try {
     const apiKey = process.env.OPENAI_API_KEY,
     if (apiKey) {
@@ -32,6 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const resp = await openai.chat.completions.create({
         model: 'gpt-4o-mini',
         messages: [
+<<<<<<< HEAD
 <<<<<<< HEAD
           { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' }
 <<<<<<< HEAD
@@ -49,10 +59,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
           { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           { role: 'user', content: String(prompt) }
         ]
       })
       const text = resp.choices?.[0]?.message?.content |'No response'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -64,10 +78,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return res.status(200).json({ text })
     }
     // Fallback without API key
     return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' })
+<<<<<<< HEAD
 <<<<<<< HEAD
   } catch (e: any) {
     return res.status(500).json({ error: e?.message ?? 'Coach error' })
@@ -80,6 +98,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   };
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -88,12 +109,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next',
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next'
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export default async /**
  * handler - Function description
@@ -103,6 +130,7 @@ function handler() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   try {
@@ -221,3 +249,6 @@ if ( {) {
 =======
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

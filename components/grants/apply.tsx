@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,6 +14,11 @@ import {useState} from 'react';
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+import {useState} from 'react';
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter  } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
@@ -25,6 +31,7 @@ const categories: GrantCategory[] = [
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 export default function ApplyGrantPage() {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -60,6 +67,8 @@ export default function ApplyGrantPage() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function ApplyGrantPage() {
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
@@ -70,10 +79,14 @@ const categories: GrantCategory[] = [;
 export default function ApplyGrantPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const router = useRouter();
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -82,6 +95,7 @@ export default function ApplyGrantPage() {;
   const [teamInfo, setTeamInfo] = useState('');
   const [proposalSummary, setProposalSummary] = useState('');
   const [timeline, setTimeline] = useState('');
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
 <<<<<<< HEAD
@@ -98,6 +112,10 @@ export default function ApplyGrantPage() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  const [budgetAmount, setBudgetAmount] = useState<number>(0);
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [supportingLinks, setSupportingLinks] = useState<string>('');
 =======
   const [budgetAmount, setBudgetAmount] = useState<number>(0);  const [supportingLinks, setSupportingLinks] = useState<string>('');
@@ -108,6 +126,7 @@ export default function ApplyGrantPage() {;
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+<<<<<<< HEAD
       router.push(`/grants/${data.id}`)
     } catch (e: any) {
       setError(e.message)
@@ -117,6 +136,8 @@ export default function ApplyGrantPage() {;
     }
 =======
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const save = async (submit: boolean) => {;
     try {;
       setLoading(true);
@@ -162,7 +183,23 @@ export default function ApplyGrantPage() {;
             .map ((s) => s.trim ());
             .filter (Boolean);
           pitchDeckUrl;
+<<<<<<< HEAD
           region;    }
+=======
+          region;
+
+          sector: (sector as any) || undefined,;
+          submit})});
+      const data = await resp && resp.json();
+      if (!resp && resp.ok) throw new Error(data?.error || 'Failed');
+      router && router.push(`/grants/${data && data.id}`);
+    } catch (e: any) {;
+      setError(e && e.message);
+    } finally {;
+      setLoading(false);
+
+    }
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
           <textarea
@@ -201,7 +238,13 @@ export default function ApplyGrantPage() {;
           </button>;
           <button
             disabled={loading}
+<<<<<<< HEAD
             onClick={() => save(true)}  }
+=======
+            onClick={() => save(true)}
+
+  }
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
 
   };
@@ -247,6 +290,7 @@ export default function ApplyGrantPage() {;
   }
 
   return (
+<<<<<<< HEAD
     <EnhancedLayout>
       <h1 className='text-2xl font-semibold mb-4'>
         Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}
@@ -374,6 +418,9 @@ export default function ApplyGrantPage() {;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {error && <div className='text-sm text-red-600'>{error}</div>}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -397,10 +444,13 @@ export default function ApplyGrantPage() {;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               <option value="USDC">USDC</option>;
               <option value="ZION$">ZION$</option>;
@@ -416,6 +466,7 @@ export default function ApplyGrantPage() {;
         <label className="text-sm">Pitch Deck URL;
           <input className="mt-1 w-full border rounded p-2" value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e && e.target.value)} />;
         </label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -491,12 +542,15 @@ export default function ApplyGrantPage() {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   );
 
 );
 }
   );
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -506,3 +560,6 @@ export default function ApplyGrantPage() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

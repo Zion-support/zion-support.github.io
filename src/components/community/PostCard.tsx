@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -17,6 +18,9 @@ import React from 'react',
 import { formatDistanceToNow } from "date-fns",
 import Link from "next/link",
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
@@ -28,15 +32,19 @@ import { logInfo } from '@/utils/productionLogger',
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface PostCardProps {
   post: ForumPost,
   compact?: boolean
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
   logInfo('PostCardComponent rendering with post:', { data: post ? post.id : 'NO POST' }),
@@ -179,6 +187,8 @@ PostCard.displayName = 'PostCard';
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       "transition-shadow hover: shadow-md",
 import React from 'react';
 import { formatDistanceToNow } from './date - fns';
@@ -200,5 +210,8 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) =>: any {
   const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),
   return (
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default PostCard;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -17,17 +18,9 @@ project_name: string, goals: string,
   tech_stack?: string[];
   talent_filters?: { verified_only?: boolean; regions?: string[] }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-
 =======
-export interface ProjectBrief {
-  projectName: string;
-  goals: string;
-  timeline: string;
-  budget: string;
-  techStack?: string[];
-<<<<<<< HEAD
-  talentFilters?: { verifiedOnly?: boolean; regions?: string[] };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
 }
 
   projectName: string, goals: string,
@@ -43,6 +36,7 @@ export interface ProjectBrief {;
   techStack?: string[];
   talentFilters?: { verifiedOnly?: boolean, regions?: string[] }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -134,3 +128,5 @@ export interface ProjectRequirements {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

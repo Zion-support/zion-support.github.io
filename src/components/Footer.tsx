@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { FooterNewsletter } from "@/components/FooterNewsletter",
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
 import Link from "next/link", // Changed from react-router-dom
@@ -48,6 +49,10 @@ import { motion } from 'framer-motion';
 } from "lucide-react";
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 =======
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react';
 import { Link } from 'react-router-dom';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -431,6 +436,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
@@ -832,3 +838,12 @@ export default Footer;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+          <p className="text-gray-400">
+            © 2024 Zion Tech Group. All rights reserved.
+          </p>
+
+        </div>
+      </div>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,10 +14,15 @@ export default function Page() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Case Study — Autonomous Reports</title>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -36,6 +42,9 @@ export default function Page() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <meta
           name='description'
           content='Pragmatic case scenario inspired by live site signals.'
@@ -57,6 +66,7 @@ export default function Page() {
 <<<<<<< HEAD
             __html:
 <<<<<<< HEAD
+<<<<<<< HEAD
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Scenario</h2><p>Exploring how autonomous, reports, 2025, 30new, contentopen delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>'
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Scenario</h2><p>Exploring how autonomous, reports, 2025, 30new, contentopen delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',
 =======
@@ -70,6 +80,9 @@ export default function Page() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }}
 =======
             __html:          }}
@@ -85,9 +98,12 @@ export default function Page() {
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Scenario</h2><p>Exploring how autonomous, reports, 2025, 30new, contentopen delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }}
         />
         <p className='mt-6 text-white/60 text-sm'>
@@ -111,6 +127,7 @@ export default function Page() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default function Page() {
 =======
@@ -121,14 +138,20 @@ export default function Page() {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
         <title>Case Study — Autonomous Reports</title>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Head from 'next / head';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -171,6 +194,7 @@ function Page() {
  */
 function Page() {
   return (
+<<<<<<< HEAD
     <div className="min - h-screen bg - slate-950 text-white">;
       <Head>;        <meta name="description" content="Pragmatic case scenario inspired by live site signals." />;
         <meta property="og:title" content="Case Study — Autonomous Reports" />;
@@ -254,6 +278,25 @@ export default function Page() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    <div className="min - h-screen bg - slate - 950 text - white">;
+      <Head>;
+
+        <meta name="description" content="Pragmatic case scenario inspired by live site signals." />;
+        <meta property="og:title" content="Case Study — Autonomous Reports" />;
+        <meta property="og:description" content="Pragmatic case scenario inspired by live site signals." />;
+        <meta name="twitter:card" content="summary_large_image" />;
+      </Head>;
+
+      <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
+        <h1 className="text - 3xl font - extrabold">Case Study  Autonomous Reports</h1>;
+        <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / explore" target="_blank" rel="noopener">https://ziontechgroup.com / explore</a></p><h2 > Scenario</h2><p > Exploring how autonomous, reports, 2025, 30new, contentopen delivers value.</p><h2 > Approach</h2><ul><li > Baseline metrics</li><li > Iterative improvements</li><li > Risk management</li></ul><h2 > Results</h2><p > Lower latency, higher reliability, and faster iteration speed.</p>" }} />;
+        <p className="mt - 6 text - white / 60 text - sm">Auto - generated by Cloud Deep Research Factory.</p>;
+      </main>;
+    </div>);
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Case Study — Autonomous Reports</title>
@@ -267,11 +310,8 @@ export default function Page() {
         <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/explore\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/explore</a></p><h2>Scenario</h2><p>Exploring how autonomous, reports, 2025, 30new, contentopen delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>" }} />
         <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
       </main>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -284,6 +324,8 @@ export default function Page() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </div>;
   );
 }
@@ -295,6 +337,7 @@ export default function Page() {
   }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -314,3 +357,6 @@ export default function Page() {
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

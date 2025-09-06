@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 =======
@@ -7,6 +8,9 @@ export function RoleManagement() {
   const teamMembers = [
 import React from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {
   Table,
   TableBody,
@@ -57,6 +61,7 @@ function RoleManagement() {
       },
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     {
       id: 2
@@ -318,6 +323,13 @@ export function RoleManagement() {;
                 </Badge>              </div>
               <p className='text-sm text-muted-foreground'>{description}</p>        <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (
+    <div className="space-y-6">
+      <div>
+
+        <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           {Object.entries(roleDescriptions).map(([role, description]) => (
             <div key={role} className="bg-card rounded-lg p-4 border border-border">
@@ -325,6 +337,7 @@ export function RoleManagement() {;
                 <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>
               </div>
               <p className="text-sm text-muted-foreground">{description}</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
             </div>
           ))}
@@ -385,6 +398,9 @@ export function RoleManagement() {
       </div>
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Table>
           <TableHeader>
             <TableRow>
@@ -469,6 +485,7 @@ export function RoleManagement() {
           </TableHeader>
           <TableBody>
 <<<<<<< HEAD
+<<<<<<< HEAD
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
                 <TableCell>
@@ -481,6 +498,8 @@ export function RoleManagement() {
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                 <TableCell>
                   <div className='font-medium'>{member.name}</div>
@@ -490,11 +509,12 @@ export function RoleManagement() {
                   </div>
                 </TableCell>
                 <TableCell>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <select 
                     className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                     defaultValue={member.role}
@@ -504,18 +524,25 @@ export function RoleManagement() {
                     <option value="Manager">Manager</option>
                     <option value="Viewer">Viewer</option>
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </select>
                 </TableCell>
                 <TableCell className="text-center">
                   <Switch
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     aria-label="View candidates"
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -658,14 +685,22 @@ export function RoleManagement() {;
             <TableRow>;
               <TableHead>Team Member</TableHead>;
               <TableHead>Role</TableHead>;
+<<<<<<< HEAD
               <TableHead className="text-center">;
                 <div className="flex items-center justify-center gap-1">;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   View Candidates;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       </TooltipTrigger>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -676,14 +711,22 @@ export function RoleManagement() {;
                   </TooltipProvider>;
                 </div>;
               </TableHead>;
+<<<<<<< HEAD
               <TableHead className="text-center">;
                 <div className="flex items-center justify-center gap-1">;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   Edit Candidates;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       </TooltipTrigger>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -694,14 +737,22 @@ export function RoleManagement() {;
                   </TooltipProvider>;
                 </div>;
               </TableHead>;
+<<<<<<< HEAD
               <TableHead className="text-center">;
                 <div className="flex items-center justify-center gap-1">;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   Create Jobs;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       </TooltipTrigger>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -712,14 +763,22 @@ export function RoleManagement() {;
                   </TooltipProvider>;
                 </div>;
               </TableHead>;
+<<<<<<< HEAD
               <TableHead className="text-center">;
                 <div className="flex items-center justify-center gap-1">;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   Manage Team;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       </TooltipTrigger>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -730,14 +789,22 @@ export function RoleManagement() {;
                   </TooltipProvider>;
                 </div>;
               </TableHead>;
+<<<<<<< HEAD
               <TableHead className="text-center">;
                 <div className="flex items-center justify-center gap-1">;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   Billing Access;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       </TooltipTrigger>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -774,6 +841,7 @@ export function RoleManagement() {;
                   <Switch;
                     aria-label="View candidates";
 <<<<<<< HEAD
+<<<<<<< HEAD
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewCandidates", checked);
@@ -806,6 +874,8 @@ export function RoleManagement() {;
                 </TableCell>;
                 <TableCell className='text-center'>;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={checked =>
@@ -829,6 +899,7 @@ export function RoleManagement() {;
                     }                  />
                 </TableCell>
                 <TableCell className='text-center'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <Switch
                     aria-label='Create jobs'
@@ -848,11 +919,18 @@ export function RoleManagement() {;
                 <TableCell className='text-center'>
                   <Switch
                     aria-label='View billing'      </div>;
+=======
+
+      </div>;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </div>;
   )
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling", checked);
                     }
@@ -861,6 +939,7 @@ export function RoleManagement() {;
               </TableRow>;
             ))}
 
+<<<<<<< HEAD
           </TableBody>;
         </Table>;
       </div>;
@@ -942,3 +1021,5 @@ export function RoleManagement() {;
 =======
                     checked={member.permissions.viewBilling}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

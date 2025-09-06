@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import * as React from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
 type CarouselOptions = {
   axis?: 'x' | 'y'
@@ -26,7 +31,10 @@ type CarouselContextProps = {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   orientation: "horizontal" | "vertical"
 } & Omit<CarouselProps "orientation">
 
@@ -82,11 +90,18 @@ const Carousel = React.forwardRef<
   (
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       orientation = "horizontal",
       orientation = "horizontal",      opts,
+=======
+
+      orientation = "horizontal",
+
+      opts,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setApi,
       plugins,
       className,
@@ -98,15 +113,16 @@ const Carousel = React.forwardRef<
     const [carouselRef, api] = useEmblaCarousel(
 <<<<<<< HEAD
       {
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         ...(opts || {}),
         axis: orientation === "horizontal" ? "x" : "y"},
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       plugins
     )
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
@@ -167,8 +183,11 @@ import { Button } from &quot;@/components / ui / button & quot;
 
       };
 
+<<<<<<< HEAD
       },;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       [scrollPrev, scrollNext];
     );
     React.useEffect(() => {;
@@ -176,6 +195,7 @@ import { Button } from &quot;@/components / ui / button & quot;
         return;
       }
 ;
+<<<<<<< HEAD
 type CarouselApi = ReturnType < typeof useEmblaCarousel>[1];
 type CarouselOptions = {
   axis?: 'x' | 'y';
@@ -247,17 +267,21 @@ if ( {) {
           scrollPrev,
           scrollNext,
           canScrollPrev,
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           canScrollNext}}
       >;
         <div;
           ref={ref}
           onKeyDownCapture={handleKeyDown}
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
 className={cn(&quot;relative&quot; className)}
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           role=&quot;region&quot;
 =======
       {          role=&quot;region&quot;
@@ -270,7 +294,10 @@ className={cn(&quot;relative&quot; className)}
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {...props}
         >;
           {children}
@@ -278,6 +305,7 @@ className={cn(&quot;relative&quot; className)}
       </CarouselContext.Provider>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 )
 <<<<<<< HEAD
@@ -288,6 +316,9 @@ Carousel.displayName = "Carousel"
 
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const CarouselContent = React.forwardRef<
   HTMLDivElement,
 =======
@@ -319,6 +350,7 @@ const CarouselContent = React.forward_ref<;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           "flex",
           orientation === "horizontal"
@@ -326,6 +358,8 @@ const CarouselContent = React.forward_ref<;
             : "-mt-4 flex-col snap-y snap-mandatory",
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           className
         )}
         {...props}
@@ -334,15 +368,16 @@ const CarouselContent = React.forward_ref<;
   )
 <<<<<<< HEAD
 })
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 CarouselContent.displayName = "CarouselContent"
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const CarouselItem = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -352,6 +387,7 @@ const CarouselItem = React.forwardRef<
   return (
     <div
       ref={ref}
+<<<<<<< HEAD
       role="group"
       aria-roledescription="slide"
       className={cn(
@@ -361,12 +397,16 @@ const CarouselItem = React.forwardRef<
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         "min-w-0 shrink-0 grow-0 basis-full snap-start",
         orientation === "horizontal" ? "pl-4" : "pt-4",
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className
       )}
       {...props}
     />
   )
 })
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -387,11 +427,15 @@ const CarouselPrevious = React.forwardRef<
 
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Button
       ref={ref}
       variant={variant}
       size={size}
+<<<<<<< HEAD
       className={cn(
 <<<<<<< HEAD
 =======
@@ -401,11 +445,18 @@ const CarouselPrevious = React.forwardRef<
         orientation === "horizontal"
           ? "left-1 sm:left-2 md:-left-12 top-1/2 -translate-y-1/2"
           : "top-1 sm:top-2 md:-top-12 left-1/2 -translate-x-1/2 rotate-90",
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     >
 =======
 })    >
@@ -423,6 +474,7 @@ const CarouselNext = React.forwardRef<
 =======
   HTMLButtonElement
   React.ComponentProps<typeof Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
@@ -442,6 +494,9 @@ const CarouselNext = React.forward_ref<;
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
   const { orientation, scrollNext, canScrollNext } = useCarousel()
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
 =======
   const { orientation, scrollNext, canScrollNext } = useCarousel()  return (
@@ -450,6 +505,7 @@ const CarouselNext = React.forward_ref<;
       ref={ref}
       variant={variant}
       size={size}
+<<<<<<< HEAD
       className={cn(
 <<<<<<< HEAD
 =======
@@ -462,14 +518,22 @@ const CarouselNext = React.forward_ref<;
           : "bottom-1 sm:bottom-2 md:-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className
       )}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
+<<<<<<< HEAD
     >
       <ArrowRight className="h-4 w-4" />
       <span className="sr-only">Next slide</span>    </Button>
+=======
+
+    </Button>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   )
 })
 CarouselNext.displayName = "CarouselNext"
@@ -479,6 +543,7 @@ export {
   Carousel,
   CarouselContent,
   CarouselItem,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -491,3 +556,6 @@ export {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

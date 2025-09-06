@@ -17,6 +17,7 @@ interface OptimizedImageProps {
   alt: string;
   width?: number;
   height?: number;
+<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
   const [isInView, setIsInView] = useState(!lazy |priority)
@@ -28,6 +29,10 @@ interface OptimizedImageProps {
   const [metrics, setMetrics] = useState<ImageMetrics | null>(null)
   const loadStartTime = useRef<number>(0)
   // Intersection Observer for lazy loading      entries => {
+=======
+
+      entries => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         const [entry] = entries;        // Check condition
 if ( {) {
   $2
@@ -46,6 +51,11 @@ if ( {) {
         }
       }
       {
+<<<<<<< HEAD
+=======
+
+      }
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )
     if (imgRef.current) {
       observerRef.current.observe(imgRef.current)
@@ -53,6 +63,7 @@ if ( {) {
     return () => {
       observerRef.current?.disconnect()
     }
+<<<<<<< HEAD
   }, [lazy, priority, isInView])
   // Start load time tracking
   useEffect(() => {
@@ -65,6 +76,10 @@ if ( {) {
         const entries = list.getEntries()
         entries.forEach(entry => {          if (entry.name === src && entry.entryType === 'resource') {
             const resourceEntry = entry as PerformanceResourceTiming              resourceEntry.responseEnd - resourceEntry.requestStart
+=======
+
+              resourceEntry.responseEnd - resourceEntry.requestStart
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             setMetrics({
               loadTime
               fileSize
@@ -89,6 +104,7 @@ if ( {) {
                 size: `${(fileSize / 1024).toFixed(2)}KB`
                 loadTime: `${loadTime.toFixed(2)}ms`
               })
+<<<<<<< HEAD
   }, [lazy, priority, isInView]);
   // Start load time tracking;
   useEffect (() => {
@@ -182,14 +198,22 @@ if ( {) {
       setCurrentSrc (fallback_src);
       set_retries (0);
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } else {
       setIsLoading(false)
       setHasError(true)
       onError?.()
     }
   }
+<<<<<<< HEAD
   // Simulate loading progress for demo purposes
   useEffect(() => {    const interval = setInterval((,) => {
+=======
+
+    const interval = setInterval((,) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setLoadProgress(prev => {
         if (prev >= 90) {
           clearInterval(interval)
@@ -218,10 +242,13 @@ if ( {) {
   style?: React && React.CSSProperties;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState, useRef, useEffect } from 'react',;
 import Image from 'next/image',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -253,6 +280,7 @@ interface OptimizedImageProps {;
   loading?: 'lazy' | 'eager',;
   style?: React.CSSProperties,;
 <<<<<<< HEAD
+<<<<<<< HEAD
   objectPosition?: string;
 }
 ;
@@ -263,6 +291,9 @@ interface ImageMetrics {;
   wasOptimized: boolean;
 }
 ;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
 =======
   objectPosition?: string;export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
@@ -291,6 +322,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   style,;
   objectPosition = 'center',;
   ...props;
+<<<<<<< HEAD
 }) => {;            if (fileSize > 500 * 1024) {;
               logWarn('Large image detected:', {;
                 src,;
@@ -355,6 +387,30 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
       placeholder === 'blur' && 'backdrop-blur-sm bg-gray-200/50',;
       placeholder === 'color' && 'bg-gray-200';
     ),;
+=======
+}) => {;
+
+        }
+      },;
+      {;
+        rootMargin: '50px', // Start loading 50px before image comes into view;
+
+            // Log slow or large images;
+            if (loadTime > 2000) {;
+              logWarn('Slow image loading:', {;
+                src,;
+
+            if (fileSize > 500 * 1024) {;
+              logWarn('Large image detected:', {;
+                src,;
+                size: `${(fileSize / 1024).toFixed(2)}KB`,;
+
+              });
+            }
+          }
+        });
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (placeholder === 'color') {;
       return (;
         <div;
@@ -362,10 +418,15 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
           style={{ backgroundColor: placeholderColor }}
         />;
       );
+<<<<<<< HEAD
 
     }
 
 <<<<<<< HEAD
+=======
+    }
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return (
 <<<<<<< HEAD
       <div className={placeholderClassName}>
@@ -431,6 +492,11 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },
 
+<<<<<<< HEAD
+=======
+  },
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Container styles
   const containerStyle: React.CSSProperties = {
     aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined),
@@ -438,7 +504,6 @@ if ( {) {
 <<<<<<< HEAD
     height: height ? `${height}px` : undefined},
 =======
-
 
         {/* Placeholder */}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -451,6 +516,7 @@ if ( {) {
     >;
       <AnimatePresence>;
         {/* Placeholder */}
+<<<<<<< HEAD
         {(isLoading || !isInView) && !hasError && (;
           <motion.div;
             initial={{ opacity: 1 }}
@@ -464,22 +530,32 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             className="absolute inset-0"
           >
             {generatePlaceholder()}
 ;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {/* Loading progress */}
             {showLoadingProgress && isLoading && loadProgress > 0 && (
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200">
                 <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="h-full bg-blue-500"
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   initial={{ width: 0 }}
                   animate={{ width: `${loadProgress}%` }}
                   transition={{ duration: 0.3 }}
@@ -494,14 +570,15 @@ if ( {) {
           <motion.div;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400"
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           >
 =======
     if (placeholder === 'color') {;
@@ -521,11 +598,15 @@ if ( {) {
             <span className="text-sm">Failed to load image</span>
             {retries > 0 && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <span className="text-xs mt-1">Retried {retries} times</span>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             )}
           </motion.div>;
 =======
@@ -534,6 +615,7 @@ if ( {) {
         )}
 ;
         {/* Actual image */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -558,6 +640,10 @@ if ( {) {
         )}
         {/* Actual image */}        {isInView && !hasError && (;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+        {isInView && !hasError && (;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <motion.img;
             src={optimizedSrc}
             srcSet={srcSet}
@@ -572,23 +658,27 @@ if ( {) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             )}
             initial={{ opacity: 0 }}
             animate={{ opacity: isLoading ? 0 : 1 }}
             transition={{ duration: 0.3 }}
           />;
         )}
-<<<<<<< HEAD
-=======
 
   opacity: 0 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </AnimatePresence>;
     </div>;
   );
@@ -608,6 +698,7 @@ interface ImageGalleryProps {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -616,11 +707,14 @@ interface ImageGalleryProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
   images,
   columns = 3,
   aspectRatio = '16/9',
   className,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   onImageClick
@@ -638,6 +732,8 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
     setLoadedCount(prev => prev + 1)
   },
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
     <div className={cn('space-y-4', className)}>
@@ -647,6 +743,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
           {loadedCount}/{images.length} loaded
         </span>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -663,6 +760,9 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
             key={index}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
@@ -679,6 +779,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
                 alt={image.alt}
                 aspectRatio={aspectRatio}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -693,18 +794,22 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
                 <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg">
                   <p className="text-sm">{image.caption}</p>
                 </div>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               )}
             </div>;
           </motion.div>;
         ))}
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
   const initials = null;
     fallback ||
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     alt
       .split(' ')
       .map(n => n[0])
@@ -713,6 +818,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
       .slice(0, 2)
     >
       {src ? (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </div>;
     </div>;
@@ -755,21 +861,29 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
           placeholderColor="#f3f4f6"
           priority={true}
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <OptimizedImage
           src={src}
           alt={alt}
           aspectRatio='1/1'
           objectFit='cover'
+<<<<<<< HEAD
           fallbackSrc={`https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=random`}
           placeholder='color'
           placeholderColor='#f3f4f6'
           priority={true}
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           className="rounded-full"
         />
       ) : (
         <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold">
+<<<<<<< HEAD
           {initials}
 <<<<<<< HEAD
         </div>;
@@ -781,6 +895,10 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
         </div>
       )}
 
+=======
+
+          {initials}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 },;
 =======
@@ -801,6 +919,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
     </div>;
   )
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -991,3 +1110,6 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

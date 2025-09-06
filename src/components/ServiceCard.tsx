@@ -9,6 +9,7 @@ interface ServiceCardProps {
   description: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   icon: string;
   features: string[];
   className?: string;
@@ -82,6 +83,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <div className="space-y-3">
         <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>        <ul className="space-y-2">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+        </div>
+
+        <ul className="space-y-2">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {features.map((feature, index) => (
             <li key={index} className="flex items-center text-sm text-gray-300">
               <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0"></span>
@@ -89,6 +96,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             </li>
           ))}
         </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
       )}
     </motion.div>
@@ -111,6 +119,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       </div>
     </div>  )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  );
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 
 export default ServiceCard;

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   ArrowRight,
   Award,
@@ -63,6 +64,9 @@ const Page = () => {
 export default Page;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   BookOpen,
   Brain,
   Building,
@@ -210,6 +214,7 @@ import {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -237,6 +242,10 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+} from 'lucide-react';
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ArrowRight
   Award
   BarChart3
@@ -747,12 +756,10 @@ export default function Navigation() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
-
 export default function Navigation() {;
 
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
 <<<<<<< HEAD
@@ -1105,6 +1112,7 @@ function Navigation() {
     </nav>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import MainLayout from '../../src/components/layout/MainLayout';
@@ -1131,3 +1139,6 @@ export default Page;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

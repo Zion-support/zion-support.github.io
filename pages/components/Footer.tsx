@@ -43,7 +43,6 @@ import {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -84,6 +83,7 @@ import {;
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 import React from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -187,6 +187,9 @@ export default Page;
 import Link from 'next/link';
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -472,6 +475,7 @@ const microSaasCategories = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 ursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
 origin/main
 origin/automation-improvements-final
 <<<<<<< HEAD
@@ -481,6 +485,8 @@ origin/automation-improvements-final
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               </ul>;
 
@@ -538,6 +544,7 @@ origin/automation-improvements-final
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+<<<<<<< HEAD
 
 
 
@@ -564,6 +571,8 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <motion.div
               transition={{ duration: 0 && 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0">;
@@ -762,6 +771,7 @@ origin/main
     </footer>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1028,3 +1038,6 @@ export default Page;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from "react"
 import {logDebug, logErrorToProduction} from '@/utils/productionLogger'
 import {useToast} from "@/hooks/use-toast"
@@ -21,6 +25,7 @@ import {z} from "zod"
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary"
 const serviceStepSchema = z.object({
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   serviceType: z.string().min(1),
@@ -29,6 +34,8 @@ const serviceStepSchema = z.object({
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
     serviceCategory: ""
@@ -42,6 +49,7 @@ const serviceStepSchema = z.object({
       amount: 0
       type: "fixed"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const serviceStepSchema = z.object({
@@ -434,12 +442,18 @@ export function QuoteRequestForm() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     },
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     contactInfo: {
       name: ""
       email: ""
       phone: ""
       company: ""
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   )
 }
 
@@ -501,9 +515,13 @@ function QuoteRequestForm() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

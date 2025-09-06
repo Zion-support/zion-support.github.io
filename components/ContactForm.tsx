@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       });
@@ -300,6 +301,9 @@ const ContactForm: React.FC = () => {
 export default ContactForm;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setSubmitStatus('success');
     } catch {;
       setSubmitStatus('error');
@@ -331,6 +335,7 @@ export default ContactForm;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default ContactForm;
 export default ContactForm;
@@ -343,3 +348,6 @@ export default ContactForm;
 =======
 export default ContactForm;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

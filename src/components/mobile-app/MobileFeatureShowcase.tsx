@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
@@ -33,6 +34,9 @@ export const MobileFeatureShowcase: React.FC = () => {
     }
 =======
 {
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       icon: <Star className="h-8 w-8 text-zion-purple" />
 =======
     {      icon: <Star className="h-8 w-8 text-zion-purple" />
@@ -40,24 +44,40 @@ export const MobileFeatureShowcase: React.FC = () => {
       title: "AI-Match Instantly"
       description: "Get matched with the perfect talent or jobs using our advanced AI algorithm."
 
+<<<<<<< HEAD
     },
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       icon: <CheckCircle className="h-8 w-8 text-zion-cyan" />
       title: "Track Milestones"
       description: "Monitor project progress and approve milestones directly from your phone."
 
+<<<<<<< HEAD
+=======
+    {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       icon: <Mail className="h-8 w-8 text-zion-purple" />
       title: "Instant Messaging"
       description: "Chat with candidates or clients and receive notifications in real-time."
 
+<<<<<<< HEAD
     },
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       icon: <Smartphone className="h-8 w-8 text-zion-cyan" />
       title: "Biometric Security"
       description: "Login quickly and securely with Face ID or Touch ID on supported devices."
+<<<<<<< HEAD
       icon: <Star className="h - 8 w - 8 text - zion-purple" />,
+=======
+
+    {
+      icon: <Star className="h - 8 w - 8 text - zion - purple" />,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       title: "AI - Match Instantly",
       description: "Get matched with the perfect talent or jobs using our advanced AI algorithm.";
     }
@@ -77,6 +97,7 @@ export const MobileFeatureShowcase: React.FC = () => {
       description: "Login quickly and securely with Face ID or Touch ID on supported devices.";
     }
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 
@@ -99,12 +120,19 @@ export const MobileFeatureShowcase: React.FC = () => {
 <<<<<<< HEAD
         
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <div 
               key={index} 
+<<<<<<< HEAD
               className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300"
             >
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="mb-4">
 <<<<<<< HEAD
                 {feature.icon}
@@ -139,7 +167,10 @@ export const MobileFeatureShowcase: React.FC = () => {
               <div className="mb-4">;
                 {feature.icon}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
               <p className="text-zion-slate-light">{feature.description}</p>
@@ -184,6 +215,10 @@ export const MobileFeatureShowcase: React.FC = () => {;
   ];
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <section id="features" className="py-16 bg-zion-blue">;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -196,6 +231,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
             The Zion mobile app brings the power of our AI marketplace to your pocket with these key features;
           </p>;
         </div>;
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">;
           {features.map((feature, index) => (;
             <div;
@@ -225,3 +261,8 @@ export const MobileFeatureShowcase: React.FC = () => {;
 '"},
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+'"},
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

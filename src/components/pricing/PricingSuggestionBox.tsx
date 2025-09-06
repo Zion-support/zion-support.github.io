@@ -15,11 +15,14 @@ interface PricingSuggestionBoxProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
 =======
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card className='border border-dashed border-muted'>
         <CardContent className='flex items-center justify-center p-6'>
           <div className='text-center'>
@@ -68,11 +71,14 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
               Generating optimal pricing suggestion...
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </p>
           </div>
         </CardContent>
@@ -89,10 +95,13 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   const confidenceColor = {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -150,9 +159,12 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <CardContent className="p-5 space-y-4">
         <div className="flex items-center justify-between">
           <h4 className="font-semibold">AI Suggested Price</h4>
@@ -236,24 +248,31 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="bg-muted/50 rounded-md p-3 text-center">
           <span className="text-2xl font-bold">
             ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
           </span>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <span className="text-sm text-muted-foreground ml-1">
             {rateType === "hourly" ? "/hour" : " total"}
           </span>
         </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           <span className="text-sm text-muted-foreground ml-1">
             {rateType === "hourly" ? "/hour" : " total"}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -262,6 +281,8 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="flex items-start space-x-2 text-sm text-muted-foreground">
           <Info className="h-4 w-4 flex-shrink-0 mt-1" />
           <p>{suggestion.explanation}</p>
@@ -302,10 +323,13 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
         <div className="flex items-center justify-between">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </TooltipTrigger>
               <TooltipContent>
                 <p>Apply this suggestion to your pricing field</p>
@@ -314,12 +338,16 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           </TooltipProvider>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
 =======
 
         
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
 
@@ -327,8 +355,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
       </CardContent>
     </Card>
   )
-
-        
 
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
@@ -340,7 +366,11 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 "  )
 };
@@ -392,6 +422,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           </TooltipProvider>;
         </div>;
 
+<<<<<<< HEAD
         <p className='text-xs text-center text-muted-foreground pt-2'>          Based on market data & trends. You can adjust as needed.;
         </p>;
       </CardContent>;
@@ -399,6 +430,8 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
   )
 };
 "        ;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <p className="text-xs text-center text-muted-foreground pt-2">;
           Based on market data & trends. You can adjust as needed.;
         </p>;
@@ -407,7 +440,10 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
   )
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 };
 

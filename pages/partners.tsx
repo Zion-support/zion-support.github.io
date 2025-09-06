@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,6 +27,9 @@ const Page = () => {
 export default Page;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
@@ -525,7 +529,6 @@ export default function PartnersPage() {
         </div>
       </section>
 
-
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
@@ -539,7 +542,6 @@ export default function PartnersPage() {
         </div>;
       </section>;
 
-
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -551,7 +553,6 @@ export default function PartnersPage() {
             </p>
           </motion.div>
               <motion.div
-
 
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
@@ -567,12 +568,10 @@ export default function PartnersPage() {
               <motion&& motion.div
                 key={type && type.title}
 
-
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
 
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-2xl flex items-center justify-center mb-6`}>
@@ -587,11 +586,9 @@ export default function PartnersPage() {
         </div>;
       </section>;
 
-
       {/* Current Partners */}
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
-
 
       {/* Current Partners */}
       <section className="py-20 px-6">
@@ -603,7 +600,6 @@ export default function PartnersPage() {
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
-
           >
             <h2 className="text-4xl font-bold text-white mb-6">Our Partners</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
@@ -611,7 +607,6 @@ export default function PartnersPage() {
             </p>
           </motion.div>
               <motion.div
-
 
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-white mb-6'>Our Partners</h2>;
@@ -625,12 +620,10 @@ export default function PartnersPage() {
               <motion&& motion.div
                 key={partner && partner.name}
 
-
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
 
               >
                 <div className="p-6">
@@ -713,7 +706,6 @@ export default function PartnersPage() {
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our Partners</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Leading technology companies and organizations that trust us to deliver innovative solutions </p> </motion.div> </span> </div> </div> </li>) )
 }</ul> </div> <div className="flex items-center justify-between" > <a > Visit Website <ExternalLink className="w-3 h-3" /> </Link> <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105" > Learn More </button> </div> </div> </motion.div>) )
 
-
 ),
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) ) 
 }</ul> </motion.div>) ) 
@@ -784,6 +776,7 @@ export default function PartnersPage() {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -816,3 +809,6 @@ export default Page;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

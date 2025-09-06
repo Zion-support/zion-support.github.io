@@ -12,6 +12,7 @@ import { Sparkles, Search } from 'lucide-react'
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -40,6 +41,9 @@ serviceType
 })
 toast ({  setIsMatchmaking (false) ; import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  setIsMatchmaking (false) ; import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface AIMatchmakerProps {
   serviceType?: string,
   onMatchSelect?: (match: any) => void,
@@ -57,6 +61,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       toast({
         title: "Please enter a description",
         description: "Tell us what you're looking for so we can find matches.",
+<<<<<<< HEAD
 <<<<<<< HEAD
         variant: "destructive"}),
       return
@@ -196,6 +201,8 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
       setMatches([])
     } finally {
       setIsMatchmaking(false)
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />;
           AI Matchmaker;
@@ -226,6 +233,7 @@ toast ({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface AIMatchmakerProps {;
   serviceType?: string,;
+<<<<<<< HEAD
   onMatchSelect?: (match: any) => void,;
   className?: string;
 }
@@ -271,6 +279,9 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         title: "Matching Error",;
         description: "We couldn't find matches for your request. Please try again.",;
         variant: "destructive"}),;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Set empty matches to show no results found UI;
 =======
         title: "Matches Found",,
@@ -286,16 +297,24 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
     } finally {;
       setIsMatchmaking(false);
     }
+<<<<<<< HEAD
   },;
   const handleItemSelect = (item: any) => {;
     if (onMatchSelect) {;
       // Find the original MatchResult that contains this item;
 <<<<<<< HEAD
       const matchResult = matches.find(match => match.item.id === item.id),;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       if (matchResult) {;
         onMatchSelect(matchResult);
       }
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   
   // Extract just the items from each MatchResult
@@ -307,7 +326,10 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         <CardTitle className="flex items-center text-white">
           <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           AI Matchmaker
         </CardTitle>
         <p className="text-sm text-zion-slate-light">
@@ -335,16 +357,21 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
               disabled={isMatchmaking}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
             >;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {isMatchmaking ? (;
                 <>Analyzing your needs...</>;
               ) : (;
                 <>;
+<<<<<<< HEAD
                   <Search className="h-4 w-4 mr-2" />;
                   Find Matches;
                 </>;
@@ -358,10 +385,14 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
               ) : (;
                 <>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
               serviceType={serviceType}
+<<<<<<< HEAD
 <<<<<<< HEAD
               projectDescription={query}
 =======
@@ -371,6 +402,13 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
               projectDescription={query}
             />;
           )}        </div>;
+=======
+
+}
+}
+
+        </div>;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </CardContent>;
     </Card>;
   );
@@ -396,8 +434,12 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 =======
     </Card>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

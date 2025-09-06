@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -50,11 +51,18 @@ if ( {) {
           .from('model_versions');
           .update({ active: false });
           .eq('purpose', purpose);
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       }
 
       // Update this model;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       await supabase;
         .from ('model_versions');
         .update ({ active: !current_active });
@@ -62,6 +70,7 @@ if ( {) {
       // Refresh the model list;
       fetch_models ();
 
+<<<<<<< HEAD
     } catch (error) {
       logErrorToProduction ('Error toggling model active state:', { data: error });
     }
@@ -129,6 +138,9 @@ interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
   errorMessage?: string
 }        .order('createdAt', { ascending: false }),;
+=======
+        .order('createdAt', { ascending: false }),;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -152,6 +164,7 @@ interface ModelVersionData extends ModelConfig {
       logErrorToProduction('Error toggling model active state:', { data: error });
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   },
 
 =======
@@ -162,6 +175,10 @@ interface ModelVersionData extends ModelConfig {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  },;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Card className="w-full">
       <CardHeader className="flex flex-row items-center justify-between">
@@ -234,6 +251,7 @@ interface ModelVersionData extends ModelConfig {
                         ) : (;
                           <RefreshCw className="h-4 w-4" />;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (
                       <Button
@@ -245,12 +263,15 @@ interface ModelVersionData extends ModelConfig {
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       >
                         {activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
                         ) : (
                           <RefreshCw className="h-4 w-4" />
                         )}
+<<<<<<< HEAD
                         <span className="ml-1">Check</span>
                       </Button>
                     ) : model.trainingStatus === 'succeeded' ? (
@@ -267,6 +288,9 @@ interface ModelVersionData extends ModelConfig {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       >
                         {model.active ? (
                           <>
@@ -277,9 +301,13 @@ interface ModelVersionData extends ModelConfig {
                             <Play className="h-4 w-4 mr-1" /> Activate
                           </>
                         )}
+<<<<<<< HEAD
                       </Button>
 <<<<<<< HEAD
                     ) : (
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       <Button
 =======
                     ) : (                      <Button
@@ -309,12 +337,15 @@ interface ModelVersionData extends ModelConfig {
                     )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </TableCell>;
                 </TableRow>;
 =======
 
                   </TableCell>;
                 </TableRow>;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -328,8 +359,11 @@ interface ModelVersionData extends ModelConfig {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 }
 
@@ -422,8 +456,12 @@ interface ModelVersionData extends ModelConfig {
     </Card>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -9,6 +9,7 @@ import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
 import {logErrorToProduction} from '@/utils/productionLogger',
 interface GeneratedContent {
 <<<<<<< HEAD
+<<<<<<< HEAD
   description: string,
   tags: string[],
   suggestedPrice: {
@@ -34,10 +35,15 @@ interface GeneratedContent {;
     min: number
 
     max: number  }
+=======
+
+  }
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   keyPoints: string[]
 }
 interface AIListingGeneratorProps {
 
+<<<<<<< HEAD
 interface GeneratedContent {,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   description: string,;
@@ -128,6 +134,20 @@ import { AIListingForm } from "./AIListingForm",
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
 import {logErrorToProduction} from '@/utils/productionLogger',      toast({
+=======
+    title?: string;
+    category?: string;
+    keyFeatures?: string;
+    targetAudience?: string
+  }
+}
+
+  }) => {
+    setIsLoading(true)
+    try {
+
+      toast({
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         title: "Content Generated"
         description: "AI has created optimized listing content for you."
       })
@@ -166,6 +186,7 @@ if (.error) {) {
       setIsLoading(false)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -176,10 +197,14 @@ if (.error) {) {
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent),
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       toast({
         title: "Content Applied",
         description: "The generated content has been applied to your listing."
       })
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   },
@@ -236,6 +261,9 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
 
       setGeneratedContent((data as any)?.generated || null);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       toast({;
         title: "Content Generated",;
         description: "AI has created optimized listing content for you.";
@@ -244,14 +272,19 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
       logErrorToProduction('Error generating content:', { data: error }),;
       toast({;
         title: "Generation Failed",;
+<<<<<<< HEAD
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         variant: "destructive";
       });
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   },;
   const handleApply = () => {;
@@ -264,6 +297,9 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
     }
   };
   return (;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="space-y-6">;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -278,6 +314,7 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
           </p>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -298,6 +335,9 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
           <AIListingForm 
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {isLoading && <LoadingContentSkeleton />}
 =======
           />;
@@ -308,6 +348,7 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
       )}
 
+<<<<<<< HEAD
     <div className="space-y-6">;
       <Card className="border border - zion - blue - light bg - zion - blue-dark">;
         <CardHeader>;
@@ -348,10 +389,13 @@ category: string;
 key_features: string;
 target_audience: string;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }) => {
   setIsLoading (true)
 try {
   const {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   data, error;
@@ -389,6 +433,10 @@ toast ({
 =======
 }catch (error) {';
   logErrorToProduction ('Error generating content:', {  data: error;
+=======
+
+  data: error;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 });
 toast ({
 }finally {
@@ -406,6 +454,10 @@ if ( {) {
   onApplyGenerated (generated_content);
 toast ({
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 }
 }
@@ -414,5 +466,9 @@ toast ({
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -119,6 +119,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
               : 'border-border hover:border-primary/40'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           }`}
+<<<<<<< HEAD
           onClick = {(,) => handleSelect('talent'),}
         >;
           <CardContent className='p-5'>;
@@ -135,6 +136,9 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
               {selectedRole === 'talent' && (;
 <<<<<<< HEAD
                 <Check className="h-5 w-5 text-primary" />;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               )}
             </div>;
           </CardContent>;
@@ -158,7 +162,12 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
               : 'border-border hover:border-primary/40'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           }`}
+<<<<<<< HEAD
           onClick = {() => handleSelect('client'),}        >;
+=======
+
+        >;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <CardContent className='p-5'>;
             <div className='flex items-center'>;
               <div className='w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4'>;
@@ -178,9 +187,12 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
         </Card>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>;
   );
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     </div>);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

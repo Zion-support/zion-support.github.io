@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -190,3 +191,12 @@ export default function handler(req, res) {
   }
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+    return res.status(200).json({ tx })
+  } catch (err: any) {
+    return res.status(400).json({ error: err.message })
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

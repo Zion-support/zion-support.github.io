@@ -54,6 +54,7 @@ import {  Table,  Table,;
   TableCell,;
   TableHead,;
   TableHeader,;
+<<<<<<< HEAD
   TableRow,;
 } from '@/components/ui/table';
 import Skeleton from '@/components/ui/skeleton';
@@ -78,10 +79,14 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
   const getStatusBadgeVariant = (status: DisputeStatus,) => {;
     switch (status) {;
       case 'open':;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         return 'default';
       case 'under_review':;
         return 'secondary';
       case 'resolved':;
+<<<<<<< HEAD
         return 'outline'; // Changed from "success" to "outline"
       case 'closed':
         return 'outline'
@@ -116,12 +121,17 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import {  Table,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  Table,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
 <<<<<<< HEAD
   TableRow} from "@/components/ui/table",
+<<<<<<< HEAD
 import Skeleton from "@/components/ui/skeleton",
 import { formatDistanceToNow } from "date-fns",
 import { ShieldAlert } from 'lucide-react'
@@ -171,6 +181,56 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+import React, { useState } from "react";
+import { Dispute, DisputeStatus } from "@/types/disputes";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {;
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table";
+import Skeleton from "@/components/ui/skeleton";
+import { formatDistanceToNow } from "date-fns";
+import { ShieldAlert } from 'lucide-react';
+import Link from "next/link";
+type DisputesListProps = {;
+  disputes: Dispute[],;
+  isLoading: boolean;
+};
+
+export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps) {;
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
+
+  const filteredDisputes = statusFilter === "all" ;
+    ? disputes ;
+    : disputes && disputes.filter(dispute => dispute && dispute.status === statusFilter);
+
+  const getStatusBadgeVariant = (status: DisputeStatus) => {;
+    switch (status) {;
+  disputes: Dispute[],
+  is_loading: boolean;
+}
+export /**
+ * DisputesList - Function description
+ */
+function DisputesList() {
+  const [status_filter, setStatusFilter] = useState < DisputeStatus | "all">("all");
+  const filtered_disputes = status_filter === "all";
+    ? disputes;
+    : disputes.filter (dispute => dispute.status === status_filter);
+  const getStatusBadgeVariant = (status: DisputeStatus) =>: any {
+    switch (status) {
+      case "open": return "default";
+      case "under_review":;
+        return "secondary";
+      case "resolved":;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="border rounded-md">
           <Table>
             <TableHeader>
@@ -181,11 +241,15 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
                 <TableHead>Created</TableHead>
                 <TableHead>Status</TableHead>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <TableHead className="text-right">Actions</TableHead>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </TableRow>
 =======
   TableRow} from "@/components/ui/table",              </TableRow>
@@ -203,7 +267,10 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </TableRow>
 import React, { useState } from "react",;
 import { Dispute, DisputeStatus } from "@/types/disputes",;
@@ -274,10 +341,15 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                 </TableRow>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </TableBody>;
           </Table>;
         </div>;
       </div>;
+<<<<<<< HEAD
     );
 <<<<<<< HEAD
   }
@@ -291,6 +363,9 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
   }
 
   if (disputes && disputes.length === 0) {;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return (
 =======
               ))}    return (
@@ -304,10 +379,14 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 
   if (disputes && disputes.length === 0) {;
     return (
+<<<<<<< HEAD
   }
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="text-center py-12 border rounded-md bg-muted/20">
 =======
   if (disputes.length === 0) {
@@ -326,6 +405,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </p>
@@ -391,6 +471,12 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        </p>
+      </div>
+    )
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
 =======
     <div className="space-y-4">      <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
@@ -408,7 +494,10 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           size="sm"
         >
           Open
@@ -419,7 +508,10 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           size="sm"
         >
           Under Review
@@ -430,7 +522,10 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           size="sm"
         >
           Resolved
@@ -441,7 +536,10 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           size="sm"
         >
           Closed
@@ -449,11 +547,15 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 <<<<<<< HEAD
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       <div className="border rounded-md overflow-hidden">
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Table>
           <TableHeader>
             <TableRow>
@@ -463,6 +565,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
               <TableHead>Created</TableHead>
               <TableHead>Status</TableHead>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -471,6 +574,8 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
           </TableHeader>
           <TableBody>
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             {filteredDisputes.map((dispute) => (
               <TableRow key={dispute.id}>
@@ -479,10 +584,13 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                 </TableCell>
                 <TableCell>
 
+<<<<<<< HEAD
 
                   {dispute.project?.title || 'Unknown Project'}
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </TableCell>
 =======
       </div>                </TableCell>
@@ -519,10 +627,13 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                   })}                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {dispute.project?.title || "Unknown Project"}
                 </TableCell>
                 <TableCell>
@@ -535,17 +646,25 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     </span>
                   </div>
                 </TableCell>
                 <TableCell>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
                 </TableCell>;
                 <TableCell>;
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>;
 =======
+=======
+
+                    </span>;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <span>;
                       Talent:{' '}
                       {dispute && dispute.talent_profile?.display_name || 'Unknown Talent'}                    </span>;
@@ -626,6 +745,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
             ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           </TableBody>;
         </Table>;
       </div>;
@@ -664,6 +784,9 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
       </div>;
     </div>);
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -689,6 +812,7 @@ if ( {") {
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   i ";
@@ -710,3 +834,6 @@ if ( {") {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

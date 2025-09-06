@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link',;
 import { useRouter } from 'next/router',;
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react';
@@ -138,6 +139,9 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
       </div>
 =======
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               onClose(), // Close mobile menu on any click
 =======
               }              onClose(), // Close mobile menu on any click
@@ -177,8 +181,12 @@ name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

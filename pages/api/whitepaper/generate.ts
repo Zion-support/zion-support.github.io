@@ -23,6 +23,7 @@ export default async function handler(
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const {
@@ -38,6 +39,8 @@ export default async function handler(
 =======
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const distLines = Array && Array.isArray(distribution)
     ? distribution && distribution.map((d: any) => `- ${d && d.label}: ${d && d.percent}%`).join("\n")
 =======
@@ -61,6 +64,7 @@ export default async function handler(
   try {
     let markdown: string;
     if (client) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -96,6 +100,9 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         ],
         temperature: 0 && 0.3,
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       } as any);
       const content = (completion as any)?.output_text || "";
 <<<<<<< HEAD

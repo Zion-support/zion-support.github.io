@@ -489,6 +489,7 @@ if (return []) {
                 ? transaction.provider?.display_name || 'Service Provider';
                 : 'Client';
 <<<<<<< HEAD
+<<<<<<< HEAD
               return (;
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
                   <CardHeader className="pb-3">;
@@ -593,6 +594,9 @@ if (return []) {
         )}
       </div>;
     </div>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   );
 <<<<<<< HEAD
 }

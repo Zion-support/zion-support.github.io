@@ -89,6 +89,7 @@ function HelpCenter() {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -103,6 +104,8 @@ function HelpCenter() {
             Find answers to common questions or get in touch with our support team.
           </p>
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
 
 class ErrorBoundary extends React.Component {
@@ -136,8 +139,11 @@ import { HelpArticleList } from './HelpArticleList';
 import { HelpArticleView } from './HelpArticleView';
 import { HELP_CATEGORIES } from './help-content';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="relative mb-8">
             <Input
               placeholder="Search for help articles..."
@@ -170,6 +176,7 @@ import { HELP_CATEGORIES } from "./help-content",;
 import { Search } from 'lucide-react';
 
 export default function HelpCenter() {;
+<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -199,6 +206,12 @@ export default function HelpCenter() {;
           </h1>;
           <p className="text-zion-slate-light mb-6">;
             Find answers to common questions or get in touch with our support team.;
+=======
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null),;
+  const [searchQuery, setSearchQuery] = useState(""),;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </p>;
           <div className="relative mb-8">;
 =======
@@ -244,10 +257,13 @@ export default function HelpCenter() {;
                 <HelpCategoryList;
                   categories={HELP_CATEGORIES} ;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   onCategorySelect={handleCategorySelect}
                   searchQuery={searchQuery}
                 />;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                   onCategorySelect={handleCategorySelect}
                   searchQuery={searchQuery}                />
@@ -273,7 +289,10 @@ export default function HelpCenter() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               {selectedArticle && (;
                 <>;
@@ -300,7 +319,11 @@ export default function HelpCenter() {;
                   />;
                 </>;
               )}
+<<<<<<< HEAD
               
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {selectedArticle && (
                 <>
                   <Button
@@ -318,14 +341,18 @@ export default function HelpCenter() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <TabsContent value="faq">
               <div className="bg-zion-blue-light/20 rounded-lg p-6">
                 <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
                 
                 <div className="space-y-6">
                   <div>
+<<<<<<< HEAD
                     <h3 className='font-medium text-zion-cyan mb-2'>
                       How do I hire someone on Zion?
                     </h3>
@@ -354,6 +381,17 @@ export default function HelpCenter() {;
 
                   
 
+=======
+
+                    </p>
+                  </div>
+
+                  <div>
+
+                    </p>
+                  </div>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">What are the payment terms?</h3>
                     <p className="text-zion-slate-light">
@@ -361,7 +399,10 @@ export default function HelpCenter() {;
                     </p>
                   </div>
 
+<<<<<<< HEAD
                   
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3>
                     <p className="text-zion-slate-light">
@@ -485,11 +526,14 @@ export default function HelpCenter() {;
             </TabsContent>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <TabsContent value="contact">
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
@@ -510,7 +554,11 @@ export default function HelpCenter() {;
                       <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">
                         support@ziontechgroup.com
 <<<<<<< HEAD
+<<<<<<< HEAD
                       </Link>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     </div>
 <<<<<<< HEAD
 =======
@@ -533,11 +581,14 @@ export default function HelpCenter() {;
                           viewBox='0 0 20 20'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">
@@ -546,10 +597,13 @@ export default function HelpCenter() {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         </svg>
                       </div>
                       <span className='text-zion-slate-light'>
@@ -561,11 +615,14 @@ export default function HelpCenter() {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">
                     Open Live Chat
                   </Button>
@@ -581,7 +638,10 @@ export default function HelpCenter() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <div>
                       <Input placeholder='Your email' />
                     </div>
@@ -598,6 +658,7 @@ export default function HelpCenter() {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     
@@ -607,6 +668,10 @@ export default function HelpCenter() {;
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       Submit Feedback
                     </Button>
                   </form>
@@ -746,11 +811,14 @@ export default function HelpCenter() {;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>;
   );
 }
 ;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     </>);
 }

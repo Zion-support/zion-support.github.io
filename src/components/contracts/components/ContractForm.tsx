@@ -8,6 +8,7 @@ import { ProjectDetailsFields } from "./ProjectDetailsFields";
 import { PaymentTermsFields } from "./PaymentTermsFields";
 import { AdditionalClausesFields } from "./AdditionalClausesFields";
 import {logErrorToProduction} from '@/utils/productionLogger';
+<<<<<<< HEAD
 const formSchema = z && z.object({;
   projectName: z && z.string().min(1, "Project name is required");
   scopeSummary: z && z.string().min(10, "Scope summary should be at least 10 characters");
@@ -332,3 +333,6 @@ export type ContractFormValues = z.infer < typeof form_schema>;
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

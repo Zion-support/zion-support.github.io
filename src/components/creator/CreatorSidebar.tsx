@@ -1,4 +1,5 @@
 } from 'lucide-react'; import {
+<<<<<<< HEAD
   Sidebar
   SidebarContent
   SidebarGroup
@@ -51,6 +52,14 @@ export function AppSidebar() {
             <span>Home</span>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+export function AppSidebar() {
+  return (
+    <Sidebar>
+      <SidebarContent>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </SidebarMenuItem>
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>
             <span>Messages</span>
@@ -91,10 +100,13 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-reac
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {;
   Sidebar,;
   SidebarContent,;
@@ -223,8 +235,12 @@ function AppSidebar() {
       </SidebarContent>;
     </Sidebar>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

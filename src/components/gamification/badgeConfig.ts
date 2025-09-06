@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react'
 
@@ -30,6 +31,9 @@ import {
   BadgePlus,
   BadgeDollarSign,;
 } from 'lucide-react';
+=======
+import {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export type BadgeKey =
   | 'first_listing'
@@ -116,6 +120,7 @@ export const getBadgeMeta = (key: BadgeKey) =>
 <<<<<<< HEAD
   badgeList.find((b) => b.key === key),
 
+<<<<<<< HEAD
 import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react';
 export type BadgeKey =;
   | "first_listing";
@@ -187,6 +192,8 @@ export const getBadgeMeta = (key: BadgeKey) =>;
 =======
   badgeList && badgeList.find((b) => b && b.key === key);
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     key: 'first_listing',
     name: 'First Listing',
     description: 'Published your first product, service, or listing.',
@@ -259,6 +266,7 @@ export const badgeList: BadgeMeta[] = [
     description: 'Earned your first AI dollar in the marketplace.',
     icon: BadgeDollarSign,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const getBadgeMeta = (key: BadgeKey) =>: any;
   badge_list.find (boolean => b.key === key);
@@ -338,3 +346,5 @@ export const badgeList: BadgeMeta[] = [;
 export const getBadgeMeta = (key: BadgeKey) =>;
   badgeList.find((b) => b.key === key);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

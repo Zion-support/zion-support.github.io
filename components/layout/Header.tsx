@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -264,6 +265,14 @@ const Header = () => {
     { name: 'Contact', href: '/contact', icon: Phone }
 
   ];
+=======
+
+
+    { name: 'Contact', href: '/contact', icon: Phone }
+
+  ];
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const service_categories = [;
     {
       name: 'Micro SaaS',
@@ -282,9 +291,12 @@ const Header = () => {
       href: '/services / ai - services',
       description: 'Cutting - edge AI & machine learning',
 
+<<<<<<< HEAD
       popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];
 }
   ];
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     { ;
       name: 'Micro SaaS',;
       href: '/services/micro-saas',,
@@ -324,9 +336,12 @@ const Header = () => {
     { name: 'Team', href: '/team' },;
     { name: 'Careers', href: '/careers' },;
 
+<<<<<<< HEAD
   ];
   const isActive = (path: string) => location && location.pathname === path;
   const resourceCategories = [;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     { name: 'Blog', href: '/blog' },;
     { name: 'Case Studies', href: '/case-studies' },;
     { name: 'Webinars', href: '/webinars' },;
@@ -339,7 +354,20 @@ const Header = () => {
     <headerclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' 
+<<<<<<< HEAD
         : 'bg-transparent'  const service_categories = [;
+=======
+        : 'bg-transparent'
+
+      popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];
+}
+  ];
+  ];
+  const isActive = (path: string) => location && location.pathname === path;
+  const resourceCategories = [;
+
+  const service_categories = [;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     { name: 'AI Solutions', href: '/services / ai - solutions' },
     { name: 'Cloud & DevOps', href: '/services / cloud' },
     { name: 'Cybersecurity', href: '/services / cybersecurity' },
@@ -378,6 +406,11 @@ const Header = () => {
       <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
         <div className="flex items - center justify-between h-16">;
           {/* Logo */}
+<<<<<<< HEAD
+=======
+
+          <div className="flex-shrink-0">;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Link href="/" className="text-2xl font-bold text-blue-600">;
               Zion Tech Group;
             </Link>;
@@ -395,15 +428,24 @@ const Header = () => {
                 </Link>;
               ))}
 
+<<<<<<< HEAD
             </div>;
           </div>;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {/* Mobile menu button */}
           <div className="md:hidden">;
             <button              onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-blue-600 p-2";
             >;
+<<<<<<< HEAD
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}        {/* Mobile Navigation */}
+=======
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+
+        {/* Mobile Navigation */}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <AnimatePresence>;
           {isMenuOpen && (;
             <motion&& motion.div
@@ -428,8 +470,15 @@ const Header = () => {
         </AnimatePresence>;
       </nav>;
     </header>;
+<<<<<<< HEAD
   );          <div className="flex-shrink-0">;
             <Link href="/" className="text - 2xl font - bold text-blue-600">;
+=======
+  );
+
+          <div className="flex - shrink - 0">;
+            <Link href="/" className="text - 2xl font - bold text - blue - 600">;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               Zion Tech Group;
             </Link>;
           </div>;
@@ -479,26 +528,97 @@ const Header = () => {
         </AnimatePresence>;
       </nav>;
     </header>);
+<<<<<<< HEAD
 }            >
+=======
+}
+
+            >
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Mobile Menu */}        {/* Mobile Navigation */}            </motion.div>
+=======
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+
+              className="lg:hidden border-t border-gray-200"
+            >
+              <div className="py-4 space-y-4">
+                {navigation.map((item) => (
+                  <div key={item.name}>
+                    {item.hasDropdown ? (
+                      <div>
+                        <div className="flex items-center justify-between px-4 py-2 text-gray-700 font-medium">
+                          <span>{item.name}</span>
+                          <ChevronDown className="h-4 w-4" />
+                        </div>
+                        <div className="pl-4 space-y-2">
+                          {item.children?.map((child) => (
+                            <Link
+                              key={child.name}
+                              href={child.href}
+                              className="flex items-center px-4 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                            >
+                              <child.icon className="h-4 w-4 mr-3 text-blue-500" />
+                              <span className="text-sm">{child.name}</span>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className={`block px-4 py-2 font-medium transition-colors duration-200 ${
+                          isActive(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    )}
+                  </div>
+                ))}
+                
+                <div className="pt-4 border-t border-gray-200">
+                  <Link
+                    href="/contact"
+                    className="block mx-4 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg text-center hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+                  >
+                    Get Started
+                  </Link>
+                </div>
+
+              </div>
+            </motion.div>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           )}
         </AnimatePresence>
       </nav>
     </header>
+<<<<<<< HEAD
   )
 };
 
 export default Header;}
+=======
+  );
+
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default Header;
 import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { motion,AnimatePresence } from 'framer-motion'; import { Menu,X,Home,Users,Briefcase,Phone,Mail,ChevronDown,Brain,Shield,Cloud,Database,Network,Zap,Target,DollarSign,BookOpen,Calendar,FileText,Award,Globe,Search,ArrowRight } from 'lucide-react'; import { Button } from '../ui/Button'; import { Badge } from '../ui/Badge'; const Header: React.FC = () => { const [isScrolled,setIsScrolled] = useState(false); useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 0)}; window.addEventListener('scroll',handleScroll); return () => window.removeEventListener('scroll',handleScroll)},[]); const navigationItems = [ { name: 'Home',href: '/' },{ name: 'Services',href: '/services' },{ name: 'Solutions',href: '/solutions' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Contact',href: '/contact' },]; return ( <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between"> <Link href="/" className="text-white font-bold">Zion Tech Group</Link> <nav className="hidden md:flex items-center gap-6 text-sm"> {navigationItems.map((item) => ( <Link key={item.name} href={item.href} className="text-gray-300 hover:text-white"> {item.name} </Link> ))} </nav> </div> </header> )} export default Header;
 export default Header;
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -518,3 +638,6 @@ export default Header;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

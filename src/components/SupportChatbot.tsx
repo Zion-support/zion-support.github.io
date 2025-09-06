@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useRef, useEffect } from 'react',;
 =======
 }
@@ -15,6 +16,9 @@ import { useState, useRef, useEffect } from 'react',;
           method: 'POST'
           headers: {
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useRef, useEffect } from 'react'
 import { MessageSquare, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -33,8 +37,11 @@ import { ChatMessage, ChatInput } from '@/components/ChatAssistant',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface Msg { id: string, role: 'user' | 'assistant', message: string }
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Fallback responses when API is unavailable
 const FALLBACK_RESPONSES = [
 
@@ -42,6 +49,7 @@ const FALLBACK_RESPONSES = [
   "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.",
   "I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.",
   "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",
+<<<<<<< HEAD
 <<<<<<< HEAD
   "While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance."
 ],
@@ -76,6 +84,8 @@ export function SupportChatbot() {
       }),
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       // If Supabase function fails, try local API fallback
       if (!res.ok) {
@@ -114,7 +124,10 @@ export function SupportChatbot() {
           headers: { 'Content-Type': 'application/json' }
           body: JSON.stringify({
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         const message = null;
           data.message ||
           data.choices?.[0]?.message?.content ||
@@ -124,7 +137,10 @@ export function SupportChatbot() {
         const finalMsg = null;
           message.trim() ||
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           FALLBACK_RESPONSES[
 =======
 // Fallback responses when API is unavailable
@@ -153,6 +169,11 @@ const FALLBACK_RESPONSES = [          FALLBACK_RESPONSES[
         let buffer = ''
         let accumulated = ''
         while (!done) {
+<<<<<<< HEAD
+=======
+
+          const result = await reader.read();
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           done = result.done;
           buffer += decoder.decode(result.value || new Uint8Array());
           const lines = buffer.split('\n');
@@ -172,6 +193,11 @@ const FALLBACK_RESPONSES = [          FALLBACK_RESPONSES[
               }
               try {
                 const json = JSON.parse(line)
+<<<<<<< HEAD
+=======
+
+                  ''
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 if (token) {
                   accumulated += token
                   setMessages(prev =>
@@ -179,6 +205,7 @@ const FALLBACK_RESPONSES = [          FALLBACK_RESPONSES[
                       m.id === botId ? { ...m, message: accumulated } : m
                     )
                   )
+<<<<<<< HEAD
 interface Msg {;
   id: string;
   role: 'user' | 'assistant';
@@ -294,6 +321,12 @@ export function SupportChatbot() {;
           accumulated.trim() ||
 
 
+=======
+
+                }
+              } catch (_) {
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           FALLBACK_RESPONSES[
 =======
                 // ignore parse errors
@@ -322,6 +355,7 @@ export function SupportChatbot() {;
         id: Date.now().toString() + '-e'
         role: 'assistant'
 <<<<<<< HEAD
+<<<<<<< HEAD
         message: fallbackResponse
 
           buffer = lines[lines.length - 1] || '';
@@ -336,6 +370,10 @@ export function SupportChatbot() {;
           prev.map (m => (m.id === bot_id ? { ...m, message: final } : m)));
       }
       setMessages(prev => [...prev, errorMsg])
+=======
+        message: fallbackResponse
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } finally {
       setLoading(false)
       setTyping(false)
@@ -355,6 +393,7 @@ export function SupportChatbot() {;
         const final = accumulated.trim() ||
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),
         setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m))
+<<<<<<< HEAD
       }
     } catch (err) {
       logErrorToProduction('Chatbot error:', { data: err }),
@@ -370,6 +409,9 @@ export function SupportChatbot() {;
     } finally {
       setLoading(false),
       setTyping(false)
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
 =======
         message: fallbackResponse    }
@@ -386,6 +428,7 @@ export function SupportChatbot() {;
         aria-label="Open help chat"
       >
         <MessageSquare className="h-5 w-5" />
+<<<<<<< HEAD
   }
 
   if (!open) {
@@ -395,10 +438,15 @@ export function SupportChatbot() {;
         className='fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-40'
         aria-label='Open help chat'      >
         <MessageSquare className='h-5 w-5' />      </Button>
+=======
+
+      </Button>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )
   }
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40">
       <div className="bg-zion-blue-dark p-2 flex justify-between items-center">
@@ -421,6 +469,9 @@ export function SupportChatbot() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </Button>
       </div>
       <div className="flex-1 overflow-y-auto p-3 space-y-4" style={{ maxHeight: '400px' }}>
@@ -428,6 +479,7 @@ export function SupportChatbot() {;
           <ChatMessage 
             role="assistant" 
             message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?" 
+<<<<<<< HEAD
 <<<<<<< HEAD
           />
 
@@ -484,10 +536,15 @@ export function SupportChatbot() {;
             role="assistant";
             message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?";
           />;
+=======
+          />
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         )}
         {messages.map(m => (;
           <ChatMessage key={m.id} role={m.role} message={m.message} />;
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -496,6 +553,9 @@ export function SupportChatbot() {;
         {typing && (
           <ChatMessage role="assistant" message="..." />
         )}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div ref={endRef} />
       </div>
       <div className="p-2 border-t border-zion-purple/20 bg-zion-blue-dark/30">
@@ -503,6 +563,7 @@ export function SupportChatbot() {;
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -651,3 +712,6 @@ set_typing (false);
 =======
           />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

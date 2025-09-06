@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { MessageCircle } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -34,6 +35,9 @@ const initial_posts: DiscussionPost[] = [;
   {
     id: 1,  time: string,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   title: string,
   body: string
 }
@@ -45,6 +49,7 @@ const initial_posts: DiscussionPost[] = [;
   time: string,  title: string,
   body: string;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const initialPosts: DiscussionPost[] = [
   {
@@ -52,6 +57,10 @@ const initialPosts: DiscussionPost[] = [
     time: "2h ago",
     title: "What AI trends are you most excited for in 2025?",
     body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},  {
+=======
+
+  {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     id: 1,
 <<<<<<< HEAD
@@ -61,6 +70,7 @@ const initialPosts: DiscussionPost[] = [
     body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},
   {
     id: 2,
+<<<<<<< HEAD
     author: "David Kim",
     time: "50m ago",
     title: "Quick tip: How to rank your Zion listing higher",
@@ -91,6 +101,15 @@ export const CommunityDiscussion: React.FC = () => {
   const [newTitle, setNewTitle] = useState(""),
   const [newBody, setNewBody] = useState(""),
   const handleAddPost = () => {    setShowNew(false)
+=======
+
+export const CommunityDiscussion: React.FC = () => {;
+  const [posts, setPosts] = useState(initialPosts);
+  const [showNew, setShowNew] = useState(false);
+  const [newTitle, setNewTitle] = useState('');
+
+    setShowNew(false)
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className='w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in'>;
       <div className='flex items - center gap - 3 mb - 4'>;
         <MessageCircle size={28} className='text - zion - cyan' />;
@@ -137,6 +156,7 @@ export const CommunityDiscussion: React.FC = () => {
 
   const handleAddPost = () => {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (!newTitle.trim() || !newBody.trim()) return,
     setPosts([
@@ -155,6 +175,8 @@ export const CommunityDiscussion: React.FC = () => {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
       <div className="flex items-center gap-3 mb-4">
@@ -170,6 +192,7 @@ export const CommunityDiscussion: React.FC = () => {
       <div className="mb-4 flex justify-end">
         <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -179,6 +202,9 @@ export const CommunityDiscussion: React.FC = () => {
           onClick={() => setShowNew((v) => !v)}
         >
           {showNew ? "Cancel" : "New Post"}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </Button>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -187,6 +213,7 @@ export const CommunityDiscussion: React.FC = () => {
         <Card className="mb-6 animate-scale-in">
           <CardContent className="py-5">
             <Input
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -204,10 +231,15 @@ export const CommunityDiscussion: React.FC = () => {
           <CardContent className="py-5">
             <Input              placeholder="Title (e.g., Share an AI tool, Ask for help...)"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+              placeholder="Title (e.g., Share an AI tool, Ask for help...)"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate"
               value={newTitle}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
               maxLength={80}
+<<<<<<< HEAD
             />
             <Textarea
               placeholder="What's on your mind?"
@@ -279,6 +311,8 @@ export const CommunityDiscussion: React.FC = () => {;
           size="sm";
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           onClick={() => setShowNew((v) => !v)}
@@ -293,6 +327,7 @@ export const CommunityDiscussion: React.FC = () => {;
               placeholder="Title (e.g., Share an AI tool, Ask for help...)";
               className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate";
               value={newTitle}
+<<<<<<< HEAD
 <<<<<<< HEAD
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
               maxLength={80}
@@ -318,12 +353,16 @@ export const CommunityDiscussion: React.FC = () => {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               >
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 Cancel
               </Button>
               <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -333,6 +372,8 @@ export const CommunityDiscussion: React.FC = () => {;
                 size="sm"
 =======
                 size="sm"
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
@@ -343,6 +384,7 @@ export const CommunityDiscussion: React.FC = () => {;
 
                 disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}
                 onClick = {handleAddPost,}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 disabled = {!newTitle && newTitle.trim() || !newBody && newBody.trim(),}>;
     <div className="w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in">;
@@ -424,6 +466,8 @@ export const CommunityDiscussion: React.FC = () => {;
       </div>
     </div>
   )
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       </div>;
 =======
@@ -489,6 +533,7 @@ export const CommunityDiscussion: React.FC = () => {;
                 </AvatarFallback>;
               </Avatar>;
               <div>;
+<<<<<<< HEAD
                 <div className="flex gap-2 items-center">;
                   <span className="font-semibold text-white">{post.author}</span>;
                   <span className="text-xs text-zion-slate-light">{post.time}</span>;
@@ -515,3 +560,6 @@ export const CommunityDiscussion: React.FC = () => {;
 =======
       </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

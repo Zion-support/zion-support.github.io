@@ -1,10 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+
+export { default as StarRating } from './StarRating',
+export { default as ReviewForm } from './ReviewForm',
+export { default as ReviewCard } from './ReviewCard',
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export { default as StarRating } from './StarRating',;
 export { default as ReviewForm } from './ReviewForm',;
 export { default as ReviewCard } from './ReviewCard',;
 
+<<<<<<< HEAD
 export { default as ReviewSummary } from './ReviewSummary';export { default as ReviewSummary } from './ReviewSummary';
 export { default as ReviewSummary } from './ReviewSummary';
 export { default as StarRating } from './StarRating',;
@@ -44,3 +53,7 @@ export { default as ReviewSummary } from './ReviewSummary';
 =======
 export { default as ReviewSummary } from './ReviewSummary';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export { default as ReviewSummary } from './ReviewSummary';
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

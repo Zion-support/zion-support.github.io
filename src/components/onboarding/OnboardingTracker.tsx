@@ -1,12 +1,15 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -46,12 +49,17 @@ import { CheckCircle, Circle, ArrowRight } from 'lucide-react'import { cn  } fro
 import { Button  } from '@/components / ui / button';
 import Link from './next / link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface OnboardingStep {
   id: string,
   label: string,
   completed: boolean,
   link: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
   action?: string
 import React from "react",;
@@ -115,6 +123,9 @@ export function OnboardingTracker({;
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">;
         <div;
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out";
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           style={{ width: `${progress}%` }}
 =======
 import React from "react"
@@ -135,6 +146,7 @@ export interface OnboardingStep {
         ></div>;
       </div>;
       {/* Steps list */}
+<<<<<<< HEAD
       <div className="space-y-3">
         {steps.map((step) => (
           <div key={step.id} className="flex items-center">
@@ -185,6 +197,9 @@ export interface OnboardingStep {
   steps.map ( (step) => (<div key= {
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   step.link 
 =======
             {!step.completed && step.action && (  step.link 
@@ -195,6 +210,7 @@ export interface OnboardingStep {
 }"};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -204,3 +220,9 @@ export interface OnboardingStep {
   );
 }
 ;
+=======
+      </div>;
+    </div>;
+  );
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

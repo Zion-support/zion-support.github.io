@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,6 +16,12 @@ import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth',
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth',
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req),
@@ -23,6 +30,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(401).json({ error: 'Unauthorized' }),
     return
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   res.status(200).json({ message: 'OK' });
 };
@@ -75,3 +83,6 @@ export default function handler(req, res) {
   res.status(200).json({ message: 'OK' })
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

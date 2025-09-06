@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',;
 import { useSelector } from 'react-redux',;
 import Link from 'next/link',;
@@ -19,11 +20,15 @@ export function CartDrawer() {;
   },
 =======
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 import { ShoppingCart } from 'lucide-react';import { useAuth } from '@/hooks/useAuth';import { ShoppingCart } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
 
+<<<<<<< HEAD
     if (!isAuthenticated) {
       e.preventDefault()
       setLoginOpen(true)
@@ -57,11 +62,14 @@ export function CartDrawer() {;
     }
   },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <>
       <Link href="/cart" aria-label="Cart" className="relative p-1" onClick={handleClick}>
         <ShoppingCart className="h-5 w-5 text-foreground hover:text-primary" />
         {count > 0 && (
+<<<<<<< HEAD
 <<<<<<< HEAD
           <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
             {count}
@@ -73,21 +81,28 @@ export function CartDrawer() {;
 
 ;
 
+=======
+
+;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
             {count}
 
           </span>
         )}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </Link>;
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );
 }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
   );
 }
 
@@ -112,3 +127,5 @@ export function CartDrawer() {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

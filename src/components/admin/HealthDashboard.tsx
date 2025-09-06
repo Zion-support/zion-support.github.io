@@ -36,6 +36,7 @@ import {;
   Activity,;
 } from 'lucide-react';
 interface HealthData {;
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -49,6 +50,9 @@ import {
   TrendingUp
   Activity
 } from 'lucide-react'
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface HealthData {
   status: 'healthy' | 'warning' | 'critical';
   timestamp: string;
@@ -56,17 +60,25 @@ interface HealthData {
   version: string;
   environment: string;
 
+<<<<<<< HEAD
   metrics: {
     error_rate: number;
     critical_errors: number;
     response_time: number;
     memory_usage: number;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   health: {
     status: string;
     score: number;
     issues: string[];
+<<<<<<< HEAD
+=======
+
+  }
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   errors: {
     summary: {
       total: number;
@@ -74,17 +86,23 @@ interface HealthData {
       high: number;
       medium: number;
 
+<<<<<<< HEAD
       low: number
 };
     topErrors: Array<{;
 
       patternId: string,
   description: string;
+=======
+      patternId: string;
+      description: string;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       occurrences: number;
       severity: string;
       solution?: string
     }>
     byCategory: { [category: string]: number }
+<<<<<<< HEAD
 <<<<<<< HEAD
       low: number;
     }
@@ -212,6 +230,8 @@ const HealthDashboard: React.FC = () => {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   if (loading) {
     return (
@@ -234,6 +254,7 @@ const HealthDashboard: React.FC = () => {;
         </CardContent>
       </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
     )
 
 const HealthDashboard: React.FC = () => {;
@@ -244,6 +265,9 @@ const HealthDashboard: React.FC = () => {;
   }
 
 
+=======
+    )
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const fetchHealthData = async () => {;
     try {;
@@ -271,6 +295,7 @@ const HealthDashboard: React.FC = () => {;
     return undefined
   }, [autoRefresh]),
 
+<<<<<<< HEAD
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'healthy':
@@ -335,6 +360,10 @@ const HealthDashboard: React.FC = () => {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  if (!healthData) return null,
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -345,10 +374,11 @@ const HealthDashboard: React.FC = () => {;
         </div>
         <div className="flex items-center space-x-2">
           <Button
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             variant="outline"
             size="sm"
             onClick={() => setAutoRefresh(!autoRefresh)}
@@ -425,12 +455,16 @@ const HealthDashboard: React.FC = () => {;
           <TabsTrigger value="recommendations">Recommendations</TabsTrigger>
         </TabsList>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         <TabsContent value="overview" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Card>
 =======
     )            <Card>
@@ -471,11 +505,15 @@ const HealthDashboard: React.FC = () => {;
                 {healthData.health.issues.length > 0 ? (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <ul className="space-y-2">
                     {healthData.health.issues.map((issue, index) => (
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       <li key={index} className="text-sm text-red-600 flex items-start">
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -560,6 +598,7 @@ const HealthDashboard: React.FC = () => {;
           <h1 className="text-3xl font-bold">Health Dashboard</h1>;
           {getStatusBadge(healthData.status)}
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="flex items-center space-x-2">;
           <Button;
@@ -675,10 +714,13 @@ const HealthDashboard: React.FC = () => {;
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className='flex items-center space-x-2'>;
           <Button
             variant='outline'
             size='sm'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       </li>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -700,6 +742,8 @@ const HealthDashboard: React.FC = () => {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         <TabsContent value="errors" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -709,7 +753,10 @@ const HealthDashboard: React.FC = () => {;
         <TabsContent value="errors" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Card>
               <CardHeader>
                 <CardTitle>Error Summary</CardTitle>
@@ -742,9 +789,8 @@ const HealthDashboard: React.FC = () => {;
               </CardHeader>
               <CardContent>
                 {healthData.errors.topErrors.length > 0 ? (
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
               </CardContent>;
             </Card>;
           </div>;
@@ -797,6 +843,8 @@ const HealthDashboard: React.FC = () => {;
                       .slice(0, 5);
                       .map((error, index) => (;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         <div
                           key={index}
                           className='border-l-4 border-red-400 pl-3 py-1'>;
@@ -811,6 +859,7 @@ const HealthDashboard: React.FC = () => {;
                 ) : (;
                   <p className='text-gray-600 text-sm'>No recurring errors</p>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <div className="space-y-2">
@@ -888,6 +937,8 @@ const HealthDashboard: React.FC = () => {;
         <TabsContent value="recommendations" className="space-y-4">
           <Card>
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 ) : (
                   <p className="text-gray-600 text-sm">No recurring errors</p>
                 )}
@@ -937,16 +988,27 @@ const HealthDashboard: React.FC = () => {;
                   {formatBytes(healthData.metrics.memoryUsage)}
                 </p>
                 <p className='text-xs text-gray-600'>JavaScript heap</p>
+<<<<<<< HEAD
                 ) : (
                   <p className="text-gray-600 text-sm">No recurring errors</p>
                 )}          <Card>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
+
+          <Card>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <CardHeader>
               <CardTitle>Improvement Recommendations</CardTitle>
             </CardHeader>
             <CardContent>
 <<<<<<< HEAD
               {healthData.health.recommendations.length > 0 ? (
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <ul className="space-y-3">
                   {healthData.health.recommendations.map((rec, index) => (
@@ -1027,6 +1089,9 @@ const HealthDashboard: React.FC = () => {;
                       <span className='text-sm'>{rec}</span>                    </li>;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   ))}
                 </ul>
               ) : (
@@ -1041,6 +1106,7 @@ const HealthDashboard: React.FC = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
             </CardContent>;
           </Card>;
         </TabsContent>;
@@ -1050,6 +1116,8 @@ const HealthDashboard: React.FC = () => {;
 },;
 export default HealthDashboard;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export default HealthDashboard, ;
 export default HealthDashboard;
@@ -1060,6 +1128,7 @@ export default HealthDashboard;
 if ( {) {
   $2
 }
+<<<<<<< HEAD
           </Card>;
         </TabsContent>;
       </Tabs>;
@@ -1075,3 +1144,11 @@ export default HealthDashboard,
 =======
 export default HealthDashboard;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+            </CardContent>;
+          </Card>;
+        </TabsContent>;
+      </Tabs>;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

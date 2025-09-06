@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -28,6 +29,9 @@ export function SmartContractDeployment({
 =======
 isDeploying
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }: SmartContractDeploymentProps) {
 =======
   isDeploying}: SmartContractDeploymentProps) {
@@ -37,9 +41,8 @@ isDeploying
     useEscrow: true,
     deployToChain: false,
     walletAddress: ''
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 ;
 import React, { useState } from './react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
@@ -73,6 +76,8 @@ if ( {) {
   $2
 }
       toast.error ("Please enter a wallet address for blockchain deployment");
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return;
     }
     try {
@@ -82,6 +87,7 @@ if ( {) {
     }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -156,6 +162,8 @@ export function SmartContractDeployment({;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -169,6 +177,7 @@ export function SmartContractDeployment({;
           Deploy your agreement as a smart contract for enhanced security and automation
         </CardDescription>
       </CardHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       
@@ -247,10 +256,14 @@ export function SmartContractDeployment(): any ({ ;
   },;
 <<<<<<< HEAD
   return (;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <Card className="w-full">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <ShieldCheck className="h-5 w-5 text-primary" />;
+<<<<<<< HEAD
 =======
   return (;    <Card className="w-full">;
       <CardHeader>;
@@ -277,6 +290,9 @@ export function SmartContractDeployment(): any ({ ;
         <CardTitle className="flex items - center gap-2">;
           <ShieldCheck className="h - 5 w - 5 text-primary" />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           Smart Contract Deployment;
         </CardTitle>;
         <CardDescription>;
@@ -284,9 +300,12 @@ export function SmartContractDeployment(): any ({ ;
         </CardDescription>;
       </CardHeader>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       <CardContent className="space-y-6">
         <div className="space-y-4">
@@ -296,6 +315,7 @@ export function SmartContractDeployment(): any ({ ;
               id="deploy-blockchain"
               aria-label="Deploy to blockchain"
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <CardContent className="space-y-6">;
         <div className="space-y-4">;
@@ -312,12 +332,17 @@ export function SmartContractDeployment(): any ({ ;
 
 
           
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {deploymentOptions.deployToChain && (
             <>
               <div className="space-y-2">
                 <Label>Select blockchain network</Label>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <RadioGroup 
                   defaultValue={deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({;
@@ -326,13 +351,15 @@ export function SmartContractDeployment(): any ({ ;
 <<<<<<< HEAD
 =======
 
-
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   })}
                   className="flex flex-col space-y-1"
                 >
@@ -347,12 +374,15 @@ export function SmartContractDeployment(): any ({ ;
                 </RadioGroup>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               <div className="space-y-2">
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>
@@ -360,6 +390,7 @@ export function SmartContractDeployment(): any ({ ;
                   id="wallet-address" 
                   placeholder="0x..." 
                   value={deploymentOptions.walletAddress || ''}
+<<<<<<< HEAD
                   onChange={(e) => setDeploymentOptions({;
                     ...deploymentOptions;
                     walletAddress: e.target.value;
@@ -367,6 +398,9 @@ export function SmartContractDeployment(): any ({ ;
                 />
               </div>
               
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="flex items-center space-x-2">
                 <Switch
                   id="use-escrow"
@@ -391,6 +425,7 @@ export function SmartContractDeployment(): any ({ ;
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions;                    network: value as BlockchainNetwork;
 
+<<<<<<< HEAD
 
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;
@@ -410,6 +445,8 @@ export function SmartContractDeployment(): any ({ ;
           
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="rounded-md bg-muted p-4">
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>
             <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">
@@ -419,8 +456,11 @@ export function SmartContractDeployment(): any ({ ;
         </div>
       </CardContent>
 
+<<<<<<< HEAD
 
       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <CardFooter className="flex justify-between">
 =======
             />
@@ -438,8 +478,11 @@ export function SmartContractDeployment(): any ({ ;
         </Button>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Button onClick={handleDeployContract} disabled={isDeploying}>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -451,9 +494,8 @@ export function SmartContractDeployment(): any ({ ;
           ) : (
             'Deploy Contract'
           )}
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
           <div className="rounded-md bg-muted p-4">;
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>;
             <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">;
@@ -593,3 +635,5 @@ export function SmartContractDeployment(): any ({ ;
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

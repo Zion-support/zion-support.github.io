@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react',;
@@ -29,12 +30,16 @@ export function AuthorBio({ author }: AuthorBioProps) {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           target.src = '/images/blog-placeholder.svg'
         }}
       />
       <div>
 =======
 
+<<<<<<< HEAD
 export function AuthorBio({ author }: AuthorBioProps) {
   if (!author.bio) return null,
   return (          target.src = '/images/blog-placeholder.svg'
@@ -43,6 +48,8 @@ export function AuthorBio({ author }: AuthorBioProps) {
       <div>
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <p className="font-medium text-lg">{author.name}</p>
         {author.title && <p className="text-sm text-muted-foreground mb-2">{author.title}</p>}
         <p>{author.bio}</p>
@@ -50,7 +57,10 @@ export function AuthorBio({ author }: AuthorBioProps) {
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 interface AuthorBioProps {;
   author: BlogAuthor;
@@ -97,6 +107,7 @@ export function AuthorBio({ author }: AuthorBioProps) {;
           const target = e.currentTarget as HTMLImageElement;
           target.src = '/images/blog-placeholder.svg';
         }}
+<<<<<<< HEAD
 <<<<<<< HEAD
       />;
       <div>;
@@ -166,6 +177,10 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {;
   return (
     <div className='mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6'>;      <img
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      <img
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         src={author && author.avatarUrl}
         alt={author && author.name}
         className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0"
@@ -175,6 +190,7 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {;
         }}
       />;
       <div>;
+<<<<<<< HEAD
       </div>;
     </div>;
   );
@@ -231,3 +247,6 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {;
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

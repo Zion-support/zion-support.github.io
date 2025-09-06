@@ -116,10 +116,13 @@ import { Input } from "@/components/ui/input",
 import { Copy, Download, Link, Plus } from 'lucide-react'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useRef, useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -133,9 +136,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function PartnerReferralLinks() {
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
   const [isDialogOpen, setIsDialogOpen] = useState(false),
@@ -162,16 +168,18 @@ export function PartnerReferralLinks() {
       // Add custom campaign parameter if selected
       if (selectedCampaign !== "default") {
         url.searchParams.append("campaign", selectedCampaign)
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
       
       // Add custom parameter if provided
       if (customParam) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         url.searchParams.append("source", customParam)
       }
@@ -221,6 +229,8 @@ import { Copy, Download, Link, Plus } from 'lucide-react'      }
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -230,10 +240,11 @@ import { Copy, Download, Link, Plus } from 'lucide-react'      }
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <span>Your Referral Link</span>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Button 
               variant="outline" 
               size="sm" 
@@ -309,6 +320,7 @@ export function PartnerReferralLinks() {;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <CardTitle className="flex items-center justify-between">;
             <span>Your Referral Link</span>;
             <Button;
@@ -318,6 +330,9 @@ export function PartnerReferralLinks() {;
               className="flex items-center gap-2";
             >;
               <Download className="h-4 w-4" />;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               Export Links;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -326,6 +341,7 @@ export function PartnerReferralLinks() {;
           <CardDescription>Share this link with your audience to earn rewards</CardDescription>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="flex space-x-2">;
             <Input;
@@ -353,6 +369,9 @@ export function PartnerReferralLinks() {;
             <Button variant='outline' on_click={() => handleCopyLink (base_link)}>;
               <Copy className='h - 4 w - 4' />;
               <span className='sr - only'>Copy</span>            </Button>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>;
         </CardContent>;
       </Card>;
@@ -375,7 +394,11 @@ export function PartnerReferralLinks() {;
             <DialogHeader>;
               <DialogTitle > Create Custom Campaign Link</DialogTitle>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <DialogTrigger asChild>
             <Button variant="outline" size="sm" className="flex items-center gap-2">
               <Plus className="h-4 w-4" />
@@ -389,10 +412,11 @@ export function PartnerReferralLinks() {;
                 Generate a trackable link for specific marketing campaigns
               </DialogDescription>
             </DialogHeader>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className="grid gap-4 py-4">
               <div className="grid gap-2">
                 <Label htmlFor="campaign">Campaign Type</Label>
@@ -415,9 +439,13 @@ export function PartnerReferralLinks() {;
               </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="grid gap-2">
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -426,6 +454,7 @@ export function PartnerReferralLinks() {;
                   id="custom" 
                   placeholder="spring_campaign, video_123, etc." 
                   value={customParam}
+<<<<<<< HEAD
                   onChange={e => setCustomParam(e && e.target.value)}                />;
               </div>;
             </div>;
@@ -440,6 +469,14 @@ export function PartnerReferralLinks() {;
                 type="button" 
                 onClick={handleGenerateLink}
                 className="bg-zion-purple hover:bg-zion-purple-dark"
+=======
+
+                onClick={() => setIsDialogOpen(false)}
+              >
+                Cancel
+              </Button>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               >
                 Generate Link
               </Button>
@@ -453,6 +490,7 @@ export function PartnerReferralLinks() {;
               <Button
                 type='button'
                 onClick={handleGenerateLink}
+<<<<<<< HEAD
                 className='bg-zion-purple hover:bg-zion-purple-dark'              >
                 Generate Link
               </Button>
@@ -462,6 +500,11 @@ export function PartnerReferralLinks() {;
       </div>                    <span>{item.name || 'Campaign Link'}</span>                  </div>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+                    <span>{item.name || 'Campaign Link'}</span>                  </div>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="grid gap-4">
         {generatedLinks.length > 0 ? (
           generatedLinks.map((item, index) => (
@@ -475,6 +518,7 @@ export function PartnerReferralLinks() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </CardTitle>
               </CardHeader>
@@ -498,6 +542,10 @@ export function PartnerReferralLinks() {;
                     <Copy className="h-4 w-4" />
                     <span className="sr-only">Copy</span>
 
+=======
+                </CardTitle>
+              </CardHeader>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                   </Button>
 =======
@@ -514,9 +562,8 @@ export function PartnerReferralLinks() {;
                 Create custom campaign links to track different marketing efforts
 <<<<<<< HEAD
               </p>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Button 
                 variant="outline"
@@ -524,6 +571,8 @@ export function PartnerReferralLinks() {;
                 className="flex items-center gap-2";
               >;
                 <Plus className="h-4 w-4" />;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 Create First Link;
 =======
               </p>                Create First Link;
@@ -587,6 +636,10 @@ document && document.body.removeChild (link)
                 variant='secondary';
                 on_click={() => setIsDialogOpen (false)}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               >;
                 <Plus className="h-4 w-4" />;
                 Create First Link;
@@ -598,6 +651,7 @@ document && document.body.removeChild (link)
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -641,3 +695,7 @@ document.body.remove_child (link);
                 onClick={() => setIsDialogOpen(true)}
                 className="flex items-center gap-2";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

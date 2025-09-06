@@ -112,7 +112,6 @@ function PrimaryNav() {
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault();
 
-
     const trimmed = query.trim();    if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed })
       router
@@ -142,6 +141,7 @@ if ( {) {
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function PrimaryNav() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
@@ -204,6 +204,19 @@ export function PrimaryNav() {;
     }
   },
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+        data-testid='header'>;
+        <div className='container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap'>;
+          <Logo />;
+
+          {/* Navigation - hidden on mobile and tablets, shown on desktop */}
+          <div className='hidden lg:block order-1 flex-shrink-0'>
+            <ResponsiveNavigation
+              openLoginModal={returnToPath => setLoginOpen(true)}
+
+            />          </div>;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
     <>
@@ -218,26 +231,22 @@ export function PrimaryNav() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
           <div className="hidden lg:block order-1 flex-shrink-0">
             <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
           </div>
-          
-          {/* Actions container with responsive layout */}
 <<<<<<< HEAD
-          <div className='hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0'>;
-            {/* Search form with clamped width */}
-            <form
-              onSubmit={handleSubmit}
-              className='flex-shrink-0'
-              style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>;
+          
 =======
-          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
-            {/* Search form with clamped width */}
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+          {/* Actions container with responsive layout */}
+
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
@@ -309,24 +318,8 @@ if ( {) {
                   if (sugg.id) {;
 
                     // Product listings with IDs go to product detail page;
-<<<<<<< HEAD
-                    router && router.push(`/marketplace/listing/${sugg && sugg.id}`);
-                  } else if (;
-                    sugg && sugg.type === 'doc' &&;
-                    sugg && sugg.slug &&;
-                    sugg && sugg.slug.startsWith('/');
-                  ) {;
-                    // Documentation suggestions navigate directly to their path;
-                    router && router.push(sugg && sugg.slug);
-                  } else if (sugg && sugg.type === 'blog' && sugg && sugg.slug) {;
-                    // Blog posts navigate to blog detail page;
-                    router && router.push(`/blog/${sugg && sugg.slug}`);
-                  } else {;
-                    // Default: search results page with query parameter;
-                    router && router.push(`/search?q=${encodeURIComponent(sugg && sugg.text)}`);
-                  }
-                  setQuery('');
 
+<<<<<<< HEAD
 =======
                     router.push(`/marketplace/listing/${sugg.id}`);
                   } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
@@ -342,6 +335,8 @@ if ( {) {
                   }
                   setQuery(''),;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   // Track analytics event;
 <<<<<<< HEAD
                   if (typeof window !== 'undefined' && window.gtag) {;
@@ -453,8 +448,6 @@ if ( {) {
               <PointsBadge />
               <CartDrawer />
             </div>
-            
-
 
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
@@ -499,6 +492,10 @@ if ( {) {
                       setLoginOpen(true);
                     }}
                   >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     {t('auth.login')}
                   </Link>
 <<<<<<< HEAD
@@ -511,6 +508,7 @@ if ( {) {
                   </Link>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <Link
+<<<<<<< HEAD
 <<<<<<< HEAD
                     href='/signup'
                     className='text-sm hover:text-primary whitespace-nowrap'>;
@@ -530,19 +528,24 @@ if ( {) {
                 </>
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               )}
               {isLoggedIn && <UserMenu />}
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </div>;
           </div>;
           {/* Tablet view (md to lg) - simplified controls */}
           <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
-
 
             <ModeToggle />
             <LanguageSelector />
@@ -582,7 +585,6 @@ if ( {) {
           </div>;
 <<<<<<< HEAD
 =======
-
 
             <div className='flex items - center gap - 1 flex - wrap'>;
               {!isLoggedIn && (
@@ -629,7 +631,6 @@ if ( {) {
           </div>;
           {/* Mobile menu button */}
 
-
           </div>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* Mobile menu button */}
@@ -640,25 +641,12 @@ if ( {) {
             aria-label={t('general.toggle_mobile_menu')}
           >
 
-
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
               <Menu className="h-6 w-6" />
             )}
-<<<<<<< HEAD
-          </button>;
-        </div>;
-      </header>;
-      {mobileMenuOpen && (;
-        <div className='lg:hidden fixed inset-0 z-60 pt-16'>;
-=======
-          </button>
-        </div>
-      </header>
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-60 pt-16">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
           <div
 <<<<<<< HEAD
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
@@ -831,6 +819,7 @@ setLoginOpen (true)
 }/> </div> </div>)
 }{
   isMobile && <MobileBottomNav unreadCount= {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1024,3 +1013,6 @@ setLoginOpen (true);
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

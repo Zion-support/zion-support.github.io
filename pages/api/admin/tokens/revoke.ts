@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,6 +31,9 @@ function handler() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { revokeTokens } from "../../../../utils/token/service",;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const { userId, amount, reason } = req.body || {},
@@ -37,6 +41,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const tx = revokeTokens(userId, Math.floor(amount), reason || "admin_revoke"),
     return res.status(200).json({ tx })
+<<<<<<< HEAD
   } catch (err: any) {
     return res.status(400).json({ error: err.message })
 <<<<<<< HEAD
@@ -85,3 +90,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

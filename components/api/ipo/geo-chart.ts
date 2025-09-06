@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,12 +35,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const svg = `<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="800" height="300"><rect width="100%" height="100%" fill="#eef2ff"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="20" fill="#1f2937">Global User Breakdown (placeholder)</text></svg>`;
   res.setHeader("Content-Type", "image/svg+xml");
   res.send(svg);
   res.setHeader("Content-Typeimage/svg+xml");
   res.send(svg);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -62,3 +74,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

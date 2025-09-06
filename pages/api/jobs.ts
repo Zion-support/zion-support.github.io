@@ -10,6 +10,7 @@ import { readJsonFile, writeJsonFile } from "../../utils/db";
 import type { Job } from "../../utils/types";
 import { rateLimit } from "../../utils/rateLimit";
 <<<<<<< HEAD
+<<<<<<< HEAD
 const FILE = "jobs.json";
 
 export default async function handler(
@@ -32,6 +33,9 @@ export default async function handler(
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -39,6 +43,7 @@ export default async function handler(
 
   if (!rateLimit(req, res)) return;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -155,6 +160,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
 import { readJsonFile, writeJsonFile } from '../../utils/db';
@@ -174,11 +181,10 @@ export default async function handler(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   if (req && req.method === "GET") {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     const jobs = readJsonFile<Job[]>(FILE, []);
     res && res.status(200).json({ jobs });
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
     return;
 <<<<<<< HEAD
     } catch (error) {
@@ -360,6 +366,7 @@ if ( {) {
     const nowIso = new Date().toISOString();
     const job: Job = {
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -386,6 +393,8 @@ category: String(category || ""),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       deliveryDeadlineIso: deliveryDeadlineIso
         ? String(deliveryDeadlineIso)
         : undefined
@@ -461,6 +470,7 @@ category: String(category || ""),
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     }
 
@@ -509,6 +519,9 @@ else job.category = 'General'
     return
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
   } catch (error) {
     console.error("Error:", error);
@@ -525,6 +538,7 @@ else job.category = 'General'
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -537,6 +551,8 @@ else job.category = 'General'
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -549,6 +565,7 @@ else job.category = 'General'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -564,6 +581,9 @@ else job.category = 'General'
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       client_email,
+=======
+      client_email
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } = req.body || {}
     // Check condition
 if ( {) {
@@ -623,6 +643,7 @@ if (=>) {
     res.status (201).json ({ job });
     return;
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -669,10 +690,14 @@ export default async function handler(req, res) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -704,3 +729,6 @@ res.setHeader("Allow", "GET, POST");
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

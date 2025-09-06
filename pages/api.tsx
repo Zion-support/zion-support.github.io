@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 
@@ -140,6 +141,9 @@ export default function APIPage() {
         </div>
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Code,
   Check,
   Globe,
@@ -656,7 +660,7 @@ export default function APIPage() {
             </div>
           </div>
         </section>
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
       </div>
     </Layout>
 <<<<<<< HEAD

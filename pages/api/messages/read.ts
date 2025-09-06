@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -86,6 +87,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ success: true })
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { NextApiRequest, NextApiResponse } from 'next',;
 import { requireUser } from '../../../utils/auth',;
 import { getConversationById, markAsRead } from '../../../utils/messaging/storage',
@@ -99,6 +103,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const conv = getConversationById(conversationId),
   if (!conv || !conv.participants.includes(user.id)) return res.status(404).json({ error: 'Conversation not found' }),
   markAsRead(conversationId, user.id),
+<<<<<<< HEAD
 <<<<<<< HEAD
   res.status(200).json({ success: true });
 };
@@ -179,3 +184,6 @@ export default function handler(req, res) {
   res.status(200).json({ success: true })
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

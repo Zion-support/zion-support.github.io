@@ -1,9 +1,8 @@
 <<<<<<< HEAD
 =======
 import React from 'react';
-<<<<<<< HEAD
-import MainLayout from '../components/layout/MainLayout';
 
+<<<<<<< HEAD
 const Page = () => {
   return (
     <MainLayout
@@ -24,6 +23,8 @@ export default Page;
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
   ArrowRight
@@ -117,7 +118,6 @@ const stats = [
   { number: "99.9%", label: "Success Rate" }
   { number: "24/7", label: "Support Available" }
 ];
-
 
         <section className="relative bg-gradient-to-br from-green-900 via-teal-900 to-blue-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -463,11 +463,7 @@ export default function CaseStudiesPage() {
                   href="/services"
 import Head from 'next/head';
 
-
 import Head from 'next/head';
-
-
-
 
   return (
     <Layout>;
@@ -478,15 +474,9 @@ import Head from 'next/head';
           name='description'
           content='Proven outcomes across AI, IT, and micro SaaS deployments.'
 
-
-
 import Head from 'next/head';
 
-
 import Head from 'next/head';
-
-
-
 
   );
  </Head> </section> </Layout>
@@ -584,6 +574,7 @@ import Link from 'next / link';
 import Layout from '../components / Layout';
 ;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -657,3 +648,5 @@ export default Page;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

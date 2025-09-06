@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from "react",
 import { X } from 'lucide-react'
@@ -75,6 +75,8 @@ export function ClickableBadge({
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",;
 import { X } from 'lucide-react';
 import { cn } from "@/lib/utils",;
@@ -83,15 +85,7 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
   onRemove?: () => void,;
   variant?: "default" | "secondary" | "destructive" | "outline";
 }
-<<<<<<< HEAD
-=======
-;
-export function ClickableBadge({;
-  children,;
-  className,;
-  variant = "default",;
-  onRemove,;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   ...props;
 }: ClickableBadgeProps) {;
   return (;
@@ -119,9 +113,8 @@ export function ClickableBadge({;
             e.stopPropagation();
             onRemove();
           }}
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           className="ml-1 rounded-full p-0.5 hover:bg-background/20";
 <<<<<<< HEAD
@@ -129,11 +122,14 @@ export function ClickableBadge({;
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           aria-label="Remove";
         >;
           <X className="h-3 w-3" />;
         </button>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
@@ -207,3 +203,6 @@ function ClickableBadge() {
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

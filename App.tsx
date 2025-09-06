@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { JSX } from 'react';
 <<<<<<< HEAD
 
@@ -366,3 +367,19 @@ export default function App() {
 
 export default App;
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+import React from 'react';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Zion Tech Group</h1>
+        <p>Welcome to our application</p>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

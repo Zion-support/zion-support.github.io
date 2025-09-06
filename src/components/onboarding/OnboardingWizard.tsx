@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
 import { cn } from '@/lib/utils';
@@ -49,6 +50,11 @@ interface OnboardingWizardProps {
 
 interface OnboardingWizardProps {;
 
+=======
+import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
+import { cn } from '@/lib/utils';
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   type: 'client' | 'talent';
   onComplete: () => void;
   onSkip: () => void;
@@ -75,10 +81,13 @@ export function OnboardingWizard(): any ({;
           <div className='bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4'>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -108,11 +117,14 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const [currentStep, setCurrentStep] = useState(0),
   const router = useRouter(), // Changed from useNavigate to useRouter
   const { user } = useAuth(),
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -153,10 +165,13 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const talentSteps: WizardStep[] = [
     {
       title: "Complete your profile",
@@ -193,6 +208,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       description: "Let our AI find the perfect opportunities for you",
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />,
       action: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -253,6 +269,9 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
           <div className="flex items-center justify-center flex-1">
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {steps.map((_, index) => (
               <div
                 key={index}
@@ -260,6 +279,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   "h-2 w-2 rounded-full mx-1",
@@ -296,11 +316,14 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
         {steps[currentStep]?.skipText && (;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Button
             variant='ghost'
             className='text-zion-slate-light hover:text-white'
             onClick={handleSkip}>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           className="w-full bg-zion-purple hover:bg-zion-purple-light"
           onClick={handleAction}
@@ -320,23 +343,27 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         )}
 =======
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {steps[currentStep]?.skipText}
           </Button>
         )}
 
+<<<<<<< HEAD
 
 ;
 }
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </CardFooter>;
     </Card>;
   );
 }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
 
   type: 'client' | 'talent';
@@ -514,3 +541,5 @@ if ( {) {
             className='text-zion-slate-light hover:text-white'
             onClick={handleSkip}>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

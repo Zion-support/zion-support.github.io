@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs",
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
@@ -103,6 +104,39 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }) => 
         />
 
 
+=======
+
+import { format } from 'date-fns'
+import { JobApplication } from '@/types/jobs'
+import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
+import { ClickableBadge } from '@/components/ui/clickable-badge'
+import {  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from '@/components/ui/table'
+import { ApplicationActions } from './ApplicationActions'
+import { StatusBadge } from './StatusBadge'
+import { Briefcase, User } from 'lucide-react'
+import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmationModal'
+import React, { useState } from 'react'; // Import React and useState
+import { toast } from '@/hooks/use-toast'
+import Image from 'next/image'; // Import next/image
+
+  applications: JobApplication[];
+  processingId: string | null;
+  onViewApplication: (applicationId: string) => Promise<void>;
+  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
+  onViewScore: (application: JobApplication) => void
+
+const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
+  const [avatarError, setAvatarError] = useState(false)
+  const talentName = application.talent_profile?.full_name |"Candidate"
+  return (
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ) : (
 =======
 const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
@@ -165,6 +199,7 @@ function ApplicationsTable() {
       description: 'Offer has been sent to the talent.',
     });
 
+<<<<<<< HEAD
       ) : (
         <User className="h-4 w-4" />
       )}
@@ -174,6 +209,8 @@ function ApplicationsTable() {
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
   
@@ -188,6 +225,10 @@ function ApplicationsTable() {
       description: "Offer has been sent to the talent."
     })
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <>;
 
@@ -229,6 +270,7 @@ function ApplicationsTable() {
                   </div>;
                 </TableCell>;
 
+<<<<<<< HEAD
           </TableBody>;
         </Table>;
       </div>;
@@ -239,6 +281,8 @@ function ApplicationsTable() {
         application = {selectedApplication |undefined,}
         onConfirm = {handleHireConfirmed,}
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   applications,
   processingId,
   onViewApplication,
@@ -281,7 +325,10 @@ export function ApplicationsTable({
       description: "Offer has been sent to the talent."
     })
   },
+<<<<<<< HEAD
   
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
     <>
@@ -303,10 +350,13 @@ export function ApplicationsTable({
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             {applications.map((application) => (
               <TableRow key={application.id}>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <TableCell>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -440,6 +490,7 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
   handleHireConfirmed
 }/> </>)
 }'"}
+<<<<<<< HEAD
       />;
     </>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -587,3 +638,6 @@ return (<> <div className=" rounded-md border"> hidden md:table - cell" >Applied
   );
 }
 ;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

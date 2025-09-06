@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Card } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -50,6 +51,10 @@ export interface EmptyMatchesCardProps {
 }
 
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {  return (
+=======
+
+  return (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
@@ -63,14 +68,16 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
       <Button 
         onClick={onRefresh} 
         disabled={isProcessing}
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className="mx-auto"
       >
         {isProcessing ? (
           <>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -78,6 +85,9 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             Processing...
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -85,12 +95,15 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
         ) : (
           <>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Sparkles className="mr-2 h-4 w-4" />
             Find AI Matches
           </>
 import { Card } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 }
 
@@ -104,6 +117,7 @@ import { Button } from "@/components/ui/button",;
   );
 }
 
+<<<<<<< HEAD
 import { Card } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -187,3 +201,5 @@ function EmptyMatchesCard() {
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

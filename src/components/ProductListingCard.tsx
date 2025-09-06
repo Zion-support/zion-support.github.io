@@ -67,6 +67,7 @@ import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -79,6 +80,10 @@ import { toast } from '@/hooks/use-toast';
 import { useCurrency } from '@/hooks/useCurrency';
 import Image from 'next/image'; // Import next/imageimport { RatingStars } from "@/components/RatingStars",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import { RatingStars } from "@/components/RatingStars",
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { FavoriteButton } from "@/components/FavoriteButton",
 import { useDispatch } from 'react-redux',
 import type { AppDispatch } from '@/store',
@@ -98,15 +103,19 @@ interface ProductListingCardProps {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const ProductListingCardComponent = ({
   listing,
   view = 'grid',
   onRequestQuote,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   detailBasePath = '/marketplace/listing'
@@ -287,10 +296,19 @@ if ( {) {
   detailBasePath?: string;
 }
 ;
+=======
+
+    // Check condition
+if ( {) {
+  $2
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const ProductListingCardComponent = ({;
   listing,;
   view = 'grid',;
   onRequestQuote,;
+<<<<<<< HEAD
   detailBasePath = '/marketplace/listing';
 }: ProductListingCardProps) => {;
   const isGrid = view === 'grid',;
@@ -401,6 +419,9 @@ const ProductListingCardComponent = ({;
         }      }}
     >
       {/* Image */}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
   const getPrice = () => {
@@ -408,6 +429,7 @@ const ProductListingCardComponent = ({;
     return formatPrice(listing.price)
   },
 
+<<<<<<< HEAD
   const handleImageError = () => {
     if (!imageError) { // Prevent infinite loops if placeholder also fails
       setImageSrc('/placeholder.svg'),
@@ -602,10 +624,18 @@ interface ProductListingCardProps {;
       onKeyDown={(e) => {
         if(e.key === 'Enter' |e.key === ' ') {
           e.preventDefault ()          handleViewListing () }
+=======
+        onClick={handleViewListing} // Keep existing onClick for navigation
+        role='button'
+        tabIndex={-1} // Remove from tab order as parent is focusable
+
+          handleViewListing () }
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }}
       {/* Image */}
       <div'
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+<<<<<<< HEAD
             handleViewListing () }
         }}
       >
@@ -613,10 +643,15 @@ interface ProductListingCardProps {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {' '}
           {/* Ensure this container has dimensions */}        onKeyDown={(e) => {
+=======
+
+        onKeyDown={(e) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
             handleViewListing()
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -666,6 +701,8 @@ interface ProductListingCardProps {;
           <div className="flex justify-between items-center mb-2">
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               {listing.category}
             </Badge>;
@@ -680,9 +717,8 @@ interface ProductListingCardProps {;
               <RatingStars value={listing.rating} count={listing.reviewCount} />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             )}
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
           </div>;
 
           {/* Title & Description */}
@@ -769,6 +805,8 @@ interface ProductListingCardProps {;
             {listing && listing.description}
           </p>;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {/* Tags */}
           {listing && listing.tags && listing && listing.tags.length > 0 && (;
             <div className='flex flex-wrap gap-1 mb-4'>;
@@ -776,6 +814,7 @@ interface ProductListingCardProps {;
                 <span
                   key={idx}
                   className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'>;
+<<<<<<< HEAD
                 {listing.uspHeadline}
               </p>
             )}
@@ -794,6 +833,14 @@ interface ProductListingCardProps {;
                   key={idx}
                   className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'                >            <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+                {listing.uspHeadline}
+              </p>
+            )}
+
+            <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {listing.title}
             </h3>
           </div>
@@ -809,11 +856,16 @@ interface ProductListingCardProps {;
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {tag}
                 </span>;
               ))}
             </div>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>;
 =======
@@ -828,6 +880,57 @@ interface ProductListingCardProps {;
           <div className="text-sm font-medium">
 
 
+=======
+
+        </div>;
+
+        {/* Footer with price and button */}
+
+          </div>;
+
+          <div className='flex gap-2'>;
+            <Button
+              size='sm'
+              className='bg-primary hover:bg-primary/80 text-primary-foreground'
+              onClick={e => {;
+                e && e.stopPropagation(); // Prevent card click event;
+                addToCart();              }}
+
+              disabled = {loading,}
+            >;
+              {loading ? (;
+                <>;
+                  <svg
+                    className='animate-spin -ml-1 mr-3 h-5 w-5 text-white'
+                    xmlns='http://www && www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'>;
+                    <circle
+                      className='opacity-25'
+                      cx='12'
+                      cy='12'
+                      r='10'
+                      stroke='currentColor'
+                      strokeWidth='4'></circle>;
+                    <path
+                      className='opacity-75'
+                      fill='currentColor'
+                      d='M4 12a8 8 0 018-8V0C5 && 8V0C5.373 0 0 5 && 5.373 0 12h4zm2 5 && 5.291A7.962 7 && 7.962 0 014 12H0c0 3 && 3.042 1 && 1.135 5 && 5.824 3 7 && 7.938l3-2 && 2.647z'></path>;
+                  </svg>;
+                  Loading...;
+                </>;
+              ) : (;
+                'Add to Cart';
+              )}
+
+            </Button>;
+
+            <Button
+              size='sm'
+              variant='default'
+              className='bg-green-600 hover:bg-green-700 text-white'
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {listing.price !== null ? (
 =======
 
@@ -841,10 +944,11 @@ interface ProductListingCardProps {;
               </div>
 <<<<<<< HEAD
             ) : (
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <span className="text-foreground/80">
                 {getPrice()}
               </span>;
@@ -877,11 +981,12 @@ interface ProductListingCardProps {;
                 "Add to Cart"
               )}
             </Button>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Button
               size="sm"
               variant="default"
@@ -898,6 +1003,7 @@ interface ProductListingCardProps {;
             >
               Buy Now
             </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
             
             {onRequestQuote && (
@@ -924,6 +1030,9 @@ interface ProductListingCardProps {;
 
             {onRequestQuote && (;
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Button
 =======
             ) : (              <Button
@@ -933,6 +1042,7 @@ interface ProductListingCardProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 onClick={handleRequestQuote}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
               >
                 Request Quote
@@ -940,6 +1050,10 @@ interface ProductListingCardProps {;
 =======
                 className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground";
               >;                Request Quote;
+=======
+
+                Request Quote;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </Button>;
             )}
 
@@ -1124,7 +1238,12 @@ ProductListingCard.display_name = 'ProductListingCard';
               </Button>) }
 
 export const ProductListingCard = React.memo(ProductListingCardComponent);
+<<<<<<< HEAD
 ProductListingCard.displayName = 'ProductListingCard';            
+=======
+ProductListingCard.displayName = 'ProductListingCard';
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {onRequestQuote && (
               <Button 
                 size="sm"
@@ -1183,10 +1302,16 @@ ProductListingCard.displayName = 'ProductListingCard';
                 Request Quote;
               </Button>;
             )}
+<<<<<<< HEAD
+=======
+
+          </div>;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           </div>;
@@ -1214,3 +1339,6 @@ ProductListingCard.display_name = 'ProductListingCard';
 },;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

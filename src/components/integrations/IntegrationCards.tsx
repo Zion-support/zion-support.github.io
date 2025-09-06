@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { logDebug } from '@/utils/productionLogger',
@@ -18,6 +19,9 @@ interface IntegrationCardProps {
 }
 
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface IntegrationCardProps {
   title: string
   description: string
@@ -25,7 +29,6 @@ interface IntegrationCardProps {
   status?: 'connected' | 'disconnected' | 'pending'
   href?: string
   onConnect?: () => void
-
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
@@ -55,10 +58,13 @@ interface IntegrationCardProps {;
   href?: string;
   onConnect?: () => void;
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function IntegrationCard({
   title,
   description,
@@ -119,7 +125,6 @@ export function IntegrationCard({
               target='_blank'
               rel='noopener noreferrer'
 
-
 import React from "react";
 import { logDebug } from '@/utils/productionLogger';
 import { Button } from "@/components/ui/button";
@@ -128,7 +133,6 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react'
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-
 
 interface IntegrationCardProps {
   title: string
@@ -181,8 +185,6 @@ export function IntegrationCard({;
   href?: string;
   onConnect?: () => void;
 
-
-
 }
 
 export function IntegrationCard(): any ({;
@@ -224,8 +226,11 @@ export function IntegrationCard(): any ({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>;
       </CardHeader>;
       <CardContent className="pb-4">;
@@ -242,11 +247,12 @@ export function IntegrationCard(): any ({;
         ) : (;
           <Button variant="default" className="w-full" onClick={onConnect}>;
             <span>Connect</span>;
+
 <<<<<<< HEAD
 =======
-
-=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>
       </CardHeader>
       <CardContent className="pb-4">
@@ -263,6 +269,7 @@ export function IntegrationCard(): any ({;
         ) : (
           <Button variant="default" className="w-full" onClick={onConnect}>
             <span>Connect</span>
+<<<<<<< HEAD
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
 
@@ -306,6 +313,9 @@ export function IntegrationCards() {
       <IntegrationCard
 
   );
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 export function IntegrationCards() {
@@ -326,11 +336,17 @@ export function IntegrationCards() {
 
         onConnect={() => logDebug('Connect Salesforce clicked')}
       />
+<<<<<<< HEAD
+=======
+
+      <IntegrationCard
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         title="Microsoft Teams"
         description="Receive updates through Microsoft Teams."
         icon={<Users className="h-5 w-5" />}
         onConnect={() => logDebug('Connect Teams clicked')}
 
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -338,10 +354,13 @@ export function IntegrationCards() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       />;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -519,3 +538,6 @@ function IntegrationCards() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

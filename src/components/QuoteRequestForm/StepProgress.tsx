@@ -17,10 +17,13 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { QuoteRequestSteps } from "../QuoteRequestForm",
 import { CheckIcon } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -30,6 +33,11 @@ interface StepProgressProps {
 
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps, label: string }[] = [
+<<<<<<< HEAD
+=======
+
+    { id: "service", label: "Service" },
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" },
@@ -56,6 +64,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
           }}
         />
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       
@@ -87,6 +96,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {
         {steps && steps.map(step => {;
           const status = getStepStatus(step && step.id);
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           return (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -99,6 +111,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                     : status === 'current'
                       ? 'bg-zion-cyan border-2 border-zion-purple'
                       : 'bg-zion-blue-light text-zion-slate-light'
+<<<<<<< HEAD
                 )}>;
                 {status === 'complete' ? (;
                   <CheckIcon className='h-4 w-4' />;
@@ -108,6 +121,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   </span>;
                 )}
               </div>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <span
                 className={cn(
                   'text-xs mt-2 font-medium'
@@ -116,6 +132,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                     : status === 'current'
                       ? 'text-white'
                       : 'text-zion-slate-light'                )}                  "text-xs mt-2 font-medium"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -150,6 +167,20 @@ interface StepProgressProps {;
                 )}
               </div>}/> </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+                  "text-zion-slate-light"
+
+                )}
+              <span
+                className = {cn(
+                  "text-xs mt-2 font-medium"
+                  status === "complete" ? "text-zion-cyan" :
+                  status === "current" ? "text-white" :
+                  "text-zion-slate-light"
+
+}/> </div>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {
   steps.findIndex (s => s.id === step.id) + 1
 }</span>)
@@ -248,6 +279,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
   (steps && steps.findIndex (s => s && s.id === currentStep) / (steps && steps.length - 1) ) * 100 ;
 }%` ;
 
@@ -345,3 +377,6 @@ if (return "current", ) {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

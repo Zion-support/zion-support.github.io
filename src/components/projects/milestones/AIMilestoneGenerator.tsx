@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,6 +8,15 @@
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+interface AIMilestoneGeneratorProps {;
+  scope: string;
+  startDate: string;
+  endDate: string | null;
+  projectType: string;
+  onAddMilestones: (milestones: GeneratedMilestone[]) => void;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (!scope || !startDate || !projectType) {
       return;
 
@@ -102,11 +112,14 @@ if ( {) {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -126,11 +139,17 @@ interface AIMilestoneGeneratorProps {;
   projectType: string,;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
   onAddMilestone: (milestone: GeneratedMilestone) => void;
+<<<<<<< HEAD
 export function AIMilestoneGenerator(): any ({;  scope,;
+=======
+
+  scope,;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   startDate,;
   endDate,;
   projectType,;
   onAddMilestones,;
+<<<<<<< HEAD
   onAddMilestone,;
 }: AIMilestoneGeneratorProps) {;
   const {;
@@ -142,14 +161,22 @@ export function AIMilestoneGenerator(): any ({;  scope,;
   const [selectedMilestones, setSelectedMilestones] = useState<;
     Record<string, boolean>;
   >({});
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleGenerateMilestones = async () => {;
     if (!scope || !startDate || !projectType) {;
       return;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const input: MilestoneInput = {;
       scope,;
       startDate,;
       endDate,;
+<<<<<<< HEAD
       projectType,
 };
 
@@ -182,6 +209,10 @@ export function AIMilestoneGenerator(): any ({;  scope,;
     onAddMilestone(milestone)
 };
   const formatDate = (dateString: string,) => {;    try {;
+=======
+
+    try {;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return format(parseISO(dateString), 'MMM dd, yyyy');
     } catch (error) {;
       return dateString;
@@ -189,6 +220,7 @@ export function AIMilestoneGenerator(): any ({;  scope,;
   },
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -208,6 +240,10 @@ export function AIMilestoneGenerator(): any ({;  scope,;
           AI Milestone Generator;
         </h3>;        <Button
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+        <Button
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           disabled={isGenerating || !scope || !startDate || !projectType}        >
 
@@ -221,10 +257,13 @@ export function AIMilestoneGenerator(): any ({;  scope,;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {isGenerating ? (
             <>
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />
@@ -370,10 +409,13 @@ export function AIMilestoneGenerator(): any ({;  scope,;
                     </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Button 
                 onClick={handleAddToProject}
                 disabled={!Object.values(selectedMilestones).some(Boolean)}
@@ -409,7 +451,10 @@ export function AIMilestoneGenerator(): any ({;  scope,;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       variant="ghost"
                       size="sm"
                       onClick={(e) => {

@@ -14,6 +14,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert",
 import { AlertCircle, FileText, Loader2 } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -26,6 +27,9 @@ import { Job } from "@/types/jobs",
 import { toast } from "sonner",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ApplyToJobFormProps {
   job: Job,
   onSuccess?: () => void
@@ -36,10 +40,13 @@ interface ApplyToJobFormProps {
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 =======
 
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { user } = useAuth()
   const { applyToJob } = useJobApplications()
   const { resumes, isLoading: isResumesLoading } = useResume()
@@ -62,7 +69,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       setError("Please provide a cover letter")
       return;
     }
+<<<<<<< HEAD
     
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     setIsSubmitting(true)
     setError(null)
@@ -119,7 +129,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         if (onSuccess) {
           onSuccess()
         }
@@ -127,6 +140,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     } catch (err: any) {
       setError(err.message || "Failed to submit application"),
       toast.error("Failed to submit application")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -220,6 +234,11 @@ if ( {) {
       
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  return (
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
@@ -227,8 +246,11 @@ if ( {) {
         </Alert>
       )}
 
+<<<<<<< HEAD
       
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="space-y-4">
         <div>
           <Label htmlFor="coverLetter">Cover Letter</Label>
@@ -251,9 +273,12 @@ if ( {) {
             rows = {6,}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -264,6 +289,10 @@ if ( {) {
               <span>Loading your resumes...</span>
             </div>
           ) : resumes && resumes.length > 0 ? (
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Select
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}
@@ -481,14 +510,18 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             onChange={(e) => setResumeFile(e.target.files?.[0] || null)}
           />
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       
       <div className="flex justify-end gap-2">
@@ -508,6 +541,15 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();
+=======
+
+      <div className="flex justify-end gap-2">
+
+        <Button
+          type="button"
+          variant="outline"
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }}
         >
           Cancel
@@ -522,30 +564,40 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
             "Submit Application"
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
 }</Button> </div> </form>) ;
 }"};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </Button>;
       </div>;
     </form>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                 {resumes.map ((resume, ) => {
                   // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
                     return (
                       <SelectItem key={resume.id} value={resume.id}>;
@@ -638,3 +690,6 @@ handle_submit;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

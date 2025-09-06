@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 status;
   label;
@@ -28,6 +29,9 @@ export function Step({
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   className}: StepProps) {
 =======
   className?: string
@@ -37,6 +41,7 @@ export function Step({  className}: StepProps) {
   return (
     <li
       className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
         "relative flex items-center",
         {
@@ -52,6 +57,9 @@ export function Step({  className}: StepProps) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className
       )}
     >
@@ -59,10 +67,14 @@ export function Step({  className}: StepProps) {
         className={cn(
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
           "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium"          {
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -79,6 +91,7 @@ export function Step({  className}: StepProps) {
             "bg-zion-purple border-zion-purple text-white":
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               status === "complete",}
         )}>;
@@ -92,6 +105,9 @@ export function Step({  className}: StepProps) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             "bg-zion-purple border-zion-purple text-white":
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               status === "complete"}
@@ -139,6 +155,7 @@ export function Step({;
         )}
       >;
 <<<<<<< HEAD
+<<<<<<< HEAD
         {status === "complete" ? (;
           <CheckIcon className="h-5 w-5" />;
         ) : (;
@@ -166,6 +183,15 @@ export function Step({;
             "text-zion-slate-light": status === "incomplete",
 
 <<<<<<< HEAD
+=======
+
+            {/* Step number would go here */}
+
+        )}
+
+            "text-zion-slate-light": status === "incomplete",
+            "text-zion-slate-light": status === "incomplete",
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             "text-white": status === "current" || status === "complete"})}
         >
@@ -178,6 +204,7 @@ export function Step({;
             "text-white": status === "current" || status === "complete"})}>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {label}
+<<<<<<< HEAD
         </h3>
         {description && (
           <p className="text-sm text-zion-slate-light">{description}</p>
@@ -196,12 +223,16 @@ export function Step({;
 
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface StepsProps {
   currentStep: number
   className?: string
   children: React.ReactNode
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+<<<<<<< HEAD
 ;
 interface StepsProps {;
   currentStep: number,;
@@ -214,6 +245,11 @@ export function Steps({ currentStep, className, children }: StepsProps) {
   
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function Steps({ currentStep, className, children }: StepsProps) {
+  const childrenArray = React.Children.toArray(children)
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
@@ -221,13 +257,21 @@ export function Steps({ currentStep, className, children }: StepsProps) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           if (!React.isValidElement(child)) return null,
           
           let status: "incomplete" | "current" | "complete" = "incomplete",
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
+<<<<<<< HEAD
           
+=======
+
+          if (!React.isValidElement(child)) return null,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           
           let status: "incomplete" | "current" | "complete" = "incomplete",
           if (index < currentStep) status = "complete",
@@ -238,18 +282,24 @@ export function Steps({ currentStep, className, children }: StepsProps) {
         })}
       </ol>
 
+<<<<<<< HEAD
       
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="hidden md:flex md:mt-4">
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 interface StepsProps {;
   currentStep: number,;
@@ -266,14 +316,22 @@ export function Steps(): any ({ currentStep, className, children }: StepsProps) 
 }"};
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
   return (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className={cn("w-full", className)}>;
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">;
         {React.Children.map(childrenArray, (child, index) => {;
@@ -296,6 +354,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -399,3 +458,6 @@ if (status = "current") {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -58,6 +58,7 @@ function SuggestedJobs() {
     } 
   } = useJobSuggestions(currentTalentId),
 
+<<<<<<< HEAD
   const handleApply = (matchId: string, jobId: string) => {
     updateJobMatchStatus(matchId, 'applied'),
     // In a real app, this might redirect to application form or open a modal
@@ -71,6 +72,8 @@ function SuggestedJobs() {
     return (
 =======
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (isLoading) {
   // Check condition
 if ( {) {
@@ -93,10 +96,13 @@ import { NoJobsCard } from "./NoJobsCard";
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useAuth } from "@/hooks/useAuth",;
 import { Loader2 } from 'lucide-react';
 import { Badge } from "@/components/ui/badge",;
@@ -169,7 +175,10 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   
   return (
@@ -206,11 +215,14 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
               />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard 
@@ -225,6 +237,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
       )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 
@@ -235,6 +248,9 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 ;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Previously Viewed Section */}
 =======
       
@@ -246,7 +262,10 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
             <h3 className="text-lg font-medium">Previously Viewed</h3>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       {/* Previously Viewed Section */}
       {viewedMatches && viewedMatches.length > 0 && (;
@@ -266,11 +285,14 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
               />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard 
@@ -285,6 +307,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
       )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 
@@ -295,6 +318,9 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 ;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Applied Jobs Section */}
 =======
       
@@ -306,6 +332,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
             <h3 className="text-lg font-medium">Applied Jobs</h3>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
@@ -316,11 +343,14 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 onDecline={handleDecline}
                 showApplied={true}
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               <JobMatchesCard 
 
                 key = {match.id,}
 
+<<<<<<< HEAD
       {/* Applied Jobs Section */}
       {appliedMatches && appliedMatches.length > 0 && (;
         <div className="space-y-4">;
@@ -332,6 +362,8 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
             {appliedMatches && appliedMatches.map(match => (;
               <JobMatchesCard
                 key = {match && match.id,}
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
@@ -341,7 +373,10 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             ))}
           </div>;
         </div>;
@@ -476,8 +511,12 @@ if ( {) {
 }'"}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

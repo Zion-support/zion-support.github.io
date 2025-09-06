@@ -28,6 +28,7 @@ export default async function handler(;
   const { message, signature, address, chainId } = req.body |{}
   if (!message |!signature |!address);
     return res.status(400).json({ error: "Missing fields" });
+<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api/auth/verify-evm.ts
 <<<<<<< HEAD
 =======
@@ -41,6 +42,9 @@ export default async function handler(;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/auth/verify-evm.ts
   try {
 =======
 =======
@@ -53,6 +57,7 @@ export default async function handler(;
     if (recovered !== String(address).toLowerCase()) {;
       return res && res.status(401).json({ error: "Invalid signature" });
     }
+<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api/auth/verify-evm.ts
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -107,6 +112,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/auth/verify-evm.ts
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/auth/verify-evm.ts
     const nonce = match[1];
     if (!String(message).includes(`Nonce: ${nonce}`));
       return res && res.status(400).json({ error: "Nonce mismatch" });
@@ -135,10 +143,13 @@ const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me';
 export default async function handler(req, res) {;
     return res && res.status(500).json({ error: e?.message || "Verify failed" });
 
-
   }
+<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/auth/verify-evm.ts
 import type { NextApiRequest, NextApiResponse } from './next';
 import jwt from './jsonwebtoken';
 import { ethers  } from './ethers';
@@ -193,6 +204,7 @@ function handler() {;
     return res.status (200).json ({ ok: true });
   } catch (e: any) {;
     return res.status (500).json ({ error: e?.message || "Verify failed" });
+<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api/auth/verify-evm.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -208,12 +220,16 @@ function handler() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/auth/verify-evm.ts
   }
 }
 
   } catch (error) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api/auth/verify-evm.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -274,3 +290,8 @@ export default async function handler(req, res) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  }
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/auth/verify-evm.ts

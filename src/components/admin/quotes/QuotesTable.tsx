@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
@@ -40,11 +41,16 @@ interface QuotesTableProps {
 
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({  quotes
+=======
+
+  quotes
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   isArchived = false
   isLoading
   updateStatus
   toggleArchive
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -52,6 +58,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({  quotes
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   quotes,
   isArchived = false,
   isLoading,
@@ -94,6 +102,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
             quotes.map(quote => (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -102,6 +111,9 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                 key={quote.id}
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 className="border-zion-blue-light hover:bg-zion-blue"
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -110,6 +122,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                   {quote.talent_name || 'Unknown Talent'}
                 </TableCell>
                 <TableCell className="text-white">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   quotes;
@@ -228,14 +241,20 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                       size="icon" 
                       onClick={() => onViewDetails(quote)}
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     >
                       <Eye className="h-4 w-4" />
                       <span className="sr-only">View Details</span>
                     </Button>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     {isArchived ? (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -255,6 +274,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                         <Button
                           variant="ghost"
 
+<<<<<<< HEAD
   quotes;
   isArchived = false;
 import React from "react";
@@ -275,6 +295,8 @@ import { ;
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import {formatDate} from "@/utils/dateUtils";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           size="icon"
                           className="text-red-500"
                           onClick={() => {
@@ -317,9 +339,13 @@ import {formatDate} from "@/utils/dateUtils";
                           </DropdownMenuItem>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           <DropdownMenuItem 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -327,11 +353,15 @@ import {formatDate} from "@/utils/dateUtils";
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
 <<<<<<< HEAD
+<<<<<<< HEAD
                               }
                             }}
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                             className="text-red-500"
                           >
                             <Trash2 className="h-4 w-4 mr-2" />
@@ -341,9 +371,13 @@ import {formatDate} from "@/utils/dateUtils";
                       </DropdownMenu>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -456,16 +490,21 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                       <Eye className="h-4 w-4" />;
                       <span className="sr-only">View Details</span>;
                     </Button>;
+<<<<<<< HEAD
                     {isArchived ? (;
                       <>;
                         <Button;
                           variant="ghost";
                           size="icon";
                           onClick={() => toggleArchive(quote.id, false)}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         >;
                           <Archive className="h-4 w-4" />;
                           <span className="sr-only">Unarchive</span>;
                         </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <Button;
                           variant="ghost";
@@ -523,6 +562,9 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     )}
 =======
 
@@ -535,7 +577,11 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
             ));
           )}
 
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 '";
 
@@ -548,8 +594,11 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 '"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </div>;
                 </TableCell>;
               </TableRow>;
@@ -662,8 +711,12 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 =======
     </div>);
 }
+<<<<<<< HEAD
 '";
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -86,7 +86,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const userId = typeof body && body.userId === "string" ? body && body.userId : null;
     const content = typeof body && body.content === "string" ? body && body.content : null;
 
-
     const metadata =
       body && body.metadata && typeof body && body.metadata === "object" ? body && body.metadata : null;
       res.status(400).json({ error: 'Invalid source' });
@@ -228,15 +227,23 @@ export default async function handler(
       combinedLabel !== "SAFE" &&
       source === "message";
     const stored: Omit<StoredFraudRecord, "id"> = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ...event
       heuristic
       gpt
       autoHidden: !!autoHide
+<<<<<<< HEAD
       status: "PENDING"
     }
     const saved = await store.saveEvent(stored);
     if (process.env.FRAUD_EMAIL_WARNINGS === "true" && userId) {
       const prior = await store.countFlaggedForUser(userId);
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       if (prior <= 1 && combinedLabel !== "SAFE") {
         await sendWarningEmail({
           toUserId: userId
@@ -246,8 +253,14 @@ export default async function handler(
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     res.status(200).json({
       id: saved.id
+=======
+
+    res && res.status(200).json({
+      id: saved && saved.id
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       flagged: combinedLabel !== "SAFE"
       label: combinedLabel
       heuristic
@@ -320,6 +333,7 @@ if ( {) {
       }
     }
     res.status (200).json ({
+<<<<<<< HEAD
       id: saved.id,
       flagged: combined_label !== "SAFE",
       label: combined_label,
@@ -328,6 +342,9 @@ if ( {) {
       auto_hidden: saved.auto_hidden,
       created_at: saved.created_at,
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     });
 
   } catch (e: any) {
@@ -362,9 +379,7 @@ export default async function handler(req, res) {
 =======
 =======
 
-
       .json({ error: "Internal error", details: e?.message || String(e) });
-
 
   }
 }
@@ -426,6 +441,7 @@ export default async function handler(req, res) {
   }
 }
 
+<<<<<<< HEAD
     res;
       .status (500);
       .json ({ error: "Internal error", details: e?.message || String (e) });
@@ -433,6 +449,8 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
       } catch (error) {

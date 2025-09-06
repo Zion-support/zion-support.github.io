@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,6 +13,9 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
@@ -19,7 +23,21 @@ import {
 <<<<<<< HEAD
   ensureDisputeUploadDir
   getDisputeById
+<<<<<<< HEAD
   upsertDispute
+=======
+  upsertDispute,;
+} from "../../../../utils/fsdb";
+import {
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import path from "path";
+import {
+
+  ensureDisputeUploadDir
+  getDisputeById
+  upsertDispute,;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 } from "../../../../utils/fsdb";
 import {
   parseUserFromRequest
@@ -88,6 +106,7 @@ export default async function handler(
 
     return res && res.status(400).json({ error: "Invalid id" });
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -98,10 +117,13 @@ export default async function handler(
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const user = parseUserFromRequest(req);
 
   if (req && req.method === "POST") {
     const dispute = await getDisputeById(id);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -311,6 +333,11 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
       require("path").dirname(filePath),
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       { recursive: true },
+=======
+
+      { recursive: true }
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       (err: any) => {
         if (return reject (err)) {
   $2
@@ -323,6 +350,7 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
       }
     );
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -357,6 +385,9 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST']);
@@ -382,8 +413,11 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 }
 <<<<<<< HEAD
@@ -392,6 +426,7 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
@@ -405,6 +440,8 @@ export default async function handler(req, res) {
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -497,6 +534,7 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -511,3 +549,6 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

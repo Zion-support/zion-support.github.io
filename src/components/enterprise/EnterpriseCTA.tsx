@@ -60,6 +60,7 @@ export function EnterpriseCTA() {
                       </span>                    </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Calendar } from 'lucide-react';
 
@@ -70,10 +71,13 @@ import { Calendar } from 'lucide-react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Calendar, ArrowRight } from 'lucide-react'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -81,6 +85,8 @@ import { Calendar, ArrowRight } from 'lucide-react'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function EnterpriseCTA() {
   return (
     <section id="contact" className="py-20 px-4 md: px-6">
@@ -141,6 +147,7 @@ export function EnterpriseCTA() {
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     </section>
   )
 import React from "react",;
@@ -158,6 +165,9 @@ import { Button } from '@/components/ui/button';
 import { Calendar, ArrowRight } from 'lucide-react';
 export function EnterpriseCTA() {;
   return (;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <section id="contact" className="py-20 px-4 md: px-6">;
 =======
 import React from "react",;
@@ -214,17 +224,24 @@ export function EnterpriseCTA() {;
                       <span className="text-primary text-sm font-medium">4</span>;
                     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <p>Free consultation on implementation</p>;
                   </li>;
 =======
                     <p>Free consultation on implementation</p>;                  </li>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    <p>Free consultation on implementation</p>;
+
+                  </li>;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </ul>;
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </section>;
   );
@@ -242,3 +259,6 @@ export function EnterpriseCTA() {;
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

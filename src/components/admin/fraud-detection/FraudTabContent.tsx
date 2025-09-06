@@ -1,8 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface FraudTabContentProps {
 =======
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
@@ -25,7 +29,10 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({
   switch (tabValue) {    case 'pending':
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface FraudTabContentProps {
   tabValue: string;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -40,6 +47,10 @@ interface FraudTabContentProps {
 export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) => {
   switch(tabValue) {
     case 'pending':
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return (
         <div className="bg-amber-50 dark: bg-amber-950/20 p-8 rounded-lg text-center">
           <AlertTriangle className="mx-auto h-12 w-12 text-amber-500 mb-4" />
@@ -49,12 +60,16 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           </p>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       ),
     
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     case 'dangerous':
 =======
   switch (tabValue) {    case 'pending':    case 'dangerous':
@@ -68,6 +83,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           </p>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       ),
     
     case 'actioned':
@@ -86,6 +102,9 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 
     case 'actioned':
       return (
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className='bg - red - 50 dark:bg - red - 950 / 20 p - 8 rounded - lg text - center'>;
           <AlertCircle className='mx - auto h - 12 w - 12 text - red - 500 mb - 4' />;
           <h3 className='text - xl font - medium mb - 4'>Dangerous Flags</h3>;
@@ -97,6 +116,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
     case 'actioned':;
       return (
 
+<<<<<<< HEAD
     case 'actioned':
       return (
         <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">
@@ -109,6 +129,11 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           </p>;
         </div>;
       );
+=======
+      return null;
+  };
+};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 <<<<<<< HEAD
@@ -119,6 +144,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       return null
 import React from "react",;
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
+<<<<<<< HEAD
 interface FraudTabContentProps {;
   tabValue: string;
 }
@@ -151,10 +177,14 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           <CheckCircle className="mx-auto h-12 w-12 text-green-500 mb-4" />;
           <h3 className="text-xl font-medium mb-4">Actioned Flags</h3>;
           <p className="text-muted-foreground">;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             This tab shows flags where action has already been taken.;
           </p>;
         </div>;
       );
+<<<<<<< HEAD
     default:;
       return null;
 <<<<<<< HEAD
@@ -165,6 +195,11 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className='bg - green - 50 dark:bg - green - 950 / 20 p - 8 rounded - lg text - center'>;
           <CheckCircle className='mx - auto h - 12 w - 12 text - green - 500 mb - 4' />;
           <h3 className='text - xl font - medium mb - 4'>Actioned Flags</h3>;
@@ -180,3 +215,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

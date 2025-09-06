@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Gift } from 'lucide-react'
 
 const REWARDS = [
@@ -9,6 +10,20 @@ const REWARDS = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+            key={r && r.id}
+            className='flex justify-between items-center border rounded-md p-4'>            <div>;
+              <p className='font-medium'>{r && r.title}</p>;
+              <p className='text-sm text-muted-foreground'>{r && r.cost} pts</p>;
+            </div>;
+            <Gift className='h-5 w-5' />          </li>            <Gift className="h-5 w-5" />;
+          </li>;
+
+import { Gift } from 'lucide-react'
+
+const REWARDS = [
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },
   { id: 'premium-week', title: 'Premium Week', cost: 1000 },
   { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }],
@@ -26,6 +41,7 @@ export default function RewardsPage() {
             </div>
             <Gift className="h-5 w-5" />
           </li>
+<<<<<<< HEAD
         ))}
       </ul>;
     </div>;
@@ -34,6 +50,8 @@ export default function RewardsPage() {
 <<<<<<< HEAD
 ;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   );
 }
@@ -65,6 +83,7 @@ const REWARDS = [;
       </ul>;
     </div>);
 }
+<<<<<<< HEAD
 import { Gift } from 'lucide-react'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -84,3 +103,6 @@ const Rewards: React.FC = () => {
 
 export default Rewards;
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

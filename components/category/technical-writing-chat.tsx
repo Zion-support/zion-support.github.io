@@ -28,9 +28,12 @@ const TechnicalWritingChat: NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <main>;
         <h1>TechnicalWritingChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -41,6 +44,7 @@ const TechnicalWritingChat: NextPage = () => {;
 }
 export default TechnicalWritingChat;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -54,6 +58,8 @@ export default TechnicalWritingChat;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -85,6 +91,7 @@ const TechnicalWritingChat: NextPage = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         <title>TechnicalWritingChat - Zion Tech Solutions</title>
@@ -102,6 +109,8 @@ const TechnicalWritingChat: NextPage = () => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -124,6 +133,7 @@ const TechnicalWritingChat: NextPage = () => {
 }
 ;
 export default TechnicalWritingChat;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -184,3 +194,7 @@ export default TechnicalWritingChat;
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

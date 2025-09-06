@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from 'react',;
 import { useLocalStorage } from '@/hooks',;
@@ -186,6 +187,8 @@ const AccountSettings: React.FC = () => {
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -194,6 +197,7 @@ const AccountSettings: React.FC = () => {
     <>
       <SEO title="Account Settings" description="Manage your account" />
       <Header />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -213,6 +217,9 @@ const AccountSettings: React.FC = () => {
 
         <div className="grid gap-6 md:grid-cols-2">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Card>
             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>
@@ -220,6 +227,7 @@ const AccountSettings: React.FC = () => {
                 Manage your personal information and privacy
               </CardDescription>
             </CardHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -281,6 +289,9 @@ const AccountSettings: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   id="email"
                   value={user?.email || ""}
                   disabled
@@ -306,12 +317,16 @@ const AccountSettings: React.FC = () => {
                     <Wallet className="h-4 w-4" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     Connect
                   </Button>
                 </div>
@@ -319,6 +334,7 @@ const AccountSettings: React.FC = () => {
                   Link your decentralized identity to display on your profile
                 </p>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -351,6 +367,8 @@ const AccountSettings: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
@@ -364,6 +382,7 @@ const AccountSettings: React.FC = () => {
                   </p>
                 </div>
                 <Switch
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   id="backup"
@@ -440,10 +459,14 @@ const AccountSettings: React.FC = () => {
                   Data will be backed up to decentralized storage. This feature
                   is in beta.
                 </div>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               )}
               <Button
                 onClick={handleSave}
                 disabled={isSubmitting}
+<<<<<<< HEAD
                 className="w-full"
               >
 <<<<<<< HEAD
@@ -456,6 +479,9 @@ const AccountSettings: React.FC = () => {
           
 =======
                 {isSubmitting ? "Saving..." : "Save Settings"}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {!isSubmitting && <Save className="ml-2 h-4 w-4" />}
               </Button>
             </CardContent>
@@ -463,7 +489,11 @@ const AccountSettings: React.FC = () => {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           <Card>
+<<<<<<< HEAD
             <CardHeader>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <CardTitle>Web3 Features</CardTitle>
               <CardDescription>
                 Manage your Web3 connections and features
@@ -814,7 +844,6 @@ const AccountSettings: React.FC = () => {
   );
 };
 
-
               <div>;
                 <h3 className='font - medium mb - 2'>Recovery Options</h3>;
                 <Button;
@@ -826,7 +855,11 @@ const AccountSettings: React.FC = () => {
                 <p className='text - xs text - gray - 500 mt - 1'>;
                   {enable_backup;
                     ? 'Restore your profile data from decentralized storage';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     : 'Enable backup first to use this feature'}
                 </p>;
               </div>;
@@ -834,6 +867,7 @@ const AccountSettings: React.FC = () => {
           </Card>;
         </div>;
       </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   );
@@ -857,3 +891,6 @@ const AccountSettings: React.FC = () => {
 
 export default AccountSettings;
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

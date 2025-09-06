@@ -67,6 +67,7 @@ export function BottomNavigation() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",;
 import { useRouter } from "next/router",;
 import Link from "next/link",;
@@ -145,3 +146,6 @@ export function BottomNavigation() {;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { issueTokens } from "../../../../utils/token/service",;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -33,6 +34,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { issueTokens } from "../../../../utils/token/service",;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const { userId, amount, reason } = req.body || {},
@@ -41,6 +45,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const tx = issueTokens(userId, Math.floor(amount), reason || "admin_issue"),
     return res.status(200).json({ tx })
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 =======
@@ -57,3 +62,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

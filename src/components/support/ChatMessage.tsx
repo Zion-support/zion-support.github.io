@@ -27,11 +27,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
 
 =======
 import { useTheme } from "@/hooks/useTheme";
-<<<<<<< HEAD
-interface ChatMessageProps {;
-=======
-interface ChatMessageProps {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   message: string;
   isUser: boolean;
 
@@ -50,10 +46,13 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
     () => ({ __html: formatMessageWithLinks(message) }),    [message];
   );
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className={cn('flex items-start gap-3', isUser && 'flex-row-reverse')}>;
       <Avatar className='h-8 w-8'>;
@@ -82,9 +81,9 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 
       </Avatar>;
 
-
       <div
         className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -479,3 +478,6 @@ function formatMessageWithLinks (message: string): string {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

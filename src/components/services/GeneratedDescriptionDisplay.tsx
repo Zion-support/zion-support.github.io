@@ -60,6 +60,7 @@ export function GeneratedDescriptionDisplay(): any ({;
   return (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -72,6 +73,8 @@ export function GeneratedDescriptionDisplay(): any ({;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -164,7 +167,10 @@ export function GeneratedDescriptionDisplay({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {editedDescription}
           </div>;
         )}
@@ -173,12 +179,19 @@ export function GeneratedDescriptionDisplay({;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </CardContent>;
       {isEditing && (;
         <CardFooter>;
           <Button;
+=======
+      </CardContent>;
+      {isEditing && (;
+        <CardFooter>;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             onClick={handleSave}
 =======
       </CardContent>;

@@ -61,6 +61,7 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
   }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
   return (
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Certifications</h3>
@@ -96,6 +97,8 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
 =======
   return (
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Button
                   variant='ghost'
                   size='icon'
@@ -130,8 +133,13 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   View credential
+<<<<<<< HEAD
                 </a>;
               </p>;            )}
+=======
+
+            )}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </CardContent>;
         </Card>;
       ))}

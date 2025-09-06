@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,6 +10,10 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Phone
   Mail
   MapPin
@@ -28,6 +33,7 @@
 
 import React from 'react;';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
 =======
@@ -136,6 +142,10 @@ export default function Footer() {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   <link.icon className="h-5 w-5" />                </a>
+=======
+
+                </a>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </div>
               <div className="flex items-center>
                 <Mail className="w-4 h-4 mr-2 text-blue-400" />
@@ -156,9 +166,17 @@ export default function Footer() {
             </div>
           </div>
           {/* Services */}
+<<<<<<< HEAD
 =======          <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
+=======
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                     className="text-gray-300 hover:text-white transition-colors"
@@ -250,6 +268,10 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     href={link && link.href}
                     className="text-gray-300 hover:text-white transition-colors">;
                     {link && link.name}
@@ -360,11 +382,16 @@ export default function Footer() {
                     <social.icon className=h-5 w-5" />
                   </a>
                 ))}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </div>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
@@ -386,6 +413,9 @@ export default function Footer() {
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {/* Bottom Footer */}
 =======
 }        {/* Bottom Footer */}
@@ -420,6 +450,7 @@ export default function Footer() {
                 Terms of Service;
               </Link>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -447,3 +478,7 @@ export default Footer;
 =======
               <Link
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <Link
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

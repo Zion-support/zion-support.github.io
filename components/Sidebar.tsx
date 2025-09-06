@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -20,11 +21,16 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Building2, ChevronDown, ChevronRight } from 'lucide-react';
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+<<<<<<< HEAD
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
 
@@ -60,6 +66,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         : [...prev, title]
     )
 };
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <AnimatePresence>
       {isOpen && (
@@ -77,7 +85,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
+<<<<<<< HEAD
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"          >
+=======
+
+          >
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className="p-6">
               {/* Header */}
               <div className="flex items-center justify-between mb-8">
@@ -89,10 +102,26 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 </div>
                 <button
                   onClick={onClose}
+<<<<<<< HEAD
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors"                >
                   <X className="w-6 h-6" />
                 </button>
               </div>
+=======
+
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+
+              {/* Navigation */}
+              <nav className="space-y-4">
+                {Object.entries(navigation).map(([title, links]) => (
+                  <div key={title}>
+                    <button
+                      onClick={() => handleDropdownToggle(title)}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {/* Quick Links */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
@@ -110,6 +139,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 </div>
               </div>
 
+<<<<<<< HEAD
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
@@ -118,11 +148,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <p>kleber@ziontechgroup.com</p>
                   <p>24/7 Support Available</p>
                 </div>              </div>
+=======
+              </div>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </div>
           </motion.div>
         </>
       )}
     </AnimatePresence>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -370,6 +404,10 @@ export default Sidebar;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+  );
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -407,7 +445,10 @@ const navigation = {
     { name: 'Contact', href: '/contact' }
   ]
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -416,6 +457,7 @@ interface SidebarProps {
   onClose: () => void;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -592,3 +634,5 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

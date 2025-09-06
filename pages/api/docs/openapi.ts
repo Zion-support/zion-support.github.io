@@ -17,13 +17,13 @@ function toOpenApi() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-
               }
             : undefined
           responses: {
             "200": {
               description: "OK"
               content: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -75,6 +75,9 @@ function toOpenApi() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   });
 
 ;
@@ -257,6 +260,7 @@ function handler() {
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -266,3 +270,5 @@ function handler() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

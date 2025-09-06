@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Badge } from "@/components/ui/badge",
@@ -48,6 +49,9 @@ export function UsageStats() {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Card>
 =======
   return (
@@ -87,11 +91,14 @@ export function UsageStats() {
           </CardFooter>
         </Card>
 
+<<<<<<< HEAD
         
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -122,8 +129,11 @@ export function UsageStats() {
         </Card>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Card>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -155,11 +165,14 @@ export function UsageStats() {
           </CardFooter>
         </Card>
 
+<<<<<<< HEAD
         
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -201,6 +214,7 @@ export function UsageStats() {
         </Card>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -211,6 +225,9 @@ export function UsageStats() {
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
             <Sparkles className="h-5 w-5 text-primary" />
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -393,6 +410,7 @@ export function UsageStats() {;
         </Card>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">;
         <div className="flex items-center gap-4">;
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">;
@@ -430,3 +448,6 @@ export function UsageStats() {;
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

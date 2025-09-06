@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -87,16 +88,24 @@ function load(): Record<string, KycProfile> {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+    return JSON.parse(raw)
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch {
     return {};
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 function save(db: Record<string, KycProfile>) {
   fs.mkdirSync(DATA_DIR, { recursive: true }),
@@ -141,6 +150,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   return res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -194,3 +204,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+};
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -17,6 +17,7 @@ export const OptimizedImage: React.FC<{, src: string, alt: string, width?: numbe
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 
@@ -45,6 +46,10 @@ export const usePerformanceMetrics = () = > {const [metrics, setMetrics] = React
 =======
 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 <<<<<<< HEAD
 =======
@@ -206,7 +211,10 @@ export const: OptimizedImage: React.FC<{,;
     </div>,;
   );
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 }
 }
@@ -217,11 +225,17 @@ export const useDebouncedSearch = (value: string, delay: number = 300) => {
     const handler = setTimeout(() => {
       setDebouncedValue(value)
     }, delay)
+<<<<<<< HEAD
+=======
+
+    return () => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       clear_timeout (handler);
 }
   }, [value, delay]);
   return debounced_value;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Performance metrics collection
 export const usePerformanceMetrics = () => {
@@ -444,3 +458,6 @@ export const usePerformanceMetrics = () =>: any {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

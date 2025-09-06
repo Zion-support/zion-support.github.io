@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 
 <<<<<<< HEAD
@@ -171,6 +172,10 @@ export default FaqSection;
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { FileText } from 'lucide-react'
 const faqs = [
   {
@@ -605,7 +610,6 @@ function FaqSection() {
           </p>;
         </div>;
 
-
 import { GradientHeading } from "./GradientHeading";
 
         <div className='max - w-3xl mx - auto bg - zion - blue - light rounded - lg border border - zion - purple / 20 p - 6'>;
@@ -691,29 +695,30 @@ const faqs = [;
     answer:;
       "Reach us via the chat widget, email support@ziontechgroup && ziontechgroup.com or call +1 302 464 0950 anytime."}];
 
-
 export function FaqSection() {;
-
 
 const faqs = [
   {
     question: "How do I publish my AI product or service?",
     answer:
 
-
 export function FaqSection() {
   return (
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">
           <div className="flex items-center mb-6">
             <FileText className="h-6 w-6 text-zion-cyan mr-2" />
             <h3 className="text-xl font-bold text-white">Common Questions</h3>
           </div>
 
+<<<<<<< HEAD
 
           
 
@@ -866,3 +871,8 @@ export default FaqSection;
 =======
 export default FaqSection;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  );
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

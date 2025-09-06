@@ -4,6 +4,7 @@
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+<<<<<<< HEAD:pages/api-disabled/api/partners/leaderboard.ts
 =======
 <<<<<<< HEAD:pages/api/partners/leaderboard.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -13,6 +14,9 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/partners/leaderboard.ts
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -33,11 +37,11 @@ export default async function handler(
     (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
 
-
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
 
       "placeholder-key";
+<<<<<<< HEAD:pages/api-disabled/api/partners/leaderboard.ts
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -46,6 +50,9 @@ export default async function handler(
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts
   try {
     if (usingPlaceholder) {
       return res.status(200).json({
@@ -65,13 +72,18 @@ export default async function handler(
     }
 =======
 
-
       });
 
+<<<<<<< HEAD:pages/api-disabled/api/partners/leaderboard.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           { code: 'aihub', profile_completions: 9 }
           { code: 'modelmasters', profile_completions: 7 }
+=======
+          { code: 'aihub', profile_completions: 9 }
+          { code: 'modelmasters', profile_completions: 7 }
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts
           { code: 'promptpro', profile_completions: 5 }
         ]})
 <<<<<<< HEAD:pages/api/partners/leaderboard.ts
@@ -88,21 +100,24 @@ export default async function handler(
 
     }
 
+<<<<<<< HEAD:pages/api-disabled/api/partners/leaderboard.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
     for (const row of data || []) {;
+=======
+    for (const row of data || []) {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts
       if (row && row.event !== "profile_completed") continue;
       const key = row && row.partner_code as string;
       map && map.set(key, (map && map.get(key) || 0) + 1);
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
 ;
     const leaders = Array && Array.from(map && map.entries())
       .map(([code, profile_completions]) => ({ code, profile_completions }))
       .sort((a, b) => b && b.profile_completions - a && a.profile_completions)
       .slice(0, 10);
+<<<<<<< HEAD:pages/api-disabled/api/partners/leaderboard.ts
 =======
 <<<<<<< HEAD:pages/api/partners/leaderboard.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -134,6 +149,9 @@ export default async function handler(
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/partners/leaderboard.ts
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts
     const supabase = getServerSupabase ();
     const startOfMonth = new Date ();
     startOfMonth.set_date (1);
@@ -161,6 +179,7 @@ if (continue) {
     return res.status (200).json ({ leaders });
   } catch (e: any) {;
     return res.status (500).json ({ error: e?.message });
+<<<<<<< HEAD:pages/api-disabled/api/partners/leaderboard.ts
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -201,6 +220,9 @@ export default async function handler(
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {;
   try {;
@@ -346,10 +368,14 @@ export default async function handler(req, res) {;
 <<<<<<< HEAD
   }
 }
+<<<<<<< HEAD:pages/api-disabled/api/partners/leaderboard.ts
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts
   }
 }
   } catch (error) {
@@ -385,6 +411,7 @@ export default async function handler(req, res) {
   }
 }
 ;
+<<<<<<< HEAD:pages/api-disabled/api/partners/leaderboard.ts
 <<<<<<< HEAD
 =======
 
@@ -402,10 +429,14 @@ export default async function handler(req, res) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
+<<<<<<< HEAD:pages/api-disabled/api/partners/leaderboard.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -435,6 +466,9 @@ export default async function handler(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts
     const { data, error } = await supabase;
       .from('referral_events');
       .select('partner_code, event, created_at');
@@ -461,6 +495,7 @@ export default async function handler(req, res) {
       .slice(0, 10);
     return res.status(200).json({ leaders });
   } catch (error) {
+<<<<<<< HEAD:pages/api-disabled/api/partners/leaderboard.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -470,6 +505,9 @@ export default async function handler(req, res) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts
     return res.status(500).json({ error: e?.message });
     } catch (error) {
     console.error("Error:", error);
@@ -484,6 +522,7 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/partners/leaderboard.ts
   }
 }
+<<<<<<< HEAD:pages/api-disabled/api/partners/leaderboard.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -534,3 +573,6 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/partners/leaderboard.ts
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts

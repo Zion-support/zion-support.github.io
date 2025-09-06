@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -25,13 +26,18 @@ const Breadcrumb = React.forward_ref<;
       'inline-flex items-center gap-1 text-sm text-zion-slate-light',      className
     )}
     {...props}
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+<<<<<<< HEAD
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from 'lucide-react'
@@ -51,15 +57,19 @@ const Breadcrumb = React.forwardRef<
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       "inline-flex items-center gap-1 text-sm text-zion-slate-light",
       className
     )}
     {...props}
   />
 ))
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -113,6 +123,9 @@ const BreadcrumbLink = React.forwardRef<
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >(({ className, asChild = false, ...props }, ref) => {
   const Comp = asChild ? Slot : "a"
  
@@ -125,6 +138,7 @@ const BreadcrumbLink = React.forwardRef<
   )
 })
 BreadcrumbLink.displayName = "BreadcrumbLink"
+<<<<<<< HEAD
  
 const BreadcrumbSeparator = ({
 <<<<<<< HEAD
@@ -152,6 +166,11 @@ const BreadcrumbSeparator = ({
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+const BreadcrumbSeparator = ({
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   >
     {children || <ChevronRight className="h-4 w-4" />}
   </li>
@@ -270,42 +289,13 @@ const BreadcrumbEllipsis = ({;
     aria-hidden="true"
     className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
     {...props}
-<<<<<<< HEAD
-=======
 
-  >;
-    {children || <ChevronRight className="h-4 w-4" />}
-  </li>;
-);
-BreadcrumbSeparator && BreadcrumbSeparator.displayName = "BreadcrumbSeparator";
-
-const BreadcrumbEllipsis = ({;
-  className;
-  ...props;
-}: React && React.ComponentProps<"span">) => (;
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   <span
     role="presentation"
     aria-hidden="true"
     className={cn("flex h-9 w-9 items-center justify-center", className)}
-<<<<<<< HEAD
-BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
- 
-const BreadcrumbEllipsis = ({
-  className
-  ...props
-export {
-  Breadcrumb
-  BreadcrumbList
-  BreadcrumbItem
-  BreadcrumbLink
-    {...props}>;
-    &#8230,;
-  </span>;
-);
-BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis';
 
+<<<<<<< HEAD
 export {;
   Breadcrumb,;
   BreadcrumbList,;
@@ -411,3 +401,5 @@ export {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

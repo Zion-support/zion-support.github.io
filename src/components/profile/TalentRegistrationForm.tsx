@@ -143,6 +143,7 @@ if ( {) {
 type TalentFormValues = z.infer<typeof talentProfileSchema>,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',
 
 interface CategorizedSkills {
@@ -217,6 +218,8 @@ export function TalentRegistrationForm() {
     defaultValues: {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       name: user?.displayName || "",
       title: "",
       bio: "",
@@ -338,6 +341,7 @@ export function TalentRegistrationForm() {;
       // Check if data exists before type assertion
       if (data && typeof data === 'object') {
 <<<<<<< HEAD
+<<<<<<< HEAD
         setGeneratedContent(data as EnhancedProfile),
         
         toast({
@@ -364,6 +368,8 @@ export function TalentRegistrationForm() {;
       
     } catch (error: any) {
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       }
       
@@ -388,16 +394,23 @@ export function TalentRegistrationForm() {;
       // Extract all skills from categorized skills and properly type cast them
       const allCategorizedSkills = generatedContent.categorizedSkills,
       const newSkills: string[] = [],
+<<<<<<< HEAD
       
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Safely extract and flatten skills from each category
       Object.values(allCategorizedSkills).forEach(categorySkills => {
         if (Array.isArray(categorySkills)) {
           categorySkills.forEach(skill => {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
               newSkills.push(skill)
 ;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             if (true) {}
 
@@ -670,10 +683,13 @@ export function TalentRegistrationForm() {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           to: email,
           subject: "Your Zion Talent Profile Has Been Enhanced",
 
@@ -687,6 +703,7 @@ export function TalentRegistrationForm() {;
               <p style="color: #666; font-size: 12px;">© ${new Date().getFullYear()} Zion Marketplace</p>
             </div>
           </div>
+<<<<<<< HEAD
           `
   },;
   // Send notification email;
@@ -713,6 +730,8 @@ export function TalentRegistrationForm() {;
       logErrorToProduction('Failed to send notification email:', { data: error });
     }
   },
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   // Handle form submission
   const onSubmit = async (values: TalentFormValues,) => {
@@ -783,8 +802,11 @@ if ( {) {
       if (!user?.id) {
         throw new Error("User not authenticated")
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       }
 
@@ -815,6 +837,7 @@ if ( {) {
                 location: values.location
   },;
   // Handle form submission;
+<<<<<<< HEAD
   const onSubmit = async (values: TalentFormValues,) => {;
     if (skillTags && skillTags.length === 0) {;
       toast({;
@@ -838,6 +861,9 @@ if ( {) {
       let finalSummary = "",;
       let finalSkills = skillTags,;
       if (values.enhancedProfile && !generatedContent) {;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         try {;
           const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {;
             body: {;
@@ -948,10 +974,13 @@ if ( {) {
       }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             }),;
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
@@ -975,18 +1004,24 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Create the talent profile
       // In a real implementation, this would save to Supabase
       setTimeout((,) => {
         toast({
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           title: 'Profile Created Successfully',
 
@@ -996,17 +1031,24 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           title: "Profile Created Successfully",
           description: "Your talent profile has been published and is now visible in the directory."}),
+<<<<<<< HEAD
         
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         // Send notification email if we have user email
         if (userEmail && values.enhancedProfile && user?.id) {
           sendEnhancementNotification(user.id, userEmail)
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         setIsSubmitting(false)
       }, 1500)
@@ -1211,10 +1253,13 @@ if ( {) {
                                 placeholder='Your full name';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       logErrorToProduction('Error creating profile:', { data: error }),
       toast({
         title: "Error Creating Profile",
@@ -1626,10 +1671,13 @@ if ( {) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
                       <Upload className="mr-2 h-4 w-4" />
                       <span>Upload Photo</span>
@@ -1753,10 +1801,13 @@ if ( {) {
                   </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         </FormLabel>
                         <FormDescription className="text-zion-slate-light">
                           Let AI help optimize your profile for better visibility and engagement
@@ -1793,15 +1844,19 @@ if ( {) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     </Button>
                   </div>
                 )}
 ;
                 {/* Generated Content Display */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {generatedContent && (
                   <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">
@@ -1810,6 +1865,9 @@ if ( {) {
                         <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
                         AI-Generated Content
                       </h4>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       <Button
 <<<<<<< HEAD
 =======
@@ -1879,9 +1937,12 @@ if ( {) {
                   </div>;
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>;
               <Separator className="bg-zion-blue-light/50" />;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               </div>;
 
@@ -1889,6 +1950,7 @@ if ( {) {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {/* Skills and Availability */}
+<<<<<<< HEAD
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
                 {/* Skills Section */}
 <<<<<<< HEAD
@@ -1900,6 +1962,10 @@ if ( {) {
                   <h3 className='text-lg font-medium text-white'>;
                     Skills & Expertise;
                   </h3>;                  <FormField
+=======
+
+                  <FormField
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     control={form.control}
@@ -1915,9 +1981,13 @@ if ( {) {
                               placeholder='Add a skill...'
                               {...field}
 <<<<<<< HEAD
+<<<<<<< HEAD
                               onKeyDown={handleSkillKeyPress}
                             />
                           </FormControl>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           <Button
 <<<<<<< HEAD
 =======
@@ -2031,7 +2101,10 @@ if ( {) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {/* Availability Section */}
 <<<<<<< HEAD
 =======
@@ -2290,7 +2363,10 @@ if ( {) {
                 </div>;
               </div>;
             </CardContent>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             <CardFooter className="border-t border-zion-blue-light pt-6">
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
@@ -2383,6 +2459,7 @@ toast ({
 }finally {
   setIsGenerating (false);
 
+<<<<<<< HEAD
 }
 //Apply generated content to form const applyGeneratedContent = () =>: any {
   // Check condition
@@ -2390,6 +2467,8 @@ if ( {) {
   $2
 }
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   new Date () .getFullYear () 
 
 }Zion Marketplace</p>
@@ -2421,7 +2500,12 @@ if ( {) {
   if (skillTags.length === 0) {
   toast ({
   return;
+<<<<<<< HEAD
 }setIsSubmitting (true);try {
+=======
+
+try {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   //For actual implementation with Supabase if (!user?.id) {
   try {
   const {
@@ -2568,7 +2652,12 @@ if (Array && Array.isArray (categorySkills) ) {;
   categorySkills && categorySkills.forEach (skill => {';
   if (typeof skill === 'string' && skill && !skillTags && skillTags.includes (skill) ) {;
 
+<<<<<<< HEAD
 })
+=======
+});
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 //Get category color //Send notification email const sendEnhancementNotification = async (userId: string, email: string) => {;
   try {';

@@ -51,6 +51,7 @@ export function TalentDashboard() {
             </CardContent>
           </Card>
 
+<<<<<<< HEAD
           
 <<<<<<< HEAD
 =======
@@ -58,6 +59,8 @@ export function TalentDashboard() {
           
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between items-start">
@@ -80,6 +83,7 @@ export function TalentDashboard() {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="flex gap-2 mt-3">
@@ -87,6 +91,10 @@ export function TalentDashboard() {
               <div className="flex gap-2 mt-3">
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <div className="flex gap-2 mt-3">
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Button size="sm">Apply Now</Button>
                 <Button size="sm" variant="outline">View Details</Button>
               </div>
@@ -98,6 +106,7 @@ export function TalentDashboard() {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
@@ -105,6 +114,8 @@ export function TalentDashboard() {
       
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <section>
         <h2 className="text-lg font-medium mb-4">Application Tracker</h2>
         <Card>
@@ -132,17 +143,21 @@ export function TalentDashboard() {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Button variant="outline" className="w-full mt-4">
               View All Applications
             </Button>
           </CardContent>
         </Card>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
       
       <section>
@@ -207,6 +222,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     <div className='space-y-6 px-4 pb-24'>;
       <section>;
@@ -415,7 +432,6 @@ function TalentDashboard() {
           >;
 =======
 
-      
       <section>
         <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
         <div className="grid grid-cols-2 gap-4">
@@ -428,6 +444,7 @@ function TalentDashboard() {
             <FileText className="h-5 w-5 mb-1" aria-hidden="true" />;
             <span>Update Resume</span>;
           </Button>;
+<<<<<<< HEAD
           <Button
             variant="outline"
             className="h-auto py-4 flex flex-col gap-1"
@@ -441,6 +458,12 @@ function TalentDashboard() {
             aria-label="Set Availability";
           >;
 =======
+=======
+
+            <Image className="h-5 w-5 mb-1" aria-hidden="true" />;
+            <span>Portfolio</span>;
+          </Button>;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Button
             variant="outline"
             className="h-auto py-4 flex flex-col gap-1"
@@ -458,9 +481,12 @@ function TalentDashboard() {
         </div>
       </section>
 
+<<<<<<< HEAD
       
 
       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Learning Hub</h2>

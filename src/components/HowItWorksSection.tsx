@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 <<<<<<< HEAD
@@ -103,6 +104,10 @@ const HowItWorksSection: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { GradientHeading } from "./GradientHeading";
 
 import { Check, Handshake, Search, Send } from 'lucide-react'
@@ -197,6 +202,10 @@ const stats = [ "
   hidden: { opacity: 0
   scale: 0.8
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react';
 import { GradientHeading } from './GradientHeading';
 <<<<<<< HEAD
@@ -306,14 +315,16 @@ const stats = [ ";
       opacity: 1,      scale: 1
       transition: {
 
-
 const getSteps = (t: any,) => [
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react',
 import { GradientHeading } from "./GradientHeading",
 import { Check, Handshake, Search, Send } from 'lucide-react'
@@ -325,12 +336,14 @@ interface HowItWorksSectionProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const getSteps = (t: any) => [
   {
 =======
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const getSteps = (t: any) => [
-
 
   {
 
@@ -349,6 +362,7 @@ const getSteps = (t: any) => [
   {
     title: t('how_it_works.done'),
     description: t('how_it_works.done_desc'),
+<<<<<<< HEAD
 <<<<<<< HEAD
     icon: Check}],
 
@@ -972,6 +986,10 @@ function HowItWorksSection() {
                         {step && step.description}
                       </p>                    </div>                    </div>;
 
+=======
+
+  return (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         <div className="relative">
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
@@ -980,6 +998,7 @@ function HowItWorksSection() {
           
           <div className="space-y-12 md:space-y-0">
             {steps.map((step, index) => (
+<<<<<<< HEAD
               <div 
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${
@@ -1025,6 +1044,9 @@ export default HowItWorksSection;
 export default HowItWorksSection;
 =======
 >>>>>>> main
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default Component;
 
 }
@@ -1061,6 +1083,7 @@ export default Component;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -1083,3 +1106,6 @@ export default HowItWorksSection;
 
 export default HowItWorksSection;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,14 +10,21 @@ import { Textarea } from "@/components/ui/textarea",
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from 'react'
 import { useForm, ControllerRenderProps } from 'react-hook-form'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -24,6 +32,7 @@ import {
   FormControl,
   FormField,
   FormItem,
+<<<<<<< HEAD
 <<<<<<< HEAD
   FormMessage
 } from "@/components/ui/form",
@@ -79,6 +88,8 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
     } finally {;
       setIsSubmitting(false);
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       content: '',;
     },;
@@ -90,6 +101,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
       form.reset()
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
   parentId?: string;
 interface ReplyFormValues {;
   content: string;
@@ -159,6 +171,9 @@ interface ReplyFormValues {
 
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
 =======
 interface ReplyFormProps {
@@ -170,10 +185,11 @@ interface ReplyFormProps {
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleSubmit)}>
             <FormField
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               control={form.control}
               name="content"
               render={({ field }: { field: ControllerRenderProps<ReplyFormValues "content"> }) => (
@@ -215,9 +231,12 @@ interface ReplyFormProps {
   )
 },
 
+<<<<<<< HEAD
 export default ReplyForm,
 =======
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               )}
             />;
             <div className='mt-4 flex justify-end'>;
@@ -250,6 +269,7 @@ export default ReplyForm,
         </Form>;
       </CardContent>;
     </Card>);
+<<<<<<< HEAD
               )}
             />
             <div className="mt-4 flex justify-end">
@@ -266,3 +286,6 @@ export default ReplyForm,
 }
 export default ReplyForm;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

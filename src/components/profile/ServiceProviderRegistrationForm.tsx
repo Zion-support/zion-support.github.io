@@ -402,10 +402,13 @@ if ( {) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           display_name: values.name,
           bio: finalSummary,
           user_type: "creator", // Set as service provider
@@ -421,10 +424,13 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (error) throw error,
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Store service-specific data in service_profiles table
       // (This assumes you have a service_profiles table in your database)
 
@@ -436,10 +442,13 @@ if ( {) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           user_id: user.id,
           services: finalServices,
           hourly_rate: Number(values.hourlyRate),
@@ -448,6 +457,7 @@ if ( {) {
 <<<<<<< HEAD
           website: values.website || null}),
 
+<<<<<<< HEAD
       if (serviceError) throw serviceError,
 =======
 
@@ -456,6 +466,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       */
 
       // Send notification email if available
@@ -522,10 +534,13 @@ if ( {) {
             body: {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               to: userEmail,
               subject: "Your Zion Service Profile Is Ready",
 
@@ -960,6 +975,7 @@ export function ServiceProviderRegistrationForm() {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -969,6 +985,8 @@ export function ServiceProviderRegistrationForm() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -1017,10 +1035,13 @@ export function ServiceProviderRegistrationForm() {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <div className="col-span-1">
                     <FormField
                       control={form.control}
@@ -1047,10 +1068,13 @@ export function ServiceProviderRegistrationForm() {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <div className="col-span-1">
                     <FormField
                       control={form.control}
@@ -1077,10 +1101,13 @@ export function ServiceProviderRegistrationForm() {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <div className="col-span-1">
                     <FormField
                       control={form.control}
@@ -1136,6 +1163,7 @@ export function ServiceProviderRegistrationForm() {;
             <CardContent className="space-y-8">;
               {/* Basic Information */}
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
@@ -1149,6 +1177,10 @@ export function ServiceProviderRegistrationForm() {;
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
                   <div className='col-span-1'>;                    <FormField
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+                    <FormField
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       control={form.control}
 <<<<<<< HEAD
                       name="name";
@@ -1295,6 +1327,7 @@ export function ServiceProviderRegistrationForm() {;
                     </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
                       <Upload className="mr-2 h-4 w-4" />
                       <span>Upload Photo</span>
@@ -1352,6 +1385,8 @@ export function ServiceProviderRegistrationForm() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         </FormLabel>
                         <FormDescription className="text-zion-slate-light">
                           Let AI help optimize your service description for better visibility and client engagement
@@ -1388,10 +1423,13 @@ export function ServiceProviderRegistrationForm() {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     </Button>
                   </div>
                 )}
@@ -1409,10 +1447,13 @@ export function ServiceProviderRegistrationForm() {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         type="button"
                         size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -1426,7 +1467,10 @@ export function ServiceProviderRegistrationForm() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       <div>
                         <h5 className='text-zion-slate-light text-sm mb-1'>
                           Professional Summary
@@ -1474,8 +1518,11 @@ export function ServiceProviderRegistrationForm() {;
                             </div>                          </div>
                         )}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       {generatedContent.services && generatedContent.services.length > 0 && (
                         <div>
                           <h5 className="text-zion-slate-light text-sm mb-1">Suggested Services</h5>
@@ -1500,7 +1547,10 @@ export function ServiceProviderRegistrationForm() {;
 =======
               <Separator className='bg-zion-blue-light/50' />;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Separator className="bg-zion-blue-light/50" />
 
               {/* Services and Availability */}
@@ -1528,9 +1578,13 @@ export function ServiceProviderRegistrationForm() {;
                               placeholder='Add a service...'
                               {...field}
 <<<<<<< HEAD
+<<<<<<< HEAD
                               onKeyDown={handleServiceKeyPress}
                             />
                           </FormControl>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           <Button
 <<<<<<< HEAD
 =======
@@ -1719,6 +1773,7 @@ export function ServiceProviderRegistrationForm() {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div className="flex flex-wrap gap-2 mt-2">
                     {serviceTags.map(service => (
                       <Badge
@@ -1737,6 +1792,8 @@ export function ServiceProviderRegistrationForm() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         </button>
                       </Badge>
                     ))}
@@ -1922,7 +1979,10 @@ export function ServiceProviderRegistrationForm() {;
                 </div>;
               </div>;
             </CardContent>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             <CardFooter className="border-t border-zion-blue-light pt-6">
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
@@ -1984,6 +2044,7 @@ export function ServiceProviderRegistrationForm() {;
   setServiceTags (service_tags.filter ( (s) => s !== service) );
 
 }
+<<<<<<< HEAD
 //Handle key press in services input (add on enter) const handleServiceKeyPress = (e: React.KeyboardEvent) =>: any {
 }
 //Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
@@ -1993,6 +2054,10 @@ if ( {) {
   $2
 }
   const reader = new FileReader ();reader.onloadend = () => {
+=======
+
+reader.onloadend = () => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   setUploadedAvatar (reader.result as string);
 }
@@ -2031,7 +2096,12 @@ if (newServices.length > 0) {
   if (serviceTags.length === 0) {
   toast ({
   return;
+<<<<<<< HEAD
 }setIsSubmitting (true);try {
+=======
+
+try {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   //For actual implementation with Supabase if (!user?.id) {
 }//Enhance profile if not already done let finalSummary = values.bio
 let finalServices = serviceTags

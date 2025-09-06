@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -1336,6 +1337,9 @@ export default function SolutionsPage() {
                   View All Services
 =======
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -1386,7 +1390,6 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
 } from 'lucide-react',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',;
-
 
       id: 'healthcare',
       name: 'Healthcare Solutions',
@@ -1571,12 +1574,8 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
                 <a
                   href="/contact"
 
-
-
                 <a
                   href="/contact"
-
-
 
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
@@ -1776,17 +1775,13 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
                 <a
                   href="/contact"
 
-
-
                 <a
                   href="/contact"
-
-
 
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
                 </a>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </div>
@@ -1794,6 +1789,7 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
           </div>
         </section>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1860,3 +1856,6 @@ export default Solutions,
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import * as React from "react"
 import { PanelLeft } from 'lucide-react'
@@ -11,6 +12,9 @@ import { PanelLeft } from 'lucide-react'
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -19,6 +23,7 @@ export const SidebarTrigger = React.forwardRef<
   React.ComponentProps<typeof Button>
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -38,6 +43,10 @@ export const SidebarTrigger = React.forward_ref<;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 =======
+=======
+
+      ref={ref}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       data - sidebar=&quot;trigger & quot;
       variant=&quot;ghost & quot;
       size=&quot;icon & quot;
@@ -45,6 +54,7 @@ export const SidebarTrigger = React.forward_ref<;
       on_click={(event) => {
         props.on_click?.(event);
         toggle_sidebar ();
+<<<<<<< HEAD
   return (
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -55,11 +65,15 @@ export const SidebarTrigger = React.forward_ref<;
       size="icon"
       className={cn("h-7 w-7", props.className)}
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       onClick={(event) => {
         props.onClick?.(event)
         toggleSidebar()
       }}
       {...props}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -88,3 +102,6 @@ SidebarTrigger.displayName = "SidebarTrigger"
 =======
 })
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

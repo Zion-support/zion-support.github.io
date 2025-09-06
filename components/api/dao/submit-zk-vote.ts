@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 export default async function handler(
   req: NextApiRequest
@@ -124,3 +125,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+  }
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

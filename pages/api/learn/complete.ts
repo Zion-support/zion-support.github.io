@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -29,6 +30,13 @@ const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next',;
+
+import fs from 'fs',;
+import path from 'path',;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -57,6 +65,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { userId = 'demo-user', courseId, enableBoost } = req.body |{}
   if (!courseId) return res.status(400).json({ error: 'courseId required' })
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -315,6 +324,9 @@ import fs from 'fs',
 import path from 'path',
 const users_path = path.join (process.cwd (), 'datalearnusers.json'),
 const courses_path = path.join (process.cwd (), 'datalearncourses.json'),
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 /**
  * read_json - Function description
  */
@@ -336,6 +348,7 @@ function handler() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
   }
 
 
@@ -377,3 +390,6 @@ if ( {) {
 =======
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,45 +1,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-
-<<<<<<< HEAD
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
 =======
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-<<<<<<< HEAD
-    
-    return this.props.children;
-  }
-}
 
+<<<<<<< HEAD
 import React from "react";
 import Layout from "../components/Layout";
 
@@ -169,12 +144,15 @@ import {
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Star,
   Clock,
   Users,
   Award,
   TrendingUp,
   Database,
+<<<<<<< HEAD
 <<<<<<< HEAD
   Shield,
   Zap
@@ -183,6 +161,9 @@ import {
   Cpu,
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Network,
   Target,
   Rocket
@@ -191,6 +172,7 @@ import {
 
 const aiServices = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     title: 'Natural Language Processing',
 <<<<<<< HEAD
@@ -437,20 +419,26 @@ const aiServices = [
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 ];
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const stats = [
   { number: "500+", label: "AI Models Deployed" },
   { number: "99.9%", label: "Uptime Guarantee" },
   { number: "24/7", label: "AI Monitoring" },
+<<<<<<< HEAD
 <<<<<<< HEAD
   { number: "48hrs", label: "Average Response Time" }
 <<<<<<< HEAD
@@ -473,6 +461,9 @@ const stats = [
   }
 }
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ];
 import React from "react";
 import Layout from "../components/Layout";
@@ -481,8 +472,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 import Layout from '../components/Layout';
 import React from "react";
 import Layout from "../components/Layout";
-origin/automation-improvements-final
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function AIServicesPage() {
   return (
@@ -614,10 +605,13 @@ origin/main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function AIServices() {
   return (
     <Layout
       title="AI Services - Zion Tech Group"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
@@ -627,6 +621,8 @@ export default function AIServices() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -636,11 +632,6 @@ export default function AIServices() {
           <div className="text-center">
             <p className="text-gray-600">AI Services page is under construction.</p>
 
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -810,10 +801,7 @@ export default function AIServices() {
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
 export default function AIServices() {;
   return (
     <Layout
@@ -832,10 +820,7 @@ export default function AIServices() {;
           </div>;
           <div className="text-center">;
             <p className="text-gray-600">;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -861,16 +846,14 @@ function AIServices() {
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
               AI Services page is under construction.;
             </p>;
           </div>;
         </div>;
       </div>;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1581,6 +1564,8 @@ origin/automation-improvements-final
               Transform your business with cutting-edge AI solutions and services.
             </p>
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1593,14 +1578,10 @@ origin/automation-improvements-final
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1608,6 +1589,8 @@ origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -1804,8 +1787,9 @@ export default function AIServicesPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       </div>
     </Layout>
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1851,3 +1835,6 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

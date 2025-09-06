@@ -5,6 +5,7 @@ const { wallet, loading } = useWallet();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { BadgeDollarSign } from 'lucide-react'
 import { useWallet } from "@/hooks/useWallet",
@@ -16,6 +17,8 @@ export function TokenDisplay() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -34,10 +37,13 @@ export function TokenDisplay() {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="flex flex-col gap-2">
             <div className="flex items-end">
               <span className="text-3xl font-bold">{wallet?.balance || 0}</span>
@@ -51,6 +57,7 @@ export function TokenDisplay() {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="mt-2">
@@ -58,6 +65,10 @@ export function TokenDisplay() {
             <div className="mt-2">
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <div className="mt-2">
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Button variant="outline" size="sm">
                 View Wallet
               </Button>
@@ -66,7 +77,10 @@ export function TokenDisplay() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",;
 import { BadgeDollarSign } from 'lucide-react';
 import { useWallet } from "@/hooks/useWallet",;
@@ -77,6 +91,7 @@ export function TokenDisplay() {;
   const { wallet, loading } = useWallet();
   return (;
     <Card>;
+<<<<<<< HEAD
       <CardHeader className='flex flex-row items-center justify-between pb-2'>;
         <div>;
           <CardTitle className='text-xl'>ZION$ Balance</CardTitle>;
@@ -96,6 +111,9 @@ export function TokenDisplay() {;
 <<<<<<< HEAD
             <p className="text-sm text-muted-foreground">;
               Use your tokens to boost visibility, access premium features, or convert to credits.;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </p>;
             <div className="mt-2">;
               <Button variant="outline" size="sm">;
@@ -163,10 +181,13 @@ function TokenDisplay() {
             </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 ;

@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 import { GripVertical } from 'lucide-react'
 <<<<<<< HEAD
 import * as ResizablePrimitive from "react-resizable-panels"
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 <<<<<<< HEAD
 import { cn } from "@/lib/utils"
@@ -16,12 +19,16 @@ const ResizablePanelGroup = ({
   <ResizablePrimitive.PanelGroup
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       "flex h-full w-full data-[panel-group-direction=vertical]:flex-col",
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -42,6 +49,7 @@ const ResizableHandle = ({
   <ResizablePrimitive.PanelResizeHandle
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -52,6 +60,9 @@ const ResizableHandle = ({
       "relative flex w-px items-center justify-center bg-border after:absolute after:inset-y-0 after:left-1/2 after:w-1 after:-translate-x-1/2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 data-[panel-group-direction=vertical]:h-px data-[panel-group-direction=vertical]:w-full data-[panel-group-direction=vertical]:after:left-0 data-[panel-group-direction=vertical]:after:h-1 data-[panel-group-direction=vertical]:after:w-full data-[panel-group-direction=vertical]:after:-translate-y-1/2 data-[panel-group-direction=vertical]:after:translate-x-0 [&[data-panel-group-direction=vertical]>div]:rotate-90",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -78,6 +89,11 @@ export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle };
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
+<<<<<<< HEAD
+=======
+
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const ResizablePanelGroup = ({
   class_name,
   ...props;
@@ -107,5 +123,9 @@ const ResizableHandle = ({
         <GripVertical className=&quot;h - 2.5 w - 2.5 & quot; />;
       </div>)}
   </ResizablePrimitive.PanelResizeHandle>);
+<<<<<<< HEAD
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

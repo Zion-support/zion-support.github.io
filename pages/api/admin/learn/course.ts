@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from 'next',;
@@ -59,10 +60,23 @@ const coursesPath = path.join(process.cwd(), 'datalearncourses.json');
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+
+const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('AllowPOST')
+    return res.status(405).end('Method Not Allowed')
+
+  }
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   try {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -108,6 +122,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     } else {
       courses.push (body);
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (existingIndex >= 0) {
       courses[existingIndex] = { ...courses[existingIndex], ...body }
     } else {
@@ -116,6 +132,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 <<<<<<< HEAD
     fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2))
+<<<<<<< HEAD
     res.status(200).json({ ok: true, course: body })
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to save course' })
@@ -128,10 +145,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2)),
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     res.status(200).json({ ok: true, course: body })
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to save course' })
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
     fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2));
@@ -179,3 +200,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

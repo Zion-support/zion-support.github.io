@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,10 +11,16 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureAdminFromApi } from '../../../../utils/auth',;
+=======
+
+import { ensureAdminFromApi } from '../../../../utils/auth',;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { allowed } = await ensureAdminFromApi(req),
   if (!allowed) return res.status(403).json({ error: 'Forbidden' }),
 
+<<<<<<< HEAD
 
   return res.status(200).json({
     title: 'Additional Insight',
@@ -95,3 +102,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'})
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+    content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'})
+};
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

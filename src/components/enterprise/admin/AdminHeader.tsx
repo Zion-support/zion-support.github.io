@@ -15,7 +15,10 @@ import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
 export function AdminHeader() {
   // const { user } = useAuth(), // Unused but available
   const { company } = useCompanyWorkspace();
+<<<<<<< HEAD
   return (
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -26,11 +29,14 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
   const { company  } = useCompanyWorkspace(),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -42,6 +48,7 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
             Manage your company's account, team members, and subscription
           </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>
         <div className="flex items-center gap-2">
 =======
@@ -50,6 +57,9 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
         <div className="flex items-center gap-2">
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Button variant="outline" size="sm" className="gap-2">
             <Settings className="h-4 w-4" />
             Settings
@@ -59,17 +69,21 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Button variant="outline" size="sm" className="gap-2">
             <Download className="h-4 w-4" />
             Export Data
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -80,6 +94,9 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
           <div className="text-sm text-muted-foreground">Subscription Plan</div>
           <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -97,13 +114,21 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
             <img
+<<<<<<< HEAD
+=======
+
+              className="max-h-10 max-w-10"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               loading="lazy"
             />
           </div>
           <div>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Subscription Plan</div>
@@ -118,7 +143,10 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
           <div className="text-xl font-medium">{company?.billingCycle || "Annual"}</div>
         </div>
       </div>
+<<<<<<< HEAD
       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -126,11 +154,15 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
             <img
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               src={company?.logoUrl || "/placeholder.svg"}
               alt={company?.name || "Company"}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className="max-h-10 max-w-10"
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -143,11 +175,14 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl || "loading..."}
@@ -166,7 +201,10 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
 
 ;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Download, Settings } from 'lucide-react';
@@ -177,6 +215,7 @@ export function AdminHeader() {;
   return (;
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <div>;
@@ -208,6 +247,9 @@ export function AdminHeader() {;
         </div>;
       </div>        <div className="flex items-center gap-2">;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Button variant="outline" size="sm" className="gap-2">;
 =======
         <div className="flex items-center gap-2">;          <Button variant="outline" size="sm" className="gap-2">;
@@ -218,6 +260,7 @@ export function AdminHeader() {;
           <Button variant="outline" size="sm" className="gap-2">;
 <<<<<<< HEAD
             <Download className="h-4 w-4" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -258,10 +301,14 @@ function AdminHeader() {
           <Button variant="outline" size="sm" className="gap - 2">;
             <Download className="h - 4 w - 4" />;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             Export Data;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             <Download className="h-4 w-4" />;            Export Data;
@@ -323,10 +370,14 @@ function AdminHeader() {
 <<<<<<< HEAD
               className="max - h-10 max - w-10";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               loading="lazy";
             />;
           </div>;
           <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>;
             <p className="text-sm text-muted-foreground">;
@@ -365,3 +416,6 @@ function AdminHeader() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

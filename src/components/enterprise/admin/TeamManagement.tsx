@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import {
@@ -40,6 +41,10 @@ const handleAddMember = () => {
 
   const handleAddMember = () => {    // In a real app, this would make an API call to add the member
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    // In a real app, this would make an API call to add the member
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (!newMemberEmail) {
       toast({
 
@@ -71,6 +76,7 @@ const handleAddMember = () => {
       title: 'Invitation resent'
       description: `A new invitation has been sent to ${memberEmail}`
     })
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Table,
   TableBody,
@@ -234,6 +240,9 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         title: "Email required",
         description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
@@ -330,10 +339,13 @@ if ( {) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="rounded-md border">
         <Table>
           <TableHeader>
@@ -661,12 +673,16 @@ export function TeamManagement() {;
                       </Button>;
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     )}
                   </div>;
                 </TableCell>;
               </TableRow>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </TableBody>;
         </Table>;
@@ -740,3 +756,6 @@ export function TeamManagement() {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

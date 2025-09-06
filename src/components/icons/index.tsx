@@ -1221,6 +1221,7 @@ export const ZoomOut = LucideZoomOut
 export type IconProps = SVGProps<SVGSVGElement> & {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -1230,6 +1231,8 @@ export type IconProps = SVGProps<SVGSVGElement> & {
   className?: string
 },
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Create a map of icon names to component references
 const iconMap = {
   home: LucideHome,
@@ -1238,10 +1241,13 @@ const iconMap = {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   sparkles: LucideSparkles,
   user: LucideUser,
   briefcase: LucideBriefcase,
@@ -1535,6 +1541,7 @@ const iconMap = {
 <<<<<<< HEAD
   'zoom-out': LucideZoomOut},
 
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -1542,12 +1549,15 @@ const iconMap = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const Icon: React.FC<IconProps> = ({
   name,
   size = 24, // Default size
   className,
   ...props
 }) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1870,6 +1880,11 @@ export const ZoomOut = LucideZoomOut,;
 }  const LucideIconComponent = iconMap[name],
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+
+  const LucideIconComponent = iconMap[name],
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -2811,6 +2826,7 @@ export const Icon: React.FC<IconProps> = ({;
   return <LucideIconComponent size={size} className={className} {...props} />
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -3743,3 +3759,6 @@ export const Icons = iconMap, // Export the map if you need to refer to availabl
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

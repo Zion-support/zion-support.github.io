@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -21,6 +22,9 @@ interface LoadingSpinnerProps {;
   variant?: 'default' | 'primary' | 'success' | 'warning' | 'error';
   className?: string;
   showText?: boolean;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   text?: string;
 =======
 } from 'lucide-react'; import { Button } from '@/components/ui/button'
@@ -55,9 +59,12 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
     error: 'text-red-500',;
   };
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState, useEffect } from 'react',;
 import { motion, AnimatePresence } from 'framer-motion',;
 import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react';
@@ -80,6 +87,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   className,
   showText = false,
 <<<<<<< HEAD
+<<<<<<< HEAD
   text = 'Loading...'
 }) => {
   const sizeClasses = {
@@ -98,6 +106,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     error: 'text-red-500',
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   variant?: 'default' | 'primary' | 'success' | 'warning' | 'error';
   className?: string;
@@ -108,6 +118,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     primary: 'text-primary',
     success: 'text-green-500',
     warning: 'text-yellow-500',
+<<<<<<< HEAD
 <<<<<<< HEAD
     error: 'text-red-500'
   },
@@ -128,6 +139,26 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       )}
     </div>
   )}) => {
+=======
+
+    error: 'text-red-500'
+  },
+
+  return (
+
+    <div className={cn ('flex items - center gap - 2', class_name)}>;
+      <Loader2;
+        className={cn (
+          'animate - spin',
+          size_classes[size],
+          variant_classes[variant])}
+      />;
+      {show_text && (
+        <span className='text - sm text - muted - foreground'>{text}</span>)}
+    </div>);
+
+}) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [activeStep, setActiveStep] = useState(0)
   const progress = ((activeStep + 1) / steps.length) * 100
   useEffect((,) => {
@@ -139,6 +170,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     if (activeStep === steps.length - 1 && onComplete) {
       setTimeout(onComplete, 500)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </div>;
@@ -162,6 +194,9 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       {showText && <span className="text-sm text-muted-foreground">{text}</span>}
     </div>
   )
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 },
 =======
   }, [activeStep, steps.length, onComplete])},
@@ -196,16 +231,20 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="space-y-4">
       {showProgress && (
         <div className="w-full bg-muted rounded-full h-2">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
             className="bg-primary h-2 rounded-full"
             initial={{ width: 0 }}
@@ -296,22 +335,28 @@ interface SkeletonProps {;
             <span className='text-sm font-medium'>{step && step.label}</span>;
           </motion && motion.div>;
         ))}
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       </div>;
     </div>;
   );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               baseClasses,
               variantClasses && variantClasses.text,
               animationClasses[animation],
               i === lines - 1 ? 'w-3/4' : 'w-full',
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className
             ),}
           />
         ))}
 
+<<<<<<< HEAD
   class_name?: string;
   variant?: 'text' | 'circular' | 'rectangular' | 'card';
   animation?: 'pulse' | 'wave' | 'none';
@@ -659,10 +704,13 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 <<<<<<< HEAD
 
           {error && process.env.NODE_ENV === 'development' && (
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <details className="mb-4 text-left">
               <summary className="text-sm text-muted-foreground cursor-pointer">
                 Error Details (Development)
               </summary>
+<<<<<<< HEAD
               <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto">
 <<<<<<< HEAD
 =======
@@ -701,6 +749,9 @@ export const Skeleton: React.FC<SkeletonProps> = ({
           )}
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {action && (;
 
               <Button
@@ -715,11 +766,16 @@ export const Skeleton: React.FC<SkeletonProps> = ({
               </Button>;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                 Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
               </Button>
             )}            {action && (
+=======
+
+            {action && (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Button
                 onClick={action.onClick}
                 variant={canRetry ? 'outline' : 'default'}
@@ -732,9 +788,13 @@ export const Skeleton: React.FC<SkeletonProps> = ({
               </Button>
             )}
 
+<<<<<<< HEAD
                 {action.label}
               </Button>
             )}            {secondaryAction && (
+=======
+            {secondaryAction && (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Button onClick={secondaryAction.onClick} variant='ghost'>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             
@@ -743,7 +803,10 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {secondaryAction.label}
               </Button>;
             )}
@@ -756,7 +819,10 @@ export const Skeleton: React.FC<SkeletonProps> = ({
             </div>
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             {secondaryAction && (;
               <Button onClick={secondaryAction && secondaryAction.onClick} variant='ghost'>;
@@ -836,6 +902,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </motion.div>;
       </CardContent>;
+<<<<<<< HEAD
     </Card>;
   );
 },;
@@ -846,11 +913,21 @@ interface LoadingGridProps {;
   variant?: 'card' | 'list' | 'table',;
   className?: string;
 }
+=======
+    </Card>);
+}
 
 export const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8,
   columns = 4,
   variant = 'card',
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+export const LoadingGrid: React.FC<LoadingGridProps> = ({
+  count = 8,
+  columns = 4,
+  variant = 'card',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   className
@@ -908,6 +985,9 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {variant === 'card' && (
 =======
   return (
@@ -929,8 +1009,11 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
               </>
             )}
 
+<<<<<<< HEAD
             
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {variant === 'list' && (
               <div className="flex gap-4">
                 <Skeleton variant="circular" />
@@ -940,6 +1023,11 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
                 </div>
               </div>
             )}
+<<<<<<< HEAD
+=======
+
+            {variant === 'table' && (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="flex items-center gap-4">
                 <Skeleton variant="text" className="h-4 w-1/4" />
                 <Skeleton variant="text" className="h-4 w-1/3" />
@@ -951,10 +1039,13 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </CardContent>;
         </Card>;
       ))}
@@ -975,6 +1066,7 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   itemCount,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   className
@@ -988,6 +1080,8 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   if (isLoading) {
     return (
@@ -997,9 +1091,8 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
       </Badge>
     )
   }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -1016,12 +1109,15 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {loadTime && (
         <Badge variant="outline" className={getPerformanceColor(loadTime)}>
           <Zap className="h-3 w-3 mr-1" />
           {loadTime}ms
         </Badge>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
       {itemCount && (;
         <span>{itemCount} items loaded</span>;
@@ -1030,10 +1126,13 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   );
 };
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 }
 }
 }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1045,3 +1144,6 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   )
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

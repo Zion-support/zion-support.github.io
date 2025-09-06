@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react'
@@ -111,6 +112,9 @@ export function CodeBlock({;
       </button>
       {language && (
         <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           {language}
         </div>;
@@ -124,11 +128,15 @@ export function CodeBlock({;
         className={cn ('p - 4 overflow - auto', showLineNumbers && 'pl - 12 relative')}
       >;
         {showLineNumbers && (
+<<<<<<< HEAD
           <div className='absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500'>
             {code.split('\n').map((_, i) => (
               <div key={i} className='h-6 leading-6'>                {i + 1}
               </div>
   const [copied, setCopied] = useState(false),
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default CodeBlock;
 ;
 }
@@ -136,6 +144,7 @@ export default CodeBlock;
 }
 }
 
+<<<<<<< HEAD
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code),
     setCopied(true),
@@ -213,12 +222,18 @@ export default CodeBlock;
 }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 export default CodeBlock;
 =======
         </div>
       )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

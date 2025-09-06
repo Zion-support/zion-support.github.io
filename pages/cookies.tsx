@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,6 +26,9 @@ export default function CookiesPage() {
       </div>
     </MainLayout>
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
 import { motion } from 'framer-motion';
@@ -281,8 +285,6 @@ export default function CookiePolicyPage() {;
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
-
-origin/automation-improvements-final
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
                 Questions About Our Cookie Policy?;
@@ -316,7 +318,6 @@ origin/automation-improvements-final
         </section>;
       </div>;
 
-
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -339,16 +340,12 @@ export default function CookiesPage() {
           </ul>
       </Layout>
     </>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
   );
       </Layout>
     </>;
   );
-
-
 
   );
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>

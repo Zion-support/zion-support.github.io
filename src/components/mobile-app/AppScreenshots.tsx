@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // These would be replaced with actual screenshots
 const mockScreenshots = [
   { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },
@@ -53,6 +54,14 @@ export const AppScreenshots: React.FC = () => {;
       scrollContainerRef && scrollContainerRef.current.scrollBy({;
         left: direction === "left" ? -scrollAmount : scrollAmount,;
         behavior: "smooth"});
+=======
+
+      const scrollAmount = 300
+      scrollContainerRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount
+        behavior: "smooth"})
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   }
     }
@@ -72,6 +81,7 @@ export const AppScreenshots: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <section className="py-16 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -85,6 +95,8 @@ export const AppScreenshots: React.FC = () => {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
 
     <section className="py-16 bg-zion-blue-dark">;
@@ -99,27 +111,35 @@ export const AppScreenshots: React.FC = () => {
         <div className="relative">;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="relative">
           <Button
             variant="ghost"
             size="icon"
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
+<<<<<<< HEAD
             onClick={() => scroll("left")}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             aria-label="Scroll left"
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
             aria-label="Scroll left";
           >;
             <ChevronLeft className="h-6 w-6" />;
           </Button>;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div
             ref = {scrollContainerRef,}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
@@ -138,6 +158,7 @@ export const AppScreenshots: React.FC = () => {
               </div>
             ))}
 
+<<<<<<< HEAD
           </div>;
 
 
@@ -145,6 +166,8 @@ export const AppScreenshots: React.FC = () => {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div 
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
@@ -165,12 +188,19 @@ export const AppScreenshots: React.FC = () => {
             ))}
           </div>
 
+<<<<<<< HEAD
           
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Button
             variant="ghost"
             size="icon"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
+<<<<<<< HEAD
             onClick={() => scroll("right")}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             aria-label="Scroll right"
 =======
         
@@ -197,6 +227,7 @@ export const AppScreenshots: React.FC = () => {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
@@ -270,6 +301,9 @@ export const AppScreenshots: React.FC = () => {;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             aria-label="Scroll right";
 =======
           </div>;
@@ -373,5 +407,8 @@ if ( {) {
 '"},
 }
 
+<<<<<<< HEAD
   )
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

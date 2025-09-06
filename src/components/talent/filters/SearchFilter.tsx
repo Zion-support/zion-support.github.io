@@ -8,7 +8,10 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="mb-6">
       <div className="relative">
@@ -38,11 +41,14 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           value={searchTerm}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           Type a name or skill to filter results
         </p>
       </div>
@@ -78,7 +84,12 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           aria-describedby="talent-search-help";
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light";
         />;
+<<<<<<< HEAD
         <p id='talent-search-help' className='sr-only'>          Type a name or skill to filter results        <p id="talent-search-help" className="sr-only">;          Type a name or skill to filter results;
+=======
+
+          Type a name or skill to filter results;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </p>;
       </div>;
     </div>;

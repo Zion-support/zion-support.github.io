@@ -5,6 +5,7 @@
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   try {
     const {
+<<<<<<< HEAD
       target_institution,
       type,
       regional_scope,
@@ -94,6 +95,9 @@ export default async function handler(
       budgetOrResolution,
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       language = 'en'
 =======
       supportingMultiverses = [],
@@ -111,6 +115,7 @@ export default async function handler(
     const completion = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || "gpt-4o-mini",
       messages: [
+<<<<<<< HEAD
 <<<<<<< HEAD
       ],
       temperature: 0.3
@@ -133,6 +138,8 @@ export default async function handler(
       budgetOrResolution,
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     return res.status(200).json({ meta, markdown: contentMarkdown })
   } catch (error: any) {
@@ -160,6 +167,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -168,6 +176,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       supporting_multiverses,
       content_markdown,
       language,
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     });
 ;
     return res.status (200).json ({ meta, markdown: content_markdown });

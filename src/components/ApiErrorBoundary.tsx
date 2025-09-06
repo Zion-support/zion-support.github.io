@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Component, ReactNode } from 'react',;
 import { QueryClient } from '@tanstack/react-query',;
 import * as Sentry from '@sentry/nextjs',;
@@ -168,6 +169,9 @@ if ( {) {
               </AlertDescription>;
             </Alert>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="flex min-h-screen items-center justify-center p-4">
 =======
       return (        <div className="flex min-h-screen items-center justify-center p-4">
@@ -178,15 +182,16 @@ if ( {) {
                 {isNetworkError ? (
                   <WifiOff className="h-4 w-4" />
                 ) : (
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <RefreshCw className="h-4 w-4" />
                 )}
                 <AlertTitle>;
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -202,6 +207,7 @@ if ( {) {
               </AlertDescription>
             </Alert>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
             <div className="flex flex-col gap-2">
@@ -212,6 +218,9 @@ if ( {) {
               <Button
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 onClick={this.handleRetry}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -233,6 +242,7 @@ if ( {) {
 <<<<<<< HEAD
               </Button>
 
+<<<<<<< HEAD
               <Button
 =======
 
@@ -243,6 +253,8 @@ if ( {) {
                 onClick={() => window.location.reload()}
                 className="w-full"
               >
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 Reload Page
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -256,8 +268,12 @@ if ( {) {
               </div>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <details className="mt-4 rounded border p-2 text-xs">
 =======
             {process.env.NODE_ENV === 'development' && this.state.error && (              <details className="mt-4 rounded border p-2 text-xs">
@@ -265,12 +281,13 @@ if ( {) {
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <pre className="mt-2 whitespace-pre-wrap break-all">
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>;
@@ -336,4 +353,8 @@ export const useApiErrorHandler = () => {;
   return { handleApiError }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

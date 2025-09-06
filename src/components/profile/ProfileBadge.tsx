@@ -14,6 +14,7 @@ interface ProfileBadgeProps {
   type: BadgeType,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import React from "react",
@@ -25,6 +26,8 @@ interface ProfileBadgeProps {
   type: BadgeType,
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   className?: string
 }
 
@@ -32,6 +35,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const badgeConfig = {
     verified: {
       icon: BadgeCheck,
+<<<<<<< HEAD
 <<<<<<< HEAD
       text: "Verified",
       colors: "bg-blue-500/20 text-blue-400"},
@@ -49,6 +53,8 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       colors: "bg-purple-500/20 text-purple-400"}},
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       icon: Star,
       text: "Featured",
@@ -62,6 +68,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
 
 import React from 'react';
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
+<<<<<<< HEAD
 import { cn } from '@/lib / utils';
 type BadgeType = 'verified' | 'featured' | 'new' | 'top - rated';
 interface ProfileBadgeProps {
@@ -97,6 +104,9 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {;
       className;
     )}>;
       <Icon className="w-3 h-3" />;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <span>{text}</span>;
 <<<<<<< HEAD
     </div>;

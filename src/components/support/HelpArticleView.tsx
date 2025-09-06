@@ -14,6 +14,7 @@ interface HelpArticleViewProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
   
@@ -23,6 +24,8 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
 
   // Find the article in all categories
@@ -113,6 +116,7 @@ function HelpArticleView() {
   let article;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   for (const category of HELP_CATEGORIES) {
+<<<<<<< HEAD
     const found = category.articles.find (array => a.id === article_id);
     // Check condition
 if ( {) {
@@ -143,6 +147,9 @@ function formatDate(date: string): string {;
     month: "long";
     day: "numeric";
   });
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 <<<<<<< HEAD
 =======

@@ -28,8 +28,6 @@ interface SearchFilters {;
   minRating: number,;
   sort: string;
 
-
-
 }
 ;
 interface ActiveFiltersBarProps {;
@@ -126,17 +124,17 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
       <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
 =======
 
-
         <Badge 
           key = {filter.key,}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {activeFilters.map(filter => (
         <Badge 
           key={filter.key} 
-
-
 
           variant="secondary" 
           className="flex items-center gap-1 pl-2 pr-1"
@@ -151,10 +149,12 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             onClick={() => removeFilter(filter.key)}
-
 
             aria-label={`Remove ${filter.label} filter`}
           >
@@ -169,9 +169,14 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         onClick={onClearAll}
+=======
+        onClick={onClearAll}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className="text-xs h-6 px-2"
       >
         Clear all
@@ -341,7 +346,6 @@ if ( {) {
       </Button>;
     </div>);
 
-
 },
 export default ActiveFiltersBar,
 
@@ -371,6 +375,7 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       </button>
@@ -395,3 +400,6 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

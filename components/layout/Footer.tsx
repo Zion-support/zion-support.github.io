@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -41,10 +42,13 @@ const Footer = () => {
 >>>>>>> main
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+<<<<<<< HEAD
 import { 
   Phone, 
   Mail, 
@@ -511,32 +515,13 @@ const Footer: React.FC = () => {
                 <span className="text-gray-300">kleber@ziontechgroup.com</span>
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </div>
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Bottom Section */}
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
-                Cookie Policy
-              </Link>
-=======
-=======
->>>>>>> main
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
@@ -545,9 +530,10 @@ const Footer: React.FC = () => {
               <span className="mr-2">Trusted by</span>
               <span className="font-semibold text-white">500+</span>
               <span className="ml-2">companies worldwide</span>
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -558,6 +544,9 @@ const Footer: React.FC = () => {
           </p>
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>
 =======
                 </span>=======        </div>
@@ -567,6 +556,7 @@ const Footer: React.FC = () => {
   )
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default Footer;
@@ -588,3 +578,5 @@ export default Footer;
 =======
 export default Footer;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

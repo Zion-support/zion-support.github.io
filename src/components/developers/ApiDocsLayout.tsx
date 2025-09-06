@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,6 +26,9 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
   const currentPath = router && router.pathname;
 export default ApiDocsLayout;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
@@ -44,6 +48,7 @@ docsSearchSuggestions;
 } from '@/data / docsSearchData';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import { SearchSuggestion } from "@/types/search",
@@ -53,12 +58,15 @@ import { useRouter } from 'next/router',
 import { Search } from 'lucide-react'
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { cn } from "@/lib/utils",
 
 import {
  getDocsSearchPath,
  docsSearchSuggestions
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -85,12 +93,22 @@ interface ApiDocsLayoutProps {
   const navigationItems = [
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
+=======
+
+}
+
+  const router = useRouter()
+  const currentPath = router.pathname
+  const [searchValue, setSearchValue] = useState("")
+  const navigationItems = [
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const router = useRouter(),
   const currentPath = router.pathname,
   const [searchValue, setSearchValue] = useState(""),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const navigationItems = [
 =======
@@ -99,6 +117,8 @@ interface ApiDocsLayoutProps {
   const navigationItems = [
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
     { title: "Webhooks", path: "/developers/docs/webhooks" },
@@ -106,6 +126,7 @@ interface ApiDocsLayoutProps {
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],
 
   const handleSelectSuggestion = (suggestion: SearchSuggestion) => {
+<<<<<<< HEAD
     const path = getDocsSearchPath(suggestion.text),
     if (path) {
       router.push(path),
@@ -132,10 +153,14 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
   const navigationItems = [;
    { title: "Getting Started", path: "/developers/docs/getting-started" },;
     { title: "API Reference", path: "/developers/docs/reference" },;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     { title: "Webhooks", path: "/developers/docs/webhooks" },;
     { title: "Sample Code", path: "/docs/sample-code" },;
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],;
   const handleSelectSuggestion = (suggestion: SearchSuggestion) => {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -169,6 +194,8 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
      {/* Sidebar */}
      <div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Link href="/developers/docs" className="flex items-center mb-8">
@@ -181,6 +208,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
       <div className="mb-6">
        <form onSubmit={handleSubmit} className="relative">
         <Search className="absolute left-2 top-2.5 h-4 w-4 text-zinc-500" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <EnhancedSearchInput
@@ -230,6 +258,8 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
 =======
 
           currentPath === item && item.path
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
            ? "bg-zion-purple/20 text-zion-cyan"
            : "text-zinc-400 hover: text-white hover:bg-zinc-900"
@@ -237,6 +267,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
          {item && item.title}
         </Link>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           "block px-3 py-2 rounded-md text-sm",
           currentPath === item.path
@@ -262,6 +293,11 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
      </div>;
     </div>;
   );
+=======
+         {item.title}
+        </Link>
+       ))}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 }
 }
@@ -277,7 +313,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
 }</div> </div>)
 }export default ApiDocsLayout
 "export default ApiDocsLayout
-
 
 };
 /* Sidebar */ ";
@@ -386,7 +421,10 @@ if ( {) {
 }export default ApiDocsLayout;
 "export default ApiDocsLayout;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
      </div>;
 =======
          className={cn(           ? "bg-zion-purple/20 text-zion-cyan"
@@ -399,4 +437,8 @@ if ( {) {
   );
 }
 ;
+<<<<<<< HEAD
 export default ApiDocsLayout;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

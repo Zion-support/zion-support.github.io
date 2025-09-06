@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,6 +10,11 @@
 
 import type {;
   GrantApplication,;  GrantCategory,;
+=======
+
+
+  GrantCategory,;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   GrantStatus,;
 } from '../../types/grants';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -51,10 +57,8 @@ export default function GrantsPage() {;
     program?: string;
 <<<<<<< HEAD
   }>({});
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
       .catch(() => setItems([]));  }, [filters]);
   return (
@@ -183,6 +187,8 @@ export default function GrantsPage() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   useEffect(() => {
 
     const params = new URLSearchParams();
@@ -233,6 +239,7 @@ export default function GrantsPage() {;
           value={filters.sector |''}
           onChange={e =>
             setFilters(f => ({ ...f, sector: e.target.value |undefined }))
+<<<<<<< HEAD
 <<<<<<< HEAD
           }
         >
@@ -289,6 +296,9 @@ function GrantsPage() {
       </div>;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }
         >
           <option value=''>All Stages</option>
@@ -303,6 +313,7 @@ function GrantsPage() {
           placeholder='Region'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           value={filters && filters.region || ''}
           onChange={e =>;
@@ -315,12 +326,16 @@ function GrantsPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }
 =======
   }>({});          }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         />
         <select
+<<<<<<< HEAD
           className='border rounded p-2'                  {g.program === 'incubator' ? 'Incubator' : 'Grant'}
                 </div>;
               </div>;
@@ -329,20 +344,42 @@ function GrantsPage() {
                 {g.program === 'incubator' && (
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+          className='border rounded p-2'
 
-          value={filters && filters.program || ''}
-          onChange={e =>;
-            setFilters(f => ({ ...f, program: e && e.target.value || undefined }));
           }
         >;
-          <option value=''>All Programs</option>;
-          <option value='grant'>Grant</option>;
-          <option value='incubator'>Incubator</option>;
+          <option value=''>All Sectors</option>;
+          {categories && categories.map(c => (;
+            <option key={c} value={c}>;
+              {c}
+            </option>;
+          ))}
         </select>;
-      </div>;
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+        <select
+          className='border rounded p-2'
+          }
+        >;
+          <option value=''>All Stages</option>;
+          {statuses && statuses.map(s => (;
+            <option key={s} value={s}>;
+              {s}
+            </option>;
+          ))}
+        </select>;
+        <input
+          className='border rounded p-2'
+          placeholder='Region'
+          }
+        />;
+
+                  {g.program === 'incubator' ? 'Incubator' : 'Grant'}
+                </div>;
+              </div>;
+              <div className='flex gap - 2 items - center'>;
+                {g.program === 'incubator' && (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>
         <div className="flex gap-2">
@@ -358,10 +395,13 @@ function GrantsPage() {
 
 =======
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className='grid gap-4'>;
 =======
                 {g.program === 'incubator' && (      <div className='grid gap-4'>;
@@ -386,6 +426,7 @@ function GrantsPage() {
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>;
                     Incubated by Zion;
                   </span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -427,6 +468,9 @@ function GrantsPage() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 )}
                 {g && g.status === 'Approved' && (;
                   <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
@@ -450,6 +494,7 @@ function GrantsPage() {
           <div className='text-sm text-gray-600'>No grants found.</div>;
         )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -511,3 +556,7 @@ function GrantsPage() {
     <EnhancedLayout>
     <EnhancedLayout>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -32,7 +32,10 @@ import {Check, ExternalLink} from 'lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export default function BrowserAutomationCloudPage() {
   const features = [
@@ -42,6 +45,7 @@ export default function BrowserAutomationCloudPage() {
     'Rotating proxies and geo targeting',
     'Webhook callbacks and REST API',;
   ];
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
@@ -49,6 +53,8 @@ export default function BrowserAutomationCloudPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const features = [
     'Parallel Playwright/Puppeteer execution'
@@ -109,9 +115,86 @@ export default function BrowserAutomationCloudPage() {
               target='_blank'
               rel='noreferrer'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;    </>);	return (
+=======
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
+              <ExternalLink className='w-4 h-4' /> Puppeteer;
+
+export default /**
+ * BrowserAutomationCloudPage - Function description
+ */
+function BrowserAutomationCloudPage() {
+  const features = [;
+    'Parallel Playwright / Puppeteer execution',
+    'Queued jobs with retries and rate limits',
+    'Artifacts: HAR, traces, screenshots, videos',
+    'Rotating proxies and geo targeting',
+    'Webhook callbacks and REST API',
+  ];
+;
+  return (
+    <>;
+      <SEO;
+        title='Browser Automation Cloud';
+        description='Parallel Playwright / Puppeteer automation at scale with queues, storage, and proxies.';
+      />;
+      <main id='main' className='container mx - auto px - 4 py - 24'>;
+        <section className='max - w-5xl mx - auto'>;
+          <h1 className='text - 4xl font - extrabold tracking - tight'>;
+            Browser Automation Cloud;
+          </h1>;
+          <p className='mt - 4 text - lg text - gray - 300'>;
+            Scale Playwright / Puppeteer tasks for testing, scraping, and robotic;
+            process automation with enterprise - grade reliability.;
+          </p>;
+          <div className='mt - 8 grid sm:grid - cols - 2 gap - 6'>;
+            {features.map (function => (
+              <div;
+                key={f}
+                className='flex items - start space - x-3 p - 4 rounded - xl bg - white / 5 border border - white / 10';
+              >;
+                <Check className='w - 5 h - 5 text - cyan - 400 mt - 1' />;
+                <p className='text - gray - 200'>{f}</p>;
+              </div>))}
+          </div>;
+          <div className='mt - 8 flex flex - wrap items - center gap - 4'>;
+            <a;
+              href='/contact';
+              className='px - 5 py - 3 rounded - lg bg - white text - black font - semibold hover:bg - gray - 200';
+            >;
+              Start from $99 / mo;
+            </a>;
+            <a;
+              href='/market - pricing';
+              className='px - 5 py - 3 rounded - lg border border - white / 20 text - white hover:bg - white / 10';
+            >;
+              Market Pricing;
+            </a>;
+            <a;
+              href='https://playwright.dev/';
+              target='_blank';
+              rel='noreferrer';
+              className='inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300';
+            >;
+              <ExternalLink className='w - 4 h - 4' /> Playwright;
+            </a>;
+            <a;
+              href='https://pptr.dev/';
+              target='_blank';
+              rel='noreferrer';
+              className='inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300';
+            >;
+              <ExternalLink className='w - 4 h - 4' /> Puppeteer;
+            </a>;
+          </div>;
+        </section>;
+      </main>;
+
+    </>);	return (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   <>;
   <SEO title="Browser Automation Cloud" description="Parallel Playwright / Puppeteer automation at scale with queues, storage, and proxies." />;
   <main id="main" className="container mx - auto px-4 py-24">;
@@ -139,6 +222,7 @@ export default function BrowserAutomationCloudPage() {
   </main>;
   </>),
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -291,6 +375,8 @@ export default function BrowserAutomationCloudPage() {
   </>),
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -299,6 +385,7 @@ export default function BrowserAutomationCloudPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -319,3 +406,5 @@ export default function BrowserAutomationCloudPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

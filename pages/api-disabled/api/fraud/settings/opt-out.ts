@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages/api-disabled/api/fraud/settings/opt-out.ts
 <<<<<<< HEAD:pages/api/fraud/settings/opt-out.ts
 <<<<<<< HEAD
 =======
@@ -22,6 +23,9 @@ export default async function handler(
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/fraud/settings/opt-out.ts
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/fraud/settings/opt-out.ts
   const store = getFraudStore();
 ;
     return res.status(200).json(settings)
@@ -43,10 +47,14 @@ export default async function handler(
 =======
 }
 
+<<<<<<< HEAD:pages/api-disabled/api/fraud/settings/opt-out.ts
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
   if (req && req.method === "GET") {;
+=======
+  if (req && req.method === "GET") {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/fraud/settings/opt-out.ts
     const userId = (req && req.query.userId as string) || "";
     if (!userId) return res && res.status(400).json({ error: "Missing userId" });
     const settings = await store && store.getPrivacySettings(userId);
@@ -63,12 +71,11 @@ export default async function handler(
 ;
   res && res.status(405).json({ error: "Method not allowed" });
 }
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
+<<<<<<< HEAD:pages/api-disabled/api/fraud/settings/opt-out.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/fraud/settings/opt-out.ts
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 ;
@@ -103,6 +110,7 @@ if ( {) {
   }
   res.status (405).json ({ error: "Method not allowed" });
 }
+<<<<<<< HEAD:pages/api-disabled/api/fraud/settings/opt-out.ts
 <<<<<<< HEAD:pages/api/fraud/settings/opt-out.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -117,6 +125,8 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/fraud/settings/opt-out.ts
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -148,6 +158,7 @@ export default async function handler(
   res: NextApiResponse
 ) {;
 
+<<<<<<< HEAD:pages/api-disabled/api/fraud/settings/opt-out.ts
 =======
 <<<<<<< HEAD:pages/api/fraud/settings/opt-out.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -158,6 +169,8 @@ export default async function handler(
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/fraud/settings/opt-out.ts
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/fraud/settings/opt-out.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler($2) {;
   res.status(200).json({ message: 'API endpoint' });
@@ -165,6 +178,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
 export default async function handler(req, res) {;
   try {
+<<<<<<< HEAD:pages/api-disabled/api/fraud/settings/opt-out.ts
 <<<<<<< HEAD:pages/api/fraud/settings/opt-out.ts
 <<<<<<< HEAD
 =======
@@ -195,6 +209,9 @@ export default async function handler(req, res) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/fraud/settings/opt-out.ts
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/fraud/settings/opt-out.ts
   const store = getFraudStore();
   if (req.method === 'GET') {;
     const userId = (req.query.userId as string) || '';
@@ -225,6 +242,7 @@ export default async function handler(req, res) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD:pages/api-disabled/api/fraud/settings/opt-out.ts
 <<<<<<< HEAD:pages/api/fraud/settings/opt-out.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -246,6 +264,9 @@ export default async function handler(req, res) {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/fraud/settings/opt-out.ts
 }
   } catch (error) {;
     console.error("Error:", error);
@@ -267,6 +288,7 @@ export default async function handler(req, res) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages/api-disabled/api/fraud/settings/opt-out.ts
 <<<<<<< HEAD:pages/api/fraud/settings/opt-out.ts
 <<<<<<< HEAD
 }
@@ -288,3 +310,6 @@ export default async function handler(req, res) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/fraud/settings/opt-out.ts
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/fraud/settings/opt-out.ts

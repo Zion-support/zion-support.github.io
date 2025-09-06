@@ -1,6 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import OpenAI from 'openai',;
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 =======
@@ -11,6 +17,7 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 =======
@@ -22,18 +29,26 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 
 
 const ipToRequests: Record<string, { timestamps: number[] }> = {},
+=======
+const ipToRequests: Record<string, { timestamps: number[] }> = {}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 function isRateLimited(ip: string): boolean {
   const now = Date.now(),
   const bucket = ipToRequests[ip] || { timestamps: [] },
   // Drop old timestamps
+<<<<<<< HEAD
   bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS),
   const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS,
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (!limited) {
     bucket.timestamps.push(now)
   }
   ipToRequests[ip] = bucket,
   return limited
+<<<<<<< HEAD
 <<<<<<< HEAD
   ipToRequests[ip] = bucket;
   return limited;
@@ -52,12 +67,16 @@ function isRateLimited(ip: string): boolean {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -78,6 +97,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP)
@@ -88,6 +109,7 @@ function isRateLimited(ip: string): boolean {
   const now = Date.now()
   const bucket = ipToRequests[ip] |{ timestamps: [] }
   // Drop old timestamps
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,6 +125,9 @@ function isRateLimited(ip: string): boolean {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (!limited) {
     bucket.timestamps.push(now)
   }
@@ -114,9 +139,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
   // Auth via Bearer token
+<<<<<<< HEAD
   const authHeader = req.headers.authorization || '',
   const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined,
   if (!token || token !== process.env.OPERATOR_API_TOKEN) {
+=======
+
+  if (!token || token !== process.env.OPERATOR_API_TOKEN) {
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return res.status(401).json({ error: 'Unauthorized' })
   }
   // Rate limit
@@ -155,6 +186,7 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
 
     const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
@@ -316,12 +348,17 @@ export default async function handler(req, res) {
     const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+    const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.',
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       temperature: typeof temperature === 'number' ? temperature : 0.7,
       messages: [
         { role: 'system', content: sys },
         { role: 'user', content: prompt }
+<<<<<<< HEAD
 <<<<<<< HEAD
       ];
     });
@@ -362,10 +399,17 @@ export default async function handler(req, res) {
     }),
 
     const text = completion.choices?.[0]?.message?.content ?? '',
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return res.status(200).json({ text })
   } catch (err: any) {
     console.error('Operator error', err),
     return res.status(500).json({ error: 'Internal Server Error' })
   }
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

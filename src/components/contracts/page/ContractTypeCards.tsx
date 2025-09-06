@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -22,6 +23,9 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
 =======
 <CardTitle className="flex items-center gap-2">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <FileText className="h-5 w-5" />
 =======
           <CardTitle className="flex items-center gap-2">            <FileText className="h-5 w-5" />
@@ -33,14 +37,15 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </CardDescription>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <ul className="space-y-2">
             <li className="text-sm">✓ Legally binding templates</li>
             <li className="text-sm">✓ Milestone-based payment terms</li>
@@ -49,6 +54,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </ul>
         </CardContent>
         <CardFooter>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Button variant="outline" onClick={onStandardClick}>
 <<<<<<< HEAD
@@ -70,6 +76,8 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
@@ -87,6 +95,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </CardDescription>
         </CardHeader>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <CardContent>
           <ul className="space-y-2">
             <li className="text-sm">✓ All standard contract features</li>
@@ -103,6 +112,9 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
             onClick={onSmartClick}
+=======
+        <CardContent>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           >
             Create Smart Contract
@@ -110,7 +122,6 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardFooter>
       </Card>
     </div>
-
 
 import { Button } from '@/components/ui/button';
 import {;
@@ -122,8 +133,11 @@ import {;
   CardTitle,;
 } from '@/components/ui/card';
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
 import { Button } from "@/components/ui/button",;
@@ -132,10 +146,14 @@ import { FileText, ShieldCheck } from 'lucide-react';
 interface ContractTypeCardsProps {;
   onStandardClick: () => void;
   onSmartClick: () => void;
+<<<<<<< HEAD
 }
 ;
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {;
   return (;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="grid md:grid-cols-2 gap-6 mb-10">;
 =======
         <CardContent>    <div className="grid md:grid-cols-2 gap-6 mb-10">;
@@ -145,6 +163,10 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             Standard Contracts;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -154,6 +176,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
           <ul className="space-y-2">;
             <li className="text-sm">✓ Legally binding templates</li>;
             <li className="text-sm">✓ Milestone-based payment terms</li>;
@@ -203,6 +226,9 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
             <span className="px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded-full">;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               Blockchain Powered;
             </span>;
           </div>;
@@ -211,6 +237,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <ul className="space-y-2">;
             <li className="text-sm">✓ All standard contract features</li>;
@@ -225,11 +252,15 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600";
             onClick={onSmartClick}
           >;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             Create Smart Contract;
           </Button>;
         </CardFooter>;
       </Card>;
 
+<<<<<<< HEAD
   );
 }
 <<<<<<< HEAD
@@ -249,3 +280,5 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
 };
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

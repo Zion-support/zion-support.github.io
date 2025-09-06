@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues) => void,
   userType: string}
+=======
+
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileSchema)
     defaultValues: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -71,6 +77,8 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
@@ -82,7 +90,10 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
         </p>
       </div>
 
+<<<<<<< HEAD
       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
           <FormField
@@ -103,6 +114,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                 </FormControl>
                 <FormMessage className="text-red-400" />
               </FormItem>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -180,6 +192,9 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
                 <FormMessage className="text-red-400" />;
               </FormItem>;
             )}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           />;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -200,6 +215,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
                         userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
                         userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
                         "Creative Director at XYZ Studios"
+<<<<<<< HEAD
 <<<<<<< HEAD
                       }`}
 <<<<<<< HEAD
@@ -265,6 +281,8 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
             name="bio"
             render={({ field }: { field: any }) => (
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               <FormItem>
 =======
@@ -287,13 +305,17 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
             )}
           />
 
+<<<<<<< HEAD
           
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Button
             type="submit"
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
           >
             Complete Profile
           </Button>
+<<<<<<< HEAD
       </Form>
     </div>
   )
@@ -306,6 +328,14 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+        </form>
+      </Form>
+    </div>
+  )
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           />;
           <Button;
             type="submit";
@@ -319,6 +349,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 ;
 =======
@@ -329,6 +360,9 @@ default: ;
 };
 getTypeLabel () ";
 }Profile</h3> <p className="text-zion-slate-light mt-2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative" > <Inputplaceholder="Your full name" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ...field "
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -369,6 +403,7 @@ getTypeLabel () ";
   ...field ";
 }/> </FormControl> <FormMessage className="text - red-400" /> </FormItem>);
 }/> <Button > Complete Profile </Button> </form> </Form> </div>);
+<<<<<<< HEAD
 }"}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -376,3 +411,6 @@ getTypeLabel () ";
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

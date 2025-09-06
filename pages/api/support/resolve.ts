@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { readJson, writeJson } from '../../../utils/fsDb',
 ;
@@ -10,6 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { id } = req.body as { id: string },
   if (!id) return res.status(400).json({ error: 'id required' }),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -229,3 +234,15 @@ export default async function handler(req, res) {
 =======
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  const requests = readJson<any[]>('support/requests.json', []),
+  const idx = requests.findIndex((r) => r.id === id),
+
+  if (idx >= 0) {
+    requests[idx].status = 'resolved'
+    requests[idx].resolvedAt = Date.now()
+    writeJson('support/requests.json', requests)
+  }
+  return res.status(200).json({ ok: true })
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

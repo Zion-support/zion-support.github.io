@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
@@ -261,6 +262,9 @@ export function DisputeDetail() {;
     if (!disputeId) return,;
 <<<<<<< HEAD
     const success = await updateDisputeStatus(disputeId, status),;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (success) {;
 =======
     const success = await updateDisputeStatus(disputeId, status),;    if (success) {;
@@ -268,6 +272,7 @@ export function DisputeDetail() {;
       // Update the dispute object with the new status;
       setDispute({ ...dispute!, status: status });
     } else {;
+<<<<<<< HEAD
       toast.error("Failed to update dispute status");
     }
   },;
@@ -301,12 +306,16 @@ export function DisputeDetail() {;
         const updatedMessages = await getDisputeMessages(disputeId),;
         setMessages(updatedMessages),;
         setMessage("");
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
     } catch (error) {;
       logErrorToProduction('Error sending message:', { data: error });
     } finally {;
       setIsSending(false);
     }
+<<<<<<< HEAD
   },
 <<<<<<< HEAD
 
@@ -344,10 +353,14 @@ export function DisputeDetail() {;
           Back to Disputes
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </Button>
       </div>
     )
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -391,13 +404,19 @@ if ( {) {
     switch (status) {
 
       case 'open':;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         return 'default';
       case 'under_review':;
         return 'secondary';
       case 'resolved':;
 
+<<<<<<< HEAD
         return 'outline'; // Changed from './success'; to "outline";
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       case 'closed':;
         return 'outline';
       default:;
@@ -421,8 +440,11 @@ if ( {) {
             <Button onClick={() => handleStatusChange('under_review')}>              Start Review;
             </Button>;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="container mx-auto p-4 space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -433,6 +455,7 @@ if ( {) {
               {dispute.status.replace('_ ')}
             </Badge>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -468,13 +491,18 @@ if ( {) {
           <AlertTitle>This dispute has been resolved</AlertTitle>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           <AlertTitle>This dispute has been resolved</AlertTitle>
           <AlertDescription>{dispute.resolution_summary}</AlertDescription>
         </Alert>
       )}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
         <div className='lg:col-span-2'>
 
@@ -483,7 +511,10 @@ if ( {) {
           <Check className="h-4 w-4" />
           <AlertTitle>This dispute has been resolved</AlertTitle>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <AlertDescription>
   },;
   if (isLoading) {;
@@ -552,6 +583,10 @@ if ( {) {
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <TabsList className="mb-6">
               <TabsTrigger value="overview">Overview</TabsTrigger>
@@ -560,12 +595,16 @@ if ( {) {
               {isAdmin && <TabsTrigger value="admin">Admin Notes</TabsTrigger>}
             </TabsList>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             
             <TabsContent value="overview" className="space-y-6">
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Card>
                 <CardHeader>
                   <CardTitle>Dispute Details</CardTitle>
@@ -573,6 +612,7 @@ if ( {) {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <h3 className="font-medium">Reason</h3>
                     <p>{
@@ -603,12 +643,16 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </div>
                   
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <div>
                     <h3 className="font-medium">Project</h3>
                     <p>{dispute.project?.title || "Unknown Project"}</p>
                     <p className="text-sm text-muted-foreground">{dispute.project?.scope_summary}</p>
                   </div>
 
+<<<<<<< HEAD
                   
 =======
       case 'open':        return 'default';
@@ -616,6 +660,8 @@ if ( {) {
         return 'secondary';
       case 'resolved':;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {dispute.milestone_id && (
                     <div>
                       <h3 className="font-medium">Related Milestone</h3>
@@ -678,6 +724,7 @@ if ( {) {
                           <span>;
                             Resolved on{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                             {format(;
                               new Date(dispute && dispute.resolved_at),;
@@ -708,6 +755,9 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       {dispute.resolved_at && (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -715,6 +765,7 @@ if ( {) {
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">
                             {dispute.status !== "open" ? "3" : "2"}
                           </Badge>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -781,6 +832,9 @@ if ( {) {
               {dispute.status === "resolved" && (
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Card>
 =======
                         </li>
@@ -795,11 +849,15 @@ if ( {) {
                   </CardHeader>
                   <CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
                     
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     {dispute.resolution_type && (
                       <div className="mt-4">
                         <Badge>
@@ -839,6 +897,7 @@ if ( {) {
                 </Card>;
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
             </TabsContent>
 =======
 
@@ -847,6 +906,9 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             
             <TabsContent value="messages" className="space-y-6">
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Card>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -864,9 +926,8 @@ if ( {) {
                     ) : (
                       messages
                         .filter(msg => !msg.is_admin_note)
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
             </TabsContent>;
 
             <TabsContent value='messages' className='space-y-6'>;
@@ -891,6 +952,8 @@ if ( {) {
                           const isCurrentUser = user?.id === msg && msg.user_id;
                                                       >;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                               <div
                                 className={`max-w-[80%] ${
                                   isCurrentUser
@@ -903,6 +966,7 @@ if ( {) {
                                       src={msg && msg.user_profile?.avatar_url}
                                       alt={
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                                         msg && msg.user_profile?.display_name ||
                                         'User avatar'
@@ -910,6 +974,9 @@ if ( {) {
                                     />;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         .map((msg) => {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -929,6 +996,7 @@ if ( {) {
                                 <div className="flex items-center gap-2 mb-2">;
                                   <Avatar className="h-6 w-6">;
                                     <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || "User avatar"} />;
+<<<<<<< HEAD
                                     <AvatarFallback>;
 <<<<<<< HEAD
                                       {msg.user_profile?.display_name?.[0] || '?'}
@@ -993,12 +1061,18 @@ if ( {) {
                         {isSending ? "Sending..." : "Send Message"}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+                    )}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       </Button>
                     </div>
                   </div>
                 </CardFooter>
               </Card>
             </TabsContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1007,6 +1081,9 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             
             <TabsContent value="attachments">
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Card>
                 <CardHeader>
                   <CardTitle>Attachments</CardTitle>
@@ -1021,8 +1098,11 @@ if ( {) {
               </Card>
             </TabsContent>
 
+<<<<<<< HEAD
 
             
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {isAdmin && (
               <TabsContent value="admin" className="space-y-6">
                 <Card>
@@ -1151,6 +1231,7 @@ if ( {) {
               </Card>;
             </TabsContent>;
 
+<<<<<<< HEAD
             {is_admin && (
               <TabsContent value='admin' className='space - y-6'>;
                 <Card>;
@@ -1188,6 +1269,8 @@ if ( {) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         >
 <<<<<<< HEAD
                           Close Dispute
@@ -1200,6 +1283,7 @@ if ( {) {
                         <Button
                           variant='outline'
                           onClick={() => handleStatusChange('under_review')}
+<<<<<<< HEAD
 <<<<<<< HEAD
                           disabled={dispute && dispute.status === 'under_review'}
                         >;
@@ -1250,16 +1334,20 @@ if ( {) {
                     {dispute.status !== "resolved" && (
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       <div>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         <h3 className="font-medium mb-2">Resolve Dispute</h3>
                         <div className="space-y-4">
                           <Textarea
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                             placeholder="Enter resolution summary..."
                             value={resolution.summary}
                             onChange={(e) => setResolution({ ...resolution, summary: e.target.value })}
@@ -1273,7 +1361,10 @@ if ( {) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                                 className="w-full p-2 border rounded"
                                 value={resolution.resolution_type || ""}
                                 onChange={(e) => setResolution({ ...resolution, resolution_type: e.target.value as ResolutionType })}
@@ -1285,6 +1376,11 @@ if ( {) {
                               </select>
                             </div>
                           </div>
+<<<<<<< HEAD
+=======
+
+                        </div>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       </div>
                     )}
                     
@@ -1365,7 +1461,10 @@ if ( {) {
                             </div>;
                           </div>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           .map((msg) => (
                           <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">
                             <div className="flex items-center justify-between mb-2">
@@ -1382,12 +1481,16 @@ if ( {) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                               </div>
                               <span className="text-xs opacity-70">
                                 {format(new Date(msg.created_at), 'MMM d, h:mm a')}
                               </span>
                             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1400,6 +1503,9 @@ if ( {) {
                         
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         {!messages.some(msg => msg.is_admin_note) && (
                           <p className="text-sm text-muted-foreground italic">No admin notes yet</p>
 =======
@@ -1453,6 +1559,7 @@ if ( {) {
                           value={adminNote}
                           onChange={e => setAdminNote(e && e.target.value)}                        />;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       
                       <Separator className="my-4" />
@@ -1541,6 +1648,8 @@ if ( {) {
                                   set_messages);
                                 setAdminNote ('');
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                               }) }
 
                           onClick={() => {;
@@ -1556,6 +1665,7 @@ if ( {) {
                                 setAdminNote('');
                               });                            }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1566,6 +1676,10 @@ if ( {) {
                           onClick={() => {
                             if (adminNote.trim()) {                              addDisputeMessage(disputeId!, adminNote, true).then(() => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+                              addDisputeMessage(disputeId!, adminNote, true).then(() => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                                 getDisputeMessages(disputeId!).then(setMessages),
                                 setAdminNote("")
                               })
@@ -1586,6 +1700,7 @@ if ( {) {
         </div>
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         
@@ -1604,12 +1719,16 @@ if ( {) {
             )}
           </Tabs>
         </div>
+=======
+                          }}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <Card>
             <CardHeader>
               <CardTitle>Parties Involved</CardTitle>
             </CardHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1688,6 +1807,9 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </p>
 =======
                 </Avatar>
@@ -1701,10 +1823,13 @@ if ( {) {
           </Card>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Card>
             <CardHeader>
               <CardTitle>Case Information</CardTitle>
@@ -1734,6 +1859,7 @@ if ( {) {
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -1831,3 +1957,6 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

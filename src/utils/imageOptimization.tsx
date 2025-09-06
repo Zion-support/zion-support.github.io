@@ -71,6 +71,7 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 export function OptimizedImage({;
   src,;
@@ -93,6 +94,9 @@ export function OptimizedImage({;
   const [hasError, setHasError] = useState(false),;
   const [isInView, setIsInView] = useState(!lazy || priority),;
   const imgRef = useRef<HTMLDivElement>(null),;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Intersection Observer for lazy loading;
 =======
   return () => observer.disconnect ();
@@ -168,6 +172,7 @@ if (||) {
     return originalSrc
   },
 
+<<<<<<< HEAD
   const handleLoad = () => {
     setIsLoading(false),
     onLoad?.()
@@ -193,6 +198,11 @@ if (||) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        }
+      }
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // Generate a simple gray blur placeholder
     return `data: image/svg+xml,base64,${Buffer.from(
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
@@ -292,8 +302,13 @@ if (||) {
         </defs>;
         <rect width="100%" height="100%" fill="url(#grad)" />;
       </svg>`;
+<<<<<<< HEAD
     ).toString('base64')}`
 };
+=======
+    ).toString('base64')}`;
+  };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     >;
       {isInView && !hasError && (;
@@ -301,7 +316,10 @@ if (||) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           src={getOptimizedSrc(src)}
           alt={alt}
           width={width}
@@ -332,11 +350,14 @@ if (||) {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {...props}
         />;
       )}
@@ -346,6 +367,7 @@ if (||) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {(isLoading && isInView) && (
@@ -355,12 +377,22 @@ if (||) {
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      {(isLoading && isInView) && (
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       )}
 ;
       {/* Error fallback */}
+<<<<<<< HEAD
       {hasError && (;
         <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center'>;
           {fallbackSrc ? (;            <img
+=======
+
+            <img
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               src={fallbackSrc}
               alt={alt}
 <<<<<<< HEAD

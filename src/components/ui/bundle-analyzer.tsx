@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 totalSize: number;
   gzippedSize: number;
@@ -27,6 +28,10 @@ totalSize: number;
   useEffect((,) => {
     // Only show in development or when explicitly enabled      localStorage.getItem('bundle-analyzer') === 'true'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      localStorage.getItem('bundle-analyzer') === 'true'
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     setShouldShow(show)
     if (!show) return;
     setIsVisible(true)
@@ -79,6 +84,7 @@ if ( {) {
 if (return) {
   $2
 }
+<<<<<<< HEAD
     setIsCollecting (true);
     try {
       // Get performance entries for script resources
@@ -112,6 +118,10 @@ if (return) {
       const cacheHitRate = null;
         chunkData.filter(chunk => chunk.cached).length / chunkData.length
       setBundleInfo({        totalSize,
+=======
+
+        totalSize,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         gzippedSize,
         chunkCount: chunkData.length,;
         loadTime: totalLoadTime / chunkData.length,;
@@ -183,10 +193,13 @@ if (return) {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState, useEffect } from 'react',;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -303,6 +316,7 @@ export function BundleAnalyzer() {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -311,10 +325,13 @@ export function BundleAnalyzer() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">
         <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -332,10 +349,14 @@ export function BundleAnalyzer() {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           Bundle Analyzer
         </Button>
       </div>
     )
+<<<<<<< HEAD
   }
 
   return (
@@ -378,6 +399,8 @@ export function BundleAnalyzer() {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 ✕
@@ -422,9 +445,8 @@ export function BundleAnalyzer() {;
               </div>
 
               <div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
                 className='h-6 w-6 p-0'>;
   // Check condition
 if ( {) {
@@ -473,10 +495,13 @@ if ( {) {
                 className='h - 6 w - 6 p - 0'              >;
 
                 ✕;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </Button>;
             </div>;
           </div>;
         </CardHeader>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -491,6 +516,9 @@ if ( {) {
                           {chunk.name}
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         </span>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -500,6 +528,7 @@ if ( {) {
                           </Badge>
                         )}
                       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -512,6 +541,9 @@ if ( {) {
                         variant='outline'
                       >
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         {formatSize(chunk.size)}
                       </Badge>;
                     </div>;
@@ -528,6 +560,7 @@ if ( {) {
             </>
           ) : (
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="text-xs text-muted-foreground">
               {isCollecting ? 'Analyzing bundle...' : 'Click refresh to analyze'}
             </div>;
@@ -542,6 +575,13 @@ if ( {) {
 
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+} 
+
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </CardContent>;
 =======
             <div className="text-xs text-muted-foreground">
@@ -557,8 +597,11 @@ if ( {) {
 =======
 } ;
 
+<<<<<<< HEAD
         
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <CardContent className='pt - 0 space - y-3'>;
           {bundle_info ? (
             <>;
@@ -638,8 +681,12 @@ if ( {) {
         </CardContent>;
       </Card>;
     </div>);
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

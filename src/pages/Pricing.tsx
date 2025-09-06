@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
@@ -449,6 +450,9 @@ const Pricing: React.FC = () => {
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-white py-20">
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -564,6 +568,7 @@ const Pricing: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
       {/* CTA Section */}
       <div className="py-20">
@@ -595,6 +600,10 @@ const Pricing: React.FC = () => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       </div>
     </>
+=======
+    </div>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   );
 };
 

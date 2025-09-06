@@ -55,6 +55,7 @@ import Link from 'next/link';
             </li>;
             <li>;
 
+<<<<<<< HEAD
 import { useState } from "react";
 import { Menu } from 'lucide-react'
 import Link from "next/link";
@@ -72,11 +73,14 @@ export function EnterpriseStickyNav() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",
 import { Menu } from 'lucide-react'
 import Link from "next/link",
 export function EnterpriseStickyNav() {
   const [open, setOpen] = useState(false),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -113,6 +117,11 @@ export function EnterpriseStickyNav() {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+  return (
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
 =======
             <li>              <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
@@ -121,6 +130,7 @@ export function EnterpriseStickyNav() {
           </ul>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     </nav>
@@ -150,6 +160,9 @@ export function EnterpriseStickyNav() {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           >;
 =======
             aria-expanded={open}          >;
@@ -169,9 +182,8 @@ export function EnterpriseStickyNav() {;
             <li>;
 <<<<<<< HEAD
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>;
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
               <Link;
                 href='#contact';
                 className='text - sm font - medium hover:text - primary';
@@ -210,10 +222,13 @@ function EnterpriseStickyNav() {
               <Link href="#contact" className="text - sm font - medium hover:text - primary">Contact Us</Link>;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </li>;
           </ul>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </nav>;
   );
@@ -234,3 +249,6 @@ function EnterpriseStickyNav() {
       </div>;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

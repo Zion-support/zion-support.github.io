@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -171,6 +172,9 @@ export default EnhancedMarketplaceCard;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
       </div>;
       <p className="text-sm text-gray-600 mb-4">{description}</p>;
@@ -182,11 +186,8 @@ interface EnhancedMarketplaceCardProps {
   title: string, description: string
   price?: string;
   href: string, image?: string
-=======
-import React from 'react';
-import { Star, Heart, ShoppingCart } from 'lucide-react';
->>>>>>> main
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface EnhancedMarketplaceCardProps {;
   title: string, description: string,;
@@ -275,6 +276,8 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
           )}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface MarketplaceCardProps {
   title: string;
   description: string;
@@ -285,6 +288,7 @@ interface MarketplaceCardProps {
   onFavorite?: () => void;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 export default EnhancedMarketplaceCard;
@@ -378,3 +382,5 @@ export default EnhancedMarketplaceCard;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

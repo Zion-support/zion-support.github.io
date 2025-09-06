@@ -156,6 +156,7 @@ interface MainNavigationProps {;
   className?: string;
 }
 
+<<<<<<< HEAD
 interface MainNavigationProps {;
   isAdmin?: boolean;
   unreadCount?: number;
@@ -184,10 +185,13 @@ export function MainNavigation(): any ({;
     }
     setIsMobileMenuOpen(false)
 };
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const baseLinks = [;
     {;
       key: 'home',;
       href: '/',;
+<<<<<<< HEAD
       matches: (path: string) => path === '/',    },;
     {;
       key: 'marketplace',;
@@ -259,6 +263,15 @@ export function MainNavigation(): any ({;
       >
         <span className="navbar-toggler-icon"></span>
       </button>
+=======
+
+      href: '/analytics',;
+      matches: (path: string) => path && path.startsWith('/analytics'),;
+    });  }
+
+  return (
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <nav
 <<<<<<< HEAD
         className={cn("navbar", className)}
@@ -290,15 +303,24 @@ export function MainNavigation(): any ({;
         aria-label='Main navigation'>;
 
         <div
+<<<<<<< HEAD
           id='main-navbar-collapse'          className={cn(
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+          className={cn(
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   href={link.href}
                   aria-label={link.name}
                   onClick={() => setIsMobileMenuOpen(false)}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className={cn(
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                     'nav-link',
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
@@ -319,7 +341,10 @@ export function MainNavigation(): any ({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {link.name}
                 </Link>;
               </li>;
@@ -389,6 +414,7 @@ export function MainNavigation(): any ({;
                 </Link>;
               </li>;
             )}
+<<<<<<< HEAD
             {/* Cart icon with badge */}
             <li className='nav-item'>;
               <HoverCard openDelay={100}>;
@@ -396,6 +422,10 @@ export function MainNavigation(): any ({;
                   <Link
                     href='/cart'
                     aria-label={t('nav && nav.cart')}                    onClick={handleCartClick}
+=======
+
+                    onClick={handleCartClick}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     className={cn(
 
                       'nav-link',
@@ -414,6 +444,7 @@ export function MainNavigation(): any ({;
       href: '/marketplace',
       matches: (path: string) => path.starts_with ('/marketplace'),    },
     {
+<<<<<<< HEAD
       key: 'categories',
       href: '/categories',
       matches: (path: string) => path.starts_with ('/categories'),    },
@@ -441,6 +472,10 @@ export function MainNavigation(): any ({;
   // Check condition
 if ( {) {
   $2}
+=======
+
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     links.push ({
       key: 'dashboard',
       name: t ('nav.dashboard'),
@@ -853,10 +888,13 @@ export default function Page() {; []);
 }`}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
             {/* Wishlist link */}
             {isAuthenticated && (
@@ -1061,7 +1099,10 @@ export default function Page() {; []);
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     )}
                   </Link>
                 </HoverCardTrigger>
@@ -1079,7 +1120,10 @@ export default function Page() {; []);
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                         {link && link.name}
                       </Link>;

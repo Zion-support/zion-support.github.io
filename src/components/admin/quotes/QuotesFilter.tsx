@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 =======
 interface QuotesFilterProps {;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React from "react",
 import { Calendar, RefreshCw } from 'lucide-react'
@@ -24,6 +27,11 @@ interface QuotesFilterProps {
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
   dateRange: DateRange | undefined;
   setDateRange: (range: DateRange | undefined) => void;
+<<<<<<< HEAD
+=======
+
+  return (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <Card className='mb-6 bg-zion-blue-dark border-zion-blue-light'>;
       <CardContent className='p-6'>;
         <div className='grid grid-cols-1 md:grid-cols-4 gap-4 items-end'>;
@@ -33,6 +41,7 @@ interface QuotesFilterProps {
               className='pl-10 bg-zion-blue border-zion-blue-light text-white'
               value={searchQuery}
 
+<<<<<<< HEAD
               onChange={e => setSearchQuery(e && e.target.value)}            />;
           </div>;
 
@@ -108,6 +117,8 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
                 <SelectValue placeholder='Status' />              </SelectTrigger>;
               <SelectContent className='bg - zion - blue - dark border - zion - blue - light text - white'>;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <SelectItem value='all'>All Statuses</SelectItem>;
                 <SelectItem value='new'>New</SelectItem>;
                 <SelectItem value='in_review'>In Review</SelectItem>;
@@ -159,6 +170,7 @@ interface QuotesFilterProps {
   onReset: () => void
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 <<<<<<< HEAD
@@ -315,6 +327,8 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
   onReset: () => void
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 =======
 }}
@@ -439,5 +453,9 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
       </CardContent>;
     </Card>);
 }  );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

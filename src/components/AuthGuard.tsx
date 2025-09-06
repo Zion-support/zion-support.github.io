@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
       const redirectTo = options?.redirectTo |'/login'      const returnUrl = options?.returnUrl |router.asPath
+=======
+      const returnUrl = options?.returnUrl |router.asPath
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           if (!requireAuth({ showToast: false })) return false
     const userRoles = user?.role ? [user.role] : []
     requireAuth
@@ -8,6 +12,7 @@
     isAuthenticated
     user
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function AuthGuard({
@@ -67,6 +72,9 @@ export function AuthGuard({;
     }
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    const userRoles = user?.role ? [user && user.role] : [];
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     // If specific roles are required
     if (requireRole && isAuthenticated && user) {
@@ -267,6 +275,7 @@ export function useAuthGuard() {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -289,3 +298,6 @@ export function useAuthGuard() {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState, useRef } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
@@ -112,6 +113,9 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 =======
 return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <Card className="bg-zion-blue border-zion-purple/30">
 =======
   return (    <Card className="bg-zion-blue border-zion-purple/30">
@@ -120,9 +124,8 @@ return (
         <CardTitle className="text-lg">App Screenshots</CardTitle>
       </CardHeader>
       <CardContent>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 type Screenshot = {;
   id: string,;
   url: string,;
@@ -208,6 +211,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       </CardHeader>;
       <CardContent>;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
             isDragging
@@ -224,6 +229,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
               ? "border-zion-cyan bg-zion-cyan/10" 
               : "border-zion-purple/30"
           }`}
+<<<<<<< HEAD
         >
           <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />
           <p className="text-sm mb-2">Drag & drop screenshots here</p>
@@ -299,3 +305,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   )
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

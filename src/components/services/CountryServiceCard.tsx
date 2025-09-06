@@ -14,12 +14,15 @@ interface CountryServiceCardProps {
   isPopular?: boolean
 }
 
+<<<<<<< HEAD
 export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes)
   const getRegionEmoji = (countryName: string | undefined): string => {
 =======
   const getRegionEmoji = (countryName: string | undefined): string => {
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (!countryName) return "🌐",
     
     const emojiMap: Record<string string> = {
@@ -73,10 +76,13 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
             <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (!countryName) return "🌐",
     
     const emojiMap: Record<string string> = {
@@ -144,11 +150,14 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="space-y-2 text-zion-slate-light">
           <div className="flex items-start">
             <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />
@@ -157,10 +166,13 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>
           <div className='flex items-start'>
             <MapPin className='h-4 w-4 mr-2 text-zion-purple mt-1' />
@@ -176,6 +188,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           </div>
         </div>
       </CardContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <CardFooter className="flex flex-col space-y-2">
         <Button
@@ -210,6 +223,8 @@ import { Button } from "@/components/ui/button",;
 import Link from 'next/link',;
 import { Badge } from "@/components/ui/badge",;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import {;
   Card,;
@@ -222,6 +237,7 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
+<<<<<<< HEAD
 import { CountryPricing } from '@/data/onsiteServicePricing';
 
 interface CountryServiceCardProps {;
@@ -343,6 +359,10 @@ export function CountryServiceCard(): any ({;
           </div>;
           <div className='flex items-start'>;
             <Check className='h-4 w-4 mr-2 text-zion-purple mt-1' />;            <span>First hour included</span>;
+=======
+
+            <span>First hour included</span>;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>;
         </div>;
       </CardContent>;

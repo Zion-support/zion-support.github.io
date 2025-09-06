@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
 function randomString(length: number) {
@@ -21,6 +22,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   const bytes: Buffer = cryptoObj.randomBytes(length);
   for (let i = 0; i < length; i++) res += charset[bytes[i] % charset.length];
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 function randomString(length: number) {
   const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
   let res = ''
@@ -28,6 +32,7 @@ function randomString(length: number) {
   const bytes: Buffer = cryptoObj.randomBytes(length)
   for (let i = 0, i < length, i++) res += charset[bytes[i] % charset.length]
 
+<<<<<<< HEAD
 function randomString(length: number): string {
   const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let res = '';
@@ -51,6 +56,8 @@ function randomString(length: number) {
   const cryptoObj = require('crypto'),
   const bytes: Buffer = cryptoObj.randomBytes(length),
   for (let i = 0, i < length, i++) res += charset[bytes[i] % charset.length],
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return res
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -59,6 +66,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`)
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   res.status(200).json({ nonce })
   try {
@@ -118,3 +126,5 @@ function handler() {
   res.status(200).json({ nonce })
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

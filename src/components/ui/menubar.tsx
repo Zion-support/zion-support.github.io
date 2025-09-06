@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import * as React from "react"
 import * as MenubarPrimitive from "@radix-ui/react-menubar"
 import { Check, ChevronRight, Circle } from 'lucide-react'
 
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const MenubarMenu = MenubarPrimitive.Menu
 
 const MenubarGroup = MenubarPrimitive.Group
@@ -20,12 +25,16 @@ const Menubar = React.forwardRef<
     ref={ref}
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       "flex h-10 items-center space-x-1 rounded-md border bg-background p-1",
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -36,6 +45,7 @@ const Menubar = React.forwardRef<
 Menubar.displayName = MenubarPrimitive.Root.displayName;
 const MenubarTrigger = React.forwardRef<;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -46,10 +56,14 @@ const MenubarTrigger = React.forwardRef<;
   React.ElementRef<typeof MenubarPrimitive.Trigger>,;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Trigger>;
 >(({ className, ...props }, ref) => (;
   <MenubarPrimitive.Trigger;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -58,6 +72,9 @@ const MenubarTrigger = React.forwardRef<;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -109,17 +126,24 @@ const MenubarSubTrigger = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof MenubarPrimitive.SubTrigger> & {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   React.ElementRef<typeof MenubarPrimitive.SubTrigger>,;
   React.ElementRef<typeof MenubarPrimitive.SubTrigger>,;  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.SubTrigger> & {;
+=======
+  React.ElementRef<typeof MenubarPrimitive.SubTrigger>,;
+
+  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.SubTrigger> & {;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     inset?: boolean;
   }
 >(({ className, inset, children, ...props }, ref) => (;
   <MenubarPrimitive.SubTrigger;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -135,11 +159,15 @@ const MenubarSubTrigger = React.forward_ref<;
       inset && "pl-8",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
   >;
     {children}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -147,6 +175,9 @@ const MenubarSubTrigger = React.forward_ref<;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <ChevronRight className="ml-auto h-4 w-4" />
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   </MenubarPrimitive.SubTrigger>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -161,6 +192,7 @@ const MenubarSubContent = React.forwardRef<
     ref={ref}
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -171,6 +203,9 @@ const MenubarSubContent = React.forwardRef<
       "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -183,6 +218,7 @@ const MenubarContent = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Content>
 >(
   (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -196,6 +232,14 @@ const MenubarContent = React.forwardRef<
     { className, align = "start", alignOffset = -4, sideOffset = 8, ...props },
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+    { className, align = "start", alignOffset = -4, sideOffset = 8, ...props },
+
+    { className, align = &quot;start&quot; alignOffset = -4, sideOffset = 8, ...props },
+    { className, align = "start", alignOffset = -4, sideOffset = 8, ...props },
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ref
   ) => (
     <MenubarPrimitive.Portal>
@@ -205,6 +249,7 @@ const MenubarContent = React.forwardRef<
         alignOffset={alignOffset}
         sideOffset={sideOffset}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -212,6 +257,9 @@ const MenubarContent = React.forwardRef<
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         className={cn(
           "z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           className
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -272,14 +320,21 @@ const MenubarItem = React.forward_ref<;
   React.ElementRef < typeof MenubarPrimitive.Item>,
   React.ComponentPropsWithoutRef < typeof MenubarPrimitive.Item> & {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   React.ElementRef<typeof MenubarPrimitive.Item>,;
   React.ElementRef<typeof MenubarPrimitive.Item>,;  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Item> & {;
+=======
+  React.ElementRef<typeof MenubarPrimitive.Item>,;
+
+  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Item> & {;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     inset?: boolean;
   }
 >(({ className, inset, ...props }, ref) => (;
   <MenubarPrimitive.Item;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -295,6 +350,9 @@ const MenubarItem = React.forward_ref<;
       inset && "pl-8",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -303,12 +361,16 @@ const MenubarItem = React.forward_ref<;
 MenubarItem.displayName = MenubarPrimitive.Item.displayName;
 const MenubarCheckboxItem = React.forwardRef<;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   React.ElementRef<typeof MenubarPrimitive.CheckboxItem>,;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.CheckboxItem>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -316,6 +378,7 @@ const MenubarCheckboxItem = React.forwardRef<;
   <MenubarPrimitive.CheckboxItem;
     ref={ref}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -328,6 +391,9 @@ const MenubarCheckboxItem = React.forwardRef<;
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
 <<<<<<< HEAD
@@ -359,6 +425,7 @@ className={cn (
     </span>
     {children}
 <<<<<<< HEAD
+<<<<<<< HEAD
   </MenubarPrimitive.CheckboxItem>;
 ));
 MenubarCheckboxItem.displayName = MenubarPrimitive.CheckboxItem.displayName;
@@ -369,12 +436,16 @@ const MenubarRadioItem = React.forwardRef<;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   React.ElementRef<typeof MenubarPrimitive.RadioItem>,;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.RadioItem>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 >(({ className, children, ...props }, ref) => (;
   <MenubarPrimitive.RadioItem;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -388,6 +459,9 @@ const MenubarRadioItem = React.forwardRef<;
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -399,11 +473,14 @@ const MenubarRadioItem = React.forwardRef<;
     </span>
     {children}
 <<<<<<< HEAD
+<<<<<<< HEAD
   </MenubarPrimitive.RadioItem>;
 ));
 MenubarRadioItem.displayName = MenubarPrimitive.RadioItem.displayName;
 const MenubarLabel = React.forwardRef<;
   React.ElementRef<typeof MenubarPrimitive.Label>,;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Label> & {;
 =======
@@ -414,6 +491,7 @@ const MenubarLabel = React.forwardRef<;
   <MenubarPrimitive.Label;
     ref={ref}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -428,6 +506,9 @@ const MenubarLabel = React.forwardRef<;
       inset && "pl-8",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -436,18 +517,23 @@ const MenubarLabel = React.forwardRef<;
 MenubarLabel.displayName = MenubarPrimitive.Label.displayName;
 const MenubarSeparator = React.forwardRef<;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   React.ElementRef<typeof MenubarPrimitive.Separator>,;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Separator>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 >(({ className, ...props }, ref) => (;
   <MenubarPrimitive.Separator;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -485,6 +571,8 @@ const MenubarShortcut = ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         "ml-auto text-xs tracking-widest text-muted-foreground",
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         className
@@ -507,6 +595,7 @@ const MenubarShortcut = ({
     />;
   );
 }
+<<<<<<< HEAD
 MenubarShortcut.displayname = "MenubarShortcut"
 
 <<<<<<< HEAD
@@ -542,3 +631,6 @@ export {
 =======
   MenubarGroup,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

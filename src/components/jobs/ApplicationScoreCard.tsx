@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { Badge } from "@/components/ui/badge",
@@ -47,12 +48,17 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const getSuggestionColor = (suggestion: string | undefined,) => {
     switch (suggestion) {      case "Recommended for Review":
+=======
+
+      case "Recommended for Review":
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         return "bg-blue-100 text-blue-800"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       case "Low Match":
         return "bg-orange-100 text-orange-800",
       default:
         return "bg-gray-100 text-gray-800"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -100,6 +106,9 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   },;
   // Trigger the scoring process;
@@ -114,16 +123,22 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ),
       
       if (error) throw error,
       
       toast.success("Resume scoring has been initiated"),
+<<<<<<< HEAD
       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       // Poll for results every 3 seconds for up to 30 seconds
       let attempts = 0,
@@ -243,8 +258,11 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
 
         }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         if (attempts < maxAttempts) {
           setTimeout(checkScore, 3000)
         } else {
@@ -291,6 +309,7 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
     }
   },
 
+<<<<<<< HEAD
   // Render the score result or button to score
   return (
     <Card className="overflow-hidden">
@@ -368,6 +387,8 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
     }
   },
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setTimeout(checkScore, 3000);
 
     } catch (error: any) {;
@@ -451,6 +472,7 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
                           <p>Missing skills: {application && application.match_breakdown.skills_match && skills_match.missing.join(", ")}</p>;
                         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
                       </div>;
@@ -458,6 +480,9 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     )}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -468,6 +493,7 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
                         <p>{application.match_breakdown.experience_match.analysis}</p>
                       </div>
                     )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     {application.match_breakdown.certifications_match && (
@@ -636,6 +662,9 @@ if ( {) {
                         <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>;
                         <p>{application.match_breakdown.experience_match.analysis}</p>;
                       </div>)}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     {application.match_breakdown.certifications_match && (
                       <div>;
                         <p className="font-medium">Certifications Match: {application.match_breakdown.certifications_match.score}/100</p>;
@@ -644,6 +673,7 @@ if ( {) {
                           <p>Matching certs: {application.match_breakdown.certifications_match.matching.join(", ")}</p>
                         )}
                         {application.match_breakdown.certifications_match.missing && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                           <p>Missing certs: {application.match_breakdown.certifications_match.missing.join(", ")}</p>
@@ -657,6 +687,9 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     )}
 =======
                           <p>Missing certs: {application.match_breakdown.certifications_match.missing.join(", ")}</p>
@@ -669,10 +702,14 @@ if ( {) {
                         <p>{application.match_breakdown.education_match.analysis}</p>
                       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     )}
                   </div>;
                 </details>;
               </div>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             )}
 <<<<<<< HEAD
           </div>
@@ -715,12 +752,15 @@ if ( {) {
               onClick={handleScore} 
               disabled={isScoring}
 
+<<<<<<< HEAD
             <Button 
 
               onClick={handleScore} 
               disabled={isScoring}
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className="w-full"
             >
               {isScoring ? (
@@ -730,10 +770,13 @@ if ( {) {
                 </>
               ) : (
                 "Score Resume"
+<<<<<<< HEAD
               )}
             </Button>;
           </div>;
         )}
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       </CardContent>;
 =======
@@ -778,9 +821,13 @@ if ( {) {
     </Card>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

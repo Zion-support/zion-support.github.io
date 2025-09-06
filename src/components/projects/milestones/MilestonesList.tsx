@@ -46,6 +46,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   if (isLoading) {
     return (
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="space-y-4">
         {[1, 2, 3].map((i) => (
           <Card key={i}>
@@ -55,6 +56,9 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
               <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>
             </CardContent>
           </Card>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         ))}
 <<<<<<< HEAD
       </div>;
@@ -76,6 +80,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 =======
@@ -85,6 +90,8 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
@@ -93,7 +100,10 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         description={isClient ? 
           "Break down the project into manageable milestones to track progress and payments." : 
           "No milestones have been created for this project yet."}
@@ -112,7 +122,10 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (milestones && milestones.length === 0 && !showAddForm) {;
     return (
       <EmptyState
@@ -129,6 +142,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
         }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
+<<<<<<< HEAD
     <div className="space-y-6">;
       {isClient && !showAddForm && (;
         <div className="flex justify-end">;
@@ -139,11 +153,16 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
         </div>;      )}
 
       
+=======
+
+      )}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <AddMilestoneForm 
               onSubmit={handleSubmit}
@@ -153,6 +172,8 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
           </CardContent>;
         </Card>;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       {showAddForm && (;
         <Card>;
@@ -170,10 +191,13 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
       
       <div className="space-y-4">
         {milestones.map((milestone) => (
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       <div className="space-y-4">;
         {milestones && milestones.map((milestone,) => (;

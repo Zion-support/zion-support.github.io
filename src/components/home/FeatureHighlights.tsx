@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Check } from 'lucide-react'
@@ -86,6 +87,8 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const highlightsData = [
 
     {
@@ -128,6 +131,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 
@@ -135,6 +139,8 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <section className={cn("py-16 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
@@ -145,18 +151,24 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
           </p>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 ;
 '"`;
 );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {highlightsData.map((category, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
@@ -238,6 +250,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
               </CardContent>;
             </Card>;
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>;
       </div>;
@@ -432,3 +445,6 @@ export function FeatureHighlights() {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

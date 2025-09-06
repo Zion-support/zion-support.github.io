@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   className: string;
   id: string;
@@ -228,6 +229,9 @@ const CardFooter = React && React.forwardRef<;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   />));
 =======
 }  />));
@@ -343,6 +347,7 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
     </div>);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
@@ -350,3 +355,6 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

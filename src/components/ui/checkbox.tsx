@@ -13,6 +13,7 @@ const Checkbox = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <CheckboxPrimitive.Root
 <<<<<<< HEAD
+<<<<<<< HEAD
     ref={ref}
     className={cn(
 <<<<<<< HEAD
@@ -87,3 +88,6 @@ Checkbox.displayName = CheckboxPrimitive.Root.displayName
 export { Checkbox }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

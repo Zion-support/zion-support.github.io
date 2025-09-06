@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',;
 import Link from 'next/link',;
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary',;
@@ -29,6 +30,8 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -52,6 +55,7 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
               {isAuthConfigError;
                 ? 'This page cannot load due to missing authentication configuration';
                 : 'An unexpected error occurred while loading this page'}
+<<<<<<< HEAD
 import {
   logInfo
   logErrorToProduction as prodLogError
@@ -135,13 +139,15 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
 <<<<<<< HEAD
 
           {error?.message && (
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <details className="bg-gray-50 rounded-lg p-4 mb-6">
               <summary className="cursor-pointer text-gray-700 font-medium">
                 Technical Details
               </summary>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <pre className="mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto">
                 {error.message}
@@ -159,17 +165,23 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
               Try Again
             </button>
             
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Link 
               href="/"
               className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             >
               <Home className="w-4 h-4 mr-2" />
               Go Home
             </Link>
           </div>
 
+<<<<<<< HEAD
           {/* Navigation Options */}
           <div className="border-t pt-6">
             <h3 className="font-semibold text-gray-900 mb-3">You can also visit:</h3>
@@ -311,6 +323,8 @@ function PageErrorBoundary() {
     fallback ||
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ((props: FallbackProps) => (
 =======
           {error?.message && (            <details className="bg-gray-50 rounded-lg p-4 mb-6">
@@ -328,8 +342,12 @@ function PageErrorBoundary() {
 
         logInfo(`Resetting error boundary for ${pageName || 'page'}`)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -378,6 +396,7 @@ function PageErrorBoundary() {
               support@zion.tech;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             </a>;
             <Link href="/status" className="text-blue-400 hover:underline">;
 =======
@@ -385,6 +404,9 @@ function PageErrorBoundary() {
             </a>;
             <Link href='/status' className='text-blue-400 hover:underline'>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               Service Status;
 =======
             </a>;
@@ -396,6 +418,7 @@ function PageErrorBoundary() {
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -435,6 +458,14 @@ export default function PageErrorBoundary({;
       {children}
     </ErrorBoundary>;
   );
+=======
+
+        logInfo(`Resetting error boundary for ${pageName || 'page'}`);
+
+      }}
+
+} ;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 } ;
 =======
 
@@ -494,6 +525,7 @@ export default function PageErrorBoundary({;
       {children}
     </ErrorBoundary>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 }
@@ -507,3 +539,6 @@ interface PageErrorBoundaryProps {;
   fallback?:React.ComponentType<FallbackProps>;
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

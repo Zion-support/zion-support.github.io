@@ -34,10 +34,20 @@ import { useIsMobile } from '@/hooks/use-mobile';
           width: 100%;
 
         }
+<<<<<<< HEAD
         .no - print {          display: none !important }
       }
 
 <<<<<<< HEAD
+=======
+
+          display: none !important }
+      }
+
+        }
+
+        }
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         }
@@ -75,6 +85,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <div className={`flex ${isMobile ? 'flex-col' : 'justify-between'} items-${isMobile ? 'stretch' : 'center'} gap-3`}>
       <Button 
@@ -88,6 +99,8 @@ import { useIsMobile } from '@/hooks/use-mobile';
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     `;
     document && document.head.appendChild(style);
 
@@ -97,14 +110,20 @@ import { useIsMobile } from '@/hooks/use-mobile';
     setTimeout(() => {;
       document && document.head.removeChild(style);
       setIsPrinting(false);
+<<<<<<< HEAD
     }, 1000)
 };
+=======
+    }, 1000);
+  };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     >;
       <Button variant='outline' onClick={onBack} className='gap-2 no-print'>;
         <ArrowLeft className='h-4 w-4' />        Back;
       </Button>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -118,6 +137,8 @@ import { useIsMobile } from '@/hooks/use-mobile';
           variant="outline" 
           onClick={handleBrowserPrint} 
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </Button>
       <div
 
@@ -139,21 +160,27 @@ import { useIsMobile } from '@/hooks/use-mobile';
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Button variant="outline" className="gap-2">
           <Link className="h-4 w-4" />
           Add to Profile
         </Button>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>
   )
 }
 ;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           className='gap-2'>;
           <FileText className='h-4 w-4' />;

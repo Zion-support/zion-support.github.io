@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from "next/link",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { useAuth } from "@/hooks/useAuth",
@@ -34,19 +35,27 @@ import { ForumCategoryInfo } from "@/types/community",
     icon: "MessageSquare"
   {    id: "feedback"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    id: "feedback"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
     adminOnly: false
     icon: "FileText"
 
+<<<<<<< HEAD
   },
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     id: "announcements"
     name: "Announcements"
     description: "Official announcements from the Zion team."
     adminOnly: true
     icon: "Megaphone"
+<<<<<<< HEAD
 <<<<<<< HEAD
 const categories: ForumCategoryInfo[] = [;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -140,6 +149,9 @@ export const ForumCategories = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Link key={category.id} href={`/community/category/${category.id}`}>
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
               <CardHeader className="flex flex-row items-center gap-4">
@@ -173,6 +185,7 @@ const categories: ForumCategoryInfo[] = [;
 <<<<<<< HEAD
     name: "Getting Hired",;
 <<<<<<< HEAD
+<<<<<<< HEAD
     description: "Tips, strategies, and questions about getting hired on the platform.",;
     adminOnly: false,;
     icon: "Briefcase";
@@ -183,12 +196,16 @@ const categories: ForumCategoryInfo[] = [;
     icon: "Briefcase";
   };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {;
     id: "project-help",;
     name: "Project Help",;
     description: "Get help with your ongoing projects and collaboration.",;
     adminOnly: false,;
     icon: "MessageSquare";
+<<<<<<< HEAD
 <<<<<<< HEAD
   },;
   {;
@@ -208,6 +225,9 @@ const categories: ForumCategoryInfo[] = [;
     icon: "Code";
   };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {;
     id: "feedback",;
     name: "Feedback & Feature Requests",;
@@ -215,10 +235,14 @@ const categories: ForumCategoryInfo[] = [;
     adminOnly: false,;
     icon: "FileText";
 <<<<<<< HEAD
+<<<<<<< HEAD
   },;
 =======
   };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {;
 =======
     name: "Getting Hired",;  {;
@@ -229,6 +253,7 @@ const categories: ForumCategoryInfo[] = [;
     adminOnly: true,;
     icon: "Megaphone";
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ],;
@@ -278,12 +303,16 @@ export const ForumCategories = () => {;
           <Link key={category && category.id} href={`/community/category/${category && category.id}`}>;
             <Card className="h-full transition-all hover: shadow-md hover:border-zion-purple/50 cursor-pointer">;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <CardHeader className="flex flex-row items-center gap-4">;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <div className="p-2 bg-zion-purple/10 rounded-full">;
                   <Icon className="h-6 w-6 text-zion-purple" />;
                 </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <CardTitle className="text-xl">{category.name}</CardTitle>;
               </CardHeader>;
@@ -295,6 +324,9 @@ export const ForumCategories = () => {;
               <CardContent>;
                 <CardDescription className="text-base">{category && category.description}</CardDescription>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </CardContent>;
             </Card>;
           </Link>;
@@ -305,7 +337,10 @@ export const ForumCategories = () => {;
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -314,5 +349,9 @@ export default ForumCategories;
 export default ForumCategories;
 ";
   const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default ForumCategories;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

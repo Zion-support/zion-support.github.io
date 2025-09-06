@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,6 +28,9 @@ const Page = () => {
 
 export default Page;
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React from "react";
 import Head from "next/head";
@@ -48,8 +52,6 @@ import Layout from "../components/Layout";
 const teamMembers = [
   {
 ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-
 
     id: 1,
     name: "Kleber Santos",
@@ -366,7 +368,6 @@ const teamMembers = [;
         </div>;
       </section>;
 
-
       {/* Stats Section */}
       <section className="py-16 bg-gray-50">;
         <div className="container mx-auto px-4">;
@@ -560,7 +561,6 @@ const teamMembers = [;
         </div>;
       </section>;
 
-
       {/* Join Our Team CTA */}
       <section className="py-16 bg-purple-600 text-white">;
         <div className="container mx-auto px-4 text-center">;
@@ -702,7 +702,6 @@ const teamMembers = [
         </div>;
       </section>;
 
-
 const teamMembers = [;
   {;
     name: "Dr. Sarah Johnson",;
@@ -746,9 +745,6 @@ export default function TeamPage() {;
         title="Our Team | Zion Tech Group"
         description="Meet the leadership team at Zion Tech Group."
         canonical="/team"
-
-
-
 
     </>;
   );
@@ -851,11 +847,11 @@ function TeamPage() {
 ;
 }
 
-
 }
 
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -888,3 +884,5 @@ export default Page;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

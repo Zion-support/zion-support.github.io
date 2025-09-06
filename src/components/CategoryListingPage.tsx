@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { ListingScoreCard } from "@/components/ListingScoreCard",
@@ -9,6 +10,9 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
 import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton",
 import { safeStorage } from "@/utils/safeStorage",
 // Example listing type
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface Listing {
   id: string,
   title: string,
@@ -32,6 +36,7 @@ interface Listing {
   price: number;
   category: string;
 
+<<<<<<< HEAD
   author_image?: string;
   ai_score?: number;
   authorImage?: string;
@@ -743,3 +748,5 @@ export function CategoryListingPage({;
     </>;
   );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -47,6 +47,7 @@ type FormData = z.infer < typeof form_schema>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
+<<<<<<< HEAD
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
   const { toast } = useToast(),
   const [isLoading, setIsLoading] = useState(false),
@@ -269,6 +270,8 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
         </Form>;
       </CardContent>;
     </Card>;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   );
 }
 <<<<<<< HEAD

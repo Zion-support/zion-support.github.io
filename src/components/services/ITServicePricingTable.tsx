@@ -70,11 +70,15 @@ export function ITServicePricingTable() {
         return sortConfig && sortConfig.direction === 'ascending' ? -1 : 1;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
+<<<<<<< HEAD
       if (a[sortConfig && sortConfig.key] > b[sortConfig && sortConfig.key]) {;
         return sortConfig && sortConfig.direction === 'ascending' ? 1 : -1;
       }
       return 0;
     });
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
       key,

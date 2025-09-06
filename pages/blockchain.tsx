@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,30 +145,11 @@ import {
   MapPin 
 } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-const features = [
-  {
-    icon: Shield,
-    title: 'Smart Contracts',
-    description: 'Secure, self-executing contracts with automated enforcement and transparent terms.'
-  },
-  {
-    icon: Zap,
-    title: 'DeFi Solutions',
-    description: 'Decentralized finance applications including lending, borrowing, and trading platforms.'
-  },
-  {
-    icon: Globe,
-    title: 'NFT Marketplaces',
-    description: 'Custom NFT platforms for digital art, collectibles, and unique digital assets.'
-  },
-  {
-    icon: Lock,
-    title: 'Security Audits',
-    description: 'Comprehensive smart contract audits to ensure security and prevent vulnerabilities.'
-  }
-];
 
+<<<<<<< HEAD
 const services = [
   {
     title: 'Smart Contract Development',
@@ -422,6 +404,8 @@ export default function Blockchain() {
         <title>Blockchain Services - Zion Tech Group</title>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
         <meta
           name="description"
@@ -457,6 +441,7 @@ export default /**
 function Blockchain() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     <>;
       <Head>;
@@ -491,11 +476,14 @@ export default function Blockchain(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        <title > Blockchain Services - Zion Tech Group</title>;
+=======
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+        <title > Blockchain Services - Zion Tech Group</title>;
 
         <title>Blockchain Services - Zion Tech Group</title>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -507,3 +495,5 @@ export default function Blockchain(req, res) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

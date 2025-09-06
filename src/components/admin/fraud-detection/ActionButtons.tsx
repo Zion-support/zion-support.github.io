@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -36,20 +37,28 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         <Eye className="h-4 w-4" />
       </Button>
       <Button};
+=======
+
+};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 '"},;
   )
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         variant="ghost"
         size="icon"
         title="Send Warning"
         aria-label="Send warning"
         onClick={() => onAction(flagId, 'warning')}
+<<<<<<< HEAD
         disabled={status === 'actioned' || status === 'ignored'}
       >
         <Info className="h-4 w-4" />
@@ -82,6 +91,9 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 =======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           onClick={() => onAction(flagId, 'ignore')}
         >
           Ignore
@@ -90,6 +102,7 @@ import { Button } from "@/components/ui/button",;
 
 import React from 'react';
 import { Button } from '@/components / ui / button';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -166,3 +179,6 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
   )
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

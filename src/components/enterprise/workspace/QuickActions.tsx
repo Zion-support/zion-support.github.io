@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FileText, Plus, Search, Calendar } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Calendar } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,6 +15,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button",
 import { FileText, Plus, Search, Calendar } from 'lucide-react'
 
+<<<<<<< HEAD
 export function QuickActions() {
   const actions = [
     {
@@ -49,6 +53,8 @@ export function QuickActions() {
           {actions && actions.map(action => (;
             <Button
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       id: 'post - job',
       label: 'Post New Job',
       icon: <FileText className='h - 5 w - 5 mr - 2' />,
@@ -115,10 +121,13 @@ export function QuickActions() {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {actions.map(action => (
             <Button 
@@ -187,6 +196,7 @@ export function QuickActions() {;
           {actions.map(action => (;
             <Button;
 <<<<<<< HEAD
+<<<<<<< HEAD
               key={action.id}
               variant="outline";
               className={`h-auto justify-start p-4 ${action.color}`}
@@ -194,6 +204,8 @@ export function QuickActions() {;
               <div className="flex flex-col items-start text-left">;
                 <div className="flex items-center">;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               key={action.id}
               variant="outline"
@@ -268,9 +280,13 @@ export function QuickActions() {;
     </Card>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

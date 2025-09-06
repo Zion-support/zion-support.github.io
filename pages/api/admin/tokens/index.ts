@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getAllTransactions } from "../../../../utils/token/service";
@@ -36,11 +36,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { userId } = req.query
   const txs = getAllTransactions()
   const filtered = typeof userId === "string" ? txs.filter((t) => t.userId === userId) : txs
 
   res.status(200).json({ transactions: filtered })
+<<<<<<< HEAD
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -80,3 +83,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ transactions: filtered })
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

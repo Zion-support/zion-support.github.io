@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import Link from "next/link",
@@ -42,6 +43,9 @@ export const MobileAppHero: React.FC = () => {
 <Link href="/open-app">
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover: bg-white/10">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 Open App
 =======
             <Link href="/open-app">
@@ -52,18 +56,24 @@ export const MobileAppHero: React.FC = () => {
             </Link>
           </div>
 
+<<<<<<< HEAD
           
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="flex-1 flex justify-center">
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
+
 <<<<<<< HEAD
 =======
+}
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 import React from "react";
 import Link from "next/link";
@@ -74,7 +84,10 @@ import { AppStoreButtons } from "./AppStoreButtons";
 };
 ";
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",;
 import Link from "next/link",;
 import { ArrowRight, Phone } from 'lucide-react';
@@ -131,9 +144,12 @@ export const MobileAppHero: React.FC = () => {;
 "
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 ";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

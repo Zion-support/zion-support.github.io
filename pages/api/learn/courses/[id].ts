@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -20,10 +21,14 @@ import path from 'path';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 const dataPath = path.join(process.cwd(), 'datalearncourses.json'),
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -75,15 +80,31 @@ import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
 const data_path = path.join (process.cwd (), 'datalearncourses.json'),
+=======
+
+    res.status(200).json({ course })
+
+import type { NextApiRequest, NextApiResponse } from 'next'
+import fs from 'fs'
+import path from 'path'
+const data_path = path.join (process.cwd (), 'datalearncourses.json')
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default /**
  * handler - Function description
  */
 function handler() {
   try {
+<<<<<<< HEAD
     const raw = fs.readFileSync (data_path, 'utf - 8'),
     const courses = JSON.parse (raw),
     const { id } = req.query,
     const course = courses.find ((c: any) => c.id === id),
+=======
+    const raw = fs.readFileSync (data_path, 'utf - 8')
+    const courses = JSON.parse (raw)
+    const { id } = req.query
+    const course = courses.find ((c: any) => c.id === id)
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (return res.status (404).json ({ error: 'Course not found' }), ) {
   $2
 }
@@ -91,12 +112,16 @@ function handler() {
     res.status (200).json ({ course });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   } catch (e: any) {
     res.status (500).json ({ error: e?.message ?? 'Failed to load course' });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -163,3 +188,7 @@ export default function handler(req, res) {
 =======
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+};
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

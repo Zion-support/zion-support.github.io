@@ -14,21 +14,30 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+// Use the ThemeProvider hook directly to ensure no conflicts
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useTheme } from "@/components/ThemeProvider"
 import { logIssue } from "@/utils/logIssue"
 import { useEffect, useState } from "react"
-<<<<<<< HEAD
-=======
 
     setIsClient(true);
   }, []);
   // Determine the actual resolved theme for display purposes;
   const resolvedTheme = (() => {;
+<<<<<<< HEAD
+=======
+
+    if (!isClient) return 'light'; // Default for SSR
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (theme === 'system') {
       return window.matchMedia('(prefers-color-scheme: dark)').matches
         ? 'dark'
         : 'light'
+<<<<<<< HEAD
 import { Moon, Sun } from 'lucide-react';
 import { Button } from '@/components / ui / button';
 import {
@@ -77,6 +86,9 @@ if ( {) {
       return window.match_media ('(prefers - color - scheme: dark)').matches;
         ? 'dark';
         : 'light';
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     return theme;
   })();
@@ -89,6 +101,7 @@ if ( {) {
   const handle_toggle = () =>: any {
     try {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     }
@@ -126,6 +139,8 @@ if ( {) {
       toast({    
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function ModeToggle() {
 
   const { theme, toggleTheme } = useTheme(),
@@ -201,6 +216,10 @@ export function ModeToggle() {
         aria-label="Loading theme toggle"
         className="focus-visible:ring-ring relative text-foreground"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       >
         <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {/* Changed to bg-muted for theme consistency */}
         <span className="sr-only">Loading theme toggle</span>
@@ -213,27 +232,53 @@ export function ModeToggle() {
       <Tooltip>
         <TooltipTrigger asChild>
           <Button
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             variant="ghost"
             size="icon"
 import { Moon, Sun } from 'lucide-react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            variant="ghost"
+            size="icon"
+import { Moon, Sun } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import {;
+  Tooltip,;
+  TooltipContent,;
+  TooltipProvider,;
+  TooltipTrigger,;
+} from '@/components/ui/tooltip';
+import { toast } from '@/hooks/use-toast';
+import {;
+  darkModeMessages,;
+  lightModeMessages,;
+} from '@/utils/themeToggleMessages';
+// Use the ThemeProvider hook directly to ensure no conflicts;
+import { useTheme } from '@/components/ThemeProvider';
+import { logIssue } from '@/utils/logIssue';
+import { useEffect, useState } from 'react';
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { toast } from "@/hooks/use-toast";
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Use the ThemeProvider hook directly to ensure no conflicts;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useTheme } from "@/components/ThemeProvider";
 import { logIssue } from "@/utils/logIssue";
 import { useEffect, useState } from "react";
+<<<<<<< HEAD
 export function ModeToggle() {;
   const { theme, toggleTheme } = useTheme(),;
   const [isClient, setIsClient] = useState(false),;
@@ -316,6 +361,9 @@ export function ModeToggle() {;
         <span className="sr-only">Loading theme toggle</span>;
       </Button>;
     );
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 ;
   return (;
@@ -326,10 +374,15 @@ export function ModeToggle() {;
             variant="ghost";
             size="icon";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             onClick={handleToggle}
             aria-pressed={isDarkMode}
             aria-label={`Toggle theme. Current theme: ${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' : 'dark'} mode.`}
             title={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
+<<<<<<< HEAD
             className="focus-visible:ring-ring relative group text-foreground" // Added text-foreground
             data-testid="theme-toggle"
             data-theme={resolvedTheme}
@@ -366,6 +419,10 @@ export function ModeToggle() {;
               Toggle theme. Current: {resolvedTheme}. Click to switch to{' '}
               {isDarkMode ? 'light' : 'dark'}.              <Moon className="h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+              <Moon className="h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             )}
 ;
             {/* Enhanced visual indicator */}
@@ -378,6 +435,10 @@ export function ModeToggle() {;
             <span className="sr-only">
               Toggle theme. Current: {resolvedTheme}. Click to switch to {isDarkMode ? 'light' : 'dark'}.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </span>
           </Button>
         </TooltipTrigger>
@@ -386,10 +447,11 @@ export function ModeToggle() {;
             <p className="text-sm font-medium">Theme: {resolvedTheme}</p>
             <p className="text-xs opacity-80">Click to switch to {isDarkMode ? 'light' : 'dark'} mode</p>
             {theme === 'system' && (
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <p className="text-xs opacity-60 mt-1">Following system preference</p>
 =======
 
@@ -402,6 +464,7 @@ export function ModeToggle() {;
         </TooltipContent>;
       </Tooltip>;
     </TooltipProvider>;
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 }
@@ -410,6 +473,8 @@ export function ModeToggle() {;
       const newTheme = isDarkMode ? "light" : "dark";
 
       logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       // Determine the new theme we are switching TO;
       const new_theme = isDarkMode ? 'light' : 'dark';
@@ -526,6 +591,7 @@ if ( {") {
 }'"}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 =======
@@ -547,3 +613,6 @@ if (!isClient) {";
   );
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

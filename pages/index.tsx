@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -11,15 +12,22 @@ export default function Home() {
 <<<<<<< HEAD
 import Link from 'next/link';
 import Head from 'next/head';
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect, Suspense } from 'react';
 import { ContactInfo, AnimationState } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
+<<<<<<< HEAD
 // import PerformanceMonitor from '../components/PerformanceMonitor';
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
     hasError: false
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   });
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -40,6 +48,7 @@ export default function Home() {
           </button>
         </div>
       </div>
+<<<<<<< HEAD
     );
   }
 =======
@@ -86,6 +95,10 @@ origin/main
 import Link from 'next/link';
 import Head from 'next/head';
 
+=======
+
+import React from 'react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         {/* Features Section */}
         <section className="py-20 bg-slate-900/50">
@@ -97,9 +110,6 @@ import ErrorBoundary from '../components/ErrorBoundary',
 import LoadingSpinner from '../components/LoadingSpinner';
 // import PerformanceMonitor from '../components/PerformanceMonitor';
 
-
-
-
 import Link from 'next/link';
 import Head from 'next/head';
 import {useState, useEffect, Suspense} from 'react';
@@ -107,6 +117,7 @@ import {ContactInfo, AnimationState} from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
+<<<<<<< HEAD
 import { ChevronRightIcon, SparklesIcon, CpuChipIcon, CloudIcon } from '@heroicons/react/24/outline';
 
 export default function Home() {
@@ -118,6 +129,9 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setAnimationState(prev => ({ ...prev, isLoaded: true }))
     }, 100);
     return () => clearTimeout(timer)
@@ -135,6 +149,7 @@ export default function Home() {
           </button>
         </div>
       </div>
+<<<<<<< HEAD
     );
   }
 
@@ -288,6 +303,9 @@ export default function Home() {
           content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions"
         />
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Zion Tech Group" />
@@ -295,43 +313,20 @@ export default function Home() {
         <link rel="canonical" href={contact.site} />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-<<<<<<< HEAD
-        <meta property="og:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />
-        <meta property="og:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
-=======
-        <meta
-          property="og:title"
-          content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions"
-        />
-        <meta
-          property="og:description"
-          content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions."
-        />
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+
         <meta property="og:url" content={contact.site} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-<<<<<<< HEAD
-        <meta name="twitter:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />
-        <meta name="twitter:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
-=======
-        <meta
-          name="twitter:title"
-          content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions"
-        />
-        <meta
-          name="twitter:description"
-          content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions."
-        />
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+
         <meta name="twitter:site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
+<<<<<<< HEAD
 <<<<<<< HEAD
               "@context": "https://schema.org",
               "@type": "Organization",
@@ -401,21 +396,56 @@ export default function Home() {
                 className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
                 aria-label="Get a quote for our services"
                 tabIndex={animationState.isLoaded ? 0 : -1}
+=======
+
+    ),
+  };
+
+                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
+                aria-label="View all our services"
+                tabIndex={animationState.isLoaded ? 0 : -1}
+
+              >
+                View All Services
+              </Link>
+
+                className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
+                aria-label="Browse our services catalog"
+                tabIndex={animationState.isLoaded ? 0 : -1}
+
+              >
+                Services Catalog
+              </Link>
+
+                className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
+                aria-label="Get a quote for our services"
+                tabIndex={animationState.isLoaded ? 0 : -1}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               >
                 Get Quote
               </Link>
             </div>
+<<<<<<< HEAD
             <div className={`grid md:grid-cols-3 gap-6 text-center transition-all duration-1000 delay-800 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105">
                 <h3 className="text-2xl font-bold text-blue-400 mb-2" aria-label="150 plus micro SaaS products">150+</h3>
                 <p className="text-slate-300">Micro SaaS Products</p>
               </div>
+<<<<<<< HEAD
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
                 <h3 className="text-2xl font-bold text-purple-400 mb-2" aria-label="100 plus AI services">100+</h3>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <p className="text-slate-300">AI Services</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105">
                 <h3 className="text-2xl font-bold text-green-400 mb-2" aria-label="100 plus IT solutions">100+</h3>
+<<<<<<< HEAD
                 <p className="text-slate-300">IT Solutions</p>
 =======
               '@context': 'https://schema.org',
@@ -447,170 +477,19 @@ export default function Home() {
     </>;
   );}
 import React from 'react';
+=======
 
-      <ErrorBoundary level="page">
-        <Suspense
-          fallback={
-            <LoadingSpinner fullScreen text="Loading Zion Tech Group..." />
-          }
-        >
-          <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-<<<<<<< HEAD
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 text-center overflow-hidden" role="banner" aria-labelledby="hero-title">
-          {/* Animated Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-indigo-900/20 animate-gradient-xy"></div>
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-          
-          <div className="relative max-w-6xl mx-auto">
-            <div className={`inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-8 transition-all duration-1000 delay-100 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <SparklesIcon className="w-5 h-5 text-blue-400 mr-2" />
-              <span className="text-blue-300 font-medium">Innovation at Scale</span>
-            </div>
-            
-            <h1 
-              id="hero-title"
-              className={`text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent transition-all duration-1000 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-            >
-              Zion Tech Group
-            </h1>
-            
-            <p className={`text-2xl md:text-3xl lg:text-4xl text-slate-300 mb-8 font-light transition-all duration-1000 delay-200 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-semibold">Innovative</span> Micro SaaS, AI Services & IT Solutions
-            </p>
-            
-            <p className={`text-lg md:text-xl text-slate-400 mb-12 max-w-4xl mx-auto leading-relaxed transition-all duration-1000 delay-400 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              We deliver cutting-edge technology solutions with <span className="text-blue-400 font-semibold">150+ micro SaaS products</span>, 
-              <span className="text-purple-400 font-semibold"> 100+ advanced AI services</span>, and <span className="text-green-400 font-semibold">100+ comprehensive IT solutions</span>. 
-              From cloud optimization to AI automation, quantum computing to blockchain solutions, we help businesses scale 
-              efficiently and securely in the digital age.
-            </p>
-            
-            <div className={`flex flex-col sm:flex-row items-center justify-center gap-6 mb-16 transition-all duration-1000 delay-600 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} role="navigation" aria-label="Main navigation">
-              <Link 
-                href="/services" 
-                className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-glow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
-                aria-label="View all our services"
-                tabIndex={animationState.isLoaded ? 0 : -1}
-              >
-                <span className="flex items-center">
-                  View All Services
-                  <ChevronRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Link>
-              <Link 
-                href="/services-catalog" 
-                className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-glow focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
-                aria-label="Browse our services catalog"
-                tabIndex={animationState.isLoaded ? 0 : -1}
-              >
-                <span className="flex items-center">
-                  Services Catalog
-                  <ChevronRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Link>
-              <Link 
-                href="/contact" 
-                className="group relative px-8 py-4 bg-slate-800/50 hover:bg-slate-700/50 border border-white/20 hover:border-white/30 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-glow focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible backdrop-blur-sm"
-                aria-label="Get a quote for our services"
-                tabIndex={animationState.isLoaded ? 0 : -1}
-              >
-                <span className="flex items-center">
-                  Get Quote
-                  <ChevronRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Link>
-            </div>
+                <p className="text-slate-300">IT Solutions</p>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-            <div className={`grid md:grid-cols-3 gap-8 text-center transition-all duration-1000 delay-800 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <div className="group p-8 bg-gradient-to-br from-slate-900/60 to-slate-800/40 rounded-2xl border border-white/10 hover:border-blue-500/40 transition-all duration-500 hover:scale-105 hover:shadow-glow backdrop-blur-sm">
-                <div className="flex justify-center mb-4">
-                  <div className="p-3 bg-blue-500/20 rounded-full group-hover:bg-blue-500/30 transition-colors">
-                    <CpuChipIcon className="w-8 h-8 text-blue-400" />
-                  </div>
-                </div>
-                <h3 className="text-4xl font-bold text-blue-400 mb-2" aria-label="150 plus micro SaaS products">150+</h3>
-                <p className="text-slate-300 text-lg">Micro SaaS Products</p>
-                <p className="text-slate-400 text-sm mt-2">Innovative software solutions</p>
               </div>
-              <div className="group p-8 bg-gradient-to-br from-slate-900/60 to-slate-800/40 rounded-2xl border border-white/10 hover:border-purple-500/40 transition-all duration-500 hover:scale-105 hover:shadow-glow backdrop-blur-sm">
-                <div className="flex justify-center mb-4">
-                  <div className="p-3 bg-purple-500/20 rounded-full group-hover:bg-purple-500/30 transition-colors">
-                    <SparklesIcon className="w-8 h-8 text-purple-400" />
-                  </div>
-                </div>
-                <h3 className="text-4xl font-bold text-purple-400 mb-2" aria-label="100 plus AI services">100+</h3>
-                <p className="text-slate-300 text-lg">AI Services</p>
-                <p className="text-slate-400 text-sm mt-2">Advanced AI solutions</p>
-              </div>
-              <div className="group p-8 bg-gradient-to-br from-slate-900/60 to-slate-800/40 rounded-2xl border border-white/10 hover:border-green-500/40 transition-all duration-500 hover:scale-105 hover:shadow-glow backdrop-blur-sm">
-                <div className="flex justify-center mb-4">
-                  <div className="p-3 bg-green-500/20 rounded-full group-hover:bg-green-500/30 transition-colors">
-                    <CloudIcon className="w-8 h-8 text-green-400" />
-                  </div>
-                </div>
-                <h3 className="text-4xl font-bold text-green-400 mb-2" aria-label="100 plus IT solutions">100+</h3>
-                <p className="text-slate-300 text-lg">IT Solutions</p>
-                <p className="text-slate-400 text-sm mt-2">Enterprise technology</p>
-              </div>
-
             </div>
           </div>
         </section>
 
-        {/* Services Overview */}
-        <section className="py-20 px-4 relative" role="main">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-transparent"></div>
-          <div className="relative max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent" id="service-categories">
-                Our Service Categories
-              </h2>
-              <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-                Discover our comprehensive range of innovative technology solutions designed to transform your business
-              </p>
-            </div>
-            
-            <div className="grid lg:grid-cols-3 gap-8">
-              <div className="group p-8 bg-gradient-to-br from-slate-900/80 to-slate-800/60 rounded-2xl border border-white/10 hover:border-blue-500/40 transition-all duration-500 hover:scale-105 hover:shadow-glow backdrop-blur-sm">
-                <div className="flex items-center mb-6">
-                  <div className="p-3 bg-blue-500/20 rounded-xl mr-4 group-hover:bg-blue-500/30 transition-colors">
-                    <CpuChipIcon className="w-8 h-8 text-blue-400" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-blue-400">Micro SaaS Products</h3>
-                </div>
-                <p className="text-slate-300 mb-6 leading-relaxed">
-                  Innovative, focused software solutions including AI-Powered Video Clip Maker, 
-                  Smart Contract Analyzer, Cybersecurity Threat Intelligence, and 50+ more specialized tools.
                 </p>
-                <ul className="text-slate-400 space-y-3 mb-8">
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                    AI-Powered Video Clip Maker
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                    Smart Contract Analyzer
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                    Cybersecurity Threat Intelligence
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                    Multi-Language Website Translator
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                    Predictive Inventory Optimizer
-                  </li>
-                </ul>
-                <Link href="/micro-saas" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold group-hover:translate-x-1 transition-transform">
-                  View All Micro SaaS
-                  <ChevronRightIcon className="w-5 h-5 ml-2" />
-                </Link>
-              </div>
 
+<<<<<<< HEAD
               <div className="group p-8 bg-gradient-to-br from-slate-900/80 to-slate-800/60 rounded-2xl border border-white/10 hover:border-purple-500/40 transition-all duration-500 hover:scale-105 hover:shadow-glow backdrop-blur-sm">
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-purple-500/20 rounded-xl mr-4 group-hover:bg-purple-500/30 transition-colors">
@@ -783,6 +662,8 @@ import React from 'react';
                   Innovative Micro SaaS, AI Services & IT Solutions
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
                 </p>
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <ul className="text-slate-400 space-y-2 mb-6">
                   <li>• AI-Powered Video Clip Maker</li>
                   <li>• Smart Contract Analyzer</li>
@@ -797,11 +678,7 @@ import React from 'react';
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors">
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3>
                 <p className="text-slate-300 mb-6">
-<<<<<<< HEAD
-                  Advanced artificial intelligence solutions including autonomous AI agents,
-=======
-                  Advanced artificial intelligence solutions including autonomous AI agents, 
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+
                   financial trading systems, legal document analysis, and 40+ more AI-powered services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
@@ -818,11 +695,7 @@ import React from 'react';
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-colors">
                 <h3 className="text-2xl font-bold mb-4 text-green-400">IT & Cloud Services</h3>
                 <p className="text-slate-300 mb-6">
-<<<<<<< HEAD
-                  Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions,
-=======
-                  Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions, 
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+
                   DevSecOps automation, and 40+ more enterprise-grade services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
@@ -837,6 +710,10 @@ import React from 'react';
                 </Link>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </div>
           </div>
         </section>
@@ -847,7 +724,11 @@ import React from 'react';
               Ready to Transform Your Business?
             </h2>
             <p className="text-lg text-slate-300 mb-8">
+<<<<<<< HEAD
               Get in touch with our experts to discuss your project requirements and discover
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               how our innovative solutions can drive your business forward.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -867,21 +748,26 @@ import React from 'react';
             </div>
           </div>
         </section>
+<<<<<<< HEAD
           </main>
         </Suspense>
         {/* <PerformanceMonitor
 =======
             </section>
 >>>>>>> origin/main
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </main>
         </Suspense>
         <PerformanceMonitor 
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+
           showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
           onThresholdExceeded={(metrics) => {
             console.warn('Performance thresholds exceeded:', metrics)
           }}
+<<<<<<< HEAD
 <<<<<<< HEAD
         /> */}
       </ErrorBoundary>
@@ -992,6 +878,12 @@ import React from 'react';
 
         {/* Features Section */}
         <section className="py-20 bg-slate-900/50">
+=======
+
+          </div>
+        </section>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Core Services</h2>
@@ -999,7 +891,11 @@ import React from 'react';
                 Comprehensive technology solutions designed to accelerate your business growth
               </p>
             </div>
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredServices.map((service, index) => (
                 <motion.div
@@ -1077,16 +973,7 @@ import React from 'react';
           </div>;
         </section>;
 
-
-
-
-
-
         {/* Why Choose Us */}
-
-
-
-origin/automation-improvements-final
         {/* Why Choose Us */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1104,6 +991,7 @@ origin/automation-improvements-final
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
                 We deliver exceptional results through innovation, expertise, and dedication
               </p>
             </motion.div>
@@ -1111,6 +999,9 @@ origin/automation-improvements-final
 =======
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 gradient-text">Our Services</h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -1150,7 +1041,36 @@ origin/automation-improvements-final
                     <item.icon className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.title}</h3>
+<<<<<<< HEAD
                   <p className="text-gray-600">{item.description}</p>
+=======
+
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="p-6 h-full">
+                    <div className="text-cyan-400 mb-4">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 text-white">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </Card>
+<p className="text-gray-600">{item.description}</p>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </motion.div>
               ))}
             </div>
@@ -1252,6 +1172,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                 </Link>;
                 <Link
                   href="tel:+13024640950"
+<<<<<<< HEAD
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center"
                 >
                   <Phone className="w-5 h-5 mr-2" />
@@ -1263,6 +1184,34 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
 
 
+=======
+
+                </Link>
+        <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Join hundreds of companies that have already revolutionized their operations with our cutting-edge solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="group">
+                  Start Your Journey
+                  <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+                <Button variant="outline" size="lg">
+                  Schedule Consultation
+                </Button>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -1278,15 +1227,86 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                 Learn More About Us
               </Link>
             </div>
+<<<<<<< HEAD
+=======
+
+</Link>
+    );
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const contact: ContactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  };
+  const featuredServices: Service[] = [
+    {
+      id: 'ai-automation',
+      title: 'AI Automation Platform',
+      description: 'Intelligent automation solutions that streamline business processes and reduce manual work.',
+      category: 'AI Services',
+      features: ['Process Automation', 'Machine Learning', 'Natural Language Processing', 'Predictive Analytics']
+    },
+    {
+      id: 'cloud-optimization',
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions designed to optimize performance and reduce costs.',
+      category: 'IT Solutions',
+      features: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Cost Optimization']
+    },
+    {
+      id: 'micro-saas',
+      title: 'Micro SaaS Development',
+      description: 'Focused software solutions that address specific business needs with minimal complexity.',
+      category: 'Micro SaaS',
+      features: ['Rapid Development', 'User-friendly Design', 'API Integration', 'Scalable Architecture']
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
+  return (
+    <>
+      <Head>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>
         </section>
           </div>
         </section>
+<<<<<<< HEAD
 origin/automation-improvements-final
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </div>
     </MainLayout>
   );
 }
+<<<<<<< HEAD
 >>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+      </main>
+    </>
+
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center">;
+                  <Phone className="w-5 h-5 mr-2" />;
+                  Call Now;
+                </Link>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </MainLayout>;
+  );
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

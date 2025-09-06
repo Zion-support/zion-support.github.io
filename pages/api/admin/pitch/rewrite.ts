@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -26,12 +27,15 @@ import { ensureAdminFromApi } from '../../../../utils/auth',;
 import OpenAI from 'openai',;
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY }),
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
     if (req.method === 'POST') {
       const { slide } = req.body;
       if (!slide) return res.status(400).json({ error: 'Slide required' });
 
+<<<<<<< HEAD
       const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -51,6 +55,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   try {
     const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
 Title: ${slide.title}\nContent:\n${slide.content}`,
@@ -61,6 +67,7 @@ Title: ${slide.title}\nContent:\n${slide.content}`,
       const chat = await client.chat.completions.create({
         model: 'gpt-4o-mini'
         messages: [
+<<<<<<< HEAD
           { role: 'system', content: 'You rewrite concise investor content and return JSON only.' },
           { role: 'user', content: prompt }],
         temperature: 0.6,
@@ -69,6 +76,11 @@ Title: ${slide.title}\nContent:\n${slide.content}`,
       const parsed = JSON.parse(raw),
       title = parsed.title || title,
       content = parsed.content || content
+=======
+
+      content = parsed.content || content
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (err) {
       // keep original if AI fails;
     }
@@ -76,6 +88,7 @@ Title: ${slide.title}\nContent:\n${slide.content}`,
     res.status(200).json({ title, content })
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Rewrite failed' })
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 }
@@ -98,3 +111,6 @@ Title: ${slide.title}\nContent:\n${slide.content}`,
 =======
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

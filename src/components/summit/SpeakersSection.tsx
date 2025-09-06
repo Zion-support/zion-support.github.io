@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 interface Speaker {
   name: string;
@@ -7,12 +8,20 @@ interface Speaker {
   twitter?: string;
   linkedin?: string;
   linkedin?: string;}
+=======
+interface Speaker {
+
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface Speaker {
   name: string,
   title: string,
   avatar: string,
   twitter?: string
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Image from "next/image",
 import { Twitter, Linkedin } from 'lucide-react'
 
@@ -24,6 +33,7 @@ interface Speaker {
   linkedin?: string
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const speakers: Speaker[] = [
@@ -116,6 +126,8 @@ export function SpeakersSection() {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   name: string,
   title: string,
   avatar: string,

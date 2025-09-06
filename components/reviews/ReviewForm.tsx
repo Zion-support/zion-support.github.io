@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+=======
+  categories?: {
+    communication?: number;
+    qualityOfWork?: number;
+    timeliness?: number;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -60,6 +67,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
 
+<<<<<<< HEAD
     wouldWorkWithAgain?: boolean;
   }
   anonymous?: boolean;
@@ -96,6 +104,17 @@ function handle_submit() {
           rating,
           text,
           anonymous,
+=======
+          categories: {
+            communication
+            qualityOfWork
+            timeliness
+            wouldWorkWithAgain
+          }
+        })
+      });
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setMessage('Review submitted! Pending admin approval.');
     } catch (err: any) {;
       setMessage(err && err.message);
@@ -104,6 +123,7 @@ function handle_submit() {
   }
   return (
 
+<<<<<<< HEAD
     <form onSubmit={handleSubmit} className='space-y-6'>;
       <div>;
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />;
@@ -111,6 +131,8 @@ function handle_submit() {
 
       <div>;
         <label className='block text-sm font-medium mb-2'>Your Review</label>          categories: {;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       const data = await res.json ();
       if (throw new Error (data.error || 'Failed to submit')) {
   $2
@@ -128,6 +150,7 @@ function handle_submit() {
       </div>;
       <div>;
         <label className='block text - sm font - medium mb - 2'>Your Review</label>          categories: {
+<<<<<<< HEAD
   }
   return (
 
@@ -149,6 +172,14 @@ function handle_submit() {
 
       <div>;
         <label className='block text-sm font-medium mb-2'>Your Review</label>;
+=======
+
+            communication;
+            qualityOfWork;
+            timeliness;
+            wouldWorkWithAgain}})});
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <textarea
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
           rows={5}
@@ -156,11 +187,23 @@ function handle_submit() {
           onChange={e => setText(e && e.target.value)}          required;
         />;
       </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
           value={text}
 
+<<<<<<< HEAD
+=======
+        <input
+          id='anonymous'
+          type='checkbox'
+          checked={anonymous}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       set_submitting (false);
     }
   }
@@ -209,23 +252,36 @@ function handle_submit() {
           <span className='pill'>Optional</span>;
         </div>;
 
+<<<<<<< HEAD
         <div className='enhanced - card'>;
           <div className='flex items - center justify - between mb - 2'>;
             <span className='text - sm'>Quality of Work</span>;
             <StarRating;
               value={qualityOfWork || 0}
               on_change={v => setQualityOfWork (v)}
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
 
+<<<<<<< HEAD
               onChange={e => setWouldWorkWithAgain(e && e.target.checked)}            />;
+=======
+            />;
+          </div>;
+          <span className='pill'>Optional</span>;
+        </div>;
+
+            />;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>;
           <span className='pill'>Optional</span>        </div>;
       </div>;
 
       </button>;
+<<<<<<< HEAD
 
       {message && <p className='text-sm'>{message}</p>}
     </form>;
@@ -239,6 +295,8 @@ export default ReviewForm;    </form>;
       >;
         {submitting ? 'Submitting...' : 'Submit Review'}
       </button>;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {message && <p className='text - sm'>{message}</p>}
     </form>);
 }

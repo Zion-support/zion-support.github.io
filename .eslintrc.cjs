@@ -19,5 +19,12 @@ module.exports = {
   },
   globals: {
     KeyboardEvent: 'readonly',
+<<<<<<< HEAD
   },
 };
+=======
+    MouseEvent: 'readonly',
+    Event: 'readonly'
+  }
+};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

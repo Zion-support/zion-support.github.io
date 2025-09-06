@@ -29,6 +29,7 @@ export function VerifiedBadge({
     sm: 'h-3.5 w-3.5'
     md: 'h-4 w-4'
     lg: 'h-5 w-5'
+<<<<<<< HEAD
   }
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 interface VerifiedBadgeProps {
@@ -61,6 +62,9 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
       <Tooltip>
         <TooltipTrigger asChild>
           <span className="inline-flex text-blue-500">
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
 =======
   return (
@@ -73,9 +77,8 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
         <TooltipContent>
           <p>{label}</p>
         </TooltipContent>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -121,6 +124,8 @@ interface VerifiedBadgeProps {;
   size?: 'sm' | 'md' | 'lg';
   /** Optional tooltip label to display */;
   label?: string;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 <<<<<<< HEAD
 ;
@@ -157,5 +162,9 @@ export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified
 }
 
     </TooltipProvider>);
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -5,7 +5,11 @@ import puppeteer from 'puppeteer';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import puppeteer from 'puppeteer',;
 export const config = {
   api: {
@@ -239,7 +243,6 @@ export default async function handler(req, res) {
   const browser = await puppeteer.launch({;
     headless: true;
 
-
     args: ['--no-sandbox--disable-setuid-sandbox']});
 
   try {
@@ -275,6 +278,7 @@ export default async function handler(req, res) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -286,3 +290,5 @@ export default async function handler(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

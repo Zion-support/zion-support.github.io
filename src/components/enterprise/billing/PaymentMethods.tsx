@@ -1,10 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from 'lucide-react'
 
+<<<<<<< HEAD
 export function PaymentMethods() {
   // Mock payment methods
   const paymentMethods = [
@@ -22,25 +27,33 @@ import { CreditCard, Plus, Trash } from 'lucide-react'
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function PaymentMethods() {
   // Mock payment methods
 
   const paymentMethods = [
     {
 
-
       id: 'pm-1',
       type: 'credit_card',
       brand: 'Visa',
       last4: '4242',
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       id: "pm-1",
       type: "credit_card",
       brand: "Visa",
       last4: "4242",
       expMonth: 12,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       expYear: 2025,
       isDefault: true},
     {
@@ -50,6 +63,7 @@ export function PaymentMethods() {
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
+<<<<<<< HEAD
       isDefault: false}
   ],
 
@@ -59,6 +73,9 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Card>
       <CardHeader>
@@ -156,6 +173,7 @@ export function PaymentMethods() {;
                   )}
                 </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -164,10 +182,14 @@ export function PaymentMethods() {;
                 <p className="text-sm text-muted-foreground">
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   Expires {method.expMonth}/{method.expYear}
                 </p>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -176,6 +198,9 @@ export function PaymentMethods() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="flex gap-2">
               {!method.isDefault && (
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Button size="sm" variant="ghost">Set Default</Button>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -187,15 +212,21 @@ export function PaymentMethods() {;
           </div>
         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
       </CardContent>
       <CardFooter>
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         <Button className="gap-1">
 
         <Button className="gap-1">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Plus className="h-4 w-4" />
           Add Payment Method
         </Button>
@@ -214,10 +245,13 @@ export function PaymentMethods() {;
   )
 =======
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -303,6 +337,7 @@ export function PaymentMethods() {;
   );
 }
 
+<<<<<<< HEAD
   );
 }
 
@@ -403,3 +438,5 @@ function PaymentMethods() {
       </CardContent>
       <CardFooter>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

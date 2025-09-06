@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,13 +55,19 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 
+<<<<<<< HEAD
 type EventRow = {
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   name: string
   page?: string
   userType?: string
@@ -83,6 +90,7 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         const t = new Date(obj.at)
         if (start && t < start) continue
         if (end && t > end) continue
+<<<<<<< HEAD
         rows.push(obj)
       } catch {}
 
@@ -141,10 +149,18 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+        rows.push(obj)
+      } catch {}
+    }
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch {
     return []
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -228,12 +244,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
     .sort((a, b) => b.value - a.value),
 
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -267,10 +287,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     .sort((a, b) => b.value - a.value),
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -446,3 +469,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  const days = Object.keys(byDay).sort()
+  const line = days.map((d) => ({ date: d, value: byDay[d] }))
+
+  const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent']
+  const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 }))
+
+  res.status(200).json({ pagesMostUsed, events, line, funnel });
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

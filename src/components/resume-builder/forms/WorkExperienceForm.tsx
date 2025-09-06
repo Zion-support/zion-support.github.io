@@ -47,8 +47,13 @@ if ( {) {
         success = await addWorkExperience(resumeId, experienceData)
       }
 
+<<<<<<< HEAD
       setError(err.message || 'An error occurred')
 };
+=======
+      setError(err.message || 'An error occurred');
+    };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   };
   const handleEdit = (work: WorkExperience) => {;
 
@@ -170,11 +175,14 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       {workExperiences.length > 0 && (
 =======
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -365,8 +373,12 @@ export function WorkExperienceForm(): any ({;
                       <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </div>
                   <div className="flex gap-2">
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <Button
 <<<<<<< HEAD
                       variant="ghost"
@@ -589,6 +601,7 @@ export function WorkExperienceForm(): any ({;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
@@ -599,6 +612,8 @@ export function WorkExperienceForm(): any ({;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
