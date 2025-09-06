@@ -4,12 +4,8 @@ import LoadingSpinner from './LoadingSpinner';
 interface ButtonProps {
   children: React.ReactNode;
   className?: string;
-  disabled?: boolean;
 }
 
-  className = '',
-  disabled = false 
-}) => {
   };
   
   const sizeClasses = {
@@ -18,12 +14,10 @@ interface ButtonProps {
     large: 'px-6 py-3 text-lg'
   };
   
-  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : '';
-
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  
   return (
     <button
-      onClick={onClick}
-      disabled={disabled || loading}
     >
       {loading && <LoadingSpinner size="sm" />}
       {children}

@@ -10,6 +10,7 @@ module.exports = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 }
@@ -34,4 +35,7 @@ module.exports = {
 >>>>>>> pr-12166
 =======
 };
+>>>>>>> origin/main
+=======
+}
 >>>>>>> origin/main
