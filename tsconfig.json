@@ -7,11 +7,6 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-<<<<<<< HEAD
-    "esModuleInterop": true
-  }
-}
-=======
     "esModuleInterop": true,
     "module": "ESNext",
     "moduleResolution": "node",
@@ -38,4 +33,3 @@
     "allowSyntheticDefaultImports": true
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

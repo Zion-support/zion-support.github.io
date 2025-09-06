@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
 import ServiceCard from './src/components/ServiceCard';
@@ -123,14 +122,3 @@ export default function App() {
     </div>
   );
 }
-=======
-
-export default function App() {
-  return (
-    <main>
-      <h1>Zion Tech Group - AI, Micro SaaS & IT Services</h1>
-      <p>Building the future with innovative technology solutions</p>
-    </main>
-  );
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

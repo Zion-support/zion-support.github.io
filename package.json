@@ -22,7 +22,6 @@
     "check": "npm run lint && npm run type-check && npm run test:smoke",
     "clean": "rm -rf .next out dist",
     "precommit": "npm run check",
-<<<<<<< HEAD
     "prepare": "echo 'Husky prepare script disabled'",
     "autonomous": "node automation/launch-enhanced-autonomous-system.js",
     "autonomous:dev": "nodemon automation/launch-enhanced-autonomous-system.js",
@@ -267,12 +266,7 @@
     "ecosystem": "ecosystem.maintenance.cjs"
   },
   "dependencies": {
-=======
-    "prepare": "echo 'Husky prepare script disabled'"
-  },
-  "dependencies": {
     "@babel/core": "^7.28.4",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     "@fastify/cors": "^11.1.0",
     "@fastify/rate-limit": "^10.3.0",
     "@google-analytics/data": "^5.2.0",
@@ -311,10 +305,7 @@
     "@radix-ui/react-tooltip": "^1.0.7",
     "@reduxjs/toolkit": "^2.8.2",
     "@stripe/stripe-js": "^2.3.0",
-<<<<<<< HEAD
     "@sendgrid/mail": "^8.1.5",
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -334,7 +325,6 @@
     "clsx": "^2.0.0",
     "critters": "^0.0.23",
     "cron-parser": "^5.3.0",
-<<<<<<< HEAD
     "d3-color": "^3.1.0",
     "d3-format": "^3.1.0",
     "d3-path": "^3.1.0",
@@ -345,10 +335,6 @@
     "express-rate-limit": "^8.1.0",
     "fastify": "^5.6.0",
     "framer-motion": "^10.18.0",
-=======
-    "events": "^3.3.0",
-    "framer-motion": "^10.16.16",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
     "glob": "^11.0.3",
@@ -390,22 +376,15 @@
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
-<<<<<<< HEAD
-=======
     "@esbuild/linux-x64": "^0.25.9",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.35.0",
     "@netlify/plugin-nextjs": "^5.12.1",
     "@next/bundle-analyzer": "^13.5.6",
     "@next/eslint-plugin-next": "^15.5.2",
     "@rollup/rollup-linux-x64-gnu": "^4.50.0",
-<<<<<<< HEAD
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
-=======
-    "@testing-library/jest-dom": "^6.6.4",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.8",
@@ -422,10 +401,7 @@
     "axe-core": "^4.10.3",
     "eslint-config-next": "^14.2.32",
     "eslint-formatter-junit": "^8.40.0",
-<<<<<<< HEAD
     "eslint-plugin-jsx-a11y": "^6.10.2",
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
@@ -462,8 +438,4 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
