@@ -2,7 +2,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 =======
@@ -92,9 +95,13 @@ class ClassNameSyntaxFixer {
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     this.log(`Fixes Applied: ${this.fixes.length}`);
     this.log(`Errors Found: ${this.errors.length}`);
     if (this.fixes.length > 0) {
@@ -116,6 +123,11 @@ class ClassNameSyntaxFixer {
 const fixer = new ClassNameSyntaxFixer();
 fixer.run().catch(console.error);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -132,9 +144,13 @@ fixer.run().catch(console.error);
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -142,6 +158,11 @@ const glob = require('glob')
   log(message, type = 'INFO')
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      const fixedQuoted = quoted.replace(/"([a-z]+)"      const fixedQuoted = quoted.replace(/"([a-z]+)"
+      const fixedQuoted = quoted.replace(/"([a-z]+)"      const fixedQuoted = quoted.replace(/"([a-z]+)"
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
       const fixedQuoted = quoted.replace(/"([a-z]+)"
@@ -161,8 +182,12 @@ const glob = require('glob')
       const fixedQuoted = quoted.replace(/"([a-z]+)"
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
       const fixedQuoted = quoted.replace(/"([a-z]+)"      const fixedQuoted = quoted.replace(/"([a-z]+)"
       const fixedQuoted = quoted.replace(/"([a-z]+)"      const fixedQuoted = quoted.replace(/"([a-z]+)"
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

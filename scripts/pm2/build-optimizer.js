@@ -340,7 +340,11 @@ module.exports = BuildOptimizer;
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }};
 ; async analyzeBuild() {; try {; this.log('🏗️ Analyzing current build...');
 ; if (!fs.existsSync('dist')) {; this.log('📦 Building project first...'); execSync('npm run build', {; cwd: this.projectRoot,
@@ -381,7 +385,11 @@ module.exports = BuildOptimizer;
     compression: false}; // Check Next.js config; if (fs.existsSync('next.config.js')) {const nextConfig = fs.readFileSync('next.config.js', 'utf8'); settings.minification = nextConfig.includes('swcMinify: true') |nextConfig.includes('swcMinify: true'); settings.compression = nextConfig.includes('compress: true') |nextConfig.includes('compress: true')}; // Check package.json for optimization scripts; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const scripts = packageJson.scripts |{}; settings.treeShaking = scripts.build && scripts.build.includes('--tree-shaking'); settings.codeSplitting = scripts.build && scripts.build.includes('--experimental-build-mode'); return {success: true
     settings: settings}} catch (error) {return {; success: false, error: error.message, settings: null}}}; async generateOptimizationReport(buildStats, analyzerInfo, settingsInfo) {const report = {; timestamp: new Date().toISOString(), summary: {
       , buildSize: buildStats?.stats?.totalSizeMB |0, fileCount: buildStats?.stats?.fileCount |0, optimizationScore: 0
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     recommendations: []
     }
     details: {, build: buildStats, analyzer: analyzerInfo
@@ -392,6 +400,10 @@ const optimizer = new BuildOptimizer();
 <<<<<<< HEAD
 optimizer.run().catch(error = > {; process.exit(1)});
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 };
@@ -1281,7 +1293,14 @@ module.exports = BuildOptimizer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 optimizer.run().catch(error = > {process.exit(1)});
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+optimizer.run().catch(error = > {process.exit(1)});
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

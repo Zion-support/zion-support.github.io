@@ -65,11 +65,15 @@ global.ResizeObserver = class ResizeObserver {
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 // Global test setup,
 =======
 }
 // Global test setup
+<<<<<<< HEAD
 >>>>>>> origin/main
 beforeEach(() => {
   jest.clearAllMocks();
@@ -78,6 +82,16 @@ beforeEach(() => {
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+beforeEach(() => {
+  jest.clearAllMocks();
+<<<<<<< HEAD
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+});
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -128,7 +142,14 @@ beforeEach(() => {
   jest.clearAllMocks();
 });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 });
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+});
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -564,10 +570,14 @@ improver.run().catch(console.error)
 <<<<<<< HEAD
 #!/usr/bin/env node;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 #!/usr/bin/env node;
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -763,12 +773,17 @@ scanner.runSecurityScan().catch(console.error);"
       this.log("\\n� Comprehensive App Improvement completed!")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   this.log(`Fatal "error": ${error.message}`, ``)
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
   this.log(`Fatal "error": ${error.message}`, ``)
 =======
+>>>>>>> origin/automation-improvements-final
   this.log(`Fatal "error": ${error.message}`, ``)
+<<<<<<< HEAD
 =======
 const fs = require('fs');
 const path = require('path');
@@ -1039,6 +1054,8 @@ module.exports = ComprehensiveAppImprover;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
   this.log(`Fatal "error": ${error.message}`, ``)
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 const fs = require("fs")
 const path = require("path")
@@ -1650,7 +1667,29 @@ scanner.runSecurityScan().catch(console.error)`;
 }
   }
 }
+<<<<<<< HEAD
 // Run the improver;
 const improver = new ComprehensiveAppImprover()
 improver.run().catch(console.error)
 >>>>>>> origin/main
+=======
+<<<<<<< HEAD
+// Run the improver;
+const improver = new ComprehensiveAppImprover()
+improver.run().catch(console.error)
+=======
+
+// Run the improver
+if (require.main === module) {
+  const improver = new ComprehensiveAppImprover();
+  improver.run().catch(error => {
+    console.error('❌ Erro: ', error);
+    process.exit(1);
+  });
+}
+
+module.exports = ComprehensiveAppImprover;
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

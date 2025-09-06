@@ -2,7 +2,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 =======
@@ -146,9 +149,13 @@ class DependencyErrorResolver {
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process'
@@ -165,6 +172,11 @@ import { execSync, spawn } from;
         "type": ';outdated, '}))    } "catch"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            "type": ';outdated, '}))} "catch"            "type": ';outdated, '}))} "catch"
+            "type": ';outdated, '}))} "catch"            "type": ';outdated, '}))} "catch"
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
             "type": ';outdated, '}))} "catch"
@@ -184,8 +196,12 @@ import { execSync, spawn } from;
             "type": ';outdated, '}))} "catch"
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
             "type": ';outdated, '}))} "catch"            "type": ';outdated, '}))} "catch"
             "type": ';outdated, '}))} "catch"            "type": ';outdated, '}))} "catch"
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

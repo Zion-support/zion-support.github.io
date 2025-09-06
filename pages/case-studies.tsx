@@ -1,5 +1,12 @@
 
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
@@ -278,6 +285,7 @@ export default function CaseStudiesPage() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -286,6 +294,13 @@ import Head from 'next/head';
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+=======
+=======
+import Head from 'next/head';
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import Link from 'next/link';
 import Layout from '../components/Layout';
 export default function CaseStudiesPage() {
@@ -311,7 +326,11 @@ export default function CaseStudiesPage() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   );
  </Head> </section> </Layout>
 	return (

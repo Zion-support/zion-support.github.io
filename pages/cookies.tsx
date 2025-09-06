@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -337,6 +348,7 @@ export default function CookiePolicyPage() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -345,10 +357,23 @@ export default function CookiePolicyPage() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Layout from '../components/Layout';
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
@@ -366,16 +391,46 @@ export default function CookiesPage() {
             browser.
           </p>
           <ul className='list-disc list-inside text-gray-300 space-y-1'>
+<<<<<<< HEAD
       <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+<<<<<<< HEAD
+=======
+}      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+=======
+=======
+import React from 'react';
+import SEO from '../components/SEO';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+export default function CookiesPage() {
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
       <div className="container mx-auto px-4 py-24 text-white">
         <div className="max-w-3xl mx-auto space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold">Cookie Policy</h1>
           <p className="text-gray-300">We use minimal, privacy‑respecting analytics. Some third‑party embeds may set cookies. You can block non‑essential cookies via your browser.</p>
           <ul className="list-disc list-inside text-gray-300 space-y-1">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> origin/automation-improvements-final
+            <li>Purpose: performance and security</li>
+=======
 <li>Purpose: performance and security</li>
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             <li>Retention: session or short‑term</li>
             <li>Opt‑out: browser settings and extensions</li>
           </ul>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
           <p className='text-gray-400 text-sm'>
             Questions?{' '}
             <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
@@ -388,7 +443,11 @@ export default function CookiesPage() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   );
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
       </div>

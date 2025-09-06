@@ -1,7 +1,11 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
@@ -31,7 +35,11 @@ interface State {
   hasError: boolean,
   error?: Error;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -47,6 +55,7 @@ class ErrorBoundary extends Component<Props, State> {
     // Update state so the next render will show the fallback UI
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     return { hasError: true, error };
 =======
@@ -54,6 +63,19 @@ class ErrorBoundary extends Component<Props, State> {
 >>>>>>> origin/main
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+=======
+>>>>>>> origin/automation-improvements-final
+    return { hasError: true, error };
+=======
+    return { hasError: true, error }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+  }
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
+    console.error('Error caught by boundary:', error, errorInfo);    this.setState({
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -63,10 +85,12 @@ class ErrorBoundary extends Component<Props, State> {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
     this.setState({
+>>>>>>> origin/automation-improvements-final
       error,
       errorInfo
     });
 
+<<<<<<< HEAD
     // You can also log the error to an error reporting service here
     // Example: logErrorToService(error, errorInfo);
 <<<<<<< HEAD
@@ -81,9 +105,14 @@ class ErrorBoundary extends Component<Props, State> {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
     console.error('Error caught by boundary:', error, errorInfo);    this.setState({
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       error
       errorInfo
     });
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     // Log error to external service (e.g., Sentry)
     if (typeof window !== 'undefined' && (window as any).Sentry) {
       (window as any).Sentry.captureException(error, { extra: errorInfo });    }
@@ -96,7 +125,21 @@ class ErrorBoundary extends Component<Props, State> {
       // Here you would typically send to an error reporting service
       console.error('Production error:', error, errorInfo);
     }
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+=======
+    // You can also log the error to an error reporting service here
+    // Example: logErrorToService(error, errorInfo);
+=======
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   }
   handleReload = () => {
     window.location.reload();
@@ -108,7 +151,11 @@ class ErrorBoundary extends Component<Props, State> {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       // Fallback UI
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -182,7 +229,11 @@ class ErrorBoundary extends Component<Props, State> {
                 onClick={() => this.setState({ hasError: false })} 
                 className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
               >
                 Try Again
               </button>
@@ -191,7 +242,11 @@ class ErrorBoundary extends Component<Props, State> {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
               <details className="mt-4 p-4 bg-gray-100 rounded-md">
                 <summary className="cursor-pointer font-medium text-gray-700">
                   Error Details (Development)
@@ -209,7 +264,11 @@ class ErrorBoundary extends Component<Props, State> {
                 <pre className="mt-2 p-4 bg-slate-800 rounded text-xs overflow-auto">
                   {this.state.error.stack}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                 </pre>
               </details>
             )}

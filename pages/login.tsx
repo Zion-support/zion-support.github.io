@@ -1,9 +1,208 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
+<<<<<<< HEAD
 import {
+=======
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Layout from './components/Layout';
+>>>>>>> origin/automation-improvements-final
+import {
+<<<<<<< HEAD
+  Mail,
+  Lock,
+  Eye,
+  EyeOff,
+  ArrowRight,
+  CheckCircle,
+  AlertCircle,
+  User,
+  Shield,
+  Globe,
+  Smartphone,
+  Monitor,
+  Server,
+  Database,
+  Cloud,
+  Brain,
+  Code,
+  Settings,
+  Wrench,
+  Cog,
+  Activity,
+  PieChart,
+  BarChart,
+  TrendingUp,
+  DollarSign,
+  ShoppingCart,
+  Home,
+  Trash2,
+  Camera,
+  Heart,
+  ClipboardList,
+  TreePine,
+  Droplets,
+  Building,
+  Rocket,
+  Lightbulb,
+  Target,
+  MessageSquare,
+  HelpCircle,
+  Info,
+  XCircle,
+  Plus,
+  Minus,
+  ChevronUp,
+  ChevronRight,
+  ChevronLeft,
+  ChevronDown,
+  ArrowUp,
+  ArrowDown,
+  ArrowLeft,
+  Pause,
+  Stop,
+  SkipForward,
+  SkipBack,
+  Volume2,
+  VolumeX,
+  Maximize,
+  Minimize,
+  RotateCcw,
+  RotateCw,
+  RefreshCw,
+  Upload,
+  Share,
+  Copy,
+  Edit,
+  Trash,
+  Save,
+  Unlock,
+  Bell,
+  BellOff,
+  Star as StarIcon,
+  Heart as HeartIcon,
+  ThumbsUp,
+  ThumbsDown,
+  MessageCircle,
+  Send,
+  Paperclip,
+  Smile,
+  Frown,
+  Meh,
+  Laugh,
+  Angry,
+  Sad,
+  Surprised,
+  Wink,
+  Kiss,
+  Tongue,
+  Wink2,
+  KissWinkHeart,
+  KissClosedEyes,
+  StuckOutTongue,
+  StuckOutTongueWinkingEye,
+  StuckOutTongueClosedEyes,
+  Disappointed,
+  Worried,
+  Angry2,
+  Rage,
+  Cry,
+  Scream,
+  Confounded,
+  Hugging,
+  Smirk,
+  NoMouth,
+  NeutralFace,
+  Expressionless,
+  Unamused,
+  RollingEyes,
+  Thinking,
+  LyingFace,
+  HandOverMouth,
+  ShushingFace,
+  ExplodingHead,
+  CowboyHatFace,
+  DisguisedFace,
+  Sunglasses,
+  NerdFace,
+  MonocleFace,
+  Confused,
+  WorriedFace,
+  SlightlyFrowningFace,
+  OpenMouth,
+  Hushed,
+  Astonished,
+  Flushed,
+  PleadingFace,
+  FrowningFace,
+  AnguishedFace,
+  FearfulFace,
+  ColdSweat,
+  DisappointedRelieved,
+  CryFace,
+  LoudlyCryingFace,
+  ScreamFace,
+  StuckOutTongueFace,
+  DroolingFace,
+  UnamusedFace,
+  SweatSmile,
+  Sweat,
+  WearyFace,
+  TiredFace,
+  SleepyFace,
+  YawningFace,
+  DizzyFace,
+  ExplodingHeadFace,
+  CowboyHatFace2,
+  DisguisedFace2,
+  SunglassesFace,
+  NerdFace2,
+  MonocleFace2,
+  ConfusedFace,
+  WorriedFace2,
+  SlightlyFrowningFace2,
+  OpenMouthFace,
+  HushedFace,
+  AstonishedFace,
+  FlushedFace,
+  PleadingFace2,
+  FrowningFace2,
+  AnguishedFace2,
+  FearfulFace2,
+  ColdSweatFace,
+  DisappointedRelievedFace,
+  CryFace2,
+  LoudlyCryingFace2,
+  ScreamFace2,
+  StuckOutTongueFace2,
+  DroolingFace2,
+  UnamusedFace2,
+  SweatSmileFace,
+  SweatFace,
+  WearyFace2,
+  TiredFace2,
+  SleepyFace2,
+  YawningFace2,
+<<<<<<< HEAD
+  DizzyFace2,
+} from "lucide-react";
+=======
+  DizzyFace2
+} from 'lucide-react';
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   Mail
   Lock
   Eye
@@ -180,6 +379,10 @@ import {
   YawningFace2
   DizzyFace2
 } from "lucide-react";
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function LoginPage() {
   const [formData, setFormData] = useState({
     email: ""
@@ -187,17 +390,44 @@ export default function LoginPage() {
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   const [error, setError] = useState("");
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
+<<<<<<< HEAD
       ...prev
       [name]: value
+=======
+<<<<<<< HEAD
+      ...prev,
+      [name]: value,
+=======
+  const [error, setError] = useState('');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+>>>>>>> origin/automation-improvements-final
+=======
+      ...prev
+      [name]: value
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     setError("");
     try {
       // Simulate API call
@@ -211,6 +441,26 @@ export default function LoginPage() {
       }
     } catch (err) {
       setError("Login failed. Please try again.");
+<<<<<<< HEAD
+=======
+=======
+    setError('');
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // For demo purposes, accept any email/password
+      if (formData.email && formData.password) {
+        // Redirect to dashboard or home page
+        window.location.href = '/';
+      } else {
+        setError('Please fill in all fields');
+      }
+    } catch (err) {
+      setError('Login failed. Please try again.');
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     } finally {
       setIsLoading(false);
     }
@@ -219,10 +469,17 @@ export default function LoginPage() {
     <Layout>
       <Head>
         <title>Login - Zion Tech Group</title>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         <meta
           name="description"
           content="Sign in to your Zion Tech Group account to access your dashboard and services."
         />
+=======
+        <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
+>>>>>>> origin/automation-improvements-final
       </Head>
       <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
@@ -239,7 +496,15 @@ export default function LoginPage() {
               Sign in to your account
             </h2>
             <p className="mt-2 text-sm text-gray-600">
+<<<<<<< HEAD
               Or{" "}
+=======
+<<<<<<< HEAD
+              Or{" "}
+=======
+              Or{' '}
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500"
@@ -267,10 +532,17 @@ export default function LoginPage() {
                 </motion.div>
               )}
               <div>
+<<<<<<< HEAD
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700 mb-2"
                 >
+<<<<<<< HEAD
+=======
+=======
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                   Email address
                 </label>
                 <div className="relative">
@@ -291,10 +563,20 @@ export default function LoginPage() {
                 </div>
               </div>
               <div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                 <label
                   htmlFor="password"
                   className="block text-sm font-medium text-gray-700 mb-2"
                 >
+<<<<<<< HEAD
+=======
+=======
+                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                   Password
                 </label>
                 <div className="relative">
@@ -333,10 +615,20 @@ export default function LoginPage() {
                     type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                   />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                   <label
                     htmlFor="remember-me"
                     className="ml-2 block text-sm text-gray-900"
                   >
+<<<<<<< HEAD
+=======
+=======
+                  <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                     Remember me
                   </label>
                 </div>
@@ -375,9 +667,16 @@ export default function LoginPage() {
                   <div className="w-full border-t border-gray-300" />
                 </div>
                 <div className="relative flex justify-center text-sm">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                   <span className="px-2 bg-white text-gray-500">
                     Or continue with
                   </span>
+=======
+                  <span className="px-2 bg-white text-gray-500">Or continue with</span>
+>>>>>>> origin/automation-improvements-final
                 </div>
               </div>
               <div className="mt-6 grid grid-cols-2 gap-3">
@@ -399,7 +698,15 @@ export default function LoginPage() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p className="text-sm text-gray-600">
+<<<<<<< HEAD
               Don't have an account?{" "}
+=======
+<<<<<<< HEAD
+              Don't have an account?{" "}
+=======
+              Don't have an account?{' '}
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500"

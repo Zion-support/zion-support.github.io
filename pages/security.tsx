@@ -1,5 +1,12 @@
 
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Users, AlertTriangle, CheckCircle, Clock } from 'lucide-react';
@@ -228,6 +235,13 @@ export default function SecurityPage() {
                 >
                   View Compliance Details
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                </Link>
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                 </Link>
 <<<<<<< HEAD
 =======
@@ -586,14 +600,29 @@ export default function Security() {
                   </div>
                 </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 </Link>
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+</Link>
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      </div>
+    </Layout>
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       </div>
     </Layout>
 <<<<<<< HEAD
@@ -612,7 +641,11 @@ export default function Security() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   );
 <<<<<<< HEAD
 =======

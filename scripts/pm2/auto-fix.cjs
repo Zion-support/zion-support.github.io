@@ -41,7 +41,11 @@ try {
 const { execSync } = require('child_process');
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 function run(cmd) {}
 	console.log(`$ ${cmd}`);
 	return execSync(cmd, { "stdio": 'inherit' })};
@@ -54,6 +58,13 @@ try {}
 	try { run('pm2 reload bolt-zion-app')} catch {};
 	console.log('Auto-fix run completed successfully.')} catch (e) {}
 	console.error('Auto-fix run "failed": ', e.message);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+	process.exit(1)};
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 	process.exit(1)};
 <<<<<<< HEAD
 =======
@@ -239,6 +250,7 @@ if (require.main === module) {
 
 module.exports = AutoFixer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node
 const { execSync } = require('child_process');
@@ -298,3 +310,8 @@ try {}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

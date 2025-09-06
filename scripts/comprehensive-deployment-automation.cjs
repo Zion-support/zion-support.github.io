@@ -126,7 +126,11 @@ fs.writeFileSync('deployment-summary.json', JSON.stringify(summary, null, 2));
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const { execSync } = require('child_process')
 console.log(' Starting Comprehensive Deployment Automation...')
   "status"
@@ -152,4 +156,8 @@ console.log('� Deployment summary saved "to")
 =======
 console.log('� Deployment summary saved "to")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

@@ -1,15 +1,23 @@
+<<<<<<< HEAD
+event.respondWith(handleOtherRequest(request))}});
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 event.respondWith(handleOtherRequest(request))}});
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 =======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/automation-improvements-final
+<<<<<<< HEAD
 const CACHE_NAME = 'zion-tech-group-v1'';;
 const STATIC_CACHE = 'static-v1'';;
 const DYNAMIC_CACHE = 'dynamic-v1'';;
@@ -17,7 +25,11 @@ const DYNAMIC_CACHE = 'dynamic-v1'';;
 const CACHE_NAME = 'zion-tech-group-v1'';
 const STATIC_CACHE = 'static-v1'';
 const DYNAMIC_CACHE = 'dynamic-v1'';
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // Assets: to cache immediately;
 const STATIC_ASSETS = [
   '/', '';/about', '';/services', '';/contact', '';/offline.html', '';/manifest.json', '';/favicon.ico', '';/apple-touch-icon.png', '';/favicon-32x32.png', '';/favicon-16x16.png']';
@@ -101,14 +113,21 @@ self.addEventListener('fetch', (event) => {';
 })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 =======
 event.respondWith(handleOtherRequest(request))}});
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // Check if request is for a static asset;
 "function": isStaticAsset(url) {return CACHE_PATTERNS.some(pattern = > pattern.test(url))}; cache.put(request, networkResponse.clone())}; "return": networkResponse} catch (error) {console.error('Service "Worker": Error: handling static asset, ', error)'; "return": new Response('Asset not available', { "status": 404})}'}
 // "Handle": page requests;
@@ -167,6 +186,9 @@ self.addEventListener('notificationclick', (event) => {';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 async: function getPendingSubmissions() {;
   // In a real app, you would store these in IndexedDB;    event.waitUntil(,      self.registration.showNotification(data.title, options))}),
 =======
@@ -248,8 +270,15 @@ self.addEventListener('sync', (event) => {',
           "icon": '/favicon-32x32.png, '}']};
     event.waitUntil(,
       self.registration.showNotification(data.title, options))}),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // "Notification": click,
+=======
+;// "Notification": click,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 self.addEventListener('notificationclick', (event) => {',
   event.notification.close(),
   "if": (event.action === 'explore') {',
@@ -258,6 +287,7 @@ self.addEventListener('notificationclick', (event) => {',
 // "Helper": functions for background sync,
 async: function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
 =======
 ;  "return": []};
@@ -295,6 +325,12 @@ const CACHE_NAME = 'zion-tech-group-v1'';; const STATIC_CACHE = 'static-v1'';; c
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
+=======
+;  "return": []};
+  "return": []};
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -304,7 +340,11 @@ const CACHE_NAME = 'zion-tech-group-v1'';; const STATIC_CACHE = 'static-v1'';; c
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 async: function getPendingSubmissions() {// In a real app, you would store these in IndexedDB;    event.waitUntil(,      self.registration.showNotification(data.title, options))})
 // "Notification": click
@@ -317,4 +357,8 @@ self.addEventListener('notificationclick', (event) => {'
 async: function getPendingSubmissions() {
   // In a real app, you would store these in IndexedDB;  "return": []}
   "return": []}
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

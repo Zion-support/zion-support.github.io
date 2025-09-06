@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = {;
@@ -73,11 +80,14 @@ module.exports = {}
   ]};
 >>>>>>> main
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480
 module.exports = {
   preset: 'ts-jest',
 <<<<<<< HEAD
 =======
 =======
+>>>>>>> origin/automation-improvements-final
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
@@ -88,11 +98,20 @@ const createJestConfig = nextJest({
 // Add any custom config to be passed to Jest
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 module.exports = {
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+module.exports = {
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   testEnvironment: 'jsdom',
   testMatch: [
     '**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
@@ -122,12 +141,18 @@ module.exports = {
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
 =======
   transformIgnorePatterns: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     '/node_modules/',
     '^.+\\.module\\.(css|sass|scss)$',
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   verbose: true,
   collectCoverage: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   coverageReporters: ['text', 'lcov'],
   coverageThreshold: {
@@ -138,7 +163,11 @@ module.exports = {
       statements: 60
     }
   }
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 };
 <<<<<<< HEAD
 =======
@@ -147,14 +176,19 @@ module.exports = {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 =======
+>>>>>>> origin/automation-improvements-final
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
   testTimeout: 10000,
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
+<<<<<<< HEAD
+module.exports = createJestConfig(customJestConfig)
+=======
 module.exports = createJestConfig(customJestConfig)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.simple.js'],
@@ -166,3 +200,14 @@ module.exports = createJestConfig(customJestConfig)
   ]
 };
 >>>>>>> origin/main
+=======
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480
+>>>>>>> origin/automation-improvements-final
+=======
+    '/node_modules/(?!(.*\.mjs$))'
+  ]
+};
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

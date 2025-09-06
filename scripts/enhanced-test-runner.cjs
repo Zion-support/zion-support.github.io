@@ -8,7 +8,11 @@
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -19,7 +23,11 @@ const { execSync, spawn } = require('child_process');
 console.log('🧪 Enhanced Test Runner v2.0');
 console.log('');
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 console.log('🧪 Enhanced Test Runner v2.0');
 console.log('');
@@ -27,7 +35,11 @@ console.log('');
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const testReport = {}
   "timestamp": new Date().toISOString(),
   "sessionId": Date.now().toString(),
@@ -52,7 +64,11 @@ function log(level, message) {}
 async function runJestTests() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)};
 async function runJestTests() {}
   log('info', 'Running Jest tests');
@@ -298,4 +314,8 @@ main();
 =======
 main();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

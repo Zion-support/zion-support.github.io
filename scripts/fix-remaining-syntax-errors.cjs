@@ -14,7 +14,11 @@ const fs = require("fs");"const path = require("path");"console.log(" Fixing rem
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -26,7 +30,11 @@ const { execSync } = require('child_process');
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // Function to fix hover syntax errors
 function fixHoverSyntax(filePath) {
   try {
@@ -39,7 +47,11 @@ function fixHoverSyntax(filePath) {
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     // Fix various hover syntax patterns
     const patterns = [
       { from: /"hover":\s*/g, to: 'hover:' },
@@ -58,7 +70,11 @@ function fixHoverSyntax(filePath) {
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     patterns.forEach(pattern => {
       if (pattern.from.test(content)) {
         content = content.replace(pattern.from, pattern.to);
@@ -78,7 +94,11 @@ function fixHoverSyntax(filePath) {
       return true;
     }
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     
     if (modified) {
       fs.writeFileSync(filePath, content);
@@ -89,7 +109,11 @@ function fixHoverSyntax(filePath) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     return false;
   } catch (error) {
     console.log(`❌ Error fixing ${filePath}: ${error.message}`);
@@ -103,7 +127,11 @@ function fixHoverSyntax(filePath) {
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // Function to find and fix all TypeScript/JSX files
 function fixAllFiles() {
   const filesToCheck = [
@@ -132,7 +160,11 @@ function fixAllFiles() {
   let totalFixed = 0;
   
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   filesToCheck.forEach(file => {
     const filePath = path.join(process.cwd(), file);
     if (fs.existsSync(filePath)) {
@@ -163,7 +195,11 @@ function fixAllFiles() {
 
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // Main execution
 try {
   console.log('🔍 Scanning for syntax errors...');
@@ -174,7 +210,11 @@ try {
   if (fixedCount > 0) {
     console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   
   if (fixedCount > 0) {
     console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
@@ -182,7 +222,11 @@ try {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     // Try to build after fixes
     console.log('🔨 Attempting build after fixes...');
     try {
@@ -203,7 +247,11 @@ try {
   process.exit(1);
 }
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   
 } catch (error) {
   console.error('❌ Error:', error.message);
@@ -221,4 +269,8 @@ try {
 }
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

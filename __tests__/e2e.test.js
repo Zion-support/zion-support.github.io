@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const { test, expect } = require('@playwright/test')'
 test.describe('"E2E"
   test('"homepage"
@@ -16,6 +19,7 @@ test.describe('"E2E"
     "await"
     await page.fill('input[name="name"
     await page.fill('input[name="email"
+<<<<<<< HEAD
     await page.fill('textarea[name="message"
 =======
 const { test, expect } = require('@playwright/test')';
@@ -97,3 +101,6 @@ const { test,expect } = require('@playwright/test')';; test.describe('E2E: Tests
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+    await page.fill('textarea[name="message"
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

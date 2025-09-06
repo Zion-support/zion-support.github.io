@@ -55,6 +55,11 @@ export function useMessageChannelHandler({
     }
   }, [handleMessage]);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }
 <<<<<<< HEAD
 =======
@@ -71,7 +76,11 @@ import { useEffect,useCallback } from 'react'; interface MessageEvent { data: un
 =======
 >>>>>>> 7a79ab46aa7794ec396c2388b3c38de69cb877ae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 }
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import Layout from "../components/Layout";
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from 'react';
 <<<<<<< HEAD
 import Layout from '../components/Layout';
@@ -185,18 +192,29 @@ export default function AboutPage() {
     }
   ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 import React from "react";
 import Layout from "../components/Layout";
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function About() {
   return (
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     <Layout
       title="About Us - Zion Tech Group"
       description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting-edge technology solutions."
@@ -204,12 +222,18 @@ export default function About() {
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
+<<<<<<< HEAD
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               About Zion Tech Group
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Leading technology solutions provider specializing in AI
               cybersecurity, and digital transformation.
+=======
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">About Zion Tech Group</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Leading technology solutions provider specializing in AI, cybersecurity, and digital transformation.
+>>>>>>> origin/automation-improvements-final
             </p>
           </div>
           <div className="text-center">
@@ -518,7 +542,14 @@ export default function AboutPage() {
 
 export default AboutPage;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

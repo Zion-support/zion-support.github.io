@@ -2,11 +2,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+import { defineConfig } from 'vite';
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16,12 +20,16 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import { defineConfig, splitVendorChunkPlugin } from 'vite';
+<<<<<<< HEAD
 =======
 import {defineConfig, splitVendorChunkPlugin} from 'vite';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 import { defineConfig } from 'vite';
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
 // https://vitejs.dev/config/
@@ -81,6 +89,22 @@ export default defineConfig({
     ]
     exclude: ['@radix-ui/react-icons']
   }
+<<<<<<< HEAD
+=======
+  server: {
+    port: 3000
+    host: true
+    open: true
+  }
+  preview: {
+    port: 4173
+    host: true
+    open: true
+  }
+<<<<<<< HEAD
+});
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -165,6 +189,7 @@ export default defineConfig({
 =======
 });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
   server: {
@@ -179,3 +204,6 @@ export default defineConfig({
   }
 });
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

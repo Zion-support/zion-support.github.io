@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -139,9 +144,13 @@ try {
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
@@ -153,6 +162,13 @@ console.log(" Starting comprehensive lint error fixes...")
         const importMatch = line.match(/import\s*{([^}]+)}\s*from\s*["']lucide-react[']
     if (content.includes('')
         if (line.includes('')
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          lines[i] = line.replace(/"[^"]*$/, '"")
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
           lines[i] = line.replace(/"[^"]*$/, '"")
 <<<<<<< HEAD
 =======
@@ -161,6 +177,10 @@ console.log(" Starting comprehensive lint error fixes...")
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

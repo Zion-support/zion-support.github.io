@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node
+const { execSync } = require('child_process')
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 #!/usr/bin/env node
@@ -265,12 +273,16 @@ echo "✅ Git workflow completed successfully"`;
 const { execSync } = require('child_process')
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 #!/usr/bin/env node
 const { execSync } = require('child_process')
 
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 function run(cmd) {
   return execSync(cmd, { stdio: 'inherit' })
 }
@@ -325,6 +337,13 @@ if (require.main === module) {
   }
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+module.exports = { run, currentBranch, commitAll, push, mergeIntoMain }
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -338,8 +357,12 @@ module.exports = { run, currentBranch, commitAll, push, mergeIntoMain }
 
 module.exports = { run, currentBranch, commitAll, push, mergeIntoMain }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 
 module.exports = { run, currentBranch, commitAll, push, mergeIntoMain }
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

@@ -13,7 +13,11 @@ class AdvancedAppImprovementSuite {}
     this.logFile = path.join(this.reportsDir, "app-improvement.log");
     this.ensureDirectories()}
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
@@ -30,7 +34,11 @@ class AdvancedAppImprovementSuite {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
@@ -43,6 +51,7 @@ class AdvancedAppImprovementSuite {
     fs.appendFileSync(this.logFile, logMessage + "\n");
 
   }
+<<<<<<< HEAD
 
   log(message) {
     const timestamp = new Date().toISOString();
@@ -51,6 +60,9 @@ class AdvancedAppImprovementSuite {
     fs.appendFileSync(this.logFile, logMessage + "\n");
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 =======
 <<<<<<< HEAD
@@ -61,7 +73,11 @@ class AdvancedAppImprovementSuite {
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   async runCommand(command, description) {
     this.log(`Starting: ${description}`);
     try {
@@ -118,7 +134,11 @@ class AdvancedAppImprovementSuite {
     this.log("Optimizing bundle size...");
     const optimizations = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       { command: "npm run analyze", description: "Bundle Analysis" },
       { command: "npm run build", description: "Production Build" }
     ];
@@ -198,6 +218,9 @@ class AdvancedAppImprovementSuite {
     this.log(`Report saved to: ${reportFile}`);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
   };
@@ -227,8 +250,12 @@ module.exports = AdvancedAppImprovementSuite;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
     console.log(`[${timestamp}] ${message}`);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   }
 
   async runPerformanceOptimizations() {
@@ -369,6 +396,7 @@ module.exports = AdvancedAppImprovementSuite;
 const suite = new AdvancedAppImprovementSuite();
 suite.run().catch(console.error);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -381,6 +409,8 @@ suite.run().catch(console.error);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     this.ensureDirectories();,
 }
 
@@ -873,4 +903,11 @@ suite.run();
 // Run the improvement suite
 const suite = new AdvancedAppImprovementSuite();
 suite.run().catch(console.error);
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

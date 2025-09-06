@@ -1,11 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 module.exports = {;
   apps:[;
 =======
 module.exports = {apps:[;
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     {;
       name:'error-fixer';
       script:'automation/lint-error-fixer.cjs';
@@ -92,6 +99,7 @@ module.exports = {apps:[;
     }
   ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 },
 =======
 =======
@@ -104,6 +112,16 @@ module.exports = {apps:[;
 =======
 }
 >>>>>>> origin/main
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+<<<<<<< HEAD
+},
+=======
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default {
   apps: [
     {
@@ -306,12 +324,22 @@ module.exports = {
 <<<<<<< HEAD
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 =======
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 }
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

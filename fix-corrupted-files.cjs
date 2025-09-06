@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -95,9 +100,13 @@ corruptedFiles.forEach(processFile);
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -114,6 +123,21 @@ const path = require('path')
     .replace(/script1\."src")
     .replace(/['"]react;['"]/g, ")
     .replace(/['"]framer-motion;['"]/g, ")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    .replace(/['"]lucide-react;['"]/g, ")import Image from 'next/image';
+;
+interface OptimizedImageProps {;
+  sr:c:string;
+  al:t:string;
+  widt:h:number;
+  heigh:t:number;
+  className?:string;
+  priority?:boolean;
+  quality?:number;
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -215,7 +239,11 @@ interface OptimizedImageProps {
   className?: string;
   priority?: boolean;
   quality?: number;
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }
 ;
 const:OptimizedImage:React.FC<OptimizedImageProps> = ({;
@@ -432,6 +460,7 @@ Object.entries(corruptedFiles).forEach(([filePath, content]) => {;
 console.log('Fixed corrupted files');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     .replace(/['"]lucide-react;['"]/g, ")
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
@@ -440,6 +469,8 @@ console.log('Fixed corrupted files');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   console.log(`Fixed ${fixedCount} corrupted files`);,
 }
 
@@ -448,4 +479,11 @@ if (require.main === module) {;
 }
 
 module.exports = { fixFile, isCorrupted, createServiceTemplate })
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

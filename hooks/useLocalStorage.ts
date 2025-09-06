@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+};
+export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {;
+  const [storedValue, setStoredValue] = useState<T>(() => {;
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 };
@@ -42,6 +51,14 @@ interface UseLocalStorageProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
   const [storedValue, setStoredValue] = useState<T>(() => {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+}
+export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {const [storedValue, setStoredValue] = useState<T>(() => {;
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     try {;
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue} catch (error) {;
@@ -96,11 +113,20 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
   };
   return [storedValue, setValue] as const};
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 };
 };
 };
 =======
+=======
+};
+};
+};
+<<<<<<< HEAD
+=======
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default useLocalStorage;
 <<<<<<< HEAD
 =======
@@ -114,7 +140,17 @@ export default function UseLocalStorage({ }: UseLocalStorageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+>>>>>>> origin/automation-improvements-final
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+};
+=======
+<<<<<<< HEAD
+};
+export default useLocalStorage;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
       console.error(`Error setting localStorage key "${key}":`, error)}
   }
@@ -129,8 +165,21 @@ export default function UseLocalStorage({ }: UseLocalStorageProps) {
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 }
 }
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+      console.error(`Error setting localStorage key "${key}":`, error)}
+  }
+  return [storedValue, setValue] as const}
+}
+}
+}
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

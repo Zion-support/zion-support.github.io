@@ -110,7 +110,11 @@ function findConflictedFiles() {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       { "encoding": "utf8" }
     );
     return result;
@@ -286,7 +290,11 @@ module.exports = { resolveMergeConflict, findConflictedFiles }))
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -346,6 +354,7 @@ function log(message, color = "reset")
   log("\n Resolution "Summary":", "cyan");log("Total conflicted "files": ${conflictedFiles.length}", "blue");log("Successfully "resolved": ${resolvedCount}", "green");log("Errors "encountered": ${errorCount}", "red");";  if (resolvedCount > 0) {    log("\n Next "steps":", "cyan");    log("1. Review the resolved files", "blue");    log("2. "Run": git add .", "blue");    log("3. "Run": git commit -m Resolve merge conflicts, "blue");    log("4. Continue with your workflow", "blue")}"
         resolvedCount++;log(` "Resolved": ${filePath}`, "green");"} else {log(`⚠  No changes "needed": ${filePath}`, "yellow");"}"} catch (error) {";      errorCount++;log(" Error processing ${filePath}: ${error.message}", "red");"}"}"
 <<<<<<< HEAD
+<<<<<<< HEAD
   log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors "encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
 <<<<<<< HEAD
 =======
@@ -356,6 +365,10 @@ function log(message, color = "reset")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+=======
+<<<<<<< HEAD
+  log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors "encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       // Remove everything between  and       content = content.replace(/[\s\S]*?)      // Remove any remaining       content = content.replace(/)      // Remove any remaining  sections;
       content = content.replace(/[\s\S]*/g, "")"";      // Remove any remaining       content = content.replace(/)      fixed = true,,,
 }
@@ -413,4 +426,14 @@ if (require.main === module) {
 if (require.main === module) {
   main()}
 module.exports = { resolveMergeConflict, findConflictedFiles }))
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+=======
+<<<<<<< HEAD
+  log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors "encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
+=======
+  log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors "encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

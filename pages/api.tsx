@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from "react";
+import MainLayout from "../src/components/layout/MainLayout";
+import { motion } from "framer-motion";
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -6,11 +13,15 @@ import React from 'react';
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 =======
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import {
   Code
   Check
@@ -336,6 +347,10 @@ export default function APIPage() {
       </div>
     </Layout>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   );
 }

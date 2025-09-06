@@ -1,4 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import js from "@eslint/js";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import tseslint from "@typescript-eslint/eslint-plugin";
+import tsparser from "@typescript-eslint/parser";
+import react from "eslint-plugin-react";
+import jsxA11y from "eslint-plugin-jsx-a11y";
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import js from '@eslint/js';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -292,8 +305,10 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
+>>>>>>> origin/automation-improvements-final
 
 =======
+<<<<<<< HEAD
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -303,6 +318,9 @@ import tsparser from "@typescript-eslint/parser";
 import react from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 >>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default [
   {
     ignores: [
@@ -396,6 +414,21 @@ export default [
         ...globals.browser,
         ...globals.node,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        React: "readonly",
+        jest: "readonly",
+        describe: "readonly",
+        it: "readonly",
+        test: "readonly",
+        expect: "readonly",
+        beforeEach: "readonly",
+        afterEach: "readonly",
+        beforeAll: "readonly",
+<<<<<<< HEAD
+        afterAll: "readonly",
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         React: 'readonly',
 <<<<<<< HEAD
 =======
@@ -448,6 +481,7 @@ export default [
         afterEach: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly'
+<<<<<<< HEAD
 =======
         React: "readonly",
         jest: "readonly",
@@ -460,6 +494,12 @@ export default [
         beforeAll: "readonly",
         afterAll: "readonly"
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+        afterAll: "readonly"
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       },
       parser: tsparser,
       parserOptions: {
@@ -489,6 +529,18 @@ export default [
       ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "react-hooks/exhaustive-deps": "warn",
+      "no-undef": "off",
+      "no-unused-vars": "off",
+      "no-console": "warn",
+      "react/prop-types": "off",
+<<<<<<< HEAD
+      "react/react-in-jsx-scope": "off",
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 =======
         describe: 'readonly',
@@ -517,6 +569,7 @@ export default [
       'no-console': 'warn',
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off'
+<<<<<<< HEAD
 =======
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
@@ -528,6 +581,13 @@ export default [
       "react/react-in-jsx-scope": "off"
 
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+      "react/react-in-jsx-scope": "off"
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     },
     settings: {
       react: {
@@ -559,13 +619,25 @@ export default [
       }
     },
     rules: {
+<<<<<<< HEAD
       "no-unused-vars": "warn",
       "no-console": "warn",
 
       "no-undef": "error"
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+  }
+];
+<<<<<<< HEAD
+=======
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'no-undef': 'error'
+    }
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
       'no-unused-vars': 'warn'
     }
@@ -599,7 +671,13 @@ export default [
       'working-automation-suite.cjs'
     ]
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   }
 ];
+>>>>>>> origin/automation-improvements-final
+=======
 
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

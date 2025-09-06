@@ -3,6 +3,13 @@
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const { execSync } = require('child_process');
+
+class PerformanceOptimizer {
+  constructor() {
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 class PerformanceOptimizer {
@@ -51,11 +58,16 @@ class PerformanceOptimizer {
     this.projectRoot = process.cwd();
     this.reportFile = path.join(__dirname, '../logs/performance-optimization-report.json');
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 class PerformanceOptimizer {
   constructor() {
+>>>>>>> origin/automation-improvements-final
     this.optimizations = [];
     this.logFile = path.join(__dirname, '..', 'logs', 'performance-optimizer.log');
     this.ensureLogDirectory();
@@ -76,7 +88,11 @@ class PerformanceOptimizer {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   }
 
   async optimizePerformance() {
@@ -133,7 +149,11 @@ class PerformanceOptimizer {
     const files = [];
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     try {
       this.log('Starting performance optimization...');
       
@@ -243,7 +263,11 @@ const path = require('path')
         const content = fs.readFileSync(file, 'utf8')
     optimized = optimized.replace(/imports+{s*([^}]+)s*}s+froms+['"]([^'')]
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
   formatBytes(bytes) {
     if (bytes === 0) return '0 Bytes';
@@ -459,7 +483,10 @@ optimizer.optimizePerformance().then(report => {
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const fs = require("fs")
 const path = require("path")
 #!/usr/bin/env node;
@@ -777,4 +804,10 @@ const path = require('path')
 }
 const optimizer = new PerformanceOptimizer()
 optimizer.run().catch(console.error)
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

@@ -33,4 +33,8 @@ console.log('[netlify] Functions manifest generated at', manifestPath);
 =======
 >>>>>>> 5d987fe43090d7728810c06da2fede859a7f3c62
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

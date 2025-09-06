@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 };
@@ -12,31 +18,34 @@ export const dynamicImport = (importFn) => { return React.lazy(importFn)}; expor
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 export const dynamicImport = (importFn) => { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}; export const preloadComponent = (importFn) => { if (typeof window !== &apos;undefined&apos;) { importFn()} };
+>>>>>>> origin/automation-improvements-final
 <<<<<<< HEAD
-module.exports = const dynamicImport = (importFn) => { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}; export const preloadComponent = (importFn) => { if (typeof window !== "undefined") { importFn()} };''"
-import { lazy } from 'react';
+}};
+export const dynamicImport = (importFn) = > { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) = > { return dynamicImport(() = > import(componentPath))}; export const preloadComponent = (importFn) = > { if (typeof window ! = = 'undefined') { importFn()} };
+export const dynamicImport = (importFn) = > { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) = > { return dynamicImport(() = > import(componentPath))}; export const preloadComponent = (importFn) = > { if (typeof window ! = = 'undefined') { importFn()} };
+export const dynamicImport = (importFn) = > { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) = > { return dynamicImport(() = > import(componentPath))}; export const preloadComponent = (importFn) = > { if (typeof window ! = = 'undefined') { importFn()} };
+;
+;
 =======
-<<<<<<< HEAD
-import { lazy } from 'react';
 
-=======
-module.exports = const dynamicImport = (importFn) => { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}; export const preloadComponent = (importFn) => { if (typeof window !== "undefined") { importFn()} };''"
-import { lazy } from 'react';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-export const dynamicImport = (importFn) => {
-  return lazy(importFn);
-};
-export const createLazyComponent = (componentPath) => {
-  return dynamicImport(() => import(componentPath));
-};
-export const preloadComponent = (importFn) => {
-  if (typeof window !== 'undefined') {
-    importFn();
-  }
-};
+}
 <<<<<<< HEAD
-export const dynamicImport = (importFn) => { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}; export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} };
+},
+export const dynamicImport = (importFn) => { return React.lazy(importFn)}, export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}, export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} },
+export const dynamicImport = (importFn) => { return React.lazy(importFn)}, export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}, export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} },
+export const dynamicImport = (importFn) => { return React.lazy(importFn)}, export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}, export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} },
+
+,
+
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+<<<<<<< HEAD
+},;
+export const dynamicImport = (importFn) => { return React.lazy(importFn)}, export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}, export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} },;
+export const dynamicImport = (importFn) => { return React.lazy(importFn)}, export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}, export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} },;
+export const dynamicImport = (importFn) => { return React.lazy(importFn)}, export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}, export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} },;
+;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
 =======
 <<<<<<< HEAD
 export const dynamicImport = (importFn) => { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}; export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} };
@@ -55,11 +64,19 @@ export const dynamicImport = (importFn) => { return React.lazy(importFn)}; expor
 export const dynamicImport = (importFn) => { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}; export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} };
 ,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 }}
 export const dynamicImport = (importFn) = > { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) = > { return dynamicImport(() = > import(componentPath))}; export const preloadComponent = (importFn) = > { if (typeof window ! = = 'undefined') { importFn()} }
 export const dynamicImport = (importFn) = > { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) = > { return dynamicImport(() = > import(componentPath))}; export const preloadComponent = (importFn) = > { if (typeof window ! = = 'undefined') { importFn()} }
 export const dynamicImport = (importFn) = > { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) = > { return dynamicImport(() = > import(componentPath))}; export const preloadComponent = (importFn) = > { if (typeof window ! = = 'undefined') { importFn()} }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 #!/usr/bin/env node;
@@ -79,6 +84,19 @@ for (const file of filesToFix) {
       totalFixed++}
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+    return match.replace(/,\s*$/, '')
+  // Fix extra commas in style "objects": textAlign: 'center', , -> "textAlign"
+  content = content.replace(/(\w+):\s*'[^']*',\s*,/g, '$"1"
+  content = content.replace(/(\w+):\s*"[^"]*",\s*,/g, '$"1": "$2"
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -468,7 +486,19 @@ console.log(`✅ Fixed ${fixedCount} files`);
   }
 }
 
+<<<<<<< HEAD
 // Run the syntax fixer
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.run().catch(console.error);
 >>>>>>> origin/main
+=======
+<<<<<<< HEAD
+// Run the syntax fixer
+const fixer = new ComprehensiveSyntaxFixer();
+fixer.run().catch(console.error);
+=======
+console.log(`✅ Fixed ${fixedCount} files`);
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

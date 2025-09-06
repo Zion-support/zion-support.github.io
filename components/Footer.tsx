@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
@@ -8,6 +9,9 @@ import Link from 'next/link';
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
 
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from "react";
 import Link from "next/link";
 import {
@@ -20,11 +24,34 @@ import {
   Instagram
   ArrowRight
 } from "lucide-react";
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+<<<<<<< HEAD
+=======
+import React from 'react;';
+import Link from 'next/link';
+<<<<<<< HEAD
+import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const footerLinks = {
     services: [
+<<<<<<< HEAD
+<<<<<<< HEAD
+      { name: "AI Services", href: "/ai-services" },
+      { name: "IT Services", href: "/it-services" },
+      { name: "Micro SaaS", href: "/micro-saas" },
+      { name: "Blockchain", href: "/blockchain" },
+      { name: "IoT Solutions", href: "/iot" },
+      { name: "Cybersecurity", href: "/cybersecurity" },
+    ],
+=======
       { name: "AI Services", href: "/ai-services" }
       { name: "IT Services", href: "/it-services" }
       { name: "Micro SaaS", href: "/micro-saas" }
@@ -32,6 +59,7 @@ export default function Footer() {
       { name: "IoT Solutions", href: "/iot" }
       { name: "Cybersecurity", href: "/cybersecurity" }
     ]
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     solutions: [
       { name: "Enterprise Solutions", href: "/enterprise" }
       { name: "Startup Solutions", href: "/startup" }
@@ -49,6 +77,50 @@ export default function Footer() {
       { name: "Contact", href: "/contact" }
     ]
     resources: [
+<<<<<<< HEAD
+      { name: "Blog", href: "/blog" },
+      { name: "Documentation", href: "/docs" },
+      { name: "API Reference", href: "/api" },
+      { name: "Tutorials", href: "/tutorials" },
+      { name: "White Papers", href: "/white-papers" },
+      { name: "Support", href: "/support" },
+    ],
+=======
+      { name: 'AI Services', href: '/ai-services' },
+      { name: 'IT Services', href: '/it-services' },
+      { name: 'Micro SaaS', href: '/micro-saas' },
+      { name: 'Blockchain', href: '/blockchain' },
+      { name: 'IoT Solutions', href: '/iot' },
+      { name: 'Cybersecurity', href: '/cybersecurity' }
+    ],
+    solutions: [
+      { name: 'Enterprise Solutions', href: '/enterprise' },
+      { name: 'Startup Solutions', href: '/startup' },
+      { name: 'E-commerce', href: '/ecommerce' },
+      { name: 'Healthcare', href: '/industries/healthcare' },
+      { name: 'Finance', href: '/industries/finance' },
+      { name: 'Education', href: '/industries/education' }
+    ],
+    company: [
+      { name: 'About Us', href: '/about' },
+      { name: 'Our Team', href: '/team' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'News', href: '/news' },
+      { name: 'Contact', href: '/contact' }
+    ],
+    resources: [
+      { name: 'Blog', href: '/blog' },
+      { name: 'Documentation', href: '/docs' },
+      { name: 'API Reference', href: '/api' },
+      { name: 'Tutorials', href: '/tutorials' },
+      { name: 'White Papers', href: '/white-papers' },
+      { name: 'Support', href: '/support' }
+    ]
+>>>>>>> origin/automation-improvements-final
+  };
+
+=======
       { name: "Blog", href: "/blog" }
       { name: "Documentation", href: "/docs" }
       { name: "API Reference", href: "/api" }
@@ -57,6 +129,7 @@ export default function Footer() {
       { name: "Support", href: "/support" }
     ]
   }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
@@ -68,10 +141,25 @@ export default function Footer() {
               Zion Tech Group
             </Link>
             <p className="text-gray-300 mb-6 max-w-md">
+<<<<<<< HEAD
+<<<<<<< HEAD
+              Leading technology solutions provider specializing in AI,
+              cybersecurity, cloud infrastructure, quantum computing,
+              blockchain, IoT, and digital transformation services.
+            </p>
+
+=======
+              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
+              quantum computing, blockchain, IoT, and digital transformation services.
+            </p>
+            
+>>>>>>> origin/automation-improvements-final
+=======
               Leading technology solutions provider specializing in AI
               cybersecurity, cloud infrastructure, quantum computing
               blockchain, IoT, and digital transformation services.
             </p>
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
@@ -85,6 +173,15 @@ export default function Footer() {
               <div className="flex items-start text-gray-300">
                 <MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                <span>
+                  364 E Main St STE 1008
+                  <br />
+                  Middletown DE 19709
+                </span>
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                 <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
 <<<<<<< HEAD
 =======
@@ -182,6 +279,7 @@ const Footer: React.FC = () => {
                 <MapPin className=w-4 h-4 mr-2 text-blue-400" />
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
                 <span>
@@ -190,6 +288,9 @@ const Footer: React.FC = () => {
                   Middletown DE 19709
                 </span>
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
               </div>
             </div>
           </div>
@@ -198,13 +299,22 @@ const Footer: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
+<<<<<<< HEAD
                   <Link
                     href={link.href}
+=======
+                  <Link 
+                    href={link.href} 
+>>>>>>> origin/automation-improvements-final
                     className="text-gray-300 hover:text-white transition-colors"
                   >
                     {link.name}
@@ -240,10 +350,17 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
           {/* Solutions */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
@@ -266,7 +383,11 @@ const Footer: React.FC = () => {
                     href={link.href}
                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                   >
                     {link.name}
                   </Link>
@@ -278,10 +399,17 @@ const Footer: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
           {/* Company & Resources */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
@@ -304,7 +432,11 @@ const Footer: React.FC = () => {
                     href={link.href}
                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                   >
                     {link.name}
                   </Link>
@@ -312,13 +444,26 @@ const Footer: React.FC = () => {
               ))}
             </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
             
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (
@@ -403,6 +548,14 @@ const Footer: React.FC = () => {
             {/* Legal Links */}
             <div className="flex space-x-6 text-sm">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              <Link
+                href="/privacy"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
 <<<<<<< HEAD
 =======
@@ -436,6 +589,7 @@ const Footer: React.FC = () => {
             <div className="flex space-x-6 text-sm>
               <Link href="/privacy" className=text-gray-400 hover:text-white transition-colors">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
               <Link
@@ -443,6 +597,9 @@ const Footer: React.FC = () => {
                 className="text-gray-400 hover:text-white transition-colors"
               >
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                 Privacy Policy
               </Link>
               <Link
@@ -464,6 +621,10 @@ const Footer: React.FC = () => {
     </footer>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }
 =======
 <<<<<<< HEAD
@@ -473,4 +634,11 @@ const Footer: React.FC = () => {
 
 export default Footer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

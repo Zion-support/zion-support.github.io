@@ -2,11 +2,61 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 
 >>>>>>> origin/main
+=======
+=======
+<<<<<<< HEAD
+import React from 'react';
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import {
+  ArrowRight,
+  Building2,
+  Rocket,
+  Factory,
+  Brain,
+  Cloud,
+  Shield,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
+  DollarSign,
+  Award,
+  Globe,
+  Lock,
+  Cpu,
+  Bot,
+  FileText,
+  Image,
+  Video,
+  Mic,
+  Code,
+  Settings,
+  Monitor,
+  Smartphone,
+  Server,
+  Network,
+  Car,
+  Rocket as RocketIcon,
+  Heart,
+  Building,
+  Database,
+  Sprout
+} from 'lucide-react';
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -48,9 +98,12 @@ import {
 } from 'lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const microSaasProducts = [
   {
     id: 1
@@ -132,6 +185,7 @@ export default function MicroSaasPage() {
                 <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   View Demo
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </Link>
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -141,6 +195,8 @@ export default function MicroSaasPage() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 </Link>
 >>>>>>> origin/main
 import React from 'react';
@@ -221,10 +277,17 @@ export default function MicroSaaS() {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   }, []);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   const contact: ContactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -275,9 +338,15 @@ export default function MicroSaasPage() {
                 </Link>
               </div>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   const products = [
     {
       id: 1
@@ -696,7 +765,11 @@ export default function MicroSaas() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
             </motion.div>
           </div>
         </section>
@@ -705,9 +778,15 @@ export default function MicroSaas() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         {/* Products Grid */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -754,7 +833,11 @@ export default function MicroSaas() {
                   key={solution.id}
                   className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -762,7 +845,11 @@ export default function MicroSaas() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
                 >
                   <div className="flex items-center mb-4">
@@ -820,7 +907,11 @@ export default function MicroSaas() {
                   </div>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                   <Link
                     href="/contact"
                     className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
@@ -834,7 +925,11 @@ export default function MicroSaas() {
                     Get Started
                     <ArrowRight className="ml-2 w-4 h-4" />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                   </Link>
                 </motion.div>
               ))}
@@ -846,9 +941,15 @@ export default function MicroSaas() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         {/* Categories */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -863,7 +964,11 @@ export default function MicroSaas() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -927,7 +1032,11 @@ Ready to Transform Your Business?
                 >
                   View IT Services
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                 </Link>
               </div>
             </motion.div>
@@ -940,17 +1049,29 @@ Ready to Transform Your Business?
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+<<<<<<< HEAD
 >>>>>>> origin/main
 }
+=======
+            </div>
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
           </section>
         </main>
       </ErrorBoundary>
     </>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
@@ -966,3 +1087,17 @@ Ready to Transform Your Business?
 =======
 }
 >>>>>>> origin/main
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

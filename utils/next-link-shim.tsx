@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -44,8 +49,28 @@
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+import React from 'react';
+type Href = string | { pathname?: string; href?: string };
+type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href: Href;
+  children: React.ReactNode;
+=======
+}}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+};
+};
+  return (;
+    <a href={resolved} className={className} {...rest}>;
+      {children};
+};
+};
+};
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from 'react';
 // Define HTMLAnchorElement if not available
 interface HTMLElement {
@@ -66,6 +91,7 @@ type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: React.ReactNode;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
@@ -80,6 +106,8 @@ type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 };
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }
 >>>>>>> origin/main
 function resolveHref(href: Href): string {
@@ -100,6 +128,12 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
     });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -131,14 +165,26 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   return (
     <a href={resolved} className={className} {...rest}>
       {children}
     </a>
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -174,7 +220,11 @@ import React from 'react'; type Href = string | { pathname?: string; href?: stri
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 }
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

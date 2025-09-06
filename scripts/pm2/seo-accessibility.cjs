@@ -2,7 +2,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 =======
@@ -538,14 +541,23 @@ monitor.run().catch(error => {
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node;
 /**
  * PM2 SEO & Accessibility Service;
  * Checks SEO and accessibility compliance;
  */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -557,14 +569,19 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -580,6 +597,11 @@ const path = require('path');
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 class SEOAccessibility {}
   constructor() {}
     this.processName = process.env.PM2_PROCESS_NAME || 'seo-accessibility';
@@ -601,6 +623,9 @@ class SEOAccessibility {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
@@ -619,9 +644,13 @@ class SEOAccessibility {}
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -634,6 +663,11 @@ class SEOAccessibility {}
     try {}
       this.log('Checking SEO compliance...');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -643,13 +677,18 @@ class SEOAccessibility {}
       const seoIssues = [];
       const htmlFiles = this.findHTMLFiles();
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       
       const seoIssues = [];
       const htmlFiles = this.findHTMLFiles();
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -664,6 +703,11 @@ class SEOAccessibility {}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       for (const file of htmlFiles) {}
         try {}
           const content = fs.readFileSync(file, 'utf8');
@@ -674,6 +718,13 @@ class SEOAccessibility {}
         };
       };
       this.log(`Found ${seoIssues.length} SEO issues`);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -688,9 +739,13 @@ class SEOAccessibility {}
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       return {}
         checked: true,
         issues: seoIssues,
@@ -705,6 +760,13 @@ class SEOAccessibility {}
   findHTMLFiles() {}
     const htmlFiles = [];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -718,9 +780,13 @@ class SEOAccessibility {}
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     const scanDir = (dir) => {}
       try {}
         const files = fs.readdirSync(dir);
@@ -728,6 +794,13 @@ class SEOAccessibility {}
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          
+          
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -741,9 +814,13 @@ class SEOAccessibility {}
 =======
           
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
           if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}
             scanDir(filePath);
           } else if (stat.isFile() && (file.endsWith('.html') || file.endsWith('.htm'))) {}
@@ -755,6 +832,13 @@ class SEOAccessibility {}
       };
     };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -768,9 +852,13 @@ class SEOAccessibility {}
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     // Scan common directories;
     const scanDirs = ['public', 'dist', 'out', 'build', 'pages'];
     for (const dir of scanDirs) {}
@@ -783,6 +871,13 @@ class SEOAccessibility {}
   analyzeSEO(content, filePath) {}
     const issues = [];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -796,9 +891,13 @@ class SEOAccessibility {}
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     // Check for title tag;
     if (!content.includes('<title>')) {}
       issues.push({})
@@ -872,6 +971,11 @@ class SEOAccessibility {}
     try {}
       this.log('Checking accessibility compliance...');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -881,13 +985,18 @@ class SEOAccessibility {}
       const a11yIssues = [];
       const htmlFiles = this.findHTMLFiles();
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       
       const a11yIssues = [];
       const htmlFiles = this.findHTMLFiles();
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -902,6 +1011,11 @@ class SEOAccessibility {}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       for (const file of htmlFiles) {}
         try {}
           const content = fs.readFileSync(file, 'utf8');
@@ -912,6 +1026,13 @@ class SEOAccessibility {}
         };
       };
       this.log(`Found ${a11yIssues.length} accessibility issues`);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -926,9 +1047,13 @@ class SEOAccessibility {}
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       return {}
         checked: true,
         issues: a11yIssues,
@@ -943,6 +1068,13 @@ class SEOAccessibility {}
   analyzeAccessibility(content, filePath) {}
     const issues = [];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -956,9 +1088,13 @@ class SEOAccessibility {}
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     // Check for proper heading hierarchy;
     const headings = content.match(/<h[1-6][^>]*>/g) || [];
     let lastLevel = 0;
@@ -1027,6 +1163,17 @@ class SEOAccessibility {}
     try {}
       this.log('Checking performance...');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      
+      const performanceIssues = [];
+      
+      
+      const performanceIssues = [];
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1047,9 +1194,13 @@ class SEOAccessibility {}
       const performanceIssues = [];
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       // Check bundle size;
       const distDir = 'dist';
       if (fs.existsSync(distDir)) {}
@@ -1082,6 +1233,13 @@ class SEOAccessibility {}
       };
       this.log(`Found ${performanceIssues.length} performance issues`);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1095,9 +1253,13 @@ class SEOAccessibility {}
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       return {}
         checked: true,
         issues: performanceIssues,
@@ -1111,6 +1273,13 @@ class SEOAccessibility {}
   calculateBundleSize(dir) {}
     let totalSize = 0;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1124,9 +1293,13 @@ class SEOAccessibility {}
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     const scanDir = (currentDir) => {}
       try {}
         const files = fs.readdirSync(currentDir);
@@ -1134,6 +1307,13 @@ class SEOAccessibility {}
           const filePath = path.join(currentDir, file);
           const stat = fs.statSync(filePath);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          
+          
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1147,9 +1327,13 @@ class SEOAccessibility {}
 =======
           
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
           if (stat.isDirectory()) {}
             scanDir(filePath);
           } else if (stat.isFile() && (file.endsWith('.js') || file.endsWith('.css'))) {}
@@ -1161,6 +1345,13 @@ class SEOAccessibility {}
       };
     };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1174,9 +1365,13 @@ class SEOAccessibility {}
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     scanDir(dir);
     return totalSize;
   };
@@ -1184,6 +1379,13 @@ class SEOAccessibility {}
     const imageFiles = [];
     const extensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1197,9 +1399,13 @@ class SEOAccessibility {}
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     const scanDir = (dir) => {}
       try {}
         const files = fs.readdirSync(dir);
@@ -1207,6 +1413,13 @@ class SEOAccessibility {}
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          
+          
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1220,9 +1433,13 @@ class SEOAccessibility {}
 =======
           
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
           if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}
             scanDir(filePath);
           } else if (stat.isFile() && extensions.some(ext => file.toLowerCase().endsWith(ext))) {}
@@ -1234,6 +1451,13 @@ class SEOAccessibility {}
       };
     };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1247,9 +1471,13 @@ class SEOAccessibility {}
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     const scanDirs = ['public', 'dist', 'out', 'build', 'assets', 'images'];
     for (const dir of scanDirs) {}
       if (fs.existsSync(dir)) {}
@@ -1266,6 +1494,13 @@ class SEOAccessibility {}
     try {}
       this.log('Running Lighthouse audit...');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1279,9 +1514,13 @@ class SEOAccessibility {}
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       // Check if Lighthouse is available;
       try {}
         execSync('npx lighthouse --version', { stdio: 'pipe' }
@@ -1294,6 +1533,13 @@ class SEOAccessibility {}
       // Run Lighthouse audit (simplified - would need a running server);
       this.log('Lighthouse audit requires a running server - skipping for now');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1307,9 +1553,13 @@ class SEOAccessibility {}
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       return {}
         audited: false,
         reason: 'No running server available for audit'
@@ -1336,6 +1586,11 @@ class SEOAccessibility {}
       };
     };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1345,9 +1600,13 @@ class SEOAccessibility {}
     const reportFile = path.join(__dirname, '../../logs/pm2/seo-accessibility-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
     const reportFile = path.join(__dirname, '../../logs/pm2/seo-accessibility-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -1355,6 +1614,7 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     const reportFile = path.join(__dirname, '../../logs/pm2/seo-accessibility-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -1366,11 +1626,21 @@ class SEOAccessibility {}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     this.log(`SEO & Accessibility report generated: ${reportFile}`);
     return report;
   };
   async start() {}
     this.log(`${this.processName} started`);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1384,9 +1654,13 @@ class SEOAccessibility {}
                          (report.accessibility.totalIssues || 0) + 
                          (report.performance.totalIssues || 0);
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     
     try {}
       const report = await this.generateReport();
@@ -1395,6 +1669,7 @@ class SEOAccessibility {}
                          (report.accessibility.totalIssues || 0) + 
                          (report.performance.totalIssues || 0);
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1412,6 +1687,11 @@ class SEOAccessibility {}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       if (totalIssues === 0) {}
         this.log('SEO & Accessibility check completed - no issues found');
       } else {}
@@ -1429,6 +1709,11 @@ if (require.main === module) {}
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+module.exports = SEOAccessibility;module.exports = SEOAccessibility;
+module.exports = SEOAccessibility;module.exports = SEOAccessibility;
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 module.exports = SEOAccessibility;
@@ -1448,8 +1733,12 @@ module.exports = SEOAccessibility;module.exports = SEOAccessibility;
 module.exports = SEOAccessibility;
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 module.exports = SEOAccessibility;module.exports = SEOAccessibility;
 module.exports = SEOAccessibility;module.exports = SEOAccessibility;
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

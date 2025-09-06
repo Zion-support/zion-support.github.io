@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -59,9 +64,13 @@ module.exports = ServicesComprehensiveFixer;
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node;
 const fs = require('fs')
       this.log(' Comprehensive fix for data/services.ts...')
@@ -75,6 +84,13 @@ const fs = require('fs')
       content = content.replace(/(\w+):\s*(\w+)\s*\n/g, '$"1"
       content = content.replace(/'([^']*)'\s*\n\s*'([^']*)'/g, '
       content = content.replace(/"([^"]*)"\s*\n\s*"([^"]*)"/g, '"$1",\n      "$2"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n    $"2"
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n    $"2"
 <<<<<<< HEAD
 =======
@@ -83,6 +99,10 @@ const fs = require('fs')
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

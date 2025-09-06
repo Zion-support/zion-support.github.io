@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 #!/usr/bin/env node;
@@ -105,12 +113,16 @@ for (const file of files) {
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 console.log(' Starting comprehensive build fix...')
   if (: JSX.Element =>')
     fixed = fixed.replace(/\): JSX\.Element =>/g, ') =>'
@@ -126,6 +138,13 @@ console.log(' Starting comprehensive build fix...')
     && !fixed.includes('import React from')
     fixed = fixed.replace(/import React, \{([^}]+)\} from 'react'}/g, 'import React, { $1 } from "react"
   fixed = fixed.replace(/className="([^"]*)\s+"/g, 'className="$1"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  fixed = fixed.replace(/href=""tel": \s*\+/g, 'href=""tel")
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   fixed = fixed.replace(/href=""tel": \s*\+/g, 'href=""tel")
 <<<<<<< HEAD
 =======
@@ -134,6 +153,10 @@ console.log(' Starting comprehensive build fix...')
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

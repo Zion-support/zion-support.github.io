@@ -1,8 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
+=======
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   ArrowRight,
   Award,
   BarChart3,
@@ -21,7 +29,11 @@ import {
   Calendar,
   ShoppingCart,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   BookOpen,
   Brain,
   Building,
@@ -60,6 +72,13 @@ import {
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+  Truck,
+  Users,
+  X,
+  Zap,
+} from "lucide-react";
+=======
+<<<<<<< HEAD
   Truck,
   Users,
   X,
@@ -107,12 +126,16 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 } from 'lucide-react';
+>>>>>>> origin/automation-improvements-final
 
 =======
+<<<<<<< HEAD
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   ArrowRight
   Award
   BarChart3
@@ -155,7 +178,11 @@ import {
   X
   Zap
 } from "lucide-react";
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const navigationItems = [
   {
     title: "Services"

@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')      return size}}
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -271,9 +280,13 @@ const path = require('path')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
       return size}}
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     totalSize = getDirectorySize(buildDir);
     totalSize = getDirectorySize(buildDir);
 
@@ -302,6 +315,12 @@ if (require.main === module) {
   });
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -314,6 +333,7 @@ module.exports = SimpleAutomationRunner;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 module.exports = { runSimpleAutomation }) {
      {
@@ -322,6 +342,9 @@ module.exports = { runSimpleAutomation }) {
 =======
 >>>>>>> origin/main
 
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
@@ -353,6 +376,13 @@ const { execSync } = require('child_process')
         return { "status": 'skipped', "message"}
     console.error(' Simple automation "failed")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        "status"
+        "status"
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -370,6 +400,10 @@ const { execSync } = require('child_process')
 =======
         "status"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

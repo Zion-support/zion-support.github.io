@@ -154,7 +154,11 @@ main();
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const { execSync } = require('child_process')
 // console.log(' Comprehensive Code Fixer')
 console.log('')
@@ -203,4 +207,8 @@ console.log('')
 =======
     console.error(' Comprehensive Code Fixer "failed")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

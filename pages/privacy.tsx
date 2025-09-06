@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from 'react';
 <<<<<<< HEAD
 import Head from 'next/head';
@@ -14,18 +19,36 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
 import ErrorBoundary from '../components/ErrorBoundary';
 import { motion } from 'framer-motion';
+>>>>>>> origin/automation-improvements-final
 <<<<<<< HEAD
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import {
-  Shield,
-  Lock,
-  Eye,
-  Database,
-  Globe,
-  User,
-  Settings,
-  AlertTriangle,
-  CheckCircle,
-  Mail,;
+  Shield
+  Lock
+  Eye
+  Database
+  Mail
+  Phone
+  MapPin
+  Users
+} from "lucide-react";
+import MainLayout from "../components/layout/MainLayout";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Shield, Lock, Eye, Database, Mail, Phone, MapPin, Users } from 'lucide-react';
+import MainLayout from '../components/layout/MainLayout';
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 =======
 import { 
   Shield, Lock, Eye, Database, Globe, 
@@ -184,6 +207,7 @@ const PrivacyPage: React.FC = () => {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
@@ -203,12 +227,22 @@ import {
   Users
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
+=======
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function PrivacyPage() {
   return (
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     <MainLayout
       title="Privacy Policy - Zion Tech Group"
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
@@ -225,12 +259,18 @@ export default function PrivacyPage() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
+<<<<<<< HEAD
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Privacy Policy
               </h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Your privacy is important to us. Learn how we collect, use, and
                 protect your information.
+=======
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Privacy Policy</h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Your privacy is important to us. Learn how we collect, use, and protect your information.
+>>>>>>> origin/automation-improvements-final
               </p>
             </motion.div>
           </div>
@@ -245,6 +285,7 @@ export default function PrivacyPage() {
               className="bg-white rounded-2xl shadow-lg p-8 md:p-12"
             >
               <div className="prose prose-lg max-w-none">
+<<<<<<< HEAD
                 <h2 className="text-2xl font-bold mb-6">
                   Information We Collect
                 </h2>
@@ -256,6 +297,15 @@ export default function PrivacyPage() {
                 <h3 className="text-xl font-semibold mb-4">
                   Personal Information
                 </h3>
+=======
+                <h2 className="text-2xl font-bold mb-6">Information We Collect</h2>
+                <p className="mb-6">
+                  We collect information you provide directly to us, such as when you create an account, 
+                  use our services, or contact us for support.
+                </p>
+                
+                <h3 className="text-xl font-semibold mb-4">Personal Information</h3>
+>>>>>>> origin/automation-improvements-final
                 <ul className="list-disc pl-6 mb-6">
                   <li>Name and contact information</li>
                   <li>Email address</li>
@@ -263,9 +313,17 @@ export default function PrivacyPage() {
                   <li>Company information</li>
                   <li>Payment information</li>
                 </ul>
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
+=======
+                <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
+>>>>>>> origin/automation-improvements-final
                 <ul className="list-disc pl-6 mb-6">
                   <li>How you use our services</li>
                   <li>Device information</li>
@@ -273,6 +331,11 @@ export default function PrivacyPage() {
                   <li>Browser type and version</li>
                   <li>Operating system</li>
                 </ul>
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   How We Use Your Information
                 </h2>
@@ -280,6 +343,17 @@ export default function PrivacyPage() {
                   We use the information we collect to provide, maintain, and
                   improve our services.
                 </p>
+<<<<<<< HEAD
+
+=======
+                <h2 className="text-2xl font-bold mb-6 mt-12">How We Use Your Information</h2>
+                <p className="mb-6">
+                  We use the information we collect to provide, maintain, and improve our services.
+                </p>
+                
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                 <ul className="list-disc pl-6 mb-6">
                   <li>Provide and maintain our services</li>
                   <li>Process transactions</li>
@@ -288,6 +362,11 @@ export default function PrivacyPage() {
                   <li>Improve our services and develop new features</li>
                   <li>Monitor and analyze usage and trends</li>
                 </ul>
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   Information Sharing
                 </h2>
@@ -295,24 +374,50 @@ export default function PrivacyPage() {
                   We do not sell, trade, or otherwise transfer your personal
                   information to third parties without your consent, except as
                   described in this policy.
+=======
+                <h2 className="text-2xl font-bold mb-6 mt-12">Information Sharing</h2>
+                <p className="mb-6">
+                  We do not sell, trade, or otherwise transfer your personal information to third parties 
+                  without your consent, except as described in this policy.
+>>>>>>> origin/automation-improvements-final
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
                 <p className="mb-6">
+<<<<<<< HEAD
                   We implement appropriate security measures to protect your
                   personal information against unauthorized access, alteration
                   disclosure, or destruction.
+=======
+                  We implement appropriate security measures to protect your personal information against 
+                  unauthorized access, alteration, disclosure, or destruction.
+>>>>>>> origin/automation-improvements-final
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
                 <p className="mb-6">
+<<<<<<< HEAD
                   You have the right to access, update, or delete your personal
                   information. You may also opt out of certain communications
                   from us.
+=======
+                  You have the right to access, update, or delete your personal information. You may also 
+                  opt out of certain communications from us.
+>>>>>>> origin/automation-improvements-final
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
                 <p className="mb-6">
+<<<<<<< HEAD
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
+<<<<<<< HEAD
+
+=======
+                  If you have any questions about this Privacy Policy, please contact us at:
+                </p>
+                
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
@@ -331,7 +436,15 @@ export default function PrivacyPage() {
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 <p className="text-sm text-gray-600 mt-8">
+=======
+                <p className="text-sm text-gray-600 mt-8">
+>>>>>>> origin/automation-improvements-final
                   Last updated: January 2024
                 </p>
               </div>
@@ -343,6 +456,15 @@ export default function PrivacyPage() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 import Layout from '../components/layout/Layout';
@@ -840,6 +962,7 @@ export default PrivacyPage;
  
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
  
@@ -853,3 +976,10 @@ export default PrivacyPage;
 =======
 
 >>>>>>> origin/main
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

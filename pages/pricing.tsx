@@ -3,7 +3,11 @@ import Head from 'next/head';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 <<<<<<< HEAD
 const PricingPage: React.FC = () => {
@@ -87,8 +91,11 @@ const PricingPage: React.FC = () => {
   );
 }
 export default PricingPage;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -100,6 +107,17 @@ import Head from 'next/head';
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+import React from 'react';
+import Head from 'next/head';
+=======
+
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import {
   Check
   Star
@@ -888,15 +906,22 @@ export default function PricingPage() {
         </div>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
     </UltraFuturisticBackground>
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   )
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     </UltraFuturisticBackground>
@@ -912,3 +937,11 @@ export default function PricingPage() {
 =======
 }
 >>>>>>> origin/main
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
+  );
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

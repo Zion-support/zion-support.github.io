@@ -2,7 +2,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 =======
@@ -370,14 +373,23 @@ scanner.run().catch(error => {
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node;
 /**
  * PM2 Security Scanner Service;
  * Scans for security vulnerabilities and issues;
  */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -389,14 +401,19 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -412,6 +429,11 @@ const path = require('path');
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 class SecurityScanner {}
   constructor() {}
     this.processName = process.env.PM2_PROCESS_NAME || 'security-scanner';
@@ -433,6 +455,9 @@ class SecurityScanner {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
@@ -451,9 +476,13 @@ class SecurityScanner {}
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -466,6 +495,13 @@ class SecurityScanner {}
     try {}
       this.log('Scanning dependencies for vulnerabilities...');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -479,9 +515,13 @@ class SecurityScanner {}
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       // Run npm audit;
       const auditResult = execSync('npm audit --json', { })
         encoding: 'utf8',
@@ -490,6 +530,13 @@ class SecurityScanner {}
       }
 });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -503,15 +550,30 @@ class SecurityScanner {}
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       const auditData = JSON.parse(auditResult);
       const vulnerabilities = auditData.vulnerabilities || {};
       const criticalCount = Object.values(vulnerabilities).filter(v => v.severity === 'critical').length;
       const highCount = Object.values(vulnerabilities).filter(v => v.severity === 'high').length;
       const moderateCount = Object.values(vulnerabilities).filter(v => v.severity === 'moderate').length;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      this.log(`Found ${criticalCount} critical, ${highCount} high, ${moderateCount} moderate vulnerabilities`);
+
+
+      this.log(`Found ${criticalCount} critical, ${highCount} high, ${moderateCount} moderate vulnerabilities`);
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -532,9 +594,13 @@ class SecurityScanner {}
       this.log(`Found ${criticalCount} critical, ${highCount} high, ${moderateCount} moderate vulnerabilities`);
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       if (criticalCount > 0 && this.alertOnCritical) {}
         this.log('ALERT: Critical vulnerabilities found!');
       };
@@ -559,6 +625,11 @@ class SecurityScanner {}
     try {}
       this.log('Scanning code for security issues...');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -568,13 +639,18 @@ class SecurityScanner {}
       // Check for common security issues;
       const securityIssues = [];
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       
       // Check for common security issues;
       const securityIssues = [];
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -589,6 +665,11 @@ class SecurityScanner {}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       // Check for hardcoded secrets;
       const secretPatterns = []
         /password\s*=\s*['"][^'"]+['"]/gi,
@@ -596,6 +677,13 @@ class SecurityScanner {}
         /secret\s*=\s*['"][^'"]+['"]/gi,
         /token\s*=\s*['"][^'"]+['"]/gi;
       ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -610,9 +698,13 @@ class SecurityScanner {}
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       const sourceFiles = this.getSourceFiles();
       for (const file of sourceFiles) {}
         try {}
@@ -635,6 +727,13 @@ class SecurityScanner {}
       };
       this.log(`Found ${securityIssues.length} potential security issues in code`);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -648,9 +747,13 @@ class SecurityScanner {}
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       return {}
         scanned: true,
         issues: securityIssues,
@@ -669,6 +772,13 @@ class SecurityScanner {}
     try {}
       this.log('Scanning configuration files...');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -682,15 +792,24 @@ class SecurityScanner {}
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       const configFiles = []
         'package.json',
         'next.config.js',
         'vite.config.js',
         'webpack.config.js',
       ].filter(file => fs.existsSync(file));
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -703,9 +822,13 @@ class SecurityScanner {}
         try {}
           const content = fs.readFileSync(file, 'utf8');
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
       const configIssues = [];
 
@@ -713,6 +836,7 @@ class SecurityScanner {}
         try {}
           const content = fs.readFileSync(file, 'utf8');
           
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -729,6 +853,11 @@ class SecurityScanner {}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
           // Check for unsafe configurations;
           if (content.includes('eval(') || content.includes('Function(')) {}
             configIssues.push({})
@@ -752,6 +881,13 @@ class SecurityScanner {}
       };
       this.log(`Found ${configIssues.length} configuration security issues`);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -765,9 +901,13 @@ class SecurityScanner {}
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       return {}
         scanned: true,
         issues: configIssues,
@@ -782,6 +922,13 @@ class SecurityScanner {}
     const extensions = ['.js', '.jsx', '.ts', '.tsx', '.vue', '.svelte'];
     const sourceFiles = [];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -795,9 +942,13 @@ class SecurityScanner {}
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     const scanDir = (dir) => {}
       try {}
         const files = fs.readdirSync(dir);
@@ -805,6 +956,13 @@ class SecurityScanner {}
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          
+          
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -818,9 +976,13 @@ class SecurityScanner {}
 =======
           
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
           if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}
             scanDir(filePath);
           } else if (stat.isFile() && extensions.some(ext => file.endsWith(ext))) {}
@@ -832,6 +994,13 @@ class SecurityScanner {}
       };
     };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -845,9 +1014,13 @@ class SecurityScanner {}
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     scanDir(process.cwd());
     return sourceFiles;
   };
@@ -867,6 +1040,11 @@ class SecurityScanner {}
       };
     };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -876,9 +1054,13 @@ class SecurityScanner {}
     const reportFile = path.join(__dirname, '../../logs/pm2/security-scanner-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
     const reportFile = path.join(__dirname, '../../logs/pm2/security-scanner-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -886,6 +1068,7 @@ class SecurityScanner {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     const reportFile = path.join(__dirname, '../../logs/pm2/security-scanner-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -897,11 +1080,21 @@ class SecurityScanner {}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     this.log(`Security report generated: ${reportFile}`);
     return report;
   };
   async start() {}
     this.log(`${this.processName} started`);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -915,9 +1108,13 @@ class SecurityScanner {}
                          (report.codeScan.totalIssues || 0) + 
                          (report.configScan.totalIssues || 0);
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     
     try {}
       const report = await this.generateReport();
@@ -926,6 +1123,7 @@ class SecurityScanner {}
                          (report.codeScan.totalIssues || 0) + 
                          (report.configScan.totalIssues || 0);
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -943,10 +1141,22 @@ class SecurityScanner {}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       if (totalIssues === 0) {}
         this.log('Security scan completed - no issues found');
       } else {}
         this.log(`Security scan completed - found ${totalIssues} issues`);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        
+        
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -961,9 +1171,13 @@ class SecurityScanner {}
 =======
         
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         if (report.dependencyScan.critical > 0 && this.alertOnCritical) {}
           this.log('ALERT: Critical vulnerabilities detected!');
         };
@@ -980,6 +1194,11 @@ if (require.main === module) {}
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+module.exports = SecurityScanner;module.exports = SecurityScanner;
+module.exports = SecurityScanner;module.exports = SecurityScanner;
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 module.exports = SecurityScanner;
@@ -999,8 +1218,12 @@ module.exports = SecurityScanner;module.exports = SecurityScanner;
 module.exports = SecurityScanner;
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 module.exports = SecurityScanner;module.exports = SecurityScanner;
 module.exports = SecurityScanner;module.exports = SecurityScanner;
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

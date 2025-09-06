@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from 'react';
 import Layout from '../components/Layout';
 export default function Training() {
@@ -20,6 +31,7 @@ export default function Training() {
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>
     </Layout>
   );
@@ -27,6 +39,9 @@ export default function Training() {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
@@ -804,6 +819,11 @@ export default function TrainingPage() {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       </div>
     </Layout>
   ),
@@ -814,7 +834,22 @@ export default function TrainingPage() {
 <<<<<<< HEAD
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+};
+=======
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+  )
+}
+export default Training;
+};export default Training;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
@@ -870,6 +905,7 @@ export default function TrainingPage() {
 <<<<<<< HEAD
 };
 =======
+<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/main
@@ -889,3 +925,15 @@ export default Training;
 };export default Training;
 
 >>>>>>> origin/main
+=======
+  )
+};
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+export default Training;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

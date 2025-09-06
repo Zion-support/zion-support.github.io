@@ -6,7 +6,11 @@ import { motion } from 'framer-motion';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import {
   Server
   Shield
@@ -70,7 +74,11 @@ const itServices = [{
     features: ['Threat Detection', 'Vulnerability Assessment', 'Security Audits', 'Incident Response']
     pricing: '$5,000 - $40,000/project'
     category: 'Security'
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     popular: true
   }
   {
@@ -652,7 +660,11 @@ import { motion } from 'framer-motion';
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import { 
   Server, 
   Shield, 
@@ -728,7 +740,11 @@ import {
   ShoppingCart
   BookOpen
   Rocket
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   Laptop;
 } from 'lucide-react';
 import Layout from '../components/Layout';
@@ -755,7 +771,11 @@ const itServices = [
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     category: 'Security',
     popular: true,
     benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection'],
@@ -770,7 +790,11 @@ const itServices = [
     popular: true
     benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection']
     marketPrice: '$4,000/month'
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     link: '/contact'
   }
   {
@@ -1199,7 +1223,11 @@ export default function ITServices() {
       <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">
 <div className="absolute inset-0">
                   <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                   </div>
                 ))}
               </div>
@@ -1515,6 +1543,18 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              >
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  {level.name}
+                </h3>
+                  <p className="text-gray-600 mb-6">
+                  {level.description}
+                </p>
+                  <div className="text-3xl font-bold text-green-600 mb-6">
+                  {level.pricing}
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 =======
     <Layout>
@@ -1683,6 +1723,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
               >
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
@@ -1833,15 +1874,48 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+              >
+                IT Services
+              </h1>
+<<<<<<< HEAD
+              <p
+                className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
+                100+ Comprehensive IT Solutions
+              </p>
+              <p
+                className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
+                Transform your business with our enterprise-grade IT services.
+                From cloud infrastructure to quantum computing, we provide
+                cutting-edge technology solutions that scale with your business
+                and drive innovation.
+=======
+              <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                100+ Comprehensive IT Solutions
+              </p>
+              <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                Transform your business with our enterprise-grade IT services. From cloud infrastructure 
+                to quantum computing, we provide cutting-edge technology solutions that scale with your 
+                business and drive innovation.
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+              </p>
+            </div>
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
           </motion.div>
         </div>
       </section>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
           </section>
 
@@ -1853,6 +1927,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 {categories.map(category => (
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+<<<<<<< HEAD
 
                   <Link
                     href={service.link}
@@ -1920,28 +1995,324 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                >
-                  Get Started Today
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-                <Link
-                  href="/micro-saas"
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-                >
-                  View Micro SaaS
-                </Link>
+=======
+          <section className="py-8 px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
+                {categories.map((category) => (
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      selectedCategory === category.id
+                        ? 'bg-green-600 text-white'
+                        : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                    }`}
+                  >
+                    {category.name} ({category.count})
+                  </button>
+                ))}
               </div>
+            </div>
+          </section>
+
+          {/* Services Grid */}
+<<<<<<< HEAD
+          <section className='py-16 px-4' role='main'>
+            <div className='max-w-7xl mx-auto'>
+              <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                {filteredServices.map((service, index) => (
+                  <div
+=======
+          <section className="py-16 px-4" role="main">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredServices.map((service, index) => (
+                  <div 
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                    key={service.id}
+                    className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                    style={{ transitionDelay: `${index * 100}ms` }}
+                  >
+                    {service.popular && (
+<<<<<<< HEAD
+                      <div className='absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full'>
+                        Popular
+                      </div>
+                    )}
+
+                    <h3 className='text-xl font-bold mb-3'>{service.name}</h3>
+                    <p className='text-slate-300 mb-4 text-sm'>
+                      {service.description}
+                    </p>
+
+                    <div className='mb-4'>
+                      <h4 className='text-sm font-semibold text-green-400 mb-2'>
+                        Key Features:
+                      </h4>
+                      <ul className='text-slate-400 text-sm space-y-1'>
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className='flex items-center'>
+                            <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0'></span>
+=======
+                      <div className="absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        Popular
+                      </div>
+                    )}
+                    
+                    <h3 className="text-xl font-bold mb-3">{service.name}</h3>
+                    <p className="text-slate-300 mb-4 text-sm">{service.description}</p>
+                    
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-green-400 mb-2">Key Features:</h4>
+                      <ul className="text-slate-400 text-sm space-y-1">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center">
+                            <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0"></span>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+<<<<<<< HEAD
+                    <div className='mb-4'>
+                      <h4 className='text-sm font-semibold text-blue-400 mb-2'>
+                        Benefits:
+                      </h4>
+                      <div className='flex flex-wrap gap-1'>
+                        {service.benefits.map((benefit, benefitIndex) => (
+                          <span
+                            key={benefitIndex}
+                            className='text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded'
+                          >
+=======
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-blue-400 mb-2">Benefits:</h4>
+                      <div className="flex flex-wrap gap-1">
+                        {service.benefits.map((benefit, benefitIndex) => (
+                          <span key={benefitIndex} className="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                            {benefit}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+<<<<<<< HEAD
+
+                    <div className='flex items-center justify-between mb-4'>
+                      <span className='text-2xl font-bold text-green-400'>
+                        {service.price}
+                      </span>
+                      <span className='text-xs text-slate-500 capitalize'>
+                        {service.category.replace('-', ' ')}
+                      </span>
+                    </div>
+
+                    <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>
+=======
+                    
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-2xl font-bold text-green-400">{service.price}</span>
+                      <span className="text-xs text-slate-500 capitalize">{service.category.replace('- ')}</span>
+                    </div>
+                    
+                    <button className="w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors">
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                      Learn More
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Technology Stack Section */}
+<<<<<<< HEAD
+          <section className='py-16 px-4 bg-slate-900/40'>
+            <div className='max-w-6xl mx-auto'>
+              <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>
+                Our Technology Stack
+              </h2>
+
+              <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
+                <div className='text-center'>
+                  <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>
+                    <svg
+                      className='w-8 h-8 text-white'
+                      fill='none'
+                      stroke='currentColor'
+                      viewBox='0 0 24 24'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M3 15a4 4 0 004 4M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+                      />
+                    </svg>
+                  </div>
+                  <h3 className='text-xl font-bold mb-2'>Cloud Platforms</h3>
+                  <p className='text-slate-400'>
+                    AWS, Azure, GCP, and hybrid cloud solutions
+                  </p>
+>>>>>>> origin/automation-improvements-final
+                </div>
+                  <ul className="space-y-3 mb-8">
+                  {level.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                  <Link
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+                  href="/contact"
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
+                    index === 1
+? 'bg-green-600 hover: bg-green-700 text-white'
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                  }`}
+                >
+                  <span>Choose Plan</span>
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                  </motion.div>
+            ))}
+          </div>
+                  </div>
+                  </section>
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+<div className="container mx-auto px-4 text-center">
+                  <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Optimize Your IT Infrastructure?</h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Let our expert team help you build a robust, secure, and scalable IT environment.
+            </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                Get IT Assessment
+              </Link>
+                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+                View All Services
+              </Link>
+                  </div>
+                  </motion.div>
+                  </div>
+                  </section>
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Get Started with IT Services Today
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              Ready to transform your IT infrastructure? Our expert team is here to help you build, secure, and optimize your technology environment. Contact us for a free consultation and discover how we can accelerate your digital transformation.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MessageSquare className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Free IT Consultation</h3>
+              <p className="text-gray-600 mb-4">Get expert advice on your IT project with our complimentary 30-minute consultation.</p>
+              <a href="tel:+13024640950" className="text-green-600 font-semibold hover:text-green-700">
+                Call Now: +1 302 464 0950
+              </a>
+            </motion.div>
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+              <p className="text-gray-600 mb-4">Send us your IT project details and we'll respond within 24 hours with a detailed proposal.</p>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 font-semibold hover:text-green-700">
+                kleber@ziontechgroup.com
+              </a>
+            </motion.div>
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Building className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Our Office</h3>
+              <p className="text-gray-600 mb-4">Schedule an in-person meeting at our headquarters in Middletown, Delaware.</p>
+              <address className="text-green-600 font-semibold not-italic">
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
+              </address>
             </motion.div>
           </div>
+<<<<<<< HEAD
+          <motion.div
+            className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
+            <p className="text-lg mb-6">
+              Join 500+ successful businesses that trust Zion Tech Group for their IT infrastructure needs. Let&apos;s build the perfect technology solution for your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                Start Building
+              </Link>
+              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+                View All Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+                  </div>
+=======
         </section>
       </div>
     </Layout>
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   );
 <<<<<<< HEAD
 

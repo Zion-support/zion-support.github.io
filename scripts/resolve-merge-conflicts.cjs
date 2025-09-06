@@ -60,7 +60,11 @@ function resolveMergeConflicts(filePath) {
       if (line.includes('=======')) {
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         conflictType = 'incoming';
         continue;
       }
@@ -181,7 +185,10 @@ function findConflictedFiles(dir) {
           const content = fs.readFileSync(fullPath, 'utf8');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
           if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
@@ -190,9 +197,13 @@ function findConflictedFiles(dir) {
 =======
           if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
             conflictedFiles.push(fullPath);
           }
         } catch (error) {
@@ -248,4 +259,8 @@ try {
 }
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

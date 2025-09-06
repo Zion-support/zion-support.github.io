@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -171,9 +176,13 @@ testSuite.runAllTests().catch(console.error);
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -188,6 +197,13 @@ console.log('🧪 Starting Comprehensive Test Suite...')
         execSync('npm run "automation": security', { "stdio"})
         execSync('npm run "automation": performance', { "stdio"})
       throw new Error(`Missing required "files"`)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      throw new Error(`Missing required "dependencies"`)
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       throw new Error(`Missing required "dependencies"`)
 <<<<<<< HEAD
 =======
@@ -196,6 +212,10 @@ console.log('🧪 Starting Comprehensive Test Suite...')
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

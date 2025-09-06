@@ -6,8 +6,14 @@ import { motion } from 'framer-motion';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import { 
   Home, 
   Brain, 
@@ -22,7 +28,11 @@ import {
   ArrowRight 
 } from 'lucide-react';
 =======
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 import {
   Home
@@ -143,7 +153,15 @@ export default function SitemapPage() {
     </>
 <<<<<<< HEAD
   );
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -154,6 +172,8 @@ export default function SitemapPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import {
   Home
   Search
@@ -695,11 +715,19 @@ export default function SitemapPage() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   );
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 =======
   )
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+
+=======
+  )
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }animate= {
   {
   opacity: 1, y: 0

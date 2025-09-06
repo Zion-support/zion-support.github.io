@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const { test, expect } = require('@playwright/test')'
 test.describe('"Accessibility"
   test('"page"
@@ -8,6 +11,7 @@ test.describe('"Accessibility"
   test('"buttons"
     "await"
     "await"
+<<<<<<< HEAD
     "await"
 =======
 const { test, expect } = require('@playwright/test')';
@@ -132,3 +136,6 @@ const { test,expect } = require('@playwright/test')';; test.describe('Accessibil
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+    "await"
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

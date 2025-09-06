@@ -2,7 +2,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 =======
@@ -361,9 +364,13 @@ automator.run().catch(error => {
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node;
 /**
  * PM2 Git Workflow Service;
@@ -393,6 +400,9 @@ class GitWorkflow {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
@@ -411,9 +421,13 @@ class GitWorkflow {}
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -534,6 +548,9 @@ class GitWorkflow {}
           let content = fs.readFileSync(file, 'utf8');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
           // Remove conflict markers and keep both versions (simplified)
@@ -550,9 +567,13 @@ class GitWorkflow {}
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
           // Remove conflict markers and keep both versions (simplified);
           content = content.replace(/\n/g, '');
           content = content.replace(/\n/g, '');
@@ -677,6 +698,11 @@ module.exports = GitWorkflow;
 cursor/website-audit-and-update-with-deployment-76dc;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-main-f3c1;
+cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
@@ -696,8 +722,12 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-ma
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-main-f3c1;
 cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

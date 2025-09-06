@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,9 +43,13 @@ function pingPreview() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node;
 const fs = require('fs');
 const http = require('http');
@@ -66,7 +75,11 @@ function pingPreview() {}
 		process.exit(1)};
 	console.log('Healthy')})();
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 		process.exit(1)};
 	console.log('Healthy')})();    // Check disk space
 const path = require('path');
@@ -303,6 +316,7 @@ module.exports = HealthChecker;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const http = require('http');
 const distOk = fs.existsSync('dist/index.html');
@@ -323,6 +337,8 @@ function pingPreview() {}
 	console.log('Healthy')})();
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
@@ -330,6 +346,10 @@ function pingPreview() {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

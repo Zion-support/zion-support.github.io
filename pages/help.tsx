@@ -1,7 +1,20 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+<<<<<<< HEAD
+=======
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import {
   Search
   HelpCircle
@@ -44,6 +57,38 @@ const helpArticles = [
         type: "Technical"
       }
       {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        title: "AI Best Practices",
+        description: "Tips and best practices for AI development",
+        readTime: "6 min read",
+        type: "Best Practice",
+      },
+    ],
+  },
+  {
+    id: "cloud-services",
+    title: "Cloud Services",
+    description: "Cloud infrastructure and deployment solutions.",
+=======
+        title: 'AI Best Practices',
+        description: 'Tips and best practices for AI development',
+        readTime: '6 min read',
+        type: 'Best Practice'
+      }
+    ]
+  },
+  {
+    id: 'cloud-services',
+    title: 'Cloud Services',
+    description: 'Cloud infrastructure and deployment solutions.',
+>>>>>>> origin/automation-improvements-final
+    icon: Cloud,
+    color: "blue",
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         title: "AI Best Practices"
         description: "Tips and best practices for AI development"
         readTime: "6 min read"
@@ -57,6 +102,10 @@ const helpArticles = [
     description: "Cloud infrastructure and deployment solutions."
     icon: Cloud
     color: "blue"
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     articles: [
       {
         title: "Cloud Migration Guide"
@@ -65,6 +114,28 @@ const helpArticles = [
         type: "Guide"
       }
       {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        title: "Cloud Security",
+        description: "Best practices for securing your cloud infrastructure",
+        readTime: "9 min read",
+        type: "Security",
+      },
+    ],
+  },
+=======
+        title: 'Cloud Security',
+        description: 'Best practices for securing your cloud infrastructure',
+        readTime: '9 min read',
+        type: 'Security'
+      }
+    ]
+  }
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         title: "Cloud Security"
         description: "Best practices for securing your cloud infrastructure"
         readTime: "9 min read"
@@ -72,22 +143,56 @@ const helpArticles = [
       }
     ]
   }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
 const helpCategories = [
   {
+<<<<<<< HEAD
+    title: "Getting Started",
+    description: "New to our platform? Start here.",
+    icon: BookOpen,
+<<<<<<< HEAD
+    color: "blue",
+    articles: helpArticles,
+  },
+=======
     title: "Getting Started"
     description: "New to our platform? Start here."
     icon: BookOpen
     color: "blue"
     articles: helpArticles
   }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
+export default function HelpPage() {
+  const [searchTerm, setSearchTerm] = useState("");
+=======
+    color: 'blue',
+    articles: helpArticles
+  }
+];
+<<<<<<< HEAD
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
   const toggleCategory = (index: number) => {
     setExpandedCategory(expandedCategory === index ? null : index);
+=======
+
+export default function HelpPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+>>>>>>> origin/automation-improvements-final
+  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
+  const toggleCategory = (index: number) => {
+    setExpandedCategory(expandedCategory === index ? null : index);
+<<<<<<< HEAD
+  };
+
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   const filteredCategories = helpCategories
     .map((category) => ({
       ...category
@@ -98,6 +203,22 @@ export default function HelpPage() {
       )
     }))
     .filter((category) => category.articles.length > 0);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  const filteredCategories = helpCategories.map(category => ({
+    ...category,
+    articles: category.articles.filter(article =>
+      article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      article.description.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  })).filter(category => category.articles.length > 0);
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   return (
     <>
       <Head>

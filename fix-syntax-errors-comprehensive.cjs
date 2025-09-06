@@ -1,4 +1,20 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
+;
+function fixSyntaxErrors(filePath) {;
+  try {;
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+;
+    // Fix common syntax errors;
+;
+    // Fix unnecessary escape characters;
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -127,6 +143,10 @@ function fixSyntaxErrors(filePath) {
     // Fix common syntax errors
 
     // Fix unnecessary escape characters
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     content = content.replace(/\\:/g, ':');
     content = content.replace(/\\,/g, ',');
     content = content.replace(/\\;/g, ';');
@@ -136,6 +156,22 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/\\\]/g, ']');
     content = content.replace(/\\\(/g, '(');
     content = content.replace(/\\\)/g, ')');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+    // Fix missing semicolons at end of statements;
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+;
+    // Fix missing commas in objects;
+    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1:$2,}');
+;
+    // Fix missing closing braces;
+    // Fix malformed CSS in JSX
+    content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -251,14 +287,27 @@ function fixSyntaxErrors(content, filePath) {
     content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     // Fix malformed function declarations
     content = content.replace(/export\s+const\s+SEO:\s*Reac\s+t\.FC<[^>]+>\s*=\s*\(/g, 'export const SEO: React.FC<SEOProps> = (');
     // Fix malformed return statements in functions
     content = content.replace(/return\s*\(\)\s*\/\*[^*]*\*\/\s*@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, 'return null;');
     // Fix missing semicolons
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    // Fix missing semicolons at end of statements
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+    // Fix missing commas in objects
+    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2,}');
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
     // Fix missing semicolons at end of statements
 =======
@@ -328,11 +377,24 @@ fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
 
     // Fix missing commas in objects
     content = content.replace(/(\w+):\s*([^}]+)\s*}/g, '$1: $2}');
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
     // Fix missing closing braces
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+;
+    if (openBraces > closeBraces) {;}
+
+=======
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -391,9 +453,13 @@ fixFile('components/ErrorBoundary.tsx', 'ErrorBoundary class syntax', (content) 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 }
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // Function to process a single file
 function processFile(filePath) {
     try {
@@ -571,6 +637,10 @@ async function main() {
     } else {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 =======
@@ -578,8 +648,97 @@ async function main() {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> origin/main
         
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+    fixed = fixed.replace(
+        /return\s*this\.props\.children;\s*\}\s*export\s*default/g,
+        'return this.props.children;\n  }\n}\n\nexport default'
+    );
+    return fixed;
+});
+<<<<<<< HEAD
+// Fix PerformanceMonitor syntax
+fixFile('components/PerformanceMonitor.tsx', 'PerformanceMonitor syntax', (content) => {
+    // Replace the entire file with correct syntax
+    return `import { useEffect } from 'react';
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    // Monitor Core Web Vitals
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Monitor Largest Contentful Paint (LCP)
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime);
+          }
+        }
+      });
+      try {
+        observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      } catch (e) {
+        // Fallback for browsers that don't support LCP
+      }
+      // Monitor First Input Delay (FID)
+      const fidObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'first-input') {
+            console.log('FID:', entry.processingStart - entry.startTime);
+          }
+        }
+      });
+      try {
+        fidObserver.observe({ entryTypes: ['first-input'] });
+      } catch (e) {
+        // Fallback for browsers that don't support FID
+      }
+      // Monitor Cumulative Layout Shift (CLS)
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        }
+        console.log('CLS:', clsValue);
+      });
+      try {
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      } catch (e) {
+        // Fallback for browsers that don't support CLS
+      }
+      return () => {
+        observer.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+      };
+    }
+  }, []);
+  return null; // This component doesn't render anything
+};
+export default PerformanceMonitor;`;
+});
+console.log('\n📊 Fix Summary');
+console.log('=');
+console.log(`Total fixes applied: ${fixes.length}`);
+if (fixes.length > 0) {
+    console.log('\nFixed files:');
+    fixes.forEach(fix => {
+        console.log(`  ✅ ${fix.file}: ${fix.description}`);
+    });
+} else {
+    console.log('\n✅ No syntax errors found - all files are clean!');
+}
+console.log('\n🎯 Syntax error fixing completed!');
+=======
+=======
+    if (openBraces > closeBraces) {
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       const missingBraces = openBraces - closeBraces;
       content += '\n''}'.repeat(missingBraces);
       modified = true;
@@ -679,6 +838,7 @@ const fixedCount = processDirectory('.');
 console.log(`Fixed ${fixedCount} files`);
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -885,3 +1045,8 @@ console.log(`Fixed ${fixedCount} files`);
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

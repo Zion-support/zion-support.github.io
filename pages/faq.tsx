@@ -1,15 +1,28 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import Head from "next/head";
+import Link from "next/link";
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import Head from 'next/head';
 import Link from 'next/link';
+>>>>>>> origin/automation-improvements-final
 
 =======
+<<<<<<< HEAD
 import Head from "next/head";
 import Link from "next/link";
 >>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function FAQ() {
   const contact = {
     phone: "+1 302 464 0950"
@@ -179,6 +192,10 @@ export default function FAQPage() {
       </div>
     </Layout>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   );
 }

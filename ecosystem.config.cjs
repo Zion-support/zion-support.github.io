@@ -1,6 +1,7 @@
 module.exports = {
   apps: [
     {
+<<<<<<< HEAD
       name: 'ci-cd-pipeline',
       script: 'npm',
       args: 'run build',
@@ -18,6 +19,11 @@ module.exports = {
       log_file: './logs/ci-cd-combined.log',
       time: true,    },
     {
+=======
+<<<<<<< HEAD
+      name: 'ci-cd-pipeline',
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -76,6 +82,10 @@ module.exports = {
 =======
       name: 'ci-cd-pipeline',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       script: 'npm',
       args: 'run build',
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -86,6 +96,104 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'code-quality-monitor',
+        QUALITY_THRESHOLD: '80',
+        AUTO_FIX_CRITICAL: 'true',
+      },
+      log_file: 'logs/pm2/code-quality-monitor.log',
+      error_file: 'logs/pm2/code-quality-monitor-error.log',
+      out_file: 'logs/pm2/code-quality-monitor-out.log',
+    },
+    {
+      name: 'auto-commit-fixes',
+      script: 'scripts/pm2/auto-commit-fixes.js',
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+        NODE_ENV: 'production',
+      },
+      cron_restart: '0 0 * * *', // Daily restart
+      error_file: './logs/ci-cd-error.log',
+      out_file: './logs/ci-cd-out.log',
+      log_file: './logs/ci-cd-combined.log',
+      time: true,    },
+    {
+      name: 'continuous-automation',
+      script: 'node',
+      args: 'scripts/automation/automation-orchestrator.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+<<<<<<< HEAD
+        NODE_ENV: 'production',      },
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        NODE_ENV: 'production',
+=======
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'auto-commit-fixes',
+        COMMIT_FREQUENCY: 'hourly',
+        AUTO_PUSH: 'false',
+      },
+      log_file: 'logs/pm2/auto-commit-fixes.log',
+      error_file: 'logs/pm2/auto-commit-fixes-error.log',
+      out_file: 'logs/pm2/auto-commit-fixes-out.log',
+    },
+    {
+      name: 'dependency-monitor',
+      script: 'scripts/pm2/dependency-monitor.js',
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+        PM2_PROCESS_NAME: 'code-quality-monitor',
+        QUALITY_THRESHOLD: '80',
+        AUTO_FIX_CRITICAL: 'true',
+      },
+      cron_restart: '0 */6 * * *', // Restart every 6 hours
+      log_file: 'logs/pm2/code-quality-monitor.log',
+      error_file: 'logs/pm2/code-quality-monitor-error.log',
+      out_file: 'logs/pm2/code-quality-monitor-out.log',
+<<<<<<< HEAD
+    }
+  ]
+=======
+=======
+        NODE_ENV: 'production',
+      },
+>>>>>>> origin/automation-improvements-final
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      error_file: './logs/automation-error.log',
+      out_file: './logs/automation-out.log',
+      log_file: './logs/automation-combined.log',
+<<<<<<< HEAD
+      time: true,    },
+=======
+      time: true,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+    },
+>>>>>>> origin/automation-improvements-final
+    {
+      name: 'comprehensive-automation',
+      script: 'node',
+      args: 'scripts/automation/comprehensive-continuous-automation.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         NODE_ENV: 'production',      },
       cron_restart: '0 */6 * * *', // Every 6 hours
       error_file: './logs/comprehensive-automation-error.log',
@@ -318,6 +426,11 @@ module.exports = {
       env: {
         NODE_ENV: "production"
       },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",
       error_file: "automation/logs/build-monitor-error.log",
@@ -718,14 +831,28 @@ module.exports = {}
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",
       error_file: "automation/logs/build-monitor-error.log",
       out_file: "automation/logs/build-monitor-out.log",
       time: true
     }
+<<<<<<< HEAD
   ]
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+<<<<<<< HEAD
+  ];};
+=======
+  ]
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

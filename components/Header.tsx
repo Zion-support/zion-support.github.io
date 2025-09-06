@@ -1,5 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+"use client";
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
+"use client";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import {
+<<<<<<< HEAD
+  Menu,
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 =======
@@ -15,6 +28,7 @@ import {
   X, 
   Phone, 
   Mail, 
+<<<<<<< HEAD
   MapPin,
   Brain,
   Network,
@@ -28,6 +42,31 @@ import {
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import {
+=======
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram, 
+  ChevronDown, 
+  Menu, 
+>>>>>>> origin/automation-improvements-final
+  X,
+  ChevronDown,
+  Code,
+  Smartphone,
+  Cloud,
+  Database,
+  Shield,
+  Zap,
+  Building,
+  ShoppingCart,
+  Heart,
+  GraduationCap,
+  Factory,
+  Truck,
+  CreditCard,
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   Menu
   X
   ChevronDown
@@ -44,6 +83,7 @@ import {
   Factory
   Truck
   CreditCard
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 } from "lucide-react";
 
 export default function Header() {
@@ -161,16 +201,31 @@ export default function Header() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
+<<<<<<< HEAD
             <Link href="/" className="text-2xl font-bold text-blue-600">
               Zion Tech Group
             </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+=======
+            <Link href="/" className="flex items-center">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
+                <Brain className="h-5 w-5 text-white" />
+              </div>
+              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+            </Link>
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
@@ -196,9 +251,19 @@ export default function Header() {
               </div>
             </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
           </div>
           {/* Desktop Navigation */}
+=======
+>>>>>>> origin/automation-improvements-final
+          </div>
+          {/* Desktop Navigation */}
+<<<<<<< HEAD
+          <nav className="hidden lg:flex space-x-8">
+            {navigation.map((item) => (
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -333,6 +398,10 @@ export default function Header() {
 
             {/* Regular Navigation Items */}
             {navigation.slice(0, 2).map((item) => (
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
               <Link
                 key={item.name}
                 href={item.href}
@@ -341,6 +410,7 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
+<<<<<<< HEAD
           </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -363,16 +433,46 @@ export default function Header() {
               onClick={toggleMenu}
               className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
 =======
+=======
+<<<<<<< HEAD
+          </nav>
+<<<<<<< HEAD
+=======
+          </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/contact"
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
             >
               Get Started
             </Link>
           </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        </div>
+<<<<<<< HEAD
+=======
+      </nav>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}

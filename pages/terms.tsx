@@ -1,6 +1,176 @@
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+import Head from 'next/head';
+import Link from 'next/link';
+=======
+<<<<<<< HEAD
+import Head from 'next/head';
+import Link from 'next/link';
+
+export default function Terms() {
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  }
+  return (
+    <>
+      <Head>
+        <title>Terms of Service - Zion Tech Group</title>
+        <meta name="description" content="Terms of Service for Zion Tech Group. Read our terms and conditions for using our micro SaaS products, AI services, and IT solutions." />
+        <meta name="keywords" content="terms of service, terms and conditions, legal, zion tech group" />
+        <link rel="canonical" href={`${contact.site}/terms`} />
+      </Head>
+      
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+        <div className="max-w-4xl mx-auto py-20 px-4">
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-8">
+            Terms of Service
+          </h1>
+          
+          <div className="prose prose-invert max-w-none">
+            <p className="text-lg text-slate-300 mb-8">
+              Last updated: {new Date().toLocaleDateString()}
+            </p>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">1. Acceptance of Terms</h2>
+              <p className="text-slate-300 mb-4">
+                By accessing and using Zion Tech Group&apos;s services, you accept and agree to be bound by the terms 
+                and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">2. Use License</h2>
+              <p className="text-slate-300 mb-4">
+                Permission is granted to temporarily download one copy of Zion Tech Group&apos;s services for personal, 
+                non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+              </p>
+              <ul className="list-disc list-inside text-slate-300 mb-4 space-y-2">
+                <li>modify or copy the materials</li>
+                <li>use the materials for any commercial purpose or for any public display</li>
+                <li>attempt to reverse engineer any software contained on the website</li>
+                <li>remove any copyright or other proprietary notations from the materials</li>
+              </ul>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">3. Service Availability</h2>
+              <p className="text-slate-300 mb-4">
+                Zion Tech Group strives to maintain high service availability but does not guarantee uninterrupted access. 
+                We reserve the right to modify, suspend, or discontinue any service at any time without notice.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">4. User Responsibilities</h2>
+              <p className="text-slate-300 mb-4">
+                Users are responsible for:
+              </p>
+              <ul className="list-disc list-inside text-slate-300 mb-4 space-y-2">
+                <li>Maintaining the confidentiality of their account credentials</li>
+                <li>All activities that occur under their account</li>
+                <li>Complying with all applicable laws and regulations</li>
+                <li>Not using the services for any unlawful or prohibited purpose</li>
+              </ul>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">5. Payment Terms</h2>
+              <p className="text-slate-300 mb-4">
+                Payment terms vary by service. All fees are non-refundable unless otherwise specified. 
+                We reserve the right to change our pricing with 30 days notice to existing customers.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">6. Limitation of Liability</h2>
+              <p className="text-slate-300 mb-4">
+                In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation, 
+                damages for loss of data or profit, or due to business interruption) arising out of the use or inability 
+                to use the services, even if Zion Tech Group or a Zion Tech Group authorized representative has been notified 
+                orally or in writing of the possibility of such damage.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">7. Privacy Policy</h2>
+              <p className="text-slate-300 mb-4">
+                Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the services.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">8. Contact Information</h2>
+              <p className="text-slate-300 mb-4">
+                If you have any questions about these Terms of Service, please contact us:
+              </p>
+              <div className="bg-slate-900/60 p-6 rounded-lg border border-white/10">
+                <p className="text-slate-300 mb-2">
+                  <strong>Phone:</strong> <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="text-blue-400 hover:text-blue-300">{contact.phone}</a>
+                </p>
+                <p className="text-slate-300 mb-2">
+                  <strong>Email:</strong> <a href={`mailto:${contact.email}`} className="text-blue-400 hover:text-blue-300">{contact.email}</a>
+                </p>
+                <p className="text-slate-300">
+                  <strong>Address:</strong> {contact.address}
+                </p>
+=======
+import React from 'react';
+<<<<<<< HEAD
+] 
+};
+const termsSections = [ {
+  Please read these terms carefully before using our website or services. </p> </div> </section> 
+};
+{
+  title: 'Service Description';
+content: `Zion Tech Group provides AI consciousness technology, quantum computing solutions, autonomous systems, and related consulting services. We reserve the right to modify, suspend, or discontinue any aspect of our services at any time.`;
+icon: <Globe className="w-6 h-6 text-green-400" /> 
+};
+{
+  title: 'User Responsibilities';
+content: `Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account. Users must not use our services for any illegal or unauthorized purpose, or in any way that violates applicable laws or regulations.`;
+icon: <Users className="w-6 h-6 text-yellow-400" /> 
+};
+{
+  title: 'Privacy and Data Protection';
+content: `Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference. We are committed to protecting your data in accordance with applicable data protection laws.`;
+icon: <Eye className="w-6 h-6 text-cyan-400" /> 
+};
+{
+  title: 'Intellectual Property Rights';
+content: `All content on this website, including but not limited to text, graphics, logos, images, software, and other materials, is the property of Zion Tech Group or its licensors and is protected by copyright, trademark, and other intellectual property laws.`;
+icon: <Shield className="w-6 h-6 text-red-400" /> 
+}];
+const importantNotices = [ {
+  title: 'AI Technology Risks';
+content: 'Our AI consciousness technology involves experimental and cutting-edge research. Users acknowledge that such technology may carry inherent risks and uncertainties.';
+type: 'warning' 
+};
+{
+  title: 'Quantum Computing Limitations';
+content: 'Quantum computing services are subject to current technological limitations and may not be suitable for all applications or use cases.';
+type: 'info' 
+};
+{
+  title: 'Service Availability';
+content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services due to factors beyond our control.';
+type: 'info' 
+}];
+>>>>>>> origin/automation-improvements-final
+
+=======
 
 import Head from 'next/head';
 import Link from 'next/link';
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function Terms() {
   const contact = {
     phone: '+1 302 464 0950'
@@ -102,6 +272,9 @@ export default function Terms() {
                   <strong>Address:</strong> {contact.address}
                 </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
               </div>
             </section>
           </div>
@@ -115,6 +288,7 @@ export default function Terms() {
     </>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -237,6 +411,8 @@ export default Terms;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function Terms() {
   return (
     <Layout>
@@ -1328,7 +1504,11 @@ export default function Terms() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
               </div>
             </motion.div>
           </div>
@@ -1347,7 +1527,11 @@ export default function Terms() {
   );
 }
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         </section>
         {/* Agreement Section */}
         <section className="py-20">
@@ -1416,8 +1600,18 @@ export default Terms;
       </Layout>
     </ErrorBoundary>
   )
+<<<<<<< HEAD
+};
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+=======
 }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default TermsPage;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
@@ -1429,7 +1623,20 @@ export default TermsPage;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>)
 };export default TermsPage;
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+export default TermsPage;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
 
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

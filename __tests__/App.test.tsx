@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import { render, screen } from '@testing-library/react';
 import App from '../src/App';
 describe('App', () => {
@@ -6,6 +10,7 @@ describe('App', () => {
     render(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
+<<<<<<< HEAD
   it('has proper heading structure', () => {
     render(<App />);
 <<<<<<< HEAD
@@ -42,3 +47,16 @@ describe('App', () => {
   });
 });
 >>>>>>> origin/main
+=======
+});
+=======
+import { render, screen } from '@testing-library/react'
+import App from '../src/App'
+describe('App'
+  it('renders without crashing'
+    expect(screen.getByRole('main'
+  it('has proper heading structure'
+    const heading = screen.getByRole('heading', { level: '1'
+    const heading = screen.getByRole('heading'
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

@@ -1,7 +1,11 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const fs = require("fs");
 const path = require("path");
 const { exec } = require("child_process");
@@ -15,7 +19,11 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 class MasterAutomation {
   constructor() {
     this.logFile = path.join(__dirname, "logs", "master-automation.log");
@@ -24,7 +32,11 @@ class MasterAutomation {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   log(message) {
 class MasterAutomation {}
   constructor() {}
@@ -66,7 +78,11 @@ class MasterAutomation {}
 
   async runCommand(command, description) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     try {
       const { stdout, stderr } = await execAsync(command, { 
         cwd: process.cwd(), 
@@ -76,7 +92,11 @@ class MasterAutomation {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   };
   async runCommand(command, options = {}) {}
     try {}
@@ -194,7 +214,11 @@ class MasterAutomation {}
         this.log(`❌ Build process failed at: ${step.description}`, 'error');
         return { success: false, results };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       }
     } else {
       this.log("Failed to get PM2 process list");
@@ -204,7 +228,11 @@ class MasterAutomation {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   async performHealthCheck() {
     this.log("Performing health check.");
     // Check if PM2 is running
@@ -332,7 +360,11 @@ class MasterAutomation {}
       const result = await this.runCommand(check.command, check.description);
       results.push({ ...check, result });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     }
   }
   async generateReport() {
@@ -350,7 +382,11 @@ class MasterAutomation {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     if (runningProcesses < expectedProcesses) {}
       this.log()
         `Only ${runningProcesses}/${expectedProcesses} processes running, restarting...``
@@ -391,7 +427,11 @@ class MasterAutomation {}
       `automation-report-${Date.now()}.json`
     );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`Report saved to ${reportFile}`);
     return report;
@@ -400,7 +440,11 @@ class MasterAutomation {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     this.log("Master Automation started");
     // Ensure logs directory exists
     const logsDir = path.join(__dirname, "logs");
@@ -494,7 +538,11 @@ class MasterAutomation {}
 
 // CLI interface
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 if (require.main === module) {
   const automation = new MasterAutomation();
   const command = process.argv[2];
@@ -502,7 +550,11 @@ if (require.main === module) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     case "start":
       automation.start().catch(error => {
         console.error("Master Automation failed: ", error);
@@ -575,9 +627,13 @@ if (require.main === module) {}
       process.exit(1);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       break;
 >>>>>>> origin/main
+=======
+      break;
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   }
 }
 module.exports = MasterAutomation;
@@ -613,7 +669,11 @@ module.exports = MasterAutomation;
 }
 module.exports = MasterAutomation;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     default: console.log()
         'Usage: node master-automation.js [start|stop|restart|status|report]'
       );
@@ -626,4 +686,8 @@ module.exports = MasterAutomation;
 module.exports = MasterAutomation;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

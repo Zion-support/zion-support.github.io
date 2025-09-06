@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import Head from "next/head";
+import Header from "./Header";
+import Footer from "./Footer";
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -7,13 +17,18 @@ import React from 'react';
 import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
+>>>>>>> origin/automation-improvements-final
 
 =======
+<<<<<<< HEAD
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
 >>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
@@ -108,7 +123,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {children}
     </main>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   );
 }
 export default Layout;

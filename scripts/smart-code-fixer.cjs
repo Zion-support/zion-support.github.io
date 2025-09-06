@@ -8,7 +8,11 @@
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -20,7 +24,11 @@ const { execSync } = require('child_process');
 console.log('🔧 Smart Code Fixer');
 console.log('=====');
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 console.log('🔧 Smart Code Fixer');
 console.log('=====');
@@ -28,7 +36,11 @@ console.log('=====');
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // Function to fix unescaped entities only in JSX content
 function fixUnescapedEntities(content) {
   // Only replace single quotes that are not in import statements or string literals
@@ -120,7 +132,11 @@ function fixFiles() {
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   // Fix console.log statements in production files
   if (filePath.includes('pages/') || filePath.includes('components/')) {
     content = content.replace(/console\.log\([^)]*\);?/g, '');
@@ -149,7 +165,11 @@ function runBuildTest() {
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   // Fix missing semicolons
   content = content.replace(/([^;}])\n\s*}/g, '$1;\n}');
   if (content !== content.replace(/([^;}])\n\s*}/g, '$1;\n}')) {
@@ -283,7 +303,11 @@ function main() {
 =======
   
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   const files = findFiles(targetDir);
   console.log(`📁 Found ${files.length} files to process`);
   
@@ -327,4 +351,8 @@ module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
 
 module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

@@ -19,7 +19,11 @@ class SyntaxErrorFixer {
 #!/usr/bin/env node;
 /**
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
  * Syntax Error Fixer;
  * Automatically fixes common syntax errors in the codebase;
  */
@@ -60,7 +64,11 @@ class SyntaxErrorFixer {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   }
 
   log(message) {
@@ -120,7 +128,11 @@ class SyntaxErrorFixer {
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     // Fix common JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
     
@@ -170,7 +182,11 @@ class SyntaxErrorFixer {
   }
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       "timestamp": new Date().toISOString(),
       "fixes": this.fixes,
       "errors": this.errors,
@@ -198,7 +214,11 @@ class SyntaxErrorFixer {
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   async run() {
     this.log('🚀 Starting syntax error fixing...');
     
@@ -218,7 +238,11 @@ class SyntaxErrorFixer {
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       if ( {
         this.log('🎉 Syntax error fixing completed successfully!')} else {
         this.log('⚠️ Syntax error fixing completed with some issues')}
@@ -258,4 +282,8 @@ module.exports = SyntaxErrorFixer;
 =======
       this.log(`� Syntax error fixing "failed"`)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

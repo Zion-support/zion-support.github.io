@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
@@ -8,11 +9,27 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+=======
+  reactStrictMode: true
+  compress: true
+  poweredByHeader: false
+  eslint: {
+    ignoreDuringBuilds: true
+  }
+  typescript: {
+<<<<<<< HEAD
+    ignoreBuildErrors: true,
+  },
+  pageExtensions: ["tsx", "ts", "jsx", "js"],
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   trailingSlash: true,
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   
 <<<<<<< HEAD
   // Performance optimizations
@@ -29,6 +46,7 @@ const nextConfig = {
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   images: {
     unoptimized: true,
@@ -49,7 +67,25 @@ const nextConfig = {
   env: {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
 =======
+>>>>>>> origin/automation-improvements-final
+  images: {
+    domains: [
+      "localhost",
+      "ziontechgroup.com",
+      "images.unsplash.com",
+      "via.placeholder.com",
+    ],
+    formats: ["image/webp", "image/avif"],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000,
+<<<<<<< HEAD
+=======
 >>>>>>> origin/resolved-all-conflicts-clean
 <<<<<<< HEAD
   },
@@ -57,6 +93,7 @@ const nextConfig = {
   // Webpack configuration to exclude problematic directories
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
+<<<<<<< HEAD
   reactStrictMode: true
   compress: true
   poweredByHeader: false
@@ -64,6 +101,17 @@ const nextConfig = {
     ignoreDuringBuilds: true
   }
   typescript: {
+=======
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+  },
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+  },
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
     ignoreBuildErrors: true
   }
@@ -82,7 +130,11 @@ const nextConfig = {
     minimumCacheTTL: 31536000
   }
 
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {

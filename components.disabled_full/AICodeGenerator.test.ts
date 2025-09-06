@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import AICodeGenerator from '
 describe('AICodeGenerator'
   it('renders without crashing'
     expect(screen.getByRole('main')).toBeInTheDocument();'  });
   it('displays correct content'
   it('handles user interactions'
+<<<<<<< HEAD
 import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator', () => {; it('renders without crashing', () => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content', () => {; render(<AICodeGenerator />); }); ; it('handles user interactions'
 =======
 import AICodeGenerator from './AICodeGenerator;
@@ -32,3 +36,6 @@ import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() 
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator', () => {; it('renders without crashing', () => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content', () => {; render(<AICodeGenerator />); }); ; it('handles user interactions'
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

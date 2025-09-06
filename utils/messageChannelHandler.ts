@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 };
 };
@@ -11,6 +12,27 @@
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+}}}};
+;
+;
+=======
+
+}
+}
+}
+<<<<<<< HEAD
+},
+
+,
+
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+},;
+,;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -51,7 +73,11 @@ export const messageChannelHandler: MessageHandler = {
 };
 ,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 // Message channel handler for real-time communication
 export class MessageChannelHandler {
@@ -76,4 +102,8 @@ export class MessageChannelHandler {
   }
 }
 export default MessageChannelHandler;
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

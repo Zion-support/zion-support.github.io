@@ -78,7 +78,11 @@ fixer.fixAllFiles().then(() => {
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // console.log(' Final Build Fixer')
 console.log('=====')
       const filesToFix = ['pages/NotFound.tsx','pages/_document.tsx','pages/about.tsx']
@@ -97,4 +101,8 @@ console.log('=====')
 =======
           "pattern"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

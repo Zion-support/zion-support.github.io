@@ -3,11 +3,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 ;const fs = require('fs');
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 const fs = require('fs');
@@ -86,8 +89,12 @@ const path = require('path')
 =======
             "message"
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -481,6 +488,14 @@ class HealthMonitor {
   }
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const monitor = new HealthMonitor();
+monitor.run().catch(console.error);
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // Run if called directly
 if (require.main === module) {
   const monitor = new HealthMonitor();
@@ -488,6 +503,7 @@ if (require.main === module) {
     .then(() => monitor.displayStatus())
     .catch(console.error);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 const monitor = new EnhancedHealthMonitor();
 monitor.generateReport();
@@ -520,3 +536,12 @@ const path = require('path')
 
 module.exports = HealthMonitor;
 >>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
+module.exports = HealthMonitor;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

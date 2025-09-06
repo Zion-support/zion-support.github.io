@@ -1,7 +1,17 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> origin/main
 #!/usr/bin/env node;const fs = require('fs');
 const path = require('path');
@@ -19,6 +29,11 @@ const { execSync } = require('child_process');
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node;
 #!/usr/bin/env node
 
@@ -30,16 +45,23 @@ const { execSync } = require('child_process');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 class AutomationImprovementSuite {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -66,7 +88,11 @@ class AutomationImprovementSuite {}
         timeout: 60000, // 1 minute timeout
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 60000, // 1 minute timeout
@@ -161,6 +187,14 @@ fixer.fixFiles().catch(console.error);
 
     // 2. Create a performance monitor
     const performanceMonitorScript = "#!/usr/bin/env node
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
@@ -171,6 +205,10 @@ const path = require('path');
 =======
 =======
 console.log('🚀 Starting Automation Improvement Suite...');
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 // Function to run command and return result
 function runCommand(command, description) {
@@ -199,15 +237,24 @@ const fs = require('fs');
 const path = require('path');
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 class PerformanceMonitor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -248,11 +295,15 @@ class PerformanceMonitor {
       ]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     fs.writeFileSync('/workspace/performance-data.json', JSON.stringify(performanceData, null, 2));
     
   } catch (error) {
     console.log(\`❌ Build failed: \${error.message}\`);
+=======
+main();
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
     this.logFile = path.join(this.reportsDir, 'automation-improvement.log');
     // Ensure reports directory exists;
@@ -951,6 +1002,7 @@ async function main() {
 main();
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 main();
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -961,3 +1013,7 @@ main();
 =======
 main();
 >>>>>>> origin/main
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

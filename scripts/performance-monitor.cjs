@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -185,17 +191,24 @@ const { execSync } = require('child_process')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
@@ -215,6 +228,100 @@ const monitor = new PerformanceMonitor();
 monitor.run().catch(console.error);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+module.exports = PerformanceMonitor;
+=======
+<<<<<<< HEAD
+class PerformanceMonitor {
+  constructor() {
+    this.metrics = {};
+    this.optimizations = [];
+    this.projectRoot = process.cwd();
+  }
+
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);
+  }
+
+  // Monitor bundle size
+  async monitorBundleSize() {
+    this.log('📦 Monitoring bundle size...');
+    try {
+      const nextDir = path.join(this.projectRoot, '.next');
+      if (fs.existsSync(nextDir)) {
+        this.log('✅ Bundle size monitoring completed');
+        this.optimizations.push('Bundle size monitoring');
+      }
+    } catch (error) {
+      this.log(`⚠️ Bundle size monitoring failed: ${error.message}`);
+    }
+  }
+
+  // Add performance optimizations
+  async addPerformanceOptimizations() {
+    this.log('🚀 Adding performance optimizations...');
+    try {
+      const optimizationsScript = `// Performance optimization utilities
+export const lazyLoadImages = () => {
+  if (typeof window === 'undefined') return;
+  const images = document.querySelectorAll('img[data-src]');
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src;
+        img.classList.remove('lazy');
+        observer.unobserve(img);
+      }
+    });
+  });
+  images.forEach(img => imageObserver.observe(img));
+};`;
+
+      fs.writeFileSync(path.join(this.projectRoot, 'utils/performance-optimizations.js'), optimizationsScript);
+      this.log('✅ Performance optimizations added');
+      this.optimizations.push('Performance optimizations');
+    } catch (error) {
+      this.log(`⚠️ Performance optimizations failed: ${error.message}`);
+    }
+  }
+
+  // Run all performance monitoring
+  async runAllPerformanceMonitoring() {
+    this.log('🚀 Starting Performance Monitoring...\n');
+    
+    try {
+      await this.monitorBundleSize();
+      await this.addPerformanceOptimizations();
+
+      this.log('\n📊 Performance Monitoring Summary:');
+      this.log(`- Optimizations applied: ${this.optimizations.length}`);
+      
+      if (this.optimizations.length > 0) {
+        this.log('\n✅ Applied optimizations:');
+        this.optimizations.forEach(opt => this.log(`  - ${opt}`));
+      }
+
+      return {
+        timestamp: new Date().toISOString(),
+        metrics: this.metrics,
+        optimizations: this.optimizations
+      };
+    } catch (error) {
+      this.log(`❌ Performance monitoring failed: ${error.message}`);
+      throw error;
+    }
+  }
+}
+
+// Run if called directly
+if (require.main === module) {
+  const monitor = new PerformanceMonitor();
+  monitor.runAllPerformanceMonitoring().catch(console.error);
+}
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 module.exports = PerformanceMonitor;
 <<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
@@ -417,7 +524,11 @@ setTimeout(() => {
 }, 1000);
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 module.exports = PerformanceMonitor;
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

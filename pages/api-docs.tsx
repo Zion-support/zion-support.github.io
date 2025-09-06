@@ -1,4 +1,16 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+import { motion } from 'framer-motion';
+=======
+import React from 'react';
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import Head from 'next/head';
 
 import Link from 'next/link';
@@ -48,10 +60,17 @@ import Head from 'next/head';
 <<<<<<< HEAD
 import Layout from '../components/Layout';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function APIDocsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -64,10 +83,17 @@ export default function APIDocsPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
@@ -172,6 +198,24 @@ export default function APIDocsPage() {
       </section>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+      <div className='container mx-auto px-4 py-16 text-gray-200'>
+        <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
+        <p className='text-gray-300'>
+          See{' '}
+          <a href='/api-docs' className='text-cyan-400 underline'>
+            API Documentation
+          </a>{' '}
+          for the full reference.
+        </p>
+      </div>
+    </Layout>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   );
 }
 import Layout from '../components/Layout';

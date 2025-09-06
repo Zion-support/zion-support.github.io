@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import Layout from "./components/Layout";
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
@@ -8,6 +17,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
+<<<<<<< HEAD
 =======
 import React from "react";
 import Head from "next/head";
@@ -15,6 +25,9 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import {
   BookOpen
   Clock
@@ -572,7 +585,11 @@ export default function GuidesPage() {
           </div>
         </section>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       </div>
     </Layout>
   );

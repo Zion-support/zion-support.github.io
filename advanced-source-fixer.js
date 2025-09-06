@@ -13,7 +13,11 @@
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node
 import fs from "fs";
 import path from "path";
@@ -214,6 +218,16 @@ class AdvancedSourceFixer {
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const fixer = new AdvancedSourceFixer();
+  fixer.fixAllSourceFiles().catch(console.error);
+}
+<<<<<<< HEAD
+
+export default AdvancedSourceFixer;
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 }
@@ -231,6 +245,7 @@ fixer.fixAllSourceFiles().catch(console.error);
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 if (import.meta.url === `file://${process.argv[1]}`) {
@@ -248,3 +263,15 @@ module.exports = AdvancedSourceFixer;
 =======
 export default AdvancedSourceFixer;
 >>>>>>> origin/main
+=======
+if (require.main === module) {
+  const fixer = new AdvancedSourceFixer();
+  fixer.fixAllSourceFiles().catch(console.error);
+
+module.exports = AdvancedSourceFixer;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
+export default AdvancedSourceFixer;
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

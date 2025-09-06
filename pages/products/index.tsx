@@ -4,10 +4,17 @@ import Head from 'next/head';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';
@@ -105,15 +112,26 @@ const ProductsIndex: NextPage = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   return (
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     <Layout
       title="Products - Zion Tech Group"
       description="Discover our comprehensive suite of technology products designed to transform your business operations."
@@ -303,9 +321,12 @@ const ProductsIndex: NextPage = () => {
       </div>
     </Layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 };
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 =======
     <div>
@@ -330,6 +351,10 @@ import Head from 'next/head';
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   );
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 };

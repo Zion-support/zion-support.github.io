@@ -5,11 +5,14 @@ import React from 'react';   main import type { NextPage } from 'next';  import 
 </Layout>"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 </Layout>"
 </Layout>"
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 </Layout>"
@@ -18,10 +21,16 @@ import React from 'react';   main import type { NextPage } from 'next';  import 
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 </Layout>"
 </Layout>"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

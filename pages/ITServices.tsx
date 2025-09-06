@@ -1,15 +1,28 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import Layout from "../components/Layout";
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import React from 'react';
 import Layout from '../components/Layout';
+>>>>>>> origin/automation-improvements-final
 
 =======
+<<<<<<< HEAD
 import React from "react";
 import Layout from "../components/Layout";
 >>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function ITServices() {
   return (
     <Layout
@@ -19,26 +32,39 @@ export default function ITServices() {
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
+<<<<<<< HEAD
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               IT Services
             </h1>
+=======
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">IT Services</h1>
+>>>>>>> origin/automation-improvements-final
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Complete IT solutions to power your digital transformation.
             </p>
           </div>
           <div className="text-center">
+<<<<<<< HEAD
             <p className="text-gray-600">
               IT Services page is under construction.
             </p>
+=======
+            <p className="text-gray-600">IT Services page is under construction.</p>
+>>>>>>> origin/automation-improvements-final
           </div>
         </div>
       </div>
     </Layout>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }
+<<<<<<< HEAD
+=======
 =======
 import { Star } from 'lucide-react';
 import Head from 'next/head';
@@ -651,4 +677,11 @@ export default function ITServices() {
     </Layout>
   );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

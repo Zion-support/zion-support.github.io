@@ -1,4 +1,16 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+import React, { useState } from 'react';
+=======
+import React, { useState, useEffect } from 'react',
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import Head from 'next/head';
 
 import Link from 'next/link';
@@ -106,6 +118,10 @@ const filters = [
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default function SearchPage() {
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 =======
 import React, { useState, useEffect } from 'react';
@@ -157,9 +173,13 @@ import SmartFooter from '../components/SmartFooter';
 >>>>>>> origin/main
 export default function SearchPage() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -262,8 +282,22 @@ export default function SearchPage() {
                     >
                       {filter.name} ({filter.count})
                     </button>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  ))}
+                </div>
+=======
+                  ))}                </div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+=======
+                  ))}
+                </div>
+>>>>>>> origin/automation-improvements-final
+=======
 ))}
                 </div>
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
               </motion.div>
             )}
           </div>
@@ -315,6 +349,13 @@ export default function SearchPage() {
                       >
                         <ArrowRight className="w-5 h-5" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                      </Link>
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                       </Link>
 <<<<<<< HEAD
 =======
@@ -476,14 +517,28 @@ export default function SearchPage() {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 </Link>
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+</Link>
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                     </div>
                   </motion.div>
                 ))}
               </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
             ) : (
               <motion.div
                 className="text-center py-16"
@@ -560,6 +615,16 @@ export default function SearchPage() {
 }  )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  )
+}
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
             </AnimatePresence>
           )}
@@ -618,8 +683,16 @@ export default function SearchPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 )
 }
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+)
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

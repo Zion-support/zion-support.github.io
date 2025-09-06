@@ -1,6 +1,15 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔒 Running security audit...');
+console.log('✅ Security audit completed');
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
@@ -213,6 +222,7 @@ class SecurityAuditor {
 const auditor = new SecurityAuditor();
 auditor.run().catch(console.error);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 =======
 const fs = require('fs');
 const path = require('path');
@@ -220,3 +230,6 @@ const path = require('path');
 console.log('🔒 Running security audit...');
 console.log('✅ Security audit completed');
 >>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
