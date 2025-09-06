@@ -1,0 +1,5 @@
+
+<<<<<<< HEAD
+  quotes;
+  isArchived = false;
+

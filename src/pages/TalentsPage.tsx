@@ -1,0 +1,7 @@
+
+<<<<<<< HEAD
+
+    let filteredTalents = allTalents;
+    
+
+
