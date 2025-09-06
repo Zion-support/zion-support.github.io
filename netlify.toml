@@ -11,9 +11,6 @@ NODE_OPTIONS = "--max-old-space-size=4096"
   NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
 [functions]
   directory = "netlify/functions"
 
