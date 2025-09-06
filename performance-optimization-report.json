@@ -1,27 +1,37 @@
 {
-  "timestamp": "2025-09-05T22:09:22.350Z",
-  "bundleAnalysis": {
-    "success": true,
-    "result": "\n> ziontechgroup-site@1.0.0 build:analyze\n> ANALYZE=true npm run build\n\n\n> ziontechgroup-site@1.0.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup-site@1.0.0 build\n> next build\n\n  ▲ Next.js 14.2.32\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully\n   Collecting page data ...\n   Generating static pages (0/6) ...\n   Generating static pages (1/6) \r\n   Generating static pages (2/6) \r\n   Generating static pages (4/6) \r\n ✓ Generating static pages (6/6)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                             Size     First Load JS\n┌ ○ /                                     2.13 kB        84.6 kB\n├ ○ /404                                  1.9 kB         84.3 kB\n├ ○ /ai-services                          4.12 kB        86.6 kB\n├ ○ /blockchain                           3.48 kB        85.9 kB\n└ ○ /contact                              3.25 kB        85.7 kB\n+ First Load JS shared by all             80 kB\n  ├ chunks/framework-64ad27b21261a9ce.js  44.8 kB\n  ├ chunks/main-dc99c5fa652eb074.js       34.2 kB\n  └ other shared chunks (total)           947 B\n\nƒ Middleware                              25.7 kB\n\n○  (Static)  prerendered as static content\n\n\n> ziontechgroup-site@1.0.0 postbuild\n> echo \"Build completed\"\n\nBuild completed\n"
-  },
-  "imageOptimization": {
-    "success": true,
-    "imagesFound": 3,
-    "optimization": "Images are already optimized for web delivery"
-  },
-  "codeSplitting": {
-    "success": true,
-    "dynamicImports": 0,
-    "recommendation": "Consider adding dynamic imports for better performance"
-  },
-  "caching": {
-    "success": true,
-    "hasCaching": true,
-    "hasImageOptimization": true,
-    "recommendation": "Caching configured"
-  },
-  "overall": {
-    "status": "excellent",
-    "score": 100
+  "timestamp": "2025-09-06T01:29:04.638Z",
+  "optimizations": [
+    "Use WebP format for images",
+    "Implement lazy loading for images",
+    "Add proper alt text for accessibility",
+    "Use responsive images with srcset",
+    "Compress images before upload",
+    "Implement React.memo for expensive components",
+    "Use useMemo and useCallback for expensive calculations",
+    "Implement code splitting with dynamic imports",
+    "Optimize bundle size with tree shaking",
+    "Use production builds for deployment",
+    "Implement service worker for caching",
+    "Use CDN for static assets",
+    "Enable gzip compression",
+    "Implement HTTP/2",
+    "Use resource hints (preload, prefetch)"
+  ],
+  "categories": {
+    "images": [
+      "Use WebP format for images",
+      "Implement lazy loading for images",
+      "Use responsive images with srcset",
+      "Compress images before upload"
+    ],
+    "code": [
+      "Implement React.memo for expensive components",
+      "Optimize bundle size with tree shaking"
+    ],
+    "network": [
+      "Implement service worker for caching",
+      "Use CDN for static assets",
+      "Enable gzip compression"
+    ]
   }
 }
