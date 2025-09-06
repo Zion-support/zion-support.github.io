@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -84,15 +85,22 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 import _React from 'react';  import '@testing-library/jest-dom'; import WebVitalsdynamic from '../components/WebVitals.dynamic'; describe('WebVitalsdynamic',() => { test('renders without crashing',() => { render(<WebVitalsdynamic />); expect(screen.getByTestId('webvitals.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<WebVitalsdynamic />)}); test('handles user interactions',() => { render(<WebVitalsdynamic />)}); test('applies correct styling',() => { render(<WebVitalsdynamic />)})});
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import WebVitalsdynamic from '../components/WebVitals.dynamic';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 describe('WebVitalsdynamic', () => {
   test('renders without crashing', () => {
     render(<WebVitalsdynamic />);
     expect(screen.getByTestId('webvitals.dynamic')).toBeInTheDocument();
   });
+<<<<<<< HEAD
   test('displays correct content', () => {
     render(<WebVitalsdynamic />);
   });
@@ -131,3 +139,21 @@ import _React from 'react';  import '@testing-library/jest-dom'; import WebVital
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+  test('displays correct content', () => {
+    render(<WebVitalsdynamic />);
+    // Add specific content tests based on component
+  });
+
+  test('handles user interactions', () => {
+    render(<WebVitalsdynamic />);
+    // Add interaction tests based on component functionality
+  });
+
+  test('applies correct styling', () => {
+    render(<WebVitalsdynamic />);
+    // Add styling tests if needed
+  });
+});
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

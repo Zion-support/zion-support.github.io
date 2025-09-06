@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,15 +14,22 @@ import _React from 'react';  import '@testing-library/jest-dom'; import ModernLa
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ModernLayoutdynamic from '../components/ModernLayout.dynamic';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 describe('ModernLayoutdynamic', () => {
   test('renders without crashing', () => {
     render(<ModernLayoutdynamic />);
     expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument();
   });
+<<<<<<< HEAD
   test('displays correct content', () => {
     render(<ModernLayoutdynamic />);
   });
@@ -110,3 +118,21 @@ import _React from 'react';  import '@testing-library/jest-dom'; import ModernLa
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+  test('displays correct content', () => {
+    render(<ModernLayoutdynamic />);
+    // Add specific content tests based on component
+  });
+
+  test('handles user interactions', () => {
+    render(<ModernLayoutdynamic />);
+    // Add interaction tests based on component functionality
+  });
+
+  test('applies correct styling', () => {
+    render(<ModernLayoutdynamic />);
+    // Add styling tests if needed
+  });
+});
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

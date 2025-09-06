@@ -129,6 +129,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     Zap,
   } = require('lucide-react');
   console.log('✅ Lucide React icons import successful', {
+<<<<<<< HEAD
     ArrowRight: 'typeof ArrowRight',
     CheckCircle: 'typeof CheckCircle',
     Brain: 'typeof Brain',
@@ -146,6 +147,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     Zap: 'typeof Zap',
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+    ArrowRight: typeof ArrowRight,
+    CheckCircle: typeof CheckCircle,
+    Brain: typeof Brain,
+    Cloud: typeof Cloud,
+    Shield: typeof Shield,
+    Zap: typeof Zap,
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   });
   console.log('🎉 All core dependencies imported successfully!');
   console.log('📋 Components should be ready for build');

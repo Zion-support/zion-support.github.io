@@ -142,6 +142,7 @@ describe('talent detail page', () => {
       "statusCode": 200,
       "body": {
         id: 't-123',
+<<<<<<< HEAD
         "full_name": 'Cypress Talent',
         "bio": 'Testing bio',
         "skills": ['Cypress']}}).as('getTalent');
@@ -209,3 +210,15 @@ describe('talent detail page',() => { it('loads profile from API',() => { cy.int
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+        full_name: 'Cypress Talent',
+        bio: 'Testing bio',
+        skills: ['Cypress'],
+      },
+    }).as('getTalent');
+    cy.visit('/talent/t-123');
+    cy.wait('@getTalent');
+    cy.get('[data-testid="talent-name"]').should('contain', 'Cypress Talent');
+  });
+});
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

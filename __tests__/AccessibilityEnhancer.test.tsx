@@ -106,6 +106,7 @@ describe('AccessibilityEnhancer', () => {
     expect(element).toHaveAttribute('tabindex', '-1');
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 });
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -135,3 +136,6 @@ describe('AccessibilityEnhancer'
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+});
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

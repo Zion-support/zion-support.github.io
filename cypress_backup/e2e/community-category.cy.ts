@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -121,3 +122,13 @@ describe ('community category listing', () => { it ('displays posts in Getting H
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+describe('community category listing', () => {
+  it('displays posts in Getting Hired category', () => {
+    cy.visit('/community/getting-hired');
+    cy.get('[data-testid="post-card"]')
+      .its('length')
+      .should('be.greaterThan', 0);
+  });
+});
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

@@ -5,6 +5,7 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
@@ -40,6 +41,130 @@ class PerformanceOptimizer {
         totalSize += this.getDirectorySize(filePath);
       } else {
         totalSize += stats.size;
+=======
+
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
+
+// Performance optimization configurations
+const optimizations = {
+  // Bundle size optimization
+  bundleSize: {
+    maxFileSize: 500 * 1024, // 500KB
+    maxTotalSize: 5 * 1024 * 1024, // 5MB
+  },
+
+  // Image optimization
+  images: {
+    maxWidth: 1920,
+    maxHeight: 1080,
+    quality: 85,
+    formats: ['webp', 'avif', 'jpg', 'png'],
+  },
+
+  // Code optimization
+  code: {
+    removeUnusedImports: true,
+    minifyInlineStyles: true,
+    optimizeImports: true,
+  },
+};
+
+let totalOptimizations = 0;
+let filesProcessed = 0;
+
+// Optimize React components
+function optimizeReactComponent(content, filePath) {
+  let optimized = content;
+  let changes = 0;
+
+  // Remove unused imports
+  if (optimizations.code.removeUnusedImports) {
+    const importRegex = /import\s+{[^}]*}\s+from\s+['"][^'"]+['"];?\s*\n/g;
+    const imports = content.match(importRegex) || [];
+
+    imports.forEach(importStatement => {
+      // Check if imported items are actually used
+      const importedItems =
+        importStatement
+          .match(/{([^}]*)}/)?.[1]
+          ?.split(',')
+          .map(item => item.trim()) || [];
+
+      importedItems.forEach(item => {
+        const cleanItem = item.replace(/\s+as\s+\w+/, '').trim();
+        const usageRegex = new RegExp(`\\b${cleanItem}\\b`, 'g');
+        const usages = content.match(usageRegex) || [];
+
+        if (usages.length <= 1) {
+          // Remove unused import
+          optimized = optimized.replace(importStatement, '');
+          changes++;
+        }
+      });
+    });
+  }
+
+  // Optimize useEffect dependencies
+  const useEffectRegex =
+    /useEffect\s*\(\s*\(\)\s*=>\s*{[^}]*},\s*\[\s*\]\s*\)/g;
+  const emptyUseEffects = optimized.match(useEffectRegex) || [];
+
+  if (emptyUseEffects.length > 0) {
+    console.log(
+      `⚠️  Found ${emptyUseEffects.length} useEffect with empty dependencies in ${filePath}`
+    );
+  }
+
+  // Add React.memo to functional components
+  const componentRegex = /const\s+(\w+)\s*=\s*\(\s*{[^}]*}\s*\)\s*=>\s*{/g;
+  const components = optimized.match(componentRegex) || [];
+
+  components.forEach(component => {
+    const componentName = component.match(/const\s+(\w+)\s*=/)?.[1];
+    if (componentName && !optimized.includes(`memo(${componentName})`)) {
+      // Add memo optimization
+      optimized = optimized.replace(
+        `const ${componentName} = (`,
+        `const ${componentName} = memo((`
+      );
+      optimized = optimized.replace(
+        `export default ${componentName};`,
+        `export default ${componentName};`
+      );
+      changes++;
+    }
+  });
+
+  return { content: optimized, changes };
+}
+
+// Optimize CSS files
+function optimizeCSS(content, filePath) {
+  let optimized = content;
+  let changes = 0;
+
+  // Remove unused CSS rules (basic implementation)
+  if (optimizations.code.minifyInlineStyles) {
+    // Remove empty rules
+    optimized = optimized.replace(/\.[\w-]+\s*{\s*}/g, '');
+    changes++;
+
+    // Remove duplicate properties
+    const ruleRegex = /([^{]+)\s*{\s*([^}]+)\s*}/g;
+    const rules = optimized.match(ruleRegex) || [];
+
+    rules.forEach(rule => {
+      const properties = rule.match(/([^:]+):\s*([^;]+);/g) || [];
+      const uniqueProperties = [...new Set(properties)];
+
+      if (uniqueProperties.length !== properties.length) {
+        const selector = rule.match(/([^{]+)\s*{/)?.[1];
+        const newRule = `${selector} {\n  ${uniqueProperties.join('\n  ')}\n}`;
+        optimized = optimized.replace(rule, newRule);
+        changes++;
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       }
     });
     return totalSize;
@@ -616,6 +741,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         "optimizationsApplied": results.optimizations,
         "errors": results.errors.length
       },
+<<<<<<< HEAD
       "details": results
     };
 <<<<<<< HEAD
@@ -970,6 +1096,25 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         })})}
   }
 <<<<<<< HEAD
+=======
+      recommendations: [
+        'Consider implementing code splitting for large components',
+        'Use React.memo for expensive components',
+        'Optimize images to WebP/AVIF format',
+        'Implement lazy loading for non-critical components',
+        'Use CSS-in-JS libraries for better tree shaking',
+      ],
+    },
+  };
+
+  fs.writeFileSync(
+    'performance-optimization-report.json',
+    JSON.stringify(report, null, 2)
+  );
+  console.log(
+    '📊 Performance report generated: performance-optimization-report.json'
+  );
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 export default PerformanceMonitor;";
     const scriptPath = path.join(this.srcDir, 'utils', 'PerformanceMonitor.js');
@@ -1004,6 +1149,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       fs.mkdirSync(utilsDir, { recursive: true });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+<<<<<<< HEAD
     const scriptPath = path && path.join(this && this.srcDir, 'utils', 'PerformanceMonitor && PerformanceMonitor.js');
     const utilsDir = path && path.dirname(scriptPath);
     if (!fs && fs.existsSync(utilsDir)) {
@@ -1090,6 +1236,31 @@ module.exports = PerformanceOptimizer;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       console.error('❌ Performance optimization failed:', error);
       process.exit(1);
+=======
+  const patterns = [
+    'src/**/*.{tsx,jsx,ts,js}',
+    'pages/**/*.{tsx,jsx,ts,js}',
+    'components/**/*.{tsx,jsx,ts,js}',
+    'styles/**/*.{css,scss}',
+  ];
+
+  const excludeDirs = [
+    'node_modules',
+    '.next',
+    'build',
+    'dist',
+    'scripts',
+    'automation',
+    'automation_backup',
+    'src.disabled',
+    'pages.disabled',
+    'components.disabled',
+  ];
+
+  for (const pattern of patterns) {
+    const files = await glob(pattern, {
+      ignore: excludeDirs.map(dir => `**/${dir}/**`),
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     });
 
 =======

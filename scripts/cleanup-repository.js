@@ -11,6 +11,10 @@
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 #!/usr/bin/env node
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
@@ -27,6 +31,10 @@ const CLEANUP_PATTERNS = [// Disabled directories
   'types.disabled/**',
   'hooks.disabled/**',
   'contracts.disabled/**',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   // Backup directories
   'automation_backup/**',
   'backup-pages/**',
@@ -34,8 +42,15 @@ const CLEANUP_PATTERNS = [// Disabled directories
   'pages_backup/**',
   'lib_backup/**',
   'broken_files_backup/**',
+<<<<<<< HEAD
   // API backup
   'api-backup/**',
+=======
+
+  // API backup
+  'api-backup/**',
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   // Temporary files
   '**/*.backup',
   '**/*.disabled',
@@ -43,29 +58,54 @@ const CLEANUP_PATTERNS = [// Disabled directories
   '**/*.bak',
   '**/*.tmp',
   '**/*.temp',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   // Build artifacts that shouldn't be in repo
   '.next/**',
   'out/**',
   'dist/**',
   'build/**',
+<<<<<<< HEAD
   // Log files
   '**/*.log',
   '**/logs/**',
   // Cache directories
   '.cache/**',
   'node_modules/.cache/**',
+=======
+
+  // Log files
+  '**/*.log',
+  '**/logs/**',
+
+  // Cache directories
+  '.cache/**',
+  'node_modules/.cache/**',
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   // IDE files
   '.vscode/**',
   '.idea/**',
   '*.swp',
   '*.swo',
   '*~',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   // OS files
   '.DS_Store',
   'Thumbs.db',
   'desktop.ini',
 ];
+<<<<<<< HEAD
 const KEEP_PATTERNS = [// Keep important config files
+=======
+const KEEP_PATTERNS = [
+  // Keep important config files
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   'package.json',
   'package-lock.json',
   'yarn.lock',
@@ -76,21 +116,42 @@ const KEEP_PATTERNS = [// Keep important config files
   'tailwind.config.js',
   'postcss.config.js',
   'eslint.config.js',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   // Keep documentation
   'README.md',
   'CHANGELOG.md',
   'LICENSE',
   'docs/**',
+<<<<<<< HEAD
   // Keep scripts (but clean them)
   'scripts/**',
   // Keep automation (but clean backups)
   'automation/**',
+=======
+
+  // Keep scripts (but clean them)
+  'scripts/**',
+
+  // Keep automation (but clean backups)
+  'automation/**',
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   // Keep tests
   '__tests__/**',
   '**/*.test.*',
   '**/*.spec.*',
+<<<<<<< HEAD
   // Keep public assets
   'public/**',
+=======
+
+  // Keep public assets
+  'public/**',
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   // Keep source code
   'pages/**',
   'components/**',
@@ -107,6 +168,7 @@ function shouldKeepFile(filePath) {
 <<<<<<< HEAD
   for (const pattern of KEEP_PATTERNS) {
     if (glob.minimatch(filePath, pattern)) {
+<<<<<<< HEAD
       return true}
 =======
   
@@ -125,11 +187,27 @@ function shouldRemoveFile(filePath) {
   // Don't remove files that should be kept
   if (shouldKeepFile(filePath)) {
     return false}
+=======
+      return true;
+    }
+  }
+
+  return false;
+}
+
+function shouldRemoveFile(filePath) {
+  // Don't remove files that should be kept
+  if (shouldKeepFile(filePath)) {
+    return false;
+  }
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   // Check if file matches cleanup patterns
 <<<<<<< HEAD
 <<<<<<< HEAD
   for (const pattern of CLEANUP_PATTERNS) {
     if (glob.minimatch(filePath, pattern)) {
+<<<<<<< HEAD
       return true}
 =======
   
@@ -144,10 +222,20 @@ function shouldRemoveFile(filePath) {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   }
   return false}
+=======
+      return true;
+    }
+  }
+
+  return false;
+}
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 function removeFile(filePath) {
   try {
     const stats = fs.statSync(filePath);
     if (stats.isDirectory()) {
+<<<<<<< HEAD
       fs.rmSync(filePath, { "recursive": true, "force": true });
       console.log(`🗂️  Removed "directory": ${filePath}`)} else {
       fs.unlinkSync(filePath);
@@ -157,6 +245,20 @@ function removeFile(filePath) {
     return false}
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+      fs.rmSync(filePath, { recursive: true, force: true });
+      console.log(`🗂️  Removed directory: ${filePath}`);
+    } else {
+      fs.unlinkSync(filePath);
+      console.log(`📄 Removed file: ${filePath}`);
+    }
+
+    return true;
+  } catch (error) {
+    console.error(`❌ Error removing ${filePath}:`, error.message);
+    return false;
+  }
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 =======
 
@@ -170,6 +272,7 @@ function removeFile(filePath) {
 function cleanScripts() {
   const scriptsDir = 'scripts';
   if (!fs.existsSync(scriptsDir)) {
+<<<<<<< HEAD
     return}
   const scriptFiles = glob.sync('scripts/**/*', { "nodir": true });
   let cleanedCount = 0;
@@ -179,6 +282,13 @@ function cleanScripts() {
   
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+    return;
+  }
+
+  const scriptFiles = glob.sync('scripts/**/*', { nodir: true });
+  let cleanedCount = 0;
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   for (const file of scriptFiles) {
     // Remove temporary fix scripts
     if (
@@ -190,6 +300,7 @@ function cleanScripts() {
       file.includes('targeted-')
     ) {
       if (removeFile(file)) {
+<<<<<<< HEAD
         cleanedCount++}
 <<<<<<< HEAD
 =======
@@ -210,6 +321,19 @@ function cleanRootFiles() {
   
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+        cleanedCount++;
+      }
+    }
+  }
+
+  console.log(`🧹 Cleaned ${cleanedCount} temporary script files`);
+}
+
+function cleanRootFiles() {
+  const rootFiles = glob.sync('*', { nodir: true });
+  let cleanedCount = 0;
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   for (const file of rootFiles) {
     // Remove temporary files in root
     if (
@@ -249,6 +373,7 @@ function cleanRootFiles() {
       file.endsWith('.sh')
     ) {
       if (removeFile(file)) {
+<<<<<<< HEAD
         cleanedCount++}
 <<<<<<< HEAD
 =======
@@ -269,6 +394,19 @@ function cleanReportFiles() {
   
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+        cleanedCount++;
+      }
+    }
+  }
+
+  console.log(`🧹 Cleaned ${cleanedCount} temporary root files`);
+}
+
+function cleanReportFiles() {
+  const reportFiles = glob.sync('**/*-report.json', { nodir: true });
+  let cleanedCount = 0;
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   for (const file of reportFiles) {
     // Keep important reports, remove temporary ones
     if (
@@ -277,6 +415,7 @@ function cleanReportFiles() {
       !file.includes('security-audit-report.json')
     ) {
       if (removeFile(file)) {
+<<<<<<< HEAD
         cleanedCount++}
 <<<<<<< HEAD
 =======
@@ -288,6 +427,16 @@ function cleanReportFiles() {
     }
   }
   console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)}
+=======
+        cleanedCount++;
+      }
+    }
+  }
+
+  console.log(`🧹 Cleaned ${cleanedCount} temporary report files`);
+}
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 function main() {
   console.log('🧹 Starting repository cleanup...');
   // Clean scripts first
@@ -298,6 +447,7 @@ function main() {
   cleanReportFiles();
   // Clean disabled/backup directories
   let totalRemoved = 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -391,3 +541,27 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+  for (const pattern of CLEANUP_PATTERNS) {
+    const files = glob.sync(pattern, { nodir: false });
+    for (const file of files) {
+      if (shouldRemoveFile(file)) {
+        if (removeFile(file)) {
+          totalRemoved++;
+        }
+      }
+    }
+  }
+
+  console.log(`\n📊 Cleanup Summary:`);
+  console.log(`   Total items removed: ${totalRemoved}`);
+  console.log('\n✨ Repository cleanup completed!');
+  console.log('\n📝 Next steps:');
+  console.log('   1. Run: npm install');
+  console.log('   2. Run: npm run build');
+  console.log('   3. Test the application');
+  console.log('   4. Commit the changes');
+}
+
+main();
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

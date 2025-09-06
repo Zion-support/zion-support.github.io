@@ -302,6 +302,7 @@ export default Careers
 import React from 'react';
 import { SEO } from '../components / SEO';
 const Careers: React.FC = () => {
+<<<<<<< HEAD
   return (<>;
       <SEO title="Careers - Zion Tech Group" />;
       <div className="min - h-screen bg - white py - 20">;
@@ -340,6 +341,14 @@ const Careers: React.FC = () => {
           >
             Apply Now
           </a>
+=======
+  return (<>""
+      <SEO title='Careers - Zion Tech Group' /" >"
+      <div className='min-h-screen bg-white py-20'>""
+        <div className='max-w-4xl mx-auto px-4'>""
+          <h1 className='text-4xl font-bold text-gray-900 mb-8'>Careers</h1>""
+          <p className='text-lg text-gray-600'>Content coming soon...</p>
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         </div>
       </div>
     </div>

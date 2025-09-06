@@ -57,13 +57,13 @@ jest.mock('@prisma/client', () => {
   const mPrismaClient = {
     product: {
       findMany: jest.fn(),
-      aggregate: jest.fn()
+      aggregate: jest.fn(),
     },
     productReview: {
-      aggregate: jest.fn()
+      aggregate: jest.fn(),
     },
     $queryRawUnsafe: jest.fn(),
-    $disconnect: jest.fn()
+    $disconnect: jest.fn(),
   };
   return { PrismaClient: jest.fn(() => mPrismaClient) };
 });
@@ -86,12 +86,13 @@ describe('/api/products API Endpoint', () => {
     // Default mock for productReview.aggregate to avoid errors in stats calculation
     (prisma.productReview.aggregate as jest.Mock).mockResolvedValue({
       _avg: { rating: null },
-      _count: { id: 0 }
+      _count: { id: 0 },
     });
   });
   describe('GET /api/products with fuzzy search', () => {
     it('should return products matching "gpt" with similarity >= 0.8', async () => {
       // 1. Mock database responses
+<<<<<<< HEAD
       const mockRawResults = [{
           "id": 'product-gpt-high-score',
           "name_similarity": 0.9,
@@ -107,6 +108,24 @@ describe('/api/products API Endpoint', () => {
           "name_similarity": 0.82,
           "description_similarity": 0.85
         }
+=======
+      const mockRawResults = [
+        {
+          id: 'product-gpt-high-score',
+          name_similarity: 0.9,
+          description_similarity: 0.5,
+        },
+        {
+          id: 'product-other',
+          name_similarity: 0.2,
+          description_similarity: 0.1,
+        },
+        {
+          id: 'product-gpt-medium-score',
+          name_similarity: 0.82,
+          description_similarity: 0.85,
+        },
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       ];
       // Note: The API sorts by GREATEST(name_similarity, description_similarity) DESC
       // So, product-gpt-high-score (0.9) should come first, then product-gpt-medium-score (0.85)
@@ -117,7 +136,7 @@ describe('/api/products API Endpoint', () => {
           images: [],
           price: null,
           currency: 'USD',
-          tags: []
+          tags: [],
         },
         {
           id: 'product-gpt-medium-score',
@@ -126,22 +145,27 @@ describe('/api/products API Endpoint', () => {
           images: [],
           price: null,
           currency: 'USD',
-          tags: []
-        }
+          tags: [],
+        },
         // Not expecting 'product-other' to be fetched by findMany if threshold is 0.3 and it's filtered out by raw query logic
       ];
       // The actual API logic filters by similarity >= 0.3 in $queryRawUnsafe
       // and then orders. Let's refine mockRawResults to reflect what $queryRawUnsafe would return
       // based on 'WHERE similarity(name, $1) >= 0.3 OR similarity(description, $1) >= 0.3'
       const filteredMockRawResults = mockRawResults
-        .filter(p => p.name_similarity >= 0.3 || p.description_similarity >= 0.3)
-        .sort((a, b) =>
-          Math.max(b.name_similarity, b.description_similarity) -
-          Math.max(a.name_similarity, a.description_similarity)
+        .filter(
+          p => p.name_similarity >= 0.3 || p.description_similarity >= 0.3
+        )
+        .sort(
+          (a, b) =>
+            Math.max(b.name_similarity, b.description_similarity) -
+            Math.max(a.name_similarity, a.description_similarity)
         );
       // Expected order by "GREATEST": // 1. product-gpt-high-score (GREATEST is 0.9)
       // 2. product-gpt-medium-score (GREATEST is 0.85)
-      (prisma.$queryRawUnsafe as jest.Mock).mockResolvedValue(filteredMockRawResults);
+      (prisma.$queryRawUnsafe as jest.Mock).mockResolvedValue(
+        filteredMockRawResults
+      );
       // findMany will be called with IDs from filteredMockRawResults
       const expectedProductIds = filteredMockRawResults.map(p => p.id);
       (prisma.product.findMany as jest.Mock).mockImplementation(
@@ -154,8 +178,8 @@ describe('/api/products API Endpoint', () => {
         method: 'GET',
         url: '/api/products?q=gpt',
         query: {
-          q: 'gpt'
-        }
+          q: 'gpt',
+        },
       });
       // 3. Call API handler
       await productHandler(
@@ -189,12 +213,13 @@ describe('/api/products API Endpoint', () => {
       expect(prisma.product.findMany).toHaveBeenCalledWith({
         where: {
           id: {
-            in: expectedProductIds
-          }
-        }
+            in: expectedProductIds,
+          },
+        },
       });
     });
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
           "id"
 =======
@@ -251,3 +276,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+});
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

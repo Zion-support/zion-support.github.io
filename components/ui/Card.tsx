@@ -109,6 +109,7 @@ const CardTitle = null;
 CardTitle.displayName = "CardTitle";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const CardDescription = React.forwardRef<
   HTMLParagraphElement,
 =======
@@ -244,3 +245,13 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 }
 const Card: React.FC<CardProps> = ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
+};
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

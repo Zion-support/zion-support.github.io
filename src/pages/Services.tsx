@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1138,3 +1139,10 @@ export default Services;
 =======
 >>>>>>> main
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+ursor/automate-test-fix-improve-and-merge-code-48f3
+  return (    <>
+      <SEO title='Services - Zion Tech Group' /" >'      <div className='min-h-screen bg-white py-20'>'        <div className='max-w-4xl mx-auto px-4'>'          <h1 className='text-4xl font-bold text-gray-900 mb-8'>Services</h1>'          <p className='text-lg text-gray-600'>Content coming soon...</p>'        </div>'      </div>"
+</>)}
+export default Services""
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

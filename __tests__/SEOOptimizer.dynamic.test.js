@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -84,15 +85,22 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 import _React from 'react';  import '@testing-library/jest-dom'; import SEOOptimizerdynamic from '../components/SEOOptimizer.dynamic'; describe('SEOOptimizerdynamic',() => { test('renders without crashing',() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId('seooptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOOptimizerdynamic />)}); test('handles user interactions',() => { render(<SEOOptimizerdynamic />)}); test('applies correct styling',() => { render(<SEOOptimizerdynamic />)})});
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import SEOOptimizerdynamic from '../components/SEOOptimizer.dynamic';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 describe('SEOOptimizerdynamic', () => {
   test('renders without crashing', () => {
     render(<SEOOptimizerdynamic />);
     expect(screen.getByTestId('seooptimizer.dynamic')).toBeInTheDocument();
   });
+<<<<<<< HEAD
   test('displays correct content', () => {
     render(<SEOOptimizerdynamic />);
   });
@@ -131,3 +139,21 @@ import _React from 'react';  import '@testing-library/jest-dom'; import SEOOptim
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+  test('displays correct content', () => {
+    render(<SEOOptimizerdynamic />);
+    // Add specific content tests based on component
+  });
+
+  test('handles user interactions', () => {
+    render(<SEOOptimizerdynamic />);
+    // Add interaction tests based on component functionality
+  });
+
+  test('applies correct styling', () => {
+    render(<SEOOptimizerdynamic />);
+    // Add styling tests if needed
+  });
+});
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

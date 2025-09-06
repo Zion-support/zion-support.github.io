@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function useCounter(target: number, durationMs: number) {
   const [value, setValue] = useState(0);
   useEffect(() => {
@@ -59,8 +60,44 @@ export default function InteractiveStats() {
       <Stat label='Satisfaction' value={satisfaction} suffix='%' />
     </div>
   );
+=======
+import React from 'react';
+interface StatItem {
+  label: string;
+  value: string | number;
+  description?: string;
+}
+
+interface InteractiveStatsProps {
+  stats: StatItem[];
+  className?: string;
+}
+
+export default function InteractiveStats({
+  stats,
+  className = 'grid grid-cols-1 md: grid-cols-3 gap-6',
+}: InteractiveStatsProps) {
+  return (
+    <div className={className}>
+      {stats.map((stat, index) => (
+        <div
+          key={index}
+          className="text-center p-6 bg-white rounded-lg shadow-md"
+        >
+          <div className="text-3xl font-bold text-blue-600 mb-2">
+            {stat.value}
+          </div>
+          <div className="text-lg font-semibold text-gray-900 mb-1">
+            {stat.label}
+          </div>
+          {stat.description && (
+            <div className="text-gray-600 text-sm">{stat.description}</div>
+          )}
+        </div>
+      ))}
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     </div>
-  )
+  );
 }
 function Stat({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {
   return (

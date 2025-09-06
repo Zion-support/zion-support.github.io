@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import '@testing-library/jest-dom';
 import AICodeGeneratortest from '../components/AICodeGenerator.test';
@@ -16,11 +17,16 @@ import AICodeGeneratortest from '../components/AICodeGenerator.test';
 
 =======
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AICodeGeneratortest from '../components/AICodeGenerator.test';
+<<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AICodeGeneratortest from "./components/AICodeGenerator.test"; describe("AICodeGeneratortest",() => { test("renders without crashing",() => { render(<AICodeGeneratortest />); expect(screen.getByTestId("aicodegenerator.test")).toBeInTheDocument()}); test("displays correct content",() => { render(<AICodeGeneratortest />)}); test("handles user interactions",() => { render(<AICodeGeneratortest />)}); test("applies correct styling",() => { render(<AICodeGeneratortest />)})});''"
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -91,6 +97,7 @@ describe('AICodeGeneratortest', () => {
     expect(screen.getByTestId('aicodegenerator.test')).toBeInTheDocument();
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -109,6 +116,13 @@ describe('AICodeGeneratortest', () => {
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+  test('displays correct content', () => {
+    render(<AICodeGeneratortest />);
+    // Add specific content tests based on component
+  });
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -143,6 +157,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   test('handles user interactions', () => {
     render(<AICodeGeneratortest />);
+<<<<<<< HEAD
   });
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -166,10 +181,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   });
   test('handles user interactions', () => {
     render(<AICodeGeneratortest />);
+=======
+    // Add interaction tests based on component functionality
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   });
 
   test('applies correct styling', () => {
     render(<AICodeGeneratortest />);
+<<<<<<< HEAD
   });
 <<<<<<< HEAD
 =======
@@ -243,3 +262,8 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    // Add styling tests if needed
+  });
+});
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

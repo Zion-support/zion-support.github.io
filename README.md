@@ -364,6 +364,7 @@ Interactive service display cards with:
 
 ## 🎨 Design System
 
+<<<<<<< HEAD
 The project uses a consistent design system with:
 
 - **Colors**: Blue primary (#2563eb), with complementary grays and accent colors
@@ -384,6 +385,35 @@ The project uses a consistent design system with:
 - **Vite 5.4.19** - Next-generation build tool
 - **Tailwind CSS 3.4.17** - Utility-first CSS framework
 - **Framer Motion 10.16.4** - Animation library
+=======
+### Color Palette
+
+- **Primary**: Zion Purple (`#8B5CF6`)
+- **Secondary**: Zion Cyan (`#22DDD2`)
+- **Background**: Zion Blue Dark (`#0F172A`)
+- **Text**: White, Zion Slate Light (`#94A3B8`)
+
+### Typography
+
+- **Headings**: Bold, large text for hierarchy
+- **Body**: Clean, readable text with proper contrast
+- **Accents**: Zion Cyan for highlights and CTAs
+
+### Components
+
+- **Cards**: Rounded corners with subtle borders and hover effects
+- **Buttons**: Gradient backgrounds with hover animations
+- **Navigation**: Dropdown menus with smooth transitions
+- **Forms**: Clean input fields with focus states
+
+## 📱 Responsive Design
+
+The website is built with a mobile-first approach:
+
+- **Mobile**: Stacked layouts with touch-friendly interactions
+- **Tablet**: Adjusted grid layouts for medium screens
+- **Desktop**: Full-featured layouts with hover effects and advanced navigation
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 ### UI Components
 - **Radix UI** - Accessible component primitives
@@ -391,6 +421,7 @@ The project uses a consistent design system with:
 - **React Hook Form** - Performant forms with validation
 - **Zod** - TypeScript-first schema validation
 
+<<<<<<< HEAD
 ### State Management & Data
 - **Redux Toolkit** - Modern Redux with best practices
 - **React Query** - Server state management
@@ -400,9 +431,27 @@ The project uses a consistent design system with:
 - **Performance Observer API** - Real-time performance monitoring
 - **Intersection Observer** - Efficient lazy loading
 - **Service Worker** - Advanced caching and offline support
+=======
+### Main Navigation
+
+- **Home** (`/`) - Landing page with hero section and service overview
+- **Services** (`/services`) - AI, Cloud, Cybersecurity, Digital Transformation
+- **Solutions** (`/solutions`) - Industry-specific solutions
+- **About** (`/about`) - Company information and team
+- **Resources** - Case studies, research, blog, webinars
+- **Support** - Help center, training, contact
+- **Contact** (`/contact`) - Get in touch and request quotes
+
+### Footer Navigation
+
+- Organized into logical sections (Services, Solutions, Company, Resources, Support)
+- Social media links and contact information
+- Newsletter signup and trust indicators
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 ## 📱 Features
 
+<<<<<<< HEAD
 ### Core Services
 - **AI & Machine Learning Solutions**
 - **Quantum Computing Platform**
@@ -425,23 +474,51 @@ The project uses a consistent design system with:
 - **Internationalization** - Multi-language support ready
 - **Progressive Enhancement** - Works without JavaScript
 - **Accessibility First** - Inclusive design principles
+=======
+### Frontend Framework
+
+- **Next.js 15.5.2** - React framework with SSR capabilities
+- **React 18.2.0** - Modern React with hooks and functional components
+- **TypeScript** - Type-safe development
+
+### Styling
+
+- **Tailwind CSS** - Utility-first CSS framework
+- **Custom CSS Variables** - Zion Tech Group brand colors
+- **Responsive Design** - Mobile-first approach
+
+### State Management
+
+- **React Hooks** - useState, useEffect for local state
+- **Context API** - For global state management
+- **React Router** - Client-side routing
+
+### Performance
+
+- **Lazy Loading** - Components loaded on demand
+- **Image Optimization** - Next.js image optimization
+- **Code Splitting** - Automatic bundle splitting
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
+
+- Node.js 18+
 - npm or yarn package manager
 - Modern web browser
 
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/your-org/zion-tech-group.git
    cd zion-tech-group
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    # or
@@ -449,6 +526,7 @@ The project uses a consistent design system with:
    ```
 
 3. **Start development server**
+
    ```bash
    npm run dev
    # or
@@ -462,7 +540,112 @@ The project uses a consistent design system with:
    yarn build
    ```
 
+<<<<<<< HEAD
 ### Available Scripts
+=======
+### Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+## 📁 Key Components
+
+### Header Component (`src/components/header/Header.jsx`)
+
+- Logo with Zion Tech Group branding
+- Main navigation with dropdown menus
+- Search functionality with suggestions
+- User authentication and language selection
+- Mobile-responsive design
+
+### Footer Component (`src/components/Footer.jsx`)
+
+- Company information and branding
+- Organized link sections
+- Newsletter signup
+- Social media links
+- Trust indicators and certifications
+
+### Sidebar Component (`src/components/Sidebar.jsx`)
+
+- Collapsible navigation sections
+- Service and solution categories
+- Quick access to key pages
+- Mobile-friendly overlay design
+
+### HomePage Component (`src/pages/HomePage.jsx`)
+
+- Hero section with compelling messaging
+- Feature highlights with icons
+- Statistics and social proof
+- Service preview cards
+- Testimonials and CTA sections
+
+## 🎯 Content Management
+
+### Service Data (`src/data/marketplaceData.js`)
+
+- Search suggestions and keywords
+- Service categories and descriptions
+- Industry solutions and use cases
+- Testimonials and case studies
+
+### Page Templates
+
+- **SimplePage.jsx** - Template for various routes with dynamic content
+- **ComprehensivePricing2025.jsx** - Pricing page with plans and add-ons
+- **Sitemap.jsx** - Complete site navigation structure
+
+## 🔍 Search Functionality
+
+### Enhanced Search Input
+
+- Real-time search suggestions
+- Recent and popular searches
+- Category-based filtering
+- Keyboard navigation support
+
+### Search Suggestions
+
+- Service-related keywords
+- Industry-specific terms
+- Technology stack references
+- Company and solution names
+
+## 📊 Analytics and SEO
+
+### SEO Features
+
+- Meta tags and descriptions
+- Structured data markup
+- Sitemap generation
+- Open Graph tags
+
+### Performance Monitoring
+
+- Lighthouse performance metrics
+- Core Web Vitals tracking
+- Page load optimization
+- Bundle size analysis
+
+## 🚀 Deployment
+
+### Build Process
+
+1. **Development**: `npm run dev` for local development
+2. **Build**: `npm run build` for production build
+3. **Start**: `npm start` for production server
+
+### Environment Variables
+
+- Configure environment variables in `.env.local`
+- Set production URLs and API endpoints
+- Configure analytics and monitoring
+
+## 📜 Available Scripts
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
@@ -720,6 +903,7 @@ The project uses a consistent design system with:
 
 ## 🤝 Contributing
 
+<<<<<<< HEAD
 1. Fork the repository
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -755,6 +939,30 @@ The project uses a consistent design system with:
 4. Submit pull request
 5. Code review and approval
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
+=======
+### Development Workflow
+
+1. Create a feature branch
+2. Make your changes
+3. Test thoroughly
+4. Submit a pull request
+5. Code review and approval
+
+### Code Standards
+
+- Follow React best practices
+- Use TypeScript for type safety
+- Maintain consistent styling with Tailwind CSS
+- Write meaningful component names and props
+
+## 📞 Support and Contact
+
+For technical support or questions about the website:
+
+- **Email**: contact@ziontechgroup.com
+- **Documentation**: Check the `/docs` section
+- **Issues**: Use the GitHub issues page
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 ## 📄 License
 

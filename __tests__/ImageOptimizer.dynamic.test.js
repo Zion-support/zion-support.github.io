@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,15 +21,22 @@ import _React from 'react';  import '@testing-library/jest-dom'; import ImageOpt
 =======
 import _React from 'react';  import '@testing-library/jest-dom'; import ImageOptimizerdynamic from '../components/ImageOptimizer.dynamic'; describe('ImageOptimizerdynamic',() => { test('renders without crashing',() => { render(<ImageOptimizerdynamic />); expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ImageOptimizerdynamic />)}); test('handles user interactions',() => { render(<ImageOptimizerdynamic />)}); test('applies correct styling',() => { render(<ImageOptimizerdynamic />)})});
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ImageOptimizerdynamic from '../components/ImageOptimizer.dynamic';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 describe('ImageOptimizerdynamic', () => {
   test('renders without crashing', () => {
     render(<ImageOptimizerdynamic />);
     expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument();
   });
+<<<<<<< HEAD
   test('displays correct content', () => {
     render(<ImageOptimizerdynamic />);
   });
@@ -91,3 +99,21 @@ import _React from 'react';  import '@testing-library/jest-dom'; import ImageOpt
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+  test('displays correct content', () => {
+    render(<ImageOptimizerdynamic />);
+    // Add specific content tests based on component
+  });
+
+  test('handles user interactions', () => {
+    render(<ImageOptimizerdynamic />);
+    // Add interaction tests based on component functionality
+  });
+
+  test('applies correct styling', () => {
+    render(<ImageOptimizerdynamic />);
+    // Add styling tests if needed
+  });
+});
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

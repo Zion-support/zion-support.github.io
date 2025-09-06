@@ -115,10 +115,19 @@ class ErrorBoundary extends Component<Props, State> {
               </div>
               <h2 className="text-xl font-semibold text-gray-900">Something went wrong</h2>
             </div>
+<<<<<<< HEAD
             <p className="text-gray-600 mb-4">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             <div className="space-y-3">
+=======
+            <div className="mt-2">
+              <p className="text-sm text-gray-500">
+                We&apos;re sorry, but something unexpected happened. Please try refreshing the page.''
+              </p>
+            </div>
+            <div className="mt-4">
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               <button
                 onClick={() => window.location.reload()}
                 className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
@@ -197,6 +206,7 @@ class ErrorBoundary extends Component<Props, State> {
       );
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -298,3 +308,7 @@ return { hasError: true, error }};
 ;
 export { ErrorBoundary };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    return this.props.children}
+}";"
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

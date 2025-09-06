@@ -9,6 +9,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -48,6 +49,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
@@ -59,24 +62,48 @@ const OPTIMIZATIONS = {
   // Image optimization
   "images": {
     enabled: true,
+<<<<<<< HEAD
     "formats": ['webp', 'avif'],
     "quality": 85,
     "sizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840]},
+=======
+    formats: ['webp', 'avif'],
+    quality: 85,
+    sizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+  },
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   // Bundle optimization
   "bundle": {
     enabled: true,
+<<<<<<< HEAD
     "chunkSize": 244000, // 244KB
     "maxChunks": 5},
+=======
+    chunkSize: 244000, // 244KB
+    maxChunks: 5,
+  },
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   // Caching
   "caching": {
     enabled: true,
+<<<<<<< HEAD
     "staticAssets": 31536000, // 1 year
     "apiResponses": 3600, // 1 hour
     "pages": 86400, // 1 day
   },
+=======
+    staticAssets: 31536000, // 1 year
+    apiResponses: 3600, // 1 hour
+    pages: 86400, // 1 day
+  },
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   // Compression
   "compression": {
     enabled: true,
+<<<<<<< HEAD
     "gzip": true,
     "brotli": true}};
 function optimizeNextConfig() {
@@ -106,6 +133,20 @@ function optimizeNextConfig() {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+    gzip: true,
+    brotli: true,
+  },
+};
+function optimizeNextConfig() {
+  const configPath = 'next.config.js';
+  if (!fs.existsSync(configPath)) {
+    console.log('❌ next.config.js not found');
+    return false;
+  }
+
+  let config = fs.readFileSync(configPath, 'utf8');
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   // Add performance optimizations
   const performanceConfig = "
   // Performance optimizations
@@ -185,7 +226,11 @@ function optimizeNextConfig() {
         ]},
     ]
   },
+<<<<<<< HEAD
   ";
+=======
+  `;
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   // Insert performance config before the closing brace
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -214,16 +259,29 @@ function optimizePackageJson() {
   );
   fs.writeFileSync(configPath, config);
   console.log('✅ Next.js config optimized for performance');
+<<<<<<< HEAD
   return true}
+=======
+  return true;
+}
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 function optimizePackageJson() {
   const packagePath = 'package.json';
   if (!fs.existsSync(packagePath)) {
     console.log('❌ package.json not found');
+<<<<<<< HEAD
     return false}
+=======
+    return false;
+  }
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
   // Add performance scripts
   packageJson.scripts = {
     ...packageJson.scripts,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   config = config && config.replace(
@@ -292,6 +350,37 @@ function createPerformanceComponents() {
   const componentsDir = 'components/performance';
   if (!fs.existsSync(componentsDir)) {
     fs.mkdirSync(componentsDir, { "recursive": true })}
+=======
+    'build:analyze': 'ANALYZE=true npm run build',
+    'build:production': 'NODE_ENV=production npm run build',
+    'perf:audit': 'npm run build:analyze',
+    'perf:lighthouse':
+      'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html',
+  };
+  // Add performance dependencies if not present
+  const perfDeps = {
+    '@next/bundle-analyzer': '^15.5.2',
+    lighthouse: '^12.0.0',
+    'web-vitals': '^5.1.0',
+  };
+  for (const [dep, version] of Object.entries(perfDeps)) {
+    if (!packageJson.devDependencies[dep]) {
+      packageJson.devDependencies[dep] = version;
+    }
+  }
+
+  fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2));
+  console.log('✅ package.json optimized for performance');
+  return true;
+}
+
+function createPerformanceComponents() {
+  const componentsDir = 'components/performance';
+  if (!fs.existsSync(componentsDir)) {
+    fs.mkdirSync(componentsDir, { recursive: true });
+  }
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   // Create optimized image component
   const optimizedImageComponent = "import React from 'react'
 import Image from 'next/image'
@@ -389,7 +478,11 @@ export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
   )
 }
 export default OptimizedImage
+<<<<<<< HEAD
 ";
+=======
+`;
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   fs.writeFileSync(
     path.join(componentsDir, 'OptimizedImage.tsx'),
     optimizedImageComponent
@@ -476,7 +569,19 @@ export const "LazyComponent": React.FC<LazyComponentProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
+=======
+export default LazyComponent
+`;
+  fs.writeFileSync(
+    path.join(componentsDir, 'LazyComponent.tsx'),
+    lazyLoadingComponent
+  );
+  console.log('✅ Performance components created');
+  return true;
+}
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -499,18 +604,32 @@ function optimizeImages() {
   const publicDir = 'public';
   if (!fs.existsSync(publicDir)) {
     console.log('❌ public directory not found');
+<<<<<<< HEAD
     return false}
+=======
+    return false;
+  }
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   // Create images directory structure
   const imageDirs = ['images', 'images/optimized', 'images/thumbnails'];
   for (const dir of imageDirs) {
     const fullPath = path.join(publicDir, dir);
     if (!fs.existsSync(fullPath)) {
+<<<<<<< HEAD
       fs.mkdirSync(fullPath, { "recursive": true })}
   }
+=======
+      fs.mkdirSync(fullPath, { recursive: true });
+    }
+  }
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   // Create .gitkeep files
   for (const dir of imageDirs) {
     const gitkeepPath = path.join(publicDir, dir, '.gitkeep');
     if (!fs.existsSync(gitkeepPath)) {
+<<<<<<< HEAD
       fs.writeFileSync(gitkeepPath, '')}
   }
   console.log('✅ Image directories optimized');
@@ -749,3 +868,44 @@ main();
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      fs.writeFileSync(gitkeepPath, '');
+    }
+  }
+
+  console.log('✅ Image directories optimized');
+  return true;
+}
+
+function main() {
+  console.log('🚀 Starting performance optimization...');
+  const optimizations = [
+    { name: 'Next.js Config', fn: optimizeNextConfig },
+    { name: 'Package.json', fn: optimizePackageJson },
+    { name: 'Performance Components', fn: createPerformanceComponents },
+    { name: 'Image Directories', fn: optimizeImages },
+  ];
+  let successCount = 0;
+  for (const optimization of optimizations) {
+    try {
+      if (optimization.fn()) {
+        successCount++;
+      }
+    } catch (error) {
+      console.error(`❌ Error in ${optimization.name}:`, error.message);
+    }
+  }
+
+  console.log(`\n📊 Optimization Summary:`);
+  console.log(`   Total optimizations: ${optimizations.length}`);
+  console.log(`   Successful: ${successCount}`);
+  console.log(`   Failed: ${optimizations.length - successCount}`);
+  if (successCount === optimizations.length) {
+    console.log('\n✨ All performance optimizations completed successfully!');
+  } else {
+    console.log('\n⚠️  Some optimizations failed. Check the logs above.');
+  }
+}
+
+main();
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

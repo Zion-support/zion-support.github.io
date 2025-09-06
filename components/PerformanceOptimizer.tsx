@@ -23,6 +23,7 @@ import {
   Database,;
   Network,;
 
+<<<<<<< HEAD
 
 } from 'lucide-react';
 <<<<<<< HEAD
@@ -70,6 +71,12 @@ interface PerformanceMetrics {
   firstInputDelay: number,
 =======
   className = '',
+=======
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  preloadImages = [], preloadFonts = [
+    'https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
+  ], criticalCSS
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -357,6 +364,7 @@ setOptimizationStatus('All optimizations complete!');
             }
           }
         }
+<<<<<<< HEAD
       });
 <<<<<<< HEAD
       return () => {
@@ -367,6 +375,15 @@ setOptimizationStatus('All optimizations complete!');
       return () => {
         window.removeEventListener('load', measurePerformance);
         observer.disconnect()
+=======
+      })
+
+      try {
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })
+      } catch (e) {
+        // Fallback for browsers that don&apos;t support all entry types''
+        console.log('Performance monitoring not fully supported')
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       }
   const getPerformanceScore = (): number => {
     let score = 100;

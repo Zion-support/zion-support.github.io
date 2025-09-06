@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Form } from "@/components/ui/form";
 import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
@@ -29,6 +30,16 @@ export type ContractFormValues = z && z.infer<typeof formSchema>;
         talent, ;
         clientName, ;
 
+=======
+export type ContractFormValues = z.infer<typeof formSchema" > interface ContractFormProps {"
+  talent: TalentProfile;
+   clientName: string;
+   initialValues?: ContractFormValues;
+   onFormValuesChange?: (values: ContractFormValues) => void;
+   onContractGenerated: (contractContent: string) => void;
+   deployOptions?: DeploymentOptions
+   onDeployOptionsChange?: (options: DeploymentOptions) => void} export function ContractForm({ talent, clientName, initialValues, onFormValuesChange, onContractGenerated, deployOptions, onDeployOptionsChange }: ContractFormProps) {
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
   );
 }

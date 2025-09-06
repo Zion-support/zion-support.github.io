@@ -75,4 +75,15 @@ const CardFooter = React.forwardRef<
 ));
 CardFooter.displayName = 'CardFooter';
 
+<<<<<<< HEAD:src/components/ui/Card.tsx
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+=======
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
+};
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0:components.disabled/components/ui/Card.tsx

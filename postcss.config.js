@@ -4,6 +4,7 @@ module.exports = {
 =======
 <<<<<<< HEAD
 export default {
+<<<<<<< HEAD
   plugins: {
 =======
 module.exports = {
@@ -14,3 +15,7 @@ module.exports = {
     autoprefixer: {},
   },
 }
+=======
+  plugins: {},
+};
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
