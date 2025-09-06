@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-=======
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
@@ -19,6 +14,9 @@ export default defineConfig({
     sourcemap: true,
     minify: 'terser',
     rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html')
+      },
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
@@ -36,14 +34,15 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
-<<<<<<< HEAD
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    }
+  },
+  css: {
+    postcss: {
+      plugins: []
+    }
   }
 });
-=======
-  },
-  server: {
-    port: 3000,
-    open: true,
-  },
-})
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
