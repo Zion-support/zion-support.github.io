@@ -48,12 +48,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
       }
     }
-<<<<<<< HEAD
 const updated = updateMilestone(project, milestoneId, body);
     if (!updated) {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return;
     }
     res && res.status(200).json({ milestone: updated });
@@ -61,7 +59,9 @@ const updated = updateMilestone(project, milestoneId, body);
   }
 
 
-=======
+  res.setHeader("AllowPATCH");
+  res.status(405).end("Method Not Allowed");
+}
 }
 ;
 
@@ -75,5 +75,7 @@ const updated = updateMilestone(project, milestoneId, body);
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from "next"
+import { requireUser } from "../../../../../utils/api/
+ from "../../../../../utils/api/
+import { isMilestoneStatus } from "../../../../../utils/types/

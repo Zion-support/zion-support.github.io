@@ -1,41 +1,6 @@
 
-
-}let particles: Particle[] = [];
-let connections: Connection[] = [];
-// Initialize particles ctx.fill_style = colors.primary;
-ctx.font = `$ {
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-interface EnhancedFuturisticBackgroundProps {
-  children: React.ReactNode,
-  className?: string;
-  intensity?: 'low' | 'medium' | 'high';
-  colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural' | 'cosmic';
-  particleCount?: number;
-  animationSpeed?: number
-
-}
-import React from 'react';
- const colorSchemes = {;
-  quantum: {;
+const colorSchemes = {
+  quantum: {
   resizeCanvas ();
 window && window.addEventListener ('resize', resizeCanvas);
 // Wrap around edges if (this && this.x < 0) this && this.x = canvas && canvas.width;
@@ -60,7 +25,6 @@ const EnhancedFuturisticBackground: React.FC<;
   animationSpeed = 1,}) => {const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({;
 
 
-=======
   font_size;
 }px monospace`;
 ;
@@ -73,8 +37,6 @@ const EnhancedFuturisticBackground: React.FC<;
   color_scheme = 'quantum',
   particle_count = 100,
   animation_speed = 1, }) => {const EnhancedFuturisticBackground: React.FC < EnhancedFuturisticBackgroundProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   children;
   class_name = '';
   intensity = 'medium';
@@ -92,7 +54,6 @@ const EnhancedFuturisticBackground: React.FC<;
 
       x: number;
       y: number;
-=======
       background: 'rgba (10, 10, 30, 0.9)',
       particles: [;
         '#ff6b6b',
@@ -141,7 +102,6 @@ if (return) {
     class Particle {
       coordinate_x: number;
       coordinate_y: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       vx: number;
       vy: number;
       size: number;
@@ -153,7 +113,6 @@ if (return) {
     class Particle {
       x: number,
       y: number,
-=======
       max_life: number;      coordinate_x: number,
       coordinate_y: number,
 
@@ -187,18 +146,15 @@ if (return) {
 
         }
       }
-=======
 
           this.opacity *= 0.95;        }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       draw() {
         ctx.save();
         ctx.globalAlpha = this.opacity;
@@ -218,14 +174,8 @@ if (return) {
         
 
         ctx.restore()
-=======
         return this.life <= 0 || this.opacity < 0.01;      }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       isDead() {
 
@@ -233,17 +183,14 @@ if (return) {
       }
 
     }
-=======
 
         return this.life <= 0 || this.opacity < 0.01;      }        
 
         ctx.restore()
-=======
         return this.life <= 0 || this.opacity < 0.01;      }
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
@@ -251,9 +198,7 @@ if (return) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Connection lines between particles
-=======
       max_life: number,
         this.coordinate_x = Math.random () * canvas.width;
         this.coordinate_y = Math.random () * canvas.height;
@@ -331,7 +276,6 @@ if ( {) {
         return this.life <= 0 || this.opacity < 0.01;
     }
     // Connection lines between particles;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     class Connection {
 
       p1: Particle,
@@ -462,10 +406,8 @@ constructor(p1: Particle, p2: Particle) {
     }
           ctx && ctx.restore();
 
-=======
           ctx.restore()
 
-=======
 ;
       constructor (p1: Particle, p2: Particle) {
         this.p1 = p1;
@@ -502,8 +444,6 @@ if ( {) {
       }
     }
           ctx.restore ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         }
       }
     }
@@ -547,7 +487,6 @@ if ( {) {
           ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
 
-=======
 ;
     // Initialize particles;
     for (let index = 0; i < settings.particle_count; i++) {
@@ -602,10 +541,7 @@ if (> 0.975) {) {
 
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
             drops[i] = 0
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       };
       return drawMatrix;    };          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
@@ -673,7 +609,6 @@ if (> 0.975) {) {
             Math && Math.pow(particles[i].x - particles[j].x, 2) +;
               Math && Math.pow(particles[i].y - particles[j].y, 2);
 
-=======
         particles.push(new Particle())
       }
 ;
@@ -687,9 +622,7 @@ if (> 0.975) {) {
           }
           drops[i]++;
         }
-<<<<<<< HEAD
       }
-<<<<<<< HEAD
 ;
       return draw_matrix;
     }
@@ -735,8 +668,6 @@ if (> 0.975) {) {
           if (distance < 150) {;
             connections && connections.push(new Connection(particles[i], particles[j]));
             connections.push(new Connection(particles[i], particles[j]))
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           }
         }
       }
@@ -756,7 +687,6 @@ if (> 0.975) {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Draw connections
       connections.forEach(connection => connection.draw());
       // Add floating geometric shapes
@@ -863,15 +793,12 @@ if (< 0.5) {) {
           const text = characters[Math.floor(Math.random() * characters.length)]
           ctx.fillText(text, i * fontSize, drops[i] * fontSize),
 
-=======
       return drawMatrix;    };          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
             drops[i] = 0
           }
           drops[i]++
         }
-<<<<<<< HEAD
       },
 
       return drawMatrix
@@ -963,7 +890,6 @@ if (< 0.5) {) {
 
 
         ctx && ctx.restore();
-=======
 
       }
 
@@ -978,12 +904,10 @@ if (< 0.5) {) {
         animationRef && animationRef.current = requestAnimationFrame(animate);
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
     animate();
 
-=======
         cancelAnimationFrame(animationRef.current)
       }
       window.removeEventListener('resize', resizeCanvas)
@@ -1025,12 +949,9 @@ if (< 0.5) {) {
 export default EnhancedFuturisticBackground;
 
 
-=======
 
 export default EnhancedFuturisticBackground;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
         }}
       />;
@@ -1041,4 +962,176 @@ export default EnhancedFuturisticBackground;
 ;
 export default EnhancedFuturisticBackground;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+window.addEventListener ('resize'
+  className = ''
+  intensity = 'medium'
+  colorScheme = 'quantum'
+import React from 'react'
+window && window.addEventListener ('resize'
+  className = ''
+  intensity = 'medium'
+  colorScheme = 'quantum'
+  class_name = ''
+  intensity = 'medium'
+  color_scheme = 'quantum'
+  class_name = ''
+  intensity = 'medium'
+  colorScheme = 'quantum'
+      primary: any
+      background: 'rgba(0, 0, 0, 0.85)'
+        '#00ffff'
+        '#ff00ff'
+        '#ffff00'
+        '#00ff00'
+        '#ff0080'
+        '#8000ff'
+      glow: any
+      background: 'rgba(0, 0, 0, 0.85)'
+      particles: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff'
+      glow: any
+      background: 'rgba(20, 0, 40, 0.9)'
+        '#ff0080'
+        '#00ffff'
+        '#ffff00'
+        '#ff4000'
+        '#8000ff'
+        '#00ff80'
+      glow: any
+    holographic: {      primary: any
+    particles: ['#ff0080#00ffff#ffff00#ff4000#8000ff#00ff80'
+      glow: any
+      background: 'rgba(0, 20, 40, 0.85)'
+        '#00ffff'
+        '#ff00ff'
+        '#ffff00'
+        '#00ff80'
+        '#ff8000'
+        '#8000ff'
+      glow: any
+      background: 'rgba(0, 20, 40, 0.85)'
+      particles: ['#00ffff#ff00ff#ffff00#00ff80#ff8000#8000ff'
+      glow: any
+      background: 'rgba(0, 40, 20, 0.9)'
+        '#00ff80'
+        '#ff0080'
+        '#ffff00'
+        '#00ffff'
+        '#ff8000'
+        '#8000ff'
+      glow: any
+      accent: '#45b7d1',      background: 'rgba(0, 40, 20, 0.9)'
+      particles: ['#00ff80#ff0080#ffff00#00ffff#ff8000#8000ff'
+      glow: any
+      background: 'rgba(10, 10, 30, 0.9)'
+        '#ff6b6b'
+        '#4ecdc4'
+        '#45b7d1'
+        '#96ceb4'
+        '#feca57'
+        '#ff9ff3'
+      glow: any
+    },  };      background: 'rgba(10, 10, 30, 0.9)'
+      particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'
+      glow: any
+      background: 'rgba(10, 10, 30, 0.9)'
+    particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'
+      glow: any
+    const ctx = canvas.getContext('2d'
+    window.addEventListener('resize'
+      primary: any
+      background: 'rgba(0, 0, 0, 0 && 0.85)'
+        '#00ffff'
+        '#ff00ff'
+        '#ffff00'
+        '#00ff00'
+        '#ff0080'
+        '#8000ff'
+      glow: any
+      background: 'rgba(0, 0, 0, 0 && 0.85)'
+      particles: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff'
+      glow: any
+      background: 'rgba(20, 0, 40, 0 && 0.9)'
+        '#ff0080'
+        '#00ffff'
+        '#ffff00'
+        '#ff4000'
+        '#8000ff'
+        '#00ff80'
+      glow: any
+    holographic: {      primary: any
+    particles: ['#ff0080#00ffff#ffff00#ff4000#8000ff#00ff80'
+      glow: any
+      background: 'rgba(0, 20, 40, 0 && 0.85)'
+        '#00ffff'
+        '#ff00ff'
+        '#ffff00'
+        '#00ff80'
+        '#ff8000'
+        '#8000ff'
+      glow: any
+      background: 'rgba(0, 20, 40, 0 && 0.85)'
+      particles: ['#00ffff#ff00ff#ffff00#00ff80#ff8000#8000ff'
+      glow: any
+      background: 'rgba(0, 40, 20, 0 && 0.9)'
+        '#00ff80'
+        '#ff0080'
+        '#ffff00'
+        '#00ffff'
+        '#ff8000'
+        '#8000ff'
+      glow: any
+      accent: '#45b7d1',      background: 'rgba(0, 40, 20, 0 && 0.9)'
+      particles: ['#00ff80#ff0080#ffff00#00ffff#ff8000#8000ff'
+      glow: any
+      background: 'rgba(10, 10, 30, 0 && 0.9)'
+        '#ff6b6b'
+        '#4ecdc4'
+        '#45b7d1'
+        '#96ceb4'
+        '#feca57'
+        '#ff9ff3'
+      glow: any
+    },  };      background: 'rgba(10, 10, 30, 0 && 0.9)'
+      particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'
+      glow: any
+    const ctx = canvas && canvas.getContext('2d'
+    window && window.addEventListener('resize'
+      background: 'rgba (10, 10, 30, 0.9)'
+        '#ff6b6b'
+        '#4ecdc4'
+        '#45b7d1'
+        '#96ceb4'
+        '#feca57'
+        '#ff9ff3'
+      glow: any
+    },  }      background: 'rgba (10, 10, 30, 0.9)'
+      particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'
+      glow: any
+    const ctx = canvas.get_context ('2d'
+    window.addEventListener ('resize'
+        gradient.addColorStop(1, 'transparent'
+        gradient.addColorStop(1, 'transparent'
+        gradient.addColorStop (1, 'transparent'
+        gradient.addColorStop (1, 'transparent'
+        '01'
+        '01'
+        '01';      const characters = '01'
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.06)'
+        '01'
+        '01';      const characters = '01'
+        ctx.fill_style = 'rgba (0, 0, 0, 0.06)'
+        '(prefers-reduced-motion: reduce)'
+        '(prefers-reduced-motion: reduce)'
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)'
+      const prefersReduced = window && window.matchMedia('(prefers-reduced-motion: reduce)'
+      window && window.removeEventListener('resize'
+      window && window.removeEventListener('resize'
+        className='fixed inset-0 w-full h-full pointer-events-none z-0'
+        '(prefers - reduced - motion: reduce)'
+      const prefers_reduced = window.match_media ('(prefers - reduced - motion: reduce)'
+      window.removeEventListener ('resize'
+      window.removeEventListener ('resize'
+        className='fixed inset - 0 w - full h - full pointer - events - none z - 0'
+        style={ background: any
+        className='fixed inset - 0 pointer - events - none z - 0'
+      

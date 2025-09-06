@@ -23,19 +23,13 @@ export default function TalentDashboard() {
   useEffect(() => {
 
 
-=======
-<<<<<<< HEAD
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useEffect, useState } from 'react';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const STEPS = [;
   { key: 'profile', label: 'Profile completed' },;
   { key: 'skills', label: 'Skills added' },;
   { key: 'availability', label: 'Availability set' },;
-<<<<<<< HEAD
   { key: 'match', label: 'First match received' },;
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
@@ -129,13 +123,11 @@ export default function TalentDashboard() {;
                 </EnhancedButton>              )}
             </li>;
 
-=======
     try { window.localStorage.setItem('onboarding.talent', JSON.stringify(completed)) } catch {}
   }, [completed]);
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100);
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] }));
 
-=======
 
 
 
@@ -167,12 +159,10 @@ export default function TalentDashboard() {;
               ) : (
 
 
-=======
 
 
 }
 
-=======
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'skills' ? 'Add skills' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
     console.error("Error:", error);
@@ -185,14 +175,12 @@ export default function TalentDashboard() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </ul>;
       </EnhancedCard>;
     </div>;
   );
 
 
-=======
   )
 }
 import EnhancedCard from '../../components / ui / EnhancedCard';
@@ -290,9 +278,6 @@ function TalentDashboard() {
       </EnhancedCard>;
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -300,5 +285,7 @@ function TalentDashboard() {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import EnhancedCard from '../../components/ui/
+import EnhancedButton from '../../components/ui/
+import EnhancedCard from '../../components / ui /
+import EnhancedButton from '../../components / ui /

@@ -42,7 +42,6 @@ export default function HelpCenter() {;
 
 
 
-=======
 
 
   
@@ -64,8 +63,38 @@ export default function HelpCenter() {;
     setSelectedArticle(null)
   },
   
+import React, { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { HelpCategoryList } from "./HelpCategoryList";
+import { HelpArticleList } from "./HelpArticleList";
+import { HelpArticleView } from "./HelpArticleView";
+import { HELP_CATEGORIES } from "./help-content";
+import { AppLayout } from "@/layout/AppLayout";
+import { Search } from "lucide-react";
+export default function HelpCenter() {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const handleCategorySelect = (categoryId: string) => {
+    (setSelectedCategory(categoryId), setSelectedArticle(null));
+  };
+
+  const handleArticleSelect = (articleId: string) => {
+    setSelectedArticle(articleId);
+  };
+
+  const handleBackToCategories = () => {
+    setSelectedCategory(null);
+    setSelectedArticle(null);
+  };
+
+  const handleBackToArticles = () => {
+    setSelectedArticle(null);
+  };
+
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -77,6 +106,7 @@ export default function HelpCenter() {;
             Find answers to common questions or get in touch with our support
             team.
           </p>
+
           <div className="relative mb-8">
             <Input
               placeholder="Search for help articles..."
@@ -86,6 +116,7 @@ export default function HelpCenter() {;
             />
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
           </div>
+
           <Tabs defaultValue="articles" className="mb-8">
             <TabsList className="w-full grid grid-cols-3 mb-6">
               <TabsTrigger value="articles">Articles</TabsTrigger>
@@ -161,7 +192,6 @@ function HelpCenter() {
                 <HelpCategoryList;
 
                   categories={HELP_CATEGORIES}
-=======
   const handleCategorySelect = (categoryId: string) => {;
     setSelectedCategory(categoryId),;
     setSelectedArticle(null);
@@ -210,20 +240,21 @@ function HelpCenter() {
 
             <TabsContent value="articles">;
               {!selectedCategory && !selectedArticle && (;
+                <HelpCategoryList;
+                  categories={HELP_CATEGORIES} ;
+
+            <TabsContent value="articles">
+              {!selectedCategory && !selectedArticle && (
                 <HelpCategoryList
-                  categories={HELP_CATEGORIES} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
-                <HelpCategoryList 
-                  categories={HELP_CATEGORIES} 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  categories={HELP_CATEGORIES}
                   onCategorySelect={handleCategorySelect}
 
 
               
 
+                  searchQuery={searchQuery}
+                />
+              )}
 
               {selectedCategory && !selectedArticle && (
                 <>
@@ -246,11 +277,10 @@ function HelpCenter() {
                   </Button>;
 
                   <HelpArticleList
-=======
 
                   <HelpArticleList 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  <HelpArticleList
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
@@ -264,11 +294,9 @@ function HelpCenter() {
 
               {selectedArticle && (
                 <>
-=======
 
               {selectedArticle && (;
                 <>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Button
                     variant="ghost"
                     onClick={handleBackToArticles}
@@ -282,6 +310,16 @@ function HelpCenter() {
 
                 <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
 
+            </TabsContent>
+            <TabsContent value="faq">
+              <div className="bg-zion-blue-light/20 rounded-lg p-6">
+                <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
+
+            <TabsContent value="faq">
+              <div className="bg-zion-blue-light/20 rounded-lg p-6">
+                <h2 className="text-xl font-semibold mb-4">
+                  Frequently Asked Questions
+                </h2>
 
                 <div className="space-y-6">
                   <div>
@@ -292,10 +330,12 @@ function HelpCenter() {
                       Our AI matching algorithm analyzes your requirements and
                       preferences to match you with the most compatible talent
                       or services. The process takes into account skills
+                      or services. The process takes into account skills,
                       experience, availability, and past performance to ensure
                       optimal results.
                     </p>
                   </div>
+
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       How do I hire someone on Zion?
@@ -307,6 +347,7 @@ function HelpCenter() {
                       protects both parties throughout the engagement.
                     </p>
                   </div>
+
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       What are the payment terms?
@@ -318,6 +359,7 @@ function HelpCenter() {
                       approved, ensuring security for both clients and talent.
                     </p>
                   </div>
+
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       How do I contact support?
@@ -332,6 +374,7 @@ function HelpCenter() {
                 </div>
               </div>
             </TabsContent>
+
             <TabsContent value="contact">
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
@@ -342,6 +385,7 @@ function HelpCenter() {
                     Our support team is available 24/7 to assist you with any
                     questions or issues.
                   </p>
+
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
@@ -362,6 +406,7 @@ function HelpCenter() {
                         support@ziontechgroup.com
                       </a>
                     </div>
+
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
                         <svg
@@ -378,10 +423,12 @@ function HelpCenter() {
                       </span>
                     </div>
                   </div>
+
                   <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">
                     Open Live Chat
                   </Button>
                 </div>
+
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
                   <h2 className="text-xl font-semibold mb-4">
                     Feedback & Suggestions
@@ -390,6 +437,7 @@ function HelpCenter() {
                     We value your input and are constantly looking to improve
                     our platform.
                   </p>
+
                   <form className="space-y-4">
                     <div>
                       <Input placeholder="Your email" />
@@ -403,6 +451,7 @@ function HelpCenter() {
                         placeholder="Your feedback or suggestion"
                       />
                     </div>
+
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
                       Submit Feedback
                     </Button>
@@ -447,7 +496,7 @@ function HelpCenter() {
                     <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3>;
                     <p className="text-zion-slate-light">;
                       You can reach our support team through the chat widget at the bottom right of any page, by emailing support@ziontechgroup && ziontechgroup.com, or by scheduling a call with our team through the Contact tab.;
-=======
+  )
                   search_query={search_query}
                 />)}
               {selected_category && !selected_article && (
@@ -620,9 +669,17 @@ function HelpCenter() {
   )
 
 
+  );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import React, { useState } from "react"
+import { Input } from "@/components/ui/
+import { Button } from "@/components/ui/
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/
+import { HelpCategoryList } from "./
+import { HelpArticleList } from "./
+import { HelpArticleView } from "./
+import { HELP_CATEGORIES } from "./
+import { AppLayout } from "@/layout/
+            

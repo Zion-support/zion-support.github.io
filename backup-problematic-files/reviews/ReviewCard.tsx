@@ -2,9 +2,7 @@
 
 }</div> </div>) };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewCard.tsx
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewCard.tsx
   return (import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
@@ -24,16 +22,12 @@ type Props = {;
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
 
   return (
-<<<<<<< HEAD:components/reviews/ReviewCard.tsx
     <div className='enhanced-card hover:shadow-lg transition-shadow'>;
       <div className='flex items-center justify-between mb-2'>;
         <div className='flex items-center gap-2'>;
-=======
-<<<<<<< HEAD:components/reviews/ReviewCard.tsx
     <div className='enhanced-card hover:shadow-lg transition-shadow'>
       <div className='flex items-center justify-between mb-2'>
         <div className='flex items-center gap-2'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewCard.tsx
           <StarRating
             value={review && review.rating}
             onChange={() => {}}
@@ -60,7 +54,6 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
         <span className='text-sm font-medium'>{review && review.authorName}</span>;
         {review && review.categories?.wouldWorkWithAgain && (;
           <span className='pill pill-success'>Would work again</span>;
-=======
   return (
 
 
@@ -69,7 +62,6 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           Report abuse
         </button>
@@ -79,7 +71,6 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
         <span className='text-sm font-medium'>{review.authorName}</span>
         {review.categories?.wouldWorkWithAgain && (
           <span className='pill pill-success'>Would work again</span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
 
       </div>;
@@ -117,7 +108,6 @@ export default ReviewCard;        {review && review.categories?.wouldWorkWithAga
           <span className="pill">Communication: {review && review.categories.communication}★</span>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
         {typeof review && review.categories?.qualityOfWork === 'number' && (;
           <span className="pill">Quality: {review && review.categories.qualityOfWork}★</span>;
@@ -130,7 +120,6 @@ export default ReviewCard;        {review && review.categories?.wouldWorkWithAga
 export default ReviewCard;
 
 
-=======
 > Report abuse </button> </div>);
 }</div> </div>) }
 ;
@@ -210,13 +199,7 @@ export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
 ;
 export default ReviewCard;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-=======
-=======
->>>>>>> main:components/reviews/ReviewCard.tsx
 export default ReviewCard;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewCard.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ > Report abuse </button> 
+</div> 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
@@ -13,19 +12,16 @@ const customJestConfig = {
   testMatch: [
     '**/__tests__/**/*.smoke.(js|jsx|ts|tsx)',
     '**/*.smoke.(js|jsx|ts|tsx)'
-=======
 module.exports = {
   testEnvironment: 'jsdom',
   testMatch: [
     '**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
     '**/*.(test|spec).(js|jsx|ts|tsx)'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   ],
   testPathIgnorePatterns: [
     '/node_modules/',
     '/.next/',
     '/out/',
-<<<<<<< HEAD
     '/dist/',
     '/recovered-branches/',
     '/src_backup/',
@@ -49,7 +45,6 @@ module.exports = {
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
 module.exports = createJestConfig(customJestConfig)
-=======
     '/dist/'
   ],
   collectCoverageFrom: [

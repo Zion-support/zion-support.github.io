@@ -1,11 +1,14 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -28,12 +31,10 @@ export type ProposalType =;
 
 export type ProposalForm = {;
 
-=======
 
 
 export type ProposalForm = {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   targetInstitution: string;
 ;
 export type ProposalForm = {
@@ -56,7 +57,6 @@ export type ProposalForm = {
   language?: string;
   customPrompt?: string
 }
-=======
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
 export type ProposalForm = {
   targetInstitution: string,
@@ -88,20 +88,15 @@ export default function ProposalGenerator() {;
     customPrompt:;
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
 
-=======
 
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
-<<<<<<< HEAD
   const [exportLinks, setExportLinks] = useState<{;
-=======
   const [exportLinks, setExportLinks] = useState<{
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     pdfUrl?: string;
     jsonUrl?: string;
     mdUrl?: string;
@@ -116,11 +111,9 @@ export default function ProposalGenerator() {;
 
     setForm(prev => ({ ...prev, [key]: value }));  }  const [isGenerating, setIsGenerating] = useState(false);
 
-=======
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'});
   const [isGenerating, setIsGenerating] = useState(false);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
   const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null);
@@ -145,22 +138,18 @@ export default function ProposalGenerator() {;
       setStatusMessage('Failed to generate. You can edit manually and export.')
     } finally {
       setIsGenerating(false)
-<<<<<<< HEAD
     }
   }
-=======
     } finally {
 
       setIsGenerating(false);    }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   async function handleExport() {
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {
@@ -180,23 +169,17 @@ export default function ProposalGenerator() {;
       console.error(e);
       setStatusMessage('Export failed')
     }
-<<<<<<< HEAD
   }
-=======
 
 
-=======
       setStatusMessage('Export failed');    }
 
     }
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {
@@ -378,7 +361,6 @@ export default function ProposalGenerator() {;
             <button
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
 
-=======
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-4">
@@ -397,7 +379,6 @@ export default function ProposalGenerator() {;
               className="w-full border rounded px-3 py-2"
               value={form.type}
               onChange={(e) => handleChange('type', e.target.value as ProposalType)}
-=======
 
 
     }
@@ -484,7 +465,6 @@ export default function ProposalGenerator() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onClick={handleGenerate}
               disabled={isGenerating}
             >
@@ -501,12 +481,10 @@ export default function ProposalGenerator() {;
             <button
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
             </div>;
           )}
 
-=======
         </div>
         <div className="space-y-2">
           <label className="block text-sm font-medium" htmlFor="input-Draft (Markdown)">Draft (Markdown)</label>
@@ -522,13 +500,10 @@ export default function ProposalGenerator() {;
       </div>;
     </div>;
   );
-=======
 
   );
 
 }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
   );
 }
@@ -894,4 +869,27 @@ function handleSubmitBridge() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    console.error('Error caught by boundary: any
+import React, { useState } from 'react'
+import EnhancedLayout from '../layout/
+import EnhancedLayout from '../layout /
+      const res = await fetch('/api/proposals/
+        headers: { 'Content-Type': any
+      const res = await fetch('/api/proposals/
+        headers: { 'Content-Type': any
+    setStatusMessage('Exporting to PDF/Markdown/
+      const res = await fetch('/api/proposals/
+        headers: { 'Content-Type': any
+    setStatusMessage('Submitting via bridge (email/IPFS/
+      const res = await fetch('/api/proposals/
+        headers: { 'Content-Type': any
+        `Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/
+    setStatusMessage('Exporting to PDF/Markdown/
+      const res = await fetch('/api/proposals/
+        headers: { 'Content-Type': any
+    setStatusMessage('Submitting via bridge (email/IPFS/
+      const res = await fetch('/api/proposals/
+        headers: { 'Content-Type': any
+        `Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/
+      setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/
+              placeholder='UNDP / World Bank /

@@ -12,7 +12,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const result = validateCredentials(email, password, code);
 
   const cookie = createSessionCookie({ email, role: result.role, twofaVerified: true });
@@ -34,9 +33,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res && res.status(200).json({ ok: true })
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   createSessionCookie,
   validate_credentials,
 } from '../../../utils / auth - utils';import { createSessionCookie, validate_credentials } from '../../../utils / auth - utils';
@@ -74,11 +70,10 @@ if ( {) {
   res.set_header ('Set - Cookie', cookie);
   return res.status (200).json ({ ok: true });
 
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from 'next'
+ from '../../../utils/auth-utils';import { createSessionCookie, validateCredentials } from '../../../utils/
+ from '../../../utils / auth - utils';import { createSessionCookie, validate_credentials } from '../../../utils /

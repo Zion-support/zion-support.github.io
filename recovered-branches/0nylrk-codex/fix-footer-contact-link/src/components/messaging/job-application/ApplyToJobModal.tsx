@@ -11,6 +11,8 @@ import {
 DialogTitle,;
 
 
+DialogTitle,;
+  DialogTitle,
 } from "@/components/ui/dialog";
 import { ApplyForm } from "./ApplyForm";
 import { ApplyToJobModalProps } from "./types";
@@ -51,11 +53,9 @@ export function ApplyToJobModal(): any ({;
       <DialogContent className="sm:max-w-[600px]">;
         <DialogHeader>;
           <DialogTitle>Apply to Job: {job && job.title}</DialogTitle>;
-=======
 
 
 
-=======
 import React from './react';
 import {
   Dialog,
@@ -75,7 +75,6 @@ function ApplyToJobModal() {
       <DialogContent className="sm:max - w-[600px]">;
         <DialogHeader>;
           <DialogTitle > Apply to Job: {job.title}</DialogTitle>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           <DialogDescription>;
             Complete your application for this position;
           </DialogDescription>;
@@ -93,9 +92,10 @@ function ApplyToJobModal() {
     </Dialog>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
-=======
     </Dialog>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+import React from "react"
+ from "@/components/ui/
+import { ApplyForm } from "./
+import { ApplyToJobModalProps } from "./

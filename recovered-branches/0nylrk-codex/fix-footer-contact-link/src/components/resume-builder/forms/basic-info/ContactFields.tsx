@@ -14,7 +14,6 @@ interface ContactFieldsProps {
   control: Control < BasicInfoFormData>;
 }
 
-=======
 
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -23,11 +22,23 @@ import {Control} from "react-hook-form";
 import {BasicInfoFormData} from "./schema";
 
 
-=======
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Control } from "react-hook-form",
 import { BasicInfoFormData } from "./schema",
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Control } from "react-hook-form";
+import { BasicInfoFormData } from "./schema";
+interface ContactFieldsProps {
+  control: Control<BasicInfoFormData>;
+}
 
 
 
@@ -53,13 +64,11 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input",;
 import { Control } from "react-hook-form",;
 import { BasicInfoFormData } from "./schema";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ContactFieldsProps {;
   control: Control<BasicInfoFormData>;
 }
 
 export function ContactFields(): any ({ control }: ContactFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
       <FormField
@@ -94,7 +103,6 @@ function ContactFields() {
           </FormItem>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
 
       />;
@@ -152,6 +160,17 @@ function ContactFields() {
             </FormControl>;
             <FormMessage />;
           </FormItem>;
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>LinkedIn</FormLabel>
+            <FormControl>
+              <Input
+                placeholder="https://linkedin.com/in/username"
+                {...field}
+              />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
         )}
       />;
 
@@ -174,7 +193,6 @@ function ContactFields() {
   );
 }
 
-=======
               />;
             </FormControl>;
             <FormMessage />;
@@ -194,11 +212,21 @@ function ContactFields() {
       />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
+      />
+    </div>
+  );
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+ from "@/components/ui/
+import { Input } from "@/components/ui/
+import { BasicInfoFormData } from "./
+              

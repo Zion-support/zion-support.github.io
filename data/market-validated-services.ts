@@ -21,7 +21,6 @@ period: string;
     website?: string;
   }
 
-=======
 ;
 const contact_info = {
 
@@ -29,7 +28,6 @@ const contact_info = {
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
 
-=======
   website: 'https://ziontechgroup.com',
 }
 ;
@@ -176,7 +174,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     contact_info,
   },
 
-=======
   // Cloud and Infra;
   {
     id: 'cloud - cost - optimizer - pro',
@@ -206,7 +203,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   },
   {
 
-=======
     id: 'database - performance - monitor',
     name: 'Database Performance Monitor',
     tagline: 'Slow query capture, AI index suggestions, capacity forecasting',
@@ -234,7 +230,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   },
   {
 
-=======
     id: 'managed - postgres - ha',
     name: 'Managed Postgres HA',
     tagline: 'Highly - available Postgres with backups, failover, and guardrails',
@@ -261,7 +256,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     contact_info,
   },
 
-=======
   // Reliability & Monitoring;
   {
     id: 'uptime - slo - monitor',
@@ -291,7 +285,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   },
   {
 
-=======
     id: 'tls - certificate - monitor',
     name: 'TLS Certificate Monitor',
     tagline: 'Auto - renewal checks and expiry alerts across your fleet',
@@ -319,7 +312,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   },
   {
 
-=======
     id: 'domain - dns - monitor',
     name: 'Domain & DNS Monitor',
     tagline: 'Track DNS changes, TTLs, and misconfigurations',
@@ -377,7 +369,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   },
   {
 
-=======
     id: 'browser - performance - monitor',
     name: 'Browser Performance Monitor',
     tagline: 'RUM metrics, Core Web Vitals, and UX waterfall analysis',
@@ -405,7 +396,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   },
   {
 
-=======
     id: 'feature - flags - edge',
     name: 'Feature Flags at the Edge',
     tagline: 'Targeting, rollouts, and experiments at CDN edge',
@@ -433,7 +423,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   },
   {
 
-=======
     id: 'serverless - cron - manager',
     name: 'Serverless Cron Manager',
     tagline: 'Reliable scheduled jobs with retries and observability',
@@ -460,7 +449,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     contact_info,
   },
 
-=======
   // Compliance & Risk;
   {
     id: 'soc2 - evidence - automation',
@@ -490,7 +478,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   },
   {
 
-=======
     id: 'vendor - risk - automation',
     name: 'Vendor Risk Automation',
     tagline: 'Automate VRM workflows, DDQs, and risk scoring',
@@ -517,7 +504,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     contact_info,
   },
 
-=======
   // Developer and Ops Utilities;
   {
     id: 'webhook - relay - replay',
@@ -547,7 +533,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   },
   {
 
-=======
     id: 'audit - log - vault',
     name: 'Audit Log Vault',
     tagline: 'Tamper - evident logs with retention and export',
@@ -574,7 +559,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     contact_info,
   },
 
-=======
   // AI Channels;
   {
     id: 'ai - phone - agent',
@@ -598,7 +582,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     contact_info,
   },
 
-=======
   // Search and Knowledge;
   {
     id: 'vector - search - starter',
@@ -610,9 +593,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
       'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.',
     features: [;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Managed vector DB',
       'Ingestion pipelines',
       'Metadata filters',
@@ -631,14 +612,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   },
 
 
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export interface MarketValidatedService {
-=======
 export interface MarketValidatedService {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 	id: string;
 	name: string;
 	tagline: string;
@@ -653,16 +630,12 @@ export interface MarketValidatedService {;
 	customers?: number;
 	trialDays?: number;
 	setupTime?: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
   mobile: "+1 302 464 0950",
 	email: "kleber@ziontechgroup && ziontechgroup.com",
 	address: "364 E Main St STE 1008 Middletown DE 19709";
   website: "https://ziontechgroup && ziontechgroup.com";,
-=======
 	contactInfo: {
 		mobile: string;
 		email: string;
@@ -1443,7 +1416,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 ;
 ;
 
-=======
 
 		contactInfo
 	}
@@ -1451,4 +1423,15 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { ServiceVariant } from '../types/
+import { ServiceVariant } from '../types /
+  website: any
+    tagline: 'OpenAPI/GraphQL scanning, auth/
+    period: any
+      'Automatically scan APIs for OWASP issues, auth/
+      'Auth/
+    link: any
+    features: ['Natural TTS/
+    link: any
+    features: ['Natural TTS /
+    link: any

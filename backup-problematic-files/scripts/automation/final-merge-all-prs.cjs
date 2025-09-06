@@ -107,8 +107,5 @@ this.log(" Resolved conflicts "in")
         "mergesSuccessful"
         "conflictsResolved"
         "errors"
-<<<<<<< HEAD
       "successRate"
-=======
       "successRate"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

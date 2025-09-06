@@ -1,4 +1,9 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
 const AccessibilityEnhancer: React.FC = () => {;
   useEffect(() => {;
@@ -12,8 +17,6 @@ const AccessibilityEnhancer: React.FC = () => {;
       left: 6px, background: #000,;
       color: #fff, padding: 8px,;
       text-decoration: none, z-index: 1000,;
-=======
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
@@ -27,7 +30,6 @@ const AccessibilityEnhancer: React.FC = () => {
       left: 6px, background: #000
       color: #fff, padding: 8px
       text-decoration: none, z-index: 1000
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     `;
     document && document.body.insertBefore(skipLink, document && document.body.firstChild);
     // Focus management;
@@ -381,11 +383,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           </div>;
         </div>;
       </div>;
-=======
 
 
 export default AccessibilityEnhancer;
-=======
 };
 
 
@@ -407,13 +407,9 @@ export default AccessibilityEnhancer;
       <div id="main-content">{children}</div>;
     </>;
   );
-<<<<<<< HEAD
 }
 export default AccessibilityEnhancer;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default AccessibilityEnhancer;
-<<<<<<< HEAD
 ;
   const toggleHighContrast = () =>: any {
     const new_value = !isHighContrast;
@@ -481,4 +477,44 @@ export default AccessibilityEnhancer;
 ;
 export default AccessibilityEnhancer;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import React, { useEffect } from 'react'
+    const skipLink = document.createElement('a'
+    skipLink.href = '#main-content'
+    skipLink.textContent = 'Skip to main content'
+    skipLink.className = 'sr-only focus: any
+      document.body.classList.add('using-mouse'
+      if (e.key = = 'Tab'
+        document.body.classList.remove('using-mouse'
+    document.addEventListener('mousedown'
+    document.addEventListener('keydown'
+    const liveRegion = document.createElement('div'
+    liveRegion.setAttribute('aria-live', 'polite'
+    liveRegion.setAttribute('aria-atomic', 'true'
+    liveRegion.className = 'sr-only'
+    liveRegion.id = 'live-region'
+      const liveRegion = document.getElementById('live-region'
+      announcePageChange('Page loaded'
+    if (typeof window != 'undefined'
+      window.addEventListener('popstate'
+      document.removeEventListener('mousedown'
+      document.removeEventListener('keydown'
+if (typeof document != 'undefined'
+  const styleSheet = document.createElement('style'
+import React, { useEffect, useState } from 'react'
+  const [fontSize, setFontSize] = useState('normal'
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)'
+    const savedHighContrast = localStorage.getItem('highContrast') = = 'true'
+    const savedFontSize = localStorage.getItem('fontSize') |'normal'
+      root.classList.add('high-contrast'
+      root.class_list.remove ('high - contrast'
+    root.classList.remove('font-small', 'font-normal', 'font-large', 'font-extra-large'
+      root.classList.add('reduced-motion'
+      root.class_list.remove ('reduced - motion'
+    localStorage && localStorage.setItem('highContrast'
+    localStorage && localStorage.setItem('fontSize'

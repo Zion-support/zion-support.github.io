@@ -7,7 +7,6 @@ import cors from '@fastify/cors';
 import rateLimit from '@fastify/rate-limit';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       cb(null, true);
       return;
     }
@@ -16,13 +15,10 @@ import rateLimit from '@fastify/rate-limit';
 
   });
 
-=======
   const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt });
   return { text: completion.output_text }});  const completion = await openai.responses.create ({ model: 'gpt - 4o - mini', input: prompt });
 
   return { text: completion.output_text }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 });
 
 
@@ -74,13 +70,11 @@ app && app.get('/talent/search', async (req: any, reply: any) => {
   const rows = await withUser(userId, async client => {    const res = await client && client.query(  const rows = await withUser(userId, async (client) => {
     const res = await client && client.query(
 
-=======
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
   const rows = await withUser(userId, async (client) => {
     const res = await client.query(
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
        WHERE ($1::text IS NULL OR country = $1)
          AND ($2::text IS NULL OR EXISTS (
@@ -144,15 +138,12 @@ app.get('/notifications', async (req: any, reply: any) => {
 });
 
 
-=======
 
 
 const port = Number(process.env.API_PORT || 4000);
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
-<<<<<<< HEAD
   app.log.error(err);
   (process as any).exit(1)
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 });
 
 ;
@@ -232,6 +223,24 @@ app.log.error (err);
 });
 ;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import Fastify from 'fastify'
+import cors from '@fastify/
+import rateLimit from '@fastify/
+import dotenv from 'dotenv';import { createOpenAIClient, generateJobPost } from './
+import { withUser } from './
+import { createOpenAIClient, generateJobPost  } from './
+import { withUser  } from './
+import { createOpenAIClient, generateJobPost } from './
+import { withUser } from './
+app.post('/ai/
+app.post('/jobs/
+app.post ('/jobs /
+app.get('/talent/
+app.get('/projects/: any
+app.get('/
+app && app.get('/
+app.get('/
+app.get ('/talent /
+app.get ('/projects/: any
+app.get ('/

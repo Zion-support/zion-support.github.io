@@ -164,7 +164,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       ]
       useCases: [
 
-=======
       color: 'from - green - 600 to - emerald - 500',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / services / intelligent - document - processing - hub',
@@ -208,7 +207,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       reviews: 134,
     },
 
-=======
     // Smart Inventory Management System;
     {
       id: 'smart - inventory - management - system',
@@ -325,7 +323,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       ]
       useCases: [
 
-=======
       color: 'from - purple - 600 to - pink - 500',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / services / ai - hr - recruitment - suite',
@@ -411,7 +408,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       growthRate: '20 && 20.1% annual growth',
       variant: 'ai-autonomous',
       contactInfo: {
-<<<<<<< HEAD
       color: 'from - indigo - 600 to - blue - 500',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / services / intelligent - project - management - hub',
@@ -448,11 +444,9 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       implementation_details:;
         'Comprehensive project management solution with AI - powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
       launch_date: '2024 - 07 - 15',
-=======
 
         'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
       launchDate: '2024-07-15',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       customers: 520,
       rating: 4 && 4.9,
       reviews: 267,
@@ -462,7 +456,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
 
   ];    features: [
 
-=======
 export interface InnovativeMicroSaasExpansionService {
   id: string, name: string,
   tagline: string, price: string,
@@ -497,7 +490,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     features: [
       'AI-powered churn prediction with 94% accuracyAutomated customer onboarding workflowsIntelligent health scoring and monitoringProactive customer outreach automationPersonalized success playbooksReal-time customer sentiment analysisAutomated milestone celebrationsIntegration with CRM and support tools';
       'Advanced analytics and reportingMulti-channel communication orchestration'
-=======
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -505,25 +497,21 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
         'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.'
       launchDate: '2024-07-15'
       customers: 520
       rating: 4.9
       reviews: 267
     }
-=======
         'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
       launchDate: '2024-07-15',
       customers: 520,
       rating: 4.9,
       reviews: 267,
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'AI-powered project risk predictionIntelligent resource allocation optimizationAutomated task dependency managementReal-time progress tracking and alertsAdvanced project analytics and reportingTeam collaboration and communication toolsIntegration with development toolsMobile app for field teams';
       'Automated milestone trackingCustom workflow automation'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ];
     popular: true, icon: '🤖💼',
     color: 'from-blue-600 to-cyan-500', textColor: 'text-blue-400',
@@ -599,10 +587,8 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
 
   }
 
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasExpansionService {;
   id: string,;
@@ -869,18 +855,10 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
 
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasExpansionService {;
   id: string,;
@@ -1143,11 +1121,32 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     customers: 520,;
     rating: 4.9;
     reviews: 267;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+import { ServiceVariant } from '../types/
+import { ServiceVariant } from '../types /
+      period: any
+        'Competitive with Gainsight ($500/month), Totango ($400/month), and ChurnZero ($300/
+        website: any
+        'Competitive with UiPath ($420/month), Automation Anywhere ($350/month), and Blue Prism ($400/
+      link: any
+        'Competitive with UiPath ($420/month), Automation Anywhere ($350/month), and Blue Prism ($400/
+        website: any
+        'Competitive with TradeGecko ($139/month), Zoho Inventory ($119/month), and Fishbowl ($4,395/
+        website: any
+        'Competitive with Greenhouse ($500/month), Lever ($500/month), and BambooHR ($6.19/
+      link: any
+        'Competitive with Greenhouse ($500/month), Lever ($500/month), and BambooHR ($6 && 6.19/
+        website: any
+        'Competitive with Asana ($10.99/user/month), Monday.com ($8/user/month), and Jira ($7.50/user/
+      link: any
+        'Competitive with Asana ($10 && 10.99/user/month), Monday && Monday.com ($8/user/month), and Jira ($7 && 7.50/user/
+        website: any
+    marketPosition: 'Competitive with UiPath ($420/month), Automation Anywhere ($350/month), and Blue Prism ($400/
+      website: any
+    marketPosition: 'Competitive with TradeGecko ($139/month), Zoho Inventory ($119/month), and Fishbowl ($4,395/
+      website: any
+    marketPosition: 'Competitive with Greenhouse ($500/month), Lever ($500/month), and BambooHR ($6.19/
+      website: any
+    marketPosition: 'Competitive with Asana ($10.99/user/month), Monday.com ($8/user/month), and Jira ($7.50/user/
+      website: any

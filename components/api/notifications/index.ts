@@ -11,16 +11,12 @@ function getUserId(req: NextApiRequest): string {
     .map(c => c && c.trim())
     .find(c => c && c.startsWith('user_id='));
   if (match) return decodeURIComponent(match && match.split('=')[1]);
-=======
 import { supabase } from '../../../utils/supabase/client';
 import {
-<<<<<<< HEAD
   NotificationItem
   NotificationType;
-=======
   NotificationItem,;
   NotificationType,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../../utils/notifications';
 function getUserId(req: NextApiRequest): string {
 
@@ -30,13 +26,11 @@ function getUserId(req: NextApiRequest): string {
     .map(c => c.trim())
     .find(c => c.startsWith('user_id='));
   if (match) return decodeURIComponent(match.split('=')[1]);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return 'demo-user-1';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
 import { supabase } from '../../../utils / supabase / client';
 import {
   NotificationItem,
@@ -67,17 +61,14 @@ function handler() {
       limit = '50',
       offset = '0',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return 'demo-user-1'
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   try {
     const userId = getUserId(req);
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // If countOnly, return unread count quickly
     if (countOnly === 'true') {
       const { data, error } = await supabase
@@ -96,7 +87,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (!count) {
         const { count: exactCount } = await supabase
           .from('notifications')
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           .select('id', { count: 'exact' })
           .eq('user_id', userId)
           .eq('read_status', false);
@@ -123,7 +113,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
       return res && res.status(200).json({ count })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     // Build query based on filter
 
@@ -168,7 +157,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 }
 
-=======
           id: 'seed-1', user_id: userId,
           type: 'onboarding', title: 'Welcome to Zion AI Marketplace',
           body: 'Complete your profile to get personalized matches.', created_at: new Date().toISOString(),
@@ -184,9 +172,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     return res.status(200).json({ notifications: data as NotificationItem[] })
   } catch (e) {
-<<<<<<< HEAD
     return res.status(500).json({ error: 'Unexpected error' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
 }
       return res.status (200).json ({ notifications: fallback });
@@ -195,17 +181,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e) {
 return res.status (500).json ({ error: 'Unexpected error' });
   }    return res.status (500).json ({ error: 'Unexpected error' });
-=======
 return res.status(500).json({ error: 'Unexpected error' });
   }    return res.status(500).json({ error: 'Unexpected error' })
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   };
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from 'next'
+import { supabase } from '../../../utils/supabase/
+ from '../../../utils/
+import { supabase } from '../../../utils / supabase /
+ from '../../../utils /
+import { NotificationItem, NotificationType } from '../../../utils/
+          related_action: any

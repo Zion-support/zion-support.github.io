@@ -1,21 +1,13 @@
-import React from 'react';
-interface ComprehensiveServicesOverview2025Props {
-  // Add props here as needed
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
 
-export default function ComprehensiveServicesOverview2025({ }: ComprehensiveServicesOverview2025Props) {
-  return (
-    <div>
-      <h1>ComprehensiveServicesOverview2025</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-
-
-
-}
-
-=======
-
-
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any

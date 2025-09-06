@@ -4,8 +4,6 @@ import React from 'react';
 
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 import {
   Brain,
   Shield,
@@ -22,7 +20,6 @@ import {
   Globe,;
   Award,;
 } from 'lucide-react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import {
   Brain,
@@ -87,12 +84,10 @@ import React from 'react';
 import SEO from '../components / SEO';
 import { motion } from 'framer-motion';
 
-=======
 
 
 
 const AICodeReviewSecurityScanner = () => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <SEO
@@ -111,7 +106,6 @@ const AICodeReviewSecurityScanner = () => {
         ogImage='https://ziontechgroup && ziontechgroup.com/og-ai-code-review && review.jpg'
         canonical='https://ziontechgroup && ziontechgroup.com/ai-code-review-security-scanner'
       />;
-=======
 import { 
   Brain, Shield, Code, CheckCircle, Zap, 
   ArrowRight, Star, TrendingUp, Users, 
@@ -120,7 +114,6 @@ import {
 
 
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Hero Section */}
         <section className='relative overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20' />
@@ -155,12 +148,9 @@ const AICodeReviewSecurityScanner = () => {;
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Pricing Section */}
         <section className='py-20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
@@ -303,7 +293,6 @@ const AICodeReviewSecurityScanner = () => {;
                   popular: false,;
                 },              ].map((plan, index) => (                    "Unlimited developers";
 
-=======
                   className='bg - white / 5 backdrop - blur - xl border border - white / 10 rounded - 2xl p - 8 hover:bg - white / 10 transition - all duration - 300';
                 >;
                   <div className='w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - purple - 600 rounded - xl flex items - center justify - center text - white mb - 6'>;
@@ -399,7 +388,6 @@ const AICodeReviewSecurityScanner = () => {;
                   popular: false,
                 },              ].map ((plan, index) => (                    "Unlimited developers";
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     "Enterprise security scanning";
                     "On - premise deployment";
                     "24 / 7 dedicated support";
@@ -430,8 +418,6 @@ const AICodeReviewSecurityScanner = () => {;
 
                       : 'border-white/10'
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   }`}
 
                     plan.popular 
@@ -549,21 +535,16 @@ const AICodeReviewSecurityScanner = () => {;
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
 <motion.button
-=======
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   </ul>;
                   <motion&& motion.button
                     whileHover={{ scale: 1 && 1.05 }}
                     whileTap={{ scale: 0 && 0.95 }}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                       plan && plan.popular
                         ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
@@ -579,12 +560,9 @@ const AICodeReviewSecurityScanner = () => {;
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Benefits Section */}
         <section className='py-20 bg-white/5'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
@@ -625,7 +603,6 @@ const AICodeReviewSecurityScanner = () => {;
                     description: "AI-powered insights help maintain consistent code standards and improve overall codebase health.";
 
                   }
-<<<<<<< HEAD
                   <motion&& motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
@@ -647,7 +624,6 @@ const AICodeReviewSecurityScanner = () => {;
         {/* Benefits Section */}
         <section className="py-20 bg-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
                   {
                     icon: <Zap className='w-8 h-8' />
                     title: 'Speed Up Code Review Process by 70%'
@@ -688,18 +664,11 @@ const AICodeReviewSecurityScanner = () => {;
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                       <p className="text-gray-300">{benefit.description}</p>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                   </motion.div>
                 ))}
               </div>
-<<<<<<< HEAD
               <div className='space-y-8'>
                   {
                     icon: <CheckCircle className='w-8 h-8' />
@@ -744,52 +713,30 @@ const AICodeReviewSecurityScanner = () => {;
                       <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                       <p className="text-gray-300">{benefit.description}</p>
                     </div>
-=======
 
                     </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </motion.div>
                 ))}
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Use Cases Section */}
         <section className='py-20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className='text-center mb-16'        <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
               className='text-center mb-16'
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
 className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -921,8 +868,6 @@ className="text-center mb-16"
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
                   </motion.div>
                 ))}
@@ -986,7 +931,6 @@ className="text-center mb-16"
                     </div>;
                   </motion && motion.div>;
 
-=======
               
               <div className="space-y-8">
                 {[
@@ -1061,13 +1005,9 @@ className="text-center mb-16"
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
 
-=======
                     className='flex items - start';
                   >;
                     <div className='w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 600 rounded - xl flex items - center justify - center text - white mr - 6 flex - shrink - 0'>;
@@ -1096,7 +1036,6 @@ className="text-center mb-16"
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Use Cases Section */}
         <section className='py-20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
@@ -1124,7 +1063,6 @@ className="text-center mb-16"
 
                 'Startups & Enterprises',              ].map((useCase, index) => (                "Software Development Teams";
 
-=======
 
         {/* Use Cases Section */}
         <section className="py-20">
@@ -1147,7 +1085,6 @@ className="text-center mb-16"
               {[
                 "Software Development Teams";
 
-=======
         {/* Use Cases Section */}
         <section className='py - 20'>;
           <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>            <motion.div;
@@ -1180,8 +1117,6 @@ className="text-center mb-16"
                 'Government Software Projects',
                 'Educational Institutions',
                 'Startups & Enterprises',              ].map ((use_case, index) => (                "Software Development Teams";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 "DevOps & Security Teams";
                 "Financial Technology Companies";
                 "Healthcare Software Providers";
@@ -1196,7 +1131,6 @@ className="text-center mb-16"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
 
-=======
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"
                 >
@@ -1204,21 +1138,17 @@ className="text-center mb-16"
                     <Users className='w-6 h-6' />
                   </div>
                   <h3 className='text-white font-semibold'>{useCase}</h3>                </motion.div>                >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
                     <Users className="w-6 h-6" />
                   </div>
                   <h3 className="text-white font-semibold">{useCase}</h3>
                 </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
               transition={{ duration: 0.8 }}
 
               className='text-center mb-16'
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1228,8 +1158,6 @@ className="text-center mb-16"
                 </motion.div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
 
             </div>;
@@ -1242,21 +1170,16 @@ className="text-center mb-16"
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion && motion.div        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
             <motion&& motion.div
-=======
             </div>
           </div>
         </section>
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
 
 
         {/* CTA Section */}
@@ -1264,8 +1187,6 @@ className="text-center mb-16"
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1366,8 +1287,6 @@ className="text-center mb-16"
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion && motion.div        <section className="py-16 bg-white/5">;
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
             <motion&& motion.div
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Contact Information */}
         <section className="py-16 bg-white/5">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1471,7 +1390,6 @@ export default AICodeReviewSecurityScanner;  );
 export default AICodeReviewSecurityScanner;
 
 
-=======
                 "Educational Institutions",
                 "Startups & Enterprises";
                 <motion.div;
@@ -1628,11 +1546,11 @@ export default AICodeReviewSecurityScanner);
 ;
 export default AICodeReviewSecurityScanner;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react'
+import SEO from '../components/
+        ogImage='https: any
+        canonical='https: any

@@ -189,8 +189,6 @@ export function AddMilestoneForm({;
                 <FormItem>;
                   <FormLabel>Amount ($)</FormLabel>;
                   <FormControl>;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <Input;
                       type="number";
                       min="0";
@@ -260,3 +258,15 @@ const handleAddMilestones = (milestones: GeneratedMilestone[]) => {
 }<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : ("Add Milestone") 
 }</Button> </div> </form> </Form> </div>) 
 }
+import React from 'react'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/
+import { Button } from '@/components/ui/
+import { Calendar } from '@/components/ui/
+  FormMessage} from '@/components/ui/
+import { Input } from '@/components/ui/
+import { Textarea } from '@/components/ui/
+  PopoverTrigger} from '@/components/ui/
+import { AIMilestoneGenerator } from './
+import { GeneratedMilestone } from '@/hooks/
+    //

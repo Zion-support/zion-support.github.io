@@ -28,3 +28,5 @@ const MobileBottomNav = ({ className }) => {
 };
 
 export default MobileBottomNav;
+import React from 'react'
+    

@@ -10,7 +10,6 @@ export default function SpaceTechPage() {;
 
 
     <div className="min-h-screen">;
-=======
 import Link from './next / link';,
 export const metadata = {
   title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services",
@@ -22,14 +21,11 @@ export default /**
 function SpaceTechPage() {
   return (
     <div className="min - h-screen">;
-=======
-<<<<<<< HEAD
 import Link from "next/link";
 export const metadata = {title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services";
   description: "Explore Zion Tech Group's cutting-edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.";
   keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"}
 export default function SpaceTechPage() {return (;
-=======
 import Link from "next/link",;
 export const metadata = {;
   title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services",;
@@ -37,9 +33,7 @@ export const metadata = {;
   keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"},;
 export default function SpaceTechPage() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -125,11 +119,9 @@ export default function SpaceTechPage() {;
               <p className="text - gray - 400 mb - 4">;
                 High - speed satellite internet, global connectivity solutions,
 
-=======
 
                 High-speed satellite internet, global connectivity solutions,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 and communication infrastructure for remote regions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -531,3 +523,4 @@ export default function SpaceTechPage() {;
       </section>;
     </div>);
 }
+import Link from "next/

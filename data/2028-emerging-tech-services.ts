@@ -1,6 +1,5 @@
-
-export interface EmergingTechService2028 {
-
+export interface EmergingTechService2028 {  id: string;
+  id: string;
   name: string;
   tagline: string;
   price: string;
@@ -8,8 +7,8 @@ export interface EmergingTechService2028 {
   features: string[];
   link: string;
   category: string;
-  realImplementation: boolean;
-  contactInfo: {
+  real_implementation: boolean;
+  contact_info: {
     mobile: string;
     email: string;
 
@@ -17,7 +16,6 @@ export interface EmergingTechService2028 {
     address: string;
   };
 
-=======
 export interface EmergingTechService2028 {;
   id: string,;
   name: string,;
@@ -37,16 +35,13 @@ export interface EmergingTechService2028 {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     address: string;
   }
 export const emergingTech2028Services: EmergingTechService2028[] = [
   {
 
-=======
     address: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 ;
 export const emergingTech2028Services: EmergingTechService2028[] = [;
@@ -77,7 +72,6 @@ export const emergingTech2028Services: EmergingTechService2028[] = [;
 ];      mobile: "+1 302 464 0950";
 
 
-=======
 
     id: "2028-emerging-tech-service",
     name: "2028 Emerging Tech Service Platform",
@@ -96,12 +90,10 @@ export const emergingTech2028Services: EmergingTechService2028[] = [;
     realImplementation: true,
     contactInfo: {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-=======
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -114,19 +106,15 @@ export const emergingTech2028Services: EmergingTechService2028[] = [;
 }
 export const emergingTech2028Services: EmergingTechService2028[] = [
   {
-<<<<<<< HEAD
     id: "2028-emerging-tech-service", name: "2028 Emerging Tech Service Platform",
     tagline: "Emerging tech services for 2028", price: "$299/month",
     description: "Advanced platform showcasing emerging technology services and innovations for 2028.",
-=======
-<<<<<<< HEAD
     id: '2028-emerging-tech-service'
     name: '2028 Emerging Tech Service Platform'
     tagline: 'Emerging tech services for 2028'
     price: '$299/month'
     description:
       'Advanced platform showcasing emerging technology services and innovations for 2028.'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     features: [
       "Emerging tech services";
       "Innovation platform";
@@ -138,20 +126,16 @@ export const emergingTech2028Services: EmergingTechService2028[] = [
     realImplementation: true,
     contactInfo: {
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-<<<<<<< HEAD
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
 ;
-=======
-=======
     id: "2028-emerging-tech-service",
     name: "2028 Emerging Tech Service Platform",
     tagline: "Emerging tech services for 2028",
@@ -168,11 +152,8 @@ export const emergingTech2028Services: EmergingTechService2028[] = [
     category: "Emerging Tech Services 2028",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-=======
-<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -180,14 +161,10 @@ export const emergingTech2028Services: EmergingTechService2028[] = [
   },;
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-=======
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    id: any

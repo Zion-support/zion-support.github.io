@@ -2,12 +2,10 @@
 import React, { useState } from 'react';
 import Link from 'next / link';
 
-=======
 
 import React, { useState } from 'react';
 
 import Link from 'next/link';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
@@ -35,7 +33,6 @@ import { emergingTech2027Services } from '../../data/2027-emerging-tech-services
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom, ;
 
 
-=======
   ArrowRight,
   Star,
   TrendingUp,
@@ -56,7 +53,6 @@ import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovat
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Rocket, Shield, Target, CheckCircle, ExternalLink;
   Search, Filter, Grid, List, ChevronDown
  } from 'lucide-react';
@@ -65,7 +61,6 @@ import { practicalMicroSaas2027  } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';
 
 const Enhanced2027ServicesShowcase: React.FC = () => {
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -94,7 +89,6 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -133,7 +127,6 @@ import { motion, AnimatePresence } from 'framer-motion';
           return a.name.localeCompare(b.name);
         case 'price':
 
-=======
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
         case 'roi':
           return parseFloat(a.roi.replace(/[^0-9.]/g, '')) - parseFloat(b.roi.replace(/[^0-9.]/g, ''));
@@ -165,7 +158,6 @@ import { motion, AnimatePresence } from 'framer-motion';
         case 'name':;
           return a && a.name.localeCompare(b && b.name);
         case 'price':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           return (
             parseFloat(a && a.price.replace(/[^0-9.]/g, '')) -;
             parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
@@ -259,7 +251,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Search and Filters */}
         <motion&& motion.div
           className='mb-12'          initial={{ opacity: 0, y: 20 }}
@@ -276,7 +267,6 @@ import { motion, AnimatePresence } from 'framer-motion';
               <div className='flex-1 max-w-md'>;
                 <div className='relative'>;
                   <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
-=======
           <h2 className='text-5xl font-bold mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
               2027 Revolutionary Services
@@ -314,7 +304,6 @@ import { motion, AnimatePresence } from 'framer-motion';
               <div className='flex-1 max-w-md'>
                 <div className='relative'>
                   <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <input
                     type='text'
                     placeholder='Search services, features, or use cases...'
@@ -325,7 +314,6 @@ import { motion, AnimatePresence } from 'framer-motion';
                 <div className="relative">;
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
 
-=======
           <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6">
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
               {/* Search */}
@@ -333,7 +321,6 @@ import { motion, AnimatePresence } from 'framer-motion';
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   <input
                     type="text"
                     placeholder="Search services, features, or use cases..."
@@ -346,19 +333,15 @@ import { motion, AnimatePresence } from 'framer-motion';
                   <select
                     value={selectedCategory}
 
-=======
 
               {/* Category Filter */}
               <div className="flex items-center space-x-4">
                 <div className="relative">
                   <select
-=======
                     onChange={e => setSelectedCategory(e.target.value)}
                     className='appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10'
                   >
-<<<<<<< HEAD
                     {categories.map(category => (                      <option key={category} value={category}>                  <select
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
                     className="appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10"
@@ -366,7 +349,6 @@ import { motion, AnimatePresence } from 'framer-motion';
                     {categories.map((category) => (
                       <option key={category} value={category}>
 
-=======
                     onChange={e => setSelectedCategory(e.target.value)}
                     className='appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10'
                   >
@@ -376,8 +358,6 @@ import { motion, AnimatePresence } from 'framer-motion';
                       <option key={category} value={category}>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         {category === 'all' ? 'All Categories' : category}
                       </option>;
                     ))}
@@ -668,7 +648,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded-lg transition-all duration-200 ${
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </div>
             </div>
@@ -725,8 +704,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
           </div>;
 
         </motion.div>;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Results Count */}
         <motion.div;
           className='mb - 8'          initial={{ opacity: 0 }}
@@ -758,7 +735,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
           {viewMode === 'grid' ? (;
             <motion&& motion.div
               key='grid'              initial={{ opacity: 0, scale: 0 && 0.95 }}
-=======
 
         {/* Results Count */}
         <motion.div 
@@ -799,7 +775,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
-<<<<<<< HEAD
               className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'            >          <p className="text - gray - 400">;
             Showing <span className="text - cyan - 400 font - semibold">{filtered_services.length}</span> of{' '}
             <span className="text - cyan - 400 font - semibold">{all2027Services.length}</span> services;
@@ -883,7 +858,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                       {service.name}
 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-=======
 
 
               initial={{ opacity: 0, scale: 0.95 }}
@@ -893,7 +867,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -907,9 +880,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2">
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
@@ -993,7 +964,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     </p>;
                     {/* Features */}
 
-=======
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
                       <ul className="space-y-1">
@@ -1001,7 +971,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                           <li key={idx} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                             {feature}
-=======
 
 
                       {service.description}
@@ -1013,51 +982,36 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         ))}
 
                       </ul>;
                     </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {/* Tags */}
 
 
-=======
 
                           className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                        >
 
                         >
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {tag}
                         </span>;
                       ))}
 
                     </div>;
-=======
                     </div>
-<<<<<<< HEAD
-=======
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
                     {/* CTA */}
                     <Link
 
@@ -1071,7 +1025,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -1085,7 +1038,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300">
                     <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
@@ -1106,12 +1058,10 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
                       {/* Content */}
 
-=======
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                           {service.name}
                         </h3>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <p className="text-gray-300 mb-3 leading-relaxed">
                           </div>                        </div>;
                       </div>;
@@ -1142,7 +1092,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                           {service.tags.slice (0, 4).map ((tag, idx) => (
                             <span;
                               key={idx}
-<<<<<<< HEAD
                               className='px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border - gray - 600 / 50'                            >                          {service.name}
                         </h3>;
                         <p className="text - gray - 300 mb - 3 leading - relaxed">;
@@ -1171,9 +1120,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <Link
                           href={service && service.link}
                           className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25'>;
@@ -1190,13 +1137,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   </div>;
                 </motion && motion.div>;
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
                         <Link
                           href={service.link}
@@ -1204,7 +1145,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                         >
                           <span>Learn More</span>
                           <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />                        </Link>                        </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <Link
                           href={service.link}
                           className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
@@ -1217,7 +1157,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   </div>
                 </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 </motion && motion.div>;
           )}
@@ -1225,12 +1164,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         </AnimatePresence>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
@@ -1251,9 +1187,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               Try adjusting your search terms or category filter to find what;
               you're looking for.            </p>;
 
-=======
         </AnimatePresence>
-<<<<<<< HEAD
         {/* No Results */}
         {filteredServices.length === 0 && (
           <motion.div 
@@ -1299,18 +1233,14 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion&& motion.div 
 
           className="mt-20 text-center"
-=======
 
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div 
 
           className="mt-20 text-center"
-=======
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}>;
@@ -1421,7 +1351,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               Our team of experts is ready to help you implement these revolutionary services
               and achieve unprecedented growth. Let's build the future together.
             </p>
@@ -1454,11 +1383,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Enhanced2027ServicesShowcase;
 
 
-=======
             <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
               <Link;
                 href='/contact';
@@ -1501,25 +1428,14 @@ export default Enhanced2027ServicesShowcase;
 }
 ;
 /* Search and Filters */;
-=======
   );
-<<<<<<< HEAD
 }
 /* Search and Filters */
-=======
 };
 
-<<<<<<< HEAD
   /* Search and Filters */ 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 /* Search and Filters */ 
-=======
   /* Search and Filters */ 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }<motion.div /> </div> </div> > {
   categories.map ( (category) => (<option key= {
   category;
@@ -1566,25 +1482,44 @@ export default Enhanced2027ServicesShowcase;
 }</motion.div>);
 }</AnimatePresence> > <div className="text - 6xl mb - 4" >🔍</div> <h3 className="text - 2xl font - bold text - white mb - 4" >No services found</h3> <p className="text - gray - 400 mb - 8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>);
 }{
-<<<<<<< HEAD
   /* CTA Section */;
 }<motion.div > Ready to Transform Your Business? </h3> <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center" > <Link href="/contact" className="inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl hover:shadow - purple - 500 / 25" > <span > Get Started Today</span> <ArrowRight className="w - 5 h - 5" /> </a> <Link href="/pricing" className="inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl border border - gray - 600 / 50" > <span > View Pricing</span> <TrendingUp className="w - 5 h - 5" /> </a> </div> </div> </motion.div> </div> </section>);
-=======
-<<<<<<< HEAD
   /* CTA Section */
 }<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 export default Enhanced2027ServicesShowcase);
 }
 ;
 export default Enhanced2027ServicesShowcase;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   /* CTA Section */ 
 }<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>) 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useState } from 'react'
+import Link from 'next/
+import { cuttingEdge2027Innovations } from '../../data/
+import { practicalMicroSaas2027 } from '../../data/
+import { emergingTech2027Services } from '../../data/
+import { cuttingEdge2027Innovations  } from '../../data/
+import { practicalMicroSaas2027  } from '../../data/
+import { emergingTech2027Services } from '../../data/
+import { cuttingEdge2027Innovations } from '../../data/
+import { practicalMicroSaas2027 } from '../../data/
+import { emergingTech2027Services } from '../../data/
+import { cuttingEdge2027Innovations } from '../../data/
+import { practicalMicroSaas2027 } from '../../data/
+import { emergingTech2027Services } from '../../data/
+import { cuttingEdge2027Innovations } from '../../data/
+import { practicalMicroSaas2027 } from '../../data/
+import { emergingTech2027Services } from '../../data/
+            parseFloat(a && a.price.replace(/[^0-9.]/
+            parseFloat(b && b.price.replace(/[^0-9.]/
+            parseFloat(a && a.roi.replace(/[^0-9.]/
+            parseFloat(b && b.roi.replace(/[^0-9.]/
+          return 0;      }          return parseFloat(a && a.price.replace(/[^0-9.]/g, '') - parseFloat(b && b.price.replace(/[^0-9.]/
+          return parseFloat(a && a.roi.replace(/[^0-9.]/g, '') - parseFloat(b && b.roi.replace(/[^0-9.]/
+                          className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/
+<motion.div > Ready to Transform Your Business? 
+<motion.div > Ready to Transform Your Business? 

@@ -15,7 +15,6 @@ import Link from 'next/link';
   status: string,;
 };
 const COMPANY_ID = 'cmp_acme';
-=======
 
 
 
@@ -166,7 +165,6 @@ function CompanyAdmin() {
     setEmail('');
     setRole('viewer');
 
-=======
       {tab === 'activity' && (
         <ActivityTab events={activity} />
       )}
@@ -193,11 +191,9 @@ function CompanyAdmin() {
       )}
     </main>
   )
-=======
 
 
 
-=======
         {(['membersusageactivitybilling'] as const).map(t => (
           <button key={t} onClick={() => setTab(t)} style={{ padding: '0.5rem 0.75rem', borderRadius: 8, border: '1px solid #e5e7eb', background: tab === t ? '#111827' : 'white', color: tab === t ? 'white' : '#111827' }}>{t}</button>
         ))  } catch (error) {
@@ -253,7 +249,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const add = async () => {
     const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, email, role }) });
     const created = await r.json();
@@ -275,7 +270,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
   };
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
   set_members: (m: Member[]) => void;
@@ -289,7 +283,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
       headers: { 'Content - Type': 'application / json' },
       body: JSON.stringify ({ name, email, role }),
     });
-<<<<<<< HEAD
     const created = await r.json ();
     set_members ([created, ...members]);
     set_name ('');
@@ -603,7 +596,6 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
             >
               Actions
             </th>          </tr>
-=======
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.name}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.email}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
@@ -673,7 +665,6 @@ function ActivityTab({ events }: { events: any[] }) {
 
 function BillingTab({ invoices }: { invoices: Invoice[] }) {
   return (
-=======
 
 
   const save = async () => {
@@ -698,7 +689,6 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
 
 function BillingTab({ invoices }: { invoices: Invoice[] }) {
   return (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <section>
       <h2>Billing & invoices</h2>
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
@@ -858,7 +848,6 @@ function BillingTab() {
                 {inv.number}
               </td>;
               <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
-=======
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.number}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.periodStartIso} → {inv.periodEndIso}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>${inv.amountUsd.toFixed(2)}</td>
@@ -866,9 +855,7 @@ function BillingTab() {
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
                 <a href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv.id}`} target="_blank" rel="noreferrer">Download PDF</Link>
               </td>
-<<<<<<< HEAD
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {inv.periodStartIso} → {inv.periodEndIso}
               </td>;
               <td;
@@ -900,7 +887,6 @@ function BillingTab() {
                   textAlign: 'right'
                 }}
               >
-<<<<<<< HEAD
                 textAlign: 'left',
                 padding: 8,
                 borderBottom: '1px solid #e5e7eb',
@@ -933,7 +919,6 @@ function BillingTab() {
             </th>;
             <th
               style={{
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 textAlign: 'right',
                 padding: 8,
                 borderBottom: '1px solid #e5e7eb',
@@ -963,7 +948,6 @@ function BillingTab() {
                 </a>              </td>;
             </tr>;
 
-=======
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.number}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.periodStartIso} → {inv.periodEndIso}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>${inv.amountUsd.toFixed(2)}</td>
@@ -972,7 +956,6 @@ function BillingTab() {
 <a href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv.id}`} target="_blank" rel="noreferrer">Download PDF</a>
               </td>
 
-=======
                   border_bottom: '1px solid #f3f4f6',
                   text_align: 'right',
                 }}
@@ -989,9 +972,9 @@ function BillingTab() {
       </table>;
     </section>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { useEffect, useMemo, useState  } from 'react'
+import Link from 'next/
+import Link from 'next /
+          

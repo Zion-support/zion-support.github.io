@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -22,8 +24,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 interface Service {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Star,;
   Users,;
@@ -97,7 +97,6 @@ interface EnhancedServiceShowcaseProps {
   show_filters?: boolean;
   services?: Service[];
 
-=======
 import { 
   Star, Users, TrendingUp, DollarSign, Clock, 
   CheckCircle, ArrowRight, Zap, Shield, Rocket;
@@ -166,7 +165,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   const [sortBy, setSortBy] = useState<string>('popular');
   const categories = [
 
-=======
   max_services?: number;
 ;
 const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
@@ -191,7 +189,6 @@ const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
     { id: 'blockchain', name: 'Blockchain', icon: '⛓️' },
     { id: 'enterprise', name: 'Enterprise', icon: '🏢' },
     { id: 'emerging', name: 'Emerging Tech', icon: '🌟' }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   ];
 
     { id: 'all', name: 'All Prices' },
@@ -541,12 +538,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
     },;
 
   ];
-=======
   ];
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <section className='py-20 px-4 sm:px-6 lg:px-8'>;
       <div className='max-w-7xl mx-auto'>;
@@ -582,12 +577,9 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
         {/* Header */}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {title}
           </motion && motion.h2>;
           <motion&& motion.p
@@ -600,7 +592,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
           </motion && motion.p>;
 
 
-=======
 
             className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >
 
@@ -610,8 +601,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
           </motion.p>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -620,18 +609,15 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
           >
             {stats.map((stat, index) => (
-=======
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
             className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
           >
             {subtitle}
           </motion.p>
-=======
             className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >
 
           >
@@ -639,25 +625,13 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
             {subtitle}
           </motion.p>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             {stats.map((stat, index) => (
               <div key={index} className='text-center'>
@@ -669,7 +643,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                 </div>
                 <div className='text-sm text-gray-400'>{stat.label}</div>              </div>          >
             {stats.map((stat, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div key={index} className="text-center">
                 <div className={`${stat.color} mb-2 flex justify-center`}>
                   <stat.icon className="w-8 h-8" />
@@ -682,7 +655,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
         </div>;
 
 
-=======
 
 
             ))}
@@ -690,8 +662,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
         </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Filters */}
         {showFilters && (;
           <motion&& motion.div
@@ -702,7 +672,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
           >
             <div className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Category Filter */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
@@ -711,14 +680,12 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                   <select
                     value={selectedCategory}
 
-=======
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mb-12"
           >
             <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 {/* Category Filter */}
                 <div>;
                   <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Category">Category</label>;
@@ -728,43 +695,32 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
                         {category.icon} {category.name}
                       </option>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
 
                   </select>;
                 </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Price Range Filter */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         {range.name}
 
                   </select>;
                 </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Sort Options */}
 
 
                         {option.name}
                       </option>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
 
                       </option>))}
@@ -842,19 +798,15 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                   {service.popular && (
 
 
-=======
                     <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      ⭐ Most Popular
 
                       ⭐ Most Popular
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                   )}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Header */}
 
                 while_hover={{ coordinate_y: -5, scale: 1.02 }}
@@ -945,7 +897,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                       {service.tagline}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </p>
                   </div>
                   {/* Features */}
@@ -955,12 +906,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       Key Features
                     </h4>
                     <ul className='space-y-2'>
                       {service.features.slice(0, 4).map((feature, idx) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <li
                           key={idx}
                           className='text-sm text-gray-400 flex items-start'>;
@@ -971,36 +920,20 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                         <li key={idx} className="text-sm text-gray-400 flex items-start">;
                           <span className="text-cyan-400 mr-2">•</span>;
 
-=======
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">
                       <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
-=======
-=======
                     <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}
 
                       {service.tagline}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </p>
                   </div>
                   {/* Features */}
                   <div className='mb-6'>
                     <h4 className='text-sm font-semibold text-gray-300 mb-3 flex items-center'>
                       <CheckCircle className='w-4 h-4 mr-2 text-green-400' />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       Key Features
                     </h4>
                     <ul className="space-y-2">
@@ -1008,7 +941,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                         <li key={idx} className="text-sm text-gray-400 flex items-start">
                           <span className="text-cyan-400 mr-2">•</span>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           {feature}
                         </li>;
                       ))}
@@ -1020,7 +952,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <div>
                       <div className='text-lg font-bold text-white'>
                         {service.rating}
@@ -1040,7 +971,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                       <div className='text-xs text-gray-400'>Trial Days</div>                    </div>
                   </div>
                   {/* ROI Highlight */}                    <div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <div className="text-lg font-bold text-white">{service.rating}</div>
                       <div className="text-xs text-gray-400">Rating</div>
                     </div>
@@ -1060,14 +990,11 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                     <div className="text-sm text-green-400 font-semibold mb-1">🚀 ROI Promise</div>
                     <div className="text-xs text-gray-300 leading-relaxed">
                       {service.roi}
-=======
 
 
                       {service.roi}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
                   </div>
                   {/* Market Position */}
@@ -1147,7 +1074,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Button
                       href={service && service.link}
                       variant='primary'
@@ -1161,17 +1087,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                   {/* Contact Info */}                    <Button
                       href={service && service.link}
                   <div className="mt-auto">
-=======
                   <div className='mt-auto'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <Button
                       href={service.link}
                       variant="primary"
@@ -1205,7 +1122,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                 </div>;
               </motion && motion.div>;
 
-=======
 
                   {/* Contact Info */}
                   <div className="mt-4 text-center">
@@ -1219,19 +1135,15 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                 </div>
               </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </AnimatePresence>;
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -1282,7 +1194,6 @@ export default EnhancedServiceShowcase;  );
 export default EnhancedServiceShowcase;
 
 
-=======
                     </p>;
                   </div>;
                   {/* Features */}
@@ -1464,12 +1375,74 @@ export default EnhancedServiceShowcase);
 ;
 export default EnhancedServiceShowcase;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    console.error('Error caught by boundary: any
+import React, { useState, useMemo } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import Button from '../ui/
+import Button from '../ui/
+    { id: 'low', name: any
+    { id: 'medium', name: any
+    { id: 'high', name: any
+    { id: 'premium', name: '$20K+/month' },  ];    { id: 'premium', name: any
+          parseFloat(service.price.replace(/[$]/
+          parseFloat(service.price.replace(/[$]/
+          parseFloat(service.price.replace(/[$]/
+          parseFloat(service.price.replace(/[$]/
+          parseFloat(service.price.replace(/[$]/
+          parseFloat(service.price.replace(/[$]/
+                          (selectedPriceRange = = 'low' && parseFloat(service.price.replace(/[$]/
+                          (selectedPriceRange = = 'medium' && parseFloat(service.price.replace(/[$]/g, '') >= 1000 && parseFloat(service.price.replace(/[$]/
+                          (selectedPriceRange = = 'high' && parseFloat(service.price.replace(/[$]/g, '') >= 5000 && parseFloat(service.price.replace(/[$]/
+                          (selectedPriceRange = = 'premium' && parseFloat(service.price.replace(/[$]/
+          const aROI = parseInt(a.roi.match(/\d+/
+          const bROI = parseInt(b.roi.match(/\d+/
+    { id: 'low', name: any
+    { id: 'medium', name: any
+    { id: 'high', name: any
+    { id: 'premium', name: '$20K+/month' },  ];    { id: 'premium', name: any
+          parseFloat(service && service.price.replace(/[$]/
+          parseFloat(service && service.price.replace(/[$]/
+          parseFloat(service && service.price.replace(/[$]/
+          parseFloat(service && service.price.replace(/[$]/
+          parseFloat(service && service.price.replace(/[$]/
+          parseFloat(service && service.price.replace(/[$]/
+                          (selectedPriceRange = = 'low' && parseFloat(service && service.price.replace(/[$]/
+                          (selectedPriceRange = = 'medium' && parseFloat(service && service.price.replace(/[$]/g, '') >= 1000 && parseFloat(service && service.price.replace(/[$]/
+                          (selectedPriceRange = = 'high' && parseFloat(service && service.price.replace(/[$]/g, '') >= 5000 && parseFloat(service && service.price.replace(/[$]/
+                          (selectedPriceRange = = 'premium' && parseFloat(service && service.price.replace(/[$]/
+          const aROI = parseInt(a && a.roi.match(/\d+/
+          const bROI = parseInt(b && b.roi.match(/\d+/
+            parseFloat(a && a.price.replace(/[$]/
+            parseFloat(b && b.price.replace(/[$]/
+            parseFloat(b && b.price.replace(/[$]/
+            parseFloat(a && a.price.replace(/[$]/
+    { id: 'low', name: any
+    { id: 'medium', name: any
+    { id: 'high', name: any
+    { id: 'premium', name: '$20K+/month' },  ];    { id: 'premium', name: any
+          parse_float (service.price.replace (/[$]/
+          parse_float (service.price.replace (/[$]/
+          parse_float (service.price.replace (/[$]/
+          parse_float (service.price.replace (/[$]/
+          parse_float (service.price.replace (/[$]/
+          parse_float (service.price.replace (/[$]/
+                          (selectedPriceRange = = 'low' && parse_float (service.price.replace (/[$]/
+                          (selectedPriceRange = = 'medium' && parse_float (service.price.replace (/[$]/g, '') >= 1000 && parse_float (service.price.replace (/[$]/
+                          (selectedPriceRange = = 'high' && parse_float (service.price.replace (/[$]/g, '') >= 5000 && parse_float (service.price.replace (/[$]/
+                          (selectedPriceRange = = 'premium' && parse_float (service.price.replace (/[$]/
+          const aROI = parse_int (a.roi.match (/\d+/
+          const bROI = parse_int (b.roi.match (/\d+/
+            parse_float (a.price.replace (/[$]/
+            parse_float (b.price.replace (/[$]/
+            parse_float (b.price.replace (/[$]/
+            parse_float (a.price.replace (/[$]/
+        filtered.sort (a, b) => parse_float (a.price.replace (/[$]/g, '') - parse_float (b.price.replace (/[$]/
+        filtered.sort (a, b) => parse_float (b.price.replace (/[$]/g, '') - parse_float (a.price.replace (/[$]/
+        filtered && filtered.sort(a, b) => parseFloat(a && a.price.replace(/[$]/g, '') - parseFloat(b && b.price.replace(/[$]/
+        filtered && filtered.sort(a, b) => parseFloat(b && b.price.replace(/[$]/g, '') - parseFloat(a && a.price.replace(/[$]/
+    { label: 'Average Rating', value: (services.reduce(sum, s) => sum + (s.rating |0), 0) /

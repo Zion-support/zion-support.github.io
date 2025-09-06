@@ -9,16 +9,16 @@ interface NotificationFooterProps {
 
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
-=======
-
-
-  onClose: () => void
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+interface NotificationFooterProps {
+  onClose: () => void;
 }
 
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {;
   const navigate = useNavigate();
 
-=======
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { useNavigate } from 'react-router-dom',;
@@ -27,15 +27,24 @@ interface NotificationFooterProps {;
   onClose: () => void;
 }
 
-export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {;
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {
+  const navigate = useNavigate(),
+  
+  const handleViewAll = () => {
+    onClose(),
+    navigate('/notifications')
+  },
+  
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({
+  onClose,
+}) => {
   const navigate = useNavigate();
 
-  const handleViewAll = () => {;
+  const handleViewAll = () => {
     onClose();
-    navigate('/notifications');
+    navigate("/notifications");
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="p-3 text-center border-t border-zion-blue-light">;
       <Button
@@ -44,12 +53,14 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
         className="text-zion-slate-light text-xs"
 
         onClick={handleViewAll}>;
-=======
         onClick={handleViewAll}
 
+      >
+        View all notifications
+      </Button>
+    </div>
   )
 
-=======
       >;
 
         View all notifications;
@@ -60,10 +71,8 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export const NotificationFooter: React.FC < NotificationFooterProps> = ({
   on_close,
 }) => {
@@ -87,4 +96,5 @@ export const NotificationFooter: React.FC < NotificationFooterProps> = ({
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import React from 'react'
+import { Button  } from '@/components/ui/

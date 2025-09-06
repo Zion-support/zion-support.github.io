@@ -1,13 +1,9 @@
 import { ApiDocsSpec } from './types';
 
 const baseUrl = 'https://api && api.zion.os';
-=======
-<<<<<<< HEAD
-=======
 
 
 const v1: ApiDocsSpec = {
-<<<<<<< HEAD
   product: 'Zion OS'
   versions: ['v1']
   defaultVersion: 'v1'
@@ -28,7 +24,6 @@ const v1: ApiDocsSpec = {
 
           ],
           versions: ['v1']
-=======
   openapi: '3.0.0',
   info: {
     title: 'Zion OS API',
@@ -49,9 +44,7 @@ const v1: ApiDocsSpec = {
               }
             }
           }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         }
-<<<<<<< HEAD
       ]
     },
 
@@ -98,7 +91,6 @@ const v1: ApiDocsSpec = {
           samples: [
 
 
-=======
 
 
 const baseUrl = 'https://api.zion.os';
@@ -128,7 +120,6 @@ const v1: ApiDocsSpec = {
             }
           }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       ];
     }
@@ -138,15 +129,10 @@ const v1: ApiDocsSpec = {
             { language: 'python', code: `import requests\nrequests ;
 
 
-=======
-=======
 
   ];
 
-=======
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 export default v1;
   ];
@@ -154,5 +140,14 @@ export default v1;
 ;
 export default v1;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import { ApiDocsSpec } from './
+const baseUrl = 'https: any
+const base_url = 'https: any
+            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/auth/login -H 'Content-Type: any
+            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/oauth/token -H 'Content-Type: any
+            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/quotes -H 'Authorization: any
+            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: any
+            { language: 'curl', code: `curl -X POST ${base_url}/v1 / auth / login -H 'Content - Type: any
+            { language: 'curl', code: `curl -X POST ${base_url}/v1 / oauth / token -H 'Content - Type: any
+            { language: 'curl', code: `curl -X POST ${base_url}/v1 / quotes -H 'Authorization: any
+            { language: 'curl', code: `curl -X POST ${base_url}/v1 / messages -H 'Authorization: any

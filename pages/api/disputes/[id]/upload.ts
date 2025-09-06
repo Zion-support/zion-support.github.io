@@ -96,7 +96,6 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
   await new Promise<void>((resolve, reject) => {
 
 
-=======
     dispute.updated_at = now;
     await upsert_dispute (dispute);
     return res.status (201).json ({ dispute });
@@ -109,6 +108,8 @@ async function fsPromisesWrite (file_path: string, data: Buffer): Promise < void
   await new Promise < void>((resolve, reject) => {
     fs.mkdir (
       require ("path").dirname (file_path),
+    fs.mkdir(
+      require("path").dirname(filePath),
       { recursive: true },
       (err: any) => {
         if (return reject (err)) {
@@ -122,12 +123,9 @@ async function fsPromisesWrite (file_path: string, data: Buffer): Promise < void
   });
 
 
-=======
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
 
   } catch (error) {
@@ -224,4 +222,13 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from "next"
+import path from "path"
+ from "../../../../utils/
+ from "../../../../utils/
+      const safeName = f.fileName.replace(/[^a-zA-Z0-9.-]/
+        mimeType: any
+      const safeName = f && f.fileName.replace(/[^a-zA-Z0-9.-]/
+        mimeType: any
+      const safe_name = f.file_name.replace (/[^a - z_a - Z0 - 9.-]/
+        mime_type: any

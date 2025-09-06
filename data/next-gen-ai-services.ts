@@ -1,7 +1,5 @@
-
-import { ServiceVariant } from '../types/service-variants';
-export interface NextGenAIService {
-
+ export interface NextGenAIService {  id: string;
+  id: string;
   name: string;
   tagline: string;
   price: string;
@@ -11,27 +9,33 @@ export interface NextGenAIService {
   popular: boolean;
   icon: string;
   color: string;
-  textColor: string;
+  text_color: string;
   link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
+  market_position: string;
+  target_audience: string;
+  trial_days: number;
+  setup_time: string;
   category: string;
-  realService: boolean;
+  real_service: boolean;
   technology: string[];
   integrations: string[];
-  useCases: string[];
+  use_cases: string[];
   roi: string;
   competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  market_size: string;
+  growth_rate: string;
   variant: ServiceVariant;
+  contact_info: {
+    mobile: string;
+    email: string;
+    address: string;
 
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
+    website: string;
+  }
 
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
   customers: number;
   rating: number;
 
@@ -39,10 +43,8 @@ export interface NextGenAIService {
   reviews: number;    mobile: string
     email: string
     address: string
-=======
 
 
-=======
   id: string,
   name: string,
   tagline: string,
@@ -75,26 +77,13 @@ export interface NextGenAIService {
 
   contactInfo: {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     mobile: string,
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  reviews: number;    mobile: string,
     email: string,
     address: string,
-
-
-
-    website: string
+    website: any
   }
-  realImplementation: boolean
-  implementationDetails: string
-  launchDate: string
-  customers: number
-  rating: number
-
-  reviews: number
-}
-
-
+  realImplementation: any
 export const nextGenAIServices: NextGenAIService[] = [
   // Advanced AI & Neural Network Services
   {
@@ -118,14 +107,10 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Advanced analytics dashboard',
       'API for research integration',
 
-=======
     tagline: 'Direct neural interface with quantum AI for cognitive enhancement',
     price: '$25,999',
 
-=======
       '24 / 7 neural support center',    ],    price: '$25, 999',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     period: '/month',
     description: 'Revolutionary neural interface that directly connects human brains to quantum AI systems, enabling unprecedented cognitive enhancement, memory augmentation, and real - time learning acceleration.',
     features: [;
@@ -169,10 +154,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     ],
     roi: 'Research institutions achieve 1000% ROI through breakthrough discoveries and cognitive enhancement capabilities',
 
-=======
     technology: ['Neural interfacesQuantum computingAI algorithmsBrain-computer interfaceNeural networksQuantum neural processingAdvanced neuroscience'],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['Medical systemsResearch platformsGaming enginesEducational systemsHealthcare platformsDefense systems'],
     useCases: ['Cognitive enhancementMemory augmentationLearning accelerationMedical researchGaming experiencesEducational simulations'],
     roi: 'Research institutions achieve 1000% ROI through breakthrough discoveries and cognitive enhancement capabilities',
@@ -202,12 +185,9 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4 && 4.9,
     reviews: 2
   },
-=======
-=======
     mobile: string,
     email: string,
     address: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     website: string
   }
   realImplementation: boolean
@@ -221,9 +201,7 @@ export const nextGenAIServices: NextGenAIService[] = [
 export const nextGenAIServices: NextGenAIService[] = [
   // Advanced AI & Neural Network Services
   {
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: 'neural-quantum-brain-interface'
     name: 'Neural Quantum Brain Interface'
     tagline:
@@ -317,7 +295,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-12-20'
     customers: 3
     rating: 4.9
-=======
 
     id: 'neural-quantum-brain-interface',
     name: 'Neural Quantum Brain Interface',
@@ -369,10 +346,7 @@ export const nextGenAIServices: NextGenAIService[] = [
 
     reviews: 2
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     reviews: 2
   }
   // Quantum AI Content Factory
@@ -406,14 +380,12 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Performance analytics',
       'API for integrations',
 
-=======
     description: 'Revolutionary content generation platform that uses quantum AI to create unlimited high-quality content across all media types. Generates content 1000x faster than traditional methods.',
     features: [
       'Quantum AI content generationMulti-media content creationReal-time content optimizationBrand voice consistencySEO optimizationContent personalizationMulti-language supportPerformance analytics',
       'API for integrations24/7 content generation'
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     popular: true,
     icon: '🏭',
     color: 'from-blue-600 to-cyan-700',
@@ -465,7 +437,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     roi: 'Content agencies achieve 800% ROI through 1000x faster content generation and improved quality',
     competitors: ['JasperCopy && JasperCopy.aiWritesonicGrammarly BusinessSurfer SEO'],
 
-=======
     technology: ['Quantum computingAI algorithmsNatural language processingContent generationMachine learningQuantum creativityMulti-media processing'],
     integrations: ['WordPressShopifyHubSpotMailchimpSocial media platformsCMS systemsMarketing automation'],
     useCases: ['Content marketingSocial media contentE-commerce descriptionsEducational contentEntertainment contentBrand content'],
@@ -475,7 +446,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-=======
     growth_rate: '300% annual growth',
     variant: 'ai - futuristic',
     contact_info: {
@@ -491,10 +461,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4 && 4.8,
     reviews: 95
   },
-=======
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: 'quantum-ai-content-factory'
     name: 'Quantum AI Content Factory'
     tagline: 'Massive-scale content generation with quantum AI creativity'
@@ -591,7 +558,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-11-20'
     customers: 180
     rating: 4.8
-=======
 
     id: 'quantum-ai-content-factory',
     name: 'Quantum AI Content Factory',
@@ -639,10 +605,7 @@ export const nextGenAIServices: NextGenAIService[] = [
 
     reviews: 95
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     reviews: 95
   }
   // AI Autonomous Research Platform
@@ -678,14 +641,12 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Performance analytics',
       'API for integration',
 
-=======
     description: 'Revolutionary AI platform that conducts autonomous research across all domains, making breakthrough discoveries without human intervention. Achieves research breakthroughs 100x faster than traditional methods.',
     features: [
       'Autonomous research capabilitiesCross-domain knowledge synthesisBreakthrough discovery algorithmsReal-time research optimizationMulti-language researchCitation and validationResearch collaborationPerformance analytics',
       'API for integration24/7 autonomous research'
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     popular: true,
     icon: '🔬',
     color: 'from-green-600 to-emerald-700',
@@ -726,10 +687,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     roi: 'Research institutions achieve 1500% ROI through breakthrough discoveries and accelerated research',
     competitors: ['No direct competitors', 'Traditional research methods'],
 
-=======
     technology: ['AI algorithmsMachine learningNatural language processingKnowledge graphsResearch databasesAutonomous systemsCross-domain learning'],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['Research databasesAcademic platformsScientific journalsLaboratory systemsCollaboration toolsPublication platforms'],
     useCases: ['Scientific researchDrug discoveryTechnology innovationAcademic researchPolicy researchMarket research'],
     roi: 'Research institutions achieve 1500% ROI through breakthrough discoveries and accelerated research',
@@ -760,10 +719,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4 && 4.9,
     reviews: 6
   },
-=======
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: 'ai-autonomous-research-platform'
     name: 'AI Autonomous Research Platform'
     tagline: 'Fully autonomous AI research with breakthrough discoveries'
@@ -855,7 +811,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-12-10'
     customers: 12
     rating: 4.9
-=======
 
     id: 'ai-autonomous-research-platform',
     name: 'AI Autonomous Research Platform',
@@ -903,10 +858,7 @@ export const nextGenAIServices: NextGenAIService[] = [
 
     reviews: 6
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     reviews: 6
   }
   // Quantum AI Video Production Studio
@@ -940,14 +892,12 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Multi - format export',
       'Collaboration tools',
 
-=======
     description: 'Revolutionary video production platform that uses quantum AI to create Hollywood-quality videos, movies, and content in minutes. Generates professional content 100x faster than traditional production.',
     features: [
       'Quantum AI video generationHollywood-quality productionReal-time video editingAI script writingVoice synthesisMusic compositionSpecial effects generationMulti-format export',
       'Collaboration tools24/7 video production'
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     popular: true,
     icon: '🎬',
     color: 'from-red-600 to-pink-700',
@@ -993,10 +943,8 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Professional studios',
     ],
 
-=======
     technology: ['Quantum computingAI algorithmsComputer visionVideo processingNatural language processingAudio synthesisSpecial effects generation'],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['Video platformsSocial mediaStreaming servicesEditing softwareAudio platformsDistribution platforms'],
     useCases: ['Film productionCommercial creationMarketing videosEducational contentEntertainment contentSocial media content'],
     roi: 'Production companies achieve 1000% ROI through 100x faster production and reduced costs',
@@ -1027,10 +975,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4 && 4.7,
     reviews: 23
   },
-=======
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: 'quantum-ai-video-studio'
     name: 'Quantum AI Video Production Studio'
     tagline: 'Hollywood-quality video production with quantum AI creativity'
@@ -1127,7 +1072,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-11-25'
     customers: 45
     rating: 4.7
-=======
 
     id: 'quantum-ai-video-studio',
     name: 'Quantum AI Video Production Studio',
@@ -1175,10 +1119,7 @@ export const nextGenAIServices: NextGenAIService[] = [
 
     reviews: 23
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     reviews: 23
   }
   // AI Quantum Computing Platform
@@ -1212,14 +1153,12 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Advanced analytics',
       'API for integration',
 
-=======
     description: 'Revolutionary quantum computing platform that makes quantum computing accessible to businesses and researchers. Features AI optimization and real-time quantum algorithm development.',
     features: [
       'Quantum computing accessAI algorithm optimizationReal-time quantum developmentQuantum algorithm libraryPerformance optimizationQuantum error correctionMulti-qubit systemsAdvanced analytics',
       'API for integration24/7 quantum operations'
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     popular: true,
     icon: '⚛️',
     color: 'from-cyan-600 to-blue-700',
@@ -1264,10 +1203,8 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Google Quantum',
       'Microsoft Azure Quantum',
 
-=======
     technology: ['Quantum computingAI algorithmsQuantum algorithmsError correctionMulti-qubit systemsQuantum optimizationMachine learning'],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['Research platformsDevelopment environmentsCloud platformsAnalytics toolsScientific softwareAcademic platforms'],
     useCases: ['Quantum researchAlgorithm developmentOptimization problemsCryptographyMaterial scienceFinancial modeling'],
     roi: 'Research institutions achieve 800% ROI through quantum computing access and AI optimization',
@@ -1297,10 +1234,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4 && 4.8,
     reviews: 4
   },
-=======
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: 'ai-quantum-computing-platform'
     name: 'AI Quantum Computing Platform'
     tagline: 'Accessible quantum computing with AI optimization'
@@ -1395,7 +1329,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-12-05'
     customers: 8
     rating: 4.8
-=======
 
     id: 'ai-quantum-computing-platform',
     name: 'AI Quantum Computing Platform',
@@ -1443,10 +1376,7 @@ export const nextGenAIServices: NextGenAIService[] = [
 
     reviews: 4
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     reviews: 4
   }
   // Neural Network Evolution Platform
@@ -1479,14 +1409,12 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Evolution tracking',
       'API for integration',
 
-=======
     description: 'Revolutionary platform that creates self-evolving neural networks that continuously improve and adapt without human intervention. Achieves exponential performance improvements over time.',
     features: [
       'Self-evolving neural networksContinuous improvementAdaptive learningPerformance optimizationAutomatic architecture updatesReal-time evolutionPerformance analyticsEvolution tracking',
       'API for integration24/7 evolution monitoring'
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     popular: true,
     icon: '🔄',
     color: 'from-purple-600 to-pink-700',
@@ -1527,10 +1455,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     roi: 'AI research institutions achieve 1200% ROI through self - evolving networks and exponential improvements',
     competitors: ['No direct competitors', 'Traditional ML platforms'],
 
-=======
     technology: ['Neural networksEvolutionary algorithmsMachine learningAutoMLNeural architecture searchPerformance optimizationAdaptive learning'],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['ML platformsData science toolsCloud platformsDevelopment environmentsResearch platformsAnalytics tools'],
     useCases: ['AI researchMachine learning developmentPerformance optimizationModel evolutionResearch automationInnovation acceleration'],
     roi: 'AI research institutions achieve 1200% ROI through self-evolving networks and exponential improvements',
@@ -1561,10 +1487,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4 && 4.9,
     reviews: 3
   },
-=======
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: 'neural-network-evolution'
     name: 'Neural Network Evolution Platform'
     tagline: 'Self-evolving neural networks with continuous improvement'
@@ -1656,7 +1579,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-12-15'
     customers: 6
     rating: 4.9
-=======
 
     id: 'neural-network-evolution',
     name: 'Neural Network Evolution Platform',
@@ -1704,10 +1626,7 @@ export const nextGenAIServices: NextGenAIService[] = [
 
     reviews: 3
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     reviews: 3
   }
   // Quantum AI Creativity Engine
@@ -1741,14 +1660,12 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Creative analytics',
       'API for integration',
 
-=======
     description: 'Revolutionary creativity engine that uses quantum AI to generate unlimited creative content across all domains. Creates original art, music, literature, and designs with human-level creativity.',
     features: [
       'Quantum AI creativityMulti-domain generationOriginal content creationCreative optimizationStyle transferCollaboration toolsPerformance analyticsCreative analytics',
       'API for integration24/7 creative generation'
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     popular: true,
     icon: '🎨',
     color: 'from-yellow-600 to-orange-700',
@@ -1788,10 +1705,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     ],
     roi: 'Creative agencies achieve 600% ROI through unlimited creative content and reduced production time',
 
-=======
     technology: ['Quantum computingAI algorithmsCreative AIStyle transferContent generationMachine learningNeural networks'],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['Design softwareCreative platformsMarketing toolsSocial mediaContent platformsCollaboration tools'],
     useCases: ['Creative designContent generationMarketing materialsEntertainment contentEducational contentBrand creation'],
     roi: 'Creative agencies achieve 600% ROI through unlimited creative content and reduced production time',
@@ -1821,10 +1736,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4 && 4.6,
     reviews: 38
   },
-=======
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: 'quantum-ai-creativity-engine'
     name: 'Quantum AI Creativity Engine'
     tagline: 'Unlimited creative content generation with quantum AI'
@@ -1914,7 +1826,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-11-30'
     customers: 75
     rating: 4.6
-=======
 
     id: 'quantum-ai-creativity-engine',
     name: 'Quantum AI Creativity Engine',
@@ -1962,17 +1873,13 @@ export const nextGenAIServices: NextGenAIService[] = [
 
     reviews: 38
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     reviews: 38
   }
   // New Innovative AI Services
   {
 
 
-=======
 
     id: 'ai-emotional-intelligence-platform',
     name: 'AI Emotional Intelligence Platform',
@@ -1982,7 +1889,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     description: 'Revolutionary AI platform that understands, processes, and responds to human emotions in real-time. Perfect for customer service, mental health applications, and human-computer interaction systems.',
     features: [
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     popular: true,
     icon: '🧠',
     color: 'from-purple-600 to-pink-700',
@@ -2005,7 +1911,6 @@ export const nextGenAIServices: NextGenAIService[] = [
 
     technology: [
 
-=======
     description:;
       'Revolutionary AI platform that understands, processes, and responds to human emotions in real - time. Perfect for customer service, mental health applications, and human - computer interaction systems.',
     features: [;
@@ -2056,7 +1961,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     ],    marketSize: '$15B emotional AI market',    technology: ['TensorFlowPyTorchOpenCVNLPComputer VisionAWSReactNode && VisionAWSReactNode.js'],
     link: 'https://ziontechgroup.com/ai-emotional-intelligence-platform',
     marketPosition: 'First-to-market emotional AI platform with no direct competitors. Traditional sentiment analysis tools cost $50K+ annually.',
-=======
     link: 'https://ziontechgroup.com/ai-emotional-intelligence-platform',
 
 
@@ -2089,24 +1993,18 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Traditional sentiment analysis tools ($50K+)',
       'Basic emotion detection APIs ($5K+)',
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     integrations: ['SalesforceZendeskIntercomSlackMicrosoft TeamsZoomWebRTC'],
     use_cases: ['Customer service automation_mental health monitoring_employee wellness tracking_educational engagement_gaming AIHealthcare diagnostics'],
     roi: 'Average customer sees 800% ROI through improved customer satisfaction and reduced support costs.',
     competitors: ['Traditional sentiment analysis tools ($50K+)Basic emotion detection APIs ($5K+)'],
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     growthRate: '400% annual growth',
     variant: 'neural-quantum',
-=======
-<<<<<<< HEAD
 
     id: 'ai-emotional-intelligence-platform'
     name: 'AI Emotional Intelligence Platform'
@@ -2186,7 +2084,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     competitors: ['Traditional sentiment analysis tools ($50K+)Basic emotion detection APIs ($5K+)']
     growthRate: '400% annual growth'
     variant: 'neural-quantum'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     contactInfo: {
     growth_rate: '400% annual growth',
     variant: 'neural - quantum',
@@ -2209,16 +2106,12 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-12-01',
     customers: 150,
     rating: 4 && 4.9,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     rating: 4.9,
 
 
     reviews: 89
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     reviews: 89
 
 
@@ -2241,8 +2134,6 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Integration with existing systems'
       'Scalable cloud infrastructure'
       '24/7 optimization support',    ],    description: 'Breakthrough AI optimization engine that uses quantum-inspired algorithms to solve complex business problems. Achieve optimal solutions 1000x faster than traditional methods.'
-=======
-=======
     real_implementation: true,
     implementation_details: 'Full - stack emotional AI platform with real - time processing, multi - modal input support, and comprehensive API ecosystem.',
     launch_date: '2024 - 12 - 01',
@@ -2251,14 +2142,12 @@ export const nextGenAIServices: NextGenAIService[] = [
     reviews: 89;
   },
   {
-<<<<<<< HEAD
     id: 'ai - quantum - optimization - engine',
     name: 'AI Quantum Optimization Engine',
     tagline: 'Quantum - inspired AI for complex optimization problems',
     price: '$5, 999',
     period: '/month',
 
-=======
     ],
 
     popular: true,
@@ -2266,7 +2155,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
 
-=======
     description:;
       'Breakthrough AI optimization engine that uses quantum - inspired algorithms to solve complex business problems. Achieve optimal solutions 1000x faster than traditional methods.',
     features: [;
@@ -2287,14 +2175,10 @@ export const nextGenAIServices: NextGenAIService[] = [
 
     marketSize: '$8B optimization software market',
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     growthRate: '250% annual growth',
     variant: 'quantum-advanced',
-=======
-<<<<<<< HEAD
 
     id: 'ai-quantum-optimization-engine'
     name: 'AI Quantum Optimization Engine'
@@ -2370,7 +2254,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     competitors: ['Traditional optimization software ($100K+)Basic optimization tools ($20K+)']
     growthRate: '250% annual growth'
     variant: 'quantum-advanced'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -2387,8 +2270,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     customers: 75,
 
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
-=======
     }
     realImplementation: true
     implementationDetails:
@@ -2402,7 +2283,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-11-15'
     customers: 75
     rating: 4.8
-=======
     id: 'ai-quantum-optimization-engine',
     name: 'AI Quantum Optimization Engine',
     tagline: 'Quantum-inspired AI for complex optimization problems',
@@ -2410,12 +2290,9 @@ export const nextGenAIServices: NextGenAIService[] = [
     period: '/month',
     description: 'Breakthrough AI optimization engine that uses quantum-inspired algorithms to solve complex business problems. Achieve optimal solutions 1000x faster than traditional methods.',
     features: [
-<<<<<<< HEAD
       'Quantum-inspired optimization algorithmsMulti-objective optimizationReal-time constraint solvingMachine learning optimizationAPI for custom optimization problemsPerformance analytics dashboardCustom algorithm developmentIntegration with existing systems',
       'Scalable cloud infrastructure24/7 optimization support'
     ],
-=======
-<<<<<<< HEAD
       'Quantum-inspired optimization algorithms',
       'Multi-objective optimization',
       'Real-time constraint solving',
@@ -2429,21 +2306,15 @@ export const nextGenAIServices: NextGenAIService[] = [
     features: [
       'Quantum-inspired optimization algorithmsMulti-objective optimizationReal-time constraint solvingMachine learning optimizationAPI for custom optimization problemsPerformance analytics dashboardCustom algorithm developmentIntegration with existing systems',
       'Scalable cloud infrastructure24/7 optimization support'
-=======
       'Quantum-inspired optimization algorithmsMulti-objective optimizationReal-time constraint solvingMachine learning optimizationAPI for custom optimization problemsPerformance analytics dashboardCustom algorithm developmentIntegration with existing systems',
       'Scalable cloud infrastructure24/7 optimization support'
     ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     popular: true,
     icon: '⚡',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-quantum-optimization-engine',
-<<<<<<< HEAD
     marketPosition: 'Unique quantum-inspired optimization platform. Traditional optimization software costs $100K+ annually.',
-=======
-<<<<<<< HEAD
     marketPosition:
       'Unique quantum-inspired optimization platform. Traditional optimization software costs $100K+ annually.',
     targetAudience:
@@ -2451,19 +2322,13 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '3 weeks',
     category: 'AI & Quantum Computing',
     realService: true,    marketPosition: 'Unique quantum-inspired optimization platform. Traditional optimization software costs $100K+ annually.',
-=======
     marketPosition: 'Unique quantum-inspired optimization platform. Traditional optimization software costs $100K+ annually.',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     targetAudience: 'Manufacturing companies, Logistics firms, Financial institutions, Research organizations, Government agencies, Energy companies',
     trialDays: 30,
     setupTime: '3 weeks',
     category: 'AI & Quantum Computing',
     realService: true,
-<<<<<<< HEAD
     technology: ['Quantum AlgorithmsMachine LearningPythonC++AWSDockerKubernetes'],
-=======
-<<<<<<< HEAD
     technology: [
       'Quantum Algorithms',
       'Machine Learning',
@@ -2494,56 +2359,35 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Traditional optimization software ($100K+)',
       'Basic optimization tools ($20K+)',
     ],    marketSize: '$8B optimization software market',    technology: ['Quantum AlgorithmsMachine LearningPythonC++AWSDockerKubernetes'],
-=======
     technology: ['Quantum AlgorithmsMachine LearningPythonC++AWSDockerKubernetes'],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     integrations: ['SAPOracleSalesforceCustom APIsDatabase systemsCloud platforms'],
     useCases: ['Supply chain optimizationFinancial portfolio optimizationManufacturing process optimizationEnergy grid optimizationTransportation routingResource allocation'],
     roi: 'Average customer sees 1200% ROI through operational efficiency improvements and cost reductions.',
     competitors: ['Traditional optimization software ($100K+)Basic optimization tools ($20K+)'],
-<<<<<<< HEAD
     marketSize: '$8B optimization software market',
-=======
-<<<<<<< HEAD
-=======
     marketSize: '$8B optimization software market',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     growthRate: '250% annual growth',
     variant: 'quantum-advanced',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'
-=======
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com',
-=======
       website: 'https://ziontechgroup.com'
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     realImplementation: true,
     implementationDetails: 'Advanced optimization engine with quantum-inspired algorithms, scalable architecture, and comprehensive integration capabilities.',
     launchDate: '2024-11-15',
     customers: 75,
     rating: 4 && 4.8,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     rating: 4.8,
 
 
     reviews: 52
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     reviews: 52
 
 
@@ -2567,8 +2411,6 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Integration with business systems'
       'Compliance and governance tools'
       '24/7 autonomous operation',    ],    description: 'Revolutionary AI platform that makes autonomous decisions for businesses. Handles complex decision-making processes with human-like reasoning and continuous learning capabilities.'
-=======
-=======
     real_implementation: true,
     implementation_details: 'Advanced optimization engine with quantum - inspired algorithms, scalable architecture, and comprehensive integration capabilities.',
     launch_date: '2024 - 11 - 15',
@@ -2578,17 +2420,14 @@ export const nextGenAIServices: NextGenAIService[] = [
 
   },
   {
-<<<<<<< HEAD
     id: 'ai - autonomous - decision - platform',
     name: 'AI Autonomous Decision Platform',
     tagline: 'Fully autonomous AI decision - making system',
     price: '$8, 999',
     period: '/month',
 
-=======
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     popular: true,
     icon: '🤖',
     color: 'from-green-600 to-emerald-700',
@@ -2647,7 +2486,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     variant: 'neural-cyberpunk'
     contactInfo: {
 
-=======
     description:;
       'Revolutionary AI platform that makes autonomous decisions for businesses. Handles complex decision - making processes with human - like reasoning and continuous learning capabilities.',
     features: [;
@@ -2718,14 +2556,10 @@ export const nextGenAIServices: NextGenAIService[] = [
 
     marketSize: '$25B decision support market',
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     growthRate: '300% annual growth',
     variant: 'neural-cyberpunk',
-=======
-<<<<<<< HEAD
 
     id: 'ai-autonomous-decision-platform'
     name: 'AI Autonomous Decision Platform'
@@ -2801,7 +2635,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     competitors: ['Traditional decision support systems ($200K+)Basic AI tools ($50K+)']
     growthRate: '300% annual growth'
     variant: 'neural-cyberpunk'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -2818,8 +2651,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     customers: 45,
 
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
-=======
     }
     realImplementation: true
     implementationDetails:
@@ -2833,7 +2664,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-10-01'
     customers: 45
     rating: 4.9
-=======
     id: 'ai-autonomous-decision-platform',
     name: 'AI Autonomous Decision Platform',
     tagline: 'Fully autonomous AI decision-making system',
@@ -2841,12 +2671,9 @@ export const nextGenAIServices: NextGenAIService[] = [
     period: '/month',
     description: 'Revolutionary AI platform that makes autonomous decisions for businesses. Handles complex decision-making processes with human-like reasoning and continuous learning capabilities.',
     features: [
-<<<<<<< HEAD
       'Autonomous decision-making engineContinuous learning and adaptationMulti-domain decision supportRisk assessment and mitigationDecision audit trailCustom decision rules engineReal-time decision analyticsIntegration with business systems',
       'Compliance and governance tools24/7 autonomous operation'
     ],
-=======
-<<<<<<< HEAD
       'Autonomous decision-making engine',
       'Continuous learning and adaptation',
       'Multi-domain decision support',
@@ -2860,21 +2687,15 @@ export const nextGenAIServices: NextGenAIService[] = [
     features: [
       'Autonomous decision-making engineContinuous learning and adaptationMulti-domain decision supportRisk assessment and mitigationDecision audit trailCustom decision rules engineReal-time decision analyticsIntegration with business systems',
       'Compliance and governance tools24/7 autonomous operation'
-=======
       'Autonomous decision-making engineContinuous learning and adaptationMulti-domain decision supportRisk assessment and mitigationDecision audit trailCustom decision rules engineReal-time decision analyticsIntegration with business systems',
       'Compliance and governance tools24/7 autonomous operation'
     ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     popular: true,
     icon: '🤖',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-autonomous-decision-platform',
-<<<<<<< HEAD
     marketPosition: 'First autonomous decision-making platform. Traditional decision support systems cost $200K+ annually.',
-=======
-<<<<<<< HEAD
     marketPosition:
       'First autonomous decision-making platform. Traditional decision support systems cost $200K+ annually.',
     targetAudience:
@@ -2882,19 +2703,13 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '4 weeks',
     category: 'AI & Autonomous Systems',
     realService: true,    marketPosition: 'First autonomous decision-making platform. Traditional decision support systems cost $200K+ annually.',
-=======
     marketPosition: 'First autonomous decision-making platform. Traditional decision support systems cost $200K+ annually.',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     targetAudience: 'Large enterprises, Financial institutions, Healthcare organizations, Government agencies, Manufacturing companies, Retail chains',
     trialDays: 45,
     setupTime: '4 weeks',
     category: 'AI & Autonomous Systems',
     realService: true,
-<<<<<<< HEAD
     technology: ['Deep LearningReinforcement LearningNatural Language ProcessingComputer VisionAWSReactPython'],
-=======
-<<<<<<< HEAD
     technology: [
       'Deep Learning',
       'Reinforcement Learning',
@@ -2925,56 +2740,35 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Traditional decision support systems ($200K+)',
       'Basic AI tools ($50K+)',
     ],    marketSize: '$25B decision support market',    technology: ['Deep LearningReinforcement LearningNatural Language ProcessingComputer VisionAWSReactPython'],
-=======
     technology: ['Deep LearningReinforcement LearningNatural Language ProcessingComputer VisionAWSReactPython'],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     integrations: ['ERP systemsCRM platformsFinancial systemsHealthcare systemsIoT devicesCustom APIs'],
     useCases: ['Financial trading decisionsHealthcare diagnosisManufacturing optimizationCustomer service automationRisk managementStrategic planning'],
     roi: 'Average customer sees 1500% ROI through improved decision quality and operational efficiency.',
     competitors: ['Traditional decision support systems ($200K+)Basic AI tools ($50K+)'],
-<<<<<<< HEAD
     marketSize: '$25B decision support market',
-=======
-<<<<<<< HEAD
-=======
     marketSize: '$25B decision support market',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     growthRate: '300% annual growth',
     variant: 'neural-cyberpunk',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'
-=======
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com',
-=======
       website: 'https://ziontechgroup.com'
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     realImplementation: true,
     implementationDetails: 'Comprehensive autonomous decision platform with advanced AI algorithms, continuous learning, and enterprise-grade security.',
     launchDate: '2024-10-01',
     customers: 45,
     rating: 4 && 4.9,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     rating: 4.9,
 
 
     reviews: 38
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     reviews: 38
 
 
@@ -2998,8 +2792,6 @@ export const nextGenAIServices: NextGenAIService[] = [
       'API for integrations'
       'Custom creative training'
       'Multi-format output support',    ],    description: 'Comprehensive AI suite for creative professionals. Generate designs, content, and creative assets with AI assistance while maintaining human creativity and artistic vision.'
-=======
-=======
     real_implementation: true,
     implementation_details: 'Comprehensive autonomous decision platform with advanced AI algorithms, continuous learning, and enterprise - grade security.',
     launch_date: '2024 - 10 - 01',
@@ -3015,10 +2807,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     price: '$3, 999',
     period: '/month',
 
-=======
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     popular: true,
     icon: '🎨',
     color: 'from-pink-600 to-rose-700',
@@ -3081,7 +2871,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     realService: true,
     technology: ['Generative AIComputer VisionNLPReactNode.jsAWSDocker'],
 
-=======
     description:;
       'Comprehensive AI suite for creative professionals. Generate designs, content, and creative assets with AI assistance while maintaining human creativity and artistic vision.',
     features: [;
@@ -3147,8 +2936,6 @@ export const nextGenAIServices: NextGenAIService[] = [
 
     ],    market_size: '$12B creative software market',    technology: ['Generative AIComputer VisionNLPReactNode.jsAWSDocker'],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
     id: 'ai-creative-intelligence-suite',
     name: 'AI Creative Intelligence Suite',
@@ -3172,17 +2959,14 @@ export const nextGenAIServices: NextGenAIService[] = [
     realService: true,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     integrations: ['Adobe Creative SuiteFigmaCanvaShopifyWordPressSocial media platforms'],
     use_cases: ['Logo and brand design_marketing materials creation_social media content_product packaging design_website design_print materials'],
     roi: 'Average customer sees 600% ROI through increased creative output and reduced design costs.',
     competitors: ['Traditional design tools ($10K+)Basic AI design tools ($2K+)'],
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     growthRate: '180% annual growth',
     variant: 'holographic-advanced',
     contactInfo: {
@@ -3207,20 +2991,15 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-09-15',
     customers: 320,
     rating: 4 && 4.7,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     rating: 4.7,
 
 
     reviews: 245
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     reviews: 245
 
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 
   {
@@ -3254,14 +3033,12 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Mobile app support',
       'Predictive analytics API',
 
-=======
     description: 'Advanced AI platform for predictive maintenance of industrial equipment. Reduce downtime by 90% and maintenance costs by 70% through intelligent monitoring and prediction.',
     features: [
       'IoT sensor integrationAI-powered failure predictionReal-time monitoring dashboardMaintenance scheduling automationPerformance analyticsCustom alert systemIntegration with CMMSMobile app support',
       'Predictive analytics API24/7 monitoring support'
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     popular: true,
     icon: '🔧',
     color: 'from-orange-600 to-red-700',
@@ -3274,11 +3051,9 @@ export const nextGenAIServices: NextGenAIService[] = [
     setup_time: '3 weeks',
     category: 'AI & Industrial IoT',
 
-=======
     link: 'https://ziontechgroup.com/ai-predictive-maintenance-platform',
     marketPosition: 'Advanced predictive maintenance platform. Traditional solutions cost $50K+ annually.',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     targetAudience: 'Manufacturing companies, Energy companies, Transportation firms, Healthcare facilities, Data centers, Industrial facilities',
     trialDays: 30,
     setupTime: '3 weeks',
@@ -3315,10 +3090,8 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Traditional maintenance systems ($50K+)',
       'Basic monitoring tools ($15K+)',
 
-=======
     technology: ['Machine LearningIoTTime Series AnalysisReactNode.jsAWS IoTDocker'],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['SAPOracleMaximoCustom CMMSIoT platformsCloud services'],
     useCases: ['Equipment monitoringFailure predictionMaintenance optimizationPerformance trackingCost reductionSafety improvement'],
     roi: 'Average customer sees 800% ROI through reduced downtime and maintenance costs.',
@@ -3348,10 +3121,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4 && 4.8,
     reviews: 156
   },
-=======
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: 'ai-predictive-maintenance-platform'
     name: 'AI Predictive Maintenance Platform'
     tagline: 'Predictive maintenance with AI and IoT integration'
@@ -3444,7 +3214,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-08-01'
     customers: 180
     rating: 4.8
-=======
 
     id: 'ai-predictive-maintenance-platform',
     name: 'AI Predictive Maintenance Platform',
@@ -3492,10 +3261,7 @@ export const nextGenAIServices: NextGenAIService[] = [
 
     reviews: 156
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     reviews: 156
   }
   // AI-Powered Predictive Analytics Platform
@@ -3528,14 +3294,12 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Scenario planning tools',
       'Executive dashboard',
 
-=======
     description: 'Enterprise-grade predictive analytics platform that uses machine learning to forecast business trends, customer behavior, and market opportunities with unprecedented accuracy.',
     features: [
       '95% prediction accuracy guaranteeReal-time data processingMulti-dimensional forecasting modelsCustom algorithm developmentAutomated insights generationRisk assessment engineScenario planning toolsExecutive dashboard',
       'API for real-time predictionsCompliance & audit trails'
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     popular: true,
     icon: '🔮',
     color: 'from-purple-600 to-indigo-700',
@@ -3576,14 +3340,10 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Operational efficiency',
     ],
 
-=======
     technology: ['TensorFlowPyTorchApache SparkKubernetesReactNode.jsPostgreSQLRedis'],
 
-=======
     roi: 'Average customer sees 800% ROI within 12 months through improved decision - making and operational efficiency.',
     competitors: ['Tableau', 'Power BI', 'Qlik', 'SAS', 'IBM Watson'],    market_size: '$23B business intelligence market',    technology: ['TensorFlowPyTorchApache SparkKubernetesReactNode.jsPostgreSQLRedis'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['SalesforceSAPOracleMicrosoft DynamicsTableauPower BICustom data sources'],
     use_cases: ['Sales forecasting_customer churn prediction_inventory optimization_risk management_market trend analysis_operational efficiency'],
     roi: 'Average customer sees 800% ROI within 12 months through improved decision - making and operational efficiency.',
@@ -3608,10 +3368,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4 && 4.9,
     reviews: 67
   },
-=======
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: 'ai-predictive-analytics-platform'
     name: 'AI Predictive Analytics Platform'
     tagline: 'Predict business outcomes with 95% accuracy using advanced AI'
@@ -3703,7 +3460,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-02-15'
     customers: 89
     rating: 4.9
-=======
 
     id: 'ai-predictive-analytics-platform',
     name: 'AI Predictive Analytics Platform',
@@ -3751,10 +3507,7 @@ export const nextGenAIServices: NextGenAIService[] = [
 
     reviews: 67
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     reviews: 67
   }
   // AI-Powered Customer Experience Platform
@@ -3779,14 +3532,10 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Customer feedback automation',
       'Loyalty program optimization',
 
-=======
     tagline: 'Deliver personalized experiences that increase customer lifetime value by 300%',
     price: '$2,499',
 
-=======
       'ROI tracking & analytics',    ],    price: '$2, 499',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     period: '/month',
     description: 'Comprehensive customer experience platform that uses AI to create personalized interactions across all touchpoints, dramatically improving customer satisfaction and loyalty.',
     features: [;
@@ -3837,13 +3586,9 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Marketo',
       'Pardot',
 
-=======
     technology: ['OpenAI GPT-4Anthropic ClaudeReactNode.jsPostgreSQLRedisAWSTensorFlow'],
 
-=======
     ],    market_size: '$18B customer experience market',    technology: ['OpenAI GPT - 4Anthropic ClaudeReactNode.jsPostgreSQLRedisAWSTensorFlow'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['ShopifyWooCommerceMagentoHubSpotMailchimpZapierCustom platforms'],
     use_cases: ['Personalized marketing_customer service automation_product recommendations_loyalty optimization_customer journey mapping_feedback management'],
     roi: 'Average customer sees 300% increase in customer lifetime value within 6 months.',
@@ -3868,10 +3613,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4 && 4.8,
     reviews: 289
   },
-=======
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: 'ai-customer-experience-platform'
     name: 'AI Customer Experience Platform'
     tagline:
@@ -3973,7 +3715,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-01-20'
     customers: 342
     rating: 4.8
-=======
 
     id: 'ai-customer-experience-platform',
     name: 'AI Customer Experience Platform',
@@ -4025,10 +3766,7 @@ export const nextGenAIServices: NextGenAIService[] = [
 
     reviews: 289
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     reviews: 289
   }
   // AI-Powered Supply Chain Optimization
@@ -4065,14 +3803,12 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Sustainability tracking',
       'Compliance management',    ],    description: 'Advanced supply chain optimization platform that uses AI to predict demand, optimize inventory, and streamline logistics operations for maximum efficiency and cost savings.',
 
-=======
     description: 'Advanced supply chain optimization platform that uses AI to predict demand, optimize inventory, and streamline logistics operations for maximum efficiency and cost savings.',
     features: [
       'Demand forecasting with 90% accuracyInventory optimization algorithmsRoute optimization & logistics planningSupplier performance analyticsRisk assessment & mitigationReal-time supply chain monitoringAutomated reorder systemsCost optimization recommendations',
       'Sustainability trackingCompliance management'
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     popular: true,
     icon: '🚚',
     color: 'from-green-600 to-emerald-600',
@@ -4119,10 +3855,8 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Manhattan Associates',
       'Blue Yonder',
 
-=======
     technology: ['TensorFlowApache SparkKubernetesReactNode.jsPostgreSQLRedisAWS'],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['SAPOracleMicrosoft DynamicsNetSuiteCustom ERP systemsLogistics platforms'],
     useCases: ['Demand planningInventory managementLogistics optimizationSupplier managementRisk mitigationCost optimization'],
     roi: 'Average customer sees 40% reduction in supply chain costs within 8 months.',
@@ -4152,10 +3886,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4 && 4.9,
     reviews: 45
   },
-=======
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: 'ai-supply-chain-optimization'
     name: 'AI Supply Chain Optimization'
     tagline: 'Optimize supply chains and reduce costs by up to 40%'
@@ -4252,7 +3983,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-03-10'
     customers: 67
     rating: 4.9
-=======
 
     id: 'ai-supply-chain-optimization',
     name: 'AI Supply Chain Optimization',
@@ -4300,10 +4030,7 @@ export const nextGenAIServices: NextGenAIService[] = [
 
     reviews: 45
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     reviews: 45
   }
   // AI-Powered Financial Trading Platform
@@ -4336,14 +4063,12 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Real - time performance monitoring',
       'Custom strategy development',
 
-=======
     description: 'Professional-grade AI trading platform that uses machine learning to analyze market data, identify opportunities, and execute trades automatically with high accuracy.',
     features: [
       '85% win rate guaranteeReal-time market analysisMulti-strategy trading algorithmsRisk management systemsPortfolio optimizationBacktesting & simulationReal-time performance monitoringCustom strategy development',
       'Multi-exchange supportCompliance & audit tools'
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     popular: true,
     icon: '📈',
     color: 'from-yellow-600 to-orange-600',
@@ -4390,10 +4115,8 @@ export const nextGenAIServices: NextGenAIService[] = [
       'TradeStation',
       'Custom solutions',
 
-=======
     technology: ['TensorFlowPyTorchPythonReactNode.jsPostgreSQLRedisAWS'],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['Interactive BrokersTD AmeritradeE*TRADEBinanceCoinbase ProCustom APIs'],
     useCases: ['Algorithmic tradingPortfolio managementRisk assessmentMarket analysisStrategy backtestingPerformance optimization'],
     roi: 'Average customer sees 200% ROI within 6 months through improved trading performance.',
@@ -4423,10 +4146,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4 && 4.9,
     reviews: 18
   },
-=======
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: 'ai-financial-trading-platform'
     name: 'AI Financial Trading Platform'
     tagline: 'Automated trading with 85% win rate using advanced AI algorithms'
@@ -4523,7 +4243,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-02-01'
     customers: 23
     rating: 4.9
-=======
 
     id: 'ai-financial-trading-platform',
     name: 'AI Financial Trading Platform',
@@ -4565,10 +4284,7 @@ export const nextGenAIServices: NextGenAIService[] = [
 
     reviews: 18
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     reviews: 18
   }
   // AI-Powered Healthcare Diagnostics
@@ -4576,7 +4292,6 @@ export const nextGenAIServices: NextGenAIService[] = [
 
 
     id: 'ai-healthcare-diagnostics',
-=======
     real_implementation: true,
     implementation_details: 'Full professional trading platform with advanced AI models, real - time execution, comprehensive risk management, and regulatory compliance.',
     launch_date: '2024 - 02 - 01',
@@ -4598,7 +4313,6 @@ export const nextGenAIServices: NextGenAIService[] = [
       '95% diagnostic accuracyMulti-modality image analysisPatient data integrationTreatment recommendation engineRisk assessment algorithmsClinical decision supportAutomated reportingHIPAA compliance'
       'Integration with EMR systemsContinuous learning algorithms'
 
-=======
     ],
 
     popular: true,
@@ -4606,7 +4320,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     color: 'from-red-600 to-pink-600',
     textColor: 'text-red-400',
 
-=======
     description:;
       'Advanced healthcare diagnostics platform that uses AI to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.',
     features: [;
@@ -4631,7 +4344,6 @@ export const nextGenAIServices: NextGenAIService[] = [
       'HIPAA - compliant infrastructure',
     ],
 
-=======
     integrations: [;
       'Epic',
       'Cerner',
@@ -4657,10 +4369,8 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Siemens Healthineers',
       'GE Healthcare',
 
-=======
     link: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
     marketPosition: 'Leading edge in AI-powered healthcare. Competes with IBM Watson Health ($10000+/month) and Google Health AI ($5000+/month) with superior accuracy.',
-=======
     id: 'ai-healthcare-diagnostics',
     name: 'AI Healthcare Diagnostics Platform',
     tagline: 'Accurate medical diagnostics with 95% accuracy using AI',
@@ -4695,7 +4405,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-=======
     ],    market_size: '$45B AI healthcare market',    technology: ['TensorFlowPyTorchReactNode.jsPostgreSQLRedisAWSHIPAA - compliant infrastructure'],
     integrations: ['EpicCernerAllscriptsCustom EMR systemsPACS systems_lab information systems'],
     use_cases: ['Medical imaging analysis_patient diagnosis_treatment planning_risk assessment_clinical research_population health'],
@@ -4704,7 +4413,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     growth_rate: '350% annual growth',
     variant: 'ai - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4718,14 +4426,10 @@ export const nextGenAIServices: NextGenAIService[] = [
 
 ],
 
-=======
     rating: 4.9,
     reviews: 34;
   }
-<<<<<<< HEAD
 ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
     growthRate: '350% annual growth',
@@ -4744,4 +4448,70 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  //
+  //
+    period: any
+      'Competes with Adobe Premiere ($20 && 20.99/
+    realService: true,    marketPosition: 'Competes with Adobe Premiere ($20 && 20.99/
+      '24 /
+      'Collaboration tools24 /
+    link: any
+      'Competes with Adobe Premiere ($20.99 /
+    real_service: true,    market_position: 'Competes with Adobe Premiere ($20.99 /
+      website: any
+      'Competes with Adobe Premiere ($20.99/
+    realService: true,    marketPosition: 'Competes with Adobe Premiere ($20.99/
+      website: any
+      'Competes with IBM Quantum ($0 && 0.60/credit), AWS Braket ($1 && 1.30/hour), and Google Quantum ($0 && 0.50/
+    realService: true,    marketPosition: 'Competes with IBM Quantum ($0 && 0.60/credit), AWS Braket ($1 && 1.30/hour), and Google Quantum ($0 && 0.50/
+      '24 /
+      'API for integration24 /
+    link: any
+      'Competes with IBM Quantum ($0.60 / credit), AWS Braket ($1.30 / hour), and Google Quantum ($0.50 /
+    real_service: true,    market_position: 'Competes with IBM Quantum ($0.60 / credit), AWS Braket ($1.30 / hour), and Google Quantum ($0.50 /
+      website: any
+      'Competes with IBM Quantum ($0.60/credit), AWS Braket ($1.30/hour), and Google Quantum ($0.50/
+    realService: true,    marketPosition: 'Competes with IBM Quantum ($0.60/credit), AWS Braket ($1.30/hour), and Google Quantum ($0.50/
+      website: any
+      'Leading edge in AI-powered business intelligence. Competes with Tableau ($70-70/user/month) and Power BI ($9 && 9.99/user/
+    realService: true,    marketPosition: 'Leading edge in AI-powered business intelligence. Competes with Tableau ($70-70/user/month) and Power BI ($9 && 9.99/user/
+    link: any
+      'Leading edge in AI - powered business intelligence. Competes with Tableau ($70 - 70 / user / month) and Power BI ($9.99 / user /
+    real_service: true,    market_position: 'Leading edge in AI - powered business intelligence. Competes with Tableau ($70 - 70 / user / month) and Power BI ($9.99 / user /
+      website: any
+      'Leading edge in AI-powered business intelligence. Competes with Tableau ($70-70/user/month) and Power BI ($9.99/user/
+    realService: true,    marketPosition: 'Leading edge in AI-powered business intelligence. Competes with Tableau ($70-70/user/month) and Power BI ($9.99/user/
+      website: any
+      'Leading edge in AI-powered CX. Competes with Adobe Experience Cloud ($1000+/month) and Salesforce Marketing Cloud ($400+/
+    realService: true,    marketPosition: 'Leading edge in AI-powered CX. Competes with Adobe Experience Cloud ($1000+/month) and Salesforce Marketing Cloud ($400+/
+    link: any
+      'Leading edge in AI - powered CX. Competes with Adobe Experience Cloud ($1000+/month) and Salesforce Marketing Cloud ($400+/
+    real_service: true,    market_position: 'Leading edge in AI - powered CX. Competes with Adobe Experience Cloud ($1000+/month) and Salesforce Marketing Cloud ($400+/
+      website: any
+      'Leading edge in AI-powered CX. Competes with Adobe Experience Cloud ($1000+/month) and Salesforce Marketing Cloud ($400+/
+    realService: true,    marketPosition: 'Leading edge in AI-powered CX. Competes with Adobe Experience Cloud ($1000+/month) and Salesforce Marketing Cloud ($400+/
+      website: any
+      'Leading edge in AI-powered supply chain optimization. Competes with SAP SCM ($5000+/month) and Oracle SCM ($3000+/
+    realService: true,    marketPosition: 'Leading edge in AI-powered supply chain optimization. Competes with SAP SCM ($5000+/month) and Oracle SCM ($3000+/
+    link: any
+      'Leading edge in AI - powered supply chain optimization. Competes with SAP SCM ($5000+/month) and Oracle SCM ($3000+/
+    real_service: true,    market_position: 'Leading edge in AI - powered supply chain optimization. Competes with SAP SCM ($5000+/month) and Oracle SCM ($3000+/
+      website: any
+      'Leading edge in AI-powered supply chain optimization. Competes with SAP SCM ($5000+/month) and Oracle SCM ($3000+/
+    realService: true,    marketPosition: 'Leading edge in AI-powered supply chain optimization. Competes with SAP SCM ($5000+/month) and Oracle SCM ($3000+/
+      website: any
+      'Leading edge in AI-powered trading. Competes with AlgoTrader ($5000+/month) and MetaTrader ($1000+/
+    realService: true,    marketPosition: 'Leading edge in AI-powered trading. Competes with AlgoTrader ($5000+/month) and MetaTrader ($1000+/
+    link: any
+      'Leading edge in AI - powered trading. Competes with AlgoTrader ($5000+/month) and MetaTrader ($1000+/
+    real_service: true,    market_position: 'Leading edge in AI - powered trading. Competes with AlgoTrader ($5000+/month) and MetaTrader ($1000+/
+      website: any
+      'Leading edge in AI-powered trading. Competes with AlgoTrader ($5000+/month) and MetaTrader ($1000+/
+    realService: true,    marketPosition: 'Leading edge in AI-powered trading. Competes with AlgoTrader ($5000+/month) and MetaTrader ($1000+/
+      website: any
+      'Leading edge in AI-powered healthcare. Competes with IBM Watson Health ($10000+/month) and Google Health AI ($5000+/
+    realService: true,    marketPosition: 'Leading edge in AI-powered healthcare. Competes with IBM Watson Health ($10000+/month) and Google Health AI ($5000+/
+    link: any
+      'Leading edge in AI-powered healthcare. Competes with IBM Watson Health ($10000+/month) and Google Health AI ($5000+/
+    realService: true,    marketPosition: 'Leading edge in AI-powered healthcare. Competes with IBM Watson Health ($10000+/month) and Google Health AI ($5000+/
+      website: any

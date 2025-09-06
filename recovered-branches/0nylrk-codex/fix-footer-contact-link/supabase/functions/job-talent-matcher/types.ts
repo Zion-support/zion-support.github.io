@@ -1,10 +1,14 @@
+export interface JobData {
+  id: string;
+  title: string;
+  description: string;
+  skills: string[];
+  category: string;
+  budget: {
 
-    min: number,
-    max: number;
+    min: any
   }
-  deadline: string;
-
-}
+  deadline: any
 export interface TalentProfile {
   id: string;
   full_name: string;
@@ -13,30 +17,19 @@ export interface TalentProfile {
   skills: string[];
   years_experience: number;
 
-  hourly_rate?: number,
-  availability_type?: string;
-
-}
+  hourly_rate?: any
 export interface TalentMatch {
   talent_id: string;
   job_id: string;
   match_score: number;
 
-  matched_skills: string[],
-  created_at: string;
+  matched_skills: string[]
 
-}
+  created_at: any
 export interface MatchResult {
   talent_id: string;
   score: number;
 
-  matched_skills: string[],
-  reason?: string;
+  matchedSkills: string[]
 
-}
-=======
-
-
-export interface JobData {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  reason?: any

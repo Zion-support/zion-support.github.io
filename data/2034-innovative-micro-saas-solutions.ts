@@ -1,16 +1,11 @@
-<<<<<<< HEAD
 export type InnovativeMicroSaas = {
       'Multi-speaker diarization',
   launch_date?: string;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
   {
 
-=======
     id: 'local - seo - reviews - booster',
     name: 'Local SEO Reviews Booster',
     description:;
@@ -33,7 +28,6 @@ export type InnovativeMicroSaas = {
   },
   {
 
-=======
     id: 'smart - invoice - reconciliation',
     name: 'Smart Invoice Reconciliation',
     description:;
@@ -57,7 +51,6 @@ export type InnovativeMicroSaas = {
   {
 
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
-=======
     id: 'candidate - screening - copilot',
     name: 'Candidate Screening Copilot',
     description:;
@@ -73,14 +66,11 @@ export type InnovativeMicroSaas = {
     real_service: true,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];	id: string;
 
-=======
 	id: string, name: string,
 	description: string, tagline?: string,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 	category:
 		| 'Content Marketing'
 		| 'Business Operations'
@@ -159,12 +149,10 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		link: 'https://ziontechgroup && ziontechgroup.com/services/candidate-screening-copilot',
 
 		realService: true
-<<<<<<< HEAD
 	}
 ];
 
 
-=======
 name: string;
 description: string;
 tagline?: string;
@@ -240,20 +228,13 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
   link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
   real_service: true;
 }
-=======
 export type InnovativeMicroSaas = {;
 
 	}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
-=======
 
-=======
 export type InnovativeMicroSaas = {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	id: string,;
 	name: string,;
 	description: string,;
@@ -328,11 +309,37 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 		useCases: ['Faster hiringBias reduction'],;
 		link: 'https://ziontechgroup.com/services/candidate-screening-copilot',;
 		realService: true;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+export type InnovativeMicroSaas = {
+  id: string;
+  name: string;
+  description: string;
+  tagline?: string;
+  category:;
+    | 'Content Marketing'
+    | 'Business Operations'
+    | 'Marketing Automation'
+    | 'Customer Success'
+    | 'Sales Automation'
+    | 'Financial Technology'
+    | 'Human Resources'
+    | 'Supply Chain Management'
+    | 'Customer Support'
+    id: any
+      'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.'
+    category: any
+    pricing: { starter: any
+    pricing: { starter: any
+    pricing: { starter: any
+    pricing: { starter: any
+    pricing: { starter: any
+		pricing: { starter: any
+		pricing: { starter: any
+		pricing: { starter: any
+		pricing: { starter: any
+  pricing: { starter: any
+  pricing: { starter: any
+  pricing: { starter: any
+  pricing: { starter: any

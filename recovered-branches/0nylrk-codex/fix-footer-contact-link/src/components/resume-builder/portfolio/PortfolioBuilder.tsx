@@ -29,6 +29,35 @@ export function PortfolioBuilder() {;
     setEditingProject(null);
     fetchProjects();
   }
+import { useState, useEffect } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { FilePlus, Loader2 } from "lucide-react";
+import { ProjectCard } from "./ProjectCard";
+import { ProjectForm } from "./ProjectForm";
+import { PortfolioProject } from "@/types/resume";
+import { usePortfolio } from "@/hooks/usePortfolio";
+export function PortfolioBuilder() {
+  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
+  const [showAddProject, setShowAddProject] = useState(false);
+  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(
+    null,
+  );
+
+  useEffect(() => {
+    fetchProjects();
+  }, [fetchProjects]);
+
+  const handleAddSuccess = () => {
+    setShowAddProject(false);
+    fetchProjects();
+  };
+
+  const handleEditSuccess = () => {
+    setEditingProject(null);
+    fetchProjects();
+  };
+
   const handleDeleteProject = async (projectId: string) => {
     const success = await deleteProject(projectId);
     if (success) {
@@ -38,7 +67,6 @@ export function PortfolioBuilder() {;
 
   };
 
-=======
 import { useState, useEffect } from 'react',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -72,8 +100,7 @@ export function PortfolioBuilder() {;
 
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -81,6 +108,7 @@ export function PortfolioBuilder() {;
       </div>
     );
   }
+
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -99,6 +127,7 @@ export function PortfolioBuilder() {;
           Add Project
         </Button>
       </div>
+
       {/* Edit or Add Form */}
       {(showAddProject |editingProject) && (
         <Card>
@@ -169,7 +198,16 @@ export function PortfolioBuilder() {;
         <Card>;
           <CardContent className="pt-6">;
             <h2 className="text-xl font-semibold mb-6">;
-=======
+              {editingProject ? "Edit Project" : "Add New Project"}
+            </h2>
+            <ProjectForm 
+
+            <ProjectForm
+              project={editingProject || undefined}
+              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
+              onCancel={() => {
+                setShowAddProject(false);
+                setEditingProject(null)
 
 
               {editingProject ? 'Edit Project' : 'Add New Project'}
@@ -177,16 +215,11 @@ export function PortfolioBuilder() {;
 
             <ProjectForm
               project={editingProject || undefined}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {;
                 setShowAddProject(false);
                 setEditingProject(null);
 
-
-=======
-
-=======
             <ProjectForm 
               project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
@@ -195,8 +228,7 @@ export function PortfolioBuilder() {;
                 setShowAddProject(false);
                 setEditingProject(null);
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                setEditingProject(null);
               }}
             />;
           </CardContent>;
@@ -233,7 +265,6 @@ export function PortfolioBuilder() {;
                 <Button
                   onClick={() => setShowAddProject(true)} ;
                   className="mt-2";
-=======
 import { useState, useEffect  } from './react';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -271,6 +302,35 @@ function PortfolioBuilder() {
     // Check condition
 if ( {) {
   $2
+        </div>
+      ) : (
+        !showAddProject && (
+          <Card className="text-center py-12">
+            <CardContent>
+              <div className="flex flex-col items-center gap-4">
+                <div className="bg-muted/50 p-6 rounded-full">
+                  <FilePlus className="h-12 w-12 text-muted-foreground" />
+                </div>
+                <h3 className="text-xl font-medium">
+                  No portfolio projects yet
+                </h3>
+                <p className="text-muted-foreground max-w-md mx-auto">
+                  Add your best work to showcase your skills and experience to
+                  potential employers.
+                </p>
+                <Button
+                  onClick={() => setShowAddProject(true)}
+                  className="mt-2"
+                >
+                  Add Your First Project
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        )
+      )}
+    </div>
+  );
 }
       fetch_projects ();
     }
@@ -359,3 +419,10 @@ if ( {) {
     </div>);
 }
 
+import { useState, useEffect  } from 'react'
+import { Card, CardContent  } from '@/components/ui/
+import { Button  } from '@/components/ui/
+import { ProjectCard  } from './
+import { ProjectForm  } from './
+import { PortfolioProject  } from '@/types/
+import { usePortfolio } from '@/hooks/

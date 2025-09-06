@@ -1,7 +1,7 @@
 
-export { useAuthStatus } from './useAuthStatus',;
-export { useTalentData } from './useTalentData',;
-export { useFilterTalents } from './useFilterTalents',;
-export { useUIState } from './useUIState',;
-export { useSavedTalents } from './useSavedTalents',;
-export { useHireRequest } from '../useHireRequest',; 
+export { useAuthStatus } from './
+export { useTalentData } from './
+export { useFilterTalents } from './
+export { useUIState } from './
+export { useSavedTalents } from './
+export { useHireRequest } from '../

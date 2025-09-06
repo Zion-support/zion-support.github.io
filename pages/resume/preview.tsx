@@ -13,12 +13,10 @@
 
 
 
-=======
 
           {versions && versions.length > 0 && (;
             <>;
               <label className='text-sm ml-4'>Version</label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <select
                 value={selectedVersionId}
                 onChange={e => setSelectedVersionId(e && e.target.value)}
@@ -32,7 +30,6 @@
               </select>;
             </>;
 
-=======
 import { GetServerSideProps } from 'next',
 import React, { useMemo, useRef, useState } from 'react',
 import PdfExportButton from '../../components/ui/PdfExportButton',
@@ -49,15 +46,12 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
     const found = versions.find(v => v.id === selectedVersionId),
     return found?.data || initialData
   }, [selectedVersionId, initialData, versions]),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className="relative">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-3">
           <label className="text-sm">Theme</label>
           <select
-<<<<<<< HEAD
 value={theme}
             onChange={(e) => setTheme(e.target.value as 'light' | 'dark')}
             className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
@@ -71,12 +65,10 @@ value={theme}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {versions.length > 0 && (
             <>
               <label className="text-sm ml-4">Version</label>
               <select
-<<<<<<< HEAD
                 value={selectedVersionId}
                 onChange={(e) => setSelectedVersionId(e.target.value)}
                 className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
@@ -147,7 +139,6 @@ title: 'Senior AI Engineer'
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />;
       </div>;
     </div>;
-=======
 
                   <option value={v.id} key={v.id}>{v.label}</option>
                 ))  } catch (error) {
@@ -162,7 +153,6 @@ title: 'Senior AI Engineer'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
         </div>
       </div>
@@ -253,7 +243,6 @@ return { props: { initialData, versions } };
 };
 
 }
-=======
                   <option value={v.id} key={v.id}>{v.label}</option>
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -439,7 +428,6 @@ if (return initial_data) {
       </div>;
     </div>);
 ;
-=======
                 value={selectedVersionId  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -454,14 +442,12 @@ if (return initial_data) {
               >
                 <option value="current">Current</option>
                 {versions.map(v => (
-<<<<<<< HEAD
                   <option value={v.id} key={v.id}>
                     {v.label}
                   </option>                ))}
               </select>
             </>
           )}
-<<<<<<< HEAD
         </div>
       </div>
       <PdfExportButton
@@ -473,7 +459,6 @@ if (return initial_data) {
       </div>
     </div>
   );
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export const getServerSideProps: GetServerSideProps = async ctx => {
   // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient ();
   const user = await (supabase as any).auth.get_user?.();
@@ -549,12 +534,10 @@ if ( {) {
 ;
 return { props: { initial_data, versions } }
 }
-<<<<<<< HEAD
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ <option value="light" >Light
+ > <option value="light" >Light
+ <option value="light" >Light

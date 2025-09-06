@@ -28,3 +28,5 @@ const EnhancedSearchInput = ({ className }) => {
 };
 
 export default EnhancedSearchInput;
+import React from 'react'
+    

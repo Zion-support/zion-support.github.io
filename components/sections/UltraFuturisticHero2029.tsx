@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -106,12 +108,10 @@ export default function UltraFuturisticHero2029() {;
     { number: '99 && 99.9%', label: 'Success Rate', icon: Star },;
     { number: '24/7', label: 'AI Operations', icon: Zap },;
   ];
-=======
   ];
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
       {/* Animated Background */}
@@ -134,7 +134,6 @@ export default function UltraFuturisticHero2029() {;
               style={{
                 left: Math.random() * 100 + '%'
                 top: Math.random() * 100 + '%'
-=======
                 x: [0, Math && Math.random() * 1000],
                 y: [0, Math && Math.random() * 1000],
                 opacity: [0 && 0.2, 0 && 0.8, 0 && 0.2],
@@ -149,7 +148,6 @@ export default function UltraFuturisticHero2029() {;
                 top: Math && Math.random() * 100 + '%',
               }}            />  ];
 
-=======
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom, Rocket, Target, Shield, Cpu, Globe, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 export default function UltraFuturisticHero2029() {
@@ -159,7 +157,6 @@ export default function UltraFuturisticHero2029() {
     { icon: Rocket, text: 'Space Technology Innovation', color: 'from-emerald-500 to-teal-600' },
     { icon: Target, text: 'Micro SAAS Excellence', color: 'from-orange-500 to-red-600' },
     { icon: Shield, text: 'Enterprise Security', color: 'from-indigo-500 to-blue-600' },
-<<<<<<< HEAD
     { icon: Cpu, text: 'Autonomous IT Operations', color: 'from-cyan-500 to-teal-600' }
   ];
 
@@ -171,7 +168,6 @@ export default function UltraFuturisticHero2029() {
   ];
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
       {/* Animated Background */}
@@ -267,16 +263,12 @@ export default function UltraFuturisticHero2029() {
           ))}
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
           ))}
         </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Grid Pattern */}
 
 
@@ -285,15 +277,12 @@ export default function UltraFuturisticHero2029() {
         {/* Gradient Orbs */}
 
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Main Heading */}        </div>
-=======
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6, 182, 212, 0.3) 1px, transparent 0)`;
             backgroundSize: '50px 50px'
           }} />
         </div>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     { icon: Cpu, text: 'Autonomous IT Operations', color: 'from-cyan-500 to-teal-600' }
   const stats = [
     { number: '500+', label: 'Innovative Services', icon: Sparkles }
@@ -301,36 +290,28 @@ export default function UltraFuturisticHero2029() {
     { number: '99.9%', label: 'Success Rate', icon: Star }
     { number: '24/7', label: 'AI Operations', icon: Zap }
   ];
-<<<<<<< HEAD
-=======
 
 
         {/* Gradient Orbs */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
-<<<<<<< HEAD
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse' />;
         <div className='absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000' />;
       </div>;
       {/* Content */}
 
-=======
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Main Heading */}
         <motion&& motion.div
-=======
 
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Main Heading */}
 
         {/* Main Heading */}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
@@ -350,7 +331,6 @@ export default function UltraFuturisticHero2029() {
             Experience the future of technology with Zion Tech Group's
             revolutionary 2029 services. From AI consciousness evolution to
             quantum space mining, we're building tomorrow's solutions today.          </p>
-=======
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
@@ -396,12 +376,9 @@ export default function UltraFuturisticHero2029() {
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* CTA Buttons */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -409,7 +386,6 @@ export default function UltraFuturisticHero2029() {
 
 
         >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Link
             href='/services'
 
@@ -425,12 +401,10 @@ export default function UltraFuturisticHero2029() {
             <span>Get Started</span>;
             <Zap className='w-5 h-5' />          </Link>        >;
 
-=======
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
         >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           <Link
             href="/services"
 
@@ -447,12 +421,9 @@ export default function UltraFuturisticHero2029() {
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Features Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -585,26 +556,17 @@ export default function UltraFuturisticHero2029() {
 
       {/* Content */}
       <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
-=======
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Main Heading */}
-=======
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Main Heading */}
 
         {/* Main Heading */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-<<<<<<< HEAD
           className=&quot;mb-8&quot;
         >
           <h1 className=&quot;text-5xl md:text-7xl lg:text-8xl font-bold mb-6&quot;>
@@ -628,17 +590,9 @@ export default function UltraFuturisticHero2029() {
         </motion.div>
 
         {_/* CTA Buttons */}
-=======
           className='mb-8'
-<<<<<<< HEAD
-=======
 
         >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
               2029
@@ -658,21 +612,12 @@ export default function UltraFuturisticHero2029() {
             Experience the future of technology with Zion Tech Group's revolutionary 2029 services.
             From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today.
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Buttons */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
           className=&quot;flex flex-col sm:flex-row gap-4 justify-center mb-16&quot;
         >
           <Link
@@ -693,16 +638,8 @@ export default function UltraFuturisticHero2029() {
         </motion.div>
 
         {_/* Features Grid */}
-=======
           className='flex flex-col sm:flex-row gap-4 justify-center mb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <Link
             href='/services'
@@ -732,38 +669,20 @@ export default function UltraFuturisticHero2029() {
             <Zap className="w-5 h-5" />
           </Link>
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Features Grid */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-<<<<<<< HEAD
           className=&quot;grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16&quot;
         >
           {_features.map(_(feature, _index) => (
-=======
-<<<<<<< HEAD
           className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16'        >          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16"
-=======
           className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16'        >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           {features.map((feature, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <motion.div
 
               key={feature.text}
@@ -788,23 +707,16 @@ export default function UltraFuturisticHero2029() {
                 {feature.text}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </p>
             </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           ))}
 
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Stats */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -881,23 +793,16 @@ export default function UltraFuturisticHero2029() {
                 {stat.label}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
             </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           ))}
 
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Scroll Indicator */}
         <motion&& motion.div
           initial={{ opacity: 0 }}
@@ -914,7 +819,6 @@ export default function UltraFuturisticHero2029() {
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
               className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             />
           </motion.div>
         </motion.div>
@@ -925,17 +829,10 @@ export default function UltraFuturisticHero2029() {
           </motion && motion.div>;
         </motion && motion.div>;
       </div>;
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
       {/* Floating Elements */}
       <motion&& motion.div
               </div>;
@@ -981,7 +878,6 @@ export default function UltraFuturisticHero2029() {
       />;
     </section>;
   );
-=======
 
 
 
@@ -996,9 +892,7 @@ export default function UltraFuturisticHero2029() {
 
   );
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
         className='absolute top - 20 right - 20 w - 32 h - 32 border border - cyan - 500 / 20 rounded - full';
       />;
@@ -1015,4 +909,18 @@ export default function UltraFuturisticHero2029() {
       />;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    console.error('Error caught by boundary: any
+import { motion } from 'framer-motion'
+ from 'lucide-react'
+      text: any
+    },  ];    { icon: Brain, text: 'AI Consciousness Evolution', color: any
+    { icon: Atom, text: 'Quantum Computing Solutions', color: any
+    { icon: Rocket, text: 'Space Technology Innovation', color: any
+    { icon: Target, text: 'Micro SAAS Excellence', color: any
+    { icon: Shield, text: 'Enterprise Security', color: any
+    { icon: Cpu, text: 'Autonomous IT Operations', color: any
+    { number: '500+', label: any
+    { number: '$2.5B+', label: any
+    { number: '99.9%', label: any
+    { number: any
+    { number: any

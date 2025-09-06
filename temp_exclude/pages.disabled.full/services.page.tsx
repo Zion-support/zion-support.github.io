@@ -1,2 +1,17 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import React from \'react\'; import Head from \'next/head\'; const services = [{ \"title\": \'AI Revenue Optimization Platform\',\"href\": \'/services/ai-revenue-operations-platform\',\"price\": \'From $2,999/month\',\"bullets\": [\'Dynamic pricing\',\'Forecasting\',\'CLV analytics\'] },{ \"title\": \'AI Autonomous DevOps\',\"href\": \'/services/ai-autonomous-devops-platform\',\"price\": \'From $1,999/month\',\"bullets\": [\'Self-healing infra\',\'Intelligent deploys\',\'Observability\'] },{ \"title\": \'Micro CRM (Multi-tenant)\',\"href\": \'/services/micro-crm\',\"price\": \'From $99/month\',\"bullets\": [\'Leads & deals\',\'Email sync\',\'Pipeline automation\'] },{ \"title\": \'Cloud FinOps Optimizer\',\"href\": \'/services/cloud-finops-optimizer\',\"price\": \'From $1,499/
+import _React from 'react'; import Head from 'next/head'; const services = [{ "title": 'AI Revenue Optimization Platform',"href": '/services/ai-revenue-operations-platform',"price": 'From $2,999/month',"bullets": ['Dynamic pricing','Forecasting','CLV analytics'] },{ "title": 'AI Autonomous DevOps',"href": '/services/ai-autonomous-devops-platform',"price": 'From $1,999/month',"bullets": ['Self-healing infra','Intelligent deploys','Observability'] },{ "title": 'Micro CRM (Multi-tenant)',"href": '/services/micro-crm',"price": 'From $99/month',"bullets": ['Leads & deals','Email sync','Pipeline automation'] },{ "title": 'Cloud FinOps Optimizer',"href": '/services/cloud-finops-optimizer',"price": 'From $1,499/
+import React from \'react\'; import Head from \'next/head\'; const services = [{ \"title\": \'AI Revenue Optimization Platform\',\"href\": \'/services/ai-revenue-operations-platform\',\"price\": \'From $2,999/month\',\"bullets\": [\'Dynamic pricing\',\'Forecasting\',\'CLV analytics\'] },{ \"title\": \'AI Autonomous DevOps\',\"href\": \'/services/ai-autonomous-devops-platform\',\"price\": \'From $1,999/month\',\"bullets\": [\'Self-healing infra\',\'Intelligent deploys\',\'Observability\'] },{ \"title\": \'Micro CRM (Multi-tenant)\',\"href\": \'/services/micro-crm\',\"price\": \'From $99/month\',\"bullets\": [\'Leads & deals\',\'Email sync\',\'Pipeline automation\'] },{ \"title\": \'Cloud FinOps Optimizer\',\"href\": \'/services/cloud-finops-optimizer\',\"price\": \'From $1,499/
+import _React from 'react'; import Head from 'next/head'; const services = [{ "title": 'AI Revenue Optimization Platform',"href": '/services/ai-revenue-operations-platform',"price": 'From $2,999/month',"bullets": ['Dynamic pricing','Forecasting','CLV analytics'] },{ "title": 'AI Autonomous DevOps',"href": '/services/ai-autonomous-devops-platform',"price": 'From $1,999/month',"bullets": ['Self-healing infra','Intelligent deploys','Observability'] },{ "title": 'Micro CRM (Multi-tenant)',"href": '/services/micro-crm',"price": 'From $99/month',"bullets": ['Leads & deals','Email sync','Pipeline automation'] },{ "title": 'Cloud FinOps Optimizer',"href": '/services/cloud-finops-optimizer',"price": 'From $1,499/

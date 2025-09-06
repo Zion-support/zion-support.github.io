@@ -1,15 +1,10 @@
 
 
 export interface EnterpriseIt2026ServiceV2 {
-=======
 
 export interface EnterpriseIt2026ServiceV2 {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
 export interface EnterpriseIt2026ServiceV2 {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   id: string;
   name: string;
   tagline: string;
@@ -45,7 +40,6 @@ export interface EnterpriseIt2026ServiceV2 {;
 
   {
 
-=======
 export interface EnterpriseIT2026ServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -71,7 +65,6 @@ export interface EnterpriseIT2026ServiceV2 {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
@@ -102,7 +95,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
@@ -115,8 +107,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     reviews: 180;
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV2 {;
   id: string,;
@@ -555,11 +545,43 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     customers: 280,;
     rating: 4.9;
     reviews: 180;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+import { ServiceVariant } from '../types/
+import { ServiceVariant } from '../types /
+    period: any
+      'Competitive with Palo Alto Networks ($1000+/month), Cisco ($800+/month), and Fortinet ($600+/
+      website: any
+      'Competitive with Palo Alto Networks ($1000+/month), Cisco ($800+/month), and Fortinet ($600+/
+      website: any
+      'Competitive with ServiceNow ($1000+/month), BMC Helix ($800+/month), and Micro Focus ($600+/
+      'AI/
+      website: any
+      'Competitive with IBM Quantum ($0-1000), Google Quantum ($500+/
+      website: any
+      'Competitive with Collibra ($1000+/month), Informatica ($800+/month), and Alation ($600+/
+      'AI/
+      website: any
+      'Competitive with IBM Blockchain ($1000+/month), Microsoft Azure Blockchain ($500+/
+      website: any
+    technology: ['AI/
+    technology: ['AI/
+      'Custom CI/
+      'CI/
+      website: any
+      'Competitive with Palo Alto Networks ($1000+/month), Cisco ($800+/month), and Fortinet ($600+/
+      website: any
+      'Competitive with ServiceNow ($1000+/month), BMC Helix ($800+/month), and Micro Focus ($600+/
+      'AI/
+      website: any
+      'Competitive with IBM Quantum ($0-1000), Google Quantum ($500+/
+      website: any
+      'Competitive with Collibra ($1000+/month), Informatica ($800+/month), and Alation ($600+/
+      'AI/
+      website: any
+      'Competitive with IBM Blockchain ($1000+/month), Microsoft Azure Blockchain ($500+/
+      website: any
+    technology: ['AI/
+      'Custom CI/
+      'CI/
+      website: any

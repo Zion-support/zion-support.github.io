@@ -1,2 +1,1 @@
-
-
+const { ServiceVariant } from "./types/

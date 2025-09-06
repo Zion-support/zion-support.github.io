@@ -24,13 +24,9 @@ const features = [
   {
 
 
-=======
 export default function GovernmentSolutions() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/government.tsx
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout
       title="Government Solutions - Zion Tech Group"
@@ -78,7 +74,6 @@ export default function GovernmentSolutions() {;
               </p>
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
@@ -291,11 +286,8 @@ export default function GovernmentSolutions() {;
         </section>;
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
@@ -322,5 +314,12 @@ export default function GovernmentSolutions() {;
       </div>
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   );
+import Layout from '../../components/
+import Layout from '../../components/
+import Layout from '../../components/
+import Head from 'next/
+import Link from 'next/
+import Layout from '../../components/
+import Layout from '../../components/
+import Layout from '../../components/

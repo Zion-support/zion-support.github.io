@@ -1,0 +1,2 @@
+import { Mail,CheckCircle,AlertCircle export const MobileEmailCapture = () => { const [email,setEmail] = useState(\') const [status,setStatus] = useState(\'idle\')\''
+import React,{ useState } from 'react''';' import { Button } from '@/components/ui/button''';' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar } from';';@/

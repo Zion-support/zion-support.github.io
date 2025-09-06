@@ -20,14 +20,12 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     let priceMatch = true;
     if (selectedPriceRange !== 'All Prices') {;
       const price = parseInt(service && service.price.replace('$', ''));
@@ -100,7 +98,6 @@ import Link from 'next/link';
 
 
 
-=======
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
   // Filter services based on selections;
   const filteredServices = comprehensiveRealServices2025.filter(service => {;
@@ -177,7 +174,6 @@ import Link from 'next/link';
     ),
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -249,7 +245,6 @@ import Link from 'next/link';
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{comprehensiveRealServices2025.length}+</div>
                   <div className="text-gray-400">Real Services</div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-400 mb-2">$2.5B+</div>
@@ -262,7 +257,6 @@ import Link from 'next/link';
                 <div className="text-center">
                   <div className="text-3xl font-bold text-green-400 mb-2">400%</div>
                   <div className="text-gray-400">Average ROI</div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <div className='text-gray-400'>Real Services</div>
               </div>
@@ -1651,7 +1645,6 @@ if (return '$500 - $800') {
   }
 }
                   className="px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-all duration-300"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   {contactInfo.website}
                 </a>
@@ -1662,7 +1655,6 @@ if (return '$500 - $800') {
       </section>
     </>
 );
-=======
                 href={`mailto:${contactInfo && contactInfo.email}`}
                 className='flex items-center px-6 py-3 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300'>;
                 <Mail className='w-5 h-5 mr-2' />;
@@ -1670,7 +1662,6 @@ if (return '$500 - $800') {
               </a>;
             </div>;
 
-=======
           <div className="relative z-10 container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -1741,12 +1732,9 @@ if (return '$500 - $800') {
     }
   }),
 
-=======
   '$800+',];
 
 export default function ComprehensiveServicesShowcase2025() {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { motion, AnimatePresence } from 'framer-motion';
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
@@ -1769,16 +1757,10 @@ const pricingRanges = [;
 ];
 export default function ComprehensiveServicesShowcase2025(req, res) {
   try {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-<<<<<<< HEAD
   const [sortBy, setSortBy] = useState<
     'name' | 'price' | 'rating' | 'popularity'
   >('popularity');
@@ -1826,7 +1808,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
       default:
         return 0;    }
   });
-<<<<<<< HEAD
   const getPriceRange = (price: string) => {
     const numPrice = parseInt(price.replace('$', ''));
     if (numPrice < 300) return 'Under $300';
@@ -1845,10 +1826,7 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
       category.toLowerCase().includes(cat.id.toLowerCase())
     );
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';  }
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
   // Filter services based on selections;
   const filteredServices = comprehensiveRealServices2025.filter(service => {;
@@ -1903,11 +1881,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
   }
 }
   }),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const getPriceRange = (price: string) => {
     const numPrice = parseInt(price.replace('$', '')),
     if (numPrice < 300) return 'Under $300',
@@ -1915,38 +1888,27 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
     if (numPrice <= 800) return '$500 - $800',
     return '$800+'
   },
-<<<<<<< HEAD
 
   const _getCategoryIcon = (_category: string) => {_const _categoryData = categories.find(cat => 
-=======
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat =>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       category.toLowerCase().includes(cat.id.toLowerCase())
     ),
     return categoryData ? categoryData.icon : Globe
   },
-<<<<<<< HEAD
 
   const _getCategoryColor = (_category: string) => {_const _categoryData = categories.find(cat => 
-=======
   const getCategoryColor = (category: string) => {
     const categoryData = categories.find(cat =>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       category.toLowerCase().includes(cat.id.toLowerCase())
     ),
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <>
       <Head>
         <title>Comprehensive Services Showcase 2025 | Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name=&quot;description&quot; content=&quot;Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with cutting-edge technology.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI services, micro SAAS, IT solutions, business automation, customer success, supply chain optimization, financial planning, sales intelligence&quot; />
         <meta property=&quot;og:title&quot; content=&quot;Comprehensive Services Showcase 2025 | Zion Tech Group&quot; />
@@ -2184,8 +2146,6 @@ className="group"
                           ))}
                         </div>
                       </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
             <div className='text-center text-gray-400'>;
               <p className='mb-2'>{contactInfo && contactInfo.address}</p>;
@@ -2194,4 +2154,11 @@ className="group"
                 <a
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useState } from 'react'
+import Head from 'next/
+import Head from 'next/
+import Link from 'next/
+import { comprehensiveRealServices2025 } from '../data/
+  website: any
+          content='https: any
+          href='https: any

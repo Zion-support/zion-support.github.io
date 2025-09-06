@@ -5,7 +5,6 @@
 
 
 type Tx = {
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -27,25 +26,14 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect, useMemo, useState } from 'react';
 import Badges from './Badges';
 type Tx = {;
-=======
-<<<<<<< HEAD
 
 import React, { useEffect, useMemo, useState } from 'react';
 import Badges from './Badges';
-=======
 import React, { useEffect, useMemo, useState } from 'react';
 import Badges from './Badges';
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Tx = {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   id: string;
   type: 'earn' | 'burn' | 'issue' | 'revoke' | 'redeem';
   amount: number;
@@ -79,7 +67,6 @@ export default function WalletPanel() {;
   type: "earn" | "burn" | "issue" | "revoke" | "redeem"
   amount: number
   reason: string
-=======
 import React, { useEffect, useMemo, useState } from "react";
 import Badges from "./Badges";
 type Tx = {
@@ -113,7 +100,6 @@ function WalletPanel() {
   const [summary, set_summary] = useState < Summary | null>(null);
   const [tab, set_tab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings');  const [eth_address, setEthAddress] = useState < string | null>(null);type Tx = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string,
   type: "earn" | "burn" | "issue" | "revoke" | "redeem",
   amount: number,
@@ -174,7 +160,6 @@ export default function WalletPanel() {;
 
 
   useEffect(() => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     refresh()
   }, []);
   const balance = summary?.wallet.balance ?? 0;
@@ -209,10 +194,8 @@ export default function WalletPanel() {;
 
   );
   const nextBadgeThreshold = useMemo(() => {;
-=======
   );
   const nextBadgeThreshold = useMemo(() => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (balance < 50) return 50;
     if (balance < 200) return 200;
     if (balance < 500) return 500;
@@ -351,7 +334,6 @@ if ( {) {
             <span className='text - 2xl'>⚡</span>;
               <div className='text - sm text - gray - 500'>Balance</div>;
               <div className='text - 2xl font - semibold'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {balance} {symbol}
               </div>;
             </div>;
@@ -459,7 +441,6 @@ if ( {) {
               <button
                 className='px-3 py-1 rounded border'
                 onClick={() => redeem(500)}
-=======
           <button;
             on_click={connect_wallet}
             className='px - 3 py - 1 text - sm rounded border';
@@ -562,7 +543,6 @@ if ( {) {
               </button>;
             </div>;
 
-=======
           <div className="h-2 bg-gray-200 rounded">
             <div className="h-2 bg-yellow-400 rounded" style={{ width: `${progress}%` }} />
           </div>
@@ -665,7 +645,6 @@ export default function WalletPanel() {
   const progress = Math.min(100, Math.floor((balance / nextBadgeThreshold) * 100)),
 
   async function connectWallet() {
-=======
     return balance;
   }, [balance]);
   const progress = Math.min(
@@ -698,12 +677,10 @@ export default function WalletPanel() {
     try {
       const accounts = await eth.request({ method: "eth_requestAccounts" })
       setEthAddress(accounts?.[0] |null)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     } catch (e) {
       console.error(e)
     }
   }
-<<<<<<< HEAD
 
   async function redeem(amount: number) {
     if (!amount || amount <= 0) return,
@@ -789,8 +766,6 @@ export default function WalletPanel() {
 }
 
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       </div>;
     </div>;
   );
@@ -798,7 +773,6 @@ export default function WalletPanel() {
   );
 }
 
-=======
             <div className='text - xs text - gray - 500'>;
               Coming soon: Redeem for branded perks and courses.;
             </div>          </div>            <div className="text - xs text - gray - 500">Coming soon: Redeem for branded perks and courses.</div>;
@@ -806,10 +780,8 @@ export default function WalletPanel() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useEffect, useMemo, useState } from 'react'
+import Badges from './

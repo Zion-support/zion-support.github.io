@@ -1,18 +1,13 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
-import React from 'react';
-interface BlockchainsolutionsProps {;
-  // Add props here as needed;
-}
-export default function Blockchainsolutions(): any ({ }: BlockchainsolutionsProps) {;
-  return (
-    <div>;
-      <h1>Blockchainsolutions</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
-  );
-}
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
 
-
-}
-}
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any

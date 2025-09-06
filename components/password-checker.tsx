@@ -1,8 +1,6 @@
 
 
 export default function PasswordCheckerPage() {
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Lock,
   Shield,
   Eye,
@@ -11,7 +9,6 @@ export default function PasswordCheckerPage() {
   RefreshCw,
   CheckCircle,
   XCircle,
-<<<<<<< HEAD
   AlertTriangle,
   ArrowRight,
 } from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
@@ -47,10 +44,8 @@ import React, { useState, useEffect } from 'react';
   ArrowRight,;
 } from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
-=======
 import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function PasswordCheckerPage() {;
 
@@ -98,7 +93,6 @@ export default function PasswordCheckerPage() {;
     setStrength(score);
     // Set strength text and color
     if (score >= 90) {
-<<<<<<< HEAD
   const analyzePassword = (pass: string) => {;
     const newChecks = {;
       length: pass && pass.length >= 8,;
@@ -280,10 +274,8 @@ if (
       symbols: false,
 
 
-=======
       no_common: false,
       no_sequential: false,
-=======
       length: false
       uppercase: false
       lowercase: false
@@ -291,7 +283,6 @@ if (
       symbols: false
       noCommon: false
       noSequential: false
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     });
     set_suggestions ([]);  }
 ;
@@ -318,17 +309,12 @@ if (
     result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor(Math.random() * 26)], // Lowercase
     result += '0123456789'[Math.floor(Math.random() * 10)], // Number
     result += '!@#$%^&*'[Math.floor(Math.random() * 8)], // Symbol
-<<<<<<< HEAD
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // Fill the rest randomly
     for (let i = 4, i < length, i++) {
       result += charset[Math.floor(Math.random() * charset.length)]
     }
-<<<<<<< HEAD
 // Shuffle the password
-=======
     // Shuffle the password
     result = result.split('').sort(() => Math.random() - 0.5).join('');
     setGeneratedPassword(result);
@@ -354,7 +340,6 @@ if (
       .join('');
     setGeneratedPassword(result);
     setPassword(result);
-=======
 
   };
   const copyToClipboard = (text: string) => {;
@@ -377,10 +362,8 @@ if (
     navigator && navigator.clipboard.writeText(text);
   };
   const getStrengthBarColor = () => {;
-=======
   }
   const getStrengthBarColor = () => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (strength >= 90) return 'bg-green-500';
     if (strength >= 70) return 'bg-green-400';
     if (strength >= 50) return 'bg-yellow-400';
@@ -397,14 +380,12 @@ if (
         <meta property=&quot;og:description&quot; content=&quot;Advanced password strength analyzer with security recommendations." />
       </Head>
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -532,9 +513,7 @@ if (
               Our advanced security analyzer evaluates multiple factors to determine password strength and security.
             </p>
           </div>
-<<<<<<< HEAD
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-=======
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Input Form */}
             <Card className="p-8 bg-gray-800 border border-gray-700">
@@ -543,7 +522,6 @@ if (
                 Password Analysis
               </h3>
               <div className="space-y-6">
-=======
                       className='absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-white';
                     >;
                       {showPassword ? (;
@@ -564,12 +542,10 @@ if (
                 Password Analysis;
               </h3>;
               <div className="space-y-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Password Input */}
                 <div>;
                   <labelclassName="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
                     Enter Password
-=======
 ;
     // Ensure at least one of each required character type;
     result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor (Math.random () * 26)]; // Uppercase;
@@ -756,36 +732,21 @@ if (return 'bg - orange - 400') {
                   <div className="relative">;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Generate Password */}
                 <div>;
                   <Button
                     onClick={generateStrongPassword}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Generated Password Display */}
 
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {/* Generated Password Display */}
                 {generatedPassword && (
                   <div className="p-4 bg-gray-700 rounded-lg border border-gray-600">
@@ -793,8 +754,6 @@ if (return 'bg - orange - 400') {
                       <span className="text-sm text-gray-300">Generated Password:</span>
                       <Button
                         onClick={() => copyToClipboard(generatedPassword)}
-<<<<<<< HEAD
-=======
                         variant='outline'
                         size='sm'
                         className='border-gray-600 text-gray-300 hover:bg-gray-600'
@@ -803,10 +762,8 @@ if (return 'bg - orange - 400') {
                         Copy
                       </Button>
                     </div>
-<<<<<<< HEAD
                     <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}                      <Button
                         onClick={() => copyToClipboard(generatedPassword)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         variant="outline"
                         size="sm"
                         className="border-gray-600 text-gray-300 hover:bg-gray-600"
@@ -817,11 +774,9 @@ if (return 'bg - orange - 400') {
                     </div>
                     <div className="mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       {generatedPassword}
                     </div>;
                   </div>;
-=======
                         variant='outline'
                         size='sm'
                         className='border-gray-600 text-gray-300 hover:bg-gray-600'
@@ -836,10 +791,8 @@ if (return 'bg - orange - 400') {
                       {generatedPassword}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                   </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
 
 
@@ -884,12 +837,9 @@ if (return 'bg - orange - 400') {
               {password ? (;
                 <div className='space-y-6'>;
 
-=======
                 <div className="space-y-6">
-=======
               {password ? (
                 <div className='space-y-6'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   {/* Strength Score */}
                   <div>;
                     <div className='flex items-center justify-between mb-2'>;
@@ -908,7 +858,6 @@ if (return 'bg - orange - 400') {
                       </span>
                     </div>
                     <div className="w-full bg-gray-700 rounded-full h-3">
-=======
                 <div className='space-y-6'>
                   {/* Strength Score */}
                   <div>
@@ -922,15 +871,10 @@ if (return 'bg - orange - 400') {
 
 
 
-=======
 
                       <div 
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         style={{ width: `${strength}%` }}
                       />
                     </div>
@@ -952,24 +896,17 @@ if (return 'bg - orange - 400') {
                   </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Security Checks */}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
                             className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}
 
                           >                            {key === 'length' && 'At least 8 characters'}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             {key === 'length' && 'At least 8 characters'}
                             {key === 'uppercase' && 'Contains uppercase letter'}
                             {key === 'lowercase' && 'Contains lowercase letter'}
@@ -983,24 +920,18 @@ if (return 'bg - orange - 400') {
                   </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Suggestions */}
 
 
-=======
 
                             </span>                          </div>
 
                           </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         ))}
                       </div>;
                     </div>;
@@ -1013,7 +944,6 @@ if (return 'bg - orange - 400') {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Features */}
 
       <section className="py-20 bg-gray-800">
@@ -1471,7 +1401,6 @@ if (return 'bg - orange - 400') {
             improve their account security.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
               href='/contact'
               size='lg'
@@ -1485,7 +1414,6 @@ if (return 'bg - orange - 400') {
               size='lg'
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               View Pricing;
             </Button>;
           </div>;
@@ -1493,11 +1421,17 @@ if (return 'bg - orange - 400') {
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import React, { useState, useEffect } from 'react'
+import Head from 'next/
+import Card from '../components/ui/
+import Button from '../components/ui/
+import Head from 'next/
+import Card from '../components/ui/
+import Button from '../components/ui/
+      symbols: any
+      noSequential: !hasSequentialChars(pass),    };      symbols: any
+      noSequential: !hasSequentialChars(pass),    };      symbols: any

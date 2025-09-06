@@ -1,6 +1,5 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 > <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {
   /* Company Culture */
 }<motion.div </div>) )
@@ -26,7 +25,6 @@
 }</motion.div> {
   /* General Application */
 }<motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion.div> </div> </Layout>)
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -71,23 +69,13 @@ class ErrorBoundary extends React.Component {
 }</motion && motion.div> {;
   /* General Application */ ;
 }<motion && motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion && motion.div> </div> </Layout>) ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 };export default CareersPage;import React, { useState } from 'react';
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
-=======
  const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
-=======
  const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 > <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {
   /* Company Culture */
 }<motion.div </div>) )
@@ -113,11 +101,9 @@ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.fi
 }</motion.div> {
   /* General Application */
 }<motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion.div> </div> </Layout>)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 };export default CareersPage;import React, { useState } from 'react';
 import React, { useState } from 'react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import {motion} from 'framer-motion';
@@ -151,7 +137,6 @@ export default function Careers() {;
       requirements: [
         'Advanced degree in Computer Science, AI, or related fieldExpertise in Python, TensorFlow, PyTorchExperience with large language models and neural networksStrong problem-solving and analytical skills'
       ]
-=======
 const filtered_jobs = selected_department === 'all' ? job_openings : job_openings.filter (job => job.department === selected_department);
 > <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - blue - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6" > Join Our Team </h1> </p> </motion.div> {
   /* Company Culture */;
@@ -302,14 +287,11 @@ function Careers() {
 
 
 
-=======
 
 
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -326,7 +308,6 @@ function Careers() {
 
 
 
-=======
 
 export default function Careers() {;
   const [selectedDepartment, setSelectedDepartment] = useState('all');
@@ -471,10 +452,8 @@ export default function Careers() {;
 
           </div>;
         </motion && motion.div>;
-=======
 
 
-=======
 
 
         {/* Benefits */}
@@ -495,13 +474,10 @@ export default function Careers() {;
 
 
 
-=======
 
 
         {/* Job Openings */}
         <motion.div 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -541,7 +517,6 @@ export default function Careers() {;
           </div>;
 
 
-=======
           {/* Department Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             {departments.map((dept) => (
@@ -561,8 +536,6 @@ export default function Careers() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Job Listings */}
           <div className="space-y-6">;
             {filteredJobs && filteredJobs.map((job) => (;
@@ -593,13 +566,10 @@ export default function Careers() {;
 
 
 
-=======
 
 
         {/* General Application */}
         <motion.div 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -632,7 +602,6 @@ export default function Careers() {;
     </Layout>
   )
 }
-=======
                     href={`/contact?position=${encodeURIComponent(job && job.title)}`}
                     className="mt-4 lg:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;
                     Apply Now;
@@ -900,7 +869,6 @@ export default function Careers() {;
 
 export default CareersPage;
 
-=======
         </motion.div>;
       </div>;
     </Layout>);
@@ -908,9 +876,8 @@ export default CareersPage;
 ;
 export default CareersPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export default CareersPage;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const filteredJobs = selectedDepartment = = 'all'
+<motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?

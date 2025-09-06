@@ -28,3 +28,5 @@ const CommunityProfilePage = ({ className }) => {
 };
 
 export default CommunityProfilePage;
+import React from 'react'
+    

@@ -45,12 +45,7 @@ const Footer = () => {
 import React from 'react';
 import Link from 'next/link';
 
->>>>>>> origin/automation-improvements-final
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -148,7 +143,6 @@ import Link from 'next/link';
       { name: "Accessibility", href: "/accessibility" },;
     ],;
   };
-=======
   ];
 
 const microSaasCategories = [
@@ -163,7 +157,6 @@ const microSaasCategories = [
 ];
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   const socialLinks = [;
     { name: "Facebook", href: "#", icon: Facebook },;
@@ -172,9 +165,6 @@ const microSaasCategories = [
     { name: "Instagram", href: "#", icon: Instagram },;
     { name: "GitHub", href: "#", icon: Github },;
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 const microSaasCategories = [
   { title: 'Marketing Tools', icon: Target, count: 15 },
   { title: 'Productivity', icon: Settings, count: 12 },
@@ -185,13 +175,7 @@ const microSaasCategories = [
   { title: 'Design', icon: Paintbrush, count: 6 },
   { title: 'Development', icon: Code, count: 14 }
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
-=======
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
@@ -340,12 +324,6 @@ const microSaasCategories = [
 
 
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
@@ -354,18 +332,10 @@ const microSaasCategories = [
               whileInView={{ opacity: 1, y: 0 }}
 
 
-=======
 
 
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <motion.div
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <motion.div
               transition={{ duration: 0 && 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0">;
@@ -386,8 +356,6 @@ const microSaasCategories = [
                 </a>;
               ))}
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -485,7 +453,6 @@ const microSaasCategories = [
                 </a>
               ))}
             </motion.div>
-=======
 
             <div className="flex items-center space-x-6">
               <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
@@ -498,11 +465,6 @@ const microSaasCategories = [
                 Cookie Policy
               </Link>
             </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>
         </div>
       </div>
@@ -752,3 +714,65 @@ const Footer = () =>: any {
 ;
 export default Footer;
 ;
+import React from "react"
+import Link from "next/
+      { name: "AI Services", href: any
+      { name: "IT Services", href: any
+      { name: "Micro SaaS", href: any
+      { name: "Cloud Solutions", href: any
+      { name: "Cybersecurity", href: any
+      { name: "Database Solutions", href: any
+      { name: "Enterprise Solutions", href: any
+      { name: "Startup Solutions", href: any
+      { name: "Industries", href: any
+      { name: "Custom Development", href: any
+      { name: "Digital Transformation", href: any
+      { name: "Consulting", href: any
+      { name: "About Us", href: any
+      { name: "Our Team", href: any
+      { name: "Careers", href: any
+      { name: "Case Studies", href: any
+      { name: "News", href: any
+      { name: "Partners", href: any
+      { name: "Blog", href: any
+      { name: "Documentation", href: any
+      { name: "API Documentation", href: any
+      { name: "Tutorials", href: any
+      { name: "White Papers", href: any
+      { name: "Webinars", href: any
+      { name: "Privacy Policy", href: any
+      { name: "Terms of Service", href: any
+      { name: "Cookie Policy", href: any
+      { name: "Security", href: any
+      { name: "Compliance", href: any
+      { name: "Accessibility", href: any
+      { name: "AI Services", href: any
+      { name: "IT Services", href: any
+      { name: "Micro SaaS", href: any
+      { name: "Cloud Solutions", href: any
+      { name: "Cybersecurity", href: any
+      { name: "Database Solutions", href: any
+      { name: "Enterprise Solutions", href: any
+      { name: "Startup Solutions", href: any
+      { name: "Industries", href: any
+      { name: "Custom Development", href: any
+      { name: "Digital Transformation", href: any
+      { name: "Consulting", href: any
+      { name: "About Us", href: any
+      { name: "Our Team", href: any
+      { name: "Careers", href: any
+      { name: "Case Studies", href: any
+      { name: "News", href: any
+      { name: "Partners", href: any
+      { name: "Blog", href: any
+      { name: "Documentation", href: any
+      { name: "API Documentation", href: any
+      { name: "Tutorials", href: any
+      { name: "White Papers", href: any
+      { name: "Webinars", href: any
+      { name: "Privacy Policy", href: any
+      { name: "Terms of Service", href: any
+      { name: "Cookie Policy", href: any
+      { name: "Security", href: any
+      { name: "Compliance", href: any
+      { name: "Accessibility", href: any

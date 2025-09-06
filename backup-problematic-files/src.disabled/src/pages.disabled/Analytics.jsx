@@ -28,3 +28,5 @@ const Analytics = ({ className }) => {
 };
 
 export default Analytics;
+import React from 'react'
+    

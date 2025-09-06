@@ -41,14 +41,9 @@ export async function getServerSideProps() {;
   let items: Trend[] = [];  try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
     items = JSON && JSON.parse(raw);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 </div> </div>) )
-=======
  </div> </div>) ) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {
@@ -60,11 +55,8 @@ export type Trend = {
   tags: string[]
 }
 export async function getServerSideProps() {
-=======
 </div> </div>) ) 
-=======
  </div> </div>) ) 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {
@@ -77,17 +69,14 @@ export type Trend = {
 };
 
 export async function getServerSideProps() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const file = path.join(process.cwd(), 'dataai-trends.json');
   let items: Trend[] = [];  try {
     const raw = fs.readFileSync(file, 'utf-8');
     items = JSON.parse(raw)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   } catch {}
   items && items.sort((a, b) => (a && a.date < b && b.date ? 1 : -1));
   return { props: { items } }
 }
-<<<<<<< HEAD
 export default function AiTrendsPage(): any ({ items }: { items: Trend[] }) {;
   return (
     <div className="space-y-6">;
@@ -141,14 +130,12 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
 
 );
 }
-=======
       </div>;
     </div>;
   );
 }
 
 
-=======
   items.sort ((a, b) => (a.date < b.date ? 1 : -1));
   return { props: { items } }
 }
@@ -177,11 +164,7 @@ function AiTrendsPage() {
           </div>))}
       </div>;
     </div>);
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function AiTrendsPage({ items }: { items: Trend[] }) {
   return (
     <div className="space-y-6">
@@ -200,15 +183,14 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
             </ul>
             <div className="flex flex-wrap gap-2 pt-1">
               {t.tags.map(tag => (<span key={tag} className="text-xs px-2 py-0.5 rounded bg-gray-100">{tag}</span>))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
           </div>
         ))}
       </div>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+</div> 
+</div> 
+</div> 

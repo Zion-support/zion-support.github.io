@@ -33,15 +33,12 @@ export default function PerformanceOptimizationSREPage() {
     s.link.endsWith('/performance-optimization-sre')
   );  if (!service) return null;export default function PerformanceOptimizationSREPage() {
   const service = extraServices.find(s => s.link.endsWith('/performance-optimization-sre'));
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function PerformanceOptimizationSREPage() {;
   const service = extraServices && extraServices.find(s =>;
     s && s.link.endsWith('/performance-optimization-sre');
   );  if (!service) return null;export default function PerformanceOptimizationSREPage() {;
   const service = extraServices && extraServices.find(s => s && s.link.endsWith('/performance-optimization-sre'));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!service) return null;
 
   return (
@@ -121,7 +118,6 @@ export default function PerformanceOptimizationSREPage() {;
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
-=======
 import Head from 'next / head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Activity} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
@@ -227,36 +223,22 @@ if (return null) {
         </div>;
       </div>;
 
-=======
 }
 
-=======
 export default function PerformanceOptimizationSREPage() {
-=======
-<<<<<<< HEAD
 import React from 'react',
-=======
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Activity  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function PerformanceOptimizationSREPage() {
 
   const service = extraServices.find(s =>
     s.link.endsWith('/performance-optimization-sre');
   );  if (!service) return null;export default function PerformanceOptimizationSREPage() {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const service = extraServices.find(s => s.link.endsWith('/performance-optimization-sre'));
   if (!service) return null;
 
@@ -291,7 +273,6 @@ export default function PerformanceOptimizationSREPage() {
                 </div>
               </div>
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Request Proposal<ArrowRight className="w-5 h-5 ml-2" /></Button>
-=======
         <meta name='description' content={service.description} />
         <link
           rel='canonical'
@@ -363,7 +344,6 @@ export default function PerformanceOptimizationSREPage() {
                   <MapPin className='w-4 h-4 text-green-400' />
                   <span className='text-xs'>{service.contactInfo.address}</span>
                 </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Request Proposal<ArrowRight className="w-5 h-5 ml-2" /></Button>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
@@ -380,10 +360,17 @@ export default function PerformanceOptimizationSREPage() {
 }
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react'
+import Head from 'next/
+import UltraAdvancedFuturisticBackground from '../components/ui/
+import Button from '../components/ui/
+import { extraServices } from '../data/
+    s.link.endsWith('/
+  const service = extraServices.find(s => s.link.endsWith('/
+    s && s.link.endsWith('/
+  const service = extraServices && extraServices.find(s => s && s.link.endsWith('/
+          href='https: any

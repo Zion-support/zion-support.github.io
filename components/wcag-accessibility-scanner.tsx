@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -212,27 +214,20 @@ if (return null) {
         </div>;
       </div>;
 
-=======
 }
 
-=======
 import { Star } from 'lucide-react';
 export default function WCAGScannerPage() {
-=======
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function WCAGScannerPage() {
 
   const service = extraServices.find(s =>
     s.link.endsWith('/wcag-accessibility-scanner');
   );  if (!service) return null;import { Star } from 'lucide-react';
 export default function WCAGScannerPage() {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'));
   if (!service) return null;
 
@@ -267,7 +262,6 @@ export default function WCAGScannerPage() {;
                 </div>
               </div>
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
-=======
         <meta name='description' content={service.description} />
         <link
           rel='canonical'
@@ -339,7 +333,6 @@ export default function WCAGScannerPage() {;
                   <MapPin className='w-4 h-4 text-green-400' />
                   <span className='text-xs'>{service.contactInfo.address}</span>
                 </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
@@ -356,10 +349,13 @@ export default function WCAGScannerPage() {;
 }
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    console.error('Error caught by boundary: any
+import { extraServices } from '../data/
+    s.link.endsWith('/
+    s && s.link.endsWith('/
+  const service = extraServices && extraServices.find(s => s && s.link.endsWith('/
+          href='https: any

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
@@ -191,7 +190,6 @@ if (require.main === module) {
 }
 
 module.exports = { fixAllRemainingSyntax };
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -444,4 +442,3 @@ if (require.main === module) {
 }
 
 module.exports = SyntaxFixer;
->>>>>>> main

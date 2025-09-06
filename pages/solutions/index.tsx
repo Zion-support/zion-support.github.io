@@ -1,8 +1,6 @@
 
 
-=======
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 import { motion } from 'framer-motion';
 
 import { ;
@@ -20,9 +18,7 @@ import { ;
 } from 'lucide-react';
 import Layout from '../../components/Layout';
 
-=======
 
->>>>>>> origin/automation-improvements-final
 
 
 
@@ -173,7 +169,6 @@ export default function SolutionsPage() {;
                 Technology Solutions for{' '}
 
 
-=======
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -426,7 +421,6 @@ const SolutionsPage: NextPage = () => {
   const solutions = [
     // Healthcare Solutions
     {
-<<<<<<< HEAD
 category: "Healthcare & Life Sciences",
       solutions: [
         {
@@ -458,7 +452,6 @@ category: "Healthcare & Life Sciences",
         }
       ]
     };
-=======
       category: "Healthcare & Life Sciences",
       solutions: [
         {
@@ -494,7 +487,6 @@ category: "Healthcare & Life Sciences",
 }
       ]
     },
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // Financial Services Solutions
     {
       category: "Financial Services & FinTech",
@@ -502,7 +494,6 @@ category: "Healthcare & Life Sciences",
         {
           name: "AI-Powered Risk Assessment",
           description: "Machine learning-based risk assessment and fraud detection for financial institutions.",
-<<<<<<< HEAD
           useCases: ["Banks", "Credit unions", "Insurance companies", "Investment firms"];
           benefits: ["Reduced fraud losses", "Better risk management", "Compliance automation", "Improved customer experience"];
           pricing: "$30,000 - $120,000";
@@ -529,7 +520,6 @@ category: "Healthcare & Life Sciences",
         }
       ]
     };
-=======
           useCases: ["Banks", "Credit unions", "Insurance companies", "Investment firms"],
           benefits: ["Reduced fraud losses", "Better risk management", "Compliance automation", "Improved customer experience"],
           pricing: "$30,000 - $120,000",
@@ -560,14 +550,12 @@ category: "Healthcare & Life Sciences",
 }
       ]
     },
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // Manufacturing & Industry 4.0
     {
       category: "Manufacturing & Industry 4.0",
       solutions: [
         {
           name: "IoT Manufacturing Platform",
-<<<<<<< HEAD
           description: "Comprehensive IoT solution for smart manufacturing, predictive maintenance, and quality control.";
           useCases: ["Production lines", "Quality control", "Predictive maintenance", "Supply chain management"];
           benefits: ["Reduced downtime", "Improved quality", "Cost optimization", "Real-time monitoring"];
@@ -595,7 +583,6 @@ category: "Healthcare & Life Sciences",
         }
       ]
     };
-=======
           description: "Comprehensive IoT solution for smart manufacturing, predictive maintenance, and quality control.",
           useCases: ["Production lines", "Quality control", "Predictive maintenance", "Supply chain management"],
           benefits: ["Reduced downtime", "Improved quality", "Cost optimization", "Real-time monitoring"],
@@ -627,7 +614,6 @@ category: "Healthcare & Life Sciences",
 }
       ]
     },
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // Retail & E-commerce Solutions
     {
       category: "Retail & E-commerce",
@@ -635,7 +621,6 @@ category: "Healthcare & Life Sciences",
         {
           name: "AI-Powered Customer Analytics",
           description: "Advanced customer behavior analysis and personalized marketing automation platform.",
-<<<<<<< HEAD
           useCases: ["Online retail", "Brick-and-mortar stores", "Marketplaces", "Subscription services"];
           benefits: ["Increased sales", "Better customer retention", "Personalized experiences", "Marketing optimization"];
           pricing: "$20,000 - $80,000";
@@ -662,7 +647,6 @@ category: "Healthcare & Life Sciences",
         }
       ]
     };
-=======
           useCases: ["Online retail", "Brick-and-mortar stores", "Marketplaces", "Subscription services"],
           benefits: ["Increased sales", "Better customer retention", "Personalized experiences", "Marketing optimization"],
           pricing: "$20,000 - $80,000",
@@ -693,7 +677,6 @@ category: "Healthcare & Life Sciences",
 }
       ]
     },
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // Education & Training Solutions
     {
       category: "Education & Training",
@@ -701,7 +684,6 @@ category: "Healthcare & Life Sciences",
         {
           name: "AI-Powered Learning Platform",
           description: "Personalized learning platform with AI-driven content recommendations and adaptive assessments.",
-<<<<<<< HEAD
           useCases: ["K-12 education", "Higher education", "Corporate training", "Professional development"];
           benefits: ["Personalized learning", "Better engagement", "Improved outcomes", "Scalable delivery"];
           pricing: "$25,000 - $100,000";
@@ -728,7 +710,6 @@ category: "Healthcare & Life Sciences",
         }
       ]
     };
-=======
           useCases: ["K-12 education", "Higher education", "Corporate training", "Professional development"],
           benefits: ["Personalized learning", "Better engagement", "Improved outcomes", "Scalable delivery"],
           pricing: "$25,000 - $100,000",
@@ -759,14 +740,12 @@ category: "Healthcare & Life Sciences",
 }
       ]
     },
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // Government & Public Sector
     {
       category: "Government & Public Sector",
       solutions: [
         {
           name: "Smart City Platform",
-<<<<<<< HEAD
           description: "Comprehensive smart city solution for urban planning, traffic management, and citizen services.";
           useCases: ["Urban planning", "Traffic management", "Public safety", "Citizen services"];
           benefits: ["Improved efficiency", "Better citizen experience", "Cost reduction", "Data-driven decisions"];
@@ -854,7 +833,6 @@ category: "Healthcare & Life Sciences",
                       href={solution.href}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
 
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">
       <Head>
         <title>Industry Solutions - Zion Tech Group | Tailored Technology Solutions</title>
@@ -912,8 +890,6 @@ category: "Healthcare & Life Sciences",
 
 
                 const IconComponent = solution.icon;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">;
@@ -944,7 +920,6 @@ category: "Healthcare & Life Sciences",
                     </ul>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     <Link
                       href={solution && solution.href}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors">;
@@ -1035,10 +1010,7 @@ category: "Healthcare & Life Sciences",
 
 };
 export default SolutionsPage;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   <motion.div;
-=======
           description: "Comprehensive smart city solution for urban planning, traffic management, and citizen services.",
           useCases: ["Urban planning", "Traffic management", "Public safety", "Citizen services"],
           benefits: ["Improved efficiency", "Better citizen experience", "Cost reduction", "Data-driven decisions"],
@@ -1066,7 +1038,6 @@ export default SolutionsPage;
           } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
       ];
@@ -1077,9 +1048,7 @@ export default SolutionsPage;
 }
   ],
   return (
-<<<<<<< HEAD
     <Layout 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       title="Solutions - Zion Tech Group"
       description="Comprehensive technology solutions for enterprises, startups, and industries. Custom development and specialized services."
       keywords="enterprise solutions, startup solutions, custom development, industry solutions, technology consulting"
@@ -1105,11 +1074,8 @@ export default SolutionsPage;
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-<<<<<<< HEAD
                 From startups to enterprises, we provide tailored technology solutions that drive growth
-=======
                 From startups to enterprises, we provide tailored technology solutions that drive growth, 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 efficiency, and innovation across all industries.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1135,8 +1101,6 @@ export default SolutionsPage;
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Our Solution Categories
-<<<<<<< HEAD
-=======
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 We offer comprehensive technology solutions tailored to different business needs and stages.
@@ -1147,7 +1111,6 @@ export default SolutionsPage;
                 const IconComponent = solution.icon;
                 return (
                   <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     key={index}
                     className="bg - white p - 8 rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 group";
                     initial={{ opacity: 0, coordinate_y: 30 }}
@@ -1174,16 +1137,13 @@ export default SolutionsPage;
                     </ul>;
                     <Link;
                       href={solution.href}
-<<<<<<< HEAD
                       className="inline - flex items - center text - blue - 600 hover:text - blue - 700 font - semibold group - hover:text - purple - 600 transition - colors";
                     >;
                       <span > Explore {solution.title}</span>;
                       <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform" />;
                     </Link>;
                   </motion.div>);
-=======
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">
       <Head>
         <title>Industry Solutions - Zion Tech Group | Tailored Technology Solutions</title>
@@ -1220,7 +1180,6 @@ export default SolutionsPage;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 We offer comprehensive technology solutions tailored to different business needs and stages.
@@ -1248,11 +1207,7 @@ export default SolutionsPage;
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {solution.description}
                     </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     <ul className="space-y-2 mb-6">
                       {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -1264,7 +1219,6 @@ export default SolutionsPage;
                     <Link
                       href={solution.href}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
-=======
                     <div className="mb-4">
                       <h4 className="font-semibold text-gray-800 mb-2">Use Cases:</h4>
                       <ul className="space-y-1">
@@ -1319,19 +1273,12 @@ export default SolutionsPage;
   }
 }
                       className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors w-full text-center"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       <span>Explore {solution.title}</span>
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Link>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </motion.div>
                 );
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               })}
             </div>;
           </div>;
@@ -1425,14 +1372,10 @@ export default SolutionsPage;
     </Layout>);
 }
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 ;
 export default SolutionsPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
                     <Link;
                       href={solution.link  } catch (error) {
     console.error("Error:", error);
@@ -1440,8 +1383,6 @@ export default SolutionsPage;
   }
 }
                       className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors w-full text-center"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       <span>Explore {solution.title}</span>
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -1453,4 +1394,7 @@ export default SolutionsPage;
 
 export default SolutionsPage;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextPage } from 'next'
+import Head from 'next/
+import Link from 'next/
+import Layout from '../../components/

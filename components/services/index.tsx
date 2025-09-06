@@ -1,7 +1,5 @@
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
@@ -31,7 +29,6 @@ budgetRange: values.budgetRange;
   handleSubmit
 }/> </div>)
 };export default ServicesPage;
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
@@ -53,33 +50,21 @@ import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
 import { Star } from 'lucide-react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function ServicesIndexPage () {
-=======
  export default function ServicesIndexPage () {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 export default function ServicesIndexPage () {
-=======
  export default function ServicesIndexPage () {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
   //Category const handleSubmit = async (values: QuoteFormValues) => {
   const res = await fetch ('/api/quote-request', {
   method: 'POST', headers: {
-<<<<<<< HEAD
   'Content-Type': 'application/json'
 }
-=======
   'Content-Type': 'application/json' ;
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {
   start: values.timelineStart, end: values.timelineEnd
@@ -97,7 +82,6 @@ budgetRange: values.budgetRange;
   handleSubmit
 }/> </div>)
 };export default ServicesPage;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const mapLocalToServiceItem = (item: any): ServiceItem => ({
   slug: item.slug
   title: item.name
@@ -114,7 +98,6 @@ const ServicesPage: NextPage = () => {
   const [selected, setSelected] = React.useState<ServiceItem | null>(null);
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
-<<<<<<< HEAD
     .concat(
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -221,7 +204,6 @@ function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[]);
     .concat (
       extra_services as any[];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       additionalEnhancedServices as any[];
       newlyAddedServices as any[];
       curatedMarketServices as any[];
@@ -290,13 +272,11 @@ function ServicesIndexPage() {
 
     }
   }
-=======
     }
 
   };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -423,7 +403,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
@@ -437,12 +416,9 @@ if ( {) {
 
 
 export default ServicesPage;
-=======
 export default ServicesPage;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
       <QuoteRequestModal;
         open={modal_open}
         on_close={() => setModalOpen (false)}
@@ -454,4 +430,10 @@ export default ServicesPage;
 ;
 export default ServicesPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export default function ServicesIndexPage () {
+  const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
+React.useEffect () => {
+  const next = services.filter (s) => {
+  //
+  const res = await fetch ('/api /
+  'Content-Type': any

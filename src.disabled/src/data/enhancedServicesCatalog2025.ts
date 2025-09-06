@@ -1,0 +1,2 @@
+module.exports = type ServiceItem = { id: string; title: string; description: string; category: any
+module && module.exports = type ServiceItem = { id: string; title: string; description: string; category: any

@@ -1,29 +1,15 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-
-    const users = readUsers(),
-    if (req && req.method === 'GET') {
-      const { userId = 'demo-user' } = req && req.query;
-
-      const user = users[userId as string];
-
-
-  }
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
-        course_progress.completed_lessons.push (lesson_id);
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-
-
-
+import type { NextApiRequest, NextApiResponse } from 'next'
+import fs from 'fs'
+import path from 'path'
+    if (req.method = = 'GET'
+      const { userId = 'demo-user'
+    if (req.method = = 'POST'
+        userId = 'demo-user'
+        return res.status(400).json({ error: any
+      if (typeof percent = = 'number'
+    res.setHeader('Allow', 'GET, POST'
+    return res.status(405).end('Method Not Allowed'
+      .json({ error: any
+    res.set_header ('Allow', 'GET, POST'
+    return res.status (405).end ('Method Not Allowed'
+      .json ({ error: any

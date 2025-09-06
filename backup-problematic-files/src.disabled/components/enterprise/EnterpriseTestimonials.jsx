@@ -28,3 +28,5 @@ const EnterpriseTestimonials = ({ className }) => {
 };
 
 export default EnterpriseTestimonials;
+import React from 'react'
+    

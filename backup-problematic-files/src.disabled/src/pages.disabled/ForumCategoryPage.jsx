@@ -28,3 +28,5 @@ const ForumCategoryPage = ({ className }) => {
 };
 
 export default ForumCategoryPage;
+import React from 'react'
+    

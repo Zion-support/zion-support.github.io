@@ -199,14 +199,12 @@ export function ApiReference() {;
         </div>;
 ;
         {/* Endpoint details */}
-=======
                 </li>;              ))}
             </ul>;
           </div>;
         </div>;
 ;
         {/* Endpoint details */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="md:col-span-4">;
           {activeEndpointData ? (;
             <div>;
@@ -363,3 +361,8 @@ requestExample: `curl -X GET \\ https://api.zionai.com/v1/api/talent?skills=Reac
 }</div> </TabsContent> <TabsContent value="try"> <div className="p-8 border border-zinc-800 rounded-lg flex items-center justify-center"> <div className="text-center"> <p className="text-zinc-400 mb-3">Interactive API tester coming soon</p> <p className="text-zinc-600 text-sm">Try the Postman collection in the meantime</p> </div> </div> </TabsContent> </Tabs> </div>) : (<div className="p-8 border border-zinc-800 rounded-lg text-center"> <p className="text-zinc-400">Select an endpoint from the list to view details</p> </div>) 
 }</div> </div> </ApiDocsLayout>) 
 }export default ApiReference;
+import React, { useState } from "react"
+import ApiDocsLayout from "@/components/developers/
+import { CodeBlock } from "@/components/developers/
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/
+      path: any

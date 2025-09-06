@@ -19,9 +19,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -170,7 +168,6 @@ import Link from './next / link';
 import { motion  } from './framer-motion';
 import Layout from "./components / Layout";
 import {
-=======
 
 import React from 'react';
 import Head from 'next/head';
@@ -179,7 +176,6 @@ import Head from 'next/head';
 
 import {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   BookOpen,
   Clock,
   User,
@@ -741,12 +737,9 @@ export default function GuidesPage() {
           </div>
         </section>
 
-=======
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </div>
     </Layout>
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center">;
@@ -758,15 +751,7 @@ export default function GuidesPage() {
           </div>;
         </section>;
       </div>;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     </Layout>;
   );
                       </span>;
@@ -873,3 +858,10 @@ export default function GuidesPage() {
       </div>;
     </Layout>);
 }
+import React from "react"
+import Head from "next/
+import Link from "next/
+import Layout from "./components/
+    image: any
+                  href="/
+                  href="/

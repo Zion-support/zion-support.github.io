@@ -28,3 +28,5 @@ const AutonomousBusinessOperationsPlatform = ({ className }) => {
 };
 
 export default AutonomousBusinessOperationsPlatform;
+import React from 'react'
+    

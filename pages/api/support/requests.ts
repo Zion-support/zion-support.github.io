@@ -14,13 +14,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     writeJson('support/requests.json', requests)
     return res.status(200).json({ ok: true, id })
   }
-<<<<<<< HEAD
   return res.status(405).json({ error: 'Method not allowed' })
 
-=======
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { read_json, write_json } from '../../../utils / fs_db',
 ;
@@ -50,9 +47,14 @@ if ( {) {
   return res.status (405).json ({ error: 'Method not allowed' });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from 'next'
+import { readJson, writeJson } from '../../../utils/
+    const requests = readJson<any[]>('support/
+    const requests = readJson<any[]>('support/
+    writeJson('support/
+import { read_json, write_json } from '../../../utils /
+    const requests = read_json < any[]>('support /
+    const requests = read_json < any[]>('support /
+    write_json ('support /

@@ -1,7 +1,6 @@
 
 
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 import React from 'react';
 
 export default function Training() {
@@ -26,17 +25,9 @@ export default function Training() {
 import React from 'react';
 import Layout from '../components/Layout';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Training() {
 
 
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -362,13 +353,7 @@ export default function TrainingPage() {
 
   )
 
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
-=======
 
 
 
@@ -415,40 +400,23 @@ export default function TrainingPage() {
   once: true 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Career? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Get Personalized Guidance </Link> <a href="/resources" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Explore Free Resources </Link> </div> </motion.div> </div> </section> </div> </Layout>) 
 
-=======
 
   )
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 };export default Training;
 
->>>>>>> origin/main
-=======
   )
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 
 export default Training;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 };export default Training;
 
->>>>>>> origin/main
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   )
   );
 };
 export default Training;
-<<<<<<< HEAD
 import Layout from '../components / Layout';
 ;
 export default /**
@@ -482,4 +450,5 @@ function Training() {
 export default Training;
 }export default Training;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import React from 'react'
+import Layout from '../components/

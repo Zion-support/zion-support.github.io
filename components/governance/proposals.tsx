@@ -24,7 +24,6 @@ export async function getStaticProps() {;
     return { props: { data: JSON && JSON.parse(raw) } }
   }catch{;
 
-=======
 import fs from 'fs'
 import path from 'path'
 export async function getStaticProps(){
@@ -121,11 +120,9 @@ export default function Proposals(): any ({ data }: { data: { updatedAt: string|
   );
 }
 
-=======
     return { props: { data: { updated_at: null, proposals: [] } } }
   }
 }
-<<<<<<< HEAD
 export default /**
  * Proposals - Function description
  */
@@ -145,17 +142,19 @@ function Proposals() {
       </ul>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
-=======
 
     </div>
   );
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import fs from 'fs'
+import path from 'path'
+    const p = path.join(process.cwd(), 'data', 'governance', 'proposals.json'
+    const raw = fs.readFileSync(p, 'utf8'
+    
+      <div className='text-sm opacity-70'>Updated: {data.updatedAt |''
+      

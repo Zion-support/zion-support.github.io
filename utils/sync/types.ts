@@ -18,13 +18,10 @@ export interface InstanceConfig {
   peers: Peer[],
   secret_configured: boolean;
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export type SyncEventType =;
   | "proposal";
   | "token_transfer";
@@ -63,7 +60,6 @@ export interface TalentMobilityPayload extends BaseEventPayload {;
   | "leaderboard_entry",
 export interface BaseEventPayload {
   id: string;
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -93,7 +89,6 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
 
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
@@ -128,17 +123,11 @@ export interface MultiverseState {
   proposalMerkleById: Record < string string>;
 
   events: SyncEvent[];
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -152,4 +141,10 @@ export interface MultiverseState {;
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export type SyncScope = "full" | "dao" | "marketplace"
+  | "proposal"
+  | "token_transfer"
+  | "talent_mobility"
+  | "dao_endorsement"
+  | "leaderboard_entry"
+  any

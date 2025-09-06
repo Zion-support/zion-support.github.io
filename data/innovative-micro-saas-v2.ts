@@ -70,7 +70,6 @@
     popular: true,
     icon: '📋',
 
-=======
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / smart - contract - automation - platform',
@@ -94,7 +93,6 @@
       'Polygon',
     ],
 
-=======
     integrations: [;
       'QuickBooks',
       'Salesforce',
@@ -189,7 +187,6 @@
       'TensorFlow',
     ],
 
-=======
     integrations: [;
       'Salesforce',
       'HubSpot',
@@ -284,7 +281,6 @@
       'TensorFlow',
     ],
 
-=======
     integrations: [;
       'Slack',
       'Microsoft Teams',
@@ -401,14 +397,12 @@
     rating: 4.8
 
 
-=======
     reviews: 912
 
   }
 ];
 
 
-=======
     integrations: [;
       'Plaid',
       'Yodlee',
@@ -476,7 +470,6 @@ export interface InnovativeMicroSaasV2 {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
   // Innovative Business Solutions
@@ -504,12 +497,10 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
     }
-<<<<<<< HEAD
     real_implementation: true,
     implementation_details: 'Production - ready AI - powered financial advisory platform with personalized recommendations, portfolio optimization, and comprehensive financial management. Includes custom AI model training.';
     launch_date: '2024 - 02 - 01';
@@ -523,10 +514,40 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
 
 ];
 
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { ServiceVariant } from '../types/
+import { ServiceVariant } from '../types /
+      '24/
+    link: any
+      'Competitive with TradeGecko ($99/month), Zoho Inventory ($99/
+      'AI/
+      website: any
+      'Competitive with OpenZeppelin ($free), ConsenSys ($500+/
+      website: any
+      'Competitive with Gainsight ($500+/month), Totango ($500+/
+      'AI/
+      website: any
+      'Competitive with Zapier ($20+/month), Make ($9+/
+      'AI/
+      website: any
+      'Competitive with Betterment ($0.25%/year), Wealthfront ($0.25%/
+      '24 /
+    link: any
+      'Competitive with Betterment ($0 && 0.25%/year), Wealthfront ($0 && 0.25%/
+      'AI/
+      website: any
+      'Competitive with TradeGecko ($99/month), Zoho Inventory ($99/
+      'AI/
+      website: any
+      'Competitive with OpenZeppelin ($free), ConsenSys ($500+/
+      website: any
+      'Competitive with Gainsight ($500+/month), Totango ($500+/
+      'AI/
+      website: any
+      'Competitive with Zapier ($20+/month), Make ($9+/
+      'AI/
+      website: any
+      'Competitive with Betterment ($0 && 0.25%/year), Wealthfront ($0 && 0.25%/
+      'AI/
+      website: any

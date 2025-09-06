@@ -35,11 +35,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-=======
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Menu,
   X,
   ChevronDown,
@@ -169,7 +166,6 @@ const companyLinks = [
   { name: '⭐ Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star },
   { name: '💰 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign },
   { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase },
-=======
     services: [;
       {
         name: 'Carbon Footprint Tracking',
@@ -221,12 +217,10 @@ const company_links = [;
   { name: '🔒 Support', href: '/support', icon: ShieldCheck }, ];  { name: '⭐ Ultimate 2028', href: '/ultimate - 2028 - services - showcase', icon: Star },
   { name: '💰 2028 Pricing', href: '/revolutionary - 2028 - pricing', icon: DollarSign },
   { name: '📊 Case Studies', href: '/case - studies', icon: Briefcase },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },
   { name: '🎯 About Us', href: '/about', icon: Users },
   { name: '📞 Contact', href: '/contact', icon: MessageCircle },
   { name: '🔒 Support', href: '/support', icon: ShieldCheck }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ];
 
 
@@ -254,11 +248,8 @@ const companyLinks = [;
   { name: '🎯 About Us', href: '/about', icon: Users },;
   { name: '📞 Contact', href: '/contact', icon: MessageCircle },;
   { name: '🔒 Support', href: '/support', icon: ShieldCheck },  { name: '🔒 Support', href: '/support', icon: ShieldCheck }
-=======
-=======
 ;
 const resource_links = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { name: '📖 Documentation', href: '/docs', icon: BookOpen },
   { name: '🎥 Video Tutorials', href: '/tutorials', icon: Video },
   { name: '💡 API Reference', href: '/api', icon: Code },
@@ -268,12 +259,9 @@ const resource_links = [;
   { name: '🔐 Security Center', href: '/security', icon: Shield },
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -283,7 +271,6 @@ const resource_links = [;
 
   const handleCategoryHover = (categoryTitle: string) => {;
     setActiveCategory(categoryTitle);
-=======
 
   const handleCategoryHover = (categoryTitle: string) => {
     setActiveCategory(categoryTitle)
@@ -303,12 +290,10 @@ const resource_links = [;
 
 
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  };
-=======
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleCategoryLeave = () => {
     setActiveCategory(null)
   }
@@ -317,7 +302,6 @@ const resource_links = [;
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
       service.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
-=======
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  };
   const handleCategoryLeave = () => {;
     setActiveCategory(null);
@@ -327,7 +311,6 @@ const resource_links = [;
       service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
       service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 
   return (
@@ -480,15 +463,12 @@ function UltraFuturisticNavigation2028() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
 
-=======
       {/* Main Navigation */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-20'>
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Logo */}
           <div className='flex items-center'>;
             <Link href='/' className='flex items-center space-x-3 group'>;
@@ -573,7 +553,6 @@ function UltraFuturisticNavigation2028() {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Mega Menu */}
               <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">;
                 <div className="p-6">;
@@ -591,8 +570,6 @@ function UltraFuturisticNavigation2028() {
 
 
                             </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           ))}
                         </div>
                       </div>
@@ -601,7 +578,6 @@ function UltraFuturisticNavigation2028() {
 
                         View All Services
 
-=======
                                   </h4>;
                                   <p className="text - xs text - purple - 300">{service.description}</p>;
                                 </div>;
@@ -637,7 +613,6 @@ function UltraFuturisticNavigation2028() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Company Links */}
             {companyLinks && companyLinks.slice(1, 5).map(link => (;
               <Link
@@ -673,15 +648,12 @@ function UltraFuturisticNavigation2028() {
             <div className="relative">;
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;
 
-=======
                       </Link>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
             {/* Company Links */}
             {companyLinks.slice(1, 5).map((link) => (
@@ -697,8 +669,6 @@ function UltraFuturisticNavigation2028() {
             {/* Search */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <input
                 type="text"
                 placeholder="Search services..."
@@ -733,12 +703,9 @@ function UltraFuturisticNavigation2028() {
       </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -750,7 +717,6 @@ function UltraFuturisticNavigation2028() {
 
           >
             <div className='px-4 py-6 space-y-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Mobile Search */}
               <div className='relative'>;
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400' />;
@@ -769,14 +735,9 @@ function UltraFuturisticNavigation2028() {
                 <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>          >;
             <div className="px-4 py-6 space-y-6">;
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           >
             <div className="px-4 py-6 space-y-6">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Mobile Search */}
               <div className="relative">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;
@@ -788,7 +749,6 @@ function UltraFuturisticNavigation2028() {
 
               {/* Mobile Service Categories */}
 
-=======
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white border-b border-purple-500/30 pb-2">
                   Services
@@ -802,21 +762,17 @@ function UltraFuturisticNavigation2028() {
                     <div className="ml-8 space-y-2">
                       {category.services.map((service) => (
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         <Link
                           key={service && service.name}
                           href={service && service.href}
                           onClick={closeMenu}
 
 
-=======
 
 
                         </Link>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       ))}
                     </div>;
                   </div>;
@@ -825,16 +781,12 @@ function UltraFuturisticNavigation2028() {
               </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Mobile Company Links */}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
                 </div>;
@@ -844,7 +796,6 @@ function UltraFuturisticNavigation2028() {
               {/* Mobile CTA */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
                   href='/contact'
                   onClick={closeMenu}
@@ -852,7 +803,6 @@ function UltraFuturisticNavigation2028() {
                   href="/contact"
                   onClick={closeMenu}
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">;
-=======
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -979,11 +929,8 @@ function UltraFuturisticNavigation2028() {
               </div>;
             </div>;
 
-=======
               <div className="pt-4 border-t border-purple-500/30">
-=======
               <div className='pt-4 border-t border-purple-500/30'>
-=======
 
                     </Link>
 
@@ -994,12 +941,6 @@ function UltraFuturisticNavigation2028() {
               {/* Mobile CTA */}
               <div className='pt-4 border-t border-purple-500/30'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <Link
                   href="/contact"
                   onClick={closeMenu}
@@ -1011,7 +952,6 @@ function UltraFuturisticNavigation2028() {
             </div>
           </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
 
       </AnimatePresence>;
@@ -1020,10 +960,7 @@ function UltraFuturisticNavigation2028() {
       {/* Search Results Dropdown */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
             </div>;
           </div>;
@@ -1034,15 +971,12 @@ function UltraFuturisticNavigation2028() {
   );
 
 }
-=======
 
 }
-=======
     </nav>;
   );
 }
     </nav>
-<<<<<<< HEAD
   );
 }
           </motion.div>)}
@@ -1087,4 +1021,287 @@ function UltraFuturisticNavigation2028() {
         </div>)}
     </nav>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import React, { useState, useEffect } from 'react'
+import Link from 'next/
+  website: 'https://ziontechgroup.com',};  website: any
+        price: '$2,999/
+        href: any
+        price: '$4,999/
+        href: any
+        price: '$1,999/
+        href: any
+        price: '$3,999/
+  },  { name: 'AI Climate Prediction Platform', href: '/ai-climate-prediction-platform', description: 'Predict climate changes with 99.9% accuracy', price: '$2,999/
+      { name: 'Quantum Cybersecurity Firewall', href: '/quantum-cybersecurity-firewall', description: 'Unbreakable quantum encryption', price: '$4,999/
+      { name: 'Autonomous Drone Delivery Network', href: '/autonomous-drone-delivery-network', description: 'AI-powered drone delivery', price: '$1,999/
+      { name: 'AI Healthcare Diagnosis Platform', href: '/ai-healthcare-diagnosis-platform', description: 'Revolutionary medical diagnosis', price: '$3,999/
+        href: any
+        price: '$5,999/
+        href: any
+        price: '$1,999/
+        href: any
+        price: '$4,999/
+        href: any
+        price: '$6,999/
+  },  { name: 'Smart City Infrastructure Management', href: '/smart-city-infrastructure-management', description: 'IoT and AI urban optimization', price: '$5,999/
+      { name: 'IoT Energy Management System', href: '/iot-energy-management-system', description: 'Smart energy optimization', price: '$1,999/
+      { name: 'Digital Twin Manufacturing Platform', href: '/digital-twin-manufacturing-platform', description: 'Virtual manufacturing replicas', price: '$4,999/
+      { name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai', description: 'Self-optimizing factories', price: '$6,999/
+        href: any
+        price: '$8,999/
+        href: any
+        price: '$7,999/
+        href: any
+        price: '$3,999/
+        href: any
+        price: '$5,999/
+  },  { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform', description: 'Quantum-powered trading', price: '$8,999/
+      { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform', description: 'Quantum computing for ML', price: '$7,999/
+      { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable internet security', price: '$3,999/
+      { name: 'Quantum Internet Protocol', href: '/quantum-internet-protocol', description: 'Next-generation internet', price: '$5,999/
+        href: any
+        price: '$1,499/
+        href: any
+        price: '$1,299/
+        href: any
+        price: '$2,999/
+  },  { name: 'AI Customer Service Automation', href: '/ai-customer-service-automation', description: 'Intelligent customer support', price: any
+      { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized learning with AI', price: '$1,499/
+      { name: 'AI Content Creation Suite', href: '/ai-content-creation-suite', description: 'Unlimited AI content creation', price: '$1,299/
+      { name: 'AI Legal Research Platform', href: '/ai-legal-research-platform', description: 'Intelligent legal research', price: '$2,999/
+        href: any
+        price: '$2,499/
+        href: any
+        price: '$1,999/
+        href: any
+        price: '$3,999/
+        href: any
+        price: '$2,999/
+  },  { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end supply chain visibility', price: '$2,499/
+      { name: 'Smart Contract Automation Platform', href: '/smart-contract-automation', description: 'Automated blockchain contracts', price: '$1,999/
+      { name: 'DeFi Yield Optimization', href: '/defi-yield-optimization', description: 'Maximize DeFi returns', price: '$3,999/
+      { name: 'NFT Marketplace Platform', href: '/nft-marketplace-platform', description: 'Complete NFT ecosystem', price: '$2,999/
+        href: any
+        price: '$3,999/
+        href: any
+        price: '$4,999/
+        href: any
+        price: '$2,999/
+        href: any
+        price: '$1,999/
+  },  { name: 'Autonomous Vehicle Fleet Management', href: '/autonomous-vehicle-fleet-management', description: 'Intelligent fleet management', price: '$3,999/
+      { name: 'Smart Traffic Management System', href: '/smart-traffic-management', description: 'AI traffic optimization', price: '$4,999/
+      { name: 'Electric Vehicle Charging Network', href: '/ev-charging-network', description: 'Smart EV infrastructure', price: '$2,999/
+      { name: 'Mobility as a Service Platform', href: '/mobility-as-a-service', description: 'Integrated mobility solutions', price: '$1,999/
+        href: any
+        price: '$9,999/
+        href: any
+        price: '$4,999/
+        href: any
+        price: '$2,999/
+        href: any
+        price: '$3,999/
+  },  { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery-platform', description: 'Accelerate drug development', price: '$9,999/
+      { name: 'Personalized Medicine AI', href: '/personalized-medicine-ai', description: 'Tailored treatment plans', price: '$4,999/
+      { name: 'Telemedicine AI Platform', href: '/telemedicine-ai-platform', description: 'Intelligent remote healthcare', price: '$2,999/
+      { name: 'Medical Imaging AI', href: '/medical-imaging-ai', description: 'Advanced diagnostic imaging', price: '$3,999/
+        href: any
+        price: '$1,999/
+        href: any
+        price: '$2,499/
+        href: any
+        price: '$1,299/
+  },  { name: 'Virtual Reality Learning Platform', href: '/vr-learning-platform', description: 'Immersive educational experiences', price: '$1,999/
+      { name: 'AI Tutoring System', href: '/ai-tutoring-system', description: 'Personalized AI tutoring', price: any
+      { name: 'Corporate Training AI', href: '/corporate-training-ai', description: 'Intelligent employee training', price: '$2,499/
+      { name: 'Language Learning AI', href: '/language-learning-ai', description: 'AI-powered language acquisition', price: '$1,299/
+        href: any
+        price: '$2,999/
+        href: any
+        price: '$3,999/
+        href: any
+        price: '$1,999/
+        href: any
+        price: '$1,499/
+  },  { name: 'Contract Analysis AI', href: '/contract-analysis-ai', description: 'Intelligent contract review', price: '$2,999/
+      { name: 'Compliance Monitoring Platform', href: '/compliance-monitoring-platform', description: 'Automated compliance tracking', price: '$3,999/
+      { name: 'Legal Document Automation', href: '/legal-document-automation', description: 'Automated legal documents', price: '$1,999/
+      { name: 'Regulatory Change Tracker', href: '/regulatory-change-tracker', description: 'Monitor regulatory updates', price: '$1,499/
+        href: any
+        price: '$1,499/
+        href: any
+        price: '$2,999/
+        href: any
+        price: '$1,999/
+        href: any
+        price: '$3,999/
+  },];      { name: 'Carbon Footprint Tracking', href: '/carbon-footprint-tracking', description: 'Monitor environmental impact', price: '$1,499/
+      { name: 'Renewable Energy Management', href: '/renewable-energy-management', description: 'Optimize green energy', price: '$2,999/
+      { name: 'Waste Management AI', href: '/waste-management-ai', description: 'Intelligent waste optimization', price: '$1,999/
+      { name: 'Quantum Cybersecurity Firewall', href: '/quantum-cybersecurity-firewall', description: 'Unbreakable quantum encryption', price: '$4,999/
+      { name: 'Autonomous Drone Delivery Network', href: '/autonomous-drone-delivery-network', description: 'AI-powered drone delivery', price: '$1,999/
+      { name: 'AI Healthcare Diagnosis Platform', href: '/ai-healthcare-diagnosis-platform', description: 'Revolutionary medical diagnosis', price: '$3,999/
+        href: any
+        price: '$5,999/
+        href: any
+        price: '$1,999/
+        href: any
+        price: '$4,999/
+        href: any
+        price: '$6,999/
+  },  { name: 'Smart City Infrastructure Management', href: '/smart-city-infrastructure-management', description: 'IoT and AI urban optimization', price: '$5,999/
+      { name: 'Smart City Infrastructure Management', href: '/smart-city-infrastructure-management', description: 'IoT and AI urban optimization', price: '$5,999/
+      { name: 'IoT Energy Management System', href: '/iot-energy-management-system', description: 'Smart energy optimization', price: '$1,999/
+      { name: 'Digital Twin Manufacturing Platform', href: '/digital-twin-manufacturing-platform', description: 'Virtual manufacturing replicas', price: '$4,999/
+      { name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai', description: 'Self-optimizing factories', price: '$6,999/
+        href: any
+        price: '$8,999/
+        href: any
+        price: '$7,999/
+        href: any
+        price: '$3,999/
+        href: any
+        price: '$5,999/
+  },  { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform', description: 'Quantum-powered trading', price: '$8,999/
+      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform', description: 'Quantum-powered trading', price: '$8,999/
+      { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform', description: 'Quantum computing for ML', price: '$7,999/
+      { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable internet security', price: '$3,999/
+      { name: 'Quantum Internet Protocol', href: '/quantum-internet-protocol', description: 'Next-generation internet', price: '$5,999/
+        href: any
+        price: '$1,499/
+        href: any
+        price: '$1,299/
+        href: any
+        price: '$2,999/
+  },  { name: 'AI Customer Service Automation', href: '/ai-customer-service-automation', description: 'Intelligent customer support', price: any
+      { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized learning with AI', price: '$1,499/
+      { name: 'AI Content Creation Suite', href: '/ai-content-creation-suite', description: 'Unlimited AI content creation', price: '$1,299/
+      { name: 'AI Legal Research Platform', href: '/ai-legal-research-platform', description: 'Intelligent legal research', price: '$2,999/
+        href: any
+        price: '$2,499/
+        href: any
+        price: '$1,999/
+        href: any
+        price: '$3,999/
+        href: any
+        price: '$2,999/
+  },  { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end supply chain visibility', price: '$2,499/
+      { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end supply chain visibility', price: '$2,499/
+      { name: 'Smart Contract Automation Platform', href: '/smart-contract-automation', description: 'Automated blockchain contracts', price: '$1,999/
+      { name: 'DeFi Yield Optimization', href: '/defi-yield-optimization', description: 'Maximize DeFi returns', price: '$3,999/
+      { name: 'NFT Marketplace Platform', href: '/nft-marketplace-platform', description: 'Complete NFT ecosystem', price: '$2,999/
+        href: any
+        price: '$3,999/
+        href: any
+        price: '$4,999/
+        href: any
+        price: '$2,999/
+        href: any
+        price: '$1,999/
+  },  { name: 'Autonomous Vehicle Fleet Management', href: '/autonomous-vehicle-fleet-management', description: 'Intelligent fleet management', price: '$3,999/
+      { name: 'Smart Traffic Management System', href: '/smart-traffic-management', description: 'AI traffic optimization', price: '$4,999/
+      { name: 'Electric Vehicle Charging Network', href: '/ev-charging-network', description: 'Smart EV infrastructure', price: '$2,999/
+      { name: 'Mobility as a Service Platform', href: '/mobility-as-a-service', description: 'Integrated mobility solutions', price: '$1,999/
+        href: any
+        price: '$9,999/
+        href: any
+        price: '$4,999/
+        href: any
+        price: '$2,999/
+        href: any
+        price: '$3,999/
+  },  { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery-platform', description: 'Accelerate drug development', price: '$9,999/
+      { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery-platform', description: 'Accelerate drug development', price: '$9,999/
+      { name: 'Personalized Medicine AI', href: '/personalized-medicine-ai', description: 'Tailored treatment plans', price: '$4,999/
+      { name: 'Telemedicine AI Platform', href: '/telemedicine-ai-platform', description: 'Intelligent remote healthcare', price: '$2,999/
+      { name: 'Medical Imaging AI', href: '/medical-imaging-ai', description: 'Advanced diagnostic imaging', price: '$3,999/
+        href: any
+        price: '$1,999/
+        href: any
+        price: '$2,499/
+        href: any
+        price: '$1,299/
+  },  { name: 'Virtual Reality Learning Platform', href: '/vr-learning-platform', description: 'Immersive educational experiences', price: '$1,999/
+      { name: 'AI Tutoring System', href: '/ai-tutoring-system', description: 'Personalized AI tutoring', price: any
+      { name: 'Corporate Training AI', href: '/corporate-training-ai', description: 'Intelligent employee training', price: '$2,499/
+      { name: 'Language Learning AI', href: '/language-learning-ai', description: 'AI-powered language acquisition', price: '$1,299/
+        href: any
+        price: '$2,999/
+        href: any
+        price: '$3,999/
+        href: any
+        price: '$1,999/
+        href: any
+        price: '$1,499/
+  },  { name: 'Contract Analysis AI', href: '/contract-analysis-ai', description: 'Intelligent contract review', price: '$2,999/
+      { name: 'Contract Analysis AI', href: '/contract-analysis-ai', description: 'Intelligent contract review', price: '$2,999/
+      { name: 'Compliance Monitoring Platform', href: '/compliance-monitoring-platform', description: 'Automated compliance tracking', price: '$3,999/
+      { name: 'Legal Document Automation', href: '/legal-document-automation', description: 'Automated legal documents', price: '$1,999/
+      { name: 'Regulatory Change Tracker', href: '/regulatory-change-tracker', description: 'Monitor regulatory updates', price: '$1,499/
+        href: any
+        price: '$1,499/
+        href: any
+        price: '$2,999/
+        href: any
+        price: '$1,999/
+        href: any
+        price: '$3,999/
+  },];      { name: 'Carbon Footprint Tracking', href: '/carbon-footprint-tracking', description: 'Monitor environmental impact', price: '$1,499/
+      { name: 'Carbon Footprint Tracking', href: '/carbon-footprint-tracking', description: 'Monitor environmental impact', price: '$1,499/
+      { name: 'Renewable Energy Management', href: '/renewable-energy-management', description: 'Optimize green energy', price: '$2,999/
+      { name: 'Waste Management AI', href: '/waste-management-ai', description: 'Intelligent waste optimization', price: '$1,999/
+      { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/
+  { name: ' Home', href: any
+  { name: ' 2028 Services', href: any
+  },  { name: ' Case Studies', href: any
+  { name: ' Blog & Resources', href: any
+  { name: ' About Us', href: any
+  { name: ' Contact', href: any
+  { name: ' Support', href: '/support', icon: ShieldCheck },];  { name: ' Ultimate 2028', href: any
+  { name: ' 2028 Pricing', href: any
+  { name: ' Case Studies', href: any
+  { name: ' Blog & Resources', href: any
+  { name: ' About Us', href: any
+  { name: ' Contact', href: any
+  { name: ' Support', href: '/support', icon: ShieldCheck },  { name: ' Support', href: any
+  { name: ' Blog & Resources', href: any
+  { name: ' About Us', href: any
+  { name: ' Contact', href: any
+  { name: ' Support', href: any
+  { name: ' Documentation', href: any
+  { name: ' Video Tutorials', href: any
+  { name: ' API Reference', href: any
+  { name: ' Developer Tools', href: any
+  { name: ' Mobile Apps', href: any
+  { name: ' Cloud Services', href: any
+  { name: ' Security Center', href: any
+  { name: ' Analytics', href: '/analytics', icon: BarChart3 },];  { name: ' Analytics', href: any
+  { name: ' Home', href: any
+  { name: ' 2028 Services', href: any
+  },  { name: ' Case Studies', href: any
+  { name: ' Blog & Resources', href: any
+  { name: ' About Us', href: any
+  { name: ' Contact', href: any
+  { name: ' Support', href: '/support', icon: ShieldCheck },];  { name: ' Ultimate 2028', href: any
+  { name: ' 2028 Pricing', href: any
+  { name: ' Case Studies', href: any
+  { name: ' Blog & Resources', href: any
+  { name: ' About Us', href: any
+  { name: ' Contact', href: any
+  { name: ' Support', href: '/support', icon: ShieldCheck },  { name: ' Support', href: any
+  { name: ' Documentation', href: any
+  { name: ' Video Tutorials', href: any
+  { name: ' API Reference', href: any
+  { name: ' Developer Tools', href: any
+  { name: ' Mobile Apps', href: any
+  { name: ' Cloud Services', href: any
+  { name: ' Security Center', href: any
+  { name: ' Analytics', href: any
+  { name: ' Documentation', href: any
+  { name: ' Video Tutorials', href: any
+  { name: ' API Reference', href: any
+  { name: ' Developer Tools', href: any
+  { name: ' Mobile Apps', href: any
+  { name: ' Cloud Services', href: any
+  { name: ' Security Center', href: any
+  { name: ' Analytics', href: '/analytics', icon: BarChart3 },];  { name: ' Analytics', href: any

@@ -232,7 +232,6 @@ export function DisputeDetail() {;
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">2</Badge>;
                           <span>Under review</span>;
                         </li>;
-<<<<<<< HEAD
                       )}
                       ;
                       {dispute.resolved_at && (;
@@ -243,7 +242,6 @@ export function DisputeDetail() {;
                           <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
                         </li>;
                       )}
-=======
                       )}
                       ;
                       {dispute.resolved_at && (;
@@ -254,7 +252,6 @@ export function DisputeDetail() {;
                           <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
                         </li>;
                       )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     </ul>;
                   </div>;
                 </CardContent>;
@@ -690,3 +687,22 @@ formatDistanceToNow (new Date (dispute.created at), {
 }> Add Admin Note </Button> </div> </div> </CardContent> </Card> </TabsContent>) 
 }</Tabs> </div> <div className="space-y-6" > <Card> <CardHeader> <CardTitle>Parties Involved</CardTitle> </CardHeader> </p> </div> </div> <div className="flex justify-center" > <ArrowDown className="h-6 w-6 text-muted-foreground" /> </div> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> </div> </CardContent> </Card> </div> </div> </div>) 
 }
+import React, { useState, useEffect } from "react"
+import { useParams, useNavigate } from "react-router-dom"
+import { useDisputes } from "@/hooks/
+import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/
+import { Button } from "@/components/ui/
+import { Textarea } from "@/components/ui/
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/
+import { Badge } from "@/components/ui/
+import { Separator } from "@/components/ui/
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/
+import { useAuth } from "@/hooks/
+          navigate("/dashboard/
+        <Button onClick={() => navigate("/dashboard/
+      case "resolved":return "outline", //
+          <Button variant="outline" onClick={() => navigate("/dashboard/
+        
+className="min-h-[100px]" /> <div className="grid grid-cols-2 gap-4"> <div> <label className="text-sm font-medium mb-1 block">Resolution Type</label> <select > <option value="client favor" >In Client's Favor

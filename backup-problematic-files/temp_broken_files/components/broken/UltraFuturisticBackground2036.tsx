@@ -2,14 +2,10 @@ import React, { useEffect, useRef } from 'react';
 interface UltraFuturisticBackground2036Props {variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber';
   intensity?: 'low' | 'medium' | 'high';
 }
-<<<<<<< HEAD:components/broken/UltraFuturisticBackground2036.tsx
-<<<<<<< HEAD
 export default function UltraFuturisticBackground2036({variant = 'default';
-=======
 ;
 export default function UltraFuturisticBackground2036({;
   variant = 'default',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   intensity = 'medium';
 }: UltraFuturisticBackground2036Props) {const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
@@ -214,14 +210,10 @@ export default function UltraFuturisticBackground2036({;
     animate();
     return () => {if (animationRef.current) {;
         cancelAnimationFrame(animationRef.current);
-<<<<<<< HEAD
       }
       window.removeEventListener('resize', resizeCanvas);
     }
 }, [variant, intensity])
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 ;
 export default function UltraFuturisticBackground2036({;
@@ -433,7 +425,6 @@ export default function UltraFuturisticBackground2036({;
         cancelAnimationFrame(animationRef.current);
 
 
-=======
 
 export default function UltraFuturisticBackground2036({ 
   variant = 'default',
@@ -699,7 +690,6 @@ const nebulaGradient = ctx.createRadialGradient(
         cancelAnimationFrame(animationRef.current)
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       window.removeEventListener('resize', resizeCanvas)
     }
@@ -721,12 +711,8 @@ ref={canvasRef}
 
         ;
 
-=======
 ;
-=======
         ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Quantum field lines */}
 {variant === 'quantum' && (
           <div className=&quot;absolute inset-0&quot;>
@@ -751,7 +737,6 @@ key={i}
                   duration: 4, repeat: Infinity, delay: i * 0.8}}
               />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>;
         )}
@@ -760,3 +745,58 @@ key={i}
   );
 }
 export default UltraFuturisticBackground2036;
+import React, { useEffect, useRef } from 'react'
+interface UltraFuturisticBackground2036Props {variant?: any
+export default function UltraFuturisticBackground2036({variant = 'default'
+  intensity = 'medium'
+    if (typeof window = = 'undefined'
+    const ctx = canvas.getContext('2d'
+      type: any
+    const colors = {quantum: ['#00ffff#0080ff#8000ff#ff0080'
+      neon: ['#00ff00#ff00ff#ffff00#00ffff'
+      energy: ['#ff6600#ff0066#6600ff#00ff66'
+      data: ['#00ccff#cc00ff#ffcc00#00ffcc'
+        type: variant = = 'default' ? ['quantumneonenergydata'
+      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)'
+      gradient.addColorStop(0.3, 'rgba(20, 20, 40, 0.6)'
+      gradient.addColorStop(0.7, 'rgba(40, 20, 60, 0.4)'
+      gradient.addColorStop(1, 'rgba(0, 0, 0, 0.8)'
+        glowGradient.addColorStop(0, `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0'
+        glowGradient.addColorStop(0.5, `${particle.color}${Math.floor(particle.opacity * 100).toString(16).padStart(2, '0'
+        glowGradient.addColorStop(1, 'transparent'
+      if (variant = = 'quantum' |variant = = 'ai'
+      if (variant = = 'ai'
+      if (variant = = 'space'
+      nebulaGradient.addColorStop(0, 'rgba(255, 0, 255, 0.1)'
+      nebulaGradient.addColorStop(0.5, 'rgba(0, 255, 255, 0.05)'
+      nebulaGradient.addColorStop(1, 'transparent'
+      window.removeEventListener('resize'
+  variant = 'default'
+  intensity = 'medium'
+    if (typeof window = = 'undefined'
+    const ctx = canvas.getContext('2d'
+      type: any
+      quantum: ['#00ffff#0080ff#8000ff#ff0080'
+      neon: ['#00ff00#ff00ff#ffff00#00ffff'
+      energy: ['#ff6600#ff0066#6600ff#00ff66'
+      data: ['#00ccff#cc00ff#ffcc00#00ffcc'
+        type: variant = = 'default' ? ['quantumneonenergydata'
+      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)'
+      gradient.addColorStop(0.3, 'rgba(20, 20, 40, 0.6)'
+      gradient.addColorStop(0.7, 'rgba(40, 20, 60, 0.4)'
+      gradient.addColorStop(1, 'rgba(0, 0, 0, 0.8)'
+        glowGradient.addColorStop(0, `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0'
+        glowGradient.addColorStop(0.5, `${particle.color}${Math.floor(particle.opacity * 100).toString(16).padStart(2, '0'
+        glowGradient.addColorStop(1, 'transparent'
+if (variant = = 'quantum' || variant = = 'ai'
+if (variant = = 'ai'
+if (variant = = 'space'
+      nebulaGradient.addColorStop(0, 'rgba(255, 0, 255, 0.1)'
+      nebulaGradient.addColorStop(0.5, 'rgba(0, 255, 255, 0.05)'
+      nebulaGradient.addColorStop(1, 'transparent'
+      window.removeEventListener('resize'
+        style={ display: any
+        {variant = = 'cyber'
+variant = = 'quantum'
+                  transform: 'translateX(-50%)'
+variant = = 'ai'

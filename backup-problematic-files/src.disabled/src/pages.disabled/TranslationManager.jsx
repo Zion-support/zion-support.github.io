@@ -28,3 +28,5 @@ const TranslationManager = ({ className }) => {
 };
 
 export default TranslationManager;
+import React from 'react'
+    

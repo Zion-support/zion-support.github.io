@@ -1,6 +1,5 @@
 
 
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -24,11 +23,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/index.tsx
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -37,7 +33,6 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-=======
 import { ;
   Heart, ;
 import React from 'react';
@@ -56,18 +51,13 @@ import { motion } from 'framer-motion';
 
 
 } from 'lucide-react';
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import SimpleLayout from '../../components/SimpleLayout';
   Brain;
 } from 'lucide-react';
 import Layout from '../../components/Layout';';
 
-=======
 const industries = [;
   {;
     name: 'Healthcare',;
@@ -96,11 +86,9 @@ const industries = [;
     icon: Settings,
 
 
-=======
     href: '/industries/manufacturing',
     features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],
     color: 'from-blue-500 to-cyan-500'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     href: '/industries/manufacturing,',
     features: ['IoT Integration, 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],',
     color: 'from-blue-500 to-cyan-500'';
@@ -111,11 +99,9 @@ const industries = [;
     icon: ShoppingCart,
 
 
-=======
     href: '/industries/retail',
     features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],
     color: 'from-purple-500 to-violet-500'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     href: '/industries/retail,',
     features: ['Personalization, 'Inventory Management', 'Omnichannel', 'Customer Analytics'],',
     color: 'from-purple-500 to-violet-500'';
@@ -126,11 +112,9 @@ const industries = [;
     icon: BookOpen,
 
 
-=======
     href: '/industries/education',
     features: ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],
     color: 'from-orange-500 to-yellow-500'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     href: '/industries/education,',
     features: ['AI Tutoring, 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],',
     color: 'from-orange-500 to-yellow-500'';
@@ -154,13 +138,8 @@ const stats = [
 ];
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     href: '/industries/government,',
     features: ['Citizen Portals, 'Data Analytics', 'Digital Services', 'Security Compliance'],',
     color: 'from-gray-500 to-slate-500'';
@@ -175,13 +154,8 @@ const stats = [;
 
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function IndustriesPage() {
   return (;
     <Layout);
@@ -236,7 +210,6 @@ const industries = [
   }
 
 
-=======
 ];
 export default function Industries() {;
   return (
@@ -245,10 +218,8 @@ export default function Industries() {;
       description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors."
       keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -266,13 +237,8 @@ export default function Industries() {;
 
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -422,11 +388,8 @@ export default function Industries() {;
               </p>;
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Industries We Serve
@@ -461,9 +424,7 @@ export default function Industries() {;
 
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
 
 
@@ -476,9 +437,7 @@ export default function Industries() {;
                     key={index}
 
 
-=======
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     className="bg-white/10 backdrop-blur-md rounded-xl p-8 hover:bg-white/20 transition-all duration-300 group"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -572,8 +531,6 @@ export default function Industries() {;
 
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/index.tsx
         {/* Why Choose Us Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -581,10 +538,7 @@ export default function Industries() {;
               className="text-center mb-16"
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
             <motion.div;
@@ -603,9 +557,7 @@ export default function Industries() {;
             </motion.div>;
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
                 className="text-center p-8"
@@ -623,9 +575,6 @@ export default function Industries() {;
                 <p className="text-gray-600">
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
               >,
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">";
                   <Users className="w-8 h-8 text-blue-600" />";
@@ -670,9 +619,6 @@ export default function Industries() {;
                 <p className="text-gray-600">
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
               >,
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">";
                   <Cloud className="w-8 h-8 text-purple-600" />";
@@ -689,10 +635,8 @@ export default function Industries() {;
         {/* Stats Section */}
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -702,9 +646,6 @@ export default function Industries() {;
                   className="text-center"
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
@@ -779,3 +720,23 @@ export default function Industries() {;
 
     </Layout>
   );
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import { motion } from 'framer-motion'
+import Link from 'next/
+import Layout from '../../components/
+import Link from 'next/
+import Link from 'next/
+import Link from 'next/
+import Link from 'next/
+import Link from 'next/
+import SimpleLayout from '../../components/
+import Layout from '../../components/
+    href: any
+  { number: any
+  { number: any

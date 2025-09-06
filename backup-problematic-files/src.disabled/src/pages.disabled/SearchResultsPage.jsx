@@ -28,3 +28,5 @@ const SearchResultsPage = ({ className }) => {
 };
 
 export default SearchResultsPage;
+import React from 'react'
+    

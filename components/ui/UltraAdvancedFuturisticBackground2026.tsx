@@ -8,7 +8,6 @@ import { motion } from 'framer-motion';
 interface UltraAdvancedFuturisticBackground2026Props {
   intensity?: 'low' | 'medium' | 'high' | 'extreme',
 interface UltraAdvancedFuturisticBackground2026Props {;
-=======
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraAdvancedFuturisticBackground2026Props {
@@ -30,7 +29,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<;
   children,}) => {const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   intensity = 'high';
   colorScheme = 'neural-network';
   particleCount = 300;
@@ -76,7 +74,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<;
         canvas && canvas.width = rect && rect.width;
         canvas && canvas.height = rect && rect.height;        canvas && canvas.height = rect && rect.height;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
     resizeCanvas();
@@ -178,7 +175,6 @@ if ( {) {
 
       x: number,
       y: number,
-=======
       max_life: number;      coordinate_x: number,
       coordinate_y: number,
 
@@ -227,10 +223,8 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Neural network node class
     class NeuralNode {
-=======
       maxLife: number;      x: number,;
       y: number,;
       vx: number,;
@@ -277,26 +271,14 @@ if ( {) {
     }
     // Neural network node class;
     class NeuralNode {;
-=======
-<<<<<<< HEAD
         ctx.restore();      }        ctx.restore()
-=======
         ctx.restore();      }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Neural network node class
     class NeuralNode {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       x: number;
       y: number;
       connections: NeuralNode[];
@@ -310,22 +292,18 @@ if ( {) {
         this && this.activation = Math && Math.max(0, Math && Math.min(1, this && this.activation));
         this && this.pulse = Math && Math.sin(Date && Date.now() * 0 && 0.001 + this && this.x * 0 && 0.01) * 0 && 0.5 + 0 && 0.5;      }        this && this.pulse = Math && Math.sin(Date && Date.now() * 0 && 0.001 + this && this.x * 0 && 0.01) * 0 && 0.5 + 0 && 0.5;
       }
-=======
             ctx.stroke();
           }
         });
 
 
-=======
         ctx.restore();      }
 
       }
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       draw() {;
         ctx && ctx.save();
@@ -394,7 +372,6 @@ if ( {) {
           ctx.lineWidth = 2;
           ctx.beginPath();
           ctx.arc(this.x, this.y, waveRadius, 0, Math.PI * 2);
-<<<<<<< HEAD
           ctx.stroke()
 
         }
@@ -402,14 +379,11 @@ if ( {) {
 
       }
 
-=======
 
 
 
 
 
-=======
-=======
 
         ctx.restore();      }
 
@@ -417,8 +391,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     // Holographic layer class
     class HolographicLayer {
@@ -655,19 +627,15 @@ if ( {) {
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         ctx.restore()
 
       }
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Get color based on scheme
     function getColorSchemeColor(): string {
       const colors = {
@@ -758,26 +726,72 @@ Math.random() * canvas.width;
       gradient.addColorStop(1, currentBgColors[2]);
       const bgColors = {
         'neural-network': [
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import React, { useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
+import { motion } from 'framer-motion'
+  intensity?: any
+import React, { useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
+  intensity?: any
+  intensity = 'high'
+  colorScheme = 'neural-network'
+  intensity = 'high'
+  colorScheme = 'neural-network'
+  intensity = 'high'
+  colorScheme = 'neural-network'
+    const ctx = canvas.getContext('2d'
+    const ctx = canvas && canvas.getContext('2d'
+    window.addEventListener('resize'
+    | 'neural - network'
+    | 'quantum - field'
+    | 'cyberpunk'
+    | 'holographic'
+    | 'multidimensional'
+  intensity?: any
+  intensity = 'high'
+  color_scheme = 'neural - network'
+  intensity = 'high'
+  color_scheme = 'neural - network'
+    const ctx = canvas.get_context ('2d'
+    window.addEventListener ('resize'
+        'neural-network': ['#00ffff', '#0080ff', '#8000ff', '#ff0080'
+        'quantum-field': ['#00ff80', '#80ff00', '#ff8000', '#ff0080'
+        cyberpunk: ['#ff0066', '#00ffff', '#ffff00', '#ff6600'
+        holographic: ['#ff00ff', '#00ffff', '#ffff00', '#ff8000'
+        multidimensional: ['#8000ff', '#00ff80', '#ff8000', '#0080ff'
+      const schemeColors = colors[colorScheme] |colors['neural-network'
+        'neural-network': ['rgba(0, 0, 20, 0.8)rgba(0, 20, 40, 0.6)rgba(20, 0, 40, 0.4)'
+        'quantum-field': ['rgba(0, 20, 0, 0.8)rgba(20, 40, 0, 0.6)rgba(40, 0, 20, 0.4)'
+        'cyberpunk': ['rgba(40, 0, 20, 0.8)rgba(20, 0, 40, 0.6)rgba(0, 20, 40, 0.4)'
+        'holographic': ['rgba(40, 0, 40, 0.8)rgba(0, 40, 40, 0.6)rgba(40, 40, 0, 0.4)'
+        'multidimensional': ['rgba(20, 0, 40, 0.8)rgba(0, 40, 20, 0.6)rgba(40, 20, 0, 0.4)'
+      const currentBgColors = bgColors[colorScheme] |bgColors['neural-network'
+        'neural-network'
           'rgba(0, 0, 20, 0.8)'
           'rgba(0, 20, 40, 0.6)'
           'rgba(20, 0, 40, 0.4)'
-        ]
-        'quantum-field': [
+        'quantum-field'
           'rgba(0, 20, 0, 0.8)'
           'rgba(20, 40, 0, 0.6)'
           'rgba(40, 0, 20, 0.4)'
-        ]
-        cyberpunk: [
           'rgba(40, 0, 20, 0.8)'
           'rgba(20, 0, 40, 0.6)'
           'rgba(0, 20, 40, 0.4)'
-        ]
-        holographic: [
           'rgba(40, 0, 40, 0.8)'
           'rgba(0, 40, 40, 0.6)'
           'rgba(40, 40, 0, 0.4)'
-        ]
-        multidimensional: [
           'rgba(20, 0, 40, 0.8)'
           'rgba(0, 40, 20, 0.6)'
           'rgba(40, 20, 0, 0.4)'
@@ -1129,7 +1143,6 @@ Math.random() * canvas.width;
               ctx && ctx.stroke();
               ctx && ctx.restore();
 
-=======
         this.coordinate_x = Math.random () * canvas.width;
         this.coordinate_y = Math.random () * canvas.height;
         this.width = Math.random () * 200 + 100;
@@ -1390,13 +1403,9 @@ if ( {) {
               ctx.line_to (other_particle.x, other_particle.y);
               ctx.stroke ();
               ctx.restore ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }
           });
         });
@@ -1435,12 +1444,10 @@ if ( {) {
 
 
 
-=======
 
 
 
     >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
@@ -1449,12 +1456,9 @@ if ( {) {
       />;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Additional visual effects */}
       {enableMultidimensional && (;
         <div className='absolute inset-0 pointer-events-none'>;
@@ -1513,7 +1517,6 @@ if ( {) {
   }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects, enableNeuralNetworks, enableMultidimensional]);
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
 
       />;
@@ -1549,8 +1552,6 @@ if ( {) {
 
 };
 export default UltraAdvancedFuturisticBackground2026;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               ease: 'easeInOut',              ease: "easeInOut";
             }}
           />;
@@ -1565,10 +1566,43 @@ export default UltraAdvancedFuturisticBackground2026;      {children}
 ;
 export default UltraAdvancedFuturisticBackground2026;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
               duration: 10,
               repeat: Infinity,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        bgColors[colorScheme] |bgColors['neural-network'
+      if (intensity = = 'extreme' |intensity = = 'high'
+        'neural - network': ['#00ffff', '#0080ff', '#8000ff', '#ff0080'
+        'quantum - field': ['#00ff80', '#80ff00', '#ff8000', '#ff0080'
+        cyberpunk: ['#ff0066', '#00ffff', '#ffff00', '#ff6600'
+        holographic: ['#ff00ff', '#00ffff', '#ffff00', '#ff8000'
+        multidimensional: ['#8000ff', '#00ff80', '#ff8000', '#0080ff'
+      const scheme_colors = colors[color_scheme] || colors['neural - network'
+        'neural - network': ['rgba (0, 0, 20, 0.8)rgba (0, 20, 40, 0.6)rgba (20, 0, 40, 0.4)'
+        'quantum - field': ['rgba (0, 20, 0, 0.8)rgba (20, 40, 0, 0.6)rgba (40, 0, 20, 0.4)'
+        'cyberpunk': ['rgba (40, 0, 20, 0.8)rgba (20, 0, 40, 0.6)rgba (0, 20, 40, 0.4)'
+        'holographic': ['rgba (40, 0, 40, 0.8)rgba (0, 40, 40, 0.6)rgba (40, 40, 0, 0.4)'
+        'multidimensional': ['rgba (20, 0, 40, 0.8)rgba (0, 40, 20, 0.6)rgba (40, 20, 0, 0.4)'
+      const currentBgColors = bg_colors[color_scheme] || bg_colors['neural - network'
+        'neural - network'
+          'rgba (0, 0, 20, 0.8)'
+          'rgba (0, 20, 40, 0.6)'
+          'rgba (20, 0, 40, 0.4)'
+        'quantum - field'
+          'rgba (0, 20, 0, 0.8)'
+          'rgba (20, 40, 0, 0.6)'
+          'rgba (40, 0, 20, 0.4)'
+          'rgba (40, 0, 20, 0.8)'
+          'rgba (20, 0, 40, 0.6)'
+          'rgba (0, 20, 40, 0.4)'
+          'rgba (40, 0, 40, 0.8)'
+          'rgba (0, 40, 40, 0.6)'
+          'rgba (40, 40, 0, 0.4)'
+          'rgba (20, 0, 40, 0.8)'
+          'rgba (0, 40, 20, 0.6)'
+          'rgba (40, 20, 0, 0.4)'
+        bg_colors[color_scheme] || bg_colors['neural - network'
+      window.removeEventListener('resize'
+      window && window.removeEventListener('resize'
+        className='absolute inset-0 w-full h-full'
+        

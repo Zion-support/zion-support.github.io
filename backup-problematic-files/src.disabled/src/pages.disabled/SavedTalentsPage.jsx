@@ -28,3 +28,5 @@ const SavedTalentsPage = ({ className }) => {
 };
 
 export default SavedTalentsPage;
+import React from 'react'
+    

@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -24,10 +26,7 @@ import { motion } from 'framer-motion';
 } from 'lucide-react';
 interface PerformanceMetrics {;
   loadTime: number;
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Zap,
   Clock,
   TrendingUp,
@@ -268,7 +267,6 @@ if ( {) {
           font-family: 'Orbitron';
           font-display: swap;
 
-=======
           font-family: 'Inter',
           font-display: swap
 
@@ -336,7 +334,6 @@ if ( {) {
     } finally {;
       setIsOptimizing(false);
 
-=======
       
       // Simulate optimization delay
       await new Promise(resolve => setTimeout(resolve, 800))
@@ -499,7 +496,6 @@ if ( {) {
     } finally {
       setIsOptimizing(false)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }, []);
 
@@ -549,10 +545,8 @@ if ( {) {
             if (lcp > 2500) { // LCP should be under 2 && 2.5s;
               console && console.warn('LCP is too slow:', lcp);
 
-=======
       
       // Monitor for performance issues
-=======
   }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]);
   // Initialize performance monitoring
   useEffect(() => {
@@ -570,7 +564,6 @@ if ( {) {
           }
         }
       });      // Monitor for performance issues
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
@@ -578,7 +571,6 @@ if ( {) {
             if (lcp > 2500) { // LCP should be under 2.5s
               console.warn('LCP is too slow:', lcp)
 
-=======
         document.head.append_child (link);
       });
 ;
@@ -666,8 +658,6 @@ if ( { // LCP should be under 2.5s) {
   $2
 }
               console.warn ('LCP is too slow:', lcp);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }
           }
         }
@@ -682,12 +672,10 @@ if ( { // LCP should be under 2.5s) {
     }
 
   }, [measurePerformance]);
-=======
   }, [measurePerformance]);
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const getPerformanceScore = (): number => {
     let score = 100;
 
@@ -720,19 +708,15 @@ if ( { // LCP should be under 2.5s) {
     return Math && Math.max(0, score);  };    ;
     return Math && Math.max(0, score);
 
-=======
     
     return Math.max(0, score)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
   const getPerformanceGrade = (score: number): string => {;
-=======
     return Math.max(0, score);  }
     return Math.max(0, score)
   }
   const getPerformanceGrade = (score: number): string => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (score >= 90) return 'A';
     if (score >= 80) return 'B';
     if (score >= 70) return 'C';
@@ -771,7 +755,6 @@ if ( { // LCP should be under 2.5s) {
           {showMetrics ? 'Hide' : 'Show'} Metrics
         </button>
       </div>
-<<<<<<< HEAD
           className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300'          className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300";
         >;
           {showMetrics ? 'Hide' : 'Show'} Metrics;
@@ -779,7 +762,6 @@ if ( { // LCP should be under 2.5s) {
       </div>;
       {/* Performance Score */}
 
-=======
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
           <span className="text-white/70">Performance Score</span>
@@ -788,14 +770,12 @@ if ( { // LCP should be under 2.5s) {
         <div className="w-full bg-white/10 rounded-full h-3">
           <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className="h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${performanceScore}%` }}
             transition={{ duration: 1, ease: "easeOut" }}
 
 
-=======
           />
         </div>
         <div className='text-right mt-1'>
@@ -807,8 +787,6 @@ if ( { // LCP should be under 2.5s) {
       </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Metrics Display */}
       {showMetrics && (;
         <motion&& motion.div
@@ -919,19 +897,15 @@ if ( { // LCP should be under 2.5s) {
       {/* Optimization Controls */}
       <div className='space-y-3'>        <button      <div className="space-y-3">;
 
-=======
           </div>
         </motion.div>
       )}
 
         <button
-=======
 
 
       {/* Optimization Controls */}
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           onClick={runAllOptimizations}
           disabled={isOptimizing}
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${
@@ -1020,22 +994,14 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
       <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
-=======
-=======
 
         )}
       </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Performance Tips */}
       <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
-=======
 
 
         )}
@@ -1052,8 +1018,6 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
         <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <li>• Use WebP images for better compression</li>
           <li>• Implement lazy loading for images</li>
           <li>• Minimize CSS and JavaScript bundles</li>
@@ -1261,11 +1225,8 @@ if (return 'D') {
       </div>;
     </div>);
 }export default PerformanceOptimizer;}
-=======
   );
-<<<<<<< HEAD
 };export default PerformanceOptimizer;}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       // Preload critical resources;
       preload_images.for_each (image => {
 addResourceHint (image, 'image');
@@ -1275,21 +1236,14 @@ addResourceHint (image, 'image');
 '      });'    }}, [preload_images, preload_fonts]);
   return (
     <Head>;
-<<<<<<< HEAD
       {/* Critical CSS inlined for above - the - fold content */}
       {criticalCSS && (
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />)}
-=======
       {/* Critical CSS inlined for above-the-fold content */}
       {criticalCSS && (;
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />;
       )}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 {/* Preload critical resources */}
       {preload_images.map ((image, index) => (
         <link;
@@ -1419,7 +1373,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
 
 export default PerformanceOptimizer;
 
-=======
 const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
   onMetricsUpdate,
   enable_reporting = false;
@@ -1523,10 +1476,20 @@ if ( {) {
 ;
 export default PerformanceOptimizer;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    console.error('Error caught by boundary: any
+import React, { useEffect, useState, useCallback } from 'react'
+import { motion } from 'framer-motion'
+ from 'lucide-react'
+ from 'lucide-react'
+  //
+          href: any
+        },      ];        { rel: 'preload', href: '/fonts/inter-var.woff2', as: 'font', type: any
+        { rel: 'preload', href: '/fonts/jetbrains-mono-var.woff2', as: 'font', type: any
+        },      ];        { rel: 'preload', href: '/fonts / inter - var.woff2', as: 'font', type: any
+        { rel: 'preload', href: '/fonts / jetbrains - mono - var.woff2', as: 'font', type: any
+    if (typeof window != 'undefined' && 'performance' in window) {'      //
+            

@@ -324,10 +324,7 @@ const ServicesIndex: NextPage = () => {
   ];
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <>
       <Head>
@@ -337,10 +334,8 @@ const ServicesIndex: NextPage = () => {
       </Head>
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     Learn More
                   </Link>
                 </div>
@@ -363,7 +358,6 @@ const ServicesIndex: NextPage = () => {
         </section>
 
 
-=======
                     Learn More
                   </Link>
                 </div>
@@ -685,4 +679,19 @@ export default ServicesIndex;
     </>;
 
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import type { NextPage } from 'next'
+import Head from 'next/
+import Link from 'next/

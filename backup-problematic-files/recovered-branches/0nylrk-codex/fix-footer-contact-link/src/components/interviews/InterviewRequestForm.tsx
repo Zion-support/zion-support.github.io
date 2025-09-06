@@ -155,7 +155,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
                         ) :(;
                           <span>Pick a date</span>;
                         )}
-=======
                       <Button;
                         variant="outline";
                         className={cn(;
@@ -168,7 +167,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
                         ) :(;
                           <span>Pick a date</span>;
                         )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                       </Button>;
                     </FormControl>;
@@ -370,3 +368,18 @@ async function onSubmit (values: z.infer<typeof formSchema>) {
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
 }/> </Button> </div> </form> </Form>) 
 }
+import React, { useState } from "react"
+import { Button } from "@/components/ui/
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/
+import { Input } from "@/components/ui/
+import { Textarea } from "@/components/ui/
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/
+import { Calendar } from "@/components/ui/
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/
+import { TalentProfile } from "@/types/
+import { UserProfile } from "@/types/
+import { cn } from "@/lib/
+import { zodResolver } from "@hookform/resolvers/
+import { toast } from "@/components/ui/
+import { useInterviews } from "@/hooks/
+              src={talent.profile_picture_url || "/

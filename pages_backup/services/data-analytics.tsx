@@ -17,8 +17,6 @@ const benefits = [
 export default function DataAnalyticsServices() {
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 export default function DataAnalyticsPage() {;
 const benefits = [;
   'Data-driven decision making',;
@@ -29,10 +27,7 @@ const benefits = [;
   'Automated reporting and analytics';
 ];
 export default function DataAnalyticsServices() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/data-analytics.tsx
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout
       title="Data Analytics Services - Zion Tech Group"
@@ -71,17 +66,16 @@ export default function DataAnalyticsServices() {;
     icon: ArrowRight,
     title: 'Data Visualization',
     description: 'Interactive charts, graphs, and visual data representations'
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-];
-const benefits = [
-  'Data-driven decision making',
-  'Improved business performance',
-  'Better customer insights',
-  'Reduced operational costs',
-  'Enhanced competitive advantage',
-  'Automated reporting and analytics'
-];
-export default function DataAnalyticsServices() {
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
 
 export default function DataAnalyticsPage() {
 
@@ -126,10 +120,8 @@ export default function DataAnalyticsPage() {
                   animate={{ opacity: 1, y: 0 }}
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -149,7 +141,6 @@ export default function DataAnalyticsPage() {
                     <feature.icon className="w-6 h-6 text-purple-600" />
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -164,7 +155,6 @@ export default function DataAnalyticsPage() {
         </section>
 
 
-=======
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -270,3 +260,5 @@ export default function DataAnalyticsPage() {
   ),;
 }
 
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any

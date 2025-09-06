@@ -28,3 +28,5 @@ const TalentsPage = ({ className }) => {
 };
 
 export default TalentsPage;
+import React from 'react'
+    

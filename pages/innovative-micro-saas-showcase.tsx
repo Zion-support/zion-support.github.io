@@ -1,7 +1,6 @@
 
 
 
-=======
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -63,9 +62,7 @@ export default function InnovativeMicroSaasShowcase() {
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
 
     return matchesCategory && matchesSearch
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -121,7 +118,6 @@ export default function InnovativeMicroSaasShowcase() {
     }
   })
 
-=======
 
 import {;
   Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket,;
@@ -204,8 +200,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 }
 
   }),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout>
       <Head>
@@ -223,7 +217,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -242,7 +235,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
               {stats.map((stat, index) => (
                 <motion.div
 
-=======
 import React, { useState } from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -291,7 +283,6 @@ function InnovativeMicroSaasShowcase() {
     ...innovativeRealMicroSaasServices2025,
     ...emergingTechServicesEnhanced2025;
   ],
-<<<<<<< HEAD
   // Filter services based on category and search;
   const filtered_services = all_services.filter (service => {
     const matches_category = selected_category === 'all' ||;
@@ -345,14 +336,12 @@ function InnovativeMicroSaasShowcase() {
             <div className="flex flex - wrap justify - center gap - 4 mb - 12">;
               {stats.map ((stat, index) => (
                 <motion.div;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   key={stat.label}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20"
                 >
                   <stat.icon className={`w-5 h-5 ${stat.color}`} />
@@ -365,7 +354,6 @@ function InnovativeMicroSaasShowcase() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="flex items-center space-x-4">
               <MapPin className="w-5 h-5 text-white" />
               <span className="text-white text-sm">{contactInfo.address}</span>
@@ -374,15 +362,12 @@ function InnovativeMicroSaasShowcase() {
         </div>
       </section>
 
-=======
                   className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm rounded - full px - 6 py - 3 border border - white / 20";
                 >;
                   <stat.icon className={`w - 5 h - 5 ${stat.color}`} />;
                   <span className="text - white font - semibold">{stat.number}</span>;
                   <span className="text - gray - 300 text - sm">{stat.label}</span>;
                 </motion.div>))}
-=======
-=======
                   key={stat.label  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -403,11 +388,6 @@ function InnovativeMicroSaasShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20"
                 >
                   <stat.icon className={`w-5 h-5 ${stat.color}`} />
@@ -419,12 +399,10 @@ function InnovativeMicroSaasShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>;
           </motion.div>;
         </div>;
       </section>;
-<<<<<<< HEAD
       {/* Contact Bar */}
       <section className="bg - gradient - to - r from - purple - 600 via - pink - 600 to - red - 600 py - 4">;
         <div className="container mx - auto px - 4">;
@@ -447,7 +425,6 @@ function InnovativeMicroSaasShowcase() {
       <section className="py - 8 bg - black / 50 backdrop - blur - sm border - b border - white / 10">;
         <div className="container mx - auto px - 4">;
           <div className="flex flex - col lg:flex - row gap - 6 items - center justify - between">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {/* Search */}
 
 
@@ -466,7 +443,6 @@ function InnovativeMicroSaasShowcase() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
@@ -507,15 +483,12 @@ function InnovativeMicroSaasShowcase() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <button
-=======
             <div className="flex flex - wrap gap - 2">;
               {categories.map ((category) => (
                 <button;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   key={category.value}
                   on_click={() => setSelectedCategory (category.value)}
                   className={`flex items - center space - x-2 px - 4 py - 2 rounded - lg border transition - all duration - 300 ${
@@ -555,7 +528,6 @@ function InnovativeMicroSaasShowcase() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
                 <option value="popularity">Most Popular</option>
@@ -577,7 +549,6 @@ function InnovativeMicroSaasShowcase() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="mb-8">
@@ -591,7 +562,6 @@ function InnovativeMicroSaasShowcase() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </h2>
             <p className="text-gray-400">
               {filteredServices.length} services found
@@ -625,11 +595,8 @@ function InnovativeMicroSaasShowcase() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20"
                 >
-=======
-=======
                 >;
                   <category.icon className="w - 4 h - 4" />;
                   <span className="text - sm font - medium">{category.name}</span>;
@@ -681,7 +648,6 @@ function InnovativeMicroSaasShowcase() {
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6">;
               {sorted_services.map ((service, index) => (
                 <motion.div;
-=======
       {/* Contact Bar */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -696,7 +662,6 @@ function InnovativeMicroSaasShowcase() {
               <Mail className="w-5 h-5 text-white" />
               <span className="text-white font-semibold">{contactInfo.email}</span>
             </div>
-<<<<<<< HEAD
           </motion.div>
         </div>
       </section>
@@ -710,12 +675,6 @@ function InnovativeMicroSaasShowcase() {
               <Mail className="w-5 h-5 text-white" />
               <span className="text-white font-semibold">{contactInfo.email}</span>
             </div>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className="flex items-center space-x-4">
               <MapPin className="w-5 h-5 text-white" />
               <span className="text-white text-sm">{contactInfo.address}</span>
@@ -723,13 +682,11 @@ function InnovativeMicroSaasShowcase() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Filters and Search */}
       <section className="py-8 bg-black/50 backdrop-blur-sm border-b border-white/10">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search */}
-=======
       {/* Filters and Search */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -743,24 +700,17 @@ function InnovativeMicroSaasShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search services..."
-<<<<<<< HEAD
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
             {/* Category Filter */}
-=======
                 value={searchTerm  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -779,11 +729,6 @@ function InnovativeMicroSaasShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <button
@@ -810,11 +755,9 @@ function InnovativeMicroSaasShowcase() {
                   <category.icon className="w-4 h-4" />
                   <span className="text-sm font-medium">{category.name}</span>
                 </button>
-<<<<<<< HEAD
               ))}
             </div>
             {/* View Mode and Sort */}
-=======
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -826,11 +769,6 @@ function InnovativeMicroSaasShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className="flex items-center space-x-4">
               <div className="flex bg-white/10 rounded-lg p-1">
                 <button
@@ -863,10 +801,8 @@ function InnovativeMicroSaasShowcase() {
                 </button>
               </div>
               <select
-<<<<<<< HEAD
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-=======
                 value={sortBy  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -877,11 +813,6 @@ function InnovativeMicroSaasShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
                 <option value="popularity">Most Popular</option>
@@ -894,36 +825,22 @@ function InnovativeMicroSaasShowcase() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Services Grid */}
-=======
       {/* Services Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-white mb-2">
-<<<<<<< HEAD
               {selectedCategory === 'all' ? 'All Services' : `${categories.find(c => c.value === selectedCategory)?.name}`}
-=======
               {selectedCategory === 'all' ? 'All Services' : `${categories.find(c => c.value === selectedCategory)?.name}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className="text-gray-400">
               {filteredServices.length} services found
@@ -933,19 +850,15 @@ function InnovativeMicroSaasShowcase() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {sortedServices.map((service, index) => (
                 <motion.div
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   key={service.id}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="group relative bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - xl p - 6 hover:bg - white / 10 hover:border - purple - 500 / 50 transition - all duration - 300 hover:shadow - 2xl hover:shadow - purple - 500 / 20";
                 >;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   {/* Popular Badge */}
                   {service.popular && (
 
-=======
                     <div className="absolute -top - 3 -right - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white text - xs font - bold px - 3 py - 1 rounded - full">;
                       Popular;
                     </div>)}
@@ -964,7 +877,6 @@ function InnovativeMicroSaasShowcase() {
                   {/* Price */}
                   <div className="flex items - center justify - between mb - 4">;
                     <div className="text - 2xl font - bold text - purple - 400">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       {service.price}
 
 
@@ -1013,7 +925,6 @@ function InnovativeMicroSaasShowcase() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <span className="text-sm text-gray-400 font-normal">{service.period}</span>
                     </div>
                     <div className="flex items-center space-x-1">
@@ -1031,7 +942,6 @@ function InnovativeMicroSaasShowcase() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div className="mb-4">
                     <div className="text-sm text-gray-400 mb-2">Key Features:</div>
                     <div className="space-y-1">
@@ -1056,13 +966,11 @@ function InnovativeMicroSaasShowcase() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
                     <span className="bg-white/10 px-2 py-1 rounded">{service.category}</span>
                     <span>Setup: {service.setupTime}</span>
                   </div>
 
-=======
                       <span className="text - sm text - gray - 400 font - normal">{service.period}</span>;
                     </div>;
                     <div className="flex items - center space - x-1">;
@@ -1091,7 +999,6 @@ function InnovativeMicroSaasShowcase() {
                   {/* Action Buttons */}
                   <div className="flex space - x-2">;
                     <Link;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       href={service.link}
 
 
@@ -1109,7 +1016,6 @@ function InnovativeMicroSaasShowcase() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-2 px-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium"
                     >
                       Learn More
@@ -1138,7 +1044,6 @@ function InnovativeMicroSaasShowcase() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-6">
                     <div className="text-center w-full">
                       <p className="text-white text-sm mb-3 line-clamp-3">{service.description}</p>
@@ -1152,7 +1057,6 @@ function InnovativeMicroSaasShowcase() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         className="inline-flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors"
                       >
                         <span>View Details</span>
@@ -1257,7 +1161,6 @@ function InnovativeMicroSaasShowcase() {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </h3>
                           <p className="text-gray-400 text-sm">{service.tagline}</p>
                         </div>
@@ -1270,8 +1173,6 @@ function InnovativeMicroSaasShowcase() {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             <span className="text-sm text-gray-400 font-normal">{service.period}</span>
                           </div>
                           <div className="flex items-center justify-end space-x-1 mt-1">
@@ -1301,7 +1202,6 @@ function InnovativeMicroSaasShowcase() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium"
                           >
                             Learn More
@@ -1336,7 +1236,6 @@ function InnovativeMicroSaasShowcase() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section className="py-20 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-red-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
@@ -1344,8 +1243,6 @@ function InnovativeMicroSaasShowcase() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-=======
-=======
                             <span className="text - sm text - gray - 400 font - normal">{service.period}</span>;
                           </div>;
                           <div className="flex items - center justify - end space - x-1 mt - 1">;
@@ -1389,10 +1286,8 @@ function InnovativeMicroSaasShowcase() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
-=======
 }
 
-=======
           >;
             <h2 className="text - 4xl font - bold text - white mb - 6">;
               Ready to Transform Your Business?;
@@ -1421,17 +1316,19 @@ function InnovativeMicroSaasShowcase() {
               <Link
                 href=&quot;/contact&quot;
                 className=&quot;bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105&quot;
-=======
       {/* CTA Section */}
-=======
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useState } from 'react'
+import Head from 'next/
+import Link from 'next/
+import Layout from '../components/layout/
+import { innovativeRealMicroSaasServices2025 } from '../data/
+import { emergingTechServicesEnhanced2025 } from '../data/
+  website: any
+  { number: any

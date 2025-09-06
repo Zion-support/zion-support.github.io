@@ -1,14 +1,2 @@
 
-
->>>>>>> origin/automation-improvements-final
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-}}}
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-}}}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+ursor/automate-test-fix-improve-and-merge-code-48f3; jest.mock( \'next/router\',() => ({ useRouter() { return { \"route\": \'/,\"pathname\": ; \'/\',\"query\": {},\"asPath\": ; \'/\',\"push\": jest.fn(),\"pop\": jest.fn(),\"reload\": jest.fn(),\"back\": jest.fn(),\"prefetch\": jest.fn().mockResolvedValue(undefined),\"beforePopState\": jest.fn(),\"events\": { on: jest.fn(),\"off\": jest.fn(),\"emit\": jest.fn()},\"isFallback\": \'false\'}}); jest.mock( \'next/image\',() => ({ \"__esModule\": \'true\',\"default\": props => { return <img {...props} /> }) jest.mock( \'next/link\',() => ({ \"__esModule\": \'true\',\"default\": ({ children,href,...props }) => { return ( <a href={href} {...props}> {children} 

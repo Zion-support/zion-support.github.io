@@ -11,10 +11,11 @@ export interface HelpArticle {
 
 }
 export interface HelpCategory {
-=======
 
 import {ReactNode} from "react";
 export interface HelpArticle {;
+import { ReactNode } from "react";
+export interface HelpArticle {
   id: string;
   title: string;
   content: string;
@@ -24,12 +25,12 @@ export interface HelpArticle {;
 
 export interface HelpCategory {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   name: string;
   description: string;
   icon: ReactNode;
   articles: HelpArticle[]
+  articles: HelpArticle[];
 }
 
 
@@ -46,11 +47,11 @@ export interface SupportTicket {;
 
   created_at: string;
   updated_at: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
-=======
 
-=======
 import { ReactNode } from "react",
 export interface HelpArticle {
   id: string,
@@ -98,5 +99,5 @@ export interface SupportTicket {;
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { ReactNode } from "react"
+  any

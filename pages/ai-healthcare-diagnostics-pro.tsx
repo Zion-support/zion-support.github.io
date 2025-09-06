@@ -66,7 +66,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
         'Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.',;
       color: 'from-yellow-500 to-orange-500',;
     },  ];
-=======
 import Layout from '../components/layout/Layout',
 import { motion } from 'framer-motion',
 import {
@@ -78,18 +77,14 @@ import {
   Activity, Zap, Pill, Syringe, Hospital, Ambulance
 } from 'lucide-react',
 import Link from 'next/link',
-<<<<<<< HEAD
-=======
 import Head from 'next / head';
 import Layout from '../components / layout / Layout';
 import {motion} from 'framer-motion';
 import {Stethoscope, Brain, Eye, Heart, Microscope, Shield, BarChart3, TrendingUp, Target, Users, CheckCircle, ArrowRight, Cpu, Network, Database, Lock, Clock, DollarSign, PieChart, Activity, Zap, Pill, Syringe, Hospital, Ambulance, } from 'lucide-react';
 import Link from 'next / link';
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const AIHealthcareDiagnosticsPro: React.FC = () => {
   const features = [
     {
@@ -253,10 +248,8 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 
       description: 'Epic, Cerner, Allscripts, athenahealth',
       color: 'from - green - 500 to - emerald - 500',
-=======
       description: "Epic, Cerner, Allscripts, athenahealth",
       color: "from-green-500 to-emerald-500"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
 
     {
@@ -265,10 +258,8 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 
       description: 'Lab information systems integration',
       color: 'from - purple - 500 to - pink - 500',
-=======
       description: "Lab information systems integration",
       color: "from-purple-500 to-pink-500"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
 
     {
@@ -277,10 +268,8 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 
       description: 'Radiology information systems',
       color: 'from - orange - 500 to - red - 500',
-=======
       description: "Radiology information systems",
       color: "from-orange-500 to-red-500"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
 
     {
@@ -289,10 +278,8 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 
       description: 'CT, MRI, X - ray, ultrasound machines',
       color: 'from - indigo - 500 to - blue - 500',
-=======
       description: "CT, MRI, X-ray, ultrasound machines",
       color: "from-indigo-500 to-blue-500"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
 
     {
@@ -359,7 +346,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               <motion&& motion.div
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
 
-=======
       description: 'AWS, Azure, Google Cloud, IBM Cloud',
       color: 'from - yellow - 500 to - orange - 500',
     },  ];
@@ -495,7 +481,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 
                 animate={{ opacity: 1, scale: 1 }}
 
-=======
 
     <Layout>
       <Head>
@@ -522,8 +507,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(56,189,248,0.15),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.1),transparent_50%)]"></div>
         {/* Floating Elements */}
-=======
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
         {/* Background Effects */}
@@ -539,7 +522,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='mb-8'
-=======
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -559,12 +541,10 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-pulse"></div>
         <div className="absolute bottom-32 right-16 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-green-400 rounded-full opacity-80 animate-pulse delay-500"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<<<<<<< HEAD
 
   return (_<Layout>
       <Head>
@@ -597,7 +577,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 className="mb-8"
-=======
           <motion.div
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -618,7 +597,6 @@ className="mb-8"
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4" />
@@ -657,7 +635,6 @@ className="mb-8"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
                 <div className="text-3xl font-bold text-green-400 mb-2">99.2%</div>
@@ -669,8 +646,6 @@ className="mb-8"
                 transition={{ duration: 0.6, delay: 0.4 }}
 className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
-=======
-<<<<<<< HEAD
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
               Transform healthcare delivery with the world's most advanced AI
               diagnostic platform. Achieve 99.2% accuracy in disease detection
@@ -688,12 +663,10 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
                   99.2%
                 </div>
                 <div className='text-gray-300'>Diagnostic Accuracy</div>              </motion.div>
-=======
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Transform healthcare delivery with the world's most advanced AI diagnostic platform.
               Achieve 99.2% accuracy in disease detection, reduce diagnosis time by 80%, and save countless lives through early intervention.
             </p>
-<<<<<<< HEAD
             {/* Key Metrics */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto'>              <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -705,18 +678,12 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
                   99.2%
                 </div>
                 <div className='text-gray-300'>Diagnostic Accuracy</div>              </motion.div>
-=======
             {/* Key Metrics */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
@@ -756,17 +723,14 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
 }
                 className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
                 <div className="text-gray-300">Faster Diagnosis</div>
               </motion.div>
               <motion.div
-<<<<<<< HEAD
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
 className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm"
-=======
                 initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -783,7 +747,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
   }
 }
                 className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
                 <div className="text-gray-300">Continuous Monitoring</div>
@@ -803,33 +766,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 
             {/* CTA Buttons */}
 
-=======
-            {/* CTA Buttons */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.6, delay: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
-              >
-=======
-
             {/* CTA Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -855,17 +791,39 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
                 className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
               >
 
+            {/* CTA Buttons */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
+              >
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
                 Schedule Demo
               </motion.button>
               <motion.button
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
 
                 className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
 
                 Contact Sales
@@ -883,14 +841,10 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
           </motion && motion.div>;
         </div>;
 
-=======
-=======
 
 
       </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Features Section */}
 
       <section className="py-20 bg-gray-900 relative overflow-hidden">
@@ -912,7 +866,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
               Our platform combines cutting-edge artificial intelligence with deep medical expertise to deliver unprecedented diagnostic accuracy and speed.
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
 
@@ -953,7 +906,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
       </section>
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Medical Specialties Section */}
 
       <section className="py-20 bg-black relative overflow-hidden">
@@ -982,7 +934,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
             </h2>;
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
 
-=======
                 className='bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 border border - purple - 500 / 30 rounded - 2xl p - 6 backdrop - blur - sm';
               >;
                 <div className='text - 3xl font - bold text - purple - 400 mb - 2'>;
@@ -1070,7 +1021,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
             </h2>;
             <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Our AI platform covers all major medical specialties with;
               specialized models trained on millions of cases for maximum;
               accuracy.;
@@ -1114,7 +1064,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
       </section>
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Use Cases Section */}
 
       <section className="py-20 bg-gray-900 relative overflow-hidden">
@@ -1136,7 +1085,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
               From radiology to pathology, our AI platform adapts to your specific medical specialty and workflow requirements.
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
 
@@ -1154,7 +1102,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
               <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -1179,8 +1126,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
                           <CheckCircle className="w-4 h-4 text-green-400" />
                           <span className="text-gray-300">{benefit}</span>
                         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
                     </div>;
                   </div>;
@@ -1198,7 +1143,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0 && 0.05),transparent_50%)]'></div>;
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
 
       {/* Pricing Section */}
       <section className="py-20 bg-black relative overflow-hidden">
@@ -1220,7 +1164,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
               Flexible pricing options designed to scale with your healthcare practice. Start with our Starter plan and upgrade as you grow.
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
 
@@ -1238,7 +1181,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
               <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1247,7 +1189,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
                 className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 border rounded-2xl p-8 backdrop-blur-sm ${
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -1264,7 +1205,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 }
 
                 <div className="text-center mb-8">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center space-x-1 mb-2">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
@@ -1275,12 +1215,9 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-<<<<<<< HEAD
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -1309,15 +1246,12 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
                 </ul>
 
@@ -1327,7 +1261,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
                 </button>
               </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -1340,7 +1273,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0 && 0.08),transparent_50%)]'></div>;
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
 
       {/* Integrations Section */}
       <section className="py-20 bg-gray-900 relative overflow-hidden">
@@ -1362,7 +1294,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
               Connect with your existing healthcare systems and workflows. Our platform integrates with all major EHR, PACS, and medical device platforms.
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {integrations.map((integration, index) => (
 
@@ -1373,7 +1304,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
             </h2>;
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
 
-=======
                     </span>;
                     <span className='text - gray - 400'>{plan.period}</span>;
                   </div>;
@@ -1414,7 +1344,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
             </h2>;
             <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Connect with your existing healthcare systems and workflows. Our;
               platform integrates with all major EHR, PACS, and medical device;
               platforms.;
@@ -1438,8 +1367,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
                 <h3 className="text-xl font-semibold text-white mb-2">{integration.name}</h3>
                 <p className="text-gray-300 text-sm">{integration.description}</p>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -1457,7 +1384,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 Schedule Demo
               </button>
               <button className='px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300'>
@@ -1495,7 +1421,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
                 <a
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </motion.div>
         </div>
       </section>
@@ -1514,15 +1439,11 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
   ),;
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default AIHealthcareDiagnosticsPro;
 
 
-=======
           </motion.div>;
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {integrations.map ((integration, index) => (
               <motion.div;
@@ -1600,4 +1521,8 @@ export default AIHealthcareDiagnosticsPro;
 ;
 export default AIHealthcareDiagnosticsPro;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import React from 'react'
+import Head from 'next/
+import Head from 'next/
+import Layout from '../components/layout/
+import Link from 'next/

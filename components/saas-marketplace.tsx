@@ -43,15 +43,11 @@ import React from 'react';
   TrendingUp, ;
   Code, ;
   Database, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Zap,
   Shield,
   BarChart3,
@@ -76,7 +72,6 @@ import {
   TrendingUp,
   Code,
   Database,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   Cloud;
   ArrowRight;
   Star;
@@ -116,7 +111,6 @@ import {
         );  const filteredServices = selectedCategory === 'All'
     ? microSaasServices
     : microSaasServices.filter(service => service.category === selectedCategory);
-=======
 export default function SaaSMarketplacePage() {;
   const microSaasServices = [;
     {;
@@ -359,7 +353,6 @@ export default function SaaSMarketplacePage() {;
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],;
     },;
 
-=======
       name: 'Zapier',
       description: 'Automate workflows between 5000+ apps with no code required. Connect your favorite tools and automate repetitive tasks.',
       category: 'Automation',
@@ -478,11 +471,9 @@ icon: <Database className="w-8 h-8 text-green-400" />,
       pros: ['Zero configExcellent performanceGreat DXFree tier'],
       cons: ['Limited backend featuresCan be expensive for high traffic']
     };
-=======
 
 export default function SaaSMarketplacePage() {
   const microSaasServices = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       name: 'Linear',
       description: 'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',
@@ -493,14 +484,12 @@ export default function SaaSMarketplacePage() {
       icon: <TrendingUp className="w-8 h-8 text-blue-400" />,
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       features: [
-<<<<<<< HEAD
         'Issue trackingRoadmap planningTeam collaborationGit integrationAutomated workflowsMobile apps'
       ];
       website: 'https://linear.app',
       useCase: 'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.',
     pros: ['Lightning fastBeautiful designGreat keyboard shortcutsGit integration'],
       cons: ['Limited reportingNo time trackingSmaller ecosystem']
-=======
         '5000+ app integrations'
         'Visual workflow builder'
         'Multi-step automations'
@@ -520,7 +509,6 @@ export default function SaaSMarketplacePage() {
       cons: ['Can get expensive', 'Limited customization']
     }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ];
   const categories = [;
     'All',;
@@ -569,7 +557,6 @@ export default function SaaSMarketplacePage() {
                 size='lg'
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
 
-=======
   const filteredServices = selectedCategory === 'All' 
     ? microSaasServices 
     : microSaasServices.filter(service => service.category === selectedCategory);
@@ -634,7 +621,6 @@ export default function SaaSMarketplacePage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {microSaasServices.length}+
               </div>
               <div className='text-gray-400 text-sm'>Curated Services</div>
@@ -657,7 +643,6 @@ export default function SaaSMarketplacePage() {
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {microSaasServices.length}+
               </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="text-gray-400 text-sm">Curated Services</div>
             </div>
             <div className="text-center group">
@@ -736,7 +721,6 @@ export default function SaaSMarketplacePage() {
               </div>;
               <div className="text-gray-400 text-sm">Total Users</div>;
 
-=======
   ExternalLink;
 export default /**
  * SaaSMarketplacePage - Function description
@@ -1118,7 +1102,6 @@ function SaaSMarketplacePage() {
               </div>;
               <div className="text - gray - 400 text - sm">Total Users</div>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             </div>;
           </div>;
         </div>;
@@ -1134,7 +1117,6 @@ function SaaSMarketplacePage() {
           <div className="flex flex-wrap justify-center gap-4">;
             {categories && categories.map((category) => (;
 
-=======
 
       {/* Category Filter */}
       <section className="py-16 bg-gray-900">
@@ -1142,14 +1124,11 @@ function SaaSMarketplacePage() {
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
 
-=======
 
 
               <button
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1167,12 +1146,9 @@ function SaaSMarketplacePage() {
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Services Grid */}
 
 
@@ -1184,7 +1160,6 @@ function SaaSMarketplacePage() {
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredServices.map((service, index) => (
-=======
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
               {selectedCategory === 'All';
                 ? 'Explore our curated selection of the best micro SaaS services for modern businesses.';
@@ -1266,7 +1241,6 @@ function SaaSMarketplacePage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -1275,7 +1249,6 @@ function SaaSMarketplacePage() {
                         {service.features
                           .slice(0, 4)
                           .map((feature, featureIndex) => (
-=======
                       className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service && service.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
                       {service && service.icon}
                     </div>;
@@ -1349,7 +1322,6 @@ function SaaSMarketplacePage() {
 
             Need Help Choosing?
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our team of experts can help you select the perfect SaaS tools for
@@ -1357,7 +1329,6 @@ function SaaSMarketplacePage() {
             implementation support.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
               href='/contact'
               variant='secondary'
@@ -1372,7 +1343,6 @@ function SaaSMarketplacePage() {
               size='lg'
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               View Our Services;
             </Button>;
           </div>;
@@ -1380,19 +1350,20 @@ function SaaSMarketplacePage() {
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
-=======
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import React from 'react'
+import Head from 'next/
+import Card from '../components/ui/
+import Button from '../components/ui/
+import Head from 'next/
+import Card from '../components/ui/
+import Button from '../components/ui/
+import Head from 'next /
+import Card from '../components / ui /
+import Button from '../components / ui /
+      pricing: any

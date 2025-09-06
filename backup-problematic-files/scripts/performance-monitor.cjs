@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node;
 ;const fs = require('fs');
 const path = require('path');
@@ -116,18 +107,11 @@ if (fs.existsSync(publicDir)) {;
       } catch (error) {;
         // Skip files that can't be accessed;
       }
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node
 /**
  * Performance Monitor
  * Basic performance monitoring for the Zion Tech Group website
  */
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -186,29 +170,13 @@ const { execSync } = require('child_process')
     if (this.metrics.performanceScore < 60) grade = 'F'
     this.log(' Starting Performance Monitor', 'PERFORMANCE')
       this.log(`Error during performance monitoring: ${error.message}`, 'ERROR'`)
-=======
 #!/usr/bin/env node
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
@@ -227,12 +195,7 @@ class PerformanceMonitor {
 const monitor = new PerformanceMonitor();
 monitor.run().catch(console.error);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 module.exports = PerformanceMonitor;
-=======
-<<<<<<< HEAD
 class PerformanceMonitor {
   constructor() {
     this.metrics = {};
@@ -321,11 +284,7 @@ if (require.main === module) {
   monitor.runAllPerformanceMonitoring().catch(console.error);
 }
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 module.exports = PerformanceMonitor;
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -384,9 +343,6 @@ const { execSync } = require('child_process')
     if (this.metrics.performanceScore < 60) grade = 'F'
     this.log(' Starting Performance Monitor', 'PERFORMANCE')
       this.log(`Error during performance monitoring: ${error.message}`, 'ERROR'`)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
 console.log('⚡ Starting performance monitoring...');
 
 const performanceMetrics = {
@@ -522,13 +478,4 @@ console.log('\n📄 Performance report saved to performance-metrics.json');
 setTimeout(() => {
   process.exit(0);
 }, 1000);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 module.exports = PerformanceMonitor;
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

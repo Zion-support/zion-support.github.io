@@ -5,7 +5,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const { id } = req && req.query;
-=======
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -18,7 +17,6 @@ export default async function handler(
 ) {;
 
   const { id } = req.query;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (typeof id !== "string")
     return res && res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req);
@@ -47,7 +45,6 @@ export default async function handler(
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
     dispute.updatedAt = now;
     await upsertDispute(dispute);
@@ -56,10 +53,11 @@ export default async function handler(
   res && res.setHeader("Allow", "POST");
   return res && res.status(405).end("Method Not Allowed");
 
+  res.setHeader("Allow", "POST");
+  return res.status(405).end("Method Not Allowed");
 }
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById, upsert_dispute  } from '../../../../utils / fsdb';
 import { parseUserFromRequest, ensure_admin  } from '../../../../utils / auth';
@@ -106,9 +104,9 @@ if ( {) {
   res.set_header ("Allow", "POST");
   return res.status (405).end ("Method Not Allowed");
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     return res.status(200).json({ dispute });
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from "next"
+import { getDisputeById, upsertDispute } from "../../../../utils/
+import { parseUserFromRequest, ensureAdmin } from "../../../../utils/

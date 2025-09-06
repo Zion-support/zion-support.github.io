@@ -8,7 +8,6 @@
 };export default EnhancedNavigation2025;
 export default function EnhancedNavigation2025() {;
 
-=======
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -376,7 +375,6 @@ const contactInfo = {
 };
 export default function EnhancedNavigation2025() {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -458,12 +456,9 @@ export default function EnhancedNavigation2025() {
                   </button>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Submenu */}
                   <AnimatePresence>;
                     {activeSubmenu === item && item.name && (;
@@ -500,7 +495,6 @@ export default function EnhancedNavigation2025() {
                                         <span
                                           key={service}
                                           className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">;
-=======
                               className="group block p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200 mb-2 last:mb-0"
                             >
                               <div className="flex items-start space-x-3">
@@ -523,7 +517,6 @@ export default function EnhancedNavigation2025() {
                                           key={service}
                                           className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md"
                                         >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                                           {service}
                                         </span>;
                                       ))}
@@ -548,12 +541,9 @@ export default function EnhancedNavigation2025() {
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <Link
@@ -570,19 +560,15 @@ export default function EnhancedNavigation2025() {
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
               className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200">;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 
-=======
 ];
 }];
 </div> </div> </div> </div> {
@@ -798,7 +784,6 @@ function EnhancedNavigation2025() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -817,7 +802,6 @@ function EnhancedNavigation2025() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {activeDropdown === item.name && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
@@ -867,12 +851,9 @@ function EnhancedNavigation2025() {
             />;
 
 
-=======
 
             
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Menu Panel */}
             <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">;
               <div className="p-6">;
@@ -906,12 +887,9 @@ function EnhancedNavigation2025() {
                       </button>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {/* Mobile Submenu */}
                       <AnimatePresence>;
                         {activeSubmenu === item && item.name && (;
@@ -940,12 +918,9 @@ function EnhancedNavigation2025() {
                 </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Mobile CTA */}
                 <div className="mt-8 space-y-4">;
                   <Link
@@ -1066,7 +1041,6 @@ className="ml - 8 mt - 2 space - y-2";
                       <AnimatePresence>;
                         {active_submenu === item.name && (
                           <motion.div;
-=======
                 <div className="space-y-4">
                   {navigationItems.map((item) => (
                     <div key={item.name}>
@@ -1082,24 +1056,15 @@ className="ml - 8 mt - 2 space - y-2";
                           activeSubmenu === item.name ? 'rotate-180' : ''
                         }`} />
                       </button>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {/* Mobile Submenu */}
                       <AnimatePresence>
                         {activeSubmenu === item.name && (
                           <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.2 }}
-<<<<<<< HEAD
 className="ml - 8 space - y-2";
                           >;
                             {item.submenu?.map ((subitem) => (
@@ -1179,7 +1144,6 @@ className="ml - 8 space - y-2";
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>
@@ -1194,10 +1158,8 @@ className="ml - 8 space - y-2";
   );
 };
 
-=======
           </motion.div>)}
       </AnimatePresence>;
-=======
                             className="ml-8 space-y-2"
                           >
                             {item.submenu?.map((subitem) => (
@@ -1217,14 +1179,7 @@ className="ml - 8 space - y-2";
                     </div>
                   ))}
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Mobile CTA */}
                 <div className="mt-8 space-y-4">
                   <Link
@@ -1264,20 +1219,12 @@ className="ml - 8 space - y-2";
           </motion.div>
         )}
       </AnimatePresence>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Spacer for fixed navigation */}
       <div className="h - 20" />;
     </>);
 }
-<<<<<<< HEAD
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+use client'
+  isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/
+  isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/

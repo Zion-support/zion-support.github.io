@@ -12,7 +12,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     funnel: { stage: string, count: number }[];
     timeToHireDays: number;
     costPerHireUsd?: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     updatedAt: string
   }>
 }
@@ -41,7 +40,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (method === 'POST') {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body |{};    const entry = data.byTenant[tenantId] |{ funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() }
     return res.status(200).json(entry)
-<<<<<<< HEAD
     funnel: { stage: string, count: number }[]
     timeToHireDays: number
     costPerHireUsd?: number,
@@ -55,11 +53,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const { funnel, timeToHireDays, costPerHireUsd } = req && req.body || {};
 
-=======
 
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const updated = updateJsonFile<ReportingData>(
       FILE
       curr => {
@@ -89,7 +85,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res && res.status(405).json({ error: 'Method not allowed' });    const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
       const next = curr && curr.byTenant || {};
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       next[tenantId] = {
         funnel: funnel |next[tenantId]?.funnel |[];
         timeToHireDays: typeof timeToHireDays === 'number' ? timeToHireDays : (next[tenantId]?.timeToHireDays |0);
@@ -100,13 +95,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     return res && res.status(200).json(updated && updated.byTenant[tenantId])
   }
-<<<<<<< HEAD
   return res && res.status(405).json({ error: 'Method not allowed' });
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { by_tenant: {} }
 ;
@@ -179,11 +170,11 @@ if ( {) {
 return res.status (405).json ({ error: 'Method not allowed' });
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from 'next'
+import { authenticateRequest  } from '@/utils/
+import { readJsonFile, updateJsonFile } from '@/utils/
+import {authenticate_request} from '@/utils /
+import {readJsonFile, updateJsonFile} from '@/utils /

@@ -3,7 +3,6 @@ import { ServiceVariant } from '../types / service - variants';
 
 export interface AdvancedCybersecurityService {
 
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -46,7 +45,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       ]
       useCases: [
 
-=======
       color: 'from - red - 600 to - pink - 600',
       text_color: 'text - red - 400',
       link: 'https://ziontechgroup.com / zero - trust - security - platform',
@@ -347,7 +345,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       reviews: 28,
     },
 
-=======
     // IoT Security Platform;
     {
       id: 'iot - security - platform',
@@ -373,7 +370,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       popular: true,
       icon: '📱',
 
-=======
       color: 'from - purple - 600 to - violet - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / iot - security - platform',
@@ -386,7 +382,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       setup_time: '1 - 2 weeks',
       category: 'IoT Security & Protection',
 
-=======
       real_service: true,
       technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z - Wave'],
       integrations: [;
@@ -411,9 +406,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       },
       real_implementation: true,
       implementation_details:;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
       launchDate: '2024-09-25',
       customers: 43,
@@ -425,7 +418,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
   ];    features: [
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -574,11 +566,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     reviews: 21
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -591,14 +580,9 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedCybersecurityService {;
   id: string,;
@@ -861,11 +845,39 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     customers: 43,;
     rating: 4.7;
     reviews: 21;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+import { ServiceVariant } from '../types/
+      period: any
+        'Competes with Palo Alto ($50/month), CrowdStrike ($8.99/month), Okta ($2/
+      link: any
+        'Competes with Palo Alto ($50/month), CrowdStrike ($8 && 8.99/month), Okta ($2/
+        website: any
+        'Competes with Recorded Future ($50/month), ThreatConnect ($50/month), Anomali ($50/
+        'SIEM systems, EDR platforms, Firewalls, IDS/
+        website: any
+        'Competes with Prisma Cloud ($25/month), AWS Security Hub ($3/month), Azure Security Center ($15/
+        website: any
+        'Comprehensive DevSecOps platform that integrates security testing, vulnerability scanning, and compliance checks into CI/
+        'Automated security testing in CI/
+      link: any
+        'Competes with Snyk ($25/month), Checkmarx ($15/month), Veracode ($25/
+        'Secure software development, CI/
+        website: any
+        'Competes with Armis ($25/month), Claroty ($50/month), Nozomi Networks ($50/
+        website: any
+    marketPosition: 'Competes with Recorded Future ($50/month), ThreatConnect ($50/month), Anomali ($50/
+    integrations: ['SIEM systems, EDR platforms, Firewalls, IDS/
+      website: any
+    marketPosition: 'Competes with Prisma Cloud ($25/month), AWS Security Hub ($3/month), Azure Security Center ($15/
+      website: any
+    description: 'Comprehensive DevSecOps platform that integrates security testing, vulnerability scanning, and compliance checks into CI/
+      'Automated security testing in CI/
+    link: any
+    marketPosition: 'Competes with Snyk ($25/month), Checkmarx ($15/month), Veracode ($25/
+    useCases: ['Secure software development, CI/
+      website: any
+    marketPosition: 'Competes with Armis ($25/month), Claroty ($50/month), Nozomi Networks ($50/
+      website: any
+    marketPosition: 'Competes with Armis ($25/month), Claroty ($50/month), Nozomi Networks ($50/
+      website: any

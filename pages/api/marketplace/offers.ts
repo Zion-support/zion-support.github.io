@@ -11,7 +11,6 @@ import {
   listOffers
   saveOffer
   saveProject
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
@@ -29,7 +28,6 @@ import {
   saveOffer,
   saveProject,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "../../../utils/marketplace/store";
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
 
@@ -248,7 +246,6 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-=======
 
 
 }
@@ -375,17 +372,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         saveOffer(existing),
         return res.json({ ok: true, offer: existing, project })
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { v4 as uuidv4 } from "uuid";
 
 import {
-<<<<<<< HEAD
   assertClient
   assertTalentOrClientForOffer
   getDemoUser
@@ -395,7 +386,6 @@ import {
   listOffers
   saveOffer
   saveProject
-=======
   assertClient,
   assertTalentOrClientForOffer,
   getDemoUser,;
@@ -405,18 +395,12 @@ import {
   listOffers,
   saveOffer,
   saveProject,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "../../../utils/marketplace/store";
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth";
 import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
-<<<<<<< HEAD
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({
@@ -428,19 +412,15 @@ import { v4 as uuidv4 } from "uuid",
 import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth",
 import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store",
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-<<<<<<< HEAD
     if (req.method === "GET") {
       const user = getDemoUser(req);
       if (user.role === "client") {
         const offers = listOffers({ clientId: user.id });
-<<<<<<< HEAD
         return res.json({ ok: true, offers });
       }
       if (user.role === "talent") {
@@ -533,12 +513,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         if (user.role !== "talent")
           return bad(res, "Only talent can decline", 403);
         existing.status = "DECLINED";
-=======
         return res.json({ ok: true, offers });
       }
       if (user.role === "talent") {
-=======
-<<<<<<< HEAD
     if (req.method === "GET") {;
       const user = getDemoUser(req);
       if (user.role === "client") {
@@ -566,7 +543,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         return bad(res, "Missing required fields");
       }
 
-=======
     if (req.method === 'GET') {
       res.status(200).json({ offers: [] });
     } else if (req.method === 'POST') {
@@ -619,4 +595,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from "next"
+import { v4 as uuidv4 } from "uuid"
+ from "../../../utils/marketplace/
+ from "../../../utils/marketplace/
+import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/

@@ -28,3 +28,5 @@ const ForumPostPage = ({ className }) => {
 };
 
 export default ForumPostPage;
+import React from 'react'
+    

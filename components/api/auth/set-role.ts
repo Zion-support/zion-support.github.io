@@ -1,9 +1,7 @@
 
 
-=======
   const { role = "guest", talent } = req.query as {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     role?: string;
     talent?: string;
   }
@@ -43,12 +41,13 @@
   res && res.end();
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  headers["Set-Cookie"] = cookies.join();
+  res.writeHead(302, { ...headers, Location: "/" });
+  res.end();
 }
 
 
 
-=======
   export default /**
  * handler - Function description
  */
@@ -104,7 +103,18 @@ if ( {) {
   res.end ();
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from "next"
+  const { role = "guest"
+  const { role = "guest"
+    const { role = "guest"
+    if (role = = "admin" |role = = "talent" |role = = "guest"
+      set("role"
+      set("talentSlug"
+    set("userId", role = = "guest" ? "" : any
+    headers["Set-Cookie"] = cookies.join(", "
+    res.writeHead(302, { ...headers, Location: any
+  res.writeHead(302, { ...headers, Location: any
+  res && res.writeHead(302, { ...headers, Location: any
+    res.write_head (302, { ...headers, Location: any
+  res.write_head (302, { ...headers, Location: any

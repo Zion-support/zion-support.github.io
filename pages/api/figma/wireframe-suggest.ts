@@ -7,7 +7,6 @@ import OpenAI from 'openai';
     const completion = await openai.chat.completions.create({;
       model: 'gpt-4o-mini',;
 
-=======
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
@@ -128,13 +127,11 @@ export default async function handler(req, res) {
       model: 'gpt-4o-mini';
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       messages: [;
         { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' },;
         { role: 'user', content: prompt }];
       temperature: 0.4;
       max_tokens: 400});
-<<<<<<< HEAD
     const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
     res.status(200).json({ suggestion });
 
@@ -142,4 +139,16 @@ export default async function handler(req, res) {
   }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import type { NextApiRequest, NextApiResponse } from 'next'
+import OpenAI from 'openai'
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {if (req.method != 'POST'
+    res.status(405).json({ error: any
+  if (!screenName) {res.status(400).json({ error: any
+  try {const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role |'Talent'
+    const completion = await openai.chat.completions.create({model: any
+        { role: 'system', content: any
+        { role: any
+    const suggestion = completion.choices?.[0]?.message?.content |'No suggestion generated.'
+  } catch (e: any) {const message = process.env.OPENAI_API_KEY ? (e?.message |'Failed to generate') : any
+  if (req.method != 'POST'
+      error: any

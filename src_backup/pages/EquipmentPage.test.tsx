@@ -1,18 +1,20 @@
+import React, { useState } from 'react',;
+import { Link } from 'react-router-dom',;
+import { SERVICE_CATEGORIES } from '@/data/servicesData',;
+export function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: '',
+    budget: '',
+    timeline: ''
+  }),
 
-import React from 'react';
-import { render, screen } from '@testing - library / react';
-import { MemoryRouter } from 'react-router-dom';
-import EquipmentPage from './EquipmentPage';
-describe ('EquipmentPage', () => {
-  it ('renders equipment page correctly', () => {
-    render (
-      <MemoryRouter>;
-        <EquipmentPage />;
-      </MemoryRouter>);
-    expect (screen.getByText ('Equipment')).toBeInTheDocument ();
+  const [selectedService, setSelectedService] = useState(''),
 
-  });
-  const [selectedService, setSelectedService] = useState('');
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -418,5 +420,20 @@ describe ('EquipmentPage', () => {
 
   );
 };
-
-
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import EquipmentPage from './EquipmentPage';
+describe('EquipmentPage', () => {
+  it('renders equipment page correctly', () => {
+    render(
+      <MemoryRouter>
+        <EquipmentPage />
+      </MemoryRouter>
+    );
+    expect(screen.getByText('Equipment')).toBeInTheDocument();
+  });
+});
+import React, { useState } from 'react'
+import { Link  } from 'react-router-dom'
+import { SERVICE_CATEGORIES } from '@/data/

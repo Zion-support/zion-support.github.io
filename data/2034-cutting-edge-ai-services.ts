@@ -1,17 +1,12 @@
-<<<<<<< HEAD
 export type CuttingEdgeAIService = {
       'CBT-guided prompts',
   launch_date?: string;
   real_service?: boolean;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
   {
 
-=======
     id: 'ai - product - spec - writer',
     name: 'AI Product Spec Writer',
     description:;
@@ -34,7 +29,6 @@ export type CuttingEdgeAIService = {
   },
   {
 
-=======
     id: 'ai - creative - studio',
     name: 'AI Creative Studio',
     description:;
@@ -55,21 +49,16 @@ export type CuttingEdgeAIService = {
     real_service: true,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];	id: string;
 
-=======
     useCases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com/services/ai-creative-studio',
     realService: true,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 ];	id: string;
 	id: string, name: string,
 	description: string,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 	category:
 		| 'AI Consciousness'
 		| 'AI Emotional Intelligence'
@@ -130,12 +119,10 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-creative-studio',
 
 		realService: true
-<<<<<<< HEAD
 	}
 ];
 
 
-=======
 name: string;
 description: string;
 category:;
@@ -194,20 +181,13 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
   link: 'https://ziontechgroup.com / services / ai - creative - studio',
   real_service: true;
 }
-=======
 export type CuttingEdgeAIService = {;
 
 	}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
-=======
 
-=======
 export type CuttingEdgeAIService = {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	id: string,;
 	name: string,;
 	description: string,;
@@ -265,11 +245,37 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		useCases: ['Marketing velocityCost savings'],;
 		link: 'https://ziontechgroup.com/services/ai-creative-studio',;
 		realService: true;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+export type CuttingEdgeAIService = {
+  id: string;
+  name: string;
+  description: string;
+  category:;
+    | 'AI Consciousness'
+    | 'AI Emotional Intelligence'
+    | 'AI Creativity'
+    | 'AI Psychology'
+    | 'AI Business Management'
+    | 'AI Healthcare'
+    | 'AI Neural Interfaces'
+    | 'AI Quantum Computing'
+    id: any
+    pricing: { starter: any
+    useCases: ['Employee wellness', '24/
+    link: any
+    useCases: ['Employee wellness', '24/
+    link: any
+    pricing: { starter: any
+    pricing: { starter: any
+		pricing: { starter: any
+		useCases: ['Employee wellness24/
+		link: any
+		pricing: { starter: any
+		pricing: { starter: any
+  pricing: { starter: any
+  use_cases: ['Employee wellness24 /
+  link: any
+  pricing: { starter: any
+  pricing: { starter: any

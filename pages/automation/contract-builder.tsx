@@ -1,6 +1,5 @@
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -41,11 +40,8 @@ export default function ContractBuilderPage() {
       !!endDate &&
       (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0)
     )
-<<<<<<< HEAD
 }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount])
-=======
   }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount])
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async function submitForm(event: React.FormEvent) {
     event.preventDefault()
     if (!canSubmit) return
@@ -91,7 +87,6 @@ export default function ContractBuilderPage() {
       setContract(data.contract)
     } catch (e: any) {
       setError(e?.message |'Failed to generate contract')
-<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react',
 import DatePicker from 'react - datepicker',
 import { use_router } from 'next / router',
@@ -207,7 +202,6 @@ if ( {) {
     setContract(''),
 
 
-=======
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -343,8 +337,6 @@ export default function ContractBuilderPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="max-w-5xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">Contract Builder</h1>
@@ -442,7 +434,6 @@ export default function ContractBuilderPage(req, res) {
 
         </div>
       </form>
-=======
   /**
  * copyToClipboard - Function description
  */
@@ -565,17 +556,12 @@ if (return, ) {
       </form>;
       {contract && (
 
-=======
 }
 
-=======
           </article>;
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
         <div className="mt-8">
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-2xl font-semibold">Generated Contract</h2>
@@ -589,7 +575,6 @@ if (return, ) {
   );
 };
 
-=======
             {contract  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -611,5 +596,13 @@ if (return, ) {
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useEffect, useMemo, useState } from 'react'
+import DatePicker from 'react-datepicker'
+import { useRouter } from 'next/
+      const res = await fetch('/api/
+          'Content-Type': any
+import { use_router } from 'next /
+      const res = await fetch ('/api /
+          'Content - Type': any
+    const blob = new Blob([contract], { type: any
+    a.download = `contract-${projectName.replace(/\s+/

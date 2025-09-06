@@ -21,10 +21,7 @@ const { BundleAnalyzerPlugin } from "webpack-bundle-analyzer"; const withBundleA
 import React from 'react';
 interface BundleanalyzerProps {
   // Add props here as needed
-<<<<<<< HEAD
-=======
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function Bundleanalyzer({ }: BundleanalyzerProps) {
   return (
     <div>
@@ -32,7 +29,6 @@ export default function Bundleanalyzer({ }: BundleanalyzerProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-=======
 }
 }
+const { BundleAnalyzerPlugin } from "webpack-bundle-analyzer"; const withBundleAnalyzer = (nextConfig = {}) => { return { .nextConfig,webpack: (config,{ dev,isServer }) => { if (process.env.ANALYZE = = "true") { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: "false",reportFilename: isServer ? "server-bundle.html" : "client-bundle.html"})} if (nextConfig.webpack) { return nextConfig.webpack(config,{ dev,isServer })} return config} } module.exports = withBundleAnalyzer;'"'

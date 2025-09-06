@@ -35,7 +35,6 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
                 ) :(;
                   <span>Pick a date</span>;
                 )}
-=======
               <Button;
                 variant={"outline"}
                 className={cn(;
@@ -48,7 +47,6 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
                 ) :(;
                   <span>Pick a date</span>;
                 )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </Button>;
             </FormControl>;
           </PopoverTrigger>;
@@ -113,3 +111,5 @@ setEndDate: (date: Date | undefined) => void
 }</Button> </FormControl> </PopoverTrigger> <PopoverContent className=" w-auto p-0"align=" start"> <Calendar initialFocus /> </PopoverContent> </Popover> </div> <div> <Label htmlFor=" expiryDate">Expiry Date (Optional) </Label> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) 
 }</Button> </FormControl> </PopoverTrigger> <PopoverContent className=" w-auto p-0"align=" start" > <Calendar initialFocus /> </PopoverContent> </Popover> </div> </div>) 
 }
+import React from 'react'
+import { format } from 'date-fns'

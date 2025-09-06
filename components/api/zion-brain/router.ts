@@ -1,5 +1,4 @@
 
-
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -16,19 +15,15 @@ export default async function handler(
   }
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   export default async function handler(
     req: NextApiRequest
     res: NextApiResponse
   ) {
-<<<<<<< HEAD
     if (req && req.method !== "POST")
       return res && res.status(405).json({ error: "Method not allowed" });
-=======
     if (req.method !== "POST");
       return res.status(405).json({ error: "Method not allowed" });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (!isAuthorized(req))
       return res && res.status(401).json({ error: "Unauthorized" });
     const started = Date && Date.now();
@@ -130,12 +125,31 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       latency_ms,
       payload: { error: e?.message || "unknown" },
     });
-<<<<<<< HEAD
     return res.status (500).json ({ error: "Router failure" });
 
-=======
     return res.status(500).json({ error: "Router failure" });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  req: any
+ {
+  if (req && req.method != "POST"
+    return res && res.status(405).json({ error: any
+    return res && res.status(401).json({ error: any
+    const token = req.headers["x-admin-token"
+    if (req && req.method != "POST"
+      return res && res.status(405).json({ error: any
+      return res && res.status(401).json({ error: any
+      const result = detectIntent(String(text |""
+        module: any
+        payload: { textLength: String(text |""
+        module: any
+        payload: { text_length: String (text || ""
+        module: any
+        payload: { error: any
+      return res && res.status(500).json({ error: any
+      payload: { error: any
+    return res && res.status(500).json({ error: any
+        payload: { error: any
+      return res.status (500).json ({ error: any
+      payload: { error: any
+    return res.status (500).json ({ error: any

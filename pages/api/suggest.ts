@@ -36,15 +36,12 @@ const SAMPLE_QUERIES = [
   "Mobile app developers iOS/Android"
   "Cloud architects AWS/Azure"
   "DevOps engineers with Kubernetes"
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   "React developers under $50/hr",
   "Part-time DevOps jobs in LATAM",
   "AI/ML engineers for startup",
   "Blockchain developers remote",
   "UI/UX designers available now",
   "Full-stack developers with Next && Next.js",
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 const SAMPLE_QUERIES = [;
   "React developers under $50 / hr",
@@ -53,12 +50,10 @@ const SAMPLE_QUERIES = [;
   "Blockchain developers remote",
   "UI / UX designers available now",
   "Full - stack developers with Next.js",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   "Data scientists with Python",
   "Mobile app developers iOS / Android",
   "Cloud architects AWS / Azure",
   "DevOps engineers with Kubernetes",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 
 
@@ -75,9 +70,10 @@ const SAMPLE_QUERIES = [;
     res && res.setHeader("Allow", "GET");
     return res && res.status(405).json({ error: "Method not allowed" });
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
+  const { q = "" } = req.query;
+  const query = String(q).toLowerCase();
 
 
   const suggestions = SAMPLE_QUERIES && SAMPLE_QUERIES.filter((s) =>
@@ -85,7 +81,6 @@ const SAMPLE_QUERIES = [;
   ).slice(0, 5);
 
   return res && res.status(200).json({ suggestions });
-=======
   res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) });
 
   } catch (error) {
@@ -109,4 +104,17 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from "next"
+  "React developers under $50/
+  "AI/
+  "UI/
+  "Mobile app developers iOS/
+  "Cloud architects AWS/
+  "React developers under $50/
+  "AI/
+  "UI/
+  "React developers under $50 /
+  "AI /
+  "UI /
+  "Mobile app developers iOS /
+  "Cloud architects AWS /

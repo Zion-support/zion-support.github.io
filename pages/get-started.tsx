@@ -28,7 +28,6 @@ export default function GetStarted() {;
 
 
 
-=======
 
   const handlePathSelection = (pathId: string) => {;
     setSelectedPath(pathId);
@@ -116,7 +115,6 @@ export default function GetStarted() {;
     },  ];
 ;
   const quickStartOptions = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       title: 'Free Consultation',
       description: '30 - minute session to discuss your needs',
@@ -135,40 +133,26 @@ export default function GetStarted() {;
       setCurrentStep(currentStep - 1)
     }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       color: 'from-orange-500 to-red-600'
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-}
-  ],;
-  const handlePathSelection = (pathId: string) => {;
-    setSelectedPath(pathId);
-    setCurrentStep(2);
-  };
-  const handleNextStep = () => {;
-    if (currentStep < 4) {;
-      setCurrentStep(currentStep + 1);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
-}
-  };
-  const handlePreviousStep = () => {;
-    if (currentStep > 1) {;
 
 
 
 
   return (
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setCurrentStep(currentStep - 1);    }
   }
   return (
@@ -188,7 +172,6 @@ export default function GetStarted() {;
             </h1>;
             <p className='text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed'>;
 
-=======
       icon: <Users className='w - 6 h - 6' />,
       action: 'Schedule Call',
       color: 'from - cyan - 500 to - blue - 600',
@@ -251,7 +234,6 @@ if ( {) {
             </h1>;
             <p className='text - xl md:text - 2xl text - gray - 300 mb - 8 leading - relaxed'>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Begin your journey into the future of AI consciousness, quantum;
               computing, and autonomous systems. Our expert team will guide you;
               every step of the way.;
@@ -293,7 +275,6 @@ if ( {) {
                 key={step && step.step}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
@@ -305,7 +286,6 @@ if ( {) {
 
               >
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
-<<<<<<< HEAD
                   {step.step}
                 </div>
 
@@ -315,8 +295,6 @@ if ( {) {
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{step.description}</p>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -327,12 +305,10 @@ if ( {) {
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
           <div className="container mx-auto px-4">
             <motion.div
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 className="text-center mb-16"
-=======
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -349,7 +325,6 @@ className="text-center mb-16"
   }
 }
               className="text-center mb-16"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >
               <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Choose Your Technology Path
@@ -361,7 +336,6 @@ className="text-center mb-16"
 
             <div className="grid lg:grid-cols-2 gap-8">
               {technologyPaths.map((path, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <motion.div
 
               transition={{ duration: 0 && 0.8 }}
@@ -458,7 +432,6 @@ className="text-center mb-16"
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
                   className='group cursor - pointer';
                   on_click={() => handlePathSelection (path.id)}
                 >;
@@ -501,11 +474,9 @@ className="text-center mb-16"
                               <CheckCircle className='w-4 h-4 text-cyan-400' />;
                               <span className='text-sm'>{feature}</span>                            </li>;
 
-=======
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="group cursor-pointer"
                   onClick={() => handlePathSelection(path.id)}
-=======
                   key={path.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -534,22 +505,18 @@ className="text-center mb-16"
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   <div className="p-8 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                     <div className="flex items-start gap-4 mb-6">
                       <div className="flex-shrink-0">{path.icon}</div>
                       <div>
                         <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-<<<<<<< HEAD
                           {path.name}
-=======
                           {path.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         </h3>
                         <p className="text-gray-300 leading-relaxed">{path.description}</p>
                       </div>
@@ -559,7 +526,6 @@ className="text-center mb-16"
                     <div className="grid md:grid-cols-2 gap-6 mb-6">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <div>
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Key Features</h4>
                         <ul className="space-y-2">
@@ -568,7 +534,6 @@ className="text-center mb-16"
                               <CheckCircle className="w-4 h-4 text-cyan-400" />
                               <span className="text-sm">{feature}</span>
                             </li>
-<<<<<<< HEAD
                           ))}
 
 
@@ -585,7 +550,6 @@ className="text-center mb-16"
                             <span
                               key={useCase}
                               className='px-3 py-1 bg-gray-800/50 text-gray-300 rounded-full text-sm'>;
-=======
                           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -593,7 +557,6 @@ className="text-center mb-16"
 }
                         </ul>
                       </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <div>
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Use Cases</h4>
                         <div className="flex flex-wrap gap-2">
@@ -671,8 +634,6 @@ className="text-center mb-16"
                     </div>
                   </div>
                 </motion.div>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         </div>;
                       </div>;
                     </div>;
@@ -717,17 +678,11 @@ className="text-center mb-16"
                         <span className="flex items-center gap-1">
                           <Target className="w-4 h-4" />
                           {path.complexity}
-=======
                           {path.timeline  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </span>
                         <span className="flex items-center gap-1">
                           <Target className="w-4 h-4" />
@@ -736,7 +691,6 @@ className="text-center mb-16"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         </span>
                       </div>
                       <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
@@ -747,7 +701,6 @@ className="text-center mb-16"
                   </div>
                 </motion.div>
 
-=======
 
               ))  } catch (error) {
     console.error("Error:", error);
@@ -770,17 +723,14 @@ className="text-center mb-16"
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {currentStep === 2 && (
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
           <div className="container mx-auto px-4">
             <motion.div
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 className="text-center mb-16"
-=======
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -797,7 +747,6 @@ className="text-center mb-16"
   }
 }
               className="text-center mb-16"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >
               <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Define Your Requirements
@@ -819,7 +768,6 @@ className="text-center mb-16"
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </h3>
                   <p className="text-gray-300">
                     Now let's gather more details about your specific needs
@@ -831,12 +779,10 @@ className="text-center mb-16"
                   <div className="grid md:grid-cols-2 gap-6">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">Project Timeline</label>
                       <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300">
                         <option>Immediate (1-2 weeks)</option>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                         <option>1-3 months</option>
                         <option>3-6 months</option>
                         <option>6+ months</option>
@@ -845,7 +791,6 @@ className="text-center mb-16"
 
                     
                     <div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <label className="block text-sm font-medium text-gray-300 mb-2">Budget Range</label>
                       <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300">
                         <option>Under $50K</option>
@@ -1001,7 +946,6 @@ className="text-center mb-16"
                     <label className="block text-sm font-medium text-gray-300 mb-2">Project Description</label>
                     <textarea
                       rows={6}
-=======
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Project Description</label>
                     <textarea
@@ -1010,7 +954,6 @@ className="text-center mb-16"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
                       placeholder="Describe your project goals, challenges, and specific requirements..."
                     />
@@ -1018,32 +961,21 @@ className="text-center mb-16"
 
                     <button
                       onClick={handlePreviousStep}
-=======
-<<<<<<< HEAD
                   <div className='flex justify-between pt-6'>
-=======
                   <div className="flex justify-between pt-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <button
                       onClick={handlePreviousStep  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       className="px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-300"
                     >
                       Previous
                     </button>
                     <button
-<<<<<<< HEAD
                       onClick={handleNextStep}
                       className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     >
                       Next Step
                     </button>
@@ -1054,7 +986,6 @@ className="text-center mb-16"
           </div>
         </section>
 
-=======
 
       )  } catch (error) {
     console.error("Error:", error);
@@ -1075,7 +1006,6 @@ className="text-center mb-16"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 className="text-center mb-16"
-=======
       {/* Quick Start Options */}
       <section className='py-20'>
         <div className='container mx-auto px-4'>          <motion.div
@@ -1083,7 +1013,6 @@ className="text-center mb-16"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
-=======
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1117,7 +1046,6 @@ className="text-center mb-16"
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Quick Start Options
@@ -1129,7 +1057,6 @@ className="text-center mb-16"
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {quickStartOptions.map((option, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 
         </section>)}
@@ -1183,7 +1110,6 @@ className="text-center mb-16"
                 key={option && option.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 className='group cursor-pointer'>;
                 <div className='p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300'>;
@@ -1210,7 +1136,6 @@ className="text-center mb-16"
                 </div>;
               </motion && motion.div>;
 
-=======
                 className="group cursor-pointer"
               >
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
@@ -1218,7 +1143,6 @@ className="text-center mb-16"
                     {option.icon}
                   </div>
                   
-=======
                 key={option.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1252,7 +1176,6 @@ className="text-center mb-16"
 }
                   </div>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <h3 className="text-xl font-bold text-white mb-3 text-center">{option.title}</h3>
                   <p className="text-gray-300 mb-4 text-center leading-relaxed">{option.description}</p>
                   <div className="text-center mb-4">
@@ -1266,8 +1189,6 @@ className="text-center mb-16"
                   </button>
                 </div>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -1325,7 +1246,6 @@ className="text-center mb-16"
                 href="/quote"
                 className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300"
               >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 Get a Quote
               </a>
             </div>
@@ -1360,7 +1280,6 @@ className="text-center mb-16"
 }</div> </div> </section>)
 }> <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Define Your Requirements </h2> <p className="text-xl text-gray-400" >Help us understand your project goals and constraints</p> </motion.div> </h3> <p className="text-gray-300" > Now let's gather more details about your specific needs </p> </div> <div className="space-y-6" > <div className="grid md:grid-cols-2 gap-6" > <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Project Timeline</label> <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" > <option>Immediate (1-2 weeks) </option> <option>1-3 months</option> <option>3-6 months</option> <option>6+ months</option> </select> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Budget Range</label> <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" > <option>Under $50K</option> <option>$50K - $100K</option> <option>$100K - $500K</option> <option>$500K+</option> </select> </div> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Project Description</label> <textarea /> </div> <div className="flex justify-between pt-6" > <button > Previous </button> <button > Next Step </button> </div> </div> </div> </div> </div> </section>)
 }> <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Quick Start Options </h2> <p className="text-xl text-gray-400" >Get started immediately with these quick options</p> </motion.div> </span> </div> <button className= {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   `w-full py-3 px-4 bg-gradient-to-r $ {
   option && option.color 
 }text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300` 
@@ -1379,7 +1298,6 @@ className="text-center mb-16"
   duration: 0 && 0.8 
 }> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Begin Your Journey? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you navigate the future of technology. Let's discuss your project and create a roadmap to success. </p> <a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300" > Contact Our Team <ArrowRight className="w-5 h-5" /> </Link> <a href="/quote" className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300" > Get a Quote </Link> </div> </motion && motion.div> </div> </section> </div>) ;
 
-=======
                   </p>;
                   <div className='text - center mb - 4'>;
                     <span className='inline - flex items - center gap - 1 px - 3 py - 1 bg - gray - 800 / 50 text - gray - 300 rounded - full text - sm'>;
@@ -1422,10 +1340,8 @@ className="text-center mb-16"
               <a;
                 href='/quote';
                 className='inline - flex items - center gap - 2 border border - cyan - 500 / 30 text - cyan - 400 px - 8 py - 4 rounded - 2xl font - semibold hover:bg - cyan - 500 / 10 transition - all duration - 300'              >;
-=======
   duration: 0.8
 }> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Begin Your Journey? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you navigate the future of technology. Let's discuss your project and create a roadmap to success. </p> <a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300" > Contact Our Team <ArrowRight className="w-5 h-5" /> </Link> <a href="/quote" className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300" > Get a Quote </Link> </div> </motion.div> </div> </section> </div>)
-=======
   )
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">;
         <div className="container mx-auto px-4 text-center">;
@@ -1465,7 +1381,6 @@ className="text-center mb-16"
                 href="/quote";
                 className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300";
               >;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 Get a Quote;
               </a>;
             </div>;
@@ -1484,4 +1399,16 @@ className="text-center mb-16"
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+  Building;} from 'lucide-react'
+  const [selectedPath, setSelectedPath] = useState<string>(''
+  Building,} from 'lucide-react'
+  const [selected_path, setSelectedPath] = useState < string>(''
+      title: any
+ <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Define Your Requirements </h2> <p className="text-xl text-gray-400" >Help us understand your project goals and constraints</p> </motion.div> 
+ <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Begin Your Journey? 
+ <h2 className="text - 4xl font - bold mb - 4 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent" > Define Your Requirements </h2> <p className="text - xl text - gray - 400" >Help us understand your project goals and constraints</p> </motion.div> 
+ <h2 className="text - 4xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent" > Ready to Begin Your Journey? 

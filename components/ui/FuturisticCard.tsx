@@ -19,9 +19,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from "react";
 type Props = {;
 import React from './react';
@@ -35,7 +33,6 @@ type Props = {
 
 export default function FuturisticCard(): any ({ title, description, cta }: Props) {;
   return (
-<<<<<<< HEAD
     <div className="futuristic-card">;
       <div className="futuristic-card-glow" />;
       <div className="relative z-10">;
@@ -59,7 +56,6 @@ function FuturisticCard() {
     </div>);
 
 }
-=======
       </div>
 
     </div>
@@ -68,4 +64,5 @@ function FuturisticCard() {
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from "react"
+    

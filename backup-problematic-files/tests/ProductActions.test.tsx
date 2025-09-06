@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
 function setup() {
   const addToCart = vi.fn().mockResolvedValue(undefined);'
@@ -26,7 +25,6 @@ describe('ProductActions', () => {'
 '
 import React from 'react'
 '"
-=======
 import { render, screen, fireEvent, waitFor } from '@testing-library/react',;
 import '@testing-library/jest-dom',;
 import { describe, it, expect, vi } from 'vitest',;
@@ -76,4 +74,6 @@ export default function ProductActions.test({ }: ProductActions.testProps) {
     </div>
   );
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+import { render, screen, fireEvent, waitFor } from '@testing-library/
+import '@testing-library/
+import { ProductActions } from '@/components/

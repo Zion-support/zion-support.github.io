@@ -5,8 +5,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 import Layout from '../../components/Layout';
@@ -23,11 +21,8 @@ import Layout from '../../components/Layout';
 import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const features = [
   {
     icon: Cloud,
@@ -197,14 +192,9 @@ export default function CloudDevOpsPage() {;
   },
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   },
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   {
     icon: GitBranch,
     title: 'CI/CD Pipelines',
@@ -253,8 +243,6 @@ const benefits = [
 export default function CloudDevOpsServices() {
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 export default function CloudDevOpsPage() {;
 const benefits = [;
   'Reduced infrastructure costs by up to 50%',;
@@ -265,11 +253,8 @@ const benefits = [;
   'Faster time-to-market for applications';
 ];
 export default function CloudDevOpsServices() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/cloud-devops.tsx
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
@@ -405,8 +390,6 @@ export default function CloudDevOpsServices() {;
                   <p className="text-gray-600">{phase.description}</p>
                 </motion.div>
               ))}
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -428,11 +411,8 @@ export default function CloudDevOpsServices() {;
                   ))}
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
@@ -459,5 +439,13 @@ export default function CloudDevOpsServices() {;
       </div>
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   );
+import Layout from '../../components/
+import Layout from '../../components/
+import Layout from '../../components/
+import Head from 'next/
+import Link from 'next/
+import Layout from '../../components/
+import Layout from '../../components/
+import Layout from '../../components/
+    title: any

@@ -2,15 +2,9 @@
 ;
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 const { execSync } = require('child_process');
 class PerformanceOptimizer {
   constructor() {
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
 class PerformanceOptimizer {
   constructor() {
     this.metrics = {};
@@ -56,18 +50,10 @@ class PerformanceOptimizer {
     return recommendations;
     this.projectRoot = process.cwd();
     this.reportFile = path.join(__dirname, '../logs/performance-optimization-report.json');
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
 class PerformanceOptimizer {
   constructor() {
->>>>>>> origin/automation-improvements-final
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     this.optimizations = [];
     this.logFile = path.join(__dirname, '..', 'logs', 'performance-optimizer.log');
     this.ensureLogDirectory();
@@ -83,23 +69,8 @@ class PerformanceOptimizer {
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   }
   async optimizePerformance() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx']);
     const optimizations = [];
     for (const file of files) {
@@ -148,13 +119,6 @@ class PerformanceOptimizer {
   }
   getAllFiles(dir, extensions) {
     const files = [];
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     try {
       this.log('Starting performance optimization...');
       // Analyze bundle size
@@ -219,11 +183,6 @@ class PerformanceOptimizer {
     });
     return files;
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   saveReport(optimizations) {
     const report = {
       timestamp: new Date().toISOString(),
@@ -251,14 +210,7 @@ const path = require('path')
     const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx')]
         const content = fs.readFileSync(file, 'utf8')
     optimized = optimized.replace(/imports+{s*([^}]+)s*}s+froms+['"]([^'')]
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   formatBytes(bytes) {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
@@ -434,16 +386,8 @@ optimizer.optimizePerformance().then(report => {
 }).catch(error => {
   console.error('Error running performance optimizer:', error.message);
   process.exit(1);
-<<<<<<< HEAD
 });
-=======
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const fs = require("fs")
 const path = require("path")
 #!/usr/bin/env node;
@@ -520,7 +464,6 @@ module.exports = {
 const { execSync } = require("fs")
 const fs = require("fs")
 const path = require("path")
->>>>>>> origin/main
 
 class PerformanceMonitor {
   constructor() {
@@ -581,7 +524,6 @@ monitor.runBundleAnalysis()
       this.log("⚠️ Public directory not found", "WARN")
       return,,
 }
-<<<<<<< HEAD
 module.exports = PerformanceOptimizer;
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");class PerformanceOptimizer { constructor() { this.projectRoot = process.cwd();" this.reportFile = path.join(__dirname, "./logs/performance-optimization-report.json"); } async optimizePerformance() {" console.log(" Optimizing performance."); " const files = this.getAllFiles(this.projectRoot, [".js", ".jsx", ".ts", ".tsx"]); const optimizations = []; for (const file of files) { try {" const content = fs.readFileSync(file, "utf8"); const optimized = this.optimizeFile(content); if (content !== optimized) { fs.writeFileSync(file, optimized); optimizations.push({ file: path.relative(this.projectRoot, file), optimizations: this.getOptimizations(content, optimized) }); } } catch (error) { console.error(`Error processing ${file}: ${error.message}`); } } this.saveReport(optimizations);` console.log(` Performance optimization completed! Optimized ${optimizations.length} files.`); } optimizeFile(content) { let optimized = content; / Optimize imports" optimized = optimized.replace(/imports+{s*([^}]+)s*}s+froms+[""]([^""]+)[""]/g, (match, imports, module) => {" const cleanImports = imports.split(",").map(imp => imp.trim()).join(", ");"` return `import { ${cleanImports} } from "${module}"`; }); / Optimize arrow functions" optimized = optimized.replace(/functions+(w+)s*([^)]*)s*{/g, "const $1 = ($2) => {"); / Remove console.logs in production" if (process.env.NODE_ENV === "production") {" optimized = optimized.replace(/console.(log|warn|error)([^)]*);?/g, ""); } return optimized; } getOptimizations(original, optimized) { const optimizations = []; if (original !== optimized) {" optimizations.push("Imports optimized");" optimizations.push("Arrow functions optimized");" if (process.env.NODE_ENV === "production") {" optimizations.push("Console statements removed"); } } return optimizations; } getAllFiles(dir, extensions) { const files = []; try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath);" if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") { files.push(.this.getAllFiles(fullPath, extensions)); } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) { files.push(fullPath); } } } catch (error) {" / Skip directories that can"t be read } return files; } saveReport(optimizations) { const report = { timestamp: new Date().toISOString(), totalFiles: optimizations.length, optimizations: optimizations }; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); }}if (require.main === module) { const optimizer = new PerformanceOptimizer(); optimizer.optimizePerformance().catch(console.error);}module.exports = PerformanceOptimizer;""`"`
 #!/usr/bin/env node;
@@ -592,14 +534,7 @@ const path = require('path')
     const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx')]
         const content = fs.readFileSync(file, 'utf8')
     optimized = optimized.replace(/imports+{s*([^}]+)s*}s+froms+['"]([^'')]
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
 });
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
     const imageExtensions = [".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"]
     const images = this.findFiles(publicDir, imageExtensions)
     this.log(`🖼️ Found ${images.length} images`, "INFO")
@@ -761,10 +696,3 @@ const path = require('path')
 }
 const optimizer = new PerformanceOptimizer()
 optimizer.run().catch(console.error)
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

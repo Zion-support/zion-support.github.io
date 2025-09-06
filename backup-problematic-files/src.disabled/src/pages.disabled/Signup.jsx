@@ -28,3 +28,5 @@ const Signup = ({ className }) => {
 };
 
 export default Signup;
+import React from 'react'
+    

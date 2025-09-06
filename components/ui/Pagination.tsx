@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -73,25 +75,17 @@ export default function Pagination(): any ({;
 };
 export default function Pagination(): any ({ page, pageSize, total, onChange }: PaginationProps) {;
   const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));
-=======
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export type PaginationProps = {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export type PaginationProps = {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   page: number;
   pageSize: number;
   total: number;
   onChange: (nextPage: number) => void;
 }
 export default function Pagination({
-<<<<<<< HEAD
   page
   pageSize
   total
@@ -103,7 +97,6 @@ export default function Pagination({
   onChange: (nextPage: number) => void
 }
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
-=======
   page,
   pageSize,
   total,
@@ -116,9 +109,7 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
 };
 
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const canPrev = page > 1;
   const canNext = page < totalPages;
   const goTo = (p: number) => {;
@@ -152,7 +143,6 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
     if (p >= 1 && p <= totalPages) onChange(p)
   };
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
     <div className="flex items-center justify-between gap-2 mt-4">;
@@ -430,27 +420,20 @@ if ( {) {
 }
 export default Pagination;
 }
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           <ChevronRight className="w - 4 h - 4 ml - 1" />;
         </span>)}
     </nav>);
 }
 export default Pagination;
-<<<<<<< HEAD
         Next
       </EnhancedButton>
     </div>
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    console.error('Error caught by boundary: any

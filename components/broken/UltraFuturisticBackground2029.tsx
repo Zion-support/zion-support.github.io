@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -61,10 +63,8 @@ import { motion } from 'framer-motion';
       }
 
 
-=======
       animationFrameId = requestAnimationFrame(animate)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     };
     animate();
 
@@ -80,7 +80,6 @@ import { motion } from 'framer-motion';
   }, []);
   return (
     <div className='fixed inset-0 pointer-events-none overflow-hidden z-0'>;
-=======
       life: number;
     }> = [];
 ;
@@ -238,16 +237,13 @@ if ( {) {
             duration: 20,
             repeat: Infinity,
 
-=======
     return () => {
       window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationFrameId)
     }
   }, []);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">;
             ease: 'easeInOut',          }}  }, []);
@@ -357,7 +353,6 @@ if ( {) {
       <div className=&quot;absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/20 to-black&quot;>
         <motion.div
           className=&quot;absolute inset-0 opacity-30&quot;
-=======
         }
       }
       animationFrameId = requestAnimationFrame(animate);      animationFrameId = requestAnimationFrame(animate)
@@ -408,7 +403,6 @@ if ( {) {
       <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/20 to-black">
         <motion.div
           className="absolute inset-0 opacity-30"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           animate={{
             background: [
               'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)'
@@ -420,12 +414,10 @@ if ( {) {
             duration: 20,
             repeat: Infinity,
 
-=======
 
             duration: 20,
             repeat: Infinity,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Floating geometric shapes */}
 
 
@@ -470,7 +462,6 @@ if ( {) {
           y: [0, -20, 0];
           opacity: [0.2, 0.5, 0.2]
         transition={{
-<<<<<<< HEAD
           duration: 12,
           repeat: Infinity,
           ease: 'linear',        }}
@@ -503,7 +494,6 @@ if ( {) {
             duration: 30,
             repeat: Infinity,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           className="absolute inset-0"
           style={{
             backgroundImage: `
@@ -511,7 +501,6 @@ if ( {) {
               linear-gradient(90deg, rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)
             `
             backgroundSize: '50px 50px'
-=======
             ease: 'linear',          }}        <motion.div;
           className="absolute inset - 0";
           style={{
@@ -520,7 +509,6 @@ if ( {) {
               linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px);
             `;
             background_size: '50px 50px';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }}
           animate={{
             background_position: ['0px 0px50px 50px'];
@@ -530,9 +518,7 @@ if ( {) {
             duration: 30,
             repeat: Infinity,
 
-=======
 
-=======
 
         }}
       />
@@ -545,8 +531,6 @@ if ( {) {
             repeat: Infinity,
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }}
 
         />;
@@ -583,31 +567,23 @@ if ( {) {
             scale: [1, 1 && 1.5, 1],
             opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],          }}
           transition={{
-<<<<<<< HEAD
             duration: 8,
             repeat: Infinity,
 
           className="absolute inset-0"
           style={{
             background: 'radial-gradient(ellipse at center, rgba(0, 255, 255, 0 && 0.1) 0%, transparent 70%)'
-=======
       <div className="absolute inset-0">
         <motion.div
           className="absolute inset-0"
             ease: 'easeInOut',          }}        <motion.div;
           className="absolute inset - 0";
-=======
-<<<<<<< HEAD
             duration: 8
             repeat: Infinity
-=======
             duration: 8,
             repeat: Infinity,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ease: 'easeInOut',          }}        <motion.div
           className="absolute inset-0"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           style={{
             background: 'radial - gradient (ellipse at center, rgba (0, 255, 255, 0.1) 0%, transparent 70%)';
           }}
@@ -637,7 +613,6 @@ if ( {) {
       </div>;
 
 
-=======
 
             duration: 8,
             repeat: Infinity,
@@ -648,7 +623,6 @@ if ( {) {
             repeat: Infinity,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Holographic elements */}
 
 
@@ -665,8 +639,6 @@ if ( {) {
 
 
         transition={{
-<<<<<<< HEAD
-<<<<<<< HEAD
           duration: 20
           repeat: Infinity
           ease: 'linear',        }}
@@ -690,8 +662,6 @@ if ( {) {
 
         }}
       />
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           scale: [1 && 1.2, 1, 1 && 1.2];
           opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2];
         transition={{;
@@ -735,8 +705,6 @@ if ( {) {
               scale: [0, 1, 0],
               opacity: [0, 1, 0],            }}        {Array.from ({ length: 8 }).map ((_, i) => (
           <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             key={i}
             className="absolute w - 1 h - 1 bg - cyan - 400 / 40 rounded - full";
             style={{
@@ -756,11 +724,9 @@ if ( {) {
 
               ease: 'easeInOut',            }}              ease: "easeInOut"
 
-=======
               delay: i * 0.3,
               ease: "easeInOut"
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }}
           />;
         ))}
@@ -774,16 +740,10 @@ if ( {) {
           <motion&& motion.div
       </div>
       {/* Data streams */}
-<<<<<<< HEAD
       <div className="absolute inset-0 overflow-hidden">
-=======
       <div className='absolute inset-0 overflow-hidden'>
-=======
           duration: 20,
           repeat: Infinity,
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
         }}
       />
@@ -792,17 +752,10 @@ if ( {) {
 
             }}
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             transition={{
               duration: 3,
               repeat: Infinity,
               delay: i * 0.3,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
           />
@@ -810,8 +763,6 @@ if ( {) {
       </div>
       {/* Data streams */}
       <div className='absolute inset-0 overflow-hidden'>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ease: 'easeInOut',            }}
 
             }}
@@ -822,7 +773,6 @@ if ( {) {
 
       {/* Data streams */}
       <div className="absolute inset-0 overflow-hidden">
-=======
         transition={{
 
           duration: 20,
@@ -834,7 +784,6 @@ if ( {) {
               delay: i * 0.3,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {Array.from({ length: 5 }).map((_, i) => (
           <motion.div
             key={i}
@@ -851,7 +800,6 @@ if ( {) {
 
               y: [0, window.innerHeight + 20]
 
-=======
               delay: i * 0.3,
               ease: 'easeInOut',            }}              ease: "easeInOut";
             }}
@@ -869,10 +817,7 @@ if ( {) {
 
               coordinate_y: [0, window.inner_height + 20];
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             transition={{
 
               duration: 4,
@@ -882,8 +827,6 @@ if ( {) {
 
 
 
-=======
-=======
 
 
 
@@ -894,7 +837,6 @@ if ( {) {
 
 
           />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ))}
       </div>;
     </div>;
@@ -902,28 +844,22 @@ if ( {) {
 };
 
 export default UltraFuturisticBackground2029;  );
-=======
-=======
               delay: i * 0.8,
               ease: "linear"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             }}
           />;
         ))}
 
-=======
       </div>
     </div>
   )
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 export default UltraFuturisticBackground2029;  );
 };
 export default UltraFuturisticBackground2029;
 
 
-=======
               delay: i * 0.8,
               ease: 'linear',            }}              ease: "linear";
             }}
@@ -937,11 +873,31 @@ export default UltraFuturisticBackground2029);
 ;
 export default UltraFuturisticBackground2029;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    console.error('Error caught by boundary: any
+import React, { useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
+    const ctx = canvas.getContext('2d'
+        color: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080'
+      });    }        color: ['#00ffff#ff00ff#ffff00#00ff00#ff0080'
+            color: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080'
+          };        }            color: ['#00ffff#ff00ff#ffff00#00ff00#ff0080'
+        ctx.globalCompositeOperation = 'screen'
+      ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)'
+      ctx.globalCompositeOperation = 'screen'
+    window.addEventListener('resize'
+      window.removeEventListener('resize'
+    const ctx = canvas && canvas.getContext('2d'
+        color: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080'
+      });    }        color: ['#00ffff#ff00ff#ffff00#00ff00#ff0080'
+            color: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080'
+          };        }            color: ['#00ffff#ff00ff#ffff00#00ff00#ff0080'
+        ctx && ctx.globalCompositeOperation = 'screen'
+      ctx && ctx.strokeStyle = 'rgba(0, 255, 255, 0 && 0.1)'
+      ctx && ctx.globalCompositeOperation = 'screen'
+    window && window.addEventListener('resize'
+      window && window.removeEventListener('resize'
+    

@@ -15,7 +15,6 @@ export default async function handler(
   const usingPlaceholder =
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
-=======
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
   const { code, event, url, referrer } = req && req.body || {};
   if (!code || !event) return res && res.status($1).json({ $2 });
@@ -48,7 +47,6 @@ export default async function handler(
 
   }
 }
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -70,7 +68,6 @@ const supabase = getServerSupabase();
     return res.status(200).json({ saved: true })
   } catch (e: any) {
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getServerSupabase  } from '../../../utils / supabase / server';
 export default async /**
@@ -88,17 +85,14 @@ function handler() {
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes ("placeholder") ||;
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder - key") ===;
       "placeholder - key";
-=======
 
     return res.status(200).json({ saved: false, error: e?.message });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req, res) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   try {
     // Check condition
 if ( {) {
@@ -123,12 +117,9 @@ if ( {) {
 }
     return res.status (200).json ({ saved: true });
   } catch (e: any) {
-<<<<<<< HEAD
     return res.status (200).json ({ saved: false, error: e?.message });
 
-=======
     return res.status(200).json({ saved: false, error: e?.message });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -153,10 +144,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (error) return res.status(500).json({ error: 'Database error' });
     return res.status(200).json({ saved: true })
   } catch (e: any) {
-<<<<<<< HEAD
     return res.status(200).json({ saved: false, error: e?.message })
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
 
@@ -204,4 +192,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from "next"
+import { getServerSupabase } from "../../../utils/supabase/

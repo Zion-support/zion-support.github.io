@@ -39,7 +39,6 @@ const REASONS = [;
 ] as const;
 type ReasonType = (typeof REASONS)[number];
 
-=======
 
 import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
@@ -60,7 +59,6 @@ type ReasonType = (typeof REASONS)[number];
 export default function NewDisputePage() {;
 
 
-=======
 import { useRouter } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -70,11 +68,9 @@ const REASONS = [
 export default function NewDisputePage() {;
   const router = useRouter();
 
-=======
   const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
   const user = useCurrentUser();
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const [projectId, setProjectId] = useState(qProjectId || '');
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
@@ -128,10 +124,7 @@ export default function NewDisputePage() {;
     } finally {;
 
       setSubmitting(false);    }
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [talentUserId, setTalentUserId] = useState(talentId || '');
   const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
   const [submitting, setSubmitting] = useState(false);
@@ -148,10 +141,8 @@ import EnhancedLayout from '../../components / layout / EnhancedLayout';
 import {useCurrentUser} from '../../utils / auth';
 ;
 const REASONS = [;
-=======
 
 const REASONS = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   'Scope Disagreement',
   'Quality Issues',
   'Delivery Delay',
@@ -159,7 +150,6 @@ const REASONS = [
   'Communication Breakdown',
   'Other',
 ] as const;
-<<<<<<< HEAD
 ;
 type ReasonType = (typeof REASONS)[number];
 ;
@@ -200,7 +190,6 @@ function handle_submit() {
       return alert ('Please fill required fields')) {
   $2
 }    set_submitting (true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
       const res = await fetch ('/api / disputes', {
         method: 'POST',
@@ -367,7 +356,6 @@ function toBase64(): any (file: File): Promise<string> {;
   })
 }
 
-=======
     </EnhancedLayout>);
 function toBase64 (file: File): Promise < string> {
   return new Promise ((resolve, reject) => {
@@ -377,13 +365,9 @@ const reader = new FileReader ();
     reader.readAsDataURL (file);
   });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 }
 
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -391,5 +375,15 @@ const reader = new FileReader ();
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { useRouter  } from 'next/
+import EnhancedLayout from '../../components/layout/
+import {useCurrentUser} from '../../utils/
+      const res = await fetch('/api/
+        headers: { 'Content-Type': any
+          headers: { 'Content-Type': any
+import {use_router} from 'next /
+import EnhancedLayout from '../../components / layout /
+import {useCurrentUser} from '../../utils /
+      const res = await fetch ('/api /
+        headers: { 'Content-Type': any
+          headers: { 'Content-Type': any

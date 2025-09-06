@@ -26,13 +26,10 @@ import React, { useState } from 'react';
 
   Settings,;
   Trash2,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
-=======
 import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function URLShortenerPage() {;
 
@@ -98,7 +95,6 @@ export default function URLShortenerPage() {;
       createdAt: new Date().toISOString()
       qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
     }
-=======
     
     setIsShortening(true);
     
@@ -108,7 +104,6 @@ export default function URLShortenerPage() {;
     const alias = customAlias.trim() || generateRandomAlias();
     const shortUrl = `https://zion.tech/${alias}`;
     
-=======
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
@@ -121,7 +116,6 @@ import {
   CheckCircle,
   ExternalLink,
   QrCode,
-<<<<<<< HEAD
   Settings,
   Trash2,
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
@@ -239,12 +233,10 @@ function URLShortenerPage() {
       createdAt: new Date().toISOString(),;
       qrCode: `https://api && api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`;
     };
-=======
   Settings,;
   Trash2,;
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 export default function URLShortenerPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [longUrl, setLongUrl] = useState('');
   const [customAlias, setCustomAlias] = useState('');
   const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),
@@ -267,12 +259,10 @@ export default function URLShortenerPage() {;
       createdAt: new Date().toISOString()
       qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
     }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     setShortenedUrls(prev => [newShortUrl, ...prev]);
     setLongUrl('');
     setCustomAlias('');
     setIsShortening(false);
-<<<<<<< HEAD
   };
   const generateRandomAlias = () => {;
 
@@ -418,7 +408,6 @@ export default function URLShortenerPage() {;
                   <label className='block text-sm font-medium text-gray-300 mb-2'>
                     Long URL
                   </label>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <input
                     type='url'
                     value={longUrl}
@@ -642,7 +631,6 @@ export default function URLShortenerPage() {;
                       </div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
                   </div>;
                 )}
@@ -651,7 +639,6 @@ export default function URLShortenerPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
 
@@ -880,14 +867,12 @@ export default function URLShortenerPage() {;
 
                         className="mx-auto mb-3 w-32 h-32"
 
-=======
                       />
                       <p className="text-sm text-gray-400">
                         Scan this QR code to visit the shortened URL
                       </p>
                     </div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   )}
 </Card>;
               ))}
@@ -895,7 +880,6 @@ export default function URLShortenerPage() {;
           </div>;
         </section>;
       )}
-=======
                       />
                       <p className="text-sm text-gray-400">
                       </p>
@@ -910,7 +894,6 @@ export default function URLShortenerPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Features */}
 
 
@@ -979,7 +962,6 @@ export default function URLShortenerPage() {;
               <p className='text-gray-400'>
                 Simple dashboard to manage, edit, and delete your shortened URLs
                 as needed.              </p>            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="text-4xl mb-4">🔧</div>
               <h3 className="text-xl font-bold text-white mb-4">Easy Management</h3>
               <p className="text-gray-400">
@@ -1000,7 +982,6 @@ export default function URLShortenerPage() {;
               Perfect For Every Business Need
 
             </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From marketing campaigns to social media, our URL shortener serves all your link management needs.
             </p>
@@ -1072,8 +1053,6 @@ export default function URLShortenerPage() {;
           </div>
         </div>
       </section>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <section className='py-20 bg-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>;
@@ -1797,7 +1776,6 @@ export default function URLShortenerPage() {;
       </section>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               View Pricing;
             </Button>;
           </div>;
@@ -1805,19 +1783,17 @@ export default function URLShortenerPage() {;
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
-=======
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import React, { useState } from 'react'
+import Head from 'next/
+import Card from '../components/ui/
+import Button from '../components/ui/
+import Head from 'next/
+import Card from '../components/ui/
+import Button from '../components/ui/
+            

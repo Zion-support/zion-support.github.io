@@ -1,5 +1,4 @@
 
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -24,9 +23,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
@@ -78,13 +75,11 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
-=======
 
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
@@ -127,11 +122,8 @@ export default function SMBSolutionsPage() {
   ];
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout
       title="SMB Solutions - Zion Tech Group"
@@ -161,13 +153,8 @@ export default function SMBSolutionsPage() {
         </section>;
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -182,8 +169,6 @@ export default function SMBSolutionsPage() {
         </section>
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/smb.tsx
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
@@ -208,3 +193,6 @@ export default function SMBSolutionsPage() {
       </div>;
     </Layout>;
   );
+import { motion } from 'framer-motion'
+import Layout from '../../components/
+import Layout from '../../components/

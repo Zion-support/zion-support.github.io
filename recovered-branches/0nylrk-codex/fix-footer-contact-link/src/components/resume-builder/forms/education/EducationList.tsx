@@ -10,36 +10,28 @@ interface EducationListProps {
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void
 
-=======
 import { Education } from '@/types/resume',;
 import { EducationItem } from './EducationItem',;
 interface EducationListProps {;
   educationEntries: Education[],;
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
-export function EducationList({
-  educationEntries
-  onEdit
-  onDelete
-}: EducationListProps) {
-  if (!educationEntries |educationEntries.length === 0) {
-=======
-import {Education} from '@/types/resume';
-import {EducationItem} from './EducationItem';
-interface EducationListProps {;
-  educationEntries: Education[],;
-  onEdit: (education: Education) => void,;
+import { Education } from "@/types/resume";
+import { EducationItem } from "./EducationItem";
+interface EducationListProps {
+  educationEntries: Education[];
+  onEdit: (education: Education) => void;
   onDelete: (id: string) => void;
 }
 
 export function EducationList(): any ({ educationEntries, onEdit, onDelete }: EducationListProps) {;
   if (!educationEntries || educationEntries && educationEntries.length === 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+export function EducationList({
+  educationEntries,
+  onEdit,
+  onDelete,
+}: EducationListProps) {
+  if (!educationEntries || educationEntries.length === 0) {
     return null;
   }
 
@@ -63,7 +55,6 @@ export function EducationList(): any ({ educationEntries, onEdit, onDelete }: Ed
   );
 }
 
-=======
 import { Education  } from '@/types / resume';
 import { EducationItem  } from './EducationItem';
 interface EducationListProps {
@@ -93,11 +84,22 @@ if ( {) {
         />))}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
+    <div className="space-y-4">
+      <h3 className="text-md font-medium">Added Education</h3>
+      {educationEntries.map((edu) => (
+        <EducationItem
+          key={edu.id}
+          education={edu}
+          onEdit={onEdit}
+          onDelete={onDelete}
+        />
+      ))}
+    </div>
+  );
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { Education  } from '@/types/
+import { EducationItem } from './

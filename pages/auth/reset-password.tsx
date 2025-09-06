@@ -1,36 +1,3 @@
-
-
-      <main>
-        <h1>ResetPassword</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
-
-
-      <main>;
-        <h1>ResetPassword</h1>;
-        <p>This page is under construction.</p>;
-      </main>;
-    </div>;
-  ),;
-};
-export default ResetPassword;
-
-
-=======
-import Head from 'next / head';
-      <main>;
-        <h1 > ResetPassword</h1>;
-        <p > This page is under construction.</p>;
-      </main>;
-    </div>),
-}
-;
-export default ResetPassword;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextPage } from 'next'
+import Head from 'next/
+import Head from 'next /

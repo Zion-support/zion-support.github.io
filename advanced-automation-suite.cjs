@@ -506,7 +506,6 @@ function createDashboard() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zion Tech Group - Monitoring Dashboard</title>
     <style>
-<<<<<<< HEAD
         body { font-family: Arial, sans-serif; margin: 0, padding: 20px, background: #f5f5f5
   }
         .container { max-width: 1200px, margin: 0 auto, }
@@ -526,7 +525,6 @@ function createDashboard() {
   }
         .recommendations { background: white, padding: 20px, border-radius: 8px, margin-top: 20px, }
         .recommendation { padding: 10px, margin: 5px 0, background: #ecf0f1, border-radius: 4px, }
-=======
         body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
         .container { max-width: 1200px; margin: 0 auto; }
         .header { background: #2c3e50; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
@@ -539,7 +537,6 @@ function createDashboard() {
         .status-error { color: #e74c3c; }
         .recommendations { background: white; padding: 20px; border-radius: 8px; margin-top: 20px; }
         .recommendation { padding: 10px; margin: 5px 0; background: #ecf0f1; border-radius: 4px; }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     </style>
 </head>
 <body>

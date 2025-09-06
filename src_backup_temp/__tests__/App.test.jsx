@@ -1,58 +1,8 @@
-import {render, screen} from "@testing-library/react";,"});,"})","});,"})"
-,"});,"})"
-";,"});,"})"
-jest && jest.mock("../pages/Index", () => {}"});,"})"
-  return function MockIndex("props": "any) {"}"});,"})"
-    return <div data-testid="index-page">Index Page</div>;,"});,"});
-};,"});,"});
-});,"});,"})"
-";,"});,"})"
-jest && jest.mock("../pages/About", () => {}"});,"})"
-  return function MockAbout("props": "any) {"}"});,"})"
-""";,"});,"})"
-"""";,"});,"})"
-    return <div data-testid="about-page">About Page</div>;,"});,"});
-};,"});,"});
-});,"});,"})"
-";,"});,"})"
-jest && jest.mock("../pages/Contact", () => {}"});,"})"
-  return function MockContact("props": "any) {"}"});,"})"
-""";,"});,"})"
-"""";,"});,"})"
-    return <div data-testid="contact-page">Contact Page</div>;,"});,"});
-};,"});,"});
-});,"});,"})"
-;,"});,"})"
-jest && jest.mock("../pages/Index", () => {;,"});,"})"
-  return function MockIndex("props": "any) {","});,"})"
-    return <div data-testid="index-page">Index Page</div>}});,"});,"})"
-;,"});,"})"
-jest && jest.mock("../pages/About", () => {;,"});,"})"
-  return function MockAbout("props": "any) {","});,"})"
-    return <div data-testid="about-page">About Page</div>}});,"});,"})"
-;,"});,"})"
-jest && jest.mock("../pages/Contact", () => {;,"});,"})"
-  return function MockContact("props": "any) {","});,"})"
-    return <div data-testid="contact-page">Contact Page</div>}});,"});,"})"
-;,"});,"})"
-const renderWithRouter = ("props": "any) => {;","});,"})"
-  return render(;,"});,"})"
-    <BrowserRouter>;,"});,"})"
-      {component}"});,"})"
-    </BrowserRouter>;,"});,"})"
-  )};,"});,"})"
-;,"});,"})"
-describe('App Component', () => {;,"});,"})"
-  test("renders without crashing", () => {;,"});,"})"
-    renderWithRouter(<App  />);,"});,"})"
-    expect(screen && screen.getByTestId("index-page")).toBeInTheDocument()})});,"});,"})"
-;,"});,"})"
-export {MockIndex, MockAbout, MockContact};,"});,"})"
-;,"});,"})"
-export {MockIndex, MockAbout, MockContact};,"});,"})"
-;,"});,"})"
-export {MockIndex, MockAbout, MockContact};,"});,"})"
-;,"});,"})"
-export {MockIndex, MockAbout, MockContact};,"});,"})"
-;,"});,"})"
-export {MockIndex, MockAbout, MockContact, MockIndex, MockAbout, MockContact};,"});,"})""""""""
+import {render, screen} from "@testing-library/
+jest && jest.mock("../pages/
+    return <div data-testid="index-page">Index Page
+    return <div data-testid="about-page">About Page
+    return <div data-testid="contact-page">Contact Page
+    return <div data-testid="index-page">Index Page
+    return <div data-testid="about-page">About Page
+    return <div data-testid="contact-page">Contact Page

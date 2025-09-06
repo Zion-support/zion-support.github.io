@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -26,10 +28,7 @@ import { motion } from 'framer-motion';
 
 interface EnhancedHero2026Props {;
   contactInfo: {;
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ArrowRight,
   Star,
   TrendingUp,
@@ -51,10 +50,8 @@ interface EnhancedHero2026Props {
     website: string;
   };
   serviceStats: {;
-=======
   Rocket,;
   CheckCircle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 
 interface EnhancedHero2026Props {
@@ -107,7 +104,6 @@ interface EnhancedHero2026Props {
 ;
   const stats_variants = {
     hidden: { scale: 0.8, opacity: 0 },
-=======
 
     revolutionaryServices: number;
   }
@@ -120,29 +116,22 @@ export default function EnhancedHero2026({
     visible: {
       opacity: 1
       transition: {
-<<<<<<< HEAD
-<<<<<<< HEAD
         staggerChildren: 0.2
       }
-=======
         staggerChildren: 0.2,
       },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     },  };        staggerChildren: 0.2
       }
     }
   }
-=======
         staggerChildren: 0.2,
       },
     },  };
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const itemVariants = {
     hidden: { y: 30, opacity: 0 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     visible: {
       y: 0
       opacity: 1
@@ -248,7 +237,6 @@ export default function EnhancedHero2026(): any ({;
               delay: Math && Math.random() * 2,            }}  }
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
       {/* Enhanced Background Elements */}
@@ -297,7 +285,6 @@ export default function EnhancedHero2026(): any ({;
 
               opacity: [0.3, 0.8, 0.3];
               scale: [1, 1.5, 1];
-=======
 
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
@@ -305,7 +292,6 @@ export default function EnhancedHero2026(): any ({;
               delay: Math.random() * 2,            }}  };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }}
             transition={{
               duration: 3 + Math.random () * 2,
@@ -493,20 +479,16 @@ export default function EnhancedHero2026(): any ({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Enhanced CTA Section */}
 
               
               <Button 
                 href="/contact" 
 
-=======
 
               <Button 
                 href="/contact" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 variant="secondary"
                 size="xl"
                 className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"
@@ -596,12 +578,9 @@ export default function EnhancedHero2026(): any ({;
           </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Contact Information */}
 
           <motion.div 
@@ -680,7 +659,6 @@ export default function EnhancedHero2026(): any ({;
   );  );
 }
 
-=======
   )
 }
           <motion.div variants={item_variants} className='space - y-6'>;
@@ -794,10 +772,11 @@ export default function EnhancedHero2026(): any ({;
       </div>;
     </section>));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    console.error('Error caught by boundary: any
+import { motion } from 'framer-motion'
+ from 'lucide-react'
+ from 'lucide-react'
+                  

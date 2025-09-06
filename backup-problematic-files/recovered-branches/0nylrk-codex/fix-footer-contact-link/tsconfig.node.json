@@ -1,0 +1,5 @@
+
+  "compilerOptions"
+    "composite"
+    "skipLibCheck"
+    "module": any

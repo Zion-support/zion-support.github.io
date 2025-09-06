@@ -1,5 +1,13 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
 
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
@@ -30,8 +38,6 @@
               Visit the{' '}
               <a className='text-cyan-400 underline' href='/support'>;
                 Support Center;
-=======
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 export default function CommunityPage() {
@@ -64,12 +70,10 @@ export default function CommunityPage() {
               Visit the{' '}
               <a className='text-cyan-400 underline' href='/support'>
                 Support Center
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </a>{' '}
               or email{' '}
               <a
                 className='text-purple-400'
-<<<<<<< HEAD
                 href='mailto: kleber@ziontechgroup && ziontechgroup.com'>;
                 kleber@ziontechgroup && ziontechgroup.com;
 import Head from 'next / head';
@@ -159,7 +163,6 @@ function CommunityPage() {
               <li>;
 
                   rel='noopener noreferrer'>;
-=======
                 <a;
                   className='text - cyan - 400';
                   href='https://youtube.com/@ziontechgroup';
@@ -176,19 +179,13 @@ function CommunityPage() {
       </div>;
 
 
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react',
 import Head from 'next/head',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function CommunityPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -209,7 +206,6 @@ export default function CommunityPage() {
 					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">
 						<h2 className="text-white text-xl font-semibold mb-2">Follow Us</h2>
 						<ul className="text-slate-300 space-y-1">
-<<<<<<< HEAD
 							<li><a className="text-cyan-400" href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
 							<li><a className="text-cyan-400" href="https://github.com/Zion-Holdings" target="_blank" rel="noopener noreferrer">GitHub</a></li>
 							<li><a className="text-cyan-400" href="https://instagram.com/ziontechgroup" target="_blank" rel="noopener noreferrer">Instagram</a></li>
@@ -242,28 +238,23 @@ export default function CommunityPage() {
 							<li><a className=&quot;text-cyan-400&quot; href=&quot;https://instagram.com/ziontechgroup&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Instagram</Link></li>
 							<li><a className=&quot;text-cyan-400&quot; href=&quot;https://youtube.com/@ziontechgroup&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>YouTube</Link></li>
 
-=======
 							<li><a className="text-cyan-400" href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer">LinkedIn</Link></li>
 							<li><a className="text-cyan-400" href="https://github.com/Zion-Holdings" target="_blank" rel="noopener noreferrer">GitHub</Link></li>
 							<li><a className="text-cyan-400" href="https://instagram.com/ziontechgroup" target="_blank" rel="noopener noreferrer">Instagram</Link></li>
 							<li><a className="text-cyan-400" href="https://youtube.com/@ziontechgroup" target="_blank" rel="noopener noreferrer">YouTube</Link></li>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 	)
-<<<<<<< HEAD
 }
 
     </div>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any

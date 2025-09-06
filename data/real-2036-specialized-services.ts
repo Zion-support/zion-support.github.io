@@ -1,19 +1,27 @@
-<<<<<<< HEAD
 export type Real2036SpecializedService = {
   id: string, name: string,
   tagline: string, description: string,
   category: string, price: string,
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
+
+export type Real2036SpecializedService = {
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  price: string;
+  period?: string;
+  features: string[];
+  link: string;  launchDate?: string;  rating?: number;
   marketSize?: string;
   targetAudience?: string;
   competitiveAdvantage?: string;
   integration?: string[];
   useCases?: string[];
+  technology?: string[];};  technology?: string[]
 
 
   {
@@ -307,7 +315,6 @@ export type Real2036SpecializedService = {
     period: '/month';
     features: [
 
-=======
   technology?: string[]
 };
 export const real2036SpecializedServices: Real2036SpecializedService[] = [
@@ -502,12 +509,10 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     integration: ['Spacecraft systemsTraining facilitiesBooking systemsSafety systems'];
     useCases: ['Space tourismTraining programsSafety managementCustomer experience']
     technology: ['Space systemsSafety protocolsTraining technologyCustomer management']
-<<<<<<< HEAD
   }
 ];
 
 
-=======
     price: '$6, 999';
     period: '/month';
     features: [;
@@ -522,20 +527,13 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     integration: ['Spacecraft systems_training facilities_booking systems_safety systems'];
     use_cases: ['Space tourism_training programs_safety management_customer experience'],
     technology: ['Space systems_safety protocols_training technology_customer management'];
-=======
 export type Real2036SpecializedService = {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-=======
 
-=======
 export type Real2036SpecializedService = {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -774,11 +772,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
     integration: ['Spacecraft systemsTraining facilitiesBooking systemsSafety systems'],;
     useCases: ['Space tourismTraining programsSafety managementCustomer experience'],;
     technology: ['Space systemsSafety protocolsTraining technologyCustomer management'];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+export const real2036SpecializedServices: Real2036SpecializedService[] = [
+  //
+    period: any

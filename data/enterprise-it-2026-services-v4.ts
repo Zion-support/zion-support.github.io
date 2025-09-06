@@ -314,16 +314,13 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
     },
     realImplementation: true, implementationDetails: 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.',
     launchDate: '2026-05-01', customers: 40,
     rating: 4.9,
     reviews: 32;
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV4 {;
   id: string,;
@@ -720,10 +717,23 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
     reviews: 32;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 
 ;
 
+import { ServiceVariant } from '../types/
+    period: any
+    technology: ['AI/
+      website: any
+    technology: ['AI/MLCloud ComputingAutomationReactPythonPostgreSQLAWSMulti-cloud'], integrations: ['AWSAzureGCPOn-premise systemsMonitoring toolsCI/
+      website: any
+    technology: ['Edge ComputingIoTAI/
+      website: any
+    technology: ['AI/
+      website: any
+    technology: ['AI/
+    useCases: ['CI/
+      website: any
+    technology: ['Quantum-Resistant EncryptionDistributed StorageAI/
+      website: any

@@ -2,21 +2,15 @@
 
       } catch {
         // ignore;
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 async function fetchFromGitHub(): Promise<any[]> {;
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 async function fetchFromGitHub(): Promise<any[]> {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   try {
-<<<<<<< HEAD
 
     const repoUrl = require('../../../package.json').repository?.url |''
     const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i)
@@ -39,7 +33,6 @@ async function fetchFromGitHub(): Promise<any[]> {
         results.push({ id: j.id |f.name, file: f.name, generatedAt: j.generatedAt, insights: j.insights })
       } catch {
         // ignore
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       }
     }
 return results;
@@ -54,7 +47,6 @@ export default async /**
 function handler() {
 const dir = path.join (process.cwd (), 'automation_logs'),
   try {
-<<<<<<< HEAD
     if () {) {
   $2
 }
@@ -80,21 +72,20 @@ if ( {) {
     // fall through to GitHub;
   }
 
-=======
 }
 
-=======
 const remote = await fetchFromGitHub (),
   return res.status (200).json ({ logs: remote });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
   return res.status(200).json({ logs: remote });
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from 'next'
+import fs from 'fs'
+import path from 'path'
+    const repoUrl = require('../../../
+    const repo_url = require ('../../../

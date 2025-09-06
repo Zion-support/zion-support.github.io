@@ -1,15 +1,10 @@
 
 
 export interface EmergingTechService {
-=======
 
 export interface EmergingTechService {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
 export interface EmergingTechService {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   id: string;
   name: string;
   tagline: string;
@@ -583,16 +578,13 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
     },
     realImplementation: true, implementationDetails: 'Quantum metaverse platform with enhanced graphics and AI capabilities.',
     launchDate: '2024-04-30', customers: 18,
     rating: 4.8,
     reviews: 11;
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechService2025 {;
   id: string,;
@@ -1253,10 +1245,30 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     reviews: 11;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 
 ;
 
+import { ServiceVariant } from '../types/
+import { ServiceVariant } from '../types /
+    period: any
+      'First-to-market quantum bio-computing platform. Competes with quantum computing ($10,000/month), bio-computing ($5,000/
+      website: any
+      'Medical devices, Gaming platforms, VR/
+      website: any
+      'Competes with energy consulting ($500/hour), energy management ($1,000/
+      website: any
+      'Competes with materials consulting ($300/hour), simulation tools ($2,000/
+      website: any
+      'Competes with robotics platforms ($5,000/month), AI robotics ($3,000/
+      'Quantum algorithms, Robotics, AI/
+      website: any
+      'Competes with cybersecurity platforms ($500/month), encryption tools ($200/
+      website: any
+      'Competes with logistics platforms ($500/month), optimization tools ($300/
+      website: any
+      'Competes with metaverse platforms ($200/month), AI development ($500/
+      'VR/
+      'AI/ML, VR/
+      website: any

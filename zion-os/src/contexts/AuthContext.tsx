@@ -9,8 +9,6 @@ interface User {
   email: string,
   role: string,
   onboarding_completed: boolean;
-=======
-<<<<<<< HEAD
 "use client";
 import { createContext, useContext, useEffect, useState } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
@@ -20,7 +18,6 @@ interface User {id: string;
   email: string;
   role: string;
   onboardingCompleted: boolean;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 interface AuthContextType {
   user: User | null,
@@ -149,10 +146,7 @@ if ( {) {
     throw new Error ("use_auth must be used within an AuthProvider");
 
   }
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 import { useSession, signIn, signOut } from "next-auth/react",;
@@ -381,6 +375,23 @@ export function useAuth() {;
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return context;
 }
+use client"
+import { createContext, useContext, useEffect, useState } from "react"
+import { useSession, signIn, signOut } from "next-auth/
+import { useRouter } from "next/
+      router.push("/
+    router.push("/
+      const response = await fetch("/api/auth/
+          "Content-Type": any
+      const response = await fetch("/api/user/
+          "Content-Type": any
+import { useSession, signIn, signOut } from "next-auth/
+import { useRouter } from "next/
+      router.push("/
+    router.push("/
+      const response = await fetch("/api/auth/
+          "Content-Type": any
+      const response = await fetch("/api/user/
+          "Content-Type": any

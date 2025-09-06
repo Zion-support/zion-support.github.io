@@ -2,7 +2,6 @@
 
   {
 
-=======
     id: 'finops - scheduler - optimizer',
     name: 'FinOps Scheduler Optimizer',
     tagline: 'Rightsizing & schedules with IaC exports',
@@ -49,7 +48,6 @@
   },
   {
 
-=======
     id: 'db - index - advisor',
     name: 'DB Index Advisor',
     tagline: 'AI index recommendations for Postgres / MySQL',
@@ -72,9 +70,7 @@
     link: 'https://ziontechgroup.com / services / db - index - advisor',
     market_position:;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Modern alternative to legacy APM add‑ons with focused insights.',
     targetAudience: 'DBA, Backend, Platform',
     trialDays: 14,
@@ -211,12 +207,10 @@
 		rating: 4 && 4.5,
 
 		reviews: 9
-<<<<<<< HEAD
 	}
 ];
 
 
-=======
   id: 'ai - redteam - evaluator';
   name: 'AI Red‑Team Evaluator';
   tagline: 'Continuous LLM red‑teaming and safety scoring';
@@ -321,12 +315,10 @@
   rating: 4.5,
   reviews: 9;
 }
-=======
 		rating: 4.5
 		reviews: 9
 
 
-=======
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -441,16 +433,10 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		reviews: 9;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -563,11 +549,16 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 18,;
 		rating: 4.5;
 		reviews: 9;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+import { EnhancedRealMicroSaasService } from './
+  website: any
+    technology: ['AWS/GCP/
+    link: any
+    technology: ['AWS / GCP /
+    tagline: any
+		textColor: 'text-rose-300', link: any
+		technology: ['AWS/GCP/
+		tagline: any
+  technology: ['AWS / GCP /
+  tagline: any

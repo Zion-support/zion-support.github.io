@@ -31,8 +31,6 @@ import React from 'react';
   Mail, ;
   Calendar, ;
   Shield, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
@@ -52,7 +50,6 @@ import {
   TrendingUp,
   Zap,
   Target,
-<<<<<<< HEAD
   Lightbulb,
   BookOpen,} from 'lucide-react';import {
   Rocket;
@@ -62,7 +59,6 @@ import {
   Mail,
   Calendar,
   Shield,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   Globe;
   ArrowRight;
   Star;
@@ -94,7 +90,6 @@ import {
 
       bestFor: 'B2B startups, SaaS companies, marketing teams'
     }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       name: 'Mailchimp'
       description:
@@ -204,7 +199,6 @@ function StartupToolsPage() {
 
       name: 'Canva',
       description: 'Graphic design platform that makes it easy to create professional designs without design skills.',
-=======
       icon: <Calendar className='w - 8 h - 8 text - blue - 400' />,
       features: [;
         'Automated scheduling',
@@ -254,7 +248,6 @@ function StartupToolsPage() {
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
         'Live chatCustomer messagingHelp deskUser onboardingAnalytics & reportingIntegration ecosystem';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       ];
       website: 'https://buffer.com',
       useCase: 'Ideal for startups that want to maintain a consistent social media presence and grow their audience.',
@@ -487,7 +480,6 @@ function StartupToolsPage() {
                 {startupTools.length}+
 
               </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="text-gray-400 text-sm">Essential Tools</div>
             </div>
             <div className="text-center group">
@@ -755,7 +747,6 @@ function StartupToolsPage() {
         </div>;
       </section>;
 
-=======
       {/* Category Filter */}
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -763,7 +754,6 @@ function StartupToolsPage() {
             {categories.map((category) => (
               <button
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -886,7 +876,6 @@ function StartupToolsPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 size='sm'>                Start Learning;
               </Button>;
             </Card>;
@@ -1012,23 +1001,24 @@ size='sm'>                Start Learning;
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
-=======
 );
-<<<<<<< HEAD
-=======
 import React from 'react';
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import React from 'react';
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react'
+import Head from 'next/
+import Card from '../components/ui/
+import Button from '../components/ui/
+import Head from 'next/
+import Card from '../components/ui/
+import Button from '../components/ui/
+import Head from 'next /
+import Card from '../components / ui /
+import Button from '../components / ui /
+      pricing: any

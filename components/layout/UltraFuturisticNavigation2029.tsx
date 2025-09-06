@@ -35,11 +35,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-=======
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Menu,
   X,
   ChevronDown,
@@ -222,7 +219,6 @@ const mainNavItems = [
 ];
 
 const mainNavItems = [
-=======
     services: [;
       {
         name: 'Enterprise AI Operations Center',
@@ -270,14 +266,12 @@ export default function UltraFuturisticNavigation2029() {;
   useEffect(() => {
     const handleScroll = () => {
 
-=======
       setScrolled(window.scrollY > 50)
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 const mainNavItems = [;
   { name: 'Home', href: '/', icon: Home },;
@@ -291,8 +285,6 @@ const mainNavItems = [;
 ];
 
 export default function UltraFuturisticNavigation2029() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -308,7 +300,6 @@ export default function UltraFuturisticNavigation2029() {;
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <>;
       {/* Top Contact Bar */}
@@ -317,7 +308,6 @@ export default function UltraFuturisticNavigation2029() {;
               <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
-=======
       <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4'>
         <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>
           <div className='flex items-center space-x-6'>
@@ -325,14 +315,7 @@ export default function UltraFuturisticNavigation2029() {;
               href={`tel:${contactInfo.mobile}`}
               className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
             >
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
@@ -349,7 +332,6 @@ export default function UltraFuturisticNavigation2029() {;
           </div>              <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-300 transition-colors">
               <Mail size={14} />
               <span>{contactInfo.email}</span>
@@ -366,12 +348,10 @@ export default function UltraFuturisticNavigation2029() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </a>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 href={contactInfo && contactInfo.website}
               className='hover:text-cyan-300 transition-colors'>              {contactInfo && contactInfo.website.replace('https://', '')}          <div className="flex items-center space-x-4">;
             <a href={contactInfo && contactInfo.website} className="hover:text-cyan-300 transition-colors">;
@@ -459,7 +439,6 @@ function UltraFuturisticNavigation2029() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center space-x-3"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >
               <div className="relative">
                 <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
@@ -493,11 +472,8 @@ function UltraFuturisticNavigation2029() {
 
             <div className="hidden lg:flex items-center space-x-8">
               {mainNavItems.map((item) => (
-=======
             <div className='hidden lg:flex items-center space-x-8'>
               {mainNavItems.map(item => (
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <Link
                   key={item.name}
                   href={item.href}
@@ -508,14 +484,12 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                     <span>{item.name}</span>
                   </div>
                   <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></div>
-=======
 
               </div>
             </motion.div>
 
             {/* Desktop Navigation */}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </Link>
 
               ))}
@@ -536,7 +510,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0 && 0.1 }}
                         className='group'>;
-=======
             <div className='hidden lg:flex items-center space-x-8'>
               {mainNavItems.map(item => (
 
@@ -552,7 +525,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
               {/* Services Dropdown */}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {serviceCategories.map((category, index) => (
                       <motion.div
                         key={category.title}
@@ -563,9 +535,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <div
                           className={`p-4 rounded-lg bg-gradient-to-br ${category && category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>;
                           <div className='flex items-center space-x-3 mb-3'>;
@@ -622,7 +592,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                                 <p className="text-xs text-gray-500 mt-1">{service && service.description}</p>;
                               </Link>;
 
-=======
               <div className="relative group">
                 <button className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
                   <Briefcase size={16} className="group-hover:text-cyan-400 transition-colors" />
@@ -777,7 +746,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                             <h3 className="font - semibold text - white group - hover:text - cyan - 300 transition - colors">;
 
                               {category.title}
-<<<<<<< HEAD
                             </h3>;
                           </div>;
                           <p className="text - sm text - gray - 400 mb - 4">{category.description}</p>;
@@ -799,7 +767,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             ))}
                           </div>;
                         </div>;
@@ -810,7 +777,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* CTA Button */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -818,18 +784,14 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
                 className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
 
-=======
 
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'              >
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 Get Started
               </motion.button>
             </div>
-<<<<<<< HEAD
 </div>;
                 </div>;
               </div>;
@@ -844,26 +806,20 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
             </div>;
             {/* Mobile Menu Button */}
 
-=======
             <div className="lg:hidden">
               <button
                 onClick={toggleMenu}
                 className="text-gray-300 hover:text-white transition-colors"
               >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
                 className='text-gray-300 hover:text-white transition-colors'              >
 
               >
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
 
-=======
                                   </span>;
                                 </div>;
                                 <p className="text - xs text - gray - 500 mt - 1">{service.description}</p>;
@@ -903,7 +859,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -914,7 +869,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
           >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div
               className='absolute inset-0 bg-black/80 backdrop-blur-sm'
               onClick={closeMenu}
@@ -967,7 +921,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                 </div>;
                 {/* Mobile Navigation Items */}
 
-=======
                 <div className="space-y-4">
                   {mainNavItems.map((item) => (
                     <Link
@@ -984,7 +937,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                 </div>;
 
 
-=======
 
 
                     </Link>
@@ -992,14 +944,10 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                 </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Mobile Services */}
 
 
                             </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           ))}
                         </div>;
                       </div>;
@@ -1009,12 +957,9 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                 </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Mobile CTA */}
                 <div className='mt-8'>;
                   <motion&& motion.button
@@ -1034,12 +979,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
         )}
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {/* Mobile CTA */}
                 <div className="mt-8">
                   <motion.button
@@ -1065,12 +1004,10 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
     </>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 
 }
 
-=======
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -1208,8 +1145,179 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
     </>);      <div className="h - 20" />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useState, useEffect } from 'react'
+import Link from 'next/
+  website: 'https://ziontechgroup.com',};  website: any
+        price: '$12,999/
+        href: any
+        price: '$45,999/
+        href: any
+        price: '$18,999/
+  },  { name: 'AI Consciousness Simulation Platform', href: '/ai-consciousness-simulation-platform', description: 'Simulate human consciousness in AI systems', price: '$12,999/
+      { name: 'Autonomous AI Corporation Platform', href: '/autonomous-ai-corporation-platform', description: 'AI systems that run entire corporations', price: '$45,999/
+      { name: 'AI Reality Augmentation Platform', href: '/ai-reality-augmentation-platform', description: 'Real-time AI reality enhancement', price: '$18,999/
+        href: any
+        price: '$25,999/
+        href: any
+        price: '$35,999/
+  },  { name: 'Quantum Brain-Computer Interface', href: '/quantum-brain-computer-interface', description: 'Direct quantum communication with brain', price: '$25,999/
+      { name: 'Quantum Time Manipulation Platform', href: '/quantum-time-manipulation-platform', description: 'Manipulate time perception', price: '$35,999/
+        href: any
+        price: '$99,999/
+        href: any
+        price: '$75,999/
+        href: any
+        price: '$65,999/
+  },  { name: 'Mars Colonization Automation Platform', href: '/mars-colonization-automation-platform', description: 'Automate Mars colonization process', price: '$99,999/
+      { name: 'Interplanetary Communication Network', href: '/interplanetary-communication-network', description: 'Real-time solar system communication', price: '$75,999/
+      { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automate asteroid and lunar mining', price: '$65,999/
+        href: any
+        price: '$45,999/
+        href: any
+        price: '$55,999/
+  },  { name: 'Space Habitat Design Platform', href: '/space-habitat-design-platform', description: 'Design space habitats for any planet', price: '$45,999/
+      { name: 'Space Energy Harvesting Platform', href: '/space-energy-harvesting-platform', description: 'Harvest energy from space sources', price: '$55,999/
+        href: any
+        price: '$2,999/
+        href: any
+        price: '$4,999/
+        href: any
+        price: '$1,499/
+        href: any
+        price: '$1,299/
+  },  { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'AI that understands human emotions', price: '$2,999/
+      { name: 'AI Multimodal Fusion Platform', href: '/ai-multimodal-fusion-platform', description: 'Unified text, image, audio, video AI', price: '$4,999/
+      { name: 'AI Customer Service Automation', href: '/ai-customer-service-automation', description: 'Intelligent customer support', price: any
+      { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized learning with AI', price: '$1,499/
+      { name: 'AI Content Creation Suite', href: '/ai-content-creation-suite', description: 'Unlimited AI content creation', price: '$1,299/
+        href: any
+        price: '$6,999/
+        href: any
+        price: '$2,499/
+        href: any
+        price: '$1,999/
+        href: any
+        price: '$3,999/
+  },  { name: 'Quantum Blockchain Platform', href: '/quantum-blockchain-platform', description: 'Quantum-resistant blockchain security', price: '$6,999/
+      { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end supply chain visibility', price: '$2,499/
+      { name: 'Smart Contract Automation Platform', href: '/smart-contract-automation', description: 'Automated blockchain contracts', price: '$1,999/
+      { name: 'DeFi Yield Optimization', href: '/defi-yield-optimization', description: 'Maximize DeFi returns', price: '$3,999/
+        href: any
+        price: '$8,999/
+        href: any
+        price: '$3,999/
+        href: any
+        price: '$4,999/
+  },  { name: 'AI Personalized Medicine Platform', href: '/ai-personalized-medicine-platform', description: 'AI-powered personalized treatment', price: '$8,999/
+      { name: 'AI Healthcare Diagnosis Platform', href: '/ai-healthcare-diagnosis-platform', description: 'Revolutionary medical diagnosis', price: '$3,999/
+      { name: 'Biotech Research Automation', href: '/biotech-research-automation', description: 'Automated biotechnology research', price: '$4,999/
+        href: any
+        price: '$12,999/
+        href: any
+        price: '$3,999/
+        href: any
+        price: '$5,999/
+  },  { name: 'AI Smart City Orchestrator', href: '/ai-smart-city-orchestrator', description: 'Comprehensive city infrastructure AI', price: '$12,999/
+      { name: 'Smart Traffic Management', href: '/smart-traffic-management', description: 'AI-powered traffic optimization', price: '$3,999/
+      { name: 'Energy Grid Optimization', href: '/energy-grid-optimization', description: 'Smart energy management', price: '$5,999/
+        href: any
+        price: '$1,999/
+        href: any
+        price: '$2,499/
+        href: any
+        price: '$1,799/
+  },  { name: 'AI Research Assistant', href: '/ai-research-assistant', description: 'AI-powered research acceleration', price: '$1,999/
+      { name: 'Data Analysis Platform', href: '/data-analysis-platform', description: 'Advanced data analytics', price: '$2,499/
+      { name: 'Research Collaboration Hub', href: '/research-collaboration-hub', description: 'Global research collaboration', price: '$1,799/
+        href: any
+        price: '$15,999/
+        href: any
+        price: '$4,999/
+        href: any
+        price: '$7,999/
+  },];      { name: 'Enterprise AI Operations Center', href: '/enterprise-ai-operations-center', description: 'Centralized AI operations', price: '$15,999/
+      { name: 'Business Process Automation', href: '/business-process-automation', description: 'End-to-end process automation', price: '$4,999/
+      { name: 'Mars Colonization Automation Platform', href: '/mars-colonization-automation-platform', description: 'Automate Mars colonization process', price: '$99,999/
+      { name: 'Interplanetary Communication Network', href: '/interplanetary-communication-network', description: 'Real-time solar system communication', price: '$75,999/
+      { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automate asteroid and lunar mining', price: '$65,999/
+      { name: 'Space Habitat Design Platform', href: '/space-habitat-design-platform', description: 'Design space habitats for any planet', price: '$45,999/
+      { name: 'Space Energy Harvesting Platform', href: '/space-energy-harvesting-platform', description: 'Harvest energy from space sources', price: '$55,999/
+      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'AI that understands human emotions', price: '$2,999/
+      { name: 'AI Multimodal Fusion Platform', href: '/ai-multimodal-fusion-platform', description: 'Unified text, image, audio, video AI', price: '$4,999/
+      { name: 'AI Customer Service Automation', href: '/ai-customer-service-automation', description: 'Intelligent customer support', price: any
+      { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized learning with AI', price: '$1,499/
+      { name: 'AI Content Creation Suite', href: '/ai-content-creation-suite', description: 'Unlimited AI content creation', price: '$1,299/
+      { name: 'Quantum Blockchain Platform', href: '/quantum-blockchain-platform', description: 'Quantum-resistant blockchain security', price: '$6,999/
+      { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end supply chain visibility', price: '$2,499/
+      { name: 'Smart Contract Automation Platform', href: '/smart-contract-automation', description: 'Automated blockchain contracts', price: '$1,999/
+      { name: 'DeFi Yield Optimization', href: '/defi-yield-optimization', description: 'Maximize DeFi returns', price: '$3,999/
+        href: any
+        price: '$8,999/
+        href: any
+        price: '$3,999/
+        href: any
+        price: '$4,999/
+  },  { name: 'AI Personalized Medicine Platform', href: '/ai-personalized-medicine-platform', description: 'AI-powered personalized treatment', price: '$8,999/
+      { name: 'AI Personalized Medicine Platform', href: '/ai-personalized-medicine-platform', description: 'AI-powered personalized treatment', price: '$8,999/
+      { name: 'AI Healthcare Diagnosis Platform', href: '/ai-healthcare-diagnosis-platform', description: 'Revolutionary medical diagnosis', price: '$3,999/
+      { name: 'Biotech Research Automation', href: '/biotech-research-automation', description: 'Automated biotechnology research', price: '$4,999/
+        href: any
+        price: '$12,999/
+        href: any
+        price: '$3,999/
+        href: any
+        price: '$5,999/
+  },  { name: 'AI Smart City Orchestrator', href: '/ai-smart-city-orchestrator', description: 'Comprehensive city infrastructure AI', price: '$12,999/
+      { name: 'AI Smart City Orchestrator', href: '/ai-smart-city-orchestrator', description: 'Comprehensive city infrastructure AI', price: '$12,999/
+      { name: 'Smart Traffic Management', href: '/smart-traffic-management', description: 'AI-powered traffic optimization', price: '$3,999/
+      { name: 'Energy Grid Optimization', href: '/energy-grid-optimization', description: 'Smart energy management', price: '$5,999/
+        href: any
+        price: '$1,999/
+        href: any
+        price: '$2,499/
+        href: any
+        price: '$1,799/
+  },  { name: 'AI Research Assistant', href: '/ai-research-assistant', description: 'AI-powered research acceleration', price: '$1,999/
+      { name: 'AI Research Assistant', href: '/ai-research-assistant', description: 'AI-powered research acceleration', price: '$1,999/
+      { name: 'Data Analysis Platform', href: '/data-analysis-platform', description: 'Advanced data analytics', price: '$2,499/
+      { name: 'Research Collaboration Hub', href: '/research-collaboration-hub', description: 'Global research collaboration', price: '$1,799/
+        href: any
+        price: '$15,999/
+        href: any
+        price: '$4,999/
+        href: any
+        price: '$7,999/
+  },];      { name: 'Enterprise AI Operations Center', href: '/enterprise-ai-operations-center', description: 'Centralized AI operations', price: '$15,999/
+      { name: 'Enterprise AI Operations Center', href: '/enterprise-ai-operations-center', description: 'Centralized AI operations', price: '$15,999/
+      { name: 'Business Process Automation', href: '/business-process-automation', description: 'End-to-end process automation', price: '$4,999/
+      { name: 'Corporate Intelligence Platform', href: '/corporate-intelligence-platform', description: 'AI-powered business intelligence', price: '$7,999/
+  { name: 'Home', href: any
+  { name: 'Services', href: any
+  { name: 'Solutions', href: any
+  { name: 'Pricing', href: any
+  { name: 'Resources', href: any
+  { name: 'News', href: any
+  { name: 'Support', href: any
+  { name: 'Contact', href: '/contact', icon: Phone },];  { name: 'Contact', href: any
+  { name: 'Home', href: any
+  { name: 'Services', href: any
+  { name: 'Solutions', href: any
+  { name: 'Pricing', href: any
+  { name: 'Resources', href: any
+  { name: 'News', href: any
+  { name: 'Support', href: any
+  { name: 'Contact', href: any
+  { name: 'Home', href: any
+  { name: 'Services', href: any
+  { name: 'Solutions', href: any
+  { name: 'Pricing', href: any
+  { name: 'Resources', href: any
+  { name: 'News', href: any
+  { name: 'Support', href: any
+  { name: 'Contact', href: '/contact', icon: Phone },];  { name: 'Contact', href: any
+            >              {contactInfo.website.replace('https: any
+              className='hover:text-cyan-300 transition-colors'>              {contactInfo && contactInfo.website.replace('https: any
+            >              {contact_info.website.replace ('https: any
+                className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover: any
+                className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover: any

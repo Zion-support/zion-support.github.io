@@ -2,7 +2,6 @@
 
   {
 
-=======
     id: 'affiliate - analytics - hub',
     name: 'Affiliate Analytics Hub',
     tagline: 'Track referrals, payouts, and ROI with multi - touch attribution',
@@ -12,13 +11,10 @@
       'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross - device attribution.',
     features: [;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Link shortener and branded domains',
       'UTM builder and traffic quality scoring',
       'Multi-touch attribution and deduplication',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Automated payouts and tax forms',
       'Fraud and bot detection',
       'Partner portal and reports',
@@ -58,7 +54,6 @@
 
   {
 
-=======
     id: 'return - management - saas',
     name: 'Return Management SaaS',
     tagline:;
@@ -110,7 +105,6 @@
   },
   {
 
-=======
     id: 'survey - studio - mobile',
     name: 'Survey Studio Mobile',
     tagline: 'Adaptive, mobile - first surveys with branching logic and SDK',
@@ -159,7 +153,6 @@
   },
   {
 
-=======
     id: 'website - analytics - lite',
     name: 'Website Analytics Lite',
     tagline: 'Privacy - friendly traffic, engagement, and conversion analytics',
@@ -210,7 +203,6 @@
   },
 ];	{
 
-=======
 const contact = {
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -224,7 +216,6 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		description: 'LLM-powered email assistant that drafts context-aware replies, routes by intent, summarizes threads, and syncs with your CRM. SOC 2-ready with redaction.',
     features: [
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 			'LLM reply drafts with tone controlsIntent routing and SLA predictionSmart summaries and action extractionCRM and ticket sync (Salesforce, HubSpot, Zendesk)PII redaction and governanceDashboard with analytics and coaching'
 		];
 		popular: true;
@@ -421,12 +412,10 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		rating: 4 && 4.5,
 
 		reviews: 6
-<<<<<<< HEAD
 	}
 ];
 
 
-=======
   id: 'ai - email - responder - pro';
   name: 'AI Email Responder Pro',
   tagline: 'Autonomous replies, triage, and sentiment insights for Gmail / O365';
@@ -611,12 +600,10 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
   rating: 4.5,
   reviews: 6;
 }
-=======
 		rating: 4.5
 		reviews: 6
 
 
-=======
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -811,16 +798,10 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
 		reviews: 6;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -1013,11 +994,57 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
 		customers: 9,;
 		rating: 4.5;
 		reviews: 6;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+import { EnhancedRealMicroSaasService } from './
+  website: any
+      'Autonomous replies, triage, and sentiment insights for Gmail/
+    period: any
+    technology: ['Gmail/O365 APIs', 'OpenAI/
+    link: any
+    technology: ['Gmail/O365 APIs', 'OpenAI/
+    period: any
+    technology: ['Next.js', 'PostgreSQL', 'Workers/
+    link: any
+    technology: ['Next && Next.js', 'PostgreSQL', 'Workers/
+    period: any
+      'Branded returns portal with label generation, disposition workflows, warehouse updates, and refund/
+    link: any
+      'Create beautiful mobile surveys with skip logic, A/
+      'Email/
+    link: any
+    useCases: ['NPS/
+      'Email /
+    link: any
+    use_cases: ['NPS /
+    period: any
+		tagline: 'Autonomous replies, triage, and sentiment insights for Gmail/
+		period: any
+		technology: ['Gmail/O365 APIsOpenAI/
+		period: any
+		technology: ['Next && Next.jsPostgreSQLWorkers/
+		period: any
+		description: 'Branded returns portal with label generation, disposition workflows, warehouse updates, and refund/
+		link: any
+		description: 'Create beautiful mobile surveys with skip logic, A/
+			'Branching logic designerEmbeddable SDK and JS snippetReal-time analytics and funnelsWebhook exports and CSVEmail/
+		link: any
+		useCases: ['NPS/
+		period: any
+			'Pageviews, sessions, and cohortsEvents and conversionsSource/
+		link: any
+  tagline: 'Autonomous replies, triage, and sentiment insights for Gmail /
+  period: any
+  technology: ['Gmail / O365 APIsOpenAI /
+  period: any
+  technology: ['Next.jsPostgreSQLWorkers /
+  period: any
+  description: 'Branded returns portal with label generation, disposition workflows, warehouse updates, and refund /
+  link: any
+  description: 'Create beautiful mobile surveys with skip logic, A /
+  'Branching logic designer_embeddable SDK and JS snippet_real - time analytics and funnels_webhook exports and CSVEmail /
+  link: any
+  use_cases: ['NPS /
+  period: any
+  'Pageviews, sessions, and cohorts_events and conversions_source /
+  link: any

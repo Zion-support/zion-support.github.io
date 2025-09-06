@@ -66,7 +66,6 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
                 <Github className="h-4 w-4" />;
               </Button>;
             </a>;
-<<<<<<< HEAD
           )}
           ;
           {project.demo_url && (;
@@ -119,3 +118,9 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
   setDeleteDialogOpen 
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) 
 }
+import { useState } from 'react'
+import { Card, CardContent, CardFooter } from '@/components/ui/
+import { Button } from '@/components/ui/
+import { Badge } from '@/components/ui/
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/
+import { PortfolioProject } from '@/types/

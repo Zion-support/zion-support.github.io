@@ -1,2 +1,16 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import React from \'react\'; import Link from \'next/link\'; export default function HomeRoute() { return ( <main style={ \"padding\": \'24\',\"fontFamily\": \'ui-sans-serif,system-ui\' }> <h1 style={ \"fontSize\": \'28\',\"fontWeight\": \'700\' }>Zion Tech Group</h1> <p style={ \"marginTop\": \'8\' }>AI-powered Micro SAAS,IT and AI solutions.</p> <div style={ \"marginTop\": \'16\',\"display\": \'flex\',\"gap\": \'12\' }> <Link href=\"/services/comprehensive-micro-saas-showcase\" legacyBehavior> <a style={ \"color\": \'#4f46e5\' }>Explore Services</a> </Link> 
+const React from "react"; import Link from "next/link"; export default function HomeRoute() { return ( <main style={ padding: "24",fontFamily: "ui-sans-serif,system-ui" }> <h1 style={ fontSize: "28",fontWeight: "700" }>Zion Tech Group</h1> <p style={ marginTop: "8" }>AI-powered Micro SAAS,IT and AI solutions.</p> <div style={ marginTop: "16",display: "flex",gap: "12" }> <Link href="/services/comprehensive-micro-saas-showcase" legacyBehavior> <a style={ color: "#4f46e5" }>Explore Services</a> </Link> <Link href="/services" legacyBehavior> <a style={ color: "#4f46e5" }>Services Overview</a> </Link> <a href="https: any
+import _React from 'react'; import Link from 'next/link'; export default function HomeRoute() { return ( <main style={ "padding": '24',"fontFamily": 'ui-sans-serif,system-ui' }> <h1 style={ "fontSize": '28',"fontWeight": '700' }>Zion Tech Group</h1> <p style={ "marginTop": '8' }>AI-powered Micro SAAS,IT and AI solutions.</p> <div style={ "marginTop": '16',"display": 'flex',"gap": '12' }> <Link href="/services/comprehensive-micro-saas-showcase" legacyBehavior> <a style={ "color": '#4f46e5' }>Explore Services</a> </Link> 

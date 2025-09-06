@@ -100,7 +100,6 @@ export function FeatureShowcase() {;
       <div className="max-w-7xl mx-auto">;
         <div className="text-center mb-16">;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">;
-=======
 "use client",
 import { useState, useEffect  } from './react';,
 interface Feature {
@@ -122,8 +121,6 @@ const features: Feature[] = [;
         <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 21V5a2 2 0 00 - 2-2H7a2 2 0 00 - 2 2v16m14 0h2m - 2 0h - 5m - 9 0H3m2 0h5M9 7h1m - 1 4h1m4 - 4h1m - 1 4h1m - 5 10v - 5a1 1 0 011 - 1h2a1 1 0 011 1v5m - 4 0h4" />;
       </svg>),
     color: "blue",
-=======
-<<<<<<< HEAD
 "use client";
 import { useState, useEffect } from "react";
 interface Feature {id: string;
@@ -138,7 +135,6 @@ const features: Feature[] = [;
   {id: "marketplace";
     title: "Marketplace & Jobs";
     description: "Complete marketplace infrastructure with job posting, talent matching, and project management.";
-=======
 "use client",;
 import { useState, useEffect } from "react",;
 interface Feature {;
@@ -156,15 +152,12 @@ const features: Feature[] = [;
     id: "marketplace",;
     title: "Marketplace & Jobs",;
     description: "Complete marketplace infrastructure with job posting, talent matching, and project management.",;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     icon: (;
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />;
       </svg>;
-<<<<<<< HEAD
     );
     color: "blue";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     details: [;
       "Smart job matching algorithms",
       "Escrow payment systems",
@@ -228,14 +221,11 @@ function FeatureShowcase() {
     }
     return color_map[color as keyof typeof color_map] || "from - blue - 500 to - blue - 600";
   }
-<<<<<<< HEAD
   return (
     <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - br from - gray - 900 / 50 to - black / 50">;
       <div className="max - w-7xl mx - auto">;
         <div className="text - center mb - 16">;
           <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;
-=======
-=======
     ),;
     color: "blue",;
     details: [;
@@ -300,13 +290,11 @@ export function FeatureShowcase() {;
     };
     return colorMap[color as keyof typeof colorMap] || "from-blue-500 to-blue-600";
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900/50 to-black/50">;
       <div className="max-w-7xl mx-auto">;
         <div className="text-center mb-16">;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             Explore Our Features;
           </h2>;
           <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
@@ -330,7 +318,6 @@ export function FeatureShowcase() {;
                 } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
                 onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}
-=======
                 className={`card cursor - pointer transform transition - all duration - 300 hover:scale - 105 ${
                   active_feature === feature.id;
                     ? `ring - 2 ring-${feature.color}-500 / 50 bg - white / 10`;
@@ -338,19 +325,14 @@ export function FeatureShowcase() {;
                 } ${is_visible ? 'opacity - 100 translate - x-0' : 'opacity - 0 translate - x-10'}`}
                 style={{ transition_delay: `${index * 100}ms` }}
                 on_click={() => setActiveFeature (active_feature === feature.id ? null : feature.id)}
-=======
-<<<<<<< HEAD
                 className={`card cursor-pointer transform transition-all duration-300 hover:scale-105 ${activeFeature === feature.id;
-=======
                 className={`card cursor-pointer transform transition-all duration-300 hover:scale-105 ${;
                   activeFeature === feature.id;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     ? `ring-2 ring-${feature.color}-500/50 bg-white/10`;
                     : 'hover:bg-white/10';
                 } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
                 onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >;
                 <div className="flex items - start space - x-4">;
                   <div className={`w - 12 h - 12 bg - gradient - to - r ${getColorClasses (feature.color)} rounded - lg flex items - center justify - center text - white flex - shrink - 0`}>;
@@ -376,12 +358,10 @@ export function FeatureShowcase() {;
                   <div className={`transform transition - transform duration - 300 ${
                     active_feature === feature.id ? 'rotate - 180' : 'rotate - 0';
 
-=======
 
                   <div className={`transform transition-transform duration-300 ${;
                     activeFeature === feature.id ? 'rotate-180' : 'rotate-0';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   }`}>;
                     <svg className="w - 5 h - 5 text - gray - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                       <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 9l - 7 7 - 7-7" />;
@@ -452,3 +432,8 @@ export function FeatureShowcase() {;
       </div>;
     </section>);
 }
+use client"
+import { useState, useEffect } from "react"
+  {id: any
+    description: "Complete marketplace infrastructure with job posting, talent matching, and project management."
+      

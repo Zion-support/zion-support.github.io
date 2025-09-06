@@ -84,8 +84,6 @@ interface ButtonProps {
   class_name?: string,
   type?: 'button' | 'submit' | 'reset',
   full_width?: boolean,
-=======
-<<<<<<< HEAD
 'use client';
 import React, { forwardRef } from 'react';
 import Link from 'next/link';
@@ -102,7 +100,6 @@ interface ButtonProps {children: React.ReactNode;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
   fullWidth?: boolean;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
 }
 const Button = forward_ref < HTMLButtonElement ButtonProps>(({
@@ -119,7 +116,6 @@ const Button = forward_ref < HTMLButtonElement ButtonProps>(({
   type = 'button',
   full_width = false,
   rounded = 'lg';
-<<<<<<< HEAD
 }, ref) => {
   const base_classes = 'inline - flex items - center justify - center font - semibold transition - all duration - 300 transform hover: scale - 105 focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - offset - black focus:ring - purple - 500 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none',
   const variant_classes = {
@@ -156,13 +152,11 @@ if ( {) {
 }
     return (
 
-=======
 
   ),;
   if (href) {;
     return (;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Link href={href} className={classes}>;
         {content}
       </Link>);
@@ -173,15 +167,9 @@ if ( {) {
 
 
   return (;
-=======
   return (
-=======
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <button;
       ref={ref}
       type={type}
@@ -192,12 +180,10 @@ if ( {) {
       aria - label={typeof children === 'string' ? children : undefined}
     >;
       {content}
-<<<<<<< HEAD
     </button>);
 }),
 Button.display_name = 'Button',
 export default Button,
-=======
 
 }),;
 Button.displayName = 'Button',;
@@ -249,7 +235,6 @@ export /**
 function FloatingActionButton() {
   return (
 
-=======
 
 ;
 // Floating action button;
@@ -261,7 +246,6 @@ export function FloatingActionButton({;
 }: ButtonProps & { icon: React.ReactNode }) {;
   return (;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <Button;
       {...props}
       icon={icon}
@@ -271,3 +255,8 @@ export function FloatingActionButton({;
       rounded="full";
     />);
 }
+use client'
+import React, { forwardRef } from 'react'
+import Link from 'next/
+import LoadingSpinner from './
+    primary: any

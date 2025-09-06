@@ -20,17 +20,12 @@ import {;
 } from '../../utils/mediaKit';
 const KitPage = () => {;
 
-=======
 import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
 import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
 const KitPage = () => {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [bundle, setBundle] = useState<MediaBundle>('general');
   const [startDate, setStartDate] = useState<Date>(new Date());
   const [companyName, setCompanyName] = useState('Zion');
@@ -38,7 +33,6 @@ const KitPage = () => {
   const [tokenName, setTokenName] = useState('ZION');
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const pdfDoc = await PDFDocument.create();
     const page = pdfDoc.addPage([612, 792]);
@@ -94,10 +88,6 @@ const KitPage = () => {
 
 
     let y = 760;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     drawText('Zion Media Kit', 50, y, 18);
 import {useCallback, useMemo, useState} from 'react';
 import Head from 'next / head';
@@ -253,7 +243,6 @@ if ( {) {
       tokenName,;
 
     });
-<<<<<<< HEAD
     const onCopy = () => navigator && navigator.clipboard.writeText(text);
     return (
       <div className='p-4 border rounded-lg space-y-2'>;
@@ -321,7 +310,6 @@ if ( {) {
                 value={tokenName}
                 onChange={e => setTokenName(e && e.target.value)}
 
-=======
         <section className='grid md:grid - cols - 3 gap - 6'>;
           <div className='p - 4 border rounded - lg'>;
             <h3 className='font - semibold mb - 2'>Bundle</h3>;
@@ -360,7 +348,6 @@ if ( {) {
                 value={token_name}
                 on_change={e => setTokenName (e.target.value)}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 placeholder='Token name';
               />;
             </div>;
@@ -386,11 +373,8 @@ if ( {) {
             </div>
             {timeline.length>0 && (
               <ul className="mt-3 text-sm list-disc list-inside space-y-1">
-<<<<<<< HEAD
                 {timeline.map((t)=> (<li key={t.label}><span className="font-medium">{t.label}:</span> {t.date}</li>))}
               </ul>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
 
           </div>;
@@ -412,8 +396,6 @@ if ( {) {
                   <span className='text-gray-400 text-xs'>generated</span>;
                 )}              </li>;
 
-=======
-=======
 
 
         <section className="p-4 border rounded-lg">
@@ -422,20 +404,15 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {assets.map(a => (
               <li key={a.filename} className="flex items-center justify-between border rounded p-2">
                 <span className="text-sm">{a.filename}</span>
                 {a.path ? <a href={a.path} download className="text-blue-600 text-sm">Download</a> : <span className="text-gray-400 text-xs">generated</span>}
               </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </ul>;
         </section>;
-=======
-=======
 
 };
 
@@ -511,7 +488,6 @@ if ( {) {
         </section>;
       </div>;
     </div>;
-=======
                 {timeline.map((t)=> (<li key={t.label}><span className="font-medium">{t.label}:</span> {t.date}</li>))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -525,19 +501,12 @@ if ( {) {
 }
           </div>
         </section>
-<<<<<<< HEAD
         <section className='p-4 border rounded-lg'>
           <h3 className='font-semibold mb-3'>Assets Included</h3>
           <ul className='grid md:grid-cols-2 gap-3'>
-=======
         <section className="p-4 border rounded-lg">
           <h3 className="font-semibold mb-3">Assets Included</h3>
           <ul className="grid md:grid-cols-2 gap-3">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {assets.map(a => (
               <li key={a.filename} className="flex items-center justify-between border rounded p-2">
                 <span className="text-sm">{a.filename}</span>
@@ -554,7 +523,6 @@ if ( {) {
 }
           </ul>
         </section>
-<<<<<<< HEAD
         <section className='p-4 border rounded-lg space-y-4'>
           <h3 className='font-semibold'>Prewritten Press Releases</h3>
           <div className='grid md:grid-cols-3 gap-4'>
@@ -566,18 +534,15 @@ if ( {) {
         </section>
       </div>
     </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   );
 
 },;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default KitPage;
 
 
-=======
           <div className='p - 4 border rounded - lg'>;
             <h3 className='font - semibold mb - 2'>Rollout Timeline</h3>;
             <div className='space - y-2'>;
@@ -631,4 +596,18 @@ export default KitPage;
 ;
 export default KitPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import { useCallback, useMemo, useState  } from 'react'
+import Head from 'next/
+ from '../../utils/
+ from '../../utils/
+ from '../../utils/
+    });    zip.file('press-releases/
+    zip.file('press-releases/
+    if (bundle = = 'web3') zip.file('press-releases/
+import Head from 'next /
+ from '../../utils /
+ from '../../utils /
+    });    zip.file ('press - releases /
+    zip.file ('press - releases /
+    if (zip.file ('press - releases /
+    const blob = new Blob([pdfBytes], { type: any

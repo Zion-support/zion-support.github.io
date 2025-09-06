@@ -96,10 +96,8 @@ const contactInfo = {;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
 };
-=======
 ];
 
-=======
 import Head from 'next / head';
 import Link from 'next / link';
 import {motion} from 'framer-motion';
@@ -107,7 +105,6 @@ import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shiel
 import Layout from '../components / layout / Layout';
 import { innovativeBusinessSolutions2025 } from '../data / 2025 - innovative - business - solutions';
 const contact_info = {
-=======
 
 
 const contactInfo = {
@@ -127,7 +124,6 @@ const heroStats = [
   }
 }
 ],
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const serviceCategories = [
   {
     title: 'Business Intelligence & Analytics',
@@ -207,7 +203,6 @@ export default function InnovativeBusinessSolutions() {
 
       {/* Hero Section */}
 
-=======
 
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -237,7 +232,6 @@ export default function InnovativeBusinessSolutions() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
 
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6">
@@ -245,7 +239,6 @@ export default function InnovativeBusinessSolutions() {
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your business operations with AI-powered intelligence, automation, and analytics that drive growth and efficiency
-=======
 
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your business operations with AI-powered intelligence, automation, and analytics that drive growth and efficiency
@@ -254,7 +247,6 @@ export default function InnovativeBusinessSolutions() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {heroStats.map((stat, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <motion.div
 
 
@@ -270,7 +262,6 @@ export default function InnovativeBusinessSolutions() {
                 <motion&& motion.div
 
 
-=======
     content:;
       'Their sales intelligence platform has increased our sales productivity by 200%. The AI - powered lead scoring and forecasting are game - changers.',
     rating: 5,
@@ -328,9 +319,6 @@ function InnovativeBusinessSolutions() {
             </p>;
             <div className='flex flex - wrap justify - center gap - 4 mb - 12'>              {hero_stats.map ((stat, index) => (
                 <motion.div;
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   key={index}
                   initial={{ opacity: 0, scale: 0 && 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -342,9 +330,7 @@ function InnovativeBusinessSolutions() {
                   <span className="text-gray-300 text-sm">{stat.label}</span>
                 </motion.div>
               ))}
-=======
                   className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-teal-500/30'
-=======
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -366,11 +352,6 @@ function InnovativeBusinessSolutions() {
   }
 }
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-teal-500/30"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   {stat.icon  } catch (error) {
     console.error("Error:", error);
@@ -385,7 +366,6 @@ function InnovativeBusinessSolutions() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
@@ -395,7 +375,6 @@ function InnovativeBusinessSolutions() {
               <Link href={`tel:${contactInfo.mobile}`} className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300">
                 <Phone className="mr-2 w-5 h-5" />
                 Get Started
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </Link>
             </div>
           </motion.div>
@@ -421,8 +400,6 @@ function InnovativeBusinessSolutions() {
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -452,7 +429,6 @@ function InnovativeBusinessSolutions() {
               <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -474,7 +450,6 @@ function InnovativeBusinessSolutions() {
                 </div>
               </motion.div>
 
-=======
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -489,7 +464,6 @@ function InnovativeBusinessSolutions() {
       <section id='services' className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-black">
@@ -510,7 +484,6 @@ function InnovativeBusinessSolutions() {
               Comprehensive business solutions covering every aspect of modern business operations
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className="space-y-16">
             {serviceCategories.map((category, categoryIndex) => (
 
@@ -528,7 +501,6 @@ function InnovativeBusinessSolutions() {
               <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -595,9 +567,7 @@ function InnovativeBusinessSolutions() {
                       </div>;
                     </motion && motion.div>;
 
-=======
                 className="relative"
-=======
               <motion.div
                 key={categoryIndex  } catch (error) {
     console.error("Error:", error);
@@ -627,7 +597,6 @@ function InnovativeBusinessSolutions() {
                 className="relative"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -636,13 +605,9 @@ function InnovativeBusinessSolutions() {
                   <h3 className="text-3xl font-bold text-white mb-4">{category.title}</h3>
                   <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
-<<<<<<< HEAD
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                   {category.services.map((service, serviceIndex) => (
-=======
-<<<<<<< HEAD
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <motion.div
 
                       key={service.id  } catch (error) {
@@ -673,7 +638,6 @@ function InnovativeBusinessSolutions() {
                       className="relative group"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -713,7 +677,6 @@ function InnovativeBusinessSolutions() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
@@ -734,7 +697,6 @@ function InnovativeBusinessSolutions() {
                       </div>
                     </motion.div>
 
-=======
 
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -756,7 +718,6 @@ function InnovativeBusinessSolutions() {
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
 
       {/* Testimonials Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
@@ -794,7 +755,6 @@ function InnovativeBusinessSolutions() {
               <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -846,9 +806,7 @@ function InnovativeBusinessSolutions() {
 
 
           >
-=======
             className='text-center mb-16'
-=======
                   ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -893,11 +851,6 @@ function InnovativeBusinessSolutions() {
   }
 }
             className="text-center mb-16"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -906,7 +859,6 @@ function InnovativeBusinessSolutions() {
               Real feedback from businesses that have transformed their operations with our innovative solutions
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -915,7 +867,6 @@ function InnovativeBusinessSolutions() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20'
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
@@ -945,11 +896,6 @@ function InnovativeBusinessSolutions() {
   }
 }
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -963,7 +909,6 @@ function InnovativeBusinessSolutions() {
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
-<<<<<<< HEAD
                       <Star key={i} className='w-4 h-4 fill-current' />                    ))}
                   </div>
                 </div>
@@ -979,7 +924,6 @@ function InnovativeBusinessSolutions() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-=======
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))  } catch (error) {
     console.error("Error:", error);
@@ -1025,13 +969,7 @@ function InnovativeBusinessSolutions() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -1040,7 +978,6 @@ function InnovativeBusinessSolutions() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-<<<<<<< HEAD
                 href={`tel:${contactInfo.mobile}`}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
               >
@@ -1062,7 +999,6 @@ function InnovativeBusinessSolutions() {
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -1072,7 +1008,6 @@ function InnovativeBusinessSolutions() {
               <p className="text-gray-300 mb-2">📍 {contactInfo.address}</p>
               <p className="text-gray-300">🌐 {contactInfo.website}</p>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </motion.div>
         </div>
       </section>
@@ -1128,13 +1063,11 @@ function InnovativeBusinessSolutions() {
   duration: 0 && 0.8 
 }viewport= {
   {
-<<<<<<< HEAD
   once: true 
 
 }> <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link > <Mail className="mr-2 w-5 h-5" /> Email Us </Link> </div> </div> </motion && motion.div> </div> </section> </Layout>) ;
 
 
-=======
   )
 }
                       className='relative group';
@@ -1317,9 +1250,12 @@ function InnovativeBusinessSolutions() {
   {
   once: true;
 }> <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI - powered solutions </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <Link > <Mail className="mr - 2 w - 5 h - 5" /> Email Us </Link> </div> </div> </motion.div> </div> </section> </Layout>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react'
+import Head from 'next/
+import Head from 'next/
+import Link from 'next/
+import Layout from '../components/layout/
+import { innovativeBusinessSolutions2025 } from '../data/
+  website: any

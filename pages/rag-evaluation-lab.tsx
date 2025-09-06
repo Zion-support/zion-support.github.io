@@ -132,7 +132,6 @@ function RAGEvaluationLabPage() {
   );
 
 
-=======
 export default function RAGEvaluationLabPage() {
 	return (
 		<>
@@ -174,7 +173,6 @@ export default function RAGEvaluationLabPage() {
 	)
 }
 
-=======
                 title: 'Golden Datasets',
                 desc: 'Curate and run task - specific datasets for repeatable evaluation.',
               },
@@ -197,7 +195,6 @@ export default function RAGEvaluationLabPage() {
             ].map (function => (
               <div;
                 key={f.title}
-<<<<<<< HEAD
                 className='rounded - xl border border - white / 10 bg - white / 5 p - 6 backdrop - blur';
               >;
                 <h3 className='text - lg font - semibold text - white'>{f.title}</h3>;
@@ -227,9 +224,18 @@ export default function RAGEvaluationLabPage() {
       </section>;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react'
+import SEO from '../components/
+import Link from 'next/
+import SEO from '../components/
+import Link from 'next/
+                title: any
+                className='rounded-xl border border-white/10 bg-white/
+              href='/
+              className='px-5 py-3 rounded-lg border border-white/
+                title: any
+                className='rounded - xl border border - white / 10 bg - white /
+              href='/
+              className='px - 5 py - 3 rounded - lg border border - white /

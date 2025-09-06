@@ -16,7 +16,6 @@ import {
 } from 'lucide-react'
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
-=======
 
 import React from 'react',;
 import Layout from '../components/layout/Layout',;
@@ -31,13 +30,9 @@ import {
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import React from 'react',
 import Layout from '../components / layout / Layout',
 import SEO from '../components / SEO',
-=======
-=======
 import React from 'react',;
 import Layout from '../components/layout/Layout',;
 import SEO from '../components/SEO',;
@@ -50,12 +45,9 @@ import {
   Video, Headphones, Code, Database, Network, Server, 
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import { motion } from 'framer-motion',
 import {
   Target, Brain, Rocket, Shield, Zap, Atom, Cpu,
@@ -73,7 +65,6 @@ import {
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const Solutions: NextPage = () => {
   const industry_solutions = [;
     {
@@ -209,7 +200,6 @@ const Solutions: NextPage = () => {
 
   ],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <UltraAdvancedFuturisticBackground>
       <div className="min-h-screen">
@@ -226,83 +216,69 @@ const Solutions: NextPage = () => {
       period: 'month',
       popular: true,
       icon: <Heart className="w-8 h-8" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       id: 'financial',
       name: 'Financial Solutions',
       description: 'Advanced financial technology and services',
       features: ['Risk ManagementFraud DetectionTrading SystemsCompliance Automation'],
-<<<<<<< HEAD
 price: '$2, 999',
       period: 'month',
       popular: false,
       icon: <TrendingUp className="w - 8 h - 8" />;
-=======
       price: '$2,999',
       period: 'month',
       popular: false,
       icon: <TrendingUp className="w-8 h-8" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       id: 'manufacturing',
       name: 'Manufacturing Solutions',
       description: 'Smart manufacturing and Industry 4.0',
       features: ['Predictive MaintenanceQuality ControlSupply Chain OptimizationIoT Integration'],
-<<<<<<< HEAD
 price: '$2, 799',
       period: 'month',
       popular: false,
       icon: <Settings className="w - 8 h - 8" />;
-=======
       price: '$2,799',
       period: 'month',
       popular: false,
       icon: <Settings className="w-8 h-8" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       id: 'retail',
       name: 'Retail Solutions',
       description: 'Digital transformation for retail businesses',
-<<<<<<< HEAD
 features: ['E - commerce PlatformsCustomer AnalyticsInventory ManagementOmnichannel Solutions'],
       price: '$2, 499',
       period: 'month',
       popular: false,
       icon: <ShoppingCart className="w - 8 h - 8" />;
-=======
       features: ['E-commerce PlatformsCustomer AnalyticsInventory ManagementOmnichannel Solutions'],
       price: '$2,499',
       period: 'month',
       popular: false,
       icon: <ShoppingCart className="w-8 h-8" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       id: 'government',
       name: 'Government Solutions',
       description: 'Technology solutions for public sector',
       features: ['Digital ServicesSecurity & ComplianceData ManagementCitizen Engagement'],
-<<<<<<< HEAD
 price: '$3, 499',
       period: 'month',
       popular: false,
       icon: <Building className="w - 8 h - 8" />;
-=======
       price: '$3,499',
       period: 'month',
       popular: false,
       icon: <Building className="w-8 h-8" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       id: 'education',
       name: 'Education Solutions',
       description: 'Innovative educational technology',
       features: ['Learning PlatformsStudent AnalyticsAdministrative SystemsVirtual Classrooms'],
-<<<<<<< HEAD
 price: '$1, 999',
       period: 'month',
       popular: false,
@@ -314,65 +290,44 @@ price: '$1, 999',
       title: 'Industry Expertise',
       description: 'Deep domain knowledge across sectors',
       icon: <Briefcase className="w - 6 h - 6" />;
-=======
       price: '$1,999',
       period: 'month',
       popular: false,
       icon: <BookOpenCheck className="w-8 h-8" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const solutionCapabilities = [
     {
       title: 'Industry Expertise',
       description: 'Deep domain knowledge across sectors',
       icon: <Briefcase className="w-6 h-6" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       title: 'Custom Development',
       description: 'Tailored solutions for unique needs',
-<<<<<<< HEAD
 icon: <Code className="w - 6 h - 6" />;
-=======
       icon: <Code className="w-6 h-6" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       title: 'Integration Services',
       description: 'Seamless system integration',
-<<<<<<< HEAD
 icon: <Network className="w - 6 h - 6" />;
-=======
       icon: <Network className="w-6 h-6" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       title: 'AI & Automation',
       description: 'Intelligent automation solutions',
-<<<<<<< HEAD
 icon: <Brain className="w - 6 h - 6" />;
-=======
       icon: <Brain className="w-6 h-6" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       title: 'Cloud & Security',
       description: 'Secure cloud infrastructure',
-<<<<<<< HEAD
 icon: <Shield className="w - 6 h - 6" />;
     },
     {
@@ -382,36 +337,24 @@ icon: <Shield className="w - 6 h - 6" />;
     }
   ],
   const case_studies = [;
-=======
       icon: <Shield className="w-6 h-6" />
     },
     {
       title: 'Analytics & Insights',
       description: 'Data-driven decision making',
       icon: <BarChart3 className="w-6 h-6" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const caseStudies = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       title: "Healthcare Provider Digital Transformation",
       industry: "Healthcare",
       description: "Implemented a comprehensive EHR system for a regional hospital network, improving patient care and operational efficiency.",
-<<<<<<< HEAD
       results: [;
         "30% reduction in administrative overhead",
         "Improved patient satisfaction scores",
@@ -429,7 +372,6 @@ icon: <Shield className="w - 6 h - 6" />;
         "Enhanced mobile user experience";
       ],
       technologies: ["Next.js", "TypeScript", "MongoDB", "Vercel"];
-=======
       results: [
         "30% reduction in administrative overhead",
         "Improved patient satisfaction scores",
@@ -447,13 +389,11 @@ icon: <Shield className="w - 6 h - 6" />;
         "Enhanced mobile user experience"
       ],
       technologies: ["Next.js", "TypeScript", "MongoDB", "Vercel"]
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       title: "Manufacturing IoT Integration",
       industry: "Manufacturing",
       description: "Implemented IoT sensors and predictive maintenance systems for a manufacturing facility, reducing downtime and improving efficiency.",
-<<<<<<< HEAD
       results: [;
         "25% reduction in unplanned downtime",
         "15% improvement in production efficiency",
@@ -504,7 +444,6 @@ icon: <Shield className="w - 6 h - 6" />;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">
                 Industry Solutions
@@ -521,7 +460,6 @@ icon: <Shield className="w - 6 h - 6" />;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Demo
@@ -596,7 +534,6 @@ icon: <Shield className="w - 6 h - 6" />;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
@@ -673,8 +610,6 @@ icon: <Shield className="w - 6 h - 6" />;
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
                     <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
                   </div>
@@ -738,7 +673,6 @@ icon: <Shield className="w - 6 h - 6" />;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
@@ -778,7 +712,6 @@ icon: <Shield className="w - 6 h - 6" />;
 
                   }`}
                 >;
-=======
 
                   key={solution.id  } catch (error) {
     console.error("Error:", error);
@@ -816,7 +749,6 @@ icon: <Shield className="w - 6 h - 6" />;
 }
 
                 >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {solution.popular && (
 
                     <div className="absolute -top - 3 left - 1/2 transform -translate - x-1 / 2">;
@@ -860,8 +792,6 @@ icon: <Shield className="w - 6 h - 6" />;
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <span className="text-lg text-gray-400">/{solution.period}</span>
                     </div>
                   </div>
@@ -875,7 +805,6 @@ icon: <Shield className="w - 6 h - 6" />;
                   <a 
                     href="/contact" 
 
-=======
                         {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -893,8 +822,6 @@ icon: <Shield className="w - 6 h - 6" />;
                     href="/contact"
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300"
                   >
                     Get Started
@@ -1010,7 +937,6 @@ icon: <Shield className="w - 6 h - 6" />;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
                 Ready for Industry Transformation?
@@ -1027,7 +953,6 @@ icon: <Shield className="w - 6 h - 6" />;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
@@ -1073,9 +998,15 @@ export default Solutions;
 },
 export default Solutions,
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react'
+import Layout from '../components/layout/
+import SEO from '../components/
+import UltraAdvancedFuturisticBackground from '../components/ui/
+import { expandedMicroSaasServices } from '../data/
+import Layout from '../components / layout /
+import SEO from '../components /
+import UltraAdvancedFuturisticBackground from '../components / ui /
+import { expandedMicroSaasServices } from '../data /

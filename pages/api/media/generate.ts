@@ -6,7 +6,6 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { buildPressRelease  } from '../../../utils / media_kit';
 ;
@@ -31,7 +30,6 @@ function handler() {
     if (req.method !== "POST") {
       res.setHeader("Allow", "POST");
       return res.status(405).json({ error: "Method not allowed" });
-=======
       type = "launch",
       company_name = "Zion",
       date = new Date ().toISOString ().substring (0, 10),
@@ -47,7 +45,6 @@ function handler() {
   } catch (error: any) {
     console && console.error("Press release generation error:", error);
     return res && res.status(500).json({
-=======
       contact_email = "press@zion.com",
     } = req.body || {}
 ;
@@ -80,7 +77,6 @@ if ( {) {
       error: "Failed to generate press release",
     });
 
-=======
 
 
   }
@@ -90,14 +86,12 @@ if ( {) {
 
 }
 
-=======
 
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
   } catch (error) {
     console.error("Error:", error);
@@ -113,5 +107,5 @@ if ( {) {
 
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from "next"
+import { buildPressRelease } from "../../../utils/

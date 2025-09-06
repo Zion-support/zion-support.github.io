@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -39,7 +41,6 @@ type Props = {
     role !== 'talent' && milestone.status === 'Pending';
   const canTalentSubmit =
     (role === 'talent' |role === 'admin') &&
-=======
   on_action: (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid',
     milestone_id: string) => Promise < void> | void;
@@ -111,17 +112,10 @@ export default function MilestoneCard(): any ({;
             Due: {new Date(milestone && milestone.dueDate).toLocaleDateString()}
           </p>;
         </div>;
-=======
 import React, { useState } from 'react';
 import { Milestone } from '../../utils/types/milestones';
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Props = {
   milestone: Milestone;
   projectId: string;
@@ -139,19 +133,16 @@ const statusSteps = [
   'Paid'
 ] as const;
 export default function MilestoneCard({
-<<<<<<< HEAD
   milestone
   projectId
   role
   onAction
 }: Props) {
-=======
   milestone,
   projectId,
   role,
   onAction,
 }: Props) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [expanded, setExpanded] = useState(false);
   const currentIndex = statusSteps.findIndex(s => s === milestone.status);
   const canClientMarkInProgress =
@@ -172,7 +163,6 @@ export default function MilestoneCard({
             Due: {new Date(milestone.dueDate).toLocaleDateString()}
           </p>
         </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <button
           className='text-sm text-blue-600'
           onClick={() => setExpanded(v => !v)}
@@ -213,7 +203,6 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
   const canTalentSubmit = (role === 'talent' |role === 'admin') && milestone.status === 'In Progress';
   const canClientApprove = role !== 'talent' && milestone.status === 'Submitted';
   const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved';
-=======
         </button>;
       </div>;
       <div className='mt-3'>;
@@ -231,7 +220,6 @@ export default function MilestoneCard(): any ({ milestone, projectId, role, onAc
   const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone && milestone.status === 'In Progress';
   const canClientApprove = role !== 'talent' && milestone && milestone.status === 'Submitted';
   const canClientMarkPaid = role !== 'talent' && milestone && milestone.status === 'Approved';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
 
@@ -286,14 +274,12 @@ function MilestoneCard() {
                 title={step}
               />;
 
-=======
 
       <div className="mt-3">
         <div className="flex items-center gap-2">
           {statusSteps.map((step, idx) => (
             <div key={step} className="flex items-center">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <div
               {idx < status_steps.length - 1 && (          {status_steps.map ((step, idx) => (
             <div key={step} className="flex items - center">;
@@ -311,8 +297,6 @@ function MilestoneCard() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
             </div>;
           ))}
@@ -365,10 +349,8 @@ function MilestoneCard() {
               {_idx < statusSteps.length - 1 && (
 
                 <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
-=======
         </button>
       </div>
-<<<<<<< HEAD
       <div className='mt-3'>
         <div className='flex items-center gap-2'>
           {statusSteps.map((step, idx) => (
@@ -384,18 +366,11 @@ function MilestoneCard() {
               <div
                 className={
                   'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }
                 title={step}
               />
               {idx < statusSteps.length - 1 && (
-<<<<<<< HEAD
                 <div
                   className={
                     'h-0.5 w-8 ' +
@@ -405,14 +380,7 @@ function MilestoneCard() {
             </div>
           ))}
         </div>                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               )}
             </div>
           ))}
@@ -462,14 +430,11 @@ function MilestoneCard() {
 
                       {a.label || a.url}
 
-=======
 
 
                       {a.label || a.url}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </a>
                   </li>
                       rel='noreferrer'>                      {a && a.label || a && a.url}              <div className="font-medium">Attachments</div>;
@@ -481,7 +446,6 @@ function MilestoneCard() {
                   </li>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
               </ul>;
             </div>;
@@ -501,14 +465,12 @@ function MilestoneCard() {
             Mark In Progress;
           </button>;
 
-=======
 
       <div className="mt-4 flex flex-wrap gap-2">
         {canClientMarkInProgress && (
           <button
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
             onClick={() => onAction('in_progress', milestone.id)}
-=======
 
 
 
@@ -521,7 +483,6 @@ function MilestoneCard() {
 
         )}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             Submit Work
           </button>
@@ -536,7 +497,6 @@ function MilestoneCard() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             Approve
           </button>
@@ -551,11 +511,9 @@ function MilestoneCard() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             Mark as Paid
           </button>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
       </div>
     </div>
@@ -564,7 +522,6 @@ function MilestoneCard() {
   );
 
 
-=======
             <div>        <div className="mt - 2 text - xs text - gray - 700">Status: {milestone.status}</div>;
       </div>;
       {expanded && (
@@ -624,13 +581,10 @@ function MilestoneCard() {
           </button>)}
       </div>;
     </div>);
-=======
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    console.error('Error caught by boundary: any
+import React, { useState } from 'react'
+import { Milestone } from '../../utils/types/
+import { Milestone } from '../../utils / types /

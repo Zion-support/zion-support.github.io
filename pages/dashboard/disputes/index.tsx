@@ -35,7 +35,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 
 
 import useSWR from 'swr';
@@ -119,7 +118,6 @@ import type { GetServerSideProps } from 'next';
                     </Link>                  </td>;
                 </tr>;
 
-=======
   return { props: {} }
 };
 export default function AdminDisputesDashboard() {
@@ -130,7 +128,6 @@ export default function AdminDisputesDashboard() {
     if (statusFilter === 'All') return list;
     return list.filter((d: any) => d.status === statusFilter)
   }, [data, statusFilter]);
-=======
 
 
   const disputes = useMemo(() => {
@@ -141,10 +138,6 @@ export default function AdminDisputesDashboard() {
   }, [data, statusFilter]),
 
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
@@ -156,8 +149,6 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
     },
     {} as Record<string, string>
   );
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
   const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {;
@@ -165,10 +156,6 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
     if (k) acc[k] = decodeURIComponent(v || '');
     return acc;
   }, {} as Record<string, string>),;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   let role = 'guest';
   try {
     const user = cookies['x-user'] ? JSON.parse(cookies['x-user']) : null;
@@ -177,9 +164,6 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   return { props: {} };};
 
 export default function AdminDisputesDashboard() {;
@@ -187,8 +171,6 @@ export default function AdminDisputesDashboard() {;
   const [statusFilter, setStatusFilter] = useState<
     'All' | 'Open' | 'Under Review' | 'Resolved'
   >('Open');
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
   if (role !== 'admin') {;
     return { redirect: { destination: '/', permanent: false }   } catch (error) {
@@ -207,33 +189,23 @@ export default function AdminDisputesDashboard() {;
   }
 }
 },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AdminDisputesDashboard() {
   const { data } = useSWR('/api/disputes', fetcher),
   const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Under Review' | 'Resolved'>('Open'),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const disputes = useMemo(() => {
-<<<<<<< HEAD
     const list = data?.disputes |[];
     if (statusFilter === 'All') return list;
     return list.filter((d: any) => d.status === statusFilter);  }, [data, statusFilter]);
 
-=======
     const list = data?.disputes || [],
     if (statusFilter === 'All') return list,
     return list.filter((d: any) => d.status === statusFilter)
   }, [data, statusFilter]),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <EnhancedLayout>
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-4">
           <h1 className="text-2xl font-semibold">Dispute Resolution Center</h1>
-<<<<<<< HEAD
 <select value={statusFilter} onChange={e => setStatusFilter(e.target.value as any)} className="border rounded px-2 py-1 text-sm">
             {(['OpenUnder ReviewResolvedAll'] as const).map(s => (<option key={s} value={s}>{s}</option>))}
           </select>
@@ -249,21 +221,18 @@ export default function AdminDisputesDashboard() {
                 <th className="text-left px-3 py-2">Created At</th>
                 <th className="text-left px-3 py-2">Status</th>
                 <th className="text-left px-3 py-2">Actions</th>
-=======
           <select value={statusFilter} onChange={e => setStatusFilter(e.target.value as any)} className="border rounded px-2 py-1 text-sm">
             {(['OpenUnder ReviewResolvedAll'] as const).map(s => (<option key={s} value={s}>{s}</option>))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </select>
         </div>
         <div className="overflow-auto border rounded">
           <table className="min-w-full text-sm">
             <thead className="bg-gray-50 dark:bg-gray-900">
               <tr>
-<<<<<<< HEAD
                 <th className=&quot;text-left px-3 py-2&quot;>Case ID</th>
                 <th className=&quot;text-left px-3 py-2&quot;>Talent</th>
                 <th className=&quot;text-left px-3 py-2&quot;>Client</th>
@@ -272,7 +241,6 @@ export default function AdminDisputesDashboard() {
                 <th className=&quot;text-left px-3 py-2&quot;>Status</th>
                 <th className=&quot;text-left px-3 py-2&quot;>Actions</th>
 
-=======
                 <th className="text-left px-3 py-2">Case ID</th>
                 <th className="text-left px-3 py-2">Talent</th>
                 <th className="text-left px-3 py-2">Client</th>
@@ -280,16 +248,12 @@ export default function AdminDisputesDashboard() {
                 <th className="text-left px-3 py-2">Created At</th>
                 <th className="text-left px-3 py-2">Status</th>
                 <th className="text-left px-3 py-2">Actions</th>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </tr>
             </thead>
             <tbody>
               {disputes.map((d: any) => (
-<<<<<<< HEAD
 <tr key={d.id} className="border-t">
-=======
                 <tr key={d.id} className="border-t">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <td className="px-3 py-2 font-medium">{d.id}</td>
                   <td className="px-3 py-2">{d.talentUserId}</td>
                   <td className="px-3 py-2">{d.clientUserId}</td>
@@ -297,19 +261,15 @@ export default function AdminDisputesDashboard() {
                   <td className="px-3 py-2">{new Date(d.createdAt).toLocaleString()}</td>
                   <td className="px-3 py-2">{d.status}</td>
                   <td className="px-3 py-2 flex gap-2">
-<<<<<<< HEAD
                     <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Admin%20Notes`}><a className="text-green-700 hover:underline">Resolve</a></Link>
                     <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Messages`}><a className="text-blue-700 hover:underline">Message Parties</a></Link>
                     <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Attachments`}><a className="text-gray-700 hover:underline">Download Evidence</a></Link>
-=======
                     <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Admin%20Notes`}><a className="text-green-700 hover:underline">Resolve</Link></Link>
                     <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Messages`}><a className="text-blue-700 hover:underline">Message Parties</Link></Link>
                     <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Attachments`}><a className="text-gray-700 hover:underline">Download Evidence</Link></Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </td>
                 </tr>
 
-=======
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../../components / layout / EnhancedLayout';
@@ -327,12 +287,10 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
     },
     {} as Record < string, string>);
   let role = 'guest';
-=======
 
 
 }
 
-=======
 },;
 export default function AdminDisputesDashboard(req, res) {
 
@@ -424,20 +382,14 @@ if (return list) {
                       </a>;
                     </Link>                  </td>;
                 </tr>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             </tbody>;
           </table>;
         </div>;
       </div>;
 
 
-=======
     </EnhancedLayout>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -445,5 +397,9 @@ if (return list) {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import useSWR from 'swr'
+import React, { useMemo, useState } from 'react'
+import EnhancedLayout from '../../../components/layout/
+import Link from 'next/
+    return { redirect: { destination: any
+  const { data } = useSWR('/api/

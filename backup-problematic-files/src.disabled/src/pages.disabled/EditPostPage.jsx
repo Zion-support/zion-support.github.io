@@ -28,3 +28,5 @@ const EditPostPage = ({ className }) => {
 };
 
 export default EditPostPage;
+import React from 'react'
+    

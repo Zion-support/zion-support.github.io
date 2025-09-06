@@ -45,7 +45,6 @@ import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas
 import { innovativeAIServices2029  } from '../data/2029-innovative-ai-services';
 import { quantumSpaceInnovations2029  } from '../data/2029-quantum-space-innovations';
 import { enterpriseITInnovations2029  } from '../data/2029-enterprise-it-innovations';
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -92,19 +91,14 @@ import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
     website: 'https://ziontechgroup.com'
   };
 
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
   Check
   Star
   Users
@@ -128,7 +122,6 @@ import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticN
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
   Check, Star, Users, TrendingUp, DollarSign, Clock
 
-=======
   Check,
   Star,
   Users,
@@ -151,7 +144,6 @@ import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturi
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
   Check, Star, Users, TrendingUp, DollarSign, Clock, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Shield, Zap, Rocket, Brain, Atom, Globe, Target;
   ArrowRight, Phone, Mail, MapPin, ExternalLink
  } from 'lucide-react';
@@ -211,7 +203,6 @@ export default function PricingPage() {;
   ];
   // Filter services
   const filteredServices = uniqueServices.filter(service => {
-<<<<<<< HEAD
     const matchesCategory =
       selectedCategory === 'All' |
       (Array.isArray(service.category)
@@ -242,7 +233,6 @@ export default function PricingPage() {;
     const category = Array.isArray(service.category) ? service.category[0] : service.category;
     if (!acc[category]) {
       acc[category] = []
-=======
     },;
     {} as Record<string, typeof filteredServices>;
   );
@@ -257,7 +247,6 @@ export default function PricingPage() {;
       acc[category] = [];
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     acc[category].push(service);
     return acc
@@ -341,7 +330,6 @@ export default function PricingPage() {;
   ];
 
   const categories = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     'AllContent & MarketingDevelopment & DevOpsSales & CRMLegal & ComplianceHuman ResourcesAnalytics & DataFinance & Accounting';
     'Project ManagementCustomer ExperienceSecurity & Compliance'
   ];
@@ -352,14 +340,10 @@ export default function PricingPage() {;
 
   const yearlyDiscount = 0.2, // 20% discount for yearly billing
 
-=======
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 
         />;
@@ -481,7 +465,6 @@ export default function PricingPage() {;
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {/* Filter Controls */}
             <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mb-8">;
               <select
@@ -500,13 +483,10 @@ export default function PricingPage() {;
                 value={selectedPriceRange}
 
 
-=======
             transition={{ duration: 0.8 }}
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ))}
 
 
@@ -516,7 +496,6 @@ export default function PricingPage() {;
             </div>
           </motion.div>
         </section>
-<<<<<<< HEAD
 </select>;
             </div>;
             <div className='text-center text-gray-400'>;
@@ -996,7 +975,6 @@ if ( {) {
         </section>;
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Contact CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
@@ -1084,12 +1062,10 @@ if ( {) {
           <div className='max-w-4xl mx-auto text-center'>        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
-=======
 
 
           </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </section>
         {/* Contact CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
@@ -1099,8 +1075,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1113,36 +1087,19 @@ if ( {) {
                 </div>
               </motion.div>
             ))}
-<<<<<<< HEAD
           </div>
         </section>
 {/* Contact CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-=======
-<<<<<<< HEAD
-=======
 
           </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </section>
         {/* Contact CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>        <section className="py-20 px-4 sm:px-6 lg:px-8">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -1181,7 +1138,6 @@ if ( {) {
                   <span>{contactInfo.mobile}</span>
 
                 </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="flex items-center justify-center space-x-2">
                   <Mail className="w-5 h-5 text-purple-400" />
                   <span>{contactInfo.email}</span>
@@ -1227,7 +1183,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -1344,7 +1299,6 @@ if ( {) {
   once: true ;
 }> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion && motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) }
 
-=======
                           </p>;
                           {/* Key Features */}
                           <div className='mb - 6'>;
@@ -1582,20 +1536,11 @@ if ( {) {
       <UltraFuturisticFooter2029 />;
     </UltraFuturisticBackground2029>);
 ;
-=======
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
-<<<<<<< HEAD
 );
-=======
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }whileInView= {
   {
   opacity: 1, coordinate_y: 0;
@@ -1604,14 +1549,40 @@ if ( {) {
   duration: 0.8;
 }viewport= {
   {
-<<<<<<< HEAD
   once: true;
 }> <h2 className="text - 3xl sm:text - 4xl lg:text - 5xl font - bold text - white mb - 6" > Ready to Get Started with <span className="bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent" > Revolutionary Technology?</span> </h2> <p className="text - xl text - gray - 300 mb - 8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 8" > <Link href="/contact" > <button className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - xl font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 200 transform hover:scale - 105" > <Phone className="inline - block w - 5 h - 5 mr - 2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt - 12 p - 6 bg - gray - 900 / 30 rounded - 2xl border border - cyan - 500 / 20"> <h3 className="text - xl font - semibold text - white mb - 4">Why Choose Zion Tech Group?</h3> <div className="grid grid - cols - 1 md: grid - cols - 2 gap - 4 text - sm text - gray - 300"> <div className="flex items - center space - x-2"> <Check className="w - 4 h - 4 text - green - 400" /> flex items - center space - x-2"> <Check className=" w - 4 h - 4 text - green - 400"/> <span > Proven ROI and customer success stories</span> </div> <div className=" flex items - center space - x-2"> <Check className=" w - 4 h - 4 text - green - 400"/> <span > Comprehensive support and implementation</span> </div> <div className=" flex items - center space - x-2"> <Check className=" w - 4 h - 4 text - green - 400" /> <span > Cutting - edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   once: true 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useState } from 'react'
+import Head from 'next/
+import Link from 'next/
+import UltraFuturisticBackground2029 from '../components/backgrounds/
+import UltraFuturisticNavigation2029 from '../components/layout/
+import UltraFuturisticFooter2029 from '../components/layout/
+import UltraFuturisticBackground2029 from '../components/backgrounds/
+import UltraFuturisticNavigation2029 from '../components/layout/
+import UltraFuturisticFooter2029 from '../components/layout/
+import { enhancedRealMicroSaasServices  } from '../data/
+import { innovativeAIServices2029  } from '../data/
+import { quantumSpaceInnovations2029  } from '../data/
+import { enterpriseITInnovations2029  } from '../data/
+import UltraFuturisticBackground2029 from '../components/backgrounds/
+import UltraFuturisticNavigation2029 from '../components/layout/
+import UltraFuturisticFooter2029 from '../components/layout/
+import UltraFuturisticBackground2029 from '../components/backgrounds/
+import UltraFuturisticNavigation2029 from '../components/layout/
+import UltraFuturisticFooter2029 from '../components/layout/
+import { enhancedRealMicroSaasServices } from '../data/
+import { innovativeAIServices2029 } from '../data/
+import { quantumSpaceInnovations2029 } from '../data/
+import { enterpriseITInnovations2029 } from '../data/
+import { innovativeMicroSaas2029 } from '../data/
+    { id: 'Under $1K', name: any
+    { id: '$1K - $5K', name: any
+    { id: '$5K - $20K', name: any
+    { id: '$20K+', name: any
+  const filteredServices = uniqueServices.filter(service => { id: '$20K+', name: any
+    const price = parseFloat(service.price.replace(/[^0-9.]/
+    website: any

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -183,7 +182,6 @@ class AdvancedSyntaxFixer {
 // Run the fixer
 const fixer = new AdvancedSyntaxFixer();
 fixer.fixAllSyntaxErrors().catch(console.error);
-=======
 #!/usr/bin/env node;
 ;
 const fs = require('fs');
@@ -372,4 +370,3 @@ try {;
   console.error('Erro:r:', error.message);
   process.exit(1);
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

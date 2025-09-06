@@ -1,5 +1,4 @@
 
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -7,11 +6,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -24,20 +23,12 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 
 
-=======
 
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 
-=======
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 import React from 'react';
 import Link from 'next/link';
@@ -1568,27 +1559,21 @@ export default function Services() {
 	),;
 
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/merge-open-prs
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
 
 }
 
 
 
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    console.error('Error caught by boundary: any
+									href='/
+									href='/
+									href='/
+									href='/
+							<a href='https://ziontechgroup && ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline font-semibold' target='_blank' rel='noreferrer'>ziontechgroup && ziontechgroup.com
+										<p className='text-blue-700'><strong>Phone: any
+										<p className='text-blue-700'><strong>Email: any
+						<a href='https://ziontechgroup && ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup && ziontechgroup.com
+						<a href='mailto:kleber@ziontechgroup && ziontechgroup.com' className='text-blue-600 hover: any
+						<a href='tel:+13024640950' className='text-blue-600 hover: any

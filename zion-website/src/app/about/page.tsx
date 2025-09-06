@@ -9,7 +9,6 @@ const values = [
     name: 'Innovation First'
     description: 'We push the boundaries of what\'s possible, constantly exploring new frontiers in AI and technology.'
     icon: LightBulbIcon}
-=======
   UserGroupIcon,
   LightBulbIcon,
   GlobeAltIcon,
@@ -18,7 +17,7 @@ const values = [
   RocketLaunchIcon;
 } from '@heroicons / react / 24 / outline';
 const values = [;
-=======
+import {
   UserGroupIcon
   LightBulbIcon
   GlobeAltIcon
@@ -26,12 +25,9 @@ const values = [;
   AcademicCapIcon
   RocketLaunchIcon
 } from '@heroicons/react/24/outline'
-=======
 import React from 'react';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const values = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
     name: 'Innovation First',
     description: 'We push the boundaries of what's possible, constantly exploring new frontiers in AI and technology.',
@@ -66,7 +62,6 @@ const team = [;
     bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top - tier journals.',
     image: '/images / team / elena - petrov.jpg'},
   {
-<<<<<<< HEAD
     name: 'James Kim',
     role: 'Chief Operations Officer',
     bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.',
@@ -78,11 +73,9 @@ function AboutPage() {
 
   return (
     <div className=&quot;bg - black & quot;>;
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
@@ -174,7 +167,6 @@ function AboutPage() {
           </div>
         </div>
       </div>
-=======
               <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
                 Zion Tech Group;
               </span>;
@@ -268,24 +260,17 @@ function AboutPage() {
                   <p className=&quot;flex - auto & quot;>{value.description}</p>;
                 </dd>;
               </div>))}
-=======
     name: 'James Kim'
     role: 'Chief Operations Officer'
     bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.'
     image: '/images/team/james-kim.jpg'}]
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export default function AboutPage() {;
   return (;
     <div className=&quot;bg-black&quot;>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AboutPage() {
   return (
     <div className="bg-black">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -296,13 +281,10 @@ export default function AboutPage() {
                 Zion Tech Group
               </span>
             </h1>
-<<<<<<< HEAD
             <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
               We are pioneers in artificial intelligence, quantum computing, and autonomous systems
-=======
             <p className="mt-6 text-lg leading-8 text-gray-300">
               We are pioneers in artificial intelligence, quantum computing, and autonomous systems, 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               dedicated to transforming industries and advancing human potential through technology.
             </p>
           </div>
@@ -323,13 +305,10 @@ export default function AboutPage() {
                 <RocketLaunchIcon className="h-8 w-8 text-blue-400" />
                 <h3 className="text-xl font-semibold text-white">Our Mission</h3>
               </div>
-<<<<<<< HEAD
               <p className=&quot;text-gray-300&quot;>
                 To accelerate human progress through cutting-edge AI and technology solutions that solve
-=======
               <p className="text-gray-300">
                 To accelerate human progress through cutting-edge AI and technology solutions that solve 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 the world's most complex challenges while maintaining the highest ethical standards.
               </p>
             </div>
@@ -338,13 +317,10 @@ export default function AboutPage() {
                 <LightBulbIcon className="h-8 w-8 text-purple-400" />
                 <h3 className="text-xl font-semibold text-white">Our Vision</h3>
               </div>
-<<<<<<< HEAD
               <p className=&quot;text-gray-300&quot;>
                 A future where AI and technology seamlessly enhance human capabilities, creating a more
-=======
               <p className="text-gray-300">
                 A future where AI and technology seamlessly enhance human capabilities, creating a more 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 intelligent, efficient, and sustainable world for generations to come.
               </p>
             </div>
@@ -359,7 +335,6 @@ export default function AboutPage() {
             From Research to Revolution
           </p>
         </div>
-<<<<<<< HEAD
         <div className=&quot;mx-auto mt-16 max-w-2xl lg:max-w-none&quot;>
           <div className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm&quot;>
             <p className=&quot;text-lg text-gray-300 mb-6&quot;>
@@ -376,7 +351,6 @@ export default function AboutPage() {
             <p className=&quot;text-lg text-gray-300&quot;>
               Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative
               startups, helping them harness the power of AI to transform their operations and
-=======
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
           <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
             <p className="text-lg text-gray-300 mb-6">
@@ -393,7 +367,6 @@ export default function AboutPage() {
             <p className="text-lg text-gray-300">
               Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative 
               startups, helping them harness the power of AI to transform their operations and 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               accelerate their growth.
             </p>
           </div>
@@ -420,7 +393,6 @@ export default function AboutPage() {
                 </dd>
               </div>
             ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </dl>;
         </div>;
       </div>;
@@ -457,7 +429,6 @@ export default function AboutPage() {
               <div className="max-w-xl">
                 <div className="group relative">
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {person.name}
                   </h3>;
                   <p className=&quot;mt - 2 text - sm text - blue - 400 & quot;>{person.role}</p>;
@@ -471,7 +442,6 @@ export default function AboutPage() {
 
 
 
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -482,8 +452,6 @@ export default function AboutPage() {
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Ready to be part of the AI revolution? Let's discuss how we can work together to 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             transform your organization.
           </p>
           <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>
@@ -502,7 +470,6 @@ export default function AboutPage() {
     </div>
   )
 }
-=======
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl text - center & quot;>;
           <h2 className=&quot;text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
@@ -527,22 +494,14 @@ export default function AboutPage() {
       </div>;
     </div>);
 }
-=======
-<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Leadership</h2>
           <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Leadership</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Meet Our Team
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -578,30 +537,20 @@ export default function AboutPage() {
         </div>;
       </div>;
       {/* CTA section */}
-<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl text-center&quot;>
           <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-<<<<<<< HEAD
             Join us in shaping the future
           </h2>
           <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
             Ready to be part of the AI revolution? Let's discuss how we can work together to
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Join us in shaping the future
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Ready to be part of the AI revolution? Let's discuss how we can work together to 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             transform your organization.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -622,4 +571,5 @@ export default function AboutPage() {
 };
 
 export default Page;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+ from '@heroicons/react/24/
+    image: any

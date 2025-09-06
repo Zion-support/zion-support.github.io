@@ -1,5 +1,17 @@
 
 
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === "GET") {
+    try {
+      const content = fs.existsSync(filePath)
+        ? JSON.parse(fs.readFileSync(filePath, "utf8"));
+        : { content: "" };
+      res.status(200).json(content);
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message || "Failed to read changelog" });
+    }
+    return;
   }
 
   if (req.method === 'POST') {
@@ -23,15 +35,13 @@
   res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  res.setHeader("Allow", "GET, POST");
+  res.status(405).end("Method Not Allowed");
 }
 
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export default /**
  * handler - Function description
  */
@@ -96,4 +106,27 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method = = "GET"
+        ? JSON.parse(fs.readFileSync(filePath, "utf8"
+        : { content: any
+      res.status(500).json({ error: any
+  if (req.method = = "POST"
+        typeof req.body = = "string"
+      const payload = { content: any
+        typeof req && req.body = = "string"
+      const payload = { content: any
+        .json({ error: any
+  res && res.setHeader("Allow", "GET, POST"
+  res && res.status(405).end("Method Not Allowed"
+        .json({ error: any
+  res.setHeader("Allow", "GET, POST"
+  res.status(405).end("Method Not Allowed"
+        ? JSON.parse (fs.readFileSync (file_path, "utf8"
+        : { content: any
+      res.status (500).json ({ error: any
+        typeof req.body = = "string"
+      const payload = { content: any
+        .json ({ error: any
+  res.set_header ("Allow", "GET, POST"
+  res.status (405).end ("Method Not Allowed"

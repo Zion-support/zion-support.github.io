@@ -1,12 +1,14 @@
-<<<<<<< HEAD
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -210,7 +212,6 @@ const ContactForm: React.FC = () => {;
         phone: '',
         service: '',
 message: '',
-=======
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 interface FormData {
@@ -252,7 +253,6 @@ const ContactForm: React.FC = () => {
         phone: ''
         service: ''
         message: ''
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       });
 ;
       setSubmitStatus ('success');
@@ -410,10 +410,11 @@ const ContactForm: React.FC = () => {
 }
 ;
 
-=======
 
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ContactForm;
+    console.error('Error caught by boundary: any
+import React, { useState } from 'react'
+import LoadingSpinner from './

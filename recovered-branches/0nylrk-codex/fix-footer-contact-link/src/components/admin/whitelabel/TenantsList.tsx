@@ -17,14 +17,23 @@ import {;
   DropdownMenuItem,;
   DropdownMenuTrigger,;
 
-=======
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  TableRow,;
+  TableRow,
+} from "@/components/ui/table";
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+DropdownMenuTrigger,;
+  DropdownMenuTrigger,
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
@@ -73,7 +82,6 @@ export function TenantsList() {;
 
   };
 
-=======
 import {
   Edit,
   MoreHorizontal,
@@ -169,7 +177,6 @@ import {
       });
     }
   };
-=======
   RefreshCcw,
 } from "@/components/icons";
 import { format } from "date-fns";
@@ -283,7 +290,6 @@ export function TenantsList() {;
         variant: "destructive",;
         title: "Failed to verify DNS",;
         description: error && error.message,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
 
@@ -291,7 +297,6 @@ export function TenantsList() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -657,7 +662,6 @@ if (throw error) {
     </div>);
 
 }
-=======
                     </TableCell>
                     <TableCell>
                       <Badge variant={tenant.is_active ? "default" : "destructive"}>
@@ -711,5 +715,12 @@ if (throw error) {
 }
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useState, useEffect } from "react"
+import { supabase } from "@/integrations/supabase/
+ from "@/components/ui/
+import { Button } from "@/components/ui/
+ from "@/components/ui/
+import { Badge } from "@/components/ui/
+import { toast } from "@/hooks/
+import { WhitelabelTenant } from "@/hooks/
+ from "@/components/

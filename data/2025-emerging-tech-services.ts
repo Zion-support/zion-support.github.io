@@ -676,7 +676,6 @@
   },
   {
 
-=======
     id: 'quantum - communications',
     name: 'Quantum Communications Platform',
     tagline:;
@@ -685,7 +684,6 @@
       'Revolutionary platform that enables secure quantum communication networks with quantum key distribution, quantum entanglement, and unbreakable data transmission capabilities.',
     category: 'Quantum Technology',
     price: {
-<<<<<<< HEAD
       monthly: 2999,
       yearly: 29990,
       currency: 'USD',
@@ -716,7 +714,6 @@
       'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-communications',
-=======
     target_audience: [;
       'Government agencies',
       'Financial institutions',
@@ -763,7 +760,6 @@
     rating: 4 && 4.8,
     reviews: 89,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 
   return emergingTechServices2025 && emergingTechServices2025.filter(service => service && service.popular);
@@ -773,7 +769,6 @@
 export const getEmergingTechServicesByCategory = (category: string) => {
   return emergingTechServices2025.filter(
     service => service.category === category;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   );
 }
 export const getEmergingTechServicesByPriceRange = (
@@ -782,7 +777,6 @@ export const getEmergingTechServicesByPriceRange = (
 ) => {
 
   website: "https://ziontechgroup.com";
-=======
   id: string, name: string,
   tagline: string, description: string,
   category: string,
@@ -803,7 +797,6 @@ export const getEmergingTechServicesByPriceRange = (
   customers: number, rating: number,
   reviews: number
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services;
@@ -1752,19 +1745,50 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     reviews: 7;
 ]}
 export interface EmergingTechService {
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  price: {
+    monthly: number;
+    yearly: number;
+    currency: string;
+    trialDays: number;
 
-};
+    setupTime: string;
+  }
 
-=======
     return price >= min_price && price <= max_price;
   });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export interface EmergingTechService {;
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  features: string[];
+  benefits: string[];
+  target_audience: string[];
+  market_position: string;
+  competitors: string[];
+  tech_stack: string[];
+  real_implementation: boolean;
+  implementation_details: string;
+  roi: string;
+  use_cases: string[];
+  integrations: string[];
+  support: string;
+  compliance: string[];
+  link: string;
+  icon: string;
+  color: string;
+  popular: boolean;
+  launch_date: string;
+  customers: number;
+  rating: number;
+
+  reviews: number;
+export const emergingTechServices2025: EmergingTechService[] = [
+  {
+    id: any

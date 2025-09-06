@@ -28,3 +28,5 @@ const NeonGlow = ({ className }) => {
 };
 
 export default NeonGlow;
+import React from 'react'
+    

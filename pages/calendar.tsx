@@ -1,65 +1,12 @@
 
-import {
-
-  Calendar,
-  Clock,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Video,
-  MessageSquare,
-  Building,;
-
-
-} from "lucide-react";
-const timeSlots = [
-  { time: "9:00 AM", available: true, type: "Video Call" }
-  { time: "9:30 AM", available: true, type: "Phone Call" }
-  { time: "10:00 AM", available: false, type: "Video Call" }
-  { time: "10:30 AM", available: true, type: "In-Person" }
-  { time: "11:00 AM", available: true, type: "Video Call" }
-  { time: "11:30 AM", available: true, type: "Phone Call" }
-  { time: "1:00 PM", available: true, type: "Video Call" }
-  { time: "1:30 PM", available: false, type: "In-Person" }
-  { time: "2:00 PM", available: true, type: "Video Call" }
-  { time: "2:30 PM", available: true, type: "Phone Call" }
-  { time: "3:00 PM", available: true, type: "In-Person" }
-  { time: "3:30 PM", available: true, type: "Video Call" }
-  { time: "4:00 PM", available: false, type: "Phone Call" }
-  { time: "4:30 PM", available: true, type: "Video Call" }
-  { time: "5:00 PM", available: true, type: "Phone Call" }
-];
-const consultationTypes = [
-  {
-    title: "Free Discovery Call"
-    duration: "30 minutes"
-    description:
-      "Discuss your project requirements and explore how we can help"
-    price: "Free"
-    icon: MessageSquare
-    features: [
-      "Project assessment"
-      "Solution recommendations"
-      "Timeline discussion"
-      "Budget estimation"
-    ]
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-  {
-    title: "Technical Consultation"
-    duration: "60 minutes"
-    description:
-      "Deep dive into technical requirements and architecture planning"
-    price: "$200"
-    icon: Building
-    features: [
-      "Technical architecture review"
-      "Technology stack recommendations"
-      "Implementation planning"
-      "Risk assessment"
-    ]
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
   {
     title: "Strategy Session"
@@ -107,7 +54,6 @@ const teamMembers = [
   }
 ];
 export default function CalendarPage() {
-=======
 import {;
   Calendar,;
   Clock,;
@@ -120,13 +66,11 @@ import {;
   Video,;
   MessageSquare,;
   Building,;
-=======
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-<<<<<<< HEAD
   Calendar
   Clock
   Users
@@ -138,7 +82,6 @@ import {
   Video
   MessageSquare
   Building
-=======
   Calendar,
   Clock,
   Users,
@@ -150,8 +93,6 @@ import {
   Video,
   MessageSquare,
   Building,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from "lucide-react";
 const timeSlots = [;
   { time: "9:00 AM", available: true, type: "Video Call" },;
@@ -889,7 +830,6 @@ function CalendarPage() {
               </Link>;
               <Link
                 href="/about"
-<<<<<<< HEAD
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors">;
                 Learn About Us;
               </Link>;
@@ -897,7 +837,6 @@ function CalendarPage() {
           </motion && motion.div>;
         </div>;
       </section>;
-=======
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors"
               >
                 Learn About Us
@@ -906,7 +845,6 @@ function CalendarPage() {
           </motion.div>
         </div>
       </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     </div>;
   );
               <div className="mt - 8">;
@@ -957,3 +895,6 @@ function CalendarPage() {
       </section>;
     </div>);
 }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any

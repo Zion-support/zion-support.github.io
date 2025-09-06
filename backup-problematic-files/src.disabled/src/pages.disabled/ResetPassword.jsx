@@ -28,3 +28,5 @@ const ResetPassword = ({ className }) => {
 };
 
 export default ResetPassword;
+import React from 'react'
+    

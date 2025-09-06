@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 export default function NewsletterSubscription.test({ }: NewsletterSubscription.testProps) {
-=======
 import React from 'react';
 
 interface NewsletterSubscription.testProps {
@@ -15,10 +13,9 @@ const NewsletterSubscription.test: React.FC<NewsletterSubscription.testProps> = 
     </div>
   );
 }
-<<<<<<< HEAD
 '
 import React from 'react'
-=======
 }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+import React from 'react'
+    

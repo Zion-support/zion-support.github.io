@@ -3,8 +3,6 @@
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -29,7 +27,6 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   buttonLabel?: string;
   title?: string;
   defaultPrompt: string;
@@ -40,8 +37,6 @@ export type AIAssistantProps = {;
 };
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   buttonLabel = "Generate with AI",
   title = "AI Writing Assistant",
@@ -51,7 +46,6 @@ export type AIAssistantProps = {;
   authorizationToken,
 }: AIAssistantProps) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");
@@ -63,13 +57,10 @@ export type AIAssistantProps = {;
     } catch {}
 }, [output]);
   const onOpen = useCallback(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
   const onOpen = useCallback(() => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setIsOpen(true);
     setOutput("");
     setIsEditing(false);
@@ -156,7 +147,6 @@ export type AIAssistantProps = {;
                   disabled={!canAccept}
 
                   className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60";
-=======
 ;
   const on_open = useCallback (() => {
     setIsOpen (true);
@@ -252,7 +242,6 @@ export type AIAssistantProps = {;
               )}
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {error && <div className="text-red-600 text-sm">{error}</div>}
               <div>;
                 <label
@@ -317,8 +306,17 @@ export type AIAssistantProps = {;
     </>);
 }
 
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useCallback, useEffect, useMemo, useState } from "react"
+import React, { useCallback, useEffect, useMemo, useState } from "react"
+  buttonLabel = "Generate with AI"
+  title = "AI Writing Assistant"
+  buttonLabel = "Generate with AI"
+  title = "AI Writing Assistant"
+  const [output, setOutput] = useState(""
+      const res = await fetch("/api/ai/
+          "Content-Type": any
+      const res = await fetch("/api/ai/
+          "Content-Type": any

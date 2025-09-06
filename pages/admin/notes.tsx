@@ -10,7 +10,6 @@
       try {
 
 
-=======
   id: string,
   target_type: string,
   target_id: string,
@@ -45,7 +44,6 @@ if (return, ) {
     }
 
 
-=======
 
 type Note = {
   id: string;
@@ -83,7 +81,6 @@ export default function AdminNotesConsole(req, res) {
     if (isAdmin) load()
   }, [isAdmin]),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -106,10 +103,8 @@ export default function AdminNotesConsole(req, res) {
               <div>{n.text}</div>
             </div>
 
-=======
 }
 
-=======
     if (load ()) {
   $2
 }
@@ -159,7 +154,6 @@ export default function AdminNotesConsole(req, res) {
             <div key={n.id} className=&quot;rounded border p-3 text-sm&quot;>
               <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
               <div className=&quot;font-medium mb-1&quot;>{n.targetType} • {n.targetId}</div>
-=======
         const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } })
         if (!res.ok) return
         const data = await res.json()
@@ -171,15 +165,9 @@ export default function AdminNotesConsole(req, res) {
     if (isAdmin) load()
   }, [isAdmin])
 
-=======
-=======
-<<<<<<< HEAD
 import { useEffect, useState } from 'react',;
 ;
-=======
 import { useEffect, useState } from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Note = {
   id: string;
   targetType: string;
@@ -208,9 +196,9 @@ export default function AdminNotesConsole(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { useEffect, useState } from 'react'
+        const res = await fetch('/api/admin/
+        const res = await fetch('/api/admin/
+        const res = await fetch ('/api / admin /

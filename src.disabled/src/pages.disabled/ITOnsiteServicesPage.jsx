@@ -1,16 +1,14 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
 
-=======
-
-=======
-import React from \'react\'; export default function ITOnsiteServicesPage () {}; return null} }
-const React from "react"; export default function ITOnsiteServicesPage() { return; }; return null} }''"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/src/pages.disabled/ITOnsiteServicesPage.jsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-import _React from 'react'; export default function ITOnsiteServicesPage () {}; return null} }
-=======
-import React from \'react\'; export default function ITOnsiteServicesPage () {}; return null} }
-const React from "react"; export default function ITOnsiteServicesPage() { return; }; return null} }''"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/src/pages.disabled/ITOnsiteServicesPage.jsx
-import _React from 'react'; export default function ITOnsiteServicesPage () {}; return null} }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+const React from "react"; export default function ITOnsiteServicesPage() { return; }; return null}''

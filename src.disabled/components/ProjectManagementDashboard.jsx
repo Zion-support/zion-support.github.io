@@ -1,21 +1,13 @@
-import React from 'react';
-interface ProjectManagementDashboardProps {
-  // Add props here as needed
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
 
-export default function ProjectManagementDashboard({ }: ProjectManagementDashboardProps) {
-  return (
-    <div>
-      <h1>ProjectManagementDashboard</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-
-}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/ProjectManagementDashboard.jsx
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any

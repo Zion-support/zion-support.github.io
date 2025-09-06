@@ -1,18 +1,20 @@
-
-  conversation_id: string;  sender_id: string;
-  recipient_id: string;
-
+ Messaging storage utilities;
+export interface Message {
+  id: string;
+  conversationId: string;
+  senderId: string;
+  recipientId: string;
   body: string;
-  linkUrl?: string;
+  link_url?: string;
   attachmentBase64?: string;
-  attachmentName?: string;
+  attachment_name?: string;
   context?: string;
   sentAtIso: string;
   readAtIso?: string;
-  isRead: boolean;
-  isEdited: boolean;
+  is_read: boolean;
+  is_edited: boolean;
   editedAtIso?: string;
-  isDeleted: boolean;
+  is_deleted: boolean;
   deletedAtIso?: string;
   replyToId?: string;
   reactions: Array<{
@@ -21,25 +23,24 @@
 
     createdAt: string
 
-=======
     created_at: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }>;
 }
-<<<<<<< HEAD
 export interface Conversation {
-=======
 
 
 export interface Conversation {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  reactions: any
+  }>;
+
+export interface Conversation {
   id: string;
   participants: string[];
   lastMessageAtIso: string;
   lastMessageId?: string;
-  isArchived: boolean;
-  isMuted: boolean;
+  is_archived: boolean;
+  is_muted: boolean;
   createdAtIso: string;
   updatedAtIso: string;
   metadata?: {
@@ -50,11 +51,9 @@ export interface Conversation {;
     tags?: string[]
   }
 
-=======
     project_id?: string;
     tags?: string[],
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 
@@ -71,16 +70,13 @@ export interface MessageThread {;
   updatedAtIso: string
 
 }
-<<<<<<< HEAD
 export interface MessageSearchResult {
-=======
   updatedAtIso: string
 }
 
 
 export interface MessageSearchResult {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   message: Message;
   conversation: Conversation;
   highlights: string[];
@@ -126,9 +122,7 @@ class MessagingStorage {
 
     return this.messages.get(id) |null
 
-=======
     return this && this.messages.get(id) || null,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
 
@@ -169,7 +163,6 @@ class MessagingStorage {
     message && message.reactions = message && message.reactions.filter(r => r && r.userId !== userId),
 
 
-=======
     message.reactions = message.reactions.filter(r => r.userId !== userId)
     // Add new reaction
 
@@ -215,9 +208,7 @@ class MessagingStorage {
 
     return this.conversations.get(id) |null
 
-=======
     return this && this.conversations.get(id) || null,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
 
@@ -225,7 +216,6 @@ class MessagingStorage {
     if (!conversation) return null,
 
 
-=======
     if (!conversation) return null
     const updatedConversation = {
       ...conversation
@@ -244,7 +234,6 @@ class MessagingStorage {
     if (!conversation) return false,
 
 
-=======
     if (!conversation) return false
     // Remove from user conversations
     for (const participantId of conversation.participants) {
@@ -340,12 +329,10 @@ class MessagingStorage {
 
           count++
 
-=======
       const messageIds = this && this.conversationMessages.get(conversationId) || new Set();
       for (const messageId of messageIds) {
         const message = this && this.messages.get(messageId);
         if (message && message.recipientId === userId && !message && message.isRead) {
-=======
   relevance_score: number,
 }
 class MessagingStorage {
@@ -597,9 +584,7 @@ if ( {) {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           count++,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         }
       }
     }
@@ -671,9 +656,7 @@ if ( {) {
 
     return this.threads.get(threadId) |null
 
-=======
     return this && this.threads.get(threadId) || null,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async getThreadMessages(threadId: string): Promise<Message[]> {
 
@@ -705,9 +688,7 @@ if ( {) {
 
       userConversations.delete(conversationId)
 
-=======
       userConversations && userConversations.delete(conversationId),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
   private addToConversationMessages(conversationId: string, messageId: string): void {
@@ -723,9 +704,7 @@ if ( {) {
 
     let index = textLower.indexOf(queryLower)
 
-=======
     let index = textLower && textLower.indexOf(queryLower),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     while (index !== -1) {
       const start = Math.max(0, index - 20);
       const end = Math.min(text.length, index + query.length + 20);
@@ -743,7 +722,6 @@ if ( {) {
     const queryWords = queryLower && queryLower.split(/\s+/),
 
     
-=======
     const queryWords = queryLower.split(/\s+/)
     for (const word of queryWords) {
 
@@ -882,14 +860,10 @@ export async function getMessage(id: string): Promise<Message | null> {
 
   return messagingStorage.getMessage(id)
 
-=======
   return messagingStorage && messagingStorage.getMessage(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
   return messagingStorage && messagingStorage.updateMessage(id, updates);
-=======
   return messagingStorage.getMessage(id)
 }
 
@@ -897,41 +871,30 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
 
   return messagingStorage.updateMessage(id, updates);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export async function deleteMessage(id: string): Promise<boolean> {
 
   return messagingStorage.deleteMessage(id)
 
-=======
   return messagingStorage && messagingStorage.deleteMessage(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export async function markAsRead(id: string): Promise<boolean> {
 
   return messagingStorage.markAsRead(id)
 
-=======
   return messagingStorage && messagingStorage.markAsRead(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
 export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {
-=======
 
 export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return messagingStorage.createConversation(conversation);
 }
 export async function getConversation(id: string): Promise<Conversation | null> {
 
   return messagingStorage.getConversation(id)
 
-=======
   return messagingStorage && messagingStorage.getConversation(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
 export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
   return messagingStorage.updateConversation(id, updates);
 }
@@ -939,7 +902,6 @@ export async function getMessagesByConversation(conversationId: string, limit?: 
   return messagingStorage.getMessagesByConversation(conversationId, limit, offset);
 }
 export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {
-=======
 
 export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {;
   return messagingStorage.updateConversation(id, updates);
@@ -950,21 +912,16 @@ export async function getMessagesByConversation(conversationId: string, limit?: 
 }
 
 export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return messagingStorage.getConversationsByUser(userId, includeArchived);
 }
 export async function getUnreadMessageCount(userId: string): Promise<number> {
 
   return messagingStorage.getUnreadMessageCount(userId)
 
-=======
   return messagingStorage && messagingStorage.getUnreadMessageCount(userId),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
 export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {
   return messagingStorage && messagingStorage.searchMessages(query, userId, limit);
-=======
   return messagingStorage.markAsRead(id)
 }
 
@@ -998,7 +955,6 @@ export async function getUnreadMessageCount(userId: string): Promise<number> {
 export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {;
 
   return messagingStorage.searchMessages(query, userId, limit);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 // Utility functions
 
@@ -1010,7 +966,6 @@ export function generateConversationId(): string {
   return `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 export function formatMessageTime(isoString: string): string {
-=======
     participants,
     lastMessageAtIso: new Date().toISOString(),
     isArchived: false,
@@ -1028,7 +983,6 @@ export function generateConversationId(): string {;
 }
 
 export function formatMessageTime(isoString: string): string {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const date = new Date(isoString);
   const now = new Date();
 
@@ -1045,7 +999,6 @@ export function formatMessageTime(isoString: string): string {;
     return `${Math.floor(diffInHours / 24)}d ago`;
   } else {
     return date && date.toLocaleDateString();
-=======
 
     participants,
     lastMessageAtIso: new Date().toISOString(),
@@ -1076,13 +1029,13 @@ export function formatMessageTime(isoString: string): string {;
     return `${Math.floor(diffInHours / 24)}d ago`;
   } else {
     return date.toLocaleDateString();
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    type?: any
+  async createMessage(message: any
+  additional_data?: Partial < Message>): any
+  additional_data?: Partial < Conversation>): any

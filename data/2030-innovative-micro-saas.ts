@@ -228,16 +228,13 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
     },
     realImplementation: true, implementationDetails: 'Advanced AI marketing automation platform with autonomous marketing campaigns and optimization.',
     launchDate: '2030-03-01', customers: 89,
     rating: 4.7,
     reviews: 52;
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaas2030 {;
   id: string,;
@@ -502,10 +499,10 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
     reviews: 52;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 
 ;
 
+import { ServiceVariant } from '../types/
+    link: any

@@ -2,4 +2,7 @@
 
 
 export * from './types';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export { EducationForm } from "./EducationForm";
+export * from "./types";
+export { EducationForm } from "./
+export * from "./

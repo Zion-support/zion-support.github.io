@@ -27,15 +27,12 @@ function ThemeProvider() {
     // Check condition
 if ( {) {
   $2
-=======
-<<<<<<< HEAD
 "use client";
 import { createContext, useContext, useEffect, useState } from "react";
 type Theme = "dark" | "light" | "system";
 type ThemeProviderProps = {children: React.ReactNode;
   defaultTheme?: Theme;
   storageKey?: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
       const stored_theme = local_storage.get_item (storage_key) as Theme,
       // Check condition
@@ -100,10 +97,7 @@ export const use_theme = () =>: any {
 
   return context;
 }
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 type Theme = "dark" | "light" | "system",;
@@ -180,3 +174,32 @@ export const useTheme = () => {;
   return context;
 };
 
+use client"
+import { createContext, useContext, useEffect, useState } from "react"
+type Theme = "dark" | "light" | "system"
+const initialState: ThemeProviderState = {theme: any
+  defaultTheme = "system"
+  storageKey = "zion-ui-theme"
+    if (typeof window != "undefined"
+    root.classList.remove("light", "dark"
+    if (theme = = "system"
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)"
+        ? "dark"
+        : any
+      if (typeof window != "undefined"
+    throw new Error ("use_theme must be used within a ThemeProvider"
+    throw new Error("useTheme must be used within a ThemeProvider"
+use client"
+import { createContext, useContext, useEffect, useState } from "react"
+type Theme = "dark" | "light" | "system"
+  theme: any
+  defaultTheme = "system"
+  storageKey = "zion-ui-theme"
+    if (typeof window != "undefined"
+    root.classList.remove("light", "dark"
+    if (theme = = "system"
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)"
+        ? "dark"
+        : any
+      if (typeof window != "undefined"
+    throw new Error("useTheme must be used within a ThemeProvider"

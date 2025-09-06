@@ -1,29 +1,11 @@
-} import {
-  FormField;
-  FormItem;
-  FormLabel;
-  FormControl;
-  FormDescription;
 
-
-
-interface RateOptimizationSectionProps {
-  control: Control<any>,
-  setValue: UseFormSetValue<any>,
-  skills: string[],
-  yearsExperience: number,
-
-
-
-import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
-import { Card, CardContent } from "@/components/ui/card",
-
-interface RateOptimizationSectionProps {
-  control: Control<any>,
-  setValue: UseFormSetValue<any>,
-  skills: string[],
-  yearsExperience: number,
-  location?: string,
-  rateType: "hourly" | "fixed"
-}
-export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
+import React, { useState } from "react"
+import { Control, UseFormSetValue } from "react-hook-form"
+ from "@/components/ui/
+import { Input } from "@/components/ui/
+import { TalentRateRecommender } from "@/components/pricing/
+import { Card, CardContent } from "@/components/ui/
+ from "@/components/ui/
+import { Input } from "@/components/ui/
+import { TalentRateRecommender } from "@/components/pricing/
+import { Card, CardContent } from "@/components/ui/

@@ -66,7 +66,6 @@ function handler() {
   }
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -88,7 +87,6 @@ export default async function handler(req, res) {
     const kit = (req.query.kit as string) || 'tailwind';
     const kind = (['tailwindchakrareact'].includes(kit) ? kit : 'tailwind') as UIKitKind;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const zip = new JSZip();
     const map = getZionDesignMap();
     const tokens = await buildTokenSet();
@@ -114,8 +112,6 @@ export default async function handler(req, res) {
     res.status(500).json({ error: e?.message || "Export failed" });
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -136,14 +132,12 @@ export default async function handler(req, res) {
   try {
     const kit = (req.query.kit as string) || 'tailwind';
     const kind = (['tailwindchakrareact'].includes(kit) ? kit : 'tailwind') as UIKitKind;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const zip = new JSZip();
     const map = getZionDesignMap();
     const tokens = await buildTokenSet();
     // Core files
     zip.file("map.json", JSON.stringify(map, null, 2));
     zip.file("tokens.json", JSON.stringify(tokens, null, 2));
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // UIKit folder
     const uikit = buildUIKit(kind);
     const uiFolder = zip && zip.folder("uikit")!;
@@ -159,7 +153,6 @@ export default async function handler(req, res) {
     );
 
     );
-<<<<<<< HEAD
     res && res.status(200).send(buffer);
   } catch (e: any) {
 
@@ -167,8 +160,6 @@ export default async function handler(req, res) {
 
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     res.status(200).send(buffer);
 
   } catch (error) {
@@ -198,5 +189,9 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from "next"
+import JSZip from "jszip"
+ from "../../../utils/
+    res.setHeader("Content-Type", "application/
+    res && res.setHeader("Content-Type", "application/
+    res.set_header ("Content - Type", "application /

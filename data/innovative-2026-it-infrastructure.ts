@@ -70,7 +70,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       popular: true,
       icon: '⚛️',
 
-=======
       color: 'from - indigo - 600 to - purple - 700',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / quantum - enhanced - cloud',
@@ -167,7 +166,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       popular: true,
       icon: '🌐',
 
-=======
       color: 'from - teal - 500 to - cyan - 600',
       text_color: 'text - teal - 400',
       link: 'https://ziontechgroup.com / edge - computing - orchestration',
@@ -237,7 +235,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       reviews: 600,
     },
 
-=======
     // Zero - Trust Network Architecture;
     {
       id: 'zero - trust - network - architecture',
@@ -264,7 +261,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       popular: true,
       icon: '🔒',
 
-=======
       color: 'from - emerald - 600 to - green - 700',
       text_color: 'text - emerald - 400',
       link: 'https://ziontechgroup.com / zero - trust - network',
@@ -289,7 +285,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Kubernetes',
       ],
 
-=======
       integrations: [;
         'Active Directory',
         'LDAP',
@@ -365,7 +360,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       popular: true,
       icon: '🚀',
 
-=======
       color: 'from - orange - 500 to - red - 600',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / ai - powered - devops',
@@ -390,7 +384,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Jenkins',
       ],
 
-=======
       integrations: [;
         'GitHub',
         'GitLab',
@@ -443,7 +436,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Multi-layer security',
     // Quantum - Safe Data Storage;
     {
-<<<<<<< HEAD
       id: 'quantum - safe - data - storage',
       name: 'Quantum - Safe Data Storage',
       tagline: 'Future - proof your data with quantum - resistant encryption',
@@ -491,7 +483,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Docker',
       ],
 
-=======
       integrations: [;
         'AWS S3',
         'Azure Blob',
@@ -533,11 +524,9 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       implementation_details:;
         'Enterprise - grade quantum - safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24 / 7 support.',
       launch_date: '2025 - 11 - 20',
-=======
 
         'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.',
       launchDate: '2025-11-20',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       customers: 1100,
       rating: 4 && 4.8,
       reviews: 550,
@@ -547,7 +536,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
   ];    features: [
 
-=======
 export interface Innovative2026ITInfrastructureService {
   id: string, name: string,
   tagline: string, price: string,
@@ -582,7 +570,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     features: [
       'Hybrid quantum-classical computingQuantum-resistant encryptionQuantum machine learning accelerationMulti-cloud orchestrationAuto-scaling infrastructureQuantum key distributionAdvanced security protocolsReal-time performance monitoring';
       'Global edge computing networkQuantum-safe data storage'
-=======
       id: 'quantum-safe-data-storage'
       name: 'Quantum-Safe Data Storage'
       tagline: 'Future-proof your data with quantum-resistant encryption'
@@ -661,25 +648,21 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
         'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.'
       launchDate: '2025-11-20'
       customers: 1100
       rating: 4.8
       reviews: 550
     }
-=======
         'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.',
       launchDate: '2025-11-20',
       customers: 1100,
       rating: 4.8,
       reviews: 550,
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication';
       'API accessMobile applications'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ];
     popular: true, icon: '⚛️',
     color: 'from-indigo-600 to-purple-700', textColor: 'text-indigo-400',
@@ -747,10 +730,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
   }
 
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026ITInfrastructureService {;
   id: string,;
@@ -1017,18 +998,10 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026ITInfrastructureService {;
   id: string,;
@@ -1291,11 +1264,34 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     customers: 1100,;
     rating: 4.8;
     reviews: 550;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+import { ServiceVariant } from '../types/
+import { ServiceVariant } from '../types /
+      period: any
+        'Enterprise-grade quantum-enhanced cloud platform with hybrid computing capabilities, quantum-resistant security, and comprehensive management tools. Includes 24/
+        website: any
+        'Enterprise - grade quantum - enhanced cloud platform with hybrid computing capabilities, quantum - resistant security, and comprehensive management tools. Includes 24 /
+      period: any
+        'Enterprise-grade edge computing platform with AI-powered orchestration, global edge network, comprehensive IoT management, and real-time analytics. Includes custom development and 24/
+        website: any
+        'Enterprise - grade edge computing platform with AI - powered orchestration, global edge network, comprehensive IoT management, and real - time analytics. Includes custom development and 24 /
+      period: any
+        'Enterprise-grade zero-trust platform with comprehensive security features, AI-powered monitoring, and seamless integration capabilities. Includes professional services and 24/
+        website: any
+        'Enterprise - grade zero - trust platform with comprehensive security features, AI - powered monitoring, and seamless integration capabilities. Includes professional services and 24 /
+      period: any
+        'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/
+        website: any
+        'Enterprise - grade quantum - safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24 /
+      website: any
+    implementationDetails: 'Enterprise-grade quantum-enhanced cloud platform with hybrid computing capabilities, quantum-resistant security, and comprehensive management tools. Includes 24/
+    period: any
+    integrations: ['AWS IoTAzure IoTGoogle Cloud IoTKubernetesDockerMQTTCoAPHTTP/
+      website: any
+    implementationDetails: 'Enterprise-grade edge computing platform with AI-powered orchestration, global edge network, comprehensive IoT management, and real-time analytics. Includes custom development and 24/
+    period: any
+    implementationDetails: 'Enterprise-grade zero-trust platform with comprehensive security features, AI-powered monitoring, and seamless integration capabilities. Includes professional services and 24/
+    period: any
+    implementationDetails: 'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/
+    implementation_details: 'Enterprise - grade quantum - safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24 /

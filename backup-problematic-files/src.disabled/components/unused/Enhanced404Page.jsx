@@ -28,3 +28,5 @@ const Enhanced404Page = ({ className }) => {
 };
 
 export default Enhanced404Page;
+import React from 'react'
+    

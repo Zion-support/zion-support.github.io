@@ -33,7 +33,6 @@ export const CommunityTrust:React.FC = () => {;
         </div>;
         ;
         {/* Rating display */}
-=======
 
 import React from "react",;
 import { Star } from "lucide-react",;
@@ -69,7 +68,6 @@ export const CommunityTrust:React.FC = () => {;
         </div>;
         ;
         {/* Rating display */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">;
           <div className="flex justify-center mb-4">;
             {[1, 2, 3, 4, 5].map((star) => (;
@@ -91,3 +89,10 @@ export const CommunityTrust:React.FC = () => {;
 }</div>) ) 
 }</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>) 
 };
+import React from "react"
+import { Star } from "lucide-react"
+    { value:"4.8", label: any
+    { value:"50K+", label: any
+    { value:"96%", label: any
+    { value:"12M+", label: any
+</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson

@@ -1,3 +1,20 @@
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+FormMessage,;
+  FormMessage,
+} from "@/components/ui/form";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+interface ReplyFormProps {
+  onSubmit: (content: string) => Promise<void>;
+  parentId?: string;
+}
 
 
 import {;
@@ -20,7 +37,6 @@ import { use_form  } from './react - hook - form';
 import { Button  } from '@/components / ui / button';
 import { Textarea  } from '@/components / ui / textarea';
 import {
-=======
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -49,7 +65,6 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
   };
 
 
-=======
 
   const form = useForm<ReplyFormValues>({;
     defaultValues: {;
@@ -58,7 +73,6 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
   });
 
   const handleSubmit = async (values: ReplyFormValues) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsSubmitting(true);
     try {;
       (await onSubmit(values && values.content), form && form.reset());
@@ -71,8 +85,6 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card>;
       <CardContent className="pt-6">;
@@ -146,11 +158,9 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
 export default ReplyForm;
 ;
 
-=======
 
                       placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       className="min-h-[100px] resize-y"
                       {...field}
                     />
@@ -173,4 +183,10 @@ export default ReplyForm;
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+import { useState } from "react"
+import { useForm } from "react-hook-form"
+import { Button } from "@/components/ui/
+import { Textarea } from "@/components/ui/
+ from "@/components/ui/
+import { Card, CardContent, CardFooter } from "@/components/ui/

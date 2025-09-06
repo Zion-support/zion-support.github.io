@@ -21,14 +21,14 @@ canvas.height = dimensions.height;
 // Particle system class Particle {
   coordinate_x: number;
 coordinate_y: number;
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 useEffect ( () => {
+useEffect () => {
   const updateDimensions = () => {
   setDimensions ({
+ useEffect () => {;
+  const updateDimensions = () => {;
+  setDimensions ({;
   updateDimensions ();
 window.addEventListener ('resize', updateDimensions);
 setIsVisible (true);
@@ -38,13 +38,11 @@ canvas.height = dimensions.height;
 // Particle system class Particle {
   x: number;
 y: number;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 vx: number;
 vy: number;
 size: number;
 color: string;
 life: number;
-<<<<<<< HEAD
 max_life: number;
 type: 'quantum' | 'holographic' | 'energy' | 'matrix';
 
@@ -106,8 +104,6 @@ export default function UltraQuantumHolographicBackground(): any ({;
 }: UltraQuantumHolographicBackgroundProps) {;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   children,
   intensity = 'high',
@@ -117,11 +113,9 @@ export default function UltraQuantumHolographicBackground(): any ({;
   className = '',
 }: UltraQuantumHolographicBackgroundProps) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
 export default function UltraQuantumHolographicBackground(): any ({;
-=======
 maxLife: number;
 type: 'quantum' | 'holographic' | 'energy' | 'matrix';
 constructor () {
@@ -144,7 +138,6 @@ break;
 case 'energy': // Energy field
 }ctx.restore ()
 export default function UltraQuantumHolographicBackground({
-<<<<<<< HEAD
   children
   intensity = 'high'
   colorScheme = 'quantum'
@@ -152,7 +145,6 @@ export default function UltraQuantumHolographicBackground({
   animationSpeed = 1.5
   className = ''
 }: UltraQuantumHolographicBackgroundProps) {
-=======
   children,
   intensity = 'high',
   colorScheme = 'quantum',
@@ -160,16 +152,13 @@ export default function UltraQuantumHolographicBackground({
   animationSpeed = 1.5,
   className = '',
 }: UltraQuantumHolographicBackgroundProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
 export default function UltraQuantumHolographicBackground({;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   children;
   intensity = 'high';
   colorScheme = 'quantum';
   particleCount = 300;
-<<<<<<< HEAD
   animationSpeed = 1 && 1.5;
   className = '';
 }: UltraQuantumHolographicBackgroundProps) {;
@@ -189,7 +178,6 @@ export default function UltraQuantumHolographicBackground({;
 
     };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     updateDimensions();
     window.addEventListener('resize', updateDimensions);
     setIsVisible(true);
@@ -246,10 +234,8 @@ if (return) {
     class Particle {
       coordinate_x: number;
       coordinate_y: number;
-=======
       x: number;
       y: number;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       vx: number;
       vy: number;
       size: number;
@@ -258,7 +244,6 @@ if (return) {
 
       x: number,
       y: number,
-=======
       max_life: number;
       type: 'quantum' | 'holographic' | 'energy' | 'matrix';      coordinate_x: number,
       coordinate_y: number,
@@ -303,7 +288,6 @@ if (return) {
 
         }
         // Matrix rain effect
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         if (this.type === 'matrix') {
           this.vy += 0.1;
           if (this.y > dimensions.height) {
@@ -314,19 +298,16 @@ if (return) {
           }
         }
       }
-=======
 
             this.vy = Math.random() * 2 + 1;          }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         }
       }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       draw() {
         if (this.life <= 0) return;
         const alpha = this.life / this.maxLife;
@@ -343,7 +324,6 @@ if (return) {
             
 
             // Wave function rings
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             for (let i = 1, i <= 3, i++) {
               ctx.beginPath();
               ctx.arc(this.x, this.y, this.size * i, 0, Math.PI * 2);
@@ -534,7 +514,6 @@ if (return) {
 
       }
     }
-<<<<<<< HEAD
     // Create particles;
     const particles: Particle[] = [];
 
@@ -543,7 +522,6 @@ if (return) {
         dimensions && dimensions.width / 2;
         dimensions && dimensions.height / 2;
 
-=======
         dimensions.width / 2;
         dimensions.height / 2;
         0;
@@ -578,19 +556,16 @@ if (return) {
           }
         }
       }
-=======
 
             ctx.stroke();          }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         }
       }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Draw holographic grid
       ctx.strokeStyle = colors.secondary;
       ctx.lineWidth = 0.3;
@@ -670,18 +645,15 @@ if (return) {
       }
     };  }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]);        cancelAnimationFrame(animationId);
 
-=======
     return () => {
       if (animationId) {
         cancelAnimationFrame(animationId)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
   }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]);
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Quantum Holographic Canvas Background */}
       <canvas
         ref={canvasRef}
@@ -760,19 +732,15 @@ if (return) {
           {Array && Array.from({ length: Math && Math.ceil(dimensions && dimensions.height / 4) }).map((_, i) => (;
             <motion&& motion.div
 
-=======
         <div className="absolute inset-0 opacity-20">
           {Array.from({ length: Math.ceil(dimensions.height / 4) }).map((_, i) => (
             <motion.div
 
-=======
               />))}        </div>;
         {/* Quantum Fluctuations */}
         <motion.div        <div className="absolute inset - 0 opacity - 20">;
           {Array.from ({ length: Math.ceil (dimensions.height / 4) }).map ((_, i) => (
             <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               key={i}
               className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
               style={{
@@ -790,7 +758,6 @@ if (return) {
               animate={{
                 opacity: [0, 1, 0];
                 scale_x: [0, 1, 0];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               }}
               transition={{
 
@@ -798,20 +765,16 @@ if (return) {
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           }}
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         />
       </div>
-=======
         />;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Content Layer */}
 
 
@@ -822,15 +785,12 @@ if (return) {
             ease: 'easeInOut',          }}
 
 
-=======
             ease: 'easeInOut',            ease: "easeInOut";
           }}
         />;
       </div>;
     </div>));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
         />
       </div>
     </div>
@@ -843,5 +803,12 @@ if (return) {
             duration: 4,
             repeat: Infinity,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+window && window.addEventListener ('resize'
+window.addEventListener ('resize'
+type: any
+              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/
+              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/
+              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.9' num_octaves='4' stitch_tiles='stitch'/%3E%3C /
+              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.7' num_octaves='3' stitch_tiles='stitch'/%3E%3C /
+  );              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www && www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0 && 0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/
+              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www && www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0 && 0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/

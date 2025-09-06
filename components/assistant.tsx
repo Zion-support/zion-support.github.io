@@ -87,7 +87,6 @@ export default function Assistant() {;
     // Basic fallback;
     setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }]);
 
-=======
 interface Message { role: 'user' | 'assistant', content: string }
 export default function Assistant() {
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
@@ -96,11 +95,7 @@ export default function Assistant() {
   const [messages, setMessages] = useState<Message[]>([
     { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
   const [input, setInput] = useState('');
-=======
-<<<<<<< HEAD
-=======
 import {useEffect, useMemo, useState} from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import {useEffect, useMemo, useState} from 'react';
 interface Message {
@@ -109,13 +104,11 @@ interface Message {
 export default function Assistant() {
   const params =
     typeof window !== 'undefined'
-<<<<<<< HEAD
       ? new URLSearchParams(window.location.search)
       : new URLSearchParams();  const tenantId = params.get('tenantId') |'';
   const brand = params.get('brand') |'Zion AI';
   const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
 export default function Assistant() {
-=======
       ? new URLSearchParams(window.location.search);
       : new URLSearchParams();  const tenantId = params.get('tenantId') || '';
   const brand = params.get('brand') || 'Zion AI';
@@ -123,7 +116,6 @@ export default function Assistant() {
   const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
 
 export default function Assistant() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
   const tenantId = params.get('tenantId') |'';
   const brand = params.get('brand') |'Zion AI';
@@ -137,8 +129,20 @@ export default function Assistant() {;
   const faqs: Record<string, string> = useMemo(
     () => ({
       'is this role remote':
+import {useEffect, useMemo, useState} from 'react'
+  role: any
+    typeof window != 'undefined'
+      : new URLSearchParams();  const tenantId = params.get('tenantId') |''
+  const brand = params.get('brand') |'Zion AI'
+  const [messages, setMessages] = useState<Message[]>([interface Message { role: any
+  const params = typeof window != 'undefined'
+  const tenantId = params.get('tenantId') |''
+  const brand = params.get('brand') |'Zion AI'
+      role: any
+  const [input, setInput] = useState(''
+      'is this role remote'
         'Many roles support remote or hybrid work. Check the job description for specifics.'
-      'how soon do you hire':
+      'how soon do you hire'
         'Typical timelines range from 2-4 weeks depending on role and interview availability.'
       'what is the interview process':
         'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'
@@ -147,12 +151,10 @@ export default function Assistant() {;
   );
     { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
   const [input, setInput] = useState('');
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const faqs: Record<string, string> = useMemo(() => ({
     'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics.how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability.what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'}), []);
   async function handleAsk(question: string) {
     const lower = question.toLowerCase();
-<<<<<<< HEAD
     const faq = Object.keys(faqs).find(key => lower.includes(key));
     if (faq) {
       setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: faqs[faq] }]),
@@ -164,7 +166,6 @@ export default function Assistant() {;
   }
   return (
 
-=======
     <div className="min-h-full h-full w-full flex flex-col bg-white">
       <div className="px-4 py-2 border-b text-sm text-gray-600 flex items-center gap-2">
         <span className="font-semibold">{brand}</span>
@@ -181,21 +182,16 @@ export default function Assistant() {;
       </div>;
       <form
 
-=======
         className="p-3 border-t flex gap-2"
         onSubmit={(e) => { e.preventDefault(), if (input.trim()) { handleAsk(input.trim()), setInput('') } }}
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>
         ))}
       </div>
       <form
-<<<<<<< HEAD
         className="p-3 border-t flex gap-2"
 
       >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <input
           className="flex-1 border rounded px-3 py-2 text-sm"
           placeholder="Ask about the role..."
@@ -207,7 +203,6 @@ export default function Assistant() {;
       </form>;
     </div>;
   );
-=======
           className='bg-gray-900 text-white text-sm rounded px-3 py-2'
         >
           Send
@@ -217,13 +212,11 @@ export default function Assistant() {;
 
   );
 
-=======
 
 
 }
 
 
-=======
 import {useEffect, useMemo, useState} from 'react';
 ;
 interface Message {
@@ -377,4 +370,8 @@ if ( {) {
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      'what is the interview process'
+        'Usually: recruiter screen, hiring manager interview, technical/
+    'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics.how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability.what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/
+        'Usually: recruiter screen, hiring manager interview, technical/
+    'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics && specifics.how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability && availability.what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/

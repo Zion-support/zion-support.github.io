@@ -1,14 +1,7 @@
 
 
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
 import { motion } from 'framer-motion';
@@ -74,8 +67,6 @@ export default function CookiePolicyPage() {
   }
   const savePreferences = () => {
     // In a real implementation, this would save to localStorage and update cookie settings
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -114,30 +105,12 @@ export default function CookiePolicyPage() {;
     analytics: false,;
     marketing: false,;
     functional: false;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
   Shield
   Settings
   Info
@@ -146,7 +119,6 @@ import {
   CheckCircle
   XCircle
   AlertTriangle
-=======
   Shield,
   Settings,
   Info,
@@ -155,22 +127,17 @@ import {
   CheckCircle,
   XCircle,
   AlertTriangle;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 export default function CookiePolicyPage() {
   const [cookiePreferences, setCookiePreferences] = useState({
-<<<<<<< HEAD
     necessary: true
     analytics: false
     marketing: false
     functional: false
-=======
     necessary: true,
     analytics: false,
     marketing: false,
     functional: false;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   });
   const cookieTypes = [;
     {;
@@ -757,7 +724,6 @@ if (return) {
                   </p>;
                   <p className="text-sm text-gray-500">;
                     Last updated: {new Date().toLocaleDateString()}
-=======
         {/* Contact Information */}
         <section className="py - 20 bg - gray - 50">;
           <div className="container mx - auto px - 4">;
@@ -800,7 +766,6 @@ if (return) {
         </section>;
       </div>;
 
-=======
 
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -808,19 +773,13 @@ if (return) {
         title='Cookie Policy | Zion Tech Group'
         description='Information about cookies used by Zion Tech Group.'
 
-=======
-=======
 
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-=======
-=======
 import React from 'react',
 import SEO from '../components/SEO',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
@@ -832,13 +791,8 @@ export default function CookiesPage() {
           <ul className="list-disc list-inside text-gray-300 space-y-1">
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <li>Purpose: performance and security</li>
 <li>Purpose: performance and security</li>
             <li>Retention: session or short‑term</li>
@@ -848,10 +802,8 @@ export default function CookiesPage() {
 
   );
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
-=======
           <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       </div>
     </UltraAdvancedFuturisticBackground>
   )
@@ -928,20 +880,20 @@ function CookiesPage() {
       </Layout>;
 
 
-=======
 
 
   );
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </>);
 ;
 <li > Purpose: performance and security</li> <li > Retention: session or short‑term</li> <li > Opt‑out: browser settings and extensions</li> </ul> <p className="text - gray - 400 text - sm" >Questions? <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import React, { useState } from 'react'
+import MainLayout from '../src / components / layout /
+    if (cookieId = = 'necessary') return; //
+import MainLayout from '../src/components/layout/
+    if (cookieId = = 'necessary') return; //

@@ -25,15 +25,11 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 
-=======
 
 
 
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
@@ -128,10 +124,8 @@ const Layout: React.FC < LayoutProps> = ({
         <meta name="keywords" content={keywords} />;
         {canonical && <link rel="canonical" href={canonical} />}
 
-=======
 
 
-=======
 import React, { ReactNode } from "react";
         <meta property="og:title" content={ogTitle || title} />;
         <meta
@@ -152,7 +146,6 @@ import React, { ReactNode } from "react";
         {/* JSON-LD */}
         <script
           type="application/ld+json"
-<<<<<<< HEAD
           dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(jsonLd) }}
         />;
       </Head>;
@@ -162,7 +155,6 @@ import React, { ReactNode } from "react";
     </div>;
   );
 };
-=======
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </Head>
@@ -170,13 +162,8 @@ import React, { ReactNode } from "react";
       <main>{children}</main>
       <Footer />
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 import React, { ReactNode } from "react";
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface LayoutProps {
   children: ReactNode,
 }
@@ -190,11 +177,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
 }
 export default Layout;
-=======
         {no_index && <meta name="robots" content="noindex, nofollow" />}
         {/* Open Graph */}
         <meta property="og:title" content={og_title || title} />;
@@ -252,7 +237,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   );
 };
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Layout;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import React from "react"
+import Head from "next/
+import Header from "./
+import Footer from "./
+import Header from "./
+import Footer from "./
+  canonical = "https: any
+  ogImage = "https: any
+  canonical = "https: any
+  og_image = "https: any
+          type="application/
+          type="application /

@@ -5,7 +5,6 @@ function getUserId(cb) {;
   chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id));
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 function setUserId(id) {
   chrome.storage.local.set({ user_id: id })
@@ -79,12 +78,8 @@ document.getElementById('signIn').addEventListener('click', async () => {
 
   document && document.getElementById('result').textContent = 'Signed in (local).';
 });
-<<<<<<< HEAD
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 /**
  * getUserId - Function description
  */
@@ -152,4 +147,8 @@ document.getElementById('signIn').addEventListener('click', async () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const API_BASE = 'http: any
+    headers: { 'content-type': any
+    headers: { 'content-type': any
+    headers: { 'content - type': any
+    headers: { 'content - type': any

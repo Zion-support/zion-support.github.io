@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -26,24 +28,16 @@ import React, { useEffect, useMemo, useState } from 'react';
   } | null>(null);  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
 
 
-=======
 export default function AccountSettingsPage() {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
 export default function AccountSettingsPage(req, res) {
   try {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [ens, setEns] = useState('');
   const [lens, setLens] = useState('');
   const [ceramic, setCeramic] = useState('');
@@ -64,8 +58,6 @@ export default function AccountSettingsPage(req, res) {
 
 
   const linkDID = async () => {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const saveDisplayPref = (val: boolean) => {;
     setDisplayWeb3(val),;
@@ -227,7 +219,6 @@ if (return) {
     } finally {;
       setLinking(false);    }
 
-=======
         setEns(did.ens || '');
         setLens(did.lens || '');
         setCeramic(did.ceramic || '');
@@ -277,9 +268,7 @@ if (return) {
     } catch (e: any) {;
       setStatus(e?.message || 'Restore failed');    }
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
         setFarcaster(did.farcaster || '');
         } catch (error) {
     console.error("Error:", error);
@@ -288,7 +277,6 @@ if (return) {
 }
       setStatus('Profile restored from backup');
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
                   className={`absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform ${displayWeb3 ? 'translate-x-4' : ''}`}></span>              </span>;
@@ -500,7 +488,6 @@ if ( {) {
         </section>;
 
 
-=======
       if (did) {;
         setEns(did.ens || '');
         setLens(did.lens || '');
@@ -512,15 +499,10 @@ if ( {) {
   }
 }
       setStatus('Profile restored from backup');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     } catch (e: any) {
       setStatus(e?.message || 'Restore failed');    }
   };
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } catch (error) {
       setStatus(e?.message || 'Restore failed');
       } catch (error) {
@@ -529,13 +511,7 @@ if ( {) {
   }
 }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <>
       <Head>
         <title>Account Settings — Zion</title>
@@ -552,7 +528,6 @@ if ( {) {
             <label className="inline-flex items-center cursor-pointer">
               <input type="checkbox" checked={displayWeb3} onChange={(e) => saveDisplayPref(e.target.checked)} className="sr-only" />
               <span className="relative inline-block w-10 h-6 bg-gray-300 rounded-full shadow-inner">
-<<<<<<< HEAD
 
   return (_<>
       <Head>
@@ -571,17 +546,12 @@ if ( {) {
               <input type=&quot;checkbox&quot; checked={displayWeb3} onChange={(e) => saveDisplayPref(e.target.checked)} className=&quot;sr-only&quot; />
               <span className=&quot;relative inline-block w-10 h-6 bg-gray-300 rounded-full shadow-inner&quot;>
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <span className={`absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform ${displayWeb3 ? 'translate-x-4' : ''}`}></span>
               </span>
             </label>
           </div>
         </section>
-<<<<<<< HEAD
 <section className="rounded-xl border p-5">
-=======
-<<<<<<< HEAD
         <section className='rounded-xl border p-5'>
           <h2 className='font-semibold mb-2'>Link Web3 identities</h2>
           <div className='grid grid-cols-1 gap-3'>
@@ -639,9 +609,7 @@ if ( {) {
                 </code>
               </span>
             )}
-=======
         <section className="rounded-xl border p-5">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <h2 className="font-semibold mb-2">Link Web3 identities</h2>
           <div className="grid grid-cols-1 gap-3">
             <input value={ens} onChange={(e) => setEns(e.target.value)} placeholder="ENS (e.g. vitalik.eth)" className="w-full rounded-md border px-3 py-2" />
@@ -664,7 +632,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
           <div className="mt-4 flex gap-2">
             <input value={restoreCid} onChange={(e) => setRestoreCid(e.target.value)} placeholder="Enter CID to restore" className="flex-1 rounded-md border px-3 py-2" />
@@ -676,7 +643,6 @@ if ( {) {
 
 }
 
-=======
         {status && <div className="text-sm text-gray-600">{status}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -693,9 +659,23 @@ if ( {) {
     </>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    console.error('Error caught by boundary: any
+import React, { useEffect, useMemo, useState } from 'react'
+import Head from 'next/
+      const nonceRes = await fetch('/api/auth/
+import Head from 'next /
+      const nonce_res = await fetch ('/api / auth /
+      const res = await fetch('/api/did/
+        headers: { 'Content-Type': any
+      const res = await fetch ('/api / did /
+        headers: { 'Content-Type': any
+      const res = await fetch('/api/did/
+        headers: { 'Content-Type': any
+      const res = await fetch('/api/backup/
+        headers: { 'Content-Type': any
+      const res = await fetch ('/api / backup /
+        headers: { 'Content - Type': any
+      const res = await fetch('/api/backup/
+        headers: { 'Content-Type': any

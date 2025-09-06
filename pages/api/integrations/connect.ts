@@ -53,6 +53,12 @@ if (state.connections[existing_idx] = connection) {
     state.logs.push ({
       id: `${now}-${provider_id}-connect`,
 
+      lastError: null,
+    };
+    if (existingIdx >= 0) state.connections[existingIdx] = connection;
+    else state.connections.push(connection);
+    state.logs.push({
+      id: `${now}-${providerId}-connect`,
       timestamp: now,
       provider_id: provider_id as any,
       level: "info",
@@ -63,7 +69,6 @@ if (state.connections[existing_idx] = connection) {
 
 }
 
-=======
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { providerId, syncRules } = req.body as { providerId?: string, syncRules?: SyncRules };
   if (!providerId || !getProviderById(providerId)) {
@@ -98,8 +103,9 @@ res.status (200).json ({
     connection: updated.connections.find ((c) => c.provider_id === provider_id),
   });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from 'next'
+import { writeState } from '[^']*'
+import { getProviderById } from '[^']*'
+import { ProviderConnection, SyncRules } from '[^']*'

@@ -28,3 +28,5 @@ const Index = ({ className }) => {
 };
 
 export default Index;
+import React from 'react'
+    

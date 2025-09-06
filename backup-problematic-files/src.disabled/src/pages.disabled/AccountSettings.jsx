@@ -28,3 +28,5 @@ const AccountSettings = ({ className }) => {
 };
 
 export default AccountSettings;
+import React from 'react'
+    

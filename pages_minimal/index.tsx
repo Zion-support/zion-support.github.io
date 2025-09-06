@@ -1,23 +1,27 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
-export default function Home() {;
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
 
   return (
-<<<<<<< HEAD
     <div>;
       <main>;
         <h1>Welcome to Zion Tech Group</h1>;
         <p>Advanced IT Solutions & AI Services</p>;
         <Link href="/services">View Our Services</Link>;
       </main>;
-=======
     <div>
       <main>
         <h1>Welcome to Zion Tech Group</h1>
         <p>Advanced IT Solutions & AI Services</p>
         <Link href="/services">View Our Services</Link>
       </main>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     </div>;
   );
 import React from './react';
@@ -36,3 +40,5 @@ function Home() {
       </main>;
     </div>);
 }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any

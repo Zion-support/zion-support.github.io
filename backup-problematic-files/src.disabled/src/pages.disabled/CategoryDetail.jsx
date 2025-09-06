@@ -28,3 +28,5 @@ const CategoryDetail = ({ className }) => {
 };
 
 export default CategoryDetail;
+import React from 'react'
+    

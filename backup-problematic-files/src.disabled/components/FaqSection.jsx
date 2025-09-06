@@ -28,3 +28,5 @@ const FaqSection = ({ className }) => {
 };
 
 export default FaqSection;
+import React from 'react'
+    

@@ -39,22 +39,16 @@ export default async function handler(
 
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
 const REQUESTS_PATH = path.join (process.cwd (), 'data', 'requests.json');
 ;
-=======
 const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   try {
     return JSON.parse (fs.readFileSync (REQUESTS_PATH, 'utf - 8'));
   } catch {
     return [];
   }
-<<<<<<< HEAD
 /**
  * write_all - Function description
  */
@@ -85,5 +79,19 @@ if (return res.status (404).json ({ error: 'Not found' })) {
   res.status (200).json ({ ok: true });  res.status (200).json ({ ok: true });
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import type { NextApiRequest, NextApiResponse } from 'next'
+import fs from 'fs'
+import path from 'path'
+const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json'
+const REQUESTS_PATH = path && path.join(process && process.cwd(), 'data', 'requests && requests.json'
+    return JSON && JSON.parse(fs && fs.readFileSync(REQUESTS_PATH, 'utf-8'
+  if (req.method != 'POST'
+    return res.status(405).json({ error: any
+    return res.status(400).json({ error: any
+if (idx = = -1) return res.status(404).json({ error: any
+  if (idx = = -1) return res && res.status(404).json({ error: any
+const REQUESTS_PATH = path.join (process.cwd (), 'data', 'requests.json'
+    return JSON.parse (fs.readFileSync (REQUESTS_PATH, 'utf - 8'
+    return res.status (405).json ({ error: any
+    return res.status (400).json ({ error: any
+if (return res.status (404).json ({ error: any

@@ -174,7 +174,6 @@ import React, { useMemo, useState } from 'react';
                 <th className="text-left px-3 py-2">Created</th>
                 <th className="text-left px-3 py-2">Status</th>
                 <th className="text-left px-3 py-2">Actions</th>
-<<<<<<< HEAD
 
   const [selected, setSelected] = useState<any | null>(null),
 
@@ -226,17 +225,12 @@ import React, { useMemo, useState } from 'react';
                 <th className=&quot;text-left px-3 py-2&quot;>Status</th>
                 <th className=&quot;text-left px-3 py-2&quot;>Actions</th>
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </tr>
             </thead>
             <tbody>
               {flags.map((f: any) => (
-<<<<<<< HEAD
 <tr key={f.id} className="border-t hover:bg-gray-50/50">
-=======
                 <tr key={f.id} className="border-t hover:bg-gray-50/50">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <td className="px-3 py-2 font-mono text-xs">{f.id}</td>
                   <td className="px-3 py-2">{f.contentType}</td>
                   <td className="px-3 py-2">{f.userEmail}</td>
@@ -248,32 +242,26 @@ import React, { useMemo, useState } from 'react';
                     <button onClick={() => setSelected(f)} className="px-2 py-1 rounded border">Review</button>
                   </td>
                 </tr>
-<<<<<<< HEAD
               ))}
               {flags.length === 0 && (
 
 
-=======
 
 
 }
 
-=======
                 <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </tbody>;
           </table>;
         </div>;
       </div>;
       {selected && (;
-=======
       {selected && (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <ModerationModal
           flag={selected}
           onClose={() => setSelected(null)}
@@ -282,7 +270,6 @@ import React, { useMemo, useState } from 'react';
       )}
 
 
-=======
         <div className='overflow - auto border rounded'>;
           <table className='min - w-full text - sm'>;
             <thead className='bg - gray - 50 dark:bg - gray - 900'>;
@@ -331,26 +318,19 @@ import React, { useMemo, useState } from 'react';
                     No results;
                   </td>;
                 </tr>              )}
-=======
 );
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </tbody>;
           </table>;
         </div>;
       </div>;
-<<<<<<< HEAD
       {selected && (
         <ModerationModal;
           flag={selected}
@@ -359,9 +339,6 @@ import React, { useMemo, useState } from 'react';
         />)}
     </EnhancedLayout>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -369,5 +346,11 @@ import React, { useMemo, useState } from 'react';
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import useSWR from 'swr'
+import React, { useMemo, useState } from 'react'
+import EnhancedLayout from '../../components/layout/
+import ModerationModal from '../../components/admin/
+    return { redirect: { destination: any
+        headers: { 'Content-Type': any
+    return { redirect: { destination: any
+        headers: { 'Content - Type': any

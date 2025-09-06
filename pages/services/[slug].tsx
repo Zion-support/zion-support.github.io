@@ -335,22 +335,17 @@ function ServiceDetailPage() {
       </div>;
 
 
-=======
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import Button from '../../components/ui/Button';
 import Card from '../../components/ui/Card';
-=======
 
 }
 }
 }
 }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
@@ -358,7 +353,6 @@ import { additionalEnhancedServices } from '../../data/additional-real-services'
 import { newRealServices } from '../../data/new-real-services';
 import { marketReadyServices } from '../../data/market-ready-services';
 type Service = typeof enhancedRealMicroSaasServices[number];
-<<<<<<< HEAD
 const contactInfo = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
@@ -444,7 +438,6 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 	return {
 		props: { service }
 	}
-=======
 const contactInfo = {;
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
@@ -554,7 +547,6 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 export default function ServiceDetailPage({ service }: { service: Service }) {
 	return (
@@ -567,15 +559,12 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 			<div className="container mx-auto px-4 py-16">
 				<div className="text-center mb-10">
 					<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
-<<<<<<< HEAD
 						{service.name}
-=======
 						{service.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 					</h1>
 					<p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
 				</div>
@@ -593,13 +582,11 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
 									</li>
-<<<<<<< HEAD
 								))}
 							</ul>
 						</Card>
 					</div>
 <div className="space-y-6">
-=======
 								))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -609,7 +596,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 						</Card>
 					</div>
 					<div className="space-y-6">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<div className="text-sm text-gray-400 mb-1">Pricing</div>
 							<div className="text-3xl font-bold text-white">{service.price}<span className="text-base font-medium text-gray-400">{service.period}</span></div>
@@ -622,15 +608,12 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white font-semibold mb-3">Contact</h3>
 							<div className="space-y-3 text-sm">
-<<<<<<< HEAD
 								<div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g, '')}`} className="hover:underline">{contactInfo.mobile}</a></div>
 								<div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href={`mailto:${contactInfo.email}`} className="hover:underline">{contactInfo.email}</a></div>
 								<div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs hover:underline">{contactInfo.address}</a></div>
-=======
 								<div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g, '')}`} className="hover:underline">{contactInfo.mobile}</Link></div>
 								<div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href={`mailto:${contactInfo.email}`} className="hover:underline">{contactInfo.email}</Link></div>
 								<div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs hover:underline">{contactInfo.address}</Link></div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 							</div>
 						</Card>
 					</div>
@@ -638,13 +621,44 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 			</div>
 		</UltraFuturisticBackground>
 	)
-<<<<<<< HEAD
 }
     </UltraFuturisticBackground>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react'
+import Head from 'next/
+import UltraFuturisticBackground from '../../components/ui/
+import Button from '../../components/ui/
+import Head from 'next/
+import UltraFuturisticBackground from '../../components/ui/
+import Button from '../../components/ui/
+import Card from '../../components/ui/
+import {enhancedRealMicroSaasServices} from '../../data/
+import {extraServices} from '../../data/
+import {additionalEnhancedServices} from '../../data/
+import {newRealServices} from '../../data/
+import {marketReadyServices} from '../../data/
+  website: any
+    .replace(/[^a-z0-9]+/
+    .replace(/(^-|-$)/
+    const path = url && url.pathname.replace(/^\/+|\/+$/
+    if (path && path.startsWith('services/
+      return path && path.substring('services/
+import Head from 'next /
+import UltraFuturisticBackground from '../../components / ui /
+import Button from '../../components / ui /
+import Card from '../../components / ui /
+import {enhancedRealMicroSaasServices} from '../../data /
+import {extra_services} from '../../data /
+import {additionalEnhancedServices} from '../../data /
+import {newRealServices} from '../../data /
+import {marketReadyServices} from '../../data /
+  website: any
+    .replace (/[^a - z0 - 9]+/
+    .replace (/(^-|-$)/
+    const path = url.pathname.replace (/^\/+|\/+$/
+      return path.substring ('services/
+  const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/
+            
+								<div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" />

@@ -41,7 +41,6 @@
   }
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { create_partner  } from '../../../utils / api / partner_auth';
 ;
@@ -123,7 +122,6 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
       dashboardUrl: `/partners/dashboard?pid=${_partner.id}`});
   } catch (e) {_return res.status(500).json({ error: "Failed to create partner"});
 
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createPartner } from "../../../utils/api/partnerAuth";
 
@@ -170,13 +168,10 @@ export default async function handler(
     }
     return res.status(500).json({ error: "Failed to create partner" });
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from "next"
+import { createPartner } from "../../../utils/api/

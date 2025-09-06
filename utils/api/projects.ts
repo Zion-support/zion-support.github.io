@@ -1,9 +1,15 @@
-
-
+import fs from 'fs';
+import path from 'path';
+import { NextApiRequest, NextApiResponse } from 'next';
+import {
+  Project,
+  Milestone,
+  MilestoneStatus,
+  isMilestoneStatus,;
+  isMilestoneStatus
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 
-=======
 // Project management utilities
 import { v4 as uuidv4 } from 'uuid';
 
@@ -39,13 +45,10 @@ export interface Project {
 }
 
 
-=======
   isMilestoneStatus;
 } from '../types / milestones';
 import { CurrentUser } from './auth';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export interface Milestone {
 } from '../types/milestones';
 import { CurrentUser } from './auth';
@@ -65,12 +68,9 @@ export interface Milestone {;
 
   return projects.find(p => p.id === id) |null;
 
-=======
   return projects && projects.find(p => p && p.id === id) || null,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export function getAllProjects(): Project[] {
-=======
 
 
 export function getProjectById(id: string): Project | null {;
@@ -79,7 +79,6 @@ export function getProjectById(id: string): Project | null {;
 
 export function getAllProjects(): Project[] {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return projects;
 }
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
@@ -119,7 +118,6 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
   const newMilestone: Milestone = {
 
-=======
 
 
     ...milestone,
@@ -132,10 +130,8 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
 
   };
 
-=======
   }
 
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
   return newMilestone;
@@ -166,7 +162,6 @@ export function deleteMilestone(project: Project, milestoneId: string): boolean 
 
   project.milestones.splice(index, 1);
   project.updatedAt = new Date().toISOString();
-=======
   const index = project && project.milestones.findIndex(m => m && m.id === milestoneId);
   if (index === -1) return false,
   
@@ -174,7 +169,6 @@ export function deleteMilestone(project: Project, milestoneId: string): boolean 
   project && project.updatedAt = new Date().toISOString();
   
 
-=======
   projectMembers.push(member);
   return member;
 }
@@ -345,7 +339,6 @@ export function getProjectTimeline(projectId: string): Array<{
   return timeline.sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
 }
 
-=======
 // Mock storage;
 const projects: Project[] = [];
 ;
@@ -410,12 +403,13 @@ if (return false) {
 ;
   return true;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import fs from 'fs'
+import path from 'path'
+import { NextApiRequest, NextApiResponse } from 'next'
+ from '../types/
+import { CurrentUser } from './
+ from '../types /
+import { CurrentUser } from './

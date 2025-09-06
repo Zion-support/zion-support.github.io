@@ -12,6 +12,7 @@ import { useTranslation } from "react-i18next";
   AlertDialogFooter,
   AlertDialogHeader,
 AlertDialogTitle,;
+  AlertDialogTitle,
 } from "../components/ui/alert-dialog";
 import {
   useLanguage,
@@ -21,7 +22,6 @@ import {
 
 } from "../context/LanguageContext";
 export function LanguageDetectionPopup() {
-=======
 import {;
   AlertDialog,;
   AlertDialogAction,;
@@ -39,7 +39,6 @@ import {;
 } from "../context/LanguageContext";
 
 export function LanguageDetectionPopup() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
   const { changeLanguage, currentLanguage, supportedLanguages } =;
@@ -81,10 +80,8 @@ export function LanguageDetectionPopup() {;
     await changeLanguage(detectedLanguage);
     setOpen(false);
   }
-=======
 
 
-=======
 import { useState, useEffect } from 'react',;
 import { useTranslation } from 'react-i18next',;
 import {;
@@ -123,14 +120,11 @@ export function LanguageDetectionPopup() {;
   const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage,
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const handleAccept = async () => {
     await changeLanguage(detectedLanguage),
     setOpen(false)
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -160,13 +154,15 @@ export function LanguageDetectionPopup() {;
 
           <AlertDialogAction
             onClick={handleAccept}
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark">;
-            {t("general && general.yes")}
-=======
-
+            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
+          >
+            {t("general.yes")}
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
 );
 
-=======
             {t('general.no')}
           </AlertDialogCancel>;
           <AlertDialogAction;
@@ -174,7 +170,6 @@ export function LanguageDetectionPopup() {;
             className="bg-zion-purple text-white hover:bg-zion-purple-dark"
           >
             {t('general.yes')}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </AlertDialogAction>;
         </AlertDialogFooter>;
       </AlertDialogContent>;
@@ -215,11 +210,7 @@ function LanguageDetectionPopup() {
     // Check condition
 if (return) {
   $2
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  );
 }
     // Mark as visited;
     local_storage.set_item ("zion_has_visitedtrue");
@@ -277,5 +268,9 @@ if (return null) {
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+import { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
+ from "../components/ui/
+ from "../context/
+      

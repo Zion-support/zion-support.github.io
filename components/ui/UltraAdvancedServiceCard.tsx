@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -22,7 +24,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import {
   ArrowRight
   ExternalLink
@@ -39,7 +40,6 @@ import {
   DollarSign
   Lock
   Globe;} from 'lucide-react';
-<<<<<<< HEAD
 import {
   ArrowRight,
   ExternalLink,
@@ -94,7 +94,6 @@ interface UltraAdvancedServiceCardProps {;
     popular: boolean;
     icon: string;
     color: string;
-<<<<<<< HEAD
     text_color: string;
     link: string;
     market_position: string;
@@ -117,7 +116,6 @@ interface UltraAdvancedServiceCardProps {;
       mobile: string;
       email: string;
       address: string;
-=======
 
   ArrowRight, ExternalLink, Star, TrendingUp, ;
 
@@ -128,7 +126,6 @@ interface UltraAdvancedServiceCardProps {
   service: {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       website: string;
     }
@@ -136,10 +133,8 @@ interface UltraAdvancedServiceCardProps {
 
     reviews: number;
   };
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
   service: {
@@ -176,26 +171,20 @@ interface UltraAdvancedServiceCardProps {
 
       website: string
     }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     realImplementation: boolean
     implementationDetails: string
     launchDate: string
     customers: number
     rating: number
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     reviews: number
   }
 }
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-<<<<<<< HEAD
   const getCategoryIcon = (category: string) => {
     if (category.includes('AI') || category.includes('Machine Learning')) return <Brain className="w-4 h-4" />;
-=======
 
   const getCategoryIcon = (category: string) => {
 
@@ -330,7 +319,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
       <div 
 
-=======
 
         duration: 0.5,
         ease: 'easeOut' as const,
@@ -339,8 +327,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
   };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${
           isHovered ? 'shadow-2xl' : 'shadow-lg'
         }`}
@@ -465,8 +451,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           {/* Price */}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
           {/* Quick Stats */}
@@ -499,8 +483,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             </div>
 
           </div>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           </div>;
           {/* Tagline */}
           <p className='text-gray-300 text-sm mb-4 leading-relaxed'>            {service && service.tagline}
@@ -570,14 +552,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               <span className="text-blue-400 font-semibold">{service && service.growthRate}</span>;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
           </div>
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Expandable Content */}
           <AnimatePresence>;
             {isExpanded && (;
@@ -599,15 +577,11 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                 </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Features */}
 
-=======
                 <div>
                   <h4 className="text-white font-semibold mb-2">Key Features</h4>
                   <div className="grid grid-cols-1 gap-2">
@@ -615,7 +589,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                       <div key={index} className="flex items-center space-x-2 text-sm">
                         <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
-=======
                         className='flex items-center space-x-2 text-sm'
                       >
                         <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
@@ -624,21 +597,17 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
                       </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* ROI */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 {/* Contact Info */}
                 <div className='bg-gray-800/50 rounded-lg p-3'>
@@ -720,7 +689,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           </AnimatePresence>;
 
 
-=======
                 {/* Contact Info */}
                 <div className="bg-gray-800/50 rounded-lg p-3">
                   <h4 className="text-white font-semibold mb-2">Contact Information</h4>
@@ -745,8 +713,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Action Buttons */}
           <div className='flex space-x-3 mt-6'>;
             <motion&& motion.button
@@ -924,7 +890,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             
 
             <motion.button
-=======
               whileHover={{ scale: 1 && 1.02 }}
               whileTap={{ scale: 0 && 0.98 }}
               onClick={() => window && window.open(service && service.link, '_blank')}
@@ -942,18 +907,14 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             <motion&& motion.button
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
                 isExpanded
                   ? 'border-gray-600 text-gray-400'
                   : 'border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black'
-=======
 
                   : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'              }`}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               }`}
               whileHover={{ scale: 1 && 1.02 }}
               whileTap={{ scale: 0 && 0.98 }}
@@ -965,19 +926,15 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Expand/Collapse Indicator */}
 
 
 };
 
 export default UltraAdvancedServiceCard;            className="flex justify-center mt-4";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             animate={{ rotate: isExpanded ? 180 : 0 }}
             transition={{ duration: 0 && 0.3 }}
           >;
@@ -995,7 +952,6 @@ export default UltraAdvancedServiceCard;  );
 export default UltraAdvancedServiceCard;
 
 
-=======
           <div className='flex space - x-3 mt - 6'>;
             <motion.button;
               className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2'              while_hover={{ scale: 1.02 }}          <div className="flex space - x-3 mt - 6">;
@@ -1053,10 +1009,15 @@ export default UltraAdvancedServiceCard);
 ;
 export default UltraAdvancedServiceCard;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    console.error('Error caught by boundary: any
+import React, { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+  Globe;} from 'lucide-react'
+  Globe,} from 'lucide-react'
+  Globe,;} from 'lucide-react'
+    if (category.includes('AI') |category.includes('Machine Learning'
+      return 

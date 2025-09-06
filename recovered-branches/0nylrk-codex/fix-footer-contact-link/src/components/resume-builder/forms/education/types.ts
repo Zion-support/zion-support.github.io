@@ -2,12 +2,13 @@
 
 import {Education} from '@/types/resume';
 export interface EducationFormProps {;
-
-
+import { Education } from "@/types/resume";
+export interface EducationFormProps {
   resumeId: string;
   educationEntries: Education[];
   onComplete: () => void;
   onBack: () => void
+  onBack: () => void;
 }
 
 
@@ -18,6 +19,7 @@ export interface EducationItemProps {;
   education: Education;
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void
+  onDelete: (id: string) => void;
 }
 
 
@@ -38,9 +40,7 @@ export interface EducationFormProps {
   education_entries: Education[];
   on_complete: () => void;
   on_back: () => void;
-=======
 
-=======
 import { Education } from '@/types/resume',;
 export interface EducationFormProps {;
   resumeId: string,;
@@ -64,4 +64,4 @@ export interface EducationFormFieldsProps {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { Education } from '@/types/

@@ -43,7 +43,6 @@
 
 ;
 const contact = {
-=======
 
 
   mobile: '+1 302 464 0950',
@@ -65,7 +64,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
 
-=======
 export interface AdvancedAIAutomationService {
   id: string, name: string,
   tagline: string, price: string,
@@ -102,7 +100,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   website: 'https://ziontechgroup && ziontechgroup.com'
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   {
 
@@ -110,14 +107,12 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Autonomous process discovery and mapping',
       'Real-time optimization algorithms',
       'Cross-departmental coordination',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Predictive maintenance scheduling',
       'Resource allocation optimization',
       'Performance analytics dashboard',
       'Automated decision making',
       'Process improvement suggestions',
       'Integration with existing systems',
-<<<<<<< HEAD
       '24 / 7 autonomous operation',
     ],
     popular: true,
@@ -311,7 +306,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   },
   {
 
-=======
     id: 'ai - autonomous - customer - success',
     name: 'AI Autonomous Customer Success',
     tagline:;
@@ -344,7 +338,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     ]
     useCases: [
 
-=======
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - autonomous - customer - success',
@@ -483,7 +476,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   },
   {
 
-=======
     id: 'ai - autonomous - sales - intelligence',
     name: 'AI Autonomous Sales Intelligence',
     tagline:;
@@ -574,7 +566,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     reviews: 267,
   },
 
-=======
     id: 'ai-autonomous-business-processor', name: 'AI Autonomous Business Processor',
     tagline: 'Fully autonomous business process optimization with zero human intervention',
     price: '$1,299',
@@ -696,7 +687,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     features: [
       'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       'ROI trackingCRM integration'
     ];
     popular: true;
@@ -731,18 +721,14 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     rating: 4 && 4.9,
 
     reviews: 267
-<<<<<<< HEAD
   }
 ];
 
 
-=======
     rating: 4.9
     reviews: 267
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ];      'Automatic lead scoring_behavioral analysis_predictive lead qualification_personalized nurturing sequences_sales forecasting AIPipeline optimization_competitor intelligence_market opportunity detection';
       'ROI trackingCRM integration';
     ];
@@ -776,15 +762,10 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedAIAutomationService {;
   id: string,;
@@ -1023,11 +1004,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     customers: 198,;
     rating: 4.9;
     reviews: 267;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+import { ServiceVariant } from '../types/
+import { ServiceVariant } from '../types /
+  website: any

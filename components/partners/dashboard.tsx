@@ -16,7 +16,6 @@ export default function PartnerDashboard() {
 
   const [usage, setUsage] = useState<any>(null);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [loading, setLoading] = useState(false);
 
   const [token, setToken] = useState<string | null>(null);
@@ -29,9 +28,7 @@ export default function PartnerDashboard() {
     if (saved) setToken(saved)
   }, []);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   async function getToken() {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const res = await fetch("/api/partners/token", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -94,7 +91,6 @@ export default function PartnerDashboard() {
       method: "POST"
       headers: token ? { Authorization: `Bearer ${token}` } : {}})
     const data = await res.json();
-<<<<<<< HEAD
     if (data.apiKey) {
       alert(`New API Key: ${data.apiKey}`)
 
@@ -113,7 +109,6 @@ export default function PartnerDashboard() {
       alert(`New API Key: ${data && data.apiKey}`);
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
   return (
@@ -162,7 +157,6 @@ export default function PartnerDashboard() {
               {loading ? 'Loading...' : 'Refresh'}
 
                       </li>                    ))}          </div>
-=======
     <div className="min-h-screen bg-gray-50 text-gray-900">
     }
   }
@@ -209,14 +203,12 @@ export default function PartnerDashboard() {
       <div className="max-w-5xl mx-auto py-12 px-4">
         <h1 className="text-3xl font-semibold mb-2">Partner Dashboard</h1>
 <p className="text-gray-600 mb-6">Manage access, view usage, and download SDKs.</p>
-=======
 
     if (data.apiKey) {
       alert(`New API Key: ${data.apiKey}`)
     }
   }
   return (
-<<<<<<< HEAD
     <div className='min-h-screen bg-gray-50 text-gray-900'>
         <title>Zion Partner Dashboard</title>
       </Head>
@@ -225,7 +217,6 @@ export default function PartnerDashboard() {
         <p className='text-gray-600 mb-6'>
           Manage access, view usage, and download SDKs.
         </p>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {!token && (
           <div className="bg-white p-6 rounded-lg shadow mb-8">
             <h2 className="text-lg font-medium mb-3">Authenticate</h2>
@@ -282,7 +273,6 @@ export default function PartnerDashboard() {
                       <li key={k}>{k}: {v as any}</li>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
                   </ul>;
                 </div>;
@@ -293,23 +283,18 @@ export default function PartnerDashboard() {
         </div>;
               <p className="text-gray-500 text-sm">No usage yet.</p>;
 
-=======
                     ))}
-=======
 
 
                     ))}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </ul>
                 </div>
               </div>
             ) : (
               <p className="text-gray-500 text-sm">No usage yet.</p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
 
           </div>;
@@ -343,12 +328,10 @@ export default function PartnerDashboard() {
           <h3 className="font-medium mb-2">SDKs</h3>
           <a className="text-blue-600 underline mr-4" href="/api/partners/sdk?type=rest">REST SDK</a>
           <a className="text-blue-600 underline" href="/api/partners/sdk?type=graphql">GraphQL SDK</a>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       </div>
     </div>
 );
 }
-<<<<<<< HEAD
 import Head from 'next / head';
 export default /**
  * PartnerDashboard - Function description
@@ -560,11 +543,9 @@ if ( {) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
           </div>
 
         </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { useEffect, useState } from "react"
+  const [apiKey, setApiKey] = useState(''

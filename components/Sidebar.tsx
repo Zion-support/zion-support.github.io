@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -50,7 +52,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
     setOpenDropdowns(prev =>
       prev.includes(title)
         ? prev.filter(item => item !== title)
-=======
 import { ;
   X, ;
   Building2, ;
@@ -356,7 +357,6 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
           </motion.div>;
         </>)}
     </AnimatePresence>);
-=======
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
                 <div className="space-y-3">
@@ -385,18 +385,36 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
       )}
     </AnimatePresence>
   );
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 ;
 export default Sidebar;
-<<<<<<< HEAD
 ;
 
-=======
 
 };
 
 export default Sidebar;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    console.error('Error caught by boundary: any
+import React, { useState } from 'react'
+import Link from 'next /
+      { name: 'Web Development', href: any
+      { name: 'Mobile Development', href: any
+      { name: 'Cloud Solutions', href: any
+      { name: 'Cybersecurity', href: any
+      { name: 'Performance Optimization', href: any
+      { name: 'Enterprise Solutions', href: any
+      { name: 'E-commerce Platforms', href: any
+      { name: 'Healthcare Technology', href: any
+      { name: 'Educational Platforms', href: any
+      { name: 'Manufacturing', href: any
+      { name: 'Logistics', href: any
+      { name: 'Finance', href: any
+      { name: 'Healthcare', href: any
+      { name: 'Education', href: any
+    { name: 'About Us', href: any
+    { name: 'Our Team', href: any
+    { name: 'Case Studies', href: any
+    { name: 'Blog', href: any
+    { name: 'Careers', href: any
+    { name: 'Contact', href: any

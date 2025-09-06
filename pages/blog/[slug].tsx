@@ -1,9 +1,7 @@
 
 
-=======
 
 
-=======
 import React from 'react',;
 import ReactMarkdown from 'react-markdown',;
 import { useRouter } from 'next/router',;
@@ -19,9 +17,6 @@ import path from 'path',;
 function parseMarkdown(filePath: string): BlogPost | null {
   if (!fs.existsSync(filePath)) {
     return null
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
@@ -30,9 +25,6 @@ import { BLOG_POSTS } from '@/data/blog-posts';
 import { AuthorBio } from '@/components/blog/AuthorBio';
 import { SocialShareButtons } from '@/components/blog/SocialShareButtons';
 import { CommentsSection } from '@/components/blog/CommentsSection';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 
@@ -44,7 +36,6 @@ import path from 'path';
 
 
 interface BlogPostPageProps {
-<<<<<<< HEAD
   /**;
   * Preloaded blog post for static generation. Can be null if not found.;
   */;
@@ -53,7 +44,6 @@ interface BlogPostPageProps {
 
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   const router = useRouter()
   const { slug } = router.query
@@ -76,11 +66,8 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
       } else {
         // If getStaticProps is working correctly, this path (slug exists, no initialPost, no fallback)
         // should ideally not be hit frequently, as getStaticProps would have returned notFound.
-<<<<<<< HEAD
 // However, to maintain some robustness for dynamic client-side slug changes not triggering a new getStaticProps: setPost(null)
-=======
         // However, to maintain some robustness for dynamic client-side slug changes not triggering a new getStaticProps: setPost(null)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         setError('Article not found')
       }
     }
@@ -88,7 +75,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   if (error) {
     return <div>{error}</div>
 
-=======
 const BlogPostPage: React.FC < BlogPostPageProps> = ({ initial_post }) => {
   const router = use_router (),
   const { slug } = router.query,
@@ -98,7 +84,6 @@ const BlogPostPage: React.FC < BlogPostPageProps> = ({ initial_post }) => {
     // Check condition
 if ( {) {
   $2
-=======
 
 function parseMarkdown(filePath: string): BlogPost | null {;
   if (!fs.existsSync(filePath)) {;
@@ -149,15 +134,12 @@ if ( {) {
     return <div > Article not found</div>;
   }
 
-=======
   const article_ld = {
 
     author: post.author.name,
     published_time: post.published_date,
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     tags: post.tags || []},
   const body = (post as any).body || post.content;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <>;
       <AdvancedSEO;
@@ -250,7 +232,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="w-10 h-10 rounded-full"
             onError={(e) => {
               const target = e.currentTarget as HTMLImageElement
@@ -270,14 +251,12 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
         </div>
         {post.featuredImage && (
           <div className="aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6">
             <img
 
-=======
             className="w - 10 h - 10 rounded - full";
             on_error={(e) => {
               const target = e.current_target as HTMLImageElement,
@@ -297,7 +276,6 @@ if ( {) {
           <div className="aspect-[16 / 9] w - full relative overflow - hidden rounded - lg mb - 6">;
             <img;
               src={post.featured_image}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               alt={post.title}
 
 
@@ -313,14 +291,12 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="object-cover w-full h-full"
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement
                 target.src = '/images/blog-placeholder.svg'
 
 
-=======
               className="object - cover w - full h - full";
               on_error={(e) => {
                 const target = e.current_target as HTMLImageElement,
@@ -366,8 +342,6 @@ if ( {) {
   return { props: { initial_post: post }, revalidate: 60 }
 },
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
               }  } catch (error) {
     console.error("Error:", error);
@@ -381,4 +355,23 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react'
+import ReactMarkdown from 'react-markdown'
+import { useRouter } from 'next/
+import AdvancedSEO from '@/components/seo/
+import { BLOG_POSTS } from '@/data/
+import { AuthorBio } from '@/components/blog/
+import { SocialShareButtons } from '@/components/blog/
+import { CommentsSection } from '@/components/blog/
+import type { BlogPost } from '@/types/
+  const slug = path.basename(filePath).replace(/\.md$/
+import { use_router } from 'next /
+import AdvancedSEO from '@/components / seo /
+import { BLOG_POSTS } from '@/data /
+import { AuthorBio } from '@/components / blog /
+import { SocialShareButtons } from '@/components / blog /
+import { CommentsSection } from '@/components / blog /
+import type { BlogPost } from '@/types /
+  const slug = path.basename (file_path).replace (/\.md$/
+      //
+      //

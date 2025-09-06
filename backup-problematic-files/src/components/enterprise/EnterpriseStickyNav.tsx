@@ -11,7 +11,6 @@ export function EnterpriseStickyNav() {;
           <button;
             className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
             onClick={() => setOpen(!open)}
-=======
 import { useState } from "react",;
 import { Menu } from 'lucide-react';
 import Link from "next/link",;
@@ -25,7 +24,6 @@ export function EnterpriseStickyNav() {;
           <button;
             className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
             onClick={() => setOpen(!open)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             aria-label="Toggle navigation";
             aria-expanded={open}
           >;
@@ -55,3 +53,6 @@ return (<nav className="sticky top-16 z-40 bg-card border-b border-border" > <di
   () => setOpen (!open) ";
 }> <Menu className=" h-6 w-6"/> </button> <li> </li> <li> <Link href=" #pricing"className=" text-sm font-medium hover:text-primary">Pricing</Link> </li> <li> <Link href=" #testimonials"className=" text-sm font-medium hover:text-primary">Testimonials</Link> </li> <li> <Link href=" #contact"className=" text-sm font-medium hover:text-primary" >Contact Us</Link> </li> </ul> </div> </div> </nav>) ;
 }"
+import { useState } from "react"
+import Link from "next/
+ <Menu className=" h-6 w-6"/> </button> <li></li> <li> <Link href=" #pricing"className=" text-sm font-medium hover:text-primary">Pricing</Link> </li> <li> <Link href=" #testimonials"className=" text-sm font-medium hover: any

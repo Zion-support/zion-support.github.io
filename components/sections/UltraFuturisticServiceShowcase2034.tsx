@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -232,7 +234,6 @@ visible: {
 }initial= {  {}
 ;
 const service_categories = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'ai - services',
     title: '🧠 Revolutionary AI Services',
@@ -291,12 +292,9 @@ const service_categories = [;
 
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
     hidden: { opacity: 0, y: 20 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">;
       {/* Animated Background */}
@@ -308,7 +306,6 @@ const service_categories = [;
       </div>;
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Header */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -326,7 +323,6 @@ const service_categories = [;
             computing, and emerging technology solutions. Each service is
             designed to transform your business and propel you into the future.
           </p>
-=======
         stagger_children: 0.1,
       },
     },  }
@@ -334,12 +330,8 @@ const service_categories = [;
   const item_variants = {
     hidden: { opacity: 0, coordinate_y: 20 },
     visible: { opacity: 1, coordinate_y: 0 },        stagger_children: 0.1;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     hidden: { opacity: 0, y: 20 }
     visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       }
     }
   }
@@ -348,19 +340,13 @@ const service_categories = [;
     hidden: { opacity: 0, coordinate_y: 20 },
     visible: { opacity: 1, coordinate_y: 0 },
   }
-<<<<<<< HEAD
 ;
-=======
-=======
     hidden: { opacity: 0, y: 20 },
-<<<<<<< HEAD
     visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
       }
     }
-=======
     visible: { opacity: 1, y: 0 },
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   };
 
   const itemVariants = {
@@ -368,13 +354,9 @@ const service_categories = [;
     visible: { opacity: 1, y: 0 },
   };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <section className='py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden'>;
       {/* Animated Background */}
-<<<<<<< HEAD
       <div className='absolute inset - 0 overflow - hidden'>;
         <div className='absolute -top - 40 -right - 40 w - 80 h - 80 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded - full blur - 3xl animate - pulse'></div>;
         <div className='absolute -bottom - 40 -left - 40 w - 80 h - 80 bg - gradient - to - tr from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl animate - pulse delay - 1000'></div>;
@@ -382,22 +364,15 @@ const service_categories = [;
       </div>;
       <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>        {/* Header */}  }
 ;
-=======
       <div className='absolute inset-0 overflow-hidden'>
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>
       </div>
-<<<<<<< HEAD
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  }
-=======
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
-=======
         {/* Header */}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <section className="py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden">;
       {/* Animated Background */}
@@ -408,7 +383,6 @@ const service_categories = [;
       </div>;
       <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
         {/* Header */}
-<<<<<<< HEAD
         <motion.div;
           initial={{ opacity: 0, coordinate_y: 20 }}
           whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -424,8 +398,6 @@ const service_categories = [;
             computing, and emerging technology solutions. Each service is;
             designed to transform your business and propel you into the future.;
           </p>;
-=======
-=======
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
 
@@ -436,21 +408,13 @@ const service_categories = [;
 
         {/* Header */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>
             Revolutionary Technology Services
@@ -460,7 +424,6 @@ const service_categories = [;
             computing, and emerging technology solutions. Each service is
             designed to transform your business and propel you into the future.
           </p>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           {/* Stats */}
           <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mt - 12'>;
             {[;
@@ -533,10 +496,7 @@ const service_categories = [;
                 <div className="text-2xl font-bold text-white">{stat && stat.value}</div>;
                 <div className="text-sm text-gray-400">{stat && stat.label}</div>;
 
-=======
               { label: 'Total Services', value: allServices.length.toString(), icon: Rocket },
-=======
-=======
 
 
                 label: 'Total Services',
@@ -567,19 +527,14 @@ const service_categories = [;
 
 
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
         </motion && motion.div>;
 
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Search and Filter */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -590,7 +545,6 @@ const service_categories = [;
 
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Search */}
             <div className='relative flex-1 max-w-md'>
               <input
@@ -598,12 +552,10 @@ const service_categories = [;
                 placeholder='Search services...'
                 value={searchTerm}
 
-=======
           className="mb-12"
         >
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {/* Search */}
             <div className="relative flex-1 max-w-md">;
               <input
@@ -612,7 +564,6 @@ const service_categories = [;
                 value={searchTerm}
 
 
-=======
                 onChange={e => setSearchTerm(e.target.value)}
                 className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
               />
@@ -622,8 +573,6 @@ const service_categories = [;
             </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Category Filter */}
             <select
               value={selectedCategory}
@@ -636,12 +585,9 @@ const service_categories = [;
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Service Categories */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -663,19 +609,15 @@ const service_categories = [;
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
 
 
                 </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               )}
               {/* Service Icon */}
 
@@ -921,14 +863,12 @@ const service_categories = [;
 
                 )}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Service Meta */}
               <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                 <div className='flex items-center space-x-2 text-gray-400'>
                   <Clock className='w-4 h-4' />
                   <span>{service.setupTime}</span>
                 </div>                  <span>{service.setupTime}</span>
-=======
 
                 {service.description}
               </p>
@@ -936,57 +876,37 @@ const service_categories = [;
               {/* Features */}
 
                     <span>{feature}</span>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                 ))}
                 {service.features.length > 3 && (
                   <div className='text-sm text-cyan-400'>                    +{service.features.length - 3} more features              <div className="space-y-2 mb-4">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {service.features.slice(0, 3).map((feature, idx) => (
                   <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
                     <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                     <span>{feature}</span>
                   </div>
-<<<<<<< HEAD
                 ))}
                 {service.features.length > 3 && (
-<<<<<<< HEAD
 <div className="text-sm text-cyan-400">
-=======
                   <div className='text-sm text-cyan-400'>                  <div className="text-sm text-cyan-400">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     +{service.features.length - 3} more features
                   </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 )}
               </div>
-<<<<<<< HEAD
 {/* Service Meta */}
               <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                 <div className="flex items-center space-x-2 text-gray-400">
                   <Clock className="w-4 h-4" />
                   <span>{service.setupTime}</span>
-=======
-=======
                 )}
               </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Service Meta */}
               <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                 <div className='flex items-center space-x-2 text-gray-400'>
                   <Clock className='w-4 h-4' />
                   <span>{service.setupTime}</span>
                 </div>                  <span>{service.setupTime}</span>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </div>
                 <div className="flex items-center space-x-2 text-gray-400">
                   <Users className="w-4 h-4" />
@@ -1084,21 +1004,11 @@ const service_categories = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <a
 
               <div className="flex space-x-3">
-=======
               <div className='flex space-x-3'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <a
 
                   href={service.link}
@@ -1147,12 +1057,9 @@ const service_categories = [;
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1172,7 +1079,6 @@ const service_categories = [;
               of business automation.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <a
                 href='/contact'
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-lg'
@@ -1211,7 +1117,6 @@ const service_categories = [;
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-lg">;
@@ -1398,4 +1303,12 @@ const service_categories = [;
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    console.error('Error caught by boundary: any
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+ from 'lucide-react'
+import { realMarketServices } from '../../data/
+import { aiEmergingTechServices } from '../../data/
+import { realMarketServices  } from '../../data/
+import { aiEmergingTechServices } from '../../data/
+  website: any

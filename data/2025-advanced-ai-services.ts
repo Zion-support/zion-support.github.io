@@ -1,7 +1,4 @@
 
-
-
-
 export const advancedAIServices2025 = [
   {
 
@@ -14,7 +11,6 @@ export const advancedAIServices2025 = [
       }
       professional: {
 
-=======
         price: 499,
         period: 'month',
         features: [;
@@ -46,7 +42,6 @@ export const advancedAIServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$27.3B',
     target_audience:;
       'Business analysts, data scientists, executives, enterprise businesses',
@@ -110,7 +105,6 @@ export const advancedAIServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$15.8B',
     target_audience:;
       'Marketing teams, customer success managers, e - commerce businesses, SaaS companies',
@@ -184,7 +178,6 @@ export const advancedAIServices2025 = [
   },
   {
 
-=======
     id: 'intelligent - supply - chain - optimization',
     name: 'SupplyChain AI',
     description:;
@@ -241,7 +234,6 @@ export const advancedAIServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$18.7B',
     target_audience:;
       'Manufacturers, distributors, logistics companies, retail chains',
@@ -305,7 +297,6 @@ export const advancedAIServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$45.2B',
     target_audience:;
       'Hospitals, clinics, diagnostic centers, healthcare providers',
@@ -369,7 +360,6 @@ export const advancedAIServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$8.9B',
     target_audience:;
       'Law firms, legal departments, compliance officers, legal tech companies',
@@ -434,7 +424,6 @@ export const advancedAIServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$22.1B',
     target_audience:;
       'Marketing teams, agencies, e - commerce businesses, SaaS companies',
@@ -498,7 +487,6 @@ export const advancedAIServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$16.3B',
     target_audience:;
       'Sales teams, sales managers, sales operations, enterprise businesses',
@@ -567,7 +555,6 @@ export const advancedAIServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$11.7B',
     target_audience:;
       'HR departments, recruitment agencies, talent acquisition teams, enterprise businesses',
@@ -627,7 +614,6 @@ export const advancedAIServices2025 = [
     website: 'https://ziontechgroup.com / cybersecurity - ai',
 
     contact: {
-<<<<<<< HEAD
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -650,19 +636,15 @@ export const advancedAIServices2025 = [
     };
     marketSize: '$173 && 173.5B',
     targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
-<<<<<<< HEAD
     competitiveAdvantage: 'Advanced threat detection with 99 && 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
   }
 ];
 
 
-=======
     targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     market_size: '$173.5B',
     target_audience:;
       'IT security teams, cybersecurity firms, enterprise businesses, government agencies',
@@ -886,19 +868,13 @@ export const advancedAIServices2025 = [
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-=======
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
-<<<<<<< HEAD
   }
 ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export const advancedAIServices2025 = [;
   {;
     id: 'ai-powered-business-intelligence-suite',;
@@ -1129,11 +1105,35 @@ export const advancedAIServices2025 = [;
     marketSize: '$173.5B',;
     targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies',;
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    id: any
+      'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.'
+      'Natural language query processing'
+      'AI-powered data visualization'
+      'Predictive analytics and forecasting'
+      'Automated report generation'
+      'Real-time data monitoring'
+      'Integration with 100+ data sources'
+      'Custom AI model training'
+      'Advanced security and compliance'
+    id: any
+      'Advanced AI - powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.'
+      'Natural language query processing'
+      'AI - powered data visualization'
+      'Predictive analytics and forecasting'
+      'Automated report generation'
+      'Real - time data monitoring'
+      'Integration with 100+ data sources'
+      'Custom AI model training'
+      'Advanced security and compliance'
+        period: any
+        features: ['Up to 10 users', 'Basic AI insights', 'Standard reports'
+        period: any
+    tags: ['AI', 'Business Intelligence', 'Analytics', 'Data Visualization'
+    website: any
+          'Up to 1,000 scans/
+          'Up to 10,000 scans/
+    website: any
+          'Up to 1,000 documents/
+    website: any

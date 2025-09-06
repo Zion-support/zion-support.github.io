@@ -1,48 +1,43 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Footer: React.FC = () => {
-  return (
-    <footer className="bg-gray-900 text-white py-8">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+          {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300">
-              Leading technology solutions provider for modern businesses.
-            </p>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">AI Services</Link></li>
-              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">IT Solutions</Link></li>
-              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">Cloud Services</Link></li>
+              <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li><Link to="/services" className="hover:text-white transition-colors">Services</Link></li>
+              <li><Link to="/about" className="hover:text-white transition-colors">About</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
-          
+
+          {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <h3 className="text-white font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
-              <li><Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</Link></li>
+              <li><a href="#" className="hover:text-white transition-colors">AI Solutions</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Cybersecurity</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Cloud Infrastructure</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Digital Transformation</a></li>
             </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <div className="space-y-2 text-gray-300">
-              <p>Email: info@ziontechgroup.com</p>
-              <p>Phone: +1 (555) 123-4567</p>
-              <p>Address: 123 Tech Street, Innovation City</p>
-            </div>
           </div>
         </div>
-        
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+
+        <div className="border-t border-slate-700 mt-8 pt-8 text-center">
+          <p className="text-gray-400">
+            © 2024 Zion Tech Group. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
@@ -50,3 +45,11 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import { Link } from 'react-router-dom'
+import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
+import React from 'react'
+import { Link } from 'react-router-dom'
+ from 'lucide-react'
+    window.scrollTo({ top: 0, behavior: any

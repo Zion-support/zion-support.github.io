@@ -23,7 +23,6 @@ const AIPoweredITAssetManagement = () => {
       title: "Real-Time Monitoring",
       description: "Continuous monitoring and health assessment of all IT assets",
       color: "from-blue-500 to-cyan-500"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     },
     {
       icon: Shield,
@@ -39,7 +38,6 @@ const AIPoweredITAssetManagement = () => {
 
   ],
   const asset_types = [;
-=======
       description: "AI-driven insights for asset lifecycle management and optimization",
       color: "from-red-500 to-orange-500"
 
@@ -66,7 +64,6 @@ const AIPoweredITAssetManagement = () => {
       value: "35%",
 
 
-=======
       description: "Reduction in IT asset costs"
     },
     {
@@ -100,9 +97,7 @@ const AIPoweredITAssetManagement = () => {
     "Integration with existing IT tools"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-=======
       description: "Reduction in IT asset costs"
     },
     {
@@ -122,12 +117,7 @@ const AIPoweredITAssetManagement = () => {
       title: "Efficiency Boost",
       value: "200%",
       description: "Increased operational efficiency"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -141,10 +131,6 @@ const AIPoweredITAssetManagement = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const capabilities = [
     "Automated asset discovery and inventory",
@@ -155,13 +141,8 @@ const AIPoweredITAssetManagement = () => {
     "Asset lifecycle optimization",
     "Cost allocation and tracking",
     "Integration with existing IT tools"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   ],
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   return (
     <div className="min-h-screen bg-gray-50">
@@ -194,13 +175,7 @@ const AIPoweredITAssetManagement = () => {
 };
 export default AIPoweredITAssetManagement;
   ],
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <>
       <Head>
         <title>AI-Powered IT Asset Management - Zion Tech Group</title>
@@ -229,7 +204,6 @@ export default AIPoweredITAssetManagement;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
@@ -237,8 +211,6 @@ export default AIPoweredITAssetManagement;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
-=======
       description: "Reduction in IT asset costs";
     },
     {
@@ -294,13 +266,9 @@ export default AIPoweredITAssetManagement;
 
                 Transform your IT operations with intelligent asset management that discovers,
 
-=======
                 Transform your IT operations with intelligent asset management that discovers, 
-=======
                 Transform your IT operations with intelligent asset management that discovers,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 monitors, and optimizes every piece of your technology infrastructure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -316,8 +284,6 @@ export default AIPoweredITAssetManagement;
           </div>
         </section>
 
-=======
-=======
 
         {/* Features Section */  } catch (error) {
     console.error("Error:", error);
@@ -596,7 +562,6 @@ const AIPoweredITAssetManagement = () => {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -630,7 +595,6 @@ const AIPoweredITAssetManagement = () => {;
                   viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-indigo-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
@@ -640,7 +604,6 @@ const AIPoweredITAssetManagement = () => {;
                   <p className="text-gray-400">{feature.description}</p>
                 </motion.div>
 
-=======
                   className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 p - 6 rounded - xl border border - slate - 700 / 50 hover:border - indigo - 500 / 50 transition - all duration - 300";
                 >;
                   <div className={`inline - flex p - 3 bg - gradient - to - r ${feature.color} rounded - lg mb - 4`}>;
@@ -749,7 +712,6 @@ const AIPoweredITAssetManagement = () => {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -785,14 +747,12 @@ const AIPoweredITAssetManagement = () => {;
                   viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
                   <span className="text-gray-300">{assetType}</span>
                 </motion.div>
 
-=======
                   className="flex items - center space - x-3";
                 >;
                   <CheckCircle className="w - 6 h - 6 text - indigo - 400 flex - shrink - 0" />;
@@ -898,7 +858,6 @@ const AIPoweredITAssetManagement = () => {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -932,7 +891,6 @@ const AIPoweredITAssetManagement = () => {;
                   viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="text-center"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
@@ -945,7 +903,6 @@ const AIPoweredITAssetManagement = () => {;
                   </div>
                 </motion.div>
 
-=======
                   className="text - center";
                 >;
                   <div className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 p - 6 rounded - xl border border - slate - 700 / 50">;
@@ -1057,7 +1014,6 @@ const AIPoweredITAssetManagement = () => {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1091,7 +1047,6 @@ const AIPoweredITAssetManagement = () => {;
                   viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
@@ -1130,7 +1085,6 @@ const AIPoweredITAssetManagement = () => {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -1138,8 +1092,6 @@ const AIPoweredITAssetManagement = () => {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-=======
-=======
                   className="flex items - center space - x-3";
                 >;
                   <CheckCircle className="w - 6 h - 6 text - indigo - 400 flex - shrink - 0" />;
@@ -1185,9 +1137,9 @@ export default AIPoweredITAssetManagement;
 },
 export default AIPoweredITAssetManagement,
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react'
+import Head from 'next/
+import Link from 'next/

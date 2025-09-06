@@ -1,20 +1,16 @@
 import type { GetServerSideProps } from 'next';
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function AgencyDashboardPage({ vendor }: Props) {
-=======
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },;
 export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
   const [pkgDesc, setPkgDesc] = useState('');
   const [pkgPrice, setPkgPrice] = useState<number | ''>('');
 
-=======
 
   if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
 
@@ -41,11 +37,9 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
         .map(s => s && s.trim());
         .filter(Boolean),;
 
-=======
 
         .filter(Boolean),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } as Vendor;
     // For MVP, update via direct API not implemented; keep local preview only;
     setActiveVendor(updated);  }
@@ -81,7 +75,6 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
     setPkgDesc('');
     setPkgPrice('');
   }
-=======
         .filter(Boolean)} as Vendor;
     // For MVP, update via direct API not implemented, keep local preview only
     setActiveVendor(updated)
@@ -90,7 +83,6 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
 
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='space-y-8'>;
       <div className='flex items-center justify-between'>;
@@ -148,7 +140,6 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
 
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>    setActiveVendor({ ...activeVendor, packages });
 
-=======
       ...activeVendor;
       name: String(formData.get('name') || activeVendor.name),
       about: String(formData.get('about') || activeVendor.about || ''),
@@ -169,7 +160,6 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
       priceUsd: Number(pkgPrice)}],
     setActiveVendor({ ...activeVendor, packages });
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     setPkgTitle('');
     setPkgDesc('');
     setPkgPrice('')
@@ -259,22 +249,18 @@ function Pipeline({ vendorId }: { vendorId: string }) {
 
 
   useEffect(() => {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
               Add;
             </button>          </div>;
         </div>;
       </section>;
 
-=======
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ itemId, status })});
     fetchItems()
   }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
       <section className='space-y-3'>;
         <h2 className='text-lg font-medium'>Project Pipeline</h2>        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-end">;
@@ -291,14 +277,8 @@ function Pipeline({ vendorId }: { vendorId: string }) {
 }
 
 function Pipeline(): any ({ vendorId }: { vendorId: string }) {;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function Pipeline({ vendorId }: { vendorId: string }) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {;
     const res = await fetch(;
@@ -316,13 +296,11 @@ function Pipeline({ vendorId }: { vendorId: string }) {
       body: JSON && JSON.stringify({ itemId, status }),;
     });
     fetchItems();
-<<<<<<< HEAD
   useEffect(() => {;
 
 
     fetchItems();
   }, []);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <div className='space-y-2'>;
       {items && items.length === 0 && (;
@@ -339,12 +317,10 @@ function Pipeline({ vendorId }: { vendorId: string }) {
             </div>;
           </div>;
           <select
-<<<<<<< HEAD
             defaultValue={item && item.status}
             onChange={e => changeStatus(item && item.id, e && e.target.value)}
             className='border rounded px-2 py-1 bg-transparent text-sm';
 
-=======
 import {FormEvent, useEffect, useState} from 'react';
 import type { Vendor } from '../utils / vendor - types';
 ;
@@ -616,7 +592,6 @@ function change_status() {
             on_change={e => change_status (item.id, e.target.value)}
             className='border rounded px - 2 py - 1 bg - transparent text - sm';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           >;
             <option value='lead'>Lead</option>;
             <option value='qualified'>Qualified</option>;
@@ -636,19 +611,14 @@ function change_status() {
 
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] |null; // tie to auth later
   return { props: { vendor } }
 };  )
 }
-<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
-=======
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] || null; // tie to auth later;
   return { props: { vendor } };
@@ -663,10 +633,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
     </div>
 
 
-=======
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         </div>))}
     </div>);
 ;
@@ -682,4 +649,6 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
   return { props: { vendor } }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import type { GetServerSideProps } from 'next'
+import { FormEvent, useEffect, useState } from 'react'
+import type { Vendor } from '../utils/

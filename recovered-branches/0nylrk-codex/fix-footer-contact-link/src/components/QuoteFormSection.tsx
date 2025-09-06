@@ -5,6 +5,11 @@ import {GradientHeading} from "./GradientHeading";
 import {useState} from "react";
 export function QuoteFormSection() {;
 
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { GradientHeading } from "./GradientHeading";
+import { useState } from "react";
+export function QuoteFormSection() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -20,7 +25,6 @@ export function QuoteFormSection() {
 
 
   const handleSubmit = (e: React.FormEvent) => {
-
     e.preventDefault(),
     setIsSubmitting(true),
     
@@ -30,8 +34,15 @@ export function QuoteFormSection() {
       setIsSubmitted(true)
     }, 1000)
   },
+    e.preventDefault();
+    setIsSubmitting(true);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    // Simulate form submission
+    setTimeout(() => {
+      (setIsSubmitting(false), setIsSubmitted(true));
+    }, 1000);
+  };
+
 
   return (
     <section className="py-20 bg-zion-blue">
@@ -88,7 +99,6 @@ export function QuoteFormSection() {
                   >
                     Name
                   </label>
-=======
 
     // Simulate form submission;
     setTimeout(() => {;
@@ -134,7 +144,6 @@ export function QuoteFormSection() {
                   <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">;
                     Name;
                   </label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Input
                     id="name"
                     type="text"
@@ -148,6 +157,15 @@ export function QuoteFormSection() {
                     Company;
                   </label>;
 
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="company"
+                    className="block text-sm font-medium text-zion-slate-light mb-1"
+                  >
+                    Company
+                  </label>
                   <Input
                     id="company"
                     type="text"
@@ -160,6 +178,15 @@ export function QuoteFormSection() {
                     Email;
                   </label>;
 
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-zion-slate-light mb-1"
+                  >
+                    Email
+                  </label>
                   <Input
                     id="email"
                     type="email"
@@ -173,12 +200,42 @@ export function QuoteFormSection() {
                     Phone;
                   </label>;
 
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-zion-slate-light mb-1"
+                  >
+                    Phone
+                  </label>
                   <Input
                     id="phone"
                     type="tel"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
 
-=======
+                  />
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <label
+                  htmlFor="interest"
+                  className="block text-sm font-medium text-zion-slate-light mb-1"
+                >
+                  I'm interested in (select all that apply)
+                </label>
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-2">
+                  {[
+                    "AI Products/Services",
+                    "IT Equipment",
+                    "Server Solutions",
+                    "Storage Solutions",
+                    "Networking",
+                    "24/7 Support",
+                    "Recycling Services",
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center">
                       <input
                         id={`interest-${index}`}
                         type="checkbox"
@@ -186,7 +243,6 @@ export function QuoteFormSection() {
                       />
 
 
-=======
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
 import { Button } from "./ui/button",;
 import { Input } from "./ui/input",;
@@ -288,7 +344,6 @@ export function QuoteFormSection() {;
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-2">;
                   {["AI Products/Services", "IT Equipment", "Server Solutions", "Storage Solutions", "Networking", "24/7 Support", "Recycling Services"].map((item, index) => (;
                     <div key={index} className="flex items-center">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <input
                         id={`interest-${index}`}
                         type="checkbox"
@@ -297,14 +352,14 @@ export function QuoteFormSection() {;
                       />;
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">;
 
-=======
                       />
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                      <label
+                        htmlFor={`interest-${index}`}
+                        className="ml-2 text-sm text-zion-slate-light"
+                      >
                         {item}
                       </label>;
                     </div>;
@@ -336,10 +391,42 @@ export function QuoteFormSection() {;
         </div>;
       </div>;
     </section>;
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-zion-slate-light mb-1"
+                >
+                  Additional Details
+                </label>
+                <textarea
+                  id="message"
+                  rows={4}
+                  className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+                ></textarea>
+              </div>
+
+              <div className="mt-6">
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-3"
+                >
+                  {isSubmitting
+                    ? "Sending..."
+                    : "Get Your Free Commercial Proposal"}
+                </Button>
+              </div>
+            </form>
+          )}
+        </div>
+      </div>
+    </section>
   );
 }
 
-=======
 import { Button  } from './ui / button';
 import { Input  } from './ui / input';
 import { GradientHeading  } from './GradientHeading';
@@ -524,4 +611,4 @@ function QuoteFormSection() {
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import React from 'react'

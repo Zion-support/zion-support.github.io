@@ -1,5 +1,3 @@
-
-
 import { createMocks, RequestMethod } from 'node-mocks-http'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import handler from '@/pages/api/auth/reset'
@@ -8,9 +6,7 @@ describe('/api/auth/reset token validation'
   it('returns 400 if token is missing'
       "method"
       "body"
-<<<<<<< HEAD
       "method"'"body": { token: 'invalid', "newPassword"'"
-=======
       "method"
 
 import { createMocks, RequestMethod } from 'node-mocks-http';
@@ -49,6 +45,6 @@ describe('/api/auth/reset token validation', () => {
   });
 });
 
-=======
       "body": { token: 'invalid', "newPassword"
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+import handler from '@/pages/api/auth/
+describe('/api/auth/

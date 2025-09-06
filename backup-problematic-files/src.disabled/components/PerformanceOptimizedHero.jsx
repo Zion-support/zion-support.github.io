@@ -28,3 +28,5 @@ const PerformanceOptimizedHero = ({ className }) => {
 };
 
 export default PerformanceOptimizedHero;
+import React from 'react'
+    

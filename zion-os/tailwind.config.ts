@@ -1,33 +1,21 @@
 
 import type { Config } from 'tailwindcss';
 const config: Config = {
-<<<<<<< HEAD
   content: [;
     &quot;./src / pages/**/*.{js, ts, jsx, tsx, mdx}&quot;,
     &quot;./src / components/**/*.{js, ts, jsx, tsx, mdx}&quot;,
     &quot;./src / app/**/*.{js, ts, jsx, tsx, mdx}&quot;],
-=======
-<<<<<<< HEAD
   content: [;
     &quot;./src/pages/**/*.{js,ts,jsx,tsx,mdx}&quot;,
     &quot;./src/components/**/*.{js,ts,jsx,tsx,mdx}&quot;,
     &quot;./src/app/**/*.{js,ts,jsx,tsx,mdx}&quot;],
-=======
   content: [
-<<<<<<< HEAD
     &quot;./src/pages/**/*.{js,ts,jsx,tsx,mdx}&quot;
     &quot;./src/components/**/*.{js,ts,jsx,tsx,mdx}&quot;
     &quot;./src/app/**/*.{js,ts,jsx,tsx,mdx}&quot;]
-=======
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   theme: {
     extend: {
       colors: {
@@ -51,3 +39,19 @@ const config: Config = {
 ;
 
 export default config;
+import type { Config } from 'tailwindcss'
+        'zion-blue': any
+          '0%': { opacity: '0', transform: 'translateY(20px)'
+          '100%': { opacity: '1', transform: 'translateY(0)'
+          '0%': { opacity: '0', transform: 'translateY(40px)'
+          '100%': { opacity: '1', transform: 'translateY(0)'
+        xs: any
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops)gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops)'
+import type { Config } from 'tailwindcss'
+        'zion - blue': any
+          '0%': { opacity: '0', transform: 'translate_y (20px)'
+          '100%': { opacity: '1', transform: 'translate_y (0)'
+          '0%': { opacity: '0', transform: 'translate_y (40px)'
+          '100%': { opacity: '1', transform: 'translate_y (0)'
+        xs: any
+        'gradient - radial': 'radial - gradient (var (--tw - gradient - stops)gradient - conic': 'conic - gradient (from 180deg at 50% 50%, var (--tw - gradient - stops)'

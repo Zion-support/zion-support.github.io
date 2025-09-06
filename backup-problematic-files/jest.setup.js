@@ -1,5 +1,4 @@
 import "@testing-library/jest-dom";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 // Mock Next.js router
 jest.mock("next/router", () => ({
@@ -77,4 +76,8 @@ global.ResizeObserver = class ResizeObserver {
 
 };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import "@testing-library/
+jest.mock("next/
+      route: any
+jest.mock("next/
+jest.mock("next/

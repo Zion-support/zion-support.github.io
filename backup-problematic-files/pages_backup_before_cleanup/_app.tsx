@@ -13,8 +13,7 @@ const _app: React.FC<_appProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+import type { AppProps } from \'next/app\' import \'../styles/
+const type { AppProps } from "next/app" import "./styles/globals.css" export default function App({ Component,pageProps }: AppProps) { return 

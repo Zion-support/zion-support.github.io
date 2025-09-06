@@ -28,3 +28,5 @@ const Input = ({ className }) => {
 };
 
 export default Input;
+import React from 'react'
+    

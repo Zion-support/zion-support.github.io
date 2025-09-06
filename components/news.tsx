@@ -1,17 +1,9 @@
 
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+featured: any
  featured: true ;
-};
-{;
-  title: 'Cybersecurity Partnership with Global Tech Leaders';
-excerpt: 'Strategic collaboration to advance AI - powered threat detection and response systems.';
-author: 'Partnerships Team';
 
 const categories = [ {;
   id: 'all', name: 'All News', icon: Newspaper, count: 45 ;
@@ -43,7 +35,6 @@ const years = [ {;
 TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap;
 Clock, BookOpen, Video, Podcast, FileText, Search ;
 
-=======
 date: '2025 - 01 - 10';
 const [search_query, setSearchQuery] = useState ('');
 const [selected_category, setSelectedCategory] = useState ('all');
@@ -79,22 +70,13 @@ TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap;
 Clock, BookOpen, Video, Podcast, FileText, Search;
 }from 'lucide-react';
 return (<UltraFuturisticBackground> <div className="min - h-screen" > <Head> <title > News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title> <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." /> </Head> id: 1;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 featured: true
 }
-=======
  featured: true 
-=======
 featured: true 
-=======
  featured: true 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 {
   title: 'Cybersecurity Partnership with Global Tech Leaders';
 excerpt: 'Strategic collaboration to advance AI-powered threat detection and response systems.';
@@ -134,7 +116,6 @@ TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap;
 Clock, BookOpen, Video, Podcast, FileText, Search
 }from 'lucide-react';
 return (<UltraFuturisticBackground> <div className="min-h-screen" > <Head> <title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title> <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." /> </Head> id: 1;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 title: "Zion Tech Group Launches Revolutionary Quantum AI Platform";
 excerpt: "Our latest quantum AI platform combines quantum computing with artificial intelligence to deliver unprecedented performance and capabilities for enterprise applications.";
 category: "Product Launch";
@@ -150,7 +131,6 @@ author: "Zion Tech Group Team";
 
 ArrowRight, ExternalLink, TrendingUp;
 BookOpen, Globe, Video
-=======
 date: "2025 - 01 - 15";
 read_time: "5 min read";
 image: "/images / news / quantum - ai - launch.jpg";
@@ -225,7 +205,6 @@ const categories = [ {
 
 }];
 const featured_news = [ {
-=======
 date: "2025-01-15";
 readTime: "5 min read";
 image: "/images/news/quantum-ai-launch.jpg";
@@ -258,18 +237,15 @@ export default function News () {
 }</span>) )
 }</div> <Link > Read More <ArrowRight className="w-4 h-4 ml-1" /> </a> </div> <section className="py-20 px-4 sm:px-6 lg:px-8" > <div className="max-w-7xl mx-auto" > <motion.div > <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6" > <Newspaper className="w-4 h-4 mr-2" /> <section className="relative py-20 px-4" > <div className="container mx-auto max-w-6xl" > <motion.div > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6" > Latest News & Updates </div> <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent mb-6" > News & Press </h1> <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Stay updated with the latest developments, breakthroughs, and innovations from Zion Tech Group and the technology industry. </p> </motion.div> > {
   categories.map ( (category, index) => (<button key= {
-<<<<<<< HEAD
   category
 }import {
   {
   {Search, Calendar, Clock, User, Tag;
-=======
   category 
 }import {;
   {;
   {;
   Search, Calendar, Clock, User, Tag;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ArrowRight, ExternalLink, TrendingUp;
 BookOpen, Globe, Video
 }from 'lucide-react';
@@ -296,13 +272,11 @@ const categories = [ {
   id: 'industry', name: 'Industry Insights', count: 2
 }];
 const featuredNews = [ {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   id: 1;
 title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform';
 excerpt: 'Our latest breakthrough in artificial consciousness technology promises to revolutionize how businesses interact with AI systems, enabling unprecedented levels of understanding and collaboration.';
 category: 'ai';
 author: 'Dr. Sarah Chen';
-<<<<<<< HEAD
 date: '2024 - 01 - 15';
 read_time: '5 min read';
 image: '/images / news / ai - consciousness - launch.jpg';
@@ -317,7 +291,6 @@ title: 'Quantum Computing Breakthrough: Achieving 1000+ Qubit Stability';
 excerpt: 'Our quantum research team has achieved a major milestone in quantum computing stability, opening new possibilities for complex computational problems.';
 category: 'quantum';
 author: 'Prof. Michael Rodriguez';
-<<<<<<< HEAD
 date: '2024 - 01 - 12';
 read_time: '7 min read';
 image: '/images / news / quantum - breakthrough.jpg';
@@ -327,7 +300,6 @@ tags: ['Quantum ComputingResearchBreakthrough'];
 
 }];
 const latest_news = [ {
-=======
 date: '2024-01-12';
 readTime: '7 min read';
 image: '/images/news/quantum-breakthrough.jpg';
@@ -335,7 +307,6 @@ featured: true;
 tags: ['Quantum ComputingResearchBreakthrough']
 }];
 const latestNews = [ {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   id: 3;
 title: 'Enterprise AI Adoption: Trends and Best Practices for 2024';
 excerpt: 'Discover the key trends driving AI adoption in enterprise environments and learn best practices for successful implementation.';
@@ -388,14 +359,12 @@ tags: ['Quantum MLResearchTechnology Convergence'];
 
 }];
 const industry_insights = [ {
-=======
 date: '2024-01-03';
 readTime: '8 min read';
 image: '/images/news/quantum-ml.jpg';
 tags: ['Quantum MLResearchTechnology Convergence']
 }];
 const industryInsights = [ {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   id: 7;
 title: 'The Rise of Conscious AI: Ethical Considerations and Business Impact';
 excerpt: 'Examining the ethical implications of AI consciousness and how businesses can navigate this new frontier responsibly.';
@@ -435,7 +404,6 @@ registration: 'https://ziontechgroup.com / events / ai - consciousness - summit 
   id: 2;
 title: 'Quantum Computing Workshop';
 type: 'Workshop';
-<<<<<<< HEAD
 date: '2024 - 02 - 22';
 time: '1:00 PM - 5:00 PM';
 location: 'Virtual';
@@ -660,7 +628,6 @@ const matchesSearch = article && article.title.toLowerCase () .includes (searchT
 
   {
   opacity: 0, y: 20
-=======
 
   duration: 0.8 
 
@@ -682,7 +649,6 @@ const matchesSearch = article && article.title.toLowerCase () .includes (searchT
   opacity: 0, y: 20 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }animate= {
   {
   opacity: 1, y: 0
@@ -711,8 +677,6 @@ const matchesSearch = article && article.title.toLowerCase () .includes (searchT
   {
 
   duration: 0 && 0.8 
-=======
-=======
   opacity: 0, y: 30 
 
 
@@ -720,11 +684,8 @@ const matchesSearch = article && article.title.toLowerCase () .includes (searchT
   {
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-4" > Media Inquiries </h2> <p className="text-xl text-gray-300 mb-8" > For press inquiries, media interviews, or additional information;
-<<<<<<< HEAD
 please contact our communications team. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105" > Contact Media Team <Mic className="ml-2 w-5 h-5" /> </a> <a href="/press" className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300" > Press Kit </a> </div> </motion && motion.div> </div> </section> </div> </Layout> <motion&& motion.div initial= {
-=======
 please contact our communications team. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105" > Contact Media Team <Mic className="ml-2 w-5 h-5" /> </a> <a href="/press" className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300" > Press Kit </a> </div> </motion.div> </div> </section> </div> </Layout> <motion.div initial= {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
   opacity: 0, y: 20
 }whileInView= {
@@ -743,7 +704,6 @@ please contact our communications team. </p> <div className="flex flex-col sm:fl
   once: true
 }> <h2 className="text-4xl md:text-5xl font-bold mb-6" > Ready to Stay Informed? </h2> <p className="text-xl text-gray-300 mb-8" > Explore our latest research, industry insights, and technology breakthroughs that are shaping the future of AI and quantum computing. </p> <Link href="/blog" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105" > Explore Our Blog <ArrowRight className="w-5 h-5 ml-2" /> </a> <Link href="/contact" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300" > Contact Our Team </a> </div> </motion.div> </div> </section> </div>)
 }<motion.div initial= {
-=======
   duration: 0 && 0.8 
 }viewport= {
   {
@@ -769,7 +729,6 @@ please contact our communications team. </p> <div className="flex flex-col sm:fl
   once: true 
 }> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent" > Get in Touch </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Have questions about our news or want to learn more about our latest developments? Contact our team. </p> <span>Contact Us</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/about" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" > About Zion Tech Group </a> </div> </motion && motion.div> </div> </section> </div>) ;
 
-=======
 description: 'Hands - on workshop covering quantum computing fundamentals and practical applications.';
 registration: 'https://ziontechgroup.com / events / quantum - workshop';
 }];
@@ -940,12 +899,9 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.h2 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
           <motion.h2 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -999,17 +955,14 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
           </div>;
         </div>;
       </section>;
-=======
 
 
-=======
 
 
       {/* Upcoming Events Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.h2 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1061,12 +1014,9 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
                     </div>;
 
 
-=======
 
                     
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <a
                       href={event && event.registration}
                       target="_blank"
@@ -1085,12 +1035,9 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Newsletter Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">;
@@ -1175,12 +1122,9 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Newsletter Signup */}
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;
                 Stay Updated;
@@ -1243,12 +1187,9 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* News Categories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
@@ -1293,12 +1234,9 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Recent News */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">;
           <div className="max-w-7xl mx-auto">;
@@ -1356,12 +1294,9 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Media Contact */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -1820,11 +1755,9 @@ min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion&& motion.div 
 
-=======
 
           <motion.div 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -2077,12 +2010,9 @@ min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Featured Article */}
             {newsArticles && newsArticles.filter(article => article && article.featured).map((article) => (;
               <div key={article && article.id} className="bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 mb-12 border border-cyan-400/30">;
@@ -2205,12 +2135,9 @@ min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Newsletter Signup */}
             <div className="text-center mt-16">;
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">;
@@ -2280,13 +2207,35 @@ min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to
       </div>;
 
 
-=======
     </>),
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   ),
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  title: any
+const [searchQuery, setSearchQuery] = useState (''
+const [selectedCategory, setSelectedCategory] = useState ('all'
+const [selectedYear, setSelectedYear] = useState ('all'
+  id: 'all', name: any
+  id: 'ai', name: any
+  id: 'quantum', name: any
+  id: 'space', name: any
+  id: 'security', name: any
+  id: 'all', name: any
+  id: '2025', name: any
+  id: '2024', name: any
+  id: '2023', name: any
+const [search_query, setSearchQuery] = useState (''
+const [selected_category, setSelectedCategory] = useState ('all'
+const [selected_year, setSelectedYear] = useState ('all'
+  id: 'all', name: any
+  id: 'ai', name: any
+  id: 'quantum', name: any
+  id: 'space', name: any
+  id: 'security', name: any
+  id: 'all', name: any
+  id: '2025', name: any
+  id: '2024', name: any
+  id: '2023', name: any
+return (<UltraFuturisticBackground> <div className="min - h-screen" > <Head> <title > News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates

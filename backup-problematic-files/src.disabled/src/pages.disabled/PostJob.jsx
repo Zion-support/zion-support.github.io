@@ -28,3 +28,5 @@ const PostJob = ({ className }) => {
 };
 
 export default PostJob;
+import React from 'react'
+    

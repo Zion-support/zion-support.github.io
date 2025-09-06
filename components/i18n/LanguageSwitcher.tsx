@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -36,7 +38,6 @@ const localeLabelKey: Record<string, string> = {
   ar: 'lang.arabic'},
 
 export default function LanguageSwitcher() {
-=======
 
   en: 'lang.english',
   pt: 'lang.portuguese',
@@ -45,7 +46,6 @@ export default function LanguageSwitcher() {
 };  ar: 'lang.arabic'},
 export default function LanguageSwitcher() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const current = i18n.resolvedLanguage |i18n.language |'en';
@@ -117,7 +117,6 @@ export default function LanguageSwitcher() {;
                 aria-selected={current && current.startsWith(lng)}
                 className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'                onClick={() => changeLanguage(lng)}  };
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
     <div className="relative">;
@@ -155,7 +154,6 @@ export default function LanguageSwitcher() {;
   );
 }
 
-=======
     </div>
   );
 }
@@ -257,7 +255,6 @@ function LanguageSwitcher() {
               >
                 <span className={_`fi fi-${localeToFlag[lng]}`}></span>
                 <span>{_t(localeLabelKey[lng])}</span>
-=======
       >
         <span className={`fi fi-${localeToFlag[current] |'us'}`}></span>
         <span>{t(localeLabelKey[current] |'lang.english')}</span>
@@ -275,22 +272,22 @@ function LanguageSwitcher() {
               >
                 <span className={`fi fi-${localeToFlag[lng]}`}></span>
                 <span>{t(localeLabelKey[lng])}</span>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </button>
             </li>
           ))}
         </ul>
       )}
     </div>
-<<<<<<< HEAD
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     </div>
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    console.error('Error caught by boundary: any
+import React, { useState } from 'react'
+import { useTranslation  } from 'react-i18next'
+import i18n from '../../utils/
+import { supportedLocales, isRtl } from '../../utils/

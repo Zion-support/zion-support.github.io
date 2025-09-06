@@ -80,10 +80,8 @@
       </main>;
 
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
@@ -118,53 +116,33 @@
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import Button from '../components/ui/Button';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
 const AIAssistant: React.FC = () => {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',
-<<<<<<< HEAD
 import Head from 'next/head';
 
 import Layout from '../components/layout/Layout';
 const AIAssistant: React.FC = () => {
 
-=======
 import Head from 'next/head',
 import Button from '../components/ui/Button',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function AIAssistantPage() {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
         <title>AI Assistant | Zion Tech Group</title>
-<<<<<<< HEAD
 <meta name="description" content="AI Assistant that automates research, drafting, scheduling, and customer responses." />
-=======
         <meta name="description" content="AI Assistant that automates research, drafting, scheduling, and customer responses." />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <link rel="canonical" href="https://ziontechgroup.com/ai-assistant" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
         <div className="max-w-6xl mx-auto space-y-10">
           <header className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">AI Assistant</h1>
-<<<<<<< HEAD
 <p className="text-gray-300 text-lg">Automate research, summarization, drafting, scheduling, and inbox triage.</p>
           </header>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -201,9 +179,10 @@ export default function AIAssistantPage() {
     </Layout>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react'
+import Head from 'next/
+import Layout from '../components/layout/
+import Layout from '../components/layout/
+        

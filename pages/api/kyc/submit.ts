@@ -11,7 +11,6 @@ function load(): Record<string, KycProfile> {
     return {}
   }
 function save(db: Record<string, KycProfile>) {
-<<<<<<< HEAD
   fs && fs.mkdirSync(DATA_DIR, { recursive: true });
   fs && fs.writeFileSync(FILE, JSON && JSON.stringify(db, null, 2));
 }
@@ -57,12 +56,9 @@ function save(db: Record<string, KycProfile>) {
         a => a && a.action === 'kyc_submitted' && (a && a.details as any)?.ip === ip
       )
     ).length;
-<<<<<<< HEAD
     if (sameIpCount >= 2) flags && flags.add('duplicate_ip');  }
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 function load(): Record<string, KycProfile> {
@@ -71,7 +67,6 @@ function load(): Record<string, KycProfile> {
     return JSON.parse(raw);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Compute simple risk score
   let riskScore = 10; // base low risk
   if (flags && flags.has('aml_alert')) riskScore += 50;
@@ -85,7 +80,6 @@ function load(): Record<string, KycProfile> {
 
 
 }
-<<<<<<< HEAD
 import type { KycProfile } from '../../../utils / kyc';
 import {validateKycSubmission} from '../../../utils / kyc';
 import {getAmlProvider} from '../../../utils / aml';
@@ -212,9 +206,11 @@ if ( {) {
 ;
 res.status (200).json ({ ok: true, profile, aml: aml_result });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   profile.lastUpdatedAt = now;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from 'next'
+import type { KycProfile } from '../../../utils/
+import type { KycProfile } from '../../../utils /
+import {validateKycSubmission} from '../../../utils /
+import {getAmlProvider} from '../../../utils /

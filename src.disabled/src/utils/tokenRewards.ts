@@ -1,0 +1,27 @@
+
+export async function rewardOnboarding(...args: any[]): any {;
+
+export async function rewardOnboarding(...args: any[]): any {;
+export async function rewardOnboarding(..."args"
+  "action"
+  "amount"
+    "method"
+    "body"
+  "userId"
+  "purchaseAmount"
+  "purchaseType"
+    "method"
+    "body"
+      "action"
+      "amount"
+  "userId"
+  "referredUserId"
+    "method"
+    "body"
+      "action"
+      "amount"
+  "userId"
+  "action"
+  "amount"
+    "method"
+    "body"

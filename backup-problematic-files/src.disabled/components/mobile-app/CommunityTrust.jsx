@@ -28,3 +28,5 @@ const CommunityTrust = ({ className }) => {
 };
 
 export default CommunityTrust;
+import React from 'react'
+    

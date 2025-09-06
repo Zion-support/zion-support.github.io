@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs');
 
 console.log('🔧 Fixing all remaining problematic files...');
@@ -187,7 +186,6 @@ filesToFix.forEach(file => {
 });
 
 console.log('✅ All remaining files fixed!');
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -583,4 +581,3 @@ fs.writeFileSync('/workspace/pages/industries/education.tsx', educationContent);
 console.log('✅ Fixed industries/education.tsx');
 
 console.log('🎉 All remaining syntax errors fixed!');
->>>>>>> main

@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
 console.log('🔧 Starting comprehensive syntax error fix...');
 
 // Common syntax error patterns and their fixes
@@ -90,7 +89,6 @@ function fixFile(filePath) {
       .replace(/\s+$/gm, '') // Remove trailing whitespace
       .replace(/\n\s*\n\s*\n/g, '\n\n'); // Fix multiple newlines
     
-=======
 console.log('🔧 Starting syntax error fixes...');
 
 function fixSyntaxErrors(filePath) {
@@ -122,7 +120,6 @@ function fixSyntaxErrors(filePath) {
       content += '\n}'.repeat(openBraces - closeBraces);
     }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Fixed: ${filePath}`);
@@ -130,16 +127,12 @@ function fixSyntaxErrors(filePath) {
     }
     return false;
   } catch (error) {
-<<<<<<< HEAD
     console.error(`❌ Error fixing ${filePath}:`, error.message);
-=======
     console.log(`❌ Error fixing ${filePath}: ${error.message}`);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return false;
   }
 }
 
-<<<<<<< HEAD
 function findFiles(dir, extensions) {
   const files = [];
   
@@ -162,7 +155,6 @@ function findFiles(dir, extensions) {
             files.push(fullPath);
           }
         }
-=======
 function processDirectory(dir) {
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
@@ -176,7 +168,6 @@ function processDirectory(dir) {
     } else if (file.match(/\.(ts|tsx|js|jsx)$/)) {
       if (fixSyntaxErrors(filePath)) {
         fixedCount++;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } catch (error) {
       // Skip directories we can't read
@@ -187,7 +178,6 @@ function processDirectory(dir) {
   return files;
 }
 
-<<<<<<< HEAD
 // Main execution
 const targetDir = process.cwd();
 const extensions = ['.ts', '.tsx', '.js', '.jsx'];
@@ -222,7 +212,5 @@ try {
 } catch (error) {
   console.log('⚠️  Linter found remaining issues (this is expected)');
 }
-=======
 const fixedCount = processDirectory('/workspace');
 console.log(`🎉 Fixed ${fixedCount} files with syntax errors`);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

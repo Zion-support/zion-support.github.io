@@ -20,11 +20,9 @@ class ErrorBoundary extends React.Component {
 }
 'use client';
 
-=======
 
 'use client';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 'use client';
 'use client';
@@ -43,12 +41,10 @@ const HeroSection: React.FC = () => {;
     { icon: Zap, value: '24/7', label: 'Support Available' },;
 
   ];
-=======
   ];
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900'>;
       {/* Animated Background Elements */}
@@ -96,7 +92,6 @@ const HeroSection: React.FC = () => {;
 
         <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]' />
       </div>
-=======
         />;
     { icon: Users, value: '500+', label: 'Happy Clients' },
     { icon: Award, value: '50+', label: 'Awards Won' },
@@ -104,7 +99,6 @@ const HeroSection: React.FC = () => {;
     { icon: Zap, value: '24/7', label: 'Support Available' }
   ];
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
         {/* Grid Pattern */}
         <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0 && 0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0 && 0.02)_1px,transparent_1px)] bg-[size:50px_50px]' />;
@@ -197,19 +191,15 @@ const HeroSection: React.FC = () => {;
 
       <div className="relative container mx-auto px-4 text-center z-10">;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Main Content */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Badge */}
           <motion&& motion.div
             initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -236,28 +226,21 @@ const HeroSection: React.FC = () => {;
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
             </span>          </motion.div>
 
           </motion.div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Main Heading */}
           <motion&& motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Subtitle */}
           <motion&& motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -265,13 +248,10 @@ const HeroSection: React.FC = () => {;
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
             in the modern technology landscape.          </motion.p>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* CTA Buttons */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -279,7 +259,6 @@ const HeroSection: React.FC = () => {;
 
 
           >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Link
               href='/contact'
 
@@ -326,12 +305,9 @@ const HeroSection: React.FC = () => {;
           </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -421,13 +397,10 @@ const HeroSection: React.FC = () => {;
               <motion.div;
         >
           {_/* Badge */}
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
             className=&quot;inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8&quot;
           >
             <Star className=&quot;w-5 h-5 text-yellow-400 fill-current&quot; />
@@ -435,34 +408,24 @@ const HeroSection: React.FC = () => {;
           </motion.div>
 
           {_/* Main Heading */}
-=======
             className='inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8'
           >
             <Star className='w-5 h-5 text-yellow-400 fill-current' />
             <span className='text-white font-medium'>
               Leading Technology Solutions Provider
-<<<<<<< HEAD
             </span>          </motion.div>            className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8"
           >
             <Star className="w-5 h-5 text-yellow-400 fill-current" />
             <span className="text-white font-medium">Leading Technology Solutions Provider</span>
-=======
             </span>          </motion.div>
 
           </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Main Heading */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-<<<<<<< HEAD
             className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;
           >
             Transform Your Business with
@@ -472,7 +435,6 @@ const HeroSection: React.FC = () => {;
           </motion.h1>
 
           {_/* Subtitle */}
-=======
             className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
           >
             Transform Your Business with
@@ -482,21 +444,12 @@ const HeroSection: React.FC = () => {;
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             </span>
           </motion.h1>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Subtitle */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-<<<<<<< HEAD
             className=&quot;text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed&quot;
           >
             From AI development to cloud architecture, we help companies revolutionize their digital presence 
@@ -504,37 +457,25 @@ const HeroSection: React.FC = () => {;
           </motion.p>
 
           {_/* CTA Buttons */}
-=======
             className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed'
           >
             From AI development to cloud architecture, we help companies
             revolutionize their digital presence and achieve sustainable growth
-<<<<<<< HEAD
             in the modern technology landscape.          </motion.p>            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
           >
             From AI development to cloud architecture, we help companies revolutionize their digital presence
             and achieve sustainable growth in the modern technology landscape.
-=======
             in the modern technology landscape.          </motion.p>
 
-<<<<<<< HEAD
           </motion.p>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
           </motion.p>
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* CTA Buttons */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-<<<<<<< HEAD
             className=&quot;flex flex-col sm:flex-row gap-6 justify-center items-center mb-16&quot;
           >
             <Link
@@ -554,16 +495,8 @@ const HeroSection: React.FC = () => {;
           </motion.div>
 
           {_/* Stats */}
-=======
             className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <Link
               href='/contact'
@@ -591,38 +524,20 @@ const HeroSection: React.FC = () => {;
               <span className="text-lg font-medium">Watch Demo</span>
             </button>
           </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Stats */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-<<<<<<< HEAD
             className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto&quot;
           >
             {_stats.map(_(stat, _index) => (
-=======
-<<<<<<< HEAD
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'          >            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-=======
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'          >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             {stats.map((stat, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <motion.div
 
                 key={stat.label}
@@ -635,7 +550,6 @@ const HeroSection: React.FC = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors">
                   <stat.icon className="w-8 h-8 text-blue-400" />
@@ -648,7 +562,6 @@ const HeroSection: React.FC = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
           </motion && motion.div>;
@@ -656,12 +569,9 @@ const HeroSection: React.FC = () => {;
       </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Scroll Indicator */}
       <motion&& motion.div
         initial={{ opacity: 0 }}
@@ -669,7 +579,6 @@ const HeroSection: React.FC = () => {;
         transition={{ duration: 1, delay: 1 }}
 
 
-=======
                 className='text - center group';
               >;
                 <div className='w - 16 h - 16 bg - white / 10 backdrop - blur - sm rounded - 2xl flex items - center justify - center mx - auto mb - 4 border border - white / 20 group - hover:border - blue - 400 transition - colors'>;
@@ -729,4 +638,18 @@ export default HeroSection);
 ;
 export default HeroSection;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+use client'
+use client'
+import React from 'react'
+import Link from 'next /
+    { icon: Zap, value: any
+          className='absolute top-20 left-20 w-72 h-72 bg-blue-500/
+    { icon: Zap, value: any
+          className='absolute top - 20 left - 20 w - 72 h - 72 bg - blue - 500 /
+          className='absolute top-40 right-20 w-96 h-96 bg-purple-500/
+          className='w-6 h-10 border-2 border-white/
+            className='w-1 h-3 bg-white/
+          className='w-6 h-10 border-2 border-white/
+            className='w-1 h-3 bg-white/
+          className='w - 6 h - 10 border - 2 border - white /
+            className='w - 1 h - 3 bg - white /

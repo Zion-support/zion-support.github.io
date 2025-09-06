@@ -57,11 +57,8 @@ export default function Revolutionary2027ServicesShowcase() {
     { id: 'over-10000', name: 'Over $10,000', range: 'Over $10,000' }
   ];
   const sortOptions = [
-=======
-<<<<<<< HEAD
 import React, { useState, useMemo } from 'react',
 import Head from 'next/head';
-<<<<<<< HEAD
 
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -74,12 +71,9 @@ import {
   MapPin
   MessageSquare
   Globe;
-=======
-<<<<<<< HEAD
 
 import { motion, AnimatePresence } from 'framer-motion';
 import {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Search,
   CheckCircle,
   ArrowRight,
@@ -87,7 +81,6 @@ import {
   Mail,
   Phone,
   MapPin,
-<<<<<<< HEAD
   MessageSquare,
   Globe,
 } from 'lucide-react';
@@ -128,7 +121,6 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
     { id: 'rating', name: 'Rating' },
     { id: 'customers', name: 'Customers' },
 
-=======
         if (selectedCategory === 'quantum') return service.category.includes('Quantum');
         if (selectedCategory === 'it') return service.category.includes('IT') || service.category.includes('Infrastructure');
         if (selectedCategory === 'micro-saas') return service.category.includes('Micro SaaS') || service.category.includes('Marketing') || service.category.includes('Legal') || service.category.includes('Health');
@@ -216,7 +208,6 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {/* Contact Information */}
             <div className='flex flex-wrap items-center justify-center gap-6 text-center mb-8'>;
               <motion&& motion.div
@@ -252,21 +243,17 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-=======
                 transition={{ type: 'spring', stiffness: 300 }}
-=======
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Experience the future of technology with our revolutionary AI, Quantum Computing, and Next-Generation IT services.
               Each solution delivers measurable ROI and transforms industries.
             </p>
-<<<<<<< HEAD
             {/* Contact Information */}
             <div className='flex flex-wrap items-center justify-center gap-6 text-center mb-8'>
               <motion.div
                 className='flex items-center gap-2 text-cyan-400'
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: 'spring', stiffness: 300 }}
-=======
             {/* Contact Information */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -284,11 +271,6 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <Phone className="w-5 h-5" />
                 <span className="font-semibold">{contactInfo.mobile}</span>
@@ -320,7 +302,6 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
   }
 }
               >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <MapPin className="w-5 h-5" />
                 <span className="text-sm font-semibold">{contactInfo.address}</span>
               </motion.div>
@@ -382,10 +363,8 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
 
             {/* Filters */}
 
-=======
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {/* Category Filter */}
-=======
 
             {/* Filters */  } catch (error) {
     console.error("Error:", error);
@@ -400,13 +379,10 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
                 <select
                   value={selectedCategory}
-=======
-<<<<<<< HEAD
       {/* Search and Filters */}
       <section className='py-8 px-4'>
         <div className='max-w-7xl mx-auto'>
@@ -414,7 +390,6 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
             {/* Search Bar */}
             <div className='relative mb-6'>
               <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
-=======
       {/* Search and Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -430,11 +405,6 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
 }
             <div className="relative mb-6">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <input
                 type="text"
                 placeholder="Search revolutionary services..."
@@ -446,11 +416,9 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
                 onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-12 pr-4 py-4 bg-gray-900/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
             </div>
-<<<<<<< HEAD
             {/* Filters */}
             <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
               {/* Category Filter */}
-=======
             {/* Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -462,11 +430,6 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
                 <select
@@ -475,7 +438,6 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
@@ -494,8 +456,6 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
                     <option key={range.id} value={range.id}>
                       {range.name}
                     </option>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
                 </select>;
@@ -503,7 +463,6 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
 
                   ))}
 
-=======
               {/* Sort By */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -541,9 +500,7 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="flex items-end">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="text-gray-300">
                   <span className="text-sm">Showing </span>
                   <span className="font-semibold text-cyan-400">{filteredServices.length}</span>
@@ -554,7 +511,6 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
             </div>
           </div>
@@ -796,12 +752,10 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <div className="flex items-baseline gap-2 mb-4">
                           <span className="text-3xl font-bold text-white">{service.price}</span>
                           <span className="text-gray-400">{service.period}</span>
                         </div>
-<<<<<<< HEAD
                         {/* Description */}
                         <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                           {service.description}
@@ -861,8 +815,6 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
                             {service.category}
                           </span>
                         </div>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${service && service.color} text-white`}>                            {service && service.category}
                           </span>;
                         </div>;
@@ -883,7 +835,6 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
 
                             Learn More
                           </Link>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <a
                             href={service && service.link}
                             className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm py-2 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300'>;
@@ -899,7 +850,6 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
                     </div>;
                   </motion && motion.div>;
 
-=======
                         <div className="flex gap-2">
                           <a 
                             href={service.link} className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm py-2 hover: from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300">
@@ -916,16 +866,13 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
                   </motion.div>
 
                 ))}
-=======
 
 
-=======
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>;
             ) : (;
               <motion&& motion.div
@@ -992,7 +939,6 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
               </motion.div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Ready to Transform Your Business?
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
@@ -1058,14 +1004,12 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
                 <span className="text-sm font-semibold">{contactInfo.address}</span>
               </div>
             </div>
-<<<<<<< HEAD
             <div className="flex flex-wrap items-center justify-center gap-4">
               <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg px-8 py-4 hover: from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300">
                 <Rocket className="w-5 h-5 mr-2" />
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 Start Your Transformation
 </a>
               <a href="/services" className="border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300">
@@ -1090,10 +1034,7 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
   );
 
 
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   )
 }
             <div className='flex flex - wrap items - center justify - center gap - 6 mb - 8'>;
@@ -1125,10 +1066,7 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
                 className='border - 2 border - purple - 500 text - purple - 400 text - lg px - 8 py - 4 hover:bg - purple - 500 hover:text - white transform hover:scale - 105 transition - all duration - 300';
               >;
                 <Globe className='w - 5 h - 5 mr - 2' />                Explore All Services;
-=======
-<<<<<<< HEAD
 );
-=======
   )
       <section className="py-16 px-4">;
         <div className="max-w-4xl mx-auto text-center">;
@@ -1178,7 +1116,6 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
               <a href="/services" className="border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300">;
                 <Globe className="w-5 h-5 mr-2" />;
                 Explore All Services;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </a>;
             </div>;
           </motion.div>;
@@ -1194,4 +1131,20 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useState, useMemo } from 'react'
+import Head from 'next/
+import Head from 'next /
+import UltraQuantumHolographicBackground from '../components/ui/
+import {revolutionary2027AIServices} from '../data/
+import {revolutionary2027ITServices} from '../data/
+import {revolutionary2027MicroSaasServices} from '../data/
+        const price = parseInt(service.price.replace(/[^0-9]/
+        const price = parseInt(service && service.price.replace(/[^0-9]/
+            parseInt(a && a.price.replace(/[^0-9]/
+            parseInt(b && b.price.replace(/[^0-9]/
+    website: any
+          content='https: any
+          href='https: any
+                href='/
+                href='/
+          

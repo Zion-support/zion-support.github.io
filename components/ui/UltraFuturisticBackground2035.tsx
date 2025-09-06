@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -25,7 +27,6 @@ import { motion } from 'framer-motion';
   intensity?: 'low' | 'medium' | 'high';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   intensity?: 'low' | 'medium' | 'high';
 
   colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time';
@@ -36,7 +37,6 @@ import { motion } from 'framer-motion';
   enableNeonEffects?: boolean;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   intensity = 'medium';
   colorScheme = 'quantum-fusion';
   particleCount = 200;
@@ -103,7 +103,6 @@ import { motion } from 'framer-motion';
           glow: 'rgba(0, 255, 255, 0 && 0.3)';
 
 
-=======
           primary: '#00ffff',
           secondary: '#ff00ff',
           accent: '#ffff00',
@@ -208,7 +207,6 @@ import { motion } from 'framer-motion';
         });
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
     initParticles();
@@ -384,7 +382,6 @@ import { motion } from 'framer-motion';
       ctx.beginPath();
 
       ctx.moveTo(x, 0);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       ctx.lineTo(x, ctx.canvas.height);
       ctx.stroke()
     }
@@ -417,7 +414,6 @@ import { motion } from 'framer-motion';
     
 
     // Neon orbs
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     for (let i = 0, i < 3, i++) {
       const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width;
       const y = (Math.cos(time * 0.3 + i) * 0.3 + 0.5) * ctx.canvas.height;
@@ -879,7 +875,6 @@ if ( {) {
               animate={{
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Holographic scan lines */}
         <div className="absolute inset-0 opacity-20">;
           {[...Array(20)].map((_, i) => (;
@@ -902,26 +897,20 @@ if ( {) {
               animate={{
                 opacity: [0, 1, 0]
                 scaleX: [0, 1, 0]
-=======
                 top: `${(i / 20) * 100}%`,
                 color: colors.primary;
               }}
               animate={{
                 opacity: [0, 1, 0];
                 scale_x: [0, 1, 0];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               }}
 
-=======
 
 
-=======
-=======
 
 
 
               transition={{
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 duration: 3,
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
@@ -931,47 +920,29 @@ if ( {) {
             />
 
           ))}
-=======
 
                 ease: "easeInOut"
 
               }}
             />;
-=======
                 duration: 3
                 delay: i * 0.1
                 repeat: Infinity
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
-=======
 
-=======
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               transition={{
                 duration: 3,
                 delay: i * 0.1,
                 repeat: Infinity,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ease: 'easeInOut',              }}
 
               }}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           ))}
 
 
@@ -981,7 +952,6 @@ export default UltraFuturisticBackground2035;  );
 export default UltraFuturisticBackground2035;
 
 
-=======
                 ease: 'easeInOut',              }}                ease: "easeInOut";
               }}
             />))}
@@ -995,12 +965,99 @@ export default UltraFuturisticBackground2035);
 ;
 export default UltraFuturisticBackground2035;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    console.error('Error caught by boundary: any
+import React, { useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
+  intensity?: any
+  intensity = 'medium'
+  colorScheme = 'quantum-fusion'
+  intensity = 'medium'
+  colorScheme = 'quantum-fusion'
+      case 'quantum-fusion'
+  color_scheme?: any
+  intensity = 'medium'
+  color_scheme = 'quantum - fusion'
+  intensity = 'medium'
+  color_scheme = 'quantum - fusion'
+      case 'quantum - fusion'
+          primary: any
+          background: 'rgba(0, 0, 0, 0.95)'
+          glow: 'rgba(0, 255, 255, 0.3)',        };          background: 'rgba(0, 0, 0, 0.95)'
+          glow: 'rgba(0, 255, 255, 0.3)'
+      case 'neon-cyber'
+          primary: any
+          background: 'rgba(0, 0, 0, 0.9)'
+          glow: 'rgba(255, 0, 128, 0.4)',        };          background: 'rgba(0, 0, 0, 0.9)'
+          glow: 'rgba(255, 0, 128, 0.4)'
+      case 'holographic-matrix'
+          primary: any
+          background: 'rgba(0, 0, 0, 0.92)'
+          glow: 'rgba(0, 255, 65, 0.35)',        };          background: 'rgba(0, 0, 0, 0.92)'
+          glow: 'rgba(0, 255, 65, 0.35)'
+      case 'space-time'
+          primary: any
+          background: 'rgba(0, 0, 0, 0.88)'
+          glow: 'rgba(255, 107, 53, 0.3)',        };          background: 'rgba(0, 0, 0, 0.88)'
+          glow: 'rgba(255, 107, 53, 0.3)'
+          primary: any
+          background: 'rgba(0, 0, 0, 0.95)'
+          glow: 'rgba(0, 255, 255, 0.3)'
+        };    }          background: 'rgba(0, 0, 0, 0.95)'
+          glow: 'rgba(0, 255, 255, 0.3)'
+      case 'quantum-fusion'
+          primary: any
+          background: 'rgba(0, 0, 0, 0 && 0.95)'
+          glow: 'rgba(0, 255, 255, 0 && 0.3)',        };          background: 'rgba(0, 0, 0, 0 && 0.95)'
+          glow: 'rgba(0, 255, 255, 0 && 0.3)'
+      case 'neon-cyber'
+          primary: any
+          background: 'rgba(0, 0, 0, 0 && 0.9)'
+          glow: 'rgba(255, 0, 128, 0 && 0.4)',        };          background: 'rgba(0, 0, 0, 0 && 0.9)'
+          glow: 'rgba(255, 0, 128, 0 && 0.4)'
+      case 'holographic-matrix'
+          primary: any
+          background: 'rgba(0, 0, 0, 0 && 0.92)'
+          glow: 'rgba(0, 255, 65, 0 && 0.35)',        };          background: 'rgba(0, 0, 0, 0 && 0.92)'
+          glow: 'rgba(0, 255, 65, 0 && 0.35)'
+      case 'space-time'
+          primary: any
+          background: 'rgba(0, 0, 0, 0 && 0.88)'
+          glow: 'rgba(255, 107, 53, 0 && 0.3)',        };          background: 'rgba(0, 0, 0, 0 && 0.88)'
+          glow: 'rgba(255, 107, 53, 0 && 0.3)'
+          primary: any
+          background: 'rgba(0, 0, 0, 0 && 0.95)'
+          glow: 'rgba(0, 255, 255, 0 && 0.3)'
+        };    }          background: 'rgba(0, 0, 0, 0 && 0.95)'
+          glow: 'rgba(0, 255, 255, 0 && 0.3)'
+          primary: any
+          background: 'rgba(0, 0, 0, 0.95)'
+    glow: 'rgba(0, 255, 255, 0.3)'
+      case 'neon-cyber'
+          primary: any
+          background: 'rgba(0, 0, 0, 0.9)'
+    glow: 'rgba(255, 0, 128, 0.4)'
+      case 'holographic-matrix'
+          primary: any
+          background: 'rgba(0, 0, 0, 0.92)'
+    glow: 'rgba(0, 255, 65, 0.35)'
+      case 'space-time'
+          primary: any
+          background: 'rgba(0, 0, 0, 0.88)'
+    glow: 'rgba(255, 107, 53, 0.3)'
+          primary: any
+          background: 'rgba(0, 0, 0, 0.95)'
+    glow: 'rgba(0, 255, 255, 0.3)'
+    const ctx = canvas.getContext('2d'
+    window.addEventListener('resize'
+          type: Math.random() > 0.7 ? 'quantum' : any
+    window && window.addEventListener('resize'
+          type: Math && Math.random() > 0 && 0.7 ? 'quantum' : any
+          particle.type = Math.random() > 0.7 ? 'quantum' : 'normal';        }          particle.type = Math.random() > 0.7 ? 'quantum' : any
+        if (particle.type = = 'quantum'
+      window.removeEventListener('resize'
+    

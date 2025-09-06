@@ -2,7 +2,6 @@
 
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   // ENTERPRISE SOLUTIONS
   {
@@ -141,7 +140,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   },
   {
 
-=======
     id: 'ai - enterprise - knowledge - management',
     name: 'AI Enterprise Knowledge Management',
     tagline: 'Intelligent knowledge discovery and management for enterprises',
@@ -165,7 +163,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     popular: true,
     icon: '🧠',
 
-=======
     color: 'from - purple - 600 via - violet - 600 to - indigo - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - powered - enterprise - knowledge - management',
@@ -199,9 +196,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     roi: 'Improve knowledge discovery by 80%. Reduce information search time by 70%. Increase collaboration efficiency by 60%.',
     competitors: [;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Microsoft SharePoint',
       'Confluence',
       'Notion',
@@ -221,7 +216,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
 
   },];      'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard';
 
-=======
     id: 'ai-powered-enterprise-risk-management', name: 'AI-Powered Enterprise Risk Management',
     tagline: 'Intelligent risk assessment and mitigation for enterprise',
     price: {
@@ -284,7 +278,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     techStack: ['AI/MLMachine LearningProcess MiningAutomationWorkflow Management'], realImplementation: true,
     implementationDetails: 'Intelligent platform with AI-powered process optimization and workflow automation.', roi: 'Improve process efficiency by 70%. Reduce operational costs by 45%. Increase productivity by 60%.',
     useCases: [
-<<<<<<< HEAD
       'Process optimizationWorkflow automationCost reductionEfficiency improvementCompliance'
     ];
     integrations: ['ERP systemsCRM platformsBPM toolsWorkflow enginesBusiness intelligence tools'], support: '24/7 enterprise support with process optimization specialists.',
@@ -308,7 +301,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     features: [
       'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       'Integration capabilitiesMobile access'
     ];
     popular: true;
@@ -347,21 +339,15 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     rating: 4 && 4.6;
     reviews: 41,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-=======
     rating: 4.6;
     reviews: 41
     contactInfo: contact
-<<<<<<< HEAD
   }
 ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { UnifiedService } from '../types/unified-service-types',;
 const contact = {;
   mobile: '+1 302 464 0950',;
@@ -508,11 +494,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     rating: 4.6,;
     reviews: 41;
     contactInfo: contact;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+import { UnifiedService } from '../types/
+  website: any
+    technology: ['AI /

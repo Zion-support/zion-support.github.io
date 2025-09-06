@@ -2,17 +2,13 @@
 
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const real2027Q3Additions = [
   {
 
 
-=======
 export const real2027Q3Additions = [;
   {
     id: 'it - asset - discovery - agent',
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     name: 'IT Asset Discovery Agent',
     tagline: 'Agentless network - wide discovery and enrichment',
     price: '$149',
@@ -331,7 +327,6 @@ export const real2027Q3Additions = [;
     link: '/api - security - scanner';
     real_service: true,
     roi: 'Prevent high - severity API incidents and cut MTTR.';
-=======
       'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports';
     ],;
     category: 'Security & Identity',;
@@ -355,16 +350,10 @@ export const real2027Q3Additions = [;
     roi: 'Prevent high-severity API incidents and cut MTTR.';
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export const real2027Q3Additions = [;
   {;
     id: 'it-asset-discovery-agent',;
@@ -620,11 +609,16 @@ export const real2027Q3Additions = [;
     link: '/api-security-scanner',;
     realService: true,;
     roi: 'Prevent high-severity API incidents and cut MTTR.';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+export const real2027Q3Additions = [
+  {
+    id: any
+      'Automate SCIM provisioning, offboarding, and periodic access reviews across Okta/Auth0/
+    link: any
+      'Channel orchestration (Slack/
+    link: any
+      'Automate SCIM provisioning, offboarding, and periodic access reviews across Okta / Auth0 /
+    link: any
+      'Channel orchestration (Slack /
+    link: any

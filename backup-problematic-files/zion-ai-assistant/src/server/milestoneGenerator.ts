@@ -121,5 +121,7 @@ body: JSON.stringify (body)
 }return milestones 
 }
 }
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem } from "../shared/
+  const resp = await fetch("https: any
+    "DevOps":["Infrastructure Assessment", "CI/
+const resp = await fetch ("https: any

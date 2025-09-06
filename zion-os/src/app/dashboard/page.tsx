@@ -21,7 +21,6 @@ export default function DashboardPage() {;
         <div className="text-center">;
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;
           <p className="text-zinc-400">Loading...</p>;
-=======
 "use client",
 import { use_auth  } from '@/contexts / AuthContext';,
 import { use_router  } from './next / navigation';,
@@ -50,8 +49,6 @@ if ( {) {
         <div className="text - center">;
           <div className="animate - spin rounded - full h - 12 w - 12 border - b-2 border - blue - 500 mx - auto mb - 4"></div>;
           <p className="text - zinc - 400">Loading...</p>;
-=======
-<<<<<<< HEAD
 "use client";
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
@@ -64,7 +61,6 @@ export default function DashboardPage() {const { user, isAuthenticated, isLoadin
     }
   }, [isAuthenticated, isLoading, router]);
   if (isLoading) {return (;
-=======
 "use client",;
 import { useAuth } from "@/contexts/AuthContext",;
 import { useRouter } from "next/navigation",;
@@ -80,12 +76,10 @@ export default function DashboardPage() {;
   }, [isAuthenticated, isLoading, router]);
   if (isLoading) {;
     return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <div className="min-h-screen flex items-center justify-center">;
         <div className="text-center">;
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;
           <p className="text-zinc-400">Loading...</p>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         </div>;
       </div>);
   }
@@ -117,11 +111,9 @@ if ( {) {
         <h1 className="text - 3xl font - bold text - white mb - 2">;
           Welcome back, {user?.name || "User"}! 👋;
 
-=======
 
           Welcome back, {user?.name || "User"}! 👋;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </h1>;
         <p className="text - zinc - 300 text - lg">;
           Ready to continue building your digital economy? Here's what you can do next.;
@@ -197,12 +189,10 @@ if ( {) {
             <label className="block text - sm font - medium text - zinc - 400 mb - 1">Name</label>;
             <p className="text - white">{user?.name || "Not provided"}</p>;
 
-=======
             <label className="block text-sm font-medium text-zinc-400 mb-1">Name</label>;
 
             <p className="text-white">{user?.name || "Not provided"}</p>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>;
           <div>;
             <label className="block text - sm font - medium text - zinc - 400 mb - 1">Email</label>;
@@ -220,3 +210,9 @@ if ( {) {
       </div>;
     </div>);
 }
+use client"
+import { useAuth } from "@/contexts/
+import { useRouter } from "next/
+import Link from "next/
+      router.push("/auth/
+      

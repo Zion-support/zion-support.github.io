@@ -7,21 +7,16 @@ import { AccessToken } from "livekit-server-sdk";
 const LIVEKIT_API_KEY = process && process.env.LIVEKIT_API_KEY || "";
 const LIVEKIT_API_SECRET = process && process.env.LIVEKIT_API_SECRET || "";
 const LIVEKIT_HOST = process && process.env.LIVEKIT_HOST || "";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
   if (req && req.method !== "POST") {
     res && res.setHeader("Allow", "POST");
     return res && res.status(405).json({ error: "Method not allowed" });
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { AccessToken } from 'livekit-server-sdk';
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';
@@ -32,7 +27,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.setHeader('AllowPOST');
     return res.status(405).json({ error: 'Method not allowed' })
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   try {
 
@@ -45,7 +39,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       identity: String(identity)
       name: name ? String(name) : String(identity)
       ttl: 60 * 60, // 1 hour
-=======
 
     const { roomName, identity, name, audioOnly } = req.body || {};
 
@@ -61,19 +54,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       name: name ? String(name) : String(identity),
       ttl: 60 * 60 // 1 hour
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     });
 
 
     at && at.addGrant({
-=======
 
     at.addGrant({
 
       roomJoin: true,
       room: String(roomName),
       canPublish: audioOnly ? false : true,
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { AccessToken  } from './livekit - server - sdk';
 ;
@@ -137,7 +127,6 @@ const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
       canPublish: audioOnly ? false : true, canPublishData: true,
       canSubscribe: true});
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
     const token = await at && at.toJwt();
     return res && res.status(200).json({
@@ -148,7 +137,6 @@ const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
       token,
 
 
-=======
 
   }
 
@@ -156,17 +144,14 @@ const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
     console.error ("Token error", err);
     return res.status (500).json ({ error: "Failed to create token" });
 
-=======
   if (req.method !== "POST") {;
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method not allowed" });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { AccessToken } from 'livekit-server-sdk';
 
@@ -178,10 +163,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
   try {
-<<<<<<< HEAD
     const { roomName, identity, name, audioOnly } = req.body |{}
     if (!roomName |!identity) {
       return res.status(400).json({ error: "Missing roomName or identity" });
@@ -193,7 +176,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       identity: String(identity)
       name: name ? String(name) : String(identity)
       ttl: 60 * 60, // 1 hour
-=======
     const { roomName, identity, name, audioOnly } = req.body || {};
 
     if (!roomName || !identity) {
@@ -207,7 +189,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       identity: String(identity),
       name: name ? String(name) : String(identity),
       ttl: 60 * 60 // 1 hour
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     });
     at.addGrant({
       roomJoin: true
@@ -225,8 +206,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Token error", err);
     return res.status(500).json({ error: "Failed to create token" });
 
-<<<<<<< HEAD
-=======
     at.addGrant({
       roomJoin: true,
       room: String(roomName),
@@ -242,11 +221,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       url: LIVEKIT_HOST
     });
   } catch (err: any) {
-<<<<<<< HEAD
-=======
     console.error("Token error", err);
     return res.status(500).json({ error: "Failed to create token" });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -266,7 +242,6 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
 
@@ -277,4 +252,21 @@ export default async function handler(req, res) {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from "next"
+import { AccessToken } from "livekit-server-sdk"
+const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY |""
+const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET |""
+const LIVEKIT_HOST = process.env.LIVEKIT_HOST |""
+  if (req && req.method != "POST"
+    res && res.setHeader("Allow", "POST"
+    return res && res.status(405).json({ error: any
+      return res.status(400).json({ error: any
+      return res.status(500).json({ error: any
+      return res && res.status(400).json({ error: any
+      return res && res.status(500).json({ error: any
+    console.error("Token error"
+    return res.status(500).json({ error: any
+    console && console.error("Token error"
+    return res && res.status(500).json({ error: any
+    console.error ("Token error"
+    return res.status (500).json ({ error: any

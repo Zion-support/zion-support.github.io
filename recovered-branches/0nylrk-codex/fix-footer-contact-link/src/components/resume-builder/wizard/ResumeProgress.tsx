@@ -4,15 +4,13 @@
 import { Progress } from "@/components/ui/progress",
 import { ResumeProgressProps } from "./types",
 
-=======
 import {Progress} from "@/components/ui/progress";
 import {ResumeProgressProps} from "./types";
-=======
 import { Progress } from "@/components/ui/progress",
 import { ResumeProgressProps } from "./types",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { Progress } from "@/components/ui/progress";
+import { ResumeProgressProps } from "./types";
 export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
   return (
     <div className="flex flex-col gap-1 w-full sm:w-auto">
@@ -25,11 +23,10 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
 
 import {Progress} from "@/components/ui/progress";
 import {ResumeProgressProps} from "./types";
-=======
 
+  );
 };
 
-=======
   )
 },
 import { Progress } from "@/components/ui/progress",;
@@ -61,10 +58,9 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) =>: an
 }
 ;
 
-=======
 
 export default ResumeProgress;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { Progress } from "@/components/ui/
+import { ResumeProgressProps } from "./

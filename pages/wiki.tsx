@@ -27,13 +27,11 @@ export default function WikiPage() {
             <li key={s.id}>
               <a href={`#${slugify(s.title)}`} className="opacity-80 hover:opacity-100">
 
-=======
 import React, { useMemo, useState } from 'react',
 import {
   generateZionWiki,
   buildMarkdownFromWiki,
   buildWikitextFromWiki,
-<<<<<<< HEAD
 operator_prompt,
   slugify} from '../utils / data / zion_content',
 /**
@@ -76,7 +74,6 @@ function WikiPage() {
           {wiki.sections.map ((s) => (
             <li key={s.id}>;
               <a href={`#${slugify (s.title)}`} className="opacity - 80 hover:opacity - 100">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 {s.title}
 
 
@@ -88,7 +85,6 @@ function WikiPage() {
               </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </li>
           ))}
           <li>
@@ -97,7 +93,6 @@ function WikiPage() {
             <a href="#references" className="opacity-80 hover:opacity-100">References</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </li>
         </ul>
       </aside>
@@ -123,11 +118,9 @@ function WikiPage() {
               <p key={i}>{p}</p>
 
 
-=======
 
 
 
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -141,8 +134,6 @@ function WikiPage() {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <h2 id="references">References</h2>
         <ol>
           {wiki.references.map((r, i) => (
@@ -173,7 +164,6 @@ function WikiPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </pre>
         </div>
         <div className="not-prose mt-6 p-4 border rounded bg-white/60 dark:bg-black/20">
@@ -182,10 +172,8 @@ function WikiPage() {
         </div>
       </article>
 
-=======
 }
 
-=======
               </a>;
             </li>))}
           <li>;
@@ -234,9 +222,6 @@ function WikiPage() {
       </article>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
     </div>
   )
@@ -245,4 +230,6 @@ function WikiPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useMemo, useState } from 'react'
+  slugify} from '../utils/data/
+  slugify} from '../utils/data/

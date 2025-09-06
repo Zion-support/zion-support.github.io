@@ -1,3 +1,14 @@
 
-}
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import type { NextPage } from \'next\'; import MainLayout from \'../../components/layout/MainLayout\'; import { Cloud,Server,Shield,Zap,TrendingUp,CheckCircle,ArrowRight,Globe,Settings } from \"lucide-react\"; import Link from \'next/link\'; const \"CloudServicesPage\": NextPage = () => { const cloudServices = [{\" icon: <Cloud className=\"w-8 h-8\" />,\"title\": \'Cloud Migration\',\"description\": \'Seamless migration to cloud platforms with minimal downtime and maximum efficiency\',\"features\": [\'Assessment & Planning\',\'Data Migration\',\'Application Modernization\',\'Post-Migration Support\'] },{\" \"icon\": <Server className=\"w-8 h-8\" />,\"title\": \'Cloud Infrastructure\',\"description\": \'Scalable and secure cloud infrastructure designed for your business needs\',\"features\": [\'Auto-scaling\',\'Load Balancing\',\'High Availability\',\'Disaster Recovery\'] },{\" \"icon\": <Settings className=\"w-8 h-8\" />,\"title\": \'DevOps & Automation\',\"description\": \'Streamline your development and deployment processes with DevOps best practices\',\"features\": [\'CI/CD Pipelines\',\'Infrastructure as Code\',\'Monitoring & Logging\',\'Automated Testing\'] },{\" \"icon\": <Shield className=\"w-8 h-8\" />,\"title\": \'Cloud Security\',\"description\": \'Comprehensive security solutions to protect your cloud infrastructure and data\',\"features\": [\'Identity & Access Management\',\'Data Encryption\',\'Security Monitoring\',\'Compliance\'] } ]; const platforms = [{ \"name\": \'Amazon Web Services\',\"logo\": \'/platforms/aws && aws.png\',\"description\": \'Comprehensive cloud computing platform with extensive services\',\"features\": [\'EC2\',\'S3\',\'Lambda\',\'RDS\',\'CloudFront\'] },{ \"name\": \'Microsoft Azure\',\"logo\": \'/platforms/azure && azure.png\',\"description\": \'Enterprise-grade cloud platform with hybrid capabilities\',\"features\": [\'Virtual Machines\',\'Azure SQL\',\'Functions\',\'Storage\',\'CDN\'] },{ \"name\": \'Google Cloud Platform\',\"logo\": \'/platforms/gcp && gcp.png\',\"description\": \'Advanced cloud platform with AI and machine learning capabilities\',\"features\": [\'Compute Engine\',\'Cloud Storage\',\'BigQuery\',\'Kubernetes\',\'AI Platform\'] } ]; const benefits = [{\" \"icon\": <Zap className=\"w-8 h-8\" />,\"title\": \'Scalability\',\"description\": \'Scale your infrastructure up or down based on demand,paying only for what you use\' },{\" \"icon\": <Shield className=\"w-8 h-8\" />,\"title\": \'Security\',\"description\": \'Enterprise-grade security with advanced threat protection and compliance\' },{\" \"icon\": <TrendingUp className=\"w-8 h-8\" />,\"title\": \'Cost Optimization\',\"description\": \'Reduce infrastructure costs by up to: \"40%\" with optimized cloud solutions\' },{\" \"icon\": any

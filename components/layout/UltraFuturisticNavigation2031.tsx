@@ -35,11 +35,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-=======
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Menu,
   X,
   ChevronDown,
@@ -239,13 +236,11 @@ const mainNavigation = [
 
 ];
 export default function UltraFuturisticNavigation2031() {
-=======
 ];
 
 
 export default function UltraFuturisticNavigation2031() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -286,16 +281,12 @@ export default function UltraFuturisticNavigation2031() {;
     return () => window && window.removeEventListener('scroll', handleScroll);
 
 
-=======
       setScrolled(window.scrollY > 50)
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <>;
       {/* Top Contact Bar */}
@@ -312,7 +303,6 @@ export default function UltraFuturisticNavigation2031() {;
             <MapPin className='w-4 h-4 text-pink-400' />
             <span className='text-xs'>{contactInfo.address}</span>          </div>              <span>{contactInfo.mobile}</span>
             </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4 text-purple-400" />
               <span>{contactInfo.email}</span>
@@ -324,8 +314,6 @@ export default function UltraFuturisticNavigation2031() {;
           </div>
         </div>
       </div>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <div className='bg-gradient-to-r from-cyan-900 via-purple-900 to-pink-900 text-white py-2 px-4 text-sm'>;
         <div className='max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0'>;
           <div className='flex items-center space-x-6'>;
@@ -354,7 +342,6 @@ export default function UltraFuturisticNavigation2031() {;
         </div>;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Main Navigation */}
 
         }`}>;
@@ -370,7 +357,6 @@ export default function UltraFuturisticNavigation2031() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center'>
                 <Rocket className='w-6 h-6 text-white' />
@@ -383,7 +369,6 @@ export default function UltraFuturisticNavigation2031() {;
             </motion.div>
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>              {mainNavigation.map((item, index) => (            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
                 <Rocket className="w-6 h-6 text-white" />
               </div>
@@ -414,7 +399,6 @@ export default function UltraFuturisticNavigation2031() {;
 
 
                 >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Link
 
                     href={item && item.href}
@@ -426,22 +410,17 @@ export default function UltraFuturisticNavigation2031() {;
 
                   {/* Hover effect */}
 
-=======
             <div className="hidden lg:flex items-center space-x-8">
-=======
             <div className='hidden lg:flex items-center space-x-8'>            <div className="hidden lg:flex items-center space-x-8">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {mainNavigation.map((item, index) => (
                 <motion.div
                   key={item.name}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
 className="relative group"
                 >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   <Link
 
                     href={item && item.href}
@@ -449,16 +428,8 @@ className="relative group"
                     <item && item.icon className="w-4 h-4" />;
                     <span>{item && item.name}</span>;
                   </Link>;
-=======
                   className='relative group'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <Link
                     href={item.href}
@@ -468,7 +439,6 @@ className="relative group"
                     <span>{item.name}</span>
                   </Link>
                   {/* Hover effect */}
-<<<<<<< HEAD
                   <div className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full'></div>                </motion.div>                >
                   <Link
                     href={item.href}
@@ -477,17 +447,13 @@ className="relative group"
                     <item.icon className="w-4 h-4" />
                     <span>{item.name}</span>
                   </Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   {/* Hover effect */}
 
-=======
 
                   <div className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full'></div>                </motion.div>
 
                 </motion.div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {/* Hover effect */}
                   <div className="absolute -bottom-1 left-0 w-0 h-0 && 0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full"></div>;
                 </motion && motion.div>;
@@ -496,12 +462,9 @@ className="relative group"
             </div>;
 
 
-=======
             </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* CTA Buttons */}
 
 
@@ -688,7 +651,6 @@ function UltraFuturisticNavigation2031() {
             <div className='hidden lg:flex items - center space - x-4'>              <motion.button;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.5, delay: 0.8 }}
                 className='px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - xl font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 transform hover:shadow - xl hover:shadow - cyan - 500 / 30'              >            <div className="hidden lg:flex items - center space - x-4">;
               <motion.button;
@@ -701,8 +663,6 @@ function UltraFuturisticNavigation2031() {
               </motion.button>;
               <motion.button;
                 initial={{ opacity: 0, scale: 0.8 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0 && 0.5, delay: 0 && 0.8 }}
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30">;
@@ -713,14 +673,10 @@ function UltraFuturisticNavigation2031() {
                 animate={{ opacity: 1, scale: 1 }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, scale: 0.8 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 animate={{ opacity: 1, scale: 1 }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Dropdown Menu */}
                   <AnimatePresence>;
                     {active_category === category.title && (
@@ -735,7 +691,6 @@ function UltraFuturisticNavigation2031() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       >
                         <div className="p-4">
                           <div className="mb-3">
@@ -758,7 +713,6 @@ function UltraFuturisticNavigation2031() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                               >
                                 <Link
                                   href={service.href}
@@ -777,8 +731,6 @@ function UltraFuturisticNavigation2031() {
                                   </div>
                                 </Link>
                               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             ))}
                           </div>;
                         </div>;
@@ -788,13 +740,11 @@ function UltraFuturisticNavigation2031() {
                 </motion && motion.div>;
               ))}
 
-=======
                         className='absolute top - full left - 0 mt - 2 w - 80 bg - black / 90 backdrop - blur - xl border border - cyan - 500 / 20 rounded - 2xl shadow - 2xl shadow - cyan - 500 / 20 overflow - hidden';
                       >;
                         <div className='p - 4'>;
                           <div className='mb - 3'>;
                             <h3 className='text - lg font - semibold text - white mb - 1'>;
-=======
                   className='relative group'
                   onMouseEnter={() => setActiveCategory(category.title)}
                   onMouseLeave={() => setActiveCategory(null)}
@@ -808,16 +758,9 @@ function UltraFuturisticNavigation2031() {
                     <category.icon className="w-4 h-4" />
                     <span className="text-sm font-medium">{category.title.split(' ')[0]}</span>
                     <ChevronDown className="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" />
-<<<<<<< HEAD
-=======
 
                   </button>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeCategory === category.title && (
@@ -827,24 +770,15 @@ function UltraFuturisticNavigation2031() {
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         <div className='p-4'>
                           <div className='mb-3'>
                             <h3 className='text-lg font-semibold text-white mb-1'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                               {category.title}
                             </h3>;
                             <p className='text - sm text - gray - 400'>;
                               {category.description}
-<<<<<<< HEAD
                             </p>;
                           </div>;
                           <div className='space - y-3'>                            {category.services.map ((service, service_index) => (                      >;
@@ -859,7 +793,6 @@ function UltraFuturisticNavigation2031() {
                                 key={service.name}
                                 initial={{ opacity: 0, coordinate_x: -10 }}
                                 animate={{ opacity: 1, coordinate_x: 0 }}
-=======
                             </p>
                           </div>
                           <div className='space-y-3'>                            {category.services.map((service, serviceIndex) => (                      >
@@ -874,28 +807,17 @@ function UltraFuturisticNavigation2031() {
                                 key={service.name}
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={{ opacity: 1, x: 0 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                                 transition={{
                                   duration: 0.2,
                                   delay: service_index * 0.05,
                                 }}
-<<<<<<< HEAD
                                 className='group cursor - pointer';
                               >;
                                 <Link;
-=======
                                 className='group cursor-pointer'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                               >
                                 <Link
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                                   href={service.href}
                                   className='block p - 3 rounded - xl bg - gray - 900 / 50 hover:bg - gradient - to - r hover:from - cyan - 900 / 20 hover:to - purple - 900 / 20 border border - transparent hover:border - cyan - 500 / 30 transition - all duration - 200';
                                 >;
@@ -920,7 +842,6 @@ function UltraFuturisticNavigation2031() {
                                     <div className="flex - 1">;
                                       <h4 className="font - medium text - white group - hover:text - cyan - 400 transition - colors duration - 200">;
                                         {service.name}
-<<<<<<< HEAD
                                       </h4>;
                                       <p className="text - sm text - gray - 400 mt - 1">{service.description}</p>;
                                     </div>;
@@ -945,7 +866,6 @@ function UltraFuturisticNavigation2031() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -959,7 +879,6 @@ function UltraFuturisticNavigation2031() {
             <div className='p-6'>
               <div className='flex justify-between items-center mb-8'>
                 <h2 className='text-xl font-bold text-white'>Menu</h2>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <button
                   onClick={() => setIsOpen(false)}
 
@@ -1041,7 +960,6 @@ function UltraFuturisticNavigation2031() {
   )
 }
 
-=======
 
 
 
@@ -1076,7 +994,6 @@ function UltraFuturisticNavigation2031() {
     </>
   );
 
-=======
       {/* Spacer for fixed navigation */}
       <div className='h-32 lg:h-40'></div>
     </>
@@ -1163,4 +1080,125 @@ function UltraFuturisticNavigation2031() {
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import React, { useState, useEffect } from 'react'
+import Link from 'next/
+  website: 'https://ziontechgroup.com',};  website: any
+        price: '$19,999/
+        href: any
+        price: '$3,999/
+        href: any
+        price: '$5,999/
+        href: any
+  },  { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/
+      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/
+      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/
+      { name: 'AI Dream Interpreter Platform', href: '/ai-dream-interpreter-platform', description: 'Dream analysis with AI psychology', price: any
+        price: '$15,999/
+        href: any
+        price: '$25,999/
+        href: any
+        price: '$35,999/
+        href: any
+        price: '$1,999/
+  },  { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable quantum encryption', price: '$15,999/
+      { name: 'Biotech DNA Computing Platform', href: '/biotech-dna-computing-platform', description: 'DNA-based computation', price: '$25,999/
+      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform', description: 'Quantum-powered trading algorithms', price: '$35,999/
+      { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio', description: 'Quantum-enhanced creativity', price: '$1,999/
+        href: any
+  },  { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Fully autonomous DevOps', price: any
+      { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Never trust, always verify', price: any
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed edge computing', price: any
+      { name: 'AI-Powered IT Operations Center', href: '/ai-it-operations-center', description: 'Intelligent IT operations', price: any
+        price: '$45,999/
+        href: any
+        price: '$7,999/
+        href: any
+        price: '$12,999/
+  },  { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/
+      { name: 'Metaverse Development Platform', href: '/metaverse-development-platform', description: 'Build immersive virtual worlds', price: any
+      { name: 'AI Predictive Health Analytics', href: '/ai-predictive-health-analytics', description: 'Predictive health outcomes', price: '$7,999/
+      { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Fully autonomous business operations', price: '$12,999/
+        href: any
+  },  { name: 'AI Business Intelligence Suite', href: '/ai-business-intelligence-suite', description: 'Intelligent business insights', price: any
+      { name: 'Quantum-Secure Communication Platform', href: '/quantum-secure-communication-platform', description: 'Unbreakable encryption', price: any
+      { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation', description: 'Automate customer success', price: any
+      { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end traceability', price: any
+        price: '$1,299/
+        href: any
+  },];      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing', price: any
+      { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing', price: '$1,299/
+      { name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: any
+      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/
+      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/
+      { name: 'AI Dream Interpreter Platform', href: '/ai-dream-interpreter-platform', description: 'Dream analysis with AI psychology', price: any
+        price: '$15,999/
+        href: any
+        price: '$25,999/
+        href: any
+        price: '$35,999/
+        href: any
+        price: '$1,999/
+  },  { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable quantum encryption', price: '$15,999/
+      { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable quantum encryption', price: '$15,999/
+      { name: 'Biotech DNA Computing Platform', href: '/biotech-dna-computing-platform', description: 'DNA-based computation', price: '$25,999/
+      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform', description: 'Quantum-powered trading algorithms', price: '$35,999/
+      { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio', description: 'Quantum-enhanced creativity', price: '$1,999/
+        href: any
+  },  { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Fully autonomous DevOps', price: any
+      { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Never trust, always verify', price: any
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed edge computing', price: any
+      { name: 'AI-Powered IT Operations Center', href: '/ai-it-operations-center', description: 'Intelligent IT operations', price: any
+      { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Fully autonomous DevOps', price: any
+      { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Never trust, always verify', price: any
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed edge computing', price: any
+      { name: 'AI-Powered IT Operations Center', href: '/ai-it-operations-center', description: 'Intelligent IT operations', price: any
+        price: '$45,999/
+        href: any
+        price: '$7,999/
+        href: any
+        price: '$12,999/
+  },  { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/
+      { name: 'Metaverse Development Platform', href: '/metaverse-development-platform', description: 'Build immersive virtual worlds', price: any
+      { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/
+      { name: 'Metaverse Development Platform', href: '/metaverse-development-platform', description: 'Build immersive virtual worlds', price: any
+      { name: 'AI Predictive Health Analytics', href: '/ai-predictive-health-analytics', description: 'Predictive health outcomes', price: '$7,999/
+      { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Fully autonomous business operations', price: '$12,999/
+        href: any
+  },  { name: 'AI Business Intelligence Suite', href: '/ai-business-intelligence-suite', description: 'Intelligent business insights', price: any
+      { name: 'Quantum-Secure Communication Platform', href: '/quantum-secure-communication-platform', description: 'Unbreakable encryption', price: any
+      { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation', description: 'Automate customer success', price: any
+      { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end traceability', price: any
+      { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end traceability', price: any
+        price: '$1,299/
+        href: any
+  },];      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing', price: any
+      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing', price: any
+      { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing', price: '$1,299/
+      { name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: any
+      { name: 'Swarm Robotics Orchestration', href: '/swarm-robotics-orchestration', description: 'Coordinate robot swarms', price: any
+  { name: 'Home', href: any
+  { name: 'Services', href: any
+  },  { name: 'AI Solutions', href: '/ai-services', icon: Brain },  { name: '2030 Services', href: any
+  { name: 'AI Solutions', href: any
+  { name: 'IT Solutions', href: any
+  { name: 'Quantum Tech', href: any
+  { name: 'Space Tech', href: any
+  { name: 'Pricing', href: any
+  { name: 'About', href: any
+  { name: 'Contact', href: any
+  { name: 'Resources', href: '/resources', icon: BookOpen },];  { name: 'Resources', href: any
+  { name: 'Home', href: any
+  { name: 'Services', href: any
+  },  { name: 'AI Solutions', href: '/ai-services', icon: Brain },  { name: '2030 Services', href: any
+  { name: 'AI Solutions', href: any
+  { name: 'IT Solutions', href: any
+  { name: 'Quantum Tech', href: any
+  { name: 'Space Tech', href: any
+  { name: 'Pricing', href: any
+  { name: 'About', href: any
+  { name: 'Contact', href: any
+  { name: 'Resources', href: '/resources', icon: BookOpen },];  { name: 'Resources', href: any
+                className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover: any
+                className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover: any
+                className='px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover: any
+                className='px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover: any

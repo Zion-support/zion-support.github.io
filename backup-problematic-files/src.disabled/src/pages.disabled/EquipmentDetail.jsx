@@ -28,3 +28,5 @@ const EquipmentDetail = ({ className }) => {
 };
 
 export default EquipmentDetail;
+import React from 'react'
+    

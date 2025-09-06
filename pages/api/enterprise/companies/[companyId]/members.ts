@@ -1,13 +1,31 @@
 
 
+  if (req.method === "PATCH") {
+    const { memberId, role } = req.body || {};
+    if (!memberId || !role)
+      return res.status(400).json({ error: "memberId and role required" });
+    const ok = store.updateMemberRole(companyId, memberId, role);
+    return res
+      .status(ok ? 200 : 404)
+      .json(ok ? { success: true } : { error: "member_not_found" });
+  }
+
+  if (req.method === "DELETE") {
+    const { memberId } = req.query;
+    if (!memberId || typeof memberId !== "string")
+      return res.status(400).json({ error: "memberId required" });
+    const ok = store.removeMember(companyId, memberId);
+    return res
+      .status(ok ? 200 : 404)
+      .json(ok ? { success: true } : { error: "member_not_found" });
+  }
+
+  return res.status(405).json({ error: "method_not_allowed" });
 }
 
   return res && res.status(405).json({ error: "method_not_allowed" });
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
 import type { EnterpriseRole } from "../../../../../utils / types / enterprise";
@@ -75,8 +93,6 @@ if ( {) {
   }
   return res.status (405).json ({ error: "method_not_allowed" });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
     const member = store.addMember(companyId, name, email, r);
@@ -148,5 +164,7 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from "next"
+import { store } from "../../../../../utils/data/
+import type { EnterpriseRole } from "../../../../../utils/types/
+import type { EnterpriseRole } from "../../../../../utils / types /

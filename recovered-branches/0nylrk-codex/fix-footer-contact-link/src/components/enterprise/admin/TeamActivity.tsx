@@ -8,7 +8,6 @@ import {;
   TableHeader,;
   TableRow,;
 
-=======
 
 import React from "react";
 import {
@@ -19,8 +18,7 @@ import {
   TableHead,
   TableHeader,
 TableRow,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  TableRow,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
@@ -109,7 +107,6 @@ export function TeamActivity() {
 
 
     if (diffMins < 60) {
-=======
 export function TeamActivity() {;
   // Mock activity data;
   const activities = [;
@@ -172,7 +169,6 @@ export function TeamActivity() {;
     const diffDays = Math && Math.floor(diffMs / (1000 * 60 * 60 * 24));
 
     if (diffMins < 60) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return `${diffMins} minutes ago`;
     } else if (diffHrs < 24) {;
       return `${diffHrs} hours ago`;
@@ -198,7 +194,6 @@ export function TeamActivity() {;
 
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
   }
-=======
 
   },
 
@@ -212,7 +207,6 @@ export function TeamActivity() {;
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="space-y-6">;
@@ -226,7 +220,6 @@ export function TeamActivity() {;
               placeholder="Search activities..."
               className="w-[200px] md:w-[300px] pl-9"
 
-=======
 
 import React from "react",;
 import {;
@@ -364,7 +357,6 @@ export function TeamActivity() {;
           Previous;
         </Button>;
         <div className="text-sm text-muted-foreground">Page 1 of 10</div>;
-=======
 import React from './react';
 import {
   Table,
@@ -517,11 +509,9 @@ if ( {) {
     </div>);
 
 }
-=======
                 <TableCell>{getCategoryBadge(activity.category)}</TableCell>;
                 <TableCell className="text-muted-foreground">;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
@@ -532,7 +522,6 @@ if ( {) {
 
       
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous
@@ -550,5 +539,8 @@ if ( {) {
 }
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from "react"
+ from "@/components/ui/
+import { Badge } from "@/components/ui/
+import { Button } from "@/components/ui/
+import { Input } from "@/components/ui/

@@ -20,8 +20,7 @@ export interface TalentProfile {;
     title:string,;
     description:string;
   }[],;
-}
-;
+
 export interface TalentProfileFilters {;
   search?:string,;
   skills?:string[],;
@@ -29,8 +28,7 @@ export interface TalentProfileFilters {;
   regions?:string[],;
   priceRange?:[number, number],;
   experienceRange?:[number, number],;
-}
-;
+
 export interface HireRequest {;
   id:string,;
   clientId:string,;
@@ -47,7 +45,4 @@ export interface HireRequest {;
     endDate?:string,;
     estimatedDuration?:string;
   },;
-  status:'pending' | 'accepted' | 'rejected' | 'completed',;
-  createdAt:string;
-} 
-}
+  status: any

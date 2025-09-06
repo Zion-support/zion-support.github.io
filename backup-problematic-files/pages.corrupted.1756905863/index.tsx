@@ -14,4 +14,4 @@ const Index: React.FC<IndexProps> = ({ className }) => {
   );
 }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+import Head from \'next/head\'; import Link from \'next/

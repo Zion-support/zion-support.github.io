@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -21,8 +23,6 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 
 type InsightResponse = {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   LineChart,;
   BarChart,;
@@ -38,7 +38,6 @@ type InsightResponse = {;
   minHourlyUsd: number;
   maxHourlyUsd: number;
   confidence: number;
-<<<<<<< HEAD
   trend_monthly: { label: string; value: number }[];
   regional_comparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
@@ -69,20 +68,16 @@ trend_monthly: { label: string, value: number }[],
   gptRecommendation?: string;
 export default function SalaryInsightsPage() {;
 
-=======
 
 
 export default function SalaryInsightsPage() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
 
-=======
   const [experienceLevel, setExperienceLevel] = useState<'Junior' | 'Mid' | 'Senior' | 'Lead'>('Senior');
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [remote, setRemote] = useState(true);
   const [employmentType, setEmploymentType] = useState<'contract' | 'freelance' | 'full-time'>('contract');
   const [loading, setLoading] = useState(false);
@@ -130,7 +125,6 @@ function SalaryInsightsPage() {
 
         const { supabase } = await import('../utils/supabase/client');
 
-=======
         const user = await supabase.auth.getUser();
         setIsLoggedIn(!!user.data.user)
       } catch {
@@ -138,7 +132,6 @@ function SalaryInsightsPage() {
       }
     })()
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, []);
 
 
@@ -196,20 +189,16 @@ function SalaryInsightsPage() {
   }
 
   useEffect(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
       setLoading(false);    }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
 
 
 
   useEffect(() => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     fetchInsights();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -221,7 +210,6 @@ function SalaryInsightsPage() {
     (async () => {
       try {
         const { supabase } = await import('../utils/supabase/client');
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         const user = await supabase.auth.getUser();
         if (user.data.user) {
           // Attempt to save to Supabase if table exists
@@ -251,7 +239,6 @@ function SalaryInsightsPage() {
             user_id: user && user.data.user && user.id,;
             payload,;
 
-=======
         const { supabase } = await import ('../utils / supabase / client');
         const user = await supabase.auth.get_user ();
         setIsLoggedIn (!!user.data.user);
@@ -343,18 +330,14 @@ if ( {) {
           return;
         }
 
-=======
             user_id: user.data.user.id,
             payload});
           alert('Insight saved to your profile');
           return
 
-=======
       } catch {
         // fall back      }          alert ('Insight saved to your profile');
           return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         }
       } catch {;
         // fall back;
@@ -365,8 +348,6 @@ if ( {) {
 
 
 
-=======
-=======
 
 
 
@@ -374,14 +355,10 @@ if ( {) {
     })();
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const donutData = useMemo(() => {
     if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
-=======
         alert('Insight saved locally')
       } catch {}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     })()
   }
   const donutData = useMemo(() => {
@@ -419,7 +396,6 @@ if ( {) {
       { label: 'Median', value: median || 1 },
       { label: 'Above Median', value: upper || 1 }]
 
-=======
         const key = 'zion.salary - insights.history';
         const history = JSON.parse (local_storage.get_item (key) || '[]');
         history.unshift (payload);
@@ -489,7 +465,6 @@ if (return [] as { label: string, value: number }[], ) {
 
 
                 <label className="block text-sm mb-2" htmlFor="input-Employment">Employment</label>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <select value={employmentType} onChange={(e) => setEmploymentType(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
                   <option value="contract">Contract</option>
                   <option value="freelance">Freelance</option>
@@ -610,10 +585,8 @@ if (return [] as { label: string, value: number }[], ) {
             </div>;
 
 
-=======
             <button onClick={fetchInsights} disabled={loading} className="mt-4 w-full rounded bg-indigo-600 text-white py-2 text-sm hover:bg-indigo-700 disabled:opacity-50">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {loading ? 'Calculating…' : 'Update Insights'}
 
             </button>;
@@ -823,7 +796,6 @@ if (return [] as { label: string, value: number }[], ) {
               <div className='text - xl font - semibold'>;
                 {data ? `$${data.medianHourlyUsd}` : '—'}
 
-=======
             </div>
           </div>
         </div>
@@ -881,7 +853,6 @@ if (return [] as { label: string, value: number }[], ) {
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />;
               )}
 
-=======
               {data && (
                 <table className="w-full mt-3 text-sm">
                   <thead>
@@ -897,7 +868,6 @@ if (return [] as { label: string, value: number }[], ) {
                         <td className="py-1">${r.medianHourlyUsd}</td>
                       </tr>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
                   </tbody>;
                 </table>;
@@ -993,7 +963,6 @@ if (return [] as { label: string, value: number }[], ) {
               ) : (;
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />;
 
-=======
             </div>
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-3">Distribution</h3>
@@ -1009,14 +978,12 @@ if (return [] as { label: string, value: number }[], ) {
               ) : (
                 <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               )}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
           {data?.gptRecommendation && (
@@ -1065,7 +1032,6 @@ if (return [] as { label: string, value: number }[], ) {
               </div>;
             </div>;
 
-=======
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-3">Signals</h3>
               <div className="flex gap-2 flex-wrap">
@@ -1076,7 +1042,6 @@ if (return [] as { label: string, value: number }[], ) {
               </div>
             </div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
 
         </div>;
@@ -1085,7 +1050,6 @@ if (return [] as { label: string, value: number }[], ) {
   );
 }
 
-=======
   );
 }
                       donut_data.map ((d, i) => ({
@@ -1149,11 +1113,24 @@ if (return [] as { label: string, value: number }[], ) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    console.error('Error caught by boundary: any
+import React, { useEffect, useMemo, useState } from 'react'
+ from '../components/salary/
+ from '../components/salary/
+        const { supabase } = await import('../utils/supabase/
+        const { supabase } = await import('../utils/supabase/
+      const res = await fetch('/api/
+        headers: { 'Content-Type': any
+        const { supabase } = await import('../utils/supabase/
+        const { supabase } = await import ('../utils / supabase /
+      const res = await fetch ('/api /
+        headers: { 'Content - Type': any
+        const { supabase } = await import ('../utils / supabase /
+        //
+        //
+        

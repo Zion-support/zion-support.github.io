@@ -1,0 +1,11 @@
+export const getWallet = () => axios.get(/api/v1/
+export const getWallet = () => axios.get(/api/v1/
+export const getWallet = () => axios.get(/api/v1/
+export const getWallet = () => axios.get(/api/v1/
+export const getWallet = () => axios.get(/api/v1/
+export const getWallet = () => axios.get(/api/v1/
+export const getWallet = () => axios.get(/api/v1/
+export const getWallet = () => axios.get(/api/v1/
+export const getWallet = () => axios.get(/api/v1/
+export const getWallet = () => axios.get(/api/v1/
+export const getWallet = () => axios.get(/api/v1/

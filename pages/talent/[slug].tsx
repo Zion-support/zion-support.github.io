@@ -23,10 +23,8 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -96,7 +94,6 @@ const TalentProfile: NextPage = () => {;
   const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
     setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }])
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-6 pb-20">
       <Head>
@@ -133,7 +130,6 @@ const TalentProfile: NextPage = () => {;
             <h3 className="font-semibold mb-2">Response Log</h3>
             <ul className="space-y-1 text-sm">
 
-=======
 ;
   const [response_log, setResponseLog] = useState<;
     Array<{ action: "Accept" | "Decline" | "Negotiate"; at: string }>;
@@ -241,15 +237,12 @@ const TalentProfile: NextPage = () => {;
                     {new Date (r.at).toLocaleString ()}
                   </span>{" "}
                 </li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </ul>;
           </div>;
         </aside>;
@@ -261,7 +254,6 @@ const TalentProfile: NextPage = () => {;
 export default TalentProfile;
 
 
-=======
     </div>);
 }
             </ul>;
@@ -271,10 +263,11 @@ export default TalentProfile;
     </div>;
   );
 },;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default TalentProfile;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import type { NextPage } from "next"
+import Head from "next/
+import { useRouter } from "next/
+import EnhancedButton from "../../components/ui/
+import { TrustBadge, MicroTestimonial } from "../../components/ui/
+                  

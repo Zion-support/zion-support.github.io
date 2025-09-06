@@ -28,3 +28,5 @@ const ProfilePage = ({ className }) => {
 };
 
 export default ProfilePage;
+import React from 'react'
+    

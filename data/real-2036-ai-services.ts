@@ -1,7 +1,4 @@
 
-
-
-
 export const real2036AIServices = [
   {
 
@@ -16,7 +13,6 @@ export const real2036AIServices = [
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
 
-=======
 export const real2036AIServices = [;
   {;
     id: 'ai-emotion-intelligence-platform',;
@@ -230,16 +226,12 @@ export const real2036AIServices = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-=======
   },;
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export const real2036AIServices = [;
   {;
     id: 'ai-emotion-intelligence-platform',;
@@ -450,11 +442,42 @@ export const real2036AIServices = [;
     useCases: [;
       'Autonomous vehiclesFleet managementTraffic optimizationSafety systems';
     ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    id: any
+      'Revolutionary AI platform for understanding, analyzing, and responding to human emotions. Features emotion recognition, sentiment analysis, emotional response generation, and emotional intelligence training.'
+    price: '$3,999'
+    period: any
+    marketPrice: '$5,000-8,000/
+    marketPrice: '$4,000-7,000/
+    marketPrice: '$3,000-5,000/
+    marketPrice: '$6,000-10,000/
+    marketPrice: '$7,000-12,000/
+      'Automated A/
+    marketPrice: '$8,000-15,000/
+    marketPrice: '$4,500-7,000/
+    marketPrice: '$10,000-18,000/
+    marketPrice: '$12,000-20,000/
+    marketPrice: '$15,000-25,000/
+    marketPrice: '$5,000-8,000/
+    marketPrice: '$4,000-7,000/
+    marketPrice: '$3,000-5,000/
+    marketPrice: '$6,000-10,000/
+    marketPrice: '$7,000-12,000/
+      'Automated A/
+    marketPrice: '$8,000-15,000/
+    marketPrice: '$4,500-7,000/
+    marketPrice: '$10,000-18,000/
+    marketPrice: '$12,000-20,000/
+    marketPrice: '$15,000-25,000/
+    market_price: '$5, 000 - 8, 000 /
+    market_price: '$4, 000 - 7, 000 /
+    market_price: '$3, 000 - 5, 000 /
+    market_price: '$6, 000 - 10, 000 /
+    market_price: '$7, 000 - 12, 000 /
+      'Automated A /
+    market_price: '$8, 000 - 15, 000 /
+    market_price: '$4, 500 - 7, 000 /
+    market_price: '$10, 000 - 18, 000 /
+    market_price: '$12, 000 - 20, 000 /
+    market_price: '$15, 000 - 25, 000 /

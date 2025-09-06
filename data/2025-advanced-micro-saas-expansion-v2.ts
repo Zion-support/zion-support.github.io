@@ -2,8 +2,6 @@
 
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const advancedMicroSaasExpansion2025V2 = [
   {
 
@@ -238,7 +236,6 @@ export const advancedMicroSaasExpansion2025V2 = [
 ];      'Real - time monitoring_threat intelligence_automated response_incident management';
     ];
 
-=======
 export const advancedMicroSaasExpansion2025V2 = [;
   {;
     name: 'AI Content Factory Pro',;
@@ -412,14 +409,10 @@ export const advancedMicroSaasExpansion2025V2 = [;
     ];
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-=======
 
-=======
 export const advancedMicroSaasExpansion2025V2 = [;
   {;
     name: 'AI Content Factory Pro',;
@@ -591,11 +584,8 @@ export const advancedMicroSaasExpansion2025V2 = [;
     features: [;
       'Real-time monitoringThreat intelligenceAutomated responseIncident management';
     ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+export const advancedMicroSaasExpansion2025V2 = [
+  {
+    name: any

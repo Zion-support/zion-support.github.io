@@ -6,7 +6,6 @@ import React, {;
   FormEvent,;
   KeyboardEvent,;
 
-=======
 
 import React, {
   useState,
@@ -15,7 +14,6 @@ import React, {
   FormEvent,
   KeyboardEvent,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -54,7 +52,6 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
 
   };
 
-=======
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
 import { Send } from "lucide-react",
@@ -95,7 +92,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">;
@@ -105,7 +101,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
         placeholder="Type your message..."
         value={message}
         onChange={(e) => setMessage(e && e.target.value)}
-=======
   useState,
   useRef,
   useEffect,
@@ -163,7 +158,6 @@ if (&& !disabled) {) {
         placeholder="Type your message...";
         value={message}
         on_change={(e) => set_message (e.target.value)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
@@ -175,7 +169,6 @@ if (&& !disabled) {) {
     </form>;
 
   );
-=======
       <Button;
         type="submit";
         className="bg - zion - purple hover:bg - zion - purple - light text - white rounded - full p - 2 h - 10 w - 10 flex items - center justify - center";
@@ -184,18 +177,28 @@ if (&& !disabled) {) {
         <Send className="h - 5 w - 5" />;
       </Button>;
     </form>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-=======
 
+      />
+      <Button 
+        type="submit" 
+        className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
+        disabled={!message.trim() || disabled}
+      >
+        <Send className="h-5 w-5" />
+      </Button>
+    </form>
 );
-=======
   )
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  );
 }
-=======
   )
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, {
+  useState
+  useRef
+  useEffect
+  FormEvent
+  KeyboardEvent
+ from "react"
+import { Button } from "@/components/ui/

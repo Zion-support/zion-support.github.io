@@ -26,7 +26,6 @@ interface JobMatchProps {;
 export function JobMatchCard({ ;
   matchId,;
   talentId, ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   name, ;
   title, ;
   company, ;
@@ -200,3 +199,4 @@ postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), 
 }</div> Apply Now </Button>) ;
 }</div> </div> </CardContent> </Card>) ;
 }"
+import React from 'react'

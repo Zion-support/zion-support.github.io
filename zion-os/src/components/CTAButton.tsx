@@ -9,8 +9,6 @@ interface CTAButtonProps {
   children: ReactNode,
   class_name?: string,
   on_click?: () => void;
-=======
-<<<<<<< HEAD
 "use client";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -20,7 +18,6 @@ interface CTAButtonProps {href: string;
   children: ReactNode;
   className?: string;
   onClick?: () => void;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 export /**
  * CTAButton - Function description
@@ -42,10 +39,7 @@ function CTAButton() {
 
     <Link;
       href={href}
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -90,3 +84,6 @@ export function CTAButton({;
       {children}
     </Link>);
 }
+use client"
+import Link from "next/
+    outline: any

@@ -147,14 +147,12 @@ import Button from '../components/ui/Button';
                   <MapPin className='w-4 h-4 text-green-400' />;
                   <span className='text-xs'>{contactInfo && contactInfo.address}</span>;
 
-=======
 
 
 }
 }
 
 
-=======
               <Button;
                 href='/contact';
                 variant='quantum';
@@ -175,19 +173,11 @@ import Button from '../components/ui/Button';
                 <div className='flex items - center space - x-2'>;
                   <MapPin className='w - 4 h - 4 text - green - 400' />;
                   <span className='text - xs'>{contact_info.address}</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 </div>              </div>;
-=======
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-=======
 
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
 import NextHead from 'next/head';
 import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';
@@ -216,21 +206,14 @@ export default function AIFinancialRiskPage(req, res) {
               <DollarSign className="w-10 h-10" />{service?.name || 'AI Financial Risk Management'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-}
-            </h1>;
-            <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service?.tagline || 'Real-time risk scoring, fraud detection, and stress scenarios with explainable AI.'}</p>;
-          </div>;
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">;
-            <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-cyan-500/30 p-6">;
-              <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>;
-              <p className="text-slate-300 mb-6">{service?.description || 'Credit risk, market risk, model validation, and anti-fraud analytics powered by ML.'}</p>;
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">;
-                {(service?.features?.slice(0, 12) || ['Credit/market riskAnomaly detectionExplainable AIStress testingModel governanceReal-time alerts']).map((feat, i) => (;
-                  <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-cyan-400 mt-0.5" /><span>{feat}</span></li>;
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
 }
               </ul>;
@@ -247,19 +230,14 @@ export default function AIFinancialRiskPage(req, res) {
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{contactInfo.address}</span></div>;
               </div>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>;
           </div>;
         </div>;
       </div>;
 
 
-=======
     </UltraAdvancedFuturisticBackground>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -268,5 +246,16 @@ export default function AIFinancialRiskPage(req, res) {
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import { innovativeAIServices } from '../data/
+    (s.link |'').endsWith('/
+import {innovativeAIServices} from '../data/
+    (s && s.link || '').endsWith('/
+import NextHead from 'next /
+import UltraAdvancedFuturisticBackground from '../components / ui /
+import Button from '../components / ui /
+import {innovativeAIServices} from '../data /
+    (s.link || '').ends_with ('/
+          href='https: any

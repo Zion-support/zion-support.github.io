@@ -8,17 +8,11 @@ import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 import EnhancedServiceCard from './ui / EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 //Import service data window.addEventListener ('mousemove', handleMouseMove);
 //Combine all revolutionary services const allRevolutionaryServices = [ ...revolutionary2044AdvancedMicroSaas;
 ...revolutionary2044ITServices;
@@ -31,7 +25,6 @@ import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 
   opacity: 0 
 
-=======
 import React from 'react';
 
 interface EnhancedHomepageProps {
@@ -49,8 +42,6 @@ const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
 
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 visible: {
   opacity: 1, transition: {
   duration: 0.8, staggerChildren: 0.1
@@ -59,7 +50,6 @@ visible: {
 }
 }
 }
-=======
 //Filter services by category //Animation variants const containerVariants = {;
   hidden: {;
   opacity: 0 ;
@@ -74,7 +64,6 @@ visible: {;
 };
 export default EnhancedHomepage;import EnhancedServiceCard from './ui/EnhancedServiceCard';
 
-=======
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
@@ -97,7 +86,6 @@ import Head from 'next/head';
 import EnhancedNavigation from './layout/EnhancedNavigation';
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 
@@ -145,7 +133,6 @@ const EnhancedHomepage: React.FC = () => {;
   // Combine all revolutionary services;
   const allRevolutionaryServices = [;
 
-=======
 //Filter services by category //Animation variants const container_variants = {
   hidden: {
   opacity: 0;
@@ -211,13 +198,11 @@ const EnhancedHomepage: React.FC = () => {
 ;
   // Combine all revolutionary services;
   const allRevolutionaryServices = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ...revolutionary2044AdvancedMicroSaas;
     ...revolutionary2044ITServices;
     ...revolutionary2044AIServices;
     ...realEnterpriseMicroSaas2025;
     ...innovativeITServicesExpansion2025V3;
-<<<<<<< HEAD
     ...innovativeAIServicesExpansion2025V3;
     ...innovative2025ITInfrastructureServices;
     ...innovative2025AIAutonomousServices;
@@ -283,7 +268,6 @@ if (return allRevolutionaryServices) {
     }
   }
   const floatingVariants = {
-=======
         duration: 0.8,
         stagger_children: 0.1;
       }
@@ -398,7 +382,6 @@ if (return allRevolutionaryServices) {
       setColorScheme(category && category.scheme);
     }
   }
-=======
     setSelectedCategory(categoryId);
     const category = categories.find(cat => cat.id === categoryId);
     if (category) {
@@ -408,7 +391,6 @@ if (return allRevolutionaryServices) {
   };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <>;
@@ -446,11 +428,9 @@ if (return allRevolutionaryServices) {
 
 
             
-=======
 
             <motion.p 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
               variants={itemVariants}
             >
@@ -469,10 +449,8 @@ if (return allRevolutionaryServices) {
               Pioneering the Future of Technology with Revolutionary AI Consciousness,;
               Quantum Computing, and Autonomous Solutions;
             </motion && motion.p>;
-=======
 
 
-=======
 
 
             {/* CTA Buttons */}
@@ -557,14 +535,10 @@ if (return allRevolutionaryServices) {
             </motion && motion.h2>;
             <motion&& motion.div 
 
-=======
 
             
-=======
 
             <motion.div 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="flex flex-wrap justify-center gap-4 mb-12"
               variants={itemVariants}>;
               {categories && categories.map((category) => (;
@@ -586,13 +560,10 @@ if (return allRevolutionaryServices) {
 
 
 
-=======
 
 
         {/* Services Grid */}
         <motion.section 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
@@ -612,11 +583,9 @@ if (return allRevolutionaryServices) {
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div 
 
-=======
 
             <motion.div 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}>;
               {getFilteredServices().slice(0, 12).map((service, index) => (;
@@ -852,13 +821,10 @@ if ( {) {
 
 
 
-=======
 
 
         {/* Featured Service Showcase */}
         <motion.section 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
@@ -888,11 +854,9 @@ if ( {) {
             </motion && motion.h2>;
             <motion&& motion.div 
 
-=======
 
             <motion.div 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
               variants={itemVariants}>;
               <AnimatePresence mode="wait">;
@@ -1006,13 +970,9 @@ if ( {) {
             </motion && motion.div>;
           </div>;
         </motion && motion.section>;
-=======
                     </div>
-<<<<<<< HEAD
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug |featuredServices[currentServiceIndex]?.id}`}>
-=======
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
@@ -1038,7 +998,6 @@ if ( {) {
             </motion.div>
           </div>
         </motion.section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Call to Action */}
         <motion&& motion.section 
           className="py-16 px-4 lg:px-8"
@@ -1048,7 +1007,6 @@ if ( {) {
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.h2 
               className="text-3xl md:text-4xl font-bold text-white mb-6"
-<<<<<<< HEAD
               variants={itemVariants}>;
               Ready to Transform Your Business?;
             </motion && motion.h2>;
@@ -1060,11 +1018,9 @@ if ( {) {
             </motion && motion.p>;
             <motion&& motion.div 
 
-=======
 
             <motion.div 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               variants={itemVariants}>;
               <Link href="/quote">;
@@ -1093,12 +1049,9 @@ if ( {) {
       </UltraFuturisticBackground>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Performance Monitor */}
       <AnimatePresence>;
         {showPerformanceMonitor && (;
@@ -1115,7 +1068,6 @@ export default EnhancedHomepage;
 
 
 
-=======
                   type={(service as any).type || service.category}
                   features={service.features?.map (function => ({ name: f, description: f }))}
                   slug={(service as any).slug || service.id}
@@ -1271,7 +1223,34 @@ export default EnhancedHomepage;
 ;
 export default EnhancedHomepage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+Import our enhanced components import EnhancedNavigation from './layout/
+import EnhancedServiceCard from './ui/
+import PerformanceMonitor from './
+import UltraFuturisticBackground from './ui/
+Import our enhanced components import EnhancedNavigation from './layout /
+import EnhancedServiceCard from './ui /
+import PerformanceMonitor from './
+import UltraFuturisticBackground from './ui /
+export default EnhancedHomepage;import EnhancedServiceCard from './ui/
+import PerformanceMonitor from './
+import UltraFuturisticBackground from './ui/
+import { revolutionary2044AdvancedMicroSaas  } from '../data/
+import { revolutionary2044ITServices  } from '../data/
+import { revolutionary2044AIServices  } from '../data/
+import { realEnterpriseMicroSaas2025  } from '../data/
+import { innovativeITServicesExpansion2025V3  } from '../data/
+import { innovativeAIServicesExpansion2025V3  } from '../data/
+import { innovative2025ITInfrastructureServices  } from '../data/
+import { innovative2025AIAutonomousServices } from '../data/
+export default EnhancedHomepage;import EnhancedServiceCard from './ui /
+import PerformanceMonitor from './
+import UltraFuturisticBackground from './ui /
+import { revolutionary2044AdvancedMicroSaas } from '../data /
+import { revolutionary2044ITServices } from '../data /
+import { revolutionary2044AIServices } from '../data /
+import { realEnterpriseMicroSaas2025 } from '../data /
+import { innovativeITServicesExpansion2025V3 } from '../data /
+import { innovativeAIServicesExpansion2025V3 } from '../data /
+import { innovative2025ITInfrastructureServices } from '../data /
+import { innovative2025AIAutonomousServices } from '../data /

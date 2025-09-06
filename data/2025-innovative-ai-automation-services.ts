@@ -1,12 +1,11 @@
+ realImplementation: true;
 
 
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launchDate: '2025-01-25';
-=======
 real_implementation: true;
 implementation_details: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launch_date: '2025 - 01 - 25';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 customers: 156;
 
 rating: 4 && 4.7;
@@ -28,7 +27,6 @@ reviews: 167
 
 }];    features: [
 
-=======
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeAIAutomationService {
   id: string, name: string,
@@ -67,7 +65,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     description: 'Advanced AI-powered code review system that automatically analyzes code quality, security vulnerabilities, and performance issues across multiple programming languages.',
     features: [
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       'Multi-language support (Python, JavaScript, Go, Rust, Java)AI-powered security vulnerability detectionPerformance optimization recommendationsCode quality scoring and metricsIntegration with GitHub, GitLab, BitbucketCustom rule engine and policiesReal-time feedback and suggestionsTeam collaboration and review workflows';
       'Compliance and best practices enforcement'
 reviews: 167;
@@ -171,11 +168,8 @@ reviews: 167;
     reviews: 167
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -188,15 +182,10 @@ reviews: 167;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAIAutomationService {;
   id: string,;
@@ -516,11 +505,41 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     customers: 234,;
     rating: 4.8;
     reviews: 167;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+realImplementation: true;
+implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.'
+launchDate: any
+implementation_details: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.'
+launch_date: any
+implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.'
+launchDate: any
+implementation_details: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.'
+launch_date: any
+      'Multi-language support (Python, JavaScript, Go, Rust, Java)AI-powered security vulnerability detectionPerformance optimization recommendationsCode quality scoring and metricsIntegration with GitHub, GitLab, BitbucketCustom rule engine and policiesReal-time feedback and suggestionsTeam collaboration and review workflows'
+      'Compliance and best practices enforcement'
+      'Multi - language support (Python, JavaScript, Go, Rust, Java)AI - powered security vulnerability detection_performance optimization recommendations_code quality scoring and metrics_integration with GitHub, GitLab, BitbucketCustom rule engine and policies_real - time feedback and suggestions_team collaboration and review workflows'
+      'Compliance and best practices enforcement'
+    popular: true, icon: any
+    color: 'from-emerald-600 to-teal-700', textColor: any
+    useCases: ['Data pipeline automation, ETL/
+    period: any
+    use_cases: ['Data pipeline automation, ETL /
+    period: any
+    marketPosition: 'Competes with Tableau ($70/month), Power BI ($9.99/month), Looker ($5,000/
+    link: any
+    marketPosition: 'Competes with Tableau ($70/month), Power BI ($9 && 9.99/month), Looker ($5,000/
+    integrations: ['SIEM systems, Firewalls, IDS/
+    link: any
+    marketPosition: 'Competes with Workday ($99/month), BambooHR ($6.19/month), ADP ($59/
+      website: any
+    market_position: 'Competes with Tableau ($70 / month), Power BI ($9.99 / month), Looker ($5, 000 /
+    integrations: ['SIEM systems, Firewalls, IDS /
+    link: any
+    market_position: 'Competes with Workday ($99 / month), BambooHR ($6.19 / month), ADP ($59 /
+      website: any
+    marketPosition: 'Competes with Tableau ($70/month), Power BI ($9 && 9.99/month), Looker ($5,000/
+    integrations: ['SIEM systems, Firewalls, IDS /
+    link: any
+    marketPosition: 'Competes with Workday ($99/month), BambooHR ($6 && 6.19/month), ADP ($59/
+      website: any

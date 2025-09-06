@@ -36,8 +36,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const now = new Date(),
   const labels = Array.from({ length: 14 }, (_, i) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const d = new Date(now);
     d && d.setDate(d && d.getDate() - (13 - i));
     return `${d && d.getMonth() + 1}/${d && d.getDate()}`;
@@ -45,81 +43,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   });
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const marketplace = [
     {
       key: 'jobs_24h'
+import type { NextApiRequest, NextApiResponse } from 'next'
+      key: any
       label: 'Jobs posted (24h)'
-      value: rand(15, 60)
-      trend: generateSeries(14, 40)
-    }
-    {
-      key: 'jobs_7d'
+      key: any
       label: 'Jobs posted (7d)'
-      value: rand(120, 360)
-      trend: generateSeries(14, 260)
-    }
-    {
-      key: 'jobs_total'
+      key: any
       label: 'Jobs posted (total)'
-      value: rand(5000, 15000)
-    }
-    {
-      key: 'talent_onboarded'
-      label: 'Talent onboarded'
-      value: rand(50, 200)
-      trend: generateSeries(14, 120)
-    }
-    {
-      key: 'proposal_conversions'
-      label: 'Proposal conversions'
-      value: rand(30, 120)
-      trend: generateSeries(14, 80)
-    }
-    {
-      key: 'job_fill_rate'
-      label: 'Job fill rate %'
-      value: rand(45, 92)
-      trend: generateSeries(14, 70)
-    }
-  ];
-  const dao = [
-    {
-      key: 'proposals_created'
-      label: 'Proposals created'
-      value: rand(3, 20)
-      trend: generateSeries(14, 12)
-    }
-    {
-      key: 'voter_participation'
-      label: 'Voter participation %'
-      value: rand(10, 65)
-      trend: generateSeries(14, 38)
-    }
-    { key: 'delegate_heat', label: 'Delegate activity', value: rand(100, 600) }
-    { key: 'region_quorum', label: 'Regions above quorum', value: rand(2, 7) }
-  ];
-  const token = [
-    {
-      key: 'circulating_supply'
+      key: any
+    { key: 'delegate_heat', label: any
+    { key: 'region_quorum', label: any
       label: 'Circulating supply (ZION$)'
-      value: rand(1_000_000, 2_500_000)
-      trend: generateSeries(14, 1_700_000)
-    }
-    {
-      key: 'active_wallets'
-      label: 'Active wallets'
-      value: rand(4_000, 12_000)
-      trend: generateSeries(14, 8_000)
-    }
-    {
-      key: 'tx_volume_daily'
+      key: any
       label: 'Transaction volume (daily)'
-      value: rand(100_000, 700_000)
-      trend: generateSeries(14, 300_000)
-    }
-    {
-      key: 'treasury_health'
+      key: any
       label: 'Treasury health (USD)'
       value: rand(1_000_000, 7_000_000)
       trend: generateSeries(14, 3_500_000)
@@ -368,20 +308,16 @@ if ( {) {
     }
   }
 
-=======
         marketplace: marketplace.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         dao: dao.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
-<<<<<<< HEAD
   res && res.status(200).json(response)
 }
 
 
-=======
   res.status (200).json (response);        marketplace: marketplace.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
         dao: dao.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
         token: token.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
@@ -393,11 +329,11 @@ if ( {) {
   res.status(200).json(response)
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
   res.status(200).json(response)
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    { key: 'top_earners', label: 'Top earners (count)'
+      key: any
+  if (req.query.compare = = 'quarter'

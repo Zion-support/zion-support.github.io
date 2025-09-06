@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -23,10 +25,8 @@ import { motion } from 'framer-motion';
 
 
 } from 'lucide-react';import Link from 'next/link';
-=======
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
 import Link from 'next/link';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
@@ -94,12 +94,10 @@ export default function Revolutionary2026ServicesShowcase() {;
     0,;
     3;
   );  const featuredMetaverseServices = metaverseDigitalRealityServices2026 && metaverseDigitalRealityServices2026.slice(0, 3);
-=======
 
         duration: 0.6,
       },
     },
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   const containerVariants = {;
     hidden: { opacity: 0 },;
@@ -115,10 +113,7 @@ export default function Revolutionary2026ServicesShowcase() {;
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
       {/* Enhanced Background Effects */}
@@ -131,7 +126,6 @@ export default function Revolutionary2026ServicesShowcase() {;
       </div>;
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}  };
 
-=======
   };
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
@@ -145,10 +139,8 @@ export default function Revolutionary2026ServicesShowcase() {;
       </div>;
       <div className="max-w-7xl mx-auto relative z-10">;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Enhanced Header */}
         <motion&& motion.div
-=======
 
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}  };
 
@@ -159,9 +151,7 @@ export default function Revolutionary2026ServicesShowcase() {;
         {/* Enhanced Header */}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
@@ -184,8 +174,6 @@ export default function Revolutionary2026ServicesShowcase() {;
             Experience the most advanced AI, quantum computing, and metaverse
             technologies ever created.
             <span className='text-purple-400 font-semibold'>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           className='text-center mb-20'>;
           <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>;
             <Sparkles className='w-5 h-5 text-purple-400' />;
@@ -394,12 +382,9 @@ export default function Revolutionary2026ServicesShowcase() {;
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* AI Autonomous Services Section */}
         <motion&& motion.div
           variants={containerVariants}
@@ -707,7 +692,6 @@ export default function Revolutionary2026ServicesShowcase() {;
                 </div>;
               </motion && motion.div>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Quantum Space Tech Services Section */}
         <motion&& motion.div
           variants={containerVariants}
@@ -716,7 +700,6 @@ export default function Revolutionary2026ServicesShowcase() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           viewport={{ once: true }}
 
                       </span>;
@@ -767,18 +750,9 @@ export default function Revolutionary2026ServicesShowcase() {;
           variants={container_variants}
           initial='hidden';
           whileInView='visible';
-=======
           initial='hidden'
           whileInView='visible'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           viewport={{ once: true }}
           className='mb - 20';
         >;
@@ -1070,17 +1044,11 @@ export default function Revolutionary2026ServicesShowcase() {;
               View All Quantum Space Services <ArrowRight className="w-5 h-5 ml-2" />;
           </div>;
         </motion && motion.div>;
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
         {/* Metaverse & Digital Reality Services Section */}
         <motion&& motion.div
           variants={containerVariants}
@@ -1089,7 +1057,6 @@ export default function Revolutionary2026ServicesShowcase() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           viewport={{ once: true }}
 
                       </span>;
@@ -1140,18 +1107,9 @@ export default function Revolutionary2026ServicesShowcase() {;
           variants={container_variants}
           initial='hidden';
           whileInView='visible';
-=======
           initial='hidden'
           whileInView='visible'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           viewport={{ once: true }}
           className='mb - 20';
         >;
@@ -1411,9 +1369,7 @@ export default function Revolutionary2026ServicesShowcase() {;
             ))}
           </div>;
           <div className='text-center mt-8'>;
-=======
           <div className='text-center mt-8'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <Link
               href='/services?category=metaverse'
               className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-xl hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
@@ -1442,12 +1398,9 @@ export default function Revolutionary2026ServicesShowcase() {;
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Call to Action Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -1540,12 +1493,10 @@ export default function Revolutionary2026ServicesShowcase() {;
       </div>;
     </section>;
   );
-=======
 
   );
 
 }
-=======
 
 }
   );
@@ -1648,4 +1599,23 @@ export default function Revolutionary2026ServicesShowcase() {;
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    console.error('Error caught by boundary: any
+import { motion } from 'framer-motion'
+ from 'lucide-react';import Link from 'next/
+import Link from 'next/
+import { aiAutonomousServices2026 } from '../../data/
+import { quantumSpaceTechServices2026 } from '../../data/
+import { metaverseDigitalRealityServices2026 } from '../../data/
+import Link from 'next/
+import { aiAutonomousServices2026  } from '../../data/
+import { quantumSpaceTechServices2026  } from '../../data/
+import { metaverseDigitalRealityServices2026 } from '../../data/
+ from 'lucide-react';import Link from 'next /
+import { aiAutonomousServices2026 } from '../../data /
+import { quantumSpaceTechServices2026 } from '../../data /
+import { metaverseDigitalRealityServices2026 } from '../../data /
+import Link from 'next /
+import { aiAutonomousServices2026 } from '../../data /
+import { quantumSpaceTechServices2026 } from '../../data /
+import { metaverseDigitalRealityServices2026 } from '../../data /
+        

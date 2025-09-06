@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -23,7 +25,6 @@ import React from 'react';
 interface OptimizedImageProps {;
   src: string, alt: string,;
 
-=======
 import Image from 'next / image';
 ;
 interface OptimizedImageProps {
@@ -52,7 +53,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({;
 }) => {;
   if (fill) {;
 
-=======
 const OptimizedImage: React.FC < OptimizedImageProps> = ({
   src,
   alt,
@@ -101,7 +101,6 @@ if ( {) {
 
 
 
-=======
       quality={quality}
       style={style}
 
@@ -111,22 +110,13 @@ if ( {) {
   );
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default OptimizedImage;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       quality={quality}
       style={style}
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 };
 
 export default OptimizedImage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    console.error('Error caught by boundary: any

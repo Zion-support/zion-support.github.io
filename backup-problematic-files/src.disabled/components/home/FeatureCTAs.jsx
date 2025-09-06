@@ -28,3 +28,5 @@ const FeatureCTAs = ({ className }) => {
 };
 
 export default FeatureCTAs;
+import React from 'react'
+    

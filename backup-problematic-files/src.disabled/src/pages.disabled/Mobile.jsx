@@ -28,3 +28,5 @@ const Mobile = ({ className }) => {
 };
 
 export default Mobile;
+import React from 'react'
+    

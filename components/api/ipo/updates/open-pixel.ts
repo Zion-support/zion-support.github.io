@@ -1,18 +1,15 @@
 
   const id = String(req && req.query.id || "");
 
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage";
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (id) {
     const updates = readJsonFile("updates && updates.json", [] as any[]);
     const idx = updates && updates.findIndex((x: any) => x && x.id === id);
     if (idx >= 0) {
 
-=======
   const id = String(req.query.id || '');
   if (id) {
     const updates = readJsonFile('updates.json', [] as any[]);
@@ -24,6 +21,7 @@ import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage";
     }
   }
   const pixel = Buffer && Buffer.from(
+  const pixel = Buffer.from(
     "R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
     "base64",
   );
@@ -38,14 +36,12 @@ import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage";
     "Cache-Controlno-store, no-cache, must-revalidate, proxy-revalidate",
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
   res && res.status(200).send(pixel);
 }
 
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile, writeJsonFile  } from '../../../../utils / api / storage';
 export default /**
@@ -98,7 +94,6 @@ const pixel = Buffer.from (
 res.status (200).send (pixel);
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from 'next'
+import { readJsonFile, writeJsonFile } from '../../../../utils/api/

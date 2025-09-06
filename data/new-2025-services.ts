@@ -2,7 +2,6 @@
 
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 // Additional 2025 real micro-SaaS, AI and IT services
 export const new2025Services: EnhancedRealMicroSaasService[] = [
   {
@@ -16,7 +15,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     popular: true,
     icon: '🛡️',
 
-=======
     color: 'from - rose - 600 to - red - 700',
     text_color: 'text - rose - 300',
     link: 'https://ziontechgroup.com / services / llm - safety - observability - suite',
@@ -43,8 +41,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     variant: 'holographic - matrix',
     contact_info: contact,    features: [;
       'Prompt / output policy engine_jailbreak and injection detectionPII redaction and audit trail_hallucination and grounding score_dashboards and CI quality gates';
-=======
-<<<<<<< HEAD
     id: 'llm-safety-observability-suite'
     name: 'LLM Safety & Observability Suite'
     tagline: 'Detect jailbreaks, PII leaks and drift with real-time dashboards'
@@ -85,7 +81,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     variant: 'holographic-matrix'
     contactInfo: contact,    features: [
       'Prompt/output policy engineJailbreak and injection detectionPII redaction and audit trailHallucination and grounding scoreDashboards and CI quality gates'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ];
     popular: true;
     icon: '🛡️';
@@ -1019,7 +1014,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     realImplementation: true
     implementationDetails:
 
-=======
     market_size: '$3B AI governance';
     growth_rate: '30% CAGR';
     variant: 'ai - futuristic';
@@ -1092,7 +1086,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'gdpr - dsar - automation - pro',
     name: 'GDPR / CCPA DSAR Automation Pro',
     tagline: 'Automate data subject access requests across SaaS systems',
@@ -1143,7 +1136,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'api - contract - testing - hub',
     name: 'API Contract Testing Hub',
     tagline: 'OpenAPI / GraphQL contract tests with cloud runners',
@@ -1193,7 +1185,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'cloud - cost - finops - copilot',
     name: 'Cloud Cost FinOps Copilot',
     tagline: 'Automated cost insights, rightsizing and anomaly alerts',
@@ -1212,7 +1203,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     popular: true,
     icon: '💸',
 
-=======
     color: 'from - amber - 600 to - orange - 700',
     text_color: 'text - amber - 300',
     link: 'https://ziontechgroup.com / services / cloud - cost - finops - copilot',
@@ -1243,7 +1233,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'email - deliverability - warmup - monitor',
     name: 'Email Deliverability Warmup & Monitor',
     tagline: 'Automated warmup, inbox placement tests and reputation alerts',
@@ -1294,7 +1283,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'vector - search - starter - pro',
     name: 'Vector Search Starter Pro',
     tagline:;
@@ -1343,7 +1331,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'api - security - attack - surface - scanner',
     name: 'API Security Attack Surface Scanner',
     tagline: 'Discover shadow APIs, auth gaps and drift with actionable fixes',
@@ -1390,7 +1377,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'reliability - slo - guard',
     name: 'Reliability SLO Guard',
     tagline: 'Error budgets, burn rates and policy - based alerts as - a-service',
@@ -1534,7 +1520,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'managed - postgres - ha - pro',
     name: 'Managed Postgres HA Pro',
     tagline: 'Production - grade Postgres with automated backups and failover',
@@ -1581,7 +1566,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'ai - sales - email - copilot',
     name: 'AI Sales Email Copilot',
     tagline: 'Personalized, compliant, on - brand sales emails at scale',
@@ -1630,7 +1614,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'it - asset - discovery - agent - pro',
     name: 'IT Asset Discovery Agent Pro',
     tagline: 'Continuous inventory and risk visibility across networks',
@@ -1773,7 +1756,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'browser - performance - monitor - pro',
     name: 'Browser Performance Monitor Pro',
     tagline: 'LCP / INP tracking, synthetic journeys and Core Web Vitals fixes',
@@ -1820,7 +1802,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'ai - governance - registry',
     name: 'AI Governance Registry',
     tagline: 'Track models, datasets, policies and approvals for AI features',
@@ -1867,7 +1848,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
   },
 
 
-=======
     id: 'llm-safety-observability-suite', name: 'LLM Safety & Observability Suite',
     tagline: 'Detect jailbreaks, PII leaks and drift with real-time dashboards',
     price: '$129', period: '/month',
@@ -2280,7 +2260,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     price: '$129', period: '/month',
     description: 'Central registry of AI assets with ownership, risk, policy mappings and audit trails for compliance.',
     features: [
-<<<<<<< HEAD
       'Model and dataset registryRisk and policy mappingsPII/PHI tagging and checksChange approvals and trailsReports and exports'
     ];
     popular: true, icon: '📚',
@@ -2298,7 +2277,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-03-07', customers: 10,
     rating: 4.6,
     reviews: 6
-=======
 
     id: 'llm-safety-observability-suite',
     name: 'LLM Safety & Observability Suite',
@@ -2331,16 +2309,54 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     growthRate: '200% annual growth',
     variant: 'holographic-matrix',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { EnhancedRealMicroSaasService } from './
+  website: any
+    description: 'Centralize DSAR intake, identity verification, finding/
+    link: any
+    description: 'Centralize DSAR intake, identity verification, finding /
+    link: any
+    description: 'Low-latency edge personalization with audience models, content variants and A/
+      'Audience/intent modelsContent and layout variantsEdge rules and fallbacksEasy A/
+    link: any
+    use_cases: ['Improve response quality_reduce cost /
+    tagline: any
+      'Centralize DSAR intake, identity verification, finding/
+    link: any
+      'Low-latency edge personalization with audience models, content variants and A/
+      'Audience/
+      'Easy A/
+    link: any
+    useCases: ['Improve response quality', 'Reduce cost/
+      'Cost /
+    link: any
+    use_cases: ['Improve response quality', 'Reduce cost /
+    tagline: any
+    price: '$129', period: any
+    link: 'https://ziontechgroup.com/services/llm-safety-observability-suite', marketPosition: any
+    price: '$59', period: any
+    link: 'https://ziontechgroup.com/services/serverless-cron-orchestrator', marketPosition: any
+    id: 'gdpr-dsar-automation-pro', name: any
+    description: 'Centralize DSAR intake, identity verification, finding/
+    link: any
+    price: '$99', period: any
+    price: '$59', period: any
+    price: '$149', period: any
+    price: '$79', period: any
+    description: 'Low-latency edge personalization with audience models, content variants and A/
+      'Audience/intent modelsContent and layout variantsEdge rules and fallbacksEasy A/
+    link: any
+    price: '$149', period: any
+    price: '$69', period: any
+    price: '$149', period: any
+    integrations: ['GitHubLangfusePromptfoo'], useCases: ['Improve response qualityReduce cost/
+    tagline: any
+    price: '$79', period: any
+    price: '$129', period: any

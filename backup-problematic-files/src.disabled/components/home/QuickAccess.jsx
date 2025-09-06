@@ -28,3 +28,5 @@ const QuickAccess = ({ className }) => {
 };
 
 export default QuickAccess;
+import React from 'react'
+    

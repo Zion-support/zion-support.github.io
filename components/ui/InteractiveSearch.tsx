@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -119,13 +121,9 @@ function InteractiveSearch() {
         </button>;
       </div>;
     </form>;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 }}
 
-=======
         className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
       {value && (
@@ -142,7 +140,6 @@ function InteractiveSearch() {
         </button>
       )}
     </motion.div>
-=======
     </motion.div>
 
 
@@ -159,5 +156,14 @@ function InteractiveSearch() {
       </div>;
     </form>);
 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    console.error('Error caught by boundary: any
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+  placeholder = 'Search talent, skills, or jobs...'
+export default function InteractiveSearch({ placeholder = 'Search talent, skills, or jobs...'
+  const [value, setValue] = useState(''
+        className='w-full rounded-md border border-gray-300 dark: any
+          onClick={() => setValue(''
+          className='absolute right-2 top-1/2 -translate-y-1/
+          className='absolute right-2 top-1/2 -translate-y-1/
+          className='absolute right - 2 top - 1/2 -translate - y-1 /

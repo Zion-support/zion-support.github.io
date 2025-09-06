@@ -8,7 +8,6 @@ import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationS
 
 
 
-=======
 import { Resume } from '@/types/resume',;
 import {;
   PreviewHeader,;
@@ -21,17 +20,28 @@ import {;
 interface PreviewResumeProps {;
   resume: Resume;
   onBack: () => void;
+import { Resume } from "@/types/resume";
+import {
+  PreviewHeader,
+  ResumeBasicInfoSection,
+  WorkExperienceSection,
+  EducationSection,
+  SkillsSection,
+  CertificationsSection,
+} from "./preview";
 
 
 
+interface PreviewResumeProps {
+  resume: Resume;
+  onBack: () => void;
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
   return (
     <div className="space-y-6">
       <PreviewHeader resume={resume} onBack={onBack} />
+
       {/* Resume Preview */}
       <div className="bg-white text-black p-8 rounded-lg shadow-lg print-section">
         <ResumeBasicInfoSection basicInfo={resume.basic_info} />
@@ -64,7 +74,6 @@ export function PreviewResume(): any ({ resume, onBack }: PreviewResumeProps) {;
   );
 }
 
-=======
 import { Resume  } from '@/types / resume';
 import {
   PreviewHeader,
@@ -96,10 +105,10 @@ function PreviewResume() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
+  );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { Resume } from "@/types/
+ from "./

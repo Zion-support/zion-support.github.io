@@ -1,15 +1,6 @@
-export type TokenSymbol = "ZION$",
-
-export type TokenTransactionType =
+export type TokenSymbol = "ZION$"
   | "earn"
   | "burn"
   | "issue"
   | "revoke"
-  | "redeem",
-
-export interface TokenTransaction {
-  id: string,
-  userId: string,
-  type: TokenTransactionType,
-  amount: number, // positive integer tokens
-  reason: string,
+  | "redeem"

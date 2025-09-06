@@ -14,4 +14,5 @@ const Platform-engineering: React.FC<Platform-engineeringProps> = ({ className }
     </div>
   );
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+export default function PlatformEngineering() {}; return null} ; function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) {}; return null} <main style={ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }> 
+module.exports = default function PlatformEngineering() { return; }; return null} ; function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) {}; return null} <main style={ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }> <h1 style={ marginTop: "0" }>{title}></div> <p><strong>{subtitle}</strong></div> <p><strong>Pricing: </strong> {price}></div> <ul> {}; <li key={b}>{b}></div> )} ></div> <ContactFooter />

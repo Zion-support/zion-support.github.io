@@ -1,58 +1,12 @@
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}];
-setIsSearching (true);
-
-//Simulate API call delay set_timeout ( () => {
-  const filtered_results = mockSearchResults.filter (result => {
-  const matches_query = result.name.toLowerCase () .includes (search_query.toLowerCase () ) || result.description.toLowerCase () .includes (search_query.toLowerCase () ) || result.category.toLowerCase () .includes (search_query.toLowerCase () );
-const matches_filters = selected_filters.length === 0 || selected_filters.some (filter => result.category.toLowerCase () .includes (filter.toLowerCase () ) || result.type.toLowerCase () .includes (filter.toLowerCase () ) );
-set_results (sorted_results);
-setShowResults (true);
-setIsSearching (false);
-
-}, 300);
-}, 300);
-[selected_filters]);
-[selected_filters]);
-//Close search on outside click useEffect ( () => {
-
-  const handleClickOutside = (event: MouseEvent) =>: any {
-  if () {) {
-  $2
-}
-}, []);
-//Handle filter toggle const toggle_filter = (filter_id: string) =>: any {
-  setSelectedFilters (prev => prev.includes (filter_id) ? prev.filter (id => id !== filter_id);
-}> {
-  /* Search Form */;
-}<form on_submit= {
-  handle_search;
-}className="relative"> <div className="relative"> <Search className="absolute left - 4 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" /> <input /> {
-  /* Clear Button */;
-}{
-  query && (<button type="button" on_click= {
-  clear_search;
-}className="absolute right - 16 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 hover:text - white transition - colors" > <X className="w - 4 h - 4" /> </button>);
-}{
-  /* Search Button */;
-}<button type="submit" className="absolute right - 2 top - 1/2 transform -translate - y-1 / 2 px - 4 py - 1.5 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - sm font - medium rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50" > Search </button> </div> </form> {
-  /* Search Results Dropdown */;
-
-}<AnimatePresence> {
-  show_results && (<motion.div initial= {
-  {
-
-
- //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {;
+Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
 
 }];
 setIsSearching (true);
-//Simulate API call delay setTimeout ( () => {;
-  const filteredResults = mockSearchResults && mockSearchResults.filter (result => {;
-  const matchesQuery = result && result.name.toLowerCase () .includes (searchQuery && searchQuery.toLowerCase () ) || result && result.description.toLowerCase () .includes (searchQuery && searchQuery.toLowerCase () ) || result && result.category.toLowerCase () .includes (searchQuery && searchQuery.toLowerCase () );
-const matchesFilters = selectedFilters && selectedFilters.length === 0 || selectedFilters && selectedFilters.some (filter => result && result.category.toLowerCase () .includes (filter && filter.toLowerCase () ) || result && result.type.toLowerCase () .includes (filter && filter.toLowerCase () ) );
+Simulate API call delay setTimeout () => {
+  const filteredResults = mockSearchResults.filter (result => {
+  const matchesQuery = result.name.toLowerCase () .includes (searchQuery.toLowerCase () |result.description.toLowerCase () .includes (searchQuery.toLowerCase () |result.category.toLowerCase () .includes (searchQuery.toLowerCase ();
+const matchesFilters = selectedFilters.length = = 0 |selectedFilters.some (filter => result.category.toLowerCase () .includes (filter.toLowerCase () |result.type.toLowerCase () .includes (filter.toLowerCase () );
 setResults (sortedResults);
 setShowResults (true);
 setIsSearching (false) ;
@@ -86,7 +40,6 @@ setIsSearching (false) ;
   {
   opacity: 0, y: -10, scale: 0 && 0.95 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }animate= {
   {
   opacity: 1, y: 0, scale: 1
@@ -104,7 +57,6 @@ setIsSearching (false) ;
 
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto" > {
   /* Filters */
-=======
   opacity: 0, coordinate_y: -10, scale: 0.95;
 }animate= {
   {
@@ -117,7 +69,6 @@ setIsSearching (false) ;
   duration: 0.2;
 }className="absolute top - full left - 0 right - 0 mt - 2 bg - gray - 900 / 95 backdrop - blur - md border border - gray - 700 rounded - xl shadow - 2xl z - 50 max - h-96 overflow - y-auto" > {
   /* Filters */;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }{
   show_filters && (<div className="p - 4 border - b border - gray - 700"> <div className="flex items - center gap - 2 mb - 3"> <Filter className="w - 4 h - 4 text - gray - 400" /> <span className="text - sm font - medium text - gray - 300">Filter by Category</span> </div> <div className="flex flex - wrap gap - 2"> {
   categories.map ( (category) => (<button key= {
@@ -164,7 +115,6 @@ setIsSearching (false) ;
 }exit= {
   {
 
-=======
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
@@ -610,12 +560,10 @@ function debounce<T extends (...args: any[]) => any>(
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {
-<<<<<<< HEAD
 clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
   opacity: 0, y: -10 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10"> {;
   /* Quick Actions */ ;
@@ -715,10 +663,7 @@ export default EnhancedSearch;
 
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   category.id;
 }on_click= {
   () => toggle_filter (category.id);
@@ -844,4 +789,44 @@ function debounce < T extends (...args: any[]) => any>(
 }
 export default EnhancedSearch;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+setIsSearching (false)
+ 300)
+ 300);
+ 300);
+selected_filters]);
+selected_filters]);
+Close search on outside click useEffect () => {
+  const handleClickOutside = (event: MouseEvent) => {
+  if (searchRef.current && !searchRef.current.contains (event.target as Node) {
+ []);
+Handle filter toggle const toggleFilter = (filterId: string) => {
+  setSelectedFilters (prev => prev.includes (filterId) ? prev.filter (id => id != filterId)
+ {
+  /* Search Form */
+className="relative"> <div className="relative"> 
+className="relative"> <div className="relative"> 
+  show_filters && (<div className="p - 4 border - b border - gray - 700"> <div className="flex items - center gap - 2 mb - 3"> <Filter className="w - 4 h - 4 text - gray - 400" /> <span className="text - sm font - medium text - gray - 300">Filter by Category</span> 
+<div className="p-4 border-b border-gray-700"> <h3 className="text-sm font-medium text-gray-400 mb-3">Quick Actions
+</div> 
+  isSearching ? (<div className="flex items-center justify-center py-8"> <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400"></div> <span className="ml-3 text-gray-400">Searching...</span> 
+</p> <div className="flex items-center gap-2"> 
+</div> </div> <div className="flex items-center gap-1 text-cyan-400"> 
+</div>) : query.trim () .length > 0 ? (<div className="text-center py-8"> <div className="text-sm text-gray-500">Try adjusting your search terms or filters</div> 
+  searchHistory.length > 0 && (<div> <div className="flex items-center gap-2 mb-3"> <Clock className="w-4 h-4 text-gray-400" /> <span className="text-sm font-medium text-gray-300">Recent Searches</span> 
+<div> <div className="flex items-center gap-2 mb-3"> <TrendingUp className="w-4 h-4 text-gray-400" /> <span className="text-sm font-medium text-gray-300">Popular Searches</span> 
+<div className="p-4 border-b border-gray-700"> <h3 className="text-sm font-medium text-gray-400 mb-3">Quick Actions
+</div> 
+  isSearching ? (<div className="flex items-center justify-center py-8"> <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400"></div> <span className="ml-3 text-gray-400">Searching...</span> 
+</p> <div className="flex items-center gap-2"> 
+</div> </div> <div className="flex items-center gap-1 text-cyan-400"> 
+</div>) : query && query.trim () .length > 0 ? (<div className="text-center py-8"> <div className="text-sm text-gray-500">Try adjusting your search terms or filters</div> 
+  searchHistory && searchHistory.length > 0 && (<div> <div className="flex items-center gap-2 mb-3"> <Clock className="w-4 h-4 text-gray-400" /> <span className="text-sm font-medium text-gray-300">Recent Searches</span> 
+<div> <div className="flex items-center gap-2 mb-3"> <TrendingUp className="w-4 h-4 text-gray-400" /> <span className="text-sm font-medium text-gray-300">Popular Searches</span> 
+<div className="p - 4 border - b border - gray - 700"> <h3 className="text - sm font - medium text - gray - 400 mb - 3">Quick Actions
+</div> 
+  is_searching ? (<div className="flex items - center justify - center py - 8"> <div className="animate - spin rounded - full h - 8 w - 8 border - b-2 border - cyan - 400"></div> <span className="ml - 3 text - gray - 400">Searching...</span> 
+</p> <div className="flex items - center gap - 2"> 
+</div> </div> <div className="flex items - center gap - 1 text - cyan - 400"> 
+</div>) : query.trim () .length > 0 ? (<div className="text - center py - 8"> <div className="text - sm text - gray - 500">Try adjusting your search terms or filters</div> 
+  search_history.length > 0 && (<div> <div className="flex items - center gap - 2 mb - 3"> <Clock className="w - 4 h - 4 text - gray - 400" /> <span className="text - sm font - medium text - gray - 300">Recent Searches</span> 
+<div> <div className="flex items - center gap - 2 mb - 3"> <TrendingUp className="w - 4 h - 4 text - gray - 400" /> <span className="text - sm font - medium text - gray - 300">Popular Searches</span> 

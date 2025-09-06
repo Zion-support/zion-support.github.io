@@ -11,14 +11,12 @@ import Sidebar from './Sidebar';
 import EndpointDetail from './EndpointDetail';
 import v1 from '../../data/api-docs/v1';
 import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types';
-=======
 import React, { useMemo, useState } from 'react',;
 import Sidebar from './Sidebar',;
 import EndpointDetail from './EndpointDetail',;
 import v1 from '../../data/api-docs/v1',;
 import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types',;
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function ApiDocsPage() {
   const spec: ApiDocsSpec = v1, // could switch by version later
   const [selectedVersion, setSelectedVersion] = useState<string>(spec.defaultVersion)
@@ -41,7 +39,6 @@ export default function ApiDocsPage() {
       <main className=&quot;p-6 space-y-6&quot;>
         <header className=&quot;flex items-center justify-between&quot;>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div>
             <div className="text-2xl font-bold">Zion OS API Documentation</div>
             <div className="text-sm text-high-contrast-muted">Developer-friendly API docs with live testing</div>
@@ -52,14 +49,11 @@ export default function ApiDocsPage() {
             <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/graphql" target="_blank" rel="noreferrer">GraphQL</a>
           </div>
         </header>
-<<<<<<< HEAD:components/docs/ApiDocsPage.tsx
         {activeEndpoint ? (
-=======
 
 
         {_activeEndpoint ? (
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <EndpointDetail endpoint={activeEndpoint} />
         ) : (
           <div className="text-sm text-high-contrast-muted">Select an endpoint from the sidebar</div>
@@ -98,11 +92,12 @@ function ChangelogWidget() {
       <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />    </div>
   )}
 
-=======
   );
 };
-=======
       <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />    </div>
   )}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useMemo, useState } from 'react'
+import Sidebar from './
+import EndpointDetail from './
+import v1 from '../../data/api-docs/
+import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/

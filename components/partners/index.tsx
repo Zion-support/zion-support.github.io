@@ -1,7 +1,6 @@
 
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     name: ''
     entityType: ''
     pocName: ''
@@ -75,7 +74,6 @@ export default function Partners() {;
         useCaseType: form && form.useCaseType,;
         pointOfContact: { name: form && form.pocName, email: form && form.pocEmail },;
       }),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
     const data = await res && res.json();
     setLoading(false);
@@ -139,7 +137,6 @@ export default function Partners() {;
 
   }
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50 text-gray-900">;
       <Head>;
         <title>Zion Partners</title>;
@@ -370,14 +367,12 @@ function submit() {
             <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result && result.apiKey}</pre>;
             <a href={result && result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>;
 
-=======
           <div className="mt-8 bg-white p-6 rounded-lg shadow">
             <h3 className="text-lg font-medium mb-2">Registration Successful</h3>
             <p className="text-sm">Your API Key:</p>
             <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result.apiKey}</pre>
             <a href={result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
 
       </div>;
@@ -385,7 +380,6 @@ function submit() {
   );
 }
 
-=======
   );
 }
     <div className="min - h-screen bg - gray - 50 text - gray - 900">;
@@ -487,11 +481,13 @@ function submit() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { useState } from "react"
+import Head from "next/
+    });    const res = await fetch("/api/partners/
+      headers: { "Content-Type": any
+    });    const res = await fetch("/api/partners/
+      headers: { "Content-Type": any

@@ -1,11 +1,14 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -85,23 +88,17 @@ import { v4 as uuidv4 } from 'uuid';
     } finally {;
       setSubmitting(false);
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   }
 
   return (
 
-=======
     <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">
       <div className="text-sm font-medium mb-2">Was this answer useful?</div>
       {submitted ? (
-=======
     }
   }
-=======
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
@@ -115,13 +112,11 @@ import { v4 as uuidv4 } from 'uuid';
           <div className='flex items-center gap-2'>
             <button
               type='button'              onClick={() => setRating(rating === 'up' ? null : 'up')}      {submitted ? (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="text-sm text-emerald-700 dark:text-emerald-300">Thanks for your feedback!</div>
       ) : (
         <div className="space-y-3">
           <div className="flex items-center gap-2">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <button
               type="button"
               onClick={() => setRating(rating === 'up' ? null : 'up')}
@@ -155,10 +150,8 @@ import { v4 as uuidv4 } from 'uuid';
   );
 
 }
-=======
 
 }
-=======
     </div>;
   );
 }
@@ -350,18 +343,13 @@ if ( {) {
               onClick={() => setRating(rating === 'up' ? null : 'up')}
               className={_`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}
               aria-pressed={_rating === 'up'}
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >
               <span>👍</span>
               <span>Yes</span>
             </button>
             <button
-<<<<<<< HEAD
               type=&quot;button&quot;
-=======
               type='button'              onClick={() => setRating(rating === 'down' ? null : 'down')}              type="button"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               onClick={() => setRating(rating === 'down' ? null : 'down')}
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'down' ? 'bg-red-600 text-white border-red-600' : ''}`}
               aria-pressed={rating === 'down'}
@@ -371,7 +359,6 @@ if ( {) {
             </button>
           </div>
           <textarea
-<<<<<<< HEAD
             placeholder=&quot;Optional feedback (what worked, what didn’t)&quot;
             value={comment}
             onChange={(e) => setComment(e.target.value.slice(0, 2000))}
@@ -381,7 +368,6 @@ if ( {) {
           {error && <div className=&quot;text-xs text-red-600&quot;>{error}</div>}
           <div>
             <button onClick={submit} disabled={submitting} className=&quot;rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm&quot;>
-=======
             placeholder='Optional feedback (what worked, what didn’t)'
             value={comment}
             onChange={e => setComment(e.target.value.slice(0, 2000))}
@@ -402,15 +388,16 @@ if ( {) {
           {error && <div className="text-xs text-red-600">{error}</div>}
           <div>
             <button onClick={submit} disabled={submitting} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {submitting ? 'Submitting…' : 'Submit feedback'}
             </button>
           </div>
         </div>
       )}
     </div>
-<<<<<<< HEAD
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    console.error('Error caught by boundary: any
+import React, { useMemo, useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'
+ FeedbackWidgetProps) {  const [rating, setRating] = useState

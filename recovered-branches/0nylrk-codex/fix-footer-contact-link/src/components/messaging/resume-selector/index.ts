@@ -1,6 +1,2 @@
-
-
-export { ResumeSelector } from './ResumeSelector',;
-export type { ResumeOption } from './types';
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export { ResumeSelector } from "./
+export type { ResumeOption } from "./

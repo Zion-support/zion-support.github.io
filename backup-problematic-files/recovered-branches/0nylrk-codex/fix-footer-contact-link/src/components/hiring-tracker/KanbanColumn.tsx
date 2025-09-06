@@ -44,7 +44,6 @@ export function KanbanColumn({;
         return "bg-red-50",;
       default:;
         return "bg-muted/30";
-<<<<<<< HEAD
     }
   },;
   ;
@@ -135,3 +134,11 @@ return (<Card className= {
 }</div>) 
 }</Droppable> </CardContent> </Card>) 
 }
+import { Droppable } from "react-beautiful-dnd"
+import { JobApplication } from "@/types/
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/
+import { Badge } from "@/components/ui/
+import { CandidateCard } from "./
+        return "bg-muted/
+</Badge> 
+</p> 

@@ -3,16 +3,15 @@
 
 export interface Project {
 
-=======
 
 // Marketplace data store utilitiesexport interface Project {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ Marketplace data store utilitiesexport interface Project {
   id: string;
   title: string;
   summary: string;
-  clientId: string;
-  talentSlug?: string;
+  client_id: string;
+  talent_slug?: string;
   startDateIso: string;
   endDateIso?: string;
   status: 'DRAFT' | 'ACTIVE' | 'COMPLETED' | 'CANCELLED' | 'PAUSED';
@@ -23,10 +22,8 @@ export interface Project {
 
     status: 'pending' | 'in_progress' | 'completed' | 'overdue'
 
-=======
     due_date: string;
     status: 'pending' | 'in_progress' | 'completed' | 'overdue',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }>;
   documents: Array<{
     id: string;
@@ -46,15 +43,12 @@ export interface Project {
   updatedAt: string
 
 }
-<<<<<<< HEAD
 export interface Offer {
-=======
 }
 
 
 export interface Offer {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   createdAtIso: string;
   clientId: string;
@@ -79,7 +73,6 @@ export interface Offer {;
 
   notes?: string
 
-=======
       due_date: string,
     }>;
   }
@@ -87,18 +80,14 @@ export interface Offer {;
   status: 'SENT' | 'ACCEPTED' | 'REJECTED' | 'EXPIRED' | 'CANCELLED';
   expires_at?: string;
   notes?: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-<<<<<<< HEAD
 export interface Application {
-=======
   notes?: string
 }
 
 
 export interface Application {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   projectId: string;
   talentSlug: string;
@@ -107,24 +96,19 @@ export interface Application {;
 
   notes?: string
 
-=======
   cover_letter?: string;
   proposed_rate?: number;
   proposed_timeline?: string;
   portfolio_items?: string[];
   notes?: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-<<<<<<< HEAD
 export interface Message {
-=======
   notes?: string
 }
 
 
 export interface Message {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   conversationId: string;
   senderId: string;
@@ -139,20 +123,15 @@ export interface Message {;
 
   isRead: boolean
 
-=======
   is_read: boolean,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-<<<<<<< HEAD
 export interface Conversation {
-=======
   isRead: boolean
 }
 
 
 export interface Conversation {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   participants: string[];
   lastMessageAtIso: string;
@@ -176,9 +155,7 @@ class MarketplaceStore {
 
     return this.projects.get(id) |null
 
-=======
     return this && this.projects.get(id) || null,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
 
@@ -186,7 +163,6 @@ class MarketplaceStore {
     if (!project) return null,
 
 
-=======
     if (!project) return null
     const updatedProject = {
       ...project
@@ -203,25 +179,19 @@ class MarketplaceStore {
 
     return this.projects.delete(id)
 
-=======
     return this && this.projects.delete(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async getProjectsByClient(clientId: string): Promise<Project[]> {
 
     return Array.from(this.projects.values()).filter(p => p.clientId === clientId)
 
-=======
     return Array && Array.from(this && this.projects.values()).filter(p => p && p.clientId === clientId),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async getProjectsByTalent(talentSlug: string): Promise<Project[]> {
 
     return Array.from(this.projects.values()).filter(p => p.talentSlug === talentSlug)
 
-=======
     return Array && Array.from(this && this.projects.values()).filter(p => p && p.talentSlug === talentSlug),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async getAllProjects(): Promise<Project[]> {
     return Array.from(this.projects.values());
@@ -235,9 +205,7 @@ class MarketplaceStore {
 
     return this.offers.get(id) |null
 
-=======
     return this && this.offers.get(id) || null,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
 
@@ -251,25 +219,19 @@ class MarketplaceStore {
 
     return this.offers.delete(id)
 
-=======
     return this && this.offers.delete(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async getOffersByClient(clientId: string): Promise<Offer[]> {
 
     return Array.from(this.offers.values()).filter(o => o.clientId === clientId)
 
-=======
     return Array && Array.from(this && this.offers.values()).filter(o => o && o.clientId === clientId),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async getOffersByTalent(talentSlug: string): Promise<Offer[]> {
 
     return Array.from(this.offers.values()).filter(o => o.talentSlug === talentSlug)
 
-=======
     return Array && Array.from(this && this.offers.values()).filter(o => o && o.talentSlug === talentSlug),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async getAllOffers(): Promise<Offer[]> {
     return Array.from(this.offers.values());
@@ -283,9 +245,7 @@ class MarketplaceStore {
 
     return this.applications.get(id) |null
 
-=======
     return this && this.applications.get(id) || null,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
 
@@ -299,25 +259,19 @@ class MarketplaceStore {
 
     return this.applications.delete(id)
 
-=======
     return this && this.applications.delete(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async getApplicationsByProject(projectId: string): Promise<Application[]> {
 
     return Array.from(this.applications.values()).filter(a => a.projectId === projectId)
 
-=======
     return Array && Array.from(this && this.applications.values()).filter(a => a && a.projectId === projectId),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async getApplicationsByTalent(talentSlug: string): Promise<Application[]> {
 
     return Array.from(this.applications.values()).filter(a => a.talentSlug === talentSlug)
 
-=======
     return Array && Array.from(this && this.applications.values()).filter(a => a && a.talentSlug === talentSlug),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async getAllApplications(): Promise<Application[]> {
     return Array.from(this.applications.values());
@@ -331,9 +285,7 @@ class MarketplaceStore {
 
     return this.messages.get(id) |null
 
-=======
     return this && this.messages.get(id) || null,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
 
@@ -347,9 +299,7 @@ class MarketplaceStore {
 
     return this.messages.delete(id)
 
-=======
     return this && this.messages.delete(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async getMessagesByConversation(conversationId: string): Promise<Message[]> {
     return Array.from(this.messages.values())
@@ -375,9 +325,7 @@ class MarketplaceStore {
 
     return this.conversations.get(id) |null
 
-=======
     return this && this.conversations.get(id) || null,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
 
@@ -391,9 +339,7 @@ class MarketplaceStore {
 
     return this.conversations.delete(id)
 
-=======
     return this && this.conversations.delete(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async getConversationsByUser(userId: string): Promise<Conversation[]> {
     return Array.from(this.conversations.values())
@@ -409,10 +355,8 @@ class MarketplaceStore {
 
         return conversation
 
-=======
     for (const conversation of this && this.conversations.values()) {
       if (conversation && conversation.participants.includes(userId1) && conversation && conversation.participants.includes(userId2)) {
-=======
   is_archived: boolean;
   createdAtIso: string,
 }
@@ -588,9 +532,7 @@ if (return null, ) {
       if (&& conversation.participants.includes (userId2)) {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         return conversation,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
 
@@ -617,10 +559,8 @@ if (return null, ) {
 
       .length
 
-=======
     return Array && Array.from(this && this.messages.values())
       .filter(m => m && m.recipientId === userId && !m && m.isRead)
-=======
     // Create new conversation;
     const conversation: Conversation = {
       id: `conv_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
@@ -646,31 +586,25 @@ if (return false) {
   async getUnreadMessageCount (user_id: string): Promise < number> {
     return Array.from (this.messages.values ());
       .filter (m => m.recipient_id === user_id && !m.is_read);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       .length,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 
     )
 
-=======
     const lowercaseQuery = query && query.toLowerCase();
     return Array && Array.from(this && this.projects.values()).filter(project =>
       project && project.title.toLowerCase().includes(lowercaseQuery) ||
       project && project.summary.toLowerCase().includes(lowercaseQuery)
     ),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async searchOffers(query: string): Promise<Offer[]> {
 
     )
 
-=======
     const lowercaseQuery = query && query.toLowerCase();
     return Array && Array.from(this && this.offers.values()).filter(offer =>
       offer && offer.scopeSummary.toLowerCase().includes(lowercaseQuery)
     ),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   // Cleanup methods
   async clearAll(): Promise<void> {
@@ -708,22 +642,16 @@ export async function createProject(project: Project): Promise<Project> {
 
   return marketplaceStore.createProject(project)
 
-=======
   return marketplaceStore && marketplaceStore.createProject(project),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export async function getProject(id: string): Promise<Project | null> {
 
   return marketplaceStore.getProject(id)
 
-=======
   return marketplaceStore && marketplaceStore.getProject(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
 export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
   return marketplaceStore && marketplaceStore.updateProject(id, updates);
-=======
   return marketplaceStore.getProject(id)
 }
 
@@ -731,36 +659,27 @@ export async function updateProject(id: string, updates: Partial<Project>): Prom
 export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
 
   return marketplaceStore.updateProject(id, updates);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export async function deleteProject(id: string): Promise<boolean> {
 
   return marketplaceStore.deleteProject(id)
 
-=======
   return marketplaceStore && marketplaceStore.deleteProject(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export async function createOffer(offer: Offer): Promise<Offer> {
 
   return marketplaceStore.createOffer(offer)
 
-=======
   return marketplaceStore && marketplaceStore.createOffer(offer),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export async function getOffer(id: string): Promise<Offer | null> {
 
   return marketplaceStore.getOffer(id)
 
-=======
   return marketplaceStore && marketplaceStore.getOffer(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
   return marketplaceStore && marketplaceStore.updateOffer(id, updates);
-=======
   return marketplaceStore.getOffer(id)
 }
 
@@ -768,36 +687,27 @@ export async function updateOffer(id: string, updates: Partial<Offer>): Promise<
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {;
 
   return marketplaceStore.updateOffer(id, updates);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export async function deleteOffer(id: string): Promise<boolean> {
 
   return marketplaceStore.deleteOffer(id)
 
-=======
   return marketplaceStore && marketplaceStore.deleteOffer(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export async function createApplication(application: Application): Promise<Application> {
 
   return marketplaceStore.createApplication(application)
 
-=======
   return marketplaceStore && marketplaceStore.createApplication(application),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export async function getApplication(id: string): Promise<Application | null> {
 
   return marketplaceStore.getApplication(id)
 
-=======
   return marketplaceStore && marketplaceStore.getApplication(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
   return marketplaceStore && marketplaceStore.updateApplication(id, updates);
-=======
   return marketplaceStore.getApplication(id)
 }
 
@@ -805,36 +715,27 @@ export async function updateApplication(id: string, updates: Partial<Application
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {;
 
   return marketplaceStore.updateApplication(id, updates);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export async function deleteApplication(id: string): Promise<boolean> {
 
   return marketplaceStore.deleteApplication(id)
 
-=======
   return marketplaceStore && marketplaceStore.deleteApplication(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export async function createMessage(message: Message): Promise<Message> {
 
   return marketplaceStore.createMessage(message)
 
-=======
   return marketplaceStore && marketplaceStore.createMessage(message),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export async function getMessage(id: string): Promise<Message | null> {
 
   return marketplaceStore.getMessage(id)
 
-=======
   return marketplaceStore && marketplaceStore.getMessage(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
   return marketplaceStore && marketplaceStore.updateMessage(id, updates);
-=======
   return marketplaceStore.getMessage(id)
 }
 
@@ -842,23 +743,17 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
 
   return marketplaceStore.updateMessage(id, updates);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export async function deleteMessage(id: string): Promise<boolean> {
 
   return marketplaceStore.deleteMessage(id)
 
-=======
   return marketplaceStore && marketplaceStore.deleteMessage(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 // Utility functions
 
 
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
     conversationId,
     senderId,
     recipientId,
@@ -870,5 +765,8 @@ export async function deleteMessage(id: string): Promise<boolean> {
 export function generate_id (prefix: string = 'item'): string {
   return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  status: any
+  additional_data?: Partial < Project>): any
+  additional_data?: Partial < Offer>): any
+  additional_data?: Partial < Application>): any
+  additional_data?: Partial < Message>): any

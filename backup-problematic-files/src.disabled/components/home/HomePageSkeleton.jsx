@@ -28,3 +28,5 @@ const HomePageSkeleton = ({ className }) => {
 };
 
 export default HomePageSkeleton;
+import React from 'react'
+    

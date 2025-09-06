@@ -3,19 +3,14 @@
 import React from "react";
 import Layout from "../components/Layout";
 
-=======
 import React from 'react';
 
-=======
 
 
-=======
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Brain, Zap, Shield, Users, Target, Globe, Heart, CheckCircle } from 'lucide-react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -61,7 +56,6 @@ const AboutPage: React.FC = () => {
 
 
     };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       icon: Shield,
       title: "Trust & Security",
@@ -99,20 +93,18 @@ const AboutPage: React.FC = () => {
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 
-=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-}
-  ];
 
-
-export default function AboutPage() {
-  const stats = [
-    { number: '500+', label: 'Projects Delivered', icon: CheckCircle, color: 'from-blue-500 to-cyan-500' },
-    { number: '50+', label: 'Enterprise Clients', icon: Users, color: 'from-purple-500 to-pink-500' },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield, color: 'from-green-500 to-emerald-500' },
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
 
 
     { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500'   } catch (error) {
@@ -121,17 +113,6 @@ export default function AboutPage() {
   }
 }
   ],
-
-
-=======
-    { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const values = [
     {
       icon: Brain,
@@ -178,15 +159,12 @@ export default function AboutPage() {
   ],
 
 
-=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const technologies = [
     { name: 'Artificial Intelligence', icon: Brain, description: 'Advanced AI and machine learning solutions', color: 'from-purple-500 to-pink-500' },
     { name: 'Quantum Computing', icon: Atom, description: 'Quantum-powered computing and cryptography', color: 'from-blue-500 to-cyan-500' },
@@ -196,15 +174,10 @@ export default function AboutPage() {
 
 
 
-=======
-
->>>>>>> origin/automation-improvements-final
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 
-=======
+
+
     { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500'   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -337,11 +310,9 @@ export default function AboutPage() {
   )
 },
 export default AboutPage,
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from "react";
 import Layout from "../components/Layout";
 export default function About() {
@@ -349,7 +320,6 @@ export default function About() {;
   return (
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <Layout
       title="About Us - Zion Tech Group"
 
@@ -377,11 +347,8 @@ export default function About() {;
   );
 }
 
-=======
 
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <>
       <Head>
         <title>About Us - Zion Tech Group</title>
@@ -428,12 +395,9 @@ export default function About() {;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 {/* Values Section */}
-=======
 
         {/* Values Section */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -554,12 +518,8 @@ export default function About() {;
       </div>
     </>
   );
-<<<<<<< HEAD
 name: 'Kleber',
-=======
-=======
       name: 'Kleber',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       role: 'Founder & CEO',
       description: 'Visionary leader driving innovation in AI and quantum technologies',
       image: '/api/placeholder/150/150',
@@ -678,18 +638,12 @@ export default function AboutPage() {
 
 };
 export default AboutPage;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
 
-=======
 
->>>>>>> origin/automation-improvements-final
-=======
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -720,5 +674,5 @@ function About() {
       </div>;
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any

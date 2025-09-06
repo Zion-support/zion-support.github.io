@@ -2,15 +2,12 @@
 
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const advancedEmergingTechServices2025 = [
   {
 
 
   {
 
-=======
     id: 'quantum - materials - discovery - platform',
     name: 'QuantumMaterials Discovery',
     description:;
@@ -72,7 +69,6 @@ export const advancedEmergingTechServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$2.8B',
     target_audience:;
       'Materials science companies, research institutions, manufacturing firms, government agencies',
@@ -141,7 +137,6 @@ export const advancedEmergingTechServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$3.2B',
     target_audience:;
       'Robotics companies, manufacturing firms, automation specialists, research institutions',
@@ -210,7 +205,6 @@ export const advancedEmergingTechServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$8.9B',
     target_audience:;
       'Internet service providers, telecommunications companies, government agencies, cybersecurity firms',
@@ -279,7 +273,6 @@ export const advancedEmergingTechServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$12.4B',
     target_audience:;
       'Logistics companies, supply chain managers, transportation firms, e - commerce businesses',
@@ -354,7 +347,6 @@ export const advancedEmergingTechServices2025 = [
 
     };
     marketSize: '$6 && 6.8B',
-=======
       starter: {
         price: 599
         period: 'month'
@@ -908,27 +900,20 @@ export const advancedEmergingTechServices2025 = [
     targetAudience:
       'Gaming companies, virtual reality firms, entertainment companies, technology startups'
     competitiveAdvantage:
-<<<<<<< HEAD
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
   }
-=======
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$6.8B'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     market_size: '$6.8B',
     target_audience:;
       'Gaming companies, virtual reality firms, entertainment companies, technology startups',
@@ -1152,15 +1137,10 @@ export const advancedEmergingTechServices2025 = [
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export const advancedEmergingTechServices2025 = [;
   {;
     id: 'space-mining-operations-platform',;
@@ -1391,11 +1371,22 @@ export const advancedEmergingTechServices2025 = [;
     marketSize: '$6.8B',;
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups',;
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+export const advancedEmergingTechServices2025 = [
+  {
+    id: any
+      'Advanced space mining platform that enables asteroid mining, lunar resource extraction, and space resource management for sustainable space exploration.'
+      'Asteroid mining operations'
+      'Lunar resource extraction'
+      'Space resource mapping'
+      'Automated mining systems'
+      'Integration with space agencies'
+      'Advanced analytics and reporting'
+      'Custom mining strategies'
+      '24/
+    website: any
+      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/
+    competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/
+      'Industry - first quantum - enhanced metaverse, advanced AI world generation, and comprehensive VR /
+    competitive_advantage: 'Industry - first quantum - enhanced metaverse, advanced AI world generation, and comprehensive VR /

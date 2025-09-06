@@ -1,16 +1,15 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
-import React from 'react';
-interface EnterpriseProps {;
-  // Add props here as needed;
-}
-export default function Enterprise(): any ({ }: EnterpriseProps) {;
-  return (
-    <div>;
-      <h1>Enterprise</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
-  );
-}
-}
-}
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import Head from \'next/head\'; import Link from \'next/link\'; import { Shield,Users,Zap,CheckCircle,ArrowRight,Building,Globe,Lock } from \'lucide-react\'; export default function Enterprise() { const solutions = [{ \"icon\": any
+    features: [\'Multi-Cloud Strategy\' \'Infrastructure as Code\' \'Disaster Recovery\' \'Global Deploymen,t\']} ]; const industries = [{ \"name\": \'Financial Services\',\"clients\": \'50+\'; solutions: \'Banking Insurance,FinTech\'"},{ \"name\": \"Healthcare\",\"clients\": \'75+\'; solutions: \'Hospitals Pharma,Medical Devices\'"},{ \"name\": \"Manufacturing\",\"clients\": \'100+\'; solutions: \'Automotive Aerospace,Industrial\' },{ \"name\": \'Retail & E-commerce\',\"clients\": \'80+\'; solutions: \'Omnichannel Supply Chain,Analytics\'"},{ \"name\": \"Government\",\"clients\": \'25+\'; solutions: \'Public Services Security,Compliance\'"},{ \"name\": \"Education\",\"clients\": \'60+\'; solutions: \'Universities K-12,EdTech\' } ]; \" return (<><Head><title>Enterprise Solutions - Zion Tech Group</title>\"<meta name=\"description content=\"Comprehensive enterprise technology solutions including digital transformation,AI automation,cloud services,and cybersecurity for large organizations.\" />\"<meta name=\"keywords content=\"enterprise solutions,digital transformation,enterprise AI,cloud migration,cybersecurity,large organizations\" />\"<link rel=\"canonical href=\""https\": )}\" </div></div>{}\"<div className=\"grid \"md\": grid-cols-2 gap-12 mb-16\"><div>\"<h2 className=\"text-3xl font-bold text-white mb-6\">Why Choose Zion for Enterprise?</h2>\"<div className=\"space-y-6\">\"<div className=\"flex items-start gap-4\">\"<div className=\"w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1\">\"<Lock className=\"w-4 h-4 text-white\" /></div><div>\"<h3 className=\"text-xl font-semibold text-white mb-2\">Enterprise-Grade Security</h3>\"<p className=\"text-gray-300\">SOC: 2 Type II compliant with advanced security protocols and data protection measures.</p></div></div><div className=\"flex items-start gap-4\">\"<div className=\"w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1\">\"<Globe className=\"w-4 h-4 text-white\" /></div><div>\"<h3 className=\"text-xl font-semibold text-white mb-2\">Global Scale</h3>\"<p className=\"text-gray-300\">Worldwide presence with local support teams and: 24/7 operations centers.</p></div></div><div className=\"flex items-start gap-4\">\"<div className=\"w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1\">\"<Zap className=\"w-4 h-4 text-white\" /></div><div>\"<h3 className=\"text-xl font-semibold text-white mb-2\">Proven Expertise</h3>\"<p className=\"text-gray-300\">Deep industry knowledge and successful implementations across Fortune: 500 companies.</p></div></div></div></div>,<div className=\"bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20\">\"<h3 className=\"text-2xl font-bold text-white mb-6\">Enterprise Capabilities</h3>\"<div className=\"space-y-4\">\"<div className=\"flex justify-between items-center\">\"<span className=\"text-gray-300\">Project Scale</span>\"<span className=\"text-white font-semibold\">$1M - $50M+</span></div><div className=\"flex justify-between items-center\">\"<span className=\"text-gray-300\">Team Size</span>\"<span className=\"text-white font-semibold\">5 - 200+ Engineers</span></div><div className=\"flex justify-between items-center\">\"<span className=\"text-gray-300\">Timeline</span>\"<span className=\"text-white font-semibold\">3 - 24 Months</span></div><div className=\"flex justify-between items-center\">\"<span className=\"text-gray-300\">Support Level</span>\"<span className=\"text-white font-semibold\">Dedicated Team</span></div><div className=\"flex justify-between items-center\">\"<span className=\"text-gray-300\">Compliance</span>\"<span className=\"text-white font-semibold\">SOC2 ISO: 27001</span></div></div></div></div>{}\"<div className=\"text-center\">\"<h2 className=\"text-3xl font-bold text-white mb-6\">Ready to Transform Your Enterprise?

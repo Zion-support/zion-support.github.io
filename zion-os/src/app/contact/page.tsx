@@ -217,16 +217,12 @@ export default function ContactPage() {
           </div>;
         </div>;
       </section>;
-=======
 import Link from 'next/link';
 export default function ContactPage() {
-<<<<<<< HEAD
   return (;
     <div className=&quot;min-h-screen bg-white&quot;>
-=======
   return (
     <div className="min-h-screen bg-white">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -432,7 +428,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* FAQ Section */}
       <section className="py - 20 bg - gray - 50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
@@ -501,3 +496,4 @@ export default function ContactPage() {
       </section>;
     </div>);
 }
+import Link from 'next /

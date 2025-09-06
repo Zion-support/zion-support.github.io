@@ -52,7 +52,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res && res.status(405).json({ error: 'Method not allowed' });
 
 }
-<<<<<<< HEAD
   append_log,
   evaluate_reflexes,
   read_state,
@@ -137,16 +136,16 @@ return res.status (405).json ({ error: 'Method not allowed' });
   return res.status (405).json ({ error: 'Method not allowed' });
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
   return res.status(405).json({ error: 'Method not allowed' });
 
-=======
 
 
   return res.status(405).json({ error: 'Method not allowed' });
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from 'next'
+ from '@/utils/
+  return !superToken |token = = superToken;import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/
+ from '@/utils /
+  return !super_token || token = = super_token;import { append_log, evaluate_reflexes, read_state, write_state } from '@/utils /

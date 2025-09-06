@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -211,7 +213,6 @@ if ( {) {
 
       <script;
         dangerouslySetInnerHTML={{
-<<<<<<< HEAD
           __html: `;
             // Performance monitoring;
             // Check condition
@@ -234,14 +235,11 @@ if ( {) {
                         name: 'load',
                         value: Math.round (load_time),
 
-=======
 
                         name: 'load',
                         value: Math.round(loadTime),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       });
-=======
           __html: `
             // Performance monitoring
             if ('performance' in window) {
@@ -252,14 +250,10 @@ if ( {) {
                     const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
                     if (window.gtag) {
                       window.gtag('event', 'timing_complete', {
-<<<<<<< HEAD
                         name: 'load'
                         value: Math.round(loadTime)
-=======
                         name: 'load',
                         value: Math.round(loadTime),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       });
                     const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart
                     if (window && window.gtag) {
@@ -269,7 +263,6 @@ if ( {) {
                       })
                     }
                   }
-<<<<<<< HEAD
                 }, 0)
               })
             }
@@ -278,7 +271,6 @@ if ( {) {
 }
 ;
 
-=======
 
           `,
 
@@ -290,5 +282,7 @@ if ( {) {
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Analytics;
+    console.error('Error caught by boundary: any
+import React, { useEffect } from 'react'
+import Head from 'next/

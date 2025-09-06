@@ -31,9 +31,6 @@
   res && res.status(405).json({ error: "Method not allowed" });
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 ;
@@ -68,8 +65,6 @@ if ( {) {
   }
   res.status (405).json ({ error: "Method not allowed" });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -80,7 +75,6 @@ export default async function handler(
   res: NextApiResponse,
 ) {;
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -90,7 +84,6 @@ export default async function handler(req, res) {
   try {
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const store = getFraudStore();
   if (req.method === 'GET') {
     const userId = (req.query.userId as string) || '';
@@ -123,4 +116,28 @@ export default async function handler(req, res) {
   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  res.status(405).json({ error: "Method not allowed" });
+}
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  res.status(405).json({ error: 'Method not allowed' });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+import type { NextApiRequest, NextApiResponse } from "next"
+import { getFraudStore } from "../../../../utils/fraud/
