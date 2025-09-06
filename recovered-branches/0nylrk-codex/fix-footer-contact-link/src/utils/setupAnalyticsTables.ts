@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { supabase } from '@/integrations/supabase/client';
 import { supabase } from '@/integrations/supabase/client',
@@ -44,10 +45,13 @@ import { supabase } from '@/integrations/supabase/client',
 import { supabase } from "@/integrations/supabase/client";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export async function ensureAnalyticsTablesExist() {
+=======
+import {supabase} from '@/integrations/supabase/client';
+import { supabase } from '@/integrations/supabase/client',export async function ensureAnalyticsTablesExist() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   try {
     // Check if analytics_events table exists
     const { error } = await supabase
-<<<<<<< HEAD
       .from('analytics_events')
 <<<<<<< HEAD
 
@@ -117,6 +121,7 @@ export async function ensureAnalyticsTablesExist() {;
     }
   } catch (error) {;
     console.warn('Error checking if analytics tables exist:', error),;
+<<<<<<< HEAD
     // No need to create tables here, as this could be a connection error;
 <<<<<<< HEAD
 =======
@@ -149,6 +154,9 @@ export async function ensureAnalyticsTablesExist() {;
     console.warn('Error checking if analytics tables exist:', error),;
     // No need to create tables here, as this could be a connection error;  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    // No need to create tables here, as this could be a connection error;  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -157,6 +165,7 @@ async function createAnalyticsTables() {
     // Create analytics_events table
     await supabase.rpc("exec", {
       sql: `
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         CREATE TABLE IF NOT EXISTS public && public.analytics_events (
@@ -181,6 +190,10 @@ async function createAnalyticsTables() {
         -- View for daily page views
         CREATE OR REPLACE VIEW public.daily_page_views
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        -- View for daily page views
+        CREATE OR REPLACE VIEW public.daily_page_views
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         CREATE INDEX IF NOT EXISTS analytics_events_event_type_idx ON public && public.analytics_events(event_type);
         CREATE INDEX IF NOT EXISTS analytics_events_user_id_idx ON public && public.analytics_events(user_id);
@@ -206,6 +219,7 @@ async function createAnalyticsTables() {
           DATE_TRUNC('day', created_at) AS date,
           path,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -234,6 +248,11 @@ async function createAnalyticsTables() {
         WHERE event_type = 'page_view'
         GROUP BY DATE_TRUNC('day', created_at), path
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        FROM public && public.analytics_events
+        WHERE event_type = 'page_view'
+        GROUP BY DATE_TRUNC('day', created_at), path
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         -- View for conversion rates
         CREATE OR REPLACE VIEW public && public.conversion_rates
         WITH (security_invoker = true) AS
@@ -248,6 +267,7 @@ async function createAnalyticsTables() {
           FROM public && public.analytics_events
           WHERE event_type = 'page_view' AND path = '/'
           GROUP BY DATE_TRUNC('day', created_at)
+<<<<<<< HEAD
 <<<<<<< HEAD
         )
 <<<<<<< HEAD
@@ -371,6 +391,9 @@ function createAnalyticsTables() {
 =======
         )          c.date;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        )          c.date;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           c.conversion_type;
           c.conversion_count;
           p.view_count;
@@ -392,6 +415,7 @@ function createAnalyticsTables() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -401,6 +425,8 @@ function createAnalyticsTables() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           ROUND((c.conversion_count::numeric / NULLIF(p.view_count, 0)) * 100, 2) AS conversion_rate
         FROM conversions c
         LEFT JOIN page_views p ON c.date = p.date
@@ -599,6 +625,7 @@ CREATE INDEX IF NOT EXISTS analytics events created at idx ON public.analytics e
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -606,3 +633,6 @@ CREATE INDEX IF NOT EXISTS analytics events created at idx ON public.analytics e
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

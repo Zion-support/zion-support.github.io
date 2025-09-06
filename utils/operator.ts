@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 type OperatorEvent = {;
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export interface OperatorSession {
   id: string;
@@ -20,6 +23,7 @@ export interface SupportEvent {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   type: string;
   sessionId: string;
+<<<<<<< HEAD
   payload?: any;
 };
 export async function logSupportEventToOperator(event: OperatorEvent): Promise<void> {;
@@ -33,6 +37,11 @@ export async function tagOperatorSession(sessionId: string, tag: string): Promis
   return Promise.resolve();
 }
 =======
+=======
+  payload: any;
+  timestamp: Date;
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   getEvents: () => []
   getEventById: (id: string) => null
@@ -70,6 +79,7 @@ export const tagOperatorSession = (sessionId: string, tag: string) =>
 export const logSupportEventToOperator = (event: SupportEvent) =>
   operatorManager.logSupportEvent(event);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -145,3 +155,7 @@ export const operator = {
 export const getOperatorSessions = () => operatorManager.getOperatorSessions();
 export const getSupportEvents = () => operatorManager.getSupportEvents();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export const getOperatorSessions = () => operatorManager.getOperatorSessions();
+export const getSupportEvents = () => operatorManager.getSupportEvents();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

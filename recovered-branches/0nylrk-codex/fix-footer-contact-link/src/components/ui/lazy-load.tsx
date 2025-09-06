@@ -10,7 +10,10 @@ import { cn } from "@/lib/utils";
 import { Skeleton } from "@/components/ui/skeleton";
 interface LazyLoadProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {useEffect, useState, useRef, ReactNode} from "react";
 import {cn} from "@/lib/utils";
@@ -29,6 +32,7 @@ import { Skeleton } from "@/components/ui/skeleton",
   className?: string;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function LazyLoad(): any ({;
@@ -76,12 +80,23 @@ interface LazyLoadProps {
 =======
 export function LazyLoad(): any ({;interface LazyLoadProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function LazyLoad(): any ({;interface LazyLoadProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   height?: string | number,
   width?: string | number,
   children: ReactNode,
   loadingComponent?: ReactNode,  className?: string
 }
 
+<<<<<<< HEAD
+=======
+export function LazyLoad({;
+  height = "200px";
+  width = "100%";
+  children;
+  loadingComponent;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function LazyLoad({
 
   className}: LazyLoadProps) {
@@ -89,6 +104,7 @@ export function LazyLoad({
   const [isLoaded, setIsLoaded] = useState(false),
   const containerRef = useRef<HTMLDivElement>(null),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -133,6 +149,8 @@ export function LazyLoad({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         threshold: 0.1}
     );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -158,8 +176,11 @@ export function LazyLoad({;
   const [isLoaded, setIsLoaded] = useState(false),;
   const containerRef = useRef<HTMLDivElement>(null),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { useEffect, useState, useRef, ReactNode } from "react",;
 import { cn } from "@/lib/utils",;
@@ -183,6 +204,7 @@ export function LazyLoad({;
   const [isLoaded, setIsLoaded] = useState(false),;
   const containerRef = useRef<HTMLDivElement>(null),;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -235,6 +257,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         threshold: 0.1}
 
           setIsVisible(true),;
@@ -277,6 +301,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -286,11 +311,14 @@ if ( {) {
     }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return () => {
       if (containerRef.current) {
         observer.unobserve(containerRef.current)
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -394,11 +422,17 @@ if ( {) {
   }, []),;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  }, []),;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   useEffect(() => {;
     if (isVisible) {;
       // Simulate loading delay (remove in production);
       const timer = setTimeout(() => {;
         setIsLoaded(true);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -454,6 +488,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         className
       )}>;
       {isVisible ? (;
@@ -464,6 +500,7 @@ if ( {) {
       ) : (;
         loadingComponent || defaultLoadingComponent;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     </div>
@@ -528,6 +565,12 @@ if ( {) {
   );
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    </div>;
+  );
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   useEffect (() => {
     // Check condition
@@ -576,6 +619,7 @@ return (<div)
 }</div>) 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -583,3 +627,6 @@ return (<div)
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

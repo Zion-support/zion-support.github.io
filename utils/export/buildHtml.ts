@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -22,11 +23,16 @@ export function buildPrintableHtml(project: BookProject): string {;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { BookProject } from '../book/bookTypes';
 export function buildPrintableHtml(project: BookProject): string {;
   const { meta, chapters, visuals } = project;
   const quotesHtml = visuals.quoteCallouts;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
+<<<<<<< HEAD
 <<<<<<< HEAD
     .join('\n');
 <<<<<<< HEAD
@@ -80,12 +86,16 @@ export function buildPrintableHtml (project: BookProject): string {
 =======
     .join('\n');    .join('\n\n');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    .join('\n');    .join('\n\n');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const visualsHtml = [;
     ...visuals.timelineImages;
     ...visuals.daoVoteCharts;
     ...visuals.uiScreens];
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
@@ -129,6 +139,11 @@ export function buildPrintableHtml (project: BookProject): string {
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
 =======  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+=======  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return `<!doctype html>;
 <html>;
 <head>;
@@ -136,7 +151,10 @@ export function buildPrintableHtml (project: BookProject): string {
 <title>${escape_html (meta.title)}</title>;
 <style>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -212,6 +230,7 @@ export function buildPrintableHtml (project: BookProject): string {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   @page { margin: 1in }
@@ -281,6 +300,8 @@ function paragraphize(text: string): string {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     ${barcode}
   </section>;
   ${quotes_html}
@@ -289,6 +310,7 @@ function paragraphize(text: string): string {;
 </body>;
 </html>`;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -418,11 +440,14 @@ function escapeHtml(s: string): string {;
 </html>`;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 function paragraphize(text: string): string {;
@@ -510,3 +535,6 @@ function escape_html (string: string): string {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import React from 'react'
@@ -69,6 +70,10 @@ function AIEducationPlatformPage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
+=======
+import React from 'react';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import SEO from '../components/SEO';
 import React from 'react'
 import SEO from '../components/SEO'
@@ -77,6 +82,7 @@ import SEO from '../components/SEO',;
 import React from 'react'
 import SEO from '../components/SEO'
 export default function AIEducationPlatformPage() {
+<<<<<<< HEAD
   return (
     <div className="min-h-[60vh] px-6 py-24">
       <SEO title="AI Education Platform | Zion Tech Group" description="Personalized learning with AI" />
@@ -93,11 +99,35 @@ export default function AIEducationPlatformPage() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+export default function Page() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+    <div className='min-h-[60vh] px-6 py-24'>
+      <SEO
+        title='AI Education Platform | Zion Tech Group'
+        description='Personalized learning with AI'
+      />
+      <div className='max-w-3xl mx-auto'>
+        <h1 className='text-4xl font-bold text-white mb-4'>
+          AI Education Platform
+        </h1>
+        <p className='text-gray-300'>
+          Adaptive learning and skill development powered by AI. Details coming
+          soon.
+        </p>
+      </div>
+    </div>
+<<<<<<< HEAD
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -122,3 +152,8 @@ export default function AIEducationPlatformPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

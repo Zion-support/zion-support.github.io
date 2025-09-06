@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
@@ -24,10 +25,13 @@ interface NotificationHeaderProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 interface NotificationHeaderProps {;
   unreadCount: number,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   onMarkAllAsRead: () => Promise<void>;
 <<<<<<< HEAD
@@ -67,6 +71,9 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
 =======
   onMarkAllAsRead: () => Promise<void>;export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  onMarkAllAsRead: () => Promise<void>;export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   unreadCount,
   onMarkAllAsRead,
 }) => {

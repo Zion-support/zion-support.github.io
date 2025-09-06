@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -18,12 +19,17 @@ import {TalentGrid} from "@/components/talent/TalentGrid";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { TalentProfile } from "@/types/talent",
 import { ActiveFilters } from "@/components/talent/ActiveFilters",
 import { ResultsHeader } from "@/components/talent/ResultsHeader";
 import { TalentGrid } from "@/components/talent/TalentGrid";
 import { ResultsHeader } from "@/components/talent/ResultsHeader",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { TalentGrid } from "@/components/talent/TalentGrid",
 <<<<<<< HEAD
@@ -88,6 +94,9 @@ import {TalentGrid} from "@/components/talent/TalentGrid";
 =======
 import { TalentGrid } from "@/components/talent/TalentGrid",    selectedSkills: string[],
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { TalentGrid } from "@/components/talent/TalentGrid",    selectedSkills: string[],
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     toggleSkill: (skill: string) => void,
     selectedAvailability: string[],
     toggleAvailability: (availability: string) => void,
@@ -97,6 +106,7 @@ import { TalentGrid } from "@/components/talent/TalentGrid",    selectedSkills: 
     setPriceRange: (range: [number, number]) => void,
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -116,6 +126,8 @@ import { TalentGrid } from "@/components/talent/TalentGrid",    selectedSkills: 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function TalentResults({;
   filteredTalents;
@@ -136,6 +148,7 @@ export function TalentResults({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -199,6 +212,11 @@ interface TalentResultsProps {;
   return (
     <div className="flex-1">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}: TalentResultsProps) {
+  return (
+    <div className="flex-1">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setPriceRange: (range: [number, number]) => void;
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void;
@@ -206,6 +224,7 @@ interface TalentResultsProps {;
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function TalentResults(): any ({;
@@ -419,13 +438,19 @@ export function TalentResults(): any ({;      />;
 }
 ;;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function TalentResults(): any ({;      />;
+    </div>;
+  );
+}
+;;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         is_authenticated={is_authenticated}
         clear_filters={activeFiltersProps.clear_filters}
       />;
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -485,3 +510,7 @@ export function TalentResults(_{_filteredTalents, _isLoading, _viewProfile, _han
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80,6 +81,11 @@ interface MessageBubbleProps {;
   message: Message,
   isUserMessage: boolean
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  message: Message,
+  isUserMessage: boolean
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   message: Message
 
   isUserMessage: boolean
@@ -88,16 +94,22 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
     <div className={cn(
       "flex",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    <div className={cn(
+      "flex",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       isUserMessage ? "justify-end" : "justify-start"
     )}>
       <div className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -121,6 +133,11 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
       "flex",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    <div className={cn(
+      "flex",
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       isUserMessage ? "justify-end" : "justify-start"
     )}>
       <div className={cn(
@@ -128,6 +145,7 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         isUserMessage
           ? "bg-zion-purple text-white"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -182,12 +200,18 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         isUserMessage 
           ? "bg-zion-purple text-white" 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        "max-w-[75%] rounded-lg px-4 py-2",
+        isUserMessage 
+          ? "bg-zion-purple text-white" 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="text-xs opacity-70 text-right mt-1">
           {format(new Date(message.created_at), 'h:mm a')}
         </div>
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -241,6 +265,8 @@ function MessageBubble() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from 'react',;
 import { format } from 'date-fns',;
@@ -296,9 +322,12 @@ export function MessageBubble({ message, isUserMessage } MessageBubbleProps) {;
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

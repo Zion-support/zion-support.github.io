@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
 module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'"
 =======
@@ -18,6 +19,9 @@ module.exports = default function Home() { return (<main style={{padding: "20"}}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
+=======
+export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'"import React from 'react';
 import React from 'react';
 import * as React from 'react';
@@ -32,6 +36,7 @@ export default function Index({ }: IndexProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,6 +98,12 @@ interface IndexProps {
   // Add props here as needed
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}
+interface IndexProps {
+  // Add props here as needed
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import React from 'react';
 import * as React from 'react';
@@ -100,6 +111,7 @@ import * as React from 'react';
 interface IndexProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -111,6 +123,8 @@ interface IndexProps {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function Index({ }: IndexProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -153,6 +167,7 @@ export default function Index(): any ({ }: IndexProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -213,3 +228,5 @@ export default function Index(): any ({ }: IndexProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -11,7 +11,12 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ' \' \' \' \' \' \' \' \' \' import { Sparkles\''\";\";
 " " " " " " " " " " import { Sparkles""";";'"'"
+<<<<<<< HEAD
 =======
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ' \' \' \' \' \' \' \' \' \' import { Sparkles\''\";\";
 " " " " " " " " " " import { Sparkles""";";'"'"
 

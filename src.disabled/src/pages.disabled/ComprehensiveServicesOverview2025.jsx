@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import _React,{ useState } from 'react';'''; import { Link } from 'react-router-dom'; const ComprehensiveServicesOverview2025 = () => {}}; const [selectedService,setSelectedService] = useState(null); const [selectedCategory,setSelectedCategory] = useState('all'); const categories = [; 'all',; 'AI & Business Intelligence',; 'Cybersecurity & Quantum Computing',; 'DevOps & Infrastructure',; 'Blockchain & Supply Chain',; 'Healthcare & AI',; 'Quantum Computing & AI',; 'FinTech & AI',; 'IoT & Edge Computing',; 'Legal Tech & AI',; 'Marketing & AI',; 'Energy & Sustainability',; 'Logistics & Transportation'; ]; const filteredServices = allEnhancedServices.filter(service => selectedCategory === 'all' || service.category === selectedCategory); const getCategoryIcon = (category) => {}; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }}}}
 
@@ -15,6 +16,8 @@ import _React,{ useState } from 'react';'''; import { Link } from 'react-router-
 <<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import _React,{ useState } from 'react';'''; import { Link } from 'react-router-dom'; const ComprehensiveServicesOverview2025 = () => {}}; const [selectedService,setSelectedService] = useState(null); const [selectedCategory,setSelectedCategory] = useState('all'); const categories = [; 'all',; 'AI & Business Intelligence',; 'Cybersecurity & Quantum Computing',; 'DevOps & Infrastructure',; 'Blockchain & Supply Chain',; 'Healthcare & AI',; 'Quantum Computing & AI',; 'FinTech & AI',; 'IoT & Edge Computing',; 'Legal Tech & AI',; 'Marketing & AI',; 'Energy & Sustainability',; 'Logistics & Transportation'; ]; const filteredServices = allEnhancedServices.filter(service => selectedCategory === 'all' || service.category === selectedCategory); const getCategoryIcon = (category) => {}; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }}}}
 
 
@@ -54,4 +57,7 @@ import _React,{ useState } from 'react';'''; import { Link } from 'react-router-
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >import _React,{ useState } from 'react';'''; import { Link } from 'react-router-dom'; const ComprehensiveServicesOverview2025 = () => {}}; const [selectedService,setSelectedService] = useState(null); const [selectedCategory,setSelectedCategory] = useState('all'); const categories = [; 'all',; 'AI & Business Intelligence',; 'Cybersecurity & Quantum Computing',; 'DevOps & Infrastructure',; 'Blockchain & Supply Chain',; 'Healthcare & AI',; 'Quantum Computing & AI',; 'FinTech & AI',; 'IoT & Edge Computing',; 'Legal Tech & AI',; 'Marketing & AI',; 'Energy & Sustainability',; 'Logistics & Transportation'; ]; const filteredServices = allEnhancedServices.filter(service => selectedCategory === 'all' || service.category === selectedCategory); const getCategoryIcon = (category) => {}; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }}}}
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

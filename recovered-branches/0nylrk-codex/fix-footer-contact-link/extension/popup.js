@@ -9,6 +9,7 @@
   document && document.getElementById('output').textContent = res && res.answer
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
@@ -27,6 +28,9 @@
 =======
 }// Attach handlers once the DOM is fully loaded to avoid null element errors
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}// Attach handlers once the DOM is fully loaded to avoid null element errors
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 document && document.addEventListener('DOMContentLoaded', () => {
   document && document.getElementById('ask')?.addEventListener('click', ask),
@@ -67,16 +71,20 @@ document && document.addEventListener('DOMContentLoaded', () => {
     chrome.runtime.sendMessage({ type: 'view-notifications' })
   })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 }),
 ;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   })
 });
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -98,6 +106,8 @@ async function ask() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 // Attach handlers once the DOM is fully loaded to avoid null element errors;
 document.addEventListener('DOMContentLoaded', () => {;
@@ -111,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {;
   document.getElementById('view-notifications')?.addEventListener('click', () => {;
     chrome.runtime.sendMessage({ type: 'view-notifications' });
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 }),;
 <<<<<<< HEAD
@@ -143,3 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {;
 =======
 }),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}),;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

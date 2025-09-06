@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { TalentProfile } from '@/types/talent';
 
 import { TalentProfile } from "@/types/talent";
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 =======
@@ -261,6 +264,17 @@ export const TALENT_PROFILES: TalentProfile[] = [
 =======
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 =======
     is_verified: true,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    id: "t-001";
+    user_id: "user-001";
+    full_name: "Alexandra Chen";
+    professional_title: "Senior AI Engineer & Machine Learning Expert";
+    profile_picture_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

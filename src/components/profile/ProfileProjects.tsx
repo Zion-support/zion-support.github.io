@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card",
@@ -7,6 +8,8 @@ import { ProfileProject } from "@/types/profile",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <img
                   src={project && project.imageUrl}
                   alt={project && project.title}
@@ -18,8 +21,19 @@ import { AspectRatio } from "@/components/ui/aspect-ratio",
                 <FileText className='text-zion-purple h-12 w-12 opacity-50' />;
               </div>;
             )}
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { ProfileProject } from '@/types/profile';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { FileText } from 'lucide-react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <CardContent className='p-4'>;
               <h4 className='text-white font-medium mb-2'>{project && project.title}</h4>;
               <p className='text-zion-slate text-sm mb-3 line-clamp-2'>;
@@ -63,6 +77,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -71,6 +86,8 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
             {project.imageUrl ? (
               <AspectRatio ratio={16/9}>
@@ -85,12 +102,15 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </AspectRatio>
             ) : (
               <div className="h-40 w-full flex items-center justify-center bg-zion-blue">
@@ -99,9 +119,12 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
             )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             <CardContent className='p-4'>
               <h4 className='text-white font-medium mb-2'>{project.title}</h4>
@@ -115,6 +138,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                       key={i}
                       variant='outline'
                       className='text-xs border-zion-slate-dark text-zion-slate-light'
+<<<<<<< HEAD
                     >                      {tag}                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
         {projects.map((project) => (
           <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
@@ -154,9 +178,12 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   src={project.imageUrl}
                   alt={project.title}
                   className="w-full h-full object-cover";
@@ -169,7 +196,10 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
               </div>;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             <CardContent className="p-4">
               <h4 className="text-white font-medium mb-2">{project.title}</h4>
@@ -178,15 +208,16 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                 <div className="flex flex-wrap gap-1 mb-2">
                   {project.tags.map((tag, i) => (
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
+=======
+                    >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       {tag}
                     </Badge>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
             <CardContent className="p-4">;
-<<<<<<< HEAD
-              <h4 className="text-white font-medium mb-2">{project && project.title}</h4>;
-              <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project && project.description}</p>;
 
+<<<<<<< HEAD
               {project && project.tags && project && project.tags.length > 0 && (;
                 <div className="flex flex-wrap gap-1 mb-2">;
                   {project && project.tags.map((tag, i) => (;                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
@@ -208,6 +239,8 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
                       {tag}
                     </Badge>;
@@ -215,17 +248,29 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                   ))}
 
               )}
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className='text-xs text-zion-slate-light mt-2'>                {project.date}              
 
               <div className="text-xs text-zion-slate-light mt-2">
+=======
+<div className='text-xs text-zion-slate-light mt-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 {project.date}
               </div>
             </CardContent>
           </Card>
         ))}
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     </div>;
   )
@@ -324,5 +369,14 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+;
+=======
+    </div>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

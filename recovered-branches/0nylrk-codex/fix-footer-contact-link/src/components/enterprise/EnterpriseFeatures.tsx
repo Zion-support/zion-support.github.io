@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
@@ -18,6 +21,7 @@ const features = [  {
     description: "Create a secure, private hiring portal accessible only to your team members.",
     icon: Shield},
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   {
@@ -73,6 +77,8 @@ const features = [
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   {
     title: "Custom SLA"
     description: "Get guaranteed response times and dedicated support with our custom SLAs."
@@ -114,10 +120,13 @@ const features = [;
   description: "Connect with talent across multiple regions with localized interfaces.",;
     icon: Globe}],;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function EnterpriseFeatures() {;
   return (
@@ -133,6 +142,7 @@ export function EnterpriseFeatures() {;
         </div>;
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -161,6 +171,8 @@ export function EnterpriseFeatures() {;
             <div
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               key={feature && feature.title}
               className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md">;
               <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5">;
@@ -233,6 +245,7 @@ icon: Settings
 ;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -240,3 +253,6 @@ icon: Settings
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

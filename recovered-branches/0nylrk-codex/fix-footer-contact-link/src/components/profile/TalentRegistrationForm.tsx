@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import React, { useState } from "react",
@@ -56,6 +57,8 @@ type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'oth
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface CategorizedSkills {
   programming: string[]
   devops: string[]
@@ -79,6 +82,7 @@ import {X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound} from "l
 import {toast} from "@/components/ui/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {useAuth} from "@/hooks/useAuth";
 <<<<<<< HEAD
@@ -157,6 +161,9 @@ import { useForm } from "react-hook-form",;
 =======
 import {useAuth} from "@/hooks/useAuth";import { useForm } from "react-hook-form",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {useAuth} from "@/hooks/useAuth";import { useForm } from "react-hook-form",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;
 import { Button } from "@/components/ui/button",;
@@ -178,6 +185,7 @@ import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from 
 import { toast } from "@/components/ui/use-toast",;
 import { supabase } from "@/integrations/supabase/client",;
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",;
 <<<<<<< HEAD
@@ -271,6 +279,9 @@ export function TalentRegistrationForm() {
 =======
 import { useAuth } from "@/hooks/useAuth",;  const form = useForm<TalentFormValues>({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { useAuth } from "@/hooks/useAuth",;  const form = useForm<TalentFormValues>({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     resolver: zodResolver(talentProfileSchema)
     defaultValues: {
       name: user?.displayName |""
@@ -329,6 +340,7 @@ export function TalentRegistrationForm() {;
       setSkillTags([...skillTags, skillInput]),;
       form.setValue("skills", "");
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -399,6 +411,8 @@ export function TalentRegistrationForm() {;
   };
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   // Handle removing skill tags;
   const handleRemoveSkill = (skill: string) => {;
@@ -440,6 +454,7 @@ export function TalentRegistrationForm() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -473,6 +488,8 @@ export function TalentRegistrationForm() {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 
@@ -482,6 +499,7 @@ export function TalentRegistrationForm() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -550,6 +568,8 @@ export function TalentRegistrationForm() {;
       if (error) {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         throw new Error(error && error.message);
       }
       setGeneratedContent(data as EnhancedProfile);
@@ -564,7 +584,10 @@ if ( {) {
       form.set_value ("skills", "");
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             }
           });
@@ -578,6 +601,7 @@ if ( {) {
 
   // Get category color;
   const getCategoryColor = (category: CategoryType) => {;
+<<<<<<< HEAD
 <<<<<<< HEAD
     switch (category) {;
 
@@ -928,6 +952,9 @@ export function TalentRegistrationForm() {;
 =======
     switch (category) {;      case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    switch (category) {;      case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
       case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
       case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
@@ -1133,6 +1160,7 @@ if ( {) {
 }
         throw new Error ("User not authenticated");
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1264,6 +1292,12 @@ if ( {) {
               }
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      }                  }
+                });
+              }
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
 
@@ -1351,6 +1385,7 @@ if ( {) {
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1423,6 +1458,12 @@ if ( {) {
           // Continue with submission even if enhancement fails
           finalSummary = ""      // Create the talent profile
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        } catch (error) {
+          console.error("Error enhancing profile:", error),
+          // Continue with submission even if enhancement fails
+          finalSummary = ""      // Create the talent profile
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // In a real implementation, this would save to Supabase
       setTimeout(() => {
         toast({
@@ -1433,6 +1474,7 @@ if ( {) {
           sendEnhancementNotification(user.id, userEmail)
         }
         setIsSubmitting(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1457,6 +1499,11 @@ if ( {) {
       }, 1500),
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      }, 1500),
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Here would be the actual code to save the profile to Supabase
       /*
       const { error } = await supabase
@@ -1471,6 +1518,7 @@ if ( {) {
           skills: finalSkills.map(name => ({ name, level: 4 })), // Default skill level
           hourly_rate: Number(values.hourlyRate)
           availability_status: values.availability
+<<<<<<< HEAD
 <<<<<<< HEAD
           // Other fields would be handled here
 <<<<<<< HEAD
@@ -1808,6 +1856,9 @@ if ( {) {
 =======
           // Other fields would be handled here    <div className="max-w-4xl mx-auto p-4 md:p-6">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          // Other fields would be handled here    <div className="max-w-4xl mx-auto p-4 md:p-6">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
           <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle>;
@@ -1820,6 +1871,7 @@ if ( {) {
           <form onSubmit={form && form.handleSubmit(onSubmit)}>;
             <CardContent className="space-y-8">;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1835,6 +1887,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {/* Basic Information */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;
@@ -1851,6 +1905,7 @@ if ( {) {
                           <FormControl>;
                             <div className="relative">;
                               <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1962,6 +2017,8 @@ if (throw error) {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     />;
                   </div>;
                   <div className="col-span-1">;
@@ -1971,6 +2028,7 @@ if (throw error) {
                               <Input;
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white";
                                 placeholder="Your full name";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -2091,6 +2149,8 @@ if (throw error) {
                       render={({ field }) => (;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">Location</FormLabel>;
                           <FormControl>;
@@ -2157,6 +2217,7 @@ if (throw error) {
                       type="button"
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+<<<<<<< HEAD
 <<<<<<< HEAD
                       onClick={generateEnhancedProfile}
 <<<<<<< HEAD
@@ -2285,6 +2346,9 @@ if (throw error) {
 =======
                       onClick={generateEnhancedProfile}                                <Badge
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                      onClick={generateEnhancedProfile}                                <Badge
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}>;
                                   {category}
                                 </Badge>;
@@ -2341,6 +2405,7 @@ if (throw error) {
                                 className="text - zion - purple focus:ring - zion-purple";
                               />;
 <<<<<<< HEAD
+<<<<<<< HEAD
                               <label html_for="unavailable" className="text - white flex items - center gap - 2">;
                                 <div className="h - 2 w - 2 rounded - full bg - red - 500"></div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -2358,11 +2423,16 @@ if (throw error) {
                               <label html_for="unavailable" className="text - white flex items - center gap-2">;
                                 <div className="h - 2 w - 2 rounded - full bg - red-500"></div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                              <label html_for="unavailable" className="text - white flex items - center gap-2">;
+                                <div className="h - 2 w - 2 rounded - full bg - red-500"></div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                                 Currently Unavailable;
                               </label>;
                             </div>;
                           </div>;
                         </FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2735,3 +2805,7 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
                     />;
                     <FormDescription className="text-zion-slate mt-1 && 1.5 text-sm">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    />;
+                    <FormDescription className="text-zion-slate mt-1 && 1.5 text-sm">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

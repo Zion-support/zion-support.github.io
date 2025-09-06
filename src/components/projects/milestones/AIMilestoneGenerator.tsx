@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,14 +10,52 @@
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface AIMilestoneGeneratorProps {;
+=======
+
+import React, { useState } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Accordion;
+  AccordionContent;
+  AccordionItem;
+  AccordionTrigger } from '@/components/ui/accordion';
+import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react'
+import { format, parseISO  } from 'date-fns';
+import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
+import { Badge } from '@/components/ui/badge';
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import {
+  Accordion
+  AccordionContent
+  AccordionItem
+  AccordionTrigger
+} from '@/components/ui/accordion'
+import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react'
+import { format, parseISO } from 'date-fns'
+  MilestoneInput
+  GeneratedMilestone
+  useMilestoneGenerator
+} from '@/hooks/useMilestoneGenerator'
+import { Badge } from '@/components/ui/badge'
+interface AIMilestoneGeneratorProps {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   scope: string;
   startDate: string;
   endDate: string | null;
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (!scope || !startDate || !projectType) {
       return;
 
@@ -113,6 +152,7 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -120,6 +160,8 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -140,8 +182,11 @@ interface AIMilestoneGeneratorProps {;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
   onAddMilestone: (milestone: GeneratedMilestone) => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function AIMilestoneGenerator(): any ({;  scope,;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   scope,;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -149,6 +194,7 @@ export function AIMilestoneGenerator(): any ({;  scope,;
   endDate,;
   projectType,;
   onAddMilestones,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   onAddMilestone,;
 }: AIMilestoneGeneratorProps) {;
@@ -164,18 +210,26 @@ export function AIMilestoneGenerator(): any ({;  scope,;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleGenerateMilestones = async () => {;
     if (!scope || !startDate || !projectType) {;
       return;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const input: MilestoneInput = {;
       scope,;
       startDate,;
       endDate,;
+<<<<<<< HEAD
 <<<<<<< HEAD
       projectType,
 };
@@ -211,6 +265,9 @@ export function AIMilestoneGenerator(): any ({;  scope,;
   const formatDate = (dateString: string,) => {;    try {;
 =======
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try {;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return format(parseISO(dateString), 'MMM dd, yyyy');
@@ -220,6 +277,7 @@ export function AIMilestoneGenerator(): any ({;  scope,;
   },
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="space-y-4">
@@ -244,6 +302,10 @@ export function AIMilestoneGenerator(): any ({;  scope,;
 
         <Button
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+        <Button
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           disabled={isGenerating || !scope || !startDate || !projectType}        >
 
@@ -256,6 +318,7 @@ export function AIMilestoneGenerator(): any ({;  scope,;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -264,6 +327,8 @@ export function AIMilestoneGenerator(): any ({;  scope,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {isGenerating ? (
             <>
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />
@@ -410,12 +475,15 @@ export function AIMilestoneGenerator(): any ({;  scope,;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <Button 
                 onClick={handleAddToProject}
                 disabled={!Object.values(selectedMilestones).some(Boolean)}
@@ -452,9 +520,12 @@ export function AIMilestoneGenerator(): any ({;  scope,;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       variant="ghost"
                       size="sm"
                       onClick={(e) => {
@@ -467,6 +538,21 @@ export function AIMilestoneGenerator(): any ({;  scope,;
                       size="sm"
                       onClick={(e) => {
                         e.stopPropagation(),
+=======
+  onAddMilestone: (milestone: GeneratedMilestone) => void
+export function AIMilestoneGenerator({
+  scope;
+  startDate;
+  endDate;
+  projectType;
+  onAddMilestones;
+  onAddMilestone
+}: AIMilestoneGeneratorProps) {
+  const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
+  const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({}),
+
+  const handleGenerateMilestones = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"
@@ -493,11 +579,14 @@ export function AIMilestoneGenerator(): any ({;  scope,;
         </Card>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>;
   );
 }
 ;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     </div>;
   );
@@ -532,4 +621,11 @@ export function AIMilestoneGenerator(): any ({;  scope,;
         </Card>)}
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

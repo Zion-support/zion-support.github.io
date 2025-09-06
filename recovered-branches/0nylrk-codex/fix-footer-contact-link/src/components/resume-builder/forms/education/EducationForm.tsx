@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -129,6 +130,11 @@ export function EducationForm(): any ({ ;
 =======
     let success;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+    let success;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }: EducationFormProps) {;
   const { addEducation, updateEducation, deleteEducation, isLoading } = useResume(),;
   const [editingId, setEditingId] = useState<string | null>(null),;
@@ -154,6 +160,7 @@ export function EducationForm(): any ({ ;
       success = await addEducation(resumeId, educationData);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -163,10 +170,13 @@ export function EducationForm(): any ({ ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     if (success) {
       setEditingId(null)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
@@ -233,6 +243,10 @@ export function EducationForm(): any ({ ;
 
     }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (success) {;
       setEditingId(null);
     }
@@ -263,6 +277,7 @@ export function EducationForm(): any ({ ;
   },
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="space-y-6">
       <div>
         <h2 className="text-xl font-semibold mb-2">Education</h2>
@@ -290,6 +305,8 @@ export function EducationForm(): any ({ ;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       <EducationList 
         educationEntries={educationEntries} 
@@ -299,6 +316,7 @@ export function EducationForm(): any ({ ;
         onDelete={handleDelete}
       />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -473,6 +491,12 @@ export function EducationForm({ ;
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>        <div className="flex justify-end">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <div className="bg-muted/40 p-6 rounded-lg">
+        <h3 className="text-md font-medium mb-4">
+          {editingId ? 'Update Education' : 'Add Education'}
+        </h3>        <div className="flex justify-end">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Button type="button" onClick={onComplete}>;
             Next;
           </Button>;

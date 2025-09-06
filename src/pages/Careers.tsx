@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -14,6 +15,8 @@ export default function Careers() {
   const whyWork =
     "At Zion, we’re building more than a marketplace—we’re cultivating a community where forward-thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote-first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real-world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open-source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.",
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Benefits list
   const benefits = [
     {
@@ -63,6 +66,18 @@ export default function Careers() {
     }
   ],
 
+=======
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import Link from 'next/link';
+import { CAREER_JOBS } from '@/data/careersJobs';
+
+export default function Careers() {
+  const applyEmail = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <SEO
@@ -314,9 +329,58 @@ export default function Careers() {;
         </div>
       </main>
     </>
+<<<<<<< HEAD
   )
 }
 ;
+<<<<<<< HEAD
+=======
+
+                    </Card>))}
+                </TabsContent>))}
+            </Tabs>;
+          </div>;
+          <div className='bg - gradient - to - r from - zion - blue - dark to - zion - blue - light border border - zion - purple / 30 rounded - xl p - 8 md:p - 12 text - center'>;
+            <h2 className='text - 3xl font - bold text - white mb - 6'>;
+              Don't see the right position?;
+            </h2>;
+            <p className='text - zion - slate - light text - lg mb - 8 max - w-2xl mx - auto'>;
+              We're always looking for talented individuals who are passionate;
+              about AI and technology. Send us your resume and let's start a;
+              conversation. You can also apply directly by emailing us at;
+              <a;
+                href={`mailto:${apply_email}`}
+                className='text - zion - cyan hover:text - zion - purple transition - colors';
+              >;
+                {apply_email}
+              </a>;
+              .;
+            </p>;
+            <Button;
+              as_child;
+              className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple';
+            >;
+              <a href={`mailto:${apply_email}`}>Send General Application</a>;
+            </Button>;
+          </div>;
+        </div>;
+      </main>;
+    </>);
+import React from 'react';
+import { SEO } from '../components / SEO';
+const Careers: React.FC = () => {
+<<<<<<< HEAD
+  return (<>;
+      <SEO title="Careers - Zion Tech Group" />;
+      <div className="min - h-screen bg - white py - 20">;
+        <div className="max - w-4xl mx - auto px - 4">;
+          <h1 className="text - 4xl font - bold text - gray - 900 mb - 8">Careers</h1>;
+          <p className="text - lg text - gray - 600">Content coming soon...</p>;
+        </div>;
+      </div>;
+    </>);
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 import React from 'react';
 import Card from '../components/Card';
@@ -345,6 +409,14 @@ const Careers: React.FC = () => {
           >
             Apply Now
           </a>
+=======
+  return (<>""
+      <SEO title='Careers - Zion Tech Group' /" >"
+      <div className='min-h-screen bg-white py-20'>""
+        <div className='max-w-4xl mx-auto px-4'>""
+          <h1 className='text-4xl font-bold text-gray-900 mb-8'>Careers</h1>""
+          <p className='text-lg text-gray-600'>Content coming soon...</p>
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         </div>
       </div>
     </div>
@@ -352,7 +424,14 @@ const Careers: React.FC = () => {
 };
 
 export default Careers;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

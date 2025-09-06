@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -69,15 +70,20 @@ import { toast } from "@/hooks/use-toast",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const useSocialAuth = () => {
+=======
+
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",export const useSocialAuth = () => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const loginWithGoogle = async () => {
     try {
       const { error } = await supabase.auth.signInWithOAuth({
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
         provider: "google"}),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         provider: "google"});
@@ -116,6 +122,8 @@ import { toast } from "@/hooks/use-toast",export const useSocialAuth = () => {
         provider: "google"}),
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           variant: "destructive"})
       }
     } catch (error: any) {
@@ -133,6 +141,7 @@ import { toast } from "@/hooks/use-toast",export const useSocialAuth = () => {
         provider: "facebook"});
       if (error) {
         toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
           title: "Facebook login failed";
 <<<<<<< HEAD
@@ -196,6 +205,9 @@ import { toast } from "@/hooks/use-toast",export const useSocialAuth = () => {
 =======
           title: "Facebook login failed";        variant: "destructive"})
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          title: "Facebook login failed";        variant: "destructive"})
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   }
   const loginWithTwitter = async () => {
@@ -223,10 +235,13 @@ import { toast } from "@/hooks/use-toast",export const useSocialAuth = () => {
           description: error.message,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           variant: "destructive"})
       }
     } catch (error: any) {
@@ -240,6 +255,7 @@ import { toast } from "@/hooks/use-toast",export const useSocialAuth = () => {
       }
     } catch (error: any) {
       console.error("Twitter login error:", error),
+<<<<<<< HEAD
 <<<<<<< HEAD
       toast({
 <<<<<<< HEAD
@@ -355,6 +371,9 @@ import { toast } from '@/hooks / use - toast';
 =======
       toast({import { toast } from '@/hooks / use - toast';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      toast({import { toast } from '@/hooks / use - toast';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const useSocialAuth = () =>: any {
   const loginWithGoogle = async () => {
     try {
@@ -431,6 +450,7 @@ if ( {) {
   return { loginWithGoogle, loginWithFacebook, loginWithTwitter }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   return { loginWithGoogle, loginWithFacebook, loginWithTwitter }
@@ -439,3 +459,5 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

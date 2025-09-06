@@ -1,5 +1,6 @@
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -15,6 +16,8 @@ interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // add more env variables as needed;
 }
 interface ImportMeta {readonly env: ImportMetaEnv;
@@ -39,6 +42,7 @@ declare module 'path' {export function resolve(...paths: string[]): string;
 declare module 'lovable-tagger' {import { Plugin } from 'vite';
   export function componentTagger(): Plugin;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Add Node.js globals;
 <<<<<<< HEAD
@@ -371,6 +375,12 @@ declare module '@/components/FeatureCard' {;
 }
 // ListingScoreCard type fixes;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+// Add Node.js globals;    key?: number | string;
+  }
+}
+// ListingScoreCard type fixes;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 declare module '@/components / ListingScoreCard' {
   export interface ListingScoreCardProps {
@@ -399,6 +409,7 @@ declare module '@/components / ChatAssistant / ChatMessage' {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
@@ -524,6 +535,8 @@ declare module '@/components/ProductListingCard' {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 // Removed custom lucide-react stub;
 // Create a replacement stub for LiveKit components;
@@ -539,6 +552,7 @@ declare module '@/components/ProductListingCard' {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -548,12 +562,15 @@ declare module '@/components/ProductListingCard' {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 declare module '@livekit / components - styles' {
 
 ;
 
 declare module '@livekit/components-styles' {;
   // Empty stub for the styles;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -622,3 +639,6 @@ declare module '@livekit/components-styles' {;
 =======
 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';
@@ -23,6 +24,8 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
 const shareToTwitter = () => {
     window.open(
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function SocialShareButtons({ title }: SocialShareButtonsProps) {
 
   const shareUrl =
@@ -299,6 +302,16 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
     { icon: <Linkedin className="h-4 w-4" />, label: 'LinkedIn', onClick: shareToLinkedIn },
     { icon: <LinkIcon className="h-4 w-4" />, label: 'Copy Link', onClick: copyLink }],
 
+=======
+import React from 'react';
+import { Button  } from '@/components/ui/button';
+import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react'
+import { toast } from '@/hooks/use-toast';
+interface SocialShareButtonsProps {
+  title: string
+export function SocialShareButtons({ title }: SocialShareButtonsProps) {
+  const shareUrl = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="mt-12 flex flex-wrap gap-2">
       {buttons.map((btn) => (
@@ -340,6 +353,7 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
           <span>{btn.label}</span>;
         </Button>;
       ))}
+<<<<<<< HEAD
     </div>;
   );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -347,5 +361,14 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

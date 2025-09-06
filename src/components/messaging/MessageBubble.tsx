@@ -1,7 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',;
 import { format } from 'date-fns',;
+=======
+  message: Message
+  isUserMessage: boolean
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+import React from 'react';
+import { format } from 'date-fns';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { PaperclipIcon } from 'lucide-react';
 <<<<<<< HEAD
 import { cn } from '@/lib/utils',;
@@ -11,6 +21,7 @@ interface MessageBubbleProps {;
 =======
 import { cn } from '@/lib/utils';
 import { Message } from '@/types/messaging';
+<<<<<<< HEAD
 
 interface MessageBubbleProps {
   message: Message;
@@ -57,6 +68,20 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
             : 'bg-zion-blue-dark text-white'
         )}
       >
+=======
+interface MessageBubbleProps {
+
+        <div className='text-xs opacity-70 text-right mt-1'>
+  isUserMessage: boolean
+}
+export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
+  return (
+    <div className;
+        isUserMessage 
+          ? "bg-zion-purple text-white" 
+          : "bg-zion-blue-dark text-white"
+      )}>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="whitespace-pre-wrap">{message.content}</div>
         
         {message.attachment_url && (
@@ -202,5 +227,18 @@ function MessageBubble() {
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+        </div>
+      </div>
+    </div>
+<<<<<<< HEAD
+  );
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -2,12 +2,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
@@ -44,6 +47,7 @@ import React from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { HireRequestForm } from "./HireRequestForm",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
 import { UserProfile } from "@/types/auth",
 <<<<<<< HEAD
 =======
@@ -218,6 +222,9 @@ onClose();
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Hire {talent.full_name}
+=======
+import { UserProfile } from "@/types/auth",            Hire {talent.full_name}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </DialogTitle>
         </DialogHeader>
         <HireRequestForm
@@ -301,11 +308,14 @@ import { UserProfile } from "@/types/auth",            Hire {talent.full_name}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             Hire {talent.full_name}
           </DialogTitle>
         </DialogHeader>

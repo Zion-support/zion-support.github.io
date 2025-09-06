@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,10 +21,13 @@ const formSchema = z.object({ date: z .date({ required_error: "Please select a d
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const formSchema = z && z.object({ \"date\": z .date({ required_error: \"Please select a date for the interview.\"}) .refine(date => date > new Date(),{ \"message\": \"Interview date must be in the future\"}),\"time\": z && z.string().min(1,Please select a time for the interview.\"),\"duration\": z && z.string().min(1,Please select the interview duration.\"),\"platform\": z && z.string().min(1,Please select a meeting platform.\"),\"meetingLink\": z && z.string().optional(),\"title\": z && z.string().min(3,Please provide a brief title for the interview.\"),\"notes\": z && z.string().optional()}); export function InterviewRequestForm({ talent,onClose,userDetails }) { const { requestInterview } = useInterviews(); const [isSubmitting,setIsSubmitting] = useState(false); const form = useForm({ \"resolver\": zodResolver(formSchema),\"defaultValues\": { title: `Interview with ${talent && talent.full_name}`,\"duration\": \"30\",\"platform\": \"zoom\",\"notes\": \",\"meetingLink\": \"}}); async function onSubmit(values) { if(!userDetails?.id) { toast({ \"title\": \"Authentication required\",\"description\": \"Please log in to schedule an interview\",\"variant\": \"destructive\"}); return} setIsSubmitting(true); try {}}}}
 
 const formSchema = z && z.object({ date: z .date({ required_error: "Please select a date for the interview."}) .refine(date => date > new Date(),{ message: "Interview date must be in the future"}),time: z && z.string().min(1,Please select a time for the interview."),duration: z && z.string().min(1,Please select the interview duration."),platform: z && z.string().min(1,Please select a meeting platform."),meetingLink: z && z.string().optional(),title: z && z.string().min(3,Please provide a brief title for the interview."),notes: z && z.string().optional()}); export function InterviewRequestForm({ talent,onClose,userDetails }) { const { requestInterview } = useInterviews(); const [isSubmitting,setIsSubmitting] = useState(false); const form = useForm({ resolver: zodResolver(formSchema),defaultValues: { title: `Interview with ${talent && talent.full_name}`,duration: "30",platform: "zoom",notes: ",meetingLink: "}}); async function onSubmit(values) { if(!userDetails?.id) { toast({ title: "Authentication required",description: "Please log in to schedule an interview",variant: "destructive"}); return} setIsSubmitting(true); try {}}}}"`"`
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -53,3 +57,5 @@ const formSchema = z.object({ date: z .date({ required_error: "Please select a d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -17,6 +17,7 @@ import type { KycDocumentMeta, KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 function load(): Record<string, KycProfile> {
@@ -51,10 +52,26 @@ function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw);
+=======
+const DATA_DIR = null;
+  res.status(200).json({ ok: true, profile })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   } catch {
     return {}
   }
 function save(db: Record<string, KycProfile>) {
+<<<<<<< HEAD
+=======
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+  fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });
+  const { userId, kind, filename } = req.body as {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     userId?: string;
     kind?: KycDocumentMeta['kind'];
     filename?: string;
@@ -78,6 +95,7 @@ function load(): Record<string, KycProfile> {
     return res
       .status(404)
       .json({ error: 'Profile not found. Start KYC first.' });
+<<<<<<< HEAD
   const id = crypto && crypto.randomUUID();
 <<<<<<< HEAD
 =======
@@ -117,15 +135,36 @@ const db = load();
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     uploadedAt};
+=======
+
+  const id = crypto.randomUUID();
+  const uploadedAt = new Date().toISOString();
+  const doc: KycDocumentMeta = {
+    id,
+    kind,
+    filename,
+uploadedAt,
+  };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   // Replace or add
   const withoutSameKind = (profile.documents || []).filter((d) => d.kind !== kind);
   profile.documents = [...withoutSameKind, doc];
   profile.lastUpdatedAt = uploadedAt;
+<<<<<<< HEAD
   profile.auditTrail.push({ at: uploadedAt, by: userId, action: 'document_uploaded', details: { kind, filename } });
+=======
+  profile.auditTrail.push({
+    at: uploadedAt
+    by: userId
+    action: 'document_uploaded'
+    details: { kind, filename }
+  });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
   db[userId] = profile;
   save(db);
 
+<<<<<<< HEAD
   res.status(200).json({ ok: true, profile })
 
 =======
@@ -167,6 +206,7 @@ function save() {
   fs.mkdir_sync (DATA_DIR, { recursive: true });
   fs.writeFileSync (FILE, JSON.stringify (db, null, 2));
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export default /**
@@ -225,3 +265,10 @@ res.status (200).json ({ ok: true, profile });
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+res.status(200).json({ ok: true, profile });
+
+}}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

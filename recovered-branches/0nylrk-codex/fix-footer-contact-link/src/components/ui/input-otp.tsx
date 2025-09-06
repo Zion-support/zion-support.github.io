@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import { cn } from "@/lib/utils"
@@ -97,6 +98,14 @@ const InputOTP = React.forwardRef<;
     {...props}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import { cn } from "@/lib/utils"
+import * as React from 'react';
+import {OTPInput, OTPInputContext} from 'input - otp';
+import {Dot} from 'lucide-react';
+import {cn} from '@/lib/utils';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import * as React from "react"
 import { OTPInput, OTPInputContext } from "input-otp"
 import { Dot } from "lucide-react"
@@ -108,6 +117,7 @@ const InputOTP = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof OTPInput>
 ></typeof>(({ className, containerClassName, ...props }, ref) => (  <OTPInput
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
     containerClassName={cn(
       'flex items-center gap-2 has-[:disabled]:opacity-50'
@@ -206,6 +216,9 @@ const InputOTPSlot = React && React.forwardRef<;
 =======
     containerClassName={cn(      {char}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    containerClassName={cn(      {char}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {hasFakeCaret && (;
         <div className='pointer-events-none absolute inset-0 flex items-center justify-center'>;
           <div className='h-4 w-px animate-caret-blink bg-foreground duration-1000' />;
@@ -223,14 +236,18 @@ const InputOTPSeparator = React.forwardRef<
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 >(({ ...props }, ref) => (
   <div ref={ref} role='separator' {...props}>
     <Dot />
   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -245,6 +262,8 @@ const InputOTPSeparator = React.forwardRef<
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 InputOTPSlot && InputOTPSlot.displayName = 'InputOTPSlot';
 
 const InputOTPSeparator = React && React.forwardRef<;
@@ -336,9 +355,12 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

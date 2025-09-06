@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -109,12 +110,18 @@ export default function Aisolutions({ }: AisolutionsProps) {
 =}
 =======export default function Aisolutions({ }: AisolutionsProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+========<
+=}
+=======export default function Aisolutions({ }: AisolutionsProps) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div>
       <h1>Aisolutions</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -149,11 +156,15 @@ export default function Aisolutions({ }: AisolutionsProps) {
 =======
 }  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div>;
       <h1>Aisolutions</h1>;
       <p>This component is currently under development.</p>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -163,3 +174,6 @@ export default function Aisolutions({ }: AisolutionsProps) {
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,4 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+function rand(min: number, max: number) {
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+function generateSeries(n: number, base: number, volatility;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+function generateSeries(n: number, base: number, volatility = 0.15) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const series: number[] = [];
   let last = base;
   for (let i = 0; i < n; i++) {
@@ -16,7 +26,7 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
     series.push(last)
   }
   return series;
-}
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
   const now = new Date()
@@ -25,6 +35,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const labels = Array.from({ length: 14 }, (_, i) => {;
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));
+<<<<<<< HEAD
 
   const now = new Date(),
   const labels = Array.from({ length: 14 }, (_, i) => {;
@@ -42,6 +53,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return `${d.getMonth() + 1}/${d.getDate()}`
   });
 
+<<<<<<< HEAD
+=======
+
+=======
+return `${d.getMonth() + 1}/${d.getDate()}`;
+  });
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const marketplace = [
     {
       key: 'jobs_24h'
@@ -147,14 +167,33 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   ];
   const response: any = {
+<<<<<<< HEAD
+=======
+    marketplace
+    dao
+    token
+    multiverse
+    timestamp: now.toISOString()
+    labels
+    history: {
+      marketplace: marketplace.map(m => m.trend || generateSeries(14, m.value)),
+      dao: dao.map(m => m.trend || generateSeries(14, m.value)),
+      token: token.map(m => m.trend || generateSeries(14, m.value)),
+      multiverse: multiverse.map(m => m.trend || generateSeries(14, m.value)),
+    },
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   if (req.query.compare === 'quarter') {
     const factor = 0.8 + Math.random() * 0.4;
     response.compare = {
       prevQuarter: {
+<<<<<<< HEAD
         })),
       },
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -166,6 +205,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
+=======
+marketplace: marketplace.map(m => ({
+          ...m,
+          value: Math.round(m.value * factor),
+        })),
+        dao: dao.map(m => ({ ...m, value: Math.round(m.value * factor) })),
+        token: token.map(m => ({ ...m, value: Math.round(m.value * factor) })),
+        multiverse: multiverse.map(m => ({
+          ...m
+          value: Math.round(m.value * factor)
+        }))
+      }
+    }
+  }
+
+  res.status(200).json(response);
+        multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 
 <<<<<<< HEAD

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,6 +28,10 @@ import type { QuoteStatus } from "@/types/quotes";
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Calendar, RefreshCw } from "@/components/icons",
 import { Card, CardContent } from "@/components/ui/card",
@@ -40,6 +45,7 @@ import type { DateRange } from "@/types/dateRange";
 import type { QuoteStatus } from "@/types/quotes";
 import { format } from "date-fns",
 import type { DateRange } from "@/types/dateRange",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import type { QuoteStatus } from "@/types/quotes",
 <<<<<<< HEAD
@@ -136,11 +142,15 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
 =======
 import type { QuoteStatus } from "@/types/quotes",  setSearchQuery;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import type { QuoteStatus } from "@/types/quotes",  setSearchQuery;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   status_filter;
   setStatusFilter;
   archive_filter;
   setArchiveFilter;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -163,6 +173,8 @@ import type { QuoteStatus } from "@/types/quotes",  setSearchQuery;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               onChange={(e) => setSearchQuery(e && e.target.value)}
 interface QuotesFilterProps {;
   searchQuery: string,;
@@ -312,6 +324,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                   initialFocus
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -328,6 +341,8 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   mode="range"
 import React from "react",;
 import { Calendar, RefreshCw } from "@/components/icons",;
@@ -378,6 +393,7 @@ import type { QuoteStatus } from "@/types/quotes",;  setDateRange;  setDateRange
               <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">;
                 <SelectValue placeholder="Status" />;
               </SelectTrigger>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
 <<<<<<< HEAD
@@ -447,10 +463,14 @@ import type { QuoteStatus } from "@/types/quotes",;  setDateRange;  setDateRange
 =======
               <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">;                <SelectItem value="active">Active Only</SelectItem>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">;                <SelectItem value="active">Active Only</SelectItem>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <SelectItem value="archived">Archived Only</SelectItem>;
                 <SelectItem value="all">All Quotes</SelectItem>;
               </SelectContent>;
             </Select>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>;
 <<<<<<< HEAD
@@ -486,6 +506,9 @@ import type { QuoteStatus } from "@/types/quotes",;  setDateRange;  setDateRange
 =======
           </div>;                    );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          </div>;                    );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   ) : (;
                     <span>Date range</span>;
                   )}
@@ -493,6 +516,7 @@ import type { QuoteStatus } from "@/types/quotes",;  setDateRange;  setDateRange
               </PopoverTrigger>;
               <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">;
                 <CalendarComponent
+<<<<<<< HEAD
 <<<<<<< HEAD
                   initialFocus
 <<<<<<< HEAD
@@ -546,6 +570,9 @@ import type { QuoteStatus } from "@/types/quotes",;  setDateRange;  setDateRange
 =======
                   initialFocus}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  initialFocus}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 },
 };
@@ -609,6 +636,7 @@ import type { QuoteStatus } from "@/types/quotes",;  setDateRange;  setDateRange
                   defaultMonth={dateRange?.from}
                   selected={dateRange}
                   onSelect={setDateRange}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -693,3 +721,5 @@ onReset
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

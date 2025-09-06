@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -32,6 +33,10 @@ export default function CategoryDetail() {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useParams, Link } from "react-router-dom",
 import { Header } from "@/components/header/Header",
 import { Footer } from "@/components/Footer",
@@ -55,6 +60,7 @@ export default function CategoryDetail() {
   const { slug } = useParams() as { slug?: string },
   const navigate = useNavigate(),
   const [isLoading, setIsLoading] = useState(true),
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
 <<<<<<< HEAD
@@ -106,6 +112,9 @@ export default function CategoryDetail() {
 =======
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS),  }),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [listings, setListings] = useState(MARKETPLACE_LISTINGS),  }),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   // Map of category slugs to their display data
   const categoryData = {
@@ -125,6 +134,7 @@ export default function CategoryDetail() {
       icon: <Code className="w-6 h-6" />
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -386,10 +396,35 @@ export default function CategoryDetail() {
     },
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    'innovation': {
+      title: "Innovation"
+      description: "Discover cutting-edge solutions and tech breakthroughs"
+      icon: <Bot className="w-6 h-6" />    'ai-models-apis': {
+      title: "AI Models & APIs"
+      description: "Access cutting-edge AI models with easy integration"
+      icon: <Brain className="w-6 h-6" />    'data-analysis': {
+      title: "Data Analysis"
+      description: "Extract insights from complex datasets"
+      icon: <BarChart className="w-6 h-6" />
+
+    },
+    'virtual-assistants': {
+      title: "Virtual Assistants"
+      description: "Intelligent automation for your workflow"
+      icon: <Bot className="w-6 h-6" />    'developer-tools': {
+      title: "Developer Tools"
+      description: "AI-powered coding assistance and automation"
+      icon: <Code className="w-6 h-6" />
+
+    },
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Find the category data based on slug
     const currentCategory = categoryData[slug as keyof typeof categoryData] |{
       title: slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') |"Category"
       description: "Explore our collection in this category"
+<<<<<<< HEAD
 <<<<<<< HEAD
       icon: <Bot className="w-6 h-6" />
 <<<<<<< HEAD
@@ -638,11 +673,15 @@ export default function CategoryDetail() {;
 =======
       icon: <Bot className="w-6 h-6" />  // Handle requesting a quote
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      icon: <Bot className="w-6 h-6" />  // Handle requesting a quote
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleRequestQuote = (listingId: string) => {
     const listing = listings.find(item => item.id === listingId)
     if (listing) {
       toast({
         title: "Quote Requested"
+<<<<<<< HEAD
 <<<<<<< HEAD
         description: `Your quote request for ${listing.title} has been sent.`
 <<<<<<< HEAD
@@ -671,6 +710,9 @@ export default function CategoryDetail() {;
 =======
         description: `Your quote request for ${listing.title} has been sent.`      // Navigate to the quote request page with the listing information
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        description: `Your quote request for ${listing.title} has been sent.`      // Navigate to the quote request page with the listing information
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       navigate("/request-quote", {
         state: {
           serviceType: listing.category
@@ -679,6 +721,7 @@ export default function CategoryDetail() {;
             title: listing.title
             category: listing.category
             image: listing.images?.[0]
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -698,6 +741,9 @@ export default function CategoryDetail() {;
 import { useParams, Link } from "react-router-dom",;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Header } from "@/components/header/Header",;
 import { Footer } from "@/components/Footer",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -817,6 +863,7 @@ export default function CategoryDetail() {;
       })),;
     setListings(listingsToShow),;
     setIsLoading(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
   }, [slug]),;
 <<<<<<< HEAD
@@ -1057,6 +1104,17 @@ if ( {) {
   };
   },
 
+=======
+  }, [slug]),;          }
+        }
+      });
+    }
+
+  },
+  };
+  },
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 
   }
@@ -1091,6 +1149,7 @@ if ( {) {
   };
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1167,6 +1226,10 @@ if ( {) {
   return (
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <ProductListingCard 
                   key={listing.id} 
 
@@ -1186,6 +1249,7 @@ if ( {) {
                   onRequestQuote={handleRequestQuote}                 />;
               ))}
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           )}
 <<<<<<< HEAD
@@ -1264,6 +1328,9 @@ if ( {) {
 =======
           )}  ),; export default function CategoryDetail () {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          )}  ),; export default function CategoryDetail () {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   //Cast to specify the expected route param type since useParams may be untyped const {
   slug 
 }= useParams () as {
@@ -1388,6 +1455,7 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue" > <div classNam
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1395,3 +1463,6 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue" > <div classNam
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

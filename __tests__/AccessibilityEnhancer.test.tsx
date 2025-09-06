@@ -42,6 +42,7 @@ describe('AccessibilityEnhancer'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     fireEvent.keyDown(element, { "key";
 =======
     fireEvent.keyDown(element, { "key"
@@ -57,6 +58,9 @@ describe('AccessibilityEnhancer'
 =======
     fireEvent.keyDown(element, { "key";
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+    fireEvent.keyDown(element, { "key";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
 describe('AccessibilityEnhancer', () => {
@@ -158,12 +162,20 @@ describe('AccessibilityEnhancer', () => {
     const element = screen.getByRole('button');
     expect(element).toHaveAttribute('tabindex', '-1');
   });
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 });
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:__tests__/AccessibilityEnhancer.test.tsx
@@ -177,6 +189,11 @@ import { render, screen, fireEvent } from '@testing-library/react'
 =======
     fireEvent.keyDown(element, { "key";import { render, screen, fireEvent } from '@testing-library/react'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+import React from 'react'
+import { render, screen, fireEvent } from '@testing-library/react'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer'
 import { describe, it, expect, vi } from 'vitest'
 describe('AccessibilityEnhancer'
@@ -192,12 +209,25 @@ describe('AccessibilityEnhancer'
     fireEvent.keyDown(element, { "key"
     fireEvent.keyDown(element, { "key";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+});
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+});
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

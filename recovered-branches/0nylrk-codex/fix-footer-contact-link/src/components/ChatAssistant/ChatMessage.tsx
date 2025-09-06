@@ -40,21 +40,27 @@ import { cn } from "@/lib/utils",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ChatMessageProps {
   role: 'user' | 'assistant',
   message: string,
   timestamp?: Date,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   timestamp?: Date;
   key?: string | number;
@@ -67,10 +73,13 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
   const isUser = role === 'user',
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <divclassName={cn(
       "flex items-start gap-2"
@@ -100,6 +109,7 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
           : "bg-zion-cyan/10 text-white rounded-tl-none"
         "max-w-[80%] px-4 py-2 rounded-lg",
         isUser 
+<<<<<<< HEAD
 <<<<<<< HEAD
           ? "bg-zion-purple/20 text-white rounded-tr-none" 
 
@@ -236,12 +246,16 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
 =======
           ? "bg-zion-purple/20 text-white rounded-tr-none"       )}>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          ? "bg-zion-purple/20 text-white rounded-tr-none"       )}>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="whitespace-pre-wrap">{message}</div>;
         {timestamp && (;
           <div className="text-xs text-zion-slate mt-1 text-right">;          </div>;
         )}
       </div>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -255,6 +269,9 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   );
+=======
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   ),; interface ChatMessageProps {
   role: 'user' | 'assistant';
@@ -322,6 +339,7 @@ function ChatMessage() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),; interface ChatMessageProps {
   role: 'user' | 'assistant';
 message: string;
@@ -358,3 +376,5 @@ isUser ? "border-zion-purple/20" : "border-zion-cyan/20")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

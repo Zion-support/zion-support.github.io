@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
 
 <<<<<<< HEAD
@@ -62,6 +63,43 @@ export function EnterpriseTestimonials() {
           </p>
         </div>export function EnterpriseTestimonials() {
 =======
+<<<<<<< HEAD
+=======
+  Carousel;
+  CarouselContent;
+  CarouselItem;
+  CarouselNext;
+  CarouselPrevious} from "@/components/ui/carousel";
+
+        <Carousel className='w-full'>    quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",
+    author: "Elena Rodriguez",
+    title: "CTO",
+    company: "FutureTech Systems",
+    image: "/placeholder.svg"}],
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import React from 'react';
+import { Quote } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,;
+} from '@/components/ui/carousel';
+
+import React from "react";
+import { Quote } from 'lucide-react'
+import {
+          <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>
+            See how enterprise teams are transforming their hiring process
+          </p>
+        </div>
+
+<Carousel className='w-full'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function EnterpriseTestimonials() {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
@@ -109,6 +147,7 @@ export function EnterpriseTestimonials() {
                     </div>
                     <div>
                       <p className='font-bold'>{testimonial.author}</p>
+<<<<<<< HEAD
                       <p className='text-sm text-muted-foreground'>                        {testimonial.title}, {testimonial.company}
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -283,9 +322,26 @@ export function EnterpriseTestimonials() {;
             ))}
 
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+                      <p className='text-sm text-muted-foreground'>
+                        {testimonial.title}, {testimonial.company}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+<div className='flex justify-center gap-2 mt-8'>
+            <CarouselPrevious />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <CarouselNext />
 =======
                       <p className="text-sm text-muted-foreground">;            <CarouselNext />
@@ -296,6 +352,10 @@ export function EnterpriseTestimonials() {;
     </section>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           </CarouselContent>;
           <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">;
@@ -433,9 +493,17 @@ function EnterpriseTestimonials() {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

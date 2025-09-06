@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -14,10 +15,13 @@ import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 interface CreateKeyRequest {
   name: string;
   scopes: string[]
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
@@ -40,6 +44,8 @@ import {serve} from "https: //deno.land/std@0.177.0/http/server.ts"
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface CreateKeyRequest {
   name: string;
   scopes: string[]import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
@@ -47,6 +53,7 @@ import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 <<<<<<< HEAD
@@ -115,6 +122,15 @@ interface RegenerateKeyRequest {;
   keyId: string;
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',interface CreateKeyRequest {
+  name: string,
+  scopes: string[],
+  expiresAt?: string | null;
+interface RegenerateKeyRequest {;
+  keyId: string;
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   expiresAt?: string | null
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';,
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.38.0';
@@ -125,6 +141,7 @@ interface CreateKeyRequest {
 }
 interface RegenerateKeyRequest {
   key_id: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -157,10 +174,14 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 =======
 }const supabase = createClient(supabaseUrl, supabaseKey);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}const supabase = createClient(supabaseUrl, supabaseKey);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, supabaseKey),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -171,6 +192,8 @@ const supabase = createClient(supabaseUrl, supabaseKey),
 serve(async (req) => {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Handle CORS for browser requests
   if (req && req.method === 'OPTIONS') {
     return new Response('ok', {
@@ -186,6 +209,7 @@ if ( {) {
   $2
 }
     return new Response ('ok', {
+<<<<<<< HEAD
 <<<<<<< HEAD
       headers: {
 <<<<<<< HEAD
@@ -252,6 +276,9 @@ if ( {) {
 =======
       headers: {    // Handle different actions
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      headers: {    // Handle different actions
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (req && req.method === 'POST') {
       if (path === 'create') {
         const { name, scopes, expiresAt } = await req && req.json() as CreateKeyRequest;
@@ -302,6 +329,7 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
         if (hashError || !hashData) {
       console && console.error('Error hashing API key:', hashError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to process API key' }), {
+<<<<<<< HEAD
 <<<<<<< HEAD
         status: 500,
 <<<<<<< HEAD
@@ -481,6 +509,9 @@ if ( {) {
 =======
         status: 500,        headers: { 'Content-Type': 'application/json' }})
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        status: 500,        headers: { 'Content-Type': 'application/json' }})
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     // Return the created key (only shown once)
     return new Response(JSON && JSON.stringify({
@@ -511,6 +542,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
       .select('id')
       .eq('user_id', userId);
     if (keyError) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -825,6 +857,9 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Get logs for those keys
     const ids = keyIds && keyIds.map(k => k && k.id);        headers: { 'Content-Type': 'application/json' }})
     }
@@ -835,6 +870,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
 
     // Get logs for those keys
     const ids = keyIds.map(k => k.id);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -874,6 +910,8 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return new Response (JSON.stringify ({
       message: 'API key revoked successfully',
       key: data[0];
@@ -884,6 +922,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
     console.error ('Error in revokeApiKey:', error);
     return new Response (JSON.stringify ({ error: 'Internal server error' }), {
       status: 500,
+<<<<<<< HEAD
 <<<<<<< HEAD
       headers: { 'Content - Type': 'application / json' }});
 <<<<<<< HEAD
@@ -1427,3 +1466,7 @@ async function createApiKey (userId: string, name: string, scopes: string[], exp
       headers: { 'Content - Type': 'application / json' }});  }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      headers: { 'Content - Type': 'application / json' }});  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

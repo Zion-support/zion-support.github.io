@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Star } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -70,6 +71,26 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },
 
+=======
+import React, { useState } from 'react';
+import { Star } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ExternalLink } from 'lucide-react';
+import { TalentProfile } from '@/types/talent';
+import { HireRequestModal } from '@/components/profile/hire-request';
+import { useAuthStatus } from '@/hooks/talent';
+import type { UserProfile } from '@/types/auth';
+import { useRouter } from 'next/router';
+interface TalentCardFooterProps {
+  profile: TalentProfile;
+  onViewProfile: (id: string) => void;
+  onRequestHire?: (profile: TalentProfile) => void
+}
+export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
+  const { userDetails } = useAuthStatus();
+  const router = null;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">
@@ -86,6 +107,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
               <span className="text-zion-slate-light">{profile.years_experience} years exp.</span>
             </div>
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>;
         {/* Action Buttons */}
@@ -107,10 +129,20 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        </div>
+        {/* Action Buttons */}
+        <div className="flex gap-2">
+          <Button
+            variant="default"
+            size="sm"
+            onClick = {handleRequestHire,}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Hire
           </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -126,6 +158,12 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
             variant="outline" 
             size="sm" 
             onClick={handleViewProfile}
+=======
+          <Button
+            variant="outline"
+            size="sm"
+            onClick = {handleViewProfile,}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
             View
@@ -133,6 +171,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -160,12 +199,15 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
       </div>;
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Hire Request Modal */}
       <HireRequestModal
         talent = {profile,}
         isOpen = {isHireModalOpen,}
         onClose = {() => setIsHireModalOpen(false),}
         userDetails = {userProfile,}
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -287,3 +329,30 @@ if ( {) {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+      />
+    </>
+  );
+
+};
+//Handle view profile const handleViewProfile = (e: React.MouseEvent) => {;
+  e.stopPropagation ();';
+profile.id || '' ;
+}`);
+//Also call the onViewProfile callback if provided <div> {;
+  profile.hourly rate ? (<div> <span className="text-zion-slate-light text-xs" >Hourly Rate</span> <div className="text-white font-bold" >$ {;
+  profile.hourly rate ;
+}/hr</div> </div>) : (</div>) ";
+}</div> > Hire </Button> <Button > View <ExternalLink className="h-3 w-3 ml-1" /> </Button> </div> </div> {;
+  /* Hire Request Modal */ ;
+}<HireRequestModal talent= {;
+  profile ;
+}isOpen= {;
+  isHireModalOpen ;
+}onClose= {;
+  () => setIsHireModalOpen (false) ;
+}userDetails= {;
+  userProfile ;
+}/> </>) ;
+}'"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

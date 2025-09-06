@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -11,6 +12,10 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -27,6 +32,7 @@ import { Form;
 import { Loader2, Link, FileImage, Github, Edit  } from 'lucide-react';
 import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio  } from '@/hooks/usePortfolio';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useAuth } from '@/hooks/useAuth';
 <<<<<<< HEAD
@@ -68,6 +74,9 @@ import {useAuth} from '@/hooks/useAuth';
 =======
 import { useAuth } from '@/hooks/useAuth';// Define schema for form validation
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { useAuth } from '@/hooks/useAuth';// Define schema for form validation
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const projectSchema = z.object({
   title: z.string().min(1, 'Project title is required'),
@@ -75,6 +84,7 @@ const projectSchema = z.object({
   technologies: z.string().optional()
   image_url: z.string().optional()
   github_url: z
+<<<<<<< HEAD
 <<<<<<< HEAD
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
 <<<<<<< HEAD
@@ -91,6 +101,9 @@ import {useState} from 'react';
 =======
     .union([z.string().url('Please enter a valid URL'), z.literal('')])import {useState} from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    .union([z.string().url('Please enter a valid URL'), z.literal('')])import {useState} from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {use_form} from 'react - hook - form';
 import {zod_resolver} from '@hookform / resolvers / zod';
 import {z} from 'zod';
@@ -99,6 +112,7 @@ import {Input} from '@/components / ui / input';
 import {Textarea} from '@/components / ui / textarea';
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
 import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -162,10 +176,13 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
   const isEditing = !!project;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -252,6 +269,8 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const form = useForm<ProjectFormValues>({;
     resolver: zodResolver(projectSchema),;
@@ -264,12 +283,15 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       pdf_url: project?.pdf_url || ''}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   });
   const onSubmit = async (data: ProjectFormValues) => {
     if (!user) return;
@@ -308,6 +330,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         const projectId = await addProject(projectData);
         success = !!projectId
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (success) {
         onSuccess();
@@ -415,10 +438,25 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
   return (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      if (success) {;
+
+        onSuccess();
+        form && form.reset();;
+      if (success) {;
+        onSuccess();
+        form.reset()
+};
+  },
+
+  
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
         <FormField
           control={form && form.control}
+<<<<<<< HEAD
 <<<<<<< HEAD
           name="title"
 <<<<<<< HEAD
@@ -864,6 +902,9 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
 =======
           name="title"        <div className="flex justify-end space-x-2 pt-4">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          name="title"        <div className="flex justify-end space-x-2 pt-4">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Button type="button" variant="outline" onClick={onCancel}>
             Cancel
           </Button>
@@ -875,6 +916,7 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
       </form>
     </Form>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -924,6 +966,8 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 import {PortfolioProject} from '@/types / resume';
 import {use_portfolio} from '@/hooks / use_portfolio';
@@ -942,6 +986,7 @@ const project_schema = z.object ({
     .optional ();
   pdf_url: z.string ().optional ()}),
 type ProjectFormValues = z.infer < typeof project_schema>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -1153,3 +1198,6 @@ try {
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

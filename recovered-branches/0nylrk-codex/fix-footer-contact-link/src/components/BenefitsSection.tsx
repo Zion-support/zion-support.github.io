@@ -24,6 +24,7 @@ const benefits = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
@@ -60,10 +61,13 @@ import {Bot, Clock, Globe, TrendingDown} from "lucide-react";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { GradientHeading } from "./GradientHeading",
 import { FeatureCard } from "./FeatureCard",
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -81,6 +85,8 @@ import { Bot, Clock, Globe, TrendingDown } from "lucide-react",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const benefits = [
   {
     title: "AI-Powered Matchmaking",
@@ -90,6 +96,7 @@ const benefits = [
     title: "Global Availability",
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",
     icon: <Globe className="w-8 h-8" />},
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -204,6 +211,14 @@ export function BenefitsSection() {;
 };
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function BenefitsSection() {;
+  return (
+            <FeatureCard}
+}
+};
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { GradientHeading } from "./GradientHeading",;
 import { FeatureCard } from "./FeatureCard",;
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",;
@@ -242,6 +257,7 @@ export function BenefitsSection() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -261,6 +277,9 @@ export function BenefitsSection() {;
 =======
     icon: <Globe className="w - 8 h-8" />},
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    icon: <Globe className="w - 8 h-8" />},
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   {
     title: "24 / 7 Support",
     description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",
@@ -299,6 +318,7 @@ function BenefitsSection() {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -309,3 +329,5 @@ function BenefitsSection() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

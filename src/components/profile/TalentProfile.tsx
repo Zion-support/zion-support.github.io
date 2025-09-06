@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 import React from "react",
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Handshake, MessageSquare, Star } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { HireNowCTA } from "./HireNowCTA",
@@ -16,6 +20,8 @@ import { useAuth } from "@/hooks/useAuth",
 import { Availability } from "@/types/profile",
 =======
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react';
 import { Handshake, MessageSquare, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -31,6 +37,7 @@ import { ProfileRatings } from './ProfileRatings';
 import { TalentProfile as TalentProfileType } from '@/types/talent';
 import { useAuth } from '@/hooks/useAuth';
 import { Availability } from '@/types/profile';
+<<<<<<< HEAD
 interface TalentProfileProps {;
   profile: TalentProfileType;
   onRequestHire: () => void;
@@ -70,6 +77,23 @@ export function TalentProfile(): any ({;
       date: new Date().toISOString(), // Default date since we don't have this data;
     })) || [];
 
+=======
+
+interface TalentProfileProps {
+  profile: TalentProfileType;
+  onRequestHire: () => void;
+  onMessageTalent?: () => void
+}
+
+export function TalentProfile({ 
+  profile;
+  onRequestHire;
+  onMessageTalent
+}: TalentProfileProps) {
+  const { isAuthenticated } = useAuth();
+  // Create proper availability object from talent profile
+  const availability: Availability;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className='container mx-auto px-4 py-8'>
       {/* Profile Header */}
@@ -460,9 +484,12 @@ export function TalentProfile({
             </div>;
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -501,5 +528,15 @@ export function TalentProfile({
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+;
+=======
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

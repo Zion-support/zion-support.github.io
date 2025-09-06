@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 =======
@@ -20,11 +21,15 @@ import Link from 'next/link';
 =======
 import React from 'react';
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import React from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
   size?: 'default' | 'sm' | 'lg' | 'icon';
   asChild?: boolean;
+<<<<<<< HEAD
 }
 
 export function Button({ 
@@ -314,6 +319,8 @@ export default Button;
     >;
       {content}
     </button>);
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 export { Button }
 export default Button;
@@ -340,5 +347,9 @@ export default Button;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
   );
+<<<<<<< HEAD
 }
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

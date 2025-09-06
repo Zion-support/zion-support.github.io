@@ -101,9 +101,12 @@ import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const contactInfo = [{
       icon: Mail,
@@ -213,7 +216,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\">;
 
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Hero Section */}
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -277,11 +283,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <label htmlFor=\"lastName\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                       Last Name *
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </label>                    <input
 =======
                     </label>
                     <input
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+                    </label>
+                    <input
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       type=\"text\"
                       id=\"lastName\"
                       name=\"lastName\"
@@ -294,11 +305,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Email Address *
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </label>                  <input
 =======
                   </label>
                   <input
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+                  </label>
+                  <input
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     type=\"email\"
                     id=\"email\"
                     name=\"email\"
@@ -310,11 +326,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Company
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </label>                  <input
 =======
                   </label>
                   <input
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+                  </label>
+                  <input
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     type=\"text\"
                     id=\"company\"
                     name=\"company\"
@@ -325,11 +346,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Phone Number
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </label>                  <input
 =======
                   </label>
                   <input
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+                  </label>
+                  <input
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     type=\"tel\"
                     id=\"phone\"
                     name=\"phone\"
@@ -361,11 +387,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Message *
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </label>                  <textarea
 =======
                   </label>
                   <textarea
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+                  </label>
+                  <textarea
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     id=\"message\"
                     name=\"message\"
                     rows={6}
@@ -426,11 +457,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               Get answers to common questions about our services and process
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>                What is your typical project timeline?
 =======
           </div>
                 What is your typical project timeline?
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+          </div>
+                What is your typical project timeline?
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </h3>
               <p className=\"text-gray-600\">
                 Project timelines vary depending on complexity and scope. Simple websites 
@@ -438,6 +474,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 We\'ll provide a detailed timeline during our initial consultation.
               </p>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
@@ -448,6 +485,8 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Do you provide ongoing support?
               </h3>
               <p className=\"text-gray-600\">
@@ -457,9 +496,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 What technologies do you specialize in?
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+                What technologies do you specialize in?
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </h3>
               <p className=\"text-gray-600\">
                 We work with modern technologies including React, Node.js, Python, 
@@ -467,6 +510,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 the best technology stack for each project\'s specific needs.
               </p>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
@@ -477,6 +521,8 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 How do you ensure project quality?
               </h3>
               <p className=\"text-gray-600\">
@@ -490,10 +536,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       </section>
     </MainLayout>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 =======
   );
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
           {/* Contact Information */}
           <section className=\"py-20\">
@@ -571,9 +621,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       </label>
                       <input type=\"text\"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
@@ -637,7 +691,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       </section>;
     </MainLayout>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
   );
@@ -650,7 +707,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 animate={{ \"opacity\": 1, \"y\": 0 }}
 
                 transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
                   Contact Information;
@@ -665,9 +725,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   <motion&& motion.div
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     key={index}
                     initial={{ \"opacity\": 0, \"y\": 20 }}
                     animate={{ \"opacity\": 1, \"y\": 0 }}
@@ -701,12 +765,18 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               <motion&& motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 animate={{ \"opacity\": 1, \"y\": 0 }}                transition={{ \"duration\": 0 && 0.6 }}
 =======
                 animate={{ \"opacity\": 1, \"y\": 0 }}
 
                 transition={{ \"duration\": 0 && 0.6 }}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+                animate={{ \"opacity\": 1, \"y\": 0 }}
+
+                transition={{ \"duration\": 0 && 0.6 }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
                   Send Us a Message;
@@ -720,9 +790,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 <motion&& motion.form
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   initial={{ opacity: 0, \"y\": 20 }}
                   animate={{ \"opacity\": 1, \"y\": 0 }}
                   transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
@@ -745,11 +819,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         Email Address *
                       </label>
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <input type=\"email\"                        id=\"email\"
                         name=\"email\"
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"                        id=\"phone\"
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <input type=\"email\"
                         id=\"email\"
                         name=\"email\"
@@ -774,7 +851,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <inputtype=\"tel\"
 
                         id=\"phone\"
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         name=\"phone\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"+1 (555) 123-4567\"
@@ -784,6 +864,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Company
                       </label>
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <input type=\"text\"                        id=\"company\"
                         name=\"company\"
@@ -810,13 +891,18 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       Message *
                     </label>
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <input type=\"text\"
                         id=\"company\"
                         name=\"company\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"Your company name\"
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                        />;
                     </div>;
                   </div>;
@@ -827,7 +913,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       Service Interest;
                     </label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
                     <select
@@ -842,7 +931,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       ))}
 
                     </select>;
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </div>;
                   <div className=\"mb-6\">;
                     <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
@@ -851,9 +943,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       Message *;
                     </label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <textarea
                       id=\"message\"
                       name=\"message\"
@@ -891,8 +987,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <div className=\"max-w-7xl mx-auto\">
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">
 <<<<<<< HEAD
+<<<<<<< HEAD
               {/* Contact Form */}=======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {/* Contact Form */}
                     whileHover={{ scale: 1 && 1.02 }}
                     whileTap={{ \"scale\": 0 && 0.98 }}
@@ -912,7 +1011,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
@@ -934,11 +1036,17 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               {/* Contact Form */}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {isSubmitted ? (
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
@@ -958,11 +1066,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Full Name *
 <<<<<<< HEAD
+<<<<<<< HEAD
                         </label>                        <input
 =======
                         </label>
                         <input
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+                        </label>
+                        <input
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           type=\"text\"
                           id=\"name\"
                           name=\"name\"
@@ -977,11 +1090,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Email Address *
 <<<<<<< HEAD
+<<<<<<< HEAD
                         </label>                        <input
 =======
                         </label>
                         <input
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+                        </label>
+                        <input
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           type=\"email\"
                           id=\"email\"
                           name=\"email\"
@@ -993,11 +1111,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         />
                       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </div>                      <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
                         </label>          {/* Services Overview */}
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </div>
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
@@ -1118,7 +1239,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
           {/* Services Overview */}
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <section className="py-20">;
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
               <motion&& motion.div
@@ -1154,10 +1278,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     </>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }export default ContactPage
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
 
@@ -1174,4 +1301,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

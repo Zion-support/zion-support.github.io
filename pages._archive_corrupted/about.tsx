@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -127,6 +128,10 @@ const "About": NextPage = () => {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const values = [{
       title: \'Innovation\',
       \"description\": \'We constantly push the boundaries of technology to deliver cutting-edge solutions.\',
@@ -158,10 +163,13 @@ const "About": NextPage = () => {
       \"icon\": Target
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   ];
   const team = [{
@@ -291,6 +299,7 @@ export default function AboutPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 =======
@@ -299,6 +308,8 @@ export default function AboutPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Users,, Target,, Award,, Globe,, Shield,, Zap} from 'lucide-react';
 const "About": NextPage = () => {;
   const values = [{;
@@ -357,6 +368,7 @@ const "About": NextPage = () => {;
       \"image\": \'/team/david && david.jpg\';
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -400,6 +412,9 @@ const "About": NextPage = () => {;
 =======
   ];  const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  ];  const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },
     { \"number\": \'5+\', \"label\": \'Years Experience\' },
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },;
@@ -446,6 +461,7 @@ export default function AboutPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ].map((v) => (
               <div key={v.title} className="bg-white rounded-lg p-8 shadow text-center">
                 <h3 className="text-xl font-semibold mb-3">{v.title}</h3>
@@ -481,10 +497,14 @@ export default function AboutPage() {;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ].map((v) => (;
               <div key={v && v.title} className="bg-white rounded-lg p-8 shadow text-center">;
                 <h3 className="text-xl font-semibold mb-3">{v && v.title}</h3>;
                 <p className="text-gray-600">{v && v.desc}</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -506,6 +526,8 @@ export default function AboutPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <MainLayout
       title=\"About Us - Zion Tech Group\"
       description=\"Learn about Zion Tech Group\'s mission, values, and the team behind our innovative technology solutions.\">;
@@ -556,6 +578,7 @@ export default function AboutPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -594,11 +617,14 @@ export default function AboutPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div key={stat.label} className=\"text-center\">
                 <div className=\"text-4xl font-bold text-blue-600 mb-2\">{stat.number}</div>
                 <div className=\"text-gray-600\">{stat.label}</div>
               <div key={stat.label} className="text-center">
                 <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className="text-gray-600">{stat.label}</div>
 <<<<<<< HEAD
@@ -653,10 +679,14 @@ export default function AboutPage() {;
 =======
                 <div className="text-gray-600">{stat.label}</div>              </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                <div className="text-gray-600">{stat.label}</div>              </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -697,6 +727,8 @@ export default function AboutPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Work With Us?</h2>
@@ -713,6 +745,7 @@ export default function AboutPage() {;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </main>
 <<<<<<< HEAD
@@ -764,6 +797,9 @@ export default function AboutPage() {;
 =======
     </main>      {/* Values Section */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </main>      {/* Values Section */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -772,6 +808,7 @@ export default function AboutPage() {;
               The principles that guide everything we do and shape our company culture
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -850,6 +887,12 @@ export default function AboutPage() {;
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div key={value.title} className=\"text-center\">
                 <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
                   <value.icon className=\"h-8 w-8\" />
@@ -863,10 +906,13 @@ export default function AboutPage() {;
               </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))}
           </div>
         </div>
@@ -882,6 +928,7 @@ export default function AboutPage() {;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1043,6 +1090,12 @@ export default function AboutPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {team.map((member) => (
               <div key={member.name} className=\"bg-white rounded-lg shadow-lg overflow-hidden\">
                 <div className=\"h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center\">
@@ -1060,10 +1113,13 @@ export default function AboutPage() {;
               </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))}
           </div>
         </div>
@@ -1133,6 +1189,7 @@ export default function AboutPage() {;
         <meta name=\"keywords\" content=\"about zion tech group, technology company, AI solutions, cybersecurity, cloud services\" />
         <link rel=\"canonical\" href=\""https\": //ziontechgroup.com/about\" />
       </Helmet>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1455,6 +1512,8 @@ export default function AboutPage() {;
     <>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Helmet>;
         <title>About Us - Zion Tech Group | Leading Technology Solutions Provider</title>;
         <meta name=\"description\" content=\"Learn about Zion Tech Group, a leading provider of AI, cybersecurity, cloud infrastructure, and emerging technology solutions. Discover our mission, values, and team.\" />;
@@ -1467,6 +1526,7 @@ export default function AboutPage() {;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1523,6 +1583,10 @@ export default function AboutPage() {;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
           <div className=\"max-w-7xl mx-auto\">;
@@ -1652,6 +1716,7 @@ export default function AboutPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
@@ -1732,3 +1797,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+}
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

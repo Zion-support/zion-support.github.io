@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -146,6 +147,10 @@ interface MilestoneCardProps {;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string,;
   projectId: string,;
   title: string,;
@@ -161,6 +166,7 @@ interface MilestoneCardProps {;
       case 'rejected':;
         return 'bg-red-500';
       default: return 'bg-gray-500';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -187,10 +193,16 @@ interface MilestoneCardProps {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
+=======
+    }
+  }
+      }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
       }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -198,6 +210,8 @@ interface MilestoneCardProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Card>;
       <CardHeader className="pb-2">;
@@ -209,6 +223,7 @@ interface MilestoneCardProps {;
                 Due: {format(new Date(dueDate), 'MMM d, yyyy')}
               </p>;
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           </div>;
@@ -297,6 +312,8 @@ export function MilestoneCard({;
                 Due:{format(new Date(dueDate), 'MMM d, yyyy')}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </p>;
             )}
           </div>;
@@ -346,6 +363,7 @@ export function MilestoneCard({;
             />;
           )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -461,6 +479,8 @@ export function MilestoneCard({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {isUnderDispute && (;
             <Button variant="outline" size="sm" disabled>;
               Actions frozen due to dispute;
@@ -569,6 +589,7 @@ function getStatusBadgeColor() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;}
@@ -621,3 +642,5 @@ case 'rejected':
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -14,12 +15,16 @@ export interface JobData {;
 =======
 export interface JobData {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+export interface JobData {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   title: string,
   description: string;
   skills: string[];
   category: string;
   budget: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,6 +58,10 @@ export interface TalentProfile {;
     min: number,    max: number
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    min: number,    max: number
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   deadline: string;
 }
 
@@ -63,6 +72,7 @@ export interface TalentProfile {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 export interface TalentProfile {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,12 +89,15 @@ export interface TalentProfile {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   full_name: string;
   professional_title: string;
   bio?: string;
   skills: string[];
   years_experience: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
   hourly_rate?: number;
   availability_type?: string;
@@ -119,6 +132,14 @@ export interface TalentMatch {
 
 export interface TalentMatch {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  talent_id: string;
+  job_id: string;
+  match_score: number;}
+export interface TalentMatch {
+
+export interface TalentMatch {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   talent_id: string;
   job_id: string;
   match_score: number;
@@ -128,6 +149,7 @@ export interface TalentMatch {;
 
 export interface MatchResult {
   talentId: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   score: number;
   matchedSkills: string[];
@@ -240,3 +262,6 @@ export interface JobData {;
 =======
   score: number;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  score: number;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

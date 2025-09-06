@@ -1,7 +1,11 @@
 import React from 'react';
 
 interface CardProps {
+<<<<<<< HEAD
 
+=======
+  children: React.ReactNode;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   title?: string;
   description?: string;
   className?: string;
@@ -28,17 +32,9 @@ const Card: React.FC<CardProps> = ({
   onClick 
 }) => {
   return (
-<<<<<<< HEAD
-    <div 
-      className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow ${className}`}
-      onClick={onClick}
-    >
-      {title && <h3 className="text-xl font-semibold mb-2">{title}</h3>}
-      {description && <p className="text-gray-600 mb-4">{description}</p>}
-=======
-<<<<<<< HEAD
     <div 
       className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 ${className}`}
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -51,11 +47,18 @@ const Card: React.FC<CardProps> = ({
         <p className="text-gray-600 mb-4">{description}</p>
       )}
 
+=======
+      onClick={onClick}
+    >
+      {title && <h3 className="text-xl font-semibold mb-3 text-gray-900">{title}</h3>}
+      {description && <p className="text-gray-600 mb-4">{description}</p>}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {children}
     </div>
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default Card;
 <<<<<<< HEAD
@@ -94,3 +97,6 @@ export default Card;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+export default Card;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

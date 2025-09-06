@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -17,6 +18,9 @@ import Link from 'next/link';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const MarketSignals: NextPage = () => {
   return (
     <div>
@@ -28,6 +32,7 @@ const MarketSignals: NextPage = () => {
         <h1 className="text-2xl font-bold">AI Market Signals Agent</h1>
         <p>Runs daily to curate relevant AI/tech market signals and trends and stores them in the repository.</p>
         <div className="space-y-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -59,17 +64,23 @@ const MarketSignals: NextPage = () => {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </div>
       </main>
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 export default MarketSignals;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 },
 export default MarketSignals,
 },
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -141,6 +152,9 @@ export default MarketSignals,
 },
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 },
 export default MarketSignals,
 
@@ -151,6 +165,7 @@ export default MarketSignals,
 export default MarketSignals,;
 export default MarketSignals,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -160,3 +175,12 @@ export default MarketSignals,
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const MarketSignals: NextPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

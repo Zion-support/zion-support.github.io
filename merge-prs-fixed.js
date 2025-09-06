@@ -35,10 +35,13 @@ try {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     // Fetch latest changes;
     console.log ('📥 Fetching latest changes...'),
@@ -53,6 +56,7 @@ try {
     } catch (error) {
         console.log ('⚠️  Merge conflicts detected. Resolving...'),
         // Find files with merge conflicts;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
@@ -75,6 +79,8 @@ const fs = require('fs');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         const conflict_files = exec_sync ('git diff --name - only --diff - filter = U', { encoding: 'utf8' }),
         if () {) {
   $2
@@ -93,6 +99,7 @@ const fs = require('fs');
                         exec_sync (`git checkout --theirs "${file}"`);
 
 #!/usr/bin/env node;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -177,6 +184,11 @@ const fs = require('fs');
 
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+#!/usr/bin/env node;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 console.log('🚀 Starting merge process for all open PRs...'),;
 try {;
     // Check if we're in a git repository;
@@ -186,6 +198,7 @@ try {;
     console.error('❌ Not in a git repository'),;
     process.exit(1);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 try {;
@@ -247,6 +260,8 @@ try {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             // Resolve conflicts by accepting our version;
 
 
@@ -255,6 +270,7 @@ try {;
                     console.log(`Resolving conflicts in: ${file}`);
                     try {execSync(`git checkout --ours "${file}"`);
                     } catch (e) {execSync(`git checkout --theirs "${file}"`);
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                     console.log(`Resolving conflicts in: ${file}`);
                     try {execSync(`git checkout --ours "${file}"`);
@@ -265,6 +281,11 @@ try {;
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+                    console.log(`Resolving conflicts in: ${file}`);
+                    try {execSync(`git checkout --ours "${file}"`);
+                    } catch (e) {execSync(`git checkout --theirs "${file}"`);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -435,11 +456,14 @@ try {;
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     console.log(`Found ${branchList.length} branches to merge: `),;
+<<<<<<< HEAD
 =======
         }
     }
     // Push all changes;    console.log(`Found ${branchList.length} branches to merge: `),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     branchList.forEach(branch => console.log(`  - ${branch}`)),;
     // Merge each branch;
     for (const branch of branchList) {;
@@ -467,6 +491,7 @@ try {;
     console.log('✅ Repository is now clean and up to date');
 } catch (error) {;
     console.error('❌ Error during merge process:', error.message),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -507,6 +532,9 @@ try {;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     process.exit(1);
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -518,4 +546,7 @@ try {;
 =======
     process.exit(1);
 }
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

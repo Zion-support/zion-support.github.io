@@ -4,6 +4,7 @@ import rate_limit from '@fastify / rate - limit';
 import dotenv from 'dotenv';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createOpenAIClient, generateJobPost } from './openai.js';
 import { getPool, withUser } from './pg.js';
 <<<<<<< HEAD
@@ -98,6 +99,8 @@ app.get('/notifications', async (req, reply) => {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { get_pool, with_user } from './pg.js';
 dotenv.config ();
 ;
@@ -105,6 +108,7 @@ const app = Fastify ({ logger: true });
 await app.register (cors, {
   origin: (origin, cb) => {
     const allowed = (process.env.CORS_ORIGINS || '').split ().map ((s) => s.trim ());
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (|| allowed.includes (origin)) {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -166,6 +170,9 @@ import { get_pool, with_user } from './pg.js';
 =======
     if (|| allowed.includes (origin)) {) {import { get_pool, with_user } from './pg.js';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    if (|| allowed.includes (origin)) {) {import { get_pool, with_user } from './pg.js';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const allowed = (process.env.CORS_ORIGINS || '';
     cb (new Error ('Not allowed';
   methods: ['GET', 'POST', 'OPTIONS';
@@ -252,6 +259,7 @@ app.post ('/jobs / generate', async (req, reply) => {
 });
 const port = Number(process.env.API_PORT |4000);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -324,3 +332,5 @@ app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

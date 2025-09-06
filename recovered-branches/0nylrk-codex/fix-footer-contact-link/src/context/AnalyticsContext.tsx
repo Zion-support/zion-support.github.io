@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { create_context, useState, useContext, useEffect, ReactNode } from 'react';
 import {use_location} from 'react-router-dom';
@@ -54,6 +55,13 @@ export interface AnalyticsEvent {
 =======
 import {supabase} from '@/integrations / supabase / client';  type: AnalyticsEventType,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import React, { create_context, useState, useContext, useEffect, ReactNode } from 'react';
+import {use_location} from 'react-router-dom';
+import {use_auth} from '@/hooks / use_auth';
+import {supabase} from '@/integrations / supabase / client';  type: AnalyticsEventType,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   path?: string;
   component?: string;
   elementId?: string;
@@ -64,6 +72,7 @@ import {supabase} from '@/integrations / supabase / client';  type: AnalyticsEve
 <<<<<<< HEAD
 export interface AnalyticsContextType {
 
+<<<<<<< HEAD
 export interface AnalyticsContextType {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -83,12 +92,17 @@ export interface AnalyticsContextType {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export interface AnalyticsContextType {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   trackEvent: (type: AnalyticsEventType, metadata?: Record<string, any>) => void;
   trackConversion: (conversionType: string, value?: number, metadata?: Record<string, any>) => void;
   pageViews: number
   lastEvent: AnalyticsEvent | null
   events: AnalyticsEvent[]
   clearEvents: () => void
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -246,10 +260,14 @@ export interface AnalyticsContextType {;
 =======
 }  pageViews: number,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}  pageViews: number,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   lastEvent: AnalyticsEvent | null,;
   events: AnalyticsEvent[],;
   clearEvents: () => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -276,6 +294,8 @@ export interface AnalyticsContextType {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
@@ -301,6 +321,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
     setPageViews((prev) => prev + 1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   // Function to track general analytics events
+<<<<<<< HEAD
 <<<<<<< HEAD
   const trackEvent = async (type: AnalyticsEventType, metadata: Record<string any> = {}) => {
 <<<<<<< HEAD
@@ -347,6 +368,9 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
 =======
   const trackEvent = async (type: AnalyticsEventType, metadata: Record<string any> = {}) => {    try {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const trackEvent = async (type: AnalyticsEventType, metadata: Record<string any> = {}) => {    try {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Store event in Supabase for persistent analytics
       await supabase.from('analytics_events').insert([{
         event_type: type
@@ -487,6 +511,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {;
       await supabase.from('analytics_events').insert([{;
         event_type: type,;
 <<<<<<< HEAD
+<<<<<<< HEAD
         path: location.pathname,;
         user_id: user?.id,;
         metadata: metadata;
@@ -594,6 +619,9 @@ export interface AnalyticsContextType {;
 =======
         path: location.pathname,;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        path: location.pathname,;}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const useAnalytics = (): AnalyticsContextType => {
   };
   return (
@@ -612,6 +640,7 @@ export const useAnalytics = (): AnalyticsContextType => {
   );
 }
 
+<<<<<<< HEAD
 export const useAnalytics = (): AnalyticsContextType => {;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -620,6 +649,12 @@ export const useAnalytics = (): AnalyticsContextType => {;
 export const useAnalytics = (): AnalyticsContextType => {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export const useAnalytics = (): AnalyticsContextType => {;
+
+export const useAnalytics = (): AnalyticsContextType => {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')
@@ -627,6 +662,7 @@ export const useAnalytics = (): AnalyticsContextType => {;
   // Cast is used here because the context default is undefined until provided
   // by `AnalyticsProvider`. The runtime check above ensures it's defined.
   return context as AnalyticsContextType
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -655,12 +691,17 @@ export const useAnalytics = (): AnalyticsContextType => {;
 =======
 export const useAnalytics = (): AnalyticsContextType => {;  const context = useContext(AnalyticsContext);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+export const useAnalytics = (): AnalyticsContextType => {;  const context = useContext(AnalyticsContext);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (!context) {;
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
 
 };  // Cast is used here because the context default is undefined until provided;
   // by `AnalyticsProvider`. The runtime check above ensures it's defined.;
+<<<<<<< HEAD
 <<<<<<< HEAD
   return context as AnalyticsContextType;
 <<<<<<< HEAD
@@ -673,6 +714,10 @@ export const useAnalytics = (): AnalyticsContextType => {;  const context = useC
   return context as AnalyticsContextType
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
+=======
+  return context as AnalyticsContextType
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 ;
   // Function to track conversion events;
@@ -719,7 +764,10 @@ if ( {) {
 
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

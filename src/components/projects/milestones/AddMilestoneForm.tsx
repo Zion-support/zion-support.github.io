@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -9,6 +10,8 @@ import { format } from 'date-fns',;
 import { Button } from '@/components/ui/button',;
 import { Calendar } from '@/components/ui/calendar',;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // If there are multiple milestones, submit them one by one
     milestones.forEach(milestone => {
       onSubmit({
@@ -31,6 +34,8 @@ import { Calendar } from '@/components/ui/calendar',;
     })
 
 type MilestoneFormValues = z.infer < typeof form_schema>;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react';
 import { use_form } from 'react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -49,6 +54,7 @@ import { Input } from '@/components / ui / input';
 import { Textarea } from '@/components / ui / textarea';
   Popover;
   PopoverContent;
+<<<<<<< HEAD
   PopoverTrigger} from '@/components / ui / popover'; import { AIMilestoneGenerator } from './AIMilestoneGenerator';
 import { GeneratedMilestone } from '@/hooks / useMilestoneGenerator';
 const form_schema = z.object ({
@@ -57,6 +63,39 @@ const form_schema = z.object ({
   due_date: z.date ().optional (),
   amount: z.coerce.number ().min (0, 'Amount must be greater than or equal to 0')});
 type MilestoneFormValues = z.infer < typeof form_schema>;
+=======
+  PopoverTrigger } from '@/components/ui/popover';
+import { AIMilestoneGenerator  } from './AIMilestoneGenerator';
+import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
+const formSchema = null;
+type MilestoneFormValues = z.infer<typeof formSchema>
+import React from 'react'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { CalendarIcon, Loader2 } from 'lucide-react'import { format } from 'date-fns'
+import { Button } from '@/components/ui/button'
+import { Calendar } from '@/components/ui/calendar'
+import {
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormLabel
+  FormMessage} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+  Popover
+  PopoverContent
+  PopoverTrigger} from '@/components/ui/popover'; import { AIMilestoneGenerator } from './AIMilestoneGenerator'
+import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator'
+const formSchema = z.object({
+  title: z.string().min(1, 'Title is required')
+  description: z.string().optional()
+  due_date: z.date().optional()
+  amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')})
+type MilestoneFormValues = z.infer<typeof formSchema>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface AddMilestoneFormProps {
   on_submit: (data: MilestoneFormValues, ) => void,
   is_submitting: boolean,
@@ -205,6 +244,7 @@ export function AddMilestoneForm(): any ({;
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       })
     })
+<<<<<<< HEAD
   },
 
 <<<<<<< HEAD
@@ -228,7 +268,29 @@ export function AddMilestoneForm(): any ({;
   return (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+  },
+
+
+=======
+  }
+  const handleAddMilestone = (milestone: GeneratedMilestone,) => {
+    onSubmit({
+      title: milestone.title
+      description: milestone.description
+      due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
+      amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
+    })
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+    <div className="space-y-6">
+      {/* AI Milestone Generator */}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },
 
   return (
@@ -530,7 +592,10 @@ export function AddMilestoneForm(): any ({;
                 "Add Milestone"
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </Button>;
@@ -598,3 +663,38 @@ export function AddMilestoneForm(): any ({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
+=======
+            </Button>
+          </div>
+        </form>
+      </Form>
+    </div>
+  );
+
+}//If there are multiple milestones, submit them one by one <AIMilestoneGenerator scope= {;
+  projectScope ;
+}startDate= {;
+  projectStartDate ;
+}endDate= {;
+  projectEndDate ;
+}projectType= {;
+  projectType ;
+}onAddMilestones= {;
+  handleAddMilestones ;
+}onAddMilestone= {;
+  handleAddMilestone ;
+}/>) ;
+}</FormControl> <FormMessage /> </FormItem>) ;
+}/> <FormField <FormItem> <FormLabel>Description (optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ;
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Due Date (optional) </FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button variant="outline" className="w-full pl-3 text-left font-normal" >) : (<span className="text-muted-foreground" > Pick a date </span>) ";
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) ;
+}/> <FormField <FormItem> <FormLabel>Amount ($) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";
+}/> </div> <Button type="button" variant="outline" onClick={;
+  onCancel ;
+}disabled= {;
+  isSubmitting ;
+}> Cancel </Button>) ";
+}<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : ("Add Milestone") ;
+}</Button> </div> </form> </Form> </div>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

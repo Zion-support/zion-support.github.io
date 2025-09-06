@@ -20,6 +20,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -80,6 +81,9 @@ const partnerFormSchema = z.object({
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
   twitter: z.string().optional(),
@@ -93,6 +97,7 @@ const partnerFormSchema = z.object({
 
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -212,6 +217,11 @@ export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { user } = useAuth(),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function PartnerRegistrationForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const { user } = useAuth(),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async function onSubmit(data: PartnerFormValues) {
     if (!user) {
       toast({
@@ -219,6 +229,7 @@ export function PartnerRegistrationForm() {
         description: "You must be logged in to register as a partner."
         variant: "destructive"})
       return
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -258,10 +269,14 @@ export function PartnerRegistrationForm() {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }
         ])
         .select();
       if (error) throw error;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -274,6 +289,8 @@ export function PartnerRegistrationForm() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",;
 import { z } from "zod",;
 import { useForm } from "react-hook-form",;
@@ -344,6 +361,7 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>,;    resolver: zodRes
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -417,6 +435,12 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>,;    resolver: zodRes
         .select();
       if (error) throw error;        await supabase.rpc('generate_referral_code', { user_id: user.id })
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          }
+        ]);
+        .select();
+      if (error) throw error;        await supabase.rpc('generate_referral_code', { user_id: user.id })
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
     } catch (error: any) {      toast({
         title: "Submission failed"
@@ -424,6 +448,7 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>,;    resolver: zodRes
 
         variant: "destructive"})
     } finally {
+<<<<<<< HEAD
 <<<<<<< HEAD
       setIsSubmitting(false)
 <<<<<<< HEAD
@@ -442,6 +467,9 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>,;    resolver: zodRes
 =======
       setIsSubmitting(false)    }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      setIsSubmitting(false)    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
@@ -468,6 +496,7 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>,;    resolver: zodRes
         .select(),;
       if (error) throw error,;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -526,6 +555,8 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>,;    resolver: zodRes
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               twitter: data.twitter || null,
               instagram: data.instagram || null,
               youtube: data.youtube || null,
@@ -578,6 +609,7 @@ if ( {) {
       </CardHeader>;
       <CardContent>;
         <Form {...form}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
             <div className="space - y-4">;
@@ -866,6 +898,11 @@ export function PartnerRegistrationForm() {;
             <div className="space-y-4">;
               <FormField;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
+            <div className="space-y-4">;
+              <FormField;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <FormControl>;
                         <Input placeholder="@username" {...field} />;
                       </FormControl>;
@@ -927,6 +964,7 @@ export function PartnerRegistrationForm() {;
                         <SelectContent>;
 
                 />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1204,6 +1242,8 @@ export function PartnerRegistrationForm() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       />;
                     </FormControl>;
                     <FormDescription>;
@@ -1215,10 +1255,13 @@ export function PartnerRegistrationForm() {;
               type="submit" 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               className="w-full bg-zion-purple hover:bg-zion-purple-dark"
               disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." : "Submit Application"}
@@ -1231,6 +1274,7 @@ export function PartnerRegistrationForm() {;
               disabled={is_submitting}
             >;
               {is_submitting ? "Submitting..." : "Submit Application"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1369,13 +1413,19 @@ data: existingCode
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 }
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { readState } from '../../../lib/integrations/fileStore',;
 import { PROVIDERS } from '../../../lib/integrations/registry',;
@@ -15,6 +16,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
   for (const p of PROVIDERS) {
@@ -60,6 +63,7 @@ function handler() {
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -68,3 +72,17 @@ function handler() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readState } from '[^']*';
+import { PROVIDERS } from '[^']*';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
+  const state = null;
+    connections[p.id] = conn || { providerId: p.id, status: 'disconnected' }
+  }
+  res.status(200).json({ connections })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

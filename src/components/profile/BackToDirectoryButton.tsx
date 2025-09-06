@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react',
 import { Button } from "@/components/ui/button",
@@ -12,6 +13,16 @@ export function BackToDirectoryButton() {
         <Link href="/talents" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
           <ArrowLeft className="mr-2 h-4 w-4" />
 =======
+=======
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
+
+import React from 'react',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -23,8 +34,11 @@ export function BackToDirectoryButton() {;
       <Button variant='outline' asChild className='my-8'>;
         <Link
           href='/talents'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -56,12 +70,15 @@ export function BackToDirectoryButton() {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import Link from "next/link";
@@ -73,10 +90,14 @@ export function BackToDirectoryButton() {;
         <Link href="/talents" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">;
           <ArrowLeft className="mr-2 h-4 w-4" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
           Back to Talent Directory;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </Link>;
       </Button>;
     </div>;
@@ -84,9 +105,12 @@ export function BackToDirectoryButton() {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           Back to Talent Directory
         </Link>
@@ -121,5 +145,20 @@ function BackToDirectoryButton() {
 }
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+;
+=======
+          className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
+        >
+          <ArrowLeft className='mr-2 h-4 w-4' />
+          Back to Talent Directory
+        </Link>
+      </Button>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

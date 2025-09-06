@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
   Card
@@ -54,6 +55,8 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Card,
   CardContent,
@@ -94,6 +97,7 @@ if ( {) {
         </CardContent>
       </Card>
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -232,6 +236,9 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
 =======
   }        <CardHeader>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }        <CardHeader>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <CardTitle className="flex items-center gap-2">;
             <BadgeDollarSign className="h-5 w-5" />;
             Your Rewards;
@@ -331,6 +338,7 @@ import {        </div>;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 ;
@@ -340,6 +348,8 @@ import {        </div>;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
   );
@@ -387,7 +397,10 @@ isLoading: boolean
 }
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

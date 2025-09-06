@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+unreadCount, ;
+    markAsRead, ;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
   const handleFilterChange = (newFilter: FilterType,) => {;
@@ -10,6 +18,9 @@
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState, useEffect } from 'react',
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 // Use the shared icon wrapper
 import { Bell } from 'lucide-react'
 import { Button } from '@/components/ui/button',
@@ -22,6 +33,7 @@ import {
   NotificationHeader, 
   NotificationList, 
   NotificationFooter 
+<<<<<<< HEAD
 } from '@/components/notifications',
 import { FilterType } from '@/components/notifications/NotificationFilter',
 export const NotificationCenter: React.FC = () => {
@@ -136,7 +148,14 @@ export const NotificationCenter: React.FC = () => {;
     <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+ } from '@/components/notifications';
+import { FilterType } from '@/components/notifications/NotificationFilter';
+export const NotificationCenter: React.FC;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const handleMarkAllAsRead = async () => {
     try {
@@ -190,7 +209,29 @@ export const NotificationCenter: React.FC = () => {;
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
+<<<<<<< HEAD
         <NotificationHeader 
+=======
+=======
+        />;
+
+
+        <NotificationList
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+          loading = {loading,}
+          error = {error,}
+          notifications = {filteredNotifications,}
+          onMarkAsRead = {markAsRead,}
+          onDismiss = {dismissNotification,}
+          onRetry = {fetchNotifications,}
+<<<<<<< HEAD
+        />
+        <NotificationFooter onClose={() => setOpen(false)} />
+      </PopoverContent>
+    </Popover>
+<<<<<<< HEAD
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           unreadCount={unreadCount} 
           onMarkAllAsRead={handleMarkAllAsRead} 
         />
@@ -305,6 +346,7 @@ export const NotificationCenter: React.FC = () => {;
 
 <<<<<<< HEAD
         <NotificationHeader
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   const handleFilterChange = (newFilter: FilterType) => {
@@ -320,3 +362,51 @@ export const NotificationCenter: React.FC = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+};
+
+}, [open, loadedOnce, fetchNotifications]);
+}catch (err) {;
+  logErrorToProduction ('Failed to mark notifications as read:', {;
+  data: err ;
+});
+enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Error ? err.message : String (err) ), {';
+  variant: 'error' ;
+}) ;
+
+};
+
+  (v) => setOpen (v ?? false) ;
+}> <PopoverTrigger asChild> {';
+  unreadCount > 9 ? '9+' : unreadCount ;
+}</span>) ;
+}</Button> </PopoverTrigger> <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col" > <NotificationHeader unreadCount= {;
+  unreadCount ;
+}onMarkAllAsRead= {;
+  handleMarkAllAsRead ;
+}/> <NotificationFilter filter= {;
+  filter as FilterType ;
+}onFilterChange= {;
+  handleFilterChange ;
+}/> <NotificationList loading= {;
+  loading ;
+}error= {;
+  error ;
+}notifications= {;
+  filteredNotifications ;
+}onMarkAsRead= {;
+  markAsRead ;
+}onDismiss= {;
+  dismissNotification ;
+}onRetry= {;
+  fetchNotifications ;
+}/> <NotificationFooter onClose= {;
+  () => setOpen (false) ;
+}/> </PopoverContent> </Popover>) ;
+};
+'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -48,10 +49,17 @@ import { HireRequestNotificationParams } from './types';
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',/**
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { createNotification  } from './createNotification';
+import { HireRequestNotificationParams } from './types';
+import { createNotification } from './createNotification',
+import { HireRequestNotificationParams } from './types',/**
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
  * Creates a hire request notification for admin and talent
  */
 export async function createHireRequestNotifications({
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   requesterEmail,
@@ -126,6 +134,8 @@ export async function createHireRequestNotifications({
   talentId,
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   adminId,
   requesterName,
 
@@ -136,6 +146,7 @@ export async function createHireRequestNotifications({
   adminId,
   requesterName,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -143,6 +154,8 @@ export async function createHireRequestNotifications({
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   projectType,
   projectSummary,
   hireRequestId
@@ -186,6 +199,7 @@ export async function createHireRequestNotifications({
       adminNotification
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -196,6 +210,8 @@ export async function createHireRequestNotifications({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { createNotification } from './createNotification',;
 import { HireRequestNotificationParams } from './types',;
 /**;
@@ -243,6 +259,7 @@ export async function createHireRequestNotifications({;
       success: talentNotification.success && adminNotification.success,;
       talentNotification;
       adminNotification;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -349,4 +366,6 @@ if ( {) {
   }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }

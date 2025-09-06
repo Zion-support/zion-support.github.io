@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -21,6 +22,8 @@ import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/compo
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {Brain, Clock, Award, Zap} from "lucide-react";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
@@ -32,6 +35,7 @@ import React from "react",
 import { Brain, Clock, Award, Zap } from "lucide-react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -54,10 +58,13 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const features = [
   {
     icon: <Brain className="h-10 w-10 text-zion-cyan" />
     title: "AI Talent Matching"
+<<<<<<< HEAD
 <<<<<<< HEAD
     description: "Our AI algorithm matches you with the perfect talent or job based on your skills and requirements."
 <<<<<<< HEAD
@@ -160,6 +167,12 @@ export const AppFeatures: React.FC = () => {
     title: "1-Click Hiring"
     description: "Streamlined hiring process that lets you connect with talent instantly with just one click."export const AppFeatures: React.FC = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    description: "Our AI algorithm matches you with the perfect talent or job based on your skills and requirements."  {
+    icon: <Clock className="h-10 w-10 text-zion-cyan" />
+    title: "1-Click Hiring"
+    description: "Streamlined hiring process that lets you connect with talent instantly with just one click."export const AppFeatures: React.FC = () => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
@@ -179,6 +192,7 @@ export const AppFeatures: React.FC = () => {
               <CardContent>
                 <CardDescription className="text-gray-300">{feature.description}</CardDescription>
               </CardContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
             </Card>
 <<<<<<< HEAD
@@ -235,11 +249,15 @@ const features = [;
 =======
             </Card>  {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            </Card>  {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     icon: <Clock className="h-10 w-10 text-zion-cyan" />,;
     title: "1-Click Hiring",,
   description: "Streamlined hiring process that lets you connect with talent instantly with just one click."
 };  {;
     icon: <Award className="h-10 w-10 text-zion-cyan" />,;
+<<<<<<< HEAD
 <<<<<<< HEAD
     title: "Resume Builder",;
     description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired.";
@@ -350,6 +368,10 @@ import React from './react';
     title: "Resume Builder",,
   description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired.";=======import React from './react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    title: "Resume Builder",,
+  description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired.";=======import React from './react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Brain, Clock, Award, Zap } from './lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
 const features = [;
@@ -404,6 +426,7 @@ export const AppFeatures: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;
@@ -450,3 +473,5 @@ export const AppFeatures: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

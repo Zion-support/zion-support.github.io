@@ -1,12 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function ensureStorage() {
   const dir = path && path.dirname(EPISODES_PATH);
   if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
   if (!fs && fs.existsSync(EPISODES_PATH))
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 <<<<<<< HEAD
@@ -41,6 +46,34 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+=======
+=======
+const EPISODES_PATH = null;
+const EPISODES_PATH = path.join(
+  process.cwd()
+  'data'
+  'podcast'
+  'episodes.json'
+);
+
+function ensureStorage() {
+  const dir = path.dirname(EPISODES_PATH);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+if (!fs.existsSync(EPISODES_PATH))
+    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  ensureStorage();
+  const { id } = req.query as { id?: string };
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+const episode = episodes.find(e => e.id === id);
+  if (!episode) return res.status(404).json({ error: 'Not found' });
+<<<<<<< HEAD
+  return res.status(200).json({ episode });  const episode = episodes.find((e) => e.id === id);
+  if (!episode) return res.status(404).json({ error: 'Not found' });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 ;
 const EPISODES_PATH = path.join (
@@ -92,4 +125,12 @@ function handler() {
   $2
 }
   return res.status (200).json ({ episode });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  return res.status(200).json({ episode });
+  return res.status(200).json({ episode })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

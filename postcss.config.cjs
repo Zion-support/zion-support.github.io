@@ -1,21 +1,16 @@
 module.exports = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   plugins: {    autoprefixer: {},
 =======
-  plugins: {
-<<<<<<< HEAD
-<<<<<<<< HEAD:postcss.config.cjs
-    tailwindcss: {},
-========
->>>>>>>> 205f16ce4ac3a8c2ac0b2e278708c4357550db22:postcss.config.js
-    autoprefixer: {},
-  },
-}
 =======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  plugins: {
     tailwindcss: {},
     autoprefixer: {},
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,3 +45,6 @@ module.exports = {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> 205f16ce4ac3a8c2ac0b2e278708c4357550db22
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

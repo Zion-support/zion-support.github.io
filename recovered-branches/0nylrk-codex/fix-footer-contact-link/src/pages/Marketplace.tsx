@@ -1,11 +1,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -29,6 +32,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -37,6 +41,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -52,6 +58,7 @@ import {toast} from "@/hooks/use-toast";
 import {useNavigate} from "react-router-dom";
 import {SearchSuggestion} from "@/types/search";
 import {AppLayout} from "@/layout/AppLayout";
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function Marketplace() {;
 <<<<<<< HEAD
@@ -152,11 +159,17 @@ export default function Marketplace() {;  const searchSuggestions: SearchSuggest
   const filterOptions = generateFilterOptions(),
     // Filter listings based on selected filters
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export default function Marketplace() {;  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
+  const filterOptions = generateFilterOptions(),
+    // Filter listings based on selected filters
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {
     // Search filter
     if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       return false
 <<<<<<< HEAD
@@ -216,6 +229,9 @@ export default function Marketplace() {;
 =======
       return false    }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      return false    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Product type filter
     if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
       return false
@@ -234,6 +250,7 @@ export default function Marketplace() {;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -243,6 +260,8 @@ export default function Marketplace() {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return true
   });
   const handleFilterChange = (filterType: string, value: string) => {    
@@ -252,6 +271,7 @@ export default function Marketplace() {;
   const handleFilterChange = (filterType: string, value: string) => {
     // // // console.log(`Filter changed: ${filterType} = ${value}`),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -264,6 +284,8 @@ export default function Marketplace() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     switch (filterType) {
       case 'productType':
         setSelectedProductTypes(prev =>
@@ -343,6 +365,7 @@ export default function Marketplace() {;
 
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 
 =======
@@ -420,12 +443,16 @@ export default function Marketplace() {;
 =======
     // Handle requesting a quote
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    // Handle requesting a quote
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleRequestQuote = (listingId: string) => {
     const listing = MARKETPLACE_LISTINGS.find(item => item.id === listingId)
     if (listing) {
       toast({
         title: "Quote Requested"
         description: `Your quote request for ${listing.title} has been sent.`
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -532,6 +559,9 @@ export default function Marketplace() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -651,6 +681,7 @@ if ( {) {
             image: listing.images?.[0];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -660,10 +691,13 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }
         }
       });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
@@ -691,12 +725,17 @@ if ( {) {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };
   },  },
   };
   },
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 
     <AppLayout>;
@@ -706,9 +745,12 @@ if ( {) {
           <p className="text-zion-slate-light">;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 selectedRating
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   return (
     <AppLayout>;
@@ -718,7 +760,10 @@ if ( {) {
           <p className="text - zion - slate-light">;
 
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             Discover professional services and products for your AI and tech projects.;
             Browse our curated collection of solutions from verified providers.;
           </p>;
@@ -786,6 +831,7 @@ if ( {) {
                 selectedAvailability,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -833,6 +879,8 @@ if ( {) {
                 selectedRating
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               }}
               filterOptions={filterOptions}
               onFilterChange={handleFilterChange}
@@ -861,6 +909,7 @@ if ( {) {
               </p>
             </div>
             
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -891,6 +940,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </p>;
             </div>;
 
@@ -914,6 +965,7 @@ if ( {) {
                     onClick={clearAllFilters}
                     className="bg-zion-purple hover:bg-zion-purple-dark">;
                     Clear Filters;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </Button>;
 <<<<<<< HEAD
@@ -1148,3 +1200,6 @@ Discover professional services and products for your AI and tech projects. Brows
 =======
                   </Button>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  </Button>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

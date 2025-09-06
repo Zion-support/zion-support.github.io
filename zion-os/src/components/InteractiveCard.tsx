@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   children?: React.ReactNode;
 }
 export default function InteractiveCard({title;
@@ -14,6 +17,7 @@ export default function InteractiveCard({title;
   className = '';
   children;
 }: InteractiveCardProps) {const [isHovered, setIsHovered] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -50,15 +54,21 @@ function InteractiveCard() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 'use client',;
 import React, { useState } from 'react',;
 import Link from 'next/link',;
 interface InteractiveCardProps {;
 <<<<<<< HEAD
+<<<<<<< HEAD
   title: string,;
 =======
   title: string,,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  title: string,,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   description: string,;
   icon: string,;
   href: string,;
@@ -76,6 +86,7 @@ export default function InteractiveCard({;
   className = '',;
   children;
 }: InteractiveCardProps) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [isHovered, setIsHovered] = useState(false),;
 <<<<<<< HEAD
@@ -98,6 +109,9 @@ export default function InteractiveCard({;
 =======
   const [isHovered, setIsHovered] = useState(false),;    <Link;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [isHovered, setIsHovered] = useState(false),;    <Link;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       href={href}
       className={`group block p - 8 rounded - 2xl border border - white / 10 hover:border - white / 30 bg - black / 20 hover:bg - black / 40 transition - all duration - 500 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm hover - lift ${class_name}`}
       onMouseEnter={() => setIsHovered (true)}
@@ -105,6 +119,7 @@ export default function InteractiveCard({;
       aria - label={`Navigate to ${title} page`}
 >;
       <div className=&quot;relative & quot;>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -115,11 +130,14 @@ export default function InteractiveCard({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Animated background */}
         <div;
           className={`absolute inset-0 bg-gradient-to-r ${color} rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-xl`}
         />;
         {/* Icon */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -157,17 +175,23 @@ export default function InteractiveCard({;
           className={`absolute inset - 0 bg - gradient - to - r ${color} rounded - xl opacity - 0 group - hover:opacity - 10 transition - opacity duration - 500 blur - xl`}
         />;
         {/* Icon */}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {title}
           </h3>;
           <p className=&quot;text - gray - 400 leading - relaxed text - lg mb - 6&quot;>;
             {description}
           </p>;
           {/* Custom children or default arrow */}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 {children || (
 
             <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           {children || (
@@ -197,6 +221,9 @@ export default function InteractiveCard({;
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
 =======
           {children || (
+=======
+          {children || (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">              <span>Learn More</span>
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
@@ -211,6 +238,7 @@ export default function InteractiveCard({;
         {/* Hover effect overlay */}
         <div;
           className={`absolute inset-0 border-2 border-transparent rounded-xl bg-gradient-to-r ${color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -246,12 +274,15 @@ export default function InteractiveCard({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }}
         />;
       </div>;
     </Link>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -286,6 +317,8 @@ export function FeatureCard({;
     </Link>);
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <InteractiveCard;
       title={title}
       description={description}
@@ -295,6 +328,7 @@ export function FeatureCard({;
       className={className}
     >
       {stats && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -322,12 +356,15 @@ export function FeatureCard({;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>;
         </div>;
       )}
     </InteractiveCard>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -340,10 +377,13 @@ export function FeatureCard({;
     </InteractiveCard>);
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <div className=&quot;text-4xl mb-4&quot;>💬</div>
       <div className="text-4xl mb-4">💬</div>
       
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -388,6 +428,8 @@ export function TestimonialCard({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Rating */}
       <div className="flex mb-4">
         {Array.from({ length: rating }).map((_, i) => (
@@ -397,6 +439,7 @@ export function TestimonialCard({;
         ))}
       </div>;
       {/* Quote */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
@@ -430,6 +473,9 @@ export function TestimonialCard({;
 =======
       </blockquote>      </blockquote>      </blockquote>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </blockquote>      </blockquote>      </blockquote>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Author info */}
       <div className="border-t border-white/10 pt-4">
         <div className="font-semibold text-white">{author}</div>
@@ -438,6 +484,7 @@ export function TestimonialCard({;
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -452,3 +499,6 @@ export function TestimonialCard({;
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

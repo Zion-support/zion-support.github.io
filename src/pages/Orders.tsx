@@ -1,6 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+=======
+  TableRow,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 =======
 import React from "react";
@@ -27,9 +33,19 @@ import {
   TableHead
   TableHeader
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+import {
+  Table,
+  TableBody,
+  TableCell,
+} from '@/components/ui/table';
+import { Badge } from '@/components/ui/badge';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
@@ -82,6 +98,35 @@ import {
   Table,
   TableBody,
   TableCell,
+<<<<<<< HEAD
+=======
+
+=======
+TableRow;
+} from '@/components/ui/table';
+import { Badge } from '@/components/ui/badge';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
+import Link from 'next/link', // Changed from react-router-dom
+import { useAuth  } from '@/hooks/useAuth';
+import { useGetOrdersQuery } from '@/hooks/useOrders';
+import { Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow } from '@/components/ui/table';
+import { Badge  } from '@/components/ui/badge';
+import Skeleton from '@/components/ui/skeleton';
+import { EmptyState } from '@/components/ui/empty-state';
+export default function OrdersPage() {;
+  const { user } = useAuth();
+  const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
+<<<<<<< HEAD
+
+  const formatDate = (date: string) => new Date(date).toLocaleDateString();
+  const getStatusBadge = (status: string,) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   TableHead,
   TableHeader,
   TableRow} from '@/components/ui/table',
@@ -130,6 +175,9 @@ export default function OrdersPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },
 
+=======
+  const formatDate = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="container max-w-4xl py-10">
       <h1 className="text-3xl font-bold mb-6">Order History</h1>
@@ -213,6 +261,7 @@ export default function OrdersPage() {
       )}
     </div>;
   );
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -327,9 +376,16 @@ function OrdersPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 export default Orders;
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

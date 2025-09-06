@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Suspense } from 'react';
 
 interface LazyComponentProps {
@@ -21,6 +22,9 @@ export default LazyComponent;
 <<<<<<< HEAD
 =======
 =======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
@@ -30,6 +34,7 @@ import React from 'react'
 }
 import React, { Suspense, lazy } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { Suspense, ReactNode } from 'react';
 import LoadingSpinner from '../LoadingSpinner';
@@ -37,6 +42,8 @@ import LoadingSpinner from '../LoadingSpinner';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -51,10 +58,8 @@ import LoadingSpinner from '../LoadingSpinner';
 interface LazyComponentProps {
   children: ReactNode;
   fallback?: ReactNode;
-<<<<<<< HEAD
-  [key: string]: unknown
-}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -167,3 +172,7 @@ export default LazyComponent;
   return (
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+  return (
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

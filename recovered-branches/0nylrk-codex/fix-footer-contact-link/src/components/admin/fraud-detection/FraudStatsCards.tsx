@@ -4,9 +4,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {;
   Card,;
@@ -18,6 +21,7 @@ import {;
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
 import { FraudStats } from "@/types/fraud";
 interface FraudStatsCardsProps {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   stats: FraudStats;
 <<<<<<< HEAD
@@ -115,6 +119,9 @@ interface FraudStatsCardsProps {
 =======
   stats: FraudStats;      
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  stats: FraudStats;      
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <Card>
@@ -166,6 +173,7 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
           </div>
           <AlertTriangle className="h-5 w-5 text-amber-500" />
         </CardHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </Card>
 <<<<<<< HEAD
@@ -232,10 +240,18 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
       </Card>
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </Card>          </div>
+          <AlertCircle className="h-5 w-5 text-red-500" />
+        </CardHeader>
+      </Card>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">
             {stats.actioned_count}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </CardTitle>
 <<<<<<< HEAD
@@ -299,6 +315,13 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
             {stats.false_positives}
           </CardTitle>      
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          </CardTitle>      <Card>
+        <CardHeader className="pb-2">
+          <CardTitle className="text-2xl font-bold">
+            {stats.false_positives}
+          </CardTitle>      
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.false_positives}</CardTitle>
@@ -314,6 +337,7 @@ import { FraudStats } from "@/types/fraud",;
 interface FraudStatsCardsProps {;
   stats: FraudStats;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -335,6 +359,9 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
 =======
 ;            <ShieldAlert className="h - 5 w - 5 text - amber-500" />)}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;            <ShieldAlert className="h - 5 w - 5 text - amber-500" />)}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </CardHeader>;
       </Card>
 };
@@ -437,6 +464,7 @@ export default FraudStatsCards;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -449,3 +477,6 @@ export default FraudStatsCards;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

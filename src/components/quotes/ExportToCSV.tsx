@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react';
 import type { QuoteRequest } from "@/types/quotes";
@@ -28,10 +31,18 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       quote.project_name
       quote.project_summary
       quote.budget_display |
+=======
+  quotes: QuoteRequest[];
+  filename?: string
+}
+
+export const ExportToCSV = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         (quote.budget_min && quote.budget_max
           ? `$${quote.budget_min} - $${quote.budget_max}`
           : quote.budget_min
             ? `$${quote.budget_min}`
+<<<<<<< HEAD
             : 'Not specified')
       quote.timeline
       quote.status
@@ -469,7 +480,58 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 }
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+            : 'Not specified'),
+      quote.timeline,
+      quote.status,
+      new Date(quote.created_at).toLocaleDateString(),
+    ]);
+
+    // Create CSV content
+    const csvContent = [
+      headers.join(','),
+      ...rows.map(row =>
+        row
+          .map(cell =>
+            // Escape commas and quotes in cell values
+            typeof cell === 'string' &&
+            (cell.includes(',') || cell.includes('"'))
+              ? `"${cell.replace(/"/g, '""')}"`
+              : cell
+          )
+          .join(',')
+      ),
+    ].join('\n');
+
+    // Create download link
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.setAttribute('href', url);
+    link.setAttribute(
+      'download',
+      `${filename}-${new Date().toISOString().split('T')[0]}.csv`
+    );
+    document.body.appendChild(link);
+    // Download file and clean up
+    link.click()
+    setTimeout(() => {
+      document.body.removeChild(link);
+URL.revokeObjectURL(url);
+    }, 100);
+  };
+    >
+      <Download size={16} />
+      Export CSV
+    </Button>
+);
+};
+'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

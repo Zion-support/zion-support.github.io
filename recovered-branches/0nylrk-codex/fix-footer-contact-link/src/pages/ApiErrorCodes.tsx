@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -9,10 +10,18 @@ import React from "react",
 =======
 <<<<<<< HEAD
 
+=======
+import React from "react",
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import { CodeBlock } from "@/components/developers/CodeBlock";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+import { CodeBlock } from "@/components/developers/CodeBlock",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function ApiErrorCodes() {
 
   const errorExample = `{
+<<<<<<< HEAD
 =======
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -42,25 +51,24 @@ export function ApiErrorCodes() {
   const errorExample = `{
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
-<<<<<<< HEAD
 export function ApiErrorCodes() {;
   const errorExample = `{;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   "error": "validation_error";
   "message": "The request was invalid";
   "details": [;
     {;
       "field": "title";
 
-
     },
-
 
     {
       "field": "budget.min";
+<<<<<<< HEAD
       "error": "Budget minimum must be greater than 0"
 =======
 =======
@@ -82,11 +90,15 @@ export function ApiErrorCodes() {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",
+=======
+      "error": "Budget minimum must be greater than 0"import React from "react",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock",
 
+<<<<<<< HEAD
 export function ApiErrorCodes() {
 
   const errorExample = `{
@@ -111,6 +123,8 @@ import { CodeBlock } from "@/components/developers/CodeBlock";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock",
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function ApiErrorCodes() {
 
   const errorExample = `{
@@ -119,6 +133,7 @@ export function ApiErrorCodes() {
   "details": [
     {
       "field": "title",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "error": "Title is required"
 <<<<<<< HEAD
@@ -231,11 +246,15 @@ function ApiErrorCodes() {
 =======
       "error": "Title is required"  const errorCodes = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      "error": "Title is required"  const errorCodes = [
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       status: 400
       code: "validation_error"
       message: "The request was invalid. Check the details for specific field errors."
       details: "Includes field-specific validation errors."
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -290,10 +309,15 @@ function ApiErrorCodes() {
 
     },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       status: 401
       code: "invalid_token"
       message: "Invalid or expired API key."
+<<<<<<< HEAD
 <<<<<<< HEAD
       details: "The provided API key is incorrect, expired, or revoked."
 <<<<<<< HEAD
@@ -345,10 +369,14 @@ function ApiErrorCodes() {
 =======
       details: "The provided API key is incorrect, expired, or revoked."    {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      details: "The provided API key is incorrect, expired, or revoked."    {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       status: 404
       code: "not_found"
       message: "The requested resource was not found."
       details: "The specified ID does not exist or is not accessible."
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -399,10 +427,15 @@ function ApiErrorCodes() {
 
     },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       status: 429
       code: "rate_limit_exceeded"
       message: "Rate limit exceeded. Try again later."
+<<<<<<< HEAD
 <<<<<<< HEAD
       details: "Includes retry_after parameter indicating when to retry."
 <<<<<<< HEAD
@@ -454,11 +487,15 @@ function ApiErrorCodes() {
 =======
       details: "Includes retry_after parameter indicating when to retry."    {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      details: "Includes retry_after parameter indicating when to retry."    {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       status: 503
       code: "service_unavailable"
       message: "Service temporarily unavailable."
       details: "The API is temporarily unavailable due to maintenance or high load."
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -484,10 +521,16 @@ function ApiErrorCodes() {
   ],
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  ],
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const rateLimits = [
     {
       endpoint: "All GET endpoints"
       limit: "100 requests per minute"
+<<<<<<< HEAD
 <<<<<<< HEAD
       notes: "Aggregate limit across all GET endpoints"
 <<<<<<< HEAD
@@ -1043,6 +1086,26 @@ function ApiErrorCodes() {
           If you're encountering persistent errors or need higher rate limits, please 
           <a href="#" className="text-zion-cyan"> contact our support team</Link>.        </p>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      notes: "Aggregate limit across all GET endpoints"    {
+      endpoint: "All POST endpoints"
+      limit: "30 requests per minute"
+      notes: "Aggregate limit across all POST endpoints"
+
+    },
+    {
+      endpoint: "All DELETE endpoints"
+      limit: "15 requests per minute"
+      notes: "Aggregate limit across all DELETE endpoints"    {
+      endpoint: "/api/talent (Search)"
+      limit: "50 requests per minute"
+      notes: "Higher limit for common search operations"
+
+    },
+
+          If you're encountering persistent errors or need higher rate limits, please 
+          <a href="#" className="text-zion-cyan"> contact our support team</Link>.        </p>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>
     </ApiDocsLayout>
   )        <h2>Error Format</h2>;        <p>;
@@ -1144,6 +1207,7 @@ function ApiErrorCodes() {
         <CodeBlock code={rateLimitExample} language="json" showLineNumbers={true} />;
         <h2 > Rate Limits</h2>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
                   <td className="py-2 px-4 text-white font-mono">{error.code}</td>;
@@ -1179,12 +1243,15 @@ function ApiErrorCodes() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <p>;
           To ensure fair usage and protect the API from abuse, we enforce rate limits on all endpoints.;
           The limits are based on the number of requests per minute per API key.;
         </p>;
 }export default ApiErrorCodes;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 
@@ -1205,6 +1272,10 @@ export default ApiErrorCodes;
         <div className="overflow - x-auto mb-8">;
           <table className="w - full border-collapse">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        <div className="overflow - x-auto mb-8">;
+          <table className="w - full border-collapse">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <thead>;
               <tr className="border - b border - zinc-800">;
                 <th className="text - left py - 2 px - 4 text - zinc - 300 font-medium">Endpoint</th>;
@@ -1266,6 +1337,7 @@ export default ApiErrorCodes;
 export default ApiErrorCodes;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1273,3 +1345,6 @@ export default ApiErrorCodes;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

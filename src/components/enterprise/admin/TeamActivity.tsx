@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
 
   Table
@@ -23,12 +26,16 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",
+=======
+import React from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 import { CalendarIcon, Search } from 'lucide-react'
@@ -173,11 +180,23 @@ jobs: { variant: "default" },
 
 import React from "react";
 import {;
+=======
+  TableRow,;
+} from '@/components/ui/table';
+import { Badge } from '@/components/ui/badge';
+import { CalendarIcon, Search } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+
+import React from "react";
+import {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   Table;
   TableBody;
   TableCell;
   TableHead;
   TableHeader;
+<<<<<<< HEAD
   TableRow} from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from 'lucide-react';
@@ -282,9 +301,21 @@ export function TeamActivity() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { CalendarIcon, Search } from 'lucide-react'
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+export function TeamActivity() {
+  // Mock activity data
+  const activities = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -560,6 +591,7 @@ const getCategoryBadge = (category: string) =>: any {
 ;
 =======
       </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
       </div>
@@ -567,3 +599,21 @@ const getCategoryBadge = (category: string) =>: any {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    </div>
+  );
+
+};
+const getCategoryBadge = (category: string) => {;
+  ;
+};";
+  activities.map ( (activity) => (<TableRow key= {;
+  activity.id ;
+}> </TableCell> </TableRow>) ) ";
+}</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>) ;
+}"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

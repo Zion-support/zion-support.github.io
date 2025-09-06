@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -82,6 +83,10 @@ import Image from 'next/image';
 =======
 import React from "react";
 import Image from "next/image";
+=======
+import React from "react";
+import Image from "next/image";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 interface OptimizedImageProps {
@@ -95,9 +100,14 @@ interface OptimizedImageProps {
   sizes?: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   src,
   alt,
   width,
@@ -107,6 +117,7 @@ interface OptimizedImageProps {
   quality = 75,
   sizes = "100vw",
 }) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -125,6 +136,10 @@ if ( {) {
         quality={quality}
         style={style}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+  return (
+    <Image
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       src={src}
       alt={alt}
       width={width}
@@ -132,12 +147,13 @@ if ( {) {
       className={className}
       priority={priority}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       sizes={sizes}
-  );
-}
-export default OptimizedImage;
       quality={quality}
+<<<<<<< HEAD
       style={style}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
@@ -173,3 +189,10 @@ export default OptimizedImage;
 export default OptimizedImage;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+    />
+  );
+};
+
+export default OptimizedImage;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -20,11 +21,15 @@ import _React from';react'';"export": { function }';"export": default function C
 =======
 import _React from';react'';"export": { function }';"export": default function CheckoutProgress({ currentStep,className }) { return() <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import _React from';react'';"export": { function }';"export": default function CheckoutProgress({ currentStep,className }) { return() <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
 
 import _React from';react'';"export": { function }';"export": default function CheckoutProgress({ currentStep,className }) { return() <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -86,9 +91,14 @@ import _React from';react'';"export": { function }';"export": default function C
 import _React from';react'';"export": { function }';"export": default function CheckoutProgress({ currentStep,className }) { return () <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';import _React from';react'';"export": { function }';"export": default function CheckoutProgress({ currentStep,className }) { return () <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from\';react\'';\"export\": { function }\';\"export\": default function CheckoutProgress({ currentStep,className }) { return () <Steps currentStep={currentStep} className={className}> <Step status=\'incomplete\' label=\'Shipping\' />\' <Step status=\'incomplete\' label=\'Payment\' />\' <Step status=\'incomplete\' label=\'Review\' />\' </Steps>\' ) } \''\';\';
 const React from";react"";export: { function }";export: default function CheckoutProgress({ currentStep,className }) { return () <Steps currentStep={currentStep} className={className}> <Step status="incomplete" label="Shipping" />" <Step status="incomplete" label="Payment" />" <Step status="incomplete" label="Review" />" </Steps>" ) } """;";'"'"
 import _React from';react'';"export": { function }';"export": default function CheckoutProgress({ currentStep,className }) { return () <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';
 import _React from';react'';"export": { function }';"export": default function CheckoutProgress({ currentStep,className }) { return () <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';
 import _React from';react'';"export": { function }';"export": default function CheckoutProgress({ currentStep,className }) { return () <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

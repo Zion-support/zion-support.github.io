@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import { Link } from 'react-router-dom',
 import { SERVICE_CATEGORIES } from '@/data/servicesData',
@@ -21,6 +22,8 @@ export function ContactPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const [selectedService, setSelectedService] = useState(''),
 
@@ -46,6 +49,7 @@ export function ContactPage() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -68,11 +72,16 @@ export function ContactPage() {
   },
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }))
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Hero Section */}
@@ -138,6 +147,7 @@ export function ContactPage() {
             <p className="text-gray-600 mb-8">
               Fill out the form below and we'll get back to you within 24 hours to discuss your project requirements.
 <<<<<<< HEAD
+<<<<<<< HEAD
             </p>
 <<<<<<< HEAD
             
@@ -166,6 +176,9 @@ export function ContactPage() {
 =======
             </p>            <form onSubmit={handleSubmit} className="space-y-6">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            </p>            <form onSubmit={handleSubmit} className="space-y-6">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -198,6 +211,7 @@ export function ContactPage() {
                     placeholder="your.email@company.com"
                   />
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               </div>
 <<<<<<< HEAD
@@ -336,6 +350,9 @@ export function ContactPage() {
 =======
               </div>              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              </div>              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div>
                   <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
                     Budget Range
@@ -462,6 +479,7 @@ export function ContactPage() {
             {/* Business Hours */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -536,6 +554,8 @@ export function ContactPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* Quick Actions */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Actions</h3>
@@ -596,6 +616,7 @@ export function ContactPage() {
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>
 <<<<<<< HEAD
   )
@@ -646,3 +667,6 @@ describe('EquipmentPage', () => {
 =======
     </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

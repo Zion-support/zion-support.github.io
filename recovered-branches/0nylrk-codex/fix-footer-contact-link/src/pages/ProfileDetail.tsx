@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -13,6 +14,8 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -67,6 +70,7 @@ import {
   Mail;
   Phone;
   Globe
+<<<<<<< HEAD
 } from "lucide-react",
 <<<<<<< HEAD
 =======
@@ -122,10 +126,14 @@ import {
   Globe
 } from "lucide-react",import { HireNowCTA } from "@/components/profile/HireNowCTA";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+} from "lucide-react",import { HireNowCTA } from "@/components/profile/HireNowCTA";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
   const { profileId } = useParams();
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -168,6 +176,8 @@ export default function ProfileDetail() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [profileData, setProfileData] = useState<any>(null),
   const [isLoading, setIsLoading] = useState(true);
 import { HireNowCTA } from "@/components/profile/HireNowCTA",
@@ -195,7 +205,10 @@ export default function ProfileDetail() {
           .eq("id", profileId)
           .single();
           .single(),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setIsLoading(true);
       setError(null);
       try {;
@@ -203,9 +216,12 @@ export default function ProfileDetail() {
           setError("Profile ID is missing.");
           return;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         }
 
           .single(),
@@ -213,6 +229,7 @@ export default function ProfileDetail() {
           .single();
           .single(),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -223,10 +240,13 @@ export default function ProfileDetail() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         if (error) {
           throw new Error(error.message);
         }
         if (!data) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -307,6 +327,8 @@ export default function ProfileDetail() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           setError("Profile not found.");
           return;
         }
@@ -400,6 +422,7 @@ if ( {) {
     fetchProfile();
   }, [profileId]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 =======
@@ -410,6 +433,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -441,6 +466,7 @@ if ( {) {
 =======
   }
   }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -562,6 +588,8 @@ export default function ProfileDetail() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     );
   }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   if (error) {;
 
@@ -573,6 +601,7 @@ export default function ProfileDetail() {;
       </div>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -846,11 +875,19 @@ export default function ProfileDetail() {;
 ;
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
+=======
+      <Header />
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-12 gap-6">            <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <CardHeader>;
                 <CardTitle className="text-xl font-bold text-white">About Me</CardTitle>;
               </CardHeader>;
               <CardContent>;
+<<<<<<< HEAD
                 <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </CardContent>;
             </Card>;
 ;
@@ -861,18 +898,27 @@ export default function ProfileDetail() {;
               </CardHeader>;
               <CardContent>;
                 <div className="flex flex-wrap gap-2">;
+<<<<<<< HEAD
                   {profileData.skills?.map((skill:string, index:number) => (;
                     <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>;
+=======
+                  {profileData.skills?.map((skill:string, index:number) => (;                    <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   )) || <p className="text-zion-slate-light">No skills provided.</p>}
                 </div>;
               </CardContent>;
             </Card>;
+<<<<<<< HEAD
 ;
             {/* Experience Section */}
+=======
+;            {/* Experience Section */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
               <CardHeader>;
                 <CardTitle className="text-xl font-bold text-white">Experience</CardTitle>;
               </CardHeader>;
+<<<<<<< HEAD
               <CardContent>;
                 {profileData.experience ? (;
                   profileData.experience.map((exp:any, index:number) => (;
@@ -1402,6 +1448,12 @@ if ( {) {
                 professional_title: profileData?.professional_title || '',
                 hourly_rate: profileData?.hourly_rate || 0
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <CardContent>;                id: profileData?.id || '',
+                full_name: profileData?.full_name || '',
+                professional_title: profileData?.professional_title || '',
+                hourly_rate: profileData?.hourly_rate || 0
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
               }}
             />;
@@ -1450,6 +1502,7 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1458,6 +1511,9 @@ if ( {) {
 =======
                 <div className="flex flex - wrap gap - 4 text-sm">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                <div className="flex flex - wrap gap - 4 text-sm">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   {profile_data.location && (
                     <div className="flex items - center text - zion - slate-light">;
                       <MapPin className="h - 4 w - 4 mr-1" />;
@@ -1624,6 +1680,7 @@ if ( {) {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ;
@@ -1704,3 +1761,6 @@ try {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

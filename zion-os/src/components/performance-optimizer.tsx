@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,10 +26,13 @@ const LazyComponent = ({ component: Component, fallback, ...props }: {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   [key: string]: any;
 }) => (;
   <Suspense fallback={fallback}>;
     <Component {...props} />;
+<<<<<<< HEAD
 <<<<<<< HEAD
   </Suspense>;
 =======
@@ -60,6 +64,8 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundarySta
   <Suspense fallback={fallback}>;
     <Component {...props} />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     this.state = { hasError: false }
   }
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {return { hasError: true, error }
@@ -68,8 +74,11 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundarySta
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Error boundary for better error handling;
 interface ErrorBoundaryState {
   has_error: boolean,
@@ -79,6 +88,7 @@ interface ErrorBoundaryProps {
   children: ReactNode,
   fallback?: ReactNode;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ;
@@ -101,6 +111,8 @@ interface ErrorBoundaryProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Error boundary for better error handling;
 interface ErrorBoundaryState {
   has_error: boolean,
@@ -120,6 +132,7 @@ export class ErrorBoundary extends Component < ErrorBoundaryProps ErrorBoundaryS
   }
   componentDidCatch (error: Error, error_info: React.ErrorInfo) {
     console.error ("Error caught by boundary:", error, error_info);
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -282,12 +295,17 @@ export function LoadingSpinner({ size = "md", className = "" }: {;
   }}
 // Skeleton loading component;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }}
+// Skeleton loading component;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export /**
  * Skeleton - Function description
  */
 function Skeleton() {
   return (
     <div className={`animate - pulse ${class_name}`}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       {Array.from ({ length: lines }).map ((_, i) => (
 =======
@@ -402,10 +420,29 @@ if ( {) {
       }
         console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      {Array.from ({ length: lines }).map ((_, i) => (    <div className={`animate-pulse ${className}`}>;
+      {Array.from({ length: lines }).map((_, i) => (;
+        <div;
+          key={i}
+          className="h - 4 bg-[var (--border)] rounded mb - 2 last:mb-0";
+          style={{ width: `${Math.random () * 40 + 60}%` }}
+        />))}
+    </div>);
+}      // Log performance metrics in development;
+      // Check condition
+if ( {) {
+  $2
+}
+        // // // console.log (`${component_name} render time: ${duration.to_fixed (2)}ms`);
+      }
+        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
     }
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -464,10 +501,13 @@ export function useDebounce<T>(value: T, delay: number): T {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   }, [value, delay]);
   return debouncedValue;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 export { LazyComponent };
@@ -488,3 +528,5 @@ export { LazyComponent };
   return debounced_value;
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

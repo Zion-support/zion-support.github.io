@@ -1,7 +1,6 @@
 
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,6 +66,15 @@ const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
+
+import {Resend} from "npm: resend@1.0.0";
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 import { Resend } from "npm: resend@1.0.0",
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
@@ -77,6 +85,7 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -175,6 +184,13 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type"}      return new Response(
         JSON && JSON.stringify({ error: "Missing required fields" });      return new Response(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type"}      return new Response(
+        JSON && JSON.stringify({ error: "Missing required fields" });      return new Response(
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         JSON && JSON.stringify({ error: "Missing required fields" });
         {
           status: 400
@@ -186,6 +202,7 @@ const corsHeaders = {
       .from("profiles")
       .select("email, display_name")
       .eq("id", user_id)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -309,11 +326,19 @@ const corsHeaders = {
     ] |"complete your next step";
     // Send email      html: `
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      return new Response(
+        JSON && JSON.stringify({ error: "User not found", details: userError });    const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
+      missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
+    ] |"complete your next step";
+    // Send email      html: `
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
           <h2>Hi ${name},</h2>
           <p>You're making great progress in setting up your ${role} profile on Zion AI Marketplace!</p>
           <p>Your next step is to <strong>${action}</strong>.</p>
           <p>This will help you get the most out of the platform and connect with the right opportunities.</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div style="margin: 30px 0,">
 <<<<<<< HEAD
@@ -363,6 +388,9 @@ const corsHeaders = {
 =======
           <div style="margin: 30px 0,">          status: 500
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <div style="margin: 30px 0,">          status: 500
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           headers: { "Content-Type": "application/json", ...corsHeaders }}
       )
     }
@@ -370,6 +398,7 @@ const corsHeaders = {
     const { data: notification, error: notificationError } = await supabase && supabase.rpc(      "create_notification";
       {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -441,11 +470,17 @@ const corsHeaders = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         notification_id: notification});
 =======
+=======
+      JSON && JSON.stringify({        message: "Reminder sent successfully",
+        notification_id: notification});
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {
 
         status: 200,
         headers: { "Content - Type": "application / json", ...cors_headers }}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -461,6 +496,8 @@ const corsHeaders = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 import { Resend } from "npm: resend@1.0.0",;
@@ -581,6 +618,7 @@ serve(async (req: Request) => {;
 
   }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
@@ -794,3 +832,6 @@ if (notificationError) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

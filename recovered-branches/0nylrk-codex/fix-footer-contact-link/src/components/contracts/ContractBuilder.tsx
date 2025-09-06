@@ -26,6 +26,7 @@ interface ContractBuilderProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37,6 +38,8 @@ interface ContractBuilderProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from "react";
 import {Dialog, DialogContent} from "@/components/ui/dialog";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
@@ -47,6 +50,7 @@ import {ContractForm, ContractFormValues} from "./components/ContractForm";
 import {ContractPreview} from "./components/ContractPreview";
 import {TemplateManager} from "./templates/TemplateManager";
 import {SmartContractBuilder} from "./SmartContractBuilder";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -116,6 +120,8 @@ interface ContractBuilderProps {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ContractBuilderProps {;
   isOpen: boolean,;
   onClose: () => void,;
@@ -126,6 +132,7 @@ interface ContractBuilderProps {;
 
 export function ContractBuilder(): any ({;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -355,6 +362,14 @@ export function ContractBuilder({;export function ContractBuilder({;
   clientName;}
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function ContractBuilder({;export function ContractBuilder({;
+  isOpen;
+  onClose;
+  talent;
+  clientName;}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   onContractGenerated
 }: ContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form"),
@@ -412,6 +427,7 @@ export function ContractBuilder({;export function ContractBuilder({;
               </Button>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     }
@@ -429,6 +445,8 @@ export function ContractBuilder({;export function ContractBuilder({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",;
 import { Dialog, DialogContent } from "@/components/ui/dialog",;
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
@@ -488,6 +506,7 @@ export function ContractBuilder({;
         }}
         talent={talent}
         client_name={client_name}
+<<<<<<< HEAD
 <<<<<<< HEAD
         onContractGenerated={onContractGenerated}
 <<<<<<< HEAD
@@ -603,6 +622,11 @@ export function ContractBuilder({;
                 size="sm"
                 onClick={() => setShowSmartContractBuilder(true)}              talent={talent}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        onContractGenerated={onContractGenerated}                variant="secondary"
+                size="sm"
+                onClick={() => setShowSmartContractBuilder(true)}              talent={talent}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               client_name={client_name}
               initial_values={form_values}
               onFormValuesChange={setFormValues}
@@ -619,6 +643,7 @@ export function ContractBuilder({;
           currentValues={formValues}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         />
       </DialogContent>
@@ -630,12 +655,15 @@ export function ContractBuilder({;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         />;
       </DialogContent>;
     </Dialog>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -683,6 +711,9 @@ export function ContractBuilder({;
 =======
 }  ),; interface ContractBuilderProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}  ),; interface ContractBuilderProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   isOpen: boolean;
 onClose: () => void;
 talent: TalentProfile;
@@ -743,6 +774,7 @@ return (<SmartContractBuilder isOpen= {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -750,3 +782,6 @@ return (<SmartContractBuilder isOpen= {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

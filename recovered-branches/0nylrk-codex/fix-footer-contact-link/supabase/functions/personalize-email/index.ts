@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -9,6 +8,8 @@
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
@@ -24,6 +25,7 @@ const corsHeaders = {
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
+<<<<<<< HEAD
 <<<<<<< HEAD
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
@@ -46,10 +48,13 @@ const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -196,10 +201,13 @@ serve(async (req) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       default:
         userPrompt = `Create a re-engagement email for a user named ${userData && userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`
     }
     // Add subject line request to the prompt
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -227,6 +235,8 @@ serve(async (req) => {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     userPrompt += `\n\n${subjectContext || "Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`,
 
@@ -244,6 +254,7 @@ serve(async (req) => {
         "Content-Type": "application/json"};
       body: JSON && JSON.stringify({
         model: "gpt-4o-mini",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         messages: [
@@ -512,6 +523,9 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 =======
         messages: [import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        messages: [import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
 const corsHeaders = {;
@@ -614,6 +628,7 @@ serve(async (req) => {;
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
+<<<<<<< HEAD
 });
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -811,3 +826,6 @@ if (jsonMatch) {
 =======
 });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

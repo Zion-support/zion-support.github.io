@@ -1,7 +1,34 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+import { format } from "date-fns";
+import { CalendarIcon } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+import { UseFormReturn, ControllerRenderProps } from "react-hook-form";
+import { ;
+  FormField,;
+  FormItem, ;
+  FormLabel, ;
+  FormControl, ;
+  FormDescription, ;
+  FormMessage ;
+} from "@/components/ui/form",;
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Calendar } from "@/components/ui/calendar";
+import { ContractFormValues } from "./ContractForm";
+<<<<<<< HEAD
+interface ProjectDetailsFieldsProps {;
+  form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>;
 
@@ -34,7 +61,13 @@ import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { Calendar } from "@/components/ui/calendar"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+interface ProjectDetailsFieldsProps {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
 }
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
@@ -42,7 +75,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
     <>
       <FormField
         control={form.control}
-        name='projectName'
+name='projectName'
         render={({
           field
         }: {
@@ -51,6 +84,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           <FormItem>
             <FormLabel>Project Name</FormLabel>
             <FormControl>
+<<<<<<< HEAD
               <Input placeholder='AI Website Development' {...field} />            </FormControl>        name="projectName"
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> },) => (        name="projectName"
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> }) => (
@@ -117,12 +151,26 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
 <<<<<<< HEAD
             </FormControl>
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+              <Input placeholder='AI Website Development' {...field} />
+            </FormControl>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <FormMessage />
           </FormItem>
         )}
       />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
           field: ControllerRenderProps<ContractFormValues, 'projectName'>;
@@ -175,12 +223,16 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
           </FormItem>)}
       />;
       <FormField;
+=======
+<FormField
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         control={form.control}
         name='scope_summary';
 
         render={({
           field
         }: {
+<<<<<<< HEAD
 
           field: ControllerRenderProps<ContractFormValues, 'scopeSummary'>;
         }) => (          <FormItem>;
@@ -197,10 +249,16 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
           <FormItem>;
             <FormLabel>Scope Summary</FormLabel>;
             <FormControl>;
+=======
+          field: ControllerRenderProps<ContractFormValues, 'scopeSummary'>;
+        }) => (
+          <FormItem>
+            <FormLabel>Scope Summary</FormLabel>
+            <FormControl>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               <Textarea
-                placeholder='Describe the project scope, deliverables, and expectations...'
-                className='min-h-[120px]'                placeholder="Describe the project scope, deliverables, and expectations..."
-                className="min-h-[120px]"
+placeholder='Describe the project scope, deliverables, and expectations...'
+                className='min-h-[120px]'
                 {...field}
               />;
             </FormControl>;
@@ -210,17 +268,23 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
             <FormMessage />;
           </FormItem>;
         )}
+<<<<<<< HEAD
 
       />;
 
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
 
+=======
+      />
+<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <FormField
           control={form && form.control}
           name='startDate'
           render={({
             field
           }: {
+<<<<<<< HEAD
 
             field: ControllerRenderProps<ContractFormValues, 'startDate'>;
           }) => (;
@@ -343,15 +407,29 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+            field: ControllerRenderProps<ContractFormValues, 'startDate'>
+          }) => (
+            <FormItem className='flex flex-col'>
+              <FormLabel>Start Date</FormLabel>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 =======
 
@@ -456,13 +534,33 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                       ) : (;
                         <span>Pick a date</span>;
                       )}
+=======
+variant={'outline'}
+                      className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
+                      {field.value ? (
+                        format(field.value, 'PPP')
+                      ) : (
+                        <span>Pick a date</span>
+                      )}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />
                     </Button>
                   </FormControl>
                 </PopoverTrigger>
                 <PopoverContent className='w-auto p-0' align='start'>
                   <Calendar
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+=======
+                    mode='single'
+                    selected={field.value}
+                    onSelect={field.onChange}
+                    disabled={date => date < new Date()}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     initialFocus
                   />
                 </PopoverContent>
@@ -472,14 +570,53 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
           )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+<<<<<<< HEAD
+=======
+        />
+<FormField
+          control={form.control}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+          name='endDate'
+          render={({
+            field
+          }: {
+            field: ControllerRenderProps<ContractFormValues, 'endDate'>
+          }) => (
+<<<<<<< HEAD
+            <FormItem className='flex flex-col'>              <FormLabel>End Date (Optional)</FormLabel>
+        <FormField
+          control = {form.control,}
+          name="endDate"
+          render={({ field }: { field: ControllerRenderProps<ContractFormValues, "endDate"> },) => (
+            <FormItem className="flex flex-col">
+          name="endDate"
+          render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate"> }) => (
+            <FormItem className="flex flex-col">
+              <FormLabel>End Date (Optional)</FormLabel>
+=======
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+            <FormItem className='flex flex-col'>
+              <FormLabel>End Date (Optional)</FormLabel>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 <<<<<<< HEAD
                       variant={"outline"}
@@ -519,6 +656,25 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                     selected={field.value || undefined}
                     onSelect={field.onChange}
                     disabled={(date) => date < form.getValues("startDate")}
+=======
+variant={'outline'}
+                      className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
+                      {field.value ? (
+                        format(field.value, 'PPP')
+                      ) : (
+                        <span>Pick a date</span>
+                      )}
+                      <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />
+                    </Button>
+                  </FormControl>
+                </PopoverTrigger>
+                <PopoverContent className='w-auto p-0' align='start'>
+                  <Calendar
+                    mode='single'
+                    selected={field.value |undefined}
+                    onSelect={field.onChange}
+                    disabled={date => date < form.getValues('startDate')}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     initialFocus
                   />
                 </PopoverContent>
@@ -592,6 +748,33 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
+                    initialFocus
+                  />
+                </PopoverContent>
+              </Popover>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+<<<<<<< HEAD
+        
+        <FormField
+          control={form.control}
+          name="endDate"
+          render={({ field }: { field: ControllerRenderProps<ContractFormValues, "endDate"> }) => (
+            <FormItem className="flex flex-col">
+              <FormLabel>End Date (Optional)</FormLabel>
+              <Popover>
+                <PopoverTrigger asChild>
+                  <FormControl>
+                    <Button
+                      variant={"outline"}
+                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     >
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       {field.value ? (
@@ -636,9 +819,19 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      </div>
+    </>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

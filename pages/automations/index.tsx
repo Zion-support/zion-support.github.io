@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -37,6 +38,8 @@ const AutomationsIndex: NextPage = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <main className="space-y-6">
       <h1 className="text-3xl font-bold">Autonomous Automations</h1>
@@ -47,6 +50,7 @@ const AutomationsIndex: NextPage = () => {
             <div className="enhanced-card hover:shadow-lg cursor-pointer">
               <h2 className="text-xl font-semibold">{it.title}</h2>
               <p className="text-sm text-gray-600 mt-1">{it.desc}</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             </div>
@@ -59,12 +63,17 @@ const AutomationsIndex: NextPage = () => {
             </div>
           </Link>
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import type { NextPage } from 'next',
 import Link from 'next / link',
@@ -86,14 +95,25 @@ const AutomationsIndex: NextPage = () => {
           </Link>))}
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
+=======
+    </main>;
+  );
+},;
+=======
+import type { NextPage } from 'next';
+import Link from 'next/link';
+const AutomationsIndex: NextPage;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
           </Link>
         ))}
       </div>
     </main>
+<<<<<<< HEAD
   )
 }
 export default AutomationsIndex;
@@ -163,3 +183,10 @@ export default AutomationsIndex;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+);
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+export default AutomationsIndex;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

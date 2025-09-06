@@ -14,6 +14,7 @@ const Checkbox = React.forwardRef<
   <CheckboxPrimitive.Root
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ref={ref}
     className={cn(
 <<<<<<< HEAD
@@ -91,3 +92,6 @@ export { Checkbox }
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -26,6 +26,7 @@ const categories = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
@@ -75,10 +76,13 @@ import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { GradientHeading } from "./GradientHeading",
 import { Link } from "react-router-dom",
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -96,6 +100,8 @@ import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const categories = [
   {
     title: "Services",
@@ -114,6 +120,7 @@ const categories = [
     description: "Rent or buy specialized hardware, servers, and devices",
     icon: <HardDrive className="w-10 h-10" />,
     link: "/equipment",
+<<<<<<< HEAD
 <<<<<<< HEAD
     color: "from-amber-500 to-orange-600"},
 <<<<<<< HEAD
@@ -152,6 +159,9 @@ const specialServices = [
 =======
     color: "from-amber-500 to-orange-600"},  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    color: "from-amber-500 to-orange-600"},  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ];
 
 interface CategoriesSectionProps {
@@ -177,10 +187,13 @@ import { Link } from "react-router-dom",;
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const categories = [;
   {;
     title: "Services",,
@@ -215,6 +228,7 @@ interface CategoriesSectionProps {;
   showTitle?: boolean;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
@@ -230,10 +244,13 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
@@ -371,6 +388,9 @@ function CategoriesSection() {
 =======
   return (                key={service.title}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (                key={service.title}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 to={service.link}
                 className="px - 6 py - 3 bg - zion - blue - light hover:bg - zion - blue - dark border border - zion - purple / 20 hover:border - zion - purple / 50 rounded - full text - zion - cyan transition - all duration-300";
               >;
@@ -389,6 +409,7 @@ function CategoriesSection() {
             ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -396,6 +417,8 @@ function CategoriesSection() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
           </div>;
         </div>;
@@ -410,6 +433,7 @@ function CategoriesSection() {
         <div className="mt - 12 flex justify-center">;
           <Link;
             to="/categories";
+<<<<<<< HEAD
 <<<<<<< HEAD
             className="text - zion - cyan border - b border - zion - cyan hover: border - zion - cyan - dark transition - colors";
 <<<<<<< HEAD
@@ -615,3 +639,6 @@ interface CategoriesSectionProps {
 =======
             className="text - zion - cyan border - b border - zion - cyan hover: border - zion - cyan - dark transition-colors";;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            className="text - zion - cyan border - b border - zion - cyan hover: border - zion - cyan - dark transition-colors";;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

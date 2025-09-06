@@ -1,11 +1,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -29,6 +32,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -37,6 +41,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -44,6 +50,7 @@ import {useAdminQuotes} from "@/hooks/useAdminQuotes";
 import {useAuth} from "@/hooks/useAuth";
 import {Card, CardContent} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {Navigate} from "react-router-dom";
 <<<<<<< HEAD
@@ -87,6 +94,9 @@ import React, { useState } from "react",
 =======
 import {Navigate} from "react-router-dom";import React, { useState } from "react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {Navigate} from "react-router-dom";import React, { useState } from "react",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { useAdminQuotes } from "@/hooks/useAdminQuotes";
@@ -99,9 +109,14 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Navigate } from "react-router-dom",
 <<<<<<< HEAD
 
+<<<<<<< HEAD
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
     quotes;
+=======
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+  const [showDetails, setShowDetails] = useState(false);    quotes;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     is_loading;
     error;
     status_filter;
@@ -112,6 +127,7 @@ import { Navigate } from "react-router-dom",
     setSearchQuery;
     date_range;
     setDateRange;
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -131,6 +147,8 @@ import type { QuoteRequest } from "@/types/quotes";
     setSearchQuery;
     date_range;
     setDateRange;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { QuoteRequest } from "@/types/quotes",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { QuoteDetails } from "@/components/quotes/QuoteDetails",
@@ -140,6 +158,7 @@ import {
   QuotesFilter,
   QuotesTable
 } from "@/components/admin/quotes",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -163,6 +182,8 @@ export default function QuoteManager() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const {
     quotes,
     isLoading,
@@ -177,6 +198,7 @@ export default function QuoteManager() {
     setDateRange,
     updateStatus,
     toggleArchive,
+<<<<<<< HEAD
 <<<<<<< HEAD
     deleteQuote
 <<<<<<< HEAD
@@ -308,6 +330,9 @@ import React, { useState } from "react",;
 =======
     deleteQuote            
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    deleteQuote            
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { useAdminQuotes } from "@/hooks/useAdminQuotes",;
@@ -368,12 +393,15 @@ export default function QuoteManager() {;
             </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
 
@@ -421,6 +449,7 @@ function QuoteManager() {
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
                     deleteQuote={deleteQuote}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     onViewDetails={handleViewDetails}
                   />;
@@ -542,6 +571,9 @@ function QuoteManager() {
 =======
                     onViewDetails={handleViewDetails}        {/* Quote Details Modal */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    onViewDetails={handleViewDetails}        {/* Quote Details Modal */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
@@ -550,13 +582,17 @@ function QuoteManager() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -583,12 +619,15 @@ function QuoteManager() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }}
         />
         <Footer />
       </div>
     </ProtectedRoute>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -712,6 +751,8 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             setShowDetails(false),;
             setSelectedQuote(null),;
           }}
@@ -786,6 +827,7 @@ const [showDetails, setShowDetails] = useState (false);
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -793,3 +835,6 @@ const [showDetails, setShowDetails] = useState (false);
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

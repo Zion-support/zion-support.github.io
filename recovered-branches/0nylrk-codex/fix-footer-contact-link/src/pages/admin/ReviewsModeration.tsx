@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
 import {SEO} from "@/components/SEO";
@@ -34,6 +37,7 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { useState, useEffect } from "react",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 =======
 import { AppHeader } from "@/layout/AppHeader";
@@ -55,12 +59,16 @@ import { Star, AlertTriangle } from "lucide-react";
 =======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",import { Star, AlertTriangle } from "lucide-react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",import { Star, AlertTriangle } from "lucide-react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { toast } from "@/components/ui/use-toast";
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending");
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,6 +87,8 @@ import { toast } from "@/components/ui/use-toast",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending"),
   const [reviews, setReviews] = useState([]),
@@ -86,6 +96,7 @@ function ReviewsModerationContent() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
   const fetchReviews = async () => {
     setIsLoading(true),
     try {
@@ -135,6 +146,8 @@ function ReviewsModerationContent() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const fetchReviews = async () => {;
     setIsLoading(true);
     try {
@@ -167,6 +180,7 @@ function ReviewsModerationContent() {
   const handleRefresh = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     fetchReviews()
   },
   
@@ -187,6 +201,11 @@ function ReviewsModerationContent() {
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+    fetchReviews()
+};
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>;
       <SEO
@@ -234,6 +253,7 @@ function ReviewsModerationContent() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -267,6 +287,8 @@ function ReviewsModerationContent() {
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
@@ -281,10 +303,13 @@ export default function ReviewsModeration() {
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
@@ -301,6 +326,7 @@ function ReviewsModerationContent() {;
   const [isLoading, setIsLoading] = useState(true),;
   const fetchReviews = async () => {;
     setIsLoading(true),;
+<<<<<<< HEAD
     try {;
       // In a real application, you would fetch reviews from an API;
       // For now, let's simulate a delay and return empty data;
@@ -499,6 +525,9 @@ function ReviewsModerationContent() {;
     setIsLoading(true),;
     try {;  const fetch_reviews = async () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    try {;  const fetch_reviews = async () => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setIsLoading (true);
     try {
       // In a real application, you would fetch reviews from an API;
@@ -614,6 +643,7 @@ function ReviewsModeration() {
       <ReviewsModerationContent />;
     </ProtectedRoute>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -655,3 +685,6 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

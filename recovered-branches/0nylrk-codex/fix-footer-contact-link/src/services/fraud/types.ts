@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -16,12 +17,15 @@
 // Types used across fraud detection modules;
 import {FraudSeverity} from '@/types / fraud';
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Types used across fraud detection modules
 import { FraudSeverity } from "@/types/fraud";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export interface AnalysisResult {
   isSuspicious: boolean;
   reasons: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -39,11 +43,14 @@ export interface AnalysisResult {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 export interface MessageAnalysisResult extends AnalysisResult {
   severity: FraudSeverity;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -75,10 +82,13 @@ export interface MessageAnalysisResult extends AnalysisResult {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface MessageAnalysisResult extends AnalysisResult {
   severity: FraudSeverity;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -151,3 +161,8 @@ export interface SignupCheckResult extends AnalysisResult {}
 export interface SignupCheckResult extends AnalysisResult {}
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+export interface SignupCheckResult extends AnalysisResult {}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

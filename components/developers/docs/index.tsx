@@ -25,13 +25,22 @@ import type { GetServerSideProps } from 'next';
 =======
 import path from 'path';
 import fs from 'fs';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+import DocsLayout from '../../../components/docs/DocsLayout';
+import CodeBlock from '../../../components/docs/CodeBlock';
+export type Section = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   title: string;
   html?: string;
@@ -60,14 +69,22 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
   const docs = JSON.parse(raw) as DocsContent;
   return { props: { docs } }
 }
+<<<<<<< HEAD
   return { props: { docs } }
+=======
+<<<<<<< HEAD
+  return { props: { docs } };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function ApiDocsPage({ docs }: PageProps) {
       nav={docs.sections.map(s => ({ id: s.id, title: s.title }))}
     >
       {docs.sections.map(section => (
         <section key={section.id} id={section.id} className='scroll-mt-24'>
+<<<<<<< HEAD
           <h2 className='text-2xl font-semibold'>{section.title}</h2>          {section.html && (
             <div dangerouslySetInnerHTML={{ __html: section.html }} />
 <<<<<<< HEAD
@@ -102,10 +119,14 @@ export default function ApiDocsPage({ docs }: PageProps) {
       {docs.sections.map((section) => (
         <section key={section.id} id={section.id} className="scroll-mt-24">
           <h2 className="text-2xl font-semibold">{section.title}</h2>
+=======
+          <h2 className='text-2xl font-semibold'>{section.title}</h2>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           {section.html && (
             <div dangerouslySetInnerHTML={{ __html: section.html }} />
           )}
           {section.code && section.code.length > 0 && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             <div className='space-y-4 mt-4'>
@@ -119,6 +140,8 @@ export default function ApiDocsPage({ docs }: PageProps) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ))}
             </div>;
           )}
@@ -183,6 +206,7 @@ function ApiDocsPage() {
         </section>))}
     </DocsLayout>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -190,10 +214,28 @@ function ApiDocsPage() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+=======
+<div className='space-y-4 mt-4'>
+              {section.code.map((c, idx) => (
+                <CodeBlock key={idx} language={c.language}>
+                  {c.content}
+                </CodeBlock>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ))}
             </div>
           )}
         </section>
       ))}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+    </DocsLayout>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

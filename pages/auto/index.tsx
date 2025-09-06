@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,6 +13,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -39,6 +42,7 @@ const AutoIndex: NextPage = () => {
             <h2 className="font-semibold text-lg"><Link href="/auto/seo-audit">Autonomous SEO Auditor</Link></h2>
             <p className="text-sm text-gray-600">Scans pages for SEO gaps and commits a report for fixes.</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -50,10 +54,19 @@ const AutoIndex: NextPage = () => {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const AutoIndex: NextPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </li>
         </ul>
       </main>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -125,6 +138,9 @@ export default AutoIndex;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 },
 export default AutoIndex,
 import type { NextPage } from 'next';
@@ -157,6 +173,7 @@ const AutoIndex: NextPage = () => {;
       </main>;
     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 },;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -179,3 +196,12 @@ export default AutoIndex;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+=======
+);
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+export default AutoIndex;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

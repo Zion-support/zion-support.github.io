@@ -38,6 +38,7 @@ export const versioning = {
   increment_version: (version: string) => version;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export function isVersionGreater(a: string, b: string): boolean {
   return compareVersions(parseVersion(a), parseVersion(b)) > 0;
@@ -69,11 +70,17 @@ export interface Version {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Versioning utilities;
 export const versioning = {
   // Add versioning functionality here;
   get_version: () => '1.0.0',
   compare_versions: (v1: string, v2: string) => 0,
   increment_version: (version: string) => version;
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

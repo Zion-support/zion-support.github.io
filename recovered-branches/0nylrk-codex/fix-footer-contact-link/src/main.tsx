@@ -73,6 +73,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -90,6 +93,7 @@ import {HelmetProvider} from 'react-helmet-async';
 import {BrowserRouter, as, Router} from 'react-router-dom';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -101,6 +105,8 @@ import {BrowserRouter, as, Router} from 'react-router-dom';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import ReactDOM from 'react-dom/client',;
 import App from './App.tsx',;
@@ -268,6 +274,7 @@ ReactDOM.create_root (document.getElementById ('root')!).render (<React.StrictMo
     </HelmetProvider>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -303,3 +310,6 @@ ReactDOM.create_root (document.getElementById ('root')!).render (<React.StrictMo
 =======
   </React.StrictMode>);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  </React.StrictMode>);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

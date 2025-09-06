@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import React from 'react',
@@ -27,6 +28,8 @@ export function ProfileLoadingState() {
 }
 ;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 export function ProfileLoadingState() {
   return (
@@ -39,6 +42,21 @@ export function ProfileLoadingState() {
 }
 ;
 
+<<<<<<< HEAD
+=======
+import React from "react";
+export function ProfileLoadingState() {
+  return (
+    <div className="min-h-screen bg-zion-blue flex justify-center items-center p-4">
+      <div className="text-zion-cyan animate-pulse text-xl">
+        Loading profile...
+      </div>
+    </div>
+  );
+}
+;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 ;
 export function ProfileLoadingState() {;
@@ -61,6 +79,7 @@ export function ProfileLoadingState() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -70,3 +89,6 @@ export function ProfileLoadingState() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

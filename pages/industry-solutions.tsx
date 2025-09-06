@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -79,10 +80,18 @@ export default function IndustrySolutions() {
             <Link className="p-5 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-cyan-600 transition" href="/biotech-ai">Biotech & Healthcare AI</Link>
             <Link className="p-5 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-cyan-600 transition" href="/space-technology">Space Technology</Link>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+import React from 'react',
+import Head from 'next/head';
+import Link from 'next/link';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
         </section>
       </div>
     </>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -130,3 +139,7 @@ export default function IndustrySolutions(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

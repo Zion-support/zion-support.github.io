@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -244,6 +245,8 @@ const servicePricing: ServicePricing[] = [;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         ctaLink: "mailto:kleber@ziontechgroup.com";
       }
     ];
@@ -258,6 +261,7 @@ const servicePricing: ServicePricing[] = [;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -265,6 +269,8 @@ const servicePricing: ServicePricing[] = [;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 "use client",
 import { useState  } from './react';,
 interface PricingTier {
@@ -276,6 +282,7 @@ interface PricingTier {
   popular?: boolean,
   cta: string,
   cta_link: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -297,6 +304,9 @@ interface PricingTier {name: string;
 =======
 =======}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ServicePricing {
   service_name: string,
   category: string,
@@ -525,10 +535,13 @@ const service_pricing: ServicePricing[] = [;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ],
 const categories = ["All", "Core Platform", "AI Services", "IT Services", "E - commerce & Services"],
 export default /**
@@ -540,6 +553,7 @@ function PricingPage() {
     ? service_pricing;
     : service_pricing.filter (service => service.category === selected_category);
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="space - y-8">;
       <div className="text - center space - y-4">;
@@ -962,11 +976,16 @@ export default function PricingPage() {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const filteredServices = selectedCategory === "All";
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="space-y-8">;
       <div className="text - center space-y-4">;
         <h1 className="text - 4xl font-bold">Pricing & Plans</h1>;
         <p className="text - xl opacity - 80 max - w-3xl mx-auto">;  const filteredServices = selectedCategory === "All";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     ? servicePricing;
     : servicePricing.filter(service => service.category === selectedCategory);
   return (;
@@ -975,16 +994,20 @@ export default function PricingPage() {;
         <h1 className="text-4xl font-bold">Pricing & Plans</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           Choose the perfect plan for your business needs. All plans include our core features with transparent pricing and no hidden fees.;
         </p>;
       </div>;
       {/* Category Filter */}
       <div className="flex justify-center">;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="flex flex-wrap gap-2 bg-zinc-800 rounded-lg p-1">;
           {categories.map(category => (;
@@ -1018,6 +1041,12 @@ export default function PricingPage() {;
           {categories.map (category => (
             <button;
               key={category}
+=======
+        <div className="flex flex - wrap gap - 2 bg - zinc - 800 rounded - lg p-1">;
+          {categories.map (category => (
+            <button;
+              key={category}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               }`}
             >;
               {category}
@@ -1027,6 +1056,7 @@ export default function PricingPage() {;
       </div>;
       {/* Services Pricing */}
       <div className="space-y-12">;
+<<<<<<< HEAD
 <<<<<<< HEAD
         {filteredServices.map((service, serviceIndex) => (;
           <div key={serviceIndex} className="space-y-6">;
@@ -1066,6 +1096,17 @@ export default function PricingPage() {;
             {/* Features & Benefits */}
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;
               <div>;
+=======
+        {filtered_services.map ((service, service_index) => (
+          <div key={service_index} className="space-y-6">;
+            <div className="text - center space-y-2">;
+              <h2 className="text - 2xl font-bold">{service.service_name}</h2>;
+              <p className="text - lg opacity-80">{service.description}</p>;
+            </div>;
+            {/* Features & Benefits */}
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;
+              <div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <h3 className="text - lg font - semibold mb-3">Key Features</h3>;
                 <ul className="space-y-2">;
                   {service.features.map ((feature, index) => (
@@ -1088,6 +1129,7 @@ export default function PricingPage() {;
               </div>;
             </div>;
             {/* Pricing Tiers */}
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
               {service.tiers.map((tier, tierIndex) => (;
@@ -1132,12 +1174,35 @@ export default function PricingPage() {;
                     {tier.features.map((feature, index) => (;
                       <li key={index} className="flex items-center gap-2 text-sm">;
                         <span className="w-2 h-2 bg-green-500 rounded-full"></span>;
+=======
+            <div className="grid grid - cols - 1 md:grid - cols - 3 gap-6">;
+              {service.tiers.map ((tier, tier_index) => (
+                <div;
+                  }`}
+                >;
+                  {tier.popular && (
+                    <div className="absolute -top - 3 left - 1/2 transform -translate-x-1 / 2">;
+                      <span className="bg - blue - 500 text - white px - 3 py - 1 rounded - full text - xs font-medium">;
+                        Most Popular;
+                      </span>;
+                    <div>;
+                      <span className="text - 3xl font-bold">{tier.price}</span>;
+                      <span className="text - lg opacity-80">{tier.period}</span>;
+                    </div>;
+                    <p className="text - sm opacity-80">{tier.description}</p>;
+                  </div>;
+                  <ul className="space - y-3 mt-6">;
+                    {tier.features.map ((feature, index) => (
+                      <li key={index} className="flex items - center gap - 2 text-sm">;
+                        <span className="w - 2 h - 2 bg - green - 500 rounded-full"></span>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         {feature}
                       </li>;
                     ))}
                   </ul>;
                   <div className="mt-6">;
                     <a;
+<<<<<<< HEAD
 <<<<<<< HEAD
                       href={tier.ctaLink}
                       className={`block w-full text-center py-3 px-4 rounded-lg font-medium transition-colors ${;
@@ -1180,6 +1245,8 @@ export default function PricingPage() {;
                   <div className="mt-6">;
                     <a;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       }`}
                     >;
                       {tier.cta}
@@ -1235,22 +1302,30 @@ export default function PricingPage() {;
             <div>;
               <h3 className="font-semibold">Consulting Services</h3>;
               <p className="text - sm opacity-90">Strategic guidance from $150 / hour</p>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>;
           </div>;
           <a;
             href="mailto:kleber@ziontechgroup.com";
 <<<<<<< HEAD
+<<<<<<< HEAD
             className="inline-block px-6 py-3 bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors";
 =======
             className="inline - block px - 6 py - 3 bg - white text - purple - 600 rounded - lg font - semibold hover:bg - gray - 100 transition-colors";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            className="inline - block px - 6 py - 3 bg - white text - purple - 600 rounded - lg font - semibold hover:bg - gray - 100 transition-colors";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >;
             Get Custom Quote;
           </a>;
         </div>;
       </div>;
       {/* Contact Information */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="text-center space-y-4">;
         <h2 className="text-2xl font-bold">Questions About Pricing?</h2>;
@@ -1266,6 +1341,14 @@ export default function PricingPage() {;
         </p>;
         <div className="grid grid - cols - 1 md: grid - cols - 3 gap-4">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <div className="text - center space-y-4">;
+        <h2 className="text - 2xl font-bold">Questions About Pricing?</h2>;
+        <p className="opacity-80">;
+          Our team is here to help you choose the right plan for your business.;
+        </p>;
+        <div className="grid grid - cols - 1 md: grid - cols - 3 gap-4">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div>;
             <h3 className="font-semibold">Phone</h3>;
             <p className="opacity-80">+1 302 464 0950</p>;
@@ -1276,6 +1359,7 @@ export default function PricingPage() {;
           </div>;
           <div>;
             <h3 className="font-semibold">Address</h3>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <p className="opacity-80">364 E Main St STE 1008<br />Middletown DE 19709</p>;
           </div>;
@@ -1290,6 +1374,8 @@ export default function PricingPage() {;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <p className="opacity-80">364 E Main St STE 1008 < br />Middletown DE 19709</p>;
           </div>;
         </div>;

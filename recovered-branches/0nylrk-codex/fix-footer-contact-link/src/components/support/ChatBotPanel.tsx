@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -23,6 +24,10 @@ import {useTheme} from "@/hooks/useTheme";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useRef, useEffect } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -44,6 +49,7 @@ import { Send, Loader2 } from "lucide-react",
 import { useTheme } from "@/hooks/useTheme",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -53,6 +59,8 @@ import { useTheme } from "@/hooks/useTheme",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Define suggested quick replies
 
 const QUICK_REPLIES = [
@@ -63,6 +71,7 @@ type Message = {
   id: string
   content: string
   sender: "user" | "bot"
+<<<<<<< HEAD
 <<<<<<< HEAD
   timestamp: Date
 <<<<<<< HEAD
@@ -119,6 +128,9 @@ export function ChatBotPanel() {
 =======
   timestamp: Date  const [inputValue, setInputValue] = useState("");
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  timestamp: Date  const [inputValue, setInputValue] = useState("");
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [isLoading, setIsLoading] = useState(false);
   const [failedAttempts, setFailedAttempts] = useState(0);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
@@ -126,6 +138,7 @@ export function ChatBotPanel() {
   const { theme } = useTheme();    {
       id: "welcome",
       content: "Hi! How can I help you?",
+<<<<<<< HEAD
 <<<<<<< HEAD
       sender: "bot",
 <<<<<<< HEAD
@@ -158,6 +171,9 @@ export function ChatBotPanel() {
 =======
       sender: "bot",  // Auto-scroll to bottom when messages change
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      sender: "bot",  // Auto-scroll to bottom when messages change
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   useEffect(() => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
@@ -297,6 +313,7 @@ if ( {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
           suggest_escalation ();
 <<<<<<< HEAD
@@ -526,6 +543,9 @@ export function ChatBotPanel() {;
 =======
           suggest_escalation ();        variant: "destructive",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          suggest_escalation ();        variant: "destructive",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         title: "Communication Error",
         description: "We're having trouble connecting to our support service."}),
       
@@ -538,6 +558,7 @@ export function ChatBotPanel() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       toast({;
         variant: "destructive",;
+<<<<<<< HEAD
 <<<<<<< HEAD
         title: "Communication Error",;
         description: "We're having trouble connecting to our support service."}),;
@@ -554,6 +575,10 @@ export function ChatBotPanel() {;
         title: "Communication Error",,
   description: "We're having trouble connecting to our support service."}),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        title: "Communication Error",,
+  description: "We're having trouble connecting to our support service."}),;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setFailedAttempts((prev) => prev + 1),;
       if (failedAttempts >= 2) {;
         suggestEscalation();
@@ -565,6 +590,7 @@ export function ChatBotPanel() {;
       if (failedAttempts >= 2) {
         suggestEscalation()
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -618,11 +644,17 @@ export function ChatBotPanel() {;
   },
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  };
+  },
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const sendToAIAssistant = async (message: string) => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -839,6 +871,14 @@ if ( {) {
         success: true
         message: data.message  const suggestEscalation = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      
+
+      const data = await response.json();
+      return {
+        success: true
+        message: data.message  const suggestEscalation = () => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const escalationMessage: Message = {
       id: `bot-escalation-${Date.now()}`,
       content:
@@ -851,6 +891,7 @@ if ( {) {
     // Log this interaction for the support team
     logSupportEscalation()
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -887,6 +928,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         conversationHistory: messages.map(m => ({
           content: m.content
           sender: m.sender
@@ -921,6 +964,7 @@ if ( {) {
           sender: m.sender,
           timestamp: m.timestamp;
         }));
+<<<<<<< HEAD
 <<<<<<< HEAD
       });
 
@@ -999,12 +1043,16 @@ if ( {) {
 =======
       });  const handleEscalateToLiveAgent = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      });  const handleEscalateToLiveAgent = () => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setMessages((prev) => [
       ...prev
       {
         id: `user-${Date.now()}`
         content: "I'd like to speak with a human agent"
         sender: "user"
+<<<<<<< HEAD
 <<<<<<< HEAD
         timestamp: new Date()
 <<<<<<< HEAD
@@ -1022,10 +1070,14 @@ if ( {) {
 =======
         timestamp: new Date()      {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        timestamp: new Date()      {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         id: `bot-${Date.now()}`
         content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.";
         sender: "bot"
         timestamp: new Date()
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
 <<<<<<< HEAD
@@ -1074,6 +1126,9 @@ if ( {) {
 =======
       }  const handleEmailSupport = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      }  const handleEmailSupport = () => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setMessages((prev) => [
       ...prev
       {
@@ -1081,6 +1136,7 @@ if ( {) {
         content: "I'd like to email support"
         sender: "user"
         timestamp: new Date()
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1165,12 +1221,17 @@ if ( {) {
 
       },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="flex flex-col h-full">
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
         <div className="flex flex-col gap-4">
           {messages.map((message) => (
             <ChatMessage
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1216,6 +1277,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const logSupportEscalation = async () => {;
     try {;
       // Send the conversation to the backend for logging;
@@ -1277,6 +1340,7 @@ if ( {) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1311,10 +1375,16 @@ if ( {) {
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>;
         <div className="flex flex-col gap-4">;              key={message.id}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    <div className="flex flex-col h-full">;
+      <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>;
+        <div className="flex flex-col gap-4">;              key={message.id}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               message={message.content}
               isUser={message.sender === "user"}
               timestamp={message.timestamp}
             />
+<<<<<<< HEAD
 <<<<<<< HEAD
           ))}
 <<<<<<< HEAD
@@ -1340,6 +1410,9 @@ if ( {) {
 =======
           ))}          {isLoading && (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          ))}          {isLoading && (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="flex items-center justify-center py-2">
               <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />
             </div>
@@ -1352,6 +1425,7 @@ if ( {) {
             Suggested questions:
           </p>
           <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
             {QUICK_REPLIES.map((reply) => (
 <<<<<<< HEAD
@@ -1508,6 +1582,9 @@ if ( {) {
 =======
             {QUICK_REPLIES.map((reply) => (      {failedAttempts >= 3 && (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            {QUICK_REPLIES.map((reply) => (      {failedAttempts >= 3 && (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="px-4 py-3 border-t border-zion-purple/10">
           <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
             Need more help?
@@ -1522,6 +1599,7 @@ if ( {) {
             </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1532,6 +1610,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       {failedAttempts >= 3 && (;
         <div className="px-4 py-3 border-t border-zion-purple/10">;
@@ -1554,6 +1634,7 @@ if ( {) {
             </Button>;
           </div>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       )}
 <<<<<<< HEAD
@@ -1642,6 +1723,9 @@ if ( {) {
 =======
       )}                : "bg-white border-gray-200"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      )}                : "bg-white border-gray-200"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             )}
           />
           <Button
@@ -1658,6 +1742,7 @@ if ( {) {
   )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             onChange={(e) => setInputValue(e && e.target.value)}
             placeholder="Type your question...";
@@ -1670,6 +1755,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               theme === "dark" ;
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" ;
 
@@ -1678,6 +1765,7 @@ if ( {) {
         </form>;
       </div>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -1696,6 +1784,9 @@ if ( {) {
 =======
   );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
 <<<<<<< HEAD
@@ -1820,6 +1911,7 @@ timestamp: new Date ()
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
             className={cn(;
@@ -1829,3 +1921,5 @@ timestamp: new Date ()
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

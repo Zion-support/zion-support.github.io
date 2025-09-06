@@ -5,6 +5,10 @@ import Quiz from '../../components/learn/Quiz',
 import CertificatePreview from '../../components/learn/CertificatePreview';
 import CoachWidget from '../../components/learn/CoachWidget';
 export default function CourseView() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {useEffect, useMemo, useState} from 'react';
 import {useRouter} from 'next/router';
@@ -22,11 +26,21 @@ export default function CourseView() {;
     percent: 0
     completedLessons: []
   });  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+=======
+    percent: 0,
+    completedLessons: [],
+  });
+  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [finalPassed, setFinalPassed] = useState(false);
   useEffect(() => {
     if (!courseId) return;
     async function load() {
       const [courseResp, progResp] = await Promise.all([
+<<<<<<< HEAD
         fetch(`/api/learn/courses/${courseId}`)
         fetch(`/api/learn/progress?userId=demo-user`),      ]);
       const courseData = await courseResp.json();
@@ -43,11 +57,24 @@ export default function CourseView() {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+fetch(`/api/learn/courses/${courseId}`),
+        fetch(`/api/learn/progress?userId=demo-user`),
+      ]);
+      const courseData = await courseResp.json();
+      const progData = await progResp.json();
+      setCourse(courseData.course);
+const cp = (progData.progress && progData.progress[courseId]) || {
+        percent: 0,
+        completedLessons: [],
+      };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setProgress(cp);
       setCurrentLessonId(courseData?.course?.lessons?.[0]?.id |null);
     }
     load();
   }, [courseId]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -116,16 +143,34 @@ async function onFinalQuizComplete(score: number) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const currentLesson = useMemo(;
     () => course?.lessons?.find((l: any) => l && l.id === currentLessonId),;
     [course, currentLessonId];
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async function markLessonComplete(): any (lessonId: string) {;
     const completedCount = (progress && progress.completedLessons || []).includes(lessonId);
       ? (progress && progress.completedLessons || []).length;
       : (progress && progress.completedLessons || []).length + 1;
     const percent = Math && Math.round(;
       (completedCount / (course?.lessons?.length || 1)) * 100;
+<<<<<<< HEAD
+=======
+=======
+
+  async function markLessonComplete(lessonId: string) {
+    const completedCount = (progress.completedLessons || []).includes(lessonId)
+      ? (progress.completedLessons || []).length
+      : (progress.completedLessons || []).length + 1;
+const percent = Math.round(
+      (completedCount / (course?.lessons?.length || 1)) * 100
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     );
     const resp = await fetch('/api/learn/progress', {;
       method: 'POST',;
@@ -137,12 +182,17 @@ async function onFinalQuizComplete(score: number) {
         percent,;
       }),;
     });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const data = await resp && resp.json();
     setProgress(data && data.progress);  }
 
   function onModuleQuizComplete(): any (score: number) {;
     // For demo, simply mark as completed when quiz attempted;
     if (currentLessonId) markLessonComplete(currentLessonId);  }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -151,6 +201,8 @@ async function onFinalQuizComplete(score: number) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   async function onFinalQuizComplete(): any (score: number) {;
     const needed = course?.finalQuiz?.passThreshold || 0;
@@ -158,6 +210,7 @@ async function onFinalQuizComplete(score: number) {
     setFinalPassed(passed);  }
 
   if (!course) return <div>Loading...</div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -167,12 +220,15 @@ async function onFinalQuizComplete(score: number) {
   return (
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <button
                     className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l && l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
                     onClick={() => setCurrentLessonId(l && l.id)}
                   >                    {l && l.title}
                   </button>;
                 </li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -189,6 +245,8 @@ import {useRouter} from 'next/router';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -263,15 +321,20 @@ export default function CourseView(req, res) {
 }
   if (!course) return <div>Loading...</div>,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <div className="grid lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2 space-y-4">
+<<<<<<< HEAD
         <div>
 <<<<<<< HEAD
 
@@ -281,6 +344,30 @@ export default function CourseView(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+    const data = await resp.json();
+    setProgress(data.progress);
+  }
+
+  function onModuleQuizComplete(score: number) {
+    // For demo, simply mark as completed when quiz attempted
+if (currentLessonId) markLessonComplete(currentLessonId);
+  }
+
+  async function onFinalQuizComplete(score: number) {
+    const needed = course?.finalQuiz?.passThreshold |0;
+    const passed = score >= needed;
+setFinalPassed(passed);
+  }
+
+  if (!course) return <div>Loading...</div>;
+  return (
+<div className='grid lg:grid-cols-3 gap-6'>
+      <div className='lg:col-span-2 space-y-4'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+        <div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <h1 className="text-2xl font-semibold">{course.title}</h1>
           <div className="text-gray-500 text-sm">{course.category} • {course.level}</div>
           <div className="mt-3">
@@ -289,15 +376,27 @@ export default function CourseView(req, res) {
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <button
                     className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
                     onClick={() => setCurrentLessonId(l.id)}
                   >                    {l.title}
+=======
+                  <button
+                    className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
+                    onClick={() => setCurrentLessonId(l.id)}
+                  >
+                    {l.title}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </button>
                 </li>
               ))}
             </ul>
           </aside>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <section className='lg:col-span-3 space-y-4'>
         <div className="grid lg:grid-cols-5 gap-4">
           <aside className="lg:col-span-2 border rounded p-3 h-max">
@@ -305,13 +404,17 @@ export default function CourseView(req, res) {
             <ul className="space-y-2">
               {course.lessons?.map((l: any) => (
                 <li key={l.id}>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <button className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick={() => setCurrentLessonId(l.id)}>
                     {l.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </button>;
                 </li>;
@@ -340,14 +443,20 @@ export default function CourseView(req, res) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
             </ul>;
           </aside>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <section className='lg:col-span-3 space-y-4'>;
             {currentLesson ? (;
               <div className='border rounded p-4'>;
@@ -358,6 +467,21 @@ export default function CourseView(req, res) {
                 {currentLesson && currentLesson.quiz?.questions?.length ? (;
                   <div className='mt-4'>;
 
+<<<<<<< HEAD
+=======
+=======
+
+<section className='lg:col-span-3 space-y-4'>
+            {currentLesson ? (
+              <div className='border rounded p-4'>
+                <div className='font-medium'>{currentLesson.title}</div>
+                <div className='mt-2 text-sm whitespace-pre-line'>
+                  {currentLesson.content}
+                </div>
+                {currentLesson.quiz?.questions?.length ? (
+                  <div className='mt-4'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <Quiz
                       questions={currentLesson && currentLesson.quiz.questions}
                       onComplete={onModuleQuizComplete}
@@ -370,6 +494,7 @@ export default function CourseView(req, res) {
                   >;
                     Mark Complete;
                   </button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 )}
@@ -588,6 +713,8 @@ if (return <div > Loading...</div>) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {currentLesson ? (
               <div className="border rounded p-4">
                 <div className="font-medium">{currentLesson.title}</div>
@@ -598,6 +725,7 @@ if (return <div > Loading...</div>) {
                   </div>
                 ) : (
                   <button className="mt-3 px-4 py-2 bg-green-600 text-white rounded" onClick={() => markLessonComplete(currentLesson.id)}>Mark Complete</button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -619,11 +747,14 @@ if (return <div > Loading...</div>) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {course.finalQuiz?.questions?.length ? (
               <div className="border rounded p-4">
                 <div className="font-medium mb-2">Final Certification Quiz</div>
                 <Quiz questions={course.finalQuiz.questions} onComplete={onFinalQuizComplete} />
                 {finalPassed && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -653,10 +784,23 @@ if (return <div > Loading...</div>) {
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+                  <div className='mt-3 text-green-700'>
+                    Passed! You can download your certificate below.
+                  </div>
+                )}
+              </div>
+            ) : null}
+
+{finalPassed && <CertificatePreview courseId={courseId} />}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </section>
         </div>
       </div>
 
+<<<<<<< HEAD
       <div className="space-y-4">
 <<<<<<< HEAD
 =======
@@ -666,6 +810,13 @@ if (return <div > Loading...</div>) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+      <div className="space-y-4">
+=======
+<div className='space-y-4'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <CoachWidget />
         <div className="border rounded p-3">
           <div className="font-medium">Profile Boost</div>
@@ -674,6 +825,7 @@ if (return <div > Loading...</div>) {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -686,10 +838,13 @@ if (return <div > Loading...</div>) {
       </div>
     </div>
 );
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
   )
 }
+<<<<<<< HEAD
 =======
 
 
@@ -710,6 +865,8 @@ if (return <div > Loading...</div>) {
   )
 }
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
@@ -719,6 +876,7 @@ if (return <div > Loading...</div>) {
 
 
 =======
+<<<<<<< HEAD
 
     </div>);
 ;
@@ -731,3 +889,7 @@ if (return <div > Loading...</div>) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

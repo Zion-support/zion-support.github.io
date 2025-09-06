@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -642,10 +643,27 @@ const About: React.FC = () => {
           </p>
         </div>
         
+=======
+import React from 'react';
+
+const About: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">About Zion Tech Group</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            We are a leading technology company specializing in AI-powered solutions,
+            micro SaaS platforms, and comprehensive IT services.
+          </p>
+        </div>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           <div>
             <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
             <p className="text-gray-300 mb-6">
+<<<<<<< HEAD
               To empower businesses with cutting-edge technology solutions that drive 
               innovation, efficiency, and growth. We believe in the transformative 
               power of AI and modern software architecture.
@@ -653,6 +671,15 @@ const About: React.FC = () => {
             <p className="text-gray-300">
               Our team of expert engineers, data scientists, and business strategists 
               work together to deliver solutions that not only meet today's needs but 
+=======
+              To empower businesses with cutting-edge technology solutions that drive
+              innovation, efficiency, and growth. We believe in the transformative
+              power of AI and modern software architecture.
+            </p>
+            <p className="text-gray-300">
+              Our team of expert engineers, data scientists, and business strategists
+              work together to deliver solutions that not only meet today's needs but
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               anticipate tomorrow's challenges.
             </p>
           </div>
@@ -665,6 +692,7 @@ const About: React.FC = () => {
               <li>• 24/7 customer support</li>
               <li>• Enterprise-grade security</li>
             </ul>
+<<<<<<< HEAD
           </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
         </div>
@@ -823,10 +851,18 @@ export default About;
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+};
+
+export default About;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

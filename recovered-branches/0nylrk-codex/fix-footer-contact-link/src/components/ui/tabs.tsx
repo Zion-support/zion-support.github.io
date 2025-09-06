@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -11,6 +12,8 @@ import * as React from 'react';
 import * as TabsPrimitive from '@radix-ui/react-tabs';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {cn} from '@/lib/utils';
 const Tabs = TabsPrimitive.Root;import {cn} from '@/lib/utils';
 const Tabs = TabsPrimitive.Root;
@@ -18,6 +21,7 @@ import * as React from "react"
 import * as TabsPrimitive from "@radix-ui/react-tabs"
 import * as React from "react"
 import * as TabsPrimitive from "@radix-ui/react-tabs"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -33,10 +37,13 @@ import * as TabsPrimitive from "@radix-ui/react-tabs"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { cn } from "@/lib/utils"
 
 const Tabs = TabsPrimitive.Root
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -104,10 +111,13 @@ const TabsList = React.forwardRef<;
     )}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {...props}
   />;
 ));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -151,11 +161,14 @@ TabsList.displayName = TabsPrimitive.List.displayName;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const TabsTrigger = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Trigger>
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.T</typeof>rigger>
 >(({ className, ...props }, ref) => (
   <TabsPrimitive.Trigger
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     ref={ref}
@@ -174,6 +187,8 @@ const TabsTrigger = React.forwardRef<
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 TabsList && TabsList.displayName = TabsPrimitive && TabsPrimitive.List.displayName;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -183,6 +198,7 @@ const TabsTrigger = React && React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <TabsPrimitive&& TabsPrimitive.Trigger
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -325,6 +341,8 @@ const TabsContent = React.forwardRef<;
     ref={ref}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     className={cn(
       "mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
     ref={ref}
@@ -378,6 +396,7 @@ TabsContent.display_name = TabsPrimitive.Content.display_name;
 ;
 export { Tabs, TabsList, TabsTrigger, TabsContent }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -437,3 +456,5 @@ export { Tabs, TabsList, TabsTrigger, TabsContent }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

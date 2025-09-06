@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -7,6 +8,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from 'react';import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -16,6 +19,7 @@ import { Mail } from "lucide-react";
 export function EnhancedNewsletterForm() {;
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [isSubmitted, setIsSubmitted] = useState(false);
 <<<<<<< HEAD
@@ -151,6 +155,9 @@ export function EnhancedNewsletterForm() {
 =======
   const [isSubmitted, setIsSubmitted] = useState(false);        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [isSubmitted, setIsSubmitted] = useState(false);        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <p className="text-white font-medium">Thank you for subscribing!</p>
           <p className="text-zion-slate-light mt-1">
             We'll keep you updated with the latest from Zion.
@@ -164,6 +171,7 @@ export function EnhancedNewsletterForm() {
         </div>;
         <div>;
           <h4 className="text-lg font-bold text-white">Stay Updated</h4>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <p className="text-zion-slate-light text-sm">;
@@ -211,6 +219,9 @@ function EnhancedNewsletterForm() {
 =======
           <p className="text-zion-slate-light text-sm">;            Get exclusive offers, trending AI news, and early access to best;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <p className="text-zion-slate-light text-sm">;            Get exclusive offers, trending AI news, and early access to best;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             deals;
           </p>;
         </div>;
@@ -222,6 +233,7 @@ function EnhancedNewsletterForm() {
         <span>Join 10,000+ tech professionals who already subscribe</span>;
       </div>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -280,6 +292,9 @@ function EnhancedNewsletterForm() {
 =======
   );}            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  );}            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             required
           />
           <Button 
@@ -290,6 +305,7 @@ function EnhancedNewsletterForm() {
             {isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>
         </form>
+<<<<<<< HEAD
 <<<<<<< HEAD
       )}
 <<<<<<< HEAD
@@ -314,6 +330,9 @@ function EnhancedNewsletterForm() {
 =======
       )}            <div
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      )}            <div
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               key={i}
               className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan"
             >

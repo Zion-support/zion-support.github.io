@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -80,12 +81,20 @@ export default function GlobalBountiesPage() {
   const items: any[] = (data?.items |[]).slice(0, 100)
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels || []).join(', ')}</div>
+=======
+  const items: any[] = (data?.items || []).slice(0, 100);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">Global Bounties</h1>
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt |'—'}</p>
+<<<<<<< HEAD
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <ul className="mt-6 space-y-4">
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
@@ -96,14 +105,19 @@ export default function GlobalBountiesPage() {
                 {it.repo} · {it.language} · {new Date(it.created_at).toLocaleString()}
               </div>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels |[]).join(', ')}</div>
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels || []).join(', ')}</div>
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </li>
           ))}
         </ul>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
   );
 };
 <<<<<<< HEAD
@@ -112,6 +126,14 @@ export default function GlobalBountiesPage() {
 };
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  );
+};
+  );
+};
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {it.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -119,6 +141,7 @@ export default function GlobalBountiesPage() {
 }
               </Link>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {it.repo} · {it.language} · {new Date(it.created_at).toLocaleString()  } catch (error) {
     console.error("Error:", error);
@@ -130,6 +153,8 @@ export default function GlobalBountiesPage() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </ul>;
       </div>;
     </EnhancedLayout>;
@@ -138,6 +163,7 @@ export default function GlobalBountiesPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 }
@@ -153,3 +179,9 @@ export default function GlobalBountiesPage() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

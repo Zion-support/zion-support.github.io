@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -17,11 +18,16 @@ import {Input} from "@/components/ui/input";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Search, Sliders } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Search, Sliders } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Input } from "@/components/ui/input",
 <<<<<<< HEAD
@@ -78,6 +84,9 @@ export function MobileFilterBar({
 =======
 import { Input } from "@/components/ui/input",}: MobileFilterBarProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Input } from "@/components/ui/input",}: MobileFilterBarProps) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">
       <Button
@@ -98,6 +107,7 @@ import { Input } from "@/components/ui/input",}: MobileFilterBarProps) {
         />
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 <<<<<<< HEAD
@@ -198,6 +208,9 @@ import React from './react';
 =======
   )import React from './react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )import React from './react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from '@/components / ui / button';
 import { Search, Sliders } from './lucide-react';
 import { Input } from '@/components / ui / input';
@@ -230,6 +243,7 @@ function MobileFilterBar() {
         />;
       </div>;
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -273,3 +287,6 @@ import {Input} from "@/components/ui/input";
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

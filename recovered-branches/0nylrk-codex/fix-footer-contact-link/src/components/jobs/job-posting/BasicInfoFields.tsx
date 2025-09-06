@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { Control } from "react-hook-form";
 
@@ -20,6 +21,8 @@ import {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {;
   FormField,;
   FormItem,;
@@ -31,6 +34,7 @@ import {;
   FormItem,
   FormLabel,
   FormControl,
+<<<<<<< HEAD
 <<<<<<< HEAD
   FormMessage,;
 <<<<<<< HEAD
@@ -80,6 +84,9 @@ import React, { useState } from './react';
 =======
   FormMessage,;import React, { useState } from './react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  FormMessage,;import React, { useState } from './react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Control  } from './react - hook - form';
 import {
   FormField,
@@ -103,6 +110,7 @@ import { Input } from "@/components/ui/input",
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",
 import { Card, CardContent } from "@/components/ui/card",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -158,6 +166,8 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-4">
       <FormField
@@ -195,6 +205,7 @@ import {;
 } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card",;
 
@@ -586,6 +597,9 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
 =======
 import { Card, CardContent } from "@/components/ui/card",;        <FormField
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Card, CardContent } from "@/components/ui/card",;        <FormField
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           control={control}
           name="budgetMax"
           render={({ field: { onChange, ...rest } }) => (;
@@ -593,6 +607,7 @@ import { Card, CardContent } from "@/components/ui/card",;        <FormField
               <FormLabel>Budget (Max)</FormLabel>;
               <FormControl>;
                 <Input
+<<<<<<< HEAD
 <<<<<<< HEAD
                   type="number"
 <<<<<<< HEAD
@@ -648,6 +663,13 @@ import { Card, CardContent } from "@/components/ui/card",;        <FormField
 =======
                     setMaxBudget(e.target.value);                    setMaxBudget(e.target.value);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  type="number"                  value={maxBudget || rest.value}
+                  onChange={(e) => {
+                  onChange={e => {;
+
+                    setMaxBudget(e.target.value);                    setMaxBudget(e.target.value);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   placeholder="e && e.g. 60"
                   value={maxBudget || rest && rest.value}
                   onChange={(e) => {;
@@ -671,6 +693,7 @@ import { Card, CardContent } from "@/components/ui/card",;        <FormField
                     on_change (e);
                   }}
                   {...rest}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 />
@@ -831,6 +854,8 @@ import { Card, CardContent } from "@/components/ui/card",;        <FormField
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Card>
         <CardContent className="pt-4">
           <ClientBudgetRecommender
@@ -858,6 +883,7 @@ import { Card, CardContent } from "@/components/ui/card",;        <FormField
             <FormLabel>Location</FormLabel>;
             <FormControl>;
               <Input
+<<<<<<< HEAD
 <<<<<<< HEAD
                 placeholder="e && e.g. Remote, San Francisco, etc."
 =======
@@ -902,6 +928,9 @@ import { Card, CardContent } from "@/components/ui/card",;        <FormField
 =======
                 placeholder="e && e.g. Remote, San Francisco, etc."                {...field}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                placeholder="e && e.g. Remote, San Francisco, etc."                {...field}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               />;
             </FormControl>;
             <FormMessage />;
@@ -910,6 +939,7 @@ import { Card, CardContent } from "@/components/ui/card",;        <FormField
       />;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 =======
@@ -1018,3 +1048,6 @@ return (<div className="space-y-4" > <FormField control= {
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

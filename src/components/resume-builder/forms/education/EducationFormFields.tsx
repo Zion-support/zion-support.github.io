@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
 import { format } from 'date-fns',;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
   })
   const handleSubmit = async (data: EducationFormValues) => {
@@ -24,12 +27,25 @@ import { Textarea } from '@/components / ui / textarea';
 import { Input } from '@/components / ui / input';
 import { Checkbox } from '@/components / ui / checkbox';
 import { Alert, AlertDescription } from '@/components / ui / alert';
+=======
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { format } from 'date-fns';
+import { Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+import { Input } from '@/components/ui/input';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
   FormMessage,
 } from '@/components / ui / form';
 import { useState } from 'react';
@@ -88,9 +104,40 @@ function EducationFormFields() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+  FormMessage,;
+} from '@/components/ui/form';
+import { useState } from 'react';
+import { EducationFormFieldsProps } from './types';
+import { Education } from '@/types/resume';
+
+import { useForm  } from 'react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { z  } from 'zod';
+import { format  } from 'date-fns';
+import { Loader2 } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import { Textarea  } from '@/components/ui/textarea';
+import { Input  } from '@/components/ui/input';
+import { Checkbox  } from '@/components/ui/checkbox';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage } from '@/components/ui/form';
+import { useState  } from 'react';
+import { EducationFormFieldsProps  } from './types';
+import { Education } from '@/types/resume';
+// Define schema for form validation
+const educationSchema = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
@@ -514,6 +561,7 @@ function EducationFormFields() {
         </div>
       </form>
     </Form>
+<<<<<<< HEAD
   )
 
         />;
@@ -560,4 +608,10 @@ function EducationFormFields() {
 }
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

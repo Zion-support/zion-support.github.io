@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,6 +37,8 @@ import TalentsPage from "../pages/TalentsPage";
 import TalentProfilePage from "../pages/TalentProfilePage";
 import SavedTalentsPage from "../pages/SavedTalentsPage";
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "../components/ProtectedRoute",
 import TalentDirectory from "../pages/TalentDirectory",
@@ -74,6 +77,7 @@ const TalentRoutes = () => {
       />
       <Route path="/profile/:id" element={<ProfilePage />} />
     </Routes>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
@@ -186,6 +190,11 @@ export default TalentRoutes;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
+=======
+  )
+};
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const TalentRoutes = () => {
 const TalentRoutes = () => {;
   return (
@@ -230,6 +239,7 @@ export default TalentRoutes;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;
@@ -259,3 +269,5 @@ export default TalentRoutes;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

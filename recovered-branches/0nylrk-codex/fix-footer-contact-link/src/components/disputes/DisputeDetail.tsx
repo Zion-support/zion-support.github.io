@@ -39,6 +39,7 @@ export function DisputeDetail() {;
   const navigate = useNavigate();
   const { user } = useAuth();
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -286,6 +287,12 @@ export function DisputeDetail() {
     if (!disputeId) return
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();  }
+  const handleResolveDispute = async () => {
+    if (!disputeId) return
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { useDisputes } from "@/hooks/useDisputes",;
@@ -353,6 +360,7 @@ export function DisputeDetail() {;
 
   const handleResolveDispute = async () => {
     if (!disputeId) return,
+<<<<<<< HEAD
 <<<<<<< HEAD
     
 <<<<<<< HEAD
@@ -443,6 +451,16 @@ export function DisputeDetail() {;
       return
     }    try {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        if (!resolution.summary) {
+      toast.error("Please provide a resolution summary");
+      return
+    }
+    if (!resolution.summary) {
+      toast.error("Please provide a resolution summary"),
+      return
+    }    try {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const success = await addDisputeMessage(disputeId, message, isAdmin),
       if (success) {
         // Refresh messages
@@ -472,6 +490,7 @@ export function DisputeDetail() {;
         resolved_at: new Date().toISOString();
       });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
 <<<<<<< HEAD
@@ -606,6 +625,9 @@ export function DisputeDetail() {;
 =======
   };  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  };  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   }
 
@@ -654,6 +676,7 @@ export function DisputeDetail() {;
   if (!dispute) {;
     return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -675,10 +698,13 @@ export function DisputeDetail() {;
   const getStatusBadgeVariant = (status: DisputeStatus) => {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     switch (status) {;
       case "open": return "default";
       case "under_review": return "secondary",;
       case "resolved": return "outline", // Changed from "success" to "outline";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -691,6 +717,8 @@ export function DisputeDetail() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useEffect } from './react';
 import { use_params, use_navigate } from './react-router-dom';
 import { use_disputes } from '@/hooks / use_disputes';
@@ -855,10 +883,13 @@ if ( {) {
       case "under_review": return "secondary",
       case "resolved": return "outline", // Changed from './success'; to "outline";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       case "closed": return "outline";
       default: return "default";
     }
@@ -995,6 +1026,7 @@ export function DisputeDetail() {;
           <div className="flex items-center gap-2">;
             <h1 className="text-2xl font-bold">Dispute Case</h1>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Badge variant={getStatusBadgeVariant(dispute.status)}>;
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1081,6 +1113,11 @@ export function DisputeDetail() {;
         <Alert className="bg - green - 50 border - green - 200 dark:bg - green - 900 / 20 dark:border - green-900">;
           <Check className="h - 4 w-4" />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <Badge variant={getStatusBadgeVariant(dispute.status)}>;      {dispute.status === "resolved" && dispute.resolution_summary && (
+        <Alert className="bg - green - 50 border - green - 200 dark:bg - green - 900 / 20 dark:border - green-900">;
+          <Check className="h - 4 w-4" />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <AlertTitle > This dispute has been resolved</AlertTitle>;
           <AlertDescription>;
             {dispute.resolution_summary}
@@ -1137,6 +1174,7 @@ export function DisputeDetail() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1150,6 +1188,10 @@ export function DisputeDetail() {;
                         <li className="flex gap - 2 items-center">;
                           <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify-center">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                        <li className="flex gap - 2 items-center">;
+                          <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify-center">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                             {dispute.status !== "open" ? "3" : "2"}
         <div className="flex gap-2">;
           <Button variant="outline" onClick={() => navigate("/dashboard/disputes")}>;
@@ -1353,6 +1395,7 @@ export function DisputeDetail() {;
                         <div className="space-y-4">;
                           <Textarea;
                             placeholder="Enter resolution summary...";
+<<<<<<< HEAD
 <<<<<<< HEAD
                             value={resolution.summary}
 <<<<<<< HEAD
@@ -1630,6 +1673,9 @@ export function DisputeDetail() {;
 =======
                             value={resolution.summary}                    />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                            value={resolution.summary}                    />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <div className="flex justify-end">;
                       <Button onClick={handleSendMessage} disabled={isSending || !message && message.trim()}>;
                         {isSending ? "Sending..." : "Send Message"}
@@ -1723,6 +1769,7 @@ export function DisputeDetail() {;
                                 getDisputeMessages(disputeId!).then(setMessages),
                                 setMessage("")
                               })
+<<<<<<< HEAD
 <<<<<<< HEAD
                       </div>;
                       <div className="mt-4 space-y-4">;
@@ -1823,6 +1870,8 @@ export function DisputeDetail() {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                             }                      </div>;
                       ;
@@ -1920,12 +1969,15 @@ export function DisputeDetail() {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                             }
                           .filter(msg => msg.is_admin_note);
                           .map((msg) => (;
@@ -2024,6 +2076,7 @@ export function DisputeDetail() {;
               </div>;
               <div className="flex justify-between">;
                 <span className="font-medium">Raised by:</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <span>{dispute.raised_by === dispute.client_profile?.id ? "Client" :"Talent"}</span>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -2195,3 +2248,6 @@ formatDistanceToNow (new Date (dispute.created at), {
 =======
                 <span>{dispute.raised_by === dispute.client_profile?.id ? "Client" : "Talent"}</span>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                <span>{dispute.raised_by === dispute.client_profile?.id ? "Client" : "Talent"}</span>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

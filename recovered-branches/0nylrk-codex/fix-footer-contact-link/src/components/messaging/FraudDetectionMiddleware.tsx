@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -8,6 +9,9 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {check_message, monitor_content} from '@/services / fraud';
 import {toast} from '@/hooks / use - toast';
 import {supabase} from '@/integrations / supabase / client';
@@ -21,6 +25,7 @@ interface FraudDetectionMiddlewareProps {
 }
 
 interface FraudDetectionMiddlewareProps {
+<<<<<<< HEAD
 <<<<<<< HEAD
   children: React.ReactNode
 =======
@@ -69,6 +74,9 @@ interface FraudDetectionMiddlewareProps {;
 =======
   children: React.ReactNode}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  children: React.ReactNode}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 // Interface for the context;
 interface FraudDetectionContextType {;
@@ -84,6 +92,7 @@ interface FraudDetectionContextType {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
@@ -97,6 +106,8 @@ interface FraudDetectionContextType {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     userId: string
     messageId: string
     content: string
@@ -111,6 +122,7 @@ interface FraudDetectionContextType {;
 // aren't available. Passing a generic argument to an untyped function causes
 // TS2347, so we cast the default value instead of using a type parameter.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const FraudDetectionContext = React.createContext(
 <<<<<<< HEAD
@@ -138,6 +150,9 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 =======
 export const FraudDetectionContext = React.createContext(export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export const FraudDetectionContext = React.createContext(export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Function to scan message content for fraud
   const scanMessageContent = useCallback(async (
     userId: string
@@ -146,6 +161,7 @@ export const FraudDetectionContext = React.createContext(export const FraudDetec
     userEmail?: string
   ): Promise<{ isSafe: boolean, explanation?: string }> => {
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -237,12 +253,17 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 
       // First do a quick local check using the fraud detection service
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      // First do a quick local check using the fraud detection service
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           userId;
           userEmail;
           'message';
           messageId;
           content;
         );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -442,6 +463,8 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         // If it's dangerous, show a warning to the user;
         if (quickCheck && quickCheck.severity === 'dangerous') {;
           toast({;
@@ -483,6 +506,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       }
       */;
       return { isSafe: true }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -537,6 +561,8 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
     } catch (error) {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       console.error('Error in fraud detection:', error),;
       // On error, let the message pass through but log the error;
       return { isSafe: true }
@@ -567,6 +593,7 @@ export const useFraudDetection = () => {;
   const context = React && React.useContext(FraudDetectionContext);
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware');
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   return context;
 <<<<<<< HEAD
@@ -874,3 +901,7 @@ explanation: data.explanation
   return context
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return context
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

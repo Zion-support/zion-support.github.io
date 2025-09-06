@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -52,6 +53,13 @@ export function ApiKeysManager() {;
 
   // Create key form state;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
+  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null);
+
+  // Create key form state;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [keyName, setKeyName] = useState("");
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]);
 
@@ -60,6 +68,7 @@ export function ApiKeysManager() {;
     fetchApiKeys();
   });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -79,10 +88,13 @@ import {useApiKeys, type, ApiKeyScope} from "@/hooks/useApiKeys";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",
 import { format } from "date-fns",
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -100,6 +112,9 @@ import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
@@ -112,6 +127,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",
 
 import CodeBlock from "./CodeBlock",
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function ApiKeysManager() {
 <<<<<<< HEAD
@@ -161,6 +177,9 @@ export function ApiKeysManager() {
 =======
 export function ApiKeysManager() {  const { 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function ApiKeysManager() {  const { 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     keys,
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     loading, 
@@ -187,6 +206,7 @@ export function ApiKeysManager() {  const {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   const handleRegenerateKey = async (keyId: string) => {
@@ -205,6 +225,8 @@ export function ApiKeysManager() {  const {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   }),
   
@@ -221,6 +243,7 @@ export function ApiKeysManager() {  const {
   
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -229,6 +252,8 @@ export function ApiKeysManager() {  const {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Scope options
   const scopeOptions: { value: ApiKeyScope, label: string, description: string }[] = [
     { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' }
@@ -242,6 +267,7 @@ export function ApiKeysManager() {  const {
       prev.includes(scope)
         ? prev.filter(s => s !== scope)
         : [...prev, scope]
+<<<<<<< HEAD
 <<<<<<< HEAD
     )
 <<<<<<< HEAD
@@ -270,6 +296,9 @@ export function ApiKeysManager() {  const {
 =======
     )  const getExampleCode = (key: string) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    )  const getExampleCode = (key: string) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer ${key}" \\
   -H "Content-Type: application/json"`
@@ -282,6 +311,7 @@ export function ApiKeysManager() {  const {
     setKeyName("");
     setSelectedScopes([]);
     setShowCreateDialog(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -367,6 +397,11 @@ export function ApiKeysManager() {  const {
 import { useState } from "react",;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  },
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",;
 import { format } from "date-fns",;
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",;
@@ -430,6 +465,7 @@ export function ApiKeysManager() {;
           <p className="text-sm text-zinc-400">;
             You have {keys && keys.length} API {keys && keys.length === 1 ? 'key' : 'keys'}
           </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -506,6 +542,8 @@ export function ApiKeysManager() {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         <Checkbox 
                           id={scope.value} 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -527,6 +565,7 @@ export function ApiKeysManager() {;
 
               <DialogFooter>;
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <Button onClick={handleCreateKey} disabled={keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0}>;
 <<<<<<< HEAD
@@ -702,6 +741,9 @@ function ApiKeysManager() {
 =======
                 <Button onClick={handleCreateKey} disabled={keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0}>;                        </Label>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                <Button onClick={handleCreateKey} disabled={keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0}>;                        </Label>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </div>;
                     ))}
                   Create Key;
@@ -819,6 +861,7 @@ function ApiKeysManager() {
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">;
                       {scope}
                     </Badge>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   ))}
                 <div className="mt - 3 flex flex - wrap gap - 2">;
@@ -1185,6 +1228,9 @@ function ApiKeysManager() {
 =======
                   ))}            </AlertDialogDescription>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  ))}            </AlertDialogDescription>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </AlertDialogHeader>;
           <AlertDialogFooter>;
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;
@@ -1206,6 +1252,7 @@ function ApiKeysManager() {
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
             <AlertDialogTitle>Revoke API Key?</AlertDialogTitle>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <AlertDialogDescription className="text-zinc-400">;
 <<<<<<< HEAD
@@ -1463,3 +1510,6 @@ setShowCreateDialog (false)
 =======
             <AlertDialogDescription className="text-zinc-400">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <AlertDialogDescription className="text-zinc-400">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

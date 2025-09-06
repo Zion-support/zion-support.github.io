@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { ResumeSelector, ResumeOption } from "../resume-selector";
 import { Button } from "@/components/ui/button";
@@ -37,6 +40,7 @@ export function ResumeTab({
       <ResumeSelector onResumeSelected={handleResumeSelected} />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       {onApply && (
         <div className="mt-6">
           <Button
@@ -52,6 +56,8 @@ import { Button } from "@/components/ui/button",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from './react';
 import { ResumeSelector, ResumeOption  } from '../resume - selector';
@@ -106,6 +112,7 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
     }
 
     if (onSelectResume) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
       onSelectResume(resume && resume.id);
 =======
@@ -365,3 +372,13 @@ isSubmitting?: boolean
               Please select a resume to continue
             </p>}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      onSelectResume(resume && resume.id);      {onApply && (
+        <div className="mt-6">
+          <Button 
+            onClick={onApply} 
+            disabled={!selectedResumeId || isSubmitting}          {!selectedResumeId && (
+            <p className="text-sm text-muted-foreground mt-2">
+              Please select a resume to continue
+            </p>}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

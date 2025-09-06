@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Heart } from 'lucide-react'
@@ -169,11 +170,34 @@ export function TalentCardSaveButton(): any ({;
       <Heart 
         className={cn(
           "h-4 w-4 transition-colors", 
+=======
+import React from 'react';
+import { Heart } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { useToast } from '@/hooks/use-toast';
+import { useRouter } from 'next/router';
+interface TalentCardSaveButtonProps {
+  profileId: string;
+  profileName: string;
+  isSaved: boolean;
+  onToggleSave?: (id: string, isSaved: boolean) => void;
+  isAuthenticated: boolean
+export function TalentCardSaveButton({
+  profileId;
+  profileName;
+  isSaved;
+  onToggleSave;
+  isAuthenticated
+}: TalentCardSaveButtonProps) {
+  const { toast } = useToast();
+  const router = null;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
         )} 
       />
     </button>
   )
+<<<<<<< HEAD
 ;
     toast({;
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",;
@@ -207,3 +231,10 @@ export function TalentCardSaveButton(): any ({;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+}variant: "default"
+})
+}
+}/> </button>)
+}"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -9,6 +9,7 @@
 export default function GrantsAdminPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [token, setToken] = useState('');
+<<<<<<< HEAD
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [selected, setSelected] = useState<GrantApplication | null>(null);
   const [milestones, setMilestones] = useState<Milestone[]>([]);
@@ -65,6 +66,7 @@ export default function GrantsAdminPage() {
     );
     const r = await fetch(`/api/grants/${selected && selected.id}`).then(x => x && x.json());
 <<<<<<< HEAD
+<<<<<<< HEAD
     setSelected(r && r.record);  };
 <<<<<<< HEAD
   return (
@@ -76,6 +78,10 @@ export default function GrantsAdminPage() {
     setSelected(r && r.record)
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    setSelected(r && r.record)
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useEffect, useMemo, useState} from 'react';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types / grants';
@@ -168,6 +174,62 @@ if (return) {
     const r = await fetch (`/api / grants/${selected.id}`).then (coordinate_x => x.json ());
     set_selected (r.record);  }
 ;
+=======
+
+const headers = useMemo(
+    () =>
+      token
+        ? {
+            Authorization: `Bearer ${token}`
+            'Content-Type': 'application/json'
+          }
+        : { 'Content-Type': 'application/json' }
+    [token]
+  );
+  const load = () => {
+    fetch('/api/grants?status=Submitted')
+      .then(r => r.json())
+      .then(d => setItems(d.items |[]));
+  }
+  useEffect(() => {
+    load();
+  }, []);
+  const setStatus = async (
+    id: string
+    status: 'Under Review' | 'Approved' | 'Rejected'
+  ) => {
+    await fetch(`/api/grants/${id}/status`, {
+      method: 'POST'
+      headers
+      body: JSON.stringify({ status })
+    });
+    load();
+  };
+
+  const saveMilestones = async () => {
+    if (!selected) return;
+await fetch(`/api/grants/${selected.id}/milestones`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({ milestones }),
+    });
+    alert('Milestones saved');
+  };
+
+  const markComplete = async (milestoneId: string) => {
+    if (!selected) return;
+await fetch(
+      `/api/grants/${selected.id}/milestones/${milestoneId}/complete`,
+      { method: 'POST', headers }
+    );
+    const r = await fetch(`/api/grants/${selected.id}`).then(x => x.json());
+    setSelected(r.record);
+  };
+
+  return (
+    <EnhancedLayout>
+<h1 className='text-2xl font-semibold mb-4'>Grants Admin</h1>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>    await fetch (`/api / grants/${selected.id}/milestones/${milestone_id}/complete`, { method: 'POST', headers });
     const r = await fetch (`/api / grants/${selected.id}`).then ((x) => x.json ());
@@ -202,6 +264,7 @@ if (return) {
                     <div className='font - medium'>{g.project_name}</div>;
                     <div className='text - xs text - gray - 600'>;
                       {g.sector} • {g.region} • {g.program}
+<<<<<<< HEAD
                     </div>;
                   </div>;
                   <div className='flex gap - 2'>;
@@ -246,6 +309,49 @@ if (return) {
         <div>;
           <div className='border rounded p - 3'>;
             <h2 className='font - medium mb - 2'>Milestone Planner</h2>;
+=======
+                    </div>
+                  </div>
+                  <div className='flex gap-2'>
+                    <button
+                      className='px-2 py-1 border rounded'
+                      onClick={() => setStatus(g.id, 'Under Review')}
+                    >
+                      Under Review
+                    </button>
+                    <button
+                      className='px-2 py-1 bg-emerald-600 text-white rounded'
+                      onClick={() => setStatus(g.id, 'Approved')}
+                    >
+                      Approve
+                    </button>
+                    <button
+                      className='px-2 py-1 bg-red-600 text-white rounded'
+                      onClick={() => setStatus(g.id, 'Rejected')}
+                    >
+                      Reject
+                    </button>
+                    <button
+                      className='px-2 py-1 border rounded'
+                      onClick={() => setSelected(g)}
+                    >
+                      Milestones
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+{items.length === 0 && (
+              <div className='text-sm text-gray-600'>
+                No submitted applications.
+              </div>
+            )}
+          </div>
+        </div>
+        <div>
+          <div className='border rounded p-3'>
+            <h2 className='font-medium mb-2'>Milestone Planner</h2>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             {selected ? (
               <div className='space - y-2'>;
                 {(milestones.length === 0;
@@ -339,6 +445,7 @@ if (return) {
                         } as any,
                       ]);
                     }
+<<<<<<< HEAD
                   >;
                     Add Milestone;
                   </button>;
@@ -365,9 +472,23 @@ if (return) {
                   <button className="px-2 py-1 border rounded" onClick={() => setMilestones((ms) => [...(ms.length ? ms : (selected.milestones |[])), { id: `${Date.now()}-${Math.random()}`, title: '', trancheAmount: 0, trancheCurrency: 'USDC' } as any])}>Add Milestone</button>
                   <button className="px-2 py-1 bg-blue-600 text-white rounded" onClick={saveMilestones}>Save Milestones</button>
                 </div>
+=======
+                  >
+                    Add Milestone
+                  </button>
+                  <button
+                    className='px-2 py-1 bg-blue-600 text-white rounded'
+                    onClick={saveMilestones}
+                  >
+                    Save Milestones
+                  </button>
+                </div>
               </div>
             ) : (
-              <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>
+              <div className='text-sm text-gray-600'>
+                Select a grant to plan milestones.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+              </div>
             )}
 <<<<<<< HEAD
 
@@ -383,8 +504,11 @@ if (return) {
       </div>
     </EnhancedLayout>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     onClick={saveMilestones}>;
@@ -479,4 +603,11 @@ if (return) {
       </div>;
     </EnhancedLayout>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

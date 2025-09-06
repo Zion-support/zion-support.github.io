@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -20,11 +21,16 @@ import {Link} from "react-router-dom";
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { ReactNode } from "react",
 import { cn } from "@/lib/utils",
 import { slugify } from "@/lib/slugify";
 import { Link } from "react-router-dom";
 import { slugify } from "@/lib/slugify",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Link } from "react-router-dom",
 <<<<<<< HEAD
@@ -150,12 +156,21 @@ import { Link } from "react-router-dom",  const slug = slugify(title);
       className={cn(interface CategoryCardProps {;
   title: string,,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Link } from "react-router-dom",  const slug = slugify(title);
+  return (
+    <Link
+      to={`/category/${slug}`}
+      className={cn(interface CategoryCardProps {;
+  title: string,,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   description: string,;
   icon: ReactNode | string,;
   /**;
    * Optional color to use for the icon. If not provided the default cyan;
    * accent colour is used. Previously this prop was ignored which meant;
    * callers could not customise the icon colour as intended.;
+<<<<<<< HEAD
 <<<<<<< HEAD
    */;
 <<<<<<< HEAD
@@ -305,3 +320,6 @@ icon: ReactNode | string;
 =======
    */;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+   */;}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

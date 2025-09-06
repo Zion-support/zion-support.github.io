@@ -1,6 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    { name: 'Contact', href: '/contact', icon: Phone }
+
+  ];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -531,6 +537,169 @@ const Header = () => {
 <<<<<<< HEAD
 }            >
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+export default Header;
+import React, { useState, useEffect } from 'react'; import Link from 'next / link'; import { use_router } from 'next / router'; import { motion, AnimatePresence } from 'framer-motion'; import { Menu, X, Home, Users, Briefcase, Phone, Mail, ChevronDown, Brain, Shield, Cloud, Database, Network, Zap, Target, DollarSign, BookOpen, Calendar, FileText, Award, Globe, Search, ArrowRight } from 'lucide-react'; import { Button } from '../ui / Button'; import { Badge } from '../ui / Badge'; const Header: React.FC = () => { const [is_scrolled, setIsScrolled] = useState (false); useEffect (() => { const handle_scroll = () =>: any { setIsScrolled (window.scroll_y > 0)} window.addEventListener ('scroll', handle_scroll); return () => window.removeEventListener ('scroll', handle_scroll)}, []); const navigation_items = [ { name: 'Home', href: '/' }, { name: 'Services', href: '/services' }, { name: 'Solutions', href: '/solutions' }, { name: 'About', href: '/about' }, { name: 'Careers', href: '/careers' }, { name: 'Contact', href: '/contact' }, ]; return ( <header className="sticky top - 0 z - 50 bg - slate - 900 / 95 backdrop - blur border - b border - slate - 800"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 h - 14 flex items - center justify - between"> <Link href="/" className="text - white font - bold">Zion Tech Group</Link> <nav className="hidden md:flex items - center gap - 6 text - sm"> {navigation_items.map ((item) => ( <Link key={item.name} href={item.href} className="text - gray - 300 hover:text - white"> {item.name} </Link> ))} </nav> </div> </header> )} export default Header;
+export default Header;
+;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+            </div>
+            <span className=&quot;text-xl font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent&quot;>
+              Zion Tech Group
+            </span>
+          </a>
+
+          {/* Desktop Navigation */}
+          <nav className=&quot;hidden md:flex items-center space-x-8&quot;>
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className=&quot;text-white/80 hover:text-white transition-colors duration-200&quot;
+              >
+                {item.name}
+              </a>
+            ))}
+=======
+import React from 'react';
+import Link from 'next/link';
+const Header: React.FC = () => {
+  return (
+    <header className="bg-white shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex-shrink-0">
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              Zion Tech Group
+            </Link>
+          </div>
+          <nav className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              <Link
+                href="/"
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Home
+              </Link>
+              <Link
+                href="/services"
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Services
+              </Link>
+              <Link
+                href="/about"
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                About
+              </Link>
+              <Link
+                href="/contact"
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Contact
+              </Link>{' '}
+            </div>
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+          </nav>
+
+          {/* CTA Button */}
+          <div className=&quot;hidden md:block&quot;>
+            <Button href=&quot;/contact&quot; variant=&quot;primary&quot; size=&quot;sm&quot;>
+              Get Started
+            </Button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button className=&quot;md:hidden p-2 text-white/80 hover:text-white transition-colors duration-200&quot;>
+            <svg className=&quot;w-6 h-6&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
+              <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M4 6h16M4 12h16M4 18h16&quot; />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+<<<<<<< HEAD
+  )
+},
+
+export default Header
+
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+import React from 'react',
+import Link from 'next/link';
+import Button from '../ui/Button';
+const Header: React.FC = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+import { Menu, X } from 'lucide-react';
+const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  const navigation = [
+    { name: 'Home', href: '/' }
+    { name: 'Services', href: '/services' }
+    { name: 'About', href: '/about' }
+{ name: 'Contact', href: '/contact' }
+  ];
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+    }`}>
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+import {Menu
+  X
+  Home
+  Users
+  Briefcase
+  Phone
+  Mail
+  ChevronDown
+  Brain
+  Shield
+  Cloud
+  Database
+  Network
+  Zap
+  Target
+  DollarSign
+  BookOpen
+  Calendar
+  FileText
+  Award
+  Globe
+  Search
+  ArrowRight;
+} from 'lucide-react';
+import { Button } from '../ui/Button';
+import { Badge } from '../ui/Badge';
+const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const location = useLocation();
+  useEffect(() => {
+    const handleScroll = () => {;
+      setIsScrolled(window.scrollY > 20);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
             >
@@ -635,9 +804,19 @@ export default Header;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+};
+
+export default Header;
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

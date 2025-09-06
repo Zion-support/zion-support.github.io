@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -12,12 +13,16 @@
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
 import { Label  } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { Skill  } from '@/types/resume';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
 <<<<<<< HEAD
@@ -53,6 +58,9 @@ interface AddSkillFormProps {
 =======
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';interface AddSkillFormProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';interface AddSkillFormProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   resumeId: string
   onAddSkill: (skill: Skill) => Promise<boolean>
@@ -60,6 +68,7 @@ import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhance
 <<<<<<< HEAD
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
 
+<<<<<<< HEAD
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -80,6 +89,10 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [skillName, setSkillName] = useState('');
   const [skillCategory, setSkillCategory] = useState('');
   const [proficiency, setProficiency] = useState<number>(3);
@@ -89,6 +102,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
     const newSkill: Skill = {
       name: skillName.trim()
       category: skillCategory |'Other'
+<<<<<<< HEAD
 <<<<<<< HEAD
       proficiency: proficiency}
 <<<<<<< HEAD
@@ -429,6 +443,13 @@ if ( {) {
         <div className="flex-1">;
           <Label htmlFor="skill-name">Skill Name</Label>;              <SelectValue placeholder="Select category" />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      proficiency: proficiency}  return (  return (
+    <form onSubmit={handleSubmit} className="space-y-4">;
+      <div className="flex flex-col gap-4 md:flex-row">;
+        <div className="flex-1">;
+          <Label htmlFor="skill-name">Skill Name</Label>;              <SelectValue placeholder="Select category" />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </SelectTrigger>;
             <SelectContent>;
               <SelectItem value="Programming">Programming</SelectItem>;
@@ -444,12 +465,16 @@ if ( {) {
 },
               on_change={(e) => set_proficiency (Number (e.target.value))}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="w - 20";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
               className="w-20";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              className="w-20";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             />;
             <Button type="submit">Add</Button>;
           </div>;
@@ -458,6 +483,7 @@ if ( {) {
 
     </form>);}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -478,3 +504,9 @@ if ( {) {
 },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+},
+};
+},
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

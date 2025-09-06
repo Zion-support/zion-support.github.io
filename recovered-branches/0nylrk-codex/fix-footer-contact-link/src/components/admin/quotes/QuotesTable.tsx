@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {formatDate} from "@/utils/dateUtils";
 interface QuotesTableProps {;
@@ -23,6 +26,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
   toggleArchive;
 
 import {formatDate} from "@/utils/dateUtils";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -51,6 +55,8 @@ import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { formatDate } from "@/utils/dateUtils";
 interface QuotesTableProps {
 
@@ -64,6 +70,7 @@ interface QuotesTableProps {
   updateStatus: (id: string, status: QuoteStatus) => void
   toggleArchive: (id: string, isArchived: boolean) => void
   deleteQuote: (id: string) => void
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {formatDate} from "@/utils/dateUtils";
@@ -109,6 +116,8 @@ import { formatDate } from "@/utils/dateUtils",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface QuotesTableProps {
   quotes: QuoteRequest[],
   isArchived?: boolean,
@@ -116,6 +125,7 @@ interface QuotesTableProps {
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
   deleteQuote: (id: string) => void,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -136,6 +146,8 @@ interface QuotesTableProps {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const QuotesTable: React.FC<QuotesTableProps> = ({;
   quotes;
   isArchived = false;
@@ -148,6 +160,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   isArchived = false;
   isLoading;
   updateStatus;
+<<<<<<< HEAD
 <<<<<<< HEAD
   toggleArchive;
 <<<<<<< HEAD
@@ -216,6 +229,9 @@ import React from './react';
 =======
   toggleArchive;import React from './react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  toggleArchive;import React from './react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Eye, MoreHorizontal, Archive, Trash2 } from './lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
 import { Button } from '@/components / ui / button';
@@ -272,6 +288,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
             quotes.map (quote => (
               <TableRow;
                 key={quote.id}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className="border - zion - blue - light hover:bg - zion - blue";
               >;
@@ -439,6 +456,9 @@ export const QuotesTable:React.FC<QuotesTableProps> = ({;
 =======
                 className="border - zion - blue - light hover:bg - zion-blue";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                className="border - zion - blue - light hover:bg - zion-blue";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >;
                 <TableCell className="text-white">;
                   {quote.talent_name || 'Unknown Talent'}
@@ -482,6 +502,7 @@ export const QuotesTable:React.FC<QuotesTableProps> = ({;
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -633,10 +654,13 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         >;
                           <Trash2 className="h-4 w-4" />;
                           <span className="sr-only">Delete</span>;
                         </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                       </>;
 <<<<<<< HEAD
@@ -735,6 +759,9 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 =======
                       </>;                    )}                    )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                      </>;                    )}                    )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </div>
                 </TableCell>
               </TableRow>
@@ -754,6 +781,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
           )}        </TableBody>;
       </Table>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 =======
@@ -966,3 +994,6 @@ onViewDetails
 =======
   );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

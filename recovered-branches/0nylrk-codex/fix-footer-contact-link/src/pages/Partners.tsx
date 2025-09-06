@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -42,6 +45,7 @@ import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks
 import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
 import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { PartnerResources } from "@/components/partners/PartnerResources",
 <<<<<<< HEAD
 =======
@@ -67,6 +71,9 @@ import { useAuth } from "@/hooks/useAuth";
 =======
 import { PartnerResources } from "@/components/partners/PartnerResources",import { useAuth } from "@/hooks/useAuth";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { PartnerResources } from "@/components/partners/PartnerResources",import { useAuth } from "@/hooks/useAuth";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useNavigate } from "react-router-dom";
 export default function Partners() {
   const [activeTab, setActiveTab] = useState("overview");
@@ -74,6 +81,7 @@ export default function Partners() {
 
   const navigate = useNavigate();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -85,6 +93,10 @@ export default function Partners() {
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // If not authenticated, display partner program info and signup CTA
+  if (!isAuthenticated) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
     return (
@@ -616,10 +628,13 @@ export default function Partners() {;
             variant="outline"
             className="text-zion-cyan border-zion-cyan"
 <<<<<<< HEAD
+<<<<<<< HEAD
             onClick={() => navigate("/login")}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           >
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Button 
             size="lg" 
             variant="outline" 
@@ -762,13 +777,19 @@ export default function Partners() {;
             Apply to Join;
           </Button>;
             onClick={() => navigate('/login')}          >
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             Partner Login
           </Button>
         </div>
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     )
   }
 <<<<<<< HEAD
@@ -821,6 +842,7 @@ export default function Partners() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     );
@@ -850,6 +872,13 @@ export default function Partners() {;
   }
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    );
+  }
+    );
+  }
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Authenticated user view - Partner Dashboard
   return (
     <div className="container max-w-7xl py-10">
@@ -921,6 +950,7 @@ export default function Partners() {;
         </TabsContent>
       </Tabs>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
@@ -1123,6 +1153,9 @@ if ( {) {
 =======
   )            Export CSV;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )            Export CSV;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </Button>;
         </div>;
       </div>;
@@ -1208,9 +1241,12 @@ if ( {) {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

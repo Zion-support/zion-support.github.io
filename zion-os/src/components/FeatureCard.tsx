@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -53,6 +54,8 @@ export function FeatureCard({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 "use client",
 import Link from './next / link';,
 import { ReactNode  } from './react';,
@@ -65,6 +68,7 @@ interface FeatureCardProps {
   href: string,
   is_active: boolean,
   on_click: () => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -87,6 +91,9 @@ interface FeatureCardProps {id: number;
 =======
 =======}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export /**
  * FeatureCard - Function description
  */
@@ -103,10 +110,13 @@ function FeatureCard() {
     <div;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className={`card group cursor - pointer transition - all duration - 300 ${
         is_active ? 'scale - 105 shadow - 2xl' : 'hover:scale - 105';
       } ${color_classes[color as keyof typeof color_classes]}`}
@@ -117,6 +127,7 @@ if ( {) {
   $2
 }
           e.prevent_default ();
+<<<<<<< HEAD
 <<<<<<< HEAD
           on_click ();
 =======
@@ -194,6 +205,10 @@ export function FeatureCard({;
 =======
           on_click ();          e.preventDefault();
           onClick();
+=======
+          on_click ();          e.preventDefault();
+          onClick();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         }
       }}
       tab_index={0}

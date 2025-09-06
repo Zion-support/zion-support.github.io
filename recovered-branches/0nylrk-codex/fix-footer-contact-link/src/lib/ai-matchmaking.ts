@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface MatchResultItem {
 =======
 =======
@@ -86,6 +87,15 @@ export interface MatchResultItem {
 
 export interface MatchResultItem {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export interface MatchResultItem {export interface MatchResultItem {
+
+export interface MatchResultItem {;
+export interface MatchResultItem {// AI Matchmaking utility functions
+export interface MatchResultItem {
+
+export interface MatchResultItem {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   score: number;
   matched_skills: string[],
   reason: string;
@@ -103,9 +113,8 @@ export interface MatchResult {
     title: "Senior AI Engineer",
   description: "Experienced AI engineer with expertise in machine learning and computer vision";
     category: "Talent - Engineering";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
     price: 120
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -130,6 +139,8 @@ export interface MatchResult {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   {
     id: "service - 1";
@@ -138,6 +149,7 @@ export interface MatchResult {
     category: "Services - AI Development";  }
   {
     id: "equipment - 1";
+<<<<<<< HEAD
 <<<<<<< HEAD
     title: "NVIDIA A100 GPU Server";
     description: "High - performance GPU server for AI model training and inference";
@@ -246,6 +258,12 @@ export interface MatchResult {;
     category: "Equipment - Hardware";
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    title: "NVIDIA A100 GPU Server",
+  description: "High - performance GPU server for AI model training and inference";
+    category: "Equipment - Hardware";
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Sample data for testing when API is not available
 const sampleData: MatchResultItem[] = [
   {
@@ -273,6 +291,7 @@ const sampleData: MatchResultItem[] = [
     skills: ["GPU Computing", "High Performance", "AI Hardware"]
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Function to find matches based on query and type
 <<<<<<< HEAD
@@ -309,10 +328,14 @@ export async function findMatches(
 =======
 // Function to find matches based on query and type): Promise<MatchResult[]> {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+// Function to find matches based on query and type): Promise<MatchResult[]> {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   try {
     // In production, we would call an API endpoint here
     // For now, we'll simulate a response with sample data
     // Simulate API call delay
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -413,6 +436,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       matchedSkills: item.skills?.slice(0, 2) || [],
       reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
     })),
@@ -425,12 +450,15 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 // Sample data for testing when API is not available;
 const sampleData: MatchResultItem[] = [;
@@ -512,6 +540,7 @@ export async function find_matches (
     let filtered_items = sample_data;
     // Check condition
 if ( {) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   $2
 <<<<<<< HEAD
@@ -660,3 +689,7 @@ export async function findMatches(;
   $2  }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  $2  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

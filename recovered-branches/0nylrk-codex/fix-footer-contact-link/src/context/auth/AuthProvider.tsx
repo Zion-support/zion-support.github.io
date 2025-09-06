@@ -16,15 +16,19 @@ import {useAuthEventHandlers} from "./useAuthEventHandlers";
 import {mapProfileToUser} from "./profileMapper";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export const AuthProvider = ({ children }: { children: React && React.ReactNode }) => {;  const { ;
     user, setUser, ;
     isLoading, setIsLoading, ;
+<<<<<<< HEAD
 <<<<<<< HEAD
     onboardingStep, setOnboardingStep ;
 <<<<<<< HEAD
@@ -104,6 +108,9 @@ import React, { useEffect } from "react",
 =======
     onboardingStep, setOnboardingStep ;import React, { useEffect } from "react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    onboardingStep, setOnboardingStep ;import React, { useEffect } from "react",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase, getFromProfiles } from "../../integrations/supabase/client",
 import { useAuthOperations } from "../../hooks/useAuthOperations",
 import { AuthContext } from "./AuthContext",
@@ -111,6 +118,7 @@ import { cleanupAuthState } from "../../utils/authUtils",
 import { useNavigate, useLocation } from 'react-router-dom',
 import { useAuthState } from "./useAuthState",
 import { useAuthEventHandlers } from "./useAuthEventHandlers",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { mapProfileToUser } from "./profileMapper",
 <<<<<<< HEAD
@@ -129,6 +137,9 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 =======
 import { mapProfileToUser } from "./profileMapper",export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { mapProfileToUser } from "./profileMapper",export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { 
     user, setUser, 
     isLoading, setIsLoading, 
@@ -162,6 +173,7 @@ import { mapProfileToUser } from "./profileMapper",export const AuthProvider = (
     return signupImpl({ email, password, display_name: userData })
   }
   useEffect(() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Clean up any potential stale auth state before setting up listeners
 <<<<<<< HEAD
@@ -221,6 +233,9 @@ import { mapProfileToUser } from "./profileMapper",export const AuthProvider = (
 =======
     // Clean up any potential stale auth state before setting up listeners              // Show welcome toast when user logs in
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    // Clean up any potential stale auth state before setting up listeners              // Show welcome toast when user logs in
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               if (event === 'SIGNED_IN') {
                 handleSignedIn(mappedUser)
               }
@@ -231,6 +246,7 @@ import { mapProfileToUser } from "./profileMapper",export const AuthProvider = (
           } catch (error) {
             console.error("Error fetching user profile:", error),
             setUser(null)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -248,6 +264,8 @@ import { mapProfileToUser } from "./profileMapper",export const AuthProvider = (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect } from "react",;
 import { supabase, getFromProfiles } from "../../integrations/supabase/client",;
 import { useAuthOperations } from "../../hooks/useAuthOperations",;
@@ -291,6 +309,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
               // Show welcome toast when user logs in;
               if (event === 'SIGNED_IN') {;
                 handleSignedIn(mappedUser);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -780,6 +799,14 @@ if (event === 'SIGNEDOUT') {
     resetPassword;
     updateProfile;    login,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              }
+            } else if (error) {;    login;
+    signup;
+    logout;
+    resetPassword;
+    updateProfile;    login,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     signup,;
     logout,;
     resetPassword,;
@@ -796,6 +823,7 @@ if (event === 'SIGNEDOUT') {
   )
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -872,3 +900,5 @@ data: {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

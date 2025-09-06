@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import { useNavigate } from "react-router-dom",
@@ -208,6 +209,22 @@ import {Star, DollarSign} from "lucide-react";  onRequestQuote
     if (listing.price === null) return "Custom pricing";
     return `${listing.currency}${listing.price.toLocaleString()}`  },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import React from 'react';import {useNavigate} from "react-router-dom";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {ProductListing} from "@/types/listings";
+import {Star, DollarSign} from "lucide-react";  onRequestQuote
+}: ProductListingCardProps) {
+  const isGrid = view === 'grid',
+  const navigate = useNavigate(),
+  
+  // Get the first image or use a placeholder  // Format price display
+  const formatPrice = () => {
+    if (listing.price === null) return "Custom pricing";
+    return `${listing.currency}${listing.price.toLocaleString()}`  },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   // Handle image loading errors
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
@@ -224,6 +241,7 @@ import {Star, DollarSign} from "lucide-react";  onRequestQuote
     e.preventDefault(),
     e.stopPropagation(),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -249,6 +267,8 @@ import {Star, DollarSign} from "lucide-react";  onRequestQuote
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useNavigate } from "react-router-dom",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -322,6 +342,7 @@ if ( {) {
     }
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -485,6 +506,9 @@ export function ProductListingCard({;
 =======
       {/* Image */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      {/* Image */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
             <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
@@ -596,6 +620,7 @@ export function ProductListingCard({;
           )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>;
 
 
@@ -649,6 +674,9 @@ export function ProductListingCard({;
 =======
         </div>;                navigate(`/listing/${listing.id}`)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        </div>;                navigate(`/listing/${listing.id}`)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               }}
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             >
@@ -659,6 +687,7 @@ export function ProductListingCard({;
                 size="sm"
                 variant="outline"
                 onClick={handleRequestQuote}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -952,3 +981,7 @@ return (<div className= {
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;                Request Quote;
               </Button>;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;                Request Quote;
+              </Button>;}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

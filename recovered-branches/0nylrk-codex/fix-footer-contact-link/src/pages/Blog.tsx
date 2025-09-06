@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -26,6 +27,10 @@ import {Search} from "lucide-react";
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { Header } from "@/components/Header",
@@ -42,6 +47,7 @@ import { Search } from "lucide-react";
 const BLOG_POSTS: BlogPost[] = [
   {
 import { BlogPost } from "@/types/blog",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Search } from "lucide-react",
 <<<<<<< HEAD
@@ -92,6 +98,9 @@ const BLOG_POSTS: BlogPost[] = [
 =======
 import { Search } from "lucide-react",<h2>1. Multimodal AI Systems</h2>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Search } from "lucide-react",<h2>1. Multimodal AI Systems</h2>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
 <h2>2. Neuromorphic Computing</h2>
 <p>Taking inspiration from the human brain's neural structure, neuromorphic computing represents a fundamental shift in how AI processes information. These systems consume significantly less power while delivering enhanced performance for complex tasks.</p>
@@ -103,7 +112,10 @@ import { Search } from "lucide-react",<h2>1. Multimodal AI Systems</h2>
 <p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`;
     author: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       title: "AI Research Director",
       avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
@@ -122,6 +134,7 @@ import { Search } from "lucide-react",<h2>1. Multimodal AI Systems</h2>
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.",
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -154,6 +167,8 @@ import { Search } from "lucide-react",<h2>1. Multimodal AI Systems</h2>
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       name: "Dr. Alicia Zhang"
       title: "AI Research Director"
       avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
@@ -170,6 +185,7 @@ import { Search } from "lucide-react",<h2>1. Multimodal AI Systems</h2>
     title: "How to Optimize Your AI Service Listings for Maximum Visibility"
     slug: "optimize-ai-listings"
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients."
+<<<<<<< HEAD
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -314,6 +330,9 @@ import { Search } from "lucide-react",<h2>1. Multimodal AI Systems</h2>
 =======
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>  {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>  {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     id: "ai-ethics-frameworks"
     title: "Implementing Ethical AI Frameworks in Enterprise Applications"
     slug: "ai-ethics-frameworks"
@@ -332,6 +351,7 @@ import { Search } from "lucide-react",<h2>1. Multimodal AI Systems</h2>
     author: {
       name: "Dr. James Peterson"
       title: "AI Ethics Officer"
+<<<<<<< HEAD
 <<<<<<< HEAD
       avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"
 <<<<<<< HEAD
@@ -425,6 +445,9 @@ import { Search } from "lucide-react",<h2>1. Multimodal AI Systems</h2>
 =======
       avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"  {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"  {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     id: "ai-compute-optimization"
     title: "AI Compute Optimization: Balancing Performance and Cost"
     slug: "ai-compute-optimization"
@@ -443,6 +466,7 @@ import { Search } from "lucide-react",<h2>1. Multimodal AI Systems</h2>
     author: {
       name: "Michael Wong"
       title: "ML Infrastructure Architect"
+<<<<<<< HEAD
 <<<<<<< HEAD
       avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
 <<<<<<< HEAD
@@ -716,6 +740,9 @@ const CATEGORIES = [;
 =======
       avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <>
       <SEO
         title="Blog - AI & Tech Insights"
@@ -733,6 +760,7 @@ const CATEGORIES = [;
             </p>
           </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1053,6 +1081,8 @@ export default function Blog() {
           
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { Header } from "@/components/Header",;
@@ -1253,12 +1283,15 @@ const CATEGORIES = [;
           </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts && featuredPosts.length > 0 && (;            <div className="mb-16">;
               <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>;
@@ -1300,6 +1333,7 @@ const CATEGORIES = [;
                   <Button
                     asChild
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <Link to={`/blog/${featuredPosts[0].slug}`}>;
 <<<<<<< HEAD
@@ -1391,6 +1425,9 @@ function Blog() {
 =======
                     <Link to={`/blog/${featuredPosts[0].slug}`}>;                    <img ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    <Link to={`/blog/${featuredPosts[0].slug}`}>;                    <img ;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       src={featuredPosts[0].author.avatarUrl} ;                      alt={featuredPosts[0].author.name}
                       className="w-10 h-10 rounded-full mr-3";
                     />;
@@ -1406,6 +1443,7 @@ function Blog() {
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit";
                   >;
                     <Link to={`/blog/${featuredPosts[0].slug}`}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -1430,6 +1468,8 @@ function Blog() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {/* Filters and Search */}
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -1438,6 +1478,7 @@ function Blog() {
                 <Input
                   type="text"
                   placeholder="Search articles..."
+<<<<<<< HEAD
 <<<<<<< HEAD
                   value={searchQuery}
 <<<<<<< HEAD
@@ -1859,11 +1900,15 @@ function Blog() {
 =======
                   value={searchQuery}          )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  value={searchQuery}          )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </div>
       </div>
       <Footer />
     </>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -1931,6 +1976,9 @@ function Blog() {
 =======
 }        </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}        </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>;
       <Footer />;
     </>;
@@ -1958,6 +2006,7 @@ function Blog() {
       </div>;
       <Footer />;
     </>);
+<<<<<<< HEAD
 }
 }
 <<<<<<< HEAD
@@ -1980,3 +2029,7 @@ function Blog() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

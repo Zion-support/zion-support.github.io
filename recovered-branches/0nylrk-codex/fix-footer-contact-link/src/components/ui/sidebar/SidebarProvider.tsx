@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -32,12 +33,16 @@ import React, { create_context, useContext, useState } from './react';
 =======
 import React, { createContext, useContext, useState } from "react";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+import React, { createContext, useContext, useState } from "react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface SidebarContextType {
   isOpen: boolean;
   toggle: () => void;
   open: () => void;
   close: () => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -49,6 +54,8 @@ interface SidebarContextType {
 const SidebarContext = create_context < SidebarContextType>({
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   is_open: true,
   toggle: () => {},
   open: () => {},
@@ -62,6 +69,7 @@ interface SidebarProviderProps {
 <<<<<<< HEAD
   default_open?: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function SidebarProvider({
   children
@@ -99,6 +107,8 @@ interface SidebarProviderProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   defaultOpen?: boolean;
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function SidebarProvider({
   children,
@@ -112,6 +122,7 @@ export function SidebarProvider({
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -146,6 +157,12 @@ export function SidebarProvider({
   defaultOpen = true 
 }: SidebarProviderProps) {;  const [isOpen, setIsOpen] = useState(defaultOpen);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function SidebarProvider({ 
+  children, 
+  defaultOpen = true 
+}: SidebarProviderProps) {;  const [isOpen, setIsOpen] = useState(defaultOpen);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const toggle = () => setIsOpen(!isOpen);
   const open = () => setIsOpen(true);
   const close = () => setIsOpen(false);
@@ -153,11 +170,14 @@ export function SidebarProvider({
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
 
@@ -233,6 +253,7 @@ export function SidebarProvider(): any ({ ;
 
   return (;
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;
+<<<<<<< HEAD
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -400,3 +421,9 @@ return (<SidebarContext.Provider value= {
     </SidebarContext.Provider>
   );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;        {children}
+      </div>
+    </SidebarContext.Provider>
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

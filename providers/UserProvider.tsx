@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 
   useMemo,;
@@ -31,6 +32,43 @@ export type UserRole = 'client' | 'talent';
 export type User = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+<<<<<<< HEAD
+=======
+import React, {;
+  createContext,;
+  useContext,;
+  useEffect,;
+  useMemo,;
+  useState,;} from 'react';} from 'react';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+useState,;
+} from 'react';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+export type UserRole = 'client' | 'talent';
+
+export type User = {
+id: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   name: string;
   role: UserRole;
 <<<<<<< HEAD
@@ -60,7 +98,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {;
 =======
   avatar?: string;
   createdAt: string;
-  updatedAt: string
+  updatedAt: string;
 };
 
 export interface UserContextType {
@@ -69,6 +107,7 @@ export interface UserContextType {
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
   completeOnboarding: () => void;};}
 };
@@ -206,6 +245,8 @@ export function useUser() {;
     }
   }, []);
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   updateUser: (userData: Partial<User>) => Promise<void>;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -219,7 +260,7 @@ export const useUser = () => {
   if (context === undefined) {
     throw new Error('useUser must be used within a UserProvider');
   }
-  return context
+  return context;
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
@@ -230,6 +271,21 @@ interface UserProviderProps {
 export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+=======
+  completeOnboarding: () => void;
+};
+
+const UserContext = createContext<UserContextValue | undefined>(undefined);
+const DEFAULT_USER: User = {
+id: 'u_001',
+  name: 'Jordan Lee',
+  role: 'client',
+  onboardingCompleted: false,
+};
+
+export function UserProvider({ children }: { children: React.ReactNode }) {
+  const [user, setUser] = useState<User | null>(null);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   useEffect(() => {
@@ -247,14 +303,40 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     }
   }, [user]);
 
+<<<<<<< HEAD
+=======
+  const login = async (email: string, password: string): Promise<void> => {
+    setLoading(true);
+    try {
+<<<<<<< HEAD
+      // Mock login logic - replace with actual authentication
+      const mockUser: User = {
+        id: '1',
+        name: 'John Doe',
+        email,
+        role: 'client',
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
+      
+      setUser(mockUser);
+      localStorage.setItem('user', JSON.stringify(mockUser));
+    } catch (error) {
+      console.error('Login error:', error);
+      throw error;
+    } finally {
+      setLoading(false);
+    }
+  };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
   const value = useMemo<UserContextValue>(
 =======
   const logout = (): void => {
     setUser(null);
-    localStorage.removeItem('user')
-};
+    localStorage.removeItem('user');
+  };
 
   const updateUser = async (userData: Partial<User>): Promise<void> => {
     if (!user) return;
@@ -266,8 +348,8 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     };
     
     setUser(updatedUser);
-    localStorage.setItem('user', JSON.stringify(updatedUser))
-};
+    localStorage.setItem('user', JSON.stringify(updatedUser));
+  };
 
   const contextValue = useMemo(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -294,6 +376,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     [user];
   );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -329,3 +412,39 @@ export default UserProvider;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+  return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
+};
+
+export default UserProvider;
+export default UserProvider;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+if (user) localStorage.setItem('zion.user', JSON.stringify(user));
+      else localStorage.removeItem('zion.user');
+    } catch {}
+  }, [user]);
+
+  const value = useMemo<UserContextValue>(
+    () => ({
+      user
+      setUser
+      logout: () => setUser(null)
+      completeOnboarding: () =>
+setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev)),
+    }),
+    [user]
+  );
+
+return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
+
+export function useUser() {
+  const ctx = useContext(UserContext);
+  if (!ctx) throw new Error('useUser must be used within UserProvider');
+  return ctx;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

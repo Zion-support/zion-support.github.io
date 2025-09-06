@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -44,11 +45,16 @@ export async function POST() {
     const existing_user = await prisma.user.find_unique ({
       where: { email }}),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    const existing_user = await prisma.user.find_unique ({
+      where: { email }}),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Check condition
 if ( {) {
   $2
 }
       return NextResponse.json (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -98,6 +104,8 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { NextRequest, NextResponse } from "next/server",;
 import bcrypt from "bcryptjs",;
 import { prisma } from "@/lib/prisma",;
@@ -189,11 +197,14 @@ export async function POST(request: NextRequest) {;
       { error: "Internal server error" };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       { status: 500 }
     );
   }

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,10 +21,13 @@ const { useState,useEffect,useCallback,useMemo } from "react"; export const useS
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState,useEffect,useCallback,useMemo } from \"react\"; export const useSearch = (data,options) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({; \"query\": filters: {},\"sortBy\": null sortOrder: \"asc\" results: data isLoading: false totalResults: data && data.length}); const [debouncedQuery,setDebouncedQuery] = useState();\");} \"export default ComponentName;\"
 
 const { useState,useEffect,useCallback,useMemo } from "react"; export const useSearch = (data,options) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({; query: filters: {},sortBy: null sortOrder: "asc" results: data isLoading: false totalResults: data && data.length}); const [debouncedQuery,setDebouncedQuery] = useState();");} "export default ComponentName;"""
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -53,3 +57,5 @@ const { useState,useEffect,useCallback,useMemo } from "react"; export const useS
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

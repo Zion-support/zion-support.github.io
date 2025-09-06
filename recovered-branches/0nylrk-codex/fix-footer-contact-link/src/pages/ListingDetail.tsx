@@ -37,6 +37,7 @@ export default function ListingDetail() {;
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
 <<<<<<< HEAD
 =======
@@ -98,6 +99,9 @@ export default function ListingDetail() {
 =======
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (!listing) {
     return (
       <AppLayout>
@@ -116,6 +120,7 @@ export default function ListingDetail() {
     )
   }
   const handleContact = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     setIsContactDialogOpen(true)
 <<<<<<< HEAD
@@ -139,6 +144,9 @@ export default function ListingDetail() {
 =======
     setIsContactDialogOpen(true)  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    setIsContactDialogOpen(true)  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <AppLayout>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
@@ -179,6 +187,7 @@ export default function ListingDetail() {
                           alt={`${listing.title} - image ${index + 1}`}
                           className="w-full h-full object-cover"
 <<<<<<< HEAD
+<<<<<<< HEAD
                           onError={(e) => {
 <<<<<<< HEAD
 
@@ -197,6 +206,9 @@ export default function ListingDetail() {
 =======
                           onError={(e) => {                            const target = e.target as HTMLImageElement,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                          onError={(e) => {                            const target = e.target as HTMLImageElement,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                             target.src = "/placeholder.svg"
 import { useState } from "react",;
 import { useParams } from "react-router-dom",;
@@ -251,6 +263,7 @@ export default function ListingDetail() {;
                   {listing && listing.images && listing && listing.images.length > 0 ? (;
                     <img
                       src={listing && listing.images[selectedImageIndex]} 
+<<<<<<< HEAD
 <<<<<<< HEAD
                       alt={listing && listing.title} 
 
@@ -366,12 +379,16 @@ export default function ListingDetail() {;
 =======
                       alt={listing && listing.title}                       >;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                      alt={listing && listing.title}                       >;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         <img;
                           src={image} ;
                           alt={`${listing.title} - image ${index + 1}`} ;
                           className="w-full h-full object-cover";
                           onError={(e) => {;
                             const target = e.target as HTMLImageElement,;
+<<<<<<< HEAD
 <<<<<<< HEAD
                             target.src = "/placeholder.svg";
 <<<<<<< HEAD
@@ -467,6 +484,13 @@ export default function ListingDetail() {;
                   </div>;
                 )}              {/* Description Section */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                            target.src = "/placeholder.svg";                        />;
+                      </div>;
+                    ))}
+                  </div>;
+                )}              {/* Description Section */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">;
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>;
                 <p className="text-zion-slate-light whitespace-pre-line">{listing && listing.description}</p>;
@@ -501,6 +525,7 @@ export default function ListingDetail() {;
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>;
                 <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>;
                 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -656,6 +681,8 @@ export default function ListingDetail() {;
             ;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* Right Column - Details */}
             <div className="lg:col-span-1">;
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
@@ -797,6 +824,7 @@ export default function ListingDetail() {;
                         })
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -805,6 +833,8 @@ export default function ListingDetail() {;
                   ) : (
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   {listing.price !== null ? (;
                     <PaymentButton;
                       amount={listing.price}
@@ -841,6 +871,7 @@ export default function ListingDetail() {;
                           const target = e.target as HTMLImageElement,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
 <<<<<<< HEAD
@@ -853,6 +884,9 @@ export default function ListingDetail() {;
 =======
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)                  <Button
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                          target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)                  <Button
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     variant="outline" 
                     onClick={handleContact}
                     disabled={isLoading}
@@ -872,6 +906,7 @@ export default function ListingDetail() {;
                     Contact Publisher;
                   </Button>;
                 </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -903,6 +938,8 @@ export default function ListingDetail() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
                     >;
                       {isLoading ? "Processing..." : "Request Quote"}
@@ -956,6 +993,7 @@ export default function ListingDetail() {;
                     <span className="text-zion-slate-light">ID</span>;
                     <span className="text-white">{listing.id}</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1003,6 +1041,8 @@ export default function ListingDetail() {;
     </AppLayout>);
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>;
@@ -1045,6 +1085,7 @@ export default function ListingDetail() {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
     </AppLayout>);
@@ -1054,3 +1095,5 @@ export default function ListingDetail() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

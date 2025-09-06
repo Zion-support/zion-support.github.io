@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -21,6 +22,10 @@ import {Globe} from "lucide-react";
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
 import { AppLayout } from "@/layout/AppLayout",
@@ -40,6 +45,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$"
     tags: ["AI Integration", "Machine Learning", "Enterprise"];
 import { Link } from "react-router-dom",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Globe } from "lucide-react",
 <<<<<<< HEAD
@@ -78,6 +84,9 @@ const SERVICE_LISTINGS: ProductListing[] = [
 =======
 import { Globe } from "lucide-react",    author: {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Globe } from "lucide-react",    author: {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       name: "TechSolutions Inc."
       id: "tech-solutions"
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"}
@@ -86,6 +95,7 @@ import { Globe } from "lucide-react",    author: {
     aiScore: 95
     rating: 4.9
     reviewCount: 124}
+<<<<<<< HEAD
 <<<<<<< HEAD
   {
 <<<<<<< HEAD
@@ -123,6 +133,9 @@ import { Globe } from "lucide-react",    author: {
 =======
   {    author: {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  {    author: {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       name: "CloudPro Experts"
       id: "cloud-pro"}
     images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"]
@@ -130,6 +143,7 @@ import { Globe } from "lucide-react",    author: {
     aiScore: 88
     rating: 4.7
     reviewCount: 92}
+<<<<<<< HEAD
 <<<<<<< HEAD
   {
 <<<<<<< HEAD
@@ -208,6 +222,9 @@ import { Globe } from "lucide-react",    author: {
 =======
   {    author: {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  {    author: {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       name: "SecureNet Team"
       id: "secure-net"}
     images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"]
@@ -216,6 +233,7 @@ import { Globe } from "lucide-react",    author: {
     rating: 4.9
     reviewCount: 103}
   {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -234,6 +252,9 @@ import { Globe } from "lucide-react",    author: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     id: "service-5",
     title: "IT Infrastructure Modernization",
     description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.",
@@ -243,6 +264,7 @@ import { Globe } from "lucide-react",    author: {
     tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -251,6 +273,8 @@ import { Globe } from "lucide-react",    author: {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     author: {
       name: "ModernizeIT Consulting"
       id: "modernize-it"}
@@ -259,6 +283,7 @@ import { Globe } from "lucide-react",    author: {
     aiScore: 86
     rating: 4.6
     reviewCount: 67}
+<<<<<<< HEAD
 <<<<<<< HEAD
   {
 <<<<<<< HEAD
@@ -404,6 +429,9 @@ const SERVICE_LISTINGS: ProductListing[] = [;
 =======
   {const SERVICE_LISTINGS: ProductListing[] = [;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  {const SERVICE_LISTINGS: ProductListing[] = [;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   {;
     id: "service-1",;
     title: "AI Development & Integration",,
@@ -442,6 +470,7 @@ const SERVICE_LISTINGS: ProductListing[] = [;
       <TrustedBySection />;
     </AppLayout>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -526,3 +555,6 @@ reviewCount: 85
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

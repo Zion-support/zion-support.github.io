@@ -4,6 +4,7 @@ export function ProjectMilestonesContent() {;
   const { projectId } = useParams() as { projectId?: string };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37,6 +38,8 @@ export function ProjectMilestonesContent() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { user } = useAuth();
   const { getProjectById } = useProjects();
   const {
@@ -44,6 +47,7 @@ export function ProjectMilestonesContent() {;
     activities;
     isLoading: milestonesLoading
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -93,11 +97,15 @@ import React, { useState, useEffect } from 'react';
 =======
 import React, { useState, useEffect } from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
 
   useEffect(() => {;
     async function loadProject() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (!projectId) return;
 
@@ -224,6 +232,11 @@ export function ProjectMilestonesContent() {;
           setProject(projectData);
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        if (projectData) {;
+          setProject(projectData);
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     async function loadProject() {;
       if (!projectId) return,;
       ;
@@ -258,6 +271,7 @@ export function ProjectMilestonesContent() {;
 ;
     loadProject(),;
     refetch();
+<<<<<<< HEAD
 <<<<<<< HEAD
   }, [projectId, getProjectById, refetch]),;
 <<<<<<< HEAD
@@ -605,6 +619,9 @@ export function ProjectMilestonesContent() {;
 =======
   }, [projectId, getProjectById, refetch]),;            milestones={milestones}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }, [projectId, getProjectById, refetch]),;            milestones={milestones}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             activities={activities}
             isLoading={milestonesLoading}
             isClient={isClient}
@@ -749,6 +766,7 @@ if (return, ) {
             onDeleteMilestone={delete_milestone}
             onUploadDeliverable={upload_deliverable}
 <<<<<<< HEAD
+<<<<<<< HEAD
             refetch={refetch}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -796,6 +814,9 @@ if (return, ) {
 =======
             refetch={refetch}              onSubmit={handleMilestoneSubmit}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            refetch={refetch}              onSubmit={handleMilestoneSubmit}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               isSubmitting={isSubmitting}
               onCancel={() => setActiveTab('milestones')}
               projectScope={project && project.scope_summary}
@@ -813,6 +834,7 @@ if (return, ) {
       </Tabs>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -876,6 +898,9 @@ if (return, ) {
 =======
 }  ),; setIsLoading (true);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}  ),; setIsLoading (true);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 try {
   
 }finally {
@@ -980,6 +1005,7 @@ await handleMilestoneCreated ()
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -987,3 +1013,6 @@ await handleMilestoneCreated ()
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

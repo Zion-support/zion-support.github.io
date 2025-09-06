@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -15,11 +16,14 @@ export type ProjectStatus =
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export type ProjectStatus =
 export type ProjectStatus = 
 export type ProjectStatus = 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   | 'offer_sent'
@@ -65,6 +69,8 @@ export type ProjectStatus =
 export type ProjectStatus = 
 export type ProjectStatus = 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   | 'offer_sent'
   | 'offer_accepted'
   | 'changes_requested'
@@ -107,6 +113,7 @@ export interface Project {  id: string;
 
 export interface ProjectNote {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 export interface ProjectNote {
@@ -116,12 +123,17 @@ export interface ProjectNote {
 
 export interface ProjectNote {export interface ProjectNote {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+export interface ProjectNote {export interface ProjectNote {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   project_id: string;
   user_id: string;
   content: string;
   created_at: string;
   created_by_profile?: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -203,3 +215,7 @@ export interface ProjectNote {;
   }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,10 +21,13 @@ const mockAIResponses = [" "I"d be happy to help you with that! Let me provide y
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const mockAIResponses = [\" \"I\"d be happy to help you with that! Let me provide you with some information about our AI development services.\",\"That\"s a great question! Our cloud infrastructure solutions are designed to scale with your business needs.\",\"Based on your requirements,I\"d recommend starting with our cybersecurity assessment package.\",We have extensive experience in that area && area.Let me connect you with one of our specialists.\",I can help you understand our pricing structure and find the best solution for your budget.\",]; export function AIChatAssistant() { const [isOpen,setIsOpen] = useState(false); const [isMinimized,setIsMinimized] = useState(false); const [messages,setMessages] = useState([{ \"id\": \"1\",\"type\": \"assistant\",\"content\": \"Hello! I\"m Zion AI,your personal technology consultant && consultant.How can I help you today?\",\"timestamp\": new Date()},]); const [inputValue,setInputValue] = useState(\"); const [isListening,setIsListening] = useState(false); const [isTyping,setIsTyping] = useState(false); const messagesEndRef = useRef(null); const inputRef = useRef(null); const scrollToBottom = () => { messagesEndRef && messagesEndRef.current?.scrollIntoView({ \"behavior\": \"smooth\" })}; useEffect(() => { scrollToBottom()},[messages]); const handleSendMessage = async () => { if(!inputValue && inputValue.trim()) return; const userMessage = { \"id\": Date && Date.now().toString(),\"type\": \"user\",\"content\": \'inputValue\',\"timestamp\": new Date()}; setMessages(prev => [...prev,userMessage]); setInputValue(\"); setIsTyping(true)}}
 
 const mockAIResponses = [" "I"d be happy to help you with that! Let me provide you with some information about our AI development services.","That"s a great question! Our cloud infrastructure solutions are designed to scale with your business needs.","Based on your requirements,I"d recommend starting with our cybersecurity assessment package.",We have extensive experience in that area && area.Let me connect you with one of our specialists.",I can help you understand our pricing structure and find the best solution for your budget.",]; export function AIChatAssistant() { const [isOpen,setIsOpen] = useState(false); const [isMinimized,setIsMinimized] = useState(false); const [messages,setMessages] = useState([{ id: "1",type: "assistant",content: "Hello! I"m Zion AI,your personal technology consultant && consultant.How can I help you today?",timestamp: new Date()},]); const [inputValue,setInputValue] = useState("); const [isListening,setIsListening] = useState(false); const [isTyping,setIsTyping] = useState(false); const messagesEndRef = useRef(null); const inputRef = useRef(null); const scrollToBottom = () => { messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })}; useEffect(() => { scrollToBottom()},[messages]); const handleSendMessage = async () => { if(!inputValue && inputValue.trim()) return; const userMessage = { id: Date && Date.now().toString(),type: "user",content: "inputValue",timestamp: new Date()}; setMessages(prev => [.prev,userMessage]); setInputValue("); setIsTyping(true)}}'"'"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -53,3 +57,5 @@ const mockAIResponses = [" "I"d be happy to help you with that! Let me provide y
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default i18n;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -19,6 +22,7 @@ import arTranslation from './locales/ar/translation ;
       caches: ['localStorage']
     }});
 // For RTL language support
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -87,6 +91,8 @@ import arTranslation from './locales/ar/translation.json',;
 i18n;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   .use (LanguageDetector) // Detect user language;
   .use (initReactI18next) // Initialize react - i18next;
   .init ({
@@ -131,6 +137,7 @@ i18n.on ('language_changed', (lng) => {
 ;
 export default i18n;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -198,3 +205,5 @@ export default i18n;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

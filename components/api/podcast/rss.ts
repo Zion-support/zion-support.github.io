@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const siteUrl = process.env.SITE_URL || 'http://localhost:3000';
 
@@ -20,6 +21,8 @@ import path from 'path';
       <link>${siteUrl}/media/podcast/${e.id}</link>
       <guid isPermaLink="false">${e.id}</guid>
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function ensureStorage() {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -27,6 +30,21 @@ function ensureStorage() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+const EPISODES_PATH = null;
+  return res.status(200).json({ ok: true, path: '/podcast.xml' })
+}
+const EPISODES_PATH = path.join(
+  process.cwd()
+  'data'
+  'podcast'
+  'episodes.json'
+);
+const RSS_PATH = path.join(process.cwd(), 'public', 'podcast.xml');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -39,6 +57,7 @@ function ensureStorage() {
 
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
@@ -70,6 +89,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+=======
+if (!fs.existsSync(EPISODES_PATH))
+    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });
+  ensureStorage();
+  const siteUrl = process.env.SITE_URL |'http://localhost:3000';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 
   const siteUrl = process && process.env.SITE_URL || 'http://localhost:3000';
@@ -85,8 +115,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ensureStorage();
   const items = episodes
     .filter(e => e.audio?.mp3Url)
+<<<<<<< HEAD
     .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3Url)
     .map((e) => {
+=======
+    .map(e => {
+      const pubDate = new Date(e.createdAt).toUTCString();
+      const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       return `
     <item>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -110,14 +146,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   </channel>
 </rss>`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 fs.writeFileSync(RSS_PATH, xml, 'utf8');
   return res.status(200).json({ ok: true, path: '/podcast.xml' });
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+
+  fs.writeFileSync(RSS_PATH, xml, 'utf8');
+return res.status(200).json({ ok: true, path: '/podcast.xml' });
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }) .join ('\n');
 <channel> <title>Zion Podcast</title> <link>$ {
   siteUrl
 }/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   items
@@ -130,6 +176,8 @@ fs.writeFileSync(RSS_PATH, xml, 'utf8');
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
   fs.writeFileSync(RSS_PATH, xml, 'utf8');
@@ -228,4 +276,11 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8');
   items 
 }</channel> </rss>`;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  items 
+}</channel> </rss>`;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

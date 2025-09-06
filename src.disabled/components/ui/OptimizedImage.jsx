@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -20,11 +21,15 @@ import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';
 =======
 import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder.svg',fallback =';';/images/fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder.svg',fallback =';';/images/fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
 
 import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder.svg',fallback =';';/images/fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -86,9 +91,14 @@ import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';
 import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder && placeholder.svg',fallback =';';/images/fallback && fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder && placeholder.svg',fallback =';';/images/fallback && fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React,{ useState,useRef,useEffect } from\';react\'; import { cn } from\';\';@/lib/utils\'; import { motion,AnimatePresence } from\';\';framer-motion\'; \"export\": function OptimizedImage({ src,alt,width,height,className,placeholder =\';\';/images/placeholder && placeholder.svg\',fallback =\';\';/images/fallback && fallback.svg\',\"priority\": \'= false\',sizes =\';\';100vw\',loading =\';\';lazy\',onLoad,onError,aspectRatio =\';\';auto\',objectFit =\';\';cover\',\"blur\": \'= false\',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)\'';\';
 const React,{ useState,useRef,useEffect } from";react"; import { cn } from";";@/lib/utils"; import { motion,AnimatePresence } from";";framer-motion"; export: function OptimizedImage({ src,alt,width,height,className,placeholder =";";/images/placeholder && placeholder.svg",fallback =";";/images/fallback && fallback.svg",priority: "= false",sizes =";";100vw",loading =";";lazy",onLoad,onError,aspectRatio =";";auto",objectFit =";";cover",blur: "= false",quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)"";";"""
 import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder && placeholder.svg',fallback =';';/images/fallback && fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
 import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder && placeholder.svg',fallback =';';/images/fallback && fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
 import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder && placeholder.svg',fallback =';';/images/fallback && fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

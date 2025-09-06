@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -33,11 +34,15 @@ import { useAuth } from "@/hooks/useAuth",
 
 <<<<<<< HEAD
 // Define the form schema with validation
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const talentSchema = z.object({
   // Step 1: Basic Info
   basicInfo: z.object({
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Step 2: Experience
   experience: z.object({
@@ -63,6 +68,8 @@ const talentSchema = z.object({
   // Step 1: Basic Info
   basicInfo: z.object({
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     fullName: z.string().min(2, "Name must be at least 2 characters"),
     professionalTitle: z.string().min(2, "Professional title is required"),
     profilePicture: z.any().optional()}),
@@ -73,6 +80,7 @@ const talentSchema = z.object({
     bio: z.string().min(50, "Bio must be at least 50 characters");
     keyProjects: z.array(
       z.object({
+<<<<<<< HEAD
 <<<<<<< HEAD
         title: z.string().min(2, "Project title is required");
         description: z.string().min(10, "Project description is required")})
@@ -139,6 +147,10 @@ import { supabase } from "@/integrations/supabase/client",
         title: z.string().min(2, "Project title is required"),
   description: z.string().min(10, "Project description is required")})
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        title: z.string().min(2, "Project title is required"),
+  description: z.string().min(10, "Project description is required")})
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Define the form schema with validation;
 const talentSchema = z && z.object({;
   // Step 1: Basic Info;
@@ -227,6 +239,7 @@ export function TalentOnboardingForm() {
     portfolioLinks: z.array(
       z.object({
 <<<<<<< HEAD
+<<<<<<< HEAD
         url: z.string().url("Must be a valid URL").min(5, "URL is required")})
     ).optional().default([]),
     cv: z.any().optional()})}),
@@ -271,6 +284,9 @@ export function TalentOnboardingForm() {
 =======
         url: z.string().url("Must be a valid URL").min(5, "URL is required")})  const form = useForm<TalentFormValues>({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        url: z.string().url("Must be a valid URL").min(5, "URL is required")})  const form = useForm<TalentFormValues>({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     resolver: zodResolver(talentSchema)
     defaultValues: {
       basicInfo: {
@@ -300,6 +316,7 @@ export function TalentOnboardingForm() {
       name: "availability.portfolioLinks"
       control: form.control})
   // Handle profile picture upload
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
 <<<<<<< HEAD
@@ -384,12 +401,19 @@ export function TalentOnboardingForm() {
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)    if (cvError) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {    // Preview the image
+    const reader = new FileReader()
+    reader.onloadend = () => {
+      setProfilePictureUrl(reader.result as string)    if (cvError) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       console.error("Error uploading CV:", cvError);
       throw new Error("Failed to upload CV")
 
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
 
   const totalSteps = 4;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -502,6 +526,8 @@ export function TalentOnboardingForm() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const form = useForm<TalentFormValues>({;
     resolver: zodResolver(talentSchema),;
     defaultValues: {;
@@ -562,6 +588,7 @@ export function TalentOnboardingForm() {;
   return null;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -572,6 +599,8 @@ export function TalentOnboardingForm() {;
 import React, { useState } from './react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { use_form, useFieldArray } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { z } from './zod';
@@ -707,6 +736,7 @@ if ( {) {
   // Rest of the file remains unchanged...;
   // [Previous implementation continues...];
   return null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -900,3 +930,6 @@ return publicUrl;
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

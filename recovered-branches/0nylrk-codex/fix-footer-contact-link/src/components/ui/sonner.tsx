@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { useTheme } from "next-themes"
 import { Toaster as Sonner, toast } from "sonner"
@@ -13,6 +16,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
 
   const { theme = "system" } = useTheme()
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -31,12 +35,15 @@ const Toaster = ({ ...props }: ToasterProps) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Sonner
       theme={theme as ToasterProps["theme"]}
       className="toaster group"
       toastOptions={{
         classNames: {
+<<<<<<< HEAD
 <<<<<<< HEAD
           toast:
 <<<<<<< HEAD
@@ -83,6 +90,9 @@ import { use_theme } from &quot;next - themes & quot;
 =======
           toast:import { use_theme } from &quot;next - themes & quot;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          toast:import { use_theme } from &quot;next - themes & quot;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Toaster as Sonner, toast } from &quot;sonner & quot;
 ;
 type ToasterProps = React.ComponentProps < typeof Sonner>;
@@ -125,6 +135,7 @@ const Toaster = ({ ...props } ToasterProps) => {;
 ;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { Toaster, toast } />) 
 }export {
   Toaster, toast 
@@ -148,3 +159,6 @@ export { Toaster, toast }
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

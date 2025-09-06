@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
+;
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -48,6 +59,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const p = e.payload as any
       const p = e.payload as any
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0
+=======
+  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
+  const state = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
   const topContributors = Object.entries(contributionsBySubject)
@@ -55,6 +70,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     .sort((a, b) => b.score - a.score)
     .slice(0, 10)
   return res.status(200).json({
+<<<<<<< HEAD
     treasuryTotals: totalsByToken
     topContributors
     totalVoteCount: globalVotes
@@ -137,3 +153,29 @@ export default function handler(req, res) {
 
       const p = e.payload as any
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  const topContributors = Object.entries(contributionsBySubject)
+    .map(([subjectId, score]) => ({ subjectId, score }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 10)
+
+  return res.status(200).json({
+    treasuryTotals: totalsByToken
+    topContributors
+    totalVoteCount: globalVotes
+    lastSyncedAt: state.lastSyncedAt})
+};
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+treasuryTotals: totalsByToken,
+    topContributors,
+    totalVoteCount: globalVotes,
+    lastSyncedAt: state.lastSyncedAt,
+  });
+    lastSyncedAt: state.lastSyncedAt})
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

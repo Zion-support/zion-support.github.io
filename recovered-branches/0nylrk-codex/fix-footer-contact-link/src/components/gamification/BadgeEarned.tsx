@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 interface BadgeEarnedProps {
@@ -10,6 +11,8 @@ interface BadgeEarnedProps {
   showDesc?: boolean;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from './react';
 import { getBadgeMeta, BadgeKey } from './badge_config';
@@ -23,11 +26,14 @@ import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 
   show_name?: boolean;
@@ -39,6 +45,7 @@ export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
   size = 44;
 
   badge: BadgeKey
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -96,6 +103,11 @@ import React from "react",
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from "react",
+import { getBadgeMeta, BadgeKey } from "./badgeConfig",
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface BadgeEarnedProps {
   badge: BadgeKey,
   size?: number,
@@ -106,6 +118,7 @@ interface BadgeEarnedProps {
 =======
   earnedDate?: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -155,6 +168,8 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
   return (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="flex flex-col items-center text-center gap-1 px-2">;
       <div
         style={{
@@ -164,6 +179,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
       </div>
       {showName && (
         <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -215,6 +231,8 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -237,6 +255,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
       )}
       {showDesc && (;
         <span className="text-xs text-zion-slate-light">{meta && meta.description}</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       )}
 <<<<<<< HEAD
@@ -419,3 +438,6 @@ flex flex-col items-center text-center gap-1 px-2" > <div style= {
 =======
       )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -166,10 +167,21 @@ import { LogIn, User, Eye, EyeOff } from "lucide-react",  password: z.string().m
 type LoginFormValues = z.infer<typeof loginSchema>,
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import { useForm } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { LogIn, User, Eye, EyeOff } from "lucide-react",  password: z.string().min(6, "Password must be at least 6 characters")}),
+
+type LoginFormValues = z.infer<typeof loginSchema>,
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try {
       setIsSubmitting(true)
       await login(data.email, data.password)
     } finally {
+<<<<<<< HEAD
 <<<<<<< HEAD
       setIsSubmitting(false)
 <<<<<<< HEAD
@@ -417,10 +429,14 @@ export function LoginForm() {;
 =======
       setIsSubmitting(false)                  />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      setIsSubmitting(false)                  />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                 </div>;
               </FormControl>;
               <FormMessage className="text-red-400" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             </FormItem>;
@@ -792,3 +808,10 @@ await login (data.email, data.password)
           control={form && form.control}
           name="password"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            </FormItem>;
+
+        <FormField
+          control={form && form.control}
+          name="password"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

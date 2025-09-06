@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,10 +11,14 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { Message, Conversation, ConversationContextData  } from '@/types/messaging';
 import { useConversationState  } from './useConversationState';
 import { useConversations  } from './useConversations';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useMessages } from './useMessages';
 <<<<<<< HEAD
@@ -351,3 +356,11 @@ type UserWithProfile = UserProfile | UserDetails | null;
  * Hook that combines all messaging operations  }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { useMessages } from './useMessages';// Allow either UserProfile or UserDetails
+
+type UserWithProfile = UserProfile | UserDetails | null;
+/**
+ * Hook that combines all messaging operations  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

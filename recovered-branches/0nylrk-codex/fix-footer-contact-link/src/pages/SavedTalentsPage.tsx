@@ -16,6 +16,7 @@ import {useNavigate} from "react-router-dom";
 export default function SavedTalentsPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   const { user } = useAuth();
@@ -43,12 +44,47 @@ export default function SavedTalentsPage() {;
   useEffect(() => {;
     const fetchSavedTalents = async () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const navigate = useNavigate();
+import { useState, useEffect } from "react",
+import { AppHeader } from "@/layout/AppHeader",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { TalentCard } from "@/components/talent/TalentCard",
+import { useAuth } from "@/hooks/useAuth",
+import { supabase } from "@/integrations/supabase/client",
+import { TalentProfile } from "@/types/talent",
+import { toast } from "@/components/ui/use-toast";
+import { useNavigate } from "react-router-dom";
+export default function SavedTalentsPage() {
+  const { user } = useAuth();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+import { toast } from "@/components/ui/use-toast",
+import { useNavigate } from "react-router-dom",
+export default function SavedTalentsPage() {
+  const { user } = useAuth(),
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+  const navigate = useNavigate(),
+
+  const { user } = useAuth();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {;
+    const fetchSavedTalents = async () => {;
+  const { user } = useAuth();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setIsLoading(true);
       try {;
         if (!user) {;
           console && console.warn("User not authenticated.");
           return;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -101,10 +137,13 @@ if ( {) {
             talent_profile (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             talent_profile (
 
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
+<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(true);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -182,6 +221,8 @@ export default function SavedTalentsPage() {
 
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [isLoading, setIsLoading] = useState(true);        if (data) {
           // Extract talent profiles and convert to TalentProfile type
           const talentProfiles = data.map(
@@ -253,13 +294,23 @@ if ( {) {
     },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    fetchSavedTalents()
+  }, [user]),
+
+  const handleViewProfile = (talentId: string) => {
+    navigate(`/talent/${talentId}`)
+  },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const handleRequestHire = (talent: TalentProfile) => {
     console.log("Request to hire:", talent);    toast({
       title: "Hire Request Sent"
       description: `A hire request has been sent to ${talent.full_name}.`})
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -318,6 +369,11 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  },
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       } catch (error) {;
         console.error("Error fetching saved talents:", error),;
         toast({;
@@ -355,6 +411,7 @@ if ( {) {
           .eq('talent_id', talentId),;
         if (error) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
           throw error;
 <<<<<<< HEAD
 =======
@@ -378,10 +435,16 @@ if ( {) {
           prevTalents.filter(talent => talent.id !== talentId)
         );        }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          throw error;        setSavedTalents(prevTalents =>
+          prevTalents.filter(talent => talent.id !== talentId)
+        );        }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
+<<<<<<< HEAD
 <<<<<<< HEAD
         );
 =======
@@ -443,6 +506,9 @@ if ( {) {
 =======
         ),          toast({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        ),          toast({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             title: "Error"
             description: "Failed to update saved talents. Please try again later."
             variant: "destructive"})
@@ -461,6 +527,7 @@ if ( {) {
         title: "Error"
         description: "Failed to update saved talents. Please try again later."
         variant: "destructive"})
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -578,11 +645,14 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <>;
       <SEO
         title="Saved Talents | Zion AI Marketplace"
+<<<<<<< HEAD
 <<<<<<< HEAD
         description="View and manage your saved talents in the Zion AI Marketplace"
 
@@ -780,6 +850,8 @@ if ( {) {
         title="Saved Talents | Zion AI Marketplace";
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         description="View and manage your saved talents in the Zion AI Marketplace";
     fetchSavedTalents ();
   }, [user]);
@@ -897,6 +969,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         ;
         {isLoading ? (;
@@ -914,10 +987,13 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 onViewProfile={handleViewProfile}
                 onRequestHire={handleRequestHire}
                 is_saved={true}
                 onToggleSave={handleToggleSave}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -925,6 +1001,8 @@ if ( {) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                 is_authenticated={!!user}
               />))}
@@ -932,6 +1010,7 @@ if ( {) {
       </div>;
       <Footer />;
     </>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -984,6 +1063,9 @@ if ( {) {
 =======
 }      </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}      </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Footer />;
     </>;
   ),; export default function SavedTalentsPage () {
@@ -1062,6 +1144,7 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1069,3 +1152,6 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

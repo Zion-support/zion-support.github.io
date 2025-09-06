@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -325,3 +326,17 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  try {
+    const q = null;
+      results})
+  } catch (e: any) {
+    res.status(500).json({ ok: false, error: e?.message |"Search failed" });
+  }
+
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

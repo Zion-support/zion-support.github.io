@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react",
@@ -6,15 +7,55 @@ import {
   DialogContent, 
   DialogHeader, 
   DialogTitle, 
+=======
+<<<<<<< HEAD
+=======
+
+import React from "react";
+import { 
+  Dialog;
+  DialogContent;
+  DialogHeader;
+  DialogTitle;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   DialogDescription 
 } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
+<<<<<<< HEAD
 import { QuoteStatusBadge } from "./QuoteStatusBadge",
 import type { QuoteRequest } from "@/types/quotes",
 import { format } from "date-fns",
+=======
+import { QuoteStatusBadge } from "./QuoteStatusBadge";
+import type { QuoteRequest } from "@/types/quotes";
+import { format } from "date-fns";
+interface QuoteDetailsProps {
+  quote: QuoteRequest | null;
+  isOpen: boolean;
+  onClose: () => void
+}
+
+export const QuoteDetails = null;
+}
+import React from "react"
+import {
+  Dialog
+  DialogContent
+  DialogHeader
+  DialogTitle
+  DialogDescription
+} from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
+import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'import { Card, CardContent } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
+import { QuoteStatusBadge } from "./QuoteStatusBadge"
+import type { QuoteRequest } from "@/types/quotes"
+import {format} from "date-fns"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface QuoteDetailsProps {
   quote: QuoteRequest | null,
   isOpen: boolean,
@@ -37,8 +78,11 @@ import type { QuoteRequest } from "@/types/quotes",;
 import { format } from "date-fns",;
 =======
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 import React from "react";
 import { ;
@@ -62,12 +106,15 @@ interface QuoteDetailsProps {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   if (!quote) return null;
 
   const formatDate = (dateString?: string) => {;
     if (!dateString) return 'Not specified';    try {;      return format(new Date(dateString), 'PPP');
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       return format(new Date(dateString), 'PPP');
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (e) {;
@@ -75,6 +122,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
     }
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -105,6 +153,10 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
   return (
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+  return (
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <Separator className="my-4" />
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -112,9 +164,12 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Card>
             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Requester Information</h3>
@@ -132,6 +187,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
           </Card>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           
 <<<<<<< HEAD
 =======
@@ -139,6 +195,8 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Card>
             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>
@@ -157,6 +215,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 <<<<<<< HEAD
 =======
@@ -164,11 +223,14 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <Card className="mt-6">
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-3">Project Details</h3>
             <p className="mb-4">{quote.project_summary}</p>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             
 <<<<<<< HEAD
@@ -177,6 +239,8 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {quote.project_description && (
               <>
                 <h4 className="font-medium mt-4">Additional Details</h4>
@@ -185,10 +249,13 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
             )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             
 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="mt-6 flex items-center gap-2">
               <DollarSign className="h-4 w-4 text-gray-500" />
               <span className="font-medium">Budget: </span>
@@ -203,6 +270,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         </Card>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 <<<<<<< HEAD
 =======
@@ -210,6 +278,8 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="mt-6 flex justify-end">
           <Button onClick={onClose}>Close</Button>
         </div>
@@ -446,5 +516,13 @@ if (return 'Not specified') {
 }` : 'Not specified');
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>);
 }
+<<<<<<< HEAD
 '";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+'";
+=======
+'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

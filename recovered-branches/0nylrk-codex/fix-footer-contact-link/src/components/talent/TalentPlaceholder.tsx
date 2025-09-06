@@ -54,6 +54,7 @@ export function TalentPlaceholder() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
   )
@@ -69,6 +70,8 @@ import {Card} from "@/components/ui/card";
 import {Skeleton} from "@/components/ui/skeleton";
 import {Button} from "@/components/ui/button";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function TalentPlaceholder() {;
   return (
 =======
@@ -88,6 +91,7 @@ export function TalentPlaceholder() {;
     <div className="p-8 text-center">;
       <h3 className="text-2xl font-bold text-white mb-4">Talent Directory Coming Soon</h3>;
       <p className="text-zion-slate-light mb-6 max-w-md mx-auto">;
+<<<<<<< HEAD
         Our talent directory is being populated with AI and tech experts. Check back soon to connect with top professionals.;
       </p>;
 <<<<<<< HEAD
@@ -135,6 +139,10 @@ export function TalentPlaceholder() {;
         Our talent directory is being populated with AI and tech experts. Check back soon to connect with top professionals.;      </p>;
       <Button className="bg - zion - purple hover: bg - zion - purple - dark text-white">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        Our talent directory is being populated with AI and tech experts. Check back soon to connect with top professionals.;      </p>;
+      <Button className="bg - zion - purple hover: bg - zion - purple - dark text-white">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         Join as Talent;
       </Button>;
     </div>);

@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState  } from 'react';
 import { useMessaging  } from '@/context/MessagingContext';
 import { MainNavigation  } from './MainNavigation';
@@ -242,6 +245,7 @@ export function AppHeader() {;
         <div className="md:hidden fixed inset-0 z-40 pt-16">
           <div
 <<<<<<< HEAD
+<<<<<<< HEAD
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
 <<<<<<< HEAD
 =======
@@ -329,6 +333,11 @@ export function AppHeader() {;
       <header className="sticky top - 0 z - 50 w - full border - b border - zion - purple / 20 bg - zion - blue - dark / 90 backdrop - blur-md">;
         <div className="container flex h - 16 items - center px - 4 sm:px-6">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"    <>;
+      <header className="sticky top - 0 z - 50 w - full border - b border - zion - purple / 20 bg - zion - blue - dark / 90 backdrop - blur-md">;
+        <div className="container flex h - 16 items - center px - 4 sm:px-6">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Logo />;
           <div className="ml - 6 flex-1 hidden md:block">;
             <MainNavigation unread_count={unread_count} />;
@@ -372,6 +381,7 @@ export function AppHeader() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;}
@@ -403,3 +413,5 @@ export function AppHeader() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

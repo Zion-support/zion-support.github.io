@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,10 +65,23 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  name: string;
+  page?: string;
+  userType?: string;
+  properties?: Record<string, any>;
+  at: string;
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 type EventRow = {
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   name: string
@@ -153,6 +169,16 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
 
         rows.push(obj)
       } catch {}
+=======
+function parseLines(startIso?: string, endIso?: string): EventRow[] {
+  try {
+    if (!fs.existsSync(LOG_FILE)) return [];
+    const raw = fs.readFileSync(LOG_FILE, 'utf8');
+    const lines = raw.split('\n').filter(Boolean);
+    const start = startIso ? new Date(startIso) : null;
+    const end = endIso ? new Date(endIso) : null;
+    const rows: EventRow[] = [];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -162,9 +188,12 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 =======
 function featureFromPath(page?: string): string {
@@ -242,11 +271,43 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  await ensureAdminFromApi(req, res);
+  
+  const { startIso, endIso } = req.query;
+  const events = parseLines(startIso as string, endIso as string);
+  
+  const pagesMostUsed = events
+    .filter(e => e.page)
+    .reduce((acc, e) => {
+      acc[e.page!] = (acc[e.page!] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
+  
+  const eventCounts = events.reduce((acc, e) => {
+    acc[e.name] = (acc[e.name] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>);
+  
+  const funnel = events
+    .filter(e => e.name === 'page_view')
+    .map(e => e.page)
+    .filter(Boolean);
+  
+  res.status(200).json({ pagesMostUsed, events: eventCounts, line: events.length, funnel });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
     .sort((a, b) => b.value - a.value),
@@ -254,6 +315,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -305,16 +371,39 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const days = Object.keys(byDay).sort();
   const line = days.map((d) => ({ date: d, value: byDay[d] }));
 
+<<<<<<< HEAD
+=======
+  const days = Object.keys(byDay).sort()
+  const line = days.map((d) => ({ date: d, value: byDay[d] }))
+
+  const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent']
+  const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 }))
+>>>>>>> main
+=======
+    .sort((a, b) => b.value - a.value);
+
+  const days = Object.keys(byDay).sort();
+const line = days.map(d => ({ date: d, value: byDay[d] }));
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const funnelStages = [
     'Visit',
     'AI Prompt Used',
     'Post Created',
     'Message Sent',
   ];
+<<<<<<< HEAD
   const funnel = funnelStages.map((stage) => ({ 
     label: stage, 
     value: byEvent[stage] || 0 
   }));
+=======
+  const funnel = funnelStages.map(stage => ({
+    label: stage,
+    value: byEvent[stage] || 0,
+  }));
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 
@@ -334,6 +423,7 @@ function featureFromPath (page?: string): string {
 if (return 'other', ) {
   $2
 }
+<<<<<<< HEAD
   const p = page.toLowerCase (),
   if (|| p.includes ('ai')) return 'AI services', ) {
   $2
@@ -468,6 +558,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
   const days = Object.keys(byDay).sort()
@@ -479,3 +570,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

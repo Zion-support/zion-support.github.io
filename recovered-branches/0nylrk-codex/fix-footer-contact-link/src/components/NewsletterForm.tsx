@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -36,6 +37,12 @@ import {Input} from "@/components/ui/input";
 import {useState} from "react";
 export function NewsletterForm() {;  const [email, setEmail] = useState("");
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {useState} from "react";
+export function NewsletterForm() {;  const [email, setEmail] = useState("");
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 <<<<<<< HEAD
@@ -114,6 +121,7 @@ export function NewsletterForm() {
     e.preventDefault();
     setIsSubmitting(true);
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -124,6 +132,8 @@ export function NewsletterForm() {
     // Simulate API call
     setTimeout(() => {
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="w-full max-w-md mx-auto">
       {isSubmitted ? (
@@ -179,6 +189,7 @@ export function NewsletterForm() {
       ) : (;
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -186,6 +197,8 @@ export function NewsletterForm() {
           <Input
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             type="email"
             placeholder="Enter your email"
             className="flex-grow bg-zion-blue-light text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"

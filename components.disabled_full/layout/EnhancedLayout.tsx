@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 <<<<<<< HEAD
@@ -79,6 +80,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 interface EnhancedLayoutProps {
 =======
 interface EnhancedLayoutProps {
+=======
+interface EnhancedLayoutProps {
+  \"children\": ReactNode;
+}interface EnhancedLayoutProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   \"children\": ReactNode;
 }interface EnhancedLayoutProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -94,6 +100,7 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
       <EnhancedFooter />
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -154,12 +161,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 } import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+} import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
  import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
  import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -174,3 +185,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

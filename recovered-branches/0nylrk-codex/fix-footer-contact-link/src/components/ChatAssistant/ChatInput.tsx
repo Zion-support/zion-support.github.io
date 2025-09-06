@@ -42,6 +42,7 @@ interface ChatInputProps {;
   disabled?: boolean
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) {;
@@ -94,6 +95,8 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
 import { Send } from "lucide-react",
@@ -138,6 +141,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -145,6 +149,8 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">;  return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">;
@@ -152,6 +158,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
         ref={inputRef}
         className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-white placeholder:text-zion-slate-light"
         placeholder="Type your message..."
+<<<<<<< HEAD
 <<<<<<< HEAD
         value={message}
 <<<<<<< HEAD
@@ -256,6 +263,10 @@ if (&& !disabled) {) {
         value={message}});
   )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        value={message}});
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
   )

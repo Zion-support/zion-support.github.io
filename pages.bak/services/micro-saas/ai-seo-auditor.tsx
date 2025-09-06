@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function AISEOAuditor() { return ( <Article title=\"AI SEO Auditor\" subtitle=\"Automated technical SEO and content insights with prioritized fixes\" price=\"from $199/mo\" bullets={[\'Crawls site maps and pages; flags Core Web Vitals and indexability issues\',\'NLP-driven content gap analysis vs. competitors with keyword clusters\',\'One-click Github PRs for meta,schema,and sitemap fixes\',\'Weekly executive report and anomaly alerts via Slack/Email\' ]} links={{ \"website\": \'https: contact: \'mailto:kleber@ziontechgroup.com\' }} /> ) } function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com</a> </p> </main> ) }
 module.exports = default function AISEOAuditor() { return ( <Article title="AI SEO Auditor" subtitle="Automated technical SEO and content insights with prioritized fixes" price="from $199/mo" bullets={["Crawls site maps and pages; flags Core Web Vitals and indexability issues","NLP-driven content gap analysis vs. competitors with keyword clusters","One-click Github PRs for meta,schema,and sitemap fixes","Weekly executive report and anomaly alerts via Slack/Email" ]} links={{ website: "https: contact: "mailto:kleber@ziontechgroup.com" }} /> ) } function Article({ title,subtitle,price,bullets,links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Pricing: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <p> Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> Email: <a href={links.contact}>kleber@ziontechgroup.com</a> </p> </main> ) }"""
 =======
@@ -22,12 +23,15 @@ module.exports = default function AISEOAuditor() { return ( <Article title="AI S
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function AISEOAuditor() { return ( <Article title=\"AI SEO Auditor\" subtitle=\"Automated technical SEO and content insights with prioritized fixes\" price=\"from $199/mo\" bullets={[\'Crawls site maps and pages; flags Core Web Vitals and indexability issues\',\'NLP-driven content gap analysis vs. competitors with keyword clusters\',\'One-click Github PRs for meta,schema,and sitemap fixes\',\'Weekly executive report and anomaly alerts via Slack/Email\' ]} links={{ \"website\": \'https: contact: \'mailto:kleber@ziontechgroup.com\' }} /> ) } function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com</a> </p> </main> ) }
 module.exports = default function AISEOAuditor() { return ( <Article title="AI SEO Auditor" subtitle="Automated technical SEO and content insights with prioritized fixes" price="from $199/mo" bullets={["Crawls site maps and pages; flags Core Web Vitals and indexability issues","NLP-driven content gap analysis vs. competitors with keyword clusters","One-click Github PRs for meta,schema,and sitemap fixes","Weekly executive report and anomaly alerts via Slack/Email" ]} links={{ website: "https: contact: "mailto:kleber@ziontechgroup.com" }} /> ) } function Article({ title,subtitle,price,bullets,links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Pricing: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <p> Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> Email: <a href={links.contact}>kleber@ziontechgroup.com</a> </p> </main> ) }"""
 import React from 'react';
 interface AiseoauditorProps {
   // Add props here as needed
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -55,12 +59,15 @@ import React from 'react';
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import * as React from 'react';
 
 interface AiseoauditorProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -72,6 +79,8 @@ export default function Aiseoauditor({ }: AiseoauditorProps) {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function Aiseoauditor({ }: AiseoauditorProps) {
   return (
     <div>
@@ -79,6 +88,7 @@ export default function Aiseoauditor({ }: AiseoauditorProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -105,6 +115,9 @@ export default function Aiseoauditor({ }: AiseoauditorProps) {
 =======
 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -147,6 +160,7 @@ export default function Aiseoauditor(): any ({ }: AiseoauditorProps) {;
       <h1>Aiseoauditor</h1>;
       <p>This component is currently under development.</p>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 <<<<<<< HEAD
@@ -209,3 +223,6 @@ export default function Aiseoauditor(): any ({ }: AiseoauditorProps) {;
 =======
   );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

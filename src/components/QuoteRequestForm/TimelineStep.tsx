@@ -1,7 +1,28 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { cn } from "@/lib/utils";
+import { QuoteFormData } from "@/types/quotes";
+import {
+  Popover
+  PopoverContent
+  PopoverTrigger
+} from '@/components/ui/popover'
+import { cn } from '@/lib/utils'
+import { QuoteFormData } from '@/types/quotes'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+interface TimelineStepProps {
+  formData: QuoteFormData
+  updateFormData: (data: Partial<QuoteFormData>) => void
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { format } from "date-fns",
 import { Calendar } from "@/components/ui/calendar",
@@ -40,6 +61,7 @@ interface TimelineStepProps {
 
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -266,6 +288,9 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                       variant="outline"
                       className={cn(
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
+=======
+    <div className;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                         !formData.endDate && "text-zion-slate-light"
                       )}
                     >
@@ -300,6 +325,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
           )}
         </div>
       </div>
+<<<<<<< HEAD
     </div>;
   )
 };
@@ -461,5 +487,14 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                       onSelect={date => updateFormData({ endDate: date })}
                       initialFocus
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

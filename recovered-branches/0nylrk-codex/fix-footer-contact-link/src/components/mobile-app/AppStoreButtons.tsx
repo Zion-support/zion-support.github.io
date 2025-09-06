@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   className?: string;
 import React from './react';
@@ -67,6 +68,8 @@ import { Apple, GithubIcon } from "lucide-react",
 import { cn } from "@/lib/utils",
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {Apple, GithubIcon} from "lucide-react";
 import {cn} from "@/lib/utils";
@@ -79,6 +82,7 @@ interface AppStoreButtonsProps {;
   onAppStoreClick?: () => void;
   onGooglePlayClick?: () => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
@@ -134,10 +138,13 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   },
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
 
   appStoreUrl = "#";
+<<<<<<< HEAD
 <<<<<<< HEAD
   googlePlayUrl = "#";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -246,6 +253,9 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
 =======
   googlePlayUrl = "#";        onClick={handleGooglePlayClick}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  googlePlayUrl = "#";        onClick={handleGooglePlayClick}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -294,6 +304,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleAppStoreClick}
         target="_blank"
+<<<<<<< HEAD
 <<<<<<< HEAD
         rel="noopener noreferrer">;
 <<<<<<< HEAD
@@ -515,3 +526,6 @@ export default AppStoreButtons;
 =======
         rel="noopener noreferrer">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        rel="noopener noreferrer">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -14,6 +15,8 @@ import {SEO} from "@/components/SEO";
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import HelpCenter from "@/components/support/HelpCenter";
 import { SEO } from "@/components/SEO";
@@ -110,6 +113,7 @@ export default function HelpCenterPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -127,6 +131,8 @@ export default function HelpCenterPage() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 import React from "react",;
 import HelpCenter from "@/components/support/HelpCenter",;
@@ -140,6 +146,7 @@ export default function HelpCenterPage() {;
 
       />;
       <HelpCenter />;
+<<<<<<< HEAD
     </>;
 =======
       />
@@ -160,6 +167,10 @@ export default function HelpCenterPage() {;
       <HelpCenter />;
     </>;  );
 }
+=======
+    </>;  );
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======import React from './react';
 import HelpCenter from "@/components / support / HelpCenter";
 import { SEO } from '@/components / SEO';
@@ -179,6 +190,7 @@ function HelpCenterPage() {
 
     </>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -218,3 +230,5 @@ function HelpCenterPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

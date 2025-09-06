@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -211,3 +212,46 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJson, writeJson } from '[^']*';
+import { tagOperatorSession } from '[^']*';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { sessionId, reason, tag } = req.body as { sessionId: string, reason?: string, tag?: string },
+  if (!sessionId) return res.status(400).json({ error: 'sessionId required' });
+  const requests = null;
+  return res.status(200).json({ ok: true, id })
+}
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== "POST")
+    return res.status(405).json({ error: "Method not allowed" });
+  const { sessionId, reason, tag } = req.body as {
+    sessionId: string;
+    reason?: string;
+    tag?: string;
+  };
+  if (!sessionId) return res.status(400).json({ error: 'sessionId required' });
+
+  const requests = readJson<any[]>('support/requests.json', []);
+  const id = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`;
+const record = {
+    id,
+    sessionId,
+    reason: reason ?? 'User requested escalation',
+    tag: tag ?? 'escalate',
+    status: 'open',
+    createdAt: Date.now(),
+  };
+  requests.push(record);
+  writeJson('support/requests.json', requests);
+
+  await tagOperatorSession(sessionId, tag ?? 'escalate');
+
+return res.status(200).json({ ok: true, id });
+
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default function ClientDashboard() {;
   const { data, error, mutate } = useSWR('/api/jobs', fetcher);
@@ -15,6 +16,19 @@ export default function ClientDashboard() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+export default function ClientDashboard() {;
+  const { data, error, mutate } = useSWR('/api/jobs', fetcher);
+
+  if (error) return <div className='text-red-600'>Failed to load</div>;  if (!data) return <div>Loading…</div>;
+
+=======
+import useSWR from 'swr';
+import Link from 'next/link';
+const fetcher = null;
+    mutate()
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const jobs = data.jobs as any[];
 
 import useSWR from 'swr'
@@ -31,14 +45,26 @@ export default function ClientDashboard() {
     await fetch(`/api/jobs/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       body: JSON.stringify({ status: 'Closed' })}),
     mutate()
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+body: JSON.stringify({ status: 'Closed' }),
+    });
+    mutate();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
   return (
@@ -67,7 +93,12 @@ export default function ClientDashboard() {
                         className='px-2 py-0.5 text-xs rounded bg-gray-100 dark:bg-gray-800'
                       >
                         {s}
+<<<<<<< HEAD
                       </span>                    ))}
+=======
+                      </span>
+                    ))}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </div>
                 )}
                       <span key={s} className="px-2 py-0.5 text-xs rounded bg-gray-100 dark:bg-gray-800">{s}</span>
@@ -93,17 +124,44 @@ export default function ClientDashboard(req, res) {
 }
 ;
               </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<div className='flex gap-2'>
+                <Link href={`/client/jobs/${job.id}/applicants`}>
+                  <a className='px-2 py-1 text-sm border rounded'>
+                    View Applicants
+                  </a>
+                </Link>
+                <Link href={`/client/jobs/${job.id}/edit`}>
+                  <a className='px-2 py-1 text-sm border rounded'>Edit Job</a>
+                </Link>
+                <button
+                  className='px-2 py-1 text-sm border rounded'
+                  onClick={() => closeJob(job.id)}
+                >
+                  Close Job
+                </button>
+              </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
           </div>
         ))}
       </div>
     </div>
 );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       </div>;
     </div>;
   );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -113,6 +171,8 @@ export default function ClientDashboard(req, res) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 }
     <div className='space - y-4'>;
@@ -169,6 +229,7 @@ export default function ClientDashboard(req, res) {
       </div>;
     </div>);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -262,10 +323,13 @@ function close_job() {
 <<<<<<< HEAD
 
   return (
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
               </div>
             </div>
           </div>
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -274,10 +338,13 @@ function close_job() {
               </div>
             </div>
           </div>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -390,6 +457,8 @@ export default function ClientDashboard(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -403,6 +472,7 @@ export default function ClientDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -428,3 +498,7 @@ export default function ClientDashboard(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

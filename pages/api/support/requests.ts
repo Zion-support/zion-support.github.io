@@ -1,4 +1,17 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { readJson, writeJson } from '../../../utils/fsDb',
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJson, writeJson } from '../../../utils/fsDb'
+>>>>>>> main
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -14,6 +27,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     requests.push(record)
     writeJson('support/requests.json', requests)
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJson, writeJson } from '[^']*';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ ok: true, id })
   }
   return res.status(405).json({ error: 'Method not allowed' });

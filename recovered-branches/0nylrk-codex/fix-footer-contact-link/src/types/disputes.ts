@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -14,11 +15,15 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed';
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null;
 ;
 
 export interface Dispute {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed';
@@ -114,6 +119,12 @@ export interface DisputeMessage {;
 
 export interface DisputeMessage {export interface DisputeMessage {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export interface Dispute {
+export interface DisputeMessage {;
+
+export interface DisputeMessage {export interface DisputeMessage {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   dispute_id: string;
   user_id: string;
@@ -127,6 +138,7 @@ export interface DisputeMessage {export interface DisputeMessage {
 
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface DisputeAttachment {
 
@@ -156,6 +168,12 @@ export interface DisputeAttachment {
 =======
 export interface DisputeAttachment {export interface DisputeAttachment {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+export interface DisputeAttachment {;
+
+export interface DisputeAttachment {export interface DisputeAttachment {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   dispute_id: string;
   uploaded_by: string;
@@ -163,6 +181,7 @@ export interface DisputeAttachment {export interface DisputeAttachment {
   file_path: string;
   file_type: string;
   file_size: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -228,11 +247,16 @@ export const disputeReasonLabels: Record<DisputeReason, string> = {;
 
 export const disputeReasonLabels: Record<DisputeReason, string> = {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+export const disputeReasonLabels: Record<DisputeReason, string> = {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   milestone_quality: 'Quality of Deliverable';
   delayed_delivery: 'Delayed Delivery';
   scope_change: 'Scope Change Disagreement';
   communication: 'Communication Issues';
   payment: 'Payment Dispute';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   contract_terms: 'Contract Terms Disagreement'
@@ -277,6 +301,8 @@ other: 'Other Issue'};
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed',;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null,;
 export interface Dispute {;
   id: string,;
@@ -349,6 +375,7 @@ export const disputeReasonLabels: Record<DisputeReason string> = {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -364,3 +391,5 @@ export const disputeReasonLabels: Record<DisputeReason string> = {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

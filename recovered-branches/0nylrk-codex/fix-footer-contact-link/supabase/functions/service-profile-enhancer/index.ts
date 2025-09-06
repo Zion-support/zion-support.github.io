@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -27,6 +28,12 @@ import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
+
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
+import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ServiceProfileData {
   name: string;
   title: string;
@@ -35,6 +42,7 @@ interface ServiceProfileData {
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -53,10 +61,14 @@ import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ServiceProfileData {
   name: string,
   title: string,
   bio: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
   services?: string[],
 <<<<<<< HEAD
@@ -163,12 +175,16 @@ serve(async (req) => {
 =======
   services?: string[],          error: "Missing required service provider data"}),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  services?: string[],          error: "Missing required service provider data"}),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 interface ServiceProfileData {;
   name: string,;
   title: string,;
   bio: string,;
   services?: string[],;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -178,6 +194,8 @@ interface ServiceProfileData {;
   location: string;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 serve (async (req) => {
   try {
@@ -227,6 +245,7 @@ if ( {) {
       );
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     // Get OpenAI API key from environment
     const apiKey = Deno.env.get("OPENAI_API_KEY"),
@@ -265,6 +284,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const prompt = `
     You are an expert in creating professional service profiles. Based on the following information about a service provider, create:
     1. A concise yet compelling professional summary (max 250 words)
@@ -273,6 +294,7 @@ if ( {) {
     Business/Service Title: ${providerData.title}
     Location: ${providerData.location}
     Current Bio: ${providerData.bio}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -285,6 +307,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     ${providerData.services && providerData.services.length > 0 
       ? `Current Services: ${providerData.services.join(", ")}`
@@ -301,6 +325,7 @@ if ( {) {
       "summary": "Professional summary goes here..."
       "services": ["Service 1", "Service 2", "Service 3", ...]
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     `;
 <<<<<<< HEAD
@@ -365,6 +390,9 @@ if ( {) {
 =======
     `;    You are an expert in creating professional service profiles. Based on the following information about a service provider, create:;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    `;    You are an expert in creating professional service profiles. Based on the following information about a service provider, create:;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     1. A concise yet compelling professional summary (max 250 words);
     2. A list of 5 - 10 specific services they could offer based on their description;
     Service Provider Name: ${provider_data.name}
@@ -391,6 +419,7 @@ if ( {) {
         messages: [;
           {
             role: "system",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -494,10 +523,13 @@ if ( {) {
       console && console.error("OpenAI API error:", responseData);
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       return new Response(
         JSON && JSON.stringify({
           error: "Failed to generate enhanced profile content",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           details: responseData});
 =======
@@ -511,6 +543,9 @@ if ( {) {
 =======
           details: responseData});          details: responseData});
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          details: responseData});          details: responseData});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
     const response_data = await response.json ();
 ;
@@ -523,6 +558,7 @@ if ( {) {
         JSON.stringify ({
           error: "Failed to generate enhanced profile content",
           details: response_data});
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -664,6 +700,11 @@ if ( {) {
       );
     }    try {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        { headers, status: 500 }
+      );
+    }    try {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           error: "Failed to parse AI response",
           raw: responseData && responseData.choices[0]?.message?.content});
@@ -671,6 +712,7 @@ if ( {) {
       return new Response (
         JSON.stringify ({
           error: "Failed to parse AI response",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -687,10 +729,14 @@ if ( {) {
 =======
           raw: response_data.choices[0]?.message?.content});          raw: response_data.choices[0]?.message?.content});
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          raw: response_data.choices[0]?.message?.content});          raw: response_data.choices[0]?.message?.content});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         { headers, status: 500 }
       );
     }
   } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -699,6 +745,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     console.error ("Function error:", error);
     return new Response (
@@ -710,6 +758,7 @@ if ( {) {
           "Content - Type": "application / json",
           "Access - Control - Allow - Origin": "*"},
         status: 500;
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -721,6 +770,8 @@ if ( {) {
           "Content - Type": "application / json",
           "Access - Control - Allow - Origin": "*"},
         status: 500;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Function error:", error),
     return new Response(
       JSON.stringify({
@@ -731,6 +782,7 @@ if ( {) {
           "Access-Control-Allow-Origin": "*"}, 
         status: 500 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -973,3 +1025,9 @@ raw: responseData.choices[0]?.message?.content
   }
 });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      }
+    );
+  }
+});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

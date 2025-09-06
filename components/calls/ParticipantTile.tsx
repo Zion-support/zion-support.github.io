@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 =======
+=======
+=======
+import React, { useEffect, useRef } from 'react';
+import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
+type Props = any;
+import type {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   RemoteParticipant
   LocalParticipant
   TrackPublication
@@ -31,11 +41,14 @@ type Props = {;
   isLocal?: boolean;
   displayName?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 export default function ParticipantTile({
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   participant
   isLocal
   displayName
@@ -51,6 +64,14 @@ type Props = {
 export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
 };
 
+=======
+}
+export default function ParticipantTile({
+  participant,
+  isLocal,
+  displayName,
+}: Props) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {
@@ -125,6 +146,7 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
       }
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     participant.tracks.forEach(pub => {
       const track = pub.track;
@@ -133,11 +155,34 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+track.attach(videoRef.current);
+      }
+      if (track.kind === 'audio' && audioRef.current) {
+        track.attach(audioRef.current);
+      }
+    };
+    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {
+      if (track.kind === 'video' && videoRef.current) {
+track.detach(videoRef.current);
+      }
+      if (track.kind === 'audio' && audioRef.current) {
+        track.detach(audioRef.current);
+      }
+    };
+
+    participant.tracks.forEach(pub => {
+      const track = pub.track;
+if (track) handleTrackSubscribed(pub, track);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     });
     participant.on('trackSubscribed', handleTrackSubscribed);
     participant.on('trackUnsubscribed', handleTrackUnsubscribed);
     return () => {
       participant.off('trackSubscribed', handleTrackSubscribed);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -161,12 +206,22 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+participant.off('trackUnsubscribed', handleTrackUnsubscribed);
+    };
+  }, [participant]);
+  return (
+    <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <video
         ref={videoRef}
         autoPlay
         playsInline
         muted={Boolean(isLocal)}
         className='w-full h-48 object-cover bg-black'
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -181,6 +236,21 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+
+=======
+      />
+      <audio ref={audioRef} autoPlay className='hidden' />
+      <div className='absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white'>
+        {displayName |
+          (participant as any).name |
+          (isLocal ? 'You' : 'Participant')}
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
   RemoteParticipant,
   LocalParticipant,
@@ -312,7 +382,9 @@ if ( {) {
     </div>
 );
 }
+<<<<<<< HEAD
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -322,3 +394,7 @@ if ( {) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

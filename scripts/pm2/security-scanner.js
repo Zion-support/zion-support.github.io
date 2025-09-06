@@ -3,9 +3,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 =======
 =======
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     
 <<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -14,9 +20,16 @@
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 =======
@@ -79,6 +92,7 @@ class SecurityScanner {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -91,6 +105,8 @@ class SecurityScanner {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -135,6 +151,9 @@ class SecurityScanner {; constructor() {; this.projectRoot = process.cwd(); this
 const scanner = new SecurityScanner();
 scanner.run().catch(error = > {; process.exit(1)}));
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }),);
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -151,9 +170,12 @@ scanner.run().catch(error = > {; process.exit(1)}));
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 #!/usr/bin/env node,;
+<<<<<<< HEAD
 =======
 }),);#!/usr/bin/env node,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const fs = require('fs'),;
 const path = require('path'),;
 const { execSync } = require('child_process'),;
@@ -661,6 +683,9 @@ class SecurityScanner {,;
     } catch (error) {,;
       this.log(`❌ Error running security: scanner: ${error.message}`),;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       process.exit(1);
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -727,9 +752,12 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     try {}
+<<<<<<< HEAD
 =======
       process.exit(1);    try {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       fs.appendFileSync(this.logFile, logMessage);,
     } catch (error) {}
       _console.error('Failed to write to log file:', error.message);',
@@ -943,8 +971,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           platform: process.platform,
           cwd: process.cwd(),
         }
-
-};,
+;      };,
       // Calculate overall security score;
       let totalIssues = 0;
       let criticalIssues = 0;
@@ -1005,6 +1032,7 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1019,6 +1047,8 @@ module.exports = SecurityScanner;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 module.exports = SecurityScanner;
 
@@ -1107,6 +1137,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 origin/cursor/integrate-build-improve-and-re-verify-242d
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1114,12 +1145,14 @@ origin/cursor/integrate-build-improve-and-re-verify-242d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class SecurityScanner {;
   constructor() {;
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log');
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json');
-    this.startTime = Date.now()
+    this.startTime = Date.now();
 };
 const fs = require('fs');
 const path = require('path');
@@ -1132,7 +1165,7 @@ const { execSync } = require('child_process');
     try {;
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {;
-      console.error('Error writing to log file:', error.message)
+      console.error('Error writing to log file:', error.message);
 };
 };
 ;
@@ -1160,13 +1193,13 @@ const { execSync } = require('child_process');
             output: output, ,
         };
       } catch (parseError) {;
-        this.log(`Error parsing npm audit output: ${parseError.message}`)
-};
+        this.log(`Error parsing npm audit output: ${parseError.message}`);
+      };
 ;
       return {;
         success: false, error: error.message,
         output: error.stdout || error.stderr || '', ,
-}
+};
 };
 ;
   async scanCode() {;
@@ -1190,13 +1223,13 @@ const { execSync } = require('child_process');
               file: file, line: lineNum,
               type: 'hardcoded-password', severity: 'high',
               message: 'Hardcoded password detected',
-            })
-};
-      }
+            });
+          };
+      };
 };
 ;
     scanDirectory(this.projectRoot);
-    return files
+    return files;
 };
 ;
   async scanConfigs() {;
@@ -1224,15 +1257,15 @@ const { execSync } = require('child_process');
             configIssues.push({;
               file: configFile, type: 'exposed-secret',
               severity: 'high', message: 'Potential secret exposed in configuration file',
-            })
-};
+            });
+          };
 ;
           // Check for debug mode in production configs;
           if (configFile.includes('production') && content.includes('debug: true')) {, configIssues.push({,
               file: configFile, type: 'debug-mode',
               severity: 'medium', message: 'Debug mode enabled in production configuration',
-            })
-};
+            });
+          };
         };
       });
 ;
@@ -1243,7 +1276,7 @@ const { execSync } = require('child_process');
       return {;
         success: false, error: error.message,
         issues: [], ,
-}
+};
 };
 ;
   async generateReport(depResults, codeResults, configResults) {;
@@ -1262,7 +1295,7 @@ const { execSync } = require('child_process');
       report.recommendations.push({;
         priority: 'critical', message: 'Dependency vulnerabilities found',
         action: 'Run npm audit fix to resolve vulnerabilities',
-      })
+      });
 };
 ;
     if (codeResults.issues.length > 0) {;
@@ -1272,31 +1305,31 @@ const { execSync } = require('child_process');
           priority: 'high',
           message: `${highSeverity} high-severity security issues found in code`;
           action: 'Review and fix high-severity security issues',
-        })
-};
+        });
+      };
 };
 ;
     if (configResults.issues.length > 0) {;
       report.recommendations.push({;
         priority: 'medium', message: 'Configuration security issues found',
         action: 'Review configuration files for security issues',
-      })
+      });
 };
 ;
-    return report
+    return report;
 };
 ;
   async saveReport(report) {;
     try {;
       const reportDir = path.dirname(this.reportFile);
       if (!fs.existsSync(reportDir)) {;
-        fs.mkdirSync(reportDir, { recursive: true })
-};
+        fs.mkdirSync(reportDir, { recursive: true });
+      };
 ;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
       this.log(`Report saved to: ${this.reportFile}`);
     } catch (error) {;
-      this.log(`Error saving report: ${error.message}`)
+      this.log(`Error saving report: ${error.message}`);
 };
 };
 ;
@@ -1308,8 +1341,8 @@ const { execSync } = require('child_process');
       // Create logs directory if it doesn't exist;
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {;
-        fs.mkdirSync(logsDir, { recursive: true })
-};
+        fs.mkdirSync(logsDir, { recursive: true });
+      };
 ;
       // Run all security scans;
       const depResults = await this.scanDependencies();
@@ -1339,14 +1372,14 @@ const { execSync } = require('child_process');
           this.log(`    Action: ${rec.action}`);
         });
       } else {;
-        this.log('\n✨ No security issues found!')
-};
+        this.log('\n✨ No security issues found!');
+      };
 ;
     } catch (error) {;
       this.log(`❌ Error running security scanner: ${error.message}`);
-      process.exit(1)
+      process.exit(1);
 };
-}
+};
 };
 ;
 // Run the security scanner;
@@ -1354,7 +1387,10 @@ const scanner = new SecurityScanner();
 scanner.run().catch(error => {;
   process.exit(1);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 #!/usr/bin/env node,
 const fs = require('fs'),
 const path = require('path'),
@@ -1619,7 +1655,10 @@ scanner.run().catch(error => {,
   process.exit(1),
 
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const fs = require ('fs');
 const path = require ('path');
@@ -1707,10 +1746,16 @@ if ( {) {
 
 const scanner = new SecurityScanner();
 
+
+
+
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
@@ -1725,13 +1770,40 @@ scanner.run().catch(error = > {process.exit(1)}));}),);
 ursor/automate-test-improve-and-merge-code-8ee2
 #!/usr/bin/env node;
 origin/automation-improvements-final
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-class SecurityScanner {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}; async scanDependencies() {try {; this.log('🔒 Scanning dependencies for vulnerabilities...'); const auditResult = execSync('npm audit --json', {; cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'}); const audit = JSON.parse(auditResult); return {success: true
-    vulnerabilities: audit.vulnerabilities |{}; summary: audit.metadata |{}}} catch (error) {// npm audit might fail if there are vulnerabilities; try {; const output = error.stdout?.toString() |error.stderr?.toString() |''; if (output.includes('npm ERR!')) {; return {; success: false, error: 'Vulnerabilities found', output: output}}} catch (parseError) {this.log(`Error parsing npm audit output: ${parseError.message}`)}; return {success: false, error: error.message, output: error.stdout |error.stderr |''}}}; async scanCode() {try {; this.log('🔍 Scanning code for security issues...'); // Check for common security issues in code; const securityIssues = []; const files = this.getSourceFiles(); files.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const lines = content.split('\n'); lines.forEach((line, index) = > {; const lineNum = index + 1; // Check for hardcoded secrets; if (line.match(/password\s* = \s*["'][^"']+["']/i)) {; securityIssues.push({; file: file, line: lineNum, type: 'hardcoded-password', severity: 'high', message: 'Hardcoded password detected'})}}}; scanDirectory(this.projectRoot); return files}; async scanConfigs() {try {; this.log('⚙️ Scanning configuration files...'); const configIssues = []; const configFiles = [
-    ; 'package.json'; 'next.config.js'; 'tsconfig.json'; '.env'; '.env.local'
+;
+class SecurityScanner {; constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'); this.startTime = Date.now()};
+; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;
+; try {; fs.appendFileSync(this.logFile, logMessage)} catch (error) {; console.error('Error writing to log file: ', error.message)}};
+; async scanDependencies() {; try {; this.log('🔒 Scanning dependencies for vulnerabilities...');
+; const auditResult = execSync('npm audit --json', {; cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'});
+; const audit = JSON.parse(auditResult); return {; success: true,
+    vulnerabilities: audit.vulnerabilities || {}; summary: audit.metadata || {}}} catch (error) {; // npm audit might fail if there are vulnerabilities; try {; const output = error.stdout?.toString() || error.stderr?.toString() || ''; if (output.includes('npm ERR!')) {; return {; success: false, error: 'Vulnerabilities found', output: output}}} catch (parseError) {; this.log(`Error parsing npm audit output: ${parseError.message}`)};
+; return {; success: false, error: error.message, output: error.stdout || error.stderr || ''}}};
+; async scanCode() {; try {; this.log('🔍 Scanning code for security issues...');
+; // Check for common security issues in code; const securityIssues = []; const files = this.getSourceFiles();
+; files.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const lines = content.split('\n');
+; lines.forEach((line, index) = > {; const lineNum = index + 1;
+; // Check for hardcoded secrets; if (line.match(/password\s* = \s*["'][^"']+["']/i)) {; securityIssues.push({; file: file, line: lineNum, type: 'hardcoded-password', severity: 'high', message: 'Hardcoded password detected'})}}};
+; scanDirectory(this.projectRoot); return files};
+; async scanConfigs() {; try {; this.log('⚙️ Scanning configuration files...');
+; const configIssues = []; const configFiles = [
+    ; 'package.json'; 'next.config.js'; 'tsconfig.json'; '.env'; '.env.local',
     '.env.production'
   ]; configFiles.forEach(configFile = > {; const filePath = path.join(this.projectRoot, configFile); if (fs.existsSync(filePath)) {; const content = fs.readFileSync(filePath, 'utf8'); // Check for exposed secrets in config files; if (content.match(/password\s* = \s*["'][^"']+["']/i)) {; configIssues.push({; file: configFile, type: 'exposed-secret', severity: 'high'
     message: 'Potential secret exposed in configuration file'})}; // Check for debug mode in production configs; if (configFile.includes('production') && content.includes('debug: true')) {, configIssues.push({, file: configFile, type: 'debug-mode', severity: 'medium'
@@ -1746,6 +1818,7 @@ class SecurityScanner {constructor() {; this.projectRoot = process.cwd(); this.l
 } catch (error) {this.log(`❌ Error running security scanner: ${error.message}`); process.exit(1)}}}
 // Run the security scanner;
 const scanner = new SecurityScanner();
+<<<<<<< HEAD
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
 scanner.run().catch(error = > {process.exit(1)}));}),);
@@ -1753,6 +1826,10 @@ scanner.run().catch(error = > {process.exit(1)}));}),);
 }),),;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 const scanner = new SecurityScanner ();
 scanner.run ().catch (error = > { process.exit (1)}));}), );
@@ -2518,11 +2595,15 @@ scanner.run().catch(error => {,
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 module.exports = SecurityScanner;
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
@@ -2537,3 +2618,14 @@ module.exports = SecurityScanner;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+scanner.run().catch(error = > {; process.exit(1)}));
+}),);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

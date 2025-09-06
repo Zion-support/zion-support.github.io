@@ -1,6 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET' && req.method !== 'POST') {
+    res.status(405).end()
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 <<<<<<< HEAD
@@ -45,7 +55,17 @@ import type { NextApiRequest, NextApiResponse } from 'next',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET' && req.method !== 'POST') {
+<<<<<<< HEAD
     res.status(405).end(),
+=======
+    res.status(405).end()
+=======
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET' && req.method !== 'POST') {
+    res.status(405).end();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return
   }
   

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -14,6 +15,8 @@ import React from 'react';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { SEO  } from '@/components/SEO';
 import { AppHeader  } from '@/layout/AppHeader';
 import { Footer  } from '@/components/Footer';
@@ -58,6 +61,7 @@ import { AppHeader } from '@/layout/AppHeader',
 import { Footer } from '@/components/Footer',
 import { ProtectedRoute } from '@/components/ProtectedRoute',
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent',
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -86,6 +90,9 @@ function ContractBuilderPage() {
 =======
 import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent',function ContractBuilderPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent',function ContractBuilderPage() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <ProtectedRoute>
       <>
@@ -102,6 +109,7 @@ import { ContractBuilderContent } from '@/components/contracts/page/ContractBuil
         <Footer />
       </>
     </ProtectedRoute>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
@@ -157,6 +165,17 @@ function ContractBuilderPage() {;
 export default ContractBuilderPage;
 
 ;
+=======
+  )}
+}
+
+;
+
+}
+export default ContractBuilderPage;
+
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default ContractBuilderPage;
 
@@ -196,6 +215,7 @@ export default ContractBuilderPage;
 ;
 export default ContractBuilderPage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -203,3 +223,6 @@ export default ContractBuilderPage;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

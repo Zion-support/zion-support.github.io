@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {MapPin} from "lucide-react";
 import {PaymentButton} from "@/components/transactions/PaymentButton";
@@ -49,11 +50,16 @@ interface PaymentSectionProps {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { MapPin  } from './lucide-react';
 import { PaymentButton  } from '@/components / transactions / PaymentButton';
 import { CountryPricing  } from '@/data / onsiteServicePricing';
 import { toast  } from '@/hooks / use - toast';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="text-center">
       <p className="text-zion-slate-light mb-2">Selected Country</p>
@@ -62,14 +68,15 @@ import { toast  } from '@/hooks / use - toast';
         {selectedCountry.country}
       </h4>
       <p className="text-2xl font-bold text-zion-cyan mb-6">
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { MapPin } from "lucide-react",;
 import { PaymentButton } from "@/components/transactions/PaymentButton",;
 import { CountryPricing } from "@/data/onsiteServicePricing",;
@@ -95,6 +102,7 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
       <p className="text-2xl font-bold text-zion-cyan mb-6">;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -107,10 +115,13 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>
       <PaymentButton
         amount={selectedCountry.pricePerIncident}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -149,6 +160,9 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
 =======
 =======        serviceId="it-onsite-service"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======        serviceId="it-onsite-service"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         providerId="zion-tech-group"
         buttonText={`Pay for Service in ${selectedCountry && selectedCountry.country}`}
         className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white w-full py-6"
@@ -162,6 +176,7 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
@@ -193,3 +208,6 @@ function PaymentSection() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

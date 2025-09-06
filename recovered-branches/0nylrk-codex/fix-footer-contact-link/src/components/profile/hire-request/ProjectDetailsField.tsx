@@ -16,6 +16,7 @@ import { UseFormReturn } from "react-hook-form";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
   FormField,
   FormItem,
   FormLabel,
@@ -66,10 +67,13 @@ import { UseFormReturn } from "react-hook-form";
 import {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   FormField
   FormItem
   FormLabel
   FormControl
+<<<<<<< HEAD
 <<<<<<< HEAD
   FormMessage
 =======
@@ -87,6 +91,12 @@ interface ProjectDetailsFieldProps {
 import { Textarea } from "@/components/ui/textarea";
 import { FormValues } from "./useHireRequestForm";
 interface ProjectDetailsFieldProps {
+=======
+  FormMessage} from "@/components/ui/form";
+import { Textarea } from "@/components/ui/textarea";
+import { FormValues } from "./useHireRequestForm";
+interface ProjectDetailsFieldProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   form: UseFormReturn<FormValues>
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
@@ -99,7 +109,10 @@ import React from "react",;
 import { UseFormReturn } from "react-hook-form",;
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Textarea } from "@/components/ui/textarea",;  form: UseFormReturn<FormValues>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
 export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;

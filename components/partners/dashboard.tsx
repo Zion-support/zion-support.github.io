@@ -1,9 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
+=======
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function PartnerDashboard() {;
   const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);import { useEffect, useState } from "react";
 import Head from "next/head";
@@ -11,6 +17,7 @@ export default function PartnerDashboard() {;
   const [apiKey, setApiKey] = useState("");
   const [token, setToken] = useState<string | null>(null),
   const [usage, setUsage] = useState<any>(null),
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
@@ -23,12 +30,15 @@ export default function PartnerDashboard() {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
 
   const [token, setToken] = useState<string | null>(null);
 
+<<<<<<< HEAD
   const [usage, setUsage] = useState<any>(null);
   const [loading, setLoading] = useState(false);
 <<<<<<< HEAD
@@ -37,6 +47,36 @@ export default function PartnerDashboard() {
   useEffect(() => {
 
     const saved = localStorage.getItem('zion_partner_token');
+=======
+=======
+
+export default function PartnerDashboard() {
+  const [apiKey, setApiKey] = useState('');
+  const [token, setToken] = useState<string | null>(null);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  const [usage, setUsage] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
+  const [usage, setUsage] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+<<<<<<< HEAD
+    const saved = localStorage.getItem("zion_partner_token");
+    if (saved) setToken(saved)
+  }, []);
+
+  async function getToken() {
+    const res = await fetch("/api/partners/token", {
+      method: "POST"
+      headers: { "Content-Type": "application/json" }
+      body: JSON.stringify({ apiKey })})
+    const data = await res.json();
+    if (data.token) {
+      localStorage.setItem("zion_partner_token", data.token);
+      setToken(data.token)
+=======
+    const saved = null;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (saved) setToken(saved);
   }, []);
   async function getToken() {
@@ -48,6 +88,7 @@ export default function PartnerDashboard() {
     const data = await res.json();
     if (data.token) {
       localStorage.setItem('zion_partner_token', data.token);
+<<<<<<< HEAD
       setToken(data.token);    }  }, []);
   const [loading, setLoading] = useState(false);
 
@@ -82,14 +123,24 @@ export default function PartnerDashboard() {
 <<<<<<< HEAD
 
 =======
+=======
+      setToken(data.token);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   }
 
   async function fetchUsage() {;
     setLoading(true);
+<<<<<<< HEAD
     });
     const data = await res && res.json();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+    });
+    const data = await res && res.json();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setLoading(false)
   }
   async function regenerateKey() {
@@ -100,6 +151,44 @@ export default function PartnerDashboard() {
     }
   }
   return (
+<<<<<<< HEAD
+=======
+=======
+const res = await fetch('/api/partners/usage', {
+      headers: token ? { Authorization: `Bearer ${token}` } : {},
+    });
+    const data = await res.json();
+    setUsage(data.summary |null);
+    setLoading(false);
+  }
+  async function regenerateKey() {
+    const res = await fetch('/api/partners/key', {
+      method: 'POST'
+      headers: token ? { Authorization: `Bearer ${token}` } : {}
+    });
+    const data = await res.json();
+    if (data.apiKey) {
+      alert(`New API Key: ${data.apiKey}`);
+    if (data.apiKey) {
+      alert(`New API Key: ${data.apiKey}`)
+    }
+  }
+  return (
+<div className='min-h-screen bg-gray-50 text-gray-900'>
+      <Head>
+        <title>Zion Partner Dashboard</title>
+      </Head>
+      <div className='max-w-5xl mx-auto py-12 px-4'>
+        <h1 className='text-3xl font-semibold mb-2'>Partner Dashboard</h1>
+        <p className='text-gray-600 mb-6'>
+          Manage access, view usage, and download SDKs.
+        </p>
+        {!token && (
+          <div className='bg-white p-6 rounded-lg shadow mb-8'>
+            <h2 className='text-lg font-medium mb-3'>Authenticate</h2>
+            <div className='flex gap-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <input
                 className='border rounded px-3 py-2 flex-1'
                 placeholder='Paste your API key'
@@ -108,6 +197,10 @@ export default function PartnerDashboard() {
               />;
               <button
                 onClick={getToken}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 className='bg-black text-white px-4 py-2 rounded'>;
                 Get JWT;
               </button>            </div>;
@@ -120,10 +213,39 @@ export default function PartnerDashboard() {
               <button onClick={getToken} className="bg-black text-white px-4 py-2 rounded">Get JWT</button>;
           </div>;
         )}
+<<<<<<< HEAD
+=======
+=======
+                className='bg-black text-white px-4 py-2 rounded'
+              >
+                Get JWT
+              </button>
+            </div>
+          </div>
+        )}
+
+<div className='grid md:grid-cols-3 gap-6'>
+          <div className='bg-white p-6 rounded-lg shadow'>
+            <h3 className='font-medium mb-2'>API Keys</h3>
+            <button
+              onClick={regenerateKey}
+              className='bg-gray-900 text-white px-3 py-2 rounded text-sm'
+            >
+              Generate New Key
+            </button>
+            <p className='text-xs text-gray-500 mt-2'>
+              Old key becomes inactive.
+            </p>
+          </div>
+          <div className='bg-white p-6 rounded-lg shadow md:col-span-2'>
+            <h3 className='font-medium mb-2'>Usage</h3>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <button
               onClick={fetchUsage}
               className='bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3'>;
               {loading ? 'Loading...' : 'Refresh'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                       </li>                    ))}          </div>
@@ -147,6 +269,8 @@ export default function PartnerDashboard() {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
             <h3 className="font-medium mb-2">Usage</h3>
             <button onClick={fetchUsage} className="bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3">{loading ? "Loading..." : "Refresh"}</button>
@@ -156,6 +280,7 @@ export default function PartnerDashboard() {
                 <div className="mt-3">
                   <p className="font-medium">By Endpoint</p>
                   <ul className="list-disc ml-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                     {Object.entries(usage.byEndpoint |{}).map(([k, v]) => (
@@ -191,6 +316,23 @@ export default function PartnerDashboard() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+            </button>
+            {usage ? (
+              <div className='text-sm'>
+                <p>
+                  Total requests: <strong>{usage.totalRequests}</strong>
+                </p>
+                <div className='mt-3'>
+                  <p className='font-medium'>By Endpoint</p>
+                  <ul className='list-disc ml-6'>
+                    {Object.entries(usage.byEndpoint |{}).map(([k, v]) => (
+                      <li key={k}>
+                        {k}: {v as any}
+                      </li>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     ))}
                   </ul>;
                 </div>;
@@ -200,6 +342,7 @@ export default function PartnerDashboard() {
           </div>;
         </div>;
               <p className="text-gray-500 text-sm">No usage yet.</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -212,16 +355,31 @@ export default function PartnerDashboard() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </ul>
                 </div>
               </div>
             ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             )}
+=======
+            )}
+=======
+<p className='text-gray-500 text-sm'>No usage yet.</p>
+            )}
+          </div>
+        </div>
+
+<div className='bg-white p-6 rounded-lg shadow mt-6'>
+          <h3 className='font-medium mb-2'>SDKs</h3>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <a
             className='text-blue-600 underline mr-4'
             href='/api/partners/sdk?type=rest'>;
@@ -229,12 +387,17 @@ export default function PartnerDashboard() {
           </a>;
           <a
             className='text-blue-600 underline'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             href='/api/partners/sdk?type=graphql'>;
             GraphQL SDK;
           </a>        </div>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }        <div className="bg-white p-6 rounded-lg shadow mt-6">;
@@ -265,3 +428,19 @@ export default function PartnerDashboard() {
 
         </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          </div>
+
+        </div>
+=======
+            href='/api/partners/sdk?type=graphql'
+          >
+            GraphQL SDK
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

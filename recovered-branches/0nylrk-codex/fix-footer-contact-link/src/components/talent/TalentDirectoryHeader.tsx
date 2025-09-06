@@ -34,8 +34,9 @@ import React from './react';
 import React from "react";
 import React from "react",
 interface TalentDirectoryHeaderProps {
-  title: string;
+  title: string,
   description: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -77,6 +78,8 @@ interface TalentDirectoryHeaderProps {;
   title: string,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   description: string;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
 export function TalentDirectoryHeader({
@@ -141,6 +144,7 @@ export function TalentDirectoryHeader({ title, description }: TalentDirectoryHea
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 =======
@@ -155,6 +159,8 @@ export function TalentDirectoryHeader({ title, description }: TalentDirectoryHea
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <p className="text-zion-slate-light max-w-2xl">
         <p className="text-zion-slate-light max-w-2xl">
 
@@ -180,6 +186,7 @@ function TalentDirectoryHeader() {
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -194,3 +201,5 @@ function TalentDirectoryHeader() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

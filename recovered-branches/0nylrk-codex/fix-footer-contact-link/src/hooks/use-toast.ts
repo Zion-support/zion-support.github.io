@@ -18,12 +18,16 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import { useToast, as, useToastHook, Toast } from "@/components/ui/toast";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 // Extend the Toast component props with common toast options
 export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
   description?: string;
   title?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   variant?: "default" | "destructive" | "success"
@@ -79,6 +83,11 @@ export const useToast = useToastHook;
 };
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  variant?: "default" | "destructive" | "success"
+};
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Base toast function that delegates to the implementation from `useToastHook`.
 function baseToast(props: ToastOptions) {
   const { toast } = useToastHook();
@@ -99,11 +108,15 @@ baseToast && baseToast.description = (description: string) => {
 =======
 baseToast.description = (description: string) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   baseToast({ description });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
   baseToast({ description })
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  baseToast({ description })
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
 baseToast.error = (error: string) => {
@@ -127,6 +140,7 @@ export const toast = baseToast as typeof baseToast & {
   title: (title: string) => void,
   description: (description: string) => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
   error: (error: string) => void;
   success: (message: string) => void;
 <<<<<<< HEAD
@@ -141,6 +155,8 @@ export const toast = baseToast as typeof baseToast & {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   error: (error: string) => void
   success: (message: string) => void
 }
@@ -163,6 +179,7 @@ baseToast.success = (message: string) => {
 // Export the callable toast function.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -181,6 +198,11 @@ export const toast = baseToast as typeof baseToast & {;
 };export const toast = baseToast as typeof baseToast & {;
   title: (title: string) => void,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+};export const toast = baseToast as typeof baseToast & {;
+  title: (title: string) => void,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   description: (description: string) => void;
   error: (error: string) => void,
   success: (message: string) => void
@@ -226,6 +248,7 @@ export const toast = baseToast as typeof baseToast & {;
   description: (description: string) => void,;
   error: (error: string) => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
   success: (message: string) => void;
 <<<<<<< HEAD
 };
@@ -247,3 +270,9 @@ export const toast = baseToast as typeof baseToast & {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  success: (message: string) => void
+};
+
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

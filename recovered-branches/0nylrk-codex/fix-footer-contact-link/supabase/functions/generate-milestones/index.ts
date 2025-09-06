@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -10,6 +11,8 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
@@ -23,16 +26,20 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -84,6 +91,8 @@ serve(async (req) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -99,6 +108,7 @@ serve(async (req) => {;
     const apiKey = Deno.env.get('OPENAI_API_KEY'),;
     if (!apiKey) {;
       throw new Error('OPENAI_API_KEY is not set');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -129,6 +139,9 @@ serve(async (req) => {;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     
   try {
     // Get the OpenAI API key from environment variables
@@ -137,6 +150,7 @@ serve(async (req) => {;
       throw new Error('OPENAI_API_KEY is not set')
     }
     // Parse request body
+<<<<<<< HEAD
 <<<<<<< HEAD
     
 <<<<<<< HEAD
@@ -405,6 +419,12 @@ if ( {) {
             role: 'user'
             content: prompt}];    }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                content: 'You are a project management expert that breaks work into appropriate milestones.'}
+          {
+            role: 'user'
+            content: prompt}];    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Parse the AI-generated content to ensure it's valid JSON
     try {
       const content = data && data.choices[0].message && message.content.trim();
@@ -417,6 +437,7 @@ if ( {) {
     }
   } catch (error) {
     console && console.error('Error generating milestones:', error);
+<<<<<<< HEAD
 <<<<<<< HEAD
     return new Response(
 <<<<<<< HEAD
@@ -598,6 +619,9 @@ serve(async (req) => {;
 =======
     return new Response(;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    return new Response(;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Parse the AI-generated content to ensure it's valid JSON;
     try {;
       const content = data.choices[0].message.content.trim(),;
@@ -623,6 +647,7 @@ serve(async (req) => {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -630,3 +655,6 @@ serve(async (req) => {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

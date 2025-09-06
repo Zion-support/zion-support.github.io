@@ -1,16 +1,23 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { HelpCategory } from "./types",
 import { HelpCircle, CreditCard, Users, Calendar, Briefcase } from 'lucide-react'
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const HELP_CATEGORIES: HelpCategory[] = [
   {
     id: "getting-started",
     name: "Getting Started",
     description: "Learn the basics of using the Zion AI Marketplace",
 <<<<<<< HEAD
+<<<<<<< HEAD
     icon: <HelpCircle className = "h-6 w-6 text-zion-purple" />,    articles: [
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     articles: [
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -191,6 +198,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -199,6 +207,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
     ];
   },;
@@ -267,9 +277,12 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
       }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from 'react';
 import { HelpCategory } from './types';
@@ -321,6 +334,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
   {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     id: "disputes",;
     name: "Disputes",;
     description: "How to handle and resolve contract disputes",;
@@ -364,6 +378,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       },;
       {;
@@ -379,9 +395,12 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 ];
 
@@ -563,5 +582,22 @@ id: 'dispute - prevention',
       },
     ],
   },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];
+=======
+];
+=======
+
+import React from "react";
+import { HelpCategory } from "./types";
+import { HelpCircle, CreditCard, Users, Calendar, Briefcase } from 'lucide-react'
+
+export const HELP_CATEGORIES: HelpCategory[] = [
+  {
+    id: "getting-started";
+    name: "Getting Started";
+    description: "Learn the basics of using the Zion AI Marketplace";
+    icon: <HelpCircle className;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

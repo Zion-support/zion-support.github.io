@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -19,11 +20,14 @@ import type { QuoteRequest } from "@/types/quotes";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { QuoteRequestCard } from "./QuoteRequestCard",
 import { EmptyStateCard } from "./EmptyStateCard";
 import type { QuoteRequest } from "@/types/quotes";
 import { EmptyStateCard } from "./EmptyStateCard",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import type { QuoteRequest } from "@/types/quotes",
 <<<<<<< HEAD
@@ -89,12 +93,16 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
 =======
 import type { QuoteRequest } from "@/types/quotes",}) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import type { QuoteRequest } from "@/types/quotes",}) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (isLoading) {
     return (
       <div className="text-center py-20">
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>
       </div>
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -117,12 +125,15 @@ import type { QuoteRequest } from "@/types/quotes",;
 type QuoteRequestsListProps = {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   quotes: QuoteRequest[],;
   isLoading: boolean,;
   isArchived: boolean,;
   onViewDetails: (quote: QuoteRequest) => void,;
   onMarkAsResponded: (id: string) => void,;
   onToggleArchive: (id: string, isArchived: boolean) => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -188,10 +199,13 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="text-center py-20">;
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>;
       </div>;
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -209,6 +223,8 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   if (quotes && quotes.length === 0) {;
     return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />;
@@ -216,6 +232,7 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 <<<<<<< HEAD
 =======
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -264,6 +281,8 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">;
       {quotes && quotes.map(quote => (;
@@ -298,6 +317,7 @@ if ( {) {
           onMarkAsResponded={!is_archived ? onMarkAsResponded : undefined}
           onToggleArchive={onToggleArchive}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -372,10 +392,13 @@ quotes, isLoading, isArchived, onViewDetails, onMarkAsResponded, onToggleArchive
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </div>;
   );
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -385,3 +408,6 @@ quotes, isLoading, isArchived, onViewDetails, onMarkAsResponded, onToggleArchive
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

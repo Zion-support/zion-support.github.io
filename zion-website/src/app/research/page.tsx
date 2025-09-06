@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
 <<<<<<< HEAD
 =======
@@ -448,6 +451,7 @@ export default function ResearchPage() {
                       {item}
                     </li>
                   ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 </div>;
@@ -957,6 +961,8 @@ export default function ResearchPage() {
             </div>
           ))}
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="bg-black">
       {/* Hero section */}

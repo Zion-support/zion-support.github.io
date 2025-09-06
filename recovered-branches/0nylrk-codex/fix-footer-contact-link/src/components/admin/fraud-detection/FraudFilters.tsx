@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -18,12 +19,15 @@ import {Search, Filter} from "lucide-react";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Search, Filter } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Search, Filter } from "lucide-react",
 
@@ -443,6 +447,9 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
 =======
 import { Search, Filter } from "lucide-react",        <SelectTrigger className="w-[180px]">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Search, Filter } from "lucide-react",        <SelectTrigger className="w-[180px]">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <SelectValue placeholder="Status" />;
         </SelectTrigger>;
         <SelectContent>;
@@ -473,6 +480,7 @@ import { Search, Filter } from "lucide-react",        <SelectTrigger className="
     </div>);
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -507,3 +515,6 @@ export default FraudFilters;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

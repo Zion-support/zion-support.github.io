@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react',;
 import Link from 'next/link',;
@@ -17,6 +18,8 @@ export function Logo({ customLogo }: LogoProps) {
   // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined),
   
 =======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 return (
       <Link href="/" className="flex items-center">;
         <img src={logoToUse} alt={`${brand_name} Logo`} className="h-8" width={32} height={32} />;
@@ -27,9 +30,15 @@ return (
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+  const logoToUse = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (logoToUse) {
     return (
       <Link href="/" className="flex items-center">
@@ -109,6 +118,7 @@ if ( {) {
         className='h-8'
         width={32}
         height={32}
+<<<<<<< HEAD
 
       />;
     </Link>;
@@ -133,6 +143,7 @@ if ( {) {
 <<<<<<< HEAD
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -140,3 +151,11 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      />
+    </Link>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

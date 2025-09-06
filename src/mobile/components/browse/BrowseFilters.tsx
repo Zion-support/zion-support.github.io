@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 return (
     <div className='space-y-3'>;
       <div className='flex justify-between items-center px-4'>;
@@ -205,6 +208,11 @@ import { X, Filter } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label",
+=======
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
+import { Badge } from "@/components/ui/badge",
+import { Label } from "@/components/ui/label";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface BrowseFiltersProps {
 <<<<<<< HEAD
   type: "jobs" | "talents"
@@ -238,12 +246,15 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -263,10 +274,13 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
                   <>
@@ -283,10 +297,13 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <div className="space-y-2">
                       <Label>Experience Level</Label>
                       <div className="flex gap-2 flex-wrap">
@@ -311,10 +328,13 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
                       <Slider
@@ -335,10 +355,13 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div className="space-y-2">
                   <Label>Location</Label>
                   <Select>
@@ -356,6 +379,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -376,6 +400,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                 <div className="space-y-2">
 
                   <Label>Salary Range</Label>
+=======
+                <div className="space-y-2">
+
+                  <Label>Salary Range</Label>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                   </div>
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -383,6 +412,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -398,6 +428,10 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                 <div className="space-y-2">
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+                <div className="space-y-2">
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <Label>Skills</Label>
 <<<<<<< HEAD
                   <div className="grid grid-cols-2 gap-2">
@@ -445,6 +479,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 
@@ -458,11 +493,16 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                 <div className="flex items-center justify-between">
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+                <div className="flex items-center justify-between">
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <Label>Only show verified profiles</Label>
                   <Switch />
                 </div>
               </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               
 <<<<<<< HEAD
@@ -471,6 +511,8 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <SheetFooter>
                 <Button variant='outline' className='w-full'>
                   Reset
@@ -486,6 +528,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
           </Sheet>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           
 <<<<<<< HEAD
 =======
@@ -493,6 +536,8 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Select>
             <SelectTrigger className='w-[120px] h-8'>
               <SelectValue placeholder='Sort By' />
@@ -612,10 +657,13 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {activeFilters.map((filter) => (
             <Badge 
               key={filter} 
@@ -629,6 +677,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
               />
             </Badge>
           ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </div>;
       </div>;
     </div>;
@@ -636,9 +689,12 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           {active_filters.map (filter => (
             <Badge;
@@ -655,5 +711,15 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+;
+=======
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

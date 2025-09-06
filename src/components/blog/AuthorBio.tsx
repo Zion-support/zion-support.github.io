@@ -1,20 +1,36 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import type { BlogAuthor } from '@/types/blog',;
 interface AuthorBioProps {;
   author: BlogAuthor;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import React from 'react';
+import type { BlogAuthor } from '@/types/blog';
+interface AuthorBioProps {
+  author: BlogAuthor;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function AuthorBio({ author }: AuthorBioProps) {
   if (!author.bio) return null,
   return (
+<<<<<<< HEAD
     <div className="mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6">
       <img
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <img
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -244,9 +260,44 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
+<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+<div className='mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6'>
+      <img
+        src={author.avatarUrl}
+        alt={author.name}
+        className='w-16 h-16 rounded-full mr-4 mb-4 md:mb-0'
+        onError={e => {
+          const target = e.currentTarget as HTMLImageElement;
+          target.src = '/images/blog-placeholder.svg';
+        }}
+      />
+      <div>
+        <p className='font-medium text-lg'>{author.name}</p>
+        {author.title && (
+          <p className='text-sm text-muted-foreground mb-2'>{author.title}</p>
+        )}
+        <p>{author.bio}</p>
+      </div>
+    </div>
+  );
+}/> <div> <p className="font-medium text-lg" > {;
+  author.name ;
+}</p> {";
+  author.title && <p className="text-sm text-muted-foreground mb-2" > {;
+  author.title ;
+}</p> ;
+}<p> {;
+  author.bio ;
+}</p> ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -17,6 +18,8 @@ import React from 'react';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Link  } from 'react-router-dom';
 import { Logo  } from './Logo';
 import { UserMenu  } from './UserMenu';
@@ -27,6 +30,7 @@ import { useWhitelabel  } from '@/context/WhitelabelContext';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { useNavigate } from "react-router-dom";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from "react";
 <<<<<<< HEAD
@@ -131,12 +135,16 @@ export interface HeaderProps {
 =======
 import { useState } from "react";  customTheme?: {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { useState } from "react";  customTheme?: {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     primaryColor: string
     backgroundColor: string
     textColor: string
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -152,6 +160,9 @@ import { useState } from "react";  customTheme?: {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {;
   const { user } = useAuth();
   const { isWhitelabel, primaryColor } = useWhitelabel();
@@ -184,6 +195,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
     backgroundColor: '#0f172a', // Default dark background
     textColor: '#ffffff', // Default light text
   } : undefined),
+<<<<<<< HEAD
 <<<<<<< HEAD
   
 <<<<<<< HEAD
@@ -309,12 +321,25 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
 }
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <EnhancedSearchInput
+            value={query}
+            onChange={setQuery}
+            searchSuggestions={searchSuggestions}          {!hideLogin && <UserMenu />}
+        </div>
+      </div>
+    </header>
+  )
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {!hideLogin && <UserMenu />}
         </div>
       </div>
     </header>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -434,6 +459,8 @@ export function Header(): any ({ hideLogin = false, customLogo, customTheme }: H
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {MainNavigation} from '@/layout / MainNavigation';
 import {use_auth} from '@/hooks / use_auth';
 import {use_whitelabel} from '@/context / WhitelabelContext';
@@ -459,6 +486,7 @@ function Header() {
   const navigate = use_navigate ();
   const [query, set_query] = useState ("");
   const search_suggestions = generateSearchSuggestions ();
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -638,3 +666,6 @@ return (<header <div className="ml-6 flex-1" > <MainNavigation /> </div> <Enhanc
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

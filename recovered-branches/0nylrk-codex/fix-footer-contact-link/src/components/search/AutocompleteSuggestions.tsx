@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -56,12 +57,18 @@ interface AutocompleteSuggestionsProps {
 =======
 import {SearchSuggestion, SearchHighlight} from "@/types/search";interface AutocompleteSuggestionsProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+import {SearchSuggestion, SearchHighlight} from "@/types/search";interface AutocompleteSuggestionsProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   suggestions: SearchSuggestion[]
   searchTerm: string
   onSelectSuggestion: (suggestion: string) => void
 
   visible: boolean
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -76,12 +83,15 @@ import {SearchSuggestion, SearchHighlight} from "@/types/search";interface Autoc
 import React from "react",;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { SearchSuggestion, SearchHighlight } from "@/types/search",;
 interface AutocompleteSuggestionsProps {;
   suggestions: SearchSuggestion[],;
   searchTerm: string,;
   onSelectSuggestion: (suggestion: string) => void,;
   visible: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -102,6 +112,9 @@ interface AutocompleteSuggestionsProps {;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 // Helper function to highlight matching text
 
@@ -109,6 +122,7 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
   if (!searchTerm |searchTerm.length === 0) {
     return { before: '', match: text, after: '' }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   
@@ -140,10 +154,16 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
   
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const lowerText = text.toLowerCase();
   const lowerSearchTerm = searchTerm.toLowerCase();
   const index = lowerText.indexOf(lowerSearchTerm);
   if (index === -1) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -180,6 +200,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return { before: '', match: text, after: '' }
   }    return { before: '', match: text, after: '' }
   }
@@ -187,6 +209,7 @@ if ( {) {
     before: text.substring (0, index);
     match: text.substring (index, index + search_term.length);
     after: text.substring (index + search_term.length);
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -220,10 +243,14 @@ export function AutocompleteSuggestions({
 =======
   }};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function AutocompleteSuggestions({ 
   suggestions, 
   searchTerm, ;
+<<<<<<< HEAD
 <<<<<<< HEAD
   onSelectSuggestion;
 <<<<<<< HEAD
@@ -310,6 +337,12 @@ export function AutocompleteSuggestions({
       <ul className="py-2 max-h-60 overflow-y-auto">
         {suggestions.map((suggestion, index) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  onSelectSuggestion;  return (
+    <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg overflow-hidden">
+      <ul className="py-2 max-h-60 overflow-y-auto">
+        {suggestions.map((suggestion, index) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 className="px-4 py-2 hover:bg-zion-blue-light/20 cursor-pointer"
                 onClick={() => onSelectSuggestion(suggestion.text)}>
               <div className="flex items-center justify-between">
@@ -324,6 +357,7 @@ export function AutocompleteSuggestions({
               </div>
             </li>
           )
+<<<<<<< HEAD
 <<<<<<< HEAD
         })}
 <<<<<<< HEAD
@@ -348,6 +382,8 @@ export function AutocompleteSuggestions({
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           const highlight = highlightMatch(suggestion.text, searchTerm),
           
 
@@ -415,6 +451,7 @@ export function AutocompleteSuggestions(): any ({ ;
         })}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -425,10 +462,13 @@ export function AutocompleteSuggestions(): any ({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </ul>;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -457,6 +497,8 @@ export function AutocompleteSuggestions(): any ({ ;
 export /**
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
  * AutocompleteSuggestions - Function description
  */
 function AutocompleteSuggestions() {
@@ -528,6 +570,7 @@ return (<li key= {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -535,3 +578,6 @@ return (<li key= {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

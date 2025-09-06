@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 ) ) 
 }</ul> </section> <section>) ) 
@@ -17,6 +20,16 @@ export default function KnowledgeGraph({ report }: Props) {
 export default function KnowledgeGraph({ report }: Props) {
   if (!report) return <div>No knowledge graph yet.</div>;
 
+=======
+import fs from 'fs',
+import path from 'path';
+import type { GetStaticProps } from 'next';
+interface Node { id: string, tokens: string[] }
+interface Edge { source: string, target: string, weight: number, terms: string[] }
+interface Report { generatedAt: string, nodes: Node[], edges: Edge[], topTerms: { term: string, count: number }[] }
+
+type Props = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">;
       <header className="space-y-1">;
@@ -44,6 +57,7 @@ export default function KnowledgeGraph({ report }: Props) {
           {report && report.edges.slice(0, 200).map((e, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{e && e.source} ⇄ {e && e.target}</span><span className="text-gray-500 truncate">{e && e.terms.join(', ')}</span></li>;
           ))}
+<<<<<<< HEAD
 }
 ) );
 }</ul> </section> <section>) );
@@ -85,6 +99,7 @@ if (return <div > No knowledge graph yet.</div>) {
       </section>;
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 },
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -122,3 +137,12 @@ if (return <div > No knowledge graph yet.</div>) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+        </ul>
+      </section>
+    </div>
+);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

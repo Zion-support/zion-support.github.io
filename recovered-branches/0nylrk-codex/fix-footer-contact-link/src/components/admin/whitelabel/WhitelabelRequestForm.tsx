@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React from 'react';
@@ -94,6 +95,12 @@ export function WhitelabelRequestForm() {
           cta: values.cta}
       }      // Submit to Supabase
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          headline: values.headline
+          subtitle: values.subtitle
+          cta: values.cta}
+      }      // Submit to Supabase
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const { data, error } = await supabase
         .from('whitelabel_tenants')
         .insert(tenantData)
@@ -110,6 +117,7 @@ export function WhitelabelRequestForm() {
         variant: 'destructive'
         title: 'Error creating tenant'
         description: error.message |'Something went wrong'})
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     }
@@ -136,10 +144,14 @@ import {supabase} from '@/integrations/supabase/client';
 =======
   };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
 
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -236,6 +248,9 @@ export function WhitelabelRequestForm() {;
 =======
 =======  };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======  };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -249,6 +264,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
 import { toast } from '@/hooks/use-toast',;
 import { supabase } from '@/integrations/supabase/client',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 // Form schema;
@@ -373,6 +389,10 @@ export function WhitelabelRequestForm() {;
   },
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  },
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 <<<<<<< HEAD
     <Card className="w-full max-w-2xl">;
@@ -483,6 +503,7 @@ if (throw error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
         .single(),;
@@ -513,12 +534,15 @@ if (throw error) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <CardDescription>;
           Create a customized version of the platform for your client or partner.;
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
         <Form {...form}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -543,10 +567,15 @@ if (throw error) {
 
           <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+          <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="space-y-4">;
               <FormField;
                 control={form.control}
                 name="brand_name";
+<<<<<<< HEAD
 <<<<<<< HEAD
                 render={({ field }) => (;
                   <FormItem>;
@@ -600,6 +629,8 @@ if (throw error) {
                 name="brand_name"
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 render={({ field }) => (
                   <FormItem>;
                     <FormLabel > Brand Name</FormLabel>;                render={({ field }) => (;
@@ -645,6 +676,7 @@ if (throw error) {
       </CardFooter>;
 
     </Card>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -713,3 +745,6 @@ return (<Card className="w-full max-w-2xl" > <CardHeader> <CardTitle>Create Whit
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

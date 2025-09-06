@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { issueTokens } from "../../../../utils/token/service",;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -22,6 +23,8 @@ import { issueTokens } from "../../../../utils/token/service";
 <<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   }
 }
@@ -49,6 +52,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 ;
 =======
+<<<<<<< HEAD
 
 =======
 
@@ -57,6 +61,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+  const { userId, amount, reason } = req.body || {};
+  if (!userId || typeof amount !== "number") return res.status(400).json({ error: "userId and amount required" });
+  
+  try {
+    const tx = await issueTokens(userId, amount, reason);
+    return res.status(200).json({ tx });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (err: any) {
     return res.status(400).json({ error: err.message })
   }

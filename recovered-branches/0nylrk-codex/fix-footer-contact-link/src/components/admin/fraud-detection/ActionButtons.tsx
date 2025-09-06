@@ -3,6 +3,7 @@ import React from './react';
 import { Button  } from '@/components / ui / button';
 import { Eye, Info, AlertTriangle, Ban  } from './lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -39,6 +40,11 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
 
     <div className="flex space-x-2">  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (
+
+    <div className="flex space-x-2">  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     <div className="flex space-x-2">
 
@@ -51,6 +57,7 @@ interface ActionButtonsProps {
 
     <div className="flex space-x-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -58,6 +65,8 @@ interface ActionButtonsProps {
       <Button
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         variant="ghost"
         size="icon"
         title="View Details"
@@ -103,6 +112,7 @@ export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onA
           size="sm"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -111,10 +121,13 @@ export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onA
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     </div>;
 );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -139,6 +152,9 @@ import React from "react",;
 =======
 =======import React from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======import React from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button",;
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react",;
 interface ActionButtonsProps {;
@@ -199,12 +215,15 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   on_action: (
     flag_id: string,
@@ -266,6 +285,7 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 =======
@@ -275,6 +295,8 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
   )
 };

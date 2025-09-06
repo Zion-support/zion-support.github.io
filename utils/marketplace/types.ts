@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type PaymentTermsType = "hourly" | "fixed" | "milestone";
 export type Milestone = {;
   id: string;
@@ -57,6 +58,10 @@ export interface Offer {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   createdAtIso: string;
   client_id: string;
@@ -64,10 +69,13 @@ export interface Offer {;
   startDateIso: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   scopeSummary: string;
   paymentTerms: PaymentTerms;
@@ -88,6 +96,7 @@ export interface PaymentTerms {
   }>;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -159,12 +168,15 @@ export interface Project {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   title: string;
   summary: string;
   client_id: string;
   talent_slug: string;
   startDateIso: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -213,6 +225,9 @@ export type MarketplaceDb = {;
 =======
   status: "ACTIVE" | "COMPLETED" | "CANCELLED";  timeline: any[];
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  status: "ACTIVE" | "COMPLETED" | "CANCELLED";  timeline: any[];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   documents: ProjectDocument[];
   notes: ProjectNote[];
 }
@@ -224,6 +239,7 @@ export interface ProjectNote {
   content: string;
   createdAtIso: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -257,3 +273,6 @@ export interface ProjectNote {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

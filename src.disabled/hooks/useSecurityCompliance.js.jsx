@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const { useState,useEffect,useCallback,useRef } from";react" import { useAnalytics } from "./useAnalytics" export const useSecurityCompliance = (_initialConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [securityEvents,setSecurityEvents] = useState([]) const [complianceRules,setComplianceRules] = useState([]) const [securityMetrics,setSecurityMetrics] = useState({ totalEvents: "0",criticalEvents: "0",highSeverityEvents: "0",complianceScore: "10",0,threatLevel: ";";low,",averageResponseTime: "0",falsePositiveRate: "0"}) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()""";low",averageResponseTime: "0",falsePositiveRate: "0" }) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()"'"'"
 
@@ -15,6 +16,8 @@ const { useState,useEffect,useCallback,useRef } from";react" import { useAnalyti
 <<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const { useState,useEffect,useCallback,useRef } from";react" import { useAnalytics } from "./useAnalytics" export const useSecurityCompliance = (_initialConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [securityEvents,setSecurityEvents] = useState([]) const [complianceRules,setComplianceRules] = useState([]) const [securityMetrics,setSecurityMetrics] = useState({ totalEvents: "0",criticalEvents: "0",highSeverityEvents: "0",complianceScore: "10",0,threatLevel: ";";low,",averageResponseTime: "0",falsePositiveRate: "0"}) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()""";low",averageResponseTime: "0",falsePositiveRate: "0" }) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()"'"'"
 
 
@@ -28,6 +31,7 @@ const { useState,useEffect,useCallback,useRef } from";react" import { useAnalyti
 const { useState,useEffect,useCallback,useRef } from";react" import { useAnalytics } from "./useAnalytics" export const useSecurityCompliance = (_initialConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [securityEvents,setSecurityEvents] = useState([]) const [complianceRules,setComplianceRules] = useState([]) const [securityMetrics,setSecurityMetrics] = useState({ totalEvents: "0",criticalEvents: "0",highSeverityEvents: "0",complianceScore: "10",0,threatLevel: ";";low,",averageResponseTime: "0",falsePositiveRate: "0"}) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()""";low",averageResponseTime: "0",falsePositiveRate: "0" }) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()"'"'"
 ursor/add-new-services-and-deploy-updates-0462
 const { useState,useEffect,useCallback,useRef } from";react" import { useAnalytics } from "./useAnalytics" export const useSecurityCompliance = (_initialConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [securityEvents,setSecurityEvents] = useState([]) const [complianceRules,setComplianceRules] = useState([]) const [securityMetrics,setSecurityMetrics] = useState({ totalEvents: "0",criticalEvents: "0",highSeverityEvents: "0",complianceScore: "10",0,threatLevel: ";";low,",averageResponseTime: "0",falsePositiveRate: "0"}) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()""";low",averageResponseTime: "0",falsePositiveRate: "0" }) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()"'"'"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>> main:corrupted_backup/useSecurityCompliance.js.jsx
 =======
@@ -48,3 +52,5 @@ const { useState,useEffect,useCallback,useRef } from";react" import { useAnalyti
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

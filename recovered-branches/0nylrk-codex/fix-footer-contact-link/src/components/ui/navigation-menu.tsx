@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -48,6 +49,9 @@ import { cn } from "@/lib/utils"
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const NavigationMenu = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
@@ -82,6 +86,7 @@ const NavigationMenu = React.forwardRef<
       'relative z-10 flex max-w-max flex-1 items-center justify-center'
       "relative z-10 flex max-w-max flex-1 items-center justify-center",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -159,12 +164,15 @@ const NavigationMenuList = React.forwardRef<;
     ref={ref}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     className={cn(
       'group flex flex-1 list-none items-center justify-center space-x-1'
       className
     )}
     {...props}
   />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ));
 <<<<<<< HEAD
@@ -185,10 +193,14 @@ const NavigationMenuList = React.forwardRef<;
 =======
 ));const NavigationMenuList = React.forwardRef<;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+));const NavigationMenuList = React.forwardRef<;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   React.ElementRef<typeof NavigationMenuPrimitive.List>,;
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.List>;
 >(({ className, ...props }, ref) => (;
   <NavigationMenuPrimitive.List;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -203,6 +215,11 @@ const NavigationMenuList = React.forwardRef<;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     ref={ref}
+=======
+    ref={ref}
+    className={cn(
+      "group flex flex-1 list-none items-center justify-center space-x-1",    ref={ref}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     className={cn(
       "group flex flex-1 list-none items-center justify-center space-x-1",    ref={ref}
     className={cn(
@@ -223,6 +240,7 @@ const NavigationMenuTrigger = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Trigger>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Trigger
@@ -230,6 +248,8 @@ const NavigationMenuTrigger = React.forwardRef<
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Trigger>(({ className, children, ...props }, ref) => (
@@ -252,6 +272,7 @@ const NavigationMenuTrigger = React && React.forwardRef<;
     className={cn(navigationMenuTriggerStyle(), 'group', className)}
     {...props}>;
     {children}{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
     <ChevronDown
 <<<<<<< HEAD
@@ -287,13 +308,19 @@ const NavigationMenuContent = React.forwardRef<
 =======
     <ChevronDown))
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    <ChevronDown))
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName
 
 const NavigationMenuContent = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Content>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 >(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.Content>(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.Content
@@ -304,6 +331,7 @@ const NavigationMenuContent = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<typeof Navigat</typeof>ionMenuPrimitive && ionMenuPrimitive.Content>;
 >(({ className, ...props }, ref) => (;
   <NavigationMenuPrimitive&& NavigationMenuPrimitive.Content
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -388,6 +416,11 @@ const NavigationMenuViewport = React.forwardRef<
       'left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto '
       "left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto ",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    ref={ref}    className={cn(
+      'left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto '
+      "left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto ",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ))
 NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName
 
@@ -402,6 +435,7 @@ const NavigationMenuViewport = React.forwardRef<
   <div className={cn('absolute left-0 top-full flex justify-center')}>
     <NavigationMenuPrimitive.Viewport
       className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -456,12 +490,16 @@ const NavigationMenuViewport = React.forwardRef<;
 =======
         className      )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        className      )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       ref={ref}
       {...props}
     />;
   </div>;
 ));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -504,11 +542,14 @@ NavigationMenuViewport.displayName =
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const NavigationMenuIndicator = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Indicator>
   React.ComponentPropsWithoutRe</typeof>f<typeof NavigationMenuPrimitive.Indicator>
 >(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.Indicator
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     ref={ref}
@@ -527,6 +568,8 @@ const NavigationMenuIndicator = React.forwardRef<
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 NavigationMenuViewport && NavigationMenuViewport.displayName =;
   NavigationMenuPrimitive && NavigationMenuPrimitive.Viewport.displayName;
 
@@ -537,6 +580,7 @@ const NavigationMenuIndicator = React && React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <NavigationMenuPrimitive&& NavigationMenuPrimitive.Indicator
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -573,10 +617,13 @@ const NavigationMenuIndicator = React.forwardRef<;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className
     )}
 
 NavigationMenuIndicator && NavigationMenuIndicator.displayName =;
+<<<<<<< HEAD
 <<<<<<< HEAD
   NavigationMenuPrimitive && NavigationMenuPrimitive.Indicator.displayName;
 <<<<<<< HEAD
@@ -600,6 +647,9 @@ NavigationMenuIndicator.displayName =
 =======
   NavigationMenuPrimitive && NavigationMenuPrimitive.Indicator.displayName;    ref={ref}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  NavigationMenuPrimitive && NavigationMenuPrimitive.Indicator.displayName;    ref={ref}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     className={cn(
       "top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in",
       className
@@ -630,6 +680,7 @@ NavigationMenuIndicator.displayName =
   NavigationMenuViewport,
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 <<<<<<< HEAD
@@ -639,6 +690,8 @@ NavigationMenuIndicator.displayName =
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 import {cn} from '@/lib / utils';
 ;
@@ -744,6 +797,7 @@ NavigationMenuIndicator.display_name =;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -756,3 +810,5 @@ NavigationMenuIndicator.display_name =;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

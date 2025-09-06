@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -26,6 +27,8 @@ function InterviewsContent() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useState } from "react",
 import { useInterviews } from "@/hooks/useInterviews",
 import { Interview } from "@/types/interview",
@@ -531,6 +534,7 @@ function InterviewsContent() {;
         grouped[dateKey] = [],;
       }
       grouped[dateKey].push(interview),;
+<<<<<<< HEAD
     }),;
     return grouped;
 <<<<<<< HEAD
@@ -544,6 +548,10 @@ function InterviewsContent() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   };
+=======
+    }),;    return grouped
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
   const pendingGrouped = groupInterviewsByDate(pendingInterviews);
@@ -614,6 +622,7 @@ function InterviewsContent() {;
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       ))
 =======
   }
@@ -631,6 +640,10 @@ function InterviewsContent() {;
       ))
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      ))
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 =======  return (
     <>
@@ -664,6 +677,7 @@ function InterviewsContent() {;
                 </span>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -682,6 +696,8 @@ function InterviewsContent() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               )}
             </TabsTrigger>
             <TabsTrigger value="past">Past</TabsTrigger>
@@ -730,6 +746,7 @@ function InterviewsContent() {;
                 <p className="text-muted-foreground">Your interview history will appear here.</p>
               </div>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -1216,6 +1233,8 @@ export default function Interviews() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </>);
 }
 export default /**
@@ -1227,6 +1246,7 @@ function Interviews() {
       <InterviewsContent />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1251,3 +1271,5 @@ export default function Interviews() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

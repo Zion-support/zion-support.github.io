@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 
 
@@ -15,6 +16,30 @@ export default function Sidebar(): any ({;
   onChangeVisibility,;
 }: SidebarProps) {;
 
+=======
+import React from 'react';
+import { ApiDocsSpec, Visibility } from '../../data/api-docs/types';
+interface SidebarProps {
+spec: ApiDocsSpec;
+  activeEndpointId?: string;
+  onSelectEndpoint: (endpointId: string) => void;
+  selectedVersion: string;
+  onChangeVersion: (v: string) => void;
+  visibilityFilter: Visibility | 'all';
+  onChangeVisibility: (v: Visibility | 'all') => void
+}
+
+export default function Sidebar({
+  spec
+  activeEndpointId
+  onSelectEndpoint
+  selectedVersion
+  onChangeVersion
+  visibilityFilter
+  onChangeVisibility
+}: SidebarProps) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <aside className='w-72 shrink-0 h-full overflow-auto border-r border-high-contrast-secondary p-3 space-y-4 bg-high-contrast-secondary'>;
       <div>;
@@ -31,10 +56,13 @@ export default function Sidebar(): any ({;
               onClick={() => onChangeVersion(v)}
               className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <nav className="space-y-3">
         {spec.sections.map((section) => (
           <div key={section.id}>
@@ -46,16 +74,56 @@ export default function Sidebar(): any ({;
                 .map((e) => (
                   <li key={e.id}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     <button
 
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+            >
+              {v}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div>
+<div className='text-xs text-high-contrast-muted mb-1'>
+          Publish Mode
+        </div>
+        <select
+          className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm'
+          value={visibilityFilter}
+          onChange={e => onChangeVisibility(e.target.value as any)}
+        >
+          <option value='all'>All</option>
+          <option value='public'>Public</option>
+          <option value='partner'>Partner-only</option>
+          <option value='internal'>Internal</option>
+        </select>
+      </div>
+      <nav className='space-y-3'>
+        {spec.sections.map(section => (
+          <div key={section.id}>
+            <div className='text-sm font-medium mb-1'>{section.title}</div>
+            <ul className='space-y-1'>
+              {section.endpoints
+                .filter(e => e.versions.includes(selectedVersion))
+                .filter(e =>
+                  visibilityFilter === 'all'
+                    ? true
+                    : e.visibility === visibilityFilter
+                )
+                .map(e => (
+                  <li key={e.id}>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <button
                       className={`w-full text-left px-2 py-1 rounded text-xs border ${activeEndpointId === e.id ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-transparent'}`}
                       onClick={() => onSelectEndpoint(e.id)}
                     >
+<<<<<<< HEAD
 =======
                       <span className="mr-2 inline-block w-10 text-center text-[10px] opacity-80">{e.method}</span>
                       <span className="font-mono">{e.path}</span>
@@ -65,6 +133,15 @@ export default function Sidebar(): any ({;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<span className='mr-2 inline-block w-10 text-center text-[10px] opacity-80'>
+                        {e.method}
+                      </span>
+                      <span className='font-mono'>{e.path}</span>
+                    </button>
+                  </li>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 ))}
             </ul>;
           </div>;
@@ -181,6 +258,7 @@ function Sidebar() {
     </aside>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -189,3 +267,9 @@ function Sidebar() {
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

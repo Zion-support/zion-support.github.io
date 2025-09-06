@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -12,6 +13,8 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from "react";
 import {MatchResultItem} from "@/lib/ai-matchmaking";
 import {Card, CardContent} from "@/components/ui/card";
@@ -20,6 +23,7 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {BarChart3, BriefcaseIcon, Monitor, User} from "@/components/icons";
 import {Skeleton} from "@/components/ui/skeleton";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {cn} from "@/lib/utils";
 <<<<<<< HEAD
@@ -350,12 +354,16 @@ export function AIMatchingResults({;
 =======
 import {cn} from "@/lib/utils";      <div className="space-y-4">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {cn} from "@/lib/utils";      <div className="space-y-4">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <Skeleton className="h-10 w-full" />;
         <div className="space-y-3">;
           <Skeleton className="h-[120px] w-full" />;
           <Skeleton className="h-[120px] w-full" />;
           <Skeleton className="h-[120px] w-full" />;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>;
 <<<<<<< HEAD
@@ -474,6 +482,9 @@ import { useState } from './react';
 =======
       </div>;import { useState } from './react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </div>;import { useState } from './react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { MatchResultItem } from '@/lib / ai - matchmaking';
 import { Card, CardContent } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -568,11 +579,15 @@ if ( {) {
         </TabsList>;
         {Object.entries (categories).map (([tab, items]) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
           <TabsContent key={tab} value={tab} className="mt - 4 space - y-3">;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
           <TabsContent key={tab} value={tab} className="mt - 4 space-y-3">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <TabsContent key={tab} value={tab} className="mt - 4 space-y-3">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {items.length > 0 ? (
               items.map ((match) => {
                 const CategoryIcon = getCategoryIcon (match.category);
@@ -654,6 +669,7 @@ if ( {) {
                                   {skill}
                                 </Badge>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                               ))}
 <<<<<<< HEAD
 =======
@@ -706,6 +722,9 @@ if ( {) {
 =======
                               ))}                            ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                              ))}                            ;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                             <div className="mt-2 flex flex-wrap gap-1">;
                               <Badge variant="outline" className="text-xs bg-zion-blue text-zion-cyan border-zion-cyan/30">;
                                 {match.category}
@@ -715,6 +734,7 @@ if ( {) {
                                   {skill}
                                 </Badge>;
                               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -860,4 +880,6 @@ if (isLoading) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }

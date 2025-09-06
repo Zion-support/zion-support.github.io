@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -16,10 +17,15 @@ import {Badge} from "@/components/ui/badge";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Badge } from "@/components/ui/badge",
 <<<<<<< HEAD
@@ -213,6 +219,9 @@ import React from './react';
 =======
 import { Badge } from "@/components/ui/badge",import React from './react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Badge } from "@/components/ui/badge",import React from './react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
 export /**
@@ -249,6 +258,7 @@ function SharedInbox() {
   ],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
 
@@ -268,6 +278,9 @@ import React from "react",;
 =======
   return (import React from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (import React from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 export function SharedInbox() {;
@@ -313,10 +326,13 @@ export function SharedInbox() {;
         </div>;
       </CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Card>;
   );
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
 ;
@@ -373,6 +389,7 @@ flex items-center justify-between" > <div> <CardTitle>Shared Inbox</CardTitle> <
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -385,3 +402,5 @@ flex items-center justify-between" > <div> <CardTitle>Shared Inbox</CardTitle> <
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

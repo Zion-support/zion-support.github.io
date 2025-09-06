@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
@@ -32,6 +33,8 @@ import {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import { useState, useEffect } from "react";
@@ -45,6 +48,7 @@ import { useTranslation } from "react-i18next";
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -75,6 +79,9 @@ export function LanguageDetectionPopup() {
 =======
 AlertDialogTitle,;export function LanguageDetectionPopup() {} from "../context/LanguageContext";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+AlertDialogTitle,;export function LanguageDetectionPopup() {} from "../context/LanguageContext";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function LanguageDetectionPopup() {
 import {;
   AlertDialog,;
@@ -112,6 +119,7 @@ export function LanguageDetectionPopup() {;
     }
   }, []);
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (!detectedLanguage) return null;
 <<<<<<< HEAD
 
@@ -137,6 +145,9 @@ export function LanguageDetectionPopup() {;
 =======
   if (!detectedLanguage) return null;    await changeLanguage(detectedLanguage);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  if (!detectedLanguage) return null;    await changeLanguage(detectedLanguage);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setOpen(false);
   }
 
@@ -199,6 +210,7 @@ export function LanguageDetectionPopup() {;
   const [open, setOpen] = useState(false),;
   const { t } = useTranslation(),;
   const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage() as LanguageContextType,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null),;
 <<<<<<< HEAD
@@ -326,6 +338,9 @@ export function LanguageDetectionPopup() {;
 =======
   const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null),;            {t('general.no')}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null),;            {t('general.no')}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </AlertDialogCancel>;
           <AlertDialogAction;
             onClick={handleAccept}
@@ -336,6 +351,7 @@ export function LanguageDetectionPopup() {;
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 <<<<<<< HEAD
@@ -396,6 +412,9 @@ if (return) {
 =======
   );    // Mark as visited;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  );    // Mark as visited;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     local_storage.set_item ("zion_has_visitedtrue");
 ;
     // Get browser language;

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { checkOnline, safeFetch  } from '@/integrations/supabase/client';
 import { vi  } from 'vitest';
 import { checkOnline, safeFetch } from '@/integrations/supabase/client',;
@@ -20,6 +21,31 @@ import { vi } from 'vitest',;
   expect(result).toBe(false)
 }),
 
+=======
+// Test that checkOnline returns false when navigator is offline
+it('checkOnline returns false when navigator is offline', async () => {
+  Object.defineProperty(window, 'navigator', {
+    value: { onLine: false };    writable: true});
+  const result = await check_online ();
+  expect (result).to_be (false);
+});
+// Test that safe_fetch throws custom error when fetch fails;
+it ('safe_fetch throws when fetch rejects', async () => {
+    value: { on_line: true }
+  vi.spy_on (global, 'fetch').mockRejectedValue (new Error ('Network error'));
+  await expect (safe_fetch ('https: //example.com')).rejects.to_throw ('Failed to connect to Supabase');
+;
+import { checkOnline, safeFetch } from '@/integrations/supabase/client',;
+import { vi } from 'vitest',;
+// Test that checkOnline returns false when navigator is offline
+it('checkOnline returns false when navigator is offline', async () => {
+  Object.defineProperty(window, 'navigator', {
+    value: { onLine: false };
+    writable: true});
+  const result = await check_online ();
+  expect (result).to_be (false);
+});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Test that safeFetch throws custom error when fetch fails
 it('safeFetch throws when fetch rejects', async () => {
   Object.defineProperty(window, 'navigator', {
@@ -29,6 +55,7 @@ it('safeFetch throws when fetch rejects', async () => {
   await expect(safeFetch('https: //example.com')).rejects.toThrow('Failed to connect to Supabase')
 }),
 ;
+<<<<<<< HEAD
 // Test that checkOnline returns false when navigator is offline;
 it('checkOnline returns false when navigator is offline', async () => {;
   Object.defineProperty(window, 'navigator', {;
@@ -118,3 +145,6 @@ it('safeFetch throws when fetch rejects', async () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -39,15 +40,23 @@ export default function ITServicesPage() {;
 =======
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
       {/* Hero Section */}
+=======
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
+      {/* Hero Section */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="bg - gradient - to - r from - green - 600 to - blue - 600 py-20">;
         <div className="container mx - auto px - 6 text-center">;
           <h1 className="text - 5xl font - bold mb-6">💻 IT Services & Solutions</h1>;
           <p className="text - xl text - green - 100 max - w-3xl mx-auto">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             Comprehensive IT infrastructure, cloud solutions, and digital transformation services;
             to modernize your business and drive operational excellence.;
           </p>;
           <div className="mt-8">;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <a href="tel:+13024640950" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors mr-4">;
               Call Now: +1 302 464 0950;
@@ -59,6 +68,12 @@ export default function ITServicesPage() {;
             </a>;
             <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - green - 600 transition-colors">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <a href="tel:+13024640950" className="bg - white text - green - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - green - 50 transition - colors mr-4">;
+              Call Now: +1 302 464 0950;
+            </a>;
+            <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - green - 600 transition-colors">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Get IT Consultation;
             </a>;
           </div>;
@@ -66,12 +81,17 @@ export default function ITServicesPage() {;
       </div>;
       {/* Contact Info Banner */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="bg-zinc-800 py-4">;
         <div className="container mx-auto px-6 text-center text-sm">;
 =======
       <div className="bg - zinc - 800 py-4">;
         <div className="container mx - auto px - 6 text - center text-sm">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <div className="bg - zinc - 800 py-4">;
+        <div className="container mx - auto px - 6 text - center text-sm">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <span className="mr-8">📱 +1 302 464 0950</span>;
           <span className="mr-8">✉️ kleber@ziontechgroup.com</span>;
           <span>📍 364 E Main St STE 1008, Middletown DE 19709</span>;
@@ -79,6 +99,7 @@ export default function ITServicesPage() {;
       </div>;
       {/* IT Services Grid */}
       <section className="py-20">;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="container mx-auto px-6">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
@@ -121,6 +142,11 @@ export default function ITServicesPage() {;
         <div className="container mx - auto px-6">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap-12">;
             {/* Cloud Infrastructure */}
+=======
+        <div className="container mx - auto px-6">;
+          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap-12">;
+            {/* Cloud Infrastructure */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc-700">;
               <div className="text - 4xl mb-6">☁️</div>;
               <h2 className="text - 3xl font - bold mb-4">Cloud Infrastructure</h2>;
@@ -155,11 +181,15 @@ export default function ITServicesPage() {;
                     <span className="text - green - 400 font-semibold">$2K - $10K</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt-2">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Free initial cloud assessment | Custom pricing for enterprise;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <a href="https://ziontechgroup.com/cloud-services" className="block w-full text-center bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors">;
                 Learn More About Cloud Infrastructure;
@@ -202,6 +232,14 @@ export default function ITServicesPage() {;
             </div>;
                 infrastructure as code, and DevOps culture implementation that drives innovation.;
               </p>;
+=======
+              <a href="https://ziontechgroup.com / cloud - services" className="block w - full text - center bg - green - 600 hover:bg - green - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+                Learn More About Cloud Infrastructure;
+              </a>;
+            </div>;
+                infrastructure as code, and DevOps culture implementation that drives innovation.;
+              </p>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="space - y-4 mb-8">;
                 <h3 className="text - xl font - semibold text - green-400">Services Include:</h3>;
                 <ul className="space - y-2 text - zinc-300">;
@@ -214,6 +252,7 @@ export default function ITServicesPage() {;
                   <li>• Automated testing and quality gates</li>;
                 </ul>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="bg-zinc-700 rounded-lg p-6 mb-6">;
                 <h4 className="text-lg font-semibold mb-4">Pricing Structure</h4>;
@@ -232,6 +271,8 @@ export default function ITServicesPage() {;
                   </div>;
                   <div className="text-sm text-zinc-400 mt-2">;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="bg - zinc - 700 rounded - lg p - 6 mb-6">;
                 <h4 className="text - lg font - semibold mb-4">Pricing Structure</h4>;
                 <div className="space-y-3">;
@@ -248,11 +289,15 @@ export default function ITServicesPage() {;
                     <span className="text - green - 400 font-semibold">$3K - $15K</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt-2">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Free DevOps maturity assessment | Training included;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <a href="https://ziontechgroup.com/devops" className="block w-full text-center bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors">;
                 Learn More About DevOps & CI/CD;
@@ -298,6 +343,18 @@ export default function ITServicesPage() {;
                 <h3 className="text - xl font - semibold text - green-400">Services Include:</h3>;
                 <ul className="space - y-2 text - zinc-300">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <a href="https://ziontechgroup.com / devops" className="block w - full text - center bg - green - 600 hover:bg - green - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+                Learn More About DevOps & CI / CD;
+              </a>;
+            </div>;
+            {/* Cybersecurity */}
+                penetration testing, compliance frameworks, and incident response planning.;
+              </p>;
+              <div className="space - y-4 mb-8">;
+                <h3 className="text - xl font - semibold text - green-400">Services Include:</h3>;
+                <ul className="space - y-2 text - zinc-300">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <li>• Security assessments and penetration testing</li>;
                   <li>• Compliance frameworks (SOC2, ISO27001, HIPAA)</li>;
                   <li>• Security architecture design and review</li>;
@@ -306,6 +363,7 @@ export default function ITServicesPage() {;
                   <li>• Threat intelligence and monitoring</li>;
                 </ul>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="bg-zinc-700 rounded-lg p-6 mb-6">;
                 <h4 className="text-lg font-semibold mb-4">Pricing Structure</h4>;
@@ -324,6 +382,8 @@ export default function ITServicesPage() {;
                   </div>;
                   <div className="text-sm text-zinc-400 mt-2">;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="bg - zinc - 700 rounded - lg p - 6 mb-6">;
                 <h4 className="text - lg font - semibold mb-4">Pricing Structure</h4>;
                 <div className="space-y-3">;
@@ -340,20 +400,28 @@ export default function ITServicesPage() {;
                     <span className="text - green - 400 font-semibold">$5K - $25K</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt-2">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Free security assessment | Compliance roadmap included;
                   </div>;
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="https://ziontechgroup.com/cybersecurity" className="block w-full text-center bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors">;
 =======
               <a href="https://ziontechgroup.com / cybersecurity" className="block w - full text - center bg - green - 600 hover:bg - green - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <a href="https://ziontechgroup.com / cybersecurity" className="block w - full text - center bg - green - 600 hover:bg - green - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Learn More About Cybersecurity;
               </a>;
             </div>;
             {/* Data Engineering */}
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
               <div className="text-4xl mb-6">📈</div>;
@@ -377,6 +445,15 @@ export default function ITServicesPage() {;
                 Build robust data pipelines, warehousing solutions, and ETL processes that transform;
                 raw data into actionable business intelligence and insights.;
               </p>;
+=======
+            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc-700">;
+              <div className="text - 4xl mb-6">📈</div>;
+              <h2 className="text - 3xl font - bold mb-4">Data Engineering</h2>;
+              <p className="text - zinc - 300 mb - 6 text-lg">;
+                Build robust data pipelines, warehousing solutions, and ETL processes that transform;
+                raw data into actionable business intelligence and insights.;
+              </p>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="space - y-4 mb-8">;
                 <h3 className="text - xl font - semibold text - green-400">Services Include:</h3>;
                 <ul className="space - y-2 text - zinc-300">;
@@ -389,6 +466,7 @@ export default function ITServicesPage() {;
                   <li>• Business intelligence and reporting</li>;
                 </ul>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="bg-zinc-700 rounded-lg p-6 mb-6">;
                 <h4 className="text-lg font-semibold mb-4">Pricing Structure</h4>;
@@ -407,6 +485,8 @@ export default function ITServicesPage() {;
                   </div>;
                   <div className="text-sm text-zinc-400 mt-2">;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="bg - zinc - 700 rounded - lg p - 6 mb-6">;
                 <h4 className="text - lg font - semibold mb-4">Pricing Structure</h4>;
                 <div className="space-y-3">;
@@ -423,20 +503,28 @@ export default function ITServicesPage() {;
                     <span className="text - green - 400 font-semibold">$3K - $20K</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt-2">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Free data assessment | Custom analytics solutions;
                   </div>;
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="https://ziontechgroup.com/data-engineering" className="block w-full text-center bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors">;
 =======
               <a href="https://ziontechgroup.com / data - engineering" className="block w - full text - center bg - green - 600 hover:bg - green - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <a href="https://ziontechgroup.com / data - engineering" className="block w - full text - center bg - green - 600 hover:bg - green - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Learn More About Data Engineering;
               </a>;
             </div>;
             {/* API Development */}
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
               <div className="text-4xl mb-6">🔌</div>;
@@ -460,6 +548,18 @@ export default function ITServicesPage() {;
                 <h3 className="text - xl font - semibold text - green-400">Services Include:</h3>;
                 <ul className="space - y-2 text - zinc-300">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc-700">;
+              <div className="text - 4xl mb-6">🔌</div>;
+              <h2 className="text - 3xl font - bold mb-4">API Development</h2>;
+              <p className="text - zinc - 300 mb - 6 text-lg">;
+                Design and develop robust APIs, microservices architecture, and API gateway solutions;
+                that enable seamless integration and data exchange between systems.;
+              </p>;
+              <div className="space - y-4 mb-8">;
+                <h3 className="text - xl font - semibold text - green-400">Services Include:</h3>;
+                <ul className="space - y-2 text - zinc-300">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <li>• RESTful API design and development</li>;
                   <li>• GraphQL API implementation</li>;
                   <li>• Microservices architecture design</li>;
@@ -468,6 +568,7 @@ export default function ITServicesPage() {;
                   <li>• Performance optimization and scaling</li>;
                 </ul>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="bg-zinc-700 rounded-lg p-6 mb-6">;
                 <h4 className="text-lg font-semibold mb-4">Pricing Structure</h4>;
@@ -486,6 +587,8 @@ export default function ITServicesPage() {;
                   </div>;
                   <div className="text-sm text-zinc-400 mt-2">;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="bg - zinc - 700 rounded - lg p - 6 mb-6">;
                 <h4 className="text - lg font - semibold mb-4">Pricing Structure</h4>;
                 <div className="space-y-3">;
@@ -502,20 +605,28 @@ export default function ITServicesPage() {;
                     <span className="text - green - 400 font-semibold">$2K - $12K</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt-2">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Free API assessment | Documentation included;
                   </div>;
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="https://ziontechgroup.com/api-development" className="block w-full text-center bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors">;
 =======
               <a href="https://ziontechgroup.com / api - development" className="block w - full text - center bg - green - 600 hover:bg - green - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <a href="https://ziontechgroup.com / api - development" className="block w - full text - center bg - green - 600 hover:bg - green - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Learn More About API Development;
               </a>;
             </div>;
             {/* Digital Transformation */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
@@ -551,6 +662,13 @@ export default function ITServicesPage() {;
                 <h3 className="text - xl font - semibold text - green-400">Services Include:</h3>;
                 <ul className="space - y-2 text - zinc-300">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                legacy system modernization, and change management expertise.;
+              </p>;
+              <div className="space - y-4 mb-8">;
+                <h3 className="text - xl font - semibold text - green-400">Services Include:</h3>;
+                <ul className="space - y-2 text - zinc-300">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <li>• Digital strategy and roadmap development</li>;
                   <li>• Legacy system modernization</li>;
                   <li>• Change management and training</li>;
@@ -559,6 +677,7 @@ export default function ITServicesPage() {;
                   <li>• ROI measurement and analytics</li>;
                 </ul>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="bg-zinc-700 rounded-lg p-6 mb-6">;
                 <h4 className="text-lg font-semibold mb-4">Pricing Structure</h4>;
@@ -577,6 +696,8 @@ export default function ITServicesPage() {;
                   </div>;
                   <div className="text-sm text-zinc-400 mt-2">;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="bg - zinc - 700 rounded - lg p - 6 mb-6">;
                 <h4 className="text - lg font - semibold mb-4">Pricing Structure</h4>;
                 <div className="space-y-3">;
@@ -593,16 +714,23 @@ export default function ITServicesPage() {;
                     <span className="text - green - 400 font-semibold">$10K - $50K</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt-2">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Free transformation assessment | Strategic roadmap included;
                   </div>;
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="https://ziontechgroup.com/digital-transformation" className="block w-full text-center bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors">;
 =======
               <a href="https://ziontechgroup.com / digital - transformation" className="block w - full text - center bg - green - 600 hover:bg - green - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <a href="https://ziontechgroup.com / digital - transformation" className="block w - full text - center bg - green - 600 hover:bg - green - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Learn More About Digital Transformation;
               </a>;
             </div>;
@@ -610,6 +738,7 @@ export default function ITServicesPage() {;
         </div>;
       </section>;
       {/* IT Service Delivery Process */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-20 bg-zinc-800">;
         <div className="container mx-auto px-6">;
@@ -640,6 +769,8 @@ export default function ITServicesPage() {;
               <h3 className="text-xl font-semibold mb-3">Optimization</h3>;
               <p className="text-zinc-300">Performance tuning, monitoring setup, and ongoing support and maintenance.</p>;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className="py - 20 bg - zinc-800">;
         <div className="container mx - auto px-6">;
           <div className="text - center mb-16">;
@@ -668,13 +799,17 @@ export default function ITServicesPage() {;
               <div className="bg - green - 600 w - 16 h - 16 rounded - full flex items - center justify - center text - 2xl font - bold mx - auto mb-4">4</div>;
               <h3 className="text - xl font - semibold mb-3">Optimization</h3>;
               <p className="text - zinc-300">Performance tuning, monitoring setup, and ongoing support and maintenance.</p>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>;
           </div>;
         </div>;
       </section>;
       {/* Technology Stack */}
       <section className="py-20">;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="container mx-auto px-6">;
           <div className="text-center mb-16">;
@@ -688,6 +823,8 @@ export default function ITServicesPage() {;
               <h3 className="text-xl font-semibold mb-4 text-green-400">Cloud & Infrastructure</h3>;
               <ul className="space-y-2 text-zinc-300">;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="container mx - auto px-6">;
           <div className="text - center mb-16">;
             <h2 className="text - 4xl font - bold mb-4">🛠️ Technology Stack</h2>;
@@ -699,13 +836,17 @@ export default function ITServicesPage() {;
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc-700">;
               <h3 className="text - xl font - semibold mb - 4 text - green-400">Cloud & Infrastructure</h3>;
               <ul className="space - y-2 text - zinc-300">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <li>• AWS, Azure, Google Cloud</li>;
                 <li>• Kubernetes, Docker, Terraform</li>;
                 <li>• Ansible, Jenkins, GitLab CI</li>;
                 <li>• Prometheus, Grafana, ELK Stack</li>;
               </ul>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">;
               <h3 className="text-xl font-semibold mb-4 text-green-400">Development & APIs</h3>;
@@ -715,12 +856,18 @@ export default function ITServicesPage() {;
               <h3 className="text - xl font - semibold mb - 4 text - green-400">Development & APIs</h3>;
               <ul className="space - y-2 text - zinc-300">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc-700">;
+              <h3 className="text - xl font - semibold mb - 4 text - green-400">Development & APIs</h3>;
+              <ul className="space - y-2 text - zinc-300">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <li>• Node.js, Python, Java, .NET</li>;
                 <li>• React, Angular, Vue.js</li>;
                 <li>• REST, GraphQL, gRPC</li>;
                 <li>• PostgreSQL, MongoDB, Redis</li>;
               </ul>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">;
               <h3 className="text-xl font-semibold mb-4 text-green-400">Security & Compliance</h3>;
@@ -729,6 +876,8 @@ export default function ITServicesPage() {;
                 <li>• Penetration testing tools</li>;
                 <li>• SIEM, IDS/IPS solutions</li>;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc-700">;
               <h3 className="text - xl font - semibold mb - 4 text - green-400">Security & Compliance</h3>;
               <ul className="space - y-2 text - zinc-300">;
@@ -744,20 +893,27 @@ export default function ITServicesPage() {;
       </section>;
       {/* Call to Action */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600">;
         <div className="container mx-auto px-6 text-center">;
           <h2 className="text-4xl font-bold mb-6">Ready to Modernize Your IT Infrastructure?</h2>;
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className="py - 20 bg - gradient - to - r from - green - 600 to - blue-600">;
         <div className="container mx - auto px - 6 text-center">;
           <h2 className="text - 4xl font - bold mb-6">Ready to Modernize Your IT Infrastructure?</h2>;
           <p className="text - xl text - green - 100 mb - 8 max - w-2xl mx-auto">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             Let's discuss how our IT services can transform your technology landscape;
             improve efficiency, and drive business growth through digital innovation.;
           </p>;
           <div className="space-y-4">;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
               <a href="tel:+13024640950" className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors text-lg">;
@@ -779,6 +935,17 @@ export default function ITServicesPage() {;
             </div>;
             <p className="text - green - 100 text-sm">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center items-center">;
+              <a href="tel:+13024640950" className="bg - white text - green - 600 px - 8 py - 4 rounded - lg font - semibold hover:bg - green - 50 transition - colors text-lg">;
+                📞 Call +1 302 464 0950;
+              </a>;
+              <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 4 rounded - lg font - semibold hover:bg - white hover:text - green - 600 transition - colors text-lg">;
+                ✉️ Schedule IT Consultation;
+              </a>;
+            </div>;
+            <p className="text - green - 100 text-sm">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https: //ziontechgroup.com;
             </p>;
           </div>;

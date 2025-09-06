@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Get region flag based on country name (for demo purposes)
 
 <<<<<<< HEAD
@@ -21,8 +22,96 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
 =======
   const getRegionEmoji = (countryName: string | undefined): string => {
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+    if (!countryName) return "🌐",
+    
+    const emojiMap: Record<string string> = {
+      "United States": "🇺🇸",
+      "United Kingdom": "🇬🇧",
+      "Canada": "🇨🇦",
+      "Australia": "🇦🇺",
+      "Germany": "🇩🇪", 
+      "France": "🇫🇷",
+      "Japan": "🇯🇵",
+      "China": "🇨🇳",
+      "Brazil": "🇧🇷",
+      "India": "🇮🇳",
+      "Russia": "🇷🇺",
+      "Singapore": "🇸🇬",
+      "South Korea": "🇰🇷",
+      "South Africa": "🇿🇦",
+      // Default if no flag is found
+      "default": "🌐"
+    },
+    
+    return emojiMap[countryName] || "🌐"
+  },
+  
+  // Get response time estimate based on country
+  const getResponseTime = (countryName: string | undefined): string => {
+    if (!countryName) return "8-24 hours",
+    
+    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],
+    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],
+    
+    if (tier1.includes(countryName)) {
+      return "4 hours"
+    } else if (tier2.includes(countryName)) {
+      return "6 hours"
+    } else {
+      return "8-24 hours"
+    }
+  },
+  
+=======
+
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import Link from 'next/link',
+import { Badge } from "@/components/ui/badge";
+import {
+  Card
+  CardContent
+  CardFooter
+  CardHeader
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { Badge } from '@/components/ui/badge'
+import { Globe, Server, Clock, MapPin, Check } from 'lucide-react'
+import { CountryPricing } from "@/data/onsiteServicePricing";
+interface CountryServiceCardProps {
+  country: CountryPricing;
+  onSelect: (country: CountryPricing) => void;
+  onQuote?: (country: CountryPricing) => void;
+  isPopular?: boolean
+}
+export function CountryServiceCard({
+  country
+  onSelect
+  onQuote
+  isPopular
+}: CountryServiceCardProps) {
+  // Get region flag based on country name (for demo purposes)
+  const getRegionEmoji = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
+      isPopular 
+        ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple" 
+        : "bg-zion-blue-dark border-zion-blue-light"
+    }`}>
+      <CardHeader className="pb-2">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>
+            <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (!countryName) return "🌐",
     
     const emojiMap: Record<string string> = {
@@ -74,6 +163,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           <div className="flex items-center space-x-2">
             <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>
             <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -134,6 +224,10 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           <div className="flex items-center space-x-2">
             <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>
             <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
           {isPopular && (
             <Badge className='bg-zion-purple text-white border-none'>
@@ -151,6 +245,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -158,6 +253,8 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
         
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="space-y-2 text-zion-slate-light">
           <div className="flex items-start">
             <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />
@@ -167,12 +264,15 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
           <div className='flex items-start'>
             <MapPin className='h-4 w-4 mr-2 text-zion-purple mt-1' />
@@ -188,6 +288,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           </div>
         </div>
       </CardContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <CardFooter className="flex flex-col space-y-2">
@@ -225,6 +326,8 @@ import { Badge } from "@/components/ui/badge",;
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {;
   Card,;
@@ -237,9 +340,8 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
-<<<<<<< HEAD
-import { CountryPricing } from '@/data/onsiteServicePricing';
 
+<<<<<<< HEAD
 interface CountryServiceCardProps {;
   country: CountryPricing;
   onSelect: (country: CountryPricing) => void;
@@ -361,6 +463,8 @@ export function CountryServiceCard(): any ({;
             <Check className='h-4 w-4 mr-2 text-zion-purple mt-1' />;            <span>First hour included</span>;
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <span>First hour included</span>;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>;
@@ -445,5 +549,13 @@ export function CountryServiceCard(): any ({;
 
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   )
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  )
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

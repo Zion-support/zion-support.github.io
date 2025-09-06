@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -104,6 +105,8 @@ import {
 } from 'lucide-react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function MicroSaaS() {
   const title = 'Micro SaaS Solutions — Zion Tech Group';
   const description = 'Custom micro SaaS applications and software solutions tailored to your business needs. Scalable, secure, and innovative.';
@@ -118,6 +121,7 @@ export default function MicroSaaS() {
         'CRM and helpdesk integration',
         'Multi-language support and compliance',
         'Analytics and performance tracking'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -167,6 +171,9 @@ export default function MicroSaaS() {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       ],
       \"pricing\": \'$199 - $799/month\',
       \"delivery\": \'1-3 weeks\',
@@ -199,6 +206,7 @@ export default function MicroSaaS() {
       \"icon\": Cod e,
         \'Real-time sentiment analysis,Automated feedback categorization,Trend identification and reporting,Customer satisfaction scoring,Integration with review platforms,Actionable insights and recommendations\'
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -315,6 +323,8 @@ export default function MicroSaaS() {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       \"pricing\": \'$299 - $1,200/month\',
       \"delivery\": \'3-5 weeks\',
       \"category\": \'Development SaaS\';
@@ -556,6 +566,7 @@ export default function MicroSaaS() {;
       "pricing": '$299 - $1,200/month',
       "delivery": '3-5 weeks',
 <<<<<<< HEAD
+<<<<<<< HEAD
       "category": 'Development SaaS';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -669,6 +680,10 @@ export default function MicroSaaS() {;
       "category": 'Development SaaS';      \"pricing\": \'$299 - $1,200/month\',
       \"delivery\": \'3-5 weeks\',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      "category": 'Development SaaS';      \"pricing\": \'$299 - $1,200/month\',
+      \"delivery\": \'3-5 weeks\',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       "pricing": '$3,000 - $10,000/month',;
       "delivery": '4-6 weeks',;
       "category": 'Event SaaS';
@@ -908,6 +923,7 @@ export default function MicroSaaS() {;
       "category": 'Development SaaS';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -931,6 +947,8 @@ export default function MicroSaaS() {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       \"pricing\": \'$299 - $1,200/month\',
       \"delivery\": \'3-5 weeks\',
 
@@ -1011,6 +1029,7 @@ export default function MicroSaaS() {;
       \"delivery\": \'3-5 weeks\',;
       \"category\": \'Development SaaS\';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
@@ -1018,6 +1037,8 @@ export default function MicroSaaS() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 },
     {
       \"title\": \'Affiliate Marketing Tracking Platform\',
@@ -1035,6 +1056,7 @@ export default function MicroSaaS() {;
       \"icon\": Mail,
       \"features\": [\'Smart follow-up sequence creation and management,AI-powered personalization and timing optimization,Engagement tracking and response analysis,A/B testing for email campaigns,CRM integration and lead scoring,Compliance with email regulations (CAN-SPAM, GDPR)\'
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1075,11 +1097,14 @@ export default function MicroSaaS() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       \"pricing\": \'$99 - $499/month\',
       \"delivery\": \'2-3 weeks\',
       \"category\": \'Analytics SaaS\'
       "pricing": '$99 - $499/month',
       "delivery": '2-3 weeks',
+<<<<<<< HEAD
 <<<<<<< HEAD
       "category": 'Analytics SaaS'
 <<<<<<< HEAD
@@ -1131,6 +1156,9 @@ export default function MicroSaaS() {;
 =======
       "category": 'Analytics SaaS'    },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      "category": 'Analytics SaaS'    },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       \"title\": \'AI-Powered Password Manager\',
       \"description\": \'Intelligent password management with security monitoring and breach detection\',
@@ -1440,6 +1468,7 @@ export default function MicroSaaS() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1477,12 +1506,15 @@ export default function MicroSaaS() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       \"pricing\": \'$399 - $1,800/month\',
       \"delivery\": \'3-5 weeks\',
       category: \'LegalTech SaaS\'
       "pricing": '$399 - $1,800/month',
       "delivery": '3-5 weeks',
       "category": 'Translation SaaS'
+<<<<<<< HEAD
 <<<<<<< HEAD
       category: 'LegalTech SaaS'
 <<<<<<< HEAD
@@ -1534,6 +1566,9 @@ export default function MicroSaaS() {;
 =======
       category: 'LegalTech SaaS'    },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      category: 'LegalTech SaaS'    },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       \"title\": \'Intelligent Inventory Forecasting System\',
       \"description\": \'AI-driven inventory optimization with demand prediction and automated reordering\',
@@ -1623,6 +1658,7 @@ export default function MicroSaaS() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1655,6 +1691,8 @@ export default function MicroSaaS() {;
       \"pricing\": \'$2,000 - $8,000/month\',
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       \"delivery\": \'3-5 weeks\',
       \"category\": \'FleetTech SaaS\'
     }
@@ -1666,6 +1704,7 @@ export default function MicroSaaS() {;
     }
   ];
       "category": 'Education SaaS';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1690,6 +1729,8 @@ export default function MicroSaaS() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       \"pricing\": \'$2,000 - $8,000/month\',
       \"delivery\": \'3-5 weeks\',
       \"category\": \'FleetTech SaaS\'
@@ -2133,6 +2174,7 @@ export default function MicroSaaS() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -2180,6 +2222,9 @@ export default function MicroSaaS() {;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 },
     {
       \"title\": \'Smart Fitness & Wellness Coach\',
@@ -2191,10 +2236,13 @@ export default function MicroSaaS() {;
       \"delivery\": \'3-5 weeks\',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       \"category\": \'Fitness SaaS\';
 },
     {
@@ -2224,6 +2272,7 @@ export default function MicroSaaS() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 =======
@@ -2232,6 +2281,8 @@ export default function MicroSaaS() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 },;
     {;
       \"title\": \'Smart Fitness & Wellness Coach\',;
@@ -2261,6 +2312,7 @@ export default function MicroSaaS() {;
       ],;
       \"pricing\": \'$14 && 14.99 - $79 && 79.99/month\',;
       \"delivery\": \'3-5 weeks\',;
+<<<<<<< HEAD
 <<<<<<< HEAD
       \"category\": \'Pet Care SaaS\';
 <<<<<<< HEAD
@@ -2374,6 +2426,9 @@ export default function MicroSaaS() {;
 =======
       \"category\": \'Pet Care SaaS\';  const benefits = [{
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      \"category\": \'Pet Care SaaS\';  const benefits = [{
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       \"title\": \'Faster Development\',
       \"description\": \'Rapid prototyping and deployment\',
       \"icon\": Za p,
@@ -2627,6 +2682,7 @@ export default function MicroSaaS() {;
     </PageTransition>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2989,3 +3045,5 @@ import React from 'react'; import Head from 'next/head'; import Link from 'next/
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

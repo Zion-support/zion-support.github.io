@@ -1,10 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { KycProfile } from '../../../utils/kyc';
+import fs from 'fs';
+import path from 'path';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
@@ -91,8 +98,21 @@ function load(): Record<string, KycProfile> {
 =======
 
     return JSON.parse(raw)
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+const DATA_DIR = path.join(process.cwd(), 'datakyc');
+const FILE = path.join(DATA_DIR, 'profiles.json');
+
+function load(): Record<string, KycProfile> {
+  try {
+    const raw = fs.readFileSync(FILE, 'utf8');
+    return JSON.parse(raw);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch {
     return {};
   }
@@ -186,6 +206,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -208,3 +229,54 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 };
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+function save(db: Record<string, KycProfile>) {
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+  fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const db = load();
+  
+  if (req.method === 'GET') {
+    const profiles = Object.values(db);
+    return res.status(200).json({ ok: true, profiles });
+  }
+  
+  if (req.method === 'POST') {
+    const { userId, action, reason } = req.body as {
+      userId?: string;
+      action?: 'approve' | 'reject' | 'needs_more_info';
+      reason?: string;
+    };
+    if (!userId || !action)
+      return res.status(400).json({ error: 'Missing userId or action' });
+    const profile = db[userId];
+    if (!profile) return res.status(404).json({ error: 'Profile not found' });
+
+    const now = new Date().toISOString();
+    if (action === 'approve') profile.status = 'approved';
+    if (action === 'reject') profile.status = 'rejected';
+    if (action === 'needs_more_info') profile.status = 'needs_more_info';
+    profile.lastUpdatedAt = now;
+    profile.auditTrail.push({
+      at: now,
+      by: 'admin',
+      action: `admin_${action}`,
+      details: reason ? { reason } : undefined,
+    });
+
+    db[userId] = profile;
+    save(db);
+    return res.status(200).json({ ok: true, profile });
+  }
+
+  return res.status(405).json({ error: 'Method not allowed' });
+}
+  }
+  return res.status(405).json({ error: 'Method not allowed' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

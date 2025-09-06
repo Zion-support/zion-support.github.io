@@ -12,8 +12,12 @@ import { Badge } from '@/components/ui/badge',;
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog',;
 =======
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Image from 'next/image';
 import { PortfolioProject } from '@/types/resume';
 interface ProjectCardProps {
@@ -26,6 +30,20 @@ interface ProjectCardProps {
   project: PortfolioProject
   onEdit: (project: PortfolioProject,) => void
   onDelete: (projectId: string,) => void
+=======
+import { useState  } from 'react';
+import { Card, CardContent, CardFooter  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle  } from '@/components/ui/alert-dialog';
+import { Edit, Trash2, Github, Link, FileText } from 'lucide-react'
+import Image from 'next/image';
+import { PortfolioProject } from '@/types/resume';
+interface ProjectCardProps {
+  project: PortfolioProject;
+  onEdit: (project: PortfolioProject) => void;
+  onDelete: (projectId: string) => void
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 }
@@ -188,7 +206,10 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             src={project.image_url}
             alt={project.title}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 
@@ -208,6 +229,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           </div>
         )}
       </div>
+<<<<<<< HEAD
       
       <CardContent className="flex-grow pt-6">
         <div className="space-y-2">
@@ -223,6 +245,48 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
 =======
+=======
+
+      </div>;
+
+      <CardContent className='flex-grow pt-6'>;
+        <div className='space-y-2'>;
+          <h3 className='font-semibold text-lg'>{project && project.title}</h3>;
+
+          {project && project.description && (;
+            <p className='text-sm text-muted-foreground line-clamp-3'>;
+              {project && project.description}
+            </p>;
+=======
+className='object-cover'
+            loading='lazy'
+        ) : (
+          <div className='w-full h-full flex items-center justify-center bg-muted'>
+            <FileText className='h-12 w-12 text-muted-foreground/50' />
+          </div>
+        )}
+      </div>
+      <CardContent className='flex-grow pt-6'>
+        <div className='space-y-2'>
+          <h3 className='font-semibold text-lg'>{project.title}</h3>
+          {project.description && (
+            <p className='text-sm text-muted-foreground line-clamp-3'>
+              {project.description}
+            </p>
+          )}
+          {project.technologies && project.technologies.length > 0 && (
+            <div className='flex flex-wrap gap-1 mt-2'>
+              {project.technologies.map((tech, index) => (
+                <Badge key={index} variant='secondary' className='text-xs'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                  {tech}
+                </Badge>
+              ))}
+            </div>
+
+          )}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           {project && project.technologies && project && project.technologies.length > 0 && (;
             <div className='flex flex-wrap gap-1 mt-2'>;
@@ -260,6 +324,13 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
       </CardContent>
 =======
 
+=======
+        </div>
+      </CardContent>
+<CardFooter className='flex justify-between border-t bg-muted/40 p-4'>
+        <div className='flex gap-2'>
+          {project.github_url && (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             <a
               href={project && project.github_url}
               target='_blank'
@@ -286,6 +357,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             </Link>
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
           {project.demo_url && (;
             <a;
@@ -297,11 +369,29 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             >
               <Button variant="ghost" size="icon" aria-label="Live demo link">
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         </div>;
 
         <div className='flex gap-2'>;
 
+=======
+          {project.demo_url && (
+            <a
+              href={project.demo_url}
+              target='_blank'
+              rel='noopener noreferrer'
+              aria-label='Live demo'
+              title='Live demo'            >
+              <Button variant='ghost' size='icon' aria-label='Live demo link'>
+                <Link className='h-4 w-4' />
+              </Button>
+            </a>
+          )}
+        </div>
+<div className='flex gap-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <Button
             variant='ghost'
             size='icon'
@@ -345,8 +435,12 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             <AlertDialogTitle>Delete Project</AlertDialogTitle>
             <AlertDialogDescription>
 <<<<<<< HEAD
+<<<<<<< HEAD
               Are you sure you want to delete this project? This action cannot be undone.
 =======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             aria-label='Delete project';
           >;
@@ -459,15 +553,25 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+Are you sure you want to delete this project? This action cannot
+              be undone.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 
@@ -476,7 +580,17 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 =======
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+=======
+<AlertDialogAction
+              onClick={handleDelete}
+              className='bg-destructive text-destructive-foreground'
+            >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Delete
             </AlertDialogAction>
           </AlertDialogFooter>
@@ -491,6 +605,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
       </AlertDialog>
     </Card>
+<<<<<<< HEAD
 
               className='bg-destructive text-destructive-foreground'>            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">;
             <AlertDialogCancel > Cancel</AlertDialogCancel>;
@@ -518,4 +633,11 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 }
     </Card>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

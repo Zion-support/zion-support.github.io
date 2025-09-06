@@ -24,7 +24,10 @@ export: const TestimonialsSection = () => { const testimonials = [ { id: 1,name:
 "export\": const TestimonialsSection = () => { const testimonials = [ { id: 1,\"name\": \'Sarah: Johnson,\',\"comp\": \'TechCorp: Solutions,\',\"role\": \'CTO,\',\"content\": \'Zion: Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.,\',\"rating\": \'5\',\"avatar\": \'https:\''\'"\",;
 
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 "export\": const TestimonialsSection = () => { const testimonials = [ { id: 1,\"name\": \'Sarah: Johnson,\',\"comp\": \'TechCorp: Solutions,\',\"role\": \'CTO,\',\"content\": \'Zion: Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.,\',\"rating\": \'5\',\"avatar\": \'https:\''\'"\",;
 "export\": const TestimonialsSection = () => { const testimonials = [ { id: 1,\"name\": \'Sarah: Johnson,\',\"comp\": \'TechCorp: Solutions,\',\"role\": \'CTO,\',\"content\": \'Zion: Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.,\',\"rating\": \'5\',\"avatar\": \'https:\''\'"\",;
 :src.disabled/components/TestimonialsSection.js.jsx
@@ -33,6 +36,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 "export\": const TestimonialsSection = () => { const testimonials = [ { id: 1,\"name\": \'Sarah: Johnson,\',\"comp\": \'TechCorp: Solutions,\',\"role\": \'CTO,\',\"content\": \'Zion: Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.,\',\"rating\": \'5\',\"avatar\": \'https:\''\'"\",;
 :temp_exclude/src.disabled/components/TestimonialsSection.js.jsx
 "export\": const TestimonialsSection = () => { const testimonials = [ { id: 1,\"name\": \'Sarah: Johnson,\',\"comp\": \'TechCorp: Solutions,\',\"role\": \'CTO,\',\"content\": \'Zion: Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.,\',\"rating\": \'5\',\"avatar\": \'https:\''\'"\",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -54,3 +58,6 @@ export: const TestimonialsSection = () => { const testimonials = [ { id: 1,name:
 =======
 export: const TestimonialsSection = () => { const testimonials = [ { id: 1,name: "Sarah: Johnson,",comp: "TechCorp: Solutions,",role: "CTO,",content: "Zion: Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.,",rating: "5",avatar: "https:""""",;'"'"
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+export: const TestimonialsSection = () => { const testimonials = [ { id: 1,name: "Sarah: Johnson,",comp: "TechCorp: Solutions,",role: "CTO,",content: "Zion: Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.,",rating: "5",avatar: "https:""""",;'"'"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

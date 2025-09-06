@@ -3,9 +3,12 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {;
   Card,;
@@ -29,6 +32,7 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
+<<<<<<< HEAD
 <<<<<<< HEAD
   CardFooter,;
 <<<<<<< HEAD
@@ -289,6 +293,22 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         <div className="flex justify-between items-start">;
           <div>;        {match.matched_skills?.length > 0 && (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  CardFooter,;  onApply: (matchId: string, jobId: string) => void;
+  onDecline: (matchId: string) => void;
+  showApplied?: boolean
+}
+
+  if (!job) return null;export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
+  const job = match.job,
+  
+  if (!job) return null,
+    return (  return (
+    <Card className="overflow-hidden border-l-4 border-l-blue-500">;
+      <CardHeader className="p-4 pb-2">;
+        <div className="flex justify-between items-start">;
+          <div>;        {match.matched_skills?.length > 0 && (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="mb-3">
             <p className="text-xs text-muted-foreground mb-1">
               Matched skills:
@@ -296,6 +316,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             <div className="flex flex-wrap gap-1">
               {match.matched_skills.slice(0, 5).map((skill, i) => (
                 <Badge key={i} variant="secondary" className="text-xs">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                   {skill}
@@ -328,6 +349,9 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -362,6 +386,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         </div>;
       </CardHeader>;
       <CardContent className="p-4 pt-0">;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">;
 <<<<<<< HEAD
@@ -480,6 +505,9 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 =======
         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">;          </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        <p className="text-sm text-muted-foreground line-clamp-2 mb-3">;          </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="flex items-center text-sm">
             <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />
             Due: {format(new Date(job.deadline), "MMM d, yyyy")}
@@ -489,6 +517,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
       <CardFooter className="p-4 pt-0">
 
         {match.status === 'applied' || showApplied ? (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -604,6 +633,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <Button
               className="flex-1"
               onClick={() => onApply(match && match.id, job && job.id)}
@@ -617,6 +648,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               onClick={() => onApply(match.id, job.id)}
             >
               Apply Now
+<<<<<<< HEAD
 <<<<<<< HEAD
             </Button>
 <<<<<<< HEAD
@@ -835,3 +867,12 @@ return (<Card className="overflow-hidden border-l-4 border-l-blue-500" > <CardHe
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            </Button>              Decline;
+            </Button>;
+          </div>;
+        )}
+      </CardFooter>;
+    </Card>;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

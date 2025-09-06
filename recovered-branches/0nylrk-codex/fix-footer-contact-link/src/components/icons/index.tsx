@@ -1,6 +1,7 @@
 
     const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
 <<<<<<< HEAD
+<<<<<<< HEAD
     return <LucideIcon {...props} />;
   };
 
@@ -124,6 +125,11 @@ const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIco
 };
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    return <LucideIcon {...props} />
+};
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   IconComponent.displayName = aliasName;
   return IconComponent
 }
@@ -132,6 +138,7 @@ const iconExports: Record<string, React.FC<IconProps>> = {}
 // Generate icon exports
 Object.entries(iconAliases).forEach(([alias, lucideName]) => {
   if (LucideIcons[lucideName]) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     iconExports[alias] = createIconComponent(alias, lucideName)
 <<<<<<< HEAD
@@ -481,6 +488,9 @@ export const {
 =======
     iconExports[alias] = createIconComponent(alias, lucideName)// Alias for missing icons or for icons with different names;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    iconExports[alias] = createIconComponent(alias, lucideName)// Alias for missing icons or for icons with different names;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const iconAliases: Record<string, keyof typeof LucideIcons> = {;
   // Grid views;
   LayoutGrid: 'LayoutGrid',;
@@ -577,6 +587,7 @@ Object && Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
     iconExports[alias] = createIconComponent(alias, 'HelpCircle');
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -611,6 +622,9 @@ export const {;
 =======
 });  LayoutGrid;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+});  LayoutGrid;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   List;
   Zap;
   Settings;
@@ -873,7 +887,10 @@ export * from 'lucide-react';
 // Generate icon exports // Also export all original icons from lucide-react export * from 'lucide-react';
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

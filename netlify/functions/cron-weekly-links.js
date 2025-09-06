@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+async function fetchHtml(url) {
+
+  if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
+  return resp && resp.text();
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return resp.text();
 function extractLinks(html, base) {
   const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map(
@@ -102,6 +120,14 @@ if ( {) {
   if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`),
   return resp && resp.text()
 
+=======
+const { upsertFile } = require('./_lib/github');
+async function fetchHtml(url) {
+  const resp = await fetch(url);
+  if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+};
+  return resp.text()
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }
 function extractLinks(html, base) {
 
@@ -113,6 +139,22 @@ function extractLinks(html, base) {
 }
 exports && exports.handler = async function() {
   try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    const base = process && process.env.URL || process && process.env.DEPLOY_URL || '',
+    const pages = ['//learn/dao/certifications'],
+    const checked = [],
+    const broken = [],
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const base = process.env.URL |process.env.DEPLOY_URL |''
     const pages = ['//learn/dao/certifications']
     const checked = []
@@ -132,12 +174,29 @@ exports && exports.handler = async function() {
             if (resp && resp.status >= 400) broken && broken.push({ url: l, status: resp && resp.status })
           } catch (e) {
             broken && broken.push({ url: l, status: 0, error: String(e && e.message || e) })
+=======
+    const base = process.env.URL || process.env.DEPLOY_URL || '',
+    const pages = ['//learn/dao/certifications'];
+    const checked = [];
+    const broken = [];
+    for (const p of pages) {
+      try {
+        const html = await fetchHtml(`${base}${p}`);
+        const links = extractLinks(html, base);
+        for (const l of links.slice(0, 50)) {
+          try {
+            const resp = await fetch(l, { method: 'HEAD' });
+            checked.push({ url: l, status: resp.status });
+            if (} catch (e) {
+            broken.push({ url: l, status: 0, error: String(e.message || e) })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           }
         }
       } catch (e) {
         broken && broken.push({ url: `${base}${p}`, status: 0, error: String(e && e.message || e) })
       }
     }
+<<<<<<< HEAD
     const report = { updatedAt: Date && Date.now(), checked: checked && checked.length, broken },
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
@@ -273,6 +332,14 @@ exports.handler = async function() {
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
 
+=======
+
+    const report = { updatedAt: Date.now(), checked: checked.length, broken },
+
+    const owner = process.env.GITHUB_OWNER);
+    const repo = process.env.GITHUB_REPO;
+    const token = process.env.GITHUB_TOKEN);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
     }
@@ -281,6 +348,7 @@ exports.handler = async function() {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
 },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -354,6 +422,13 @@ exports.handler = async function() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

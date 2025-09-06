@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -66,6 +67,8 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <UltraAdvancedFuturisticBackground>;
       <NextHead>;
         <title>;
@@ -106,7 +109,10 @@ import Button from '../components/ui/Button';
                   ];
                 ).map((feat, i) => (;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200'>;
@@ -116,6 +122,10 @@ import Button from '../components/ui/Button';
                 ))}
 import {innovativeAIServices} from '../data/innovative-ai-services';
 export default function AIFinancialRiskPage() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const service = innovativeAIServices.find(s =>
     (s.link || '').endsWith('/ai-financial-risk');
   );
@@ -131,6 +141,12 @@ export default function AIFinancialRiskPage() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   },
+<<<<<<< HEAD
+=======
+=======
+  const service = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <UltraAdvancedFuturisticBackground>
       <NextHead>
@@ -149,31 +165,63 @@ export default function AIFinancialRiskPage() {
 }
             </h1>
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service?.tagline || 'Real-time risk scoring, fraud detection, and stress scenarios with explainable AI.'}</p>
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
             <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>
+<<<<<<< HEAD
 
+=======
+              <p className="text-slate-300 mb-6">{service?.description || 'Credit risk, market risk, model validation, and anti-fraud analytics powered by ML.'}</p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {(service?.features?.slice(0, 12) || ['Credit/market riskAnomaly detectionExplainable AIStress testingModel governanceReal-time alerts']).map((feat, i) => (
+                  <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-cyan-400 mt-0.5" /><span>{feat}</span></li>
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit">
               <div className="flex items-end justify-between mb-3">
                 <div>
+<<<<<<< HEAD
 
                 </div>
               </div>
+=======
+                  <div className='text-3xl font-bold text-white'>
+                    {service?.price |'Custom pricing'}
+                    <span className='text-slate-400 text-base'>
+                      {service?.period |''}
+                    </span>
+                  </div>
+                  <div className="text-3xl font-bold text-white">{service?.price || 'Custom pricing'}<span className="text-slate-400 text-base">{service?.period || ''}</span></div>
+                </div>
+              </div>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Discuss Controls</Button>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{contactInfo.address}</span></div>
+<<<<<<< HEAD
 
               </div>
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+              </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
               </ul>;
             </div>;
@@ -247,18 +295,48 @@ export default function AIFinancialRiskPage() {
               </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+              <Button
+                href='/contact'
+                variant='quantum'
+                size='lg'
+                className='w-full'
+              >
+                Discuss Controls
+              </Button>
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>
+                <div className='flex items-center space-x-2'>
+                  <Phone className='w-4 h-4 text-cyan-400' />
+                  <span>{contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <Mail className='w-4 h-4 text-purple-400' />
+                  <span>{contactInfo.email}</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <MapPin className='w-4 h-4 text-green-400' />
+                  <span className='text-xs'>{contactInfo.address}</span>
+                </div>
+              </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </div>              </div>;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
                 className='w-full'>;
@@ -278,14 +356,18 @@ export default function AIFinancialRiskPage() {
                   <span className='text-xs'>{contactInfo && contactInfo.address}</span>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -328,6 +410,8 @@ export default function AIFinancialRiskPage() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 import NextHead from 'next/head';
 import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';
@@ -381,6 +465,9 @@ export default function AIFinancialRiskPage(req, res) {
                   <div className="text-3xl font-bold text-white">{service?.price || 'Custom pricing'}<span className="text-slate-400 text-base">{service?.period || ''}</span></div>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div className='flex items - center space - x-2'>;
                   <Mail className='w - 4 h - 4 text - purple - 400' />;
                   <span>{contact_info.email}</span>;
@@ -389,6 +476,7 @@ export default function AIFinancialRiskPage(req, res) {
                   <MapPin className='w - 4 h - 4 text - green - 400' />;
                   <span className='text - xs'>{contact_info.address}</span>;
                 </div>              </div>;
+<<<<<<< HEAD
 =======
               </div>;
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Discuss Controls</Button>;
@@ -399,10 +487,13 @@ export default function AIFinancialRiskPage(req, res) {
               </div>;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -414,12 +505,15 @@ export default function AIFinancialRiskPage(req, res) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -432,3 +526,8 @@ export default function AIFinancialRiskPage(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

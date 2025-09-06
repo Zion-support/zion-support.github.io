@@ -1,10 +1,22 @@
+<<<<<<< HEAD
 =======
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState } from "react";
+import Tree, { TreeNode } from "../../components/ui/Tree";
+=======
+  nodes: TreeNode[];
+  status: { gitConnected: boolean, gitBranch?: string }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   nodes: TreeNode[]
 status: {
   gitConnected: boolean, gitBranch?: string
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import Tree, { TreeNode } from '../../components/ui/Tree';
 <<<<<<< HEAD
@@ -23,6 +35,13 @@ export default function DevTreePage() {
   const [git, setGit] = useState<ApiResponse["status"] | null>(null),
   const [adminToken, setAdminToken] = useState<string>(""),
 =======
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
+import Tree, { TreeNode } from '../../components/ui/Tree';
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useState } from 'react';
 
 
@@ -31,6 +50,7 @@ import React, { useEffect, useState } from 'react';
 
 import Tree, { TreeNode } from '../../components / ui / Tree';
 interface ApiResponse {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   nodes: TreeNode[],
@@ -67,17 +87,30 @@ import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ApiResponse {
   nodes: TreeNode[],
   status: { gitConnected: boolean, gitBranch?: string }
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [nodes, setNodes] = useState<TreeNode[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [git, setGit] = useState<ApiResponse['status'] | null>(null);
   const [adminToken, setAdminToken] = useState<string>('');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+export default function DevTreePage() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  const [nodes, setNodes] = useState<TreeNode[] | null>(null);
+  const [error, setError] = useState<string | null>(null);
+const [git, setGit] = useState<ApiResponse['status'] | null>(null);
+  const [adminToken, setAdminToken] = useState<string>('');
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React, { useEffect, useState } from "react",
 import Tree, { TreeNode } from "../../components/ui/Tree",
@@ -99,6 +132,7 @@ export default function DevTreePage() {
   const [git, setGit] = useState<ApiResponse["status"] | null>(null),
   const [adminToken, setAdminToken] = useState<string>(""),
   const fetchTree = async (token?: string) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     try {
 
@@ -125,6 +159,28 @@ export default function DevTreePage() {
     try {
       const resp = await fetch('/api/dev/source-map', {
         method: 'POST'
+=======
+=======
+      setError(e.message || 'Failed to load');
+    }
+  };
+
+  useEffect(() => {
+const stored = localStorage.getItem('ADMIN_TOKEN') || '';
+    setAdminToken(stored);
+    fetchTree(stored);
+  }, []);
+  const handleSaveToken = () => {
+    localStorage.setItem('ADMIN_TOKEN', adminToken);
+    fetchTree(adminToken);
+  };
+
+  const onDeploy = async (p: string) => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    try {
+const resp = await fetch('/api/dev/source-map', {
+        method: 'POST',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         headers: {
           'Content-Type': 'application/json'
           'x-admin-token': adminToken
@@ -137,15 +193,23 @@ export default function DevTreePage() {
       }
       await fetchTree(adminToken);
     } catch (e: any) {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {error && <div className="mb-3 text-sm text-red-600">{error}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const fetchTree = async (token?: string) => {;
     try {;
       const resp = await fetch('/api/dev/source-map', {;
@@ -190,13 +254,59 @@ export default function DevTreePage() {
     } catch (e: any) {;
       setError(e && e.message || 'Deploy failed');    }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {nodes ? (
         <div className="rounded border p-3 bg-white">
+=======
+      {nodes ? (
+        <div className="rounded border p-3 bg-white">
+=======
+      setError(e.message || 'Deploy failed');
+    }
+  };
+
+  return (
+<div className='p-6 max-w-5xl mx-auto'>
+  return (
+    <div className='p-6 max-w-5xl mx-auto'>
+      <div className='flex items-center gap-4 mb-4'>
+        <h1 className='text-xl font-semibold'>Zion OS Source Tree</h1>
+        {git && (
+          <div className='text-sm text-gray-600'>
+            Git:{' '}
+            {git.gitConnected
+              ? `connected (${git.gitBranch})`
+              : 'not connected'}
+          </div>
+        )}
+        <div className='ml-auto flex items-center gap-2'>
+          <input
+            className='border rounded px-2 py-1 text-sm'
+            placeholder='Admin token'
+            value={adminToken}
+            onChange={e => setAdminToken(e.target.value)}
+          />
+          <button
+            className='px-3 py-1 text-sm bg-blue-600 text-white rounded'
+            onClick={handleSaveToken}
+          >
+            Save Token
+          </button>
+        </div>
+      </div>
+
+{error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
+
+      {nodes ? (
+        <div className='rounded border p-3 bg-white'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Tree nodes={nodes} onDeploy={onDeploy} />
         </div>
       ) : (
         <div>Loading...</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       )}
@@ -208,17 +318,25 @@ export default function DevTreePage() {
             onClick={handleSaveToken}>            Save Token;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+            onClick={handleSaveToken}>            Save Token;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 }
 }
 }
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
 interface ApiResponse {;
@@ -332,13 +450,17 @@ export default function DevTreePage(req, res) {
           <button className="px-3 py-1 text-sm bg-blue-600 text-white rounded" onClick={handleSaveToken}>;
             Save Token;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </button>;
         </div>;
       </div>;
 
       {error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </button>;
@@ -346,22 +468,31 @@ export default function DevTreePage(req, res) {
       </div>;
       {error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {nodes ? (;
         <div className='rounded border p-3 bg-white'>          <Tree nodes={nodes} onDeploy={onDeploy} />;
         </div>;
       ) : (;
         <div>Loading...</div>;
       )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </div>;
   );
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
   )
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       set_error (e.message || 'Failed to load');    }
   }
 ;
@@ -430,18 +561,22 @@ if ( {) {
     </div>);
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -452,3 +587,8 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    </div>
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

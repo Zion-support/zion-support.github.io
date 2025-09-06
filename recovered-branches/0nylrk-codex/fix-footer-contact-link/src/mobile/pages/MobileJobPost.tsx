@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -18,6 +21,7 @@ import {Label} from "@/components/ui/label";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Zap, ChevronLeft, ChevronRight} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
+<<<<<<< HEAD
 import {Card, CardContent} from "@/components/ui/card";
 <<<<<<< HEAD
 type JobPostStep = "details" | "requirements" | "budget" | "preview";
@@ -70,6 +74,9 @@ import {Zap, ChevronLeft, ChevronRight} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
 import {Card, CardContent} from "@/components/ui/card";import React, { useState } from "react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {Card, CardContent} from "@/components/ui/card";import React, { useState } from "react",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { Button } from "@/components/ui/button",
@@ -92,6 +99,7 @@ type JobPostStep = "details" | "requirements" | "budget" | "preview",
 export function MobileJobPost() {;
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
 export function MobileJobPost() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
@@ -264,6 +272,10 @@ export function MobileJobPost() {;
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
     const goToNextStep = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
+    const goToNextStep = () => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (currentStep === "details") {
       setCurrentStep("requirements");
     } else if (currentStep === "requirements") {
@@ -489,6 +501,7 @@ function DetailsStep() {
   const removeSkill = (skill: string) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     setSkills(skills.filter(s => s !== skill))
   },
   
@@ -502,6 +515,11 @@ function DetailsStep() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+    setSkills(skills.filter((s) => s !== skill))
+};
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
@@ -547,9 +565,12 @@ function DetailsStep() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 function RequirementsStep() {;
   const [skills, setSkills] = useState<string[]>([;
@@ -566,8 +587,8 @@ function RequirementsStep() {;
   };
 
   const removeSkill = (skill: string) => {;
-    setSkills(skills && skills.filter(s => s !== skill));
-  };
+    setSkills(skills && skills.filter(s => s !== skill))
+};
 
   return (
     <div className="space-y-4">;
@@ -621,6 +642,7 @@ function RequirementsStep() {
     }
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1">;
+<<<<<<< HEAD
               {skill}
 <<<<<<< HEAD
               <button;
@@ -792,6 +814,8 @@ function RequirementsStep() {
     }
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1">;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {skill}          rows={3}
         />
       </div>

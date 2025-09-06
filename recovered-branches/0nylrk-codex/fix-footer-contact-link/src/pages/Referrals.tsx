@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -9,6 +10,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { useReferrals  } from '@/hooks/useReferrals';
@@ -25,7 +28,10 @@ import { toast  } from '@/hooks/use-toast';
 import { Share, Users  } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 export default function ReferralsPage() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useEffect} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {useReferrals} from '@/hooks / useReferrals';
@@ -42,18 +48,24 @@ import {toast} from '@/hooks / use - toast';
 import {Share, Users} from 'lucide-react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {use_navigate} from 'react-router-dom';
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
   const {;
     isLoading;
     referralCode;import {use_navigate} from 'react-router-dom';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default /**
  * ReferralsPage - Function description
  */
@@ -66,6 +78,7 @@ function ReferralsPage() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -73,6 +86,8 @@ function ReferralsPage() {
 import { useEffect  } from 'react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useAuth  } from '@/hooks/useAuth';
 import { useReferrals  } from '@/hooks/useReferrals';
 import { ReferralStats  } from '@/components/referrals/ReferralStats';
@@ -114,6 +129,7 @@ import {Share, Users} from 'lucide-react';
     stats;
     getReferralLink;
     copyReferralLink;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     shareOnSocialMedia} = useReferrals();
@@ -162,6 +178,9 @@ export default function ReferralsPage() {;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useEffect } from 'react',
 import { useAuth } from '@/hooks/useAuth',
 import { useReferrals } from '@/hooks/useReferrals',
@@ -189,6 +208,7 @@ export default function ReferralsPage() {
     copyReferralLink,
     shareOnSocialMedia} = useReferrals(),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -273,6 +293,8 @@ export default function ReferralsPage() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   useEffect(() => {;
     if (!isAuthenticated) {;
       toast({;
@@ -286,6 +308,7 @@ export default function ReferralsPage() {
 
   const referralLink = getReferralLink(),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -317,6 +340,8 @@ export default function ReferralsPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useReferrals } from '@/hooks/useReferrals',;
@@ -399,6 +424,7 @@ export default function ReferralsPage() {;
           </Tabs>;
         </div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="space-y-6">;
 <<<<<<< HEAD
@@ -555,3 +581,8 @@ return (<div className="container max-w-7xl py-10" > <div className="mb-8 flex f
         <div className="space-y-6">;
         <div className="space-y-6">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        <div className="space-y-6">;;
+        <div className="space-y-6">;
+        <div className="space-y-6">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

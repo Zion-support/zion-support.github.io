@@ -1,17 +1,21 @@
 import useSWR from 'swr';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export function useCurrentUser() {
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function useCurrentUser() {
 
 export function useCurrentUser() {;
 
 export function useCurrentUser() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -20,6 +24,8 @@ export function useCurrentUser() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { data, error, mutate } = useSWR('/api/auth/me', fetcher);
   return {
     user: data?.user |null
@@ -35,10 +41,16 @@ export /**
 function useCurrentUser() {
   const { data, error, mutate } = useSWR ('/api / auth / me', fetcher);
   return {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     user: data?.user || null,
     loading: !data && !error,
     error,
     mutate,
+<<<<<<< HEAD
   }
     loading: !data && !error;
 <<<<<<< HEAD
@@ -71,3 +83,16 @@ export function useCurrentUser() {
     mutate}
 }
 }
+=======
+<<<<<<< HEAD
+  }
+    loading: !data && !error;
+    mutate}
+}
+}
+=======
+  };
+    mutate}
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 import { useState } from 'react';
 import {useState} from 'react';
 =======
@@ -20,6 +19,11 @@ import {useState} from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import {useState} from 'react';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function useAuthStatus() {
   // Mock authenticated status  // Mock user details
   const [userDetails, setUserDetails] = useState({
@@ -51,6 +55,7 @@ export function useAuthStatus() {
     handleToggleSave;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     toggleAuth
 <<<<<<< HEAD
   }
@@ -68,6 +73,8 @@ export function useAuthStatus() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from 'react';
 export /**
  * useAuthStatus - Function description
@@ -131,6 +138,7 @@ if ( {) {
   }
 }  }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function useAuthStatus() {;
   // Mock authenticated status;
@@ -204,3 +212,5 @@ toggleAuth
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

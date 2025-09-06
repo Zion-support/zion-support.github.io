@@ -3,6 +3,7 @@
 import type { UserProfile } from "@/types/auth",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import type { UserProfile } from "@/types/auth",
@@ -35,6 +36,8 @@ export interface SupabaseUser {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string,
   email?: string | null;
 }
@@ -95,6 +98,7 @@ export interface SupabaseUser {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -102,3 +106,6 @@ export interface SupabaseUser {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

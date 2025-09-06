@@ -27,10 +27,15 @@ import { TALENT_PROFILES } from '../data/talent';
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function RequestToHirePage() {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function RequestToHirePage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const router = useRouter();
@@ -42,6 +47,7 @@ export default function RequestToHirePage() {;
 <<<<<<< HEAD
     }
 
+<<<<<<< HEAD
           ...form;
           budget: normalizedBudget,
           talentSlug: selected?.slug || null})}),
@@ -49,6 +55,8 @@ export default function RequestToHirePage() {;
 
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
@@ -81,8 +89,17 @@ export default function RequestToHirePage() {;
   description: ''}),;
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<null | { id: string, message: string }>(null),;
+=======
+  const router = null;
+  });
+  const [submitting, setSubmitting] = useState(false);
+  const [result, setResult] = useState<null | { id: string; message: string }>(
+    null
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [error, setError] = useState<string | null>(null);
       setError('Please fill in name, email, and description.');
+<<<<<<< HEAD
       return;    }      return;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       const data = await res.json();
@@ -107,6 +124,42 @@ export default function RequestToHirePage() {;
           Confirmation ID: {result && result.id}
         </div>;
       </div>;
+=======
+return;
+    }
+    const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '');
+    setSubmitting(true);
+    try {
+      const res = await fetch('/api/requests/create', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+...form,
+          budget: normalizedBudget,
+          talentSlug: selected?.slug || null,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error |'Failed to submit');
+      setResult({ id: data.id, message: 'Request submitted successfully.' });
+    } catch (err: any) {
+      setError(err.message |'Something went wrong');
+    } finally {
+      setSubmitting(false);
+    }
+  }
+  if (result) {
+    return (
+<div className='max-w-xl mx-auto py-12'>
+        <h1 className='text-2xl font-semibold mb-2'>Thanks!</h1>
+        <p className='text-gray-600 mb-4'>
+          We received your request. We will notify the appropriate team.
+        </p>
+        <div className='text-sm text-gray-500'>
+          Confirmation ID: {result.id}
+        </div>
+      </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     );
   }
   return (
@@ -164,6 +217,7 @@ export default function RequestToHirePage() {;
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <button
           disabled={submitting}
+<<<<<<< HEAD
           className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting…' : 'Submit Request'}      </div>;
     );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -354,6 +408,7 @@ if ( {) {
       </form>;
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>
     )
   }
@@ -488,10 +543,16 @@ if ( {) {
         {error && <div className="text-sm text-red-600">{error}</div>}
         <button disabled={submitting} className="px-4 py-2 rounded bg-black text-white">
 
+=======
+=======
+          className='px-4 py-2 rounded bg-black text-white'
+        >
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {submitting ? 'Submitting…' : 'Submit Request'}
         </button>
       </form>
     </div>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   )
@@ -501,3 +562,8 @@ if ( {) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

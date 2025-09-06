@@ -1,5 +1,35 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  }
+import { ShoppingCart } from 'lucide-react';import { useAuth } from '@/hooks/useAuth';import { ShoppingCart } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { LoginModal } from '@/components/auth/LoginModal';
+
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { useSelector  } from 'react-redux';
+import Link from 'next/link',
+import type { RootState } from '@/store';
+import { ShoppingCart } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { LoginModal } from '@/components/auth/LoginModal';
+export function CartDrawer() {
+  const items = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    if (!isAuthenticated) {
+      e.preventDefault()
+      setLoginOpen(true)
+    }
+  }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import { useSelector } from 'react-redux',;
 import Link from 'next/link',;
@@ -42,6 +72,7 @@ import { LoginModal } from '@/components/auth/LoginModal';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+<<<<<<< HEAD
   }
 import React from 'react',;
 import { useSelector } from 'react-redux',;
@@ -64,11 +95,21 @@ export function CartDrawer() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <Link href="/cart" aria-label="Cart" className="relative p-1" onClick={handleClick}>
         <ShoppingCart className="h-5 w-5 text-foreground hover:text-primary" />
         {count > 0 && (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 <<<<<<< HEAD
           <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
@@ -87,10 +128,19 @@ export function CartDrawer() {;
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
+=======
+          <span className='absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             {count}
 
           </span>
         )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -127,5 +177,16 @@ export function CartDrawer() {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      </Link>
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+    </>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

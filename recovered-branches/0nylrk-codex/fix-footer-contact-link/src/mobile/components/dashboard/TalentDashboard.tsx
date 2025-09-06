@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
@@ -9,6 +10,8 @@ import {ChevronRight, FileText, Image, Clock, Zap, BookOpen} from "lucide-react"
 import {Link} from "react-router-dom";
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -17,6 +20,7 @@ import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-reac
 <<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react",
+<<<<<<< HEAD
 import { Link } from "react-router-dom",
 =======
 
@@ -50,6 +54,9 @@ import { Link } from "react-router-dom";
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react",
 import { Link } from "react-router-dom",export function TalentDashboard() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Link } from "react-router-dom",export function TalentDashboard() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-6 px-4 pb-24">
       <section>
@@ -273,6 +280,9 @@ import { Link } from "react-router-dom",export function TalentDashboard() {
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 }
 import React from "react",;
@@ -560,5 +570,9 @@ import { Link } from "react-router-dom";
         </Card>;
       </section>;
     </div>);
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

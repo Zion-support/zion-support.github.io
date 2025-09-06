@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -29,6 +30,8 @@ interface CTAButtonProps {href: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 export /**
  * CTAButton - Function description
@@ -47,6 +50,7 @@ function CTAButton() {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const classes = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${class_name}`;
   return (
@@ -61,6 +65,8 @@ function CTAButton() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -91,16 +97,22 @@ export function CTAButton({;
     small: "px-4 py-2 text-sm",;
     medium: "px-6 py-3 text-base",;
 <<<<<<< HEAD
+<<<<<<< HEAD
     large: "px-8 py-4 text-lg";
   };
 =======
     large: "px-8 py-4 text-lg"
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    large: "px-8 py-4 text-lg"
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   return (;
     <Link;
       href={href} ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -121,6 +133,8 @@ export function CTAButton({;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className={classes}
       on_click={on_click}
       role="button";

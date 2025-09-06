@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -14,10 +15,13 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Button} from "./ui/button";
 import {Input} from "./ui/input";
 import {GradientHeading} from "./GradientHeading";
 import {useState} from "react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function QuoteFormSection() {;
 <<<<<<< HEAD
@@ -36,6 +40,9 @@ export function QuoteFormSection() {
 =======
 export function QuoteFormSection() {;  const [isSubmitted, setIsSubmitted] = useState(false);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function QuoteFormSection() {;  const [isSubmitted, setIsSubmitted] = useState(false);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [isSubmitting, setIsSubmitting] = useState(false);
 import { Button } from "./ui/button",
 import { Input } from "./ui/input",
@@ -50,6 +57,7 @@ import { useState } from "react",
     e && e.preventDefault();
     setIsSubmitting(true);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -77,6 +85,8 @@ import { useState } from "react";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function QuoteFormSection() {
   const [isSubmitted, setIsSubmitted] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -110,6 +120,7 @@ export function QuoteFormSection() {
     e.preventDefault();
     setIsSubmitting(true);
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -121,6 +132,8 @@ export function QuoteFormSection() {
     // Simulate form submission
     setTimeout(() => {
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <section className="py-20 bg-zion-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -178,12 +191,15 @@ export function QuoteFormSection() {
                   </label>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     // Simulate form submission;
     setTimeout(() => {;
@@ -200,6 +216,7 @@ export function QuoteFormSection() {
             Request your instant commercial proposal and discover how Zion can revolutionize your IT operations;
           </p>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -268,6 +285,8 @@ export function QuoteFormSection() {
                   <Input
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     id="name"
                     type="text"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
@@ -315,6 +334,7 @@ export function QuoteFormSection() {
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                       />
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -336,6 +356,8 @@ export function QuoteFormSection() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
 import { Button } from "./ui/button",;
 import { Input } from "./ui/input",;
@@ -352,12 +374,17 @@ export function QuoteFormSection() {;
       setIsSubmitting(false);
       setIsSubmitted(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
     }, 1000);
   };
 =======
     }, 1000)
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }, 1000)
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (;
     <section className="py-20 bg-zion-blue">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
@@ -459,6 +486,7 @@ export function QuoteFormSection() {;
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-2">;
                   {["AI Products/Services", "IT Equipment", "Server Solutions", "Storage Solutions", "Networking", "24/7 Support", "Recycling Services"].map((item, index) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div key={index} className="flex items-center">;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -498,6 +526,9 @@ export function QuoteFormSection() {;
 =======
                     <div key={index} className="flex items-center">;                        {item}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    <div key={index} className="flex items-center">;                        {item}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </label>;
                     </div>;
                   ))}

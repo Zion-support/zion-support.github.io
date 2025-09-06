@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import Layout from '../../components/Layout';
@@ -24,10 +25,14 @@ import Head from 'next/head';
 =======
 import React from 'react';import Head from 'next/head';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from 'react';import Head from 'next/head';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -55,6 +60,8 @@ const features = [
   },
   {
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Layout from '../../components/Layout';
 import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
 import React from 'react';
@@ -67,7 +74,10 @@ const features = [;
   description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',;
 import Layout from '../../components/Layout';
 import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';  {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     icon: Server,
     title: 'Infrastructure as Code',
     description: 'Manage your infrastructure using code for better consistency and automation.',
@@ -95,6 +105,7 @@ import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from '
     description: '24/7 monitoring and proactive alerting systems'
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -162,6 +173,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 Transform your infrastructure with modern cloud technologies and automated DevOps processes
                 for improved performance, security, and scalability.
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
@@ -196,6 +209,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
         {/* Features Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -206,6 +220,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 Comprehensive cloud and DevOps services designed to modernize your infrastructure
                 and accelerate your development processes.
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Benefits Section */}
         <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -330,10 +346,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <p className="text-gray-600 text-sm">{tool.description}</p>
                 </motion.div>
               ))}
+<<<<<<< HEAD
             </div>
           </div>
         </section>
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>;
           </div>;
         </section>;
@@ -467,5 +486,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
+<<<<<<< HEAD
                   ))}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  ))}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

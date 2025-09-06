@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -18,6 +19,10 @@ import * as React from "react"
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import useEmblaCarousel from "embla-carousel-react"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 
@@ -43,6 +48,7 @@ type CarouselContextProps = {
   canScrollPrev: boolean
   canScrollNext: boolean
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -65,6 +71,9 @@ type CarouselContextProps = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   orientation: "horizontal" | "vertical"
 } & Omit<CarouselProps "orientation">
 
@@ -107,6 +116,7 @@ function useCarousel(): CarouselContextProps {;
     throw new Error("useCarousel must be used within a <Carousel />");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -143,6 +153,14 @@ function useCarousel(): CarouselContextProps {;
 ;
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }
+;
+
+  }
+;
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return context as CarouselContextProps;
 }
 const Carousel = React.forwardRef<
@@ -150,6 +168,7 @@ const Carousel = React.forwardRef<
   React.HTMLAttributes<HTMLDivElement> & CarouselProps
 >(
   (
+<<<<<<< HEAD
 <<<<<<< HEAD
     {
 <<<<<<< HEAD
@@ -216,6 +235,9 @@ const Carousel = React.forwardRef<
 =======
     {      plugins
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    {      plugins
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     )
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
     const [canScrollNext, setCanScrollNext] = React.useState(false)
@@ -239,6 +261,7 @@ const Carousel = React.forwardRef<
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       onSelect(api)
       api.on("reInit", onSelect)
       api.on("select", onSelect)
@@ -247,6 +270,8 @@ const Carousel = React.forwardRef<
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import * as React from &quot;react & quot;
 import useEmblaCarousel from &quot;embla - carousel - react & quot;
 import { ArrowLeft, ArrowRight } from &quot;lucide-react & quot;
@@ -310,6 +335,7 @@ if ( {) {
         return;
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       onSelect(api)
       api.on("reInit", onSelect)
@@ -321,6 +347,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       return () => {
         api?.off("select", onSelect)
@@ -342,6 +370,7 @@ on_select (api);
       }
     return (
       <CarouselContext.Provider;
+<<<<<<< HEAD
 <<<<<<< HEAD
         value={{
 <<<<<<< HEAD
@@ -486,10 +515,14 @@ onSelect(api)
 =======
         value={{          canScrollNext}}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        value={{          canScrollNext}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       >;
         <div;
           ref={ref}
           onKeyDownCapture={handleKeyDown}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -510,25 +543,25 @@ onSelect(api)
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+className={cn (&quot;relative & quot;, class_name)}
+          role=&quot;region & quot;
+          aria - roledescription=&quot;carousel & quot;          className={cn("relative", className)}
+          role="region"
+          aria-roledescription="carousel"
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {...props}
         >;
-          {children}
-=======
-          className={cn("relative", className)}
-          role="region";
-          aria-roledescription="carousel";
-          {...props}
-        >;          {children}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        </div>;
+          {children}        </div>;
       </CarouselContext.Provider>);
   }
 
-<<<<<<< HEAD
 )
 
 Carousel.displayName = "Carousel"
 
+<<<<<<< HEAD
 
 
 =======
@@ -606,6 +639,8 @@ const CarouselContent = React.forward_ref<;
 Carousel.displayName = "Carousel"
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div ref={carousel_ref} className=&quot;overflow - hidden & quot;>;
       <div;
@@ -615,6 +650,7 @@ Carousel.displayName = "Carousel"
 
           "flex",
           orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -660,11 +696,14 @@ CarouselContent.displayName = "CarouselContent"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const CarouselItem = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
   const { orientation } = useCarousel()
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -677,6 +716,8 @@ const CarouselItem = React.forwardRef<
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         className={cn (
           &quot;flex & quot;,
           orientation === &quot;horizontal & quot; ? &quot;-ml - 4&quot; : &quot;-mt - 4 flex - col & quot;,
@@ -695,6 +736,7 @@ const CarouselItem = React.forward_ref<;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div;
+<<<<<<< HEAD
 <<<<<<< HEAD
       ref={ref}
 <<<<<<< HEAD
@@ -732,6 +774,9 @@ const CarouselItem = React.forward_ref<;
 =======
       ref={ref}        className
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      ref={ref}        className
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       )}
       {...props}
     />
@@ -752,6 +797,7 @@ const CarouselPrevious = React.forwardRef<
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -762,6 +808,8 @@ const CarouselPrevious = React.forwardRef<
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       role=&quot;group & quot;
       aria - roledescription=&quot;slide & quot;
       className={cn (
@@ -800,6 +848,7 @@ const CarouselPrevious = React.forwardRef<
       className={cn(
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -812,6 +861,8 @@ const CarouselPrevious = React.forwardRef<
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         "absolute  h-8 w-8 rounded-full",
         orientation === "horizontal"
           ? "-left-12 top-1/2 -translate-y-1/2"
@@ -829,6 +880,7 @@ const CarouselPrevious = React.forwardRef<
       on_click={scroll_prev}
       {...props}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -865,6 +917,9 @@ const CarouselPrevious = React.forwardRef<
 =======
 =======      disabled={!canScrollPrev}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======      disabled={!canScrollPrev}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       on_click={scroll_prev}
       {...props}
     </Button>
@@ -874,6 +929,7 @@ CarouselPrevious.displayName = &quot;CarouselPrevious&quot;
     >
       <ArrowLeft className="h-4 w-4" />
       <span className="sr-only">Previous slide</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1033,6 +1089,11 @@ const CarouselNext = React.forwardRef<
 })
 CarouselPrevious.displayName = "CarouselPrevious"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )
+})
+CarouselPrevious.displayName = "CarouselPrevious"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       disabled={!canScrollNext}
       on_click={scroll_next}
       {...props}
@@ -1060,6 +1121,7 @@ export {
     >
       <ArrowRight className="h-4 w-4" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <span className="sr-only">Next slide</span>
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1085,6 +1147,9 @@ CarouselNext.display_name = &quot;CarouselNext & quot;
 =======
       <span className="sr-only">Next slide</span>  )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <span className="sr-only">Next slide</span>  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 })
 CarouselNext.displayName = "CarouselNext"
 
@@ -1094,6 +1159,7 @@ export {
   CarouselContent,
   CarouselItem,
   CarouselPrevious,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1212,3 +1278,8 @@ React.ComponentProps<typeof Button>)
 ;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  CarouselNext}  CarouselNext}
+;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

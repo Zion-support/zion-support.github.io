@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,6 +21,9 @@ import _React from "react"; import { SEO } from "@/components/SEO"; export defau
 =======
 import _React from "react"; import { SEO } from "@/components/SEO"; export default function FeaturedListingsSection() {return (; <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"; <SEO title="FeaturedListingsSection - Zion Tech Group" description="Professional FeaturedListingsSection services by Zion Tech Group" />"; <div className="container mx-auto px-4 py-20">"; <h1 className="text-4xl font-bold text-white mb-8">FeaturedListingsSection</h1>"; <p className="text-gray-300 text-lg"> Professional FeaturedListingsSection services to help your business grow.; ></div> ></div> );"}"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -51,6 +55,7 @@ import _React from "react"; import { SEO } from "@/components/SEO"; export defau
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -90,3 +95,8 @@ import React from \"react\"; import { SEO } from \"@/components/SEO\"; export de
 const React from "react"; import { SEO } from "@/components/SEO"; export default function FeaturedListingsSection() {return (; <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"; <SEO title="FeaturedListingsSection - Zion Tech Group" description="Professional FeaturedListingsSection services by Zion Tech Group" />"; <div className="container mx-auto px-4 py-20">"; <h1 className="text-4xl font-bold text-white mb-8">FeaturedListingsSection</h1>"; <p className="text-gray-300 text-lg"> Professional FeaturedListingsSection services to help your business grow.; ></div> ></div> );"}"""
 import _React from "react"; import { SEO } from "@/components/SEO"; export default function FeaturedListingsSection() {return (; <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"; <SEO title="FeaturedListingsSection - Zion Tech Group" description="Professional FeaturedListingsSection services by Zion Tech Group" />"; <div className="container mx-auto px-4 py-20">"; <h1 className="text-4xl font-bold text-white mb-8">FeaturedListingsSection</h1>"; <p className="text-gray-300 text-lg"> Professional FeaturedListingsSection services to help your business grow.; ></div> ></div> );"}"
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import React from \"react\"; import { SEO } from \"@/components/SEO\"; export default function FeaturedListingsSection() {return (; <div className = \"min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950\">\"; <SEO title=\"FeaturedListingsSection - Zion Tech Group\" description=\"Professional FeaturedListingsSection services by Zion Tech Group\" />\"; <div className=\"container mx-auto px-4 py-20\">\"; <h1 className=\"text-4xl font-bold text-white mb-8\">FeaturedListingsSection</h1>\"; <p className=\"text-gray-300 text-lg\"> Professional FeaturedListingsSection services to help your business grow.; ></div> ></div> );\"}\"
+const React from "react"; import { SEO } from "@/components/SEO"; export default function FeaturedListingsSection() {return (; <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"; <SEO title="FeaturedListingsSection - Zion Tech Group" description="Professional FeaturedListingsSection services by Zion Tech Group" />"; <div className="container mx-auto px-4 py-20">"; <h1 className="text-4xl font-bold text-white mb-8">FeaturedListingsSection</h1>"; <p className="text-gray-300 text-lg"> Professional FeaturedListingsSection services to help your business grow.; ></div> ></div> );"}"""
+import _React from "react"; import { SEO } from "@/components/SEO"; export default function FeaturedListingsSection() {return (; <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"; <SEO title="FeaturedListingsSection - Zion Tech Group" description="Professional FeaturedListingsSection services by Zion Tech Group" />"; <div className="container mx-auto px-4 py-20">"; <h1 className="text-4xl font-bold text-white mb-8">FeaturedListingsSection</h1>"; <p className="text-gray-300 text-lg"> Professional FeaturedListingsSection services to help your business grow.; ></div> ></div> );"}"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

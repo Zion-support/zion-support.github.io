@@ -7,6 +7,7 @@ import {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from "react";
 import {
@@ -51,6 +52,12 @@ DialogTitle,;
   DialogDescription,
   DialogHeader,} from "@/components/ui/dialog";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,} from "@/components/ui/dialog";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { ApplyForm } from "./ApplyForm";
 import { ApplyToJobModalProps } from "./types";
 export function ApplyToJobModal({
@@ -69,6 +76,7 @@ export function ApplyToJobModal({
             Complete your application for this position
           </DialogDescription>
         </DialogHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -97,6 +105,9 @@ import React from 'react',;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {;
   Dialog,;
   DialogContent,;
@@ -121,6 +132,7 @@ function ApplyToJobModal() {
       <DialogContent className="sm:max-w-[600px]">;
         <DialogHeader>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <DialogTitle>Apply to Job:{job.title}</DialogTitle>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -129,11 +141,15 @@ function ApplyToJobModal() {
 =======
           <DialogTitle > Apply to Job: {job.title}</DialogTitle>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <DialogTitle > Apply to Job: {job.title}</DialogTitle>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <DialogDescription>;
             Complete your application for this position;
           </DialogDescription>;
         </DialogHeader>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         <ApplyForm;
 
@@ -209,3 +225,6 @@ function ApplyToJobModal() {
 =======
         <ApplyForm;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        <ApplyForm;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

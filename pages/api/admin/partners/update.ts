@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server',;
@@ -18,3 +23,32 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { error } = await supabase.from('partners').update(updates).eq('code', String(code).toLowerCase())
     if (error) return res.status(500).json({ error: error.message })
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      const updates: any = {};
+      if (status) updates.status = status;
+      if (typeof commission_rate === 'number') updates.commission_rate = commission_rate;
+
+=======
+    return res.status(200).json({ ok: true })
+=======
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { code, status, commission_rate } = req.body || {};
+  if (!code) return res.status(400).json({ error: 'Missing code' });
+  try {
+    const usingPlaceholder = true; // Mock implementation
+    if (error) return res.status(500).json({ error: error.message });
+    return res.status(200).json({ ok: true });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message })
+  }
+<<<<<<< HEAD
+};
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

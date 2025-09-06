@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -17,11 +18,16 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Link } from "react-router-dom",
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 <<<<<<< HEAD
@@ -142,10 +148,14 @@ function ApiDocsHub() {
 =======
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",      title: "Sample Code",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",      title: "Sample Code",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       description: "Examples in JavaScript, Python, and Node.js",
       icon: Zap,
       path: "/developers/docs/samples",
       color: "from-yellow-500 to-orange-500"},
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -159,6 +169,8 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout",      title: "
     {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       title: "Error Codes & Rate Limits"
       description: "Understanding API errors and rate limiting"
       icon: AlertCircle
@@ -194,6 +206,7 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout",      title: "
           <h2 className="text-xl font-semibold text-white mb-4">Ready to get started?</h2>
           <p className="text-zinc-400 mb-6">
             To use the Zion AI Marketplace API, you'll need an API key. Visit your developer portal to create one.
+<<<<<<< HEAD
 <<<<<<< HEAD
           </p>
 <<<<<<< HEAD
@@ -301,6 +314,9 @@ export function ApiDocsHub() {;
 =======
           </p>      icon: Zap,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          </p>      icon: Zap,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       path: "/developers/docs/samples",;
       color: "from-yellow-500 to-orange-500"},;
     {;
@@ -371,6 +387,7 @@ export function ApiDocsHub() {;
 export default ApiDocsHub;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           {sections.map((section) => (;
@@ -409,6 +426,8 @@ export default ApiDocsHub;
               to={section.path}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               className="block p-6 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all";
             >;
               <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${section.color} flex items-center justify-center mb-4`}>;
@@ -500,6 +519,7 @@ return (<ApiDocsLayout> <div className="max-w-4xl" > <h1 className="text-4xl fon
             <Link;
               key={section.path} ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -507,3 +527,6 @@ return (<ApiDocsLayout> <div className="max-w-4xl" > <h1 className="text-4xl fon
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

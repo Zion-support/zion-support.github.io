@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -73,6 +74,15 @@ export default function ZionOSPage() {;
           <h1 className="text - 5xl md:text - 6xl font - bold mb-6">;
             <span className="gradient-text">Zion OS</span>;
           </h1>;
+=======
+    <div className="min-h-screen">;    <div className="min-h-screen">;
+      {/* Hero Section */}
+      <section className="relative py - 20 px - 4 sm:px - 6 lg:px-8">;
+        <div className="max - w-7xl mx - auto text-center">;
+          <h1 className="text - 5xl md:text - 6xl font - bold mb-6">;
+            <span className="gradient-text">Zion OS</span>;
+          </h1>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading-relaxed">;
             Launch sovereign AI - powered digital economies with one click.;
             Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.;
@@ -82,12 +92,16 @@ export default function ZionOSPage() {;
               Launch Your Economy;
             </Link>;
             <Link href="/docs" className="btn - secondary text - lg px - 8 py-4">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               View Documentation;
             </Link>;
           </div>;
         </div>;
         {/* Background Elements */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="absolute inset-0 -z-10 overflow-hidden">;
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-full blur-3xl animate-pulse-slow"></div>;
@@ -131,10 +145,25 @@ export default function ZionOSPage() {;
                 The Future of Digital Economies;
               </h2>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        <div className="absolute inset - 0 -z - 10 overflow-hidden">;
+          <div className="absolute top - 1/2 left - 1/2 -translate - x-1 / 2 -translate - y-1 / 2 w-[800px] h-[800px] bg - gradient - to - r from - blue - 500 / 20 to - purple - 600 / 20 rounded - full blur - 3xl animate - pulse-slow"></div>;
+        </div>;
+      </section>;
+      {/* Platform Overview */}
+      <section className="py - 20 px - 4 sm:px - 6 lg:px-8">;
+        <div className="max - w-7xl mx-auto">;
+          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items-center">;
+            <div>;
+              <h2 className="text - 3xl md:text - 4xl font - bold mb-6">;
+                The Future of Digital Economies;
+              </h2>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 and manage sovereign digital economies powered by artificial intelligence.;
                 Our unified deployment protocol makes it possible to launch complex;
                 economic systems in minutes, not months.;
               </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -154,10 +183,13 @@ export default function ZionOSPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 or creating a new token ecosystem, Zion OS provides all the tools you need;
                 to succeed in the digital economy revolution.;
               </p>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="card bg-gradient-to-br from-blue-600/20 to-purple-600/20 border-blue-500/30 p-8">;
               <h3 className="text-2xl font-bold mb-4">Key Benefits</h3>;
@@ -183,6 +215,8 @@ export default function ZionOSPage() {;
                 <li className="flex items-center">;
                   <svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="card bg - gradient - to - br from - blue - 600 / 20 to - purple - 600 / 20 border - blue - 500 / 30 p-8">;
               <h3 className="text - 2xl font - bold mb-4">Key Benefits</h3>;
               <ul className="space - y-3 text - gray-300">;
@@ -206,7 +240,10 @@ export default function ZionOSPage() {;
                 </li>;
                 <li className="flex items-center">;
                   <svg className="w - 5 h - 5 text - green - 400 mr-3" fill="none" stroke="current_color" viewBox="0 0 24 24">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />;
                   </svg>;
                   Scalable infrastructure;
@@ -217,6 +254,7 @@ export default function ZionOSPage() {;
         </div>;
       </section>;
       {/* Core Features */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">;
         <div className="max-w-7xl mx-auto">;
@@ -258,10 +296,32 @@ export default function ZionOSPage() {;
               <h3 className="text - xl font - semibold mb-2">Marketplace & Jobs</h3>;
               <p className="text - gray-400">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - blue - 600 / 10 to - purple-600 / 10">;
+        <div className="max - w-7xl mx-auto">;
+          <div className="text - center mb-16">;
+            <h2 className="text - 3xl md:text - 4xl font - bold mb-4">;
+              Everything You Need to Build;
+            </h2>;
+            <p className="text - xl text - gray - 400 max - w-3xl mx-auto">;
+              Zion OS provides a complete toolkit for launching and managing sovereign digital economies;
+            </p>;
+          </div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">;
+            <div className="card group">;
+              <div className="w - 12 h - 12 bg - blue - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - blue - 500 / 30 transition-colors">;
+                <svg className="w - 6 h - 6 text - blue-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00 - 2-2H7a2 2 0 00 - 2 2v16m14 0h2m - 2 0h - 5m - 9 0H3m2 0h5M9 7h1m - 1 4h1m4 - 4h1m - 1 4h1m - 5 10v - 5a1 1 0 011 - 1h2a1 1 0 011 1v5m - 4 0h4" />;
+                </svg>;
+              </div>;
+              <h3 className="text - xl font - semibold mb-2">Marketplace & Jobs</h3>;
+              <p className="text - gray-400">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Complete marketplace infrastructure with job posting, talent matching, and project management.;
               </p>;
             </div>;
             <div className="card group">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">;
                 <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -309,6 +369,13 @@ export default function ZionOSPage() {;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h - 1M4 12H3m3.343 - 5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11 - 4 0v-.531c0-.895-.356 - 1.754-.988 - 2.386l-.548-.547z" />;
                 </svg>;
               </div>;
+=======
+              <div className="w - 12 h - 12 bg - purple - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - purple - 500 / 30 transition-colors">;
+                <svg className="w - 6 h - 6 text - purple-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h - 1M4 12H3m3.343 - 5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11 - 4 0v-.531c0-.895-.356 - 1.754-.988 - 2.386l-.548-.547z" />;
+                </svg>;
+              </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h3 className="text - xl font - semibold mb-2">AI Governance</h3>;
               <p className="text - gray-400">;
                 Intelligent governance systems with DAO voting, proposal management, and automated decision - making.;
@@ -344,11 +411,15 @@ export default function ZionOSPage() {;
               </div>;
               <h3 className="text - xl font - semibold mb-2">AI - Powered Tools</h3>;
               <p className="text - gray-400">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 ZionGPT integration, resume builders, and AI moderation systems for enhanced user experience.;
               </p>;
             </div>;
             <div className="card group">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-500/30 transition-colors">;
                 <svg className="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -366,6 +437,15 @@ export default function ZionOSPage() {;
               <h3 className="text - xl font - semibold mb-2">Modular Architecture</h3>;
               <p className="text - gray-400">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <div className="w - 12 h - 12 bg - indigo - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - indigo - 500 / 30 transition-colors">;
+                <svg className="w - 6 h - 6 text - indigo-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2H6a2 2 0 01 - 2-2V6zM14 6a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2V6zM4 16a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2H6a2 2 0 01 - 2-2v - 2zM14 16a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2v - 2z" />;
+                </svg>;
+              </div>;
+              <h3 className="text - xl font - semibold mb-2">Modular Architecture</h3>;
+              <p className="text - gray-400">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Pick and choose the features you need. Deploy only what matters for your specific use case.;
               </p>;
             </div>;
@@ -373,6 +453,7 @@ export default function ZionOSPage() {;
         </div>;
       </section>;
       {/* How It Works */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
@@ -424,10 +505,28 @@ export default function ZionOSPage() {;
                 <span className="text - 2xl font - bold text - blue-400">1</span>;
               </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <section className="py - 20 px - 4 sm:px - 6 lg:px-8">;
+        <div className="max - w-7xl mx-auto">;
+          <div className="text - center mb-16">;
+            <h2 className="text - 3xl md:text - 4xl font - bold mb-4">;
+              How Zion OS Works;
+            </h2>;
+            <p className="text - xl text - gray - 400 max - w-3xl mx-auto">;
+              Three simple steps to launch your sovereign digital economy;
+            </p>;
+          </div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap-8">;
+            <div className="text-center">;
+              <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb-4">;
+                <span className="text - 2xl font - bold text - blue-400">1</span>;
+              </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 including governance rules, token economics, and marketplace settings.;
               </p>;
             </div>;
             <div className="text-center">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">;
                 <span className="text-2xl font-bold text-purple-400">2</span>;
@@ -455,10 +554,16 @@ export default function ZionOSPage() {;
                 <span className="text - 2xl font - bold text - purple-400">2</span>;
               </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <div className="w - 16 h - 16 bg - purple - 500 / 20 rounded - full flex items - center justify - center mx - auto mb-4">;
+                <span className="text - 2xl font - bold text - purple-400">2</span>;
+              </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 smart contracts, and governance systems in minutes.;
               </p>;
             </div>;
             <div className="text-center">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">;
                 <span className="text-2xl font-bold text-green-400">3</span>;
@@ -486,6 +591,11 @@ export default function ZionOSPage() {;
                 <span className="text - 2xl font - bold text - green-400">3</span>;
               </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <div className="w - 16 h - 16 bg - green - 500 / 20 rounded - full flex items - center justify - center mx - auto mb-4">;
+                <span className="text - 2xl font - bold text - green-400">3</span>;
+              </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 and building your digital community.;
               </p>;
             </div>;
@@ -493,6 +603,7 @@ export default function ZionOSPage() {;
         </div>;
       </section>;
       {/* Use Cases */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">;
         <div className="max-w-7xl mx-auto">;
@@ -522,6 +633,20 @@ export default function ZionOSPage() {;
           </div>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">;
             <div className="card">;
+=======
+      <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - blue - 600 / 10 to - purple-600 / 10">;
+        <div className="max - w-7xl mx-auto">;
+          <div className="text - center mb-16">;
+            <h2 className="text - 3xl md:text - 4xl font - bold mb-4">;
+              Perfect For;
+            </h2>;
+            <p className="text - xl text - gray - 400 max - w-3xl mx-auto">;
+              Whether you're a startup, enterprise, or community, Zion OS has you covered;
+            </p>;
+          </div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">;
+            <div className="card">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h3 className="text - xl font - semibold mb-3">Startups & Entrepreneurs</h3>;
               <p className="text - gray - 400 mb-4">;
                 Launch innovative business models with built - in governance;
@@ -531,10 +656,13 @@ export default function ZionOSPage() {;
             </div>;
             <div className="card">;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h3 className="text-xl font-semibold mb-3">Enterprises</h3>;
               <p className="text-gray-400 mb-4">;
                 Transform traditional business models with AI-powered governance;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h3 className="text - xl font - semibold mb-3">Enterprises</h3>;
               <p className="text - gray - 400 mb-4">;
                 Transform traditional business models with AI - powered governance;
@@ -543,6 +671,7 @@ export default function ZionOSPage() {;
               </p>;
             </div>;
             <div className="card">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h3 className="text-xl font-semibold mb-3">Communities & DAOs</h3>;
               <p className="text-gray-400 mb-4">;
@@ -561,6 +690,8 @@ export default function ZionOSPage() {;
               <h3 className="text-xl font-semibold mb-3">Investors & Traders</h3>;
               <p className="text-gray-400 mb-4">;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h3 className="text - xl font - semibold mb-3">Communities & DAOs</h3>;
               <p className="text - gray - 400 mb-4">;
                 Build thriving communities with transparent governance;
@@ -577,12 +708,16 @@ export default function ZionOSPage() {;
             <div className="card">;
               <h3 className="text - xl font - semibold mb-3">Investors & Traders</h3>;
               <p className="text - gray - 400 mb-4">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Participate in emerging digital economies with transparent;
                 governance and liquid token markets.;
               </p>;
             </div>;
             <div className="card">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h3 className="text-xl font-semibold mb-3">Researchers & Academics</h3>;
               <p className="text-gray-400 mb-4">;
@@ -590,6 +725,10 @@ export default function ZionOSPage() {;
               <h3 className="text - xl font - semibold mb-3">Researchers & Academics</h3>;
               <p className="text - gray - 400 mb-4">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <h3 className="text - xl font - semibold mb-3">Researchers & Academics</h3>;
+              <p className="text - gray - 400 mb-4">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Study and experiment with new economic models in a;
                 controlled, scalable environment.;
               </p>;
@@ -598,6 +737,7 @@ export default function ZionOSPage() {;
         </div>;
       </section>;
       {/* Technology Stack */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
@@ -650,6 +790,23 @@ export default function ZionOSPage() {;
               <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - xl flex items - center justify - center mx - auto mb-4">;
                 <span className="text - 2xl font - bold text - blue-400">⚡</span>;
               </div>;
+=======
+      <section className="py - 20 px - 4 sm:px - 6 lg:px-8">;
+        <div className="max - w-7xl mx-auto">;
+          <div className="text - center mb-16">;
+            <h2 className="text - 3xl md:text - 4xl font - bold mb-4">;
+              Built on Proven Technology;
+            </h2>;
+            <p className="text - xl text - gray - 400 max - w-3xl mx-auto">;
+              Zion OS leverages the latest blockchain and AI technologies for maximum performance and security;
+            </p>;
+          </div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-8">;
+            <div className="card text-center">;
+              <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - xl flex items - center justify - center mx - auto mb-4">;
+                <span className="text - 2xl font - bold text - blue-400">⚡</span>;
+              </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h3 className="text - lg font - semibold mb-2">High Performance</h3>;
               <p className="text - gray - 400 text-sm">;
                 Built for scale with sub - second transaction times;
@@ -670,11 +827,15 @@ export default function ZionOSPage() {;
               </div>;
               <h3 className="text - lg font - semibold mb-2">Interoperable</h3>;
               <p className="text - gray - 400 text-sm">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Works with existing blockchain networks;
               </p>;
             </div>;
             <div className="card text-center">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="w-16 h-16 bg-red-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">;
                 <span className="text-2xl font-bold text-red-400">🤖</span>;
@@ -688,6 +849,13 @@ export default function ZionOSPage() {;
               <h3 className="text - lg font - semibold mb-2">AI - Powered</h3>;
               <p className="text - gray - 400 text-sm">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <div className="w - 16 h - 16 bg - red - 500 / 20 rounded - xl flex items - center justify - center mx - auto mb-4">;
+                <span className="text - 2xl font - bold text - red-400">🤖</span>;
+              </div>;
+              <h3 className="text - lg font - semibold mb-2">AI - Powered</h3>;
+              <p className="text - gray - 400 text-sm">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Intelligent governance and automation;
               </p>;
             </div>;
@@ -695,6 +863,7 @@ export default function ZionOSPage() {;
         </div>;
       </section>;
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">;
@@ -718,6 +887,14 @@ export default function ZionOSPage() {;
             <h2 className="text - 3xl md:text - 4xl font - bold mb-4">;
               Ready to Launch Your Digital Economy?;
             </h2>;
+=======
+      <section className="py - 20 px - 4 sm:px - 6 lg:px-8">;
+        <div className="max - w-4xl mx - auto text-center">;
+          <div className="card bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 border - blue-500 / 30">;
+            <h2 className="text - 3xl md:text - 4xl font - bold mb-4">;
+              Ready to Launch Your Digital Economy?;
+            </h2>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <p className="text - xl text - gray - 300 mb-8">;
               Join the future of sovereign, AI - powered digital economies.;
               Deploy in minutes, scale infinitely.;
@@ -727,7 +904,10 @@ export default function ZionOSPage() {;
                 Start Deployment;
               </Link>;
               <Link href="/admin / instances" className="btn - secondary text - lg px - 8 py-4">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 View Examples;
               </Link>;
             </div>;

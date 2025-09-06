@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 const DATA_ROOT = path.join(process.cwd(), 'datamarketplace');
@@ -8,6 +9,16 @@ function ensureDataDir(): void {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
+=======
+  }
+  return default_value;
+=======
+import fs from 'fs';
+import path from 'path';
+function getFilePath(fileName: string): string {
+  return path.join(process.cwd(), 'data', `${fileName}.json`);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 <<<<<<< HEAD
 ;
@@ -114,8 +125,11 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
   items.push(item);
   writeJsonFile<T[]>(fileName, items);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 <<<<<<< HEAD
 import fs from 'fs';
@@ -139,6 +153,12 @@ import path from 'path';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

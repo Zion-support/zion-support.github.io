@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -47,6 +48,13 @@ import { Skill  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addSkillsSection(  doc: jsPDF;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import { jsPDF  } from 'jspdf';
+import { Skill  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addSkillsSection(  doc: jsPDF;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   skills: Skill[];
   colors: PdfThemeColors;
   startY: number
@@ -60,6 +68,7 @@ export function addSkillsSection(  doc: jsPDF;
     }
     acc[category].push(skill);
     return acc
+<<<<<<< HEAD
 <<<<<<< HEAD
   }, {} as Record<string, typeof skills>);
 <<<<<<< HEAD
@@ -145,6 +154,9 @@ export function addSkillsSection(;
 =======
   }, {} as Record<string, typeof skills>);  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }, {} as Record<string, typeof skills>);  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return yPos + 5
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types / resume';
@@ -197,6 +209,7 @@ if ( {) {
     y_pos += (skill_lines.length * 5) + 10;
   }
   return y_pos + 5;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -269,3 +282,6 @@ return yPos + 5
 =======
 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

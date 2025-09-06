@@ -278,6 +278,7 @@ origin/automation-improvements-final
     return { hasError: true, error }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
     console.error('Error caught by boundary:', error, errorInfo);    this.setState({
 ursor/integrate-build-improve-and-re-verify-8f7d
     // Log the error to console or error reporting service
@@ -297,6 +298,40 @@ origin/automation-improvements-final
       error      errorInfo
 =======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+=======
+export class ErrorBoundary extends Component<Props, State> {
+  public state: State = {
+<<<<<<< HEAD
+    hasError: false,
+  };
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+=======
+    hasError: false
+  }
+  public static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error }
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+  }
+
+<<<<<<< HEAD
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    
+    this.setState({
+      error,
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       errorInfo
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     });
@@ -324,6 +359,11 @@ origin/automation-improvements-final
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
+=======
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+       
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
   }
@@ -420,6 +460,58 @@ class ErrorBoundary extends Component<Props, State> {
               <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
               </svg>
+=======
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error: ', error, errorInfo);
+
+    // Log error to monitoring service
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'exception', {
+        description: error.message,
+        fatal: false,
+      });
+    }
+  }
+
+  public render() {
+    if (this.state.hasError) {
+      return (
+        this.props.fallback || (
+          <div className="min-h-screen flex items-center justify-center bg-gray-50">
+            <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+              <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
+                <svg
+                  className="w-6 h-6 text-red-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                  />
+                </svg>
+              </div>
+              <div className="mt-4 text-center">
+                <h3 className="text-lg font-medium text-gray-900">
+                  Something went wrong
+                </h3>
+                <p className="mt-2 text-sm text-gray-500">
+                  We&apos;re sorry, but something unexpected happened. Please
+                  try refreshing the page.''
+                </p>
+                <div className="mt-6">
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  >
+                    Refresh Page
+                  </button>
+                </div>
+              </div>
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
             </div>
             <h2 className="text-xl font-semibold text-gray-900 text-center mb-2">
               Something went wrong
@@ -600,8 +692,12 @@ export default class ErrorBoundary extends Component<Props, State> {
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>
+<<<<<<< HEAD
         </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       );
     }
 
@@ -609,6 +705,12 @@ export default class ErrorBoundary extends Component<Props, State> {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    return this.props.children;
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 
 =======
@@ -984,9 +1086,15 @@ export default ErrorBoundary;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 export default ErrorBoundary;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

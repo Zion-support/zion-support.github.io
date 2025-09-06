@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
   };
@@ -15,12 +16,15 @@ origin/cursor/integrate-build-improve-and-re-verify-242d
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 };
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
   return (;
     <a href={resolved} className={className} {...rest}>;
-      {children};
+      {children}
 };
-};
+}
 };
 
 };
@@ -64,20 +68,30 @@ type Href = string | { pathname?: string; href?: string };
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: Href;
 <<<<<<< HEAD
+<<<<<<< HEAD
   children: React.ReactNode;
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
   children: React.ReactNode
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  children: React.ReactNode
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 };
   return (;
     <a href={resolved} className={className} {...rest}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       {children};
+=======
+      {children}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
+}
 };
+<<<<<<< HEAD
 };
 origin/automation-improvements-final
 import React from 'react';
@@ -92,6 +106,8 @@ import React from "react";
 }
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -128,6 +144,7 @@ interface HTMLElement {;
   style: { [key: string]: string }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -142,6 +159,9 @@ interface HTMLAnchorElement extends HTMLElement {
 =======
   tagName: 'A';  href: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  tagName: 'A';  href: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   target: string;
 }
 type Href = string | { pathname?: string; href?: string }
@@ -162,6 +182,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/main
 function resolveHref(href: Href): string {
 =======
@@ -171,10 +192,14 @@ function resolveHref(href: Href): string {
 =======
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 };
   return (;
     <a href={resolved} className={className} {...rest}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       {children};
 };
@@ -191,6 +216,10 @@ function resolveHref(href: Href): string {
 =======
       {children}
 };
+=======
+      {children}
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 };
 import React from 'react';
@@ -231,10 +260,14 @@ type Href = string | { pathname?: string; href?: string };
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   "href": Href;
 <<<<<<< HEAD
+<<<<<<< HEAD
   children: React.ReactNode;
 =======
   children: React.ReactNode
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  children: React.ReactNode
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 function resolveHref("href": Href): string {
   if (typeof href === 'string') return href;
@@ -243,6 +276,7 @@ function resolveHref("href": Href): string {
 }
 export default function Link({ href, children, className, ...rest }: LinkProps) {
 
+<<<<<<< HEAD
 export default function Link({ href, children, className, ...rest }: LinkProps) {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const resolved = resolveHref(href);
@@ -274,6 +308,8 @@ function resolveHref(href: Href): string {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function Link({ href, children, className, ...rest }: LinkProps) {;
 
   const resolved = resolveHref(href);

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -9,6 +10,24 @@ import { Button } from "@/components/ui/button",
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+import React, { useState } from 'react';
+import { useForm, ControllerRenderProps } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Button } from '@/components/ui/button';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import {
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage} from "@/components/ui/form",
+import { Textarea } from "@/components/ui/textarea";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Form,
   FormControl,
@@ -35,6 +54,7 @@ import { FileText } from 'lucide-react'
 
 =======
 
+<<<<<<< HEAD
   Form
   FormControl
   FormField
@@ -161,7 +181,14 @@ if (onDisputeCreated) {
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+const formSchema = null;
+      toast.error("Failed to submit dispute. Please try again.")
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } finally {
       setIsSubmitting(false)
     }
@@ -653,18 +680,110 @@ if ( {) {
             {onCancel && (
               <Button type='button' variant='outline' onClick={onCancel}>
                 Cancel
+<<<<<<< HEAD
               </Button>}value= {
 =======
+              </Button>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 
+<<<<<<< HEAD
+=======
+          <div className='flex justify - end space - x-2'>;
+            {on_cancel && (
+              <Button type='button' variant='outline' on_click={on_cancel}>;
+                Cancel;
+              </Button>)}
+            <Button type='submit' disabled={is_submitting}>;
+              {is_submitting ? 'Submitting...' : 'Submit Dispute'}
+            </Button>;
+          </div>;
+        </form>;
+      </Form>;
+    </div>);
+
+}
+
+            </Button>;
+          </div>;
+        </form>;
+      </Form>;
+    </div>;
+  );
+
+};
+const removeFile = (index: number) => {;
+  async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {;
+=======
+            )}
+            <Button type='submit' disabled={isSubmitting}>
+              {isSubmitting ? 'Submitting...' : 'Submit Dispute'}
+            </Button>
+          </div>
+        </form>
+      </Form>
+    </div>
+  );
+
+
+};
+const removeFile = (index: number) => {;
+  async function onSubmit (values: z.infer<typeof formSchema>) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  try {;
+  setIsSubmitting (true);
+const dispute = await createDispute ({;
+  project id: projectId;
+milestone id: milestoneId;
+<<<<<<< HEAD
+reason code: values && values.reason code;
+description: values && values.description ;
+});
+//Future enhancement: Upload attachments //For now we just log the files that would be uploaded if (files && files.length > 0) {;
+
+=======
+reason code: values.reason code;
+description: values.description ;
+});
+//Future enhancement: Upload attachments //For now we just log the files that would be uploaded if (files.length > 0) {;
+  ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+}finally {;
+  setIsSubmitting (false) ;
+}";
+<<<<<<< HEAD
+}return (<div className="space-y-6" > <div className="flex items-center space-x-2" > <FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute</FormLabel> <SelectonValueChange= {
+  field && field.onChange 
+}defaultValue= {
+  field && field.value "
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select a reason" /> </SelectTrigger> </FormControl> <SelectContent> {;
+  Object && Object.entries (disputeReasonLabels) .map ( ([value, label]) => (<SelectItemkey= {
+  value 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }value= {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   value 
+=======
+}return (<div className="space-y-6" > <div className="flex items-center space-x-2" > <FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute</FormLabel> <Select onValueChange= {;
+  field.onChange ;
+}defaultValue= {;
+  field.value ";
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select a reason" /> </SelectTrigger> </FormControl> <SelectContent> {;
+  Object.entries (disputeReasonLabels) .map ( ([value, label]) => (<SelectItem key= {;
+  value ;
+}value= {;
+  value ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }> {;
   label ;
 }</SelectItem>) ) ;
 }</SelectContent> </Select> <FormMessage /> </FormItem>) ;
 }/> <FormField <FormItem> <FormLabel>Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) ;
+<<<<<<< HEAD
 
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) 
 <<<<<<< HEAD
@@ -707,6 +826,7 @@ if ( {) {
 }</ul> </div>);
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>);
 }'"}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -714,3 +834,11 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}</ul> </div>) ;
+}</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

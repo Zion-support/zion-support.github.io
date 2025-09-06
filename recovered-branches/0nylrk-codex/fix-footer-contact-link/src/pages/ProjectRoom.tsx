@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 =======
 
   const { projectId } = useParams() as { projectId: string },;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,6 +77,9 @@ export default function ProjectRoom() {
 
   const [activeTab, setActiveTab] = useState('chat');  const [isInCall, setIsInCall] = useState(false);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [activeTab, setActiveTab] = useState('chat');  const [isInCall, setIsInCall] = useState(false);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [callParticipants, setCallParticipants] = useState<
     Array<{
       id: string;
@@ -92,6 +99,7 @@ export default function ProjectRoom() {
       isMuted: false,
     },
   ]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -148,6 +156,10 @@ import {useParams} from 'react-router-dom';
 =======
   const startVideoCall = () => {import {useParams} from 'react-router-dom';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  const startVideoCall = () => {import {useParams} from 'react-router-dom';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
 import {SEO} from '@/components/SEO';
@@ -155,10 +167,13 @@ import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react';
 import {use_params} from 'react-router-dom';
 import {Header} from '@/components / Header';
@@ -175,6 +190,7 @@ import {toast} from 'sonner';
 
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -188,6 +204,8 @@ import {toast} from 'sonner';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const startVideoCall = () => {
     setIsInCall(true),
     toast.success("Video call started", {
@@ -198,6 +216,7 @@ import {toast} from 'sonner';
       setActiveTab("video");
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   };
 
 <<<<<<< HEAD
@@ -206,6 +225,8 @@ import {toast} from 'sonner';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const endVideoCall = () => {
     setIsInCall(false);
     toast.info("Video call ended", {
@@ -217,8 +238,8 @@ import {toast} from 'sonner';
   ]),;
   const startVideoCall = () => {;
     setIsInCall(true),;
-    toast.success("Video call started", {;
-      description: "Others can join with the project room link";
+    toast.success("Video call started", {,
+  description: "Others can join with the project room link";
     }),;
     // Switch to video tab if not already there;
     if (activeTab !== 'video') {;
@@ -227,8 +248,8 @@ import {toast} from 'sonner';
   },;
   const endVideoCall = () => {;
     setIsInCall(false),;
-    toast.info("Video call ended", {;
-      description: "Call duration and participants will be logged";
+    toast.info("Video call ended", {,
+  description: "Call duration and participants will be logged";
     });
   },;
   const simulateUserJoining = () => {;
@@ -237,6 +258,7 @@ import {toast} from 'sonner';
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+<<<<<<< HEAD
     ],;
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],;
     if (!callParticipants.find(p => p.id === randomUser.id)) {;
@@ -522,6 +544,8 @@ import {toast} from 'sonner';
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
     <>
       <SEO
@@ -928,6 +952,7 @@ if ( {) {
 
     </>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
@@ -973,3 +998,6 @@ return (<> End Call </Button>)
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

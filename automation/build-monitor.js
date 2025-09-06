@@ -27,6 +27,9 @@ const { promisify } = require('util');
 const execAsync = promisify(exec);
 class BuildMonitor {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   constructor() {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -210,9 +213,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     this.isRunning = false;
+<<<<<<< HEAD
 =======
   constructor() {    this.isRunning = false;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
     this.lastBuildTime = null;
@@ -230,6 +236,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       console.log(logMessage);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -326,6 +333,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async checkBuildStatus() {
     try {
       this.log('info', 'Checking build status...');
@@ -345,6 +357,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         this.log('warn', 'No build found, triggering build...');
         await this.triggerBuild();
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -383,6 +396,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
       
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+      
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       
       
 <<<<<<< HEAD
@@ -643,9 +659,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   const command = process.argv[2];
+<<<<<<< HEAD
 =======
             
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   switch (command) {
     case 'start':
       monitor.start().catch(console.error);
@@ -672,11 +691,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = BuildMonitor;
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -851,6 +873,7 @@ module.exports = BuildMonitor;
 module.exports = BuildMonitor;
 module.exports = BuildMonitor;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> main
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -862,3 +885,5 @@ module.exports = BuildMonitor;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

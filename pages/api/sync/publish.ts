@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",
 import axios from "axios",
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
@@ -392,8 +395,14 @@ export default async function handler(req, res) {
     }
     const computed = computeMerkleRootFromVotes(votes);
     if (computed !== providedRoot) {
+<<<<<<< HEAD
 
 =======
+=======
+=======
+  if (scope;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     const computed = computeMerkleRootFromVotes(votes);
     if (computed !== providedRoot) {
@@ -448,10 +457,11 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
   const alreadyPropagated = payload.propagate === false;
   if (!alreadyPropagated && currentState.config.peers.length > 0) {
-    const headers: Record<string, string> = {}
-    const localBody = { ...event, propagate: false }
-    const baseSignature = require("../../../utils/sync/signature");
+    const headers: Record<string, string> = {};
+    const localBody = { ...event, propagate: false };
+const baseSignature = require('../../../utils/sync/signature');
     const sig = baseSignature.signPayload(localBody);
+<<<<<<< HEAD
     if (sig) headers["x-zion-signature"] = sig;
 =======
 
@@ -643,6 +653,7 @@ if (headers["x - zion - signature"] = sig) {
         }));
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
   } catch (error) {
     console.error("Error:", error);
@@ -717,3 +728,28 @@ if (headers["x - zion - signature"] = sig) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+    if (sig) headers['x-zion-signature'] = sig;
+
+    await Promise.all(
+      currentState.config.peers
+        .filter(p => !p.paused)
+        .map(async peer => {
+          const url = new URL('/api/sync/publish', peer.baseUrl).toString();
+          try {
+            await axios.post(url, localBody, { headers, timeout: 5000 });
+          try {
+            await axios.post(url, localBody, { headers, timeout: 5000 })
+          } catch {
+            // ignore peer failure
+          }
+        })
+);
+  }
+
+  return res.status(200).json({ status: 'accepted', entityId });
+
+}}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

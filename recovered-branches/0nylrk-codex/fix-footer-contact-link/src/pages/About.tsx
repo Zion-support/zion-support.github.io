@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -17,11 +18,14 @@ import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { SEO } from "@/components/SEO",
+<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -49,6 +53,9 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",export default function About() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { GradientHeading } from "@/components/GradientHeading",export default function About() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <SEO
@@ -212,6 +219,7 @@ import { GradientHeading } from "@/components/GradientHeading",export default fu
     </>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 =======
@@ -224,6 +232,8 @@ import { GradientHeading } from "@/components/GradientHeading",export default fu
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -232,6 +242,7 @@ import {Footer} from "@/components/Footer";
 import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -245,6 +256,8 @@ import {GradientHeading} from "@/components/GradientHeading";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
@@ -639,6 +652,7 @@ function About() {
         </div>;
       </main>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Footer />;
 <<<<<<< HEAD
 =======
@@ -649,11 +663,15 @@ function About() {
 =======
       <Footer />;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <Footer />;}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 }
 ;
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -682,3 +700,5 @@ function About() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

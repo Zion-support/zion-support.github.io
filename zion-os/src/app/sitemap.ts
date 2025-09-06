@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function sitemap(): MetadataRoute.Sitemap {;
   const baseUrl = 'https: //ziontechgroup.com';
   const routes = [;
@@ -22,6 +23,8 @@ export default function sitemap(): MetadataRoute.Sitemap {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default function sitemap(): MetadataRoute.Sitemap {;
   const baseUrl = 'https: //ziontechgroup.com';
@@ -43,9 +46,12 @@ export default function sitemap(): MetadataRoute.Sitemap {;
     '/ai-agents/ai-agent-orchestrator/ai-analytics-copilot/ai-ad-creative-generator/agentic-rag-helpdesk/agentic-rag/agentic-sales-outreach/affiliate-attribution-hub',;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     '/advanced-research-automation/advanced-cybersecurity-suite/advanced-it-infrastructure-services/accessibility-auditor/accessibility-scanner'];
   const quantumServices = [;
     '/quantum-neural-network-platform/quantum-cloud-infrastructure/quantum-financial-trading/quantum-network-optimization/quantum-private-network-solutions/quantum-private-network-solutions-2026'];
@@ -56,7 +62,10 @@ export default function sitemap(): MetadataRoute.Sitemap {;
   const allRoutes = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const base_url = 'https: //ziontechgroup.com';
   const routes = [;
     '',
@@ -115,13 +124,17 @@ export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https
   const complianceServices = [;
     '/soc2-compliance-automation'];
   const allRoutes = [;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     ...routes;
     ...aiServices;
     ...quantumServices;
     ...networkServices;
     ...complianceServices];
   return allRoutes.map((route) => ({;
+<<<<<<< HEAD
 <<<<<<< HEAD
     url: `${baseUrl}${route}`;
 =======
@@ -139,6 +152,9 @@ export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https
 =======
     url: `${baseUrl}${route}`;    lastModified: new Date();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    url: `${baseUrl}${route}`;    lastModified: new Date();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     changeFrequency: 'weekly';
     priority: route === '' ? 1 : 0.8}));
 }

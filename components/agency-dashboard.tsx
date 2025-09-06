@@ -1,4 +1,5 @@
 import type { GetServerSideProps } from 'next';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default function AgencyDashboardPage({ vendor }: Props) {
@@ -20,15 +21,24 @@ type Props = { vendor: Vendor | null };
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+import { FormEvent, useEffect, useState } from 'react';
+import type { Vendor } from '../utils/vendor-types';
+type Props = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function AgencyDashboardPage({ vendor }: Props) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
   const [pkgDesc, setPkgDesc] = useState('');
   const [pkgPrice, setPkgPrice] = useState<number | ''>('');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     } as Vendor;
@@ -56,6 +66,8 @@ export default function AgencyDashboardPage({ vendor }: Props) {
       }
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } as Vendor;
     // For MVP, update via direct API not implemented; keep local preview only;
     setActiveVendor(updated);  }
@@ -71,6 +83,37 @@ export default function AgencyDashboardPage({ vendor }: Props) {
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
     const packages = [
       ...(activeVendor.packages |[])
+=======
+
+if (!activeVendor)
+    return (
+      <div className='text-gray-500'>No vendor found. Please apply first.</div>
+    );
+
+  async function saveProfile(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const updated = {
+...activeVendor,
+      name: String(formData.get('name') || activeVendor.name),
+      about: String(formData.get('about') || activeVendor.about || ''),
+      servicesOffered: String(
+        formData.get('servicesOffered') |
+          activeVendor.servicesOffered?.join(',') |
+          ''
+      )
+        .split(',')
+        .map(s => s.trim())
+        .filter(Boolean)
+    } as Vendor;
+    // For MVP, update via direct API not implemented; keep local preview only
+    setActiveVendor(updated);
+  }
+  function addPackage() {
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
+const packages = [
+      ...(activeVendor.packages || []),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       {
         id: `pkg_${Date.now()}`
         title: pkgTitle
@@ -195,6 +238,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
             <input
               name='servicesOffered'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               defaultValue={activeVendor && activeVendor.servicesOffered?.join(', ') || ''}
               className='w-full border rounded px-3 py-2 bg-transparent'
@@ -273,9 +317,26 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setPkgTitle('');
     setPkgDesc('');
       <section className='space-y-3'>
+=======
+              defaultValue={activeVendor.servicesOffered?.join(', ') |''}
+              className='w-full border rounded px-3 py-2 bg-transparent'
+            />
+          </div>
+          <div className='md:col-span-2'>
+            <button className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>
+              Save
+            </button>
+          </div>
+        </form>
+      </section>
+
+<section className='space-y-3'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <h2 className='text-lg font-medium'>Publish Packages</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
 
@@ -340,6 +401,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
               placeholder='Price (USD)'
               type='number'
               value={pkgPrice}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -362,6 +424,28 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         </form>
       </section>
 
+=======
+              onChange={e => setPkgPrice(Number(e.target.value))}
+              className='border rounded px-3 py-2 bg-transparent w-full'
+            />
+            <button
+              onClick={addPackage}
+              className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'
+            >
+              Add
+            </button>
+          </div>
+        </div>
+      </section>
+
+<section className='space-y-3'>
+        <h2 className='text-lg font-medium'>Project Pipeline</h2>
+        <Pipeline vendorId={activeVendor.id} />
+      </section>
+      <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
@@ -375,6 +459,12 @@ export default function AgencyDashboardPage({ vendor }: Props) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 function Pipeline({ vendorId }: { vendorId: string }) {
+<<<<<<< HEAD
+=======
+  const [items, setItems] = useState<any[]>([]);
+  async function fetchItems() {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 =======
@@ -382,10 +472,18 @@ function Pipeline({ vendorId }: { vendorId: string }) {
     const data = await res.json();
     setItems(data.items || [])
 
+=======
+const res = await fetch(
+      `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`
+    );
+    const data = await res.json();
+    setItems(data.items || []);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
   async function changeStatus(itemId: string, status: string) {
     await fetch('/api/vendors/update-pipeline', {
+<<<<<<< HEAD
 
   useEffect(() => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -447,6 +545,11 @@ function Pipeline({ vendorId }: { vendorId: string }) {
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON && JSON.stringify({ itemId, status }),;
+=======
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ itemId, status }),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     });
     fetchItems();
 <<<<<<< HEAD
@@ -551,18 +654,11 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
             <option value='proposal'>Proposal</option>
             <option value='in_progress'>In Progress</option>
             <option value='complete'>Complete</option>
-            <option value='lost'>Lost</option>          </select>
+            <option value='lost'>Lost</option>
+          </select>
         </div>
       ))}
-    </div>          <select defaultValue={item.status} onChange={e => changeStatus(item.id, e.target.value)} className="border rounded px-2 py-1 bg-transparent text-sm">
-            <option value="lead">Lead</option>
-            <option value="qualified">Qualified</option>
-            <option value="proposal">Proposal</option>
-            <option value="in_progress">In Progress</option>
-            <option value="complete">Complete</option>
-            <option value="lost">Lost</option>
-        </div>
-      ))}
+<<<<<<< HEAD
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] |null; // tie to auth later
   return { props: { vendor } }
@@ -594,4 +690,17 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
   return { props: { vendor } }
 }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+    </div>
+);
+
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+  const { listVendors } = await import('../utils/vendor-store');
+  const vendor = listVendors()[0] || null; // tie to auth later
+  return { props: { vendor } };
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

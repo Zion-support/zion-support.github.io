@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -18,6 +19,10 @@ import {useTheme} from "@/hooks/useTheme";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { cn } from "@/lib/utils",
@@ -25,6 +30,7 @@ import { format } from "date-fns";
 import { useTheme } from "@/hooks/useTheme";
 import { format } from "date-fns",
 import { useTheme } from "@/hooks/useTheme",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -78,6 +84,9 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
@@ -88,6 +97,7 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
             <AvatarFallback>U</AvatarFallback>
           </>
         ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD
           <>
 <<<<<<< HEAD
@@ -155,6 +165,11 @@ export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
               src="https://placehold && placehold.co/40x40?text=AI"
               alt="Zion Support"            <AvatarImage
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <>            <AvatarImage
+              src="https://placehold && placehold.co/40x40?text=AI"
+              alt="Zion Support"            <AvatarImage
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               src="https://placehold && placehold.co/40x40?text=AI"
               alt="Zion Support"
             />;
@@ -189,6 +204,7 @@ export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
 
             : theme === "dark"
               ? "text-gray-300"
+<<<<<<< HEAD
 <<<<<<< HEAD
               : "text-gray-500"
 =======
@@ -300,6 +316,10 @@ import React from "react",;
               : "text-gray-500"        )}>;
           {format(timestamp, "h:mm a")}import React from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              : "text-gray-500"        )}>;
+          {format(timestamp, "h:mm a")}import React from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { cn } from "@/lib/utils",;
 import { format } from "date-fns",;
@@ -357,6 +377,7 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // Function to convert URLs and help links to actual clickable links;
 function formatMessageWithLinks(): any (message: string): string {;
@@ -390,6 +411,8 @@ function formatMessageWithLinks(): any (message: string): string {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -471,6 +494,7 @@ function formatMessageWithLinks (message: string): string {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;
@@ -532,3 +556,5 @@ function formatMessageWithLinks(message: string): string {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -24,6 +23,8 @@ export const checkSignupPatterns = async (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export const checkSignupPatterns = async (;
 export const checkSignupPatterns = async (
@@ -95,6 +96,7 @@ export const checkSignupPatterns = async (;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -106,11 +108,14 @@ export const checkSignupPatterns = async (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   // Check email against suspicious patterns;
   const email_check = analyze_email (email),
   // Check condition
 if ( {) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   $2
 =======
@@ -225,3 +230,6 @@ export const checkSignupPatterns = async (;
 =======
   $2
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  $2
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

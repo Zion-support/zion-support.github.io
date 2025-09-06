@@ -34,6 +34,7 @@ files.for_each ((file) => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -42,6 +43,9 @@ files.for_each ((file) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
 

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     if (!targetRef.current) return;
     const element = targetRef.current;
@@ -19,6 +20,8 @@
 
       >
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const opt = {
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -75,14 +78,23 @@ export type PdfExportButtonProps = {
 };
 
 export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: PdfExportButtonProps) {;
+=======
+import React from 'react';
+export type PdfExportButtonProps = any;
+  return (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     if (!targetRef.current) return;
     const element = targetRef.current;
 
     const html2pdf = (await import('html2pdf.js')).default;
 
     const opt = {
+<<<<<<< HEAD
       margin: [10, 10, 10, 10],
 
+=======
+margin: [10, 10, 10, 10],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       filename: fileName,
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: { scale: 2, useCORS: true },
@@ -92,6 +104,7 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
 <<<<<<< HEAD
     html2pdf().set(opt).from(element).save();
   };
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -103,6 +116,9 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       >
+=======
+    >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       Download as PDF
     </button>
   };
@@ -110,11 +126,16 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
       Download as PDF;
     </button>;
   );
+<<<<<<< HEAD
 }  return (
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     <button
       onClick={onClick}
       className="no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover: bg-blue-700 focus:outline-none"
       aria-label="Download as PDF"
+<<<<<<< HEAD
 ;
     html2pdf ().set (opt).from (element).save ();
   }
@@ -129,6 +150,7 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
       aria - label="Download as PDF";
       Download as PDF;
     </button>);
+<<<<<<< HEAD
 <<<<<<< HEAD
     html2pdf().set(opt).from(element).save()
   },
@@ -165,3 +187,11 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+      Download as PDF
+    </button>
+);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

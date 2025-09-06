@@ -16,6 +16,7 @@ interface ActiveFiltersProps {;
   toggleRegion: (region: string) => void,;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   priceRange: [number, number];
 <<<<<<< HEAD
 
@@ -83,6 +84,9 @@ interface ActiveFiltersProps {
 =======
   priceRange: [number, number];interface ActiveFiltersProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  priceRange: [number, number];interface ActiveFiltersProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   selectedSkills: string[],
   toggleSkill: (skill: string) => void,
   selectedAvailability: string[],
@@ -93,6 +97,7 @@ interface ActiveFiltersProps {
   setPriceRange: (range: [number, number]) => void,
   experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   clearFilters: () => void
@@ -166,6 +171,13 @@ export function ActiveFilters({
   // Check if any filters are active
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  clearFilters: () => void
+}}: ActiveFiltersProps) {
+  // Check if any filters are active
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     selectedSkills.length > 0 || 
     selectedAvailability.length > 0 || 
     selectedRegions.length > 0 ||
@@ -175,6 +187,7 @@ export function ActiveFilters({
     priceRange[1] !== 200,
   
   if (!hasActiveFilters) return null,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -376,6 +389,13 @@ export function ActiveFilters({;
       <span className="text-zion-slate-light text-sm">Active filters:</span>
       {selectedSkills.map(skill => (        <ClickableBadge        <ClickableBadge
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  return (
+    <div className="mb-6 flex flex-wrap gap-2 items-center">
+      <span className="text-zion-slate-light text-sm">Active filters:</span>
+      {selectedSkills.map(skill => (        <ClickableBadge        <ClickableBadge
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           key={status}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => toggleAvailability(status)}
@@ -417,6 +437,7 @@ export function ActiveFilters({;
       )}
 
       <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -523,15 +544,23 @@ export function ActiveFilters({;
         size="sm" 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        variant="ghost" 
+        size="sm" 
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         Clear All;
       </Button>;
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
 import React from './react';
@@ -564,6 +593,7 @@ function ActiveFilters() {
     experience_range[1] !== 15 ||;
     price_range[0] !== 50 ||;
     price_range[1] !== 200;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -686,3 +716,6 @@ if (!hasActiveFilters) return null;
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

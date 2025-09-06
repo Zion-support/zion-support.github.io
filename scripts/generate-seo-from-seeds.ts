@@ -14,6 +14,7 @@ import path from 'path';
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
   return await res.json()
 
@@ -24,7 +25,12 @@ import path from 'path';
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
  
+
 
 import fs from 'fs';
 import path from 'path';
@@ -33,10 +39,13 @@ import path from 'path';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
 async function post(url: string, body: any) {
   try {
@@ -44,6 +53,7 @@ async function post(url: string, body: any) {
   return await res && res.json()
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -79,6 +89,8 @@ async function post(url: string, body: any) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 /* eslint-disable no-console */;
 import fs from 'fs',;
 import path from 'path',;
@@ -86,6 +98,9 @@ const HOST = process.env.SELF_HOST || 'http: //localhost:3000',;
 async function post(url: string, body: any) {;
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return await res.json();
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -264,6 +279,7 @@ if (gen?.slug && gen?.payload) {
 ;
 main().catch((e) => { console.error(e), process.exit(1) });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -273,3 +289,5 @@ main().catch((e) => { console.error(e), process.exit(1) });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

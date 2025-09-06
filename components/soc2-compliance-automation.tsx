@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 =======
@@ -38,6 +44,24 @@ import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
 
+=======
+import React from 'react',
+import SEO from '../components/SEO';
+import Link from 'next/link';
+export default function SOC2ComplianceAutomationPage() {
+	return (
+		<>
+			<SEO title;
+							{ title: 'Audit Room', desc: 'Share evidence securely with auditors, immutable logs.' }
+						].map((f) => (
+							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
+								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>
+							</div>
+						))}
+					</div>
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <SEO
@@ -224,6 +248,7 @@ import Link from 'next/link';
         </div>
       </section>
     </>
+<<<<<<< HEAD
   );					<div className="mt-12 flex flex-wrap items-center gap-4">
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -405,6 +430,7 @@ import Link from 'next/link';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -412,3 +438,9 @@ import Link from 'next/link';
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

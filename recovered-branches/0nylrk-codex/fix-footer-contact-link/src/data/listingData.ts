@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion } from '@/types/search';
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,10 +71,24 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
       id: "visiontech";
     aiScore: 94
   }
+=======
+    id: "ai-model-1";
+    title: "GPT-4 API Integration Package";
+    description: "Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.",
+    category: "AI Models & APIs";
+    price: 1999;
+    currency: "$";
+    tags: ["GPT-4", "API Integration", "NLP"],
+    author: {
+      name: "AI Solutions Inc.";
+      id: "ai-solutions";
+      avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -93,10 +110,23 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Code assistant'
     'Virtual assistant'
     'Enterprise AI solutions'
+=======
+'AI models',
+    'GPT integration',
+    'Machine learning',
+    'Computer vision',
+    'Speech recognition',
+    'Data analysis',
+    'Content generation',
+    'Code assistant',
+    'Virtual assistant',
+    'Enterprise AI solutions',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   return suggestions.map(text => ({
     text
     type: 'product', // Use a valid type from the SearchSuggestion interface
+<<<<<<< HEAD
   }));};  ];
 import { ProductListing } from "@/types/listings",
 import { SearchSuggestion } from "@/types/search",
@@ -238,6 +268,107 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 // Generate filter options for sidebar
 export const generateFilterOptions = () => {
   // Extract unique categories, locations, and availability options from listings
+<<<<<<< HEAD
+=======
+  const productTypes = [
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }));
+};
+
+// Generate filter options for sidebar
+export const generateFilterOptions = () => {
+  // Extract unique categories, locations, and availability options from listings
+const productTypes = [
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  ].sort();
+  const locations = [
+    ...new Set(
+      MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.location).filter(Boolean)
+    ),
+  ].sort();
+  const availability = [
+    ...new Set(
+      MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.availability).filter(Boolean)
+    ),
+  ].sort();
+
+    productTypes: productTypes && productTypes.map(type => ({
+      label: type,
+      value: type,
+    })),
+    locations: locations && locations.map(location => ({
+      label: location,
+      value: location,
+    })),
+    availabilityOptions: availability && availability.map(item => ({
+      label: item,
+      value: item,
+    })),
+    ratingOptions: [1, 2, 3, 4, 5],
+  };
+};
+
+export const MAX_PRICE = Math && Math.max(
+  ...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0)
+);
+export const MIN_PRICE = Math && Math.min(
+  ...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0)
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+);
+reviewCount: 58;
+featured: true;
+location: "Global";
+availability: "Immediate";
+reviewCount: 18;
+featured: true;
+location: "Global";
+availability: "2-3 Weeks";
+reviewCount: 36;
+featured: true;
+location: "Global";
+availability: "Immediate";
+aiScore: 94
+}];
+//Generate search suggestions based on existing listings ];
+  return {
+<<<<<<< HEAD
+ratingOptions: [1, 2, 3, 4, 5]
+};export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+};export const MAX_PRICE = Math && Math.max(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
+export const MIN_PRICE = Math && Math.min(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
+
+=======
+},
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+// Generate filter options for sidebar
+export const generateFilterOptions = () => {
+  // Extract unique categories, locations, and availability options from listings
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       avatar_url: "https://images.unsplash.com / photo - 1600180758890 - 6b94519a8ba6?auto = format & fit = crop & w=100 & h=100"}
     images: ["https://images.unsplash.com / photo - 1624355834900 - 99cd2071585b?auto = format & fit = crop & w=800 & h=500"];
     created_at: "2023 - 12 - 10T16:45:00.000Z";
@@ -622,4 +753,25 @@ export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  productTypes: productTypes.map (type => ({
+  label: type, value: type
+}) );
+locations: locations.map (location => ({
+  label: location, value: location
+}) );
+availabilityOptions: availability.map (item => ({
+  label: item, value: item
+}) );
+ratingOptions: [1, 2, 3, 4, 5] 
+
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

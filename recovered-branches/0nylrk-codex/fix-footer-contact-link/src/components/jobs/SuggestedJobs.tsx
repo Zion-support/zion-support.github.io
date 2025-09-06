@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,6 +20,9 @@ import {NoJobsCard} from "./NoJobsCard";
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useAuth } from "@/hooks/useAuth",
 import { Loader2 } from "lucide-react",
 import { Badge } from "@/components/ui/badge",
@@ -26,6 +30,7 @@ import { useJobSuggestions } from "@/hooks/useJobSuggestions",
 import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
 import { JobMatchesCard } from "./JobMatchesCard",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { NoJobsCard } from "./NoJobsCard",
 interface SuggestedJobsProps {
@@ -79,6 +84,9 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
 =======
 import { NoJobsCard } from "./NoJobsCard",    isLoading,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { NoJobsCard } from "./NoJobsCard",    isLoading,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     updateJobMatchStatus, 
     categorizedMatches: { 
       newMatches, 
@@ -106,6 +114,7 @@ import { NoJobsCard } from "./NoJobsCard",    isLoading,
 =======
   } = useJobSuggestions(currentTalentId);
   const handleApply = (matchId: string, jobId: string) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -295,6 +304,8 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
     return <NoJobsCard />;
@@ -319,6 +330,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
 
           <div className="grid gap-4 md:grid-cols-2">;
             {newMatches && newMatches.map(match => (;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <JobMatchesCard
 <<<<<<< HEAD
@@ -393,6 +405,9 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
 =======
               <JobMatchesCard              />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <JobMatchesCard              />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))}
           </div>
         </div>
@@ -546,6 +561,7 @@ if (isLoading) {
 ;
               />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -553,3 +569,6 @@ if (isLoading) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

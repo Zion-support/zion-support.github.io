@@ -34,11 +34,14 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
 
   const config = statusConfig[status];
@@ -65,6 +68,7 @@ interface QuoteStatusBadgeProps {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
   const config = statusConfig[status];
 
@@ -82,6 +86,8 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

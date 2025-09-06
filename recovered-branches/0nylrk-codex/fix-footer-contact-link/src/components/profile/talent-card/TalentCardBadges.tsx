@@ -41,6 +41,7 @@ interface TalentCardBadgesProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -72,6 +73,11 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
   if (!featured) return null;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
+  if (!featured) return null;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded-tl-lg rounded-br-lg z-10">
       <Badge className="bg-transparent border-0 flex items-center gap-1 text-white px-0">
@@ -79,6 +85,7 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
         <span>Featured</span>
       </Badge>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -121,13 +128,18 @@ interface TalentCardBadgesProps {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Award } from "lucide-react",;
 interface TalentCardBadgesProps {;
   featured: boolean | undefined;}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function TalentCardBadges(): any ({ featured }: TalentCardBadgesProps) {;
   if (!featured) return null;
@@ -172,6 +184,7 @@ if (return null) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -190,6 +203,8 @@ if (return null) {
 import React from "react",;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Badge } from "@/components/ui/badge",;
 import { Award } from "lucide-react",;
 interface TalentCardBadgesProps {;

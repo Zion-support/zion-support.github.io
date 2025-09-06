@@ -2,16 +2,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Index utility
 export const Index = () => {
   // Implementation here
-  return null;
+  return null
 };
 
 <<<<<<< HEAD
@@ -48,17 +51,21 @@ export * from './types';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export * from './createNotification',;
 export * from './createHireRequestNotifications',;
 export * from './createOnboardingNotification',;
 export * from './createSystemNotification',;
 export * from './createTestNotification',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export * from './types';
 <<<<<<< HEAD
@@ -86,3 +93,6 @@ export * from "./types";
 =======
 export * from './types';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export * from './types';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

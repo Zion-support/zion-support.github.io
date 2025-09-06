@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { GradientHeading } from "./GradientHeading",
 import Link from "next/link",
@@ -10,13 +11,47 @@ import { cn } from "@/lib/utils",
 import { useTranslation } from "react-i18next",
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // This is the type definition copied from Categories.tsx for consistency.
 // Ideally, this would be in a shared types file.
 interface CategoryType {
   id: string,
   name: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
   description?: string,
+=======
+=======
+
+import { GradientHeading } from "./GradientHeading",
+import Link from "next/link",
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
+import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
+// This is the type definition copied from Categories.tsx for consistency.
+// Ideally, this would be in a shared types file.
+interface CategoryType {
+  id: string;
+  name: string;
+  description?: string;
+color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
+    : defaultCategories.map(cat => ({
+        ...cat
+import { GradientHeading } from "./GradientHeading"
+import Link from "next/link"
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
+import { cn } from "@/lib/utils"
+import { useTranslation } from "react-i18next"
+// This is the type definition copied from Categories.tsx for consistency.
+// Ideally, this would be in a shared types file.
+interface CategoryType {
+  id: string
+  name: string
+  description?: string
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   iconName?: string, // Example field if categories have icons
   itemCount?: number, // Example field for number of items in a category
   // Add a 'link' property if your API provides it, or construct it.
@@ -38,6 +73,7 @@ interface CategoryType {
     link: "/services - comparison"
 }
 // Default static categories with translation keys
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -348,6 +384,9 @@ export function CategoriesSection({
         title: cat.name,
         icon: getIcon(cat.iconName)})),
 
+=======
+const getDefaultCategories = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   // If fetchedCategories is an empty array, and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {
     return (
@@ -646,6 +685,7 @@ export function CategoriesSection(): any ({;
             {t('home.view_all_categories')}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           </Link>;
         </div>;
       </div>;
@@ -658,13 +698,50 @@ export function CategoriesSection(): any ({;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+  switch (iconName) {;
+  ;
+
+};
+const getSpecialServices = (t: any) => [ {;
+  title: t ('categories.it onsite services');
+link: "/it-onsite-services" ;
+}];
+interface CategoriesSectionProps {;
+  showTitle?: boolean;
+className?: string;
+style?: React.CSSProperties;
+categories?: CategoryType[], //Accept categories as a prop ;
+}export function CategoriesSection ({;
+  showTitle = true;
+className;
+style;
+categories: fetchedCategories, //Rename prop for clarity ;
+}: CategoriesSectionProps) {;
+  const {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   t ;
 }= useTranslation ();
 const defaultCategories = getDefaultCategories (t);
 //Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: cat.id;"
@@ -883,8 +960,42 @@ if ( {) {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+<<<<<<< HEAD
 =======
             {t('home.view_all_categories')}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  id: cat.id;";
+title: cat.name,  //Map name to title description: cat.description || "No description available.";
+icon: getIcon (cat.iconName), //Get icon component link: cat.link || `/category/$ {;
+  cat.id ";
+}`, //Construct link if not provided //Assign a default color or implement logic to assign colors color: defaultCategories.find (dc => dc.id === cat.id) ?.color || "from-gray-500 to-gray-600" ;
+}) ) : defaultCategories.map (cat => ({;
+  ...cat;
+title: cat.name;
+icon: getIcon (cat.iconName) ;
+}) );
+//If fetchedCategories is an empty array, and we want to show nothing: if (fetchedCategories && fetchedCategories.length === 0) {;
+  
+}> <div className="container mx-auto px-4" > <h2 className="text-3xl font-semibold text-white mb-4" > {';
+  t ('home.no categories title') ";
+}</h2> <p className="text-zion-slate-light text-lg mb-2" > {';
+  t ('home.no categories desc') ";
+}</p> <p className="text-zion-slate-light text-md" > {';
+  t ('home.no categories support') ;
+
+}return (</p> </div>) ;
+}</div> </Link>) ) ;
+}</div> > {;
+  service.title ;
+}</Link>) ) ";
+}</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors" > {';
+  t ('home.view all categories') ;
+}</Link> </div> </div> </section>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

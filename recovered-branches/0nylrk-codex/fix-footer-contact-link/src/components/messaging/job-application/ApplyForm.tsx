@@ -24,6 +24,7 @@ interface ApplyFormProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const { createConversation } = useMessaging(),
   const { applyToJob } = useJobApplications(),
@@ -47,6 +48,8 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react';
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
@@ -60,6 +63,9 @@ import {ResumeTab} from "./ResumeTab";
 import {Job} from "./types";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
@@ -100,6 +106,7 @@ interface ApplyFormProps {
   onClose: () => void
 
   onApplySuccess?: (jobId: string) => Promise<void>
+<<<<<<< HEAD
 }
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -173,6 +180,8 @@ interface ApplyFormProps {
   onClose: () => void
 
   onApplySuccess?: (jobId: string) => Promise<void>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }interface ApplyFormProps {;
   job: Job,;
   onClose: () => void,;
@@ -219,6 +228,7 @@ interface ApplyFormProps {
     setSelectedResume(resume)
     setSelectedResumeId(resume.id)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -249,12 +259,18 @@ interface ApplyFormProps {
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [activeTab, setActiveTab] = useState<string>("message");
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
+  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleApply = async () => {
     if (!message.trim()) {
       toast({
         title: "Message required"
         description: "Please enter a message before applying."
         variant: "destructive"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -386,11 +402,14 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
     }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       }),
       return
     }
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
       setIsSubmitting(true);
       setIsSubmitting(true),
@@ -427,11 +446,14 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
       // Add info about attached resume if available
       if (selectedResume) {
         fullMessage += `\n\nI've attached my resume: ${selectedResume.title}`
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       
@@ -463,6 +485,11 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Create context data for the conversation
       const contextData = {
         title: job.title
@@ -476,6 +503,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       // Create conversation with the job client
       await createConversation(
         job.client_id;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -496,6 +524,8 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // First submit the application to the job applications table;
       const applicationSuccess = await applyToJob(;
         job && job.id, ;
@@ -524,6 +554,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
         'job';
         job && job.id;
         contextData;
+<<<<<<< HEAD
 <<<<<<< HEAD
       );
 <<<<<<< HEAD
@@ -555,6 +586,9 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
 =======
       );;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      );;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Create context data for the conversation;
       const contextData = {;
         title: job.title,,
@@ -576,6 +610,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       // Call onApplySuccess to update job status in the UI;
       if (onApplySuccess) {;
         await onApplySuccess(job.id);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -614,6 +649,14 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      }
+      
+
+      }
+      
+      
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       toast({
         title: "Application sent"
         description: `Your application for "${job.title}" has been sent.`})
@@ -627,6 +670,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       })
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -655,6 +699,8 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 ;
 
@@ -681,6 +727,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     }
   }
@@ -702,6 +749,8 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     }
   }
@@ -852,6 +901,7 @@ if ( {) {
           <MessageTab;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -872,11 +922,14 @@ if ( {) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <MessageTab 
 
         ;
         <TabsContent value="message">;
           <MessageTab ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -926,6 +979,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <Button
           type="button"
           variant="outline"
@@ -938,6 +993,7 @@ if ( {) {
         <Button
           type="button"
           onClick={handleApply}
+<<<<<<< HEAD
 <<<<<<< HEAD
           disabled={isSubmitting}
 <<<<<<< HEAD
@@ -1006,6 +1062,9 @@ if ( {) {
 =======
           disabled={isSubmitting}          />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          disabled={isSubmitting}          />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </TabsContent>;
         <TabsContent value="resume">;
           <ResumeTab;
@@ -1041,6 +1100,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -1057,6 +1117,9 @@ if ( {) {
 =======
 }  ),; interface ApplyFormProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}  ),; interface ApplyFormProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   job: Job;
 onClose: () => void;
 onApplySuccess?: (jobId: string) => Promise<void> 
@@ -1152,6 +1215,7 @@ return (<> <Tabs value= {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1159,3 +1223,6 @@ return (<> <Tabs value= {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

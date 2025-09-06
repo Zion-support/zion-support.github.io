@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -112,6 +113,8 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -208,6 +211,7 @@ function ProfileContact() {
           </Link>
         </div>
       )}
+<<<<<<< HEAD
       <form onSubmit={handleSendMessage}>
         <div className="space-y-4">
           <div>
@@ -359,6 +363,8 @@ export function ProfileContact({ email, profileName, profileType } ProfileContac
           </a>;
         </div>;
       )}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div>;
             <Input;
               placeholder="Subject";
@@ -368,6 +374,7 @@ export function ProfileContact({ email, profileName, profileType } ProfileContac
           </div>;
           <div>;
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
+<<<<<<< HEAD
 <<<<<<< HEAD
             disabled={isSending}
           >
@@ -398,6 +405,11 @@ export function ProfileContact({ email, profileName, profileType } ProfileContac
             <Send className="mr-2 h-4 w-4" />;
             {isSending ? "Sending..." : "Send Message"}            <Textarea;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            disabled={isSending}>;
+            <Send className="mr-2 h-4 w-4" />;
+            {isSending ? "Sending..." : "Send Message"}            <Textarea;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               placeholder={`Message to ${profile_name}...`}
               value={message}
               on_change={(e) => set_message (e.target.value)}
@@ -420,6 +432,7 @@ export function ProfileContact({ email, profileName, profileType } ProfileContac
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -434,6 +447,8 @@ export function ProfileContact({ email, profileName, profileType } ProfileContac
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   )
   )

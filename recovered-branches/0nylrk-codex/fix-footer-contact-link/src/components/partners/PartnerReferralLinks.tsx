@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -12,6 +13,8 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useRef, useState} from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -25,6 +28,7 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [customParam, setCustomParam] = useState<string>("");
 <<<<<<< HEAD
@@ -95,12 +99,16 @@ export function PartnerReferralLinks() {
 =======
   const [customParam, setCustomParam] = useState<string>("");  const handleCopyLink = (link: string) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [customParam, setCustomParam] = useState<string>("");  const handleCopyLink = (link: string) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     navigator.clipboard.writeText(link)
     toast({
       title: "Link copied!"
       description: "The referral link has been copied to your clipboard"
       variant: "default"
     })
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -117,12 +125,16 @@ export function PartnerReferralLinks() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },
   
   const handleGenerateLink = () => {
     if (baseLink) {
       const url = new URL(baseLink),
       
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -137,6 +149,9 @@ export function PartnerReferralLinks() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Add custom campaign parameter if selected
       if (selectedCampaign !== "default") {
         url.searchParams.append("campaign", selectedCampaign)
@@ -150,6 +165,7 @@ export function PartnerReferralLinks() {
         link: url.toString()      setGeneratedLinks(prev => [...prev, newLink]);
       setIsDialogOpen(false);
       setCustomParam("");
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 <<<<<<< HEAD
@@ -461,6 +477,12 @@ export function PartnerReferralLinks() {;
       { name: "Default", link: baseLink }
       ...generatedLinks      <Card className="bg-zion-blue-dark border-zion-blue-light">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }  const handleDownloadLinks = () => {
+    const allLinks = [
+      { name: "Default", link: baseLink }
+      ...generatedLinks      <Card className="bg-zion-blue-dark border-zion-blue-light">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <CardHeader>;
           <CardTitle className="flex items-center justify-between">;
             <span>Your Referral Link</span>;
@@ -484,10 +506,13 @@ export function PartnerReferralLinks() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               onClick={handleDownloadLinks}
               className="flex items-center gap-2">;      "Name,Link";
       ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);
@@ -505,6 +530,7 @@ export function PartnerReferralLinks() {;
             <Input
               value={baseLink}
               readOnly
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="font-mono text-sm"
 <<<<<<< HEAD
@@ -708,6 +734,9 @@ if ( {) {
 =======
               className="font-mono text-sm"                  <SelectTrigger id="campaign">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              className="font-mono text-sm"                  <SelectTrigger id="campaign">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <SelectValue placeholder="Select campaign type" />;
                   </SelectTrigger>;
                   <SelectContent>;
@@ -746,6 +775,7 @@ if ( {) {
                     <span className="sr-only">Copy</span>;
                   </Button>;
                 </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               </CardContent>;
 <<<<<<< HEAD
@@ -829,3 +859,6 @@ document.body.removeChild (link);
 =======
               </CardContent>;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              </CardContent>;}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

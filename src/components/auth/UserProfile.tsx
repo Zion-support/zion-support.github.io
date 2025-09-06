@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React, { useEffect, useState } from 'react';
 <<<<<<< HEAD
@@ -120,6 +121,9 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {;
     )
 =======
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
       <Card className='w-full max-w-sm'>;
         <CardHeader>;
@@ -158,6 +162,7 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {;
   }
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <Card className="w-full max-w-sm">
       <CardHeader>
@@ -249,6 +254,8 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {;
           </div>
         </div>          Sign Out
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           Sign Out
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -364,6 +371,7 @@ if ( {) {
       </CardContent>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Card>);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -372,3 +380,6 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 =======
 =======
@@ -27,6 +28,11 @@ import React from "react";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import React from './react';
+import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
 import React from "react",
@@ -56,6 +62,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           <h3 className="text-xl font-medium mb-4">Pending Review Flags</h3>
           <p className="text-muted-foreground">
             This tab will show fraud flags that are still pending admin review.
+<<<<<<< HEAD
 <<<<<<< HEAD
           </p>
 <<<<<<< HEAD
@@ -169,6 +176,9 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
 =======
           </p>      return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          </p>      return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center">
           <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />
           <h3 className="text-xl font-medium mb-4">Dangerous Flags</h3>
@@ -176,6 +186,7 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
             This tab shows high-priority dangerous flags requiring immediate attention.
           </p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -213,6 +224,13 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      );
+      ),
+          ),
+    
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     case 'actioned':
       return (
         <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">
@@ -225,6 +243,7 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
       )
     default:
       return null
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -257,6 +276,9 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
 interface FraudTabContentProps {;
@@ -344,6 +366,7 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({ tab_value })
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -354,3 +377,6 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({ tab_value })
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

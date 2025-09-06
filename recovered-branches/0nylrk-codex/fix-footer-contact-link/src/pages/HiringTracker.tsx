@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -43,6 +44,8 @@ function HiringTrackerContent() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",
 import { useParams } from "react-router-dom",
 import { AppHeader } from "@/layout/AppHeader",
@@ -62,12 +65,15 @@ function HiringTrackerContent() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <SEO
@@ -127,6 +133,7 @@ export default function HiringTracker() {
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   const [activeTab, setActiveTab] = useState<string>("kanban");
@@ -134,6 +141,8 @@ export default function HiringTracker() {
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -150,6 +159,7 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import { Briefcase } from "lucide-react",;
 function HiringTrackerContent() {;
   const { jobId } = useParams() as { jobId?: string },;
+<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState<string>("kanban");
 <<<<<<< HEAD
   return (;
@@ -191,6 +201,9 @@ function HiringTrackerContent() {;
 =======
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  const [activeTab, setActiveTab] = useState<string>("kanban");  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <>;
       <SEO;
         title="Hiring Tracker | Zion AI Marketplace";
@@ -200,14 +213,18 @@ function HiringTrackerContent() {;
 =======
       />;
       <AppHeader />;
-      <main className="container mx - auto px - 4 py - 8">;
-        <div className="flex justify - between items - center mb - 8">;
+      <main className="container mx - auto px - 4 py-8">;
+        <div className="flex justify - between items - center mb-8">;
           <div>;
-            <h1 className="text - 3xl font - bold flex items - center">;
-              <Briefcase className="mr - 2 h - 6 w - 6 text - primary" />;
+            <h1 className="text - 3xl font - bold flex items-center">;
+              <Briefcase className="mr - 2 h - 6 w - 6 text-primary" />;
               Hiring Pipeline;
             </h1>;
+<<<<<<< HEAD
             <p className="text - muted - foreground mt - 1">;
+=======
+            <p className="text - muted - foreground mt-1">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         title="Hiring Tracker | Zion AI Marketplace" 
         description="Manage your candidate pipeline in the Zion AI Marketplace." 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -220,6 +237,7 @@ function HiringTrackerContent() {;
               <Briefcase className="mr-2 h-6 w-6 text-primary" />;
               Hiring Pipeline;
             </h1>;
+<<<<<<< HEAD
             <p className="text-muted-foreground mt-1">;
               Track and manage your candidates through the hiring process;
             </p>;
@@ -439,3 +457,9 @@ export default function HiringTracker() {;
 =======
           </TabsList>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <p className="text-muted-foreground mt-1">;          <TabsList>;
+            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>;
+            <TabsTrigger value="analytics">Analytics</TabsTrigger>;
+          </TabsList>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

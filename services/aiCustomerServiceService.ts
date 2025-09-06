@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,6 +12,8 @@ export interface CustomerTicket {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface CustomerTicket {
 export interface CustomerTicket {;
   id: string;
@@ -25,6 +28,7 @@ export interface CustomerTicket {;
   updatedAt: Date;
   resolvedAt?: Date;
   customerSatisfaction?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
   tags: string[];
 <<<<<<< HEAD
@@ -181,6 +185,14 @@ export interface CustomerProfile {
 export interface CustomerProfile {}
 export interface CustomerProfile {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  tags: string[];  message: string;
+  timestamp: Date;
+  attachments?: string[];
+  sentiment: 'positive' | 'neutral' | 'negative';}
+export interface CustomerProfile {}
+export interface CustomerProfile {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface AIResponse {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
@@ -191,6 +203,7 @@ export interface AIResponse {
   next_steps: string[];
   requiresHumanReview: boolean,
   generated_at: Date;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -243,6 +256,9 @@ export interface CustomerServiceMetrics {
 =======
 }  customer_satisfaction: number;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}  customer_satisfaction: number;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   firstResponseTime: number,
   ticketVolumeByCategory: Record < string, number>;
   agent_performance: Record < string, {
@@ -252,13 +268,17 @@ export interface CustomerServiceMetrics {
   }>;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface CustomerServiceRequest {
   customer_id: string;    customerSatisfaction: number
   }>
 }
 export interface CustomerServiceRequest {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   customerId: string;
@@ -299,6 +319,9 @@ export interface CustomerServiceRequest {
 =======
   customerId: string;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  customerId: string;}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ticketId: string;
 export interface CustomerServiceResponse {
   ticket_id: string;
@@ -316,6 +339,7 @@ export interface CustomerServiceResponse {
     try {  }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -396,6 +420,8 @@ export interface CustomerServiceResponse {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
@@ -526,6 +552,7 @@ export interface CustomerServiceResponse {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   private apiKey: string;
@@ -551,6 +578,9 @@ export const aiCustomerServiceService = new AICustomerServiceService(process.env
 =======
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string,;
   customerId: string,;
   subject: string,,
@@ -566,6 +596,7 @@ export const aiCustomerServiceService = new AICustomerServiceService(process.env
   tags: string[],;
   attachments: string[],;
   conversationHistory: CustomerMessage[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -838,6 +869,8 @@ export interface CustomerTicket {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface CustomerTicket {;
 
 export interface CustomerTicket {;
@@ -1237,6 +1270,7 @@ export class AICustomerServiceService {;
 ;
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1259,3 +1293,8 @@ export interface CustomerTicket {;
 export interface CustomerTicket {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+export interface CustomerTicket {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

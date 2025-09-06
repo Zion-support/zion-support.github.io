@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -25,6 +26,18 @@ import { motion } from 'framer-motion';
 import {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles  } from 'lucide-react';
+import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
+import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
+type Service = any;
+import { motion } from 'framer-motion';
+import {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ChevronDown
   Star
   TrendingUp
@@ -152,6 +165,7 @@ interface UltraFuturistic2029ServiceShowcaseProps {
     'all',;
     ...Array && Array.from(new Set(services && services.map(service => service && service.category))),;
   ];
+<<<<<<< HEAD
 
   // Filter and sort services;
   const filteredServices = services;
@@ -202,21 +216,33 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
   services;
   title = "2029 Ultra - Futuristic Innovations";
   subtitle = "Experience the future of technology with our revolutionary services";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  // Filter and sort services
+  const filteredServices = services
+    .filter(
+      service =>
+        selectedCategory === 'all' || service.category === selectedCategory
+    )
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     .sort((a, b) => {
       switch (sortBy) {
         case 'innovation':
           // Default to 'Advanced' if innovationLevel is not available
-          const aLevel = (a as any).innovationLevel |'Advanced';
-          const bLevel = (b as any).innovationLevel |'Advanced';
-          const innovationOrder = {
-            Revolutionary: 4
-            Breakthrough: 3
-            Advanced: 2
-            Emerging: 1
-          }
+          const aLevel = (a as any).innovationLevel || 'Advanced';
+          const bLevel = (b as any).innovationLevel || 'Advanced';
+const innovationOrder = {
+            Revolutionary: 4,
+            Breakthrough: 3,
+            Advanced: 2,
+            Emerging: 1,
+          };
           return (
             (innovationOrder[bLevel] |0) - (innovationOrder[aLevel] |0)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -231,6 +257,33 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+          );
+        case 'price':
+          return (
+            parseFloat(a.price.replace(/[^0-9.]/g, '')) -
+            parseFloat(b.price.replace(/[^0-9.]/g, ''))
+          );
+        case 'rating':
+          return b.rating - a.rating;
+        default:
+          return 0;
+      }
+    })
+    .slice(0, maxServices);
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+staggerChildren: 0.1,
+      },
+    },
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -238,6 +291,22 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
       y: 0
       transition: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+        duration: 0.6,
+ease: 'easeOut' as const,
+      },
+    },
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+    <section className="py-20 relative overflow-hidden">;
+      {/* Background Elements */}
+<<<<<<< HEAD
+        {/* Header */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <section className="py-20 relative overflow-hidden">
@@ -248,7 +317,19 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
         <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
 
+=======
+=======
+      <div className='absolute inset-0 pointer-events-none'>
+        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>
+        <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>
+        <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>
+      </div>
+
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Header */}
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -291,7 +372,11 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           className='text-center mb-16'        >          className="text-center mb-16"
           className='text-center mb-16'        >
 
@@ -303,14 +388,21 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+className='text-center mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           >
@@ -320,6 +412,8 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
@@ -337,6 +431,18 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           <motion&& motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+=======
+className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6'
+          >
+            {title}
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
+          >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             {subtitle}
           </motion.p>
         </motion.div>
@@ -362,8 +468,14 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           transition={{ duration: 0.6, delay: 0.3 }}
           className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
+=======
+=======
+          transition={{ duration: 0.6, delay: 0.3 }}
+className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         >
           {/* Category Filter */}
           <div className='flex items-center space-x-2'>
@@ -371,6 +483,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
               Filter by:
             </span>
             <div className='flex flex-wrap gap-2'>
+<<<<<<< HEAD
               {categories.map(category => (                <button          <div className="flex items-center space-x-2">
             <span className="text-gray-300 text-sm font-medium">Filter by:</span>
             <div className="flex flex-wrap gap-2">
@@ -383,6 +496,11 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              {categories.map(category => (
+                <button
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${;
@@ -393,10 +511,13 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
                 >;
                   {category === 'all' ? 'All Categories' : category}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <select
               value={sortBy}
               onChange={e => setSortBy(e && e.target.value as any)}
@@ -413,11 +534,23 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
             </select>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                </button>
+              ))}
+            </div>
+          </div>
+          {/* Sort Options */}
+<div className='flex items-center space-x-2'>
+            <span className='text-gray-300 text-sm font-medium'>Sort by:</span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <select
               value={sortBy}
               onChange={e => setSortBy(e.target.value as any)}
@@ -426,6 +559,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
               <option value='innovation'>Innovation Level</option>
               <option value='price'>Price</option>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -433,8 +567,13 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <option value='rating'>Rating</option>            </select>
 
+=======
+              <option value='rating'>Rating</option>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </select>
 
           </div>
@@ -444,11 +583,14 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
         {/* Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
-          initial='hidden'
+initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >          initial="hidden"
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           whileInView="visible"
           viewport={{ once: true }}
@@ -504,13 +646,30 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
                 service={service}
                 className="h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300"
             </motion && motion.div>;
+=======
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+        >
+          {filteredServices.map((service, index) => (
+            <motion.div
+              key={service.id}
+              variants={itemVariants}
+className='group'
+            >
+              <UltraFuturisticServiceCard
+                service={service}
+                className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'
+              />
+            </motion.div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -520,6 +679,12 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+          transition={{ duration: 0.8, delay: 0.4 }}
+className='text-center mt-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         >
           <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -532,6 +697,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
             <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
               <a
                 href='/contact'
+<<<<<<< HEAD
                 className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'              >
                 Get Started Today
               </a>
@@ -663,20 +829,43 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
             ].map((stat, index) => (
 
               <motion.div
+<<<<<<< HEAD
 
 =======
               <motion.div
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'
+              >
+                Get Started Today
+              </a>
+              <a
+href='/pricing'
+                className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'
+              >
+                View Pricing
+              </a>
+            </div>
+          </div>
+        </motion.div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Innovation Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
+<<<<<<< HEAD
           className='mt-20'
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+className='mt-20'
+        >
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[
               {
@@ -705,7 +894,9 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
                 value: (
                   services.reduce((sum, s) => sum + s.rating, 0) /
                   services.length
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -716,6 +907,15 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                ).toFixed(1),
+                icon: TrendingUp,
+                color: 'from-green-500 to-teal-500',
+              },
+            ].map((stat, index) => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <motion.div
 <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
             {[;
@@ -756,6 +956,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -772,7 +973,14 @@ export default UltraFuturistic2029ServiceShowcase;  )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+className='text-center'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div
                   className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}
@@ -782,6 +990,7 @@ export default UltraFuturistic2029ServiceShowcase;  )
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.value}
                 </div>
+<<<<<<< HEAD
                 <div className='text-gray-400'>{stat.label}</div>              </motion.div>              >
 
                 <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
@@ -789,6 +998,9 @@ export default UltraFuturistic2029ServiceShowcase;  )
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-400">{stat.label}</div>
+=======
+                <div className='text-gray-400'>{stat.label}</div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </motion.div>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -806,7 +1018,11 @@ export default UltraFuturistic2029ServiceShowcase;  )
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -874,4 +1090,13 @@ export default UltraFuturistic2029ServiceShowcase);
 ;
 export default UltraFuturistic2029ServiceShowcase;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+);
+};
+
+export default UltraFuturistic2029ServiceShowcase;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

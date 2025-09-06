@@ -13,6 +13,7 @@ interface MilestoneCreatorProps {;
 export function MilestoneCreator(): any ({;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -105,6 +106,9 @@ import React from 'react',;
 =======
 export function MilestoneCreator({;import React from 'react',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function MilestoneCreator({;import React from 'react',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { AddMilestoneForm } from '../AddMilestoneForm',;
 interface MilestoneCreatorProps {;
   onSubmit: (data: any) => Promise<void>,;
@@ -133,6 +137,7 @@ export function MilestoneCreator({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -147,6 +152,8 @@ export function MilestoneCreator({;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <AddMilestoneForm
 
@@ -175,6 +182,7 @@ export function MilestoneCreator({;
   return (;
     <AddMilestoneForm ;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
     <AddMilestoneForm;
 <<<<<<< HEAD
@@ -212,6 +220,9 @@ export function MilestoneCreator({;
 =======
     <AddMilestoneForm;  on_submit: (data: any) => Promise < void>,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    <AddMilestoneForm;  on_submit: (data: any) => Promise < void>,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   is_submitting: boolean,
   on_cancel: () => void,
   project_scope?: string;
@@ -233,6 +244,7 @@ function MilestoneCreator() {
       projectEndDate={projectEndDate}
       project_type={project_type}
     />);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -269,3 +281,6 @@ function MilestoneCreator() {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

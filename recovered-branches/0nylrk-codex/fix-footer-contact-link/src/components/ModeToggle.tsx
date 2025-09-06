@@ -12,6 +12,7 @@ export function ModeToggle() {;
   const { theme, setTheme } = useTheme();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -50,6 +51,8 @@ import { Button } from "@/components/ui/button"
 // Create a simplified theme hook for offline mode
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const useTheme = () => ({
   theme: "dark"
@@ -62,11 +65,14 @@ const useTheme = () => ({
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function ModeToggle() {
   const { theme, setTheme } = useTheme(),
 
@@ -96,6 +102,7 @@ export function ModeToggle() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -120,6 +127,8 @@ import { Button } from "@/components/ui/button";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Moon, Sun  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
 // Create a simplified theme hook for offline mode;
@@ -142,6 +151,7 @@ function ModeToggle() {
     >;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -159,6 +169,8 @@ function ModeToggle() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {theme === "dark" ? (;
         <Sun className="h-5 w-5 text-yellow-300" />;
       ) : (;
@@ -169,11 +181,14 @@ function ModeToggle() {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 }
   ),;}

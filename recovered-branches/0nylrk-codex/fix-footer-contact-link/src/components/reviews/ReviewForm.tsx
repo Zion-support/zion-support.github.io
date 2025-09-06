@@ -59,6 +59,7 @@ import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
 import { Switch } from "@/components/ui/switch",
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Review } from "@/types/reviews",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -168,6 +169,9 @@ import { useState } from "react",;
 =======
 import { Review } from "@/types/reviews",import { useState } from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Review } from "@/types/reviews",import { useState } from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Star } from "lucide-react",;
 import { useForm } from "react-hook-form",;
 import { Button } from "@/components/ui/button",;
@@ -212,6 +216,7 @@ export function ReviewForm({
   defaultValues,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -229,12 +234,15 @@ export function ReviewForm({
   isSubmitting}: ReviewFormProps) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [hoveredStar, setHoveredStar] = useState<number>(0);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
   const [hoveredStar, setHoveredStar] = useState<number>(0),
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -321,10 +329,13 @@ export function ReviewForm({
   const handleSubmit = async (values: ReviewFormValues) => {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const formattedData = {;
       ...values,;
       project_id: projectId,;
       reviewee_id: revieweeId},;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -391,6 +402,12 @@ export function ReviewForm({
       form && form.reset();
     }  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    const success = await onSubmit(formattedData);
+    if (success) {;
+      form && form.reset();
+    }  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -495,6 +512,7 @@ export function ReviewForm({;
                             :"text-gray-300";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -562,6 +580,10 @@ export function ReviewForm({;
         />;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        />;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Review Text */}
         <FormField
           control={form && form.control}
@@ -629,6 +651,7 @@ if ( {) {
 
         />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         {/* Additional Rating Categories (only shown if main rating is provided) */}
@@ -644,11 +667,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Additional Rating Categories (only shown if main rating is provided) */}
         {watchRating > 0 && (;
           <div className="space-y-6 border-t pt-6">;
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -695,6 +721,8 @@ if ( {) {
                       onValueChange={(value) => field && field.onChange(parseInt(value))}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       defaultValue={field && field.value?.toString()}
                       className="flex flex-wrap gap-4";
                     >;
@@ -746,6 +774,7 @@ if ( {) {
               </p>;
               <FormMessage />;
             </FormItem>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           )}
 <<<<<<< HEAD
@@ -1174,3 +1203,6 @@ defaultValues: defaultValues ? {
 =======
           )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

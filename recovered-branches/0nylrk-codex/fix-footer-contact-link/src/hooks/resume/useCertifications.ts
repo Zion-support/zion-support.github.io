@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,11 +11,15 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Certification  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function useCertifications() {
 <<<<<<< HEAD
@@ -50,12 +55,16 @@ export function useCertifications() {;
 =======
 export function useCertifications() {  const { user } = useAuth();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function useCertifications() {  const { user } = useAuth();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
   const addCertification = async (resumeId: string, cert: Certification): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to add certifications')
+<<<<<<< HEAD
 <<<<<<< HEAD
       return false
 <<<<<<< HEAD
@@ -226,6 +235,12 @@ export function useCertifications() {;
         .from('certifications')
         .insert({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      return false    try {
+      const { error } = await supabase
+        .from('certifications')
+        .insert({;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setIsLoading(true),;
     setError(null),;
     try {;
@@ -254,6 +269,7 @@ export function useCertifications() {;
       return false;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -266,10 +282,14 @@ export function useCertifications() {;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     
     setIsLoading(true),
     setError(null),
+<<<<<<< HEAD
 <<<<<<< HEAD
     
 <<<<<<< HEAD
@@ -591,6 +611,16 @@ import {useState} from 'react';
         .from('certifications')
         .delete()import {useState} from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          return showSuccessToast("Certification updated", "Your certification has been updated")
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not update certification')
+    } finally {
+      setIsLoading(false)    try {
+      const { error } = await supabase
+        .from('certifications')
+        .delete()import {useState} from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {supabase} from '@/integrations / supabase / client';
 import {Certification} from '@/types / resume';
 import {use_auth} from '@/hooks / use_auth';
@@ -619,6 +649,7 @@ if ( {) {
     addCertification;
     updateCertification;
     deleteCertification;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -812,6 +843,8 @@ deleteCertification
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }  }
 }
@@ -819,8 +852,12 @@ deleteCertification
     set_error (null);
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

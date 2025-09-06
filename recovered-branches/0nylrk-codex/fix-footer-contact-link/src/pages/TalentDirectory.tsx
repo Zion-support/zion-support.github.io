@@ -1,11 +1,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -29,6 +32,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -37,6 +41,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -49,6 +55,7 @@ import {X} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {TalentProfile} from "@/types/talent";
 export default function TalentDirectory() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const navigate = useNavigate();
 <<<<<<< HEAD
@@ -88,6 +95,9 @@ import { X } from "lucide-react",
 =======
   const navigate = useNavigate();    filteredTalents;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const navigate = useNavigate();    filteredTalents;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     isLoading;
     searchTerm;
 <<<<<<< HEAD
@@ -133,6 +143,7 @@ function TalentDirectory() {
     selected_talent;
     setSelectedTalent;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -165,6 +176,8 @@ function TalentDirectory() {
     filteredTalents,
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     isLoading,
     searchTerm,
     setSearchTerm,
@@ -198,6 +211,7 @@ function TalentDirectory() {
   const handleRequestHire = (talent: TalentProfile) => {
     setSelectedTalent(talent)
     setIsHireModalOpen(true)
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -206,6 +220,8 @@ function TalentDirectory() {
   const handleRequestHire = (talent: TalentProfile) => {
     setSelectedTalent(talent)
     setIsHireModalOpen(true)
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },
   
   const viewProfile = (id: string) => {
@@ -214,6 +230,7 @@ function TalentDirectory() {
   },
   
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -225,6 +242,8 @@ function TalentDirectory() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -234,6 +253,7 @@ function TalentDirectory() {
             <p className="text-zion-slate-light">
               Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.
             </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
 <<<<<<< HEAD
@@ -588,6 +608,13 @@ export default function TalentDirectory() {;
             <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
               <FilterSidebar            {/* Results */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          </div>          {/* Main content */}
+          <div className="flex flex-col lg:flex-row gap-6">;
+            {/* Sidebar - Desktop */}
+            <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
+              <FilterSidebar            {/* Results */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <TalentResults;
               filtered_talents={filtered_talents}
               is_loading={is_loading}
@@ -612,6 +639,7 @@ export default function TalentDirectory() {;
                 price_range;
 
                 setPriceRange;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 experience_range;
 =======
@@ -650,6 +678,9 @@ export default function TalentDirectory() {;
 =======
                 experience_range;              activeFiltersProps={{;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                experience_range;              activeFiltersProps={{;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 selectedSkills,;
                 toggleSkill,;
                 selectedAvailability,;
@@ -660,10 +691,13 @@ export default function TalentDirectory() {;
                 setPriceRange,;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 experienceRange;
                 setExperienceRange;
                 selectedSkills
@@ -682,6 +716,7 @@ export default function TalentDirectory() {;
                   <FilterSidebar
                     searchTerm={searchTerm}
                     setSearchTerm={setSearchTerm}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     selectedSkills={selectedSkills}
                     toggleSkill={toggleSkill}
@@ -741,6 +776,8 @@ export default function TalentDirectory() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     selected_skills={selected_skills}
                     toggle_skill={toggle_skill}
                     selected_availability={selected_availability}
@@ -917,6 +954,7 @@ return (<AppLayout> <div className="container mx-auto px-4 py-8" > <div classNam
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -924,3 +962,6 @@ return (<AppLayout> <div className="container mx-auto px-4 py-8" > <div classNam
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

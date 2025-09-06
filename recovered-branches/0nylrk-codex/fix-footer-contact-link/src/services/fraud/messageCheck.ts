@@ -18,10 +18,13 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
 export const checkMessage = (messageContent: string): MessageAnalysisResult => {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const analysis = analyzeContent(messageContent);
   // Determine severity based on number and type of issues
 
@@ -30,6 +33,7 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
     severity = analysis && analysis.reasons.length > 2 || 
               analysis && analysis.reasons.some(r => r && r.includes('payment') || r && r.includes('external')) 
       ? 'dangerous' 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -47,6 +51,8 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       : 'suspicious'
 // Message checking functionality;
 import {FraudSeverity} from '@/types / fraud';
@@ -76,6 +82,7 @@ if ( {) {
 
     severity
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -132,6 +139,8 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Message checking functionality;
 import { FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -156,6 +165,7 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
 };
   }
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -198,3 +208,5 @@ export const checkMessage = (messageContent:string):MessageAnalysisResult => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

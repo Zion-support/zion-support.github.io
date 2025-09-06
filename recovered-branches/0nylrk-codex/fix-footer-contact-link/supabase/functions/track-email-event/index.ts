@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21,10 +22,15 @@ import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+<<<<<<< HEAD
 <<<<<<< HEAD
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 <<<<<<< HEAD
@@ -54,6 +60,11 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);// Initialize Sup
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const supabase = createClient(supabaseUrl, supabaseServiceKey);// Initialize Supabase client
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -61,6 +72,7 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 serve(async (req) => {
   // Parse the URL to get the tracking parameters
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -89,6 +101,8 @@ serve(async (req) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
@@ -105,6 +119,7 @@ serve(async (req) => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -114,6 +129,8 @@ serve(async (req) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Validate required parameters
   if (!type |!campaignId |!userId) {
     return new Response("Missing required parameters", { status: 400 })
@@ -182,6 +199,7 @@ if ( {) {
           0x00, 0x02, 0x02, 0x44, 0x01, 0x00, 0x3B]);
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
           headers: {
 <<<<<<< HEAD
 
@@ -230,12 +248,16 @@ if ( {) {
 =======
           headers: {            "Expires": "0"}}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          headers: {            "Expires": "0"}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       )
     } else if (type === "click") {
       await supabase
         .from("email_campaigns")
         .update({ clicked_at: new Date().toISOString() })
         .eq("id", campaignId)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -284,6 +306,14 @@ if ( {) {
 
       // Redirect to the specified URL or default to dashboard
       const destination = redirectUrl || `${supabaseUrl}/dashboard`,
+=======
+        headers: {
+          Location: destination}})
+    }        .eq("user_id", userId),
+
+      // Redirect to the specified URL or default to dashboard
+      const destination = redirectUrl || `${supabaseUrl}/dashboard`,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       return new Response(null, {
         status: 302
@@ -318,14 +348,18 @@ if ( {) {
           Location: destination}})
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // If it was a click event, still try to redirect the user
     if (type === "click" && redirectUrl) {
       return new Response(null, {
         status: 302
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -344,6 +378,8 @@ if ( {) {
     return new Response ("Invalid event type", { status: 400 });
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error ("Error tracking email event:", error);
 ;
@@ -358,6 +394,7 @@ if ( {) {
           Location: redirect_url}});
     }  }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -564,3 +601,5 @@ headers: {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

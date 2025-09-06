@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,10 +12,13 @@
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {MilestonesList} from '../MilestonesList';
 import {PaymentSummary} from '../PaymentSummary';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -35,6 +39,9 @@ interface MilestoneManagerProps {
 =======
 =======  projectId: string
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======  projectId: string
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   milestones: Milestone[]
   activities: Record<string, MilestoneActivity[]>;
   isLoading: boolean
@@ -48,6 +55,7 @@ interface MilestoneManagerProps {
   onUploadDeliverable: (id: string, file: File) => Promise<any>
 
 import {MilestonesList} from '../MilestonesList';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {PaymentSummary} from '../PaymentSummary';
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
@@ -85,6 +93,9 @@ interface MilestoneManagerProps {
 =======
 import {PaymentSummary} from '../PaymentSummary';interface MilestoneManagerProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {PaymentSummary} from '../PaymentSummary';interface MilestoneManagerProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   projectId: string,
   milestones: Milestone[],
   activities: Record<string MilestoneActivity[]>,
@@ -97,6 +108,7 @@ import {PaymentSummary} from '../PaymentSummary';interface MilestoneManagerProps
   onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,
   onDeleteMilestone: (id: string) => Promise<boolean>,
   onUploadDeliverable: (id: string, file: File) => Promise<any>,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -116,6 +128,10 @@ export function MilestoneManager({;
   refetch: () => Promise<void>
 }  projectId;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  refetch: () => Promise<void>
+}  projectId;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   milestones;
   activities;
   isLoading;
@@ -139,6 +155,7 @@ export function MilestoneManager({
   onCreateMilestone,
   onUpdateStatus,
   onDeleteMilestone,
+<<<<<<< HEAD
 <<<<<<< HEAD
   onUploadDeliverable,
 <<<<<<< HEAD
@@ -239,12 +256,16 @@ function MilestoneManager() {
 =======
   onUploadDeliverable,      await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  onUploadDeliverable,      await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       toast.success("Milestone approved"),
       await refetch()
     } catch (error) {
       console.error("Error approving milestone:", error),
       toast.error("Failed to approve milestone")
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -319,6 +340,11 @@ import React from 'react',;
   },
   import React from 'react',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  },
+  import React from 'react',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { MilestonesList } from '../MilestonesList',;
 import { PaymentSummary } from '../PaymentSummary',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
@@ -379,6 +405,7 @@ export function MilestoneManager({;
       <div className="lg:col-span-2">;
         <MilestonesList;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -420,12 +447,15 @@ export function MilestoneManager({;
           milestones={milestones}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           activities={activities}
           is_loading={is_loading}
           is_client={is_client}
           onCreateMilestone={onCreateMilestone}
           onUpdateStatus={onUpdateStatus}
           onDeleteMilestone={onDeleteMilestone}
+<<<<<<< HEAD
 <<<<<<< HEAD
           onUploadDeliverable={onUploadDeliverable}
 <<<<<<< HEAD
@@ -471,6 +501,9 @@ export function MilestoneManager({;
 =======
           onUploadDeliverable={onUploadDeliverable}          paymentTerms={paymentTerms}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          onUploadDeliverable={onUploadDeliverable}          paymentTerms={paymentTerms}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         />;
       </div>;
     </div>;
@@ -555,6 +588,7 @@ grid grid-cols-1 lg:grid-cols-3 gap-6"> <div className=" lg:col-span-2" > <Miles
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -562,3 +596,6 @@ grid grid-cols-1 lg:grid-cols-3 gap-6"> <div className=" lg:col-span-2" > <Miles
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

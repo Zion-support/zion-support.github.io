@@ -25,6 +25,7 @@ import { cn } from "@/lib/utils",
 import {cn} from "@/lib/utils";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function SidebarGroupLabel({
   className,
   children,
@@ -119,6 +120,10 @@ export function SidebarGroupLabel(): any ({ className, children, ...props }: Sid
       {children}
     </div>;
 =======
+=======
+import React from "react",
+import { cn } from "@/lib/utils",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 <<<<<<< HEAD
 }
@@ -142,6 +147,7 @@ export function SidebarGroupLabel(): any ({ className, children, ...props }: Sid
 =======
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -187,3 +193,5 @@ export function SidebarGroupLabel({ className, children, ...props }: SidebarGrou
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

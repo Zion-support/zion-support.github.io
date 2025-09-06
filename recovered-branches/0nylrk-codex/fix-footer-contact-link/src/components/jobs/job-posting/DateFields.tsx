@@ -18,6 +18,7 @@ import {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 } from "@/components/ui/popover";
@@ -50,10 +51,13 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 
 import { FormControl } from "@/components/ui/form";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { cn } from "@/lib/utils";
 <<<<<<< HEAD
@@ -128,10 +132,14 @@ interface DateFieldsProps {
 =======
 import { cn } from "@/lib/utils";interface DateFieldsProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { cn } from "@/lib/utils";interface DateFieldsProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   startDate: Date | undefined,
   setStartDate: (date: Date | undefined) => void,
   endDate: Date | undefined,
   setEndDate: (date: Date | undefined) => void
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -153,6 +161,9 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
 =======
 }  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
@@ -211,6 +222,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
                 ) : (;
                   <span>Pick a date</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 )}
@@ -266,6 +278,9 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
 =======
                 )}              initialFocus
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                )}              initialFocus
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             />
           </PopoverContent>
         </Popover>
@@ -277,6 +292,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
             <FormControl>
               <Button
                 variant={"outline"}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className={cn(
 <<<<<<< HEAD
@@ -303,6 +319,9 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
 =======
                 className={cn(                  !endDate && "text-muted-foreground"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                className={cn(                  !endDate && "text-muted-foreground"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 )}
               >
                 {endDate ? (
@@ -370,6 +389,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
         </Popover>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -412,3 +432,6 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

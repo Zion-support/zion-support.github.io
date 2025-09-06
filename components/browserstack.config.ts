@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'};
 
@@ -145,8 +146,40 @@ default define_config ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+projects: [ {
+  name: Desktop Chrome', use: {
+  browserName: chromium', channel: window.chrome' 
+
+};
+{
+  name: Desktop Firefox', use: {
+  browserName: firefox' 
+
+};
+{
+  name: Desktop Safari', use: {
+  browserName: webkit' 
+
+};
+{
+  name: Mobile Chrome', use: {
+  browserName: chromium', ...devices['Pixel 5'] 
+
+};
+{
+  name: Mobile Safari', use: {
+  browserName: webkit', ...devices['iPhone 12'] 
+
+}];
+reporter: [
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

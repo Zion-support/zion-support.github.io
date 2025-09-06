@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     </header>
   );
 }
@@ -172,6 +173,10 @@ export default function Header() {;
 
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+'use client';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -217,10 +222,13 @@ const Header: React.FC = () => {
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
@@ -254,6 +262,7 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
 <<<<<<< HEAD
+<<<<<<< HEAD
           <nav className="hidden md:flex space-x-8">
 =======
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -266,6 +275,8 @@ const Header: React.FC = () => {
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="hidden lg:flex items-center space-x-8">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {navigation.map((item) => (
@@ -430,6 +441,7 @@ import React, { useState, useEffect } from 'react';
                         </Link>
                       ))}
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </motion.div>
                 )}
@@ -712,6 +724,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   )}
                 </div>
               ))}
@@ -732,6 +746,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   );
 };
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Link from 'next/link';
@@ -988,3 +1003,6 @@ export default Header;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+export default Header;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

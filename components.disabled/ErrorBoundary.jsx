@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -40,6 +41,8 @@ const Component = () => {; import _React from "react"; "class": ErrorBoundary ex
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const Component = () => {; import _React from "react"; "class": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { "hasError": 'fals',e,"error": 'null'} } "static": getDerivedStateFromError(error) { return { hasError tru,e,"error": ''} } componentDidCatch(error,errorInfo) {" } render() { if (this.state.hasError) { return (" <div className="error-boundary"> <h2>Something went wrong.</h2> <details>{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}
 const Component = () => {; import _React from "react"; "class": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { "hasError": 'fals',e,"error": 'null'} } "static": getDerivedStateFromError(error) { return { hasError tru,e,"error": ''} } componentDidCatch(error,errorInfo) {" } render() { if (this.state.hasError) { return (" <div className="error-boundary"> <h2>Something went wrong.</h2> <details>{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}
 const Component = () => {; import _React from "react"; "class": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { "hasError": 'fals',e,"error": 'null'} } "static": getDerivedStateFromError(error) { return { hasError tru,e,"error": ''} } componentDidCatch(error,errorInfo) {" } render() { if (this.state.hasError) { return (" <div className="error-boundary"> <h2>Something went wrong.</h2> <details>{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}
@@ -48,6 +51,7 @@ const Component = () => {; import React from "react"; class: ErrorBoundary exten
 const Component = () => {; import _React from "react"; "class": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { "hasError": 'fals',e,"error": 'null'} } "static": getDerivedStateFromError(error) { return { hasError tru,e,"error": ''} } componentDidCatch(error,errorInfo) {" } render() { if (this.state.hasError) { return (" <div className="error-boundary"> <h2>Something went wrong.</h2> <details>{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}
 const Component = () => {; import _React from "react"; "class": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { "hasError": 'fals',e,"error": 'null'} } "static": getDerivedStateFromError(error) { return { hasError tru,e,"error": ''} } componentDidCatch(error,errorInfo) {" } render() { if (this.state.hasError) { return (" <div className="error-boundary"> <h2>Something went wrong.</h2> <details>{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}
 const Component = () => {; import _React from "react"; "class": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { "hasError": 'fals',e,"error": 'null'} } "static": getDerivedStateFromError(error) { return { hasError tru,e,"error": ''} } componentDidCatch(error,errorInfo) {" } render() { if (this.state.hasError) { return (" <div className="error-boundary"> <h2>Something went wrong.</h2> <details>{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 =======
@@ -69,3 +73,5 @@ const Component = () => {; import _React from "react"; "class": ErrorBoundary ex
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

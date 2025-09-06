@@ -1,16 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Head from 'next/head';
 export default function OffworldConsole() {;
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [chat, setChat] = useState('');
   const [voteChoice, setVoteChoice] = useState('yes');
   const [proposalId, setProposalId] = useState('prop-1');
   const [name, setName] = useState('');
   const [skills, setSkills] = useState('');
   const [status, setStatus] = useState('');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -34,6 +38,8 @@ export default function OffworldConsole() {;
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
   }
   async function syncProfile() {
@@ -46,6 +52,54 @@ export default function OffworldConsole() {;
     });
     setStatus(res && res.ok ? 'Broadcast sent' : 'Broadcast failed');
 
+<<<<<<< HEAD
+=======
+=======
+import { useState  } from 'react';
+import Head from 'next/head';
+    const res = null;
+    setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')
+  }
+
+    const res = await fetch('/api/offworld/orbit?action=chat', {
+      method: 'POST'
+      headers: { 'content-type': 'application/json' }
+      body: JSON.stringify({ from: 'anon', text: chat })
+    });
+    setStatus(res.ok ? 'Chat sent' : 'Chat failed');    const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ from: 'anon', text: chat }) })
+    setStatus(res.ok ? 'Chat sent' : 'Chat failed')
+  }
+  async function castVote() {
+    setStatus('Recording vote...');
+const res = await fetch('/api/offworld/orbit?action=vote', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }),
+    });
+    setStatus(res.ok ? 'Vote recorded' : 'Vote failed');
+  }
+  async function syncProfile() {
+    setStatus('Pinning profile...');
+const res = await fetch('/api/offworld/ipfs?action=json', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        profile: { name, skills: skills.split(',').map(s => s.trim()) }
+      })
+    });
+    const data = await res.json();
+    setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed');
+  }
+  async function broadcast() {
+    setStatus('Broadcasting manifesto...');
+const res = await fetch('/api/offworld/ipfs?action=broadcast', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ message: 'We build beyond platforms.' }),
+    });
+    setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
         <input
           className='border p-2 w-full'
@@ -196,6 +250,7 @@ function broadcast() {
         <button
           className='px-3 py-2 bg-black text-white rounded'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           onClick={syncProfile}>;
           Pin Profile to IPFS;
@@ -203,15 +258,21 @@ function broadcast() {
       </section>;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className='space-y-2'>;
         <h2 className='font-semibold'>Broadcast Manifesto</h2>;
         <button
           className='px-3 py-2 bg-indigo-600 text-white rounded'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           onClick={broadcast}>;
           Broadcast;
         </button>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -227,6 +288,14 @@ function broadcast() {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+      {status && <p className='text-sm text-gray-700'>{status}</p>}
+    </div>
+<<<<<<< HEAD
+);
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <button;
           className='px - 3 py - 2 bg - black text - white rounded';
           on_click={cast_vote}
@@ -266,6 +335,7 @@ function broadcast() {
       </section>;
       {status && <p className='text - sm text - gray - 700'>{status}</p>}
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 
@@ -314,3 +384,8 @@ function broadcast() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

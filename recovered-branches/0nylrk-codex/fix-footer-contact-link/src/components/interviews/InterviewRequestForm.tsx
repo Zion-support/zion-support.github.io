@@ -48,6 +48,7 @@ import {toast} from "@/components/ui/use-toast";
 import {useInterviews} from "@/hooks/useInterviews";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,6 +80,8 @@ interface InterviewRequestFormProps {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface InterviewRequestFormProps {;
   talent: TalentProfile,;
   onClose: () => void,;
@@ -120,6 +123,7 @@ export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: I
 
     }
     setIsSubmitting(true);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -202,6 +206,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -220,15 +226,19 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     try {
       // Combine date and time
       const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`;
       const scheduledDate = new Date(dateTimeString);
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Calculate end time based on duration
 <<<<<<< HEAD
@@ -285,6 +295,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 =======
       // Calculate end time based on duration      toast({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      // Calculate end time based on duration      toast({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         title: "Interview requested"
         description: `Your interview request with ${talent.full_name} has been sent.`})
       onClose()
@@ -294,6 +307,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         title: "Failed to schedule interview"
         description: "An error occurred while scheduling the interview. Please try again."
         variant: "destructive"})
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -308,6 +322,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components / ui / form';
@@ -413,6 +429,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     } finally {
@@ -473,6 +490,8 @@ if ( {) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try {;
       // Combine date and time;
       const dateTimeString = `${format(values && values.date, 'yyyy-MM-dd')}T${values && values.time}:00`;
@@ -565,6 +584,7 @@ if ( {) {
                 <Input placeholder="Brief title for the interview" {...field} />;
               </FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <FormMessage />;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -634,6 +654,9 @@ if ( {) {
 =======
               <FormMessage />;                          "w-full pl-3 text-left font-normal"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <FormMessage />;                          "w-full pl-3 text-left font-normal"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           !field && field.value && "text-muted-foreground"
                         )}>;
                         {field && field.value ? (;
@@ -649,6 +672,7 @@ if ( {) {
                   <PopoverContent className="w-auto p-0" align="start">;
                     <Calendar
                       mode="single"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         <FormField
@@ -710,6 +734,8 @@ if ( {) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       selected={field && field.value}
                       onSelect={field && field.onChange}
 
@@ -870,6 +896,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       onSelect={field.onChange}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                       disabled={(date) => date < new Date() |date > addDays(new Date(), 90)}
                       initialFocus
                       className="p-3 pointer-events-auto"
@@ -883,6 +910,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;
@@ -896,6 +925,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;
                       className="p-3 pointer-events-auto";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -924,6 +954,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           />;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           <FormField
             control={form && form.control}
@@ -944,6 +976,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <FormLabel > Time</FormLabel>;
                 <Select onValueChange={field.on_change} default_value={field.value}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
               </FormItem>;            )}
@@ -962,6 +995,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select time" />;
@@ -1018,6 +1053,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <FormControl>;
                   <Input;
                     placeholder={`Add your ${form.watch('platform')} link here`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -1223,6 +1259,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 />;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </FormControl>;
               <FormMessage />;
 
@@ -1329,6 +1367,7 @@ async function onSubmit (values: z.infer<typeof formSchema>) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1342,3 +1381,5 @@ async function onSubmit (values: z.infer<typeof formSchema>) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

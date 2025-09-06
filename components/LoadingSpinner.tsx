@@ -15,16 +15,32 @@ interface LoadingSpinnerProps {
   className?: string;
 }
 
+<<<<<<< HEAD
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   className = '' 
 }) => {
   const sizeClasses = {
+<<<<<<< HEAD
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
   };
+=======
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md', text,
+  className = '', }) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4', md: 'w-8 h-8',
+    lg: 'w-12 h-12', }
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
+=======
+    sm: 'h-4 w-4',
+    md: 'h-8 w-8',
+    lg: 'h-12 w-12'
+  }
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
   return (
     <div className={`inline-block ${className}`}>
       <div 
@@ -35,13 +51,34 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <span className="sr-only">Loading...</span>
       </div>
     </div>
+<<<<<<< HEAD
   )
+=======
+<<<<<<< HEAD
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
 <<<<<<< HEAD
 export default LoadingSpinner;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
+=======
+  )
+React from, react''
+import { Loader2  } from 'lucide-react'';interface LoadingSpinnerProps {'
+  size?: 'sm ' | 'md ' | 'lg '
+   text?: string
+   className?: string
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size =, md', text, '  className = ''}) => {
+  '  const sizeClasses = {'    sm: 'w-4 h-4, md:, w-8 h-8', '    lg: 'w-12 h-12}'  return ('
+    <div className={`flex flex-col items-center justify-center ${className}`}>`      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`} />`      {text && (
+        <p className='mt-2 text-sm text-gray-600 animate-pulse'>{text}</p>'      )}'    </div>)
+}
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 import React from 'react';
 ;

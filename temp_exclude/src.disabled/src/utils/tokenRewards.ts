@@ -46,12 +46,15 @@ export async function rewardOnboarding(...args: any[]): any {; export async func
 <<<<<<< HEAD:temp_exclude/src.disabled/src/utils/tokenRewards.ts
 <<<<<<< HEAD:temp_exclude/src.disabled/src/utils/tokenRewards.ts
 <<<<<<< HEAD:temp_exclude/src.disabled/src/utils/tokenRewards.ts
+<<<<<<< HEAD:temp_exclude/src.disabled/src/utils/tokenRewards.ts
 export async function rewardOnboarding(...args: any[]): any {; export async function rewardOnboarding(; userId: string,action: string,amount: number; ): Promise<any> {; await apiClient('/functions/v1/token-manager/earn',{; method: 'POST',body: JSON.stringify({ userId,action,amount }),}),} export async function earnTokensForPurchase(; userId: string,purchaseAmount: number,purchaseType: string; ): Promise<any> {; await apiClient('/functions/v1/token-manager/earn',{; method: 'POST',body: JSON.stringify({; userId,action: 'purchase',amount: purchaseAmount,purchaseType,}),}),} export async function earnTokensForReferral(; userId: string,referredUserId: string; ): Promise<any> {; await apiClient('/functions/v1/token-manager/earn',{; method: 'POST',body: JSON.stringify({; userId,action: 'referral',referredUserId,amount: 100,}),}),} export async function earnTokensForAction(; userId: string,action: string,amount: number; ): Promise<any> {; await apiClient('/functions/v1/token-manager/earn',{; method: 'POST',body: JSON.stringify({ userId,action,amount }),}),} export default earnTokensForAction; export const tokenRewards = {}; export default tokenRewards}
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/src/utils/tokenRewards.ts
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:src.disabled/src/utils/tokenRewards.ts
 export async function rewardOnboarding(...args: any[]): any {; export async function rewardOnboarding(; userId: string,action: string,amount: number; ): Promise<any> {; await apiClient('/functions/v1/token-manager/earn',{; method: 'POST',body: JSON.stringify({ userId,action,amount }),}),} export async function earnTokensForPurchase(; userId: string,purchaseAmount: number,purchaseType: string; ): Promise<any> {; await apiClient('/functions/v1/token-manager/earn',{; method: 'POST',body: JSON.stringify({; userId,action: 'purchase',amount: purchaseAmount,purchaseType,}),}),} export async function earnTokensForReferral(; userId: string,referredUserId: string; ): Promise<any> {; await apiClient('/functions/v1/token-manager/earn',{; method: 'POST',body: JSON.stringify({; userId,action: 'referral',referredUserId,amount: 100,}),}),} export async function earnTokensForAction(; userId: string,action: string,amount: number; ): Promise<any> {; await apiClient('/functions/v1/token-manager/earn',{; method: 'POST',body: JSON.stringify({ userId,action,amount }),}),} export default earnTokensForAction; export const tokenRewards = {}; export default tokenRewards}
 
 
@@ -66,6 +69,7 @@ export async function rewardOnboarding(...args: any[]): any {; export async func
 export async function rewardOnboarding(...args: any[]): any {; export async function rewardOnboarding(; userId: string,action: string,amount: number; ): Promise<any> {; await apiClient('/functions/v1/token-manager/earn',{; method: 'POST',body: JSON.stringify({ userId,action,amount }),}),} export async function earnTokensForPurchase(; userId: string,purchaseAmount: number,purchaseType: string; ): Promise<any> {; await apiClient('/functions/v1/token-manager/earn',{; method: 'POST',body: JSON.stringify({; userId,action: 'purchase',amount: purchaseAmount,purchaseType,}),}),} export async function earnTokensForReferral(; userId: string,referredUserId: string; ): Promise<any> {; await apiClient('/functions/v1/token-manager/earn',{; method: 'POST',body: JSON.stringify({; userId,action: 'referral',referredUserId,amount: 100,}),}),} export async function earnTokensForAction(; userId: string,action: string,amount: number; ): Promise<any> {; await apiClient('/functions/v1/token-manager/earn',{; method: 'POST',body: JSON.stringify({ userId,action,amount }),}),} export default earnTokensForAction; export const tokenRewards = {}; export default tokenRewards}
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD:temp_exclude/src.disabled/src/utils/tokenRewards.ts
 <<<<<<< HEAD:temp_exclude/src.disabled/src/utils/tokenRewards.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -86,3 +90,5 @@ export async function rewardOnboarding(...args: any[]): any {; export async func
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/src/utils/tokenRewards.ts
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/src/utils/tokenRewards.ts
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:src.disabled/src/utils/tokenRewards.ts

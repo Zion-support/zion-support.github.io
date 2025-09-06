@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -16,10 +17,13 @@ import {useAuth} from "./useAuth";
 import {supabase} from "@/integrations/supabase/client";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from "react",
 import { useAuth } from "./useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "./useAuth",
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -45,6 +49,9 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "./useAuth",
 import { supabase } from "@/integrations/supabase/client",interface OnboardingStatus {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { supabase } from "@/integrations/supabase/client",interface OnboardingStatus {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   profileCompleted: boolean;
   skillsAdded: boolean;
   availabilitySet: boolean;
@@ -53,6 +60,7 @@ import { supabase } from "@/integrations/supabase/client",interface OnboardingSt
   inviteSent: boolean;
   responseReceived: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -489,6 +497,13 @@ export function useOnboardingStatus() {;
 export function useOnboardingStatus() {
   const { user } = useAuth(),          .eq('user_id', user.id);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+export function useOnboardingStatus() {;
+  const { user } = useAuth();
+export function useOnboardingStatus() {
+  const { user } = useAuth(),          .eq('user_id', user.id);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           .single(),;
           ;
         if (error) {;
@@ -582,9 +597,12 @@ return status;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

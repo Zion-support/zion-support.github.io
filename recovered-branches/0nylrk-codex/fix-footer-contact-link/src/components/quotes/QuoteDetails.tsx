@@ -22,9 +22,12 @@ import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { 
   Dialog,
@@ -39,6 +42,7 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 import { QuoteStatusBadge } from "./QuoteStatusBadge",
 import type { QuoteRequest } from "@/types/quotes",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { format } from "date-fns",
 <<<<<<< HEAD
@@ -57,6 +61,9 @@ interface QuoteDetailsProps {
 =======
 import { format } from "date-fns",interface QuoteDetailsProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { format } from "date-fns",interface QuoteDetailsProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   quote: QuoteRequest | null;
   isOpen: boolean;
   onClose: () => void;
@@ -163,6 +170,7 @@ if (return "Not specified") {
     } catch (e) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -178,6 +186,8 @@ if (return "Not specified") {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
@@ -265,6 +275,7 @@ if (return "Not specified") {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 },
 };
@@ -275,6 +286,8 @@ if (return "Not specified") {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       return date_string;
     }
   }

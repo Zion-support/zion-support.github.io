@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -23,11 +24,14 @@ import {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Card
   CardContent
   CardDescription
   CardFooter
   CardHeader
+<<<<<<< HEAD
 <<<<<<< HEAD
   CardTitle
   Card,
@@ -212,6 +216,9 @@ export function UsageStats() {
 =======
   CardTitle        <Card>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  CardTitle        <Card>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
             <CardDescription>
@@ -241,6 +248,7 @@ export function UsageStats() {
             </Button>
           </CardFooter>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </Card>
 <<<<<<< HEAD
         
@@ -268,6 +276,9 @@ export function UsageStats() {
 =======
         </Card>        <Card>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        </Card>        <Card>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
             <CardDescription>
@@ -294,6 +305,7 @@ export function UsageStats() {
           <CardFooter>            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         
@@ -435,6 +447,9 @@ export function UsageStats() {
 =======
       </div>  )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </div>  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import { Slider } from "@/components/ui/slider",;
 import { Badge } from "@/components/ui/badge",;
@@ -462,6 +477,7 @@ export function UsageStats() {;
       <div>;
         <h3 className="text-xl font-medium mb-4">Usage Limits & Settings</h3>;
         <p className="text-muted-foreground mb-6">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -497,6 +513,8 @@ function UsageStats() {
     });
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -553,6 +571,7 @@ function UsageStats() {
               </div>;
               <div className="grid grid - cols - 3 items - center gap-4">;
                 <div className="text-sm">Alert threshold:</div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className="col-span-2">;
                   <select className="w-full flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">;
@@ -636,6 +655,10 @@ function UsageStats() {
                 <div className="col - span-2">;
                   <select className="w - full flex h - 10 rounded - md border border - input bg - background px - 3 py - 2 text - sm ring - offset - background focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring-ring">;  );}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                <div className="col - span-2">;
+                  <select className="w - full flex h - 10 rounded - md border border - input bg - background px - 3 py - 2 text - sm ring - offset - background focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring-ring">;  );}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
         <Button > Contact Us</Button>;
       </div>;

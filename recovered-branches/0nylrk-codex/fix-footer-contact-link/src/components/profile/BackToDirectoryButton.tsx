@@ -56,6 +56,7 @@ export function BackToDirectoryButton() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
   )
@@ -85,6 +86,8 @@ export function BackToDirectoryButton() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
@@ -99,6 +102,7 @@ export function BackToDirectoryButton() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Button variant="outline" asChild className="my-8">;
         <Link to="/talents" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">;
+<<<<<<< HEAD
           <ArrowLeft className="mr-2 h-4 w-4" />;
           Back to Talent Directory;
         </Link>;
@@ -134,6 +138,9 @@ function BackToDirectoryButton() {
         <Link to="/talents" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">;
           <ArrowLeft className="mr-2 h-4 w-4" />;          Back to Talent Directory;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <ArrowLeft className="mr-2 h-4 w-4" />;          Back to Talent Directory;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </Link>;
       </Button>;
     </div>);

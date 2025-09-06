@@ -98,6 +98,7 @@ export const realMarketServices: RealMarketService[] = [
 =======
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 =======
 // Placeholder content - file was empty after conflict resolution
@@ -106,3 +107,6 @@ export const realMarketServices: RealMarketService[] = [
 =======
 ];
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

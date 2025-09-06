@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
 </Component>'
@@ -13,6 +14,8 @@ import type { AppProps } from 'next/app'; import '../styles/globals.css'; export
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
 </Component>'
 import type { AppProps } from \'next/app\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
@@ -32,6 +35,7 @@ import type { AppProps } from 'next/app'; import '../styles/globals ; export def
 </Component>'
 import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
 </Component>'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
@@ -54,3 +58,5 @@ import type { AppProps } from 'next/app'; import '../styles/globals.css'; export
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

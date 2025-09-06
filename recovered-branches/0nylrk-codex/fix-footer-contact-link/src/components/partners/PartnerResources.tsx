@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -20,11 +21,16 @@ import {toast} from "@/hooks/use-toast";
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { toast } from "@/hooks/use-toast",
 <<<<<<< HEAD
@@ -93,11 +99,15 @@ export function PartnerResources() {
 =======
 import { toast } from "@/hooks/use-toast",    {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { toast } from "@/hooks/use-toast",    {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       id: 'brand-guidelines'
       title: 'Brand Guidelines'
       description: 'How to properly use our brand assets in your content'
       type: 'document'
       icon: <FileText className="h-10 w-10 text-zion-cyan" />
+<<<<<<< HEAD
 <<<<<<< HEAD
       url: '#'
 <<<<<<< HEAD
@@ -148,12 +158,16 @@ import { toast } from "@/hooks/use-toast",    {
 =======
       url: '#'    {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      url: '#'    {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       id: 'promotional-video'
       title: 'Promotional Video'
       description: 'Short explainer video about Zion AI Marketplace'
       type: 'video'
       icon: <FileVideo className="h-10 w-10 text-red-500" />
       url: '#'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -206,6 +220,10 @@ import { toast } from "@/hooks/use-toast",    {
 
     },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       id: 'talking-points'
       title: 'Talking Points'
@@ -213,6 +231,7 @@ import { toast } from "@/hooks/use-toast",    {
       type: 'document'
       icon: <FileText className="h-10 w-10 text-zion-cyan" />
       url: '#'
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 <<<<<<< HEAD
@@ -238,10 +257,14 @@ import { toast } from "@/hooks/use-toast",    {
 =======
     }  const handleDownload = (resource: ResourceItem) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }  const handleDownload = (resource: ResourceItem) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // In a real app, this would download the actual resource
     toast({
       title: "Download started"
       description: `Downloading ${resource.title}`
+<<<<<<< HEAD
 <<<<<<< HEAD
       variant: "default"})
 <<<<<<< HEAD
@@ -342,6 +365,11 @@ function PartnerResources() {
     <div className="space-y-6">;
       <Card className="bg - zion - blue - dark border - zion - blue-light">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      variant: "default"})  return (
+    <div className="space-y-6">;
+      <Card className="bg - zion - blue - dark border - zion - blue-light">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <CardHeader>;
           <CardTitle > Marketing Resources</CardTitle>;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -428,6 +456,7 @@ import {Download, FileImage, FileText, FileType, FileVideo, Link} from "lucide-r
 import {toast} from "@/hooks/use-toast";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -459,12 +488,16 @@ import {toast} from "@/hooks/use-toast";
 =======
 =======                  <Button
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======                  <Button
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     onClick={() => handleDownload(resource)}
                     size="sm"
                     variant="outline"
                     className="w-full flex items-center gap-2"
                   >
                     <Download className="h-4 w-4" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -481,6 +514,8 @@ import { toast } from "@/hooks/use-toast",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ResourceItem {;
   id: string,;
   title: string,,
@@ -569,6 +604,7 @@ export function PartnerResources() {;
                     className="w-full flex items-center gap-2";
                   >;
                     <Download className="h-4 w-4" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -702,6 +738,13 @@ export function PartnerResources() {;
                 </CardContent>
               </Card>                  </Button>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+                    {resource.type === 'link' ? 'Visit Link' : 'Download'}
+                  </Button>
+                </CardContent>
+              </Card>                  </Button>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </CardContent>;
 ;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
@@ -715,6 +758,7 @@ export function PartnerResources() {;
         <CardHeader>;
           <CardTitle>Promotion Guidelines</CardTitle>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
                     {resource && resource.type === 'link' ? 'Visit Link' : 'Download'}
@@ -724,6 +768,8 @@ export function PartnerResources() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <CardDescription>;
             Best practices for promoting the Zion AI Marketplace;
           </CardDescription>;
@@ -750,6 +796,7 @@ export function PartnerResources() {;
               <li > Create fake accounts or use bots to generate referrals</li>;          <CardDescription>;
             Need help with your affiliate marketing? Contact our partner support team.;
           </CardDescription>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         </CardHeader>;
 <<<<<<< HEAD
@@ -812,3 +859,6 @@ export function PartnerResources() {;
 =======
         </CardHeader>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        </CardHeader>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

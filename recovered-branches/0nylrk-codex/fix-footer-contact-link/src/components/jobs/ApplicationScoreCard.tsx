@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -24,6 +25,10 @@ import {JobApplication} from "@/types/jobs";
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -34,6 +39,7 @@ import { toast } from "sonner";
 import { JobApplication } from "@/types/jobs";
 import { toast } from "sonner",
 import { JobApplication } from "@/types/jobs",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -95,6 +101,9 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const hasScore = typeof application.match_score === 'number';
   // Format the date when the application was scored
   const scoredDate = application.scored_at
@@ -102,6 +111,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     : null;
   // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     switch (suggestion) {
 <<<<<<< HEAD
@@ -130,6 +140,9 @@ import {useState} from "react";
 =======
     switch (suggestion) {import {useState} from "react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    switch (suggestion) {import {useState} from "react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {Card, CardHeader, CardTitle, CardContent, CardFooter} from "@/components/ui/card";
@@ -160,6 +173,7 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
       case "Strongly Recommended": return "bg-green-100 text-green-800";
       case "Recommended for Review":;
         return "bg-blue-100 text-blue-800";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -204,6 +218,8 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -317,6 +333,7 @@ function ApplicationScoreCard() {
       ),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (error) throw error,
 <<<<<<< HEAD
 =======
@@ -411,6 +428,16 @@ function ApplicationScoreCard() {
           .single(),
           
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      if (error) throw error,        const { data, error } = await supabase
+          .from("job_applications")
+          .select("*")
+          .eq("id", application.id)
+  }
+  };
+          .single(),
+          
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         if (error) {
 
@@ -438,6 +465,7 @@ function ApplicationScoreCard() {
         if (error) {;
           setIsScoring(false);
           return toast && toast.error("Failed to check scoring status");
+<<<<<<< HEAD
 <<<<<<< HEAD
         }
         if (data.scored_at) {
@@ -514,6 +542,13 @@ function ApplicationScoreCard() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        }
+
+        if (data && data.scored_at) {;
+
+        if (data && data.scored_at) {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
       ),;
@@ -556,6 +591,7 @@ function ApplicationScoreCard() {
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
@@ -587,6 +623,8 @@ function ApplicationScoreCard() {
     }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 
   // Render the score result or button to score;
@@ -727,6 +765,7 @@ function ApplicationScoreCard() {
                         {application && application.match_breakdown.skills_match && skills_match.missing && (;
                           <p>Missing skills: {application && application.match_breakdown.skills_match && skills_match.missing.join(", ")}</p>;
                         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                       </div>
@@ -901,6 +940,11 @@ function ApplicationScoreCard() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+                      </div>;                    )}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     )}
 
                   </div>;
@@ -908,6 +952,7 @@ function ApplicationScoreCard() {
               </div>;
             )}            )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -918,6 +963,8 @@ function ApplicationScoreCard() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             )}
 
             )}
@@ -942,6 +989,7 @@ function ApplicationScoreCard() {
             </Button>;
           </div>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -987,6 +1035,9 @@ function ApplicationScoreCard() {
 =======
 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </CardContent>;
     </Card>;
   );
@@ -1267,7 +1318,10 @@ return
 ;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

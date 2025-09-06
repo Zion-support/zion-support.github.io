@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
@@ -16,6 +17,36 @@ interface AIEnhancementPanelProps {;
   onClose?: () => void,;
   showInstructions?: boolean,;
   initialContent?: string;
+=======
+
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Card, CardContent, CardHeader, CardTitle, CardFooter  } from '@/components/ui/card';
+import { Textarea  } from '@/components/ui/textarea';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
+import React, { useState } from 'react'
+import {
+  Card
+  CardContent
+  CardHeader
+  CardTitle
+  CardFooter
+} from '@/components/ui/card'; import React, { useState } from 'react'
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card'
+import { Textarea } from '@/components/ui/textarea'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
+  useAIContentEnhancer
+  AIEnhancementOptions
+} from '@/hooks/useAIContentEnhancer'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+interface AIEnhancementPanelProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 import React, { useState } from 'react';
 import {;
@@ -46,6 +77,7 @@ interface AIEnhancementPanelProps {  title: string;
   onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
@@ -203,7 +235,25 @@ export function AIEnhancementPanel({;  title,;
   },
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+      ...options,
+
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+=======
+  initialContent?: string
+export function AIEnhancementPanel({
+  title;
+  defaultOptions;
+  onApply;
+  onClose;
+  showInstructions;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
@@ -513,11 +563,21 @@ export function AIEnhancementPanel({;  title,;
           </Button>;
         </CardFooter>;
       )}
+<<<<<<< HEAD
     </Card>;
   );
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    </Card>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

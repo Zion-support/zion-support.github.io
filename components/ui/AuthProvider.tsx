@@ -1,18 +1,24 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       if (stored === 'talent' |stored === 'client') {
         setRoleState(stored);      }        setRoleState(stored)
       if (stored === 'talent' || stored === 'client') {
         setRoleState(stored);      }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       if (stored === 'talent' || stored === 'client') {
         setRoleState(stored);      }        setRoleState(stored)
         setRoleState(stored);      }
@@ -27,14 +33,35 @@
 
         setRoleState(stored);      }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import React, { createContext, useContext, useEffect, useState } from 'react';
+type UserRole = any;
+  setRole: (role: UserRole) => void;
+}
+const AuthContext = createContext<AuthContextType>({
+  role: 'talent',
+  setRole: () => {},
+});
+export function AuthProvider({ children }: { children: React.ReactNode }) {
+  const [role, setRoleState] = useState<UserRole>('talent');
+  useEffect(() => {
+    try {
+      const stored = window.localStorage.getItem('userRole') as UserRole | null;
+      if (stored === 'talent' || stored === 'client') {
+setRoleState(stored);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
     } catch {}
   }, []);
   const setRole = (r: UserRole) => {
     setRoleState(r);
-    try {
+try {
       window.localStorage.setItem('userRole', r);
+<<<<<<< HEAD
       document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`;    } catch {}
   }
   return (    try {
@@ -125,11 +152,14 @@ export function useAuth() {;
   );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function useAuth() {;
   return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
   )
@@ -144,6 +174,7 @@ return useContext(AuthContext);
 }
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -151,3 +182,17 @@ return useContext(AuthContext);
 }
   return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+      document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`;
+    } catch {}
+  }
+  return (
+<AuthContext.Provider value={{ role, setRole }}>
+      {children}
+    </AuthContext.Provider>
+  );
+export function useAuth() {
+  return useContext(AuthContext);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

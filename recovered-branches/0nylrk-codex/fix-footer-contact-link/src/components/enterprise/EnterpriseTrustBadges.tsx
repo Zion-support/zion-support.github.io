@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 export function EnterpriseTrustBadges() {;
@@ -18,6 +21,7 @@ export function EnterpriseTrustBadges() {;
           </h3>;
           <p className="text-muted-foreground">;
             We maintain the highest standards of data protection and compliance;
+<<<<<<< HEAD
 <<<<<<< HEAD
           </p>;
 =======
@@ -33,6 +37,9 @@ export function EnterpriseTrustBadges() {
 =======
           </p>;export function EnterpriseTrustBadges() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          </p>;export function EnterpriseTrustBadges() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">
       <div className="container mx-auto max-w-6xl">
@@ -48,7 +55,10 @@ export function EnterpriseTrustBadges() {
 =======
 import React from "react";
 import { Shield, Lock, Award, CheckCircle } from "lucide-react";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
@@ -79,10 +89,13 @@ import { Shield, Lock, Award, CheckCircle } from "lucide-react";
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function EnterpriseTrustBadges() {;
 
   return (
@@ -90,6 +103,7 @@ export function EnterpriseTrustBadges() {;
       <div className="container mx-auto max-w-6xl">;
         <div className="text-center mb-8">;
           <h3 className="text-xl font-medium mb-2">Enterprise-Grade Security & Compliance</h3>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <p className="text-muted-foreground">We maintain the highest standards of data protection and compliance</p>;
 <<<<<<< HEAD
@@ -134,6 +148,9 @@ import React from './react';
 =======
           <p className="text-muted-foreground">We maintain the highest standards of data protection and compliance</p>;import React from './react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <p className="text-muted-foreground">We maintain the highest standards of data protection and compliance</p>;import React from './react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Shield, Lock, Award, CheckCircle  } from './lucide-react';
 export /**
  * EnterpriseTrustBadges - Function description
@@ -193,6 +210,7 @@ function EnterpriseTrustBadges() {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -208,3 +226,5 @@ function EnterpriseTrustBadges() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

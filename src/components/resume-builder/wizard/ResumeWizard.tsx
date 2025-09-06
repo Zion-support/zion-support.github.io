@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -68,6 +69,8 @@ export function ResumeWizard() {;
   
   if (isLoading) {
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">;
@@ -77,6 +80,7 @@ if (isLoading) {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 
 =======
@@ -85,12 +89,62 @@ if (isLoading) {
 
   if (error) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  if (error) {
+
+  if (error) {;
+=======
+import { useState, useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { useResume } from '@/hooks/useResume';
+import { Tabs } from '@/components/ui/tabs';
+import { Card, CardContent } from '@/components/ui/card';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { AlertCircle, FilePlus, Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Resume } from '@/types/resume';
+
+import { useState, useEffect  } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { useResume  } from '@/hooks/useResume';
+import { Tabs  } from '@/components/ui/tabs';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
+import { AlertCircle, FilePlus, Loader2 } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import { Resume  } from '@/types/resume';
+// Import components
+import { ResumeProgress  } from './ResumeProgress';
+import { EmptyResumeState  } from './EmptyResumeState';
+import { CreateResumeForm  } from './CreateResumeForm';
+import { ResumeSteps  } from './ResumeSteps';
+import { ResumeStepContent  } from './ResumeStepContent';
+import { useResumeProgress  } from './useResumeProgress';
+import { ResumeVersionSelector  } from './ResumeVersionSelector';
+import { RESUME_STEPS } from './constants';
+export function ResumeWizard() {
+  const { user } = useAuth();
+  const { 
+    isLoading;
+    error;
+    resume;
+    fetchResume;
+    createResume
+  } = useResume();
+  const [activeTab, setActiveTab] = useState('basic-info');
+  const [showNewResumeForm, setShowNewResumeForm] = useState(false);
+  // Use the extracted hook for progress calculation
+  const progress = null;
+  if (isLoading) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
       <div className="flex justify-center items-center h-64">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
     )
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   
@@ -107,11 +161,33 @@ if (isLoading) {
   
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
+<<<<<<< HEAD
+=======
+  if (showNewResumeForm) {
+
+  if (!resume && !showNewResumeForm) {;
+    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
+  }
+
+  if (showNewResumeForm) {;
+    return (
+      <CreateResumeForm
+        onCreateResume = {handleCreateNewResume,}
+        onCancel = {(,) => setShowNewResumeForm(false),}
+        isLoading = {isLoading,}
+
+      />;
+    );
+  }
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
@@ -126,6 +202,7 @@ if (isLoading) {
       />;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -174,6 +251,12 @@ if (isLoading) {
         <div className="flex gap-4 flex-wrap items-center">;          {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+
+  return (
+
+          {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
 
@@ -195,6 +278,7 @@ if (isLoading) {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       
 <<<<<<< HEAD
 =======
@@ -202,6 +286,8 @@ if (isLoading) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Card>
         <CardContent className="pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -210,6 +296,7 @@ if (isLoading) {
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           
 =======
 
@@ -219,6 +306,9 @@ if (isLoading) {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Tabs value={activeTab} onValueChange={setActiveTab}>
 <<<<<<< HEAD
             <ResumeSteps 
@@ -307,11 +397,25 @@ if ( {) {
               />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </Tabs>;
         </CardContent>;
       </Card>;
     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+          </Tabs>
+        </CardContent>
+      </Card>
+    </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 <<<<<<< HEAD
 }
@@ -329,11 +433,16 @@ if ( {) {
 }</AlertDescription> </Alert>) ;
 
 }if (showNewResumeForm) {;
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   () => setShowNewResumeForm (false) ;
 }isLoading= {;
   isLoading ;
 }/>) ;
+<<<<<<< HEAD
 }> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabsvalue= {
   activeTab 
 }onValueChange= {
@@ -407,4 +516,31 @@ if ( {) {
 }/>);
 }</Tabs> </CardContent> </Card> </div>);
 }'"}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {;
+  activeTab ;
+}onValueChange= {;
+  setActiveTab ;
+}> <ResumeSteps steps= {;
+  RESUME STEPS ;
+}activeTab= {;
+  activeTab ;
+}onChange= {;
+  setActiveTab ;
+}/> {;
+  resume && (<ResumeStepContent activeTab= {;
+  activeTab ;
+}resume= {;
+  resume as Resume ;
+}onNextStep= {;
+  nextStep ;
+}onPrevStep= {;
+  prevStep ;
+}/>) ;
+}</Tabs> </CardContent> </Card> </div>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,10 +1,14 @@
-
-  "static"
-    "maxAge"
-    "immutable"
-  "dynamic"
-    "maxAge"
-    "staleWhileRevalidate"
-  "api"
-    "maxAge"
-    "staleWhileRevalidate"
+{
+  "static": {
+    "maxAge": 31536000,
+    "immutable": true
+  },
+  "dynamic": {
+    "maxAge": 3600,
+    "staleWhileRevalidate": 86400
+  },
+  "api": {
+    "maxAge": 300,
+    "staleWhileRevalidate": 3600
+  }
+}

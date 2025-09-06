@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -25,11 +26,16 @@ interface AIListingFormProps {
 import React, { useState } from "react";
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -144,6 +150,8 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-4">
       <div className="space-y-2">
@@ -189,6 +197,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           className="bg-zion-blue border border-zion-blue-light text-white"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -208,10 +217,15 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 
       <Button 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      <Button 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Button
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
       <Button 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -225,11 +239,14 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Sparkles } from "lucide-react",;
 <<<<<<< HEAD
@@ -262,6 +279,9 @@ interface AIListingFormProps {;
 =======
 import { Sparkles } from "lucide-react",;    category?: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Sparkles } from "lucide-react",;    category?: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     keyFeatures?: string;
     targetAudience?: string;
   }
@@ -285,6 +305,7 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
 
         />;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Button;
 <<<<<<< HEAD
@@ -310,15 +331,21 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
 =======
       <Button;        <Input
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <Button;        <Input
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           id="targetAudience"
           value={targetAudience}
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
       >
         {isLoading ? (
@@ -329,6 +356,7 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
             Generate Optimized Content
           </>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -365,6 +393,8 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <>;
             <Sparkles className="h-4 w-4 mr-2" />;
             Generate Optimized Content;
@@ -405,6 +435,7 @@ function AIListingForm() {
   const [category, set_category] = useState (initial_values.category || "");
   const [key_features, setKeyFeatures] = useState (initial_values.key_features || "");
   const [target_audience, setTargetAudience] = useState (initial_values.target_audience || "");
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -519,3 +550,6 @@ if ( {) {
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

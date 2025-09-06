@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,11 +30,15 @@ export function useTalentDirectory() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useAuthStatus } from "./talent/useAuthStatus",
 import { useTalentData } from "./talent/useTalentData",
 import { useFilterTalents } from "./talent/useFilterTalents";
 import { useUIState } from "./talent/useUIState";
 export function useTalentDirectory() {
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Fetch auth status and saved talents
 <<<<<<< HEAD
@@ -183,6 +188,9 @@ function useTalentDirectory() {
 =======
   // Fetch auth status and saved talents  } = useUIState(),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // Fetch auth status and saved talents  } = useUIState(),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return {
     // Talents and loading state
@@ -232,6 +240,7 @@ function useTalentDirectory() {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     expanded_sections;
 =======
 
@@ -258,6 +267,9 @@ import { useAuthStatus } from "./talent/useAuthStatus",;
 =======
     expanded_sections;import { useAuthStatus } from "./talent/useAuthStatus",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    expanded_sections;import { useAuthStatus } from "./talent/useAuthStatus",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useTalentData } from "./talent/useTalentData",;
 import { useFilterTalents } from "./talent/useFilterTalents",;
 import { useUIState } from "./talent/useUIState",;
@@ -342,6 +354,7 @@ export function useTalentDirectory() {;
     handleToggleSave;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -351,6 +364,12 @@ export function useTalentDirectory() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 =======
+=======
+  }
+}
+;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
 ;
@@ -386,6 +405,7 @@ export function useTalentDirectory() {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 ;
@@ -398,3 +418,5 @@ export function useTalentDirectory() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

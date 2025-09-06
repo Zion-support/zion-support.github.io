@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -28,9 +29,18 @@ import {CheckCircle2, Circle, PartyPopper} from 'lucide-react';
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export type OnboardingStep = {;
   id: string;
+=======
+import React from 'react',
+import Link from 'next/link';
+import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
+export type OnboardingStep = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   label: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   completed: boolean;
 <<<<<<< HEAD
@@ -47,19 +57,28 @@ export type OnboardingProgressCardProps = {;
 =======
   completed: boolean
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  completed: boolean
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
 export type OnboardingProgressCardProps = {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   title: string;
   steps: OnboardingStep[];
-  highlightColorClass?: string;}
+  highlightColorClass?: string;
+};
+
 function computePercentage(steps: OnboardingStep[]): number {
+<<<<<<< HEAD
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
 <<<<<<< HEAD
@@ -81,12 +100,19 @@ export type OnboardingProgressCardProps = {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function computePercentage(steps: OnboardingStep[]): number {
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
+=======
+  if (!steps || steps.length === 0) return 0;
+const completedCount = steps.filter(s => s.completed).length;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return Math.round((completedCount / steps.length) * 100);
 <<<<<<< HEAD
 export default function OnboardingProgressCard({
@@ -124,6 +150,7 @@ export default function OnboardingProgressCard({
       {/* Progress Bar */}
       <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>
         <div
+<<<<<<< HEAD
           className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={{ width: `${percentage}%` }}
 export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {;
   const percentage = computePercentage(steps);
@@ -306,6 +333,7 @@ function OnboardingProgressCard() {
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
@@ -313,6 +341,8 @@ function OnboardingProgressCard() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   {step.ctaLabel}
                 </a>
               </Link>
@@ -415,6 +445,9 @@ function OnboardingProgressCard() {
           </Link>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+          className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm">
       <div className="flex items-center justify-between">
@@ -431,20 +464,23 @@ function OnboardingProgressCard() {
         />
       </div>
       {allDone ? (
-        <div className='mt-4 flex items-center gap-2 text-green-600 dark:text-green-400'>
+<div className='mt-4 flex items-center gap-2 text-green-600 dark:text-green-400'>
           <PartyPopper size={18} />
-          <span className='text-sm'>All steps completed — great job!</span>        </div>
-      ) : null}
-      {/* Checklist */}        <div className="mt-4 flex items-center gap-2 text-green-600 dark:text-green-400">
-          <PartyPopper size={18} />
-          <span className="text-sm">All steps completed — great job!</span>
+          <span className='text-sm'>All steps completed — great job!</span>
         </div>
       ) : null}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <ul className='mt-4 space-y-2'>
+=======
+      {/* Checklist */}
+<ul className='mt-4 space-y-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         {steps.map(step => (
           <li key={step.id} className='flex items-center justify-between'>
             <div className='flex items-center gap-2'>
@@ -461,8 +497,12 @@ function OnboardingProgressCard() {
             </div>
             {!step.completed && step.ctaHref && step.ctaLabel ? (
               <Link href={step.ctaHref}>
+<<<<<<< HEAD
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
 
+=======
+                <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   {step.ctaLabel}
                 </a>
               </Link>
@@ -485,10 +525,16 @@ function OnboardingProgressCard() {
 =======
       {/* Primary CTA for next step */}
       {!allDone && firstIncomplete ? (
+<<<<<<< HEAD
         <div className="mt-5">
           <Link href={firstIncomplete.ctaHref!}>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <a className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition">
+=======
+<div className='mt-5'>
+          <Link href={firstIncomplete.ctaHref!}>
+            <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               {firstIncomplete.ctaLabel}
             </a>
           </Link>
@@ -496,12 +542,15 @@ function OnboardingProgressCard() {
       ) : null}
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 }
   );
@@ -509,6 +558,8 @@ function OnboardingProgressCard() {
   )
 
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

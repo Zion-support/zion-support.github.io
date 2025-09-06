@@ -2,12 +2,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { BookOpen, Brain, Users, CheckCircle, ArrowRight, GraduationCap, BarChart3, FileText, Video, Globe, Database } from 'lucide-react';;
 import React from 'react';
 import Link from 'next/link';';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { BookOpen, 
   Brain, 
@@ -59,6 +63,8 @@ import Layout from '../../components/Layout';
 import { BookOpen, Brain, Users, CheckCircle, ArrowRight, GraduationCap, BarChart3, FileText, Video, Globe, Database } from 'lucide-react';;
 import React from 'react';
 import Link from 'next/link';';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion';import Layout from '../../components/Layout';
 const services = [
   {
@@ -69,6 +75,7 @@ const services = [
       'Course management,',
       'Student tracking',',
       'Assessment tools',',
+<<<<<<< HEAD
 <<<<<<< HEAD
       'Progress analytics'';
     ];
@@ -122,6 +129,23 @@ const services = [;
       'Progress monitoring',',;
 
 =======
+=======
+    title: 'Learning Management Systems,',,
+  description: 'Comprehensive LMS platforms for educational institutions and corporate training.,',;
+import Layout from '../../components/Layout';
+const services = [;
+  {;
+    title: 'Learning Management Systems',,
+  description: 'Comprehensive LMS platforms for educational institutions and corporate training.',;
+    icon: BookOpen,;
+    features: [,;
+      'Course management,',;
+      'Student tracking',',;
+      'Assessment tools',',;      'Recording capabilities'';
+    ];
+  },
+  {}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Educational AI Tutors,',
     description: 'AI-powered tutoring systems for personalized learning experiences.,',
     icon: Brain,
@@ -129,11 +153,15 @@ const services = [;
       'Adaptive learning paths,',
       'Intelligent tutoring',',
       'Progress monitoring',',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'Personalized feedback'';
     ];
   },
   {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -171,6 +199,11 @@ const services = [;
       'Secure testing',',;
 
 =======
+=======
+    ];
+  },
+  {}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Online Assessment Tools,',
     description: 'Secure and comprehensive online testing and evaluation systems.,',
     icon: FileText,
@@ -178,11 +211,15 @@ const services = [;
       'Automated grading,',
       'Plagiarism detection',',
       'Secure testing',',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'Performance reports'';
     ];
   },
   {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -308,6 +345,14 @@ const benefits = [;
   description: 'Personalized learning experiences lead to better student performance.,',;
     icon: GraduationCap;  {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;];
+const benefits = [;
+  {}
+    title: 'Improved Learning Outcomes,',,
+  description: 'Personalized learning experiences lead to better student performance.,',;
+    icon: GraduationCap;  {}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Enhanced Engagement,',
     description: 'Interactive tools and gamification increase student participation.,',
     icon: Users;
@@ -351,6 +396,7 @@ export default function EducationPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
@@ -408,6 +454,8 @@ export default function EducationPage() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto"">;
               <div className="flex items-center justify-center mb-6">";
@@ -426,7 +474,10 @@ export default function EducationPage() {;
             </motion && motion.div>;
           </div>;
         </section>;              className="text-center mb-16"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Education Technology Services
@@ -447,8 +498,11 @@ export default function EducationPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg flex items-center justify-center mb-6">";
@@ -508,7 +562,10 @@ export default function EducationPage() {;
                     {service && service.features.map((feature, featureIndex) => (,;
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";                        {feature}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </li>,
                     ))}
                   </ul>,
@@ -527,6 +584,7 @@ export default function EducationPage() {;
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">"
@@ -557,6 +615,8 @@ export default function EducationPage() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>,;
           </div>;
         </section>;
@@ -569,7 +629,10 @@ export default function EducationPage() {;
             </div>;
           </div>;
         </section>;              className="text-center mb-16"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Why Choose Our Education Solutions?
@@ -583,6 +646,7 @@ export default function EducationPage() {;
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={benefit.title}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -611,6 +675,8 @@ export default function EducationPage() {;
         </section>
         {/* CTA Section */}
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </motion && motion.div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
               {benefits && benefits.map((benefit, index) => (,;
@@ -628,12 +694,16 @@ export default function EducationPage() {;
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
                   key={benefit && benefit.title}        {/* CTA Section */}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <section className="py-20 bg-gradient-to-r from-orange-600 to-amber-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
@@ -644,6 +714,8 @@ export default function EducationPage() {;
                 Ready to Transform Education?;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </h2>;
               <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">";
                 Let our education technology experts help you implement solutions that improve;
@@ -676,7 +748,10 @@ export default function EducationPage() {;
         </section>;
       </div>;
     </Layout>;            >
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Education?
               </h2>
@@ -700,10 +775,13 @@ export default function EducationPage() {;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">;
                 Ready to Transform Education?;
@@ -726,5 +804,9 @@ export default function EducationPage() {;
       </div>;
     </Layout>;
   ),;
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

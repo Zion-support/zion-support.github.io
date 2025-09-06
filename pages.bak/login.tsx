@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from \'next/link\'; import Head from \'next/head\'; export default function Login() { return ( <> <Head> <title>Login - Zion Tech Group</title> <meta name=\"description\" content=\"Login to your Zion Tech Group account to access your services and dashboard.\" /> <meta name=\"keywords\" content=\"login,account,authentication,sign in,user portal\" /> <link rel=\"canonical\" href=\""https\": </Head> <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\"> <div className=\"max-w-md mx-auto px-4 py-16\"> <div className=\"text-center mb-8\"> <h1 className=\"text-3xl font-bold mb-4\">Login</h1> <p className=\"text-slate-300\">Access your account and services</p> </div> <div className=\"bg-slate-900/60 rounded-lg border border-white/10 p-8\"> <form className=\"space-y-6\"> <div> <label htmlFor=\"email\" className=\"block text-sm font-medium mb-2\"> Email Address </label> <input type=\"email\" id=\"email\" className=\"w-full px-3 py-2 bg-slate-800 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500\" placeholder=\"Enter your email\" /> </div> <div> <label htmlFor=\"password\" className=\"block text-sm font-medium mb-2\"> Password </label> <input type=\"password\" id=\"password\" className=\"w-full px-3 py-2 bg-slate-800 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500\" placeholder=\"Enter your password\" /> </div> <button type=\"submit\" className=\"w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors\" > Login </button> </form> <div className=\"mt-6 text-center\"> <p className=\"text-slate-400\"> Don\'t have an account?{\' \'} <Link href=\"/signup\" className=\"text-blue-400 \"hover\": text-blue-300\"> Sign up </Link> </p> </div> </div> </div> </main> </> )}
 const Link from "next/link"; import Head from "next/head"; export default function Login() { return ( <> <Head> <title>Login - Zion Tech Group</title> <meta name="description" content="Login to your Zion Tech Group account to access your services and dashboard." /> <meta name="keywords" content="login,account,authentication,sign in,user portal" /> <link rel="canonical" href="https: </Head> <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white"> <div className="max-w-md mx-auto px-4 py-16"> <div className="text-center mb-8"> <h1 className="text-3xl font-bold mb-4">Login</h1> <p className="text-slate-300">Access your account and services</p> </div> <div className="bg-slate-900/60 rounded-lg border border-white/10 p-8"> <form className="space-y-6"> <div> <label htmlFor="email" className="block text-sm font-medium mb-2"> Email Address </label> <input type="email" id="email" className="w-full px-3 py-2 bg-slate-800 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your email" /> </div> <div> <label htmlFor="password" className="block text-sm font-medium mb-2"> Password </label> <input type="password" id="password" className="w-full px-3 py-2 bg-slate-800 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your password" /> </div> <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors" > Login </button> </form> <div className="mt-6 text-center"> <p className="text-slate-400"> Don"t have an account?{" "} <Link href="/signup" className="text-blue-400 hover: text-blue-300"> Sign up </Link> </p> </div> </div> </div> </main> </> )}"""
 =======
@@ -18,6 +19,9 @@ const Link from "next/link"; import Head from "next/head"; export default functi
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import Link from \'next/link\'; import Head from \'next/head\'; export default function Login() { return ( <> <Head> <title>Login - Zion Tech Group</title> <meta name=\"description\" content=\"Login to your Zion Tech Group account to access your services and dashboard.\" /> <meta name=\"keywords\" content=\"login,account,authentication,sign in,user portal\" /> <link rel=\"canonical\" href=\""https\": </Head> <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\"> <div className=\"max-w-md mx-auto px-4 py-16\"> <div className=\"text-center mb-8\"> <h1 className=\"text-3xl font-bold mb-4\">Login</h1> <p className=\"text-slate-300\">Access your account and services</p> </div> <div className=\"bg-slate-900/60 rounded-lg border border-white/10 p-8\"> <form className=\"space-y-6\"> <div> <label htmlFor=\"email\" className=\"block text-sm font-medium mb-2\"> Email Address </label> <input type=\"email\" id=\"email\" className=\"w-full px-3 py-2 bg-slate-800 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500\" placeholder=\"Enter your email\" /> </div> <div> <label htmlFor=\"password\" className=\"block text-sm font-medium mb-2\"> Password </label> <input type=\"password\" id=\"password\" className=\"w-full px-3 py-2 bg-slate-800 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500\" placeholder=\"Enter your password\" /> </div> <button type=\"submit\" className=\"w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors\" > Login </button> </form> <div className=\"mt-6 text-center\"> <p className=\"text-slate-400\"> Don\'t have an account?{\' \'} <Link href=\"/signup\" className=\"text-blue-400 \"hover\": text-blue-300\"> Sign up </Link> </p> </div> </div> </div> </main> </> )}
+=======
+import Link from \'next/link\'; import Head from \'next/head\'; export default function Login() { return ( <> <Head> <title>Login - Zion Tech Group</title> <meta name=\"description\" content=\"Login to your Zion Tech Group account to access your services and dashboard.\" /> <meta name=\"keywords\" content=\"login,account,authentication,sign in,user portal\" /> <link rel=\"canonical\" href=\""https\": </Head> <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\"> <div className=\"max-w-md mx-auto px-4 py-16\"> <div className=\"text-center mb-8\"> <h1 className=\"text-3xl font-bold mb-4\">Login</h1> <p className=\"text-slate-300\">Access your account and services</p> </div> <div className=\"bg-slate-900/60 rounded-lg border border-white/10 p-8\"> <form className=\"space-y-6\"> <div> <label htmlFor=\"email\" className=\"block text-sm font-medium mb-2\"> Email Address </label> <input type=\"email\" id=\"email\" className=\"w-full px-3 py-2 bg-slate-800 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500\" placeholder=\"Enter your email\" /> </div> <div> <label htmlFor=\"password\" className=\"block text-sm font-medium mb-2\"> Password </label> <input type=\"password\" id=\"password\" className=\"w-full px-3 py-2 bg-slate-800 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500\" placeholder=\"Enter your password\" /> </div> <button type=\"submit\" className=\"w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors\" > Login </button> </form> <div className=\"mt-6 text-center\"> <p className=\"text-slate-400\"> Don\'t have an account?{\' \'} <Link href=\"/signup\" className=\"text-blue-400 \"hover\": text-blue-300\"> Sign up </Link> </p> </div> </div> </div> </main> </> )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const Link from "next/link"; import Head from "next/head"; export default function Login() { return ( <> <Head> <title>Login - Zion Tech Group</title> <meta name="description" content="Login to your Zion Tech Group account to access your services and dashboard." /> <meta name="keywords" content="login,account,authentication,sign in,user portal" /> <link rel="canonical" href="https: </Head> <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white"> <div className="max-w-md mx-auto px-4 py-16"> <div className="text-center mb-8"> <h1 className="text-3xl font-bold mb-4">Login</h1> <p className="text-slate-300">Access your account and services</p> </div> <div className="bg-slate-900/60 rounded-lg border border-white/10 p-8"> <form className="space-y-6"> <div> <label htmlFor="email" className="block text-sm font-medium mb-2"> Email Address </label> <input type="email" id="email" className="w-full px-3 py-2 bg-slate-800 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your email" /> </div> <div> <label htmlFor="password" className="block text-sm font-medium mb-2"> Password </label> <input type="password" id="password" className="w-full px-3 py-2 bg-slate-800 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your password" /> </div> <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors" > Login </button> </form> <div className="mt-6 text-center"> <p className="text-slate-400"> Don"t have an account?{" "} <Link href="/signup" className="text-blue-400 hover: text-blue-300"> Sign up </Link> </p> </div> </div> </div> </main> </> )}"""import React from 'react';
 import React from 'react';
 import * as React from 'react';
@@ -32,6 +36,7 @@ export default function Login({ }: LoginProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,6 +98,12 @@ interface LoginProps {
   // Add props here as needed
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}
+interface LoginProps {
+  // Add props here as needed
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import React from 'react';
 import * as React from 'react';
@@ -100,6 +111,7 @@ import * as React from 'react';
 interface LoginProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -111,6 +123,8 @@ interface LoginProps {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function Login({ }: LoginProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -153,6 +167,7 @@ export default function Login(): any ({ }: LoginProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -213,3 +228,5 @@ export default function Login(): any ({ }: LoginProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

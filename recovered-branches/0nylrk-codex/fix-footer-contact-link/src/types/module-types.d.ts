@@ -4,6 +4,7 @@ declare module 'vitest / config' {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -21,10 +22,13 @@ declare module 'vitest/config' {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 declare module '@vitejs/plugin-react-swc' {
   import { Plugin } from 'vite';
   export default function reactSWC(): Plugin
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 declare module 'path' {
 <<<<<<< HEAD
@@ -59,13 +63,19 @@ declare module 'path' {;
 =======
 declare module 'path' {  export function resolve(...paths: string[]): string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+declare module 'path' {  export function resolve(...paths: string[]): string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   export function join(...paths: string[]): string
 
   export function dirname(path: string): string
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 declare module 'lovable-tagger' {;
 
@@ -73,6 +83,7 @@ import {Plugin} from 'vite';
   export default function reactSWC (): Plugin;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -101,6 +112,9 @@ import {Plugin} from 'vite';
 =======
 ;;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 declare module '@vitejs/plugin-react-swc' {;
   import { Plugin } from 'vite',;
   export default function reactSWC(): Plugin;
@@ -119,6 +133,7 @@ declare module 'lovable-tagger' {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -133,3 +148,6 @@ declare module 'lovable-tagger' {;
 =======
 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

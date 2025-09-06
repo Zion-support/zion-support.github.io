@@ -1,6 +1,39 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { cn  } from '@/lib/utils';
+import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import {
+  Loader2
+  AlertTriangle
+  RefreshCw
+  Wifi
+  WifiOff
+  Clock
+  Zap
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+} from 'lucide-react'; import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { cn } from '@/lib/utils'
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+// Enhanced loading spinner with different variants
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -60,9 +93,17 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  variant?: 'default' | 'primary' | 'success' | 'warning' | 'error';
+  className?: string;
+  showText?: boolean;
+  text?: string
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState, useEffect } from 'react',;
@@ -1130,6 +1171,7 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 }
+<<<<<<< HEAD
 }
 }
 <<<<<<< HEAD
@@ -1147,3 +1189,11 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  );
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

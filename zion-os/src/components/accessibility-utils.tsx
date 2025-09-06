@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -27,11 +28,17 @@ export function SkipLink({ targetId, children }: { targetId: string, children: R
     <a;
       href={`#${targetId}`}
       className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[var(--accent)] text-white px-4 py-2 rounded z-50";
+=======
+    <a;
+      href={`#${target_id}`}
+      className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z-50";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     >;
       {children}
     </a>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -66,11 +73,19 @@ export function LiveRegion({;
       aria-live={ariaLive}
       className="sr-only";
       aria-atomic="true";
+=======
+    <div;
+      role={role}
+      aria - live={aria_live}
+      className="sr-only";
+      aria - atomic="true";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     >;
       {message}
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -111,6 +126,8 @@ export function useFocusTrap(enabled: boolean = true) {;
     </div>);
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const handleKeyDown = (e: KeyboardEvent) => {;
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
@@ -201,6 +218,7 @@ export function Announcement({;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -302,20 +320,26 @@ export function useFocusTrap(enabled: boolean = true) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const handleKeyDown = (e: KeyboardEvent) => {;
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
           if (document.activeElement === firstElement) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             e.preventDefault();
             lastElement.focus();
           }
         } else {if (document.activeElement === lastElement) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
             e.preventDefault();
 =======
@@ -518,6 +542,17 @@ export function ProgressIndicator({;
       <div className="w-full bg-[var(--border)] rounded-full h-2">;
         <div;
           className="bg-[var(--accent)] h-2 rounded-full transition-all duration-300";
+=======
+            e.preventDefault();            firstElement.focus();
+          }
+        }
+      }        <span>{label}</span>;
+        <span>{percentage}%</span>;
+      </div>;
+      <div className="w - full bg-[var (--border)] rounded - full h-2">;
+        <div;
+          className="bg-[var (--accent)] h - 2 rounded - full transition - all duration-300";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           style={{ width: `${percentage}%` }}
           role="progressbar";
           aria-valuenow={value}
@@ -529,6 +564,7 @@ export function ProgressIndicator({;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -598,6 +634,16 @@ export function CollapsibleSection({;
         onClick={() => setIsExpanded(!isExpanded)}
         aria-expanded={isExpanded}
         aria-controls={`collapsible-${title.toLowerCase().replace(/\s+/g, '-')}`}
+=======
+  return (;
+    <div className="border border-[var(--border)] rounded-lg">;  return (;
+    <div className="border border-[var(--border)] rounded-lg">;
+      <button;
+        className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify-between";
+        on_click={() => setIsExpanded (!is_expanded)}
+        aria - expanded={is_expanded}
+        aria - controls={`collapsible-${title.toLowerCase ().replace (/\s+/g, '-')}`}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       >;
         {title}
         <span className="text-[var(--accent)]">;
@@ -605,6 +651,7 @@ export function CollapsibleSection({;
         </span>;
       </button>;
       <div;
+<<<<<<< HEAD
 <<<<<<< HEAD
         id={`collapsible-${title.toLowerCase().replace(/\s+/g, '-')}`}
         ref={contentRef}
@@ -625,16 +672,23 @@ export function CollapsibleSection({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         }`}
         aria-hidden={!isExpanded}
       >;
+<<<<<<< HEAD
         <div className="px-4 pb-3">;
+=======
+        <div className="px - 4 pb-3">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {children}
         </div>;
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -784,6 +838,8 @@ export function Tooltip({;
       </div>;
     </div>);
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (;
     <div className="relative inline-block">;  return (;
     <div className="relative inline-block">;

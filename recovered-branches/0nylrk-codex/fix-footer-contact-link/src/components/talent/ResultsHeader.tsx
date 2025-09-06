@@ -54,6 +54,7 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           {resultCount === 0
@@ -76,6 +77,8 @@ interface ResultsHeaderProps {;
   isLoading: boolean,;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   resultCount: number;
 }
 
@@ -202,6 +205,7 @@ function ResultsHeader() {
         </span>)}
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -265,3 +269,6 @@ resultCount: number
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

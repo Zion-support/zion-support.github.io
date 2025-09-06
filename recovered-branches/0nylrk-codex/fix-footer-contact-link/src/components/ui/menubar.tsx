@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -17,6 +18,10 @@ import * as React from "react"
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import * as MenubarPrimitive from "@radix-ui/react-menubar"
 import { Check, ChevronRight, Circle } from "lucide-react"
 
@@ -34,6 +39,7 @@ const Menubar = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <MenubarPrimitive.Root
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
     className={cn(
 <<<<<<< HEAD
@@ -60,12 +66,16 @@ const Menubar = React.forwardRef<
 =======
     className={cn(      className
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    className={cn(      className
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     )}
     {...props}
   />;
 ));
 Menubar.displayName = MenubarPrimitive.Root.displayName;
 const MenubarTrigger = React.forwardRef<;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -133,12 +143,18 @@ className={cn(
   React.ElementRef<typeof MenubarPrimitive.Trigger>,;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  React.ElementRef<typeof MenubarPrimitive.Trigger>,;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
 
       &quot;flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot;,
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -151,6 +167,8 @@ className={cn(
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className
     )}
     {...props}
@@ -158,6 +176,7 @@ className={cn(
 ));
 MenubarTrigger.displayName = MenubarPrimitive.Trigger.displayName;
 const MenubarSubTrigger = React.forwardRef<;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -171,6 +190,8 @@ const MenubarSubTrigger = React.forwardRef<;
 import * as React from &quot;react & quot;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import * as MenubarPrimitive from &quot;@radix - ui / react - menubar & quot;
 import { Check, ChevronRight, Circle } from &quot;lucide-react & quot;
 ;
@@ -274,6 +295,7 @@ const MenubarSubTrigger = React.forwardRef<;
       inset && "pl-8",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -321,11 +343,16 @@ className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
       inset && "pl-8",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
+      inset && "pl-8",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className
     )}
     {...props}
   >;
     {children}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -359,6 +386,11 @@ className={cn(
     <ChevronRight className="ml-auto h-4 w-4" />
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    <ChevronRight className="ml-auto h-4 w-4" />
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   </MenubarPrimitive.SubTrigger>
 ))
 MenubarSubTrigger.displayName = MenubarPrimitive.SubTrigger.displayName
@@ -368,6 +400,7 @@ const MenubarSubContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <MenubarPrimitive.SubContent
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
     className={cn(
 <<<<<<< HEAD
@@ -394,6 +427,9 @@ const MenubarSubContent = React.forwardRef<
 =======
     className={cn(      className
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    className={cn(      className
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     )}
     {...props}
   />
@@ -403,6 +439,7 @@ const MenubarContent = React.forwardRef<
   React.ElementRef<typeof MenubarPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Content>
 >(
+<<<<<<< HEAD
 <<<<<<< HEAD
   (
 <<<<<<< HEAD
@@ -487,6 +524,9 @@ className={cn(
 =======
   (          className
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  (          className
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         )}
         {...props}
       />;
@@ -495,6 +535,7 @@ className={cn(
 );
 MenubarContent.displayName = MenubarPrimitive.Content.displayName;
 const MenubarItem = React.forwardRef<;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -507,6 +548,8 @@ const MenubarItem = React.forwardRef<;
 className={cn (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[state = open]:bg - accent data-[state = open]:text - accent - foreground & quot;,
       inset && &quot;pl - 8&quot;,
       class_name)}
@@ -601,6 +644,7 @@ const MenubarItem = React.forward_ref<;
       inset && "pl-8",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -639,6 +683,10 @@ className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      inset && "pl-8",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className
     )}
     {...props}
@@ -646,6 +694,7 @@ className={cn(
 ));
 MenubarItem.displayName = MenubarPrimitive.Item.displayName;
 const MenubarCheckboxItem = React.forwardRef<;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -719,6 +768,11 @@ className={cn(
   React.ElementRef<typeof MenubarPrimitive.CheckboxItem>,;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  React.ElementRef<typeof MenubarPrimitive.CheckboxItem>,;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
@@ -753,6 +807,7 @@ className={cn (
         <Check className=&quot;h - 4 w - 4&quot; />;
       </MenubarPrimitive.ItemIndicator>;
     </span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     {children}
 <<<<<<< HEAD
@@ -865,6 +920,9 @@ className={cn (
 =======
     {children}      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    {children}      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
@@ -905,6 +963,7 @@ className={cn (
       "px-2 py-1.5 text-sm font-semibold",
       inset && "pl-8",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -954,6 +1013,10 @@ className={cn(
       "px-2 py-1.5 text-sm font-semibold",
       inset && "pl-8",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      "px-2 py-1.5 text-sm font-semibold",
+      inset && "pl-8",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className
     )}
     {...props}
@@ -961,6 +1024,7 @@ className={cn(
 ));
 MenubarLabel.displayName = MenubarPrimitive.Label.displayName;
 const MenubarSeparator = React.forwardRef<;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1152,6 +1216,10 @@ export {
 MenubarShortcut.displayname = "MenubarShortcut"
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+MenubarShortcut.displayname = "MenubarShortcut"
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Menubar,
   MenubarMenu,
   MenubarTrigger,
@@ -1169,6 +1237,7 @@ MenubarShortcut.displayname = "MenubarShortcut"
   MenubarSub,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1183,6 +1252,8 @@ MenubarShortcut.displayname = "MenubarShortcut"
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   MenubarShortcut}
 MenubarShortcut.displayname = "MenubarShortcut";
 ;
@@ -1287,6 +1358,7 @@ React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Separator> > ( ({
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1297,3 +1369,6 @@ React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Separator> > ( ({
 =======
   MenubarShortcut}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  MenubarShortcut}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -4,6 +4,7 @@ interface CareersProps {
   // Add props here as needed
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React from 'react';
@@ -27,10 +28,13 @@ import * as React from 'react';
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface CareersProps {
   // Add props here as needed
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
@@ -44,12 +48,16 @@ export default function Careers({ }: CareersProps) {
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5export default function Careers({ }: CareersProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5export default function Careers({ }: CareersProps) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div>
       <h1>Careers</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,11 +73,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5export default function 
 =======
 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 }
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -89,3 +101,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

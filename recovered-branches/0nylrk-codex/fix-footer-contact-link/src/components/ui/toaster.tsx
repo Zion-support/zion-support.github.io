@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -28,6 +29,8 @@ import { Toaster as SonnerToaster } from "sonner",
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Toaster as SonnerToaster } from "sonner";
 import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
@@ -40,9 +43,12 @@ import { Toaster as SonnerToaster } from "sonner",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
 
@@ -71,8 +77,11 @@ export function Toaster() {;
         style: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           background: '#0a1429'
           color: '#fff'
           border: '1px solid #1e3a6f'}
@@ -87,6 +96,7 @@ export function Toaster() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 =======
 =======
@@ -110,6 +120,8 @@ export function Toaster() {;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import * as React from "react",;
 import { Toaster as SonnerToaster } from "sonner",;
 export function Toaster() {;
@@ -154,6 +166,7 @@ function Toaster() {
           color: '#fff',
           border: '1px solid #1e3a6f'},
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           background: "#0a1429",
           color: "#fff",
@@ -162,6 +175,8 @@ function Toaster() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         duration: 4000,
         descriptionClassName: "text - zion - slate - light"}}
     />);
@@ -173,6 +188,7 @@ function Toaster() {
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -189,3 +205,6 @@ function Toaster() {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

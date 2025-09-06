@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -67,6 +68,12 @@ import {useRecordActivity} from './useRecordActivity';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';        .select()
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+import {supabase} from '@/integrations / supabase / client';
+import {use_auth} from '@/hooks / use_auth';        .select()
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         .single();
       if (error) throw error;
       // Create activity record
@@ -81,6 +88,7 @@ import {use_auth} from '@/hooks / use_auth';        .select()
       toast && toast.error("Failed to create milestone: " + err && err.message),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       return null
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -94,6 +102,9 @@ import {use_auth} from '@/hooks / use_auth';        .select()
 =======
       return null      return null
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      return null      return null
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const useCreateMilestone = (project_id?: string) =>: any {
   const { user } = use_auth ();
   const [is_submitting, setIsSubmitting] = useState (false);
@@ -106,6 +117,7 @@ if (return null) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } finally {
       setIsSubmitting (false);
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 <<<<<<< HEAD
@@ -150,6 +162,9 @@ import { useState } from 'react',
 =======
     }import { useState } from 'react',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }import { useState } from 'react',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
 import { toast } from 'sonner',
@@ -158,6 +173,7 @@ import { useRecordActivity } from './useRecordActivity',
 export const useCreateMilestone = (projectId?: string) => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
+<<<<<<< HEAD
 <<<<<<< HEAD
   const { recordMilestoneActivity } = useRecordActivity(),
 <<<<<<< HEAD
@@ -175,6 +191,9 @@ export const useCreateMilestone = (projectId?: string) => {
 =======
   const { recordMilestoneActivity } = useRecordActivity(),    
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const { recordMilestoneActivity } = useRecordActivity(),    
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const createMilestone = async (milestoneData: Omit<Milestone 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {
     if (!user || !projectId) return null,
 
@@ -206,6 +225,7 @@ export const useCreateMilestone = (projectId?: string) => {
       setIsSubmitting(false)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -225,6 +245,9 @@ export const useCreateMilestone = (projectId?: string) => {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -265,6 +288,7 @@ export const useCreateMilestone = (projectId?: string) => {;
     isSubmitting;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -276,6 +300,8 @@ export const useCreateMilestone = (projectId?: string) => {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   }
 ;
@@ -287,6 +313,7 @@ export const useCreateMilestone = (projectId?: string) => {;
 
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -297,3 +324,5 @@ export const useCreateMilestone = (projectId?: string) => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

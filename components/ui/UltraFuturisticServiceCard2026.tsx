@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 
@@ -17,10 +18,24 @@ interface Service {;
     monthly?: number;
     yearly?: number;
     currency?: string;
+=======
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  price?: string | {
+    monthly?: number;
+    yearly?: number;
+    currency?: string;
+    trialDays?: number;
+    setupTime?: string
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   period?: string;
   pricing?: any;
   features: string[],;
   popular?: boolean;
+<<<<<<< HEAD
   competitors?: string[];
   targetMarket?: string;
   useCases?: string[];
@@ -395,18 +410,24 @@ UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 };
 
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* CTA Button */}
         <div className="relative z-10">;
           <motion&& motion.button
@@ -426,6 +447,7 @@ export default UltraFuturisticServiceCard2026;
 UltraFuturisticServiceCard2026 && UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -434,6 +456,8 @@ UltraFuturisticServiceCard2026 && UltraFuturisticServiceCard2026.displayName = '
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default UltraFuturisticServiceCard2026;
 export default UltraFuturisticServiceCard2026;
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
@@ -536,8 +560,28 @@ UltraFuturisticServiceCard2026.display_name = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  category: string;
+  icon: string;
+  marketPrice?: string;
+  competitors?: string[];
+  targetMarket?: string;
+  useCases?: string[];
+  integration?: string[],
+  benefits?: string[]
+}
+interface ServiceCardProps {
+  service: Service;
+  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
+}
+
+const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

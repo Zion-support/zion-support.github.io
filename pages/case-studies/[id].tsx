@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -11,15 +14,21 @@ export default function CaseStudyPage() {
   const router = useRouter(),
   const { id } = router.query,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -42,6 +51,8 @@ function CaseStudyPage() {
       title: 'AI - Powered Manufacturing Automation',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       company: 'Global Manufacturing Corp',
       industry: 'Manufacturing',
       challenge: 'Traditional manufacturing processes were inefficient with high downtime and low production rates.',
@@ -50,10 +61,16 @@ function CaseStudyPage() {
       duration: '6 months',
       description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       fullContent: `
         <h2>Background</h2>
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
@@ -82,6 +99,7 @@ function CaseStudyPage() {
         <h2>Implementation Timeline</h2>
         <p>The project was completed in 6 months with minimal disruption to ongoing operations.
         The system was deployed in phases, allowing for gradual adoption and optimization.</p>
+<<<<<<< HEAD
       `
 
 
@@ -192,6 +210,27 @@ export default function CaseStudyPage() {
       description: 'Transforming content creation through autonomous AI systems.',
 
 
+=======
+`,
+    },
+    {
+      id: 'content-generation-scale',
+      title: 'Scaling Content Generation 10x',
+      company: 'Digital Marketing Agency',
+      industry: 'Marketing',
+challenge:
+        'Manual content creation was limiting growth and unable to meet client demands.',
+      solution:
+        'Deployed autonomous AI content generation systems with human oversight.',
+      results: [
+        '10x increase in content output',
+        '85% improvement in engagement',
+        '70% reduction in production time',
+      ],
+      duration: '4 months',
+      description:
+        'Transforming content creation through autonomous AI systems.',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       fullContent: `
         <h2>Background</h2>
         <p>A leading digital marketing agency was struggling to scale their content creation capabilities.
@@ -218,6 +257,7 @@ export default function CaseStudyPage() {
         <h2>Implementation Timeline</h2>
         <p>The system was deployed in 4 months with comprehensive training for the creative team.
         The AI systems learned from human feedback and continuously improved over time.</p>
+<<<<<<< HEAD
       `
 
 
@@ -227,6 +267,28 @@ export default function CaseStudyPage() {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+`,
+    },
+    {
+      id: 'cloud-infrastructure-optimization',
+      title: 'Cloud Infrastructure Optimization',
+      company: 'E-commerce Platform',
+      industry: 'Technology',
+challenge:
+        'Cloud costs were spiraling out of control with poor resource utilization.',
+      solution:
+        'Built self-healing, auto-scaling cloud infrastructure with intelligent cost optimization.',
+      results: [
+        '50% reduction in cloud costs',
+        '99.9% uptime achieved',
+        '3x improvement in performance',
+      ],
+      duration: '8 months',
+      description: 'Building self-healing, auto-scaling cloud infrastructure.',
+      fullContent: `
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <h2>Background</h2>
         <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages.
         Their infrastructure was not scaling efficiently with their business growth.</p>
@@ -234,6 +296,7 @@ export default function CaseStudyPage() {
         <p>The platform needed to optimize their cloud infrastructure for cost, performance, and reliability.
         They required a solution that could automatically adapt to traffic patterns and prevent outages.</p>
         <h2>Solution</h2>
+<<<<<<< HEAD
         <p>We designed and implemented a comprehensive cloud optimization system: </p>
 
 
@@ -245,6 +308,15 @@ export default function CaseStudyPage() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+        <p>We designed and implemented a comprehensive cloud optimization system: </p>
+
+
+=======
+<p>We designed and implemented a comprehensive cloud optimization system:</p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <ul>
           <li>Auto-scaling infrastructure with intelligent resource allocation</li>
           <li>Self-healing systems with automatic failure recovery</li>
@@ -252,12 +324,15 @@ export default function CaseStudyPage() {
           <li>Performance monitoring and alerting</li>
         </ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <h2>Results</h2>
         <p>The optimization delivered outstanding results:</p>
         <ul>
@@ -265,6 +340,7 @@ export default function CaseStudyPage() {
           <li><strong>99.9% uptime achieved</strong> - Self-healing systems prevented outages</li>
           <li><strong>3x improvement in performance</strong> - Optimized infrastructure handled traffic spikes</li>
         </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -294,10 +370,18 @@ export default function CaseStudyPage() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        <p>The project was completed in 8 months with careful planning to avoid service disruption.
+        The new infrastructure was deployed alongside the existing system and gradually migrated traffic.</p>
+<<<<<<< HEAD
+      `
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -306,6 +390,8 @@ import { useRouter } from 'next/router';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function CaseStudyPage(req, res) {
   try {
   const router = useRouter();
@@ -430,6 +516,7 @@ export default function CaseStudyPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   ],
@@ -449,12 +536,25 @@ export default function CaseStudyPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  ],
+  const caseStudy = caseStudies.find(study => study.id === id),
+=======
+`,
+    },
+  ];
+
+  const caseStudy = caseStudies.find(study => study.id === id);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (!caseStudy) {
     return (
       <>
         <Head>
           <title>Case Study Not Found | Zion Tech Group</title>
         </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -474,13 +574,35 @@ export default function CaseStudyPage(req, res) {
               <Link
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+<div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
+          <main className='container mx-auto px-6 py-12'>
+            <div className='max-w-4xl mx-auto text-center'>
+              <h1 className='text-4xl font-bold mb-6 text-white'>
+                Case Study Not Found
+              </h1>
+              <p className='text-xl text-white/80 mb-8'>
+                The case study you're looking for doesn't exist.
+              </p>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 href="/case-studies"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+=======
+                href="/case-studies"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+=======
+              <Link
+                href='/case-studies'
+                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 ← Back to Case Studies
               </Link>
@@ -488,6 +610,7 @@ export default function CaseStudyPage(req, res) {
           </main>
         </div>
       </>
+<<<<<<< HEAD
     )
   }
 <<<<<<< HEAD
@@ -511,6 +634,22 @@ export default function CaseStudyPage(req, res) {
         <meta property="og:title" content={`${caseStudy.title} | Zion Tech Group`} />
         <meta property="og:description" content={caseStudy.description} />
       </Head>
+=======
+);
+  }
+  return (
+    <>
+      <Head>
+        <title>{caseStudy.title} | Zion Tech Group - Case Study</title>
+<meta name='description' content={caseStudy.description} />
+        <meta
+          property='og:title'
+          content={`${caseStudy.title} | Zion Tech Group`}
+        />
+        <meta property='og:description' content={caseStudy.description} />
+      </Head>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
@@ -522,6 +661,7 @@ export default function CaseStudyPage(req, res) {
               <div className="mb-6">
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -532,11 +672,14 @@ export default function CaseStudyPage(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   {caseStudy.industry  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -566,10 +709,61 @@ export default function CaseStudyPage(req, res) {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+=======
+
+      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
+        <main className='container mx-auto px-6 py-12'>
+          <div className='max-w-4xl mx-auto'>
+            <nav className='mb-8'>
+              <Link
+                href='/case-studies'
+                className='text-cyan-400 hover:text-cyan-300 transition-colors'
+              >
+                ← Back to Case Studies
+              </Link>
+            </nav>
+
+            <header className='mb-12'>
+              <div className='mb-6'>
+                <span className='px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30'>
+                  {caseStudy.industry}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                </span>
+              </div>
+              <h1 className='text-4xl font-bold mb-4 text-white'>
+                {caseStudy.title}
+              </h1>
+              <p className='text-xl text-cyan-400 font-semibold mb-2'>
+                {caseStudy.company}
+              </p>
+              <p className='text-white/80 text-lg'>{caseStudy.description}</p>
+            </header>
+
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12'>
+              <div className='lg:col-span-2'>
+                <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20'>
+                  <h2 className='text-2xl font-bold mb-6 text-white'>
+                    Overview
+                  </h2>
+                  <div className='space-y-6'>
+                    <div>
+                      <h3 className='font-semibold text-cyan-400 text-lg mb-2'>
+                        Challenge
+                      </h3>
+                      <p className='text-white/80'>{caseStudy.challenge}</p>
+                    </div>
+                    <div>
+                      <h3 className='font-semibold text-fuchsia-400 text-lg mb-2'>
+                        Solution
+                      </h3>
+                      <p className='text-white/80'>{caseStudy.solution}</p>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </div>
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -595,6 +789,18 @@ export default function CaseStudyPage(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<div className='space-y-6'>
+                <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20'>
+                  <h3 className='font-semibold text-green-400 text-lg mb-4'>
+                    Key Results
+                  </h3>
+                  <ul className='space-y-3'>
+                    {caseStudy.results.map((result, index) => (
+<<<<<<< HEAD
+                      <li key={index} className="text-white/80 flex items-center gap-3">
+                        <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ];
   const caseStudy = caseStudies.find(study => study.id === id);
   if (!caseStudy) {;
@@ -692,6 +898,7 @@ export default function CaseStudyPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -705,11 +912,14 @@ export default function CaseStudyPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </ul>
                 </div>
 
 
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -723,6 +933,38 @@ export default function CaseStudyPage(req, res) {
                     <div>
                       <span className="text-white/60 text-sm">Industry:</span>
                       <p className="text-white font-medium">{caseStudy.industry}</p>
+=======
+                  <h3 className="font-semibold text-blue-400 text-lg mb-4">Project Details</h3>
+                  <div className="space-y-3">
+=======
+                      <li
+                        key={index}
+                        className='text-white/80 flex items-center gap-3'
+                      >
+                        <div className='w-2 h-2 bg-green-400 rounded-full'></div>
+                        {result}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+<div className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20'>
+                  <h3 className='font-semibold text-blue-400 text-lg mb-4'>
+                    Project Details
+                  </h3>
+                  <div className='space-y-3'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                    <div>
+                      <span className='text-white/60 text-sm'>Duration:</span>
+                      <p className='text-white font-medium'>
+                        {caseStudy.duration}
+                      </p>
+                    </div>
+                    <div>
+                      <span className='text-white/60 text-sm'>Industry:</span>
+                      <p className='text-white font-medium'>
+                        {caseStudy.industry}
+                      </p>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </div>
                   </div>
                 </div>
@@ -731,6 +973,7 @@ export default function CaseStudyPage(req, res) {
 <<<<<<< HEAD
               <div
                 className="prose prose-invert max-w-none"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
               />
@@ -751,6 +994,31 @@ export default function CaseStudyPage(req, res) {
 
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+=======
+
+=======
+<div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12'>
+              <div
+                className='prose prose-invert max-w-none'
+                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+              />
+            </div>
+
+            <div className='text-center'>
+              <Link
+<<<<<<< HEAD
+
+
+
+
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+=======
+                href='/contact'
+                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 Get Started with Your Project
               </Link>
@@ -760,17 +1028,21 @@ export default function CaseStudyPage(req, res) {
       </div>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 };
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
                   </ul>;
                 </div>;
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">;
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Project Details</h3>;
                   <div className="space-y-3">;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -783,6 +1055,11 @@ export default function CaseStudyPage(req, res) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       solution: 'Built self - healing, auto - scaling cloud infrastructure with intelligent cost optimization.',
       results: ['50% reduction in cloud costs99.9% uptime achieved3x improvement in performance'],
       duration: '8 months',
@@ -907,6 +1184,7 @@ if ( {) {
                       <span className="text - white / 60 text - sm">Industry:</span>;
                       <p className="text - white font - medium">{case_study.industry}</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -927,11 +1205,14 @@ if ( {) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </div>;
                   </div>;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -966,12 +1247,15 @@ if ( {) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >;
                 Get Started with Your Project;
               </Link>;
             </div>;
           </div>;
         </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -997,3 +1281,10 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+=======
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

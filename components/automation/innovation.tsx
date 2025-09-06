@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 };
 </header> {;
@@ -58,9 +61,18 @@ export default function InnovationDigest(): any ({ items }: Props) {;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+import fs from 'fs',
+import path from 'path';
+import type { GetStaticProps } from 'next';
+type Item = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function InnovationDigest({ items }: Props) {
   return (
     <div className="space-y-6">
@@ -92,6 +104,7 @@ export default function InnovationDigest({ items }: Props) {
 =======
 );
 }
+<<<<<<< HEAD
   );
 }
 
@@ -124,4 +137,9 @@ function InnovationDigest() {
           </li>))}
       </ul>;
     </div>);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

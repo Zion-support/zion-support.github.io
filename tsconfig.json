@@ -32,15 +32,19 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
+<<<<<<< HEAD
     "module": "esnext",
 <<<<<<< HEAD
     "moduleResolution": "bundler",
 =======
     "moduleResolution": "node",
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+    "module": "ESNext",
+    "moduleResolution": "node",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -52,6 +56,7 @@
     ],
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -100,13 +105,20 @@
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
       "@/pages/*": ["./pages/*"],
       "@/styles/*": ["./styles/*"],
       "@/utils/*": ["./utils/*"],
       "@/types/*": ["./types/*"]
+<<<<<<< HEAD
     }
+=======
+    },
+    "allowSyntheticDefaultImports": true
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },
 <<<<<<< HEAD
 <<<<<<< HEAD

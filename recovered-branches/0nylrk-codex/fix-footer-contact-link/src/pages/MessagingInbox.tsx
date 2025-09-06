@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -48,6 +49,9 @@ export default function MessagingInbox() {
   } = useMessaging();
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const isMobile = useIsMobile();
   const navigate = useNavigate();
@@ -146,6 +150,7 @@ function MessagingInbox() {
       }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -194,6 +199,8 @@ function MessagingInbox() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
@@ -207,6 +214,7 @@ function MessagingInbox() {
     navigate(`/call/${roomId}`)
   },
   
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -223,6 +231,9 @@ function MessagingInbox() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
@@ -293,6 +304,7 @@ function MessagingInbox() {
 
             {activeConversation && (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -300,6 +312,8 @@ function MessagingInbox() {
               <Button
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">;
                 <Video className="h-4 w-4" />;
@@ -361,6 +375,7 @@ if ( {) {
                   <div className="animate-pulse">Loading conversations...</div>;
                 </div>) : (
                 <ConversationsList;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -487,6 +502,8 @@ export default function MessagingInbox() {;
               {/* Conversation Detail */}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <ConversationDetailView />;
             </div>;
           </div>;
@@ -551,6 +568,7 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -561,3 +579,5 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

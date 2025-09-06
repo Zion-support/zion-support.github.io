@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -24,6 +25,8 @@ import React, { useState, useEffect } from 'react';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Link from 'next/link';
 
 import {motion} from 'framer-motion';
@@ -174,7 +177,10 @@ const EnhancedNavigation: React.FC = () => {
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 20)
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           {/* Mobile Menu Button */}
           <button
@@ -742,4 +748,14 @@ export default EnhancedNavigation;
 export default EnhancedNavigation;
 export default EnhancedNavigation;
 export default EnhancedNavigation;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import { motion } from 'framer-motion';
+import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket;
+  Cpu, Database, Users, Award, BookOpen, Phone
+ } from 'lucide-react';
+const EnhancedNavigation: React.FC;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

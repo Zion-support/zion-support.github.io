@@ -26,15 +26,19 @@ import {Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign} from "
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 interface BrowseItem {;
   id: string,;
   title: string,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   subtitle: string,;
   description: string,;
@@ -55,6 +59,10 @@ import React, { useState } from "react",
   subtitle: string,,
   description: string,;import React, { useState } from "react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  subtitle: string,,
+  description: string,;import React, { useState } from "react",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
@@ -70,6 +78,7 @@ interface BrowseItem {
   description: string
   location?: string;
   badges: string[]
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -333,6 +342,18 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
   },
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    setSavedItems((prev) =>
+      prev.includes(id)
+        ? prev.filter(itemId => itemId !== id)
+        : [...prev, id]
+    )
+  price?: string;
+  image?: string;
+  match?: number;
+  },
+  
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-4 pb-24">;
       {items && items.map((item) => (;
@@ -349,6 +370,7 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                   )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -356,12 +378,15 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                   <div>;
                     <h3 className="font-medium">{item && item.title}</h3>;
                     <p className="text-sm text-muted-foreground">{item && item.subtitle}</p>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -464,6 +489,8 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -535,6 +562,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
               </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className="mt-3 flex flex-wrap gap-1">;
 
 =======
@@ -571,6 +599,9 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
 =======
               <div className="mt-3 flex flex-wrap gap-1">;                    {badge}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <div className="mt-3 flex flex-wrap gap-1">;                    {badge}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </Badge>;
                 ))}
 
@@ -628,6 +659,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
 
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -836,3 +868,6 @@ setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

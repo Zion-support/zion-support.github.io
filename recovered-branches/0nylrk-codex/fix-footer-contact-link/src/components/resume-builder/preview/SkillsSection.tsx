@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Skill } from '@/types/resume';
 import {Skill} from '@/types/resume';
@@ -17,21 +18,27 @@ import {Skill} from '@/types/resume';
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Skill } from "@/types/resume";
 interface SkillsSectionProps {
   skills: Skill[];
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface SkillsSectionProps {
   skills: Skill[];
 }
 export function SkillsSection({ skills }: SkillsSectionProps) {
   // Group skills by category
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -74,6 +81,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const skillsByCategory = skills.reduce((acc, skill) => {;
     const category = skill.category || 'Other';
     if (!acc[category]) {
@@ -119,6 +128,7 @@ const skillsByCategory = skills.reduce(
   }, {} as Record<string Skill[]>),
 
   if (skills.length === 0) return null,
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -145,6 +155,8 @@ const skillsByCategory = skills.reduce(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   if (skills.length === 0) return null,
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Skills</h2>
@@ -152,6 +164,7 @@ const skillsByCategory = skills.reduce(
         {Object.entries(skillsByCategory).map(([category, skills]) => (
           <div key={category}>
             <h3 className="text-sm font-medium">{category}</h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <p className="text-sm">
               {skills.map((skill) => skill.name).join(", ")}
@@ -240,11 +253,15 @@ export function SkillsSection({ skills } SkillsSectionProps) {;
 =======
             <p className="text-sm">            </p>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <p className="text-sm">            </p>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>;
         ))}
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -260,11 +277,16 @@ export function SkillsSection({ skills } SkillsSectionProps) {;
       <h2 className="text - lg font - semibold border - b mb - 3">Skills</h2>;
       <div className="space - y-2">;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }  return (
     <div className="mb-6">;
       <h2 className="text - lg font - semibold border - b mb-3">Skills</h2>;
       <div className="space-y-2">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {Object.entries (skillsByCategory).map (([category, skills]) => (
           <div key={category}>;
             <h3 className="text - sm font-medium">{category}</h3>;

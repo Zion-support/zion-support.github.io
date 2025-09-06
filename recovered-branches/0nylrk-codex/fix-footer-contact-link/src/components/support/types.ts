@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ReactNode } from "react";
 =======
@@ -17,10 +18,14 @@ import { ReactNode  } from './react';
 =======
 import { ReactNode } from "react";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+import { ReactNode } from "react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface HelpArticle {
   id: string;
   title: string;
   content: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,11 +40,14 @@ export interface HelpCategory {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {ReactNode} from "react";
 export interface HelpArticle {;
   id: string;
   title: string;
   content: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,11 +60,17 @@ export interface HelpArticle {;
 
 export interface HelpCategory {;  lastUpdated: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+
+export interface HelpCategory {;  lastUpdated: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   tags: string[];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 export interface HelpCategory {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -190,3 +204,5 @@ export interface SupportTicket {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

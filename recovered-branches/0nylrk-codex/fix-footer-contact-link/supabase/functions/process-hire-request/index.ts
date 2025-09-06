@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -46,6 +45,11 @@ const corsHeaders = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
+import {Configuration, OpenAIApi} from "https: //esm && esm.sh/openai@3 ;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface HireRequest {
   talent: {
     id: string;
@@ -53,6 +57,7 @@ interface HireRequest {
   }
   project: {
     overview: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
     timeline: string;
 <<<<<<< HEAD
@@ -102,6 +107,9 @@ const corsHeaders = {
 =======
     timeline: string;const corsHeaders = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    timeline: string;const corsHeaders = {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
@@ -122,6 +130,7 @@ interface HireRequest {
     timeline: string,
     budgetMin: number,
 <<<<<<< HEAD
+<<<<<<< HEAD
     budgetMax: number
 <<<<<<< HEAD
 =======
@@ -138,6 +147,9 @@ import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 =======
     budgetMax: numberimport { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    budgetMax: numberimport { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",;
 const corsHeaders = {;
@@ -159,6 +171,7 @@ interface HireRequest {;
     overview: string,;
     timeline: string,;
     budgetMin: number,;
+<<<<<<< HEAD
 <<<<<<< HEAD
     budgetMax: number;
 <<<<<<< HEAD
@@ -218,6 +231,9 @@ serve(async (req) => {
 =======
     budgetMax: number;  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    budgetMax: number;  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   try {
     const supabase = createClient(
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -229,6 +245,7 @@ serve(async (req) => {
     // 1. Optional: Enhance content with AI
     let enhancedContent: EnhancedContent | null = null;
     
+<<<<<<< HEAD
 <<<<<<< HEAD
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY"),
 
@@ -315,11 +332,18 @@ serve(async (req) => {
           Please provide:
           1. A brief summary of this project (max 100 characters)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY"),        const prompt = `          Project Overview: "${project && project.overview}"
+          
+          Please provide:
+          1. A brief summary of this project (max 100 characters)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           2. Classify this project into one category (e && e.g., "AI Development", "Cloud Migration", "Web Design", etc.)
           
 
           Format your response as JSON: {
             "summary": "Brief summary here"
+<<<<<<< HEAD
 <<<<<<< HEAD
             "projectType": "Project type here"
 =======
@@ -584,6 +608,10 @@ if ( {) {
             "projectType": "Project type here"          }
         `;        // Continue without enhanced content
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            "projectType": "Project type here"          }
+        `;        // Continue without enhanced content
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
     }
     // 2. Store the request in the database
@@ -592,6 +620,7 @@ if ( {) {
       .insert([
         {      ])
       .select();
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (requestError) {
 <<<<<<< HEAD
@@ -681,12 +710,17 @@ if ( {) {
     if (requestError) {    }
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    if (requestError) {    }
+    
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // 3. Create notification for the admin
     // Fetch admin users
     const { data: adminUsers, error: adminError } = await supabase
       .from('profiles')
       .select('id')
       .eq('user_typeadmin')
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -707,6 +741,11 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (adminError) {
+=======
+    if (adminError) {
+      console && console.error("Error fetching admin users:", adminError)
+    }    if (adminError) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       console && console.error("Error fetching admin users:", adminError)
     }    if (adminError) {
       console && console.error("Error fetching admin users:", adminError)
@@ -840,6 +879,7 @@ if ( {) {
         }),
         
       if (notificationError) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         console.error("Error creating admin notification:", notificationError)
 <<<<<<< HEAD
@@ -1120,6 +1160,14 @@ if ( {) {
         request_id: requestRecord[0].id
       {        headers: { ...corsHeaders, "Content-Type": "application/json" }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        console.error("Error creating admin notification:", notificationError)            ${enhancedContent?.summary ? `<p><strong>Summary:</strong> ${enhancedContent.summary}</p>` : ''}
+            ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent.projectType}</p>` : ''}
+            <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>
+            <p>Best regards,<br>The Zion AI Marketplace Team</p>    return new Response(
+        request_id: requestRecord[0].id
+      {        headers: { ...corsHeaders, "Content-Type": "application/json" }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         status: 200}
     )
   } catch (error) {
@@ -1189,6 +1237,7 @@ if ( {) {
         error: error.message;
       });
       {
+<<<<<<< HEAD
 <<<<<<< HEAD
         headers: { ...cors_headers, "Content - Type": "application / json" }
 <<<<<<< HEAD
@@ -1487,3 +1536,6 @@ error: error.message
 =======
         headers: { ...cors_headers, "Content - Type": "application / json" }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        headers: { ...cors_headers, "Content - Type": "application / json" }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

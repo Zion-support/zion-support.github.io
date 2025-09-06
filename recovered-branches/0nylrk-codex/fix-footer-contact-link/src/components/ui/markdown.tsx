@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -34,12 +35,17 @@ import { cn } from "@/lib/utils",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface MarkdownProps {
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import ReactMarkdown from "react-markdown";
 import { cn } from "@/lib/utils";
 import ReactMarkdown from "react-markdown",
 import { cn } from "@/lib/utils",interface MarkdownProps {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   content: string;
   className?: string;
 }
@@ -48,6 +54,7 @@ export function Markdown({ content, className }: MarkdownProps) {
     <div className={cn("prose dark:prose-invert max-w-none", className)}>
       <ReactMarkdown>{content}</ReactMarkdown>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,6 +70,8 @@ import {cn} from "@/lib/utils";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 import React from "react",;
 import ReactMarkdown from "react-markdown",;
@@ -75,6 +84,7 @@ import { cn } from "@/lib/utils",;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface MarkdownProps {;
   content: string,;
+<<<<<<< HEAD
   className?: string;
 =======
   );
@@ -85,6 +95,9 @@ interface MarkdownProps {;
   content: string,;
   className?: string;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  className?: string;}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function Markdown(): any ({ content, className }: MarkdownProps) {;
   return (
@@ -94,6 +107,7 @@ export function Markdown(): any ({ content, className }: MarkdownProps) {;
   );
 =======
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -111,6 +125,8 @@ export function Markdown(): any ({ content, className }: MarkdownProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from './react';
 import ReactMarkdown from './react - markdown';
 import { cn  } from '@/lib / utils';
@@ -167,6 +183,7 @@ export function Markdown({ content, className }: MarkdownProps) {;
 ;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 ;
@@ -174,3 +191,5 @@ export function Markdown({ content, className }: MarkdownProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

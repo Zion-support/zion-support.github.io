@@ -7,8 +7,11 @@
 import React from "react";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Button} from "@/components/ui/button";
 import {Menu, X} from "lucide-react";
 import {useSidebar} from "./sidebar-context";
@@ -32,6 +35,7 @@ import React from "react",
 import { Button } from "@/components/ui/button",
 import { Menu, X } from "lucide-react",
 import { useSidebar } from "./sidebar-context",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { cn } from "@/lib/utils",
 <<<<<<< HEAD
@@ -103,6 +107,15 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
   const { open, toggleSidebar } = useSidebar(),
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { cn } from "@/lib/utils",interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
+  className?: string;
+}
+
+export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
+  const { open, toggleSidebar } = useSidebar(),
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button",;
 import { Menu, X } from "lucide-react",;
 import { useSidebar } from "./sidebar-context",;
@@ -119,6 +132,7 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
       size="icon";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -129,6 +143,8 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       className={cn("", className)}
@@ -139,6 +155,7 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
     </Button>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -159,3 +176,5 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

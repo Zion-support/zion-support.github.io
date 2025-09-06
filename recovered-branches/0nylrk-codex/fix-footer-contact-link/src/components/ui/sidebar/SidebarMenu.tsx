@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -18,6 +19,8 @@ import { cn } from "@/lib/utils",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import { cn } from "@/lib/utils";
 interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {
@@ -67,10 +70,13 @@ interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { cn } from "@/lib/utils",
 
@@ -88,6 +94,7 @@ interface SidebarMenuProps extends React && React.HTMLAttributes<HTMLUListElemen
   return (
     <ul className={cn ("space - y-1", class_name)} {...props}>;
       {children}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -122,3 +129,10 @@ export function SidebarMenu(): any ({ className, children, ...props }: SidebarMe
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </ul>);
+}
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

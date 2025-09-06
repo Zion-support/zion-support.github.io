@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
@@ -8,18 +9,43 @@ import Card from '../../components/ui/Card';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
 import {enhancedRealMicroSaasServices} from '../../data/enhanced-real-micro-saas-services';
 import {extraServices} from '../../data/extra-services';
 import {additionalEnhancedServices} from '../../data/additional-real-services';
 import {newRealServices} from '../../data/new-real-services';
 import {marketReadyServices} from '../../data/market-ready-services';
+<<<<<<< HEAD
+=======
+=======
+import React from 'react',
+import Head from 'next/head',
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
+import Button from '../../components/ui/Button',
+import Card from '../../components/ui/Card';
+import { Check, Mail, MapPin, Phone, ExternalLink  } from 'lucide-react';
+import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services';
+import { extraServices  } from '../../data/extra-services';
+import { additionalEnhancedServices  } from '../../data/additional-real-services';
+import { newRealServices  } from '../../data/new-real-services';
+import { marketReadyServices } from '../../data/market-ready-services';
+type Service = any;
+	if (!service) {
+		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug)
+	}
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 type Service = (typeof enhancedRealMicroSaasServices)[number];
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
@@ -45,6 +71,9 @@ function extractServiceSlugFromLink(link: string): string | null {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -68,6 +97,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -114,6 +144,16 @@ export async function getStaticPaths() {;
 =======
 export async function getStaticPaths() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    }
+    return null;
+  } catch {;
+    return null;
+  }
+
+
+export async function getStaticPaths() {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const services = getAllServices();
   const slugs = new Set<string>();
 
@@ -123,6 +163,7 @@ export async function getStaticPaths() {;
     else if (s && s.name) slugs && slugs.add(toSlug(s && s.name));
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   return {
     paths: Array.from(slugs).map(slug => ({ params: { slug } }))
     fallback: false
@@ -131,23 +172,32 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     paths: Array.from(slugs).map(slug => ({ params: { slug } })),
     fallback: false,
   };
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return {;
     paths: Array && Array.from(slugs).map(slug => ({ params: { slug } })),;
     fallback: false,;
   };
 
 export async function getStaticProps(): any ({ params }: { params: { slug: string } }) {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const services = getAllServices();
   const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
 
@@ -164,6 +214,10 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
         toSlug(s && s.name || '') === incomingSlug;
     );
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   if (!service) {;
     return { notFound: true };
@@ -174,12 +228,18 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
   };
 
 export default function ServiceDetailPage(): any ({ service }: { service: Service }) {;
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (!service) {
     return { notFound: true }
   }
@@ -187,6 +247,7 @@ export default function ServiceDetailPage(): any ({ service }: { service: Servic
     props: { service }
   }
 export default function ServiceDetailPage({ service }: { service: Service }) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -486,6 +547,43 @@ function ServiceDetailPage() {
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+  return (
+    <UltraFuturisticBackground variant='quantum' intensity='high'>;
+      <Head>;
+        <title>{service && service.name} | Zion Tech Group</title>;
+        <meta
+          name='description'
+                <Button
+                  href='/contact'
+                  className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>;
+                  Contact Sales;
+                </Button>;
+                <Button
+                  href={service && service.link}
+                  variant='outline'
+                  <a
+                    href={`tel:${contactInfo && contactInfo.mobile.replace(/[^+\\d]/g, '')}`}
+                    className='hover:underline'>;
+                    {contactInfo && contactInfo.mobile}
+                  </a>;
+                </div>;
+                <div className='flex items-center gap-2 text-purple-400'>;
+                  <Mail className='w-4 h-4' />;
+                  <a
+                    href={`mailto:${contactInfo && contactInfo.email}`}
+                    className='hover:underline'>;
+                    {contactInfo && contactInfo.email}
+                  </a>;
+                </div>;
+                <div className='flex items-center gap-2 text-green-400'>;
+                  <MapPin className='w-4 h-4' />;
+                  <a
+                    href={`https://maps && maps.google.com/?q=${encodeURIComponent(contactInfo && contactInfo.address)}`}
+                    target='_blank'
+                    rel='noopener noreferrer'
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
@@ -563,6 +661,7 @@ import Card from '../../components/ui/Card';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import React from 'react';
@@ -582,6 +681,8 @@ import Card from '../../components/ui/Card';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
@@ -589,6 +690,7 @@ import { additionalEnhancedServices } from '../../data/additional-real-services'
 import { newRealServices } from '../../data/new-real-services';
 import { marketReadyServices } from '../../data/market-ready-services';
 type Service = typeof enhancedRealMicroSaasServices[number];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -794,6 +896,8 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function ServiceDetailPage({ service }: { service: Service }) {
 	return (
 		<UltraFuturisticBackground variant="quantum" intensity="high">
@@ -802,6 +906,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 				<meta name="description" content={service.tagline || service.description} />
 				<link rel="canonical" href={service.link} />
 			</Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 			<div className="container mx-auto px-4 py-16">
@@ -824,6 +929,8 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 					<p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
 				</div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
 					<div className="lg:col-span-2 space-y-6">
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
@@ -839,6 +946,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
 									</li>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -863,6 +971,8 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<div className="text-sm text-gray-400 mb-1">Pricing</div>
 							<div className="text-3xl font-bold text-white">{service.price}<span className="text-base font-medium text-gray-400">{service.period}</span></div>
@@ -872,6 +982,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 								<Button href={service.link} variant="outline" className="flex-1 border border-gray-600 text-gray-200"><ExternalLink className="w-4 h-4 mr-2" /> Learn More</Button>
 							</div>
 						</Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
@@ -891,12 +1002,15 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 							</div>
 						</Card>
 					</div>
 				</div>
 			</div>
 		</UltraFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 	)
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -905,11 +1019,14 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </UltraFuturisticBackground>);
 ;
 
 
 =======
+<<<<<<< HEAD
 	)
 <<<<<<< HEAD
 }
@@ -923,3 +1040,18 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                    className='text-xs hover:underline'
+                  >
+                    {contactInfo.address}
+                  </a>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </UltraFuturisticBackground>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

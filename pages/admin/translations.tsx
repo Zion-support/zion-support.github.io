@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import dynamic from 'next/dynamic';
 
 
@@ -18,11 +19,21 @@ const TranslationPreview = dynamic(() => import('../../components/admin/Translat
 const TranslationPreview = dynamic(() => import('../../components/admin/TranslationPreview'), { ssr: false }),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+const TranslationPreview = dynamic(() => import('../../components/admin/TranslationPreview'), { ssr: false }),
+=======
+import dynamic from 'next/dynamic';
+const TranslationPreview = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function TranslationsAdminPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <TranslationPreview />
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 };
@@ -30,23 +41,34 @@ export default function TranslationsAdminPage() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
+=======
+  )
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 import dynamic from 'next/dynamic';
 const _TranslationPreview = dynamic__(() => import('../../components/admin/TranslationPreview'), {_ssr: false});
 export default function TranslationsAdminPage() {_return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="container mx-auto px-4 py-8">
       <TranslationPreview />
     </div>
@@ -59,6 +81,7 @@ export default function TranslationsAdminPage() {_return (
 
 
 =======
+<<<<<<< HEAD
 
 =======
 }
@@ -84,3 +107,7 @@ function TranslationsAdminPage() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

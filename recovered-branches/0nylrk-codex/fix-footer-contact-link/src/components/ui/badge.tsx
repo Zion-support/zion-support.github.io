@@ -3,6 +3,7 @@ import * as React from &quot;react & quot;
 import { cn } from &quot;@/lib / utils & quot;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -53,6 +54,14 @@ export interface BadgeProps
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { cn } from "@/lib/utils"
+
+import { badgeVariants } from "@/components/ui/badge-variants"
+
+export interface BadgeProps
+  extends React.HTMLAttributes<HTMLSpanElement> {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   variant?:
     | "default"
     | "secondary"
@@ -70,6 +79,7 @@ export interface BadgeProps
 ;
 
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -98,3 +108,5 @@ export { Badge, badgeVariants }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

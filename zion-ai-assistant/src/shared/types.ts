@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -14,12 +15,15 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",
 export interface MilestoneSuggestionInput {
   scopeOfWork: string,
   startDateIso: string, // ISO 8601;
   endDateIso: string,   // ISO 8601;
   project_type: ProjectType;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -94,6 +98,12 @@ export interface SuggestedMilestoneItem {
   tags?: string[], // e.g., ["AI Suggested"];
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}  suggestedDueDateIso: string;
+  estimatedEffortHours: number, // estimated hours;
+  tags?: string[], // e.g., ["AI Suggested"];
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export interface MilestoneSuggestionResponse {
   milestones: SuggestedMilestoneItem[];
@@ -101,6 +111,7 @@ export interface MilestoneSuggestionResponse {
 export interface MilestoneSuggestionResponse {
   milestones: SuggestedMilestoneItem[];
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -128,6 +139,8 @@ export interface MilestoneSuggestionResponse {milestones: SuggestedMilestoneItem
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 export interface MilestoneSuggestionResponse {;
   milestones: SuggestedMilestoneItem[];

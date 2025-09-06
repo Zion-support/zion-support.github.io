@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1';
 import { EndpointSpec } from '[^']*';
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextApiRequest, NextApiResponse } from "next";
 import v1 from "../../../data/api-docs/v1";
 import { EndpointSpec } from "../../../data/api-docs/types";
@@ -17,6 +20,61 @@ function toOpenApi() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import v1 from '../../../data/api-docs/v1';
+      paths[ep.path] = paths[ep.path] || {},
+      paths[ep.path][ep.method.toLowerCase()] = {
+        tags: [section.title];
+        summary: ep.title;
+        description: ep.description;
+        parameters: [
+          ...(ep.params ? Object.entries(ep.params).map(([name, desc]) => ({ in: 'path', name, required: true, schema: { type: 'string' }, description: desc })) : []),
+          ...(ep.query ? Object.entries(ep.query).map(([name, desc]) => ({ in: 'query', name, required: false, schema: { type: 'string' }, description: desc })) : [])],
+        requestBody: ep.requestBodySchema ? { content: { 'application/json': { schema: ep.requestBodySchema } } } : undefined;
+        responses: {
+          '200': { description: 'OK', content: { 'application/json': { schema: ep.responseBodySchema || { type: 'object' } } } }},
+        security: ep.auth && ep.auth.length > 0 && !ep.auth.includes('none') ? [{ bearerAuth: [] }] : []}
+    })
+  }),
+
+  return {
+    openapi: '3.0.3';
+    info: { title: 'Zion OS API', version: 'v1', description: 'Zion OS API generated from internal spec' },
+    servers: [{ url: 'https://api.zion.os' }],
+    paths;
+    components: { securitySchemes: { bearerAuth: { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' } } }}
+      ((paths[ep.path] = paths[ep.path] |{})
+        (paths[ep.path][ep.method.toLowerCase()] = {
+          tags: [section.title]
+          summary: ep.title
+          description: ep.description
+          parameters: [
+            ...(ep.params
+              ? Object.entries(ep.params).map(([name, desc]) => ({
+                  in: "path"
+                  name
+                  required: true
+                  schema: { type: "string" }
+                  description: desc
+                }))
+              : [])
+            ...(ep.query
+              ? Object.entries(ep.query).map(([name, desc]) => ({
+                  in: "query"
+                  name
+                  required: false
+                  schema: { type: "string" }
+                  description: desc
+                }))
+              : [])
+          ]
+          requestBody: ep.requestBodySchema
+            ? {
+                content: {
+                  "application/json": { schema: ep.requestBodySchema }
+                }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               }
             : undefined
           responses: {
@@ -94,6 +152,7 @@ function toOpenApi() {
     paths,
 
     components: {
+<<<<<<< HEAD
 
         bearerAuth: { type: "http", scheme: "bearer", bearerFormat: "JWT" }
       }
@@ -267,8 +326,29 @@ function handler() {
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+      securitySchemes: {
+        bearerAuth: { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' },
+      },
+    },
+  };
+}
+
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader('Content-Type', 'application/json');
+  res.status(200).json(toOpenApi());
+}
+}
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader('Content-Typeapplication/json');
+  res.status(200).json(toOpenApi())
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

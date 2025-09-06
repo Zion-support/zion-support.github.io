@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -9,6 +10,8 @@
 
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   | "info",
 
 =======
@@ -61,6 +64,7 @@ declare type BadgeVariant =;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   | "info",;
 
 
@@ -85,3 +89,6 @@ declare type BadgeVariant =;
 =======
   | "info",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  | "info",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

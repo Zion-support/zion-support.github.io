@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {useState, useEffect} from 'react';
 import {use_form} from 'react - hook - form';
@@ -19,6 +22,7 @@ import { format  } from 'date-fns';
 import { toast } from "sonner";
 import { useNavigate  } from 'react-router-dom';
 import { jobSchema, JobSchemaType  } from './validation';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 <<<<<<< HEAD
@@ -60,6 +64,9 @@ import { useState, useEffect } from 'react',
 =======
 import { useAuth } from "@/hooks/useAuth";import { useState, useEffect } from 'react',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { useAuth } from "@/hooks/useAuth";import { useState, useEffect } from 'react',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useForm } from 'react-hook-form',
 import { zodResolver } from "@hookform/resolvers/zod",
 import { format } from 'date-fns',
@@ -68,6 +75,7 @@ import { useNavigate } from 'react-router-dom',
 import { jobSchema, JobSchemaType } from './validation',
 import { useAuth } from "@/hooks/useAuth",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -155,10 +163,17 @@ export interface JobPostingProps {
   on_success?: () => void;
 }      title: '';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export interface JobPostingProps {
+  job_id?: string;
+  on_success?: () => void;
+}      title: '';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       company: '';
       location: '';
       job_type: '';
       salary_range: '',
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: '',
       responsibilities: '',
@@ -276,6 +291,9 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
 =======
   description: '';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  description: '';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       responsibilities: '';
       qualifications: '';
       benefits: '';
@@ -294,6 +312,7 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
 
         is_remote: isRemote,
         user_id: user && user.id};
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -384,6 +403,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
       return job_data;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -392,6 +413,7 @@ if ( {) {
       toast.error (error.message || "Failed to process form");
       throw error;
     } finally {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -411,6 +433,10 @@ if ( {) {
 
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setIsLoading (false);
     }
   }
@@ -423,6 +449,7 @@ if ( {) {
     is_remote;
     setIsRemote;
     initial_values;
+<<<<<<< HEAD
 <<<<<<< HEAD
     setInitialValues;
 <<<<<<< HEAD
@@ -496,6 +523,9 @@ if ( {) {
       setIsLoading(false)
 
 ;
+=======
+    setInitialValues;;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       return jobData;
     } catch (error: any) {;
       console.error("Error in job form submission:", error),;
@@ -525,6 +555,7 @@ if ( {) {
 };
   }
 }
+<<<<<<< HEAD
 
 ;
 
@@ -534,6 +565,8 @@ if ( {) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 ;
 
@@ -542,6 +575,7 @@ if ( {) {
   }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -549,3 +583,6 @@ if ( {) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

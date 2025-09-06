@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Skill } from '@/types/resume';
 export interface SkillsFormProps {
@@ -12,6 +13,8 @@ export interface SkillsFormProps {;
 import { Skill  } from '@/types / resume';
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Skill } from "@/types/resume";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export interface SkillsFormProps {
@@ -27,6 +30,7 @@ export interface SkillsFormProps {
 
   on_complete: () => void;
   on_back: () => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -47,6 +51,8 @@ export interface SkillCategoryProps {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Skill  } from '@/types / resume';
 
 export interface SkillsFormProps {
@@ -58,6 +64,7 @@ export interface SkillsFormProps {;
   skills: Skill[];
   onComplete: () => void;
   onBack: () => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -99,10 +106,13 @@ export interface AddSkillFormProps {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface AddSkillFormProps {;
 
   resumeId: string;
   onAddSkill: (skill: Skill) => Promise<boolean>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -212,6 +222,11 @@ export interface BulkAddSkillsProps {
   onAddSkill: (skill: Skill) => Promise<boolean>;
   defaultCategory?: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  defaultCategory?: string;
+  onAddSkill: (skill: Skill) => Promise<boolean>;
+  defaultCategory?: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 ;
 ;

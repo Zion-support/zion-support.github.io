@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
       let success = false;
       // Check condition
@@ -7,6 +10,106 @@ if ( {) {
   $2
 }
         success = await update_project (project.id, project_data);
+=======
+import { useState  } from 'react';
+import { useForm  } from 'react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { z  } from 'zod';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Textarea  } from '@/components/ui/textarea';
+import {logErrorToProduction} from '@/utils/productionLogger';
+import { Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage } from '@/components/ui/form';
+import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
+import { PortfolioProject  } from '@/types/resume';
+import { usePortfolio  } from '@/hooks/usePortfolio';
+import { useAuth } from '@/hooks/useAuth';
+// Define schema for form validation
+const projectSchema = null;
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { logErrorToProduction } from '@/utils/productionLogger'; import {
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormLabel
+  FormMessage
+} from '@/components/ui/form'; import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
+import { PortfolioProject } from '@/types/resume'
+import { usePortfolio } from '@/hooks/usePortfolio'
+import { useAuth } from '@/hooks/useAuth'
+// Define schema for form validation
+const projectSchema = z.object({
+  title: z.string().min(1, 'Project title is required')
+  description: z.string().optional()
+  technologies: z.string().optional()
+  image_url: z.string().optional()
+  github_url: z
+    .union([z.string().url('Please enter a valid URL'), z.literal('')])
+    .optional()
+  demo_url: z
+    .union([z.string().url('Please enter a valid URL'), z.literal('')])
+    .optional()
+  pdf_url: z.string().optional()
+})
+type ProjectFormValues = z.infer<typeof projectSchema>
+interface ProjectFormProps {
+  project?: PortfolioProject
+  onSuccess: () => void
+  onCancel: () => void
+export function ProjectForm({
+  project
+  onSuccess
+  onCancel
+}: ProjectFormProps) {
+  const { user } = useAuth()
+  const { addProject, updateProject } = usePortfolio()
+  const [isLoading, setIsLoading] = useState(false)
+  const isEditing = !!project
+  const form = useForm<ProjectFormValues>({
+    resolver: zodResolver(projectSchema)
+    defaultValues: {
+      title: project?.title |''
+      description: project?.description |''
+      technologies: project?.technologies
+        ? project.technologies.join(', ')
+        : ''
+      image_url: project?.image_url |''
+      github_url: project?.github_url |''
+      demo_url: project?.demo_url |''
+      pdf_url: project?.pdf_url |''
+    }
+  })
+  const onSubmit = async (data: ProjectFormValues) => {
+    if (!user) return
+    setIsLoading(true)
+    try {
+      const projectData: PortfolioProject = {
+        title: data.title
+        description: data.description
+        technologies: data.technologies
+          ? data.technologies.split(',').map(tech => tech.trim())
+          : []
+        image_url: data.image_url
+        github_url: data.github_url |undefined
+        demo_url: data.demo_url |undefined
+        pdf_url: data.pdf_url
+      }
+      let success = false
+      if (isEditing && project?.id) {
+        success = await updateProject(project.id, projectData)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       } else {
         const projectId = await addProject(projectData)
         success = !!projectId
@@ -36,8 +139,11 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {;
       setIsLoading(false)
     }
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -59,6 +165,7 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   FormMessage,;
 } from '@/components/ui/form';import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
@@ -148,6 +255,15 @@ export function ProjectForm(): any ({;
       title: project?.title || '',;
       description: project?.description || '',;
 
+=======
+
+  const form = useForm<ProjectFormValues>({;
+    resolver: zodResolver(projectSchema),;
+    defaultValues: {;
+      title: project?.title || '',;
+      description: project?.description || '',;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (error) {;
@@ -156,6 +272,7 @@ export function ProjectForm(): any ({;
       setIsLoading(false);
     }
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   
 <<<<<<< HEAD
@@ -167,6 +284,13 @@ export function ProjectForm(): any ({;
   return (
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <FormField
           control={form.control}
 <<<<<<< HEAD
@@ -182,9 +306,12 @@ export function ProjectForm(): any ({;
 
         <FormField
 <<<<<<< HEAD
+<<<<<<< HEAD
           control={form && form.control}          name='description'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           name='description'
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -232,8 +359,11 @@ export function ProjectForm(): any ({;
 
         <FormField
 <<<<<<< HEAD
+<<<<<<< HEAD
           control={form && form.control}          name='technologies'
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           name='technologies'
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -383,6 +513,7 @@ export function ProjectForm(): any ({;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -390,6 +521,8 @@ export function ProjectForm(): any ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   GitHub URL
                 </FormLabel>
                 <FormControl>
@@ -427,8 +560,11 @@ export function ProjectForm(): any ({;
 
         <FormField
 <<<<<<< HEAD
+<<<<<<< HEAD
           control={form && form.control}          name='image_url'
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           name='image_url'
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -479,6 +615,7 @@ export function ProjectForm(): any ({;
       </form>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Form>
   )
 }
@@ -486,6 +623,8 @@ export function ProjectForm(): any ({;
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     </Form>
   )
@@ -508,6 +647,7 @@ export function ProjectForm(): any ({;
 };
 };
     </Form>
+<<<<<<< HEAD
   )
 }
 }
@@ -530,4 +670,10 @@ export function ProjectForm(): any ({;
     </Form>);
 }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

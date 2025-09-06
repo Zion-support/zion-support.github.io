@@ -44,6 +44,7 @@ export function ClickableBadge({
   children;
   className;
 <<<<<<< HEAD
+<<<<<<< HEAD
   variant;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -159,11 +160,15 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
 =======
   variant;          className="ml-1 rounded-full p-0.5 hover:bg-background/20"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  variant;          className="ml-1 rounded-full p-0.5 hover:bg-background/20"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           aria-label="Remove"
         >
           <X className="h-3 w-3" />
         </button>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -176,6 +181,8 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from './react';
 import { X } from './lucide-react';
 import { cn } from '@/lib / utils';
@@ -204,6 +211,7 @@ function ClickableBadge() {
           on_click={(e) => {
             e.stop_propagation ();
             on_remove ();
+<<<<<<< HEAD
 <<<<<<< HEAD
           }}
 <<<<<<< HEAD
@@ -273,3 +281,6 @@ onRemove && "pl-2.5 pr-1.5 py-1";
 =======
           }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

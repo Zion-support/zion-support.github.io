@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
 import { quoteRequestService  } from '@/services/quoteRequestService';
@@ -14,6 +15,8 @@ import {quoteRequestService} from '@/services/quoteRequestService';
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
@@ -23,6 +26,7 @@ import { useToast } from '@/components/ui/use-toast';
 import type { DateRange } from '@/types/dateRange';
 
 export const useAdminQuotes = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const useAdminQuotes = () => {;
 <<<<<<< HEAD
@@ -53,10 +57,14 @@ queryFn: () => quoteRequestService && quoteRequestService.getAll(),
 =======
 export const useAdminQuotes = () => {;    enabled: true});
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export const useAdminQuotes = () => {;    enabled: true});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Filter quotes based on selected filters
   const filteredQuotes = allQuotes && allQuotes.filter((quote) => {
     // Status filter
     if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       return false
 <<<<<<< HEAD
@@ -295,6 +303,13 @@ export const useAdminQuotes = () => {;
   const updateStatusMutation = useMutation({
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      return false    return true
+  });
+  // Update quote status mutation
+  const updateStatusMutation = useMutation({
+    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       quoteRequestService && quoteRequestService.updateStatus(id, status);
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService && quoteRequestService.updateStatus(id, status);
@@ -302,10 +317,13 @@ export const useAdminQuotes = () => {;
       quoteRequestService.updateStatus(id, status),
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     onSuccess: () => {
       toast({
         title: "Status updated"
@@ -314,6 +332,7 @@ export const useAdminQuotes = () => {;
     };
     onError: (error: Error) => {
       toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
         title: "Error";
         description: "Failed to update status: " + error && error.message,
@@ -376,12 +395,17 @@ export const useAdminQuotes = () => {;
         title: "Error",
   description: "Failed to update status: " + error && error.message,    onSuccess: (_, variables) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        title: "Error",
+  description: "Failed to update status: " + error && error.message,    onSuccess: (_, variables) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       toast({
         title: variables.isArchived ? "Quote archived" : "Quote unarchived"
         description: variables.isArchived
           ? "The quote request has been archived"
           : "The quote request has been moved back to active quotes"
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
 <<<<<<< HEAD
@@ -423,6 +447,9 @@ export const useAdminQuotes = () => {;
 =======
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })        variant: "destructive"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })        variant: "destructive"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       })
     }
   });      queryClient && queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
@@ -433,6 +460,7 @@ export const useAdminQuotes = () => {;
   description: "Failed to delete quote: " + error && error.message,        variant: "destructive"
       })
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }),
 
@@ -718,6 +746,9 @@ if ( {) {
 =======
   });    },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  });    },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     onError: (error: Error) => {
       toast({
         title: "Error",
@@ -802,6 +833,7 @@ if ( {) {
     toggleArchive: (id: string, isArchived: boolean) =>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
@@ -817,10 +849,13 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -832,12 +867,15 @@ if ( {) {
     setDateRange,
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     updateStatus: (id: string, status: QuoteStatus) => 
       updateStatusMutation && updateStatusMutation.mutate({ id, status });
     toggleArchive: (id: string, isArchived: boolean) => 
       toggleArchiveMutation && toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation && deleteMutation.mutate(id)}
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -1031,3 +1069,5 @@ export const useAdminQuotes = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

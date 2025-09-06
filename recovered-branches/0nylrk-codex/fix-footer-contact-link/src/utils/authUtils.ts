@@ -8,6 +8,7 @@ import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -45,12 +46,17 @@ import type { UserDetails } from "@/types/auth",
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { supabase } from "@/integrations/supabase/client",
+import type { UserDetails } from "@/types/auth",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 /**
  * Utility function to clean up authentication state
  * This helps prevent auth state inconsistencies and "limbo" states
  */
 
 export const cleanupAuthState = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -136,6 +142,10 @@ export const cleanupAuthState = () => {
 
   // Remove standard auth tokens
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  // Remove standard auth tokens
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase } from "@/integrations/supabase/client",;
 import type { UserDetails } from "@/types/auth",;
 /**;
@@ -154,6 +164,7 @@ export const cleanupAuthState = () => {;
   // Remove from sessionStorage if in use;
   Object.keys(sessionStorage || {}).forEach((key) => {;
     if (key.startsWith('supabase.auth.') || key.includes('sb-')) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
       sessionStorage.removeItem(key);
 <<<<<<< HEAD
@@ -226,12 +237,18 @@ export const checkNewRegistration = async (user: UserDetails) => {
   })
 },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      sessionStorage.removeItem(key);    }
+  })
+},
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // If no welcome email sent yet, schedule one
     if (!existingCampaign) {
       // Create a scheduled job for the welcome email
       await supabase
         .from("scheduled_jobs")
         .insert({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -295,10 +312,13 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           job_type: "send_retention_email";
           scheduled_for: new Date ().toISOString ();
           status: "pending";
           payload: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -352,6 +372,10 @@ if ( {) {
 =======
         });      // Create entry in email_campaigns table
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          }
+        });      // Create entry in email_campaigns table
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       await supabase
         .from("email_campaigns")
         .insert({
@@ -360,6 +384,7 @@ if ( {) {
             display_name: user.display_name || user.email?.split ("@")[0] || "User";          user_id: user.id,
           campaign_type: "welcome_series",
           template_name: "welcome_email",
+<<<<<<< HEAD
 <<<<<<< HEAD
           template_data: {
 <<<<<<< HEAD
@@ -393,6 +418,9 @@ if ( {) {
 =======
           template_data: {            user_id: user.id,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          template_data: {            user_id: user.id,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             email_type: "welcome_series",
             user_type: user.userType || "unknown",
             display_name: user.displayName || user.email?.split("@")[0] || "User"
@@ -423,6 +451,7 @@ export const checkNewRegistration = async (user: UserDetails) => {;
             user_id: user.id,;
             email_type: "welcome_series",;
             user_type: user.userType || "unknown",;
+<<<<<<< HEAD
 <<<<<<< HEAD
             display_name: user.displayName || user.email?.split("@")[0] || "User";
 <<<<<<< HEAD
@@ -584,3 +613,6 @@ export const checkNewRegistration = async (user:UserDetails) => {;
 =======
             display_name: user.displayName || user.email?.split("@")[0] || "User";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            display_name: user.displayName || user.email?.split("@")[0] || "User";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

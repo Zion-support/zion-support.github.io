@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { Trophy } from 'lucide-react'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 =======
@@ -16,6 +21,20 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 =======
   points: number;
 
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Trophy } from 'lucide-react'
+export interface LeaderboardEntry {
+  name: string
+  points: number
+interface UserLeaderboardProps {
+  entries: LeaderboardEntry[]
+  entries: LeaderboardEntry[]
+}
+export interface LeaderboardEntry {
+  name: string;
+  points: number
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }
 interface UserLeaderboardProps {
   entries: LeaderboardEntry[];
@@ -47,25 +66,39 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
 <<<<<<< HEAD
     <Card>
       <CardHeader>
+<<<<<<< HEAD
         <CardTitle className="flex items-center gap-2">
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Trophy className="h-5 w-5" /> Leaderboard
+=======
+<CardTitle className='flex items-center gap-2'>
+          <Trophy className='h-5 w-5' /> Leaderboard
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         </CardTitle>
         <CardDescription>Top users by points</CardDescription>
       </CardHeader>
       <CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="space-y-2">
+=======
+<div className='space-y-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           {entries.map((e, idx) => (
             <div
               key={e.name}
@@ -80,9 +113,12 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
               </span>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <span className="text-sm">{e.points} pts</span>
             </div>
           ))}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 
@@ -137,6 +173,7 @@ function UserLeaderboard() {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+<<<<<<< HEAD
 =======
 
     <Card>
@@ -145,3 +182,16 @@ function UserLeaderboard() {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+              <span className='text-sm'>{e.points} pts</span>
+            </div>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

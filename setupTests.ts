@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -20,11 +21,16 @@ import '@testing-library/jest-dom/vitest';
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const "@testing-library/jest-dom/vitest";''"
 import '@testing-library/jest-dom/vitest';''const "@testing-library/jest-dom/vitest";''"
 import '@testing-library/jest-dom/vitest';''
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const "@testing-library/jest-dom/vitest";''"
 import '@testing-library/jest-dom/vitest';''
 
@@ -46,6 +52,7 @@ const "@testing-library/jest-dom/vitest";''"
 import '@testing-library/jest-dom/vitest';''
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -117,3 +124,6 @@ import '@testing-library/jest-dom/vitest';''
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

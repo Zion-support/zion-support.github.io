@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { GradientHeading } from "./GradientHeading",
 import { FeatureCard } from "./FeatureCard",
@@ -14,8 +15,91 @@ import { useTranslation } from "react-i18next",
 interface BenefitsSectionProps {
   className?: string,
   style?: React.CSSProperties
+=======
+=======
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+import React from 'react';
+import { CheckCircle, Shield, Zap, Users, Clock, Award, Bot, Globe, TrendingDown } from 'lucide-react';
+
+interface Benefit {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
+const BenefitsSection: React.FC = () => {
+  const benefits: Benefit[] = [
+    {
+      title: 'Proven Results',
+      description: 'We deliver measurable results with a 98% client satisfaction rate and proven ROI.',
+      icon: <CheckCircle className="w-8 h-8 text-green-500" />,
+    },
+    {
+      title: 'Enterprise Security',
+      description: 'Bank-level security with SOC 2 compliance and advanced threat protection.',
+      icon: <Shield className="w-8 h-8 text-blue-500" />,
+    },
+    {
+      title: 'AI-Powered Solutions',
+      description: 'Our advanced AI algorithms provide cutting-edge solutions tailored to your specific needs.',
+      icon: <Bot className="w-8 h-8 text-purple-500" />,
+    },
+    {
+      title: 'Global Reach',
+      description: 'Access a worldwide network of skilled professionals and cutting-edge services.',
+      icon: <Globe className="w-8 h-8 text-indigo-500" />,
+    },
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock assistance from our dedicated team to ensure your success.',
+      icon: <Clock className="w-8 h-8 text-orange-500" />,
+    },
+    {
+      title: 'Cost Reduction',
+      description: 'Save up to 40% on your projects through direct connections and competitive pricing.',
+      icon: <TrendingDown className="w-8 h-8 text-red-500" />,
+    },
+  ];
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Why Choose Zion Tech?
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            We combine cutting-edge technology with exceptional service to deliver 
+            solutions that drive real business value.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {benefits.map((benefit, index) => (
+<<<<<<< HEAD
+            <div key={index} className="text-center p-6">
+              <div className="text-4xl mb-4">{benefit.icon}</div>
+              <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+              <p className="text-gray-600">{benefit.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default BenefitsSection;
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 const getBenefits = (t: any) => [
   {
 =======
@@ -186,6 +270,7 @@ import React from 'react';
 import { CheckCircle, Shield, Zap, Users, Clock, Award, Bot, Globe, TrendingDown } from 'lucide-react';
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
+
   {
 
 <<<<<<< HEAD
@@ -339,6 +424,15 @@ const BenefitsSection: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf89
 =======
 
+=======
+}
+
+const getBenefits = null;
+  return (
+    <section className={cn("py-20 bg-zion-blue-light", className)} style={style}>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <GradientHeading>{t('home.benefits_title')}</GradientHeading>
           <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
             {t('home.benefits_subtitle')}
@@ -350,12 +444,19 @@ const BenefitsSection: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (        
 
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+=======
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           {benefits.map((benefit, index) => (
 
 class ErrorBoundary extends React.Component {
@@ -415,6 +516,7 @@ const getBenefits = (t: any,) => [;
 export function BenefitsSection(): any ({ className, style }: BenefitsSectionProps) {;
   const { t } = useTranslation();
   const benefits = getBenefits(t);
+
 
     >;
       <div className='container mx-auto px-4'>;
@@ -480,6 +582,7 @@ function BenefitsSection() {
           {benefits.map((benefit, index) => (;
             <FeatureCard;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               key={index}
@@ -586,9 +689,19 @@ export default BenefitsSection;
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+              key={index}
+<<<<<<< HEAD
+<<<<<<< HEAD
+              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div
               key={index}
               className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
             >
               <div className="text-blue-600 mb-4 flex justify-center">
                 {benefit.icon}
@@ -600,6 +713,13 @@ export default BenefitsSection;
                 {benefit.description}
               </p>
             </div>
+=======
+              title={benefit.title}
+              description={benefit.description}
+              icon={benefit.icon}
+className='bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300'
+            />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         </div>
 
@@ -622,7 +742,97 @@ export default BenefitsSection;
       </div>
     </section>
   );
+<<<<<<< HEAD
 };
 
 export default BenefitsSection;
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+<<<<<<< HEAD
+=======
+
+              title={benefit.title}
+              description={benefit.description}
+              icon={benefit.icon}
+
+          ))}
+
+              className='bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300'            />              className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";
+              className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";
+            />))}
+        </div>;
+      </div>;
+    </section>);
+}
+import React, { useState } from 'react';
+export /**;
+
+export default BenefitsSection }}}}</motion.div></motion.div></motion.div>}
+import { GradientHeading } from './ui / GradientHeading';
+export default /**
+ * Page - Function description
+ */
+function Page() {
+  {
+
+
+      "Direct provider connections",";
+      "Competitive pricing",";
+      "Bulk discount options",";
+      "Transparent cost structure" ];
+
+              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
+            />
+          ))}
+
+        </div>;
+      </div>;
+    </section>;
+  );
+
+
+  );
+}
+";
+    title: "24 / 7 Support", ";
+    description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.", ";
+    icon: <Clock className="w - 8 h - 8"  />, ";
+    color: "from - zion - blue to - zion - blue - dark", ";
+    bg_color: "from - zion - blue / 20 to - zion - blue - dark / 20", "    stats: "99.9% Uptime",
+    features: [";
+      "Round - the - clock assistance", ";
+      "Expert technical support", ";
+      "Rapid response times", ";
+      "Proactive monitoring" ];
+},
+  {
+";
+    title: "Cost Reduction", ";
+    description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.", ";
+    icon: <TrendingDown className="w - 8 h - 8"  />, ";
+    color: "from - zion - green to - zion - green - dark", ";
+    bg_color: "from - zion - green / 20 to - zion - green - dark / 20", "    stats: "40% Cost Savings",
+    features: [";
+      "Direct provider connections", ";
+      "Competitive pricing", ";
+      "Bulk discount options", ";
+      "Transparent cost structure" ];
+}
+;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -5,16 +5,20 @@ import { Interview } from "@/types/interview",
 import { format, parseISO } from "date-fns",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Interview } from "@/types/interview",
 import { format, parseISO } from "date-fns",
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { Interview  } from '@/types / interview';
 import { format, parseISO  } from './date - fns';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -28,11 +32,14 @@ interface InterviewResponseFormProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   interview: Interview;
 
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Interview } from "@/types/interview";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { format, parseISO } from "date-fns";
 <<<<<<< HEAD
@@ -114,10 +121,18 @@ import { format, parseISO } from "date-fns";export function InterviewResponseFor
   const formattedDate = format(interviewDate, 'EEEE, MMMM d'),
   const formattedTime = format(interviewDate, 'h: mm a'),  const endTime = new Date(interviewDate);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { format, parseISO } from "date-fns";export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading }: InterviewResponseFormProps) {
+  // Format interview date and time
+  const interviewDate = parseISO(interview.scheduled_date),
+  const formattedDate = format(interviewDate, 'EEEE, MMMM d'),
+  const formattedTime = format(interviewDate, 'h: mm a'),  const endTime = new Date(interviewDate);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   endTime && endTime.setMinutes(endTime && endTime.getMinutes() + interview && interview.duration_minutes);
   const formattedEndTime = format(endTime, "h: mm a");
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="space-y-4">
@@ -129,10 +144,13 @@ import { format, parseISO } from "date-fns";export function InterviewResponseFor
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           Interview requested by {interview.client_name || 'Client'}
         </p>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -153,12 +171,15 @@ import { format, parseISO } from "date-fns";export function InterviewResponseFor
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="grid gap-3">
           <div className="flex items-center gap-3">
             <div className="w-24 text-sm text-zion-slate-light">Date:</div>
             <div>{formattedDate}</div>
           </div>
           <div className="flex items-center gap-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="w-24 text-sm text-zion-slate-light">Time:</div>
 <<<<<<< HEAD
@@ -325,6 +346,9 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
 =======
             <div className="w-24 text-sm text-zion-slate-light">Time:</div>            <div>{interview.duration_minutes} minutes</div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <div className="w-24 text-sm text-zion-slate-light">Time:</div>            <div>{interview.duration_minutes} minutes</div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>;
           {interview.meeting_platform && (;
             <div className="flex items-center gap-3">;
@@ -345,6 +369,7 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
         </Button>;
       </div>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 <<<<<<< HEAD
@@ -490,3 +515,6 @@ return (<div className="space-y-4" > <div className="p-4 bg-zion-blue-light/20 r
 =======
   );}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  );}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

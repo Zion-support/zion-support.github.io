@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,10 +11,14 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useCallback  } from 'react';
 import { checkSignupPatterns  } from '@/services/fraud/signupCheck';
 import { supabase  } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function useFraudPreventionSignup() {
 <<<<<<< HEAD
@@ -177,6 +182,13 @@ export function useFraudPreventionSignup() {  const [isCheckingFraud, setIsCheck
   const getIP = async (): Promise<string | undefined> => {
     try {          user_email: email;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function useFraudPreventionSignup() {  const [isCheckingFraud, setIsCheckingFraud] = useState(false);
+  // Get the user's IP address (in a real app, you'd do this server-side)
+
+  const getIP = async (): Promise<string | undefined> => {
+    try {          user_email: email;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           content_type: 'signup'
           content_id: email, // Using email as content ID for signup attempts
           content_excerpt: `Signup attempt for ${email}`;
@@ -185,6 +197,7 @@ export function useFraudPreventionSignup() {  const [isCheckingFraud, setIsCheck
           ip_address: ipAddress;
           timestamp: new Date().toISOString()
           status: 'pending'
+<<<<<<< HEAD
 <<<<<<< HEAD
         });
 <<<<<<< HEAD
@@ -222,6 +235,9 @@ export function useFraudPreventionSignup() {  const [isCheckingFraud, setIsCheck
 =======
         });          console && console.error('Error creating fraud flag:', error)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        });          console && console.error('Error creating fraud flag:', error)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         }
         // Depending on how strict we want to be, we could block the signup
         // If the check is very suspicious, block the signup
@@ -232,6 +248,7 @@ export function useFraudPreventionSignup() {  const [isCheckingFraud, setIsCheck
 
         )) {
           toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -255,6 +272,10 @@ export function useFraudPreventionSignup() {  const [isCheckingFraud, setIsCheck
             title: "Signup blocked",
   description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error."
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            title: "Signup blocked",
+  description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error."
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             variant: "destructive"});
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         }
@@ -408,14 +429,20 @@ if (||) {
 
   return {
   return {  return {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     isCheckingFraud;
-<<<<<<< HEAD
+
+    checkFraudBeforeSignup}
+}    isCheckingFraud;
 
     checkFraudBeforeSignup}
 }
+<<<<<<< HEAD
 =======
     checkFraudBeforeSignup}
 }
@@ -549,3 +576,5 @@ status: 'pending'
 
     checkFraudBeforeSignup}
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

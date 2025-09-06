@@ -18,6 +18,7 @@ interface SEOProps {
   type?: string;
 }
 
+<<<<<<< HEAD
 export const SEO = ({
   title,
   description,
@@ -148,6 +149,23 @@ export function SEO({
       "Quantum Computing",
       "Machine Learning"
     ]
+=======
+export const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Leading technology solutions provider offering AI services, IT services, and micro SaaS solutions. Enterprise-grade infrastructure and development services.',
+  keywords = 'technology solutions, AI services, IT services, micro SaaS, enterprise software, cloud services, cybersecurity', image = 'https: //ziontechgroup.com/og-image.jpg',
+  url = 'https: //ziontechgroup.com', type = 'website'
+}) => {
+  const structuredData = {
+    '@context': 'https://schema.org', '@type': 'Organization',
+    'name': 'Zion Tech Group', 'url': 'https://ziontechgroup.com',
+    'logo': 'https://ziontechgroup.com/logo.svg', 'description': description,
+    'sameAs': [
+      'https://linkedin.com/compunknown/zion-tech-group', 'https: //twitter.com/ziontechgroup'
+    ], 'contactPoint': {
+      '@type': 'ContactPoint',
+      'telephone': '+1-555-ZION-TECH', 'contactType': 'customer service'
+    }
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   };
 
   // Service-specific structured data
@@ -328,9 +346,15 @@ export function SEO({
       <link rel="canonical" href={fullUrl} />
 
       {/* Open Graph / Facebook */}
+<<<<<<< HEAD
       <meta property="og:type" content={type} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:title" content={fullTitle} />
+=======
+      <meta property="og: type" content={type} />
+      <meta property="og:url" content={url} />
+      <meta property="og:title" content={title} />
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content={siteName} />
@@ -385,6 +409,7 @@ export function SEO({
     </Helmet>
   );
 };
+<<<<<<< HEAD
 
 export default SEO;
 =======
@@ -398,6 +423,21 @@ export default SEO;
       <meta property="og:type" content={type} />
       <meta property="og:url" content={currentUrl} />
       <meta property="og:title" content={fullTitle} />
+=======
+  title = 'Zion Tech Group - Advanced AI Solutions', description = 'Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.',
+  keywords = 'AI, artificial intelligence, cloud computing, digital transformation, automation', image = '/og-image.jpg',
+  url = 'https: //ziontechgroup.com', type = 'website'
+}) => {
+  return (
+    <Head>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      
+      {/* Open Graph */}
+      <meta property="og: title" content={title} />
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:image:width" content="1200" />

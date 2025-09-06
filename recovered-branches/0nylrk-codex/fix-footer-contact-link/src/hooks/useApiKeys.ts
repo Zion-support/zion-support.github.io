@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -9,11 +10,14 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export interface ApiKey {
@@ -69,11 +73,14 @@ export interface ApiKey {
   id: string;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   name: string;
   key_prefix: string;
   scopes: ApiKeyScope[];
   created_at: string;
   last_used_at: string | null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   expires_at: string | null
@@ -157,11 +164,14 @@ export function useApiKeys() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ip_address?: string,
   response_time_ms?: number
 }
 
 export function useApiKeys() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -178,6 +188,9 @@ export function useApiKeys() {;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { user } = useAuth();
   const [keys, setKeys] = useState<ApiKey[]>([]);
   const [logs, setLogs] = useState<ApiLog[]>([]);
@@ -185,6 +198,7 @@ export function useApiKeys() {;
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [newApiKey, setNewApiKey] = useState<string | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -247,10 +261,13 @@ export function useApiKeys() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Helper to get the base URL for API functions
   const getApiUrl = () => {
     // Using optional chaining ensures this function works both in the browser
     // (where import && import.meta.env is injected by Vite) and in Node environments
+<<<<<<< HEAD
 <<<<<<< HEAD
     // such as tests or server side rendering.
 <<<<<<< HEAD
@@ -366,6 +383,9 @@ export function useApiKeys() {
 =======
     // such as tests or server side rendering.  ip_address?: string,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    // such as tests or server side rendering.  ip_address?: string,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   response_time_ms?: number;
 }
 export /**
@@ -423,6 +443,7 @@ if ( {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
         throw new Error (result.error || 'Failed to fetch API keys');
 <<<<<<< HEAD
@@ -601,10 +622,18 @@ export function useApiKeys() {;
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({          name;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        throw new Error (result.error || 'Failed to fetch API keys');      setKeys(result.keys || [])
+    } catch (err) {
+      console.error('Error fetching API keys:', err),
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),
+      toast({          name;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           scopes,
           expiresAt: expiresAt ? expiresAt && expiresAt.toISOString() : null
         })
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -631,10 +660,13 @@ export function useApiKeys() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
       // Add the new key to the list
       setKeys(prev => [{ ...result, key: undefined }, ...prev]);
       // Store the actual key value temporarily so it can be displayed once
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -678,6 +710,11 @@ export function useApiKeys() {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       toast({
+=======
+      toast({
+        title: "API Key Created"
+        description: "Your new API key has been generated. Save it now, you won't be able to see it again."});      toast({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         title: "API Key Created"
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."});      toast({
         title: "API Key Created"
@@ -687,10 +724,13 @@ export function useApiKeys() {;
         title: "API Key Created"
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
       setKeys(result.keys || []);
     } catch (err) {;
@@ -736,6 +776,7 @@ export function useApiKeys() {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -751,6 +792,8 @@ export function useApiKeys() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Add the new key to the list
       setKeys(prev => [{ ...result, key: undefined }, ...prev]),
 
@@ -760,6 +803,7 @@ export function useApiKeys() {;
       toast({
         title: "API Key Created",
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."}),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -977,6 +1021,9 @@ if ( {) {
 =======
           } finally {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          } finally {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setLoading(false)
     }
   },
@@ -1068,6 +1115,7 @@ if ( {) {
       // Store the new key value
       toast({
         title: "API Key Regenerated"
+<<<<<<< HEAD
 <<<<<<< HEAD
         description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1319,6 +1367,9 @@ if ( {) {
 =======
         description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});      return result
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});      return result
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (err) {
       console && console.error('Error revoking API key:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
@@ -1326,6 +1377,7 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         variant: "destructive",
         title: "Error regenerating API key",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -1339,13 +1391,18 @@ if ( {) {
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } finally {
       setLoading(false)
     }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },
 
   // Fetch API usage logs
@@ -1357,12 +1414,15 @@ if ( {) {
     
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
@@ -1388,6 +1448,7 @@ if ( {) {
 
       setLogs(result && result.logs || []);
       setTotalLogs(result && result.count || 0);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       setLogs(result.logs || []);
@@ -1504,6 +1565,11 @@ if ( {) {
 =======
       setTotalLogs(result.count || 0);      
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      setLogs(result.logs || []);
+      setTotalLogs(result.count || 0);      
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         variant: "destructive";
 ;
   // Revoke API key;
@@ -1643,14 +1709,18 @@ if ( {) {
           method: 'GET'
           headers: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       return result
     } catch (err) {
       console && console.error('Error fetching API logs:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
+<<<<<<< HEAD
 <<<<<<< HEAD
       toast({
 <<<<<<< HEAD
@@ -1748,6 +1818,9 @@ if ( {) {
 =======
       toast({    error;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      toast({    error;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     newApiKey;
     fetchApiKeys;
     createApiKey;
@@ -1755,6 +1828,7 @@ if ( {) {
     revokeApiKey;
     fetchApiLogs;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     clearNewApiKey: () => setNewApiKey(null)
@@ -1767,6 +1841,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
         variant: "destructive",
@@ -1805,6 +1881,7 @@ if ( {) {
     clearNewApiKey: () => setNewApiKey(null);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1823,10 +1900,13 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2302,3 +2382,7 @@ clearNewApiKey: () => setNewApiKey (null)
   }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

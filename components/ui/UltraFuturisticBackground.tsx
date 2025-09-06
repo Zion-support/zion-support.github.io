@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 interface UltraFuturisticBackgroundProps {
   children: React.ReactNode;
@@ -41,12 +42,21 @@ import React from 'react';
 interface UltraFuturisticBackgroundProps {
   children: React.ReactNode;
 
+=======
+
+import React from 'react';
+
+interface UltraFuturisticBackgroundProps {
+  children: React.ReactNode;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   className?: string;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   children,
+<<<<<<< HEAD
 <<<<<<< HEAD
   intensity = 'medium',
   colorScheme = 'quantum-fusion',
@@ -58,6 +68,8 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   enableSpaceTime = true,
   variant = 'quantum',  className = ''
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   className = ''
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -72,8 +84,11 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
         return `${baseClasses} bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900`;
       case 'cyber':
 <<<<<<< HEAD
+<<<<<<< HEAD
         return `${baseClasses} bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900`;      default:
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       default:
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -82,10 +97,13 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <div className={`${getBackgroundClasses()} ${className}`}>
       <div className="absolute inset-0 bg-black/20" />      <div className="relative z-10">
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="relative z-10">
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {children}
@@ -96,6 +114,10 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
 
 export default UltraFuturisticBackground;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

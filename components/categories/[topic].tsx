@@ -30,6 +30,7 @@ import { BlogPost  } from '@/utils/types/blog';
 import PageShareButtons from '@/components/blog/PageShareButtons';
 import { listPublishedPosts } from '@/utils/data/blogStore';
 import BlogCard from '@/components/blog/BlogCard';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -445,12 +446,15 @@ import { listPublishedPosts } from '@/utils/data/blogStore';
 import BlogCard from '@/components/blog/BlogCard';
 
 type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] }
+=======
+type Props = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
   return (
     <div>
       <Head>
         <title>{topic} - Zion Blog</title>
-        <meta name='description' content={`Articles about ${topic}`} />
+<meta name='description' content={`Articles about ${topic}`} />
         <meta property='og:title' content={`${topic} - Zion Blog`} />
         <meta property='og:description' content={`Articles about ${topic}`} />
         <meta property='og:image' content='/images/og/topic-default.jpg' />
@@ -511,6 +515,7 @@ export const getServerSideProps: GetServerSideProps = async ctx => {;
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
+<<<<<<< HEAD
   return { props: { topic, posts } }
 }
 export default TopicPage;      </Head>
@@ -557,9 +562,19 @@ export default TopicPage;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  return { props: { topic, posts } };
+};
+
+export default TopicPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

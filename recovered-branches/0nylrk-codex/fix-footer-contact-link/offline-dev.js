@@ -25,6 +25,7 @@ const server = http && http.createServer((req, res) => {
     res && res.end('Not found')
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 })
 const PORT = 8080
@@ -43,6 +44,8 @@ const PORT = 8080
     res && res.writeHead(200, { 'Content-Type': 'application/json' }),
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     res && res.end(JSON && JSON.stringify({ online: false, message: 'Running in offline development mode' }))
   } else {
     res && res.writeHead(404),
@@ -73,10 +76,13 @@ const server = http.createServer((req, res) => {
 })
 const PORT = 8080
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       res.writeHead(200, { 'Content-Type': 'text/html' }),;
       res.end(data);
     });
@@ -89,6 +95,7 @@ const PORT = 8080
     res.end('Not found');
   }
 }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -190,6 +197,15 @@ const PORT = 8080,;
 server.listen(PORT, () => {;
   // // // console.log(`;║                                                                  ║;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+`)}),;
+const PORT = 8080,;
+server.listen(PORT, () => {;
+  // // // console.log(`;║                                                                  ║;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ║  🌐 When internet is available: ║;
 ║     1. Run: chmod +x setup.sh                                    ║;
 ║     2. Run: ./setup.sh npm                                       ║;
@@ -259,7 +275,10 @@ server.listen(PORT, () => {;
 }),;
 }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

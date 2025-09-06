@@ -91,7 +91,10 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
   const [isLoading, setIsLoading] = useState(false),
   
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema)
     defaultValues: {

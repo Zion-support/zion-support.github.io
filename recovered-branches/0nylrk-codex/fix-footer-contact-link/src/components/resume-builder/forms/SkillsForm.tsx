@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { SkillsForm as SkillsFormComponent  } from './skills';
 import { SkillsFormProps } from './skills/types';
@@ -16,6 +17,8 @@ export function SkillsForm(props: SkillsFormProps) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { SkillsForm, as, SkillsFormComponent  } from './skills';
 import { SkillsFormProps  } from './skills / types';
 export /**
@@ -41,7 +44,6 @@ export function SkillsForm(): any (props: SkillsFormProps) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-
 import {SkillsForm, as, SkillsFormComponent} from './skills';
 import {SkillsFormProps} from './skills/types';
 export function SkillsForm(props: SkillsFormProps) {
@@ -51,6 +53,7 @@ export function SkillsForm(props: SkillsFormProps) {
 import { SkillsForm as SkillsFormComponent } from './skills',;
 import { SkillsFormProps } from './skills/types';
 export function SkillsForm(props: SkillsFormProps) {;
+<<<<<<< HEAD
   return <SkillsFormComponent {...props} />;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -129,6 +132,8 @@ export function SkillsForm(props: SkillsFormProps) {
 import { SkillsForm as SkillsFormComponent } from './skills',;
 import { SkillsFormProps } from './skills/types';
 export function SkillsForm(props: SkillsFormProps) {;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return <SkillsFormComponent {...props} />;}
 ;
 }

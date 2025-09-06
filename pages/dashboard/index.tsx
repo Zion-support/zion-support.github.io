@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -17,6 +18,9 @@ import EmptyState from '../../components/ui/EmptyState';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const Dashboard: NextPage = () => {
   return (
     <div className="space-y-6 pb-16">
@@ -24,6 +28,7 @@ const Dashboard: NextPage = () => {
         <title>Dashboard - Zion</title>
       </Head>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -45,6 +50,8 @@ const Dashboard: NextPage = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           icon={<span>🧰</span>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -60,6 +67,7 @@ const Dashboard: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -105,6 +113,23 @@ const Dashboard: NextPage = () => {
       <section>
         <h2 className="text-lg font-semibold mb-2">Messages</h2>
         <EmptyState
+=======
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import EmptyState from '../../components/ui/EmptyState';
+const Dashboard: NextPage;
+          icon={<span>🧰</span>}
+          primaryAction={{ label: 'Post a job', href: '/jobs/post' }}
+          secondaryAction={{ label: 'Explore talent', href: '/talent' }}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+        />
+      </section>
+      <section>
+<h2 className='text-lg font-semibold mb-2'>Messages</h2>
+        <EmptyState
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           title="No messages yet"
           icon={<span>💬</span>  } catch (error) {
     console.error("Error:", error);
@@ -120,10 +145,13 @@ const Dashboard: NextPage = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import EmptyState from '../../components / ui / EmptyState',
@@ -144,6 +172,7 @@ const Dashboard: NextPage = () => {
           secondary_action={{ label: 'Explore talent', href: '/talent' }}
         />;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -250,3 +279,21 @@ export default Dashboard;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    </div>;
+  );
+},;
+=======
+          title='No messages yet'
+          description='When conversations start, they’ll show up here.'
+          icon={<span>💬</span>}
+          primaryAction={{ label: 'Browse services', href: '/services' }}
+        />
+      </section>
+    </div>
+);
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+export default Dashboard;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

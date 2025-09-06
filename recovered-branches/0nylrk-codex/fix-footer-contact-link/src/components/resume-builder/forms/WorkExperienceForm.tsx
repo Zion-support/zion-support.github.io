@@ -62,6 +62,7 @@ interface WorkExperienceFormProps {
 <<<<<<< HEAD
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
 
+<<<<<<< HEAD
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -73,6 +74,10 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -132,6 +137,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   }
   };
 
+<<<<<<< HEAD
 =======
 
   };
@@ -142,6 +148,10 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  };
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
     form.reset({
@@ -154,12 +164,15 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       await deleteWorkExperience(id)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
   }
   };
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   };
 
@@ -411,11 +424,15 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     <Textarea;
                       placeholder="Describe your responsibilities and accomplishments...";
 <<<<<<< HEAD
+<<<<<<< HEAD
                       className="min - h-[100px]";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
                       className="min-h-[100px]";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                      className="min-h-[100px]";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       {...field}
                     />;
                   </FormControl>;

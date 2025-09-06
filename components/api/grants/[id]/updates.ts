@@ -5,11 +5,13 @@ import {v4, as, uuidv4} from 'uuid';
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 
 function grantPath(id: string) {
+<<<<<<< HEAD
   return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
 function readGrant(id: string): GrantApplication | null {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
@@ -22,12 +24,23 @@ function readGrant(id: string): GrantApplication | null {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  return path.join(GRANTS_DIR, `${id}.json`);
+
+function readGrant(id: string): GrantApplication | null {
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
+return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function writeGrant(record: GrantApplication) {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs && fs.writeFileSync(
     grantPath(record && record.id),
     JSON && JSON.stringify(record, null, 2),
     'utf8'
+<<<<<<< HEAD
 <<<<<<< HEAD
   );  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
 }
@@ -40,6 +53,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { id } = req.query as { id: string };
 =======
+=======
+
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -57,6 +76,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method === 'GET') {
     return res.status(200).json({ updates: existing.updates |[] });
   }
+<<<<<<< HEAD
     const update = {
 <<<<<<< HEAD
       id: uuidv4()
@@ -160,6 +180,11 @@ if ( {) {
 }
     const { content } = req.body as { content?: string }
     if (!content |!content.trim())
+=======
+  if (req.method === 'POST') {
+    const { content } = req.body as { content?: string };
+if (!content || !content.trim())
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       return res.status(400).json({ error: 'Missing content' });
     const update = {
       id: uuidv4()
@@ -171,6 +196,7 @@ if ( {) {
     write_grant (existing);
     return res.status (201).json ({ update });
   }
+<<<<<<< HEAD
   res.set_header ('Allow', 'GET, POST');
   res.status (405).end ('Method Not Allowed');    existing.updates = [...(existing.updates || []), update];
     existing.updated_at = new Date ().toISOString ();
@@ -183,6 +209,15 @@ if ( {) {
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
+  res.status(405).end('Method Not Allowed')
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

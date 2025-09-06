@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -16,12 +17,16 @@ import { createContext, useContext, useEffect, useState } from "react"
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 type Theme = "dark" | "light" | "system"
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 type ThemeProviderProps = {
   children: React.ReactNode
   defaultTheme?: Theme
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -99,6 +104,9 @@ export function ThemeProvider({
 =======
 }    () => (localStorage.getItem("theme") as Theme) || defaultTheme
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}    () => (localStorage.getItem("theme") as Theme) || defaultTheme
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
   useEffect(() => {
     const root = window.document.documentElement
@@ -107,6 +115,7 @@ export function ThemeProvider({
       const systemTheme = window.matchMedia(&quot;(prefers-color-scheme: dark)&quot;)
         .matches
         ? &quot;dark&quot;
+<<<<<<< HEAD
 <<<<<<< HEAD
         : &quot;light&quot;
 <<<<<<< HEAD
@@ -137,12 +146,16 @@ export function ThemeProvider({
 =======
         : &quot;light&quot;      root.classList.add(systemTheme)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        : &quot;light&quot;      root.classList.add(systemTheme)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       return
     }
     root.classList.add(theme)
   }, [theme])
   const value = {
     theme
+<<<<<<< HEAD
 <<<<<<< HEAD
     setTheme: (theme: Theme) => {
 <<<<<<< HEAD
@@ -415,3 +428,8 @@ export const useTheme = () => {
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    setTheme: (theme: Theme) => {  return context
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

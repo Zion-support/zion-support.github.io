@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Common constants used across fraud detection modules
 // Phrases that might indicate fraud
 
@@ -84,6 +85,10 @@ export const suspiciousEmailDomains = [;
 // Phrases that might indicate fraud;
 export const suspicious_phrases = [;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+// Phrases that might indicate fraud;
+export const suspicious_phrases = [;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   "throwaway";
   "fakeemail";
   "mailinator";
@@ -129,6 +134,7 @@ export const suspiciousEmailDomains = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ];
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -138,6 +144,8 @@ export const suspiciousEmailDomains = [;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Common constants used across fraud detection modules;
 // Phrases that might indicate fraud;
 export const suspicious_phrases = [;
@@ -167,6 +175,7 @@ export const suspiciousEmailDomains = [;
   "guerrillamail";
   "10minutemail";
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -202,3 +211,5 @@ export const suspiciousEmailDomains = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

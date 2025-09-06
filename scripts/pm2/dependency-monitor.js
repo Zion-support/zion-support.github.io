@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -24,9 +25,12 @@ class DependencyMonitor {,;
 ,;
     try {,;
 =======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -34,6 +38,40 @@ class DependencyMonitor {constructor() {; this.projectRoot = process.cwd(); this
     path: parts[3]})}}}); return { vulnerabilities, error: true }}} catch (parseError) {this.log(`Error parsing npm audit output: ${parseError.message}`)}; return { error: true, message: error.message }}}; async checkOutdatedPackages() {try {; this.log('📦 Checking for outdated packages...'); const outdatedResult = execSync('npm outdated --json', {; cwd: this.projectRoot, encoding: 'utf8', stdio: 'pipe'}); const outdated = JSON.parse(outdatedResult); return outdated} catch (error) {// npm outdated returns non-zero exit code if there are outdated packages; try {; const output = error.stdout?.toString() |''; if (output) {; return JSON.parse(output)}} catch (parseError) {this.log(`Error parsing npm outdated output: ${parseError.message}`)}; return {}}}; async checkPackageLock() {try {; const packageLockPath = path.join(this.projectRoot, 'package-lock.json'); if (!fs.existsSync(packageLockPath)) {; return { exists: false, message: 'No package-lock.json found' }}; const packageLock = JSON.parse(fs.readFileSync(packageLockPath, 'utf8')); const lockfileVersion = packageLock.lockfileVersion; return {exists: true, lockfileVersion, dependencies: Object.keys(packageLock.dependencies |{}).length; devDependencies: Object.keys(packageLock.devDependencies |{}).length}} catch (error) {return { exists: false, error: error.message }}}; async checkNodeVersion() {try {; const nodeVersion = process.version; const npmVersion = execSync('npm --version', {; cwd: this.projectRoot
     encoding: 'utf8'}).trim(); return { nodeVersion, npmVersion }} catch (error) {return { error: error.message }}}; async checkGitHooks() {try {; const hooksDir = path.join(this.projectRoot, '.git/hooks'); if (!fs.existsSync(hooksDir)) {; return { exists: false, message: 'No git hooks directory found' }}; const hooks = fs.readdirSync(hooksDir); const activeHooks = hooks.filter(hook = > {const hookPath = path.join(hooksDir, hook); const stats = fs.statSync(hookPath); return stats.isFile() && (hook.endsWith('.sample') |stats.mode & 0o111)}); return { exists: true, hooks: activeHooks }} catch (error) {return { error: error.message }}}; async generateReport(auditResult, outdatedResult, packageLockInfo, nodeInfo, gitHooksInfo) {const report = {; timestamp: new Date().toISOString(), summary: {
       , vulnerabilities: {, total: 0, critical: 0, high: 0, moderate: 0
+=======
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+;
+class DependencyMonitor {; constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/dependency-monitor.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/dependency-report.json'); this.startTime = Date.now()};
+; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;
+; try {; fs.appendFileSync(this.logFile, logMessage)} catch (error) {; console.error('Error writing to log file: ', error.message)}};
+; async checkNpmAudit() {; try {; this.log('🔒 Running npm audit...'); const auditResult = execSync('npm audit --json', {; cwd: this.projectRoot, encoding: 'utf8', stdio: 'pipe'});
+; const audit = JSON.parse(auditResult); return audit} catch (error) {; // npm audit might fail if there are vulnerabilities; try {; const output = error.stdout?.toString() || error.stderr?.toString() || ''; if (output.includes('npm ERR!')) {; // Try to parse the error output for vulnerability info; const lines = output.split('\n'); const vulnerabilities = [];
+; lines.forEach(line = > {; if (line.includes('│')) {; const parts = line.split('│').map(p = > p.trim()).filter(Boolean); if (parts.length > = 4) {; vulnerabilities.push({; package: parts[0], severity: parts[1], title: parts[2],
+    path: parts[3]})}}});
+; return { vulnerabilities, error: true }}} catch (parseError) {; this.log(`Error parsing npm audit output: ${parseError.message}`)};
+; return { error: true, message: error.message }}};
+; async checkOutdatedPackages() {; try {; this.log('📦 Checking for outdated packages...'); const outdatedResult = execSync('npm outdated --json', {; cwd: this.projectRoot, encoding: 'utf8', stdio: 'pipe'});
+; const outdated = JSON.parse(outdatedResult); return outdated} catch (error) {; // npm outdated returns non-zero exit code if there are outdated packages; try {; const output = error.stdout?.toString() || ''; if (output) {; return JSON.parse(output)}} catch (parseError) {; this.log(`Error parsing npm outdated output: ${parseError.message}`)};
+; return {}}};
+; async checkPackageLock() {; try {; const packageLockPath = path.join(this.projectRoot, 'package-lock.json');
+; if (!fs.existsSync(packageLockPath)) {; return { exists: false, message: 'No package-lock.json found' }};
+; const packageLock = JSON.parse(fs.readFileSync(packageLockPath, 'utf8')); const lockfileVersion = packageLock.lockfileVersion;
+; return {; exists: true, lockfileVersion, dependencies: Object.keys(packageLock.dependencies || {}).length; devDependencies: Object.keys(packageLock.devDependencies || {}).length}} catch (error) {; return { exists: false, error: error.message }}};
+; async checkNodeVersion() {; try {; const nodeVersion = process.version; const npmVersion = execSync('npm --version', {; cwd: this.projectRoot,
+    encoding: 'utf8'}).trim();
+; return { nodeVersion, npmVersion }} catch (error) {; return { error: error.message }}};
+; async checkGitHooks() {; try {; const hooksDir = path.join(this.projectRoot, '.git/hooks');
+; if (!fs.existsSync(hooksDir)) {; return { exists: false, message: 'No git hooks directory found' }};
+; const hooks = fs.readdirSync(hooksDir); const activeHooks = hooks.filter(hook = > {; const hookPath = path.join(hooksDir, hook); const stats = fs.statSync(hookPath); return stats.isFile() && (hook.endsWith('.sample') || stats.mode & 0o111)});
+; return { exists: true, hooks: activeHooks }} catch (error) {; return { error: error.message }}};
+; async generateReport(auditResult, outdatedResult, packageLockInfo, nodeInfo, gitHooksInfo) {; const report = {; timestamp: new Date().toISOString(), summary: {
+      , vulnerabilities: {, total: 0, critical: 0, high: 0, moderate: 0,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     low: 0
     }
     outdatedPackages: Object.keys(outdatedResult).length, packageLockStatus: packageLockInfo.exists ? 'healthy': 'missing', nodeVersion: nodeInfo.nodeVersion
@@ -45,6 +83,7 @@ class DependencyMonitor {constructor() {; this.projectRoot = process.cwd(); this
 } catch (error) {this.log(`❌ Error running dependency monitor: ${error.message}`); process.exit(1)}}}
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
+<<<<<<< HEAD
 monitor.run().catch(error = > {process.exit(1)});
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -52,6 +91,15 @@ monitor.run().catch(error = > {process.exit(1)});
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+<<<<<<< HEAD
+monitor.run().catch(error = > {process.exit(1)});
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   log(message) {;
     const timestamp = new Date().toISOString();
@@ -1335,11 +1383,15 @@ monitor.run().catch(error => {,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+<<<<<<< HEAD
       , vulnerabilities: {, total: 0, critical: 0, high: 0, moderate: 0,
     low: 0;
     },
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class DependencyMonitor {;
   constructor() {;
     this.projectRoot = process.cwd();
@@ -1708,6 +1760,7 @@ monitor.run().catch(error = > {; process.exit(1)});
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
@@ -1716,3 +1769,11 @@ monitor.run().catch(error = > {; process.exit(1)});
 
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+monitor.run().catch(error = > {; process.exit(1)});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

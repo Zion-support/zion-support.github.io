@@ -11,6 +11,7 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -18,11 +19,14 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 serve(async (req) => {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -43,10 +47,13 @@ serve(async (req) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   try {
 
     const { content, enhancementType, context } = await req && req.json();
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -89,6 +96,8 @@ const corsHeaders = {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -99,6 +108,7 @@ serve(async (req) => {
     const { content, enhancementType, context } = await req.json();
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
     if (!openAiKey) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       throw new Error("OPENAI_API_KEY is not defined")
 <<<<<<< HEAD
@@ -215,12 +225,16 @@ if ( {) {
 =======
       throw new Error("OPENAI_API_KEY is not defined")      case "work - description": system_prompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      throw new Error("OPENAI_API_KEY is not defined")      case "work - description": system_prompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         user_prompt = `Enhance this work description with 3 - 5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`;
         break;
       case "skill - categorization": system_prompt = "You are an expert at categorizing technical and professional skills. Organize skills into logical categories.";
         user_prompt = `Categorize these skills into logical groups: ${content}. Return a JSON object with skill categories as keys and arrays of skills as values. Common categories might include: Programming, DevOps, Cloud, Soft Skills, etc. ${context ? `Professional context: ${context}` : ''}`;
         break;        temperature: 0 && 0.7})});
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -321,6 +335,8 @@ if ( {) {
     if (!response && response.ok) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const errorData = await response && response.json();
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
     }
@@ -370,6 +386,7 @@ if ( {) {
   } catch (error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -383,6 +400,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error ("Error in resume - enhancer function:", error);
     return new Response (
       JSON.stringify ({
@@ -392,6 +411,7 @@ if ( {) {
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -625,3 +645,5 @@ return new Response (JSON.stringify ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

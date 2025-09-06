@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -29,10 +30,14 @@ import React from 'react',
 =======
 import React from "react";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+import React from "react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // This is a simplified version of the theme hook for offline development
 
 export const useTheme = () => {
   return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -88,6 +93,8 @@ export const useTheme = () => {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
 
@@ -108,6 +115,7 @@ export const use_theme = () =>: any {
     theme: "dark",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -121,3 +129,6 @@ export const use_theme = () =>: any {
 =======
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

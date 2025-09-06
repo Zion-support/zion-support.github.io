@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import clsx, { type ClassValue } from &quot;clsx&quot;
@@ -21,12 +22,15 @@ export function cn(...inputs: ClassValue[]) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import clsx, { type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
  
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -72,3 +76,6 @@ export function cn(...inputs: ClassValue[]) {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

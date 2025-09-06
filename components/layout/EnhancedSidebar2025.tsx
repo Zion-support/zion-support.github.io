@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ]
  ] 
@@ -6,6 +7,9 @@
  ] 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ] 
  ] 
 
@@ -46,14 +50,51 @@
 interface SidebarItem {
   name: string,
   href: string,
+=======
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, ChevronRight, Home, Star, Users;
+  Settings, HelpCircle, Mail, Phone, MapPin;
+  Brain, Atom, Shield, Rocket, DollarSign;
+  Globe, Cpu, Database, Lock, Zap;
+  TrendingUp, Award, CheckCircle, Clock;
+  ArrowRight, Search, Menu, X as CloseIcon;
+  Target, BookOpen, Truck, BarChart3;
+  Sparkles, Eye, Lightbulb, Palette, Code
+ } from 'lucide-react';
+interface SidebarItem {
+  name: string;
+  href: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   icon?: React.ReactNode;
   description?: string;
   children?: SidebarItem[];
   badge?: string;
   isNew?: boolean;
   isHot?: boolean
+=======
+import React, { useState, useEffect               } from 'react'
+  'react.ts'
+import Link from 'next/link' from 'next/link.ts';{ motion, AnimatePresence               } from
+  'framer-motion.ts'
+import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, '  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star } from'
+  'lucide-react.ts'';interface SidebarItem {'
+  name: string
+   href: string
+   icon: React.ReactNode
+   description?: string
+   children?: SidebarItem[]
+   badge?: string
+   color?: string
+   isNew?: boolean
+   isHot?: boolean
+   isPremium?: boolean
+   category?: string
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 
+<<<<<<< HEAD
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -68,6 +109,7 @@ const contactInfo = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const sidebarItems: SidebarItem[] = [
   {
+<<<<<<< HEAD
     name: 'All Services'
     href: '/comprehensive-services-showcase-2025'
     icon: <Globe className="w-5 h-5" />
@@ -82,6 +124,51 @@ const sidebarItems: SidebarItem[] = [
       { name: '2026 Services', href: '/revolutionary-2026-services', description: 'Next generation solutions' }
       { name: '2027 Services', href: '/revolutionary-2027-services-showcase', description: 'Future-ready services' }
       { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', description: 'Premium service collection' }
+=======
+    title: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Revolutionary Services', icon: Zap, , color: 'from-cyan-500 to-blue-600, items[, {
+  ''
+        name: 'AI & Consciousness,'        href: '/ai-services', icon: Brain, , description: 'Advanced AI consciousness and evolution platforms, subItems[, { name: 'AI Consciousness Evolution, href:, /ai-consciousness-evolution' }, { name: 'AI Autonomous Ecosystem, href:, /ai-autonomous-ecosystem' }, { name: 'AI Ethics & Governance, href:, /ai-ethics-governance' }, { name: 'AI Creativity Studio, href:, /ai-creativity-studio' }, { name: 'AI Education Platform, href:, /ai-education-platform' }, { name: 'AI Healthcare Diagnostics, href:, /ai-healthcare-diagnostics' }, { name: 'AI Financial Intelligence, href:, /ai-financial-intelligence' }, { name: 'AI Sustainability Platform, href:, /ai-sustainability-platform' }, { name: 'AI Emotional Intelligence, href:, /ai-emotional-intelligence-platform' }, { name: 'AI Legal Contract Analyzer, href:, /ai-legal-contract-analyzer' }'
+  '        ]'      }, {
+
+        name: 'Quantum Computing, , href: '/quantum-services, icon: Atom, '        description:, Next-generation quantum computing solutions', subItems[
+  '          { name: 'Quantum Cloud Infrastructure, href:, /quantum-cloud-infrastructure
+  ' }, { name: 'Quantum Bio-Computing, href:, /quantum-bio-computing
+  ' }, { name: 'Quantum Energy Platform, href:, /quantum-energy-platform
+  ' }, { name: 'Quantum Materials Discovery, href:, /quantum-materials-discovery
+  ' }, { name: 'Quantum Robotics, href:, /quantum-robotics
+  ' }, { name: 'Quantum Internet Security, href:, /quantum-internet-security
+  ' }, { name: 'Quantum Logistics, href:, /quantum-logistics-optimization
+  ' }, { name: 'Quantum Cybersecurity, href:, /quantum-cybersecurity-platform
+  ' }'        ]
+  '      }, {'
+
+        name: 'Enterprise IT,'        href: '/enterprise-it', icon: Shield, , description: 'Enterprise-grade IT infrastructure and security, subItems[, { name: 'Edge Computing Orchestrator, href:, /edge-computing-orchestration' }, { name: 'Zero Trust Security Platform, href:, /zero-trust-network-architecture' }, { name: 'Blockchain Enterprise Platform, href:, /blockchain-infrastructure-platform' }, { name: 'AI-Powered DevOps, href:, /ai-powered-devops' }, { name: 'Quantum Networking, href:, /quantum-networking' }, { name: 'Autonomous IT Operations, href:, /autonomous-it-operations' }, { name: 'Quantum Data Center, href:, /quantum-data-center' }, { name: 'Quantum Cloud Migration, href:, /quantum-cloud-migration' }'
+  '        ]'      }, {
+
+        name: 'Micro SAAS, , href: '/micro-saas, icon: Rocket, '        description:, AI-powered micro SAAS solutions', subItems[
+  '          { name: 'AI Content Factory Platform, href:, /ai-content-factory
+  ' }, { name: 'CRM Intelligence & Automation, href:, /crm-intelligence-automation
+  ' }, { name: 'AI Decision Engine Platform, href:, /ai-decision-engine
+  ' }, { name: 'E-commerce Optimization, href:, /ecommerce-optimization-platform
+  ' }, { name: 'AI HR & Talent Platform, href:, /ai-hr-talent-platform
+  ' }, { name: 'Financial Analytics Platform, href:, /financial-analytics-platform
+  ' }, { name: 'Supply Chain Intelligence, href:, /supply-chain-intelligence
+  ' }, { name: 'Marketing Automation Platform, href:, /marketing-automation-platform
+  ' }, { name: 'Project Management AI, href:, /project-management-ai
+  ' }'        ]
+  '      }, {'
+
+        name: 'Space Technology,'        href: '/space-tech', icon: Globe, , description: 'Cutting-edge space exploration and mining, subItems[, { name: 'Space Mining Platform, href:, /space-mining-platform' }, { name: 'Satellite Technology, href:, /satellite-technology' }, { name: 'Space Resource Management, href:, /space-resource-management' }, { name: 'Interplanetary Communication, href:, /interplanetary-communication' }'
+  '        ]'      }, {
+
+        name: 'Emerging Tech, , href: '/emerging-tech, icon: Sparkles, '        description:, Future technologies and innovations', subItems[
+  '          { name: 'Brain-Computer Interface, href:, /brain-computer-interface
+  ' }, { name: 'Autonomous Vehicle AI, href:, /autonomous-vehicle-ai
+  ' }, { name: 'Advanced Robotics, href:, /advanced-robotics
+  ' }, { name: 'Biotechnology Platform, href:, /biotechnology-platform
+  ' }'        ]
+  ''
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     ]
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -573,6 +660,7 @@ const sidebar_items: SidebarItem[] = [;
               {expanded_sections.has (section.title) && (
                 <motion.div;
     ]
+<<<<<<< HEAD
   }
 ],
 
@@ -586,6 +674,26 @@ const supportLinks = [
   { name: 'Training', href: '/training', description: 'Learn our platforms' },
   { name: 'Community', href: '/community', description: 'Connect with users' }
 ],
+=======
+  }, {
+    title: 'Comp & Resources, '    icon: Users, color:, from-green-500 to-emerald-600
+  ', '    items[
+  '      {'
+        name: 'About Us, href: '/about
+  ', '        icon: Users, description:, Learn about Zion Tech Group', '        subItems['          { name: 'Our Mission, href:, /mission' }, '          { name: 'Leadership Team, href:, /leadership'
+  ' },'          { name: 'Comp History, href:, /history' }, '          { name: 'Careers, href:, /careers
+  ' }'        ]
+  '      }, {'
+
+        name: 'Resources,'        href: '/resources', icon: BookOpen, , description: 'Educational content and documentation, subItems[, { name: 'Documentation, href:, /docs' }, { name: 'API Reference, href:, /api-docs' }, { name: 'Blog & News, href:, /blog' }, { name: 'Case Studies, href:, /case-studies' }, { name: 'Whitepapers, href:, /whitepapers' }, { name: 'Webinars, href:, /webinars' }'
+  '        ]'      }, {
+
+        name: 'Support, , href: '/support, icon: HelpCircle, '        description:, Get help and support', subItems[
+  '          { name: 'Contact Support, href:, /contact-support
+  ' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs, href:, /training'}, '          { name: 'Community Forum, href:, /community' },'          { name: 'Knowledge Base, href: '
+  '/knowledge-base' }'        ]'      }]  }
+]
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
   };
   {
@@ -1253,6 +1361,7 @@ className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border -
                       />;
                     </button>;
 
+<<<<<<< HEAD
                     <AnimatePresence>;
                       {expandedCategory === item && item.name && (;
                         <motion&& motion.div
@@ -1472,6 +1581,7 @@ className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border -
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="pt-4 border-t border-gray-800 px-3">
           <Link
             href="/contact"
@@ -1502,6 +1612,8 @@ import { motion, AnimatePresence               } from 'framer-motion.ts;
             <span>Get Started Today</span>;
             <ArrowRight className="w-4 h-4 ml-2 inline" />;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="pt - 4 border - t border - gray-800 px-3">;
           <Link;
             href="/contact";
@@ -1509,7 +1621,10 @@ import { motion, AnimatePresence               } from 'framer-motion.ts;
           >;
             <span > Get Started Today</span>;
             <ArrowRight className="w - 4 h-4 ml-2 inline" />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </Link>;
         </div>;
       </div>;
@@ -1840,6 +1955,31 @@ initial = {{ opacity: 0}}
             className="fixed: inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden,";
             onClick="{onClos,e}""return (
     <>;
+=======
+  const filteredServices = sidebarSections.flatMap(section =>
+    section.items.flatMap(item =>
+      item.subItems?.filter(child =>
+        child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        child.description?.toLowerCase().includes(searchQuery.toLowerCase())
+      ) || []
+    )
+  )
+
+      newExpanded.delete(itemName)} else {
+      newExpanded.add(itemName)}
+    setExpandedItems(newExpanded)}
+
+  useEffect(() => {
+    if (isOpen) {
+document.body.style.overflow =
+  'hidden'} else {''
+  '      document.body.style.overflow = 'unset
+  '}'
+   return () => {
+      document.body.style.overflow =
+  'unset'}}, [isOpen])'  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return ('
+    <>
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       {/* Backdrop */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1948,8 +2088,17 @@ className="{"fixed" left - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - 
           <div className="space-y-3">"            <div className="flex items - center gap - 3 p - 3 bg - gray - 800 / 30 rounded - lg border border-gray-700 / 30>              <Phone className="w - 4 h - 4 text - cyan - 400" />              <span className="text-sm" text - gray - 300">{contact_info.mobile}</span>"            </div>            <div className="flex" items - center gap - 3 p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30">"              <Mail className="w-4" h - 4 text - cyan - 400 />"              <span className="text - sm text-gray-300>{contact_info.email}</span>            </div>"          </div>";
         </div>;
       {/* Sidebar */}
+<<<<<<< HEAD
     damping: 25,'  stiffness: 200 '}}
 className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto}
+=======
+      <motion.div
+initial={{ x:, -100%
+  ' }}'        animate={{ x: isOpen ? 0 :
+  '-100% }}'
+, transition = {''
+  { type: 'spring, damping: 25, , stiffness: 200}}className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}`'
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         {/* Header */}
         <div className="sticky top-0 bg-black/80 backdrop-blur-xl border-b border-gray-800/50 p-6>          <div className="flex items-center justify-between mb-6">"            <div className="flex items-center gap-3>              <div className="relative">"                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center>                  <Zap className="w-6 h-6 text-white" />"                </div>"                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20></div>              </div>"              <div>;
                 <h2 className="text-xl font-bold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent>                  Zion Tech Group"                </h2>;
@@ -2349,4 +2498,10 @@ Contact Us";
       </motion && motion.div>;
     </>;
 ";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+const contactInfo = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

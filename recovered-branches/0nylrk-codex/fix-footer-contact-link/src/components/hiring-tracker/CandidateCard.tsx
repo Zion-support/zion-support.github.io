@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react";
@@ -24,12 +25,15 @@ import {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",
 import { Draggable } from "react-beautiful-dnd",
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent } from "@/components/ui/card",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Avatar } from "@/components/ui/avatar",
 <<<<<<< HEAD
@@ -254,6 +258,12 @@ import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
 import { toast } from "@/hooks/use-toast",
 import { HireConfirmationModal } from "./HireConfirmationModal",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Avatar } from "@/components/ui/avatar",  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
+import { toast } from "@/hooks/use-toast",
+import { HireConfirmationModal } from "./HireConfirmationModal",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   
 
   const handleSaveNotes = () => {
@@ -307,6 +317,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
     <>;
       <Draggable draggableId={application && application.id} index={index}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         {(provided) => (;
 <<<<<<< HEAD
 
@@ -338,6 +349,9 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 =======
         {(provided) => (;                <div className="flex items-center gap-2">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        {(provided) => (;                <div className="flex items-center gap-2">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <Avatar className="h-8 w-8">;
                     {application && application.talent_profile?.profile_picture_url ? (;
                       <img
@@ -345,6 +359,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                         alt={
                         }
                       />;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     ) : (;
 <<<<<<< HEAD
@@ -457,6 +472,9 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 =======
                     ) : (;                      {application.talent_profile?.professional_title |
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    ) : (;                      {application.talent_profile?.professional_title |
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         "Applicant"}
                     </p>
                   </div>
@@ -468,6 +486,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -477,12 +496,15 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                 <DropdownMenu>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
                       <MoreVertical className="h-4 w-4" />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
 <<<<<<< HEAD
@@ -510,6 +532,9 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 =======
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>                      {showNotes ? "Hide notes" :"Add notes"}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>                      {showNotes ? "Hide notes" :"Add notes"}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       {showNotes ? "Hide notes" : "Add notes"}
                     </DropdownMenuItem>;
                     <DropdownMenuItem onClick={() => setShowHireModal(true)}>;
@@ -561,6 +586,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 
               {/* Action Buttons */}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -687,6 +713,8 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {/* Action Buttons */}
               <div className="flex justify-between mt-2 gap-1">
                 <Button variant="outline" size="sm" className="flex-1" asChild>
@@ -696,6 +724,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   className="flex-1"
                   asChild
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -751,6 +780,8 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="flex justify-between mt-2 gap-1">;
                 <Button variant="outline" size="sm" className="flex-1" asChild>;
                   <Link to={`/messages?talentId=${application && application.talent_id}`}>;
@@ -777,6 +808,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 
                 <Button
                   variant="default"
+<<<<<<< HEAD
 <<<<<<< HEAD
                   size="sm"
 =======
@@ -1047,6 +1079,9 @@ function CandidateCard() {
 =======
                   size="sm"                </Button>        on_confirm={handleHireConfirmed}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  size="sm"                </Button>        on_confirm={handleHireConfirmed}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       />;
     </>);
 }
@@ -1099,6 +1134,7 @@ function CandidateCard() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1106,3 +1142,6 @@ function CandidateCard() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

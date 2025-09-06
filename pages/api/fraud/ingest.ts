@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -7,6 +8,8 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
@@ -196,7 +199,44 @@ export default async function handler(
       userId
       content
       metadata
+<<<<<<< HEAD
       ipAddress: ip
+=======
+      ip_address: ip
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { evaluateHeuristics } from '[^']*';
+import { classifyWithGPT } from '[^']*';
+import { getFraudStore, newEvent } from '[^']*';
+import { extractClientIp } from '[^']*';
+import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '[^']*';
+import { sendWarningEmail } from '[^']*';
+const allowedSources: MonitoredSource[] = ['signupjob_postmessagequotereview'];
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return
+  }
+  try {
+      res.status(400).json({ error: 'Invalid source' });
+return;
+    }
+
+    const userId = typeof body.userId === 'string' ? body.userId : null;
+    const content = typeof body.content === 'string' ? body.content : null;
+const metadata =
+      body.metadata && typeof body.metadata === 'object' ? body.metadata : null;
+
+    const ip = extractClientIp(req);
+    const store = getFraudStore();
+const event = newEvent({
+      source,
+      userId,
+      content,
+      metadata,
+      ipAddress: ip,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     });
 <<<<<<< HEAD
     const heuristic = await evaluateHeuristics(event, {
@@ -208,12 +248,39 @@ export default async function handler(
       countEventsByIp: (ip, s, m) => store.countEventsByIp (ip, s, m),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     });
+<<<<<<< HEAD
     // Privacy opt-out check for content analysis
     let gpt: GptClassification | undefined = undefined;
     if (content && userId) {
       const privacy = await store.getPrivacySettings(userId);
       if (!privacy.monitoringContentAnalysisOptOut) {
         gpt = await classifyWithGPT(content, source);
+=======
+<<<<<<< HEAD
+    // Privacy opt - out check for content analysis;
+    let gpt: GptClassification | undefined = undefined;
+
+    // Check condition
+if ( {) {
+  $2
+}
+      const privacy = await store.getPrivacySettings (user_id);
+      // Check condition
+if ( {) {
+  $2
+}
+        gpt = await classifyWithGPT (content, source);
+
+=======
+
+    // Privacy opt-out check for content analysis
+    let gpt: GptClassification | undefined = undefined;
+    if (content && userId) {
+      const privacy = await store.getPrivacySettings(userId);
+      if (!privacy.monitoringContentAnalysisOptOut) {
+gpt = await classifyWithGPT(content, source);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
     } else if (content && !userId) {
       gpt = await classifyWithGPT(content, source);
@@ -223,7 +290,12 @@ export default async function handler(
     if (heuristic.severity === "high") combinedLabel = "DANGEROUS";
     if (gpt?.label === "DANGEROUS") combinedLabel = "DANGEROUS";
     const autoHide =
+<<<<<<< HEAD
       process.env.FRAUD_AUTOHIDE === "true" &&
+=======
+<<<<<<< HEAD
+      process && process.env.FRAUD_AUTOHIDE === "true" &&
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       combinedLabel !== "SAFE" &&
       source === "message";
     const stored: Omit<StoredFraudRecord, "id"> = {
@@ -243,20 +315,45 @@ export default async function handler(
       const prior = await store.countFlaggedForUser(userId);
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+=======
+      process.env.FRAUD_AUTOHIDE === 'true' &&
+      combinedLabel !== 'SAFE' &&
+      source === 'message';
+
+    const stored: Omit<StoredFraudRecord, 'id'> = {
+      ...event,
+      heuristic,
+      gpt,
+      autoHidden: !!autoHide,
+status: 'PENDING',
+    };
+
+    const saved = await store.saveEvent(stored);
+    if (process.env.FRAUD_EMAIL_WARNINGS === "true" && userId) {
+      const prior = await store.countFlaggedForUser(userId);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       if (prior <= 1 && combinedLabel !== "SAFE") {
         await sendWarningEmail({
-          toUserId: userId
-          subject: "Marketplace warning: suspicious activity detected"
-          body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`
+toUserId: userId,
+          subject: 'Marketplace warning: suspicious activity detected',
+          body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`,
         });
       }
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     res.status(200).json({
       id: saved.id
 =======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     res && res.status(200).json({
       id: saved && saved.id
@@ -347,6 +444,17 @@ if ( {) {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     });
 
+=======
+    res.status(200).json({
+id: saved.id,
+      flagged: combinedLabel !== 'SAFE',
+      label: combinedLabel,
+      heuristic,
+      gpt,
+      autoHidden: saved.autoHidden,
+      createdAt: saved.createdAt,
+    });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       .json({ error: "Internal error", details: e?.message |String(e) });
@@ -429,6 +537,7 @@ export default async function handler(req, res) {
     res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })
 <<<<<<< HEAD
   }
+<<<<<<< HEAD
 }
   }
 }
@@ -453,6 +562,7 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
+<<<<<<< HEAD
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -521,3 +631,9 @@ export default async function handler(req, res) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

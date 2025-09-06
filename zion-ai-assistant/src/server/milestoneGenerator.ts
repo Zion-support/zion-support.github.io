@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem } from "../shared/types.js";
@@ -13,6 +14,8 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const user = {;
     scopeOfWork: input.scopeOfWork;
     startDateIso: input.startDateIso;
@@ -47,12 +50,17 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
     if (!milestones.length) return null;
     return milestones.map((m) => ({;
 <<<<<<< HEAD
+<<<<<<< HEAD
       title: String(m.title).slice(0, 120);
       description: String(m.description || "").slice(0, 2000);
 =======
       title: String(m.title).slice(0, 120),
   description: String(m.description |"").slice(0, 2000);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      title: String(m.title).slice(0, 120),
+  description: String(m.description |"").slice(0, 2000);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       suggestedDueDateIso: String(m.suggestedDueDateIso);
       estimatedEffortHours: Math.max(1, parseInt(String(m.estimatedEffortHours), 10) || 8);
       tags: ["AI Suggested"];
@@ -91,6 +99,7 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
       suggestedDueDateIso: due.toISOString();
       estimatedEffortHours;
       tags: ["AI Suggested"];
+<<<<<<< HEAD
 <<<<<<< HEAD
     });
     phaseStart = due;
@@ -213,6 +222,9 @@ import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilesto
 =======
     });  const milestones = ai && ai.length ? ai : createHeuristicPlan(input);  const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    });  const milestones = ai && ai.length ? ai : createHeuristicPlan(input);  const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN,
 async function callOpenAI (input: MilestoneSuggestionInput): Promise < SuggestedMilestoneItem[] | null> {
   // Check condition
@@ -284,6 +296,7 @@ export async function generate_milestones (input: MilestoneSuggestionInput): Pro
   return milestones,;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 export async function generateMilestones(input:MilestoneSuggestionInput):Promise<MilestoneSuggestionResponse> {;
   const ai = await callOpenAI(input),;
@@ -326,5 +339,7 @@ body: JSON.stringify (body)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return { milestones }
 }

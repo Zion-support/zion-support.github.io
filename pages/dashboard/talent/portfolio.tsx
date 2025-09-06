@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -9,7 +13,10 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false };
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -27,7 +34,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {GetServerSideProps} from 'next';
 import React, { useRef, useState } from 'react';
 import PdfExportButton from '../../../components/ui/PdfExportButton';
@@ -43,9 +53,12 @@ export default function TalentPortfolio() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
   const ref = useRef<HTMLDivElement>(null),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const data: ResumeData = {
     name: 'Your Name',
     contact: {
@@ -59,11 +72,45 @@ export default function TalentPortfolio() {
     certifications: ['AWS SAA-C03'],
     portfolio: [{ title: 'Top Project', description: 'Showcase' }]},
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
 =======
 return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+=======
+email: 'you@example.com',
+      phone: '+1 555-123-4567',
+      location: 'City, Country',
+    },
+    summary: 'AI talent focused on LLM apps and marketplaces.',
+    skills: ['AI', 'TypeScript', 'Next.js'],
+    technologies: ['OpenAI', 'Supabase'],
+    experience: [
+      {
+        title: 'AI Engineer'
+        company: 'Zion'
+        start: '2023'
+        end: 'Present'
+        bullets: ['Built resume exporter.']
+      }
+    ]
+    education: [
+      {
+        institution: 'University of Example'
+        degree: 'B.Sc.'
+        start: '2016'
+        end: '2020'
+      }
+    ]
+    certifications: ['AWS SAA-C03']
+    portfolio: [{ title: 'Top Project', description: 'Showcase' }]
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="relative">
       <div className="flex items-center gap-3 mb-4">
         <label className="text-sm">Theme</label>
@@ -76,11 +123,15 @@ return (
       </div>
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 return { props: {} };
 };
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -94,10 +145,24 @@ return { props: {} };
     </div>
   )
 }
+=======
+
+
+      <PdfExportButton targetRef={ref} fileName={`resume-${data.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
+      <ResumePreview ref={ref} data={data} theme={theme} />
+    </div>
+<<<<<<< HEAD
+  )
+}
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const supabase = createServerClient();
   if (!user) {
+<<<<<<< HEAD
     return { redirect: { destination: '/auth', permanent: false } } as any;
   }
 <<<<<<< HEAD
@@ -125,6 +190,12 @@ import React, { useRef, useState } from 'react';
 import PdfExportButton from '../../../components/ui/PdfExportButton';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+return { redirect: { destination: '/auth', permanent: false } } as any;
+  }
+<<<<<<< HEAD
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import ResumePreview, {
   ResumeData,
 } from '../../../components / ui / ResumePreview';
@@ -166,6 +237,7 @@ function TalentPortfolio() {
     certifications: ['AWS SAA - C03'],
     portfolio: [{ title: 'Top Project', description: 'Showcase' }],
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -266,10 +338,13 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   if (!user) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return { redirect: { destination: '/auth', permanent: false } } as any;
   }
 return { props: {} }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -282,3 +357,9 @@ return { props: {} }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  return { props: {} };
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

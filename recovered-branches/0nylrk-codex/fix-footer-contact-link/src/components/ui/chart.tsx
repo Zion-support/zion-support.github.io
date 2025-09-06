@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from "react"
 import type { CSSProperties } from "react"
 import * as RechartsPrimitive from "recharts"
@@ -8,6 +9,8 @@ import * as RechartsPrimitive from "recharts"
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 // Format: { THEME_NAME: CSS_SELECTOR }
@@ -22,6 +25,7 @@ import { cn } from "@/lib/utils"
 
 const THEMES = { light: "", dark: ".dark" } as const
 export type ChartConfig = Record<
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,6 +53,8 @@ function useChart(): ChartContextProps {
 import React from 'react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import * as React from "react";
 import type { CSSProperties } from "react";
 import * as RechartsPrimitive from "recharts";
@@ -80,6 +86,7 @@ type ChartContextProps = {
   config: ChartConfig;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -118,6 +125,9 @@ type ChartContextProps = {
 =======
 const ChartContainer = React.forwardRef<  );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const ChartContainer = React.forwardRef<  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 >;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -160,6 +170,7 @@ function useChart(): any (): ChartContextProps {;
 
 const ChartContainer = React && React.forwardRef<;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 type ChartContextProps = {
@@ -186,6 +197,9 @@ type ChartContextProps = {
 =======
     <ChartContext && ChartContext.Provider value={{ config }}>;  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    <ChartContext && ChartContext.Provider value={{ config }}>;  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <ChartContext && ChartContext.Provider value={{ config }}>;
       <div
         data-chart={chartId}
@@ -218,6 +232,7 @@ const ChartTooltipContent = React.forward_ref<;
       name_key?: string;
       label_key?: string;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >(
@@ -303,6 +318,8 @@ const ChartTooltipContent = React.forwardRef<
       active,
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       payload,
       className,
       indicator = "dot",
@@ -315,6 +332,7 @@ const ChartTooltipContent = React.forwardRef<
       color,
       nameKey,
       labelKey},
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -330,6 +348,9 @@ const ChartTooltipContent = React.forwardRef<
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     ref
   ) => {
     const { config } = useChart()
@@ -344,6 +365,7 @@ const ChartTooltipContent = React.forwardRef<
         !labelKey && typeof label === "string"
           ? config[label as keyof typeof config]?.label |label
           : itemConfig?.label
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (labelFormatter) {
 <<<<<<< HEAD
@@ -407,12 +429,16 @@ const ChartTooltipContent = React.forwardRef<
 =======
       if (labelFormatter) {        return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      if (labelFormatter) {        return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className={cn("font-medium", labelClassName)}>;
             {labelFormatter(value, payload)}
           </div>;
         );
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -528,6 +554,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             return (
               <div
                 key={item && item.dataKey}
@@ -581,6 +609,7 @@ if ( {) {
                         {nestLabel ? tooltipLabel : null}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <span className="text-muted-foreground">
                           {itemConfig?.label |item.name}
                         </span>
@@ -592,6 +621,8 @@ if ( {) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                         <span className="text-muted-foreground">;
                           {itemConfig?.label || item && item.name}
@@ -601,6 +632,7 @@ if ( {) {
                         <span className="font-mono font-medium tabular-nums text-foreground">;
                           {item && item.value.toLocaleString()}
                         </span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1067,10 +1099,13 @@ const ChartLegendContent = React.forward_ref<;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     ref
   ) => {
     const { config } = useChart()
     if (!payload?.length) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       return null
 <<<<<<< HEAD
@@ -1326,6 +1361,9 @@ function getPayloadConfigFromPayload(
 =======
       return null    { class_name, hide_icon = false, payload, vertical_align = "bottom", name_key }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      return null    { class_name, hide_icon = false, payload, vertical_align = "bottom", name_key }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     ref) => {
     const { config } = use_chart ();
     // Check condition
@@ -1450,6 +1488,7 @@ function getPayloadConfigFromPayload(): any (;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   ChartContainer,;
   ChartTooltip,;
   ChartTooltipContent,;
@@ -1502,6 +1541,13 @@ export {;
 }
 export {  ChartLegend;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  ChartStyle}  return configLabelKey in config
+    ? config[configLabelKey]
+    : config[key as keyof typeof config]
+}
+export {  ChartLegend;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ChartLegendContent;
 
   ChartStyle}

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../utils/sync/storage";
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types";
@@ -11,6 +12,8 @@ import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",;
@@ -296,6 +299,7 @@ if (state.config.instance_id = instance_id, ) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default function handler(_req: NextApiRequest, _res: NextApiResponse) {_const _state = readState();
 
@@ -426,6 +430,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     writeState(state)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+=======
+  const state = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return res.status(200).json({ config: state.config })
   }
   return res.status(405).json({ error: "Method not allowed" })

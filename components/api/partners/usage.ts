@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
@@ -21,6 +22,14 @@ export default async function handler(
   const summary = await calculateUsageSummary(auth.partner.id);
   return res.status(200).json({ summary });
 =======
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { authenticateRequest, calculateUsageSummary } from "../../../utils/api/partnerAuth";
+import type { NextApiRequest, NextApiResponse } from 'next';
+import {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   authenticateRequest
   calculateUsageSummary;
   authenticateRequest,;
@@ -28,10 +37,13 @@ export default async function handler(
 } from '../../../utils/api/partnerAuth';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
   if (req && req.method !== "GET") {
@@ -43,6 +55,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!auth) {
     return res && res.status(401).json({ error: "Unauthorized" })
   }
+<<<<<<< HEAD
   const summary = await calculateUsageSummary(auth && auth.partner.id);
   return res && res.status(200).json({ summary })
 }
@@ -50,8 +63,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   authenticate_request,
   calculateUsageSummary,
 } from '../../../utils / api / partner_auth';
@@ -102,4 +118,19 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  const summary = await calculateUsageSummary(auth.partner.id);
+  return res.status(200).json({ summary });
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "GET") {
+    res.setHeader("Allow", "GET");
+    return res.status(405).json({ error: "Method Not Allowed" })
+  }
+  const auth = null;
+  return res.status(200).json({ summary })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

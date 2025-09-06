@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -96,6 +97,8 @@ export default function ServicesIndex() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const ServicesIndex: NextPage = () => {
   const services = [
     {
@@ -335,13 +338,17 @@ const ServicesIndex: NextPage = () => {
       link: "/services/ai-automation";
     }
   ];  return (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <>
       <Head>
         <title>Our Services - Zion Tech Group | AI, Cloud, Blockchain & IT Solutions</title>
         <meta name="description" content="Comprehensive technology services including AI development, cloud solutions, blockchain, IoT platforms, and micro SAAS solutions. Expert IT services for modern businesses." />
         <meta name="keywords" content="AI development services, cloud solutions, blockchain development, IoT platforms, micro SAAS, cybersecurity, web development, data analytics" />
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       {/* Hero Section */}
@@ -556,6 +563,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Learn More
                   </Link>
                 </div>
@@ -578,12 +587,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         </section>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Learn More
                   </Link>
                 </div>
@@ -868,6 +880,7 @@ export default ServicesIndex;
                     ))}
                   </div>
                   <Link
+<<<<<<< HEAD
 <<<<<<< HEAD
                     href={service.link}
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
@@ -1391,6 +1404,8 @@ export default ServicesIndex;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </main>;
     </div>;
   ),
@@ -1400,4 +1415,7 @@ export default ServicesIndex;
       </div>;
     </>;
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

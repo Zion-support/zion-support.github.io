@@ -46,6 +46,7 @@ import React,{ useState,useCallback } from "react"; export const toast = ({ titl
 <<<<<<< HEAD:backup-merge-conflicts/use-toast.js.backup
 :backup-merge-conflicts/use-toast.js.backup
 
+<<<<<<< HEAD
 import React,{ useState,useCallback } from "react"; export const toast = ({ title,description,variant = "default" }) => {}; console.log(""Toast [${variant}]: ${title} -,${description}""),} return Date.now()} ; export const useToast = () => {}}; const [toasts,setToasts] = useState([]),} ; const toast = useCallback(({ title,description,variant = "default' }) => {}} const newToast = {} ; setToasts(prev => [...prev,newToast]),} setTimeout(() => {}} },5000),} return id},[]),} const dismiss = useCallback((id) => {}} },[]),} return {}; toast,dismiss,toasts}};"`
 
 import React,{ useState,useCallback } from "react"; export const toast = ({ title,description,variant = "default" }) => {}; console.log(""Toast [${variant}]: ${title} -,${description}""),} return Date.now()} ; export const useToast = () => {}}; const [toasts,setToasts] = useState([]),} ; const toast = useCallback(({ title,description,variant = "default' }) => {}} const newToast = {} ; setToasts(prev => [...prev,newToast]),} setTimeout(() => {}} },5000),} return id},[]),} const dismiss = useCallback((id) => {}} },[]),} return {}; toast,dismiss,toasts}};"`
@@ -59,12 +60,19 @@ import React,{ useState,useCallback } from "react"; export const toast = ({ titl
 
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React,{ useState,useCallback } from "react"; export const toast = ({ title,description,variant = "default" }) => {}; console && console.log(Toast [${variant}]: ${title} -,${description}"");,} return Date && Date.now()} ; export const useToast = () => {}}; const [toasts,setToasts] = useState([]);,} ; const toast = useCallback(({ title,description,variant = "default' }) => {}} const newToast = {} ; setToasts(prev => [...prev,newToast]);,} setTimeout(() => {}} },5000);,} return id},[]);,} const dismiss = useCallback((id) => {}} },[]);,} return {}; toast,dismiss,toasts}};"`
 import React,{ useState,useCallback } from "react"; export const toast = ({ title,description,variant = "default" }) => {}; console && console.log(""Toast [${variant}]: ${title} -,${description}""),} return Date && Date.now()} ; export const useToast = () => {}}; const [toasts,setToasts] = useState([]),} ; const toast = useCallback(({ title,description,variant = "default' }) => {}} const newToast = {} ; setToasts(prev => [...prev,newToast]),} setTimeout(() => {}} },5000),} return id},[]),} const dismiss = useCallback((id) => {}} },[]),} return {}; toast,dismiss,toasts}};"`
 import React,{ useState,useCallback } from "react"; export const toast = ({ title,description,variant = "default" }) => {}; console && console.log(""Toast [${variant}]: ${title} -,${description}""),} return Date && Date.now()} ; export const useToast = () => {}}; const [toasts,setToasts] = useState([]),} ; const toast = useCallback(({ title,description,variant = "default' }) => {}} const newToast = {} ; setToasts(prev => [...prev,newToast]),} setTimeout(() => {}} },5000),} return id},[]),} const dismiss = useCallback((id) => {}} },[]),} return {}; toast,dismiss,toasts}};"`
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

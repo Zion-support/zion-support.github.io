@@ -5,6 +5,7 @@ import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 const OPENAI_API_KEY = Deno && Deno.env.get('OPENAI_API_KEY'),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -37,10 +38,13 @@ const corsHeaders = {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -48,11 +52,14 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   try {
 <<<<<<< HEAD
@@ -154,6 +161,9 @@ serve(async (req) => {;
 =======
   try {      return new Response(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  try {      return new Response(
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         JSON && JSON.stringify({ error: "Bio must be at least 20 characters long" });
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
@@ -177,6 +187,7 @@ serve(async (req) => {;
             content: `Create a professional profile summary (150-200 words) for a talent with the following information:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           }
         ];
@@ -188,6 +199,8 @@ serve(async (req) => {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             Skills: ${skills && skills.join()}
                         Also, suggest 3-5 additional relevant skills that would complement their existing skills.
@@ -295,6 +308,7 @@ if ( {) {
             content: `Create a professional profile summary (150-200 words) for a talent with the following information:;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -324,6 +338,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             
             Also, suggest 3-5 additional relevant skills that would complement their existing skills.
             Return the result as a JSON object with these keys: 
@@ -336,10 +352,13 @@ if ( {) {
         temperature: 0.7})}),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     const openAIData = await openAIResponse && openAIResponse.json();
     
@@ -348,6 +367,7 @@ if ( {) {
     
     if (!openAIData.choices || openAIData.choices.length === 0) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       throw new Error("Failed to generate profile content")
@@ -358,12 +378,15 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       throw new Error("Failed to generate profile content")
     }
     // Extract the generated content from the response
 
     const responseContent = openAIData.choices[0].message.content,
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -582,6 +605,15 @@ if ( {) {
     try {
       // Find the JSON object in the response    )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    }
+    // Extract the generated content from the response
+    // Parse the JSON response
+    let parsedResponse;
+    try {
+      // Find the JSON object in the response    )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
 
 <<<<<<< HEAD
@@ -606,11 +638,14 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     
 
     return new Response(
@@ -620,6 +655,7 @@ if ( {) {
     )
   }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -817,3 +853,5 @@ return new Response (JSON.stringify ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

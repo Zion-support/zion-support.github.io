@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -18,10 +19,13 @@ export type LanguageContextType = {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   currentLanguage: SupportedLanguage
   changeLanguage: (lang: SupportedLanguage) => Promise<void>
   isRTL: boolean
   supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[]
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -53,6 +57,9 @@ const supportedLanguages = [
 =======
 }const supportedLanguages = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}const supportedLanguages = [
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' }
   { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' }
   { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' }
@@ -63,6 +70,7 @@ const defaultLanguageContext: LanguageContextType = {
   changeLanguage: async () => {}
   isRTL: false
   supportedLanguages
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -145,6 +153,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 =======
 }  const { i18n, t } = useTranslation();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}  const { i18n, t } = useTranslation();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { isAuthenticated, user } = authState;
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(
     (i18n.language?.substring(0, 2) as SupportedLanguage) |'en'
@@ -165,6 +176,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     document.documentElement.lang = currentLanguage;
     // Add RTL class for Tailwind
     if (i18n.dir() === 'rtl') {
+<<<<<<< HEAD
 <<<<<<< HEAD
       document.documentElement.classList.add('rtl')
 <<<<<<< HEAD
@@ -304,6 +316,9 @@ export const useLanguage = (): LanguageContextType => useContext(LanguageContext
 =======
       document.documentElement.classList.add('rtl')    const syncLanguageWithProfile = async () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      document.documentElement.classList.add('rtl')    const syncLanguageWithProfile = async () => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Check condition
 if ( {) {
   $2
@@ -347,6 +362,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
       document && document.documentElement.classList && classList.remove('rtl');
     }
   }, [currentLanguage, i18n]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -545,12 +561,15 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try {;
       await i18n && i18n.changeLanguage(lang);
       setCurrentLanguage(lang),;
       localStorage && localStorage.setItem('zion_language', lang);
       // Get language name for toast;
       const langName = supportedLanguages && supportedLanguages.find(l => l && l.code === lang)?.name || lang;
+<<<<<<< HEAD
 <<<<<<< HEAD
       toast({;
         description: t('language && language.language_changed', { language: langName });
@@ -606,10 +625,16 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
   description: t('language && language.language_changed', { language: langName });
       });        }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      toast({,
+  description: t('language && language.language_changed', { language: langName });
+      });        }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
     } catch (err) {;
       console && console.error('Error changing language:', err);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
@@ -627,10 +652,13 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   };
   
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -653,11 +681,14 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <LanguageContext.Provider
       value={{
         currentLanguage
         changeLanguage
+<<<<<<< HEAD
 <<<<<<< HEAD
         isRTL;
 <<<<<<< HEAD
@@ -733,6 +764,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
 =======
         isRTL;          const { error } = await supabase;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        isRTL;          const { error } = await supabase;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             .from ('profiles');
             .update ({ preferred_language: current_language });
             .eq ('id', user.id);
@@ -816,6 +850,7 @@ if ( {) {
       {children}
 
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -953,3 +988,6 @@ syncLanguageWithProfile ()
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

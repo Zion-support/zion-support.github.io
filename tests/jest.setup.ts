@@ -1,12 +1,18 @@
 // Polyfill fetch and enable fetch mocks;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import 'whatwg - fetch',
 import fetch_mock from 'jest - fetch - mock',
 fetch_mock.enable_mocks (),
 // Reset fetch mocks before each test to ensure isolation;
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 before_each (() => {
   fetch_mock.reset_mocks ();
 }),
@@ -15,6 +21,7 @@ import '@testing - library / jest - dom',
 import { TextEncoder, TextDecoder } from 'util',
 // Polyfill TextEncoder and TextDecoder for JSDOM environment;
 <<<<<<< HEAD
+<<<<<<< HEAD
 global.TextEncoder = TextEncoder,;
 // @ts-expect-error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests;
 global.TextDecoder = TextDecoder,;
@@ -22,6 +29,8 @@ global.TextDecoder = TextDecoder,;
 // will transform import.meta.env.VITE_SOME_VAR to something like process.env.VITE_SOME_VAR;
 // or that import.meta itself is transformed into an object where 'env' can be populated.;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 global.TextEncoder = TextEncoder,
 // @ts - expect - error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests;
 global.TextDecoder = TextDecoder,
@@ -65,7 +74,10 @@ Object.define_property (window, 'match_media', {
     removeEventListener: jest.fn (),
     dispatch_event: jest.fn ()}))}),
 // Mock import.meta.env for Jest - This was ineffective for the SyntaxError;
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // global.import = {
 //   // @ts - expect - error;
 //   meta: {
@@ -206,7 +218,10 @@ global.ResizeObserver = jest.fn ().mock_implementation (() => ({
   disconnect: jest.fn ()})),
 // Polyfill for URL.revokeObjectURL;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Check condition
 if ( {) {
   $2
@@ -352,15 +367,22 @@ global.ResizeObserver = jest.fn ().mock_implementation (() => ({
   unobserve: jest.fn (),
   disconnect: jest.fn ()})),
 // Polyfill for URL.revokeObjectURL;
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 if (typeof URL.revokeObjectURL === 'undefined') {;
   URL.revokeObjectURL = jest.fn(),;
 }
 // Polyfill for BroadcastChannel;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // Check condition
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+// Check condition
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 if ( {) {
   $2
 }
@@ -390,11 +412,16 @@ if ( {) {
 import axios from 'axios',
 // @ts - ignore;
 <<<<<<< HEAD
+<<<<<<< HEAD
 axios.create = jest.fn (() => axios),      this.name = name;
 =======
 axios.create = jest.fn (() => axios),
       this.name = name;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+axios.create = jest.fn (() => axios),
+      this.name = name;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     post_message = jest.fn (),
     close = jest.fn (),
@@ -418,15 +445,22 @@ import axios from 'axios',;
 axios.create = jest.fn(() => axios),;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // -----------------------------;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+// -----------------------------;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Vitest Compatibility Layer for Jest;
 // -----------------------------;
 // Some test files were originally written for Vitest and import utilities from 'vitest'.;
 // To keep migrating gradually while still running the Jest suite successfully, we create;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // a lightweight shim that re - maps the most common Vitest helpers to their Jest equivalents.;
 // This avoids individual test failures like &quot;Vitest cannot be imported in a CommonJS module & quot;.;
 //;
@@ -440,7 +474,10 @@ jest.mock ('vitest', () => {
     // Named export expected in `import { vi } from 'vitest'` statements;
     vi: {
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       fn: jest_fn,
       spy_on: jest.spy_on.bind (jest),
       mock: jest.mock.bind (jest),
@@ -565,16 +602,23 @@ if ( {) {
 
   global.IntersectionObserver = MockIntersectionObserver;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   global.IntersectionObserver = MockIntersectionObserver;
 }
 // Ensure all code paths use the mock implementation;
 // Some services import the global fetch reference before jest - fetch - mock is enabled.;
 // Override it explicitly so those modules receive the mocked version.;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 // @ts - ignore;
 global.fetch = fetch_mock,
@@ -583,7 +627,10 @@ global.fetch = fetch_mock,
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // @ts - ignore;
   window.window.window.performance.getEntriesByType = () => [];
 }
@@ -649,7 +696,10 @@ if ( {) {
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
   // @ts - ignore;
@@ -716,7 +766,10 @@ if ( {) {
   $2
 }
 }
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }) );
 //Add any other specific methods from supabase.auth if they get called 
 };
@@ -876,7 +929,11 @@ getItem: jest.fn ()
 //@ts-ignore if (!global.vi.runAllTimers) global.vi.runAllTimers = jest.runAllTimers.bind (jest);
 // @ts-ignore 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

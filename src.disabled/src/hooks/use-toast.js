@@ -25,12 +25,15 @@ import React,{ useState,useCallback } from "react"; export const toast = ({ titl
 import React,{ useState,useCallback } from "react"; export const toast = ({ title,description,variant = "default" }) => {}; console.log(""Toast [${variant}]: ${title} -,${description}""),} return Date.now()} ; export const useToast = () => {}}; const [toasts,setToasts] = useState([]),} ; const toast = useCallback(({ title,description,variant = "default' }) => {}} const newToast = {} ; setToasts(prev => [...prev,newToast]),} setTimeout(() => {}} },5000),} return id},[]),} const dismiss = useCallback((id) => {}} },[]),} return {}; toast,dismiss,toasts}};"`
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
@@ -44,6 +47,7 @@ import React,{ useState,useCallback } from "react"; export const toast = ({ titl
 import React,{ useState,useCallback } from "react"; export const toast = ({ title,description,variant = "default" }) => {}; console.log(""Toast [${variant}]: ${title} -,${description}""),} return Date.now()} ; export const useToast = () => {}}; const [toasts,setToasts] = useState([]),} ; const toast = useCallback(({ title,description,variant = "default' }) => {}} const newToast = {} ; setToasts(prev => [...prev,newToast]),} setTimeout(() => {}} },5000),} return id},[]),} const dismiss = useCallback((id) => {}} },[]),} return {}; toast,dismiss,toasts}};"`
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -66,3 +70,5 @@ import React,{ useState,useCallback } from "react"; export const toast = ({ titl
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

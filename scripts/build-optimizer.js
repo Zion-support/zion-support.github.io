@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -17,6 +18,8 @@
 <<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process';  const cleanBuild = () => {  const dirsToClean = ['.next','out','dist']; dirsToClean.forEach(dir => { if (fs.existsSync(dir)) { fs.rmSync(dir,{ "recursive": 'true',"force": 'true' }) } })} const optimizeImages = () => {  } const generateStaticAssets = () => {  try { execSync('npm run build',{ "stdio": 'inherit' }) } catch (error) { console.error('❌ Failed to generate static "assets": ',error.message)} } const runOptimizations = () => { cleanBuild(); optimizeImages(); generateStaticAssets(); } runOptimizations();
@@ -47,6 +50,7 @@ import fs from 'fs'; import path from 'path'; import { execSync } from 'child_pr
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -71,3 +75,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

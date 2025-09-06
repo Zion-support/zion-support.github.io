@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next'
 ;
 const memoryStore: { q: string, ts: number }[] = []
@@ -55,4 +56,37 @@ export default function handler(req, res) {
     const counts = new Map<string, number>();
     for (const { q } of memoryStore) counts.set(q, (counts.get(q) || 0) + 1);
     const top = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([q, n]) => ({ q, n }));
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return res.status(405).end();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+const memoryStore: { q: string, ts: number }[] = [],
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    return res.status(200).json({ ok: true, top, total: memoryStore.length })
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 

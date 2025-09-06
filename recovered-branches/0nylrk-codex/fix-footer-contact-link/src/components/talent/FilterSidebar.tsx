@@ -16,6 +16,7 @@ import {FilterSidebarProps} from "@/types/filters";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function FilterSidebar(): any ({;
 
 =======
@@ -75,6 +76,9 @@ export function FilterSidebar({
 =======
 export function FilterSidebar(): any ({;  searchTerm,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function FilterSidebar(): any ({;  searchTerm,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   setSearchTerm,
   selectedSkills,
   toggleSkill,
@@ -91,14 +95,17 @@ export function FilterSidebar(): any ({;  searchTerm,
   sortOption,
   setSortOption,
   clearFilters,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
   isMobileFilterOpen
 }: FilterSidebarProps) {
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
@@ -147,6 +154,8 @@ export function FilterSidebar({;
   isMobileFilterOpen
 }: FilterSidebarProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }: FilterSidebarProps) {
   return (
     <>;
@@ -164,6 +173,7 @@ export function FilterSidebar({;
         >
           Clear All
         </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>
 <<<<<<< HEAD
@@ -241,6 +251,9 @@ export function FilterSidebar({;
 =======
       </div>      {/* Search */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </div>      {/* Search */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
@@ -297,6 +310,7 @@ export function FilterSidebar({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
@@ -309,6 +323,11 @@ export function FilterSidebar({;
     <>;
       {/* Filter header */}      <div className="flex items-center justify-between mb-6">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (
+    <>;
+      {/* Filter header */}      <div className="flex items-center justify-between mb-6">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <h3 className="text-lg font-semibold text-white flex items-center">;
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />;
           Filters;
@@ -384,6 +403,7 @@ export function FilterSidebar({;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 =======
@@ -394,6 +414,8 @@ export function FilterSidebar({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Filter } from './lucide-react';

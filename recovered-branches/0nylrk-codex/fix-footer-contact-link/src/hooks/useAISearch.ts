@@ -5,6 +5,7 @@ import {PROJECTS} from "@/data/projectsData";
 export interface SearchResult {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -20,6 +21,8 @@ export interface SearchResult {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from './react';
 import { TALENT_PROFILES } from '@/data / talent_data';
 import { JOB_POSTS } from '@/data / jobs_data';
@@ -29,6 +32,7 @@ export interface SearchResult {
   type: "talent" | "job" | "project";
   title: string,
   description: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,6 +94,8 @@ export function useAISearch() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function useAISearch() {;
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
@@ -127,6 +133,7 @@ export function useAISearch() {
   const [results, setResults] = useState<SearchResult[]>([]),
   const [loading, setLoading] = useState(false),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -150,6 +157,8 @@ export function useAISearch() {
 export /**
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
  * useAISearch - Function description
  */
 function useAISearch() {
@@ -187,10 +196,13 @@ function useAISearch() {
 
       if (!filters.type || filters.type === "talent" || filters.type === "all") {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         TALENT_PROFILES.forEach((t) => {
           if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return;
           if (!matchSkill(t.skills)) return;        return skills?.some((s) =>
@@ -214,6 +226,7 @@ function useAISearch() {
       }
       if (!filters && filters.type || filters && filters.type === "project" || filters && filters.type === "all") {
         PROJECTS && PROJECTS.forEach((p) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
           items && items.push({ id: p && p.id, type: "project", title: p && p.job?.title || "Project", description: p && p.scope_summary })
 <<<<<<< HEAD
@@ -260,6 +273,12 @@ function useAISearch() {
       setResults(items)
     } catch (err) {      const response = await fetch (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          items && items.push({ id: p && p.id, type: "project", title: p && p.job?.title || "Project", description: p && p.scope_summary })        })
+      }
+      setResults(items)
+    } catch (err) {      const response = await fetch (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         "https://ziontechgroup.functions.supabase.co / functions / v1 / ai - search";
         {
           method: "POST",
@@ -278,6 +297,7 @@ if (return true, ) {
         return skills?.some ((s) =>;
           filters.skills!.some ((f) => s.toLowerCase ().includes (f.toLowerCase ())));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -298,6 +318,8 @@ if (return true, ) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 export function useAISearch() {;
   const [results, setResults] = useState<SearchResult[]>([]),;
@@ -325,6 +347,7 @@ export function useAISearch() {;
         TALENT_PROFILES.forEach((t) => {;
           if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return,;
           if (!matchSkill(t.skills)) return,;
+<<<<<<< HEAD
 <<<<<<< HEAD
           items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title });
 <<<<<<< HEAD
@@ -492,3 +515,7 @@ export function useAISearch() {;
           items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title });  return { results, loading, search }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title });  return { results, loading, search }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

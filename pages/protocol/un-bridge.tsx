@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -14,6 +15,10 @@
     language: 'en',;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -43,16 +48,54 @@ import React, { useState } from 'react';
     language: 'en',;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   });  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [translated, setTranslated] = useState<string>('');
   const onChange = (
+=======
+=======
+import React, { useState } from 'react';
+export default function UNBridge() {
+  const [form, setForm] = useState({
+    title: 'Zion DAO x Digital Labor Initiative';
+    targetInstitution: 'UN Development Programme';
+    type: 'Workforce Dev';
+    regionalScope: 'Global South';
+    budgetOrResolution: 'USD 3M over 24 months';
+    supportingMultiverses: 'Digital Labor, AI Ethics',
+    promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
+    language: 'en'});
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<any>(null),
+  const [translated, setTranslated] = useState<string>(''),
+
+  const onChange = null;
+      setResult((r: any) => ({ ...r, meta: data.meta }))
+    } finally { setLoading(false) }
+    title: 'Zion DAO x Digital Labor Initiative'
+    targetInstitution: 'UN Development Programme'
+    type: 'Workforce Dev'
+    regionalScope: 'Global South'
+    budgetOrResolution: 'USD 3M over 24 months'
+    supportingMultiverses: 'Digital Labor, AI Ethics'
+    promptAssist:
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
+    language: 'en'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  });  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<any>(null);
+  const [translated, setTranslated] = useState<string>('');
+
+const onChange = (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
     const { name, value } = e.target;
+<<<<<<< HEAD
     setForm(f => ({ ...f, [name]: value }));  }
 <<<<<<< HEAD
 
@@ -60,6 +103,11 @@ import React, { useState } from 'react';
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    setForm(f => ({ ...f, [name]: value }));
+  };
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async function generate() {
     setLoading(true);
     try {
@@ -67,6 +115,7 @@ import React, { useState } from 'react';
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -86,12 +135,21 @@ export default function UNBridge(req, res) {
 =======
 =======
           ...form
+=======
+export default function UNBridge(req, res) {
+  try {
+          ...form;
+          supportingMultiverses: form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),
+=======
+...form,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           supportingMultiverses: form.supportingMultiverses
             .split(',')
             .map(s => s.trim())
             .filter(Boolean)
         })
       });
+<<<<<<< HEAD
       const data = await res.json();
       setResult(data);
     } finally {
@@ -155,11 +213,19 @@ export default function UNBridge(req, res) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      const data = await res.json();
+
+  const [form, setForm] = useState({;
+    title: 'Zion DAO x Digital Labor Initiative',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     targetInstitution: 'UN Development Programme',;
     type: 'Workforce Dev',;
     regionalScope: 'Global South',;
     budgetOrResolution: 'USD 3M over 24 months',;
     supportingMultiverses: 'Digital Labor, AI Ethics',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -195,11 +261,17 @@ export default function UNBridge(req, res) {
         }),;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       });
       const data = await res && res.json();
       setResult(data);
     } finally {;
       setLoading(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }  }
 
 
@@ -208,14 +280,50 @@ export default function UNBridge(req, res) {
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ markdown: result && result.markdown, targetLanguage }),;
+<<<<<<< HEAD
+=======
+=======
+    }
+  }
+
+  async function translate(targetLanguage: string) {
+    if (!result?.markdown) return;
+    setLoading(true)
+    try {
+      const res = await fetch('/api/proposals/translate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ markdown: result.markdown, targetLanguage }),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       });
       const data = await res && res.json();
       setTranslated(data && data.translated);
     } finally {;
       setLoading(false);
+<<<<<<< HEAD
     }  }
 
 
+=======
+<<<<<<< HEAD
+    }  }
+
+
+=======
+    }
+  }
+
+  async function exportArtifacts() {
+    if (!result?.meta?.id) return;
+    setLoading(true);
+    try {
+      await fetch('/api/proposals/export', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ id: result.meta.id }),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       });
       // Refresh meta;
       const list = await fetch('/api/proposals/list');
@@ -226,6 +334,10 @@ export default function UNBridge(req, res) {
       setResult((r: any) => ({ ...r, meta: updated }));
     } finally {;
       setLoading(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }  }
 
 
@@ -239,15 +351,32 @@ export default function UNBridge(req, res) {
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ id: result && result.meta.id, channels }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+    }
+  }
+
+  async function submit(channels: string[]) {
+    if (!result?.meta?.id) return;
+    setLoading(true)
+    try {
+      const res = await fetch('/api/proposals/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ id: result.meta.id, channels }),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       });
       const data = await res && res.json();
       setResult((r: any) => ({ ...r, meta: data && data.meta }));
     } finally {;
       setLoading(false);
     }
+<<<<<<< HEAD
 
   }
 <<<<<<< HEAD
@@ -258,6 +387,13 @@ export default function UNBridge(req, res) {
   }
 }
 =======
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className='space-y-6'>;
       <h1 className='text-2xl font-semibold'>Global Outreach: UN Bridge</h1>;
@@ -300,6 +436,10 @@ export default function UNBridge(req, res) {
               value={form && form.regionalScope}
               onChange={onChange}
               className='w-full border rounded p-2'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             />;
           </label>;
           <label className='block'>;
@@ -434,7 +574,10 @@ export default function UNBridge(req, res) {
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <div className="space-y-6">
@@ -444,6 +587,7 @@ export default function UNBridge(req, res) {
           <label className="block">
             <span className="text-sm">Title</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -452,6 +596,9 @@ export default function UNBridge(req, res) {
             <input name="title" value={form.title} onChange={onChange} className="w-full border rounded p-2" />
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+            <input name="title" value={form.title} onChange={onChange} className="w-full border rounded p-2" />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </label>
           <label className="block">
             <span className="text-sm">Target institution</span>
@@ -461,18 +608,25 @@ export default function UNBridge(req, res) {
             <span className="text-sm">Type</span>
             <select name="type" value={form.type} onChange={onChange} className="w-full border rounded p-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+=======
+            >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
               <option>Digital ID</option>
               <option>Education</option>
             </select>
           </label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <label className="block">
 =======
@@ -481,6 +635,21 @@ export default function UNBridge(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <span className="text-sm">Regional scope</span>
             <input name="regionalScope" value={form.regionalScope} onChange={onChange} className="w-full border rounded p-2" />
+=======
+          <label className="block">
+            <span className="text-sm">Regional scope</span>
+            <input name="regionalScope" value={form.regionalScope} onChange={onChange} className="w-full border rounded p-2" />
+=======
+<label className='block'>
+            <span className='text-sm'>Regional scope</span>
+            <input
+              name='regionalScope'
+              value={form.regionalScope}
+              onChange={onChange}
+              className='w-full border rounded p-2'
+            />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </label>
           <label className="block">
             <span className="text-sm">Budget / Resolution goals</span>
@@ -495,6 +664,7 @@ export default function UNBridge(req, res) {
             <textarea name="promptAssist" rows={5} value={form.promptAssist} onChange={onChange} className="w-full border rounded p-2" />
           </label>
           <div className="flex gap-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             <button onClick={generate} disabled={loading} className="px-4 py-2 bg-black text-white rounded">{loading ? 'Working…' : 'Generate Proposal'}</button>
@@ -573,6 +743,8 @@ export default function UNBridge(req, res) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
           <div className="flex items-center gap-2">
             <button onClick={() => translate('fr')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate FR</button>
@@ -580,6 +752,7 @@ export default function UNBridge(req, res) {
             <button onClick={() => translate('ar')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate AR</button>
           </div>
           {translated && (
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50'>
               {translated}
@@ -603,6 +776,8 @@ export default function UNBridge(req, res) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50">
               {translated  } catch (error) {
     console.error("Error:", error);
@@ -618,6 +793,7 @@ export default function UNBridge(req, res) {
           </div>
           <div className="flex items-center gap-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <button onClick={exportArtifacts} disabled={loading || !result} className="px-3 py-2 border rounded">Export PDF + Sign + IPFS</button>
             <button onClick={() => submit(['email'])} disabled={loading || !result} className="px-3 py-2 border rounded">Submit (Email)</button>
 =======
@@ -627,10 +803,13 @@ export default function UNBridge(req, res) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
           {result?.meta && (
             <div className="text-sm space-y-1">
               <div><span className="font-medium">Status:</span> {result.meta.status}</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               {result.meta.artifacts?.markdownPath && (
 
@@ -764,6 +943,8 @@ if (return) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</Link></div>
               )  } catch (error) {
     console.error("Error:", error);
@@ -908,6 +1089,10 @@ if (return) {
               <div>;
                 <span className='font - medium'>Status:</span>{' '}
                 {result.meta.status}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>;
               {result.meta.artifacts?.markdown_path && (
                 <div>;
@@ -933,6 +1118,7 @@ if (return) {
                 </div>              )}
               {result.meta.artifacts?.ipfs_cid && (
                 <div > IPFS CID: {result.meta.artifacts.ipfs_cid}</div>)}
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               {result.meta.artifacts?.signature && (
 <<<<<<< HEAD
@@ -946,12 +1132,16 @@ if (return) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+              {result.meta.artifacts?.signature && (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div>;
                   Signature: {result.meta.artifacts.signature.slice (0, 30)}…;
                 </div>              )}
             </div>)}
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -968,3 +1158,46 @@ if (return) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+              </div>
+              {result.meta.artifacts?.markdownPath && (
+                <div>
+                  <a
+                    className='text-blue-600 underline'
+                    href={result.meta.artifacts.markdownPath}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    Markdown
+                  </a>
+                </div>
+              )}
+              {result.meta.artifacts?.pdfPath && (
+                <div>
+                  <a
+                    className='text-blue-600 underline'
+                    href={result.meta.artifacts.pdfPath}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    PDF
+                  </a>
+                </div>
+              )}
+              {result.meta.artifacts?.ipfsCid && (
+                <div>IPFS CID: {result.meta.artifacts.ipfsCid}</div>
+              )}
+              {result.meta.artifacts?.signature && (
+<div>
+                  Signature: {result.meta.artifacts.signature.slice(0, 30)}…
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

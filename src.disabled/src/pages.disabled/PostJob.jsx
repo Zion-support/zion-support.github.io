@@ -22,7 +22,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 interface PostJobProps {
   // Add props here as needed
@@ -32,7 +35,10 @@ interface PostJobProps {
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 interface PostJobProps {
   // Add props here as needed
@@ -69,6 +75,7 @@ export default function PostJob({ }: PostJobProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,6 +84,8 @@ export default function PostJob({ }: PostJobProps) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -125,6 +134,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 :src.pages.disabled/PostJob.jsx
+<<<<<<< HEAD
 }
 }
 ursor/add-new-services-and-deploy-updates-0462
@@ -141,6 +151,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 =======:src.pages.disabled/PostJob.jsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 }
 }
@@ -148,14 +160,20 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 :temp_exclude/src.pages.disabled/PostJob.jsx
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 :src.pages.disabled/PostJob.jsx
 }
@@ -163,6 +181,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -184,3 +203,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+=
+}
+>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

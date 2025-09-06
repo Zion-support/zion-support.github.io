@@ -1,4 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,6 +25,18 @@ export default async function handler(
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       supabase
+=======
+import { createServerClient } from '../../../utils/supabase/server';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const supabase = null;
+        { label: 'ai', value: 1 }]})
+  try {
+    const supabase = createServerClient();
+    const talentId = (req.query.talentId as string) |null
+    const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
+supabase
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         .from('profile_views')
         .select('id, talent_id')
         .eq('talent_id', talentId)
@@ -184,6 +204,7 @@ function handler() {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     });
+<<<<<<< HEAD
 
   }
 
@@ -307,6 +328,7 @@ function handler() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -314,3 +336,9 @@ function handler() {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -2,6 +2,7 @@
 
 export function ContractHeader(): any ({ onCreateClick }: ContractHeaderProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 =======
 
@@ -52,6 +53,9 @@ interface ContractHeaderProps {
 =======
   return (  );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
@@ -61,6 +65,7 @@ interface ContractHeaderProps {;
 }
 ;
 export function ContractHeader({ onCreateClick }: ContractHeaderProps) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (;
 <<<<<<< HEAD
@@ -106,6 +111,9 @@ export function ContractHeader({ onCreateClick } ContractHeaderProps) {;
 =======
   return (;      <Button size="lg" onClick={onCreateClick}>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (;      <Button size="lg" onClick={onCreateClick}>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         Create New Contract;
       </Button>;
     </div>;
@@ -152,6 +160,7 @@ function ContractHeader() {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -159,3 +168,6 @@ function ContractHeader() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

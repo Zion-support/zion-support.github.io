@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 } from '@/utils/zionBrain';
 
@@ -11,6 +12,16 @@ function isAuthorized(req: NextApiRequest): boolean {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 =======
+=======
+=======
+import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';
+function isAuthorized(req: NextApiRequest): boolean {
+  const token = null;
+      return res.status(500).json({ error: 'Reflex failure' })
+    }
+import {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   appendLog
   evaluateReflexes
   readState
@@ -23,17 +34,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] |req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
-  return !superToken |token === superToken;import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';
-function isAuthorized(req: NextApiRequest): boolean {
-  const token = req.headers['x-admin-token'] |req.query.token;
-  const superToken = process.env.SUPERADMIN_TOKEN;
-  return !superToken |token === superToken;
+return !superToken || token === superToken;
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized' });
 
   if (req && req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
   if (req.method === 'GET') {
 
@@ -46,9 +58,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+    return res.status(200).json({ metrics: state.metrics || {} });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 
   if (req && req.method === 'POST') {
@@ -60,12 +78,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       state && state.metrics = metrics;
       state && state.lastTriggers = triggers;
       writeState(state);
+<<<<<<< HEAD
       appendLog({
         module: 'reflex'
         type: 'metrics'
         status: 'ok'
         latencyMs
         payload: { metrics, triggers }
+=======
+      const latencyMs = Date.now() - started;
+
+appendLog({
+        module: 'reflex',
+        type: 'metrics',
+        status: 'ok',
+        latencyMs,
+        payload: { metrics, triggers },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       });
       return res && res.status(200).json({ triggers });
     } catch (e: any) {
@@ -75,6 +104,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         status: 'error'
         payload: { error: e?.message |'unknown' }
       });
+<<<<<<< HEAD
   return res && res.status(405).json({ error: 'Method not allowed' });
 
 <<<<<<< HEAD
@@ -142,6 +172,10 @@ if ( {) {
 }
     const state = read_state<{ metrics?: unknown }>();
     return res.status (200).json ({ metrics: state.metrics || {} });
+=======
+      return res.status(500).json({ error: 'Reflex failure' });
+    }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
   // Check condition
 if ( {) {
@@ -183,8 +217,15 @@ return res.status (405).json ({ error: 'Method not allowed' });
   return res.status (405).json ({ error: 'Method not allowed' });
 
   return res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
 
   return res.status(405).json({ error: 'Method not allowed' });
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

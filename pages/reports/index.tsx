@@ -1,22 +1,29 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import { useEffect, useState } from 'react';
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import { useEffect, useState } from 'react';
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function Reports() {
   const [uptime, setUptime] = useState<any[]>([]),
   const [seo, setSeo] = useState<any>({}),
   const [links, setLinks] = useState<any>({}),
   const [deps, setDeps] = useState<any>({}),
   const [changelog, setChangelog] = useState<any>({}),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -32,11 +39,18 @@ export default function Reports() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import {useEffect, useState} from 'react';
+export default function Reports() {;
+import { useEffect, useState } from 'react';
+export default function Reports() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [uptime, setUptime] = useState<any[]>([]);
   const [seo, setSeo] = useState<any>({});
   const [links, setLinks] = useState<any>({});
   const [deps, setDeps] = useState<any>({});
   const [changelog, setChangelog] = useState<any>({});
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -95,6 +109,14 @@ export default function Reports() {
             <div className='text-sm text-gray-500'>No data</div>;
           )}
         </div>;
+=======
+  const [pagespeed, setPagespeed] = useState<any>({});
+  useEffect(() => {
+    Promise.all([
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime);
       fetch('/api/reports/seo').then((r) => r.json()).then(setSeo);
       fetch('/api/reports/links').then((r) => r.json()).then(setLinks);
@@ -102,6 +124,7 @@ export default function Reports() {
       fetch('/api/reports/changelog').then((r) => r.json()).then(setChangelog);
       fetch('/api/reports/pagespeed').then((r) => r.json()).then(setPagespeed)
     ]).catch(() => {})
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -120,6 +143,12 @@ export default function Reports() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }, []),
+
+  const lastUptime = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       fetch('/api/reports/uptime')
         .then(r => r.json())
         .then(setUptime)
@@ -140,9 +169,18 @@ export default function Reports() {
         .then(setPagespeed)
     ]).catch(() => {});  }, []);
   const lastUptime = uptime[uptime.length - 1];
+<<<<<<< HEAD
 
   return (
     <div className='space-y-6'>
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+<div className='space-y-6'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div>
         <h1 className='text-2xl font-semibold'>Automation Reports</h1>
         <div className='text-sm text-gray-500'>
@@ -165,6 +203,7 @@ export default function Reports() {
           ) : (;
             <div className='text-sm text-gray-500'>No data</div>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -208,6 +247,9 @@ export default function Reports() {
 =======
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
       fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime),
@@ -217,24 +259,31 @@ export default function Reports() {
       fetch('/api/reports/changelog').then((r) => r.json()).then(setChangelog),
 
         </div>;
+<<<<<<< HEAD
 =======
         </div>;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 }
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime);
       fetch('/api/reports/seo').then((r) => r.json()).then(setSeo);
       fetch('/api/reports/links').then((r) => r.json()).then(setLinks);
       fetch('/api/reports/deps').then((r) => r.json()).then(setDeps);
       fetch('/api/reports/changelog').then((r) => r.json()).then(setChangelog);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       fetch('/api/reports/pagespeed').then((r) => r.json()).then(setPagespeed)
 <<<<<<< HEAD
@@ -247,6 +296,10 @@ export default function Reports() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      fetch('/api/reports/pagespeed').then((r) => r.json()).then(setPagespeed)
+    ]).catch(() => {})
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }, []);
 
   const lastUptime = uptime[uptime.length - 1];
@@ -258,6 +311,7 @@ export default function Reports() {
         <div className="text-sm text-gray-500">Autonomously generated and synced</div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -266,6 +320,9 @@ export default function Reports() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className='border rounded p-4'>;
           <div className='font-medium mb-1'>SEO (weekly)</div>;
           <div className='text-sm text-gray-600'>;
@@ -386,6 +443,7 @@ function Reports() {
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -418,6 +476,8 @@ function Reports() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="border rounded p-4">
           <div className="font-medium mb-1">Changelog (weekly)</div>
           <div className="text-sm text-gray-600">Commits: {changelog?.totalCommits || 0}</div>
@@ -427,6 +487,7 @@ function Reports() {
 
 
 =======
+<<<<<<< HEAD
         <div className="border rounded p-4">
           <div className="font-medium mb-1">PageSpeed (weekly)</div>
           <div className="text-sm text-gray-600">Pages: {pagespeed?.results?.length || 0}</div>
@@ -497,3 +558,39 @@ function Reports() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        <div className='border rounded p-4'>
+          <div className='font-medium mb-1'>SEO (weekly)</div>
+          <div className='text-sm text-gray-600'>
+            Pages: {seo?.results?.length |0}
+          </div>
+        </div>
+        <div className='border rounded p-4'>
+          <div className='font-medium mb-1'>Broken Links (weekly)</div>
+          <div className='text-sm text-gray-600'>
+            Broken: {links?.broken?.length |0}
+          </div>
+        </div>
+        <div className='border rounded p-4'>
+          <div className='font-medium mb-1'>Dependencies (weekly)</div>
+          <div className='text-sm text-gray-600'>
+            Checked: {deps?.entries?.length |0}
+          </div>
+        </div>
+        <div className='border rounded p-4'>
+          <div className='font-medium mb-1'>Changelog (weekly)</div>
+          <div className='text-sm text-gray-600'>
+            Commits: {changelog?.totalCommits |0}
+          </div>
+        </div>
+        <div className='border rounded p-4'>
+          <div className='font-medium mb-1'>PageSpeed (weekly)</div>
+          <div className='text-sm text-gray-600'>
+            Pages: {pagespeed?.results?.length |0}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

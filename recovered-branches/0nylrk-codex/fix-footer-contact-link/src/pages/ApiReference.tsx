@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -18,6 +19,8 @@ export function ApiReference() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock";
@@ -29,6 +32,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -80,6 +84,10 @@ export function ApiReference() {
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function ApiReference() {
+  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       responses: {
         "200": {
           description: "A list of jobs"
@@ -89,9 +97,12 @@ export function ApiReference() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 <<<<<<< HEAD
@@ -158,6 +169,7 @@ function ApiReference() {
       "category": "development";
       "budget": {;
         "min": 5000;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -296,6 +308,8 @@ function ApiReference() {
   "retry_after": 60
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }`
         }
       }
@@ -313,6 +327,7 @@ function ApiReference() {
     },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -321,11 +336,14 @@ function ApiReference() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       id: "post-jobs"
       method: "POST"
       path: "/api/jobs"
       description: "Create a new job posting"
+<<<<<<< HEAD
 <<<<<<< HEAD
       parameters: [
 <<<<<<< HEAD
@@ -468,6 +486,11 @@ export function ApiReference() {;
         "currency": "USD"
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      parameters: [        "max": 10000,;
+        "currency": "USD"
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       "status": "open";
       "created_at": "2023-05-10T15:30:00Z"
 };
@@ -496,6 +519,7 @@ export function ApiReference() {;
   description: "Job created successfully",;
           example: `{;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   "id": "job-456";
 <<<<<<< HEAD
@@ -603,6 +627,10 @@ export function ApiReference() {;
   "id": "job-456";  "id": "job-456";
   "id": "job - 456";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  "id": "job-456";  "id": "job-456";
+  "id": "job - 456";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   ];
 }`;
@@ -635,6 +663,7 @@ export function ApiReference() {;
     {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -647,6 +676,8 @@ export function ApiReference() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       requestExample: `curl -X POST \\
   https://api.zionai.com/v1/api/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -667,6 +698,7 @@ export function ApiReference() {;
     "category": "design";
     "budget": {;
       "min": 3000;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -702,6 +734,8 @@ export function ApiReference() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       "min": 3000,
       "max": 5000,
       "currency": "USD"
@@ -709,6 +743,7 @@ export function ApiReference() {;
     "skills": ["Figma", "User Research", "Prototyping"],
     "deadline": "2023-07-01T00:00:00Z"
   }'`
+<<<<<<< HEAD
 <<<<<<< HEAD
     },
 <<<<<<< HEAD
@@ -728,10 +763,14 @@ export function ApiReference() {;
 =======
     },    {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    },    {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       id: "get-talent"
       method: "GET"
       path: "/api/talent"
       description: "Search for talent profiles with optional filtering"
+<<<<<<< HEAD
 <<<<<<< HEAD
       parameters: [
 <<<<<<< HEAD
@@ -789,11 +828,15 @@ export function ApiReference() {;
 =======
       parameters: [      responses: {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      parameters: [      responses: {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         "200": {
           description: "A list of talent profiles"
           example: `{
   "talent": [;
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -807,6 +850,8 @@ export function ApiReference() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       "max": 5000,;
       "currency": "USD"
 };
@@ -844,6 +889,7 @@ export function ApiReference() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
       },
@@ -875,6 +921,8 @@ export function ApiReference() {;
       requestExample: `curl -X GET \\
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   https://api.zionai.com/v1/api/talent?skills=React,Node.js&limit=10 \\
   -H "Authorization: Bearer YOUR_API_KEY"`
     }
@@ -889,6 +937,7 @@ export function ApiReference() {;
     }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -911,6 +960,9 @@ export function ApiReference() {;
 =======
 =======  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Find the active endpoint data;
   const activeEndpointData = endpoints && endpoints.find(e => e && e.id === activeEndpoint);
   return (
@@ -1151,6 +1203,7 @@ export function ApiReference() {;
         </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Endpoint details */}
 <<<<<<< HEAD
 =======
@@ -1365,6 +1418,9 @@ export function ApiReference() {;
 =======
         {/* Endpoint details */}                      language="bash"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        {/* Endpoint details */}                      language="bash"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       showLineNumbers={true}
                     />
                   </div>
@@ -1377,6 +1433,7 @@ export function ApiReference() {;
                           <span className={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${
                             status.startsWith('2') ? 'bg-green-950 text-green-500' :
                             status === '401' |status === '403' ? 'bg-orange-950 text-orange-500' :
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                             'bg-red-950 text-red-500'
@@ -1399,6 +1456,8 @@ export function ApiReference() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                     <h4 className="text-lg font-medium text-white mb-3">Example Request</h4>;
                     <CodeBlock
@@ -1426,6 +1485,7 @@ export function ApiReference() {;
                           code={response && response.example} 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                         <CodeBlock 
@@ -1439,6 +1499,8 @@ export function ApiReference() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                         
 
@@ -1461,6 +1523,7 @@ export function ApiReference() {;
                     <div className="text-center">;
                       <p className="text-zinc-400 mb-3">Interactive API tester coming soon</p>;
                       <p className="text-zinc-600 text-sm">Try the Postman collection in the meantime</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1572,6 +1635,8 @@ export function ApiReference() {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default ApiReference;
 
@@ -1582,6 +1647,7 @@ export default ApiReference;
       </div>;
     </ApiDocsLayout>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1698,12 +1764,15 @@ requestExample: `curl -X GET \\ https://api.zionai.com/v1/api/talent?skills=Reac
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default ApiReference;
 
 ;
 export default ApiReference;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -1716,3 +1785,6 @@ export default ApiReference;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

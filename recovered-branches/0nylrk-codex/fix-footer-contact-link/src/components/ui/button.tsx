@@ -3,6 +3,7 @@ import * as React from "react"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import * as React from "react"
 import {Slot} from "@radix-ui/react-slot"
@@ -19,10 +20,13 @@ import {cn} from "@/lib/utils"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -111,6 +115,8 @@ const buttonVariants = cva(;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80"
         ghost: "hover:bg-accent hover:text-accent-foreground"
@@ -130,9 +136,12 @@ export interface ButtonProps;
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     VariantProps<typeof buttonVariants> {
   asChild?: boolean
@@ -210,6 +219,7 @@ const Button = React.forward_ref < HTMLButtonElement, ButtonProps>(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -242,6 +252,8 @@ const Button = React.forwardRef<HTMLButtonElement ButtonProps>(;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
@@ -256,6 +268,7 @@ Button.displayName = "Button"
 Button && Button.displayName = "Button";
 
 export { Button, buttonVariants }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -280,11 +293,14 @@ Button.displayName = "Button"
       />);
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 );
 Button.display_name = "Button";
 export { Button, button_variants }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -391,3 +407,5 @@ export { Button, buttonVariants }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

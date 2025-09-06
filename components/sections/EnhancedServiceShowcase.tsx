@@ -1,4 +1,6 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import Button from '../ui/Button';
 interface Service {
@@ -240,6 +242,17 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
             {title}
 =======
+=======
+=======
+import React, { useState, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Star, Users, TrendingUp, DollarSign, Clock;
+  CheckCircle, ArrowRight, Zap, Shield, Rocket;
+  Brain, Globe, Lock, Code, Database, Cloud
+ } from 'lucide-react';
+import {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Star
   Users
   TrendingUp
@@ -256,6 +269,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   Code
   Database
   Cloud;
+<<<<<<< HEAD
 
   Star,
   Users,
@@ -291,6 +305,8 @@ import {;
   Code,;
   Database,;
   Cloud,;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import Button from '../ui/Button';
 interface Service {;
   id: string;
@@ -319,18 +335,47 @@ interface Service {;
   market_size: string;
   growth_rate: string;
   variant: string;
+<<<<<<< HEAD
+=======
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+    website: string
+  },
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number
+}
+
+interface EnhancedServiceShowcaseProps {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   title: string;
   subtitle: string;
   show_filters?: boolean;
   services?: Service[];
+<<<<<<< HEAD
   subtitle;
   showFilters = false;
   services = []
   maxServices = 12
+=======
+  maxServices?: number
+}
+
+const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
+  title;
+  subtitle;
+  showFilters;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('popular');
   const categories = [
+<<<<<<< HEAD
   const filteredServices = useMemo(() => {
     const filtered = services.filter(service => {
       const matchesCategory = selectedCategory === 'all' |
@@ -345,6 +390,65 @@ interface Service {;
                           (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service.price.replace(/[$]/g, '')) < 20000) |
                           (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 20000);
       return matchesCategory && matchesPrice
+=======
+    { id: 'all', name: 'All Services', icon: '🚀' },
+    { id: 'ai', name: 'AI & ML', icon: '🧠' },
+    { id: 'quantum', name: 'Quantum', icon: '⚛️' },
+    { id: 'blockchain', name: 'Blockchain', icon: '⛓️' },
+    { id: 'enterprise', name: 'Enterprise', icon: '🏢' },
+{ id: 'emerging', name: 'Emerging Tech', icon: '🌟' },
+  ];
+  const priceRanges = [
+    { id: 'all', name: 'All Prices' },
+    { id: 'low', name: 'Under $1K/month' },
+    { id: 'medium', name: '$1K - $5K/month' },
+    { id: 'high', name: '$5K - $20K/month' },
+{ id: 'premium', name: '$20K+/month' },
+  ];
+  const sortOptions = [
+    { id: 'popular', name: 'Most Popular' },
+    { id: 'rating', name: 'Highest Rated' },
+    { id: 'roi', name: 'Best ROI' },
+    { id: 'price-low', name: 'Price Low to High' },
+{ id: 'price-high', name: 'Price High to Low' },
+  ];
+  const filteredServices = useMemo(() => {
+    let filtered = services.filter(service => {
+      const matchesCategory =
+        selectedCategory === 'all' |
+        (selectedCategory === 'ai' &&
+          (service.category.includes('AI') |
+            service.category.includes('Machine Learning'))) |
+        (selectedCategory === 'quantum' &&
+          (service.category.includes('Quantum') |
+            service.category.includes('Space'))) |
+        (selectedCategory === 'blockchain' &&
+          (service.category.includes('Blockchain') |
+            service.category.includes('DeFi') |
+            service.category.includes('NFT'))) |
+        (selectedCategory === 'enterprise' &&
+          (service.category.includes('Enterprise') |
+            service.category.includes('IT'))) |
+        (selectedCategory === 'emerging' &&
+          (service.category.includes('Neural') |
+            service.category.includes('Autonomous') |
+            service.category.includes('Space') |
+            service.category.includes('Biotech')));
+      const matchesPrice =
+        selectedPriceRange === 'all' |
+        (selectedPriceRange === 'low' &&
+          parseFloat(service.price.replace(/[$]/g, '')) < 1000) |
+        (selectedPriceRange === 'medium' &&
+          parseFloat(service.price.replace(/[$]/g, '')) >= 1000 &&
+          parseFloat(service.price.replace(/[$]/g, '')) < 5000) |
+        (selectedPriceRange === 'high' &&
+          parseFloat(service.price.replace(/[$]/g, '')) >= 5000 &&
+          parseFloat(service.price.replace(/[$]/g, '')) < 20000) |
+        (selectedPriceRange === 'premium' &&
+          parseFloat(service.price.replace(/[$]/g, '')) >= 20000);
+
+      return matchesCategory && matchesPrice;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     });
     // Sort services
     switch (sortBy) {
@@ -356,6 +460,7 @@ interface Service {;
         break;
       case 'roi':
         filtered.sort((a, b) => {
+<<<<<<< HEAD
   subtitle;
   showFilters = false;
   services = [],;
@@ -445,6 +550,11 @@ interface Service {;
           const aROI = parseInt(a && a.roi.match(/\d+/)?.[0] || '0');
           const bROI = parseInt(b && b.roi.match(/\d+/)?.[0] || '0');
           return bROI - aROI;
+=======
+          const aROI = parseInt(a.roi.match(/\d+/)?.[0] || '0');
+          const bROI = parseInt(b.roi.match(/\d+/)?.[0] || '0');
+return bROI - aROI;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         });
         break;
       case 'price-low':;
@@ -604,6 +714,7 @@ interface Service {;
     <section className='py-20 px-4 sm:px-6 lg:px-8'>;
       <div className='max-w-7xl mx-auto'>;
         {/* Header */}
+<<<<<<< HEAD
         <div className='text-center mb-16'>          <motion&& motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -625,11 +736,17 @@ interface Service {;
       <div className="max-w-7xl mx-auto">;
         {/* Header */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="text-center mb-16">
+=======
+=======
+        <div className='text-center mb-16'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
             className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'            className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6"
           >
 
@@ -639,13 +756,18 @@ interface Service {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'
+          >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {title}
           </motion && motion.h2>;
           <motion&& motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
+className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'
           >
             {subtitle}
           </motion.p>
@@ -701,11 +823,15 @@ interface Service {;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
+<<<<<<< HEAD
             className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             {stats.map((stat, index) => (
               <div key={index} className='text-center'>
@@ -715,6 +841,7 @@ interface Service {;
                 <div className='text-2xl font-bold text-white'>
                   {stat.value}
                 </div>
+<<<<<<< HEAD
                 <div className='text-sm text-gray-400'>{stat.label}</div>              </div>          >
             {stats.map((stat, index) => (
 <<<<<<< HEAD
@@ -727,6 +854,9 @@ interface Service {;
                 </div>
                 <div className="text-2xl font-bold text-white">{stat.value}</div>
                 <div className="text-sm text-gray-400">{stat.label}</div>
+=======
+                <div className='text-sm text-gray-400'>{stat.label}</div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>
 
 <<<<<<< HEAD
@@ -744,6 +874,7 @@ interface Service {;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             transition={{ duration: 0.8, delay: 0.6 }}
 =======
             className='mb-12'
@@ -755,6 +886,13 @@ interface Service {;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+=======
+            transition={{ duration: 0.8, delay: 0.6 }}
+className='mb-12'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <div className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
@@ -766,6 +904,7 @@ interface Service {;
                   <select
                     value={selectedCategory}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     onChange={e => setSelectedCategory(e.target.value)}
                     className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                   >
@@ -773,11 +912,14 @@ interface Service {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {/* Category Filter */}
                 <div>;
                   <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Category">Category</label>;
                   <select
                     value={selectedCategory}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     onChange={(e) => setSelectedCategory(e.target.value)}
                     className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -797,6 +939,15 @@ interface Service {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                    onChange={e => setSelectedCategory(e.target.value)}
+                    className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                  >
+                    {categories.map(category => (
+                      <option key={category.id} value={category.id}>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         {category.icon} {category.name}
                       </option>
                     ))}
@@ -820,7 +971,7 @@ interface Service {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 {/* Price Range Filter */}
                 <div>
-                  <label className='block text-sm font-medium text-gray-300 mb-3'>
+<label className='block text-sm font-medium text-gray-300 mb-3'>
                     Price Range
                   </label>
                   <select
@@ -828,12 +979,7 @@ interface Service {;
                     onChange={e => setSelectedPriceRange(e.target.value)}
                     className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                   >
-                    {priceRanges.map(range => (                      <option key={range.id} value={range.id}>                  <select
-                    value={selectedPriceRange}
-                    onChange={(e) => setSelectedPriceRange(e.target.value)}
-                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
-                    {priceRanges.map((range) => (
+                    {priceRanges.map(range => (
                       <option key={range.id} value={range.id}>
                     {priceRanges.map(range => (                      <option key={range.id} value={range.id}>
 
@@ -866,7 +1012,7 @@ interface Service {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 {/* Sort Options */}
                 <div>
-                  <label className='block text-sm font-medium text-gray-300 mb-3'>
+<label className='block text-sm font-medium text-gray-300 mb-3'>
                     Sort By
                   </label>
                   <select
@@ -874,12 +1020,7 @@ interface Service {;
                     onChange={e => setSortBy(e.target.value)}
                     className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                   >
-                    {sortOptions.map(option => (                      <option key={option.id} value={option.id}>                  <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
-                    {sortOptions.map((option) => (
+                    {sortOptions.map(option => (
                       <option key={option.id} value={option.id}>
                     {sortOptions.map(option => (                      <option key={option.id} value={option.id}>
 
@@ -962,6 +1103,7 @@ interface Service {;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.8 }}
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -970,6 +1112,13 @@ interface Service {;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+=======
+          transition={{ duration: 0.8, delay: 0.8 }}
+className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         >
           <AnimatePresence>
             {filteredServices.map((service, index) => (
@@ -990,14 +1139,22 @@ interface Service {;
                 whileInView={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                whileHover={{ y: -5, scale: 1.02 }}
+className='group'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div className='relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full'>
                   {/* Popular Badge */}
                   {service.popular && (
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      ⭐ Most Popular              >
                 <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full">
@@ -1009,8 +1166,13 @@ interface Service {;
                   )}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      ⭐ Most Popular
 
+=======
+                    <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       ⭐ Most Popular
 
 <<<<<<< HEAD
@@ -1027,13 +1189,22 @@ interface Service {;
 
                   {/* Header */}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div className='mb-6'>
+=======
+=======
+<div className='mb-6'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <div className='flex items-center justify-between mb-4'>
                       <div className='text-3xl'>{service.icon}</div>
                       <div className='text-right'>
                         <div className='text-2xl font-bold text-white'>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           {service.price}
                         </div>;
                         <div className='text - sm text - gray - 400'>;
@@ -1115,12 +1286,18 @@ interface Service {;
                       {service.name}
                     </h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}
 
+=======
+                    <p className='text-gray-300 text-sm leading-relaxed'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       {service.tagline}
 
 <<<<<<< HEAD
@@ -1162,7 +1339,7 @@ interface Service {;
                     </p>
                   </div>
                   {/* Features */}
-                  <div className='mb-6'>
+<div className='mb-6'>
                     <h4 className='text-sm font-semibold text-gray-300 mb-3 flex items-center'>
                       <CheckCircle className='w-4 h-4 mr-2 text-green-400' />
 <<<<<<< HEAD
@@ -1171,11 +1348,21 @@ interface Service {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       Key Features
                     </h4>
+<<<<<<< HEAD
                     <ul className="space-y-2">
                       {service.features.slice(0, 4).map((feature, idx) => (
                         <li key={idx} className="text-sm text-gray-400 flex items-start">
                           <span className="text-cyan-400 mr-2">•</span>
 
+=======
+                    <ul className='space-y-2'>
+                      {service.features.slice(0, 4).map((feature, idx) => (
+                        <li
+                          key={idx}
+                          className='text-sm text-gray-400 flex items-start'
+                        >
+                          <span className='text-cyan-400 mr-2'>•</span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                           {feature}
                         </li>;
                       ))}
@@ -1186,9 +1373,16 @@ interface Service {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
                   {/* Stats */}
+<<<<<<< HEAD
                   <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+<div className='grid grid-cols-3 gap-4 mb-6 text-center'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <div>
                       <div className='text-lg font-bold text-white'>
                         {service.rating}
@@ -1205,6 +1399,7 @@ interface Service {;
                       <div className='text-lg font-bold text-white'>
                         {service.trialDays}
                       </div>
+<<<<<<< HEAD
                       <div className='text-xs text-gray-400'>Trial Days</div>                    </div>
                   </div>
                   {/* ROI Highlight */}                    <div>
@@ -1241,12 +1436,24 @@ interface Service {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+=======
+                      <div className='text-xs text-gray-400'>Trial Days</div>
+                    </div>
+                  </div>
+                  {/* ROI Highlight */}
+<div className='mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20'>
+                    <div className='text-sm text-green-400 font-semibold mb-1'>
+                      🚀 ROI Promise
+                    </div>
+                    <div className='text-xs text-gray-300 leading-relaxed'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       {service.roi}
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     </div>
                   </div>
                   {/* Market Position */}
+<<<<<<< HEAD
 
                   <div className="mb-6 p-4 bg-gray-800/30 rounded-lg">
 
@@ -1353,6 +1560,30 @@ interface Service {;
                   {/* Contact Info */}
                   <div className='mt-4 text-center'>;
                     <div className='text-xs text-gray-500'>;
+=======
+<div className='mb-6 p-4 bg-gray-800/30 rounded-lg'>
+                    <div className='text-sm text-cyan-400 font-semibold mb-2'>
+                      📊 Market Position
+                    </div>
+                    <div className='text-xs text-gray-300 leading-relaxed'>
+                      {service.marketPosition}
+                    </div>
+                  </div>
+                  {/* CTA */}
+<div className='mt-auto'>
+                    <Button
+                      href={service.link}
+                      variant='primary'
+                      className='w-full group-hover:bg-cyan-500 transition-colors'
+                    >
+                      Get Started
+                      <ArrowRight className='ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform' />
+                    </Button>
+                  </div>
+                  {/* Contact Info */}
+<div className='mt-4 text-center'>
+                    <div className='text-xs text-gray-500'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       Contact:{' '}
                       <span className='text-cyan-400'>;
                         {service && service.contactInfo.mobile}
@@ -1360,6 +1591,7 @@ interface Service {;
                     </div>;
                     <div className='text-xs text-gray-500'>;
                       Email:{' '}
+<<<<<<< HEAD
                       <span className='text-cyan-400'>;
                         {service && service.contactInfo.email}
                       </span>                    </div>                  <div className="mt-4 text-center">;
@@ -1417,17 +1649,38 @@ interface Service {;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+                      <span className='text-cyan-400'>
+                        {service.contactInfo.email}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           transition={{ duration: 0.8, delay: 1.0 }}
           className='text-center mt-16'
 
+=======
+=======
+          transition={{ duration: 0.8, delay: 1.0 }}
+className='text-center mt-16'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         >
           <div className='bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1439,11 +1692,15 @@ interface Service {;
               started today and see the future of business technology.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <Button
                 href='/contact'
                 variant='primary'
@@ -1471,6 +1728,7 @@ interface Service {;
               <p>;
                 🌐 Visit:{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <span className='text-cyan-400'>https://ziontechgroup.com</span>
               </p>            </div>            <div className="mt-6 text-sm text-gray-400">
               <p>📞 Call us: <span className="text-cyan-400">+1 302 464 0950</span></p>
@@ -1487,6 +1745,8 @@ export default EnhancedServiceShowcase;  )
 export default EnhancedServiceShowcase;
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <span className='text-cyan-400'>https://ziontechgroup && ziontechgroup.com</span>;
               </p>            </div>            <div className="mt-6 text-sm text-gray-400">;
               <p>📞 Call us: <span className="text-cyan-400">+1 302 464 0950</span></p>;
@@ -1690,6 +1950,7 @@ export default EnhancedServiceShowcase;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1700,3 +1961,18 @@ export default EnhancedServiceShowcase;
 };
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+                <span className='text-cyan-400'>https://ziontechgroup.com</span>
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+);
+};
+
+export default EnhancedServiceShowcase;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

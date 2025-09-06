@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -23,6 +24,10 @@ import {CountryPricing} from "@/data/onsiteServicePricing";
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",
 import { Search } from "lucide-react",
 import { Input } from "@/components/ui/input",
@@ -32,6 +37,7 @@ import { CountryServiceCard } from "@/components/services/CountryServiceCard";
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceCard } from "@/components/services/CountryServiceCard",
 import { CountryPricing } from "@/data/onsiteServicePricing",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -95,6 +101,9 @@ export function CountryTabs({
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }: CountryTabsProps) {
   return (
     <Tabs defaultValue="featured" className="w-full">
@@ -116,6 +125,7 @@ export function CountryTabs({
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCountries
             .filter(country => popularCountries.includes(country.country))
+<<<<<<< HEAD
 <<<<<<< HEAD
             .map(country => (
 <<<<<<< HEAD
@@ -200,6 +210,9 @@ export function CountryTabs({ ;
 =======
             .map(country => (  filteredCountries, ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            .map(country => (  filteredCountries, ;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   handleCountrySelect, ;
   searchQuery, ;
   setSearchQuery ;    <Tabs defaultValue="featured" className="w-full">;
@@ -222,6 +235,7 @@ export function CountryTabs({ ;
           {filteredCountries;
             .filter(country => popularCountries && popularCountries.includes(country && country.country));
 <<<<<<< HEAD
+<<<<<<< HEAD
             .map(country => (;
 <<<<<<< HEAD
               <CountryServiceCard;
@@ -242,10 +256,18 @@ export function CountryTabs({ ;
                 country={country} 
 
 =======
+=======
+            .map(country => (;              <CountryServiceCard
+                key={country && country.country} 
+                country={country} 
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <CountryServiceCard 
                 key={country.country} 
                 country={country} 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -351,6 +373,11 @@ export function CountryTabs({ ;
           <div className="relative">;
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;              onSelect={handleCountrySelect}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        <div className="mb-6 max-w-md mx-auto">;
+          <div className="relative">;
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;              onSelect={handleCountrySelect}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               isPopular={popularCountries && popularCountries.includes(country && country.country)}
             />;
           ))}

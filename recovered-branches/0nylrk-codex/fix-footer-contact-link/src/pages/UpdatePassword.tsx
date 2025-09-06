@@ -64,6 +64,7 @@ import { toast } from "@/hooks/use-toast",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { cleanupAuthState } from "@/utils/authUtils",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -157,6 +158,9 @@ export default function UpdatePassword() {
 =======
 import { cleanupAuthState } from "@/utils/authUtils",  // Initialize react-hook-form
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { cleanupAuthState } from "@/utils/authUtils",  // Initialize react-hook-form
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const form = useForm<UpdatePasswordFormValues>({
     resolver: zodResolver(updatePasswordSchema)
     defaultValues: {
@@ -164,6 +168,7 @@ import { cleanupAuthState } from "@/utils/authUtils",  // Initialize react-hook-
       confirmPassword: ""}})
   useEffect(() => {
     // Extract access token from URL hash
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -215,6 +220,20 @@ import { cleanupAuthState } from "@/utils/authUtils",  // Initialize react-hook-
 =======    } else {
       set_error ("No access token found. Please request a new password reset link.");
     }
+=======
+    } else {
+      setError("No access token found. Please request a new password reset link.")
+    }
+    const hashParams = new URLSearchParams(location.hash.substring(1)),
+    const token = hashParams.get("access_token"),
+    
+
+    if (token) {
+      setAccessToken(token)
+=======    } else {
+      set_error ("No access token found. Please request a new password reset link.");
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   }, [location]),
 
@@ -228,6 +247,7 @@ import { cleanupAuthState } from "@/utils/authUtils",  // Initialize react-hook-
     // Extract access token from URL hash;
     const hashParams = new URLSearchParams(location && location.hash.substring(1));
     const token = hashParams && hashParams.get("access_token");
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -339,6 +359,8 @@ export default function UpdatePassword() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try {
       // Set the session with the access token
       await supabase.auth.setSession({
@@ -461,6 +483,7 @@ export default function UpdatePassword() {;
   }, [location]),;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -483,6 +506,8 @@ export default function UpdatePassword() {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     }
 
@@ -546,6 +571,7 @@ export default function UpdatePassword() {;
             <div className="bg-zion-blue-dark rounded-lg p-6">;
               {error && (;
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <p className="text-sm">{error}</p>;
 <<<<<<< HEAD
@@ -657,6 +683,11 @@ export default function UpdatePassword() {;
                       control={form && form.control}
                       name="password"                    <FormField
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  <p className="text-sm">{error}</p>;                    <FormField
+                      control={form && form.control}
+                      name="password"                    <FormField
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       control={form && form.control}
                       name="password"
                       render={({ field }) => (;
@@ -708,6 +739,7 @@ export default function UpdatePassword() {;
                       )}
 
                     />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -810,6 +842,8 @@ export default function UpdatePassword() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Clean up auth state to prevent issues;
     cleanupAuthState ();
   }, [location]);
@@ -960,6 +994,7 @@ if ( {) {
                       </Button>;
                     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </form>;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -980,6 +1015,9 @@ if ( {) {
 =======
                   </form>;                      name="confirmPassword";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  </form>;                      name="confirmPassword";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       render={({ field }) => (;
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>;
@@ -998,6 +1036,7 @@ if ( {) {
                   </form>
                 </Form>
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             </div>
@@ -1043,10 +1082,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">;
             <div className="flex flex-col justify-center items-center h-full px-8">;
               <div className="max-w-md text-center">;
                 <h3 className="text-3xl font-bold text-white mb-4">Password Recovery</h3>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <p className="text-lg text-white/80">;
 <<<<<<< HEAD
@@ -1098,6 +1140,9 @@ if ( {) {
 =======
                 <p className="text-lg text-white/80">;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                <p className="text-lg text-white/80">;}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </>);
     </>;
   ); import {
@@ -1155,6 +1200,7 @@ flex min-h-screen bg-zion-blue"> <div className=" flex-1 flex flex-col justify-c
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1167,3 +1213,5 @@ flex min-h-screen bg-zion-blue"> <div className=" flex-1 flex flex-col justify-c
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api/auth/verify-evm.ts
 <<<<<<< HEAD
 =======
@@ -13,12 +14,27 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/auth/verify-evm.ts
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/auth/verify-evm.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import jwt from "jsonwebtoken";
 import { ethers } from "ethers";
 const JWT_SECRET = process.env.JWT_SECRET |"dev-secret-change-me";
+<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 export default async function handler(;
   req: NextApiRequest;
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import jwt from 'jsonwebtoken';
+import { ethers } from 'ethers';
+const JWT_SECRET = null;
+    return res.status(200).json({ ok: true })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+export default async function handler(
+  req: NextApiRequest
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/auth/verify-evm.ts
   res: NextApiResponse
 ) {;
   req: NextApiRequest;
@@ -128,8 +144,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       "Set-Cookie"
       `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`
     );
+<<<<<<< HEAD
     return res && res.status(200).json({ ok: true });
+<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api/auth/verify-evm.ts
+=======
+=======
+    return res.status(200).json({ ok: true });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/auth/verify-evm.ts
   } catch (e: any) {
 <<<<<<< HEAD
 =======
@@ -145,6 +168,11 @@ export default async function handler(req, res) {;
 
   }
 <<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
+<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/auth/verify-evm.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 =======
@@ -290,8 +318,16 @@ export default async function handler(req, res) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 =======
   }
 }
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/auth/verify-evm.ts
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/auth/verify-evm.ts

@@ -7,6 +7,7 @@ import {format} from 'date-fns';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -28,6 +29,8 @@ interface WorkExperienceSectionProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { WorkExperience  } from '@/types/resume';
 import { format } from 'date-fns';
 import {WorkExperience} from '@/types/resume';
@@ -57,6 +60,7 @@ interface WorkExperienceSectionProps {
   const sortedWorkExperience = [...workExperience].sort((a, b) => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -69,6 +73,8 @@ interface WorkExperienceSectionProps {
     if (a.is_current && !b.is_current) return -1;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
@@ -77,6 +83,7 @@ interface WorkExperienceSectionProps {
   const formatDate = (date: Date | string | undefined) => {
     if (!date) return ''
     if (typeof date === 'string') {
+<<<<<<< HEAD
 <<<<<<< HEAD
       return format(new Date(date), 'MMM yyyy')
 <<<<<<< HEAD
@@ -104,6 +111,9 @@ import { WorkExperience } from '@/types/resume',;
 =======
       return format(new Date(date), 'MMM yyyy')import { WorkExperience } from '@/types/resume',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      return format(new Date(date), 'MMM yyyy')import { WorkExperience } from '@/types/resume',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { format } from 'date-fns',;
 interface WorkExperienceSectionProps {;
   workExperience: WorkExperience[];
@@ -121,6 +131,7 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
   const formatDate = (date: Date | string | undefined) => {;
     if (!date) return '',;
     if (typeof date === 'string') {;
+<<<<<<< HEAD
 <<<<<<< HEAD
       return format(new Date(date), 'MMM yyyy');
 <<<<<<< HEAD
@@ -354,3 +365,9 @@ if (return null) {
   }
   if (sortedWorkExperience.length === 0) return null;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      return format(new Date(date), 'MMM yyyy');    }
+    return format(date, 'MMM yyyy')
+  }
+  if (sortedWorkExperience.length === 0) return null;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

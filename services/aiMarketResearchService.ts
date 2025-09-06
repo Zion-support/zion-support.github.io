@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,6 +12,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface MarketTrend {
 export interface MarketTrend {;
   id: string;
@@ -20,8 +23,11 @@ export interface MarketTrend {;
   growthRate: number;
   relatedKeywords: string[];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export interface MarketTrend {
   id: string;
@@ -31,6 +37,7 @@ export interface MarketTrend {
   related_keywords: string[];
   market_opportunity: 'high' | 'medium' | 'low',
   timestamp: Date;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -319,6 +326,18 @@ export interface MarketResearchRequest {  success: boolean;
     trends?: MarketTrend[];
     competitors?: CompetitorAnalysis[];  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  size: number;
+
+export interface MarketReport {  title: string;
+  industry: string;
+  summary: string;
+}
+export interface MarketResearchRequest {  success: boolean;
+  data: {
+    trends?: MarketTrend[];
+    competitors?: CompetitorAnalysis[];  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[]> {
     try {
 
@@ -479,6 +498,7 @@ export interface MarketResearchRequest {  success: boolean;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   private apiKey: string;
@@ -502,6 +522,9 @@ export interface MarketTrend {;
 =======
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY |'demo-key');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY |'demo-key');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string,;
   keyword: string,;
   searchVolume: number,;
@@ -568,6 +591,7 @@ export interface MarketResearchResponse {;
     trends?: MarketTrend[],;
     competitors?: CompetitorAnalysis[],;
     segments?: MarketSegment[],;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -776,6 +800,11 @@ export const aiMarketResearchService = new AIMarketResearchService(process.env.M
 export interface MarketTrend {;
 
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
+=======
+export interface MarketTrend {;
+
+export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface MarketTrend {;
   id:string,;
   keyword:string,;
@@ -1013,6 +1042,7 @@ export class AIMarketResearchService {;
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
@@ -1024,3 +1054,5 @@ export const aiMarketResearchService = new AIMarketResearchService(process.env.M
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
   FormField
@@ -25,6 +26,8 @@ import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   FormField,
 
   FormField,
@@ -34,8 +37,11 @@ FormField,
   FormMessage,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 } from '@/components / ui / form';
 import { Input  } from '@/components / ui / input';
 import { UseFormReturn  } from './react - hook - form';
@@ -57,6 +63,7 @@ interface PersonalInfoFieldsProps {
 
 =======
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -119,6 +126,8 @@ interface PersonalInfoFieldsProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {UseFormReturn} from "react-hook-form";
@@ -315,6 +324,7 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -324,3 +334,6 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

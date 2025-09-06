@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -17,11 +18,16 @@ import {MobileProjectView} from "../components/projects/MobileProjectView";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation";
 import { MobileProjectView } from "../components/projects/MobileProjectView";
 import { BottomNavigation } from "../components/common/BottomNavigation",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { MobileProjectView } from "../components/projects/MobileProjectView",
 <<<<<<< HEAD
@@ -73,6 +79,9 @@ const milestonesData = [;
 =======
 import { MobileProjectView } from "../components/projects/MobileProjectView",const milestonesData = [;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { MobileProjectView } from "../components/projects/MobileProjectView",const milestonesData = [;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   {;
     id: "milestone-1",;
     title: "Initial Design Concepts",;
@@ -116,6 +125,7 @@ const milestonesData = [
     paymentStatus: "pending" as const,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -147,6 +157,8 @@ export function MobileProjects() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -197,6 +209,7 @@ export function MobileProjects() {;
         <MobileProjectView 
           project={projectData} 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -205,6 +218,8 @@ export function MobileProjects() {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           milestones={milestonesData}
@@ -213,6 +228,7 @@ export function MobileProjects() {;
       <BottomNavigation />
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -232,6 +248,8 @@ export function MobileProjects() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       />;
 
       <main className="py-4">;
@@ -324,6 +342,7 @@ export function MobileProjects() {;
 };
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -331,3 +350,6 @@ export function MobileProjects() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

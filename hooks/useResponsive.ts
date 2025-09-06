@@ -17,6 +17,7 @@ export const useResponsive = (): ResponsiveState => {
     height: 0,
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -50,12 +51,15 @@ const defaultBreakpoints: Breakpoints = {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     updateDimensions(),;
     window && window.addEventListener(;
   'resize', updateDimensions),;
     return () => window && window.removeEventListener(;
   'resize', updateDimensions)}, []),;
   return state},;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default useResponsive,;import { useState, useEffect } from 'react';
 <<<<<<< HEAD
@@ -297,3 +301,6 @@ const defaultBreakpoints: Breakpoints = {
 =======
 export default useResponsive,;import { useState, useEffect } from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export default useResponsive,;import { useState, useEffect } from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

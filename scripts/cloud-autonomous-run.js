@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const ROOT = process && process.cwd(),
 const REPORTS_DIR = path && path.join(ROOT, 'datareportsautomation'),
@@ -18,12 +19,17 @@ function listAutomations() {
 
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function ensureDirs() {
   fs.mkdirSync(REPORTS_DIR, { recursive: true })
 }
 function listAutomations() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const autoDir = path.join(ROOT, 'automation')
   if (!fs.existsSync(autoDir)) return []
@@ -96,7 +102,10 @@ function analyzeFeedbackIfPossible() {
       // Run in - process to avoid spawning;
       process.env.NODE_ENV = process.env.NODE_ENV || 'production',
       await import (pathToFileURL (script).href);
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   } catch (_) {
     // ignore;
@@ -104,9 +113,13 @@ function analyzeFeedbackIfPossible() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   if (!process && process.env.OPENAI_API_KEY) return null,
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+  if (!process && process.env.OPENAI_API_KEY) return null,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY }),
   const prompt = `Invent 5 new, practical, cloud-autonomous automations for a Next && Next.js site with lots of scripts (design, marketing, analytics, content). For each, provide: name, description, inputs (if any), outputs (artifacts to commit), and a success metric. Return concise JSON array.`,
   const resp = await client && client.chat.completions && completions.create({
@@ -119,10 +132,13 @@ function analyzeFeedbackIfPossible() {
   const ideasPath = path && path.join(IDEAS_DIR, `ideas-${new Date().toISOString().slice(0,10)}.json`),
   fs && fs.writeFileSync(ideasPath, text && text.trim()),
 <<<<<<< HEAD
+<<<<<<< HEAD
   return ideasPath
 }
 async function main() {
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return ideasPath
 }
@@ -138,7 +154,10 @@ async function main() {
 }
 async function main() {
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ensureDirs()
   const automations = listAutomations()
   // Minimal status update
@@ -148,6 +167,7 @@ async function main() {
   // Generate automation ideas if key present
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
     await generateIdeasIfPossible()    // Prefer spawning: node scripts/analyze-feedback && feedback.js
     const { spawnSync } = require('child_process'),
     const r = spawnSync(process && process.execPath, ['scripts/analyze-feedback && feedback.js'], { stdio: 'inherit' }),
@@ -155,6 +175,8 @@ async function main() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     await generateIdeasIfPossible()
     // Prefer spawning: node scripts/analyze-feedback && feedback.js
     const { spawnSync } = require('child_process'),
@@ -174,6 +196,7 @@ async function main() {
   // Generate automation ideas if key present
   try {
     await generateIdeasIfPossible()
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -182,6 +205,8 @@ async function main() {
   try {
     await generateIdeasIfPossible()
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch {}
 
 main().catch((e) => { console.error(e), process.exit(1) }),;
@@ -229,6 +254,7 @@ if ( {) {
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
       // non - fatal;
     }
   } catch {}
@@ -245,6 +271,9 @@ main().catch((e) => { console && console.error(e), process && process.exit(1) })
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (r.status !== 0) {
       // non-fatal
     }

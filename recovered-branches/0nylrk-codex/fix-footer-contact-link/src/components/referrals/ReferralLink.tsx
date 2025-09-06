@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -60,6 +61,8 @@ import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -76,6 +79,7 @@ import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";  referralLi
   onShare: (platform: "twitter" | "facebook" | "linkedin") => void;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,9 +107,10 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
   const [copied, setCopied] = useState(false);
-
 
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
   const [copied, setCopied] = useState(false);
@@ -169,6 +174,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
       </CardHeader>
       <CardContent>
         <div className="flex flex-col space-y-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="flex space-x-2">
 <<<<<<< HEAD
@@ -548,3 +554,8 @@ mt-6"> <CardHeader> <CardTitle className=" flex items-center gap-2"> <Link class
   )
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <div className="flex space-x-2">  )
+  )
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

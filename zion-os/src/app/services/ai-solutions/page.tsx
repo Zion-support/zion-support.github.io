@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -206,6 +207,8 @@ export default function AISolutionsPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 "use client",
 import { useState  } from './react';,
 interface AIService {
@@ -219,6 +222,7 @@ interface AIService {
   contact_link: string,
   icon: string,
   features: string[],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -242,6 +246,9 @@ interface AIService {id: string;
 =======
 =======  integration: string[];
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======  integration: string[];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 const ai_services: AIService[] = [;
   {
@@ -414,10 +421,13 @@ const ai_services: AIService[] = [;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ],
 export default /**
  * AISolutionsPage - Function description
@@ -425,6 +435,7 @@ export default /**
 function AISolutionsPage() {
   const [selected_service, setSelectedService] = useState < string | null>(null);
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="space - y-8">;
 =======
@@ -638,6 +649,11 @@ export default function AISolutionsPage() {;
     <div className="space-y-8">;  return (;
     <div className="space-y-8">;
       {/* Header */}
+=======
+    <div className="space-y-8">;  return (;
+    <div className="space-y-8">;
+      {/* Header */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="text - center space-y-4">;
         <h1 className="text - 4xl font-bold">AI Solutions & Services</h1>;
         <p className="text - xl opacity - 80 max - w-3xl mx-auto">;
@@ -647,6 +663,7 @@ export default function AISolutionsPage() {;
         </p>;
       </div>;
       {/* AI Services Grid */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
         {aiServices.map(service => (;
@@ -687,6 +704,23 @@ export default function AISolutionsPage() {;
             </div>;
             {/* Features */}
             <div>;
+=======
+      <div className="grid grid - cols - 1 lg:grid - cols - 2 gap-8">;
+        {ai_services.map (service => (
+          <div;
+            key={service.id}
+            className="rounded - lg border border - white / 10 bg - white / 5 p - 6 space-y-6";
+          >;
+            {/* Service Header */}
+            <div className="text - center space-y-3">;
+              <div className="text-4xl">{service.icon}</div>;
+              <h2 className="text - 2xl font-bold">{service.name}</h2>;
+              <p className="opacity-80">{service.description}</p>;
+              <div className="text - 2xl font - bold text - blue-400">{service.pricing}</div>;
+            </div>;
+            {/* Features */}
+            <div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h3 className="font - semibold mb - 3 text - blue-400">Key Features</h3>;
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
                 {service.features.map ((feature, index) => (
@@ -700,6 +734,7 @@ export default function AISolutionsPage() {;
             {/* Technical Specifications */}
             <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h3 className="font-semibold mb-3 text-purple-400">Technical Specifications</h3>;
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">;
                 {service.technicalSpecs.map((spec, index) => (;
@@ -709,6 +744,8 @@ export default function AISolutionsPage() {;
                   </div>;
                 ))}
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h3 className="font - semibold mb - 3 text - purple-400">Technical Specifications</h3>;
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
                 {service.technical_specs.map ((spec, index) => (
@@ -722,6 +759,7 @@ export default function AISolutionsPage() {;
             {/* Use Cases */}
             <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h3 className="font-semibold mb-3 text-green-400">Use Cases</h3>;
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">;
                 {service.useCases.map((useCase, index) => (;
@@ -731,6 +769,8 @@ export default function AISolutionsPage() {;
                   </div>;
                 ))}
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h3 className="font - semibold mb - 3 text - green-400">Use Cases</h3>;
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
                 {service.use_cases.map ((use_case, index) => (
@@ -743,6 +783,7 @@ export default function AISolutionsPage() {;
             </div>;
             {/* Integration */}
             <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h3 className="font-semibold mb-3 text-orange-400">Integration Options</h3>;
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">;
@@ -760,6 +801,8 @@ export default function AISolutionsPage() {;
                 href={service.contactLink}
                 className="w-full block text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold";
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h3 className="font - semibold mb - 3 text - orange-400">Integration Options</h3>;
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
                 {service.integration.map ((integration, index) => (
@@ -774,7 +817,10 @@ export default function AISolutionsPage() {;
               <a;
                 href={service.contact_link}
                 className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font-semibold";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >;
                 Get Started;
               </a>;
@@ -785,7 +831,10 @@ export default function AISolutionsPage() {;
 =======
                 href={`https://ziontechgroup.com / services/${service.id}`}
                 className="w - full block text - center text - blue - 400 hover:text - blue - 300 text-sm underline";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >;
                 Learn More;
               </a>;
@@ -833,11 +882,15 @@ export default function AISolutionsPage() {;
             <div className="text - 3xl mb-3">📈</div>;
             <h3 className="font - semibold mb-2">Predictive Analytics</h3>;
             <p className="text - sm opacity-80">Machine learning models for forecasting, trend analysis, and decision support</p>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>;
         </div>;
       </div>;
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="text-center space-y-6 py-12 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-lg border border-white/10">;
         <h2 className="text-3xl font-bold">Ready to Harness the Power of AI?</h2>;
@@ -856,21 +909,36 @@ export default function AISolutionsPage() {;
           Let's discuss how our AI solutions can transform your business operations and drive innovation.;
           Get in touch for a personalized AI strategy consultation.;
         </p>;
+=======
+      <div className="text - center space - y-6 py - 12 bg - gradient - to - r from - blue - 600 / 10 to - purple - 600 / 10 rounded - lg border border-white / 10">;
+        <h2 className="text - 3xl font-bold">Ready to Harness the Power of AI?</h2>;
+        <p className="text - xl opacity - 80 max - w-2xl mx-auto">;
+          Let's discuss how our AI solutions can transform your business operations and drive innovation.;
+          Get in touch for a personalized AI strategy consultation.;
+        </p>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="flex flex - col sm:flex - row gap - 4 justify-center">;
           <a;
             href="mailto:kleber@ziontechgroup.com?subject = AI%20Solutions%20Consultation";
             className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold text-lg";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >;
             Schedule AI Consultation;
           </a>;
           <a;
             href="tel:+13024640950";
 <<<<<<< HEAD
+<<<<<<< HEAD
             className="border border-white/20 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all font-semibold text-lg";
 =======
             className="border border - white / 20 text - white px - 8 py - 3 rounded - lg hover:bg - white / 10 transition - all font - semibold text-lg";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            className="border border - white / 20 text - white px - 8 py - 3 rounded - lg hover:bg - white / 10 transition - all font - semibold text-lg";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >;
             Call: +1 302 464 0950;
           </a>;
@@ -881,10 +949,14 @@ export default function AISolutionsPage() {;
         <a;
           href="/services";
 <<<<<<< HEAD
+<<<<<<< HEAD
           className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover: bg-white/10 transition-all font-semibold";
 =======
           className="inline - block px - 6 py - 3 rounded - lg border border - white / 20 text - white hover: bg - white / 10 transition - all font-semibold";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          className="inline - block px - 6 py - 3 rounded - lg border border - white / 20 text - white hover: bg - white / 10 transition - all font-semibold";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         >;
           ← Back to All Services;
         </a>;

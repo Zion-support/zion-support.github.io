@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,10 +14,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -30,6 +34,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function ReferralGuide() {
 
   const steps = [import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -49,6 +55,7 @@ export function ReferralGuide() {
     {
       title: "Share your referral link"
       description: "Copy your unique referral link and share it with potential clients or talent"}
+<<<<<<< HEAD
 <<<<<<< HEAD
     {
 <<<<<<< HEAD
@@ -96,10 +103,16 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
       title: "You earn rewards"
       description: "Rewards are issued based on the type of user who completes onboarding"}]      title: "They sign up"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    {    {
+      title: "You earn rewards"
+      description: "Rewards are issued based on the type of user who completes onboarding"}]      title: "They sign up"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       description: "When someone clicks your link and creates an account, they're tagged as your referral"}
     {
       title: "They complete onboarding"
       description: "Once they complete their profile setup, your referral is confirmed"}
+<<<<<<< HEAD
 <<<<<<< HEAD
       title: "They sign up",;
       description: "When someone clicks your link and creates an account, they're tagged as your referral"};
@@ -113,6 +126,10 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 
       title: "They sign up",;
       description: "When someone clicks your link and creates an account, they're tagged as your referral"};
+=======
+      title: "They sign up",,
+  description: "When someone clicks your link and creates an account, they're tagged as your referral"};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -152,6 +169,7 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -175,12 +193,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function ReferralGuide() {;
   const steps = [;
     {;
       title: "Share your referral link",,
   description: "Copy your unique referral link and share it with potential clients or talent"},;
     {;
+<<<<<<< HEAD
 <<<<<<< HEAD
       title: "They sign up",;
 <<<<<<< HEAD
@@ -267,6 +288,9 @@ export function ReferralGuide() {;
 =======
       title: "They sign up",;}}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      title: "They sign up",;}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
                 {index + 1}
               </div>;
@@ -282,6 +306,7 @@ export function ReferralGuide() {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 =======
@@ -289,6 +314,8 @@ export function ReferralGuide() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       title: "They sign up",
       description: "When someone clicks your link and creates an account, they're tagged as your referral"}
     {
@@ -318,6 +345,7 @@ export function ReferralGuide() {;
         </div>;
       </CardContent>;
     </Card>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -359,3 +387,6 @@ export function ReferralGuide() {;
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

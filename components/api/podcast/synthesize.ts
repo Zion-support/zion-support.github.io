@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import axios from 'axios';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EPISODES_PATH = path && path.join(
   process && process.cwd(),
   'data',
@@ -23,12 +24,35 @@ function ensureStorage() {
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+=======
+const EPISODES_PATH = null;
+    return res.status(500).json({ error: error?.message || 'Synthesis failed' })
+};
+const EPISODES_PATH = path.join(
+  process.cwd()
+  'data'
+  'podcast'
+  'episodes.json'
+);
+const PUBLIC_DIR = path.join(process.cwd(), 'public', 'podcast');
+
+function ensureStorage() {
+  const dir = path.dirname(EPISODES_PATH);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+if (!fs.existsSync(EPISODES_PATH))
+    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
+  if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
 <<<<<<< HEAD
 
+<<<<<<< HEAD
   if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true })
 }
 
@@ -42,6 +66,8 @@ export default async function handler(
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { episodeId } = req && req.body || {};
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const idx = episodes && episodes.findIndex(e => e && e.id === episodeId);  if (idx === -1) return res && res.status(404).json({ error: 'Episode not found' });  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8');
@@ -56,6 +82,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const idx = episodes && episodes.findIndex(e => e && e.id === episodeId);  const idx = episodes && episodes.findIndex((e) => e && e.id === episodeId);
   if (idx === -1) return res && res.status(404).json({ error: 'Episode not found' });
 
+<<<<<<< HEAD
+=======
+=======
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });
+  ensureStorage();
+  const { episodeId } = req.body |{}
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+const idx = episodes.findIndex(e => e.id === episodeId);
+  if (idx === -1) return res.status(404).json({ error: 'Episode not found' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const episode = episodes[idx];
   const text = episode && episode.transcript as string;
 
@@ -70,6 +108,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   let mp3Created = false;
   try {
     if (elevenKey) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      const voiceId = process.env.ELEVENLABS_VOICE_ID |'21m00Tcm4TlvDq8ikWAM';
+      const resp = await axios.post(
+`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {
           text,
           model_id: process && process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2',
@@ -92,6 +139,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     if (mp3Created) {
       // Simple placeholders for WAV/MP4; real conversion would use ffmpeg
+<<<<<<< HEAD
     const publicBase = '/podcast/' + baseFilename;
     episode && episode.audio = {      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path))
     }
@@ -100,26 +148,59 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     episode && episode.audio = {
       mp3Url: publicBase + '.mp3',
+=======
+<<<<<<< HEAD
+    const publicBase = '/podcast/' + baseFilename;
+    episode && episode.audio = {      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path))
+=======
+      fs.writeFileSync(wavPath, fs.readFileSync(mp3Path));
+      fs.writeFileSync(mp4Path, fs.readFileSync(mp3Path));
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    }
+
+    const publicBase = '/podcast/' + baseFilename;
+<<<<<<< HEAD
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+    return res.status(200).json({ episode });
+=======
+    episode.audio = {
+mp3Url: publicBase + '.mp3',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       wavUrl: publicBase + '.wav',
       mp4Url: publicBase + '.mp4',
     };
 
     episodes[idx] = episode;
+<<<<<<< HEAD
 =======
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
     return res.status(200).json({ episode });
+=======
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+
+return res.status(200).json({ episode });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error: any) {
     console.error(error);
     return res
       .status(500)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       .json({ error: error?.message |'Synthesis failed' });
   }    return res.status(200).json({ episode })
   } catch (error: any) {
     console.error(error)
     return res.status(500).json({ error: error?.message |'Synthesis failed' })
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       mp3Url: publicBase + '.mp3';
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error: any) {
     console.error(error)
     return res.status(500).json({ error: error?.message |'Synthesis failed' })
@@ -132,7 +213,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           response_type: 'arraybuffer',
           headers: {
             'xi - api - key': eleven_key,
@@ -144,7 +228,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } else // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
       const resp = await axios.post (
         'https://api.play.ht / api / v2 / tts',
@@ -201,6 +288,7 @@ if ( {) {
     return res.status (500).json ({ error: error?.message || 'Synthesis failed' });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res.status(200).json({ episode })
   } catch (error: any) {
     console.error(error),
@@ -224,3 +312,13 @@ if ( {) {
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+=======
+      .json({ error: error?.message || 'Synthesis failed' });
+  }
+}
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

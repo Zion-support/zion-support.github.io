@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -21,6 +22,8 @@ import {Card, CardContent, CardFooter} from "@/components/ui/card";
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {Star} from "lucide-react";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
@@ -32,6 +35,7 @@ import React from "react",
 import { Star } from "lucide-react",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -54,12 +58,15 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const testimonials = [
   {
     name: "Alex Johnson"
     role: "AI Developer"
     text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!"
     rating: 5
+<<<<<<< HEAD
 <<<<<<< HEAD
     avatar: "/placeholder.svg"
 <<<<<<< HEAD
@@ -129,11 +136,19 @@ const testimonials = [;
     role: "Tech Recruiter"
     text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.";  {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    avatar: "/placeholder.svg"  }
+  {
+    name: "Sarah Williams"
+    role: "Tech Recruiter"
+    text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.";  {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     name: "Michael Chen"
     role: "Full Stack Developer"
     text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful."
     rating: 4
     avatar: "/placeholder.svg"
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -184,6 +199,9 @@ export const AppTestimonials: React.FC = () => {
 =======
   }                    <Star
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }                    <Star
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       key={i}
                       className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
                     />
@@ -204,7 +222,10 @@ export const AppTestimonials: React.FC = () => {
               </CardFooter>
             </Card>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import { Star } from "lucide-react",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
@@ -220,6 +241,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card",;
                     />;
                   ))}
                 </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <p className="text-gray-200 mb-6">"{testimonial && testimonial.text}"</p>;
 <<<<<<< HEAD
@@ -382,3 +404,6 @@ export const AppTestimonials: React.FC = () => {
 =======
                 <p className="text-gray-200 mb-6">"{testimonial && testimonial.text}"</p>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                <p className="text-gray-200 mb-6">"{testimonial && testimonial.text}"</p>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

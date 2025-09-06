@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react',;
 import { Milestone } from '@/hooks/useMilestones',;
@@ -156,3 +157,12 @@ export const PaymentSummary: React.FC < PaymentSummaryProps> = ({ milestones, pa
 }
 '";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React from 'react';
+import { Milestone  } from '@/hooks/useMilestones';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { CreditCard } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+import React from 'react'
+interface PaymentSummaryProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

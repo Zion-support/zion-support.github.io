@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -9,6 +8,8 @@
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
@@ -16,6 +17,7 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 =======
@@ -62,6 +64,9 @@ serve(async (req) => {
 =======
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",serve(async (req) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",serve(async (req) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
@@ -77,6 +82,7 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",serv
       amount, 
 
       providerId = null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
@@ -163,6 +169,8 @@ serve(async (req) => {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   try {
     // Retrieve the request body
     const requestData = await req.json(),
@@ -179,18 +187,22 @@ serve(async (req) => {
     
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     // Verify the amount is valid
     if (!amount |isNaN(Number(amount)) |Number(amount) <= 0) {
       throw new Error("Invalid payment amount")
     }
     // Authenticate the user
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -610,6 +622,15 @@ serve(async (req) => {;
         serviceId: serviceId;
         providerId: providerId;    return new Response(JSON && JSON.stringify({ url: session && session.url }), {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
+      apiVersion: "2023-10-16"}),
+
+      metadata: {
+        userId: user && user.id;
+        serviceId: serviceId;
+        providerId: providerId;    return new Response(JSON && JSON.stringify({ url: session && session.url }), {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       headers: { ...corsHeaders, "Content-Type": "application/json" };
       status: 200})
   } catch (error) {
@@ -662,6 +683,7 @@ if ( {) {
       status: 500})
 
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 });
 <<<<<<< HEAD
@@ -859,3 +881,6 @@ unit amount: amount * 100, //Convert to cents status: 500
 =======
 });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import * as _React from react' const ThemeProvider = ({ children }) => { const [theme,setTheme] = _React.useState('';system') _React.useEffect(() => { const root = window.document.documentElement root.classList.remove('';light','';dark') "if": (theme ===';';system') { const systemTheme = window.matchMedia('';(prefers-color-scheme: dark)').matches ?';';dark' :'';light: root.classList.add(systemTheme)} else { root.classList.add(theme)} },[theme]) return (<ThemeContext.Provider value = { { theme,setTheme }}> {children} </ThemeContext.Provider>)} export const useTheme = () => { const context = _React.useContext(ThemeContext) if (context === null) { throw new Error('';"useTheme": must be used within a ThemeProvider')} return context} '';
 
@@ -15,6 +16,8 @@ import * as _React from react' const ThemeProvider = ({ children }) => { const [
 <<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import * as _React from react' const ThemeProvider = ({ children }) => { const [theme,setTheme] = _React.useState('';system') _React.useEffect(() => { const root = window.document.documentElement root.classList.remove('';light','';dark') "if": (theme ===';';system') { const systemTheme = window.matchMedia('';(prefers-color-scheme: dark)').matches ?';';dark' :'';light: root.classList.add(systemTheme)} else { root.classList.add(theme)} },[theme]) return (<ThemeContext.Provider value = { { theme,setTheme }}> {children} </ThemeContext.Provider>)} export const useTheme = () => { const context = _React.useContext(ThemeContext) if (context === null) { throw new Error('';"useTheme": must be used within a ThemeProvider')} return context} '';
 
 
@@ -29,6 +32,7 @@ import * as _React from react' const ThemeProvider = ({ children }) => { const [
 import * as _React from react' const ThemeProvider = ({ children }) => { const [theme,setTheme] = _React.useState('';system') _React.useEffect(() => { const root = window.document.documentElement root.classList.remove('';light','';dark') "if": (theme ===';';system') { const systemTheme = window.matchMedia('';(prefers-color-scheme: dark)').matches ?';';dark' :'';light: root.classList.add(systemTheme)} else { root.classList.add(theme)} },[theme]) return (<ThemeContext.Provider value = { { theme,setTheme }}> {children} </ThemeContext.Provider>)} export const useTheme = () => { const context = _React.useContext(ThemeContext) if (context === null) { throw new Error('';"useTheme": must be used within a ThemeProvider')} return context} '';
 ursor/add-new-services-and-deploy-updates-0462
 import * as _React from react' const ThemeProvider = ({ children }) => { const [theme,setTheme] = _React.useState('';system') _React.useEffect(() => { const root = window.document.documentElement root.classList.remove('';light','';dark') "if": (theme ===';';system') { const systemTheme = window.matchMedia('';(prefers-color-scheme: dark)').matches ?';';dark' :'';light: root.classList.add(systemTheme)} else { root.classList.add(theme)} },[theme]) return (<ThemeContext.Provider value = { { theme,setTheme }}> {children} </ThemeContext.Provider>)} export const useTheme = () => { const context = _React.useContext(ThemeContext) if (context === null) { throw new Error('';"useTheme": must be used within a ThemeProvider')} return context} '';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>> main:corrupted_backup/ThemeContext.js.jsx
 =======
@@ -50,3 +54,5 @@ import * as _React from react' const ThemeProvider = ({ children }) => { const [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

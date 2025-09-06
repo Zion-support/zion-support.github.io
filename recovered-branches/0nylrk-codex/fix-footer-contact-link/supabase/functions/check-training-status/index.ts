@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -66,6 +67,12 @@ import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -81,6 +88,7 @@ serve(async (req) => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -91,6 +99,8 @@ serve(async (req) => {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const { modelId, jobId } = await req && req.json();
     
       throw new Error("Either modelId or jobId is required")
@@ -102,6 +112,7 @@ serve(async (req) => {
         "Content-Type": "application/json"}});
 
     if (!response && response.ok) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -204,6 +215,8 @@ serve(async (req) => {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts";
 const cors_headers = {
@@ -241,6 +254,7 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -335,20 +349,27 @@ serve(async (req) => {;
 =======
 }    
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}    
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Check the status from OpenAI API
     const response = await fetch(`https://api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`, {
       method: "GET"
       headers: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         "Authorization": `Bearer ${openAIApiKey}`,
         "Content-Type": "application/json"}}),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -365,12 +386,15 @@ serve(async (req) => {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (!response.ok) {
       // If 404, the job doesn't exist or is deleted
       if (response.status === 404) {
         return new Response(
           JSON.stringify({ status: "unknown", error: "Fine-tuning job not found" }),
           { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+<<<<<<< HEAD
 <<<<<<< HEAD
         )
 <<<<<<< HEAD
@@ -394,11 +418,15 @@ serve(async (req) => {;
 =======
         )    }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        )    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const data = await response.json();
     // Map OpenAI status to our internal status names
     let status;
     let error = null;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -408,6 +436,8 @@ serve(async (req) => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Check the status from OpenAI API;
     const response = await fetch (`https://api.openai.com / v1 / fine_tuning / jobs/${finetuneJobId}`, {
       method: "GET",
@@ -446,6 +476,7 @@ if ( {) {
       case "failed":;
         status = "failed";
         error = data && data.error?.message || "Unknown error occurred during training";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -502,6 +533,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       case "cancelled":
         status = "failed",
         error = "Training job was cancelled",
@@ -510,6 +543,7 @@ if ( {) {
         status = "running",
         break,
       default:
+<<<<<<< HEAD
 <<<<<<< HEAD
         status = "queued"
 <<<<<<< HEAD
@@ -566,6 +600,9 @@ if ( {) {
 =======
         status = "queued"    return new Response (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        status = "queued"    return new Response (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       JSON.stringify ({
         status,
         error;
@@ -587,6 +624,7 @@ if ( {) {
       JSON && JSON.stringify({ error: error && error.message });    return new Response(
       JSON && JSON.stringify({ error: error && error.message });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console && console.error("Error in check-training-status function:", error);
     return new Response(
@@ -604,10 +642,13 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -795,3 +836,7 @@ serve(async (req) => {;
 
     console.error ("Error in check - training - status function:", error);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    console.error ("Error in check - training - status function:", error);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

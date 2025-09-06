@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -11,6 +12,10 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
 import { z  } from 'zod';
@@ -29,6 +34,7 @@ import { Form;
   FormMessage } from '@/components/ui/form';
 import { useState  } from 'react';
 import { EducationFormFieldsProps  } from './types';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Education } from '@/types/resume';
 <<<<<<< HEAD
@@ -72,6 +78,9 @@ import {Education} from '@/types/resume';
 =======
 import { Education } from '@/types/resume';// Define schema for form validation
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Education } from '@/types/resume';// Define schema for form validation
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const educationSchema = z.object({
   institution: z.string().min(1, 'Institution is required');
@@ -82,6 +91,7 @@ const educationSchema = z.object({
   is_current: z.boolean().default(false)
   description: z.string().optional()
   location: z.string().optional()})
+<<<<<<< HEAD
 <<<<<<< HEAD
 type EducationFormValues = z.infer<typeof educationSchema>;
 <<<<<<< HEAD
@@ -186,6 +196,9 @@ import { useForm } from 'react-hook-form',;
 =======
 type EducationFormValues = z.infer<typeof educationSchema>;import { useForm } from 'react-hook-form',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+type EducationFormValues = z.infer<typeof educationSchema>;import { useForm } from 'react-hook-form',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
 import { format } from 'date-fns',;
@@ -247,10 +260,13 @@ export function EducationFormFields(): any ({ ;
     } finally {;
       setIsLoading(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
 
   },
@@ -258,6 +274,7 @@ export function EducationFormFields(): any ({ ;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -271,6 +288,8 @@ export function EducationFormFields(): any ({ ;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
@@ -280,6 +299,7 @@ export function EducationFormFields(): any ({ ;
             name="institution"
             render={({ field }) => (;
               <FormItem>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <FormLabel>Institution</FormLabel>;
 =======
@@ -362,6 +382,9 @@ import {Education} from '@/types / resume';
 =======
                 <FormLabel>Institution</FormLabel>;import {Education} from '@/types / resume';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                <FormLabel>Institution</FormLabel>;import {Education} from '@/types / resume';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Define schema for form validation;
 const education_schema = z.object ({
   institution: z.string ().min (1, 'Institution is required');
@@ -501,6 +524,7 @@ import {EducationFormFieldsProps} from './types';
               <FormItem>;
                 <FormLabel>Institution</FormLabel>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
           <FormField
@@ -522,11 +546,17 @@ import {EducationFormFieldsProps} from './types';
                 </FormControl>;
                 <FormMessage />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  <Input placeholder="University of California, MIT, etc." {...field} />;
+                </FormControl>;
+                <FormMessage />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           />;
 
           <FormField
             control={form && form.control}
+<<<<<<< HEAD
 <<<<<<< HEAD
             name="degree"
 <<<<<<< HEAD
@@ -550,10 +580,16 @@ import {EducationFormFieldsProps} from './types';
             control={form && form.control}
             name="degree"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            name="degree"          <FormField
+            control={form && form.control}
+            name="degree"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Degree</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -587,6 +623,8 @@ import {EducationFormFieldsProps} from './types';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <FormField
           control={form && form.control}
           name="field_of_study"
@@ -623,6 +661,7 @@ import {EducationFormFieldsProps} from './types';
               <FormMessage />;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         />;
 
@@ -648,6 +687,11 @@ import {EducationFormFieldsProps} from './types';
             control={form && form.control}
             name="start_date"        />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <FormField
+            control={form && form.control}
+            name="start_date"        />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
 
@@ -657,6 +701,7 @@ import {EducationFormFieldsProps} from './types';
 
                   <Input 
                     type="date" 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -742,6 +787,8 @@ import {EducationFormFieldsProps} from './types';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Start Date</FormLabel>;
@@ -749,18 +796,24 @@ import {EducationFormFieldsProps} from './types';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <Input
                     type="date"
                   <Input 
                     type="date" 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     {...field}
                     value={field && field.value || ''}                   />;
                 </FormControl>;
@@ -770,6 +823,7 @@ import {EducationFormFieldsProps} from './types';
           />;
 
           <div className="space-y-4">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -802,6 +856,8 @@ import {EducationFormFieldsProps} from './types';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     />;
                   </FormControl>;
                   <div className="space-y-1 leading-none">;
@@ -842,6 +898,7 @@ import {EducationFormFieldsProps} from './types';
           name="location"
           render={({ field }) => (;
             <FormItem>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <FormLabel>Location (Optional)</FormLabel>;
 <<<<<<< HEAD
@@ -914,6 +971,9 @@ import {EducationFormFieldsProps} from './types';
 =======
               <FormLabel>Location (Optional)</FormLabel>;                )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <FormLabel>Location (Optional)</FormLabel>;                )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <Input ;
                         type="date" ;
                         {...field} ;
@@ -937,6 +997,7 @@ import {EducationFormFieldsProps} from './types';
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Location (Optional)</FormLabel>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -1153,6 +1214,8 @@ import {EducationFormFieldsProps} from './types';
           </Button>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </div>;
       </form>;
     </Form>;
@@ -1206,6 +1269,7 @@ import {EducationFormFieldsProps} from './types';
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1213,3 +1277,6 @@ import {EducationFormFieldsProps} from './types';
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

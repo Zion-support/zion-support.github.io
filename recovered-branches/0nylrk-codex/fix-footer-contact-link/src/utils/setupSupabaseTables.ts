@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { supabase } from "@/integrations/supabase/client";
 import { supabase } from "@/integrations/supabase/client",
@@ -48,6 +49,10 @@ import { supabase } from "@/integrations/supabase/client";
 import {supabase} from "@/integrations/supabase/client";
 import { supabase } from "@/integrations/supabase/client",/**
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {supabase} from "@/integrations/supabase/client";
+import { supabase } from "@/integrations/supabase/client",/**
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
  * Checks if the profiles table exists and creates it if it doesn't
  * This is a utility function that can be called when the app starts
  */
@@ -74,6 +79,7 @@ export const ensureProfilesTableExists = async () => {
       ),`,
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 =======
@@ -81,6 +87,8 @@ export const ensureProfilesTableExists = async () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // If there's an error, log it and proceed with table creation
     if (error) {
       console.warn(
@@ -145,6 +153,7 @@ if ( {) {
         created_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE ('utc', now ());
         updated_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE ('utc', now ());
         bio TEXT;
+<<<<<<< HEAD
 <<<<<<< HEAD
         avatar_url TEXT;
 <<<<<<< HEAD
@@ -222,12 +231,16 @@ if ( {) {
 =======
         avatar_url TEXT;          CREATE POLICY "Users can view their own profile" 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        avatar_url TEXT;          CREATE POLICY "Users can view their own profile" 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ON public.profiles FOR SELECT 
             USING (auth.uid() = id),
         END IF,
       END
       $$,
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -256,6 +269,8 @@ if ( {) {
           WHERE policyname = 'Users can update their own profile'
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           AND tablename = 'profiles'
         ) THEN
           CREATE POLICY "Users can update their own profile" 
@@ -277,6 +292,7 @@ if ( {) {
       $$;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           CREATE POLICY "Users can update their own profile"
@@ -285,6 +301,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         END IF;
       END
       $$;
@@ -295,6 +313,7 @@ if ( {) {
       END
       $$,
         
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -309,6 +328,9 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       -- Set up trigger for new users
       CREATE OR REPLACE FUNCTION public && public.handle_new_user()
       RETURNS TRIGGER AS $$
@@ -321,6 +343,7 @@ if ( {) {
                 new && new.raw_user_meta_data->>'headline');
         RETURN new;
       END;
+<<<<<<< HEAD
 <<<<<<< HEAD
       $$ LANGUAGE plpgsql SECURITY DEFINER;
 <<<<<<< HEAD
@@ -573,3 +596,16 @@ export const initializeDatabase = async () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      $$ LANGUAGE plpgsql SECURITY DEFINER;      -- Check if trigger exists before creating it
+      DO $$
+      BEGIN
+        IF NOT EXISTS (SELECT 1 FROM pg_trigger WHERE tgname = 'on_auth_user_created') THEN
+          CREATE TRIGGER on_auth_user_created  }
+};
+// Call this when the app starts to ensure the table exists;
+export const initializeDatabase = async () => {;
+
+  await ensureProfilesTableExists()
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

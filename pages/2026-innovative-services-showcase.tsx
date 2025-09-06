@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -33,6 +34,13 @@ import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React, { useState, useMemo } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Search,
   Star,
@@ -53,6 +61,7 @@ import {
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail } from 'lucide-react';
 import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
@@ -60,10 +69,30 @@ import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail  } from 'lucide-react';
+import { innovative2026MicroSaasServicesV4  } from '../data/innovative-2026-micro-saas-v4';
+import { emergingTech2026ServicesV4  } from '../data/emerging-tech-2026-services-v4';
+import { enterpriseIT2026ServicesV4  } from '../data/enterprise-it-2026-services-v4';
+import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
+import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
+export default function Innovative2026ServicesShowcase() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<string>('name'),
+
+  const allServices = null;
+                    setSelectedPriceRange('all')
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
 import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -111,11 +140,52 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
     let filtered = allServices;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount },
+    { id: 'quantum', name: 'Quantum Tech', icon: '⚛️', count: quantumCount },
+{
+      id: 'enterprise',
+      name: 'Enterprise IT',
+      icon: '🏢',
+      count: enterpriseCount,
+    },
+    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },
+    {
+      id: 'emerging',
+      name: 'Emerging Tech',
+      icon: '🔬',
+      count: emergingTechCount,
+    },
+  ];
+
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $500', range: 'Under $500' },
+{ id: 'medium', name: '$500 - $1,000', range: '$500 - $1,000' },
+    { id: 'high', name: 'Over $1,000', range: 'Over $1,000' },
+  ];
+
+  const sortOptions = [
+    { id: 'name', name: 'Name' },
+    { id: 'price', name: 'Price' },
+    { id: 'rating', name: 'Rating' },
+{ id: 'popularity', name: 'Popularity' },
+  ];
+
+  // Filter and sort services
+  const filteredServices = useMemo(() => {
+    let filtered = allServices;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Category filter
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
         switch (selectedCategory) {
           case 'ai':
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -128,6 +198,8 @@ return service.category?.includes('AI');
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           case 'quantum':
             return service.category?.includes('Quantum');
           case 'enterprise':
@@ -137,6 +209,7 @@ return service.category?.includes('AI');
           case 'emerging':
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -151,16 +224,34 @@ return service.category?.includes('AI');
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     // Price range filter
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+return (
+              service.category?.includes('Emerging') ||
+              service.category?.includes('Neuromorphic') ||
+              service.category?.includes('Synthetic')
+            );
+          default:
+            return true;
+        }
+      });
+    }
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    // Price range filter
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
         const price = parseInt(service.price.replace(/[^0-9]/g, ''));
         switch (selectedPriceRange) {
           case 'low':
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const categories = [;
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },;
@@ -224,7 +315,10 @@ return service.category?.includes('AI');
         const price = parseInt(service && service.price.replace(/[^0-9]/g, ''));
         switch (selectedPriceRange) {;
           case 'low':;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             return price < 500;
           case 'medium':;
             return price >= 500 && price <= 1000;
@@ -232,9 +326,49 @@ return service.category?.includes('AI');
             return price > 1000;
 
 
+<<<<<<< HEAD
           return b.rating - a.rating;
         case 'popularity':;
           return b.customers - a.customers;
+=======
+=======
+            return price < 500;
+          case 'medium':
+            return price >= 500 && price <= 1000;
+          case 'high':
+            return price > 1000;
+default:
+            return true;
+        }
+      });
+    }
+
+    // Search filter
+    if (searchTerm) {
+filtered = filtered.filter(
+        service =>
+          service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+          service.description
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase()) |
+          service.category.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+
+    // Sort
+    filtered.sort((a, b) => {
+      switch (sortBy) {
+        case 'price':
+          const priceA = parseInt(a.price.replace(/[^0-9]/g, ''));
+          const priceB = parseInt(b.price.replace(/[^0-9]/g, ''));
+          return priceA - priceB;
+        case 'rating':
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+          return b.rating - a.rating;
+        case 'popularity':;
+          return b.customers - a.customers;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
           default: return true,;
@@ -264,6 +398,7 @@ return service.category?.includes('AI');
         case 'popularity':;
           return b && b.customers - a && a.customers;
         default: return a && a.name.localeCompare(b && b.name),;
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
     });
@@ -300,6 +435,10 @@ return service.category?.includes('AI');
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      }
+    });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -309,16 +448,20 @@ return service.category?.includes('AI');
       },;
     },  };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         duration: 0.5,
       },
     },  };
 
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -326,6 +469,8 @@ return service.category?.includes('AI');
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function Innovative2026ServicesShowcase(req, res) {
   try {
   const [searchTerm, setSearchTerm] = useState('');
@@ -480,16 +625,20 @@ export default function Innovative2026ServicesShowcase(req, res) {
 }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const itemVariants = {;
     hidden: { y: 20, opacity: 0 },;
     visible: {;
       y: 0,;
       opacity: 1,;
       transition: {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -500,6 +649,8 @@ export default function Innovative2026ServicesShowcase(req, res) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         duration: 0.5;
         } catch (error) {
     console.error("Error:", error);
@@ -516,10 +667,13 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 
           href='https://ziontechgroup && ziontechgroup.com/2026-innovative-services-showcase'
@@ -529,16 +683,22 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
       <UltraAdvancedFuturisticBackground2026
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         intensity='extreme'
         colorScheme='neural-network'        particleCount={800}
         animationSpeed={3 && 3.0}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <>
       <Head>
         <title>2026 Innovative Services Showcase - Zion Tech Group</title>
@@ -551,14 +711,84 @@ export default function Innovative2026ServicesShowcase(req, res) {
         <link rel="canonical" href="https://ziontechgroup.com/2026-innovative-services-showcase" />
       </Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+default:
+          return a.name.localeCompare(b.name);
+      }
+    });
+
+    return filtered;
+  }, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]);
+
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 }
+    visible: {
+      y: 0
+      opacity: 1
+      transition: {
+duration: 0.5,
+      },
+    },
+  };
+
+  return (
+    <>
+      <Head>
+        <title>2026 Innovative Services Showcase - Zion Tech Group</title>
+<meta
+          name='description'
+          content='Discover cutting-edge 2026 innovative services including AI, Quantum Computing, Emerging Technologies, and Enterprise IT solutions. Transform your business with next-generation technology.'
+        />
+        <meta
+          name='keywords'
+          content='2026 services, innovative technology, AI services, quantum computing, emerging tech, enterprise IT, micro SaaS, Zion Tech Group'
+        />
+        <meta
+          property='og:title'
+          content='2026 Innovative Services Showcase - Zion Tech Group'
+        />
+        <meta
+          property='og:description'
+          content='Discover cutting-edge 2026 innovative services including AI, Quantum Computing, Emerging Technologies, and Enterprise IT solutions.'
+        />
+        <meta property='og:type' content='website' />
+        <meta
+          property='og:url'
+          content='https://ziontechgroup.com/2026-innovative-services-showcase'
+        />
+        <link
+          rel='canonical'
+          href='https://ziontechgroup.com/2026-innovative-services-showcase'
+        />
+      </Head>
+      <UltraAdvancedFuturisticBackground2026
+        intensity='extreme'
+        colorScheme='neural-network'
+        particleCount={800}
+        animationSpeed={3.0}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         enableHolographic={true}
         enableQuantumEffects={true}
         enableNeuralNetworks={true}
         enableMultidimensional={true}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -569,11 +799,14 @@ export default function Innovative2026ServicesShowcase(req, res) {
       <div className='min-h-screen relative z-10'>;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Hero Section */}
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto text-center'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className='mb-8'
@@ -646,10 +879,27 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+      />
+      <UltraAdvancedNavigation2026 />
+
+<div className='min-h-screen relative z-10'>
+        {/* Hero Section */}
+        <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto text-center'>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+className='mb-8'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 2026 Innovative Services
               </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
             </motion.div>
             <motion.div
@@ -723,27 +973,87 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+              <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
+                Discover the future of technology with our cutting-edge 2026
+                services. From AI-powered solutions to quantum computing and
+                emerging technologies, transform your business with
+                next-generation innovation.
+              </p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+<<<<<<< HEAD
+
+=======
+className='flex flex-wrap justify-center gap-4 mb-12'
+            >
+              <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-full px-6 py-3'>
+                <span className='text-blue-400 font-semibold'>
+                  {allServices.length}+ Services
+                </span>
+              </div>
+              <div className='bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-full px-6 py-3'>
+                <span className='text-purple-400 font-semibold'>
+                  AI-Powered
+                </span>
+              </div>
+              <div className='bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm border border-green-500/30 rounded-full px-6 py-3'>
+                <span className='text-green-400 font-semibold'>
+                  Quantum Ready
+                </span>
+              </div>
+              <div className='bg-gradient-to-r from-orange-600/20 to-red-600/20 backdrop-blur-sm border border-orange-500/30 rounded-full px-6 py-3'>
+                <span className='text-orange-400 font-semibold'>
+                  Future-Proof
+                </span>
+              </div>
+            </motion.div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* Search and Filters */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
               className='max-w-4xl mx-auto'>;
               <div className='relative mb-8'>;
                 <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
+<<<<<<< HEAD
+=======
+=======
+              transition={{ duration: 0.8, delay: 0.4 }}
+className='max-w-4xl mx-auto'
+            >
+              <div className='relative mb-8'>
+                <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <input
                   type='text'
                   placeholder='Search innovative services...'
                   value={searchTerm}
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <div className="relative mb-8">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search innovative services..."
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -774,6 +1084,11 @@ export default function Innovative2026ServicesShowcase(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                />
+              </div>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   onChange={e => setSearchTerm(e && e.target.value)}
                   className='w-full pl-12 pr-4 py-4 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent';
                 />;
@@ -783,6 +1098,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                 {categories && categories.map(category => (                  <button
                     key={category && category.id}
                     onClick={() => setSelectedCategory(category && category.id)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -802,10 +1118,13 @@ export default function Innovative2026ServicesShowcase(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     className={`px-6 py-3 rounded-full backdrop-blur-sm border transition-all duration-300 ${;
                       selectedCategory === category && category.id;
                         ? 'bg-gradient-to-r from-blue-600/30 to-purple-600/30 border-blue-500/50 text-blue-300';
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50';
+<<<<<<< HEAD
 <<<<<<< HEAD
                     }`  } catch (error) {
     console.error("Error:", error);
@@ -821,10 +1140,26 @@ export default function Innovative2026ServicesShowcase(req, res) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+=======
+              <div className='flex flex-wrap gap-4 justify-center mb-8'>
+                {categories.map(category => (
+                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`px-6 py-3 rounded-full backdrop-blur-sm border transition-all duration-300 ${
+                      selectedCategory === category.id
+                        ? 'bg-gradient-to-r from-blue-600/30 to-purple-600/30 border-blue-500/50 text-blue-300'
+                        : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     }`}
                   >;
                     <span className='mr-2'>{category && category.icon}</span>                    {category && category.name} ({category && category.count});
                   </button>;
+<<<<<<< HEAD
                 ))}
                     }`}
 
@@ -852,6 +1187,27 @@ export default function Innovative2026ServicesShowcase(req, res) {
                       selectedPriceRange === range.id
                         ? 'bg-gradient-to-r from-green-600/30 to-emerald-600/30 border-green-500/50 text-green-300'
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50'
+=======
+
+                ))}
+
+                  >
+<<<<<<< HEAD
+                    <span className="mr-2">{category.icon}</span>
+=======
+<span className='mr-2'>{category.icon}</span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                    {category.name} ({category.count})
+                  </button>
+                ))}
+              </div>
+
+<<<<<<< HEAD
+              <div className="flex flex-wrap gap-4 justify-center">
+                {priceRanges.map((range) => (
+                  <button
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>;
 
               <div className='flex flex-wrap gap-4 justify-center'>;
@@ -862,6 +1218,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                       selectedPriceRange === range && range.id;
                         ? 'bg-gradient-to-r from-green-600/30 to-emerald-600/30 border-green-500/50 text-green-300';
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     }`}
@@ -880,6 +1237,31 @@ export default function Innovative2026ServicesShowcase(req, res) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+<div className='flex flex-wrap gap-4 justify-center'>
+                {priceRanges.map(range => (
+                  <button
+                    key={range.id}
+                    onClick={() => setSelectedPriceRange(range.id)}
+                    className={`px-4 py-2 rounded-lg backdrop-blur-sm border transition-all duration-300 ${
+                      selectedPriceRange === range.id
+                        ? 'bg-gradient-to-r from-green-600/30 to-emerald-600/30 border-green-500/50 text-green-300'
+                        : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50'
+                    }`}
+                  >
+                    {range.name}
+                  </button>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+        {/* Services Grid */}
+<section className='py-16 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <motion.div
               variants={containerVariants  } catch (error) {
     console.error("Error:", error);
@@ -914,7 +1296,15 @@ export default function Innovative2026ServicesShowcase(req, res) {
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-4xl">{service.icon}</span>
                         {service.popular && (
+<<<<<<< HEAD
                           <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
+=======
+<<<<<<< HEAD
+                          <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
+=======
+                          <span className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                             POPULAR
                           </span>
                         )  } catch (error) {
@@ -923,8 +1313,20 @@ export default function Innovative2026ServicesShowcase(req, res) {
   }
 }
                       </div>
+<<<<<<< HEAD
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <p className="text-gray-300 text-sm">{service.tagline}</p>
+=======
+<<<<<<< HEAD
+                      <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
+                      <p className="text-gray-300 text-sm">{service.tagline}</p>
+=======
+<h3 className='text-xl font-bold text-white mb-2'>
+                        {service.name}
+                      </h3>
+                      <p className='text-gray-300 text-sm'>{service.tagline}</p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </div>
                     {/* Service Content */}
                     <div className='p-6'>
@@ -932,6 +1334,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                         {service.description}
                       </p>
                       <div className='flex items-center justify-between mb-4'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -947,17 +1350,23 @@ export default function Innovative2026ServicesShowcase(req, res) {
           </div>;
         </section>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
         {/* Services Grid */}
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                        </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         <div className='flex items-center space-x-2'>
                           <Users className='w-4 h-4 text-blue-400' />
                           <span className='text-gray-300 text-sm'>
@@ -972,6 +1381,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                           <Star className='w - 4 h - 4 text - yellow - 500 fill - current' />;
                           <span className='text - white text - sm'>;
                             {service.rating}
+<<<<<<< HEAD
 <<<<<<< HEAD
                           </span>
                           <span className='text-gray-400 text-sm'>
@@ -992,6 +1402,8 @@ export default function Innovative2026ServicesShowcase(req, res) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         </div>
                         <div className="flex items-center space-x-2">
                           <Users className="w-4 h-4 text-blue-400" />
@@ -1026,6 +1438,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                           <Zap className='w-4 h-4 text-yellow-400' />
                           <span className='text-gray-300 text-sm'>
                             {service.trialDays} days trial
+<<<<<<< HEAD
                           </span>                        </div>
                       </div>
 <<<<<<< HEAD
@@ -1036,6 +1449,12 @@ export default function Innovative2026ServicesShowcase(req, res) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+                          </span>
+                        </div>
+                      </div>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           </span>;
                           <span className='text - gray - 400 text - sm'>;
                             ({service.reviews});
@@ -1105,10 +1524,18 @@ export default function Innovative2026ServicesShowcase(req, res) {
                       </div>;
 
 
+<<<<<<< HEAD
 
                       {/* Features Preview */}
 <<<<<<< HEAD
                       <div className='mb-4'>
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+                      {/* Features Preview */}
+<div className='mb-4'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         <h4 className='text-white font-semibold mb-2'>
                           Key Features:
                         </h4>
@@ -1129,6 +1556,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                           {service.features.length > 3 && (
                             <span className='text-gray-500 text-xs'>
                               +{service.features.length - 3} more features
+<<<<<<< HEAD
                             </span>                          )}
                         </div>
                       </div>
@@ -1137,6 +1565,18 @@ export default function Innovative2026ServicesShowcase(req, res) {
                         <span
                           className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service.textColor} bg-opacity-20`}
                         >                          {service.category}
+=======
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                      {/* Category Badge */}
+<div className='mb-4'>
+                        <span
+                          className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service.textColor} bg-opacity-20`}
+                        >
+                          {service.category}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         </span>
                       </div>
                       {/* CTA Button */}
@@ -1145,11 +1585,14 @@ export default function Innovative2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <div className="mb-4">
                         <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                         <div className="space-y-1">
@@ -1158,6 +1601,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                               <CheckCircle className="w-3 h-3 text-green-400" />
                               <span className="text-gray-300 text-xs">{feature}</span>
                             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                       <Link href={service.link}>
@@ -1168,6 +1612,8 @@ export default function Innovative2026ServicesShowcase(req, res) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           ))}
                           {service.features.length > 3 && (
                             <span className="text-gray-500 text-xs">+{service.features.length - 3} more features</span>
@@ -1180,18 +1626,26 @@ export default function Innovative2026ServicesShowcase(req, res) {
                         <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service.textColor} bg-opacity-20`}>
                           {service.category}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         </span>
                       </div>
                       {/* CTA Button */}
                       <Link href={service.link}>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                           className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service && service.textColor} bg-opacity-20`}>                          {service && service.category}
                         </span>;
                       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -1203,10 +1657,22 @@ export default function Innovative2026ServicesShowcase(req, res) {
                           <span className="flex items-center justify-center space-x-2">
                             <span>Learn More</span>
                             <ArrowRight className="w-4 h-4" />
+=======
+                          <span className="flex items-center justify-center space-x-2">
+                            <span>Learn More</span>
+                            <ArrowRight className="w-4 h-4" />
+=======
+<button className='w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>
+                          <span className='flex items-center justify-center space-x-2'>
+                            <span>Learn More</span>
+                            <ArrowRight className='w-4 h-4' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           </span>
                         </button>
                       </Link>
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1219,11 +1685,19 @@ export default function Innovative2026ServicesShowcase(req, res) {
 <<<<<<< HEAD
 
 =======
+=======
+                    {/* Hover Effect Overlay */}
+<div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
+                  </div>
+                </motion.div>
+              ))}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </motion.div>
             {filteredServices.length === 0 && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >
                 <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
@@ -1260,6 +1734,31 @@ export default function Innovative2026ServicesShowcase(req, res) {
                     setSelectedPriceRange('all');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+<<<<<<< HEAD
+              >
+                <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
+=======
+className='text-center py-16'
+              >
+                <div className='text-gray-400 text-xl mb-4'>
+                  No services found matching your criteria
+                </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                <button
+                  onClick={() => {
+                    setSearchTerm('');
+                    setSelectedCategory('all');
+<<<<<<< HEAD
+                    setSelectedPriceRange('all');
+
+=======
+setSelectedPriceRange('all');
+                  }}
+                  className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300'
+                >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   }}
                   className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300'                >
                   Clear Filters
@@ -1269,8 +1768,14 @@ export default function Innovative2026ServicesShowcase(req, res) {
           </div>
         </section>
         {/* Contact Section */}
+<<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
+=======
+<section className='py-20 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-4xl mx-auto text-center'>
+            <motion.div
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -1279,6 +1784,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                     setSelectedCategory('all'),
                     setSelectedPriceRange('all')
                   }}
+<<<<<<< HEAD
 =======
 
 
@@ -1295,11 +1801,14 @@ export default function Innovative2026ServicesShowcase(req, res) {
                   }}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                 >
                   Clear Filters
                 </button>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             )}
           </div>
@@ -1314,17 +1823,23 @@ export default function Innovative2026ServicesShowcase(req, res) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>;
         </section>;
 
@@ -1332,6 +1847,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -1359,24 +1875,41 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
             >
 
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+=======
+
+            >
+<<<<<<< HEAD
+
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+=======
+<h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -1387,6 +1920,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                   <Phone className='w-8 h-8 text-blue-400 mx-auto mb-4' />
                   <h3 className='text-white font-semibold mb-2'>Call Us</h3>
                   <p className='text-blue-300'>+1 302 464 0950</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6">
@@ -1399,6 +1933,8 @@ export default function Innovative2026ServicesShowcase(req, res) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>
                 <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6">
                   <Mail className="w-8 h-8 text-purple-400 mx-auto mb-4" />
@@ -1413,6 +1949,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
               </div>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
               <Link href="/contact">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
@@ -1423,6 +1960,12 @@ export default function Innovative2026ServicesShowcase(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              <Link href='/contact'>
+                <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>
+                  Get Started Today
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </button>
               </Link>
             </motion.div>
@@ -1430,6 +1973,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
         </section>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1511,19 +2055,27 @@ export default function Innovative2026ServicesShowcase(req, res) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>;
         </section>;
       </div>;
     </>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
   )
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         </div>;
                       </div>;
                       <div className='flex items - center justify - between mb - 4'>;
@@ -1644,16 +2196,20 @@ export default function Innovative2026ServicesShowcase(req, res) {
         </section>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     </>;
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1665,3 +2221,8 @@ export default function Innovative2026ServicesShowcase(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

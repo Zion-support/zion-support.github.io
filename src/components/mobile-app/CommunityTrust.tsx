@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Star } from 'lucide-react'
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Star } from 'lucide-react'
 
 <<<<<<< HEAD
@@ -46,6 +49,23 @@ export const CommunityTrust: React.FC = () => {;
     { value: '12M+', label: 'Matches Made' },;
   ];
 
+<<<<<<< HEAD
+=======
+
+=======
+
+export const CommunityTrust: React.FC;
+export const CommunityTrust: React.FC = () => {
+  // Stats display with social proof
+  const stats = [
+{ value: '4.8', label: 'App Store Rating' },
+    { value: '50K+', label: 'Downloads' },
+    { value: '96%', label: 'User Satisfaction' },
+    { value: '12M+', label: 'Matches Made' },
+  ];
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <section className='py-16 bg-zion-blue'>;
       <div className='container mx-auto px-4'>;
@@ -85,6 +105,7 @@ export const CommunityTrust: React.FC = () => {;
                 className='w - 6 h - 6 text - zion - cyan';
                 fill='current_color';
               />            ))}
+<<<<<<< HEAD
 
   ]
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -238,10 +259,21 @@ export const CommunityTrust: React.FC = () => {;
           <div className="text-center">
             <div className="font-semibold text-zion-cyan">Sarah Johnson</div>
             <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>
+=======
+          </div>
+          <blockquote className='text-center text-lg text-white italic mb-4'>
+            "The Zion app has completely changed how I find tech talent. The AI
+            matching is spot on and I can manage everything from anywhere."
+          </blockquote>
+          <div className='text-center'>
+            <div className='font-semibold text-zion-cyan'>Sarah Johnson</div>
+            <div className='text-sm text-zion-slate-light'>CTO at TechFlow</div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </div>
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
@@ -249,6 +281,9 @@ export const CommunityTrust: React.FC = () => {;
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           </div>;
           <blockquote className="text-center text-lg text-white italic mb-4">;
@@ -334,6 +369,7 @@ export const CommunityTrust: React.FC = () => {;
 }
 '"  );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   )
@@ -342,3 +378,13 @@ export const CommunityTrust: React.FC = () => {;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+);
+}</div>) ) ;
+}</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>) ;
+};
+'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

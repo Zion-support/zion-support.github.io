@@ -42,6 +42,7 @@ export function useTalentProfile(id: string | undefined) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -124,6 +125,12 @@ const foundProfile = MOCK_TALENTS && MOCK_TALENTS.find(talent => talent && talen
         // For now, we'll use mock data
         setTimeout(() => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======      try {
+        // In a real implementation, we would fetch from Supabase
+        // For now, we'll use mock data
+        setTimeout(() => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           if (foundProfile) {
             setProfile(convertProfileToTalentProfile(foundProfile))
 import { useState, useEffect } from './react';
@@ -262,6 +269,7 @@ if ( {) {
   }, [id]);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -373,3 +381,8 @@ if (mockProfile) {
   return { profile, is_loading, error, mockProfileData }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+  return { profile, is_loading, error, mockProfileData }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

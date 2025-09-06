@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { render, screen } from '@testing-library/react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { describe, it, expect } from 'vitest';
 import AppMinimal from './AppMinimal';
 
@@ -40,6 +44,7 @@ describe('AppMinimal', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 =======
 =======
@@ -65,6 +70,8 @@ describe('AppMinimal', () => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   it('displays correct content', () => {
     render(<AppMinimal />);
@@ -75,6 +82,7 @@ describe('AppMinimal', () => {
     render(<AppMinimal />);
     // Add interaction tests here
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 });
 =======
@@ -205,3 +213,6 @@ describe('AppMinimal'
 =======
 });
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

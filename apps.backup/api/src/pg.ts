@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Pool, PoolClient } from 'pg';
 <<<<<<< HEAD
 let pool: Pool | null = null;
@@ -34,6 +35,8 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
 }
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   if (!pool) {;
   if (!pool) {;    pool = new Pool({ connectionString:process.env.DATABASE_URL });
@@ -42,9 +45,12 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
   return pool;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export async function withUser<T>(userId:string, fn:(client:PoolClient) => Promise<T>):Promise<T> {;
 <<<<<<< HEAD
@@ -52,14 +58,18 @@ export async function withUser<T>(userId:string, fn:(client:PoolClient) => Promi
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const client = await getPool().connect();
   try {
     await client.query('BEGIN');
     await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]);
+<<<<<<< HEAD
 <<<<<<< HEAD
     const result = await fn(client);
 <<<<<<< HEAD
@@ -115,6 +125,9 @@ client.release();  }
 =======
     const result = await fn(client);  } finally {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    const result = await fn(client);  } finally {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     client.release();
   }
 }
@@ -126,6 +139,7 @@ client.release();  }
   } finally {
 client.release ();  }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -146,3 +160,5 @@ client.release();  }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

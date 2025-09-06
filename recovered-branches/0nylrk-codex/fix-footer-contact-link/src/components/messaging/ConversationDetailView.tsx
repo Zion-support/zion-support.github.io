@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -12,6 +13,10 @@ import React, { useState, useEffect, useRef } from 'react';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { format  } from 'date-fns';
 import { MessageSquare  } from 'lucide-react';
 import { useMessaging  } from '@/context/MessagingContext';
@@ -21,6 +26,7 @@ import { AspectRatio  } from '@/components/ui/aspect-ratio';
 import { useAuth  } from '@/hooks/useAuth';
 import { MessageBubble  } from './MessageBubble';
 import { DateDivider } from './DateDivider';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function ConversationDetailView() {
 <<<<<<< HEAD
@@ -60,6 +66,9 @@ export function ConversationDetailView() {;
 =======
 export function ConversationDetailView() {  const { user } = useAuth();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function ConversationDetailView() {  const { user } = useAuth();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const {
     activeConversation;
 
@@ -73,6 +82,7 @@ export function ConversationDetailView() {  const { user } = useAuth();
     if (activeConversation) {
       loadMessages(activeConversation.id)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }, [activeConversation?.id, loadMessages]);
 <<<<<<< HEAD
@@ -100,6 +110,9 @@ import React, { useState, useEffect, useRef } from 'react',;
 =======
   }, [activeConversation?.id, loadMessages]);import React, { useState, useEffect, useRef } from 'react',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }, [activeConversation?.id, loadMessages]);import React, { useState, useEffect, useRef } from 'react',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { format } from 'date-fns',;
 import { MessageSquare } from 'lucide-react',;
 import { useMessaging } from '@/context/MessagingContext',;
@@ -126,12 +139,15 @@ export function ConversationDetailView() {;
   }, [activeConversation?.id, loadMessages]),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React, { useState, useEffect, useRef } from 'react';
 import {MessageSquare} from 'lucide-react';
@@ -145,6 +161,7 @@ import {DateDivider} from './DateDivider';
 
   }, [activeConversation?.id, loadMessages]),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -169,6 +186,8 @@ import {DateDivider} from './DateDivider';
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   },
@@ -182,6 +201,7 @@ import {DateDivider} from './DateDivider';
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (!activeConversation) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -193,6 +213,10 @@ import {DateDivider} from './DateDivider';
   
   if (!activeConversation) {  useEffect(() => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  
+  if (!activeConversation) {  useEffect(() => {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     scrollToBottom();
   }, [activeMessages]);
 
@@ -212,10 +236,13 @@ import {DateDivider} from './DateDivider';
   
   if (!activeConversation) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
       <div className="flex-1 flex flex-col items-center justify-center p-8">;
         <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />;
@@ -226,6 +253,7 @@ import {DateDivider} from './DateDivider';
       </div>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -256,6 +284,11 @@ import {DateDivider} from './DateDivider';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Group messages by date
   const groupedMessages: { date: string, messages: any[] }[] = []
   activeMessages.forEach(message => {
@@ -269,6 +302,7 @@ import {DateDivider} from './DateDivider';
         messages: [message]
       })
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   });
 <<<<<<< HEAD
@@ -363,11 +397,18 @@ import {DateDivider} from './DateDivider';
       });
     }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  });        date: messageDate,;
+        messages: [message];
+      });
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   }),
   
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description),
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -918,6 +959,17 @@ if ( {) {
   );
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+  return (
+    <div className="flex-1 flex flex-col h-full">;
+      {/* Header */}            </div>;
+          </div>;
+        </div>;
+      </div>;            Send;
+          </Button>;
+        </form>;
+      </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
     </div>);
@@ -962,6 +1014,7 @@ if ( {) {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -975,3 +1028,6 @@ if ( {) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -84,6 +84,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 const securityHeaders = [
+<<<<<<< HEAD
 =======
 
 
@@ -92,6 +93,8 @@ const securityHeaders = [{ "key": 'X-DNS-Prefetch-Control',"value": 'on' },{ "ke
 const securityHeaders = [{ key: "X-DNS-Prefetch-Control",value: "on" },{ key: "Strict-Transport-Security",value: "max-age=630720;0;0; includeSubDomains; preload" },{ key: "X-XSS-Protection",value: "1; mode=block" },{ key: "X-Frame-Options",value: "SAMEORIGIN" },{ key: "X-Content-Type-Options",value: "nosniff" },{ key: "Referrer-Policy",value: "origin-when-cross-origin" }]; module.exports = { securityHeaders };'"'"
 const securityHeaders = [{ "key": 'X-DNS-Prefetch-Control',"value": 'on' },{ "key": 'Strict-Transport-Security',"value": 'max-age=630720;0;0; includeSubDomains; preload' },{ "key": 'X-XSS-Protection',"value": '1; mode=block' },{ "key": 'X-Frame-Options',"value": 'SAMEORIGIN' },{ "key": 'X-Content-Type-Options',"value": 'nosniff' },{ "key": 'Referrer-Policy',"value": 'origin-when-cross-origin' }]; module.exports = { securityHeaders };''const securityHeaders = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   { key: "X-DNS-Prefetch-Control", value: "on" },
   { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
   { key: "X-XSS-Protection", value: "1; mode=block" },
@@ -101,6 +104,7 @@ const securityHeaders = [{ "key": 'X-DNS-Prefetch-Control',"value": 'on' },{ "ke
 ];
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -153,3 +157,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

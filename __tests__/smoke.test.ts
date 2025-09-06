@@ -3,12 +3,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 describe('smoke',() => { it('true is truthy',() => { expect(true).toBeTruthy()})}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 });''
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -26,6 +29,7 @@ describe('smoke',() => { it('true is truthy',() => { expect(true).toBeTruthy()})
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 });''
@@ -47,16 +51,21 @@ describe('smoke', () => { it("true is truthy"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 describe('smoke', () => {
   it('true is truthy', () => {
     expect(true).toBeTruthy();
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 });''describe('smoke'
   it('true is truthy'
 describe('smoke', () => { it("true is truthy"
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 });''
 
@@ -114,6 +123,7 @@ describe('smoke',() => { it('true is truthy',() => { expect(true).toBeTruthy()})
 });''
 });''
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
@@ -131,3 +141,5 @@ describe('smoke',() => { it('true is truthy',() => { expect(true).toBeTruthy()})
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

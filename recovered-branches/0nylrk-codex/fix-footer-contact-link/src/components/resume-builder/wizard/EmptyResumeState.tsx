@@ -35,10 +35,17 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
       </CardContent>
     </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  )
+};
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 <<<<<<< HEAD
 }
 
+<<<<<<< HEAD
 };
 =======
 };
@@ -59,6 +66,8 @@ import { EmptyResumeProps } from "./types",;
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };            Create Resume;
           </Button>;
         </div>;
@@ -67,6 +76,7 @@ import { EmptyResumeProps } from "./types",;
     </Card>);
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -87,3 +97,5 @@ export default EmptyResumeState;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

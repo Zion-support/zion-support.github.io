@@ -8,6 +8,7 @@ module.exports = {
   darkMode: "class",
   content: [
 <<<<<<< HEAD
+<<<<<<< HEAD
     './pages/**/*.{js,ts,jsx,tsx}./components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -49,10 +50,17 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx}'
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
+    './app/**/*.{js,ts,jsx,tsx}',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ],
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,10 +74,18 @@ module.exports = {
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
         primary: {
+=======
+        blue: {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
           500: '#3b82f6',
           600: '#2563eb',
           700: '#1d4ed8',
+<<<<<<< HEAD
 <<<<<<< HEAD
           800: '#1e40af',
           900: '#1e3a8a',
@@ -619,6 +635,11 @@ module.exports = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+          800: '#1e40af',
+          900: '#1e3a8a',
+          950: '#172554',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         },
         gray: {
           50: '#f9fafb',
@@ -631,6 +652,7 @@ module.exports = {
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
           950: '#030712'
@@ -655,10 +677,15 @@ module.exports = {
 =======
         mono: ['JetBrains Mono', 'monospace'],
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+          950: '#030712',
+        },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -697,14 +724,17 @@ module.exports = {
         'gradient-y': 'gradient-y 15s ease infinite',
         'gradient-xy': 'gradient-xy 15s ease infinite',
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
-          '100%': { opacity: '1' }
+          '100%': { opacity: '1' },
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -884,3 +914,12 @@ module.exports = {
   ],
 };
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+      },
+    },
+  },
+  plugins: [],
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

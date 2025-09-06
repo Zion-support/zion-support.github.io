@@ -24,6 +24,7 @@ function readAllGrants(): GrantApplication[] {
     const raw = fs.readFileSync(full, 'utf8');
     return JSON.parse(raw) as GrantApplication;
   });
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {;
     const { status, sector, region, program } = req.query;
@@ -35,10 +36,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
 function readAllGrants(): GrantApplication[] {
@@ -193,12 +197,68 @@ if ( {) {
   $2
 }
         res.status (400).json ({ error: 'Missing required fields' });
+=======
+  const files = null;
+      return (
+        (status ? g.status === status : true) &&
+        (sector ? g.sector === sector : true) &&
+        (region ? g.region === region : true) &&
+        (program ? g.program === program : true)
+);
+    });
+    res.status(200).json({ items: list });
+    return;
+  }
+
+  if (req.method === 'POST') {
+    try {
+      const payload = req.body as CreateGrantPayload;
+if (
+        !payload ||
+        !payload.projectName ||
+        !payload.teamInfo ||
+        !payload.proposalSummary ||
+        !payload.timeline
+      ) {
+        res.status(400).json({ error: 'Missing required fields' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         return;
       }
       ensure_dir ();
       const id = uuidv4 ();
       const now = new Date ().toISOString ();
       const record: GrantApplication = {
+<<<<<<< HEAD
+=======
+id,
+        program: payload.program || 'grant',
+        projectName: payload.projectName,
+        teamInfo: payload.teamInfo,
+        proposalSummary: payload.proposalSummary,
+        timeline: payload.timeline,
+        budgetAmount: payload.budgetAmount || 0,
+        budgetCurrency: payload.budgetCurrency || 'USDC',
+        supportingLinks: payload.supportingLinks || [],
+        pitchDeckUrl: payload.pitchDeckUrl,
+        region: payload.region,
+        sector: payload.sector,
+        status: payload.submit ? 'Submitted' : 'Draft',
+        createdAt: now,
+        updatedAt: now,
+        milestones: [],
+        fundsReleased: 0,
+        updates: [],
+        votes: [],
+      };
+      fs.writeFileSync(
+        path.join(GRANTS_DIR, `${id}.json`)
+        JSON.stringify(record, null, 2)
+        'utf8'
+      );
+      res.status(201).json({ id, record });
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message |'Failed to create grant' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
     return;
   }
@@ -219,12 +279,14 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
+<<<<<<< HEAD
   res.status(405).end('Method Not Allowed');    } catch (e: any) {
       res.status(500).json({ error: e?.message || 'Failed to create grant' })
     }
     return
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
@@ -239,3 +301,9 @@ if ( {) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  res.status(405).end('Method Not Allowed')
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

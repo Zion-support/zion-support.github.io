@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 //FCP recommendations if (metrics.fcp > 2000) {
  //FCP recommendations if (metrics.fcp > 2000) {
@@ -8,6 +9,52 @@
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Activity;
+  AlertTriangle;
+  CheckCircle;
+  X;
+  RefreshCw;
+  BarChart3;
+  Gauge
+ } from 'lucide-react';
+interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  domLoad: number;
+  windowLoad: number;
+  memoryUsage?: {
+    usedJSHeapSize: number;
+    totalJSHeapSize: number;
+    jsHeapSizeLimit: number
+  },
+  networkInfo?: {
+    effectiveType: string;
+    downlink: number;
+    rtt: number
+  }
+}
+
+interface PerformanceRecommendation {
+  id: string;
+  title: string;
+  description: string;
+  priority: 'high' | 'medium' | 'low';
+  impact: string;
+  solution: string;
+  category: 'performance' | 'accessibility' | 'seo' | 'user-experience'
+}
+
+const EnhancedPerformanceMonitor: React.FC;
+//FCP recommendations if (metrics.fcp > 2000) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   recs.push ({
 }return recs;
 }, []);
@@ -42,6 +89,7 @@ if (!performanceData) {;
 }
 }> </p> </div> </div> <div className="flex items-center space-x-2" > <button > <BarChart3 className="w-4 h-4" /> </button> <button > <RefreshCwclassName= {
   `w-4 h-4 $ {
+<<<<<<< HEAD
 //FCP recommendations // Check condition
 if ( {) {
   $2
@@ -99,6 +147,18 @@ if ( {) {
 }`;
 }> {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+  isLoading ? 'animate-spin' : ''
+}`
+}/> </button> <button > <Settings className="w-4 h-4" /> </button> </div> </div> </div> performanceData.overallScore >= 70 ? 'Good': 'Needs Improvement'
+}</p> </div> <span className= {
+  `font-mono $ {
+  metrics.fcp > 2000 ? 'text-red-400': 'text-green-400'
+}`
+}> {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   metrics.fcp.toFixed (0)
 }ms </span> </div> </span> </div> </div> </div>)
 }</span> </div> <div className="w-full bg-gray-700 rounded-full h-2" > <div width: `$ {
@@ -114,6 +174,7 @@ if ( {) {
 }</div> </div>)
 }) : (<BarChart3 className="w-4 h-4" />)
 }<span> {
+<<<<<<< HEAD
   isMonitoring ? 'Measuring...': 'Measure Performance'
 }</span> </button> </div> </div> </motion.div>)
 }</AnimatePresence> </>)
@@ -129,3 +190,11 @@ export default EnhancedPerformanceMonitor;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  isMonitoring ? 'Measuring...': 'Measure Performance' 
+}</span> </button> </div> </div> </motion.div>) 
+}</AnimatePresence> </>) 
+};
+export default EnhancedPerformanceMonitor;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

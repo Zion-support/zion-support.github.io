@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -16,6 +17,9 @@ import type { SafeRef } from &quot;../sidebar.types&quot;
 import * as React from "react"
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
 import { cn } from "@/lib/utils"
@@ -24,6 +28,7 @@ import type { SafeRef } from "../sidebar.types"
 
 export const SidebarInput = React.forwardRef<
   React.ElementRef<typeof Input>
+<<<<<<< HEAD
 <<<<<<< HEAD
   React.ComponentProps<typeof Input>
 <<<<<<< HEAD
@@ -36,6 +41,9 @@ export const SidebarInput = React.forwardRef<
 =======
   React.ComponentProps<typeof Input>export const SidebarInput = React.forwardRef<
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  React.ComponentProps<typeof Input>export const SidebarInput = React.forwardRef<
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   React.ElementRef<typeof Input>
   React.ComponentProps<typeof Input>
 import * as React from &quot;react & quot;
@@ -49,6 +57,7 @@ export const SidebarInput = React.forward_ref<;
   React.ComponentProps < typeof Input>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >((props, ref) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
 <<<<<<< HEAD
@@ -139,6 +148,11 @@ export const SidebarHeader = React.forwardRef<
     <Input;
       ref={ref}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (  return (
+    <Input;
+      ref={ref}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 >((props, ref) => {
   return (
     <div;
@@ -146,6 +160,7 @@ export const SidebarHeader = React.forwardRef<
       data - sidebar=&quot;header & quot;
       className={cn (&quot;flex flex - col gap - 2 p - 2&quot;, props.class_name)}
       {...props}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     />
@@ -161,6 +176,8 @@ export const SidebarHeader = React.forwardRef<
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     />);
 });
@@ -176,6 +193,7 @@ export const SidebarFooter = React.forwardRef<
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -186,12 +204,15 @@ export const SidebarFooter = React.forwardRef<
 >((props, ref) => {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div;
       ref={ref as SafeRef < HTMLDivElement>}
       data - sidebar=&quot;footer & quot;
       className={cn (&quot;flex flex - col gap - 2 p - 2&quot;, props.class_name)}
       {...props}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     />
@@ -204,14 +225,20 @@ SidebarFooter.displayName = &quot;SidebarFooter&quot;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 SidebarFooter.displayName = "SidebarFooter"
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export const SidebarSeparator = React.forwardRef<
   HTMLDivElement
   React.ComponentProps<typeof Separator>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >((props, ref) => {
@@ -228,6 +255,8 @@ export const SidebarSeparator = React.forwardRef<
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     />);
 });
 SidebarFooter.display_name = &quot;SidebarFooter & quot;
@@ -251,6 +280,7 @@ export const SidebarContent = React.forwardRef<
 
   return (
     <div;
+<<<<<<< HEAD
 <<<<<<< HEAD
       ref={ref}
 <<<<<<< HEAD
@@ -309,10 +339,14 @@ export const SidebarContent = React.forwardRef<
 =======
       ref={ref}        props.className
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      ref={ref}        props.className
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       )}
       {...props}
     />
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 })
 <<<<<<< HEAD
@@ -359,6 +393,9 @@ export const SidebarGroup = React.forwardRef<
 =======
 })>((props, ref) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+})>((props, ref) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div;
       ref={ref}
@@ -393,6 +430,7 @@ SidebarGroup.displayName = &quot;SidebarGroup&quot;
 SidebarGroup.displayName = "SidebarGroup"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -401,3 +439,5 @@ SidebarGroup.displayName = "SidebarGroup"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

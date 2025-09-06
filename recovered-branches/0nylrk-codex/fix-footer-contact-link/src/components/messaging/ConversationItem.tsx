@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80,6 +81,12 @@ interface ConversationItemProps {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  conversation: Conversation,
+  isActive: boolean,
+  onClick: () => void
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   conversation: Conversation
   isActive: boolean
 
@@ -103,6 +110,7 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
         "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors",
         isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover:bg-zion-blue-dark/30",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -121,6 +129,11 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    <div 
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
       onClick={onClick}
@@ -141,6 +154,7 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
         <div className="text-sm text-zion-slate truncate">
           {conversation.last_message?.content |'(No messages yet)'}
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -192,6 +206,9 @@ import React from 'react';
 =======
 import React from 'react';import React from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from 'react';import React from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {conversation.context_data?.title && (
           <div className="text - xs mt - 1 text - zion-cyan truncate">;
             Re: {conversation.context_data.title}

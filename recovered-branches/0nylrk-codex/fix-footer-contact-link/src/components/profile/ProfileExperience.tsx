@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,6 +46,9 @@ import { Briefcase } from "lucide-react";
 =======
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile";import { Briefcase } from "lucide-react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { ProfileExperience as ProfileExperienceType } from "@/types/profile";import { Briefcase } from "lucide-react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ProfileExperienceProps {
   experience: ProfileExperienceType[];
 }
@@ -85,6 +89,7 @@ import { ProfileExperience as ProfileExperienceType } from "@/types/profile",;
 import { Briefcase } from "lucide-react";
 interface ProfileExperienceProps {;
   experience: ProfileExperienceType[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -281,3 +286,6 @@ export function ProfileExperience({ experience } ProfileExperienceProps) {;
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

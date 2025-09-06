@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -81,6 +82,8 @@ export default function AIAutonomousEcosystemManager() {
 			pricePerMonthUSD={2999}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Average ROI 4–9x within 6 months"
 			features={[
@@ -90,6 +93,7 @@ export default function AIAutonomousEcosystemManager() {
 				"Sandboxing and E2E approvals for sensitive actions"
 				"Cost and performance optimization"
 
+<<<<<<< HEAD
 				"Integrations: Kubernetes, Slack/Teams, Jira, GitHub"
 			]}
 			industries={["Platform Teams", "R&D", "Operations", "Security"]}
@@ -107,11 +111,23 @@ export default function AIAutonomousEcosystemManager() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import React from 'react';
+			title;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+				"Integrations: Kubernetes, Slack/Teams, Jira, GitHub"
+			]}
+			industries={["Platform Teams", "R&D", "Operations", "Security"]}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			pricePerMonthUSD={2999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -131,6 +147,8 @@ export default function AIAutonomousEcosystemManager() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Average ROI 4–9x within 6 months"
 			features={[
@@ -140,6 +158,7 @@ export default function AIAutonomousEcosystemManager() {
 				"Sandboxing and E2E approvals for sensitive actions",
 				"Cost and performance optimization",
 				"Integrations: Kubernetes, Slack/Teams, Jira, GitHub"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -158,6 +177,8 @@ export default function AIAutonomousEcosystemManager() {
 };
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -172,6 +193,10 @@ export default function AIAutonomousEcosystemManager() {
 			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager"
 		/>
 	)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager";
 		/>;
 	);
@@ -179,6 +204,7 @@ export default function AIAutonomousEcosystemManager() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -193,3 +219,8 @@ export default function AIAutonomousEcosystemManager() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

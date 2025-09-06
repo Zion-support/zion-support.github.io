@@ -69,6 +69,7 @@ export const MobileAppHero: React.FC = () => {
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           
 =======
 =======
@@ -76,6 +77,8 @@ export const MobileAppHero: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 
@@ -103,6 +106,7 @@ export const MobileAppHero: React.FC = () => {
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -221,10 +225,13 @@ export const MobileAppHero:React.FC = () => {;
           <div className="flex-1 flex justify-center">;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="relative w-64 h-auto">;
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>;
               <Phone className="w-full h-auto text-white" />;
               {/* This would be replaced with an actual phone mockup image in production */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -311,4 +318,10 @@ export const MobileAppHero: React.FC = () => {
         </div>;
       </div>;  )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            </div>;
+          </div>;
+        </div>;
+      </div>;  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };

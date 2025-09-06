@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
 import { Card, CardContent } from "@/components/ui/card",
@@ -10,6 +11,8 @@ import Skeleton from "@/components/ui/skeleton",
 import { cn } from "@/lib/utils",
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface AIMatchingResultsProps {
   matches: MatchResultItem[],
   onSelectMatch?: (match: MatchResultItem) => void,
@@ -201,6 +204,37 @@ export function AIMatchingResults({;
                           <Avatar className='h-12 w-12 border border-zion-blue-light'>;
                             {match && match.image ? (;
 
+=======
+import { useState } from 'react';
+import { MatchResultItem } from '@/lib/ai-matchmaking';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
+import Skeleton from '@/components/ui/skeleton';
+import { cn } from '@/lib/utils';
+
+interface AIMatchingResultsProps {
+  matches: MatchResultItem[];
+  onSelectMatch?: (match: MatchResultItem) => void;
+  isLoading?: boolean;
+  projectDescription?: string;
+  serviceType?: string
+}
+export function AIMatchingResults({
+  matches;
+  onSelectMatch;
+  isLoading;
+                        match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 
+                        match.category.toLowerCase().includes("service") ? "bg-zion-purple" : 
+                        "bg-green-500"
+                      )} />
+                      <div className="flex-1 p-4">
+                        <div className="flex items-start gap-4">
+                          <Avatar className="h-12 w-12 border border-zion-blue-light">
+                            {match.image ? (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                               <AvatarImage
                                 src={match && match.image}
                                 alt={match && match.title}
@@ -405,9 +439,13 @@ if ( {) {
           </TabsContent>;
         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
       </Tabs>;
     </div>;
   );
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 };
@@ -437,9 +475,18 @@ if ( {) {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      </Tabs>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

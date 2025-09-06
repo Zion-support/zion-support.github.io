@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -7,6 +8,8 @@
 import React from "react";
 import {cn} from "@/lib/utils";
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { cn } from "@/lib/utils";
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
@@ -14,25 +17,27 @@ interface SeverityIndicatorProps {
 
 interface SeverityIndicatorProps {;
   severity: "safe" | "suspicious" | "dangerous",;
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   showIcon?: boolean;
   showText?: boolean;
   size?: "sm" | "md" | "lg";
   className?: string;
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import React from "react";
 import {cn} from "@/lib/utils";
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
-<<<<<<< HEAD
 
 interface SeverityIndicatorProps {;
+<<<<<<< HEAD
   severity: "safe" | "suspicious" | "dangerous",;
 =======
 =======
@@ -40,16 +45,24 @@ interface SeverityIndicatorProps {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",
+=======
+  severity: "safe" | "suspicious" | "dangerous",;import React from "react",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { cn } from "@/lib/utils";
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
 interface SeverityIndicatorProps {
 
+<<<<<<< HEAD
 interface SeverityIndicatorProps {;
   severity: "safe" | "suspicious" | "dangerous",;
+=======
+  severity: "safe" | "suspicious" | "dangerous"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   showIcon?: boolean;
   showText?: boolean;
   size?: "sm" | "md" | "lg";
   className?: string;
+<<<<<<< HEAD
 }
 
 import React from "react";
@@ -121,6 +134,9 @@ export function SeverityIndicator({
   className?: string;
 }}: SeverityIndicatorProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}: SeverityIndicatorProps) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const getSeverityIcon = () => {
     switch (severity) {
       case 'dangerous':
@@ -132,6 +148,7 @@ export function SeverityIndicator({
         return <AlertTriangle className={cn(
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
           "text-amber-500"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -190,6 +207,8 @@ export function SeverityIndicator({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
@@ -212,6 +231,7 @@ export function SeverityIndicator({;
   className;}: SeverityIndicatorProps) {;
   const getSeverityIcon = () => {;
     switch (severity) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
       case 'dangerous':;
 <<<<<<< HEAD
@@ -413,3 +433,6 @@ return (</div>)
 =======
       case 'dangerous':;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      case 'dangerous':;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

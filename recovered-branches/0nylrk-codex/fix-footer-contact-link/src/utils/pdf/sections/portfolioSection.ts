@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,11 +47,19 @@ import { PortfolioProject  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addPortfolioSection(  doc: jsPDF;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import { jsPDF  } from 'jspdf';
+import { PortfolioProject  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addPortfolioSection(  doc: jsPDF;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   projects: PortfolioProject[];
   colors: PdfThemeColors;
   startY: number;
 
   maxProjects: number = 2
+<<<<<<< HEAD
 <<<<<<< HEAD
 ): number {
 <<<<<<< HEAD
@@ -375,6 +384,9 @@ if ( {) {
 =======
 ): number {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+): number {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // If there are more projects than we're displaying;
   if (projects.length > maxProjects) {;
     doc.setFontSize(10),;
@@ -382,6 +394,7 @@ if ( {) {
     doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
     yPos += 6;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -393,6 +406,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   doc.setFontSize (16);
   doc.setTextColor (colors.heading);
@@ -424,6 +439,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -431,6 +447,8 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Check condition
 if ( {) {
   $2
@@ -486,6 +504,7 @@ if ( {) {
     y_pos += 6;
   }
   return y_pos + 5;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -614,3 +633,6 @@ yPos += 4
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

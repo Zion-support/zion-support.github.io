@@ -6,21 +6,29 @@ import {useState} from 'react';
 import {readJson} from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import {GetStaticPaths, GetStaticProps} from 'next';
 import {useState} from 'react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
 import type { HelpArticle } from '../../utils/support';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -28,6 +36,8 @@ import {read_json} from '../../utils / fs_db';
 import type { HelpArticle } from '../../utils / support';
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles = read_json < HelpArticle[]>('help / articles.json', []);
   return {
@@ -35,6 +45,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return {
+<<<<<<< HEAD
 <<<<<<< HEAD
     paths: articles.map(a => ({ params: { slug: a.slug } }))
     fallback: false
@@ -52,30 +63,44 @@ export const getStaticProps: GetStaticProps = async ctx => {
 export const getStaticProps: GetStaticProps = async (ctx) => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const slug = ctx.params?.slug as string;
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   const article = articles.find((a) => a.slug === slug) || null;
   return { props: { article } }
 };
 
+<<<<<<< HEAD
 export default function HelpArticlePage({ article }: { article: HelpArticle }) {
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+export const getStaticPaths: GetStaticPaths;
+    setVoted(helpful)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+export default function HelpArticlePage({ article }: { article: HelpArticle }) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
     await fetch('/api/support/feedback', {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const getStaticPaths: GetStaticPaths = async () => {;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   return {;
     paths: articles && articles.map(a => ({ params: { slug: a && a.slug } })),;
     fallback: false,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -83,6 +108,8 @@ export const getStaticPaths: GetStaticPaths = async () => {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     paths: articles.map(a => ({ params: { slug: a.slug } })),
     fallback: false,
 
@@ -96,7 +123,10 @@ export const getStaticProps: GetStaticProps = async ctx => {;
   return { props: { article } };};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             className='enhanced-button enhanced-button-secondary';
     paths: articles.map (array => ({ params: { slug: a.slug } })),
@@ -157,20 +187,27 @@ function vote() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ articleId: article.id, helpful })});
     setVoted(helpful)
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function HelpArticlePage({ article }: { article: HelpArticle }) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export default function HelpArticlePage({ article }: { article: HelpArticle }) {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
     await fetch('/api/support/feedback', {
@@ -178,6 +215,7 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ articleId: article.id, helpful })
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
     setVoted(helpful);
 
@@ -188,6 +226,11 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { useState } from 'react';
+import { readJson } from '../../utils/fsDb';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { HelpArticle } from '../../utils/support';
 export const getStaticPaths: GetStaticPaths = async () => {;
   const articles = readJson<HelpArticle[]>('help/articles.json', []),;
@@ -196,6 +239,16 @@ export const getStaticPaths: GetStaticPaths = async () => {;
     fallback: false  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+=======
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ articleId: article.id, helpful }),
+    });
+    setVoted(helpful);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
 },;
@@ -218,6 +271,7 @@ export default function HelpArticlePage(req, res) {
       headers: { 'Content-Type': 'application/json' };
       body: JSON.stringify({ articleId: article.id, helpful })});
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
@@ -225,12 +279,15 @@ export default function HelpArticlePage(req, res) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setVoted(helpful);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export const getStaticPaths: GetStaticPaths = async () => {;
@@ -356,6 +413,11 @@ export const getStaticPaths: GetStaticPaths = async () => {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <article className="prose dark:prose-invert max-w-none">
       <h1>{article.title}</h1>
@@ -363,17 +425,24 @@ export const getStaticPaths: GetStaticPaths = async () => {;
       <div className="mt-6 whitespace-pre-wrap">{article.body}</div>
       <div className="mt-8 p-4 rounded-lg border border-gray-200 dark:border-gray-800 flex items-center justify-between">
         <div>Was this article helpful?</div>
+<<<<<<< HEAD
         <div className="flex gap-2">
           <button onClick={() => vote(true)} disabled={voted !== null} className="enhanced-button enhanced-button-primary">Yes</button>
 <<<<<<< HEAD
           <button onClick={() => vote(false)} disabled={voted !== null} className="enhanced-button enhanced-button-secondary">No</button>
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <div className="flex gap-2">
+          <button onClick={() => vote(true)} disabled={voted !== null} className="enhanced-button enhanced-button-primary">Yes</button>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
   )
 }
 
+<<<<<<< HEAD
 =======
           <button onClick={() => vote(false)} disabled={voted !== null} className="enhanced-button enhanced-button-secondary">No</button>
 <<<<<<< HEAD
@@ -383,14 +452,19 @@ export const getStaticPaths: GetStaticPaths = async () => {;
     </article>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   )
 }
@@ -401,8 +475,32 @@ export const getStaticPaths: GetStaticPaths = async () => {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+        <div className='flex gap-2'>
+          <button
+            onClick={() => vote(true)}
+            disabled={voted !== null}
+            className='enhanced-button enhanced-button-primary'
+          >
+            Yes
+          </button>
+          <button
+            onClick={() => vote(false)}
+            disabled={voted !== null}
+            className='enhanced-button enhanced-button-secondary'
+          >
+            No
+          </button>
+        </div>
+      </div>
+    </article>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

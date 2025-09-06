@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
@@ -31,6 +32,8 @@ export function FraudDetectionSettings() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Switch} from '@/components/ui/switch';
 import {Button} from '@/components/ui/button';
@@ -41,6 +44,7 @@ import {toast} from '@/hooks/use-toast';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 export function FraudDetectionSettings() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -68,6 +72,8 @@ import { Label } from "@/components/ui/label";
 import { ShieldAlert, Info } from "lucide-react";
 import {
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { user } = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
@@ -79,7 +85,10 @@ import { Switch } from '@/components/ui/switch',
 import { Button } from '@/components/ui/button',
 import { Label } from '@/components/ui/label',
 import { ShieldAlert, Info } from 'lucide-react',import {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -89,6 +98,7 @@ import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 export function FraudDetectionSettings() {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const { user } = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
@@ -101,11 +111,20 @@ export function FraudDetectionSettings() {
 
 <<<<<<< HEAD
   const handleSavePreferences = async () => {
+=======
+  const { user } = useAuth(),
+  const [messageScanningEnabled, setMessageScanningEnabled] = useState(true),
+  const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true),
+  const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true),
+  const [isSaving, setIsSaving] = useState(false),
+    const handleSavePreferences = async () => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (!user?.id) return;
     setIsSaving(true);
     try {
       // In a real implementation, we would save these preferences to the database
       // For now, we'll just simulate a successful save
+<<<<<<< HEAD
       await new Promise((resolve) => setTimeout(resolve, 1000));
 =======
 
@@ -159,6 +178,8 @@ export function FraudDetectionSettings() {
     try {
       // In a real implementation, we would save these preferences to the database
       // For now, we'll just simulate a successful save
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       toast({
@@ -166,6 +187,7 @@ export function FraudDetectionSettings() {
         description: "Your fraud detection preferences have been updated.",
       });
     } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -194,6 +216,8 @@ export function FraudDetectionSettings() {
       toast({
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         title: "Error",
         description: "Failed to save your preferences. Please try again.",
         variant: "destructive",
@@ -232,11 +256,14 @@ export function FraudDetectionSettings() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleSavePreferences = async () => {;
     if (!user?.id) return;
     setIsSaving(true);
@@ -245,6 +272,7 @@ export function FraudDetectionSettings() {
       // For now, we'll just simulate a successful save;
       await new Promise(resolve => setTimeout(resolve, 1000));
       toast({;
+<<<<<<< HEAD
 <<<<<<< HEAD
         title: "Settings saved",;
         description: "Your fraud detection preferences have been updated."});
@@ -262,6 +290,15 @@ export function FraudDetectionSettings() {
         title: "Error",,
   description: "Failed to save your preferences. Please try again.",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        title: "Settings saved",,
+  description: "Your fraud detection preferences have been updated."});
+    } catch (error) {;
+      console && console.error('Error saving preferences:', error);
+      toast({;
+        title: "Error",,
+  description: "Failed to save your preferences. Please try again.",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         variant: "destructive"});
     } finally {;
       setIsSaving(false);
@@ -491,6 +528,7 @@ export function FraudDetectionSettings() {;
               <Switch;
                 id="ai-analysis";
                 checked={aiAnalysisEnabled}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 onCheckedChange={setAiAnalysisEnabled}
 <<<<<<< HEAD
@@ -729,6 +767,9 @@ if (return) {
 =======
                 onCheckedChange={setAiAnalysisEnabled}            </Button>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                onCheckedChange={setAiAnalysisEnabled}            </Button>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
         </div>
       </CardContent>
@@ -784,6 +825,7 @@ mb-8"> <CardHeader className=" space-y-1"> <div className=" flex items-center ga
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -791,3 +833,6 @@ mb-8"> <CardHeader className=" space-y-1"> <div className=" flex items-center ga
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

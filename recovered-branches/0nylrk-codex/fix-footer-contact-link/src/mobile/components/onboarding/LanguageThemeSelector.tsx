@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -23,6 +24,8 @@ import {Card, CardContent} from "@/components/ui/card";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useTheme } from "@/hooks/useTheme",
@@ -50,6 +53,7 @@ interface Language {
 
   flag: string
 }
+<<<<<<< HEAD
 const languages: Language[] = [
 <<<<<<< HEAD
   { code: "en", name: "English", flag: "🇺🇸" }
@@ -88,6 +92,8 @@ interface Language {
   flag: string
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const languages: Language[] = [  { code: "en", name: "English", flag: "🇺🇸" },
   { code: "es", name: "Español", flag: "🇪🇸" },
   { code: "fr", name: "Français", flag: "🇫🇷" },
@@ -97,10 +103,13 @@ const languages: Language[] = [  { code: "en", name: "English", flag: "🇺🇸"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function LanguageThemeSelector() {
   const { theme, setTheme } = useTheme();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -153,6 +162,7 @@ export function LanguageThemeSelector() {;
 
         <div className="grid grid-cols-2 gap-3 mt-4">;
           {languages && languages.map((language) => (;
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
 
@@ -180,6 +190,8 @@ export function LanguageThemeSelector() {
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 <<<<<<< HEAD
 =======
@@ -208,6 +220,7 @@ export function LanguageThemeSelector() {
                 {selectedLanguage === language.code && (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -217,6 +230,8 @@ export function LanguageThemeSelector() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <Check className="h-4 w-4 text-primary" />
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -341,6 +356,7 @@ export function LanguageThemeSelector() {;
                 )}
               </CardContent>;
             </Card>;
+<<<<<<< HEAD
           ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -380,6 +396,9 @@ export function LanguageThemeSelector() {;
             </Card>;
           ))}          <Card
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          ))}          <Card
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             className={`flex-1 cursor-pointer transition-all ${
               theme === "light"
                 ? "border-primary bg-primary/5"
@@ -423,6 +442,7 @@ export function LanguageThemeSelector() {;
           </Card>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -444,6 +464,9 @@ export function LanguageThemeSelector() {;
 =======
           <Card            }`}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <Card            }`}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             onClick={() => setTheme("light")}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           >
@@ -476,6 +499,7 @@ export function LanguageThemeSelector() {;
               theme === 'dark' ;
                 ? "border-primary bg-primary/5" ;
                 :"border-border hover:border-primary/40";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -609,6 +633,8 @@ function LanguageThemeSelector() {
             }`}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             onClick={() => setTheme('dark')}
           >
             <CardContent className="p-3 flex flex-col items-center justify-center">
@@ -625,6 +651,7 @@ function LanguageThemeSelector() {
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -702,3 +729,7 @@ flag: string
     </div>);
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

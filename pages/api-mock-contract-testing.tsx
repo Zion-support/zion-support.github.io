@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -198,6 +199,8 @@ import React from 'react',
 import Head from 'next/head';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import ServiceAds from '../components/sections/ServiceAds';
@@ -217,8 +220,11 @@ export default function ApiMockContractTestingPage() {
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 class ErrorBoundary extends React.Component {
@@ -257,6 +263,7 @@ function ApiMockContractTestingPage() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     website: 'https://ziontechgroup.com',  }
   const adItems = [
@@ -271,6 +278,12 @@ function ApiMockContractTestingPage() {
       features: [
 
 =======
+=======
+    website: 'https://ziontechgroup.com',  }
+;
+  const ad_items = [;
+    {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         'OpenAPI/GraphQL import and live mock server'
         'Contract tests gated in CI (GitHub/GitLab/Bitbucket)'
         'Dynamic data generators and scenario templates'
@@ -287,7 +300,10 @@ function ApiMockContractTestingPage() {
       link: 'https://ziontechgroup.com/api-mock-contract-testing',
       contactInfo,;
     },;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ];
   const tiers = [
     {
@@ -307,9 +323,12 @@ function ApiMockContractTestingPage() {
     },  ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import Head from 'next/head';
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check } from 'lucide-react';
@@ -364,6 +383,7 @@ export default function ApiMockContractTestingPage(req, res) {
   ];
 ;
   const tiers = [;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },  ];
 ;
@@ -384,6 +404,33 @@ export default function ApiMockContractTestingPage(req, res) {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+    },  ];
+;
+=======
+import React from 'react',
+import Head from 'next/head';
+  const contactInfo = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+    <Layout>
+      <Head>
+        <title>API Mock & Contract Testing | Zion Tech Group</title>
+<<<<<<< HEAD
+        <meta name="description" content="OpenAPI/GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals." />
+        <link rel="canonical" href="https://ziontechgroup.com/api-mock-contract-testing" />
+=======
+<meta
+          name='description'
+          content='OpenAPI/GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals.'
+        />
+        <link
+          rel='canonical'
+          href='https://ziontechgroup.com/api-mock-contract-testing'
+        />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      </Head>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>
         <ServiceAds
           heading='API Quality Fast-Track'
@@ -403,11 +450,31 @@ export default function ApiMockContractTestingPage(req, res) {
                   {t && t.items.map(i => (;
                     <li
                       key={i}
+<<<<<<< HEAD
                       className='flex items-start gap-2 w-4 h-4 mt-0 && 0.5 text-emerald-400'>;
                       <Check /> <span>{i}</span>;
                     </li>                  ))}
           </div>
           <div className='mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30'>
+=======
+<<<<<<< HEAD
+                      className='flex items-start gap-2 w-4 h-4 mt-0 && 0.5 text-emerald-400'>;
+                      <Check /> <span>{i}</span>;
+                    </li>                  ))}
+=======
+                      className='flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400'
+                    >
+                      <Check /> <span>{i}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+          </div>
+
+<div className='mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4'>
               <div className='flex items-center justify-center gap-2 text-cyan-400 w-4 h-4'>
                 <Phone />
@@ -421,6 +488,7 @@ export default function ApiMockContractTestingPage(req, res) {
                 <MapPin />
                 <span>{contactInfo.address}</span>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
         <ServiceAds heading="API Quality Fast-Track" subheading="Mock, validate, and ship with confidence." items={adItems} />
@@ -458,12 +526,18 @@ export default function ApiMockContractTestingPage(req, res) {
           <div className="mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          </div>
+
+          <div className="mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
               <div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
               <div className="flex items-center justify-center gap-2 text-purple-400 w-4 h-4"><Mail /><span>{contactInfo.email}</span></div>
               <div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
             </div>
             <div className="text-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -494,10 +568,26 @@ export default function ApiMockContractTestingPage(req, res) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+            </div>
+<<<<<<< HEAD
+=======
+            <div className='text-center'>
+              <a
+                href='/contact'
+                className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl'
+              >
+                Book a Demo
+              </a>
+            </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
         </div>
       </div>
     </Layout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -510,6 +600,8 @@ export default function ApiMockContractTestingPage(req, res) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           </div>;
 
@@ -598,6 +690,7 @@ export default function ApiMockContractTestingPage(req, res) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           </div>;
 
@@ -606,11 +699,14 @@ export default function ApiMockContractTestingPage(req, res) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Book a Demo;
               </a>            </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -634,11 +730,14 @@ export default function ApiMockContractTestingPage(req, res) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 }
 
     </Layout>);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -683,3 +782,11 @@ export default function ApiMockContractTestingPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+
+
+=======
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

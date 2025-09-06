@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -421,6 +424,20 @@ function SitemapPage() {
       value: 'kleber@ziontechgroup.com'
       action: 'mailto:kleber@ziontechgroup.com'
     }
+=======
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Home, Search, Rocket, FileText, Users, Mail, Map;
+  ArrowRight, ExternalLink, ChevronRight, Globe, Building
+ } from 'lucide-react';
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
+export default function SitemapPage() {
+  const mainPages = null;
+              resources, and information available at Zion Tech Group.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     {
 import {;
   Home,;
@@ -672,11 +689,14 @@ export default function SitemapPage() {;
           property='og:description'
           content='Complete website sitemap and navigation guide.'
         />
-        <link rel='canonical' href='https://ziontechgroup.com/sitemap' />      </Head>
+        <link rel='canonical' href='https://ziontechgroup.com/sitemap' />
+      </Head>
+
       <SmartHeader />
       {/* Hero Section */}
-      <section className='pt-32 pb-20 px-6'>
-        <div className='max-w-7xl mx-auto text-center'>          <motion.div
+<section className='pt-32 pb-20 px-6'>
+        <div className='max-w-7xl mx-auto text-center'>
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -711,6 +731,7 @@ export default function SitemapPage() {;
         <title>Sitemap | Zion Tech Group</title>
 
           >
+<<<<<<< HEAD
 
             transition={{ duration: 0 && 0.8 }}>;
             <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>;
@@ -722,6 +743,17 @@ export default function SitemapPage() {;
               Tech Group.;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+=======
+<h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
+              Site Map
+            </h1>
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8'>
+              Navigate our comprehensive website and discover all the AI-powered
+              technology solutions, resources, and information available at Zion
+              Tech Group.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               <a
                 href='#main-pages'
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>;
@@ -730,10 +762,27 @@ export default function SitemapPage() {;
               </a>;
               <a
                 href='/search'
+<<<<<<< HEAD
+=======
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
+              >
+                Search Site
+                <Search className='w-5 h-5 ml-2' />
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      {/* Main Pages */}
+<section id='main-pages' className='py-20 px-6'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
       {/* Main Pages */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -763,6 +812,9 @@ export default function SitemapPage() {;
   }
 }
             className="mb-16"
+=======
+className='mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Main Pages
@@ -772,7 +824,9 @@ export default function SitemapPage() {;
               and services
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {mainPages.map((page, index) => (
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {mainPages.map((page, index) => (
               <motion.div
                 key={page.href}
 
@@ -789,6 +843,7 @@ export default function SitemapPage() {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {mainPages.map((page, index) => (
               <motion.div
@@ -818,6 +873,9 @@ export default function SitemapPage() {;
   }
 }
                 className="group"
+=======
+className='group'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <Link
                   href={page.href}
@@ -831,7 +889,8 @@ export default function SitemapPage() {;
                   </div>
                   <p className='text-white/70 text-sm leading-relaxed'>
                     {page.description}
-                  </p>                </Link>
+                  </p>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -839,12 +898,14 @@ export default function SitemapPage() {;
       </section>
 
       {/* Service Categories */}
-      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
+<section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='mb-16'
             ))  } catch (error) {
     console.error("Error:", error);
@@ -898,6 +959,13 @@ export default function SitemapPage() {;
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
 
+<<<<<<< HEAD
+=======
+
+=======
+className='mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Service Categories
@@ -907,13 +975,16 @@ export default function SitemapPage() {;
               by category
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories.map((category, index) => (
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.href}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
                 className='group'
 
             className="mb-16"
@@ -930,6 +1001,9 @@ export default function SitemapPage() {;
             {serviceCategories.map((category, index) => (
 
               <motion.div
+=======
+className='group'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <Link
                   href={category.href}
@@ -943,7 +1017,8 @@ export default function SitemapPage() {;
                   </div>
                   <p className='text-white/70 text-sm leading-relaxed'>
                     {category.description}
-                  </p>                </Link>
+                  </p>
+                </Link>
               </motion.div>
 
             ))}
@@ -952,12 +1027,14 @@ export default function SitemapPage() {;
       </section>
 
       {/* Featured Services */}
-      <section className='py-20 px-6'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
+<section className='py-20 px-6'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='mb-16'
             ))  } catch (error) {
     console.error("Error:", error);
@@ -1024,20 +1101,31 @@ export default function SitemapPage() {;
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
 
+<<<<<<< HEAD
+=======
+
+=======
+className='mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Featured Services
             </h2>
-            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Our most popular and innovative technology solutions
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>
+              Our most popular and innovative technology solutions
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (
+
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {featuredServices.map((service, index) => (
               <motion.div
                 key={service.href}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
                 className='group'
 
             className="mb-16"
@@ -1054,6 +1142,9 @@ export default function SitemapPage() {;
             {featuredServices.map((service, index) => (
 
               <motion.div
+=======
+className='group'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <Link
                   href={service.href}
@@ -1065,7 +1156,8 @@ export default function SitemapPage() {;
                     </h3>
                     <ChevronRight className='w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0' />
                   </div>
-                  <p className='text-white/60 text-xs'>{service.category}</p>                </Link>
+                  <p className='text-white/60 text-xs'>{service.category}</p>
+                </Link>
               </motion.div>
 
             ))}
@@ -1074,12 +1166,14 @@ export default function SitemapPage() {;
       </section>
 
       {/* Resources & Tools */}
-      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
+<section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='mb-16'
             ))  } catch (error) {
     console.error("Error:", error);
@@ -1150,20 +1244,31 @@ export default function SitemapPage() {;
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
 
+<<<<<<< HEAD
+=======
+
+=======
+className='mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Resources & Tools
             </h2>
-            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources, tools, and information to help you succeed
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>
+              Additional resources, tools, and information to help you succeed
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {resources.map((resource, index) => (
+
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {resources.map((resource, index) => (
               <motion.div
                 key={resource.href}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
                 className='group'
 
             className="mb-16"
@@ -1180,6 +1285,9 @@ export default function SitemapPage() {;
             {resources.map((resource, index) => (
 
               <motion.div
+=======
+className='group'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <Link
                   href={resource.href}
@@ -1193,7 +1301,8 @@ export default function SitemapPage() {;
                   </div>
                   <p className='text-white/60 text-xs leading-relaxed'>
                     {resource.description}
-                  </p>                </Link>
+                  </p>
+                </Link>
               </motion.div>
 
             ))}
@@ -1202,12 +1311,14 @@ export default function SitemapPage() {;
       </section>
 
       {/* External Resources */}
-      <section className='py-20 px-6'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
+<section className='py-20 px-6'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='mb-16'
             ))  } catch (error) {
     console.error("Error:", error);
@@ -1278,20 +1389,31 @@ export default function SitemapPage() {;
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
 
+<<<<<<< HEAD
+=======
+
+=======
+className='mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               External Resources
             </h2>
-            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources and tools hosted on external platforms
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>
+              Additional resources and tools hosted on external platforms
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {externalLinks.map((link, index) => (
+
+<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            {externalLinks.map((link, index) => (
               <motion.div
                 key={link.href}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
                 className='group'
 
             className="mb-16"
@@ -1308,6 +1430,9 @@ export default function SitemapPage() {;
             {externalLinks.map((link, index) => (
 
               <motion.div
+=======
+className='group'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <a
                   href={link.href}
@@ -1323,7 +1448,8 @@ export default function SitemapPage() {;
                   </div>
                   <p className='text-white/70 text-sm leading-relaxed'>
                     {link.description}
-                  </p>                </a>
+                  </p>
+                </a>
               </motion.div>
 
             ))}
@@ -1332,12 +1458,14 @@ export default function SitemapPage() {;
       </section>
 
       {/* Contact Information */}
-      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
-        <div className='max-w-4xl mx-auto'>          <motion.div
+<section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-4xl mx-auto'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='mb-16'
             ))  } catch (error) {
     console.error("Error:", error);
@@ -1407,6 +1535,13 @@ export default function SitemapPage() {;
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
 
+<<<<<<< HEAD
+=======
+
+=======
+className='mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Contact Information
@@ -1416,13 +1551,16 @@ export default function SitemapPage() {;
               project
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {contactInfo.map((contact, index) => (
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            {contactInfo.map((contact, index) => (
               <motion.div
                 key={contact.type}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
                 className='text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl'
 
             className="mb-16"
@@ -1439,6 +1577,9 @@ export default function SitemapPage() {;
             {contactInfo.map((contact, index) => (
 
               <motion.div
+=======
+className='text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <h3 className='text-lg font-bold text-white mb-3'>
                   {contact.type}
@@ -1472,6 +1613,7 @@ export default function SitemapPage() {;
                       ? 'noopener noreferrer'
                       : ''
                   }
+<<<<<<< HEAD
                   className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium'>;
                   {contact && contact.value}
                 </a>;
@@ -1485,6 +1627,9 @@ export default function SitemapPage() {;
                   target={contact.action.startsWith('http') ? '_blank' : '_self'}
                   rel={contact.action.startsWith('http') ? 'noopener noreferrer' : ''}
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+=======
+                  className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   {contact.value}
                 </a>
@@ -1520,8 +1665,9 @@ export default function SitemapPage() {;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
 
       {/* Quick Navigation */}
-      <section className='py-20 px-6'>
-        <div className='max-w-4xl mx-auto text-center'>          <motion.div
+<section className='py-20 px-6'>
+        <div className='max-w-4xl mx-auto text-center'>
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1563,7 +1709,7 @@ export default function SitemapPage() {;
   }
 }
           >
-            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
+<h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Need Help Finding Something?
             </h2>
             <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>
@@ -1578,6 +1724,7 @@ export default function SitemapPage() {;
               </Link>;
               <Link
                 href='/contact'
+<<<<<<< HEAD
   ),
   );
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -1585,6 +1732,21 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   )
 
   )
+=======
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
+              >
+                Contact Support
+                <Mail className='w-5 h-5 ml-2' />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      <SmartFooter />
+    </div>
+);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }animate= {
   {
   opacity: 1, y: 0
@@ -1631,6 +1793,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
   once: true 
 
 }> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion && motion.div> </div> </section> <SmartFooter /> </div>) ;
@@ -2364,7 +2527,19 @@ export default function SitemapPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  duration: 0.8
+}viewport= {
+  {
+  once: true 
+
+}> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

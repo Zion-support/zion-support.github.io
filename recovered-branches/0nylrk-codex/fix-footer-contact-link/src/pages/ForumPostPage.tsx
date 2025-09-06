@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -31,6 +32,10 @@ import {useToast} from "@/hooks/use-toast";
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -50,6 +55,7 @@ import ReplyForm from "@/components/community/ReplyForm";
 import { useToast } from "@/hooks/use-toast";
 // Mock data for a forum post
 import ReplyForm from "@/components/community/ReplyForm",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useToast } from "@/hooks/use-toast",
 <<<<<<< HEAD
@@ -93,6 +99,9 @@ const mockPost: ForumPost = {
 =======
 import { useToast } from "@/hooks/use-toast",const mockPost: ForumPost = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { useToast } from "@/hooks/use-toast",const mockPost: ForumPost = {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: "1"
   title: "Best practices for AI model fine-tuning"
   content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?";
@@ -123,6 +132,7 @@ const mockReplies: ForumReply[] = [
     updatedAt: "2025-04-01T14:30:00Z"
     upvotes: 12
 <<<<<<< HEAD
+<<<<<<< HEAD
     downvotes: 0
 <<<<<<< HEAD
 
@@ -139,6 +149,9 @@ const mockReplies: ForumReply[] = [
 =======
     downvotes: 0  {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    downvotes: 0  {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     id: "reply2"
     postId: "1"
     content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good performance."
@@ -161,6 +174,7 @@ const mockReplies: ForumReply[] = [
     updatedAt: "2025-04-02T09:45:00Z"
     upvotes: 15
     downvotes: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     isAnswer: true
 <<<<<<< HEAD
@@ -533,6 +547,9 @@ export default function ForumPostPage() {
 =======
     isAnswer: true    return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    isAnswer: true    return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { postId } = useParams() as { postId?:string },;
   const { user } = useAuth(),;
   const { toast } = useToast(),;
@@ -569,6 +586,7 @@ export default function ForumPostPage() {
     setPost({ ...post, downvotes: post.downvotes + 1 })
     toast({
       title: "Vote recorded"
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "You downvoted this post"})
 <<<<<<< HEAD
@@ -619,6 +637,9 @@ export default function ForumPostPage() {
 =======
       description: "You downvoted this post"})      downvotes: 0
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      description: "You downvoted this post"})      downvotes: 0
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post.replyCount + 1 })
@@ -644,6 +665,7 @@ export default function ForumPostPage() {
 
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -740,6 +762,8 @@ export default function ForumPostPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       });
       return;
     }
@@ -751,6 +775,7 @@ export default function ForumPostPage() {
     }));
 
       ...reply,
+<<<<<<< HEAD
 <<<<<<< HEAD
       isAnswer: reply.id === replyId
 <<<<<<< HEAD
@@ -776,12 +801,16 @@ export default function ForumPostPage() {
 =======
       isAnswer: reply.id === replyId    })),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      isAnswer: reply.id === replyId    })),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     
     setReplies(updatedReplies),
     setPost({ ...post, isAnswered: true }),
     
     toast({
       title: "Answer marked"
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "The reply has been marked as the accepted answer"})
 
@@ -806,6 +835,11 @@ export default function ForumPostPage() {
       title: "Answer marked"
       description: "The reply has been marked as the accepted answer"})
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      description: "The reply has been marked as the accepted answer"})    toast({
+      title: "Answer marked"
+      description: "The reply has been marked as the accepted answer"})
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleReportPost = () => {
     if (!user) {
       toast({
@@ -815,6 +849,7 @@ export default function ForumPostPage() {
     }
     toast({
       title: "Report submitted"
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "A moderator will review this content"})
 <<<<<<< HEAD
@@ -863,6 +898,9 @@ export default function ForumPostPage() {
 =======
       description: "A moderator will review this content"})  },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      description: "A moderator will review this content"})  },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const handleLockPost = () => {
     if (!isAdminOrMod) return,
@@ -873,6 +911,7 @@ export default function ForumPostPage() {
     toast({
       title: post.isLocked ? "Post unlocked" : "Post locked"
 <<<<<<< HEAD
+<<<<<<< HEAD
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
 =======
 =======
@@ -882,10 +921,14 @@ export default function ForumPostPage() {
 =======
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})    toast({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})    toast({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       title: post.isLocked ? "Post unlocked" : "Post locked"
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
   }
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
+<<<<<<< HEAD
 <<<<<<< HEAD
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")
 <<<<<<< HEAD
@@ -1218,6 +1261,9 @@ export default function ForumPostPage() {;
 =======
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")                      {post.authorRole}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")                      {post.authorRole}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </Badge>
                   )}
                 </div>
@@ -1233,6 +1279,7 @@ export default function ForumPostPage() {;
             <div className="flex flex-wrap gap-2 mb-6">
               {post.tags.map(tag => (
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1450,6 +1497,9 @@ export default function ForumPostPage() {;
 =======
     setPost({ ...post, isAnswered: true }),;        <Card>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    setPost({ ...post, isAnswered: true }),;        <Card>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <CardContent className="p-6">;
             <div className="flex justify-between items-start mb-6">;
               <div className="flex items-center gap-4">;
@@ -1477,6 +1527,7 @@ export default function ForumPostPage() {;
 
             <div className="flex flex-wrap gap-2 mb-6">;
 <<<<<<< HEAD
+<<<<<<< HEAD
               {post && post.tags.map(tag => (;
 =======
             ;
@@ -1492,6 +1543,9 @@ export default function ForumPostPage() {;
 =======
               {post && post.tags.map(tag => (;                <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              {post && post.tags.map(tag => (;                <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   {tag}
                 </Badge>;
               ))}                <Button
@@ -1504,6 +1558,7 @@ export default function ForumPostPage() {;
                   onClick={handleDownvote}              )}
             </div>
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2003,6 +2058,8 @@ if (return) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {post.isLocked && (
             <Alert className="mb-8">
               <AlertDescription className="flex items-center">
@@ -2050,6 +2107,7 @@ if (return) {
 
                   canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
                 />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2261,3 +2319,5 @@ downvotes: 0
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

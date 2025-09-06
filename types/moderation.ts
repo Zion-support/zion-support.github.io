@@ -53,11 +53,16 @@ export interface ModerationResult {
   reason?: string;
   moderatedBy?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   moderatedAt: Date;;
 =======
   moderatedAt: Date;
 ;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+  moderatedAt: Date;
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface ModerationAction {
   id: string;
   type: "approve" | "remove" | "warn" | "ban";
@@ -66,11 +71,16 @@ export interface ModerationAction {
   adminId: string;
   reason?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   createdAt: string;}
 =======
   createdAt: string;
 }
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+  createdAt: string;
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 export interface ModerationFlag {
 
@@ -87,6 +97,13 @@ export interface ModerationFlag {;
   adminNotes?: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+}
+export interface ModerationFlag {
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export interface ModerationRule {
   id: string;
@@ -219,6 +236,7 @@ export interface ModerationFlag {;
   action: 'approve' | 'reject' | 'flag';
   severity: 'low' | 'medium' | 'high';
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -243,3 +261,6 @@ export interface ModerationFlag {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,10 +21,14 @@ import React from \'react\';\''\'; import { EnhancedInnovativeServicesShowcase }
 =======
 import _React from 'react';'''; import { EnhancedInnovativeServicesShowcase } from '@/components/services/EnhancedInnovativeServicesShowcase';'''; import EnhancedSEO from '@/components/EnhancedSEO'; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };import React from \'react\';\''\'; import { EnhancedInnovativeServicesShowcase } from \'@/components/services/EnhancedInnovativeServicesShowcase\';\''\'; import EnhancedSEO from \'@/components/EnhancedSEO\'; export {}; return null} return (); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from \'react\';\''\'; import { EnhancedInnovativeServicesShowcase } from \'@/components/services/EnhancedInnovativeServicesShowcase\';\''\'; import EnhancedSEO from \'@/components/EnhancedSEO\'; export {}; return null} return (); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const React from "react";"""; import { EnhancedInnovativeServicesShowcase } from "@/components/services/EnhancedInnovativeServicesShowcase";"""; import EnhancedSEO from "@/components/EnhancedSEO"; export {}; return null} return (); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };''"
 
 import _React from 'react';'''; import { EnhancedInnovativeServicesShowcase } from '@/components/services/EnhancedInnovativeServicesShowcase';'''; import EnhancedSEO from '@/components/EnhancedSEO'; export {}; return null} return (); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,3 +72,8 @@ import React from \'react\';\''\'; import { EnhancedInnovativeServicesShowcase }
 const React from "react";"""; import { EnhancedInnovativeServicesShowcase } from "@/components/services/EnhancedInnovativeServicesShowcase";"""; import EnhancedSEO from "@/components/EnhancedSEO"; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };''"
 import _React from 'react';'''; import { EnhancedInnovativeServicesShowcase } from '@/components/services/EnhancedInnovativeServicesShowcase';'''; import EnhancedSEO from '@/components/EnhancedSEO'; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import React from \'react\';\''\'; import { EnhancedInnovativeServicesShowcase } from \'@/components/services/EnhancedInnovativeServicesShowcase\';\''\'; import EnhancedSEO from \'@/components/EnhancedSEO\'; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
+const React from "react";"""; import { EnhancedInnovativeServicesShowcase } from "@/components/services/EnhancedInnovativeServicesShowcase";"""; import EnhancedSEO from "@/components/EnhancedSEO"; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };''"
+import _React from 'react';'''; import { EnhancedInnovativeServicesShowcase } from '@/components/services/EnhancedInnovativeServicesShowcase';'''; import EnhancedSEO from '@/components/EnhancedSEO'; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -35,6 +36,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -54,9 +57,12 @@ export default function PublishProduct() {
   const { isAuthenticated, isLoading } = useAuth();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Navigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
 export default function PublishProduct() {
@@ -65,7 +71,10 @@ export default function PublishProduct() {
 
   // Show loading while checking authentication;
   if (isLoading) {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   // Show loading while checking authentication
   if (isLoading) {
@@ -77,6 +86,7 @@ export default function PublishProduct() {
       </div>
     );
   }
+<<<<<<< HEAD
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -201,6 +211,8 @@ import { useAuth } from "@/hooks/useAuth",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -229,6 +241,7 @@ export default function PublishProduct() {;
   return (;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   // Redirect to login if not authenticated;
@@ -247,6 +260,13 @@ export default function PublishProduct() {;
         description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals."
         keywords="publish product, sell online, digital marketplace, AI tools, tech services"
 <<<<<<< HEAD
+=======
+
+    <div className="min-h-screen flex flex-col bg-zion-blue">;      <SEO
+        title="Publish Your Product"
+        description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals."
+        keywords="publish product, sell online, digital marketplace, AI tools, tech services"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       />
       <Header />
       <main className="flex-1 p-6 md:p-10">
@@ -359,6 +379,7 @@ if ( {) {
             Share your products, services, or digital assets with the Zion community.;
           </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 md: p - 8">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -372,11 +393,15 @@ if ( {) {
 =======
           <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 md: p-8">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 md: p-8">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <ProductSubmissionForm />;
           </div>;
         </div>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
@@ -385,6 +410,8 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
 ;
@@ -411,6 +438,7 @@ if ( {) {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -421,3 +449,5 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

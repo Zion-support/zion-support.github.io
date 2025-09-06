@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -16,10 +17,15 @@ import {FilterSidebar} from "@/components/talent/FilterSidebar";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Drawer } from "@/components/ui/drawer";
 import { FilterSidebar } from "@/components/talent/FilterSidebar";
 import { Drawer } from "@/components/ui/drawer",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { FilterSidebar } from "@/components/talent/FilterSidebar",
 <<<<<<< HEAD
@@ -94,6 +100,13 @@ import { FilterSidebar } from "@/components/talent/FilterSidebar",  filterProps
     <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>
       <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">import React from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { FilterSidebar } from "@/components/talent/FilterSidebar",  filterProps
+}: MobileFilterDrawerProps) {
+  return (
+    <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>
+      <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">import React from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Drawer } from "@/components/ui/drawer",;
 import { FilterSidebar } from "@/components/talent/FilterSidebar",;
 interface MobileFilterDrawerProps {;
@@ -110,6 +123,7 @@ export function MobileFilterDrawer({;
   return (;
     <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>;
       <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <FilterSidebar;
 <<<<<<< HEAD
@@ -239,3 +253,6 @@ filterProps
 =======
         <FilterSidebar;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        <FilterSidebar;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

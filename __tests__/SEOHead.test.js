@@ -80,6 +80,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 import _React from 'react"  import '@testing-library/jest-dom import SEOHead from '../components/SEOHead" describe('SEOHead',() => {' test('renders without crashing',() => {' render(<SEOHead / />) expect(screen.getByTestId("seohead")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SEOHead / />) }) test('handles user interactions',() => {' render(<SEOHead / />) }) test('applies correct styling',() => {' render(<SEOHead / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import SEOHead from '../components/SEOHead" describe('SEOHead',() => {' test('renders without crashing',() => {' render(<SEOHead / />) expect(screen.getByTestId("seohead")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SEOHead / />) }) test('handles user interactions',() => {' render(<SEOHead / />) }) test('applies correct styling',() => {' render(<SEOHead / />) }) })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 <<<<<<< HEAD
@@ -92,3 +93,5 @@ import _React from 'react"  import '@testing-library/jest-dom import SEOHead fro
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

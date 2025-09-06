@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -27,6 +28,8 @@ import { X } from "lucide-react";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
   useEffect(() => {
@@ -52,6 +55,7 @@ export function FloatingCTA() {
       if (scrollPosition > threshold && !isClosed) {        setIsVisible(true);
       } else {;
         setIsVisible(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
 <<<<<<< HEAD
@@ -122,6 +126,14 @@ export function FloatingCTA() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   return (
+=======
+      }    setIsClosed(true);
+    setIsVisible(false);
+  }
+  if (!isVisible) return null;
+
+  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     },
 
     window.addEventListener("scroll", handleScroll),
@@ -136,6 +148,7 @@ export function FloatingCTA() {
   },
 
   if (!isVisible) return null,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -183,6 +196,8 @@ export function FloatingCTA() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
@@ -262,6 +277,7 @@ if (return null) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -303,3 +319,5 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

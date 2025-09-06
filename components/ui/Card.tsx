@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   className: string;
   id: string;
@@ -127,6 +128,8 @@ const CardDescription = React.forward_ref<;
     className={cn ("text - sm text - muted - foreground", class_name)}
     {...props}
 =======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react';
@@ -190,14 +193,62 @@ const CardTitle = React.forwardRef<
     className={cn(
       "text-2xl font-semibold leading-none tracking-tight",
       className,
+=======
+import React from 'react';
+import { cn } from '../../lib/utils';
+// Define HTML element types
+interface HTMLElement {
+  className: string;
+  id: string;
+  innerHTML: string;
+  textContent: string | null;
+  style: { [key: string]: string }
+}
+interface HTMLDivElement extends HTMLElement {
+  tagName: 'DIV';
+}
+interface HTMLParagraphElement extends HTMLElement {
+  tagName: 'P';
+}
+interface HTMLHeadingElement extends HTMLElement {
+  tagName: 'H1' | 'H2' | 'H3' | 'H4' | 'H5' | 'H6';
+}
+
+const Card = null;
+      className
+    )}
+    {...props}
+  />;
+));
+Card.displayName = "Card";
+
+const CardHeader = null;
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("flex flex-col space-y-1.5 p-6", className)}
+    {...props}
+  />;
+));
+CardHeader.displayName = "CardHeader";
+
+const CardTitle = null;
+      className
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     )}
     {...props}
   />;
 ));
 CardTitle.displayName = "CardTitle";
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 const CardDescription = React.forwardRef<
   HTMLParagraphElement,
+=======
+const CardDescription = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
   <p
@@ -208,13 +259,18 @@ const CardDescription = React.forwardRef<
 ));
 CardDescription.displayName = "CardDescription";
 
+<<<<<<< HEAD
 const CardContent = React.forwardRef<
   HTMLDivElement,
+=======
+const CardContent = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
 ));
+<<<<<<< HEAD
 CardContent && CardContent.displayName = "CardContent";
 
 
@@ -351,6 +407,7 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 <<<<<<< HEAD
@@ -358,3 +415,35 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+CardContent.displayName = "CardContent";
+
+const CardFooter = null;
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("flex items-center p-6 pt-0", className)}
+    {...props}
+  />;
+));
+CardFooter.displayName = "CardFooter";
+
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+  hover?: boolean
+}
+const Card: React.FC<CardProps> = ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
+};
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

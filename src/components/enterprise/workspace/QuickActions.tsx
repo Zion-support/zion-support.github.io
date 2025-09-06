@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -108,7 +113,19 @@ export function QuickActions() {
                 <span className='mt - 1 text - xs text - muted - foreground'>;
                   {action.description}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { FileText, Plus, Search, Calendar } from 'lucide-react'
+export function QuickActions() {
+  const actions = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Card>
       <CardHeader>
@@ -117,7 +134,10 @@ export function QuickActions() {
       </CardHeader>
       <CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 
@@ -129,6 +149,9 @@ export function QuickActions() {
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+=======
+<div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           {actions.map(action => (
             <Button 
               key={action.id}
@@ -242,12 +265,29 @@ export function QuickActions() {;
                 <div className='flex items-center'>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   {action.icon}
+<<<<<<< HEAD
                   <span>{action.label}</span>;
                 </div>;
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>;
               </div>;
             </Button>;
+=======
+                  <span>{action.label}</span>
+                </div>
+                <span className='mt-1 text-xs text-muted-foreground'>
+                  {action.description}
+<<<<<<< HEAD
+                </span>              </div>
+
+=======
+                </span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+              </div>
+
+            </Button>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           ))}
+<<<<<<< HEAD
         </div>;
       </CardContent>;
     </Card>;
@@ -289,4 +329,16 @@ export function QuickActions() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

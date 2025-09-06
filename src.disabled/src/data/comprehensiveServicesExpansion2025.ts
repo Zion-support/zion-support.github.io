@@ -7,13 +7,18 @@ import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listi
 """;,
 ";";"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ";";"
 ";";"
 ";";"
 ursor/add-new-services-and-deploy-updates-0462
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
@@ -37,3 +42,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

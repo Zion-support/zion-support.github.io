@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
@@ -9,6 +10,8 @@ import {ChevronRight, Plus, UserCheck, FileText, Bell} from "lucide-react";
 import {Link} from "react-router-dom";
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -17,6 +20,7 @@ import { Badge } from "@/components/ui/badge",
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react",
+<<<<<<< HEAD
 import { Link } from "react-router-dom",
 =======
 
@@ -38,6 +42,9 @@ import { Link } from "react-router-dom";
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react",
 import { Link } from "react-router-dom",export function ClientDashboard() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Link } from "react-router-dom",export function ClientDashboard() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-6 px-4 pb-24">
       <section className="mt-4">
@@ -312,6 +319,9 @@ import { Link } from "react-router-dom",export function ClientDashboard() {
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 }
 import React from "react",;
@@ -633,5 +643,9 @@ import { Link } from "react-router-dom";
             </CardContent>;
           </Card>;
         </div>;
+<<<<<<< HEAD
       </section>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </section>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

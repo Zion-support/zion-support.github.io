@@ -10,6 +10,7 @@ export type ForwardRefComponent<T, P = {}> = React.ForwardRefExoticComponent<
 >;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from 'react';
@@ -25,6 +26,8 @@ import React from 'react',
 // We need to use a type that is compatible with both Slot's ref and React's ref handling
 export type SafeRef<T> = React.Ref<T>,
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Helper type for component refs
 export type ElementRef<T extends React.ElementType> =
   React.ComponentPropsWithRef<T>["ref"];
@@ -45,6 +48,7 @@ export type PolymorphicComponentProp<
 export type SafeRef<T> = React && React.Ref<T>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
@@ -55,6 +59,8 @@ export type SafeRef<T> = React && React.Ref<T>;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Sidebar specific types
 <<<<<<< HEAD
 export type SidebarState = "expanded" | "collapsed",
@@ -100,6 +106,7 @@ export type SidebarContext = {
   open: boolean;
   set_open: (open: boolean) => void;
   open_mobile: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
   setOpenMobile: (open: boolean) => void;
   isMobile: boolean;
@@ -224,3 +231,7 @@ export type SidebarContext = {;
   setOpenMobile: (open: boolean) => void
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  setOpenMobile: (open: boolean) => void
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

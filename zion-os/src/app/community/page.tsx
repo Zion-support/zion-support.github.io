@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import Link from './next / link';
 export default /**
@@ -9,6 +12,7 @@ export default /**
  */
 function CommunityPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
       <div className="max - w-7xl mx - auto">;
@@ -43,10 +47,21 @@ export default function CommunityPage() {;
           </h1>;
           <p className="text - xl text - gray - 300 max - w-2xl mx-auto">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px-8">;
+      <div className="max - w-7xl mx-auto">;
+        {/* Header */}
+        <div className="text - center mb-16">;
+          <h1 className="text - 4xl md:text - 5xl font - bold mb-6">;
+            <span className="gradient-text">Join Our Community</span>;
+          </h1>;
+          <p className="text - xl text - gray - 300 max - w-2xl mx-auto">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             Connect with fellow developers, entrepreneurs, and innovators building the future of digital economies.;
           </p>;
         </div>;
         {/* Community Stats */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-20">;
           <div className="text-center">;
@@ -101,6 +116,27 @@ export default function CommunityPage() {;
           </div>;
         </div>;
         {/* Community Platforms */}
+=======
+        <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 8 mb-20">;
+          <div className="text-center">;
+            <div className="text - 4xl font - bold gradient - text mb-2">10K+</div>;
+            <div className="text - gray-400">Community Members</div>;
+          </div>;
+          <div className="text-center">;
+            <div className="text - 4xl font - bold gradient - text mb-2">500+</div>;
+            <div className="text - gray-400">Active Projects</div>;
+          </div>;
+          <div className="text-center">;
+            <div className="text - 4xl font - bold gradient - text mb-2">24 / 7</div>;
+            <div className="text - gray-400">Support Available</div>;
+          </div>;
+          <div className="text-center">;
+            <div className="text - 4xl font - bold gradient - text mb-2">50+</div>;
+            <div className="text - gray-400">Countries</div>;
+          </div>;
+        </div>;
+        {/* Community Platforms */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb-20">;
           <div className="card - hover text-center">;
             <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb-6">;
@@ -115,13 +151,17 @@ export default function CommunityPage() {;
             <a;
               href="https://discord.gg / ziontechgroup";
               className="btn - primary inline-block";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               target="_blank";
               rel="noopener noreferrer";
             >;
               Join Discord;
             </a>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="card-hover text-center">;
             <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;
@@ -137,6 +177,8 @@ export default function CommunityPage() {;
               href="https://linkedin.com/company/ziontechgroup";
               className="btn-primary inline-block";
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="card - hover text-center">;
             <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb-6">;
               <svg className="w - 8 h - 8 text - blue-400" fill="current_color" viewBox="0 0 24 24">;
@@ -150,13 +192,17 @@ export default function CommunityPage() {;
             <a;
               href="https://linkedin.com / company / ziontechgroup";
               className="btn - primary inline-block";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               target="_blank";
               rel="noopener noreferrer";
             >;
               Join LinkedIn;
             </a>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="card-hover text-center">;
             <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;
@@ -172,6 +218,8 @@ export default function CommunityPage() {;
               href="https://github.com/ziontechgroup";
               className="btn-primary inline-block";
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="card - hover text-center">;
             <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb-6">;
               <svg className="w - 8 h - 8 text - blue-400" fill="current_color" viewBox="0 0 24 24">;
@@ -185,7 +233,10 @@ export default function CommunityPage() {;
             <a;
               href="https://github.com / ziontechgroup";
               className="btn - primary inline-block";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               target="_blank";
               rel="noopener noreferrer";
             >;
@@ -195,6 +246,7 @@ export default function CommunityPage() {;
         </div>;
         {/* Community Events */}
         <div className="mb-20">;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="text-center mb-12">;
             <h2 className="text-3xl font-bold mb-4">Upcoming Events</h2>;
@@ -267,16 +319,55 @@ export default function CommunityPage() {;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9 - 11h - 7z" />;
                 </svg>;
               </div>;
+=======
+          <div className="text - center mb-12">;
+            <h2 className="text - 3xl font - bold mb-4">Upcoming Events</h2>;
+            <p className="text - gray-300">Join us for workshops, hackathons, and networking events</p>;
+          </div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">;
+            <div className="card">;
+              <div className="w - full h - 48 bg - gradient - to - br from - blue - 500 / 20 to - purple - 600 / 20 rounded - lg mb - 4 flex items - center justify-center">;
+                <svg className="w - 16 h - 16 text - blue-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6 - 3a9 9 0 11 - 18 0 9 9 0 0118 0z" />;
+                </svg>;
+              </div>;
+              <h3 className="text - xl font - semibold mb-2">Zion OS Workshop</h3>;
+              <p className="text - gray - 400 mb-3">Learn how to deploy your first digital economy in this hands - on workshop.</p>;
+              <div className="text - sm text - gray - 500 mb-4">March 15, 2024 • Virtual</div>;
+              <button className="btn - outline w-full">Register Now</button>;
+            </div>;
+            <div className="card">;
+              <div className="w - full h - 48 bg - gradient - to - br from - green - 500 / 20 to - blue - 600 / 20 rounded - lg mb - 4 flex items - center justify-center">;
+                <svg className="w - 16 h - 16 text - green-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h - 1M4 12H3m3.343 - 5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11 - 4 0v-.531c0-.895-.356 - 1.754-.988 - 2.386l-.548-.547z" />;
+                </svg>;
+              </div>;
+              <h3 className="text - xl font - semibold mb-2">AI Governance Summit</h3>;
+              <p className="text - gray - 400 mb-3">Explore the future of AI - powered governance and decision - making systems.</p>;
+              <div className="text - sm text - gray - 500 mb-4">April 22, 2024 • New York</div>;
+              <button className="btn - outline w-full">Register Now</button>;
+            </div>;
+            <div className="card">;
+              <div className="w - full h - 48 bg - gradient - to - br from - purple - 500 / 20 to - pink - 600 / 20 rounded - lg mb - 4 flex items - center justify-center">;
+                <svg className="w - 16 h - 16 text - purple-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9 - 11h - 7z" />;
+                </svg>;
+              </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h3 className="text - xl font - semibold mb-2">Hackathon 2024</h3>;
               <p className="text - gray - 400 mb-3">Build innovative solutions using Zion OS and win amazing prizes.</p>;
               <div className="text - sm text - gray - 500 mb-4">May 10 - 12, 2024 • Virtual</div>;
               <button className="btn - outline w-full">Register Now</button>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>;
           </div>;
         </div>;
         {/* Community Guidelines */}
         <div className="mb-20">;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="text-center mb-12">;
             <h2 className="text-3xl font-bold mb-4">Community Guidelines</h2>;
@@ -296,6 +387,16 @@ export default function CommunityPage() {;
               <h3 className="text - xl font - semibold mb - 4 text - green-400">✅ What We Encourage</h3>;
               <ul className="space - y-2 text - gray-300">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <div className="text - center mb-12">;
+            <h2 className="text - 3xl font - bold mb-4">Community Guidelines</h2>;
+            <p className="text - gray-300">Help us maintain a positive and inclusive environment</p>;
+          </div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 gap-8">;
+            <div className="card">;
+              <h3 className="text - xl font - semibold mb - 4 text - green-400">✅ What We Encourage</h3>;
+              <ul className="space - y-2 text - gray-300">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <li>• Respectful and constructive discussions</li>;
                 <li>• Sharing knowledge and helping others</li>;
                 <li>• Constructive feedback and suggestions</li>;
@@ -305,11 +406,14 @@ export default function CommunityPage() {;
             </div>;
             <div className="card">;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h3 className="text-xl font-semibold mb-4 text-red-400">❌ What We Don't Allow</h3>;
               <ul className="space-y-2 text-gray-300">;
                 <li>• Harassment or discrimination</li>;
                 <li>• Spam or self-promotion</li>;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h3 className="text - xl font - semibold mb - 4 text - red-400">❌ What We Don't Allow</h3>;
               <ul className="space - y-2 text - gray-300">;
                 <li>• Harassment or discrimination</li>;
@@ -324,6 +428,7 @@ export default function CommunityPage() {;
         </div>;
         {/* Get Involved */}
         <div className="text-center">;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">;
             <h2 className="text-3xl font-bold mb-4">Ready to Get Involved?</h2>;
@@ -347,6 +452,18 @@ export default function CommunityPage() {;
               </a>;
               <a href="/docs" className="btn - secondary text - lg px - 8 py-4">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <div className="card bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 border - blue-500 / 30">;
+            <h2 className="text - 3xl font - bold mb-4">Ready to Get Involved?</h2>;
+            <p className="text - xl text - gray - 300 mb-8">;
+              Join our community and help shape the future of digital economies;
+            </p>;
+            <div className="flex flex - col sm: flex - row gap - 4 justify-center">;
+              <a href="/contact" className="btn - primary text - lg px - 8 py-4">;
+                Contact Us;
+              </a>;
+              <a href="/docs" className="btn - secondary text - lg px - 8 py-4">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Read Documentation;
               </a>;
             </div>;

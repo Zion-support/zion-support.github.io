@@ -101,11 +101,16 @@ export function ProjectOfferBanner() {;
       updated.add(projectId),;
       return updated;
 <<<<<<< HEAD
+<<<<<<< HEAD
     });
   };
+=======
+    })
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleViewOffer = (projectId: string) => {;
-    navigate(`/project/${projectId}`);
-  };
+    navigate(`/project/${projectId}`)
+};
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
 =======

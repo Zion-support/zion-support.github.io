@@ -1,13 +1,30 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 }
 >(({ className, separator, ...props }, ref,) => (;
+=======
+ 
+import { cn } from "@/lib/utils"
+ 
+const Breadcrumb = null;
+  BreadcrumbEllipsis}
+;
+const Breadcrumb = React.forwardRef<
+  HTMLElement
+  React.ComponentPropsWithoutRef<'nav'> & {
+    separator?: React.ReactNode
+  }
+>(({ className, separator, ...props }, ref,) => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   <nav
 import * as React from 'react';
 import { Slot } from '@radix - ui / react - slot';
@@ -23,11 +40,16 @@ const Breadcrumb = React.forward_ref<;
     ref={ref}
     aria-label='breadcrumb'
     className={cn(
-      'inline-flex items-center gap-1 text-sm text-zion-slate-light',      className
+      'inline-flex items-center gap-1 text-sm text-zion-slate-light',
+      className
     )}
     {...props}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
@@ -91,9 +113,26 @@ Breadcrumb.displayName = "Breadcrumb"
  
 const BreadcrumbList = React.forwardRef<
   HTMLOListElement,
+<<<<<<< HEAD
   React.ComponentPropsWithoutRef<"ol">
 >(({ className, ...props }, ref) => (
   <ol
+=======
+  React.ComponentPropsWithoutRef<'ol'>;
+>(({ class_name, ...props }, ref) => (
+  <ol;
+=======
+  />
+));
+Breadcrumb.displayName = 'Breadcrumb';
+
+const BreadcrumbList = React.forwardRef<
+  HTMLOListElement,
+  React.ComponentPropsWithoutRef<'ol'>
+>(({ className, ...props }, ref) => (
+  <ol
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     ref={ref}
     className={cn("flex items-center gap-1.5", className)}
     {...props}
@@ -265,6 +304,7 @@ const BreadcrumbSeparator = ({;
   <li
     role='presentation'
     aria-hidden='true'
+<<<<<<< HEAD
     className={cn('[&>svg]:size-3 && 3.5 text-zion-slate-light/70', className)}    {...props}
   >;
     {children || <ChevronRight className='h-4 w-4' />}
@@ -324,12 +364,23 @@ const BreadcrumbEllipsis = ({
     {...props}
   >
     &#8230,
+=======
+    className={cn('flex h-9 w-9 items-center justify-center', className)}
+    {...props}
+  >
+    &#8230
+  </span>
+);
+BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export {
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
+<<<<<<< HEAD
 =======
 
 
@@ -400,6 +451,13 @@ export {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+  BreadcrumbEllipsis,
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

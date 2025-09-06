@@ -1,4 +1,7 @@
+import Link from 'next/link';
+
 export const metadata = {
+<<<<<<< HEAD
 <<<<<<< HEAD:temp_conflicted_files/page.tsx
 <<<<<<< HEAD
   title: "AI Customer Insights | Zion Tech Group",
@@ -13,17 +16,25 @@ export const metadata = {
   description: 'Transform customer data into actionable insights with AI-powered analytics. Understand customer behavior, preferences, and trends.',
   keywords: 'AI customer insights, customer analytics, behavior analysis, sentiment analysis, predictive analytics',
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:app/services/ai-customer-insights/page.tsx
+=======
+  title: "AI Customer Insights | Zion Tech Group",
+  description: "Transform customer data into actionable insights with AI-powered analytics. Understand customer behavior, preferences, and trends.",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
 export default function AICustomerInsightsPage() {
   return (
     <div className="animate-fade-in">
+<<<<<<< HEAD
 <<<<<<< HEAD:temp_conflicted_files/page.tsx
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
           AI Customer Insights
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
 <<<<<<< HEAD
           Transform customer data into actionable insights with AI-powered analytics. 
           Understand customer behavior, preferences, and trends to drive business growth.
@@ -82,74 +93,102 @@ export default function AICustomerInsightsPage() {
             business decisions and improve customer experience.
           </p>
         </div>
+=======
+          Transform customer data into actionable insights with AI-powered analytics. 
+          Understand customer behavior, preferences, and trends to drive business growth.
+        </p>
+      </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-        {/* Key Features */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Key Features
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-white rounded-lg shadow-md">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">📊</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Data Integration</h3>
-              <p className="text-gray-600">Connect multiple data sources for comprehensive customer view</p>
-            </div>
-            <div className="text-center p-6 bg-white rounded-lg shadow-md">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎯</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Behavior Analysis</h3>
-              <p className="text-gray-600">AI-powered analysis of customer behavior patterns and preferences</p>
-            </div>
-            <div className="text-center p-6 bg-white rounded-lg shadow-md">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🔮</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Predictive Analytics</h3>
-              <p className="text-gray-600">Predict future customer behavior and identify opportunities</p>
-            </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Features</h2>
+          <div className="space-y-4">
+            <FeatureItem
+              icon="🧠"
+              title="Behavioral Analysis"
+              description="AI-powered analysis of customer interactions, purchase patterns, and engagement metrics across all touchpoints."
+            />
+            <FeatureItem
+              icon="📊"
+              title="Predictive Analytics"
+              description="Machine learning models to predict customer lifetime value, churn risk, and future purchase behavior."
+            />
+            <FeatureItem
+              icon="🎯"
+              title="Segmentation Intelligence"
+              description="Automated customer segmentation based on behavior, demographics, and preferences for targeted marketing."
+            />
+            <FeatureItem
+              icon="💬"
+              title="Sentiment Analysis"
+              description="Real-time analysis of customer feedback, reviews, and social media mentions to understand satisfaction levels."
+            />
+            <FeatureItem
+              icon="📈"
+              title="Trend Detection"
+              description="Identify emerging trends, seasonal patterns, and market shifts that impact customer behavior."
+            />
+            <FeatureItem
+              icon="🔮"
+              title="Recommendation Engine"
+              description="Personalized product and content recommendations based on individual customer preferences and behavior."
+            />
           </div>
         </div>
 
-        {/* Benefits */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Business Benefits
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">📈</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">25% Higher Retention</h3>
-              <p className="text-gray-600">AI insights help identify and prevent customer churn</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">💰</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">40% Revenue Increase</h3>
-              <p className="text-gray-600">Better targeting and personalization drive higher revenue</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎯</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Better Targeting</h3>
-              <p className="text-gray-600">Precise customer segmentation and personalized experiences</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">⚡</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Real-time Insights</h3>
-              <p className="text-gray-600">Instant access to customer insights and trends</p>
-            </div>
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Pricing</h2>
+          <div className="space-y-6">
+            <PricingCard
+              plan="Starter"
+              price="$199"
+              period="per month"
+              description="Perfect for small businesses getting started with customer analytics"
+              features={[
+                "Up to 10,000 customer records",
+                "Basic behavioral analysis",
+                "Standard segmentation",
+                "Email support",
+                "Monthly reports"
+              ]}
+              popular={false}
+            />
+            <PricingCard
+              plan="Professional"
+              price="$599"
+              period="per month"
+              description="Ideal for growing businesses with complex customer data"
+              features={[
+                "Up to 100,000 customer records",
+                "Advanced AI analytics",
+                "Predictive modeling",
+                "Real-time insights",
+                "Priority support",
+                "Custom dashboards"
+              ]}
+              popular={true}
+            />
+            <PricingCard
+              plan="Enterprise"
+              price="$1,999"
+              period="per month"
+              description="For large organizations with extensive customer data needs"
+              features={[
+                "Unlimited customer records",
+                "Custom AI models",
+                "Advanced predictive analytics",
+                "Dedicated support",
+                "Custom integrations",
+                "On-premise deployment"
+              ]}
+              popular={false}
+            />
           </div>
         </div>
+      </div>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <div className="text-center py-16 bg-blue-50 rounded-lg">
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:app/services/ai-customer-insights/page.tsx
@@ -288,6 +327,8 @@ export default function AICustomerInsightsPage() {
       </div>
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="bg-gray-50 rounded-xl p-8 mb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">How It Works</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -305,6 +346,7 @@ export default function AICustomerInsightsPage() {
             step="3"
             title="Actionable Insights"
             description="Receive detailed reports, recommendations, and real-time dashboards to drive business decisions."
+<<<<<<< HEAD
 =======
       <div className="bg-gradient-to-r from-teal-50 to-blue-50 border border-teal-200 rounded-xl p-8 mb-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
@@ -341,11 +383,16 @@ export default function AICustomerInsightsPage() {
             title="Predictive Insights"
             description="Future behavior predictions, market trends, and growth opportunities"
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           />
         </div>
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
         <div className="bg-white border border-gray-200 rounded-xl p-6">
           <h3 className="text-xl font-bold text-gray-900 mb-4">Data Sources We Analyze</h3>
@@ -431,21 +478,34 @@ export default function AICustomerInsightsPage() {
           Transform your customer data into competitive advantage with AI-powered insights and analytics.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
 =======
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             Start your free trial today and discover the power of AI-driven customer analytics.
           </p>
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:app/services/ai-customer-insights/page.tsx
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <a
-            href="mailto:kleber@ziontechgroup.com?subject=AI Customer Insights Inquiry"
-            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            href="tel:+13024640950"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
-            Get Started Today
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Email Us
           </a>
         </div>
-      </section>
+        <div className="mt-4 text-sm text-gray-500">
+          <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+        </div>
+      </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:temp_conflicted_files/page.tsx
 }
 
@@ -462,21 +522,31 @@ function FeatureItem({
   description: string;
 }) {
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+}
+
+function FeatureItem({ icon, title, description }: { icon: string; title: string; description: string }) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="flex items-start space-x-4">
       <div className="text-2xl">{icon}</div>
       <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <h3 className="font-semibold text-gray-900 mb-2">{title}</h3>
 =======
         <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+        <h3 className="font-semibold text-gray-900 mb-2">{title}</h3>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <p className="text-gray-600">{description}</p>
       </div>
     </div>
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 function PricingCard({ plan, price, period, description, features, popular }: {
   plan: string;
@@ -491,6 +561,10 @@ function PricingCard({
 }: {
   title: string;
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+function PricingCard({ plan, price, period, description, features, popular }: {
+  plan: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   price: string;
   period: string;
   description: string;
@@ -499,6 +573,9 @@ function PricingCard({
 }) {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className={`border rounded-xl p-6 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200'}`}>
       {popular && (
         <div className="bg-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
@@ -519,6 +596,7 @@ function PricingCard({
           </li>
         ))}
       </ul>
+<<<<<<< HEAD
 =======
     <div
       className={`border rounded-xl p-6 ${popular ? 'border-teal-500 bg-teal-50' : 'border-gray-200 bg-white'}`}
@@ -552,11 +630,16 @@ function PricingCard({
         Start Free Trial
       </button>
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </div>
   );
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function StepCard({ step, title, description }: { step: string; title: string; description: string }) {
   return (
     <div className="text-center">
@@ -564,6 +647,7 @@ function StepCard({ step, title, description }: { step: string; title: string; d
         {step}
       </div>
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+<<<<<<< HEAD
 =======
 function InsightCategory({
   icon,
@@ -579,10 +663,13 @@ function InsightCategory({
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <p className="text-gray-600">{description}</p>
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -666,3 +753,5 @@ function CTA() {
 =======
 }
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:app/services/ai-customer-insights/page.tsx
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

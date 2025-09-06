@@ -26,6 +26,7 @@ interface ApplicationRowProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37,6 +38,8 @@ interface ApplicationRowProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {formatDistanceToNow} from "date-fns";
 import {Link} from "react-router-dom";
 import {Calendar, User, FileText, BarChart} from "lucide-react";
@@ -47,6 +50,7 @@ import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {StatusBadge} from "./StatusBadge";
 import {ScoreBadge} from "./ScoreBadge";
 import {ApplicationActions} from "./ApplicationActions";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -116,6 +120,8 @@ interface ApplicationRowProps {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ApplicationRowProps {;
   application: JobApplication,;
   processingId: string | null,;
@@ -126,6 +132,7 @@ interface ApplicationRowProps {;
 
 export function ApplicationRow(): any ({;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -160,17 +167,24 @@ export function ApplicationRow({;
 =======
 export function ApplicationRow({;export function ApplicationRow({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function ApplicationRow({;export function ApplicationRow({;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   application;
   processingId;
   onViewApplication;
   onStatusChange;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function ApplicationRow({
   application,
   processingId,
   onViewApplication,
+<<<<<<< HEAD
   onStatusChange,
 =======
 <<<<<<< HEAD
@@ -215,6 +229,8 @@ export function ApplicationRow({
   application,
   processingId,
   onViewApplication,
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   onStatusChange,}
 
   onViewScore
@@ -370,6 +386,7 @@ function ApplicationRow() {
         </Button>;
       </TableCell>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       <TableCell>;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -415,5 +432,8 @@ function ApplicationRow() {
 =======
       <TableCell>;          processing_id={processing_id}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <TableCell>;          processing_id={processing_id}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           onViewApplication={onViewApplication}
           onStatusChange={onStatusChange}

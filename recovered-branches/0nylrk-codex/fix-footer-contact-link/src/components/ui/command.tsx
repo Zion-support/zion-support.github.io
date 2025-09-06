@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -114,6 +113,11 @@ import {Search} from 'lucide-react';
 import { cn } from "@/lib/utils"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import { cn } from "@/lib/utils"
+import { Dialog, DialogContent } from "@/components/ui/dialog"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {...props}
   />;
 ));
@@ -129,6 +133,7 @@ interface CommandDialogProps;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -137,10 +142,13 @@ interface CommandDialogProps;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 Command && Command.displayName = CommandPrimitive && CommandPrimitive.displayName;
 
 interface CommandDialogProps;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -167,6 +175,8 @@ interface CommandDialogProps;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const CommandDialog = ({ children, ...props }: CommandDialog</typeof>Props) => {;
 Command.displayName = CommandPrimitive.displayName;
 <<<<<<< HEAD
@@ -185,6 +195,7 @@ const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
     </Dialog>;
   );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -283,6 +294,14 @@ const CommandInput = React.forwardRef<
     <Search className='mr-2 h-4 w-4 shrink-0 opacity-50' />
     <CommandPrimitive.Input
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const CommandInput = React.forwardRef<
+  React.ElementRef<typeof CommandPrimitive.Input>,
+  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>>(({ className, ...props }, ref) => (
+  <div className='flex items-center border-b px-3' cmdk-input-wrapper=''>
+    <Search className='mr-2 h-4 w-4 shrink-0 opacity-50' />
+    <CommandPrimitive.Input
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 const CommandInput = React && React.forwardRef<;
   React && React.ElementRef<typeof CommandPrimitive && CommandPrimitive.Input>,;
@@ -290,6 +309,7 @@ const CommandInput = React && React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <div className='flex items-center border-b px-3' cmdk-input-wrapper=''>;
     <Search className='mr-2 h-4 w-4 shrink-0 opacity-50' />;
+<<<<<<< HEAD
 <<<<<<< HEAD
     <CommandPrimitive&& CommandPrimitive.Input
 <<<<<<< HEAD
@@ -367,10 +387,14 @@ const CommandList = React.forwardRef<
 =======
     <CommandPrimitive&& CommandPrimitive.Inputconst CommandList = React.forwardRef<
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    <CommandPrimitive&& CommandPrimitive.Inputconst CommandList = React.forwardRef<
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   React.ElementRef<typeof CommandPrimitive.List>
   React.ComponentPropsWithoutRef<type</typeof>of CommandPrimitive.List>
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.List
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -383,12 +407,15 @@ const CommandList = React.forwardRef<
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 CommandInput && CommandInput.displayName = CommandPrimitive && CommandPrimitive.Input.displayName;
 
 const CommandList = React && React.forwardRef<;
   React && React.ElementRef<typeof CommandPrimitive && CommandPrimitive.List>,;
   React && React.ComponentPropsWithoutRef<type</typeof>of CommandPrimitive && CommandPrimitive.List>;
 >(({ className, ...props }, ref) => (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -524,6 +551,8 @@ const CommandEmpty = React.forward_ref<;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     ref={ref}
     className='py - 6 text - center text - sm';
@@ -570,6 +599,7 @@ const CommandGroup = React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <CommandPrimitive.Group;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     ref={ref}
     className='py - 6 text - center text - sm';
@@ -581,6 +611,8 @@ const CommandGroup = React.forwardRef<;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     ref={ref}
     className={cn(
@@ -606,6 +638,7 @@ CommandGroup.displayName = CommandPrimitive.Group.displayName;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
+<<<<<<< HEAD
 
 
 
@@ -638,11 +671,14 @@ CommandGroup.displayName = CommandPrimitive.Group.displayName;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const CommandSeparator = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Separator>
   React.Compone</typeof>ntPropsWithoutRef<typeof CommandPrimitive.Separator>
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.Separator
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -660,6 +696,8 @@ const CommandSeparator = React.forwardRef<
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ref={ref}
@@ -727,6 +765,7 @@ const CommandSeparator = React.forward_ref<;
     {...props}
   />
 ));
+<<<<<<< HEAD
 <<<<<<< HEAD
 CommandSeparator.displayName = CommandPrimitive.Separator.displayName;
 
@@ -817,6 +856,8 @@ CommandShortcut.displayName = "CommandShortcut"
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     ref={ref}
     className={cn(
@@ -828,6 +869,7 @@ CommandShortcut.displayName = "CommandShortcut"
 
 ))
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1042,3 +1084,9 @@ export {
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  CommandSeparator,
+};
+  CommandSeparator}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

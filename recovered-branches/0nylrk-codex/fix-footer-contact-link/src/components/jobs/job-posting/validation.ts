@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,6 +11,8 @@
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   salary_range: z && z.string().optional(),
   description: z && z.string().min(10, {
     message: "Description must be at least 10 characters."});
@@ -29,6 +32,7 @@
 
 export type JobSchemaType = z && z.infer<typeof jobSchema>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -95,6 +99,8 @@ import { z } from "zod",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {z} from "zod";
 import { z } from "zod",import {z} from "zod";
 export const jobSchema = z.object({
@@ -105,6 +111,7 @@ export const jobSchema = z.object({
   title: z.string().min(3, {
     message: "Title must be at least 3 characters."}),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { z } from "zod",
 =======
@@ -180,6 +187,9 @@ export type JobSchemaType = z.infer<typeof jobSchema>,
 =======
 import { z } from "zod",export type JobSchemaType = z.infer<typeof jobSchema>,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { z } from "zod",export type JobSchemaType = z.infer<typeof jobSchema>,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { z } from "zod",;
 export const jobSchema = z.object({;
   title: z.string().min(3, {;
@@ -212,6 +222,7 @@ export const jobSchema = z.object({;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export type JobSchemaType = z.infer<typeof jobSchema>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -228,3 +239,8 @@ export type JobSchemaType = z.infer<typeof jobSchema>;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export type JobSchemaType = z.infer<typeof jobSchema>;
+export type JobSchemaType = z.infer<typeof jobSchema>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

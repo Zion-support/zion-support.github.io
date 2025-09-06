@@ -32,6 +32,7 @@ import {PreviewResume} from '../PreviewResume';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           initialData={resume?.basic_info}
           onSave={(data) => {;
@@ -57,6 +58,8 @@ import { PreviewResume } from '../PreviewResume',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ResumeStepContentProps {
 
   activeTab: string
@@ -92,6 +95,7 @@ import { WorkExperienceForm } from '../forms/WorkExperienceForm',;
 import { EducationForm } from '../forms/EducationForm',;
 import { SkillsForm } from '../forms/SkillsForm',;
 import { CertificationsForm } from '../forms/CertificationsForm',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { PreviewResume } from '../PreviewResume',;
 <<<<<<< HEAD
@@ -219,6 +223,9 @@ export const ResumeStepContent = ({;
 =======
 import { PreviewResume } from '../PreviewResume',;          resumeId={resume?.id!}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { PreviewResume } from '../PreviewResume',;          resumeId={resume?.id!}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           workExperiences={resume?.work_experience |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
@@ -237,6 +244,7 @@ import { PreviewResume } from '../PreviewResume',;          resumeId={resume?.id
 =======
         <EducationForm
         <EducationForm 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -263,10 +271,13 @@ import { PreviewResume } from '../PreviewResume',;          resumeId={resume?.id
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <SkillsForm
           resumeId={resume?.id!}
           skills={resume?.skills |[]}
           onComplete={onNextStep}
+<<<<<<< HEAD
 <<<<<<< HEAD
           onBack={onPrevStep}
 <<<<<<< HEAD
@@ -439,6 +450,9 @@ export const ResumeStepContent = ({
 =======
           onBack={onPrevStep}},; interface ResumeStepContentProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          onBack={onPrevStep}},; interface ResumeStepContentProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   activeTab: string;
 resume: Resume;
 onNextStep: () => void;
@@ -511,6 +525,7 @@ onPrevStep
       </TabsContent>;
     </>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 =======
@@ -535,3 +550,8 @@ onPrevStep
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

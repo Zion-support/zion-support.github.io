@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -47,6 +48,10 @@ import { Button } from "@/components/ui/button",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Dialog;
@@ -60,6 +65,7 @@ import { DisputeForm } from "./DisputeForm",
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import {Button} from "@/components/ui/button";
@@ -70,12 +76,19 @@ import {ShieldAlert} from "lucide-react";
 interface RaiseDisputeButtonProps {;
   projectId: string,;
 =======
+=======
+import { useNavigate } from "react-router-dom";
+import { ShieldAlert } from "lucide-react";
+interface RaiseDisputeButtonProps {
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   milestoneId?: string;
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   className?: string;
 }
 =======
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -92,10 +105,16 @@ interface RaiseDisputeButtonProps {
   milestoneId?: string;
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
+=======
+  milestoneId?: string;
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   className?: string;
 }
 
 import { useNavigate } from "react-router-dom",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { ShieldAlert } from "lucide-react",
 
@@ -159,6 +178,12 @@ import { ShieldAlert } from "lucide-react",  milestoneId,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   size,
   className
+=======
+import { ShieldAlert } from "lucide-react",  milestoneId, 
+  variant = "outline", 
+  size,
+  className 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }: RaiseDisputeButtonProps) {
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const navigate = useNavigate(),
@@ -176,6 +201,7 @@ import { ShieldAlert } from "lucide-react",  milestoneId,
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   
@@ -184,10 +210,13 @@ import { ShieldAlert } from "lucide-react",  milestoneId,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleDisputeCreated = (disputeId: string) => {
     setIsDialogOpen(false)
     navigate(`/dashboard/disputes/${disputeId}`)
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -345,12 +374,15 @@ export function RaiseDisputeButton({ ;
         onClick={() => setIsDialogOpen(true)}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       >;
         <ShieldAlert className="h-4 w-4 mr-2" />;
         Raise Dispute;
       </Button>;      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
         <DialogContent className="sm:max-w-[550px]">;
           <DialogHeader>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <DialogTitle>Raise a Dispute</DialogTitle>;
 <<<<<<< HEAD
@@ -449,6 +481,9 @@ function RaiseDisputeButton() {
 =======
             <DialogTitle>Raise a Dispute</DialogTitle>;          <DisputeForm;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <DialogTitle>Raise a Dispute</DialogTitle>;          <DisputeForm;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             project_id={project_id}
             milestone_id={milestone_id}
             onDisputeCreated={handleDisputeCreated}
@@ -458,6 +493,7 @@ function RaiseDisputeButton() {
       </Dialog>;
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -513,3 +549,5 @@ return (<> <Button variant= {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

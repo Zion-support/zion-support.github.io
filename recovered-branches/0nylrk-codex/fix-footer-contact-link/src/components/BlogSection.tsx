@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -49,12 +50,15 @@ const recentPosts = [...BLOG_POSTS];
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
       new Date(b && b.publishedDate).getTime() - new Date(a && a.publishedDate).getTime();
     );
   });
   .slice(0, 3);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -108,6 +112,8 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             className="mt-4 md:mt-0 border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
             asChild
           >
@@ -116,6 +122,7 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {recentPosts.map((post, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -153,11 +160,14 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     e: React.SyntheticEvent<HTMLImageElement, Event>
                   ) => {
                     const target = e.currentTarget as HTMLImageElement;
 
                   onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
                     const target = e.currentTarget as HTMLImageElement,
 <<<<<<< HEAD
@@ -230,6 +240,9 @@ import { GradientHeading } from "./GradientHeading",;
 =======
                     const target = e.currentTarget as HTMLImageElement,import { GradientHeading } from "./GradientHeading",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    const target = e.currentTarget as HTMLImageElement,import { GradientHeading } from "./GradientHeading",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
 import { Button } from "./ui/button",;
 import { Link } from "react-router-dom",;
@@ -275,6 +288,7 @@ export function BlogSection() {;
             </p>;
           </div>;
           <Button;
+<<<<<<< HEAD
 <<<<<<< HEAD
             variant="outline";
             className="mt - 4 md:mt - 0 border - zion - purple text - zion - cyan hover:bg - zion - purple / 10";
@@ -390,3 +404,6 @@ export function BlogSection() {;
 =======
             variant="outline";}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            variant="outline";}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

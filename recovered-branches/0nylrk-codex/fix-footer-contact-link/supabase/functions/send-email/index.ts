@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -10,12 +11,15 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {Resend} from "npm: resend@2 ;import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Resend} from "npm: resend@2.0.0";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 <<<<<<< HEAD
@@ -41,6 +45,9 @@ const corsHeaders = {
 =======
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));  "Access-Control-Allow-Origin": "*",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"));  "Access-Control-Allow-Origin": "*",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));
@@ -56,6 +63,7 @@ serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   try {
 <<<<<<< HEAD
@@ -191,6 +199,9 @@ import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 =======
   try {import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  try {import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Resend } from 'npm: resend@2.0.0';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
@@ -244,6 +255,7 @@ if ( {) {
 ;
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -254,3 +266,5 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -20,6 +20,7 @@ import {toast} from "sonner";
 import {FileText} from "lucide-react";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -71,6 +72,8 @@ import { FileText } from "lucide-react",
 const formSchema = z.object({
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   reason_code: z.string()
     .min(1, { message: "Please select a reason for the dispute" })
   description: z.string()
@@ -79,10 +82,13 @@ const formSchema = z.object({
 type DisputeFormProps = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   milestoneId?: string,
   onDisputeCreated?: (disputeId: string) => void,
@@ -94,6 +100,7 @@ export function DisputeForm({
   milestoneId, 
   onDisputeCreated, 
   onCancel 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -243,6 +250,8 @@ export function DisputeForm({ ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       setIsSubmitting(true)
@@ -256,6 +265,7 @@ export function DisputeForm({ ;
         // For now we just log the files that would be uploaded
         if (files.length > 0) {
           console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
+<<<<<<< HEAD
 <<<<<<< HEAD
         }
 
@@ -320,6 +330,9 @@ export function DisputeForm({ ;
 =======
         }  };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        }  };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const removeFile = (index: number) => {;
     const newFiles = [...files],;
@@ -359,6 +372,7 @@ export function DisputeForm({ ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
 <<<<<<< HEAD
@@ -556,6 +570,9 @@ export function DisputeForm({;
 =======
   return (          <FormField
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (          <FormField
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             control={form && form.control}
             name="reason_code"
             render={({ field }) => (;
@@ -676,6 +693,7 @@ if ( {) {
               <FormItem>;
                 <FormLabel > Reason for dispute</FormLabel>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Select onValueChange={field.on_change} default_value={field.value}>;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -727,6 +745,9 @@ if ( {) {
 =======
                 <Select onValueChange={field.on_change} default_value={field.value}>;                  </SelectContent>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                <Select onValueChange={field.on_change} default_value={field.value}>;                  </SelectContent>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </Select>;
                 <FormMessage />;
               </FormItem>;
@@ -765,12 +786,15 @@ if ( {) {
                     placeholder="Please provide specific details about the issue...";
                     className="min-h-[150px]";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     {...field}
                   />;
                 </FormControl>;
@@ -785,6 +809,7 @@ if ( {) {
                   type="file" 
                   multiple 
                   onChange={handleFileChange}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className="cursor-pointer"
 =======
@@ -839,6 +864,9 @@ if ( {) {
 =======
                   className="cursor-pointer"                />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  className="cursor-pointer"                />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                 {files && files.length > 0 && (;
                   <div className="space-y-2">;
@@ -851,6 +879,7 @@ if ( {) {
                             type="button" 
                             variant="ghost" 
                             size="sm" 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -980,6 +1009,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </Button>;
           </div>;
         </form>;
@@ -992,6 +1023,7 @@ if ( {) {
         </form>
       </Form>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 <<<<<<< HEAD
@@ -1101,3 +1133,6 @@ description: values.description
 =======
   )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

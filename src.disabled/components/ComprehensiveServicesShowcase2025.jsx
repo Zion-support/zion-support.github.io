@@ -11,7 +11,12 @@ import { AnimatePresence,motion } from';framer-motion' import { CheckCircle,Cloc
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { AnimatePresence,motion } from\';framer-motion\' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from\';\';lucide-react\' import { useState } from\';\';react\'';\';
 const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from";";lucide-react" import { useState } from";";react"";";''"
+<<<<<<< HEAD
 =======
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { AnimatePresence,motion } from\';framer-motion\' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from\';\';lucide-react\' import { useState } from\';\';react\'';\';
 const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from";";lucide-react" import { useState } from";";react"";";''"
 
@@ -33,6 +38,7 @@ const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock
 =======
 import { AnimatePresence,motion } from\';framer-motion\' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from\';\';lucide-react\' import { useState } from\';\';react\'';\';
 const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from";";lucide-react" import { useState } from";";react"";";''"
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/ComprehensiveServicesShowcase2025.jsx
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -64,3 +70,6 @@ import { AnimatePresence,motion } from\';framer-motion\' import { CheckCircle,Cl
 const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from";";lucide-react" import { useState } from";";react"";";''"
 import { AnimatePresence,motion } from';framer-motion' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from';';lucide-react' import { useState } from';';react'';';''
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import { AnimatePresence,motion } from';framer-motion' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from';';lucide-react' import { useState } from';';react'';';''
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

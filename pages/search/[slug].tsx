@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GetServerSideProps  } from 'next';
 import { useRouter  } from 'next/router';
 import { useState, useEffect  } from 'react';
@@ -15,10 +16,13 @@ import { Input  } from '@/components/ui/input';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Search, Filter, Grid, List } from 'lucide-react';import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
@@ -26,6 +30,14 @@ import { Input } from '@/components/ui/input';
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import { Search, Filter, Grid, List } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import ProductCard from '@/components/ProductCard';
 import { TalentCard  } from '@/components/talent/TalentCard';
 import { CategoryCard  } from '@/components/CategoryCard';
@@ -35,6 +47,7 @@ import { TALENT_PROFILES  } from '@/data/talentData';
 import { BLOG_POSTS  } from '@/data/blog-posts';
 import { useDebounce  } from '@/hooks/useDebounce';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+<<<<<<< HEAD
 interface BaseSearchResult {
 <<<<<<< HEAD
 =======
@@ -43,11 +56,16 @@ interface BaseSearchResult {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+interface BaseSearchResult {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   title: string;
   description?: string;
   slug: string;
   image?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -59,21 +77,38 @@ interface BaseSearchResult {
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     avatar?: string;
   }
   tags?: string[];
   category?: string;
   date?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+  author?: {
+    name: string;
+    avatar?: string
+  },
+  tags?: string[],
+  category?: string;
+  date?: string
+}
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ProductSearchResult extends BaseSearchResult {
   type: 'product' | 'equipment';
   price?: number;
   rating?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -86,6 +121,8 @@ interface ProductSearchResult extends BaseSearchResult {;
   rating?: number;
 interface TalentSearchResult extends BaseSearchResult {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   type: 'talent';
   rating?: number;
 
@@ -99,16 +136,20 @@ interface CategorySearchResult extends BaseSearchResult {
 interface CategorySearchResult extends BaseSearchResult {;
   type: 'category';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 type SearchResult =;
   | ProductSearchResult;
   | TalentSearchResult;
   | BlogSearchResult;
   | CategorySearchResult;
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Type guard functions
 const hasPrice = (result: SearchResult): result is ProductSearchResult =>
@@ -143,19 +184,25 @@ interface SearchResultsPageProps {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   initialResults: SearchResult[];
   query: string;
   slug: string;
   totalCount: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Search, Filter, Grid, List } from 'lucide-react';
 =======
@@ -334,10 +381,62 @@ interface SearchResultsPageProps {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import ProductCard from '@/components/ProductCard';
+import { TalentCard } from '@/components/talent/TalentCard';
+import { CategoryCard } from '@/components/CategoryCard';
+import { SearchEmptyState } from '@/components/marketplace/EmptyState';
+import { MARKETPLACE_LISTINGS } from '@/data/listingData';
+import { TALENT_PROFILES } from '@/data/talentData';
+import { BLOG_POSTS } from '@/data/blog-posts';
+import { useDebounce } from '@/hooks/useDebounce';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+=======
+
+interface TalentSearchResult extends BaseSearchResult {
+  type: 'talent';
+  rating?: number;
+
+interface BlogSearchResult extends BaseSearchResult {
+  type: 'blog';
+
+interface CategorySearchResult extends BaseSearchResult {
+  type: 'category';
+
+interface BlogSearchResult extends BaseSearchResult {
+  type: 'blog';
+interface CategorySearchResult extends BaseSearchResult {
+  type: 'category';
+
+type SearchResult = any;
+type SearchResult =
+  | ProductSearchResult
+  | TalentSearchResult
+  | BlogSearchResult
+  | CategorySearchResult;
+
+// Type guard functions
+const hasPrice = (result: SearchResult): result is ProductSearchResult =>
+  result.type === 'product' || result.type === 'equipment';
+
+const hasRating = (
+  result: SearchResult
+): result is ProductSearchResult | TalentSearchResult =>
+  result.type === 'product' ||
+  result.type === 'equipment' ||
+  result.type === 'talent';
+
+interface SearchResultsPageProps {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   initialResults: SearchResult[];
   query: string;
   slug: string;
   totalCount: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -353,10 +452,16 @@ interface OfflineFilters {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+interface OfflineFilters {
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   sortBy?: string;
   category?: string;
   minPrice?: number;
   maxPrice?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -366,6 +471,8 @@ interface OfflineFilters {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           return aPrice - bPrice;        });
         break;
       case 'price_desc':;
@@ -374,6 +481,7 @@ interface OfflineFilters {
           const bPrice = b && b.type === 'product' ? (b && b.price ?? 0) : 0;
           return bPrice - aPrice;        });
         break;
+<<<<<<< HEAD
 <<<<<<< HEAD
       case 'rating':;
         all && all.sort((a, b) => {;
@@ -393,6 +501,13 @@ interface OfflineFilters {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+            b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -556,6 +671,7 @@ function offlineSearch(;
         all.sort((a, b) => {;
           const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0;
           const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -563,12 +679,137 @@ function offlineSearch(;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+minRating?: number;
+
+function offlineSearch(
+  query: string
+  page = 1
+  limit = 12
+  filters: OfflineFilters = {}
+): { results: SearchResult[]; totalCount: number } {
+  const term = query.toLowerCase().trim();
+  const match = (text?: string) => text?.toLowerCase().includes(term);
+  const productResults = MARKETPLACE_LISTINGS.filter(
+p =>
+      match(p.title) ||
+      match(p.description) ||
+      match(p.category) ||
+      p.tags?.some(t => match(t))
+  ).map(p => ({
+    id: p.id,
+    title: p.title,
+    description: p.description || '',
+    type: 'product' as const,
+    slug: p.id,
+    image: p.images?.[0],
+    price: p.price ?? undefined,
+    rating: p.rating,
+    author: p.author
+      ? { name: p.author.name, avatar: p.author.avatarUrl }
+: undefined,
+    tags: p.tags,
+    category: p.category,
+    date: p.createdAt,
+  }));
+  const talentResults = TALENT_PROFILES.filter(
+    t =>
+      match(t.full_name) |
+      match(t.professional_title) |
+      match(t.bio) |
+      t.skills?.some(s => match(s))
+  ).map(t => ({
+    id: t.id,
+    title: t.full_name,
+    description: t.professional_title || '',
+    type: 'talent' as const,
+    slug: t.id,
+    image: t.profile_picture_url,
+    rating: t.average_rating,
+    author: { name: t.full_name, avatar: t.profile_picture_url },
+    tags: t.skills,
+    category: t.location,
+date: undefined,
+  }));
+  const blogResults = BLOG_POSTS.filter(
+    b =>
+      match(b.title) |
+      match(b.excerpt) |
+      match(b.content) |
+      b.tags?.some(t => match(t))
+  ).map(b => ({
+    id: b.slug,
+    title: b.title,
+    description: b.excerpt,
+    type: 'blog' as const,
+    slug: b.slug,
+    image: b.featuredImage,
+    tags: b.tags,
+    category: 'Blog',
+date: b.publishedDate,
+  }));
+
+  let all = [...productResults, ...talentResults, ...blogResults];
+  if (filters.category) {
+all = all.filter(r => r.category === filters.category);
+  }
+  if (typeof filters.minPrice === 'number') {
+    all = all.filter(r => {
+      if (r.type === 'product') {
+return (r.price ?? 0) >= filters.minPrice!;
+      }
+      return true;
+    });
+  }
+  if (typeof filters.maxPrice === 'number') {
+    all = all.filter(r => {
+      if (r.type === 'product') {
+return (r.price ?? 0) <= filters.maxPrice!;
+      }
+      return true;
+    });
+  }
+  if (typeof filters.minRating === 'number') {
+    all = all.filter(r => {
+      if (r.type === 'product' || r.type === 'talent') {
+return (r.rating ?? 0) >= filters.minRating!;
+      }
+      return true;
+    });
+  }
+
+  if (filters.sortBy && filters.sortBy !== 'relevance') {
+    switch (filters.sortBy) {
+      case 'price_asc':
+        all.sort((a, b) => {
+          const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;
+          const bPrice = b.type === 'product' ? (b.price ?? 0) : 0;
+return aPrice - bPrice;
+        });
+        break;
+      case 'price_desc':
+        all.sort((a, b) => {
+          const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;
+          const bPrice = b.type === 'product' ? (b.price ?? 0) : 0;
+return bPrice - aPrice;
+        });
+        break;
+      case 'rating':
+        all.sort((a, b) => {
+const aRating =
+            a.type === 'product' || a.type === 'talent' ? (a.rating ?? 0) : 0;
+          const bRating =
+            b.type === 'product' |b.type === 'talent' ? (b.rating ?? 0) : 0;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           return bRating - aRating;
         });
         break;
       default:;
         break;
     }
+<<<<<<< HEAD
   } else {;
 <<<<<<< HEAD
     all.sort((a, b) => a.title.localeCompare(b.title));
@@ -581,6 +822,10 @@ function offlineSearch(;
   const paginated = all.slice(start, start + limit);
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  } else {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return { results: paginated, totalCount: all.length }
 export default function SearchResultsPage({
   initialResults
@@ -588,6 +833,7 @@ export default function SearchResultsPage({
   slug
   totalCount
   return { results: paginated, totalCount: all.length };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -642,6 +888,22 @@ export default function SearchResultsPage({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    all && all.sort((a, b) => a && a.title.localeCompare(b && b.title));
+
+          return aPrice - bPrice
+        });
+        break;
+      case 'price_desc':
+        all.sort((a, b) => {
+          const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;
+          const bPrice = b.type === 'product' ? (b.price ?? 0) : 0;
+          return bPrice - aPrice
+        });
+        break;
+      case 'rating':
+        all.sort((a, b) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default function SearchResultsPage(): any ({;
   initialResults,;
@@ -649,8 +911,11 @@ export default function SearchResultsPage(): any ({;
   slug,;
   totalCount,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }: SearchResultsPageProps) {  const router = useRouter();
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 }: SearchResultsPageProps) {  const router = useRouter();
@@ -659,6 +924,7 @@ export default function SearchResultsPage(): any ({;
   slug;
   totalCount}: SearchResultsPageProps) {
   const router = useRouter();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }: SearchResultsPageProps) {  const router = useRouter();
@@ -671,6 +937,10 @@ export default function SearchResultsPage(): any ({;
 }: SearchResultsPageProps) {  const router = useRouter();
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+}: SearchResultsPageProps) {  const router = useRouter();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return { results: paginated, totalCount: all.length   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -684,6 +954,7 @@ export default function SearchResultsPage(): any ({;
 ;
 export default function SearchResultsPage(req, res) {
   try {
+<<<<<<< HEAD
   const router = useRouter();
 =======
 
@@ -695,6 +966,24 @@ export default function SearchResultsPage(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  } else {
+    all.sort((a, b) => a.title.localeCompare(b.title));
+  }
+  const start = (page - 1) * limit;
+  const paginated = all.slice(start, start + limit);
+  return { results: paginated, totalCount: all.length };
+
+export default function SearchResultsPage({
+  initialResults,
+  query,
+  slug,
+  totalCount,
+}: SearchResultsPageProps) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  const router = useRouter();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { isAuthenticated } = useAuth();
   const [results, setResults] = useState<SearchResult[]>(initialResults);
   const [loading, setLoading] = useState(false);
@@ -709,16 +998,26 @@ export default function SearchResultsPage(req, res) {
   const [minRating, setMinRating] = useState('');
   const [totalResults, setTotalResults] = useState(totalCount);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 
       logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`),
+=======
+=======
+  // Fetch search results
+  const fetchResults = async (searchTerm: string, page = 1) => {
+    try {
+      setLoading(true);
+logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const params = new URLSearchParams({
         query: searchTerm,
         page: String(page),
         limit: '12',
+<<<<<<< HEAD
         sort: sortBy}),
       if (categoryFilter !== 'all') params.append('category', categoryFilter);
 
@@ -739,10 +1038,17 @@ export default function SearchResultsPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+sort: sortBy,
+      });
+      if (categoryFilter !== 'all') params.append('category', categoryFilter);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       if (minPrice) params.append('minPrice', minPrice);
       if (maxPrice) params.append('maxPrice', maxPrice);
       if (minRating) params.append('minRating', minRating);
       const response = await fetch(`/api/search?${params.toString()}`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       }
@@ -850,6 +1156,8 @@ export default function SearchResultsPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Handle search input change;
   const handleSearch = (newQuery: string) => {;
     setSearchQuery(newQuery),;
@@ -861,10 +1169,14 @@ export default function SearchResultsPage(req, res) {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   useEffect(() => {;
     if (debouncedQuery.trim()) {;
       fetchResults(debouncedQuery, 1);
     } else {;
+<<<<<<< HEAD
       setResults([]);
       setTotalResults(0);    }
   }, [debouncedQuery]);
@@ -878,9 +1190,76 @@ export default function SearchResultsPage(req, res) {
 =======
     fetchResults(searchQuery, nextPage)
   };
+=======
+=======
+      if (!response.ok) {
+throw new Error(`Search API error: ${response.status}`);
+      }
+      const data = await response.json();
+      logInfo('Search results received:', { data: data });
+
+      setTotalResults(data.totalCount || data.results?.length || 0);
+
+      if (page === 1) {
+setResults(data.results || []);
+      } else {
+        setResults(prev => [...prev, ...(data.results |[])]);
+      }
+    } catch (error) {
+      logErrorToProduction('Error fetching search results:', { data: error });
+      const offline = offlineSearch(searchTerm, page, 12, {
+        sortBy
+        category: categoryFilter !== 'all' ? categoryFilter : undefined
+        minPrice: minPrice ? Number(minPrice) : undefined
+        maxPrice: maxPrice ? Number(maxPrice) : undefined
+        minRating: minRating ? Number(minRating) : undefined
+      });
+      setTotalResults(offline.totalCount);
+      if (page === 1) {
+        setResults(offline.results);
+      } else {
+        setResults(prev => [...prev, ...offline.results]);
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Handle search input change
+  const handleSearch = (newQuery: string) => {
+    setSearchQuery(newQuery)
+    if (newQuery.trim()) {
+      router.push(`/search?q=${encodeURIComponent(newQuery)}`, undefined, {
+shallow: true,
+      });
+      setCurrentPage(1);
+    }
+  };
+
+  useEffect(() => {
+    if (debouncedQuery.trim()) {
+fetchResults(debouncedQuery, 1);
+    } else {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      setResults([]);
+      setTotalResults(0);
+    }
+  }, [debouncedQuery]);
+<<<<<<< HEAD
+=======
+  // Load more results
+  const loadMore = () => {
+    const nextPage = currentPage + 1;
+    setCurrentPage(nextPage);
+fetchResults(searchQuery, nextPage);
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const categories = Array.from(
     new Set(results.map((r) => r.category).filter(Boolean));
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const filteredResults = results.filter((r) => {
@@ -888,10 +1267,18 @@ export default function SearchResultsPage(req, res) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+
+  const filteredResults = results.filter(r => {
+    if (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       categoryFilter !== 'all' &&
       categoryFilter &&
       r.category !== categoryFilter
     ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       return false;
@@ -1213,6 +1600,30 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+return false;
+    }
+    if (minPrice && r.type === 'product') {
+      if ((r.price ?? 0) < Number(minPrice)) {
+        return false;
+      }
+    }
+    if (maxPrice && r.type === 'product') {
+      if ((r.price ?? 0) > Number(maxPrice)) {
+return false;
+      }
+    }
+    if (minRating && (r.type === 'product' |r.type === 'talent')) {
+      if ((r.rating ?? 0) < Number(minRating)) {
+return false;
+      }
+    }
+    return true;
+  });
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Group results by type for better display
   const groupedResults = filteredResults.reduce(
     (acc, result) => {
@@ -1248,7 +1659,10 @@ if ( {) {
     }
     return true;  });
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1291,6 +1705,7 @@ if ( {) {
   // Group results by type for better display
   const groupedResults = filteredResults.reduce(
     (acc, result) => {
+<<<<<<< HEAD
       if (!acc[result.type]) acc[result.type] = [],
       acc[result.type]!.push(result),
       return acc
@@ -1309,10 +1724,24 @@ if ( {) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      if (!acc[result.type]) acc[result.type] = [];
+      acc[result.type]!.push(result);
+
+      return acc
+=======
+return acc;
+    },
+    {} as Record<string, SearchResult[]>
+  );
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const renderResultCard = (result: SearchResult) => {
     switch (result.type) {
       case 'product':
       case 'equipment':
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -1320,6 +1749,9 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Group results by type for better display;
   const groupedResults = filteredResults && filteredResults.reduce(;
     (acc, result) => {;
@@ -1329,14 +1761,19 @@ if ( {) {
     },;
     {} as Record<string, SearchResult[]>  );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const renderResultCard = (result: SearchResult) => {;
     switch (result && result.type) {;
       case 'product':;
       case 'equipment':;
         return (
+<<<<<<< HEAD
           <div key={result && result.id} data-testid='result-card'>            <ProductCard
 <<<<<<< HEAD
 
@@ -1345,6 +1782,11 @@ if ( {) {
 <<<<<<< HEAD
               product={{
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+          <div key={result && result.id} data-testid='result-card'>            <ProductCard
+              product={{
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 id: result.id
                 name: result.title
                 title: result.title
@@ -1361,6 +1803,7 @@ if ( {) {
                 stock: (result as any).stock
                 in_stock: ((result as any).stock |0) > 0,              }}
 =======
+<<<<<<< HEAD
 
 =======
         return (
@@ -1404,6 +1847,12 @@ if (acc[result.type] = []) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<div key={result.id} data-testid='result-card'>
+            <ProductCard
+              product={{
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 id: result.id,
                 name: result.title,
                 title: result.title,
@@ -1411,6 +1860,10 @@ if (acc[result.type] = []) {
                 price: result.price || 0,
                 images: result.image ? [result.image] : [],
                 rating: result.rating || 0,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 review_count: 0,
                 tags: result.tags || [],
                 category: result.category || '',
@@ -1418,6 +1871,7 @@ if (acc[result.type] = []) {
                 created_at: new Date ().toISOString (),
                 updated_at: new Date ().toISOString (),
                 stock: (result as any).stock,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1482,6 +1936,27 @@ if (acc[result.type] = []) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                reviewCount: 0,
+                tags: result.tags || [],
+                category: result.category || '',
+                currency: '$',
+                created_at: new Date().toISOString(),
+                updated_at: new Date().toISOString(),
+                stock: (result as any).stock,
+in_stock: ((result as any).stock || 0) > 0,
+              }}
+            />
+          </div>
+        );
+      case 'talent':
+        return (
+<div key={result.id} data-testid='result-card'>
+            <TalentCard
+              talent={{
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 id: result.id,
                 user_id: result.id,
                 full_name: result.title,
@@ -1494,6 +1969,7 @@ if (acc[result.type] = []) {
                 summary: result.description,
                 is_verified: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 availability_type: 'available',
               }}
               onViewProfile={(id: string) => {
@@ -1505,6 +1981,8 @@ if (acc[result.type] = []) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 availability_type: 'available'}  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1529,12 +2007,31 @@ if (acc[result.type] = []) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+=======
+availability_type: 'available',
+              }}
+              onViewProfile={(id: string) => {
+                router.push(`/talent/${id}`);
+              }}
+              onRequestHire={talent => {
+                router.push(`/talent/${talent.id}?action=hire`);
+              }}
+              isAuthenticated={isAuthenticated}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             />
           </div>
         ),
       case 'category':
         return (
+<<<<<<< HEAD
           <div key={result.id} data-testid='result-card'>            <CategoryCard
+=======
+<div key={result.id} data-testid='result-card'>
+            <CategoryCard
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               title={result.title}
               description={result.description |''}
               icon={result.image |'📁'}
@@ -1542,6 +2039,7 @@ if (acc[result.type] = []) {
           </div>
         );
       default:
+<<<<<<< HEAD
 =======
 
 
@@ -1558,11 +2056,15 @@ if (acc[result.type] = []) {
             data-testid="result-card"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
+=======
+>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <h3 className='font-semibold'>{result.title}</h3>
             <p className='text-gray-600 dark:text-gray-200'>
               {result.description}
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         )
@@ -1582,6 +2084,10 @@ if (acc[result.type] = []) {
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
+=======
+        );    }
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };
 
           <div key={result.id} data-testid="result-card">
@@ -1607,6 +2113,7 @@ if (acc[result.type] = []) {
       default:;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         return (
           <div
@@ -1631,6 +2138,8 @@ if (acc[result.type] = []) {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >;
             <h3 className='font-semibold'>{result && result.title}</h3>;
             <p className='text-gray-600 dark:text-gray-200'>;
@@ -1642,6 +2151,7 @@ if (acc[result.type] = []) {
 
 }
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   return (
@@ -1705,6 +2215,17 @@ if (acc[result.type] = []) {
           {/* Search Header */}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+        );
+    }
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+    <>;
+      <SEO
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         title={`Search Results for "${query}" - Zion Marketplace`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1728,6 +2249,7 @@ if (acc[result.type] = []) {
       />
 <<<<<<< HEAD
       <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
+<<<<<<< HEAD
 =======
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
 <<<<<<< HEAD
@@ -1763,10 +2285,22 @@ if (acc[result.type] = []) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+
+
+=======
+
+<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div
           className="container mx-auto px-4 py-8"
           data-testid="search-results"
         >
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* Search Header */}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1792,6 +2326,8 @@ if (acc[result.type] = []) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="mb-8">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
               <div className="flex-1">
@@ -1799,11 +2335,16 @@ if (acc[result.type] = []) {
                   Search Results
                 </h1>
                 <p
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   className="text-gray-600 dark:text-gray-200"
                   data-testid="results-count"
                 >
                   {filteredResults.length > 0
                     ? `Found ${filteredResults.length} results for "${query}"`
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1830,10 +2371,16 @@ if (acc[result.type] = []) {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     : `No results found for "${query}"`  } catch (error) {
+=======
+                <Input
+                  type="text"
+                  value={searchQuery  } catch (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
                 </p>
               </div>
 <<<<<<< HEAD
@@ -1931,12 +2478,50 @@ if (acc[result.type] = []) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                  onChange={(e) => handleSearch(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  placeholder="Search marketplace..."
+                  className="pl-10"
+                />
+              </div>
+            </div>
+=======
+                  className='text-gray-600 dark:text-gray-200'
+                  data-testid='results-count'
+                >
+                  {filteredResults.length > 0
+                    ? `Found ${filteredResults.length} results for "${query}"`
+                    : `No results found for "${query}"`}
+                </p>
+              </div>
+              {/* Search Input */}
+<div className='relative w-full lg:w-96'>
+                <Search className='absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200' />
+                <Input
+                  type='text'
+                  value={searchQuery}
+                  onChange={e => handleSearch(e.target.value)}
+                  placeholder='Search marketplace...'
+                  className='pl-10'
+                />
+              </div>
+            </div>
+            {/* Controls */}
+<div className='flex flex-wrap items-center justify-between gap-4 mt-6'>
+              <div className='flex items-center gap-2 flex-wrap'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <Button
                   variant="outline"
                   size="sm"
                   className="flex items-center gap-2"
                   data-testid="filter-button"
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   <Filter className="h-4 w-4" />
@@ -1974,15 +2559,23 @@ if (acc[result.type] = []) {
                 <select
                   value={categoryFilter  } catch (error) {
 =======
+=======
+                </Button>
+                <select
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
                   data-testid='filter-button'>;
                   <Filter className='h-4 w-4' />                  Filters;
                 </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <select
                   value={sortBy}
                   onChange={e => setSortBy(e && e.target.value)}
@@ -1990,9 +2583,12 @@ if (acc[result.type] = []) {
                   data-testid='sort-select';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 router.push (`/talent/${id}`);
               }}
               onRequestHire={talent => {
@@ -2074,10 +2670,13 @@ if (acc[result.type] = []) {
                   data - testid='sort - select';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >;
                   <option value='relevance'>Relevance</option>;
                   <option value='newest'>Newest</option>;
@@ -2086,6 +2685,7 @@ if (acc[result.type] = []) {
                   <option value='rating'>Highest Rated</option>                </select>;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 <select
@@ -2167,6 +2767,40 @@ if (acc[result.type] = []) {
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+                  <Filter className='h-4 w-4' />
+                  Filters
+                </Button>
+                <select
+                  value={sortBy}
+onChange={e => setSortBy(e.target.value)}
+                  className='px-3 py-1 border border-gray-300 rounded-md text-sm'
+                  data-testid='sort-select'
+                >
+                  <option value='relevance'>Relevance</option>
+                  <option value='newest'>Newest</option>
+                  <option value='price_asc'>Price: Low to High</option>
+                  <option value='price_desc'>Price: High to Low</option>
+                  <option value='rating'>Highest Rated</option>
+                </select>
+
+                <select
+                  value={categoryFilter}
+onChange={e => setCategoryFilter(e.target.value)}
+                  className='px-3 py-1 border border-gray-300 rounded-md text-sm'
+                >
+                  <option value='all'>All Categories</option>
+                  {categories.map(c => (
+                    <option key={c} value={c}>
+                      {c}
+                    </option>
+                  ))}
+                </select>
+
+<div className='flex items-center gap-1'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <input
                     type="number"
                     placeholder="Min $"
@@ -2180,6 +2814,7 @@ if (acc[result.type] = []) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <input
@@ -2210,12 +2845,15 @@ if (acc[result.type] = []) {
 }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
                   />
                   <span>-</span>
                   <input
                     type="number"
                     placeholder="Max $"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2251,10 +2889,27 @@ if (acc[result.type] = []) {
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+                    value={maxPrice}
+<<<<<<< HEAD
+                    onChange={(e) => setMaxPrice(e.target.value)}
+                    className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
+=======
+                    onChange={e => setMaxPrice(e.target.value)}
+                    className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                  />
+                </div>
+                <select
+                  value={minRating}
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     onChange={e => setMaxPrice(e && e.target.value)}
                     className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'                  />;
                 </div>;
                   onChange={(e) => setMinRating(e.target.value)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2272,6 +2927,13 @@ if (acc[result.type] = []) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+=======
+                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+=======
+onChange={e => setMinRating(e.target.value)}
+                  className='px-3 py-1 border border-gray-300 rounded-md text-sm'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >
                   <option value="">All Ratings</option>
                   <option value="4">4★ & up</option>
@@ -2279,6 +2941,7 @@ if (acc[result.type] = []) {
                   <option value="2">2★ & up</option>
                 </select>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <div className="flex items-center gap-2">
@@ -2358,6 +3021,8 @@ if (acc[result.type] = []) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
     console.error("Error:", error);
@@ -2381,6 +3046,7 @@ if (acc[result.type] = []) {
                 </Button>
                 <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                   variant={viewMode === 'list' ? 'default' : 'outline'  } catch (error) {
@@ -2402,18 +3068,24 @@ if (acc[result.type] = []) {
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >;
                   <List className='h-4 w-4' />                </Button>;
               </div>;
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {/* Loading State */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           {loading && results.length === 0 && (
+<<<<<<< HEAD
             <div className="flex justify-center py-12">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
             </div>
@@ -2462,10 +3134,13 @@ if (acc[result.type] = []) {
           {loading && results.length === 0 && (
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {!loading && filteredResults.length === 0 && (
             <div data-testid="search-empty-state">
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
             </div>
+<<<<<<< HEAD
 
           {filteredResults.length > 0 && (
             <div className="space-y-8">
@@ -2513,12 +3188,15 @@ if (acc[result.type] = []) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {filteredResults && filteredResults.length > 0 && (;
             <div className='space-y-8'>;
               {Object && Object.entries(groupedResults).map(([type, typeResults]) => (;
                 <div key={type}>;
                   <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults && typeResults.length});
                   </h2>;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
               <div className='flex items-center gap-2'>
@@ -2552,18 +3230,28 @@ if (acc[result.type] = []) {
                 </Button>
                 <Button
 <<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   variant={viewMode === 'list' ? 'default' : 'outline'}
                   size='sm'
                   onClick={() => setViewMode('list')}
                   data-testid='view-mode-list'
                   className={viewMode === 'list' ? 'active' : ''}
                 >
+<<<<<<< HEAD
                   <List className='h-4 w-4' />                </Button>
+=======
+                  <List className='h-4 w-4' />
+                </Button>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>
             </div>
           </div>
           {/* Loading State */}
           {loading && results.length === 0 && (
+<<<<<<< HEAD
             <div className='flex justify-center py-12'>
               <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>            </div>
           )}
@@ -2646,6 +3334,27 @@ if (acc[result.type] = []) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<div className='flex justify-center py-12'>
+              <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>
+            </div>
+          )}
+          {/* Empty State */}
+          {!loading && filteredResults.length === 0 && (
+<div data-testid='search-empty-state'>
+              <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
+            </div>
+          )}
+          {/* Results */}
+          {filteredResults.length > 0 && (
+<div className='space-y-8'>
+              {Object.entries(groupedResults).map(([type, typeResults]) => (
+                <div key={type}>
+                  <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>
+                    {type}s ({typeResults.length})
+                  </h2>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <div
                     className={
                       viewMode === 'grid'
@@ -2659,6 +3368,7 @@ if (acc[result.type] = []) {
               {/* Load More Button */}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -2666,12 +3376,30 @@ if (acc[result.type] = []) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              {results.length < totalResults && (
+<div className='flex justify-center py-8'>
+                  <Button
+                    onClick={loadMore}
+                    disabled={loading}
+                    className='flex items-center gap-2'
+                  >
+                    {loading ? (
+                      <>
+                        <div className='animate-spin rounded-full h-4 w-4 border-b-2 border-white'></div>
+                        Loading...
+                      </>
+                    ) : (
+                      'Load More Results'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     )}
                   </Button>;
                 </div>;
               )}
             </div>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>
       </div>
@@ -2684,6 +3412,22 @@ if (acc[result.type] = []) {
 export const getServerSideProps: GetServerSideProps<
   SearchResultsPageProps
 > = async (context: any) => {;
+=======
+      process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',
+    logInfo(`Fetching search results for slug: ${slug}, query: ${query}`),
+    const response = await fetch(
+      `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`;
+    );
+=======
+        </div>
+      </div>
+    </>
+);
+
+export const getServerSideProps: GetServerSideProps<
+  SearchResultsPageProps
+> = async (context: any) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const params = context.params;
   const slug = params?.slug as string
   // Convert slug back to query term
@@ -2691,6 +3435,7 @@ export const getServerSideProps: GetServerSideProps<
   try {
     // In production, replace with your actual API base URL
     const apiBaseUrl =
+<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps<;
   SearchResultsPageProps;
 > = async (context: any) => {;
@@ -2808,11 +3553,28 @@ if ( {) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+
+    logInfo(`Fetching search results for slug: ${slug}, query: ${query}`);
+    const response = await fetch(
+      `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`
+    );
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    let results = [];
+    let totalCount = 0;
+      const data = await response.json();
+      results = data.results || [];
+      totalCount = data.totalCount || results.length;
+logInfo(`Server-side fetch successful: ${results.length} results`);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } else {
       logErrorToProduction (
         `Search API error: ${response.status} ${response.status_text}`);
       const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
       results = offline.results;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -2858,6 +3620,8 @@ if ( {) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       results = data.results || [];
       totalCount = data.totalCount || results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`)
@@ -2866,11 +3630,21 @@ if ( {) {
       const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
       results = offline.results;
       totalCount = offline.totalCount
+<<<<<<< HEAD
+=======
+=======
+      totalCount = offline.totalCount;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
 
     return {
       props: {
         initialResults: results,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         query;
         slug;
         totalCount}}
@@ -2886,7 +3660,10 @@ if ( {) {
   }
 
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       total_count = offline.total_count;    }
     return {
       props: {
@@ -2896,6 +3673,16 @@ if ( {) {
         total_count,
       },
     }
+<<<<<<< HEAD
+=======
+=======
+query,
+        slug,
+        totalCount,
+      },
+    };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     logErrorToProduction ('Error fetching search results:', { data: error });
     const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
@@ -2913,9 +3700,12 @@ total_count: offline.total_count,
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -3030,6 +3820,7 @@ export const getServerSideProps: GetServerSideProps<;
     let results = [];
     let totalCount = 0;
     if (response.ok) {;
+<<<<<<< HEAD
 =======
 
 
@@ -3040,10 +3831,13 @@ export const getServerSideProps: GetServerSideProps<;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const data = await response.json();
       results = data.results || [];
       totalCount = data.totalCount || results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`);
+<<<<<<< HEAD
 <<<<<<< HEAD
     } else {
       logErrorToProduction(
@@ -3076,6 +3870,8 @@ totalCount: offline.totalCount,
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } else {;
       logErrorToProduction(;
         `Search API error: ${response.status} ${response.statusText}`);
@@ -3101,6 +3897,10 @@ totalCount: offline.totalCount,
   } catch (error) {
     logErrorToProduction('Error fetching search results:', { data: error });
     const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return {;
       props: {;
         initialResults: offline.results,;
@@ -3118,6 +3918,7 @@ totalCount: offline.totalCount,
 }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -3129,3 +3930,19 @@ totalCount: offline.totalCount,
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+=======
+    return {
+      props: {
+        initialResults: offline.results,
+        query,
+        slug,
+        totalCount: offline.totalCount,
+      },
+    };
+  }
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

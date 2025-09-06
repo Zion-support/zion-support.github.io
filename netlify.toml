@@ -1,5 +1,6 @@
 [build]
 <<<<<<< HEAD
+<<<<<<< HEAD
 command = "npm run build"
 publish = "dist"
 
@@ -36,15 +37,27 @@ NODE_OPTIONS = "--max-old-space-size=4096"
 [build.environment]
   NODE_VERSION = "18"
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+command = "npm ci && npm run build"
+publish = ".next"
+
+[build.environment]
+NODE_VERSION = "20"
+NODE_OPTIONS = "--max-old-space-size=4096"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 [functions]
   directory = "netlify/functions"
 
 [[redirects]]
+<<<<<<< HEAD
 <<<<<<< HEAD
 from = "/api/*"
 to = "/.netlify/functions/:splat"
@@ -60,6 +73,11 @@ to = "/.netlify/functions/:splat"
 status = 200
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 # Security and caching headers for static assets
 [[headers]]
@@ -87,6 +105,7 @@ status = 200
     X-Permitted-Cross-Domain-Policies = "none"
     Origin-Agent-Cluster = "?1"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -100,6 +119,10 @@ status = 200
 =======
 # Static redirects for exported site
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+# Static redirects for exported site
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 [[redirects]]
 from = "/ai-customer-success-platform"
 to = "/services/ai-customer-success-platform/"
@@ -136,6 +159,7 @@ to = "/services/smart-crm-intelligence-suite/"
 status = 301
 
 [[redirects]]
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -182,3 +206,8 @@ status = 301
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

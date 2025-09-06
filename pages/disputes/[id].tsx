@@ -5,10 +5,24 @@ import {useRouter} from 'next/router';
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
 import {useCurrentUser} from '../../utils/auth';
 export default function DisputeDetailPage() {
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+import {useCurrentUser} from '../../utils/auth';
+=======
+import { useCurrentUser } from '../../utils/auth';
+const fetcher = null;
+    mutate()
+  }
+
+const fetcher = (url: string) => fetch(url).then(r => r.json());
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+export default function DisputeDetailPage() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 class ErrorBoundary extends React.Component {
@@ -38,35 +52,49 @@ import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {useRouter} from 'next/router';
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
 
 const fetcher = (url: string) => fetch(url).then(r => r && r.json());
 export default function DisputeDetailPage() {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const router = useRouter();
   const { id } = router && router.query as { id?: string };
 <<<<<<< HEAD
+=======
+  const router = useRouter();
+  const { id } = router && router.query as { id?: string };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { data, mutate } = useSWR(id ? `/api/disputes/${id}` : null, fetcher);
   const user = useCurrentUser();
   const dispute = data?.dispute;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function DisputeDetailPage() {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
@@ -75,6 +103,7 @@ import { useCurrentUser } from '../../utils/auth';
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export default function DisputeDetailPage(req, res) {
   try {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -86,12 +115,15 @@ export default function DisputeDetailPage(req, res) {
   const dispute = data?.dispute;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     });
     setResolutionSummary ('');
     mutate ();  }
   return (
     <EnhancedLayout>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -232,34 +264,71 @@ export default function DisputeDetailPage(req, res) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const router = useRouter();
   const { id } = router.query as { id?: string };
   const { data, mutate } = useSWR(id ? `/api/disputes/${id}` : null, fetcher);
   const user = useCurrentUser();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
   async function sendMessage() {
     if (!message.trim() || !id) return;
     await fetch(`/api/disputes/${id}/message`, {
+<<<<<<< HEAD
+=======
+=======
+const [activeTab, setActiveTab] = useState<
+    'Overview' | 'Messages' | 'Attachments' | 'Admin Notes'
+  >('Overview');
+  const [message, setMessage] = useState('');
+  const [resolutionSummary, setResolutionSummary] = useState('');
+  async function sendMessage() {
+    if (!message.trim() || !id) return;
+await fetch(`/api/disputes/${id}/message`, {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ body: message }),
     });
     setMessage('');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     mutate();  }
 
   async function resolve(status?: 'Resolved' | 'Under Review' | 'Open') {
     if (!id) return;
     await fetch(`/api/disputes/${id}/resolve`, {
+<<<<<<< HEAD
+=======
+=======
+    mutate();
+  }
+
+  async function resolve(status?: 'Resolved' | 'Under Review' | 'Open') {
+    if (!id) return;
+await fetch(`/api/disputes/${id}/resolve`, {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ resolutionSummary, status }),
     });
     setResolutionSummary('');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     mutate();  }
 
   const dispute = data?.dispute;
@@ -288,6 +357,7 @@ export default function DisputeDetailPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
@@ -298,15 +368,28 @@ export default function DisputeDetailPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+=======
+    mutate();
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <EnhancedLayout>
       {!dispute ? (
         <div>Loading...</div>
       ) : (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center justify-between mb-4">
             <h1 className="text-2xl font-semibold">Case {dispute.id}</h1>
             <span className={`px-2 py-1 rounded text-sm border ${dispute.status === 'Resolved' ? 'bg-green-100 text-green-800 border-green-300' : dispute.status === 'Under Review' ? 'bg-yellow-100 text-yellow-800 border-yellow-300' : 'bg-red-100 text-red-800 border-red-300'}`}>{dispute.status}</span>
+<<<<<<< HEAD
           </div>
 <<<<<<< HEAD
 
@@ -323,10 +406,24 @@ export default function DisputeDetailPage(req, res) {
               <div className='mt-1'>{dispute.projectId}</div>
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+<div className='max-w-4xl mx-auto'>
+          <div className='flex items-center justify-between mb-4'>
+            <h1 className='text-2xl font-semibold'>Case {dispute.id}</h1>
+            <span
+              className={`px-2 py-1 rounded text-sm border ${dispute.status === 'Resolved' ? 'bg-green-100 text-green-800 border-green-300' : dispute.status === 'Under Review' ? 'bg-yellow-100 text-yellow-800 border-yellow-300' : 'bg-red-100 text-red-800 border-red-300'}`}
+            >
+              {dispute.status}
+            </span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+          </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
             <div className="p-3 border rounded">
               <div className="font-medium text-gray-500">Project</div>
               <div className="mt-1">{dispute.projectId}</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -335,6 +432,8 @@ export default function DisputeDetailPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
             <div className="p-3 border rounded">
               <div className="font-medium text-gray-500">Client</div>
@@ -346,6 +445,7 @@ export default function DisputeDetailPage(req, res) {
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -354,6 +454,15 @@ export default function DisputeDetailPage(req, res) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+          </div>
+
+          {activeTab === 'Overview' && (
+            <div className="space-y-6">
+              <div className="p-4 border rounded">
+                <div className="font-medium mb-2">Reason</div>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className='border-b mb-4 flex gap-4 text-sm'>
             {(
               ['Overview', 'Messages', 'Attachments', 'Admin Notes'] as const
@@ -364,6 +473,7 @@ export default function DisputeDetailPage(req, res) {
                 className={`py-2 border-b-2 -mb-px ${activeTab === t ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500'}`}
               >
                 {t}
+<<<<<<< HEAD
               </button>            ))}
 =======
           <div className="border-b mb-4 flex gap-4 text-sm">
@@ -386,6 +496,21 @@ export default function DisputeDetailPage(req, res) {
             <div className="space-y-6">
               <div className="p-4 border rounded">
                 <div className="font-medium mb-2">Reason</div>
+=======
+              </button>
+            ))}
+          </div>
+
+          {activeTab === 'Overview' && (
+<div className='space-y-6'>
+              <div className='p-4 border rounded'>
+                <div className='font-medium mb-2'>Reason</div>
+                <div className='text-sm'>
+                  {dispute.reason}
+                  {dispute.reasonDetails ? ` — ${dispute.reasonDetails}` : ''}
+                </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>
               <div className="p-4 border rounded">
                 <div className="font-medium mb-2">Description</div>
@@ -405,6 +530,7 @@ export default function DisputeDetailPage(req, res) {
                       <time className="text-xs text-gray-500">{new Date(m.createdAt).toLocaleString()}</time>
                       <div className="text-sm">{m.authorRole} messaged</div>
                     </li>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   ))  } catch (error) {
@@ -432,12 +558,16 @@ export default function DisputeDetailPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <li className="mb-6 ml-4">
                       <div className="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white" />
                       <time className="text-xs text-gray-500">{new Date(dispute.resolvedAt).toLocaleString()}</time>
                       <div className="text-sm">Case resolved</div>
                     </li>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -540,17 +670,51 @@ export default function DisputeDetailPage(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="space-y-4">
               <div className="max-h-72 overflow-auto border rounded p-3 bg-gray-50 dark:bg-gray-900">
+=======
+          {activeTab === 'Messages' && (
+            <div className="space-y-4">
+              <div className="max-h-72 overflow-auto border rounded p-3 bg-gray-50 dark:bg-gray-900">
+=======
+                  ))}
+                  {dispute.resolvedAt && (
+                    <li className='mb-6 ml-4'>
+                      <div className='absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white' />
+                      <time className='text-xs text-gray-500'>
+                        {new Date(dispute.resolvedAt).toLocaleString()}
+                      </time>
+                      <div className='text-sm'>Case resolved</div>
+                    </li>
+                  )}
+                </ol>
+              </div>
+            </div>
+          )}
+          {activeTab === 'Messages' && (
+<div className='space-y-4'>
+              <div className='max-h-72 overflow-auto border rounded p-3 bg-gray-50 dark:bg-gray-900'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {dispute.messages.length === 0 ? (
                   <div className="text-sm text-gray-500">No messages yet</div>
                 ) : (
                   <ul className="space-y-3">
                     {dispute.messages.map((m: any) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+                      <li key={m.id} className="text-sm">
+                        <div className="text-gray-500 text-xs">{m.authorRole} • {new Date(m.createdAt).toLocaleString()}</div>
+                        <div className="whitespace-pre-wrap">{m.body}</div>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <li key={m.id} className='text-sm'>
                         <div className='text-gray-500 text-xs'>
                           {m.authorRole} •{' '}
                           {new Date(m.createdAt).toLocaleString()}
                         </div>
+<<<<<<< HEAD
                         <div className='whitespace-pre-wrap'>{m.body}</div>                      </li>
                     ))}
                   </ul>
@@ -609,10 +773,16 @@ export default function DisputeDetailPage(req, res) {
                         <div className='whitespace-pre-wrap'>{m.body}</div>                      </li>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+                        <div className='whitespace-pre-wrap'>{m.body}</div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                      </li>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     ))}
                   </ul>;
                 )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -664,11 +834,17 @@ export default function DisputeDetailPage(req, res) {
               {user.role !== 'guest' && (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              </div>
+              {user.role !== 'guest' && (
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div className="flex gap-2">
                   <input value={message} onChange={e => setMessage(e.target.value)} placeholder="Write a message" className="flex-1 border rounded px-3 py-2 bg-white dark:bg-black" />
                   <button onClick={sendMessage} className="px-3 py-2 rounded bg-blue-600 text-white">Send</button>
                 </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           {activeTab === 'Attachments' && (
             <div className="space-y-3">
@@ -685,6 +861,8 @@ export default function DisputeDetailPage(req, res) {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               )}
             </div>;
 
@@ -697,6 +875,35 @@ export default function DisputeDetailPage(req, res) {
                 <ul className='divide-y'>;
                   {dispute && dispute.attachments.map((a: any) => (;
 
+<<<<<<< HEAD
+=======
+=======
+<div className='flex gap-2'>
+                  <input
+                    value={message}
+                    onChange={e => setMessage(e.target.value)}
+                    placeholder='Write a message'
+                    className='flex-1 border rounded px-3 py-2 bg-white dark:bg-black'
+                  />
+                  <button
+                    onClick={sendMessage}
+                    className='px-3 py-2 rounded bg-blue-600 text-white'
+                  >
+                    Send
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
+          {activeTab === 'Attachments' && (
+<div className='space-y-3'>
+              {dispute.attachments.length === 0 ? (
+                <div className='text-sm text-gray-500'>No attachments</div>
+              ) : (
+                <ul className='divide-y'>
+                  {dispute.attachments.map((a: any) => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <li
                       key={a && a.id}
                       className='py-2 flex items-center justify-between'>;
@@ -708,10 +915,15 @@ export default function DisputeDetailPage(req, res) {
                       </div>;
                       <a
                         className='text-blue-600 hover:underline'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         href={`/api/disputes/${encodeURIComponent(dispute && dispute.id)}/download?fileName=${encodeURIComponent(a && a.fileName)}`}>;
                         Download;
                       </a>                    </li>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -733,10 +945,35 @@ export default function DisputeDetailPage(req, res) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {activeTab === 'Attachments' && (
             <div className="space-y-3">
               {dispute.attachments.length === 0 ? (
                 <div className="text-sm text-gray-500">No attachments</div>
+<<<<<<< HEAD
+=======
+=======
+                        href={`/api/disputes/${encodeURIComponent(dispute.id)}/download?fileName=${encodeURIComponent(a.fileName)}`}
+                      >
+                        Download
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          )}
+          {activeTab === 'Admin Notes' && (
+<div className='space-y-4'>
+              {user.role !== 'admin' ? (
+                <div className='text-sm text-gray-500'>
+                  Admin access required
+                </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ) : (
                 <ul className="divide-y">
                   {dispute.attachments.map((a: any) => (
@@ -745,6 +982,7 @@ export default function DisputeDetailPage(req, res) {
                         <div className="font-medium">{a.fileName}</div>
                         <div className="text-xs text-gray-500">{a.mimeType} • {(a.fileSize / 1024).toFixed(1)} KB</div>
                       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <a
                         className='text-blue-600 hover:underline'
@@ -764,6 +1002,10 @@ export default function DisputeDetailPage(req, res) {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           {activeTab === 'Admin Notes' && (;
             <div className='space-y-4'>;
@@ -790,12 +1032,17 @@ export default function DisputeDetailPage(req, res) {
                     </button>;
                     <button
                       onClick={() => resolve('Resolved')}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       className='px-3 py-2 rounded bg-green-600 text-white';
                     >;
                       Resolve;
                     </button>                  </div>;
                 </div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -812,6 +1059,11 @@ export default function DisputeDetailPage(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <a className="text-blue-600 hover:underline" href={`/api/disputes/${encodeURIComponent(dispute.id)}/download?fileName=${encodeURIComponent(a.fileName)}`}>Download</Link>
                     </li>
                   ))  } catch (error) {
@@ -831,6 +1083,7 @@ export default function DisputeDetailPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 =======
 
 
@@ -842,6 +1095,8 @@ export default function DisputeDetailPage(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {activeTab === 'Admin Notes' && (
             <div className="space-y-4">
               {user.role !== 'admin' ? (
@@ -852,20 +1107,34 @@ export default function DisputeDetailPage(req, res) {
                   <div className="flex gap-2">
                     <button onClick={() => resolve('Under Review')} className="px-3 py-2 rounded border">Mark Under Review</button>
                     <button onClick={() => resolve('Resolved')} className="px-3 py-2 rounded bg-green-600 text-white">Resolve</button>
+<<<<<<< HEAD
                   </div>
                 </div>
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                      className='px-3 py-2 rounded bg-green-600 text-white'
+                    >
+                      Resolve
+                    </button>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                  </div>
+                </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
 }
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -876,6 +1145,7 @@ export default function DisputeDetailPage(req, res) {
           )}
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1002,12 +1272,15 @@ export default function DisputeDetailPage(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1018,3 +1291,8 @@ export default function DisputeDetailPage(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    </EnhancedLayout>
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

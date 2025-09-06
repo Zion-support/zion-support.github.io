@@ -129,6 +129,7 @@ const statuses: GrantStatus[] = [;
 import { useEffect, useState  } from 'react';
 import Link from 'next/link',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
 import {useEffect, useState} from 'react';
 import Link from 'next/link';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -138,6 +139,11 @@ import type {
   GrantStatus,;
 } from '../../types/grants';
 
+=======
+import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/grants';
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
+const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import type {
   GrantApplication
   GrantCategory
@@ -156,8 +162,12 @@ const statuses: GrantStatus[] = [
   'Approved'
   'Rejected'
 ];
+<<<<<<< HEAD
 
 export default function GrantsPage() {;
+=======
+export default function GrantsPage() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{
     sector?: string;
@@ -166,6 +176,7 @@ export default function GrantsPage() {;
     program?: string;
   }>({});
 
+<<<<<<< HEAD
 
       .catch(() => setItems([]));  }, [filters]);
   return (
@@ -220,8 +231,16 @@ export default function GrantsPage() {;
       .then((d) => setItems(d && d.items || []));
       .catch(() => setItems([]));
   }, [filters]);
+=======
+  useEffect(() => {
+.then(r => r.json())
+      .then(d => setItems(d.items || []))
+      .catch(() => setItems([]));
+  }, [filters]);
+  return (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     <EnhancedLayout>
-      <div className='flex items-center justify-between mb-6'>
+<div className='flex items-center justify-between mb-6'>
         <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>
         <div className='flex gap-2'>
           <Link href='/grants/apply'>
@@ -510,6 +529,7 @@ function GrantsPage() {
 =======
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 );
 =======
       </div>;
@@ -550,6 +570,7 @@ function GrantsPage() {
     </EnhancedLayout>);
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   return (
@@ -560,3 +581,9 @@ function GrantsPage() {
 }
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

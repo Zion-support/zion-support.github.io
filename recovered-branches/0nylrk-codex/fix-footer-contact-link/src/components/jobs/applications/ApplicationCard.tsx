@@ -41,6 +41,7 @@ import { toast } from "sonner",
 interface ApplicationCardProps {
   application: JobApplication
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -91,10 +92,14 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 =======
 }export function ApplicationCard({ application }: ApplicationCardProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}export function ApplicationCard({ application }: ApplicationCardProps) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [expanded, setExpanded] = useState(false),
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
+<<<<<<< HEAD
 <<<<<<< HEAD
     toast.info("Resume download functionality will be implemented soon")
 <<<<<<< HEAD
@@ -120,6 +125,9 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 =======
     toast.info("Resume download functionality will be implemented soon")      case "shortlisted": return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    toast.info("Resume download functionality will be implemented soon")      case "shortlisted": return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Button variant="default" size="sm">;
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview;
           </Button>;
@@ -148,6 +156,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   }
 =======
@@ -158,10 +167,14 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 =======
   }    }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -352,6 +365,8 @@ function ApplicationCard() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
         {expanded && (
           <div className="mt - 4 space-y-3">;
@@ -398,6 +413,7 @@ function ApplicationCard() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -425,11 +441,14 @@ function ApplicationCard() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {expanded ? "Show Less" : "Show More"}
           </Button>;
           <div className="flex gap-2">;
             {renderActionButtons()}
             <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -467,10 +486,13 @@ function ApplicationCard() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         <Button 
           variant="secondary" 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -486,6 +508,8 @@ function ApplicationCard() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           size="sm"
           className="w-full"
           asChild
@@ -496,6 +520,7 @@ function ApplicationCard() {
         </Button>
       </CardFooter>
     </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 <<<<<<< HEAD
@@ -655,3 +680,6 @@ case "interview" : default: return (<Card className="overflow-hidden" > <CardHea
 =======
   )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

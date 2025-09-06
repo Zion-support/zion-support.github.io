@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,25 +62,36 @@ export const fsDb = {
 
 
 
+=======
+import path from "path";
+
+const DATA_DIR = path.join(process.cwd(), "data");
+=======  read: (path: string) => null
+  write: (path: string, data: any) => null
+  exists: (path: string) => false
+  delete: (path: string) => null
   read: (path: string) => null,
   write: (path: string, data: any) => null,
   exists: (path: string) => false,
-  delete: (path: string) => null;
+  delete: (path: string) => null
 };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-import { promises as fs } from 'fs';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  read: (path: string) => null,
+  write: (path: string, data: any) => null,
+  exists: (path: string) => false,
+  delete: (path: string) => null
+};
+
+  read: (path: string) => null,
+  write: (path: string, data: any) => null,
+  exists: (path: string) => false,
+  delete: (path: string) => null
+};
 import path from 'path';
 
 const DATA_DIR = path.join(process.cwd(), 'data');
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -143,6 +155,8 @@ const DATA_DIR = path.join(process.cwd(), 'data');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   try {
     const fullPath = path && path.join(DATA_DIR, filePath);
@@ -198,6 +212,7 @@ export async function writeJsonAsync<T>(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -212,6 +227,8 @@ export function writeJson<T>(relativePath: string, value: T): void {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 // File system database utilities;
 export const fs_db = {
@@ -224,6 +241,7 @@ export const fs_db = {
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -254,3 +272,5 @@ export const fs_db = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

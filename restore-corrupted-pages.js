@@ -78,6 +78,9 @@ function restorePage(pagePath) {;
       const parts = backupContent.split('');
       if (parts.length > 1) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         // Take the content after the conflict resolution;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -123,9 +126,12 @@ function restorePage(pagePath) {;
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       }
+<<<<<<< HEAD
 =======
         // Take the content after the conflict resolution;      }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     // Clean up the content
 
@@ -138,6 +144,7 @@ function restorePage(pagePath) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -146,6 +153,8 @@ function restorePage(pagePath) {;
 <<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
@@ -199,8 +208,11 @@ function restorePage(pagePath) {;
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 '),
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Check condition
 if ( {) {
   $2
@@ -232,11 +244,14 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     fs.writeFileSync(pagePath, backupContent),;
     return {;
       restored: true,;
@@ -247,6 +262,7 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -254,6 +270,8 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
@@ -262,8 +280,11 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
@@ -345,9 +366,12 @@ function restoreAllCorruptedPages() {
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 ;
+<<<<<<< HEAD
 =======
 =======;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Function to scan and restore all corrupted pages;
 function restoreAllCorruptedPages() {;
   const pagesDir = path.join(process.cwd(), 'pages'),;
@@ -384,6 +408,7 @@ function restoreAllCorruptedPages() {;
 =======
         const result = restorePage(fullPath),
         const result = restorePage(fullPath),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
         const result = restorePage(fullPath),
@@ -405,13 +430,18 @@ function restoreAllCorruptedPages() {;
 =======
         const result = restorePage(fullPath),
         const result = restorePage(fullPath),
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
         const result = restorePage(fullPath),
         const result = restorePage(fullPath),
         const result = restorePage(fullPath),
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         if (result.restored) {
           results.restored++
           console.log(`✅ Restored: ${fullPath}`)
@@ -422,6 +452,7 @@ function restoreAllCorruptedPages() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -438,6 +469,8 @@ function restoreAllCorruptedPages() {;
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           console.log(`   Reason: ${result.reason}`)
           results.failed++,
@@ -472,6 +505,7 @@ function restoreAllCorruptedPages() {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+<<<<<<< HEAD
           results.failed++,          results.failed++,
 
 <<<<<<< HEAD
@@ -480,6 +514,8 @@ function restoreAllCorruptedPages() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           results.failed++,
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
           results.failed++,
@@ -660,10 +696,13 @@ function restoreAllCorruptedPages() {;
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 }
+<<<<<<< HEAD
 =======
   
   console.log('🚀 Starting page restoration process...'),}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Run the restoration if this script is executed directly
 if ({
   restoreAllCorruptedPages()
@@ -775,16 +814,20 @@ module.exports = {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 module.exports = {;
   restorePage,;
   restoreAllCorruptedPages,;
+<<<<<<< HEAD
   findBestBackup
 };
 <<<<<<< HEAD
@@ -823,6 +866,10 @@ module.exports = {
   findBestBackup;
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  findBestBackup;
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 };
@@ -858,6 +905,7 @@ main
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -870,3 +918,5 @@ module.exports = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

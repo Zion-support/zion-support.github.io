@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -94,6 +95,14 @@ export interface InvoiceRecord {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer',
+export interface CompanyUsageLimits {
+  monthlyJobPosts: number,
+  budgetCapUsd: number;    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ;
 export interface CompanyRecord {;
@@ -105,6 +114,7 @@ export interface CompanyRecord {;
   plan: CompanyPlan;
   members: CompanyMember[];
   activity: CompanyActivityEvent[];
+<<<<<<< HEAD
   invoices: InvoiceRecord[];
 <<<<<<< HEAD
 }
@@ -133,6 +143,8 @@ export interface CompanyRecord {;
   plan: CompanyPlan;
   members: CompanyMember[];
   activity: CompanyActivityEvent[];
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   invoices: InvoiceRecord[];  logoUrl?: string,;
   brandColor?: string,;
   plan: CompanyPlan,;
@@ -148,6 +160,7 @@ export interface CompanyRecord {;
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -156,3 +169,5 @@ export interface CompanyRecord {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

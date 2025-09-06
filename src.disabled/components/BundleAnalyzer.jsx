@@ -11,7 +11,12 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
+<<<<<<< HEAD
 =======
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
 

@@ -108,6 +108,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                 <div className="flex flex-wrap gap-1 mb-2">;
                   {project.tags.map((tag, i) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -118,6 +119,9 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 =======
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;              <p className="text-zion-slate text-sm mb-3 line-clamp-2">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;              <p className="text-zion-slate text-sm mb-3 line-clamp-2">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {project.description}
               </p>
 
@@ -147,6 +151,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
   )
@@ -162,6 +167,9 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 
   )
 }
+=======
+  )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

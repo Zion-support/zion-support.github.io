@@ -3,6 +3,10 @@ import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton',
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
 import { useToast } from '../../components/ui/NotificationSystem';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function NewJobPage() {
   const { notify } = useToast();
   const [loading, setLoading] = useState(false);
@@ -34,12 +38,15 @@ export default function NewJobPage() {
     }, 800)
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="max-w-2xl mx-auto">
       <EnhancedCard>
@@ -52,6 +59,7 @@ export default function NewJobPage() {
             <input className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm" placeholder="Location (Remote)" />
             <textarea className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm" rows={5} placeholder="Job description" />
             <EnhancedButton type="submit" variant="primary">Publish</EnhancedButton>
+<<<<<<< HEAD
 
           </form>
 <<<<<<< HEAD
@@ -86,6 +94,9 @@ import { use_toast } from '../../components / ui / NotificationSystem';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          </form>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -101,6 +112,7 @@ import { use_toast } from '../../components / ui / NotificationSystem';
 }
 =======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -109,3 +121,11 @@ import { use_toast } from '../../components / ui / NotificationSystem';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          </form>
+        )}
+      </EnhancedCard>
+    </div>
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

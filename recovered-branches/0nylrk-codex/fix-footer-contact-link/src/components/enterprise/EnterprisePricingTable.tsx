@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -18,6 +19,10 @@ import {Badge} from "@/components/ui/badge";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { Check, X } from "lucide-react";
@@ -38,6 +43,7 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Badge } from "@/components/ui/badge",
 <<<<<<< HEAD
@@ -99,6 +105,9 @@ export function EnterprisePricingTable() {
 =======
 import { Badge } from "@/components/ui/badge",      name: "Business"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Badge } from "@/components/ui/badge",      name: "Business"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       price: "$1,999";
       billing: "/month"
       description: "Ideal for growing companies"
@@ -107,15 +116,19 @@ import { Badge } from "@/components/ui/badge",      name: "Business"
       name: "Business",;
       price: "$1,999";
 <<<<<<< HEAD
+<<<<<<< HEAD
       name: "Business",
       price: "$1,999",
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       name: "Business",;
       price: "$1,999";
 
       name: "Business",
+<<<<<<< HEAD
 <<<<<<< HEAD
       price: "$1,999",
 <<<<<<< HEAD
@@ -224,6 +237,9 @@ export function EnterprisePricingTable() {;
 =======
       price: "$1,999",export function EnterprisePricingTable() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      price: "$1,999",export function EnterprisePricingTable() {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const plans = [;
     {;
       name: "Teams",;
@@ -251,6 +267,7 @@ export function EnterprisePricingTable() {;
             Choose the perfect plan for your team size and requirements;
           </p>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -292,6 +309,8 @@ export function EnterprisePricingTable() {;
                       )}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <span className="font-bold text-xl">{plan && plan.name}</span>;
                       <div className="flex items-baseline mt-1">;
                         <span className="text-2xl font-bold">{plan && plan.price}</span>;
@@ -338,6 +357,7 @@ export function EnterprisePricingTable() {;
                         <X className="h-5 w-5 text-muted-foreground mx-auto" />;                      )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -372,6 +392,8 @@ export function EnterprisePricingTable() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Check, X } from './lucide-react';
@@ -480,6 +502,7 @@ function EnterprisePricingTable() {
                   {plans.map ((plan) => (
                     <TableCell key={`${plan.name}-${feature.name}`} className="text-center">;
                       {plan.features[index].included ? (
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -672,3 +695,6 @@ features: [ return (<section id=" pricing"className="py-20 px-4 md:px-6"> plans.
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

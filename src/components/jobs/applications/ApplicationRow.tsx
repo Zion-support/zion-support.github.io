@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns",
 import { Calendar, User, FileText, BarChart } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -14,13 +15,48 @@ import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import useState
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface ApplicationRowProps {
+=======
+import { Button } from "@/components/ui/button",
+import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
+import { TableRow, TableCell } from "@/components/ui/table",
+import { JobApplication, ApplicationStatus } from "@/types/jobs",
+import { StatusBadge } from "./StatusBadge",
+import { ScoreBadge } from "./ScoreBadge";
+import { ApplicationActions } from "./ApplicationActions";
+import Image from 'next/image', // Import next/image
+import React, { useState } from 'react', // Import useState
+
+interface ApplicationRowProps {
+  application: JobApplication;
+  processingId: string | null;
+  onViewApplication: (applicationId: string) => Promise<void>;
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
+  onViewScore: (application: JobApplication) => void
+import { Button } from '@/components/ui/button'
+import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict
+import { TableRow, TableCell } from '@/components/ui/table'
+import { JobApplication, ApplicationStatus } from '@/types/jobs'
+import { StatusBadge } from './StatusBadge'
+import { ScoreBadge } from './ScoreBadge'
+import { ApplicationActions } from './ApplicationActions'
+import Image from 'next/image'; // Import next/image
+import React, { useState } from 'react'; // Import useState
+interface ApplicationRowProps {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   application: JobApplication
   processingId: string | null
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -105,6 +141,42 @@ export function ApplicationRow(): any ({;
   const [avatarError, setAvatarError] = useState(false);
   const talentName = application && application.talent_profile?.full_name || 'Unknown';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  const talentName = application.talent_profile?.full_name || 'Unknown'
+
+=======
+    applicationId: string
+    newStatus: ApplicationStatus
+  ) => Promise<void>
+  onViewScore: (application: JobApplication) => void
+interface ApplicationRowProps {
+  application: JobApplication
+  processingId: string | null
+  onViewApplication: (applicationId: string,) => Promise<void>
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus,) => Promise<void>
+  onViewScore: (application: JobApplication,) => void
+}
+export function ApplicationRow({
+  application;
+  processingId;
+  onViewApplication;
+  onStatusChange;
+  onViewScore
+}: ApplicationRowProps) {
+  const [avatarError, setAvatarError] = useState(false);
+  const talentName = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+  const talentName = application.talent_profile?.full_name |'Unknown'
+
+  const talentName = application.talent_profile?.full_name || 'Unknown'
+=======
+  return (
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <TableRow key={application.id}>
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <TableCell>
@@ -376,12 +448,24 @@ export function ApplicationRow({;
         )}
       </TableCell>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       <TableCell className="text-right">;
         <ApplicationActions;
           application={application}
           processingId={processingId}
           onViewApplication={onViewApplication}
           onStatusChange={onStatusChange}
+=======
+=======
+      <TableCell className='text-right'>;
+        <ApplicationActions
+          application = {application,}
+          processingId = {processingId,}
+          onViewApplication = {onViewApplication,}
+          onStatusChange = {onStatusChange,}
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         />;
       </TableCell>;
     </TableRow>;
@@ -415,9 +499,19 @@ export function ApplicationRow({;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+<<<<<<< HEAD
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+        />
+      </TableCell>
+    </TableRow>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

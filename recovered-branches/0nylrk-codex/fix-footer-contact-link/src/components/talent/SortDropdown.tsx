@@ -13,6 +13,7 @@ import React from './react';
 import { Button  } from '@/components / ui / button';
 import { SORT_OPTIONS  } from '@/data / sort_options';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { SortDesc, ChevronDown  } from './lucide-react';
 =======
 <<<<<<< HEAD
@@ -45,10 +46,14 @@ import {
 =======
 import { SortDesc, ChevronDown  } from './lucide-react';import {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { SortDesc, ChevronDown  } from './lucide-react';import {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+<<<<<<< HEAD
 <<<<<<< HEAD
 } from '@/components / ui / dropdown - menu';
 ;
@@ -56,6 +61,9 @@ import { SortDesc, ChevronDown  } from './lucide-react';import {
 =======
 } from "@/components/ui/dropdown-menu";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+} from "@/components/ui/dropdown-menu";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface SortDropdownProps {
   sortOption: string;
   setSortOption: (option: string) => void;
@@ -76,6 +84,7 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
           </div>
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
         </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </DropdownMenuTrigger>
 =======
@@ -132,6 +141,9 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
 =======
       </DropdownMenuTrigger>            }`}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </DropdownMenuTrigger>            }`}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             {option.label}
           </DropdownMenuItem>
@@ -156,6 +168,7 @@ interface SortDropdownProps {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -167,3 +180,6 @@ interface SortDropdownProps {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

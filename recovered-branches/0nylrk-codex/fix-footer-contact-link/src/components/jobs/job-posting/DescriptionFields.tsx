@@ -17,6 +17,7 @@ import {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
@@ -46,12 +47,16 @@ import {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormDescription,
   FormMessage,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -68,6 +73,11 @@ import {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 } from "@/components/ui/form";
+=======
+} from "@/components/ui/form";
+
+import { Textarea } from "@/components/ui/textarea";} from "@/components/ui/form";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { Textarea } from "@/components/ui/textarea";} from "@/components/ui/form";
 
@@ -79,6 +89,7 @@ interface DescriptionFieldsProps {;
   handleEditorChange: (content: string) => void;
   editorContent: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -105,11 +116,15 @@ export function DescriptionFields(): any ({;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         control={control}
         name="description"        render={({ field }) => (;
           <FormItem>;
             <FormLabel>Job Description</FormLabel>;
             <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -140,6 +155,8 @@ export function DescriptionFields({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',
 import { Control } from 'react-hook-form',
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
@@ -167,6 +184,7 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -185,11 +203,14 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         control={control}
         name="description"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Job Description</FormLabel>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <FormControl>
 <<<<<<< HEAD
@@ -377,6 +398,9 @@ function DescriptionFields() {
 =======
             <FormControl>        render={({ field }) => (;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <FormControl>        render={({ field }) => (;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <FormItem>;
             <FormLabel>Qualifications (Optional)</FormLabel>;
             <FormControl>;
@@ -408,6 +432,7 @@ function DescriptionFields() {
     </>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -421,6 +446,9 @@ function DescriptionFields() {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );}  );
           </FormItem>)}
       />;
@@ -450,6 +478,7 @@ editorContent: string
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -457,3 +486,6 @@ editorContent: string
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

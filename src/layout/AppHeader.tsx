@@ -1,4 +1,31 @@
+<<<<<<< HEAD
 const showTagline = router.pathname === '/'
+=======
+import React, { useState } from 'react';
+import { useMessaging  } from '@/context/MessagingContext';
+import Link from 'next/link';
+import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation';
+import { Logo  } from '@/components/header/Logo';
+import { useTranslation  } from 'react-i18next';
+import { Menu, X } from 'lucide-react'
+import { MobileMenu  } from '@/components/header/MobileMenu';
+import { useIsMobile  } from '@/hooks/use-mobile';
+import { MobileBottomNav  } from '@/components/header/MobileBottomNav';
+import { PointsBadge  } from '@/components/loyalty/PointsBadge';
+import { LoginModal  } from '@/components/auth/LoginModal';
+import { useAuth  } from '@/hooks/useAuth';
+import { UserMenu  } from '@/components/header/UserMenu';
+import { useSelector  } from 'react-redux';
+import type { RootState } from '@/store';
+import { cn } from '@/lib/utils', // Import cn utility
+import { useRouter } from 'next/router';
+export function AppHeader() {
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
+  const isMobile = null;
+  const showTagline = router.pathname === '/'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [loginOpen, setLoginOpen] = useState(false)
   const isMobile = useIsMobile()
@@ -97,9 +124,12 @@ import React from 'react';
           </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">
             <button
@@ -108,12 +138,15 @@ import React from 'react';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded={mobileMenuOpen}
@@ -139,9 +172,12 @@ import React from 'react';
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
@@ -150,7 +186,15 @@ import React from 'react';
                   // For the main login link, we might not have a specific returnTo beyond current page,
                   // or we could default to dashboard.
                   // For consistency with how sub-menus now set it:
+<<<<<<< HEAD
                   router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true }),
+=======
+                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   openLoginModal(router.asPath)
                 }}
               >;
@@ -164,12 +208,15 @@ import React from 'react';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 aria-label={t('auth.signup')}
 
                 data-testid="signup-nav-link"
@@ -220,7 +267,10 @@ import React from 'react';
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const show_tagline = router.pathname === '/';
   const [mobileMenuOpen, setMobileMenuOpen] = useState (false),
@@ -1258,12 +1308,15 @@ import React from 'react';
 
               {/* Mobile Services */}
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className="space-y-2">;
                 <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">;
                   Services;
                 </div>;
                 {services && services.map((service) => (;                  <Link
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                   <Link
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -1501,5 +1554,43 @@ import React from 'react';
 =======
 ;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+;
+=======
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+    </>
+  );
+
+}';
+}> {';';
+  t ('auth.login') ;';
+}</Link> <Link > {';';
+  t ('auth.signup') ;
+}</Link> </div>) ;";
+}<UserMenu /> </div>) ";";
+}</div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={;";
+  () => setMobileMenuOpen (false) ";";
+}aria-hidden="true" /> <div className="relative bg-background border-t border-border h-auto max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {;
+  unreadCount ;
+}onClose= {;
+  () => setMobileMenuOpen (false) ;
+}openLoginModal= {;
+  openLoginModal ;
+}/> </div> </div>) ;
+}{;
+  /* Mobile Bottom Navigation */ ;
+}{;
+  isMobile && <MobileBottomNav unreadCount= {;
+  unreadCount ;
+}/> ;
+}<LoginModal isOpen= {;
+  loginOpen ;
+}onOpenChange= {;
+  setLoginOpen ;
+}/> </>) ;'";
+}'"'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

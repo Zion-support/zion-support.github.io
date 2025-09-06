@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -100,6 +101,13 @@ import { Helmet } from './react - helmet - async';  keywords?: string;
   ogUrl?: string;
   canonical?: string;interface SEOProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import { Helmet } from './react - helmet - async';  keywords?: string;
+  ogImage?: string;
+  ogUrl?: string;
+  canonical?: string;interface SEOProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   title: string,
   description: string,
   keywords?: string,
@@ -111,6 +119,7 @@ import { Helmet } from './react - helmet - async';  keywords?: string;
 =======
   noindex?: boolean
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -150,6 +159,8 @@ export function SEO({
   ogImage = "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ogUrl,
   canonical,
   noindex}: SEOProps) {
@@ -157,6 +168,7 @@ export function SEO({
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle,
   
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
@@ -197,11 +209,15 @@ export function SEO({;
 =======
   return (  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <Helmet>;
       <title>{fullTitle}</title>;
       <meta name="description" content={description} />;
       {keywords && <meta name="keywords" content={keywords} />}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -297,6 +313,8 @@ function SEO() {
 import { Helmet } from "react-helmet-async",;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface SEOProps {;
   title: string,,
   description: string,;
@@ -347,6 +365,7 @@ export function SEO({;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -354,3 +373,6 @@ export function SEO({;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

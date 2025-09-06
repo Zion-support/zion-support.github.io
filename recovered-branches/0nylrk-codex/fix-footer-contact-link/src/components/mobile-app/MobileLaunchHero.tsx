@@ -27,6 +27,7 @@ import {AppStoreButtons} from "./AppStoreButtons";
 import {Card, CardContent} from "@/components/ui/card";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Link } from "react-router-dom",
 import { ArrowRight, Smartphone } from "lucide-react",
@@ -178,6 +179,12 @@ import { Link } from "react-router-dom",
 import { ArrowRight, Smartphone } from "lucide-react",
 import { Button } from "@/components/ui/button",import React from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from "react",
+import { Link } from "react-router-dom",
+import { ArrowRight, Smartphone } from "lucide-react",
+import { Button } from "@/components/ui/button",import React from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Link } from "react-router-dom",;
 import { ArrowRight, Smartphone } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -215,6 +222,7 @@ export const MobileLaunchHero: React.FC = () => {;
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">;
                     <Smartphone className="w-40 h-40 text-white opacity-40" />;
                     {/* In production, replace with actual app screenshot */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -292,12 +300,15 @@ export const MobileLaunchHero: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </div>;
                 </CardContent>;
               </Card>;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>;
 <<<<<<< HEAD
@@ -326,4 +337,7 @@ export const MobileLaunchHero: React.FC = () => {
 =======
       </div>;  )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </div>;  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -38,6 +39,12 @@ export function MobileOnboarding() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+export function MobileOnboarding() {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
   const navigate = useNavigate();
 import React, { useState } from "react",
@@ -72,7 +79,10 @@ export function MobileOnboarding() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const goToNextStep = () => {
     if (currentStep === "language") {
       setCurrentStep("role");
@@ -81,6 +91,7 @@ export function MobileOnboarding() {;
     } else {
       navigate("/mobile");
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -198,6 +209,13 @@ export function MobileOnboarding() {;
     setCurrentStep("signup")
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  };
+
+  const handleRoleSelect = () => {
+    setCurrentStep("signup")
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -321,6 +339,7 @@ if ( {) {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ;
@@ -431,3 +450,6 @@ const handleRoleSelect = () => {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

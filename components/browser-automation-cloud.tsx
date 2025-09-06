@@ -239,6 +239,7 @@ import SEO from '../components/SEO';
 import {Check, ExternalLink} from 'lucide-react';
 
 export default function BrowserAutomationCloudPage() {
+<<<<<<< HEAD
 
 export default function BrowserAutomationCloudPage() {
   const features = [
@@ -255,6 +256,10 @@ export default function BrowserAutomationCloudPage() {
     'Artifacts: HAR, traces, screenshots, videos'
     'Rotating proxies and geo targeting'
     'Webhook callbacks and REST API'
+=======
+	const features = null;
+	return (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   return (
     <>
@@ -316,8 +321,12 @@ export default function BrowserAutomationCloudPage() {
         </section>
       </main>
     </>
+<<<<<<< HEAD
   );	return (
 
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 		<>
 			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />
 			<main id="main" className="container mx-auto px-4 py-24">
@@ -374,6 +383,7 @@ export default function BrowserAutomationCloudPage() {
   </main>;
   </>),
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -403,8 +413,14 @@ export default function BrowserAutomationCloudPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

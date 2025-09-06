@@ -80,6 +80,7 @@ const EnhancedFooter = () => {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const EnhancedFooter = () => {
+<<<<<<< HEAD
   return (
     <footer className='bg - gray - 900 text - white'>;
       {/* Main Footer Content */}
@@ -100,6 +101,11 @@ const EnhancedFooter = () => {
               their digital presence with cutting - edge AI, cloud architecture,
               and innovative development services.            </p > const EnhancedFooter = () =>: any {
   const current_year = new Date ().getFullYear (),
+=======
+  const currentYear = new Date().getFullYear();
+              their digital presence with cutting-edge AI, cloud architecture,
+              and innovative development services.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <footer className="bg - gray-900 text-white">;
       {/* Main Footer Content */}
@@ -107,16 +113,20 @@ const EnhancedFooter = () => {
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-4 gap-8">;
           {/* Company Info */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <ul className="space-y-2">
               <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">AI Development</Link></li>
               <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Cloud Services</Link></li>
               <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Blockchain Solutions</Link></li>
               <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Data Analytics</Link></li>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -128,10 +138,63 @@ const EnhancedFooter = () => {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+=======
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xl">Z</span>
+              </div>
+              <span className="text-xl font-bold">Zion Tech Group</span>
+            </div>
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading technology solutions provider helping businesses transform their digital presence
+              with cutting-edge AI, cloud architecture, and innovative development services.
+            </p>
+          </div>
+          {/* Services */}
+          <div>
+<h3 className='text-lg font-semibold mb-4'>Services</h3>
+            <ul className='space-y-2'>
+              <li>
+                <Link
+                  href='/services'
+                  className='text-gray-300 hover:text-white transition-colors'
+                >
+                  AI Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/services'
+                  className='text-gray-300 hover:text-white transition-colors'
+                >
+                  Cloud Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/services'
+                  className='text-gray-300 hover:text-white transition-colors'
+                >
+                  Blockchain Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/services'
+                  className='text-gray-300 hover:text-white transition-colors'
+                >
+                  Data Analytics
+                </Link>
+              </li>
+            </ul>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
           {/* Company */}
           <div>
-            <h3 className='text-lg font-semibold mb-4'>Company</h3>
+<h3 className='text-lg font-semibold mb-4'>Company</h3>
             <ul className='space-y-2'>
               <li>
                 <Link
@@ -164,6 +227,7 @@ const EnhancedFooter = () => {
                 >
                   Blog
                 </Link>
+<<<<<<< HEAD
               </li>            </ul>            <h3 className="text-lg font-semibold mb-4">Company</h3>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <ul className="space-y-2">
@@ -179,14 +243,26 @@ const EnhancedFooter = () => {
 export default EnhancedFooter;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+              </li>
+            </ul>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
         </div>
       </div>
       {/* Bottom Footer */}
+<<<<<<< HEAD
           <div className="lg:col-span-2">;
             <div className="flex items - center space-x-2 mb-4">;
               <div className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items-center justify-center">;
                 <span className="text - white font-bold text-xl">Z</span>;
+=======
+<<<<<<< HEAD
+          <div className="lg:col - span - 2">;
+            <div className="flex items - center space - x-2 mb - 4">;
+              <div className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center">;
+                <span className="text - white font - bold text - xl">Z</span>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>;
               <span className="text-xl font-bold">Zion Tech Group</span>;
             </div>;
@@ -294,5 +370,9 @@ export default EnhancedFooter;
     </footer>);
 }
 export default EnhancedFooter;}
+=======
+  )
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default EnhancedFooter;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

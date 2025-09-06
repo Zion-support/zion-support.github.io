@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -16,10 +17,15 @@ import {Button} from "@/components/ui/button";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",
 import { Briefcase, Star, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Briefcase, Star, User } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
@@ -83,11 +89,15 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 =======
 import { Button } from "@/components/ui/button",    {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Button } from "@/components/ui/button",    {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       id: "talent"
       name: "Talent"
       description: "I want to showcase my skills and find opportunities"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       icon: Star
 <<<<<<< HEAD
@@ -278,6 +288,11 @@ function UserTypeSelection() {
           const is_selected = selected_type === type.id,
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      icon: Star          const Icon = type.icon;
+          const is_selected = selected_type === type.id,
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           const Icon = type.icon,
           const isSelected = selectedType === type.id,
           
@@ -288,6 +303,7 @@ function UserTypeSelection() {
             <Button;
               key={type.id}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -314,6 +330,9 @@ function UserTypeSelection() {
 =======
 =======          return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======          return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <Button;
               key={type.id}
               }`}
@@ -324,6 +343,7 @@ function UserTypeSelection() {
               <div className="text-center">
                 <h4 className="font-medium">{type.name}</h4>
                 <p className="text-sm text-zion-slate-light mt-1">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -443,6 +463,9 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="space-y-6">;
       <div className="text-center mb-6">;
         <h3 className="text-2xl font-bold text-white">Choose your role</h3>;
@@ -462,6 +485,7 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
               variant="outline";
               className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${;
                 isSelected ;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   ? "border-zion-purple bg-zion-purple/10 text-zion-purple" ;
 <<<<<<< HEAD
@@ -501,6 +525,9 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
 =======
                   ? "border-zion-purple bg-zion-purple/10 text-zion-purple" ;              }`}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  ? "border-zion-purple bg-zion-purple/10 text-zion-purple" ;              }`}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >;
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>;
                 <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />;
@@ -517,6 +544,7 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
 
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -554,3 +582,5 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

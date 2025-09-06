@@ -49,6 +49,7 @@ export const DownloadSection: React.FC = () => {
               </p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <AppStoreButtons
                 className="mb-8"
 =======
@@ -109,6 +110,8 @@ export const DownloadSection: React.FC = () => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
                 onAppStoreClick={() => console.log("App Store button clicked")}
@@ -132,12 +135,15 @@ export const DownloadSection: React.FC = () => {;
               </p>;
               <AppStoreButtons;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <AppStoreButtons
                 className="mb-8"
                 appStoreUrl={appStoreUrl}
@@ -171,6 +177,7 @@ export const DownloadSection: React.FC = () => {;
         </div>
       </div>
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,6 +218,9 @@ export const DownloadSection: React.FC = () => {;
 =======
   )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
   )
 };
@@ -220,6 +230,7 @@ export const DownloadSection: React.FC = () => {;
 }
 
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -280,12 +291,15 @@ export const DownloadSection:React.FC = () => {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="flex-shrink-0 bg-white p-4 rounded-lg">;
               <div className="w-36 h-36 flex items-center justify-center bg-white rounded-lg">;
                 <QrCodeIcon className="w-full h-full p-2" />;
                 {/* This would be replaced with an actual QR code in production */}
               </div>;
               <p className="text-center text-xs mt-2 text-zion-blue-dark">Scan to download</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -314,10 +328,13 @@ export const DownloadSection:React.FC = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -361,3 +378,7 @@ export default DownloadSection;
 }
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

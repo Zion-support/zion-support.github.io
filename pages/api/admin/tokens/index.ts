@@ -7,6 +7,7 @@ import { getAllTransactions } from "../../../../utils/token/service";
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -41,7 +42,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { userId } = req.query
   const txs = getAllTransactions()
   const filtered = typeof userId === "string" ? txs.filter((t) => t.userId === userId) : txs
+<<<<<<< HEAD
 
+=======
+=======
+  const { userId } = req.query;
+  const txs = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   res.status(200).json({ transactions: filtered })
 <<<<<<< HEAD
 }

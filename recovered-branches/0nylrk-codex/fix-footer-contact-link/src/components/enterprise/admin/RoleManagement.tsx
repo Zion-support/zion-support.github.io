@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React from "react";
@@ -54,6 +55,8 @@ export function RoleManagement() {
   // Mock team members data
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const teamMembers = [
 import React from './react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -86,6 +89,7 @@ function RoleManagement() {
       email: "taylor@example.com"
       role: "Viewer"
       permissions: {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -109,6 +113,9 @@ function RoleManagement() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       title: "Permission updated",
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
   },
@@ -320,6 +327,7 @@ import {;
   Tooltip,;
   TooltipContent,;
   TooltipProvider,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   TooltipTrigger} from "@/components/ui/tooltip",;
 <<<<<<< HEAD
@@ -1022,6 +1030,9 @@ export function RoleManagement() {;
 =======
   TooltipTrigger} from "@/components/ui/tooltip",;                    }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  TooltipTrigger} from "@/components/ui/tooltip",;                    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   />;
                 </TableCell>;
               </TableRow>;
@@ -1036,6 +1047,7 @@ export function RoleManagement() {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -1267,3 +1279,6 @@ TooltipProvider;
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

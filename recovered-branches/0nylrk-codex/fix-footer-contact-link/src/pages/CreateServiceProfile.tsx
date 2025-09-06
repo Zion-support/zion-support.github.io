@@ -1,15 +1,24 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-
+=======
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
+import React from "react",
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
+import React from "react",
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
 
+<<<<<<< HEAD
 =======
 =======
 import React from "react",
@@ -67,6 +76,11 @@ import { ServiceProviderRegistrationForm } from "@/components/profile/ServicePro
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
+import React from "react",
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function CreateServiceProfile() {
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">
@@ -84,6 +98,7 @@ export default function CreateServiceProfile() {
         <ServiceProviderRegistrationForm />
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
@@ -105,11 +120,16 @@ import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProvi
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
 
@@ -157,6 +177,7 @@ export default function CreateServiceProfile() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <ServiceProviderRegistrationForm />;
       </div>;
+<<<<<<< HEAD
     </div>;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -178,12 +199,16 @@ import React from './react';
       </div>;
     </div>;import React from './react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </div>;import React from './react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { ServiceProviderRegistrationForm } from '@/components / profile / ServiceProviderRegistrationForm';
 export default /**
  * CreateServiceProfile - Function description
  */
 function CreateServiceProfile() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="bg - zion - blue min - h-screen py - 8 md: py - 12">;
       <div className="container mx - auto px - 4">;
@@ -235,9 +260,14 @@ function CreateServiceProfile() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="bg - zion - blue min - h-screen py - 8 md: py-12">;
       <div className="container mx - auto px-4">;
         <div className="max - w-4xl mx - auto text - center mb - 8 md:mb-12">;
           <h1 className="text - 3xl md:text - 4xl font - bold text - white mb-4">Create Your Service Provider Profile</h1>;
           <p className="text - zion - slate - light max - w-2xl mx-auto">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

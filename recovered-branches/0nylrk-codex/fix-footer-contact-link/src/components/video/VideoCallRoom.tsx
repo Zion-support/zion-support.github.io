@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -22,11 +23,15 @@ import { Badge } from "@/components/ui/badge",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react';
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX} from '@/components/icons';
 <<<<<<< HEAD
@@ -271,6 +276,12 @@ import {Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume
   onToggleVideo;
   onToggleScreenShare;interface Participant {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX} from '@/components/icons';  onLeave;
+  onToggleMute;
+  onToggleVideo;
+  onToggleScreenShare;interface Participant {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string,
   name: string,
   avatar?: string,
@@ -278,6 +289,7 @@ import {Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume
   isVideoEnabled?: boolean,
   isScreenSharing?: boolean,
   isHost?: boolean
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -353,6 +365,8 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };
 
 import React, { useState } from 'react',;
@@ -430,6 +444,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 
 
@@ -469,6 +484,8 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleToggleScreenShare = () => {
     const newScreenShareState = !isScreenSharing;
     setIsScreenSharing(newScreenShareState);
@@ -489,6 +506,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     if (onLeave) {
       onLeave()
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
@@ -515,6 +533,12 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  }
+};
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },;
   const handleToggleScreenShare = () => {;
     const newScreenShareState = !isScreenSharing,;
@@ -522,15 +546,22 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     if (onToggleScreenShare) {;
+=======
+    }
+    const newScreenShareState = !isScreenSharing;
+    setIsScreenSharing(newScreenShareState);    if (onToggleScreenShare) {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       onToggleScreenShare(newScreenShareState);
     }
 
   };
 
   const handleToggleAudioOnly = () => {;
+<<<<<<< HEAD
 
 =======
   };
@@ -548,6 +579,8 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
   };
 
   const handleToggleAudioOnly = () => {;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setIsAudioOnly(!isAudioOnly);
     if (!isAudioOnly) {;
       setIsVideoEnabled(false);
@@ -555,6 +588,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
         onToggleVideo(false);
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -583,6 +617,8 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
@@ -733,6 +769,7 @@ if ( {) {
         <div className="video - container p - 4 grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-4">;
           {participants.length > 0 ? (
             participants.map ((participant) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div key={participant.id} className="video - participant bg - zion - blue - dark rounded - lg overflow - hidden relative">;
                 {participant.isVideoEnabled && !participant.isScreenSharing ? (
@@ -997,6 +1034,12 @@ if ( {) {
 
           <Button
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <div key={participant.id} className="video - participant bg - zion - blue - dark rounded - lg overflow-hidden relative">;
+                {participant.isVideoEnabled && !participant.isScreenSharing ? (          </Button>;
+
+          <Button
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Button 
@@ -1006,6 +1049,7 @@ if ( {) {
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleVideo}>;
             {isVideoEnabled ? <Video /> : <VideoOff />}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           </Button>
@@ -1148,6 +1192,9 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             size="icon"
             className="video-button video-button-danger rounded-full h-10 w-10"
             onClick={handleLeaveCall}
@@ -1261,6 +1308,7 @@ if ( {) {
     </Card>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1334,3 +1382,6 @@ if (onToggleVideo) {
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

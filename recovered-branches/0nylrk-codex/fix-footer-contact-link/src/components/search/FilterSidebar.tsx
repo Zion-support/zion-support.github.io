@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -18,12 +19,17 @@ import {FilterOptions} from "@/types/search";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox",
 import { Filter, X, Star } from "lucide-react";
 import { FilterOptions } from "@/types/search";
 import { Filter, X, Star } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { FilterOptions } from "@/types/search",
 <<<<<<< HEAD
@@ -107,6 +113,9 @@ interface FilterSidebarProps {;
 =======
 import { FilterOptions } from "@/types/search",  filters: {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { FilterOptions } from "@/types/search",  filters: {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     selectedProductTypes: string[],;
     selectedLocations: string[],;
     selectedAvailability: string[],;
@@ -121,6 +130,7 @@ import { FilterOptions } from "@/types/search",  filters: {;
   onRatingChange;
   onClearFilters;
 }: FilterSidebarProps) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -149,6 +159,8 @@ import { FilterOptions } from "@/types/search",  filters: {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           onClick={onClearFilters}
@@ -227,6 +239,7 @@ import { FilterOptions } from "@/types/search",  filters: {;
             </div>
           ))}
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>
 <<<<<<< HEAD
@@ -507,6 +520,9 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
 =======
       </div>      <div className="mb-6">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </div>      <div className="mb-6">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <label className="text-sm font-medium text-zion-slate-light block mb-2">;
           Minimum Rating;
         </label>;
@@ -534,6 +550,7 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -736,3 +753,6 @@ function FilterSidebar() {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

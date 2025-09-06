@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type {
   GrantApplication
   MilestonesUpdatePayload;
@@ -15,6 +16,10 @@ const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 function grantPath(id: string) {
+=======
+function grantPath(id: string) {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
 function grantPath(id: string) {
@@ -28,10 +33,34 @@ function writeGrant(record: GrantApplication) {
 }
 function isAuthorized(req: NextApiRequest) {
   return (
+<<<<<<< HEAD
+=======
+=======
+  return path.join(GRANTS_DIR, `${id}.json`);
+
+function readGrant(id: string): GrantApplication | null {
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
+return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
+
+function writeGrant(record: GrantApplication) {
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
+  fs.writeFileSync(
+    grantPath(record.id)
+    JSON.stringify(record, null, 2)
+    'utf8'
+  );
+
+function isAuthorized(req: NextApiRequest) {
+  const header = req.headers.authorization |''
+  const token = header.replace('Bearer ', '');
+return (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     token &&
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN
   );
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
   if (!isAuthorized(req)) {
@@ -118,6 +147,26 @@ function write_grant() {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+=======
+  if (!isAuthorized(req)) {
+    res.status(401).json({ error: 'Unauthorized' });
+return;
+  }
+  const { id } = req.query as { id: string }
+  if (!id) {
+    res.status(400).json({ error: 'Missing id' });
+return;
+  }
+  if (req.method === 'GET') {
+    const existing = readGrant(id);
+    if (!existing) return res.status(404).json({ error: 'Not found' });
+return res.status(200).json({ milestones: existing.milestones || [] });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   if (req.method === 'POST') {
     const existing = readGrant(id);
@@ -125,6 +174,7 @@ function write_grant() {
     const payload = req.body as MilestonesUpdatePayload;
     existing.milestones = payload.milestones |[];
     existing.updatedAt = new Date().toISOString();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -147,6 +197,8 @@ function write_grant() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8');
 }
 /**
@@ -178,6 +230,13 @@ function handler() {
 }
     res.status (401).json ({ error: 'Unauthorized' });
     return;    return;
+<<<<<<< HEAD
+=======
+=======
+    writeGrant(existing);
+return res.status(200).json({ record: existing });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   const { id } = req.query as { id: string }
   // Check condition
@@ -217,6 +276,7 @@ if ( {) {
   res.set_header ('AllowGET, POST');
   res.status (405).end ('Method Not Allowed');
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 
@@ -234,3 +294,14 @@ if ( {) {
   }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  res.setHeader('Allow', 'GET, POST');
+<<<<<<< HEAD
+  }
+
+=======
+  res.status(405).end('Method Not Allowed');
+  res.status(405).end('Method Not Allowed')
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

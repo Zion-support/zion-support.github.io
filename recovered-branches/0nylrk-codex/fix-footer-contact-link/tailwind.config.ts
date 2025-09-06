@@ -14,6 +14,7 @@ import plugin from "tailwindcss/plugin",
 import animatePlugin from "tailwindcss-animate",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -25,6 +26,8 @@ import animatePlugin from "tailwindcss-animate",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const config: Config = {
   darkMode: ["class"]
   content: [
@@ -44,6 +47,7 @@ const config: Config = {
     "./app/**/*.{ts, tsx}";
     "./src/**/*.{ts, tsx}"];
   safelist: ['border - border'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   theme: {
@@ -77,6 +81,8 @@ const config: Config = {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   theme: {
     container: {
       center: true;
@@ -86,6 +92,7 @@ const config: Config = {
       padding: "2rem"
       screens: {
         "2xl": "1400px"}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -108,6 +115,11 @@ const config: Config = {
       screens: {
         "2xl": "1400px"}},
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px"}},
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     extend: {
       colors: {
@@ -116,6 +128,7 @@ const config: Config = {
         ring: "hsl (var (--ring))";
         background: "hsl (var (--background))";
         foreground: "hsl (var (--foreground))";
+<<<<<<< HEAD
 <<<<<<< HEAD
         primary: {
 <<<<<<< HEAD
@@ -184,12 +197,16 @@ const config: Config = {
 =======
         primary: {      keyframes: {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        primary: {      keyframes: {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         "accordion-down": {
           from: { height: "0" }
           to: { height: "var(--radix-accordion-content-height)" }}
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" }
           to: { height: "0" }}}
+<<<<<<< HEAD
 <<<<<<< HEAD
       animation: {
 <<<<<<< HEAD
@@ -272,10 +289,14 @@ const config: Config = {
 =======
       animation: {  plugins: [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      animation: {  plugins: [
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     animatePlugin
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.rtl': {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -550,6 +571,8 @@ export default config;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default config;
 ;
@@ -558,8 +581,12 @@ export default config;
 ;
 export default config;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

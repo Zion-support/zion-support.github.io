@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 import UseTokensModal, { RedemptionType } from "./UseTokensModal";
@@ -8,11 +9,18 @@ import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 export default function UseTokensButton({
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+
+export default function UseTokensButton({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   serviceId
   defaultType
 }: {
   serviceId?: string;
   defaultType?: RedemptionType;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }) {
 
@@ -29,6 +37,11 @@ serviceId
 }) {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+}) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -72,6 +85,7 @@ serviceId
       />
     </>
   );
+<<<<<<< HEAD
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -104,3 +118,5 @@ serviceId
         default_type={default_type}
       />;
     </>);
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

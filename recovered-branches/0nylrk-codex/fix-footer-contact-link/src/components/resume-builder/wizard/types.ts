@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Resume } from "@/types/resume";
 import { Resume } from "@/types/resume",
@@ -21,6 +22,8 @@ import {Resume} from "@/types/resume";
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Resume } from "@/types/resume";
 export interface StepProps {
   id: string;
@@ -42,6 +45,7 @@ import {Resume} from "@/types/resume";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -51,10 +55,13 @@ import {Resume} from "@/types/resume";
 export interface StepProps {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   label: string
 
 export interface NavigationButtonsProps {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -160,6 +167,9 @@ export interface NavigationButtonsProps {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 =======
 =======
@@ -186,6 +196,7 @@ export interface CreateResumeFormProps {
 ;
 export interface ResumeProgressProps {;
   resume: Resume | null,;
+<<<<<<< HEAD
   progress: number;
 =======
   onCancel: () => void;
@@ -221,6 +232,9 @@ export interface CreateResumeFormProps {
 export interface ResumeProgressProps {;
   resume: Resume | null,;
   progress: number
+=======
+  progress: number
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 export interface CreateResumeFormProps {;
   onCreateResume: (title: string) => Promise<void>;
@@ -243,6 +257,7 @@ export interface EmptyResumeProps {
 }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -275,3 +290,5 @@ export interface EmptyResumeProps {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

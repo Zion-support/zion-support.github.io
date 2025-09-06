@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GripVertical } from 'lucide-react'
 <<<<<<< HEAD
 import * as ResizablePrimitive from "react-resizable-panels"
@@ -6,6 +7,8 @@ import * as ResizablePrimitive from "react-resizable-panels"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 import { cn } from "@/lib/utils"
@@ -20,6 +23,7 @@ const ResizablePanelGroup = ({
     className={cn(
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -29,6 +33,9 @@ const ResizablePanelGroup = ({
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -50,6 +57,7 @@ const ResizableHandle = ({
     className={cn(
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -63,6 +71,9 @@ const ResizableHandle = ({
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className
     )}
     {...props}
@@ -89,8 +100,6 @@ export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle };
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
-<<<<<<< HEAD
-=======
 
 ;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -124,8 +133,12 @@ const ResizableHandle = ({
       </div>)}
   </ResizablePrimitive.PanelResizeHandle>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,6 +55,11 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Server, Clock, MapPin } from './lucide-react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { Server, Clock, MapPin } from './lucide-react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Clock, MapPin } from "lucide-react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -74,6 +80,7 @@ import {Server, Clock, MapPin} from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Server, Clock, MapPin } from "lucide-react",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -112,6 +119,8 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Component to show service details for the selected country;
 export /**
  * ServiceDetails - Function description
@@ -119,6 +128,7 @@ export /**
 function ServiceDetails() {
   // Get datacenters for regions (simplified - in production this would come from a real database);
   const get_datacenters = (country: string): string[] => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     const data_centers: Record < string, string[]> = {
 <<<<<<< HEAD
@@ -145,6 +155,9 @@ function ServiceDetails() {
 =======
     const data_centers: Record < string, string[]> = {    const dataCenters: Record<string string[]> = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    const data_centers: Record < string, string[]> = {    const dataCenters: Record<string string[]> = {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
       "United Kingdom": ["London", "Manchester", "Birmingham"],
       "Germany": ["Frankfurt", "Berlin", "Munich"],
@@ -152,6 +165,7 @@ function ServiceDetails() {
       "Australia": ["Sydney", "Melbourne", "Perth"],
       "Singapore": ["Singapore Central"],
       "Canada": ["Toronto", "Montreal", "Vancouver"],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -180,15 +194,23 @@ function ServiceDetails() {
     return regions[country] |regions["default"]
   }    },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }
+    return regions[country] |regions["default"]
+  }    },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     
     return dataCenters[country] || dataCenters["default"]
   },
   
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   // Get region-specific image
   const getRegionalImage = (country: string): string => {
@@ -212,6 +234,7 @@ function ServiceDetails() {
     return regions[country] |regions["default"]
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
     }
@@ -221,11 +244,14 @@ function ServiceDetails() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     },
     
     return regions[country] || regions["default"]
   },
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -241,6 +267,8 @@ function ServiceDetails() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Get region-specific instructions
   const getRegionalInstructions = (country: string): string => {
     // In a real implementation, this would be much more detailed and specific
@@ -252,6 +280,7 @@ function ServiceDetails() {
       "Australia": "AEST/ACDT/AWST depending on location",
       "Singapore": "SGT",
       "default": "Local timezone"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -616,10 +645,16 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
             alt={`Datacenter in ${country}`}
             className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            src={getRegionalImage(country)}
+            alt={`Datacenter in ${country}`}
+            className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {datacenters.map((dc, idx) => (;
                 <div;
                   key={idx} ;
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light";
+<<<<<<< HEAD
 <<<<<<< HEAD
                 >;
 <<<<<<< HEAD
@@ -635,10 +670,14 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
 =======
                 >;                </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                >;                </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ))}
 
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -823,3 +862,5 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

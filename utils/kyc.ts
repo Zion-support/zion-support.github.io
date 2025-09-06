@@ -242,8 +242,17 @@ export function validateKycSubmission (profile: KycProfile): { ok: boolean, miss
   if (profile.role === 'client' && !profile.dateOfBirth) {
     missing.push('dateOfBirth');
   }
+<<<<<<< HEAD
   if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
     missing.push('businessRegistrationNumber');
+=======
+<<<<<<< HEAD
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('businessRegistrationNumber');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   return {
     ok: missing.length === 0
@@ -269,7 +278,14 @@ export function validateKycSubmission (profile: KycProfile): { ok: boolean, miss
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  return { ok: missing.length === 0, missing };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

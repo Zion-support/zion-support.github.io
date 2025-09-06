@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -18,37 +19,40 @@ import {cn} from "@/lib/utils";
 interface SidebarProps extends React && React.HTMLAttributes<HTMLDivElement> {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   className?: string;
+=======
+import { cn } from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+import {cn} from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string,
+  children?: React.ReactNode
+
+import React from "react",
+import { cn } from "@/lib/utils",
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   children?: React && React.ReactNode;
 }
 
-
 export function Sidebar(): any ({ className, children, ...props }: SidebarProps) {;
   return (
     <div
-=======
-=======
 export function Sidebar(): any ({ className, children, ...props }: SidebarProps) {;
   return (
     <div
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       className={cn(;
         "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200";
 
         className
+
+      className={cn(
+        "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200"
+        className
 <<<<<<< HEAD
-=======
-
-      className={cn(
-        "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-        className
-
-=======
-
-      className={cn(
-        "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200"
-        className
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -93,6 +97,8 @@ export function Sidebar(): any ({ className, children, ...props }: SidebarProps)
       className={cn(
         "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200"
         className
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { cn } from "@/lib/utils";
 import React from "react",
 import { cn } from "@/lib/utils",
@@ -157,6 +163,7 @@ export function Sidebar({ className, children, ...props }: SidebarProps) {;
 
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -242,3 +249,6 @@ children?: React.ReactNode
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { format } from "date-fns";
@@ -33,6 +34,8 @@ interface ProjectDetailsFieldsProps {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { format } from "date-fns",
 
 <<<<<<< HEAD
@@ -94,6 +97,7 @@ interface ProjectDetailsFieldsProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -102,6 +106,8 @@ interface ProjectDetailsFieldsProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   form: UseFormReturn<ContractFormValues>;
 }
 
@@ -136,6 +142,7 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
             <FormMessage />;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       />;
 
@@ -162,10 +169,16 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <FormField
+=======
+      <FormField
+        control={form && form.control}
+        name="scopeSummary"      <FormField
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         control={form && form.control}
         name="scopeSummary"      <FormField
         control={form && form.control}
         name="scopeSummary"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -218,6 +231,8 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Scope Summary</FormLabel>;
@@ -242,6 +257,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
             <FormDescription>;
               Be specific about what is included and any limitations;
             </FormDescription>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <FormMessage />;
 <<<<<<< HEAD
@@ -292,6 +308,9 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 =======
             <FormMessage />;        <FormField
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <FormMessage />;        <FormField
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           control={form && form.control}
           name="startDate"          render={({ field }) => (;
             <FormItem className="flex flex-col">;
@@ -319,6 +338,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
           )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         />
 =======
@@ -329,10 +349,15 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        />;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <FormField
           control={form && form.control}
         />;
         <FormField;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -348,6 +373,9 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           control={form.control}
           name="endDate"                  <Calendar
                     mode="single"
@@ -368,6 +396,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                   </FormControl>;
                 </PopoverTrigger>;
                 <PopoverContent className="w-auto p-0" align="start">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -458,6 +487,8 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <Calendar
                     mode="single"                  <Calendar
                     mode="single"
@@ -533,6 +564,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                     on_select={field.on_change}
                     disabled={(date) => date < form.get_values ("start_date")}
                     initial_focus;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -622,3 +654,5 @@ FormMessage interface ProjectDetailsFieldsProps {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

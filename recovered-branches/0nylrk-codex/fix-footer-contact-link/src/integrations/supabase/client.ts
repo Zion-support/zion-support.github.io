@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -18,6 +19,8 @@ import {createClient} from '@supabase/supabase-js';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {createClient} from '@supabase/supabase-js';
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
@@ -82,12 +85,14 @@ export const getFromProfiles = () => supabase.from('profiles');
 =======
 =======
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {createClient} from '@supabase/supabase-js';
-
 
 import { createClient } from '@supabase/supabase-js',;
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL,;
@@ -99,6 +104,7 @@ if (!supabaseUrl || !supabaseAnonKey) {;
 
 
 }
+<<<<<<< HEAD
 // Utility to detect network connectivity. navigator.onLine is not reliable in
 <<<<<<< HEAD
 =======
@@ -188,6 +194,10 @@ if (!supabaseUrl || !supabaseAnonKey) {;
 // Utility to detect network connectivity. navigator.onLine is not reliable inimport { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { responseTime: number; memoryUsage: number; timestamp: string; endpoint: string; method: string} class PerformanceMonitor { private static instance: PerformanceMonitor; private metrics: PerformanceMetrics[] = []; static getInstance(): PerformanceMonitor { if (!PerformanceMonitor.instance) { PerformanceMonitor.instance = new PerformanceMonitor()} return PerformanceMonitor.instance} recordMetric(metric: PerformanceMetrics) { this.metrics.push(metric); if (this.metrics.length > 1000) { this.metrics = this.metrics.slice(-1000)} getMetrics(): PerformanceMetrics[] { return [...this.metric,s ]} getAverageResponseTime(): number { if (this.metrics.length === 0) { return 0} const total = this.metrics.reduce((sum,metric) => sum + metric.responseTime,0); return total / this.metrics.length} getMemoryUsage(): number { if (this.metrics.length === 0) { return 0} const latest = this.metrics[this.metrics.length - 1]; return latest ? latest.memoryUsage : 0} export const performanceMiddleware = (req: NextApiRequest,res: NextApiResponse,next: Function) => { const startTime = Date.now(); const startMemory = process.memoryUsage().heapUsed; res.on('finish',() => { const endTime = Date.now(); const endMemory = process.memoryUsage().heapUsed; const monitor = PerformanceMonitor.getInstance(); monitor.recordMetric({ responseTime: 'endTime - startTime',memoryUsage: endMemory - startMemory,timestamp: new Date().toISOString(),endpoint: req.url || '',method: req.method || '' })}); next()} export default PerformanceMonitor;
 import { createClient } from '@supabase/supabase-js';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+// Utility to detect network connectivity. navigator.onLine is not reliable inimport { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { responseTime: number; memoryUsage: number; timestamp: string; endpoint: string; method: string} class PerformanceMonitor { private static instance: PerformanceMonitor; private metrics: PerformanceMetrics[] = []; static getInstance(): PerformanceMonitor { if (!PerformanceMonitor.instance) { PerformanceMonitor.instance = new PerformanceMonitor()} return PerformanceMonitor.instance} recordMetric(metric: PerformanceMetrics) { this.metrics.push(metric); if (this.metrics.length > 1000) { this.metrics = this.metrics.slice(-1000)} getMetrics(): PerformanceMetrics[] { return [...this.metric,s ]} getAverageResponseTime(): number { if (this.metrics.length === 0) { return 0} const total = this.metrics.reduce((sum,metric) => sum + metric.responseTime,0); return total / this.metrics.length} getMemoryUsage(): number { if (this.metrics.length === 0) { return 0} const latest = this.metrics[this.metrics.length - 1]; return latest ? latest.memoryUsage : 0} export const performanceMiddleware = (req: NextApiRequest,res: NextApiResponse,next: Function) => { const startTime = Date.now(); const startMemory = process.memoryUsage().heapUsed; res.on('finish',() => { const endTime = Date.now(); const endMemory = process.memoryUsage().heapUsed; const monitor = PerformanceMonitor.getInstance(); monitor.recordMetric({ responseTime: 'endTime - startTime',memoryUsage: endMemory - startMemory,timestamp: new Date().toISOString(),endpoint: req.url || '',method: req.method || '' })}); next()} export default PerformanceMonitor;
+import { createClient } from '@supabase/supabase-js';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -247,6 +257,9 @@ export const safeFetch: typeof fetch = async (input, init) => {
   try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return await fetch (input, init);
   } catch (err) {
 
@@ -459,4 +472,7 @@ export const safeFetch: typeof fetch = async (input, init) => {;
     throw new Error('No internet connection');
   }
   try {;export const getFromProfiles = () => supabase.from("profiles");
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

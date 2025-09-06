@@ -8,6 +8,7 @@ type EmptyStateCardProps = {
 },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
   const isActive = type === 'active',
   
@@ -31,6 +32,8 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { MessageSquare, ArchiveIcon } from 'lucide-react'
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
@@ -139,5 +142,12 @@ export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {
     </Card>);
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 };
+=======
+};
+=======
+type EmptyStateCardProps = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

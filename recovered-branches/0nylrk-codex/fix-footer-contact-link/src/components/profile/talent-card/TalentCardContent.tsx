@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 import {MapPin} from "lucide-react";
@@ -33,10 +34,16 @@ import { TalentCardSkills  } from './TalentCardSkills';
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import React, { useState } from './react';
+import { MapPin  } from './lucide-react';
+import { TalentCardSkills  } from './TalentCardSkills';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
   timezone: string | undefined;
+<<<<<<< HEAD
 <<<<<<< HEAD
   skills: string[] | undefined
 
@@ -61,6 +68,8 @@ interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
   timezone: string | undefined;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   skills: string[] | undefined;
 }
 
@@ -77,6 +86,7 @@ export function TalentCardContent({
 skills: string[] | undefined
   skills: string[] | undefined
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -105,6 +115,8 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [isHovering, setIsHovering] = useState(false);
   return (
     <div>
@@ -124,6 +136,7 @@ export function TalentCardContent(): any ({ summary, bio, timezone, skills }: Ta
 
   const [isHovering, setIsHovering] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
     <div>;
@@ -140,6 +153,9 @@ import { TalentCardSkills } from "./TalentCardSkills",;
 =======
   return (;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface TalentCardContentProps {;
   summary:string | undefined,;
   bio:string,;
@@ -152,6 +168,7 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
 ;
   return (;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [isHovering, setIsHovering] = useState(false);
   return (
@@ -175,11 +192,15 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
 =======
 }      {/* Location */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}      {/* Location */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {timezone && (;
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">;
           <MapPin className="h-3 w-3" />;
           <span>{timezone}</span>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       )}
 <<<<<<< HEAD
@@ -286,6 +307,9 @@ export /**
 =======
       )}export /**
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      )}export /**
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
  * TalentCardContent - Function description
  */
 function TalentCardContent() {

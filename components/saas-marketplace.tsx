@@ -4,6 +4,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 
 import {
 <<<<<<< HEAD
@@ -60,7 +61,10 @@ import {
   Code
   Database
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   Zap;
   Shield,
@@ -71,16 +75,251 @@ import {
   TrendingUp,
   Code,
   Database,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import { Zap;
+  Shield;
+  BarChart3;
+  Globe;
+  Users;
+  Lock;
+  TrendingUp;
+  Code;
+  Database;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Cloud;
   ArrowRight;
   Star;
   Check;
+<<<<<<< HEAD
   ExternalLink
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+<<<<<<< HEAD
+
+=======
+  ExternalLink
+ } from 'lucide-react';
+export default function SaaSMarketplacePage() {
+  const microSaasServices = null;
+      features: [
+        '5000+ app integrations'
+        'Visual workflow builder'
+        'Multi-step automations'
+        'Scheduled triggers'
+        'Error handling'
+        'Team collaboration'
+      ]
+      website: 'https://zapier.com'
+      useCase:
+        'Perfect for businesses looking to automate customer support, marketing, and sales processes.'
+      pros: [
+        'Easy to use'
+        'Extensive integrations'
+        'Reliable'
+        'Great support'
+      ]
+      cons: ['Can get expensive', 'Limited customization']
+    }
+    {
+      name: 'Notion'
+      description:
+        'All-in-one workspace for notes, docs, projects, and team collaboration. Organize everything in one place.'
+      category: 'Productivity'
+      pricing: 'Free - $8/month'
+      rating: 4.7
+      users: '20M+'
+      icon: <Code className='w-8 h-8 text-gray-400' />
+      color: 'bg-gradient-to-br from-gray-500 to-gray-700'
+      features: [
+        'Note-taking & docs'
+        'Project management'
+        'Team collaboration'
+        'Database & tables'
+        'Templates library'
+        'API integration'
+      ]
+      website: 'https://notion.so'
+      useCase:
+        'Ideal for teams that need a flexible workspace for documentation, project management, and knowledge sharing.'
+      pros: [
+        'Highly flexible'
+        'Beautiful interface'
+        'Great templates'
+        'Free tier'
+      ]
+      cons: ['Learning curve', 'Limited offline access']
+    }
+    {
+      name: 'Stripe'
+      description:
+        'Complete payment processing platform for online businesses. Accept payments, manage subscriptions, and handle compliance.'
+      category: 'Payments'
+      pricing: '2.9% + 30¢ per transaction'
+      rating: 4.9
+      users: '1M+'
+      icon: <Shield className='w-8 h-8 text-blue-400' />
+      color: 'bg-gradient-to-br from-blue-500 to-indigo-600'
+      features: [
+        'Global payment methods'
+        'Subscription billing'
+        'Fraud protection'
+        'Compliance tools'
+        'Developer-friendly API'
+        'Analytics dashboard'
+      ]
+      website: 'https://stripe.com'
+      useCase:
+        'Essential for any online business that needs to accept payments, especially SaaS companies and e-commerce.'
+      pros: [
+        'Developer-friendly'
+        'Global reach'
+        'Excellent docs'
+        'Reliable'
+      ]
+      cons: ['Higher fees than some alternatives', 'Complex for beginners']
+    }
+    {
+      name: 'Intercom'
+      description:
+        'Customer messaging platform that helps businesses build better customer relationships through personalized, messenger-based experiences.'
+      category: 'Customer Support'
+      pricing: '$39 - $999/month'
+      rating: 4.6
+      users: '25K+'
+      icon: <Users className='w-8 h-8 text-green-400' />
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      features: [
+        'Live chat'
+        'Customer messaging'
+        'Help desk'
+        'User onboarding'
+        'Analytics & reporting'
+        'Integration ecosystem'
+      ]
+      website: 'https://intercom.com'
+      useCase:
+        'Perfect for SaaS companies and online businesses that want to provide excellent customer support and user engagement.'
+      pros: [
+        'Great UX'
+        'Powerful features'
+        'Good integrations'
+        'Mobile apps'
+      ]
+      cons: ['Expensive', 'Complex pricing', 'Can be overwhelming']
+    }
+    {
+      name: 'Mixpanel'
+      description:
+        'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',
+      category: 'Analytics',
+      pricing: 'Free - $25/month',
+      rating: 4.5,
+      users: '26K+',
+icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
+      color: 'bg-gradient-to-br from-purple-500 to-pink-600',
+      features: [
+        'User behavior tracking',
+        'Funnel analysis',
+        'A/B testing',
+        'Real-time data',
+        'Custom events',
+        'Mobile analytics',
+      ],
+      website: 'https://mixpanel.com',
+      useCase:
+        'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.'
+      pros: [
+        'Powerful analytics'
+        'Real-time data'
+        'Good documentation'
+        'Flexible'
+      ]
+      cons: ['Complex setup', 'Expensive at scale', 'Steep learning curve']
+    }
+    {
+      name: 'MongoDB Atlas'
+      description:
+        'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.',
+      category: 'Database',
+      pricing: 'Free - $57/month',
+      rating: 4.7,
+      users: '35K+',
+icon: <Database className='w-8 h-8 text-green-400' />,
+      color: 'bg-gradient-to-br from-green-500 to-teal-600',
+      features: [
+        'Fully managed MongoDB',
+        'Global clusters',
+        'Auto-scaling',
+        'Backup & recovery',
+        'Security & compliance',
+        'Monitoring & alerting',
+      ],
+      website: 'https://mongodb.com/atlas',
+      useCase:
+        'Perfect for developers who want to use MongoDB without managing infrastructure, especially for modern web applications.'
+      pros: [
+        'Fully managed'
+        'Global distribution'
+        'Auto-scaling'
+        'Good free tier'
+      ]
+      cons: ['Can be expensive', 'Vendor lock-in', 'Limited customization']
+    }
+    {
+      name: 'Vercel'
+      description:
+        'Platform for deploying and hosting frontend applications with automatic scaling, global CDN, and zero configuration.'
+      category: 'Hosting'
+      pricing: 'Free - $20/month'
+      rating: 4.8
+      users: '100K+'
+      icon: <Cloud className='w-8 h-8 text-black' />
+      color: 'bg-gradient-to-br from-gray-800 to-black'
+      features: [
+        'Zero-config deployment'
+        'Global CDN'
+        'Automatic scaling'
+        'Git integration'
+        'Preview deployments'
+        'Edge functions'
+      ]
+      website: 'https://vercel.com'
+      useCase:
+        'Ideal for frontend developers and teams that want to deploy modern web applications quickly with excellent performance.'
+      pros: ['Zero config', 'Excellent performance', 'Great DX', 'Free tier']
+      cons: ['Limited backend features', 'Can be expensive for high traffic']
+    }
+    {
+      name: 'Linear'
+      description:
+        'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',
+      category: 'Project Management',
+      pricing: 'Free - $8/month',
+      rating: 4.9,
+      users: '10K+',
+icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
+      features: [
+        'Issue tracking',
+        'Roadmap planning',
+        'Team collaboration',
+        'Git integration',
+        'Automated workflows',
+        'Mobile apps',
+      ],
+      website: 'https://linear.app',
+      useCase:
+        'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.'
+      pros: [
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         'Lightning fast'
         'Beautiful design'
         'Great keyboard shortcuts'
@@ -90,12 +329,15 @@ import {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         'Lightning fast',
         'Beautiful design',
         'Great keyboard shortcuts',
@@ -162,6 +404,7 @@ import {
     'Hosting',;
     'Project Management',;
   ];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -170,6 +413,21 @@ import {
       <Head>;
         <title>SaaS Marketplace - Zion Tech Group</title>;
         <meta
+=======
+  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const filteredServices =
+    selectedCategory === 'All'
+      ? microSaasServices
+      : microSaasServices.filter(
+          service => service.category === selectedCategory
+        );
+
+  return (
+    <>
+      <Head>
+        <title>SaaS Marketplace - Zion Tech Group</title>
+<meta
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           name='description'
           content='Discover the best micro SaaS services for your business. Curated selection of tools for automation, productivity, payments, and more.'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -185,7 +443,9 @@ import {
                 href='/contact'
                 variant='outline'
                 size='lg'
+<<<<<<< HEAD
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
+<<<<<<< HEAD
 <<<<<<< HEAD
   const filteredServices = selectedCategory === 'All'
     ? microSaasServices
@@ -240,6 +500,12 @@ import {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
+                style={{ animationDelay: '0.4s' }}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 Get Recommendations
               </Button>
@@ -275,6 +541,7 @@ import {
 
 =======
           {/* Stats */}
+<<<<<<< HEAD
                 {microSaasServices.length}+
               </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -297,13 +564,45 @@ import {
                 100K+
               </div>
               <div className="text-gray-400 text-sm">Total Users</div>
+=======
+<div
+            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
+            style={{ animationDelay: '0.6s' }}
+          >
+            <div className='text-center group'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
+                {microSaasServices.length}+
+              </div>
+              <div className='text-gray-400 text-sm'>Curated Services</div>
+            </div>
+            <div className='text-center group'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>
+                9
+              </div>
+              <div className='text-gray-400 text-sm'>Categories</div>
+            </div>
+            <div className='text-center group'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>
+                4.7+
+              </div>
+              <div className='text-gray-400 text-sm'>Avg Rating</div>
+            </div>
+            <div className='text-center group'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>
+                100K+
+              </div>
+              <div className='text-gray-400 text-sm'>Total Users</div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Get Recommendations;
               </Button>;
             </div>;
@@ -313,6 +612,7 @@ import {
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -332,6 +632,16 @@ import {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+      {/* Category Filter */}
+<section className='py-16 bg-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='flex flex-wrap justify-center gap-4'>
+            {categories.map(category => (
+              <button
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -346,7 +656,7 @@ import {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Services Grid */}
-      <section id='services' className='py-24 bg-black'>
+<section id='services' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
@@ -403,6 +713,7 @@ import {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -410,6 +721,8 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -477,6 +790,7 @@ import {
                         variant='outline'
                         size='sm'
 <<<<<<< HEAD
+<<<<<<< HEAD
                         className='group-hover:border-blue-500 group-hover:text-blue-400'
                       >
                         Visit Website
@@ -539,6 +853,8 @@ import {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         className='group-hover:border-blue-500 group-hover:text-blue-400'>;
                         Visit Website;
                         <ExternalLink className='w-4 h-4 ml-2' />;
@@ -558,6 +874,25 @@ import {
                   </div>;
                 </div>;
               </Card>;
+=======
+                        className='group-hover:border-blue-500 group-hover:text-blue-400'
+                      >
+                        Visit Website
+                        <ExternalLink className='w-4 h-4 ml-2' />
+                      </Button>
+                      <div className='text-right'>
+                        <div className='text-xs text-gray-500 mb-1'>
+                          Use Case:
+                        </div>
+                        <div className='text-sm text-gray-300 max-w-xs'>
+                          {service.useCase}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           </div>;
         </div>;
@@ -641,6 +976,7 @@ import {
           </p>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -651,8 +987,10 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* CTA Section */}
-      <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
+<section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
@@ -679,6 +1017,7 @@ import {
               variant='outline'
               size='lg'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'            >              href="/services"
@@ -696,6 +1035,8 @@ import {
 }
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               View Our Services;
             </Button>;
           </div>;
@@ -709,4 +1050,19 @@ import {
 }
     </>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+              className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'
+            >
+              View Our Services
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

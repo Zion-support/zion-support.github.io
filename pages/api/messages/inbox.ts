@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 =======
 <<<<<<< HEAD
@@ -152,6 +155,26 @@ export default function handler(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+<<<<<<< HEAD
+=======
+import { requireUser } from '../../../utils/auth',;
+import { listConversations } from '../../../utils/messaging/storage',;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const user = requireUser(req, res)
+  if (!user) return
+  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' })
+  const items = listConversations(user.id)
+>>>>>>> main
+=======
+  const user = requireUser(req, res);
+  if (!user) return;
+  if (req.method !== 'GET')
+    return res.status(405).json({ error: 'Method not allowed' });
+  const items = listConversations(user.id);
+  res.status(200).json({ items });
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   res.status(200).json({ items })
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

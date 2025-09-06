@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -25,6 +26,8 @@ import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from "lucide-r
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { 
@@ -55,6 +58,7 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
 import { WebhooksManager } from "@/components/developers/WebhooksManager",
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
+<<<<<<< HEAD
 import { ApiLogs } from "@/components/developers/ApiLogs",
 <<<<<<< HEAD
 
@@ -102,6 +106,9 @@ import { WebhooksManager } from "@/components/developers/WebhooksManager",
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
 import { ApiLogs } from "@/components/developers/ApiLogs",interface TabDefinition {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { ApiLogs } from "@/components/developers/ApiLogs",interface TabDefinition {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   label: string;
   icon: LucideIcon;
@@ -118,6 +125,7 @@ export function DeveloperPortal() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>("documentation");
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -130,6 +138,8 @@ export function DeveloperPortal() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function DeveloperPortal() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>("documentation");
@@ -143,6 +153,7 @@ export function DeveloperPortal() {
 
   const [activeTab, setActiveTab] = useState<string>("documentation");
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -209,6 +220,11 @@ export function DeveloperPortal() {
   const [activeTab, setActiveTab] = useState<string>("documentation"),
               return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState<string>("documentation"),
+              return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <button
                 key={tab.id}
                 className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
@@ -221,6 +237,7 @@ export function DeveloperPortal() {
       <div className="border - b border - zinc - 800 mb-8">;
         <div className="flex flex - wrap -mb-px">;
           {tabs.map ((tab) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
             const Icon = tab.icon;
 <<<<<<< HEAD
@@ -437,3 +454,6 @@ export default function ProtectedDeveloperPortal() {;
 =======
             const Icon = tab.icon;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            const Icon = tab.icon;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

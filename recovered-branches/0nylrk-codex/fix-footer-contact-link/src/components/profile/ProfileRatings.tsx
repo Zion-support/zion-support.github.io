@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -310,6 +311,8 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
         <div className="md:w-2/3">
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Tabs defaultValue="all">
             <TabsList className="mb-4">
               <TabsTrigger value="all">
@@ -365,6 +368,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 ;
 ;
@@ -378,6 +382,8 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   // Fetch reviews when component mounts;
   useEffect (() => {
@@ -385,6 +391,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   }, [user_id]);
 ;
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="space - y-6">;
       <div className="flex flex - col md:flex - row gap - 6">;
@@ -394,12 +401,18 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
       <div className="flex flex - col md:flex - row gap-6">;
         <div className="md:w-1/3">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    <div className="space-y-6">;
+      <div className="flex flex - col md:flex - row gap-6">;
+        <div className="md:w-1/3">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <ReviewStats;
             average_rating={average_rating}
             total_reviews={rating_count}
             rating_distribution={rating_distribution}
           />;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="md:w - 2/3">;
           <Tabs default_value="all">;
@@ -409,6 +422,11 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
           <Tabs default_value="all">;
             <TabsList className="mb-4">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        <div className="md:w-2/3">;
+          <Tabs default_value="all">;
+            <TabsList className="mb-4">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <TabsTrigger value="all">;
                 All Reviews ({reviews.length});
               </TabsTrigger>;
@@ -453,6 +471,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             </TabsContent>;
           </Tabs>;
         </div>;
+<<<<<<< HEAD
       </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -468,6 +487,8 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             </TabsContent>;
           </Tabs>;
         </div>;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>;    </div>;
   ),; interface ProfileRatingsProps {
   userId: string;
@@ -530,9 +551,12 @@ reviews.forEach ( (review) => {
 ;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

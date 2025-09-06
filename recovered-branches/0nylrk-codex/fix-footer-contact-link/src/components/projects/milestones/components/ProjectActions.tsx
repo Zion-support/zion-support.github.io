@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,15 +26,20 @@ interface ProjectActionsProps {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Button} from '@/components/ui/button';
 import {Link} from 'react-router-dom';
 import {ShieldAlert} from "lucide-react";
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   projectId: string
   isUnderDispute: boolean
@@ -42,6 +48,7 @@ import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -66,11 +73,14 @@ import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { Link } from 'react-router-dom',
 import { ShieldAlert } from "lucide-react",
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -121,10 +131,13 @@ export function ProjectActions({
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   onAddMilestone
 }: ProjectActionsProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -159,6 +172,9 @@ export function ProjectActions({
 =======
   return (        <RaiseDisputeButton
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (        <RaiseDisputeButton
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           projectId={projectId}
           variant="outline"
         />
@@ -181,6 +197,7 @@ export function ProjectActions({;
   disputeId;
   isTalent;
   onAddMilestone;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }: ProjectActionsProps) {;
 <<<<<<< HEAD
@@ -289,6 +306,15 @@ import {Button} from '@/components / ui / button';
   )
 }import {Button} from '@/components / ui / button';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}: ProjectActionsProps) {;        <RaiseDisputeButton
+          projectId={projectId}
+          variant="outline"        />;
+
+    </div>
+  )
+}import {Button} from '@/components / ui / button';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Link} from 'react-router-dom';
 import { ShieldAlert } from './lucide-react';
 import {RaiseDisputeButton} from '@/components / disputes / RaiseDisputeButton';
@@ -323,6 +349,7 @@ function ProjectActions() {
         </Button>)}
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -361,3 +388,5 @@ onAddMilestone
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

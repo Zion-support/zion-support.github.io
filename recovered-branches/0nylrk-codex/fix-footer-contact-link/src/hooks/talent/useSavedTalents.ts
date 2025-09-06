@@ -9,6 +9,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -28,6 +29,8 @@ export function useSavedTalents() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
@@ -55,10 +58,13 @@ export function useSavedTalents() {
       }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
     const fetchSavedTalents = async () => {
 
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Fetch saved talents
   useEffect(() => {
 
@@ -69,6 +75,7 @@ export function useSavedTalents() {
           setSavedTalentIds(talentIds);
 
           
+<<<<<<< HEAD
 <<<<<<< HEAD
           if (talentIds && talentIds.length > 0) {
 
@@ -145,6 +152,9 @@ import { useState, useEffect } from './react';
 =======
           if (talentIds && talentIds.length > 0) {import { useState, useEffect } from './react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          if (talentIds && talentIds.length > 0) {import { useState, useEffect } from './react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase } from '@/integrations / supabase / client';
 import { TalentProfile } from '@/types / talent';
 import { toast } from '@/hooks / use - toast';
@@ -207,6 +217,7 @@ if (throw talent_error) {
         }
       } catch (error) {
       } finally {
+<<<<<<< HEAD
 <<<<<<< HEAD
         setIsLoading (false);
 <<<<<<< HEAD
@@ -465,6 +476,9 @@ if ( {) {
 =======
         setIsLoading (false);      });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        setIsLoading (false);      });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       return;
     }
 
@@ -477,6 +491,7 @@ if ( {) {
   const toggleSaveTalent = async (talent: TalentProfile) => {
     if (!isAuthenticated |!userDetails.id |!talent.id) {
       toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -507,10 +522,20 @@ if ( {) {
       return
     }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        title: "Authentication required",
+  description: "Please log in to save talents to your favorites"
+        title: "Authentication required",
+        description: "Please log in to save talents to your favorites",        variant: "destructive"
+      }),
+      return
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const isSaved = savedTalentIds.includes(talent.id);
     
     const isSaved = savedTalentIds.includes(talent.id),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -524,10 +549,13 @@ if ( {) {
     try {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       if (isSaved) {
         // Remove from saved_talents
         const { error } = await supabase
           .from('saved_talents')
+<<<<<<< HEAD
 <<<<<<< HEAD
           .delete()
 <<<<<<< HEAD
@@ -588,6 +616,9 @@ if ( {) {
 =======
           .delete()      } else {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          .delete()      } else {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         // Add to saved_talents
         const { error } = await supabase
           .from('saved_talents')
@@ -614,12 +645,15 @@ if ( {) {
         setSavedTalents(prev => [...prev, talent]),
         setSavedTalentIds(prev => [...prev, talent.id]),
         
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         toast({
           title: "Added to favorites"
@@ -635,6 +669,7 @@ if ( {) {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -649,6 +684,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return {
     savedTalents;
     savedTalentIds;
@@ -656,6 +693,7 @@ if ( {) {
     toggleSaveTalent;
 
     isTalentSaved
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -672,6 +710,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       } catch (error) {;
         console.error('Error fetching saved talents:', error),;
         toast({;
@@ -694,6 +734,7 @@ if ( {) {
         variant: "destructive";
       }),;
       return;
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 <<<<<<< HEAD
@@ -842,3 +883,7 @@ if (throw error) {
     }  }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

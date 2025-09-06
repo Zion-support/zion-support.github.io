@@ -8,6 +8,7 @@ const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>,
   React.ComponentPropsWithoutRef<typeof OTPInput>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >(({ className, containerClassName, ...props }, ref) => (
   <OTPInput
     ref={ref}
@@ -22,6 +23,8 @@ const InputOTP = React.forwardRef<
 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       containerClassName
 =======
@@ -53,16 +56,20 @@ InputOTPGroup && InputOTPGroup.displayName = 'InputOTPGroup';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const InputOTPGroup = React.forwardRef<
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div">
 >(({ className, ...props }, ref) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   <div ref={ref} className={cn("flex items-center", className)} {...props} />
@@ -73,6 +80,8 @@ InputOTPGroup.displayName = "InputOTPGroup"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const InputOTPSlot = React.forwardRef<
 =======
@@ -85,6 +94,7 @@ const InputOTPSlot = React.forwardRef<
   const inputOTPContext = React.useContext(OTPInputContext) as any
   const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index]
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <div
@@ -118,11 +128,16 @@ InputOTPSlot.displayName = "InputOTPSlot"
 
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 InputOTPSlot.displayName = "InputOTPSlot"
 
 InputOTPSlot.displayName = "InputOTPSlot"
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const InputOTPSeparator = React.forwardRef<
 =======
       )}InputOTPSlot.displayName = "InputOTPSlot"
@@ -220,12 +235,13 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 
 InputOTPSeparator.displayName = 'InputOTPSeparator';
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
-<<<<<<< HEAD
-InputOTPSeparator.displayName = "InputOTPSeparator"
 
+<<<<<<< HEAD
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

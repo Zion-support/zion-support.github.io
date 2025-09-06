@@ -32,18 +32,24 @@ export interface TokenTransaction {;
 export interface Wallet {
   user_id: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   balance: number;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   updated_at: string;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   balance: number
   updated_at: string
 }
 export type TransactionType = 'earn' | 'burn';
   balance: number,  updated_at: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 <<<<<<< HEAD
 export type TransactionType = 'earn' | 'burn';
@@ -54,6 +60,7 @@ export type TransactionType = "earn" | "burn";
 
 =======
 export interface TokenTransaction {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -71,10 +78,13 @@ export interface TokenTransaction {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   user_id: string;
   amount: number;
   transaction_type: TransactionType;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,6 +106,8 @@ export interface TokenTransaction {;
 export interface Wallet {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   user_id: string,;
   balance: number,;
   updated_at: string;
@@ -106,6 +118,7 @@ export interface TokenTransaction {;
   id: string,;
   user_id: string,;
   amount: number,;
+<<<<<<< HEAD
   transaction_type: TransactionType,;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -132,3 +145,9 @@ export interface TokenTransaction {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  transaction_type: TransactionType,;  created_at: string;
+}
+;
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

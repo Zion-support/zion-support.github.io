@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -10,6 +11,7 @@ interface Report {
 }
  
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
  
@@ -39,6 +41,8 @@ interface Report {
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 type Props = { report: Report | null }
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -86,10 +90,15 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default function RepoHealth(): any ({ report }: Props) {
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export default function RepoHealth(): any ({ report }: Props) {
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default function RepoHealth({ report }: Props) {
 =======
@@ -143,6 +152,9 @@ export default function RepoHealth({ report }: Props) {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!report) return <div>No report yet. Check back soon.</div>;
+=======
+type Props = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
     <div className="space-y-6">;
@@ -171,6 +183,7 @@ export default function RepoHealth({ report }: Props) {;
           {report && report.stalePages.map((p, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.file}</span><span className="text-gray-500">{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>;
           ))}
+<<<<<<< HEAD
 }
 ;
 export default /**
@@ -209,6 +222,7 @@ if (return <div > No report yet. Check back soon.</div>) {
       </section>;
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 },
 
@@ -237,3 +251,12 @@ export default function RepoHealth({ report }: Props) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+        </ul>
+      </section>
+    </div>
+);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

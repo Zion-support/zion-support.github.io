@@ -7,6 +7,7 @@ interface FilterSidebarProps {;
 
 import React from 'react';
 interface FilterSidebarProps {
+<<<<<<< HEAD
   class_name?: string;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   children?: React.ReactNode;
@@ -115,5 +116,19 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
     </div>;
   )
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default FilterSidebar;
+=======
+export default FilterSidebar;
+=======
+  className?: string;
+
+export const FilterSidebar: React.FC<FilterSidebarProps> = ({ 
+  className;
+  children 
+}) => {
+  return (
+    <div className;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

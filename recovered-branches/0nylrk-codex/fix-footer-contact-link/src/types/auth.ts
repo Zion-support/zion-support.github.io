@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface UserDetails {
   id?: string;
   name?: string;
@@ -25,6 +28,7 @@ export interface UserDetails {
   permissions?: string[];
   company_id?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -32,6 +36,8 @@ export interface UserDetails {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface UserDetails {
 export interface UserDetails {;
   id?: string;
@@ -80,6 +86,7 @@ export interface UserProfile {;
 }
 
   permissions?: string[],
+<<<<<<< HEAD
 <<<<<<< HEAD
   company_id?: string;
 =======
@@ -137,6 +144,9 @@ export interface AuthContextType {;
 =======
   company_id?: string;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  company_id?: string;}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface UserDetails {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id?: string,;
@@ -170,6 +180,7 @@ export interface UserProfile {;
   role?: string,;
   permissions?: string[],;
   companyId?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -244,6 +255,8 @@ export interface UserDetails {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface UserDetails {;
 
 }
@@ -306,6 +319,7 @@ export interface AuthContextType {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -313,3 +327,6 @@ export interface AuthContextType {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

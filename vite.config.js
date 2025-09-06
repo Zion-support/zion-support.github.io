@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'path';
 
 <<<<<<< HEAD
 // https://vitejs.dev/config/
@@ -64,10 +63,10 @@ export default defineConfig({
   build: {
     outDir: "dist",
     sourcemap: true,
-    minify: "terser",
     rollupOptions: {
       output: {
         manualChunks: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           vendor: ['react', 'react-dom'],
@@ -104,6 +103,8 @@ export default defineConfig({
 =======
         drop_debugger: true,
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
         },
@@ -111,6 +112,7 @@ export default defineConfig({
       },
     },
   },
+<<<<<<< HEAD
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -128,3 +130,9 @@ export default defineConfig({
   },
 });
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+  },
+});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

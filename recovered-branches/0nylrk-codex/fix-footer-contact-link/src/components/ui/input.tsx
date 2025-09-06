@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -7,10 +8,14 @@
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -25,6 +30,9 @@ const Input = React.forwardRef<HTMLInputElement React.ComponentProps<"input">>(
 =======
         )}const Input = React.forwardRef<HTMLInputElement React.ComponentProps<"input">>(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        )}const Input = React.forwardRef<HTMLInputElement React.ComponentProps<"input">>(
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ({ className, type, ...props }, ref) => {
     return (
       <input
@@ -42,6 +50,7 @@ const Input = React.forwardRef<HTMLInputElement React.ComponentProps<"input">>(;
         className={cn(;
           "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm";
           className;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -80,6 +89,12 @@ import { cn } from &quot;@/lib / utils & quot;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+        )}        ref={ref}
+        {...props}
+      />);
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export { Input }
 export { Input };
 
@@ -95,6 +110,7 @@ export { Input }
 ;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -102,3 +118,6 @@ export { Input }
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

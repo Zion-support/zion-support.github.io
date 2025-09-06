@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
@@ -8,16 +9,21 @@ export default function HealthcareAISolutions() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 			title="Healthcare AI Solutions"
 			slug="healthcare-ai-solutions"
 			description="Deploy AI for diagnostics assistance, care management, operational optimization, and compliance workflows. Improve outcomes while protecting patient privacy."
 			subtitle="Clinically aware AI that augments providers and reduces administrative burden."
 <<<<<<< HEAD
+<<<<<<< HEAD
 			pricePerMonthUSD={2999}
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			implementationWeeks="Implementation: 6–12 weeks"
 			roiNote="Reduce admin time 20–40% and improve throughput"
 			features={[
@@ -27,6 +33,7 @@ export default function HealthcareAISolutions() {
 				"Capacity forecasting and staffing optimization"
 				"HIPAA-compliant data pipelines and audit"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -48,6 +55,17 @@ export default function HealthcareAISolutions() {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function HealthcareAISolutions() {
+			title;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+				"EHR integrations: HL7/FHIR, Epic, Cerner"
+			]}
+			industries={["Hospitals", "Clinics", "Payers", "HealthTech"]}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -78,6 +96,7 @@ return (
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -112,11 +131,14 @@ export default function HealthcareAISolutions() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			pricePerMonthUSD={2999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -139,6 +161,8 @@ export default function HealthcareAISolutions() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			implementationWeeks="Implementation: 6–12 weeks"
 			roiNote="Reduce admin time 20–40% and improve throughput"
 			features={[
@@ -148,6 +172,7 @@ export default function HealthcareAISolutions() {
 				"Capacity forecasting and staffing optimization",
 				"HIPAA-compliant data pipelines and audit",
 				"EHR integrations: HL7/FHIR, Epic, Cerner"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -166,6 +191,8 @@ export default function HealthcareAISolutions() {
 };
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -179,6 +206,10 @@ export default function HealthcareAISolutions() {
 			canonical="https: //ziontechgroup.com/healthcare-ai-solutions"
 		/>
 	)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			canonical="https: //ziontechgroup.com/healthcare-ai-solutions";
 		/>;
 	);
@@ -187,6 +218,7 @@ export default function HealthcareAISolutions() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -202,3 +234,10 @@ export default function HealthcareAISolutions() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

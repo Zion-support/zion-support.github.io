@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -17,6 +18,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -26,12 +29,16 @@ import {Input} from "@/components/ui/input";
 import {cn} from "@/lib/utils";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Card } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Search } from "lucide-react",
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,6 +47,14 @@ interface Conversation {;
   name: string,;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   avatar?: string;
+=======
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
+interface Conversation {
+
+  id: string
+  name: string  avatar?: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   lastMessage: string,;
   timestamp: string,;
   unreadCount: number,;
@@ -49,6 +64,7 @@ interface Conversation {;
 interface MobileConversationListProps {;
   conversations: Conversation[],;
 
+<<<<<<< HEAD
   activeConversation?: string;
   onSelectConversation: (id: string) => void;
 }
@@ -227,6 +243,9 @@ export function MobileConversationList({;
 =======
   activeConversation?: string;    <div className="space-y-4">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  activeConversation?: string;    <div className="space-y-4">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="px-4 mb-2">;
         <div className="relative">;
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />;
@@ -253,6 +272,7 @@ export function MobileConversationList({;
             className={cn(
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 
               "px-4",
@@ -332,6 +352,9 @@ export function MobileConversationList({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              "px-4",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               "px-4"
               activeConversation === conversation && conversation.id && "bg-primary/5"
             )}

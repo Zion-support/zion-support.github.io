@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -9,6 +10,24 @@ import React from "react",
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'
 import { FraudStats } from "@/types/fraud",
+=======
+=======
+import React from 'react';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,;
+} from '@/components/ui/card';
+import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react';
+import { FraudStats } from '@/types/fraud';
+
+import React from "react",
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'
+import { FraudStats } from "@/types/fraud";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface FraudStatsCardsProps {
   stats: FraudStats
 }
@@ -21,6 +40,7 @@ interface FraudStatsCardsProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
   return (
+<<<<<<< HEAD
 =======
 
 
@@ -277,6 +297,7 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) =
 <<<<<<< HEAD
 
   )
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -284,3 +305,8 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) =
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

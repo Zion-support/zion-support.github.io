@@ -1,7 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import { getDisputeById } from '../../../../utils/fsdb';
+import {
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,
+} from '../../../../utils/auth';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/disputes/[id]/download.ts
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -33,6 +43,7 @@ import {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/download.ts
   ensureInvolvedOrAdmin,;
 } from "../../../../utils/auth";
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 ;
 export default async function handler(
 =======
@@ -41,6 +52,9 @@ export default async function handler(
   parseUserFromRequest
   ensureInvolvedOrAdmin
 } from "../../../../utils/auth";
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/disputes/[id]/download.ts
 
 export default async function handler(
 <<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
@@ -119,6 +133,17 @@ export default async function handler(;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
+=======
+
+  parseUserFromRequest
+  ensureInvolvedOrAdmin,;
+} from "../../../../utils/auth";
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+export default async function handler(
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/disputes/[id]/download.ts
   req: NextApiRequest
   res: NextApiResponse
 ) {;
@@ -130,6 +155,17 @@ export default async function handler(;
     typeof id !== "string" |
     typeof fileName !== "string"
   ) {
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    return res.status(400).json({ error: "Invalid parameters" });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/disputes/[id]/download.ts
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/download.ts
   }
@@ -141,14 +177,19 @@ export default async function handler(;
     ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
   } catch (e: any) {;
     return res.status(e.statusCode |403).json({ error: "Forbidden" });
+=======
+  const user = null;
+  stream.pipe(res)
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
   const att = dispute.attachments.find((a) => a.fileName === fileName);
   if (!att) return res.status($1).json({ $2 });
   const stat = fs.statSync(att.path);
-  res.setHeader("Content-Type", att.mimeType);
-  res.setHeader("Content-Length", String(stat.size));
-  res.setHeader(
-    "Content-Disposition"
+  res.setHeader('Content-Type', att.mimeType);
+  res.setHeader('Content-Length', String(stat.size));
+res.setHeader(
+    'Content-Disposition',
     `attachment; filename="${path.basename(att.fileName)}"`
   );
 <<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
@@ -338,7 +379,12 @@ export default async function handler(req, res) {;
   res.setHeader('Content-Disposition', `attachment, filename="${path.basename(att.fileName)}"`);
   const stream = fs.createReadStream(att.path);
   stream.pipe(res);
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
   } catch (error) {;
+=======
+<<<<<<< HEAD
+  } catch (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/disputes/[id]/download.ts
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {;
@@ -356,6 +402,7 @@ export default async function handler(req, res) {;
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/download.ts
 =======
 
@@ -372,3 +419,10 @@ export default async function handler(req, res) {;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/download.ts
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/disputes/[id]/download.ts

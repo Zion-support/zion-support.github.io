@@ -8,10 +8,16 @@ let state: IntegrationState = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   connections: []
   logs: []
   overrides: []
 }
+=======
+  connections: [],
+  logs: [],
+  overrides: [],}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function getState(): IntegrationState {
   return { ...state }
 }
@@ -21,7 +27,10 @@ export function writeState(updater: (state: IntegrationState) => void): Integrat
 export function getState(): IntegrationState {;
   return { ...state };
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function writeState(updater: (state: IntegrationState) => void): IntegrationState {;
 =======
 =======
@@ -33,9 +42,9 @@ export function getState(): IntegrationState {
 export function writeState(updater: (state: IntegrationState) => void): IntegrationState {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-
   updater(state);
   return { ...state }
+<<<<<<< HEAD
 }
 export function resetState(): void {
   state = {
@@ -197,3 +206,9 @@ export function reset_state (): void {
     overrides: [],
   };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}    connections: [],
+    logs: [],
+    overrides: [],
+  };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

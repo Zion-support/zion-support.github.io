@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { UseFormReturn } from "react-hook-form";
 =======
 <<<<<<< HEAD
@@ -42,6 +43,8 @@ import { UseFormReturn } from "react-hook-form",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   FormField;
@@ -51,6 +54,7 @@ import {
   FormDescription;
   FormMessage
 } from "@/components/ui/form",
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {
@@ -117,6 +121,10 @@ interface PaymentTermsFieldsProps {
 =======
 import { Input } from "@/components/ui/input",interface PaymentTermsFieldsProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import { Input } from "@/components/ui/input",interface PaymentTermsFieldsProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   form: UseFormReturn<ContractFormValues>
   talent: TalentProfile
@@ -133,6 +141,7 @@ import {TalentProfile} from "@/types/talent";
 import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
 import {ContractFormValues} from "./ContractForm";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -159,6 +168,8 @@ export function PaymentTermsFields({
 }: PaymentTermsFieldsProps) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -182,6 +193,7 @@ export function PaymentTermsFields({
               </Select>
               <FormMessage />
             </FormItem>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -218,6 +230,8 @@ import { ContractFormValues } from "./ContractForm",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface PaymentTermsFieldsProps {;
   form: UseFormReturn<ContractFormValues>,;
   talent: TalentProfile,;
@@ -230,6 +244,7 @@ export function PaymentTermsFields(): any ({ ;
   handleMilestonesGenerated ;
 }: PaymentTermsFieldsProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -237,6 +252,8 @@ export function PaymentTermsFields(): any ({ ;
   return (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <>;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
         <FormField
@@ -270,6 +287,7 @@ export /**
 function PaymentTermsFields() {
   return (
     <>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
 <<<<<<< HEAD
@@ -510,6 +528,13 @@ export function PaymentTermsFields({ ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;      {/* Project Milestones */}
+      {form && form.watch("paymentTerms") === "milestone" && (;
+        <div className="pt-2">;
+          <MilestoneSuggestions
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             projectName={form.getValues("projectName") || "Project"}
             scopeSummary={form.getValues("scopeSummary") || ""}
             startDate={form.getValues("startDate") || new Date()}
@@ -517,10 +542,13 @@ export function PaymentTermsFields({ ;
             projectType={form.getValues("projectName").includes("AI") ? "AI/ML" : 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                         form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}            projectName={form && form.getValues("projectName") || "Project"}
             scopeSummary={form && form.getValues("scopeSummary") || ""}
@@ -532,6 +560,7 @@ export function PaymentTermsFields({ ;
           />;
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -640,3 +669,9 @@ handleMilestonesGenerated
   );
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    </>;
+  );
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

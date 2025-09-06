@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -29,6 +30,10 @@ export function useJobSuggestions(talentId?: string) {;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -45,15 +50,19 @@ export function useJobSuggestions(talentId?: string) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   useEffect(() => {
 
     const fetchSuggestedJobs = async () => {
       if (!talentId) return;
       try {
+<<<<<<< HEAD
 <<<<<<< HEAD
         setIsLoading(true);
 <<<<<<< HEAD
@@ -220,6 +229,19 @@ if (throw error) {
       }
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        setIsLoading(true);        // Get job matches with job details
+        const { data, error } = await supabase
+          .from("job_talent_matches")
+          .select(`
+            *,
+            job:job_id (*)
+          `)
+          .eq("talent_id", talentId)      } finally {
+        setIsLoading (false);
+      }
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       } finally {
         setIsLoading(false)
       }
@@ -229,6 +251,7 @@ if (throw error) {
     fetchSuggestedJobs()
   }, [talentId]),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -245,6 +268,8 @@ if (throw error) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {
     try {
       const updates = {
@@ -275,6 +300,7 @@ if (throw error) {
       
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -302,6 +328,8 @@ if (throw error) {
       // Show appropriate message
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       if (status === 'applied') {
         toast({
           title: "Application Submitted"
@@ -313,6 +341,7 @@ if (throw error) {
           description: "This job will be removed from your suggestions"
         })
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
     } catch (error) {
 <<<<<<< HEAD
@@ -431,6 +460,15 @@ export function useJobSuggestions(talentId?: string) {;
   // Filter matches by status    }
   };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    } catch (error) {        title: "Error",
+  description: "Failed to update job status"
+        variant: "destructive"})
+    }
+  }
+  // Filter matches by status    }
+  };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     fetchSuggestedJobs ();
   }, [talent_id]);
 ;
@@ -519,11 +557,14 @@ if ( {) {
       declined_matches;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   }
 }}

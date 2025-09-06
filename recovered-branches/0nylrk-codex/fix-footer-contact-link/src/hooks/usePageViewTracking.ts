@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -64,10 +65,25 @@ import { useLocation } from "react-router-dom";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { useEffect  } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react',
+import { useLocation } from 'react-router-dom',
+import {useEffect} from 'react';
+import {useLocation} from 'react-router-dom';
+import { useEffect } from 'react',
+import { useLocation } from 'react-router-dom',
+import {useEffect} from 'react';
+import {useLocation} from 'react-router-dom';
+import { useEffect } from 'react',
+import { useLocation } from 'react-router-dom',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 /**
  * Custom hook to track page views for analytics purposes
  * Attaches event listeners to track route changes and logs page views
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -280,3 +296,8 @@ export function usePageViewTracking() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+export function usePageViewTracking() {
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

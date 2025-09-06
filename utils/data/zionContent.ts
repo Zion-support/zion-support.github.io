@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type Infobox = {;
 =======
 <<<<<<< HEAD
@@ -9,6 +10,8 @@ export type Infobox = {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export type Infobox = {;
   founder: string,;
   launchYear: string,;
@@ -28,6 +31,7 @@ export type WikiContent = {;
 },;
 export type DocsContent = {;
   productOverview: WikiSection,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -55,10 +59,13 @@ export type WikiContent = {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   intro: string;
   infobox: Infobox;
   sections: WikiSection[];
   references: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -181,10 +188,13 @@ export function buildMarkdownFromWiki (wiki: WikiContent): string {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 |---|---|;
 | Founder | ${wiki.infobox.founder} |;
 | Launch Year | ${wiki.infobox.launch_year} |;
 | Token | ${wiki.infobox.token} |;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -274,10 +284,13 @@ export type DocsContent = {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   developerApi: WikiSection,;
   governanceGuide: WikiSection,;
   tokenomics: WikiSection,;
   team: WikiSection,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   publicRoadmap: WikiSection;
 <<<<<<< HEAD
@@ -285,6 +298,9 @@ export type DocsContent = {;
 =======
   publicRoadmap: WikiSection
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  publicRoadmap: WikiSection
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 export const operatorPrompt = `Write a Wikipedia-style article about Zion OS — the world’s first decentralized AI protocol for trust, work, and talent. Include use cases, launch history, modules, and governance model.`;
 export function generateZionWiki(): WikiContent {;
@@ -293,6 +309,7 @@ export function generateZionWiki(): WikiContent {;
   const infobox: Infobox = {;
     founder: 'Zion Holdings';
     launchYear: '2025';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     token: 'ZION$';
@@ -308,6 +325,8 @@ export function generateZionWiki(): WikiContent {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     token: 'ZION$',;
     protocolType: 'Decentralized AI marketplace & governance protocol'},;
   const sections: WikiSection[] = [;
@@ -348,6 +367,7 @@ export function generateZionWiki(): WikiContent {;
       id: 'adoption';
       title: 'Adoption';
       paragraphs: [;
+<<<<<<< HEAD
 <<<<<<< HEAD
         'Initial adoption focuses on developer ecosystems, open-source contributors, and AI-native organizations seeking transparent marketplaces for model-centric work.Partnerships emphasize interoperability, agent standards, and safety benchmarks that enable reliable collaboration at scale.']}];
   const references = [;
@@ -399,6 +419,13 @@ export function slugify (input: string): string {
   }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        'Initial adoption focuses on developer ecosystems, open-source contributors, and AI-native organizations seeking transparent marketplaces for model-centric work.Partnerships emphasize interoperability, agent standards, and safety benchmarks that enable reliable collaboration at scale.']}],;
+  const references = [;  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -521,6 +548,7 @@ export function slugify(input: string): string {;
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 
@@ -532,3 +560,6 @@ export function slugify(input: string): string {;
 =======
 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

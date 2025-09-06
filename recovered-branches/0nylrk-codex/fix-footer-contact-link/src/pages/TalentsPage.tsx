@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,6 +13,9 @@
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 // Sample talent listings
@@ -24,6 +28,7 @@ const TALENT_LISTINGS: ProductListing[] = [
     category: "Engineering"
     price: 150
     currency: "$"
+<<<<<<< HEAD
 <<<<<<< HEAD
     tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"];
 <<<<<<< HEAD
@@ -52,6 +57,9 @@ import { ProductListing } from "@/types/listings",
 =======
     tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"];// Sample talent listings
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"];// Sample talent listings
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const TALENT_LISTINGS: ProductListing[] = [
   {
     id: "talent-1",
@@ -60,6 +68,7 @@ const TALENT_LISTINGS: ProductListing[] = [
     category: "Engineering",
     price: 150,
     currency: "$",
+<<<<<<< HEAD
 <<<<<<< HEAD
     tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"],
 <<<<<<< HEAD
@@ -78,6 +87,9 @@ const TALENT_LISTINGS: ProductListing[] = [
 =======
     tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"],    author: {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"],    author: {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       name: "Alexandra Chen"
       id: "alexandra-chen"
       avatarUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&h=100"}
@@ -86,6 +98,7 @@ const TALENT_LISTINGS: ProductListing[] = [
     aiScore: 97
     rating: 4.9
     reviewCount: 43}
+<<<<<<< HEAD
 <<<<<<< HEAD
   {
 <<<<<<< HEAD
@@ -190,6 +203,9 @@ const TALENT_LISTINGS: ProductListing[] = [;
 =======
   {    description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  {    description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     category: "Data Science"
     price: 145
     currency: "$"
@@ -201,6 +217,7 @@ const TALENT_LISTINGS: ProductListing[] = [;
     price: 145,
     currency: "$",
     tags: ["Statistical Analysis", "Python", "R", "Tableau"],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -355,6 +372,14 @@ const TALENT_LISTINGS: ProductListing[] = [;
     currency: "$"
     tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"];    author: {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    author: {    description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.";
+    category: "Security"
+    price: 165
+    currency: "$"
+    tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"];    author: {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     author: {
       name: "David Martinez"
       id: "david-martinez"}
@@ -439,6 +464,7 @@ const TALENT_FILTERS = [
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -487,6 +513,8 @@ export default function TalentsPage() {
     <DynamicListingPage
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       title="AI & Tech Talent"
       description="Connect with highly skilled professionals in AI, software development, data science, and more."
       categorySlug="talents"
@@ -658,6 +686,7 @@ function TalentsPage() {
 }/>) 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -665,3 +694,6 @@ function TalentsPage() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

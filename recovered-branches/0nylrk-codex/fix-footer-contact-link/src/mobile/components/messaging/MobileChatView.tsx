@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -28,6 +29,9 @@ interface Message {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
@@ -35,6 +39,7 @@ import {Input} from "@/components/ui/input";
 import {Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {useNavigate} from "react-router-dom";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {toast} from "sonner";
 <<<<<<< HEAD
@@ -162,6 +167,9 @@ interface Message {;
 =======
 import {toast} from "sonner";  id: string,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {toast} from "sonner";  id: string,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   content: string,;
   timestamp: string,;
   isMe: boolean,;
@@ -196,6 +204,7 @@ interface MobileChatViewProps {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   onSendMessage: (content: string) => void
 }
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
@@ -212,6 +221,11 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   onSendMessage: (content: string) => void
 }
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
+=======
+  onSendMessage: (content: string) => void
+}
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   onSendMessage: (content: string) => void
 }
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
@@ -232,6 +246,7 @@ export function MobileChatView(): any ({ contact, messages, onBack, onSendMessag
   const [newMessage, setNewMessage] = useState("");
 
   const navigate = useNavigate();
+<<<<<<< HEAD
 <<<<<<< HEAD
       onSendMessage(newMessage);
       setNewMessage("");
@@ -302,10 +317,15 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       onSendMessage(newMessage);      setNewMessage("");
     }  const startVideoCall = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      onSendMessage(newMessage);      setNewMessage("");
+    }  const startVideoCall = () => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const roomId = `mobile-${contact.id}`;
     toast.success("Starting video call", {
       description: `Connecting with ${contact.name}...`
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -315,6 +335,8 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`,
     toast.success("Starting video call", {
@@ -324,10 +346,13 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     navigate(`/call/${roomId}`)
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }),
     
     // Navigate to video call page
@@ -337,6 +362,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -344,6 +370,8 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const startAudioCall = () => {
     const roomId = `mobile-audio-${contact.id}`;
     toast.success("Starting audio call", {
@@ -352,6 +380,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   const startAudioCall = () => {
     const roomId = `mobile-audio-${contact.id}`,
     toast.success("Starting audio call", {
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: `Connecting with ${contact.name}...`
 <<<<<<< HEAD
@@ -455,6 +484,9 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 =======
       description: `Connecting with ${contact.name}...`                  : "bg-muted rounded-tl-none"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      description: `Connecting with ${contact.name}...`                  : "bg-muted rounded-tl-none"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               )}
             >
               <p>{message.content}</p>
@@ -466,16 +498,20 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     toast.success("Starting video call", {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleSend = () => {;
     if (newMessage && newMessage.trim() !== "") {;
       onSendMessage(newMessage);
       setNewMessage("");
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -594,6 +630,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {message.timestamp}
                 {message.is_me && message.status && (
                   <span className="ml-1">;
@@ -718,6 +756,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
               </p>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -785,6 +824,9 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
 =======
           </div>;              )}>;              <p>{message && message.content}</p>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          </div>;              )}>;              <p>{message && message.content}</p>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <divclassName={cn(
                 "text-xs mt-1 flex justify-end"
                 message && message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
@@ -793,6 +835,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
                 {message && message.isMe && message && message.status && (;
                   <span className="ml-1">;
                     {message && message.status === 'read' ? '✓✓' : '✓'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -871,6 +914,9 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
 =======
                   </span>;                )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  </span>;                )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>;
             </div>;
           </div>;
@@ -883,6 +929,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
             <PaperclipIcon className="h-5 w-5" />;
           </Button>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -960,6 +1007,8 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <Send className="h-5 w-5" />;
           </Button>;
         </div>;
@@ -1046,6 +1095,7 @@ setNewMessage ("") contact.avatar
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1053,3 +1103,6 @@ setNewMessage ("") contact.avatar
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

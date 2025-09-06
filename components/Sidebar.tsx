@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -22,6 +23,9 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Building2, ChevronDown, ChevronRight } from 'lucide-react';
 =======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -30,6 +34,7 @@ interface SidebarProps {
   onClose: () => void;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
@@ -68,6 +73,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 };
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <AnimatePresence>
       {isOpen && (
@@ -86,8 +93,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"          >
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           >
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -103,11 +113,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 <button
                   onClick={onClose}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors"                >
                   <X className="w-6 h-6" />
                 </button>
               </div>
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                 >
                   <X className="w-6 h-6" />
@@ -121,7 +134,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     <button
                       onClick={() => handleDropdownToggle(title)}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {/* Quick Links */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
@@ -140,6 +156,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
@@ -149,6 +166,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <p>24/7 Support Available</p>
                 </div>              </div>
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </div>
@@ -156,6 +175,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </>
       )}
     </AnimatePresence>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -408,6 +428,10 @@ export default Sidebar;
   );
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+  );
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -446,9 +470,12 @@ const navigation = {
   ]
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -457,6 +484,7 @@ interface SidebarProps {
   onClose: () => void;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -636,3 +664,5 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -52,10 +53,15 @@ export const useUpdateMilestone = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const useUpdateMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -100,6 +106,9 @@ export const useUpdateMilestone = () => {
 =======
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const updateMilestoneStatus = async (milestoneId: string, newStatus: MilestoneStatus, comment?: string) => {
     if (!user) return false;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -113,6 +122,7 @@ export const useUpdateMilestone = () => {
       
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -123,10 +133,13 @@ export const useUpdateMilestone = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Get the current status
       const { data: milestoneData, error: fetchError } = await supabase
         .from('project_milestones')
         .select('status')
+<<<<<<< HEAD
 <<<<<<< HEAD
         .eq('id', milestoneId)
 <<<<<<< HEAD
@@ -215,6 +228,11 @@ export const useUpdateMilestone = () => {
       setIsSubmitting(false)
     }
 
+=======
+        .eq('id', milestoneId)      const { error } = await supabase
+        .from('project_milestones')
+        .update({ status: newStatus })      return false
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } finally {
       setIsSubmitting(false)
     }
@@ -284,6 +302,7 @@ if (throw error) {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       toast.success(`Milestone status changed to ${newStatus}`);
@@ -315,6 +334,8 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },
   
   const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {
@@ -408,6 +429,7 @@ export const useUpdateMilestone = () => {;
     } catch (err: any) {
       console && console.error("Error updating milestone:", err);
       toast && toast.error("Failed to update milestone: " + err && err.message),
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return false
@@ -602,3 +624,6 @@ isSubmitting
 =======
       return false
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      return false
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

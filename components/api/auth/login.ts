@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   createSessionCookie
   validateCredentials;
@@ -9,11 +10,20 @@ import {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import {
+  createSessionCookie,
+  validateCredentials,;
+} from '../../../utils/auth-utils';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });
   }
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   const { email, password, code } = req && req.body || {};
@@ -24,6 +34,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const result = validateCredentials(email, password, code);
   res.setHeader('Set-Cookie', cookie);
 
@@ -56,6 +70,7 @@ if ( {) {
   res.set_header ('Set - Cookie', cookie);
   return res.status (200).json ({ ok: true });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -64,3 +79,16 @@ if ( {) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+const cookie = createSessionCookie({
+    email,
+    role: result.role,
+    twofaVerified: true,
+  });
+  res.setHeader('Set-Cookie', cookie);
+  return res.status(200).json({ ok: true });
+  return res.status(200).json({ ok: true })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

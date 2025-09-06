@@ -55,6 +55,7 @@ import { useState,useEffect,useCallback } from 'react'; import { supabase } from
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {; ); ; if(status) {; query = query.eq("status",status),} ; const { data,error: fetchError } = await query; ; if(fetchError) throw fetchError; ; setJobs(data as Job[] || []); setError(null),} catch(err: unknown) {}} finally {}} },[clientId,status]); const updateJobStatus = async(jobId: string,newStatus: JobStatus) => {}; const { error: updateError } = await supabase; .from("jobs"); .update({ status: newStatus }); .eq("id",jobId); .eq("client_id",clientId); ; ; if(updateError) throw updateError; ; setJobs(prevJobs => prevJobs.map(job => job.id === jobId ? {...job,status: newStatus} : job)); toast.success("Job status updated successfully"); return true,} catch(err: unknown) {}} }; ; const deleteJob = async(jobId: string) => {}; const { error: deleteError } = await supabase; .from("jobs"); .delete(); .eq("id",jobId); .eq("client_id",clientId); ; ; if(deleteError) throw deleteError; ; setJobs(prevJobs => prevJobs.filter(job => job.id !== jobId)); toast.success("Job deleted successfully"); return true,} catch(err: unknown) {}} }; ; useEffect(() => {}},[]); fetchJobs(),},[fetchJobs]); ; return {}},};
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 =======
@@ -65,6 +66,9 @@ import { useState,useEffect,useCallback } from 'react'; import { supabase } from
     fetchJobs(),
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    fetchJobs(),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }, [fetchJobs]); // Changed dependencies to just fetchJobs;
 
   return {}},
@@ -74,6 +78,7 @@ import { useState,useEffect,useCallback } from 'react'; import { supabase } from
   return {}}};
 
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {; ); ; if(status) {; query = query.eq("status",status),} ; const { data,error: fetchError } = await query; ; if(fetchError) throw fetchError; ; setJobs(data as Job[] || []); setError(null),} catch(err: unknown) {}} finally {}} },[clientId,status]); const updateJobStatus = async(jobId: string,newStatus: JobStatus) => {}; const { error: updateError } = await supabase; .from("jobs"); .update({ status: newStatus }); .eq("id",jobId); .eq("client_id",clientId); ; ; if(updateError) throw updateError; ; setJobs(prevJobs => prevJobs.map(job => job.id === jobId ? {...job,status: newStatus} : job)); toast.success("Job status updated successfully"); return true,} catch(err: unknown) {}} }; ; const deleteJob = async(jobId: string) => {}; const { error: deleteError } = await supabase; .from("jobs"); .delete(); .eq("id",jobId); .eq("client_id",clientId); ; ; if(deleteError) throw deleteError; ; setJobs(prevJobs => prevJobs.filter(job => job.id !== jobId)); toast.success("Job deleted successfully"); return true,} catch(err: unknown) {}} }; ; useEffect(() => {}},[]); fetchJobs(),},[fetchJobs]); ; return {}},};
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {; ); ; if(status) {; query = query.eq("status",status),} ; const { data,error: fetchError } = await query; ; if(fetchError) throw fetchError; ; setJobs(data as Job[] || []); setError(null),} catch(err: unknown) {}} finally {}} },[clientId,status]); const updateJobStatus = async(jobId: string,newStatus: JobStatus) => {}; const { error: updateError } = await supabase; .from("jobs"); .update({ status: newStatus }); .eq("id",jobId); .eq("client_id",clientId); ; ; if(updateError) throw updateError; ; setJobs(prevJobs => prevJobs.map(job => job.id === jobId ? {...job,status: newStatus} : job)); toast.success("Job status updated successfully"); return true,} catch(err: unknown) {}} }; ; const deleteJob = async(jobId: string) => {}; const { error: deleteError } = await supabase; .from("jobs"); .delete(); .eq("id",jobId); .eq("client_id",clientId); ; ; if(deleteError) throw deleteError; ; setJobs(prevJobs => prevJobs.filter(job => job.id !== jobId)); toast.success("Job deleted successfully"); return true,} catch(err: unknown) {}} }; ; useEffect(() => {}},[]); fetchJobs(),},[fetchJobs]); ; return {}},};
 <<<<<<< HEAD
@@ -108,3 +113,6 @@ import { useState,useEffect,useCallback } from 'react'; import { supabase } from
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {; ); ; if(status) {; query = query.eq("status",status),} ; const { data,error: fetchError } = await query; ; if(fetchError) throw fetchError; ; setJobs(data as Job[] || []); setError(null),} catch(err: unknown) {}} finally {}} },[clientId,status]); const updateJobStatus = async(jobId: string,newStatus: JobStatus) => {}; const { error: updateError } = await supabase; .from("jobs"); .update({ status: newStatus }); .eq("id",jobId); .eq("client_id",clientId); ; ; if(updateError) throw updateError; ; setJobs(prevJobs => prevJobs.map(job => job.id === jobId ? {...job,status: newStatus} : job)); toast.success("Job status updated successfully"); return true,} catch(err: unknown) {}} }; ; const deleteJob = async(jobId: string) => {}; const { error: deleteError } = await supabase; .from("jobs"); .delete(); .eq("id",jobId); .eq("client_id",clientId); ; ; if(deleteError) throw deleteError; ; setJobs(prevJobs => prevJobs.filter(job => job.id !== jobId)); toast.success("Job deleted successfully"); return true,} catch(err: unknown) {}} }; ; useEffect(() => {}},[]); fetchJobs(),},[fetchJobs]); ; return {}},};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import fs from 'fs';
@@ -127,7 +132,35 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
 export function read_json < T>(file_path: string, default_value: T): T {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+import fs from 'fs';
+import path from 'path';
+import { promisify } from 'util';
+import crypto from 'crypto';
+import { DisputeCase } from '../types/disputes';
+
+const mkdir = promisify(fs.mkdir);
+const readFile = promisify(fs.readFile);
+const writeFile = promisify(fs.writeFile);
+
+const ROOT = path.join(process.cwd(), 'data');
+const DISPUTES_FILE = path.join(ROOT, 'disputes.json');
+const UPLOADS_ROOT = path.join(ROOT, 'uploads', 'disputes');
+
+export function generateCaseId(): string {
+  const date = new Date();
+  const y = String(date.getFullYear());
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
+  const suffix = crypto.randomBytes(3).toString('hex').toUpperCase();
+  return `DSP-${y}${m}${d}-${suffix}`;
+
+async function ensureBaseFiles() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   try {
     const fs = require("fs");
     if (fs.existsSync(filePath)) {
@@ -212,6 +245,14 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId);
   await mkdir(dir, { recursive: true });
   return dir;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
       fs.mkdir_sync (dir, { recursive: true });
     }
@@ -478,7 +519,13 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

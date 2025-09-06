@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -39,6 +40,8 @@ export default function Header() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const navigation = [;
     { name: 'Home', href: '/' }
     { name: 'About', href: '/about' }
@@ -59,12 +62,15 @@ export default function Header() {;
       }`}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
@@ -94,6 +100,7 @@ export default function Header() {;
                 {item.name}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -106,6 +113,8 @@ export default function Header() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </Link>
             ))}
 ;
@@ -117,6 +126,7 @@ export default function Header() {;
                 aria-label="Services menu"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -124,6 +134,8 @@ export default function Header() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 Services
                 <svg className=&quot;ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot;>
@@ -136,11 +148,14 @@ export default function Header() {;
                     <Link
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <span className=&quot;absolute -bottom - 1 left - 0 w - 0 h - 0.5 bg - gradient - to - r from - purple - 400 to - blue - 400 transition - all duration - 300 group - hover:w - full & quot;></span>;
               </Link>))}
             {/* Services Dropdown */}
@@ -153,12 +168,17 @@ export default function Header() {;
               >;
                 Services;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <svg className=&quot;ml - 1 w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot; aria - hidden=&quot;true & quot;>;
                   <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M19 9l - 7 7 - 7-7 & quot; />;
 =======
                 <svg className=&quot;ml - 1 w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; viewBox=&quot;0 0 24 24 & quot; aria - hidden=&quot;true & quot;>;
                   <path strokeLinecap=&quot;round & quot; strokeLinejoin=&quot;round & quot; strokeWidth={2} d=&quot;M19 9l - 7 7 - 7-7 & quot; />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                <svg className=&quot;ml - 1 w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; viewBox=&quot;0 0 24 24 & quot; aria - hidden=&quot;true & quot;>;
+                  <path strokeLinecap=&quot;round & quot; strokeLinejoin=&quot;round & quot; strokeWidth={2} d=&quot;M19 9l - 7 7 - 7-7 & quot; />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </svg>;
               </button>;
               <div className=&quot;absolute top - full left - 0 mt - 2 w - 80 bg - black / 95 backdrop - blur - xl border border - white / 20 rounded - xl shadow - 2xl opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform translate - y-2 group - hover:translate - y-0 & quot;>;
@@ -172,6 +192,7 @@ export default function Header() {;
                     >;
                       <div className=&quot;flex items - center justify - between & quot;>;
                         <span>{service.name}</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <svg className=&quot;w - 4 h - 4 opacity - 0 group - hover / item:opacity - 100 transition - opacity duration - 200 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;
                           <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M9 5l7 7 - 7 7 & quot; />;
@@ -234,6 +255,15 @@ export default function Header() {;
 =======role=&quot;banner&quot;
       aria-label=&quot;Main navigation&quot;    >
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                        <svg className=&quot;w - 4 h - 4 opacity - 0 group - hover / item:opacity - 100 transition - opacity duration - 200 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; viewBox=&quot;0 0 24 24 & quot;>;
+                          <path strokeLinecap=&quot;round & quot; strokeLinejoin=&quot;round & quot; strokeWidth={2} d=&quot;M9 5l7 7 - 7 7 & quot; />;
+                        </svg>;
+                      </div>;
+                    </Link>))}
+=======role=&quot;banner&quot;
+      aria-label=&quot;Main navigation&quot;    >
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
@@ -262,6 +292,7 @@ export default function Header() {;
               >;
                 {item.name}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
@@ -270,6 +301,8 @@ export default function Header() {;
             <div className="relative group">
               <button 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <span className=&quot;absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full&quot;></span>
               </Link>
             ))}
@@ -284,7 +317,10 @@ export default function Header() {;
 ;
             {/* Services Dropdown */}
             <div className="relative group">              <button 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 className="text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group"
                 aria-expanded="false"
                 aria-haspopup="true"
@@ -314,16 +350,20 @@ export default function Header() {;
                   ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>;
               </div>;
             </div>;
           </nav>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* CTA Button */}
 <<<<<<< HEAD
@@ -341,6 +381,9 @@ export default function Header() {;
 =======
           {/* CTA Button */}            <Link
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          {/* CTA Button */}            <Link
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
               aria-label="Get started with Zion Tech Group"
@@ -355,15 +398,20 @@ export default function Header() {;
           {/* Mobile menu button */}
           <button;
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+<<<<<<< HEAD
 
             className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200"
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             aria-expanded={isMenuOpen}
+=======
+className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200&quot;            aria-expanded={isMenuOpen}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-controls="mobile-menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {isMenuOpen ? (
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
@@ -412,6 +460,11 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
                 <path strokeLinecap=&quot;round & quot; strokeLinejoin=&quot;round & quot; strokeWidth={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
                 <path strokeLinecap=&quot;round & quot; strokeLinejoin=&quot;round & quot; strokeWidth={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              {isMenuOpen ? (
+                <path strokeLinecap=&quot;round & quot; strokeLinejoin=&quot;round & quot; strokeWidth={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
+                <path strokeLinecap=&quot;round & quot; strokeLinejoin=&quot;round & quot; strokeWidth={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <Link
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -430,6 +483,7 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               {isMenuOpen ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -442,10 +496,13 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </svg>;
           </button>;
         </div>;
         {/* Mobile Navigation */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -463,10 +520,13 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
                 <Link
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -503,6 +563,8 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
             <div className=&quot;px-2 pt-2 pb-3 space-y-1&quot;>
               {navigation.map((item) => (
                 <Link
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   key={item.name}
                   href={item.href}
                   className=&quot;block px - 3 py - 3 text - gray - 300 hover:text - white hover:bg - white / 5 rounded - lg transition - all duration - 200 & quot;
@@ -510,7 +572,10 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
                   aria - label={`Navigate to ${item.name} page`}
                 >;
                   {item.name}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                 </Link>;
               ))}
@@ -519,11 +584,14 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
                 <div className="text-gray-400 text-sm font-medium mb-2">Services</div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {services.map((service) => (
                   <Link
                     key={service.name}
@@ -534,6 +602,7 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
                     aria-label={`Navigate to ${service.name} service page`}
                   >;
                     {service.name}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </Link>;
                 ))}
@@ -559,6 +628,8 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
                   >;
                     {service.name}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <Link
                   href="/contact"
                   className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-200"
@@ -573,6 +644,7 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
         )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>;
     </header>;
   );
@@ -582,6 +654,8 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>;
     </header>);
 }

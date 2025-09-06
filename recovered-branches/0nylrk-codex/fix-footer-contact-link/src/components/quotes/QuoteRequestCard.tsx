@@ -58,7 +58,10 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   onViewDetails,
   onMarkAsResponded,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   onToggleArchive
 }) => {
   // Format date for display
@@ -330,6 +333,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
             </Button>;
           </div>;
         </div>;
+<<<<<<< HEAD
       </CardContent>;
     </Card>;
   );
@@ -343,6 +347,8 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
             </Button>;
           </div>;
         </div>;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </CardContent>
 };
     </Card>);

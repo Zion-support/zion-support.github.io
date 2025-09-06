@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -27,6 +28,8 @@ export function EducationItem({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { format  } from './date - fns';
 import { Edit, Trash2  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
@@ -61,6 +64,7 @@ function EducationItem() {
                 {education.field_of_study}
               </p>)}
             <p className="text - xs text - muted - foreground mt-1">;
+<<<<<<< HEAD
               {typeof education.start_date === "string";
                 ? education.start_date;
                 : format (education.start_date, "MMM yyyy")}{" "}
@@ -106,6 +110,8 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
 <<<<<<< HEAD
               </p>)}
             <p className="text - xs text - muted - foreground mt - 1">;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {typeof education.start_date === "string";
                 ? education.start_date;
                 : format (education.start_date, "MMM yyyy")}{" "}
@@ -119,13 +125,16 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
                   : ""}
             </p>;
             {education.location && (
-              <p className="text - xs text - muted - foreground">;
+              <p className="text - xs text - muted-foreground">;
                 {education.location}
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {format} from 'date-fns';
 import {Edit, Trash2} from 'lucide-react';
 import {Button} from '@/components/ui/button';
@@ -136,6 +145,7 @@ import {EducationItemProps} from './types';
 =======
 =======
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,6 +154,8 @@ import {EducationItemProps} from './types';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { format } from 'date-fns',
 import { Edit, Trash2 } from 'lucide-react',
 import { Button } from '@/components/ui/button',
@@ -151,6 +163,7 @@ import { Card, CardContent } from '@/components/ui/card',
 import { Education } from '@/types/resume',
 import { EducationItemProps } from './types',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
@@ -169,6 +182,20 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
             {education && education.field_of_study && (;
               <p className="text-sm text-muted-foreground">{education && education.field_of_study}</p>;
 =======
+=======
+export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {  return (
+    <Card className="bg-muted/40">
+      <CardContent className="pt-6">
+        <div className="flex justify-between">
+          <div>
+            <h4 className="font-medium">{education.degree}</h4>
+            <p className="text-sm text-muted-foreground">
+              {education.institution}
+            </p>
+            {education.field_of_study && (
+              <p className="text-sm text-muted-foreground">
+                {education.field_of_study}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </p>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             )}
@@ -256,12 +283,16 @@ export function EducationItem({
         )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </CardContent>
     </Card>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 }
@@ -276,6 +307,8 @@ export function EducationItem({
 }
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 
 ;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
@@ -8,16 +9,21 @@ export default function RetailTechnologySolutions() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 			title="Retail Technology Solutions"
 			slug="retail-technology-solutions"
 			description="Optimize merchandising, pricing, demand forecasting, and omni-channel experiences with AI. Personalize at scale while reducing waste and stockouts."
 			subtitle="Higher margins and better experiences powered by AI."
 <<<<<<< HEAD
+<<<<<<< HEAD
 			pricePerMonthUSD={1999}
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Lift gross margin 2–4 pts and reduce stockouts 10–20%"
 			features={[
@@ -27,6 +33,7 @@ export default function RetailTechnologySolutions() {
 				"Store ops: labor planning and task automation"
 				"Omni-channel journey orchestration"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -48,6 +55,17 @@ export default function RetailTechnologySolutions() {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function RetailTechnologySolutions() {
+			title;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+				"Integrations: POS, eCom, WMS, ESP, CDP"
+			]}
+			industries={["Retail", "CPG", "E‑commerce"]}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -78,6 +96,7 @@ return (
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -112,11 +131,14 @@ export default function RetailTechnologySolutions() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			pricePerMonthUSD={1999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -139,6 +161,8 @@ export default function RetailTechnologySolutions() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Lift gross margin 2–4 pts and reduce stockouts 10–20%"
 			features={[
@@ -148,6 +172,7 @@ export default function RetailTechnologySolutions() {
 				"Store ops: labor planning and task automation",
 				"Omni-channel journey orchestration",
 				"Integrations: POS, eCom, WMS, ESP, CDP"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -166,6 +191,8 @@ export default function RetailTechnologySolutions() {
 };
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -179,6 +206,10 @@ export default function RetailTechnologySolutions() {
 			canonical="https: //ziontechgroup.com/retail-technology-solutions"
 		/>
 	)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			canonical="https: //ziontechgroup.com/retail-technology-solutions";
 		/>;
 	);
@@ -187,6 +218,7 @@ export default function RetailTechnologySolutions() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -202,3 +234,10 @@ export default function RetailTechnologySolutions() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

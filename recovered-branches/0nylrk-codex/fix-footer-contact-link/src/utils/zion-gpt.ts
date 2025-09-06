@@ -1,18 +1,22 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3 && 3.5-turbo';
 
 export type ZionGPTUsage = {export type ZionGPTUsage = {
 
 export type ZionGPTUsage = {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -39,6 +43,10 @@ export type ZionGPTUsage = {;
 export type ZionGPTUsage = {;
 export type ZionGPTUsage = {// ZionGPT Utility Functions
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export type ZionGPTUsage = {;
+export type ZionGPTUsage = {// ZionGPT Utility Functions
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // This file handles interaction with the fine-tuned ZionGPT model
 
 import {supabase} from '@/integrations/supabase/client';
@@ -46,6 +54,7 @@ export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' |
 export type ZionGPTUsage = {
 
 export type ZionGPTUsage = {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -120,10 +129,13 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Fallback to default models
       switch(purpose) {
         case 'job': return 'zion-job-generator-v1';
         case 'resume': return 'zion-resume-enhancer-v1';
+<<<<<<< HEAD
 <<<<<<< HEAD
         case 'support': return 'zion-support-v1';
 <<<<<<< HEAD
@@ -358,6 +370,9 @@ export async function callZionGPT({
 =======
         case 'support': return 'zion-support-v1';      body: {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        case 'support': return 'zion-support-v1';      body: {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         prompt;
         modelId;
         maxTokens
@@ -373,6 +388,7 @@ export async function callZionGPT({
     
     return data && data.completion
   } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     console && console.error('Error calling ZionGPT:', error);
 
@@ -583,6 +599,10 @@ export async function getActiveModelId(purpose:'job' | 'resume' | 'support'):Pro
     console && console.error('Error calling ZionGPT:', error);  }
 }  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    console && console.error('Error calling ZionGPT:', error);  }
+}  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ;
 // Log usage of the fine-tuned model;

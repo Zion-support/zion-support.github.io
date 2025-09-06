@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -25,6 +26,12 @@ import {useEffect, useState} from 'react';
 
 =======import { useEffect, useState  } from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import {useEffect, useState} from 'react';
+
+=======import { useEffect, useState  } from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
@@ -49,6 +56,7 @@ import {TokenTransaction} from '@/types/tokens';
 import {ProtectedRoute} from '@/components/ProtectedRoute';
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {useToast} from '@/hooks/use-toast';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function TokenManager() {;
 <<<<<<< HEAD
@@ -272,6 +280,9 @@ export default function TokenManager() {;
 =======
 export default function TokenManager() {;      .limit(100);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export default function TokenManager() {;      .limit(100);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (!error) setTransactions(data || []);
   const handleIssue = async (type: 'earn' | 'burn') => {;
     if (!userId || amount <= 0) return,;
@@ -301,6 +312,7 @@ export default function TokenManager() {;      .limit(100);
   },
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -429,6 +441,8 @@ export default function TokenManager() {;      .limit(100);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <TabsList>;
                 <TabsTrigger value="history">Transaction History</TabsTrigger>;
               </TabsList>;

@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 return (
 
     <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
@@ -7,11 +10,34 @@ return (
         on_click={toggle_section}
         className='flex w - full items - center justify - between text - white font - medium'      >;
         <span > Years of Experience</span>;
+=======
+import { Slider } from "@/components/ui/slider";
+import { ExperienceFilterProps } from "@/types/filters";
+export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {
+  const handleChange = null;
+export function ExperienceFilter({
+  experienceRange
+  setExperienceRange
+  expanded
+  toggleSection
+  isMobileFilterOpen
+}: ExperienceFilterProps) {
+  const handleChange = (values: number[]) => {
+    setExperienceRange([values[0] |0, values[1] |15])
+  }
+  return (
+    <div className='mb-6 border-b border-zion-blue-light pb-6'>
+      <button
+        onClick={toggleSection}
+        className='flex w-full items-center justify-between text-white font-medium'      >
+        <span>Years of Experience</span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         {expanded ? (
           <ChevronUp className='h - 4 w - 4 text - zion - slate - light' />) : (
           <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
       </button>;
       {expanded && (
+<<<<<<< HEAD
         <div className='mt - 6'>;
           <div className='flex justify - between text - sm text - zion - slate - light mb - 2'>            <span>{experience_range[0]} years</span>;
             <span>{experience_range[1]} years</span>;
@@ -62,7 +88,13 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+        <div className='mt-6'>
+          <div className='flex justify-between text-sm text-zion-slate-light mb-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -99,7 +131,10 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
           </div>
           <Slider
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             aria-label="Experience range"
@@ -130,25 +165,40 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Slider;
             aria-label="Experience range";
+<<<<<<< HEAD
+=======
+
+=======
+aria-label='Experience range'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             value={[experienceRange[0], experienceRange[1]]}
             min={0}
             max={15}
             step={1}
             onValueChange={handleChange}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     </div>;
   );
 
 <<<<<<< HEAD
             className="mt-6"
+=======
+className='mt-6'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           />
         </div>
       )}
     </div>
   );
 }
+<<<<<<< HEAD
 
         <div className="mt - 6">;
           <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
@@ -217,6 +267,11 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

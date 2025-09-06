@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 
 =======
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import {
@@ -13,6 +16,7 @@ import {;
   Home,;
   Mail,;
   Search,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   Settings,;
 =======
@@ -56,6 +60,9 @@ import {
 =======
   Settings,;  Bell,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  Settings,;  Bell,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   FileText,
   Home,
   Mail,
@@ -63,6 +70,7 @@ import {
   Settings,
 
   Users,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 } from "lucide-react";
 =======
@@ -74,6 +82,9 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
 =======
 } from "lucide-react";  Bell,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+} from "lucide-react";  Bell,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   FileText,
   Home,
   Mail,
@@ -93,8 +104,6 @@ import {;
   SidebarMenuItem,;
   SidebarMenuButton,;
   SidebarGroupLabel,;
-<<<<<<< HEAD
-<<<<<<< HEAD
   SidebarGroupContent,;
 =======
 
@@ -107,6 +116,7 @@ import {;
 <<<<<<< HEAD
   SidebarGroupContent,;
 
+<<<<<<< HEAD
 
 
 =======
@@ -191,6 +201,8 @@ import {
   SidebarGroupContent,;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -213,6 +225,7 @@ import {
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
         </SidebarGroup>
 <<<<<<< HEAD
@@ -260,6 +273,9 @@ import {
 =======
         </SidebarGroup>                </SidebarMenuButton>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        </SidebarGroup>                </SidebarMenuButton>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
@@ -275,6 +291,7 @@ import {
       </SidebarContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -286,6 +303,8 @@ import {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 }
   )
@@ -300,6 +319,7 @@ import {;
   SidebarGroupLabel,;
   SidebarGroupContent} from "@/components/ui/sidebar";
 export function AppSidebar() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (;
 <<<<<<< HEAD
@@ -573,3 +593,9 @@ return (<Sidebar> <SidebarContent> <SidebarGroup> <SidebarGroupLabel>Dashboard</
               </SidebarMenuItem>;
               <SidebarMenuItem>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (;                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+              <SidebarMenuItem>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

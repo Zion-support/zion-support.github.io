@@ -3,6 +3,7 @@ import {jsPDF} from 'jspdf';
 export interface FontConfig {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -25,6 +26,8 @@ export interface FontConfig {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
 
@@ -40,6 +43,7 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
   try {
     // Font loading logic would go here
     // For demonstration purposes, we'll just set up the font using standard fonts
+<<<<<<< HEAD
 <<<<<<< HEAD
     switch (fontFamily) {
 <<<<<<< HEAD
@@ -145,5 +149,8 @@ if (return, ) {
 =======
     switch (fontFamily) {    doc.set_font ('helvetica');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    switch (fontFamily) {    doc.set_font ('helvetica');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }

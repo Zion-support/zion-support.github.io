@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React from "react",
@@ -10,6 +11,8 @@ import { ScrollArea } from "@/components/ui/scroll-area",
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -29,10 +32,13 @@ export function TransactionHistory() {
   const { transactions, loading } = useWallet();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   if (loading) {;
 
@@ -82,6 +88,7 @@ export function TransactionHistory() {;
           <CardDescription>Loading transactions...</CardDescription>;
         </CardHeader>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       </Card>;
 <<<<<<< HEAD
     );
@@ -128,6 +135,9 @@ export function TransactionHistory() {
 =======
       </Card>;    return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </Card>;    return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Card>
         <CardHeader>
           <CardTitle>Transaction History</CardTitle>
@@ -137,6 +147,7 @@ export function TransactionHistory() {
     );
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const earnTransactions = transactions.filter(
     (tx) => tx.transaction_type === "earn",
@@ -441,6 +452,8 @@ if ( {) {
   return (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <Card>;
       <CardHeader>;
         <CardTitle>Transaction History</CardTitle>;
@@ -466,6 +479,7 @@ if ( {) {
                       <Badge variant="outline" className="bg - red - 100 text - red-800">;
                         -{tx.amount} ZION$;
                       </Badge>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </div>;                  ))}
                 </div>;
@@ -558,3 +572,7 @@ return (<Card> <CardHeader> <CardTitle>Transaction History</CardTitle> <CardDesc
                     </div>))}
                 </div>)}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    </div>))}
+                </div>)}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

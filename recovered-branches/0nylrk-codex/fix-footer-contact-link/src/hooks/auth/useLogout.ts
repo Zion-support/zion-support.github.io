@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -16,11 +17,14 @@ import {cleanupAuthState} from "@/utils/authUtils";
 import type { UserProfile } from "@/types/auth";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase } from "@/integrations/supabase/client",
 import { cleanupAuthState } from "@/utils/authUtils";
 import type { UserProfile } from "@/types/auth";
 
 import { cleanupAuthState } from "@/utils/authUtils",
+<<<<<<< HEAD
 import type { UserProfile } from "@/types/auth",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -64,6 +68,12 @@ import type { UserProfile } from "@/types/auth",export const useLogout = (setUse
     try {
       // Clean up existing auth state
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import type { UserProfile } from "@/types/auth",export const useLogout = (setUser: (user: UserProfile | null) => void) => {
+  const logout = async () => {
+    try {
+      // Clean up existing auth state
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       cleanupAuthState(),
       
       // Sign out;
@@ -250,7 +260,10 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
       // Sign out;
       await supabase.auth.signOut({ scope: 'global' }),;
       // Update state;      setUser(null);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (error) {
       console.error("Error during logout:", error);
 <<<<<<< HEAD
@@ -274,6 +287,7 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
     }
@@ -285,10 +299,13 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
   };
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return { logout }
 }
 
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -305,3 +322,6 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

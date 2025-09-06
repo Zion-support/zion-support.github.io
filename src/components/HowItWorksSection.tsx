@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,10 +19,17 @@ import { Search, Users, CheckCircle, ArrowRight } from 'lucide-react';
 import React from 'react';
 import { FileText, Search, Handshake, Check } from 'lucide-react';
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+import React from 'react';
+import { FileText, Search, Handshake, Check } from 'lucide-react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const HowItWorksSection: React.FC = () => {
   const steps = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       number: "01",
       icon: <Search className="w-8 h-8 text-blue-600" />,
@@ -46,6 +54,8 @@ const HowItWorksSection: React.FC = () => {
       title: "Launch & Support",
       description: "We launch your solution and provide ongoing support to ensure continued success and optimal performance."
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       icon: <FileText className="w-8 h-8" />,
       title: "Plan",
       description: "Collaborate on project requirements, timeline, and deliverables",
@@ -104,11 +114,15 @@ const HowItWorksSection: React.FC = () => {
       ],
       duration: "Ongoing",
       success: "98% client satisfaction"
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <section className="py-16 px-4 bg-gray-50">
       <div className="container mx-auto max-w-6xl">
@@ -148,6 +162,8 @@ const HowItWorksSection: React.FC = () => {
                   <ArrowRight className="w-8 h-8 text-gray-300" />
                 </div>
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -168,7 +184,10 @@ const HowItWorksSection: React.FC = () => {
               {/* Connection Line */}
               {index < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-gray-300 to-transparent transform translate-x-4 z-0" />
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               )}
               
               <div className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2 border border-gray-100">
@@ -215,6 +234,7 @@ const HowItWorksSection: React.FC = () => {
             </div>
           ))}
         </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         <div className="mt-16 text-center">
@@ -258,6 +278,17 @@ const HowItWorksSection: React.FC = () => {
 
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+<<<<<<< HEAD
+      </div>
+    </section>
+=======
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { GradientHeading } from "./GradientHeading";
 
 import { Check, Handshake, Search, Send } from 'lucide-react'
@@ -353,6 +384,7 @@ const stats = [ "
   scale: 0.8
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -363,6 +395,11 @@ import { GradientHeading } from './GradientHeading';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf89
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import React from 'react';
+import { GradientHeading } from './GradientHeading';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Check, Handshake, Search, Send } from 'lucide-react';
 import { cn } from '@/lib / utils';
 import { use_translation } from 'react - i18next';
@@ -393,8 +430,11 @@ const get_steps = (t: any, ) =>: any [;
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react';
 export /**;
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -465,6 +505,7 @@ const stats = [ ";
       opacity: 1,      scale: 1
       transition: {
 
+<<<<<<< HEAD
 const getSteps = (t: any,) => [
 
 <<<<<<< HEAD
@@ -475,6 +516,12 @@ const getSteps = (t: any,) => [
 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+const getSteps = (t: any,) => [
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',
 import { GradientHeading } from "./GradientHeading",
 import { Check, Handshake, Search, Send } from 'lucide-react'
@@ -487,6 +534,7 @@ interface HowItWorksSectionProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const getSteps = (t: any) => [
   {
 =======
@@ -498,6 +546,14 @@ const getSteps = (t: any) => [
   {
 
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+
+const getSteps = (t: any) => [
+
+
+  {
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: t('how_it_works.post'),
     description: t('how_it_works.post_desc'),
     icon: Send},
@@ -512,6 +568,7 @@ const getSteps = (t: any) => [
   {
     title: t('how_it_works.done'),
     description: t('how_it_works.done_desc'),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     icon: Check}],
@@ -854,14 +911,49 @@ function HowItWorksSection() {
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 
   return (
+=======
+
+=======
+}
+
+const getSteps = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+<<<<<<< HEAD
+    <section className="py-16 px-4 bg-white">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">How We Work</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Our proven process ensures successful project delivery and maximum value for your investment.
+          </p>
+        </div>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <section className={cn('py-20 bg-zion-blue', className)} style={style}>
       <div className='container mx-auto px-4'>
         <div className='text-center mb-16'>
           <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
 
+<<<<<<< HEAD
+=======
+=======
+          <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
+            {t('home.how_it_works_subtitle')}
+          </p>
+        </div>
+
+<div className='relative'>
+          {/* Timeline line */}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
@@ -877,9 +969,12 @@ function HowItWorksSection() {
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="relative max-w-4xl mx-auto">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf89
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -1120,6 +1215,10 @@ function HowItWorksSection() {
                       </h3>;
                       <p className='text - zion - slate - light'>;
                         {step.description}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                 </div>;
                 <div className='relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0'>;
@@ -1136,6 +1235,7 @@ function HowItWorksSection() {
                         {step && step.description}
                       </p>                    </div>                    </div>;
 
+<<<<<<< HEAD
 =======
 
   return (
@@ -1143,11 +1243,17 @@ function HowItWorksSection() {
 
         <div className="relative">
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+        <div className="relative">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {/* Timeline line */}
           <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>
           
           <div className="space-y-12 md:space-y-0">
             {steps.map((step, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div 
                 key={step.title}
@@ -1251,9 +1357,59 @@ export default HowItWorksSection;
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 =======
+=======
+              <div key={index} className="relative">
+                <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                  <div className="relative mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white font-bold text-xl">{step.number}</span>
+                    </div>
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto shadow-md">
+                      {step.icon}
+=======
+                      </p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4 text-gray-900">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+
+        {/* CTA Section */}
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
+            <p className="text-xl mb-6 opacity-90">
+              Join thousands of businesses that trust our platform for their technology needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Start Your Project
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
+<<<<<<< HEAD
 };
 
+<<<<<<< HEAD
 export default HowItWorksSection;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -1265,3 +1421,103 @@ export default HowItWorksSection;
 
 export default HowItWorksSection;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+<<<<<<< HEAD
+export default HowItWorksSection;
+=======
+              <div 
+                key={step.title}
+                className={`flex flex-col md:flex-row items-center ${
+                  index % 2 === 0 ? "md: flex-row-reverse" : "",
+                } relative`}
+              >
+                <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
+                  {index % 2 === 0 ? (
+                    <div>
+                      <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
+                      <p className="text-zion-slate-light">{step.description}</p>
+                    </div>
+                  ) : null}
+                </div>;
+                      <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
+                      <p className="text-zion-slate-light">{step && step.description}</p>;
+                    </div>;
+                  ) : null}
+
+
+                  ) : null}
+                </div>;
+              </div>;
+            ))}
+
+          </div>;
+        </div>;
+      </div>;
+    </section>;
+  );
+};
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default HowItWorksSection;
+=======
+<<<<<<< HEAD
+export default HowItWorksSection;
+=======
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+export default Component;
+
+}
+}
+}
+
+  );
+}
+
+                      </p>                    </div>                    </div>) : null}
+                </div>;
+                      <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;
+                      <p className="text - zion - slate - light">{step.description}</p>;
+                    </div>) : null}
+                </div>;
+                <div className="relative z - 10 flex items - center justify - center w - 12 h - 12 rounded - full bg - zion - blue - light border - 2 border - zion - purple mx - 4 md:mx - 0">;
+                  <step.icon className="w - 6 h - 6 text - zion - cyan" />;
+                </div>;
+                <div className="md:w - 1/2 md:px - 12 text - center md:text - left">;
+                  {index % 2 !== 0 ? (
+                    <div>;
+                      <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;
+                      <p className="text - zion - slate - light">{step.description}</p>;
+                    </div>) : null}
+                </div>;
+              </div>))}
+          </div>;
+        </div>;
+      </div>;
+    </section>);
+}
+}
+}
+;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export default HowItWorksSection;
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

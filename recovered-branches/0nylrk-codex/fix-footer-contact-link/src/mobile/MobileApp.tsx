@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -23,6 +24,8 @@ import { MobileMessages } from "./pages/MobileMessages";
 import { MobileResumeBuilder } from "./pages/MobileResumeBuilder";
 import { MobileJobPost } from "./pages/MobileJobPost";
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Routes, Route, Navigate } from "react-router-dom",
 import { MobileThemeProvider } from "./theme/MobileThemeProvider",
@@ -32,6 +35,7 @@ import { MobileBrowse } from "./pages/MobileBrowse",
 import { MobileProjects } from "./pages/MobileProjects",
 import { MobileMessages } from "./pages/MobileMessages",
 import { MobileResumeBuilder } from "./pages/MobileResumeBuilder",import { MobileJobPost } from "./pages/MobileJobPost";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useAuth } from "@/hooks/useAuth";
 export function MobileApp() {
@@ -58,6 +62,12 @@ export function MobileApp() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { useAuth } from "@/hooks/useAuth";
+export function MobileApp() {
+  const { isAuthenticated } = useAuth();
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <MobileThemeProvider>
       <Routes>
@@ -79,6 +89,7 @@ export function MobileApp() {
     </MobileThemeProvider>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 }
@@ -89,6 +100,8 @@ export function MobileApp() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -104,6 +117,7 @@ import {MobileResumeBuilder} from "./pages/MobileResumeBuilder";
 import {MobileJobPost} from "./pages/MobileJobPost";
 import {useAuth} from "@/hooks/useAuth";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -189,6 +203,8 @@ export function MobileApp() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import { Routes, Route, Navigate } from "react-router-dom",;
 import { MobileThemeProvider } from "./theme/MobileThemeProvider",;
@@ -226,6 +242,7 @@ export function MobileApp() {;
         <Route path="/browse" element={<MobileBrowse />} />;
         <Route path="/projects" element={<MobileProjects />} />;
         <Route path="/inbox" element={<MobileMessages />} />;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Route path="/resume" element={<MobileResumeBuilder />} />;
 <<<<<<< HEAD
@@ -277,3 +294,6 @@ export function MobileApp() {;
 =======
         <Route path="/resume" element={<MobileResumeBuilder />} />;=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        <Route path="/resume" element={<MobileResumeBuilder />} />;=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

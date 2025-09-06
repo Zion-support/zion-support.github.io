@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React from "react";
@@ -96,11 +97,21 @@ export function QuickAccess() {
     }
     },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      description: "Find the perfect match for your project needs",
+      icon: <Search className="h-6 w-6 text-zion-cyan" />,
+      link: "/match"
+};
+      link: "/match"
+    }
+    },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       title: "Talent Directory"
       description: "Browse verified tech specialists"
       icon: <Users className="h-6 w-6 text-zion-purple" />
       link: "/talent"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -151,10 +162,15 @@ export function QuickAccess() {
 
     },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       title: "Equipment Catalog"
       description: "Find specialized hardware"
       icon: <Settings className="h-6 w-6 text-zion-purple" />
+<<<<<<< HEAD
 <<<<<<< HEAD
       link: "/equipment"
 <<<<<<< HEAD
@@ -353,6 +369,9 @@ import React from './react';
 =======
       link: "/equipment"import React from './react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      link: "/equipment"import React from './react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Link } from './react-router-dom';
 import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from './lucide-react';
 ;
@@ -525,6 +544,7 @@ export function QuickAccess() {;
               className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-4 transition-all duration-300 flex flex-col items-center text-center">;
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">;
@@ -539,6 +559,8 @@ export function QuickAccess() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {link.icon}
               </div>
               <h3 className="text-white font-medium mb-1">{link.title}</h3>
@@ -551,6 +573,7 @@ export function QuickAccess() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
@@ -578,11 +601,16 @@ export function QuickAccess() {;
         <div className="text - center mb - 8">;
           <h2 className="text - 2xl font - bold bg - gradient - to - r from - zion - cyan via - zion - purple - light to - zion - purple bg - clip - text text - transparent mb - 2">;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <section className="py - 12 bg - zion - blue-dark">;
       <div className="container mx - auto px-4">;
         <div className="text - center mb-8">;
           <h2 className="text - 2xl font - bold bg - gradient - to - r from - zion - cyan via - zion - purple - light to - zion - purple bg - clip - text text - transparent mb-2">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             Quick Access;
           </h2>;
           <p className="text - zion - slate - light text-lg">;
@@ -610,6 +638,7 @@ export function QuickAccess() {;
       </div>;
     </section>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -661,3 +690,5 @@ Smartphone const quickLinks = [ {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

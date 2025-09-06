@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface InvestmentPortfolio {
 export interface InvestmentPortfolio {;
   id: string;
@@ -17,6 +20,7 @@ export interface InvestmentPortfolio {;
   name: string;
   totalValue: number;
   currency: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -32,6 +36,8 @@ export interface InvestmentPortfolio {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   assets: PortfolioAsset[];
   last_rebalanced: Date;
   performance: PortfolioPerformance;
@@ -46,6 +52,7 @@ export interface PortfolioAsset {
 
 export interface PortfolioAsset {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -56,10 +63,13 @@ export interface PortfolioAsset {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   symbol: string;
   name: string;
   type: 'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity';
+<<<<<<< HEAD
 <<<<<<< HEAD
   quantity: number;
 <<<<<<< HEAD
@@ -151,6 +161,10 @@ export interface InvestmentRecommendation {
   quantity: number;  id: string;
   user_id: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  quantity: number;  id: string;
+  user_id: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   currentPrice: number;
 
   marketValue: number
@@ -192,6 +206,7 @@ export interface InvestmentRecommendation {;
   userId: string;
   asset: {
     symbol: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
     name: string;
 <<<<<<< HEAD
@@ -473,6 +488,9 @@ export interface FinancialPlan {
 =======
     name: string;  insurance: {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    name: string;  insurance: {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     life: boolean;
     health: boolean;
     disability: boolean;
@@ -514,6 +532,10 @@ export interface FinancialPlan {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  userId: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   userId: string;
 =======
@@ -535,6 +557,7 @@ export interface FinancialPlan {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 export interface FinancialResponse {
@@ -552,10 +575,14 @@ export interface FinancialResponse {;
 
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
   parameters: Record<string, any>;
 
   preferences?: Record<string, any>
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -622,6 +649,9 @@ export class AIFinancialAdvisorService {
 =======
 }  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async analyzePortfolio(portfolioId: string): Promise<InvestmentPortfolio> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {
@@ -752,6 +782,7 @@ export class AIFinancialAdvisorService {
       throw error
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{
 <<<<<<< HEAD
@@ -924,6 +955,9 @@ if ( {) {
 =======
   async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{    } catch (error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{    } catch (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       console && console.error('Error getting tax optimization strategies:', error);
       throw error
     }
@@ -951,6 +985,7 @@ if ( {) {
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY |'demo-key');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
@@ -968,6 +1003,8 @@ export interface InvestmentPortfolio {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string,;
   userId: string,;
   name: string,;
@@ -980,6 +1017,7 @@ export interface InvestmentPortfolio {;
   lastRebalanced: Date,;
   performance: PortfolioPerformance,;
   createdAt: Date,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   updatedAt: Date;
 <<<<<<< HEAD
@@ -1623,3 +1661,6 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.e
 =======
   updatedAt: Date;export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  updatedAt: Date;export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

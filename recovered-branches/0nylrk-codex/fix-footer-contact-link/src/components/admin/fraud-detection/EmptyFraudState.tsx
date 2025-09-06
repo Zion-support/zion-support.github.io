@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from './react';
 import { Button  } from '@/components / ui / button';
@@ -20,6 +23,7 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   onResetFilters
 import { Button } from "@/components/ui/button",
 import { ShieldAlert } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -54,10 +58,13 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     </div>;
 );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -81,6 +88,9 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
 =======
 =======        <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======        <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { ShieldAlert } from "lucide-react",;
@@ -97,6 +107,7 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
   onResetFilters,;
 }) => {;
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -135,6 +146,8 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
   )
 };

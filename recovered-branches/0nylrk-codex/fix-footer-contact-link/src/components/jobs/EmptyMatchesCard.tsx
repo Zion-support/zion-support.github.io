@@ -1,13 +1,17 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Card } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Sparkles, RefreshCcw } from "lucide-react",
 
 export interface EmptyMatchesCardProps {
   onRefresh: () => void,
+<<<<<<< HEAD
   isProcessing: boolean
 =======
 }
@@ -32,17 +36,23 @@ export interface EmptyMatchesCardProps {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Card } from "@/components/ui/card",
+=======
+  isProcessing: booleanimport { Card } from "@/components/ui/card",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button",
 import { Sparkles, RefreshCcw } from "lucide-react",
 
 export interface EmptyMatchesCardProps {
   onRefresh: () => void,
+<<<<<<< HEAD
   isProcessing: booleanimport { Card } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Sparkles, RefreshCcw } from "lucide-react",
 
 export interface EmptyMatchesCardProps {
   onRefresh: () => void,
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   isProcessing: boolean
 
 export interface EmptyMatchesCardProps {;
@@ -99,6 +109,7 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -119,6 +130,8 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
 import { Card } from "@/components/ui/card",;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button",;
 import { Sparkles, RefreshCcw } from "lucide-react",;
 export interface EmptyMatchesCardProps {;
@@ -131,6 +144,7 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -140,6 +154,9 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
 =======
   return (  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { Card } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -152,6 +169,7 @@ export interface EmptyMatchesCardProps {;
 ;
 export function EmptyMatchesCard({ onRefresh, isProcessing } EmptyMatchesCardProps) {;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -181,6 +199,8 @@ export function EmptyMatchesCard({ onRefresh, isProcessing } EmptyMatchesCardPro
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {isProcessing ? (;
           <>;
             <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />;
@@ -233,6 +253,7 @@ function EmptyMatchesCard() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -240,6 +261,8 @@ function EmptyMatchesCard() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
 }
@@ -261,6 +284,7 @@ isProcessing: boolean
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -268,3 +292,5 @@ isProcessing: boolean
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

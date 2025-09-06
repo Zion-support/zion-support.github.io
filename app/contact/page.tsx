@@ -11,6 +11,7 @@ export const metadata = {
 export const metadata = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   title: 'Contact | Zion Tech Group',
   description: 'Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.',
@@ -24,6 +25,11 @@ export const metadata = {
   description: "Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.",
   keywords: "contact, support, AI services, micro SaaS, IT services, consulting"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  title: 'Contact | Zion Tech Group',
+  description: 'Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.',
+  keywords: 'contact, support, AI services, micro SaaS, IT services, consulting'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
 export default function ContactPage() {
@@ -212,6 +218,7 @@ export default function ContactPage() {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -240,3 +247,6 @@ export const metadata = { title: 'Contact | Zion Tech Group',description: 'Get i
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

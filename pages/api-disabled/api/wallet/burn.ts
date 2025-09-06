@@ -2,6 +2,7 @@
 <<<<<<< HEAD:pages/api/wallet/burn.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD:pages/api-disabled/api/wallet/burn.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { burnTokens, burnForFeature } from "../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -10,6 +11,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { burnTokens, burnForFeature } from "../../../utils/token/service",;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/wallet/burn.ts
 
 
   try {
@@ -30,6 +33,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const tx = feature
       ? burnForFeature(userId, feature, metadata)
       : burnTokens(userId, Math.floor(amount), reason || "burn", metadata),
+=======
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+  const { userId, amount, reason, feature, metadata } = req.body || {},
+  if (!userId) return res.status(400).json({ error: "userId required" });
+  try {
+    const tx = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ tx })
   } catch (err: any) {
     return res.status(400).json({ error: err.message })

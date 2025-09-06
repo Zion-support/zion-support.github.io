@@ -1,5 +1,27 @@
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+
+import { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs";
+import path from "path";
+const configPath = path.join(process.cwd(), "data", "dao", "config.json");
+const cachePath = path.join(process.cwd(), "data", "dao", "metrics.json");
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const configPath = null;
+    return res.status(200).json(result)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+async function fetchJson(url: string) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/dao/metrics.ts
 =======
 
 ;
@@ -94,8 +116,12 @@ function writeJson(p: string, v: any) {
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
   return resp.json();
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api/dao/metrics.ts
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/dao/metrics.ts
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -186,11 +212,24 @@ function readJson(p: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
 }
 function writeJson(p: string, v: any) {;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+
+function readJson(p: string) {
+  return JSON.parse(fs.readFileSync(p, 'utf-8'));
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+}
+
+function writeJson(p: string, v: any) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/dao/metrics.ts
   fs.writeFileSync(p, JSON.stringify(v, null, 2));
   } catch (error) {;
     console.error("Error:", error);
@@ -198,6 +237,7 @@ function writeJson(p: string, v: any) {;
   }
 }
 
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api/dao/metrics.ts
 <<<<<<< HEAD
@@ -223,14 +263,23 @@ function writeJson(p: string, v: any) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/dao/metrics.ts
+=======
 
 
 
 
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/dao/metrics.ts
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/dao/metrics.ts
 export default async function handler(
   _req: NextApiRequest;
   res: NextApiResponse
@@ -355,6 +404,7 @@ export default async function handler(req, res) {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
       return res.status(200).json({ ...cache, cached: true });
@@ -371,6 +421,7 @@ export default async function handler(req, res) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api/dao/metrics.ts
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -379,13 +430,30 @@ export default async function handler(req, res) {;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
+return res.status(200).json({ ...cache, cached: true });
+    }
+    const apiKey = process.env.ETHERSCAN_API_KEY |"";
+    const tokenAddr = cfg.token.address;
+
+// Top holders (using Etherscan token holder endpoint alternative: token supply holders is limited; use rich list approximation via token transactions + unique addresses)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/dao/metrics.ts
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
 =======
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/dao/metrics.ts
     const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ""}`;
     const transfersJson = await fetchJson(transfersUrl);
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 ;
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/dao/metrics.ts
     const txs = transfersJson?.result || [];
 ;
     const holderToDelta: Record<string, bigint> = {};
@@ -398,13 +466,34 @@ export default async function handler(req, res) {;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 =======
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    const txs = transfersJson?.result || [];
+
+    const holderToDelta: Record<string, bigint> = {};
+
+
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/dao/metrics.ts
     const entries = Object && Object.entries(holderToDelta)
+=======
+    const entries = Object.entries(holderToDelta)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       .map(([address, delta]) => ({ address, netDelta: delta }))
       .sort((a, b) => (b && b.netDelta > a && a.netDelta ? 1 : -1))
       .slice(0, 10);
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/dao/metrics.ts
     const total = entries && entries.reduce(
       (acc, e) => acc + (BigInt(e && e.amount) > 0n ? BigInt(e && e.amount) : 0n)
       0n
@@ -433,6 +522,29 @@ export default async function handler(req, res) {;
     // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
         .flatMap((t: any) => [t && t.from?.toLowerCase(), t && t.to?.toLowerCase()])
+=======
+
+const topHolders = entries.map(e => ({
+      address: e.address,
+      amount: e.netDelta.toString(),
+    }));
+    // Token distribution buckets (very rough: based on netDelta approximation)
+    const total = entries.reduce(
+      (acc, e) => acc + (BigInt(e.amount) > 0n ? BigInt(e.amount) : 0n)
+      0n
+    );
+    const distribution = entries.map(e => ({
+      address: e.address,
+      percent:
+        total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0,
+    }));
+    // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
+    const activeProposals: any[] = [];
+// Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
+    const uniqueAddresses = new Set(
+      txs
+        .flatMap((t: any) => [t.from?.toLowerCase(), t.to?.toLowerCase()])
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         .filter(Boolean)
     );
     const participationRate = uniqueAddresses && uniqueAddresses.size
@@ -457,6 +569,12 @@ export default async function handler(req, res) {;
     }
     writeJson(cachePath, result);
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
+<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/dao/metrics.ts
 import { NextApiRequest, NextApiResponse  } from './next';
 import fs from './fs';
 import path from './path';
@@ -564,6 +682,9 @@ if ( {) {
     }
     write_json (cache_path, result);
     return res.status (200).json (result);
+=======
+    return res.status(200).json(result);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
   }

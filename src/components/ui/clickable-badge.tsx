@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,6 +28,10 @@ import React from "react"
 import { cn } from "@/lib/utils"
 import { badgeVariants } from "@/components/ui/badge-variants"
 
+=======
+import { cn } from "@/lib/utils";
+import { badgeVariants } from "@/components/ui/badge-variants";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   onRemove?: () => void;
   variant?: "default" | "secondary" | "destructive" | "outline";
@@ -103,6 +112,7 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       )}
+<<<<<<< HEAD
       {...props}
     >;
       <span>{children}</span>;
@@ -112,6 +122,16 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
           onClick={(e) => {;
             e.stopPropagation();
             onRemove();
+=======
+
+    </div>
+  )
+<<<<<<< HEAD
+  )
+}
+            e.stopPropagation()
+            onRemove()
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }}
 
 <<<<<<< HEAD
@@ -204,5 +224,10 @@ function ClickableBadge() {
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

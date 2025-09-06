@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -14,6 +15,58 @@ import { innovativeITServices2033 } from '../data/2033-innovative-it-services';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+  Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Crown, Gem, Infinity, Brain, Atom, Microscope, Phone, Mail, MapPin
+} from 'lucide-react'
+=======
+  Check,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Target,
+  Building,
+  Rocket,
+  Award,
+  DollarSign,
+  ChartBar,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Code,
+  BookOpen,
+  Activity,
+  Crown,
+  Gem,
+  Infinity,
+  Brain,
+  Atom,
+  Microscope,
+  Phone,
+  Mail,
+  MapPin,;
+} from 'lucide-react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations';
+import { innovativeITServices2033 } from '../data/2033-innovative-it-services';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
@@ -22,6 +75,7 @@ import {
 } from 'lucide-react',;
 import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations',;
 import { innovativeITServices2033 } from '../data/2033-innovative-it-services',;
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -32,6 +86,10 @@ import { innovativeITServices2033 } from '../data/2033-innovative-it-services',;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const contactInfo = {
+=======
+const contactInfo = {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -42,12 +100,30 @@ const contactInfo = {
 export default function Pricing2033Page() {
 
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+<<<<<<< HEAD
+=======
+=======
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+website: 'https://ziontechgroup.com',
+};
+
+export default function Pricing2033Page() {
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
+    'monthly'
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 
   // Enhanced service categories with pricing
   const serviceCategories = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react',
 import Head from 'next / head',
 import { motion } from 'framer-motion',
@@ -74,14 +150,106 @@ function Pricing2033Page() {
     {
 <<<<<<< HEAD
   ]
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       name: 'Revolutionary AI Services',
       description: 'AI consciousness evolution and emotional intelligence',
       services: ['AI Consciousness EvolutionAI Emotional IntelligenceAI Creativity OrchestratorAI Autonomous Business Manager'],
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+      name: 'Revolutionary AI Services',
+      description: 'AI consciousness evolution and emotional intelligence',
+services: [
+        'AI Consciousness Evolution',
+        'AI Emotional Intelligence',
+        'AI Creativity Orchestrator',
+        'AI Autonomous Business Manager',
+      ],
+      avgPrice: '$11,499/month',
+      savings: 'Save 60-80% vs. competitors',
+      icon: Brain,
+      color: 'from-violet-500 to-purple-500',
+    },
+    {
+      name: 'Quantum & Emerging Tech',
+      description: 'Quantum computing and DNA-based solutions',
+      services: [
+        'Quantum DNA Computing',
+        'Quantum Internet Security',
+        'Quantum Financial Trading',
+        'Quantum Creativity Studio',
+      ],
+      avgPrice: '$19,999/month',
+      savings: 'Save 70-85% vs. competitors',
+      icon: Atom,
+      color: 'from-indigo-500 to-blue-500',
+    },
+    {
+      name: 'Enterprise IT Solutions',
+      description: 'Autonomous operations and zero-trust security',
+      services: [
+        'Autonomous DevOps',
+        'Zero Trust Architecture',
+        'Edge Computing Orchestration',
+        'AI IT Operations Center',
+      ],
+      avgPrice: '$649/month',
+      savings: 'Save 50-70% vs. competitors',
+      icon: Cpu,
+      color: 'from-blue-500 to-cyan-500',
+    },
+    {
+      name: 'Space & Metaverse Tech',
+      description: 'Space mining and metaverse development',
+      services: [
+        'Space Mining Automation',
+        'Metaverse AI Development',
+        'AI Health Analytics',
+        'Holographic Events',
+      ],
+      avgPrice: '$14,999/month',
+      savings: 'Save 65-80% vs. competitors',
+      icon: Rocket,
+      color: 'from-teal-500 to-emerald-500',
+    },
+    {
+      name: 'Innovative Micro SAAS',
+      description: 'Cutting-edge solutions for every business',
+      services: [
+        'AI Business Intelligence',
+        'Quantum-Secure Communication',
+        'AI Customer Success',
+        'Blockchain Supply Chain',
+      ],
+      avgPrice: '$374/month',
+      savings: 'Save 40-60% vs. competitors',
+      icon: Target,
+      color: 'from-green-500 to-yellow-500',
+    },
+    {
+      name: 'Research & Development',
+      description: 'Breakthrough technologies and innovations',
+      services: [
+        'Neuromorphic Computing',
+        'Photonic Computing',
+        'Swarm Robotics',
+        'Biotech Automation',
+      ],
+      avgPrice: '$1,099/month',
+      savings: 'Save 55-75% vs. competitors',
+      icon: Microscope,
+      color: 'from-orange-500 to-red-500',
+    },
+  ];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
@@ -93,20 +261,42 @@ function Pricing2033Page() {
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         'API Access (1000 calls/month)Community Support'
       ]
       popular: false
       color: 'from-gray-500 to-gray-600'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
     };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+'Access to 100+ Core Services',
+        'Basic AI Integration',
+        'Standard Support (24/7)',
+        '30-Day Free Trial',
+        'Basic Analytics Dashboard',
+        'Email Support',
+        '99.5% Uptime Guarantee',
+        'Basic Security Features',
+        'API Access (1000 calls/month)',
+        'Community Support',
+      ],
+      popular: false,
+      color: 'from-gray-500 to-gray-600',
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       name: 'Professional'
       description: 'Ideal for growing businesses and teams'
@@ -115,20 +305,44 @@ function Pricing2033Page() {
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         'API Access (10,000 calls/month)Dedicated Account ManagerCustom IntegrationsAdvanced Reporting'
       ]
       popular: true
       color: 'from-purple-500 to-cyan-500'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
     };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+'Access to 200+ Advanced Services',
+        'Advanced AI Integration',
+        'Priority Support (24/7)',
+        '60-Day Free Trial',
+        'Advanced Analytics Dashboard',
+        'Phone & Email Support',
+        '99.9% Uptime Guarantee',
+        'Advanced Security Features',
+        'API Access (10,000 calls/month)',
+        'Dedicated Account Manager',
+        'Custom Integrations',
+        'Advanced Reporting',
+      ],
+      popular: true,
+      color: 'from-purple-500 to-cyan-500',
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       name: 'Enterprise'
       description: 'For large organizations and enterprises'
@@ -137,15 +351,19 @@ function Pricing2033Page() {
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         'Unlimited API AccessDedicated Success ManagerCustom DevelopmentAdvanced ComplianceWhite-label SolutionsSLA Guarantees'
       ]
       popular: false
       color: 'from-blue-500 to-indigo-500'
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -170,6 +388,75 @@ function Pricing2033Page() {
       savings: 'Save 80% vs. competitors'
     }
     {
+=======
+      savings: 'Save 70% vs. competitors'
+    }
+=======
+'Access to All 500+ Services',
+        'Full AI & Quantum Integration',
+        'Premium Support (24/7)',
+        '90-Day Free Trial',
+        'Enterprise Analytics Suite',
+        'Dedicated Support Users',
+        '99.99% Uptime Guarantee',
+        'Enterprise Security Features',
+        'Unlimited API Access',
+        'Dedicated Success Manager',
+        'Custom Development',
+        'Advanced Compliance',
+        'White-label Solutions',
+        'SLA Guarantees',
+      ],
+      popular: false,
+      color: 'from-blue-500 to-indigo-500',
+    },
+  ];
+
+  // Popular services with pricing
+  const popularServices = [
+    {
+      name: 'AI Consciousness Evolution Platform',
+      price: '$24,999/month',
+description:
+        'Develop genuine AI consciousness through advanced neural architecture',
+      category: 'AI & Consciousness',
+      features: [
+        'Multi-dimensional consciousness mapping',
+        'Emotional intelligence evolution',
+        'Self-awareness development',
+      ],
+      savings: 'Save 70% vs. competitors',
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    {
+      name: 'Quantum DNA Computing Platform',
+      price: '$35,999/month',
+      description:
+        'Breakthrough platform combining quantum computing with DNA-based computation',
+      category: 'Quantum & Biotech',
+      features: [
+        'DNA-based quantum algorithms',
+        'Biological quantum entanglement',
+        'DNA memory systems',
+      ],
+      savings: 'Save 75% vs. competitors',
+    },
+    {
+      name: 'Space Mining Automation Platform',
+      price: '$45,999/month',
+      description:
+        'Revolutionary platform for automated asteroid mining and resource extraction',
+      category: 'Space Technology',
+      features: [
+        'Asteroid identification and mapping',
+        'Automated mining operations',
+        'Resource extraction algorithms',
+      ],
+      savings: 'Save 80% vs. competitors',
+    },
+    {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       name: 'AI Business Intelligence Suite'
       price: '$299/month'
       description: 'Comprehensive business intelligence platform powered by artificial intelligence'
@@ -177,6 +464,7 @@ function Pricing2033Page() {
       features: ['AI-powered analyticsPredictive insightsAutomated reporting']
       savings: 'Save 50% vs. competitors'
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   ],
@@ -197,6 +485,8 @@ function Pricing2033Page() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -361,6 +651,7 @@ export default function Pricing2033Page(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   ],
@@ -377,6 +668,85 @@ export default function Pricing2033Page(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  ],
+=======
+      name: 'AI Business Intelligence Suite',
+      price: '$299/month',
+      description:
+        'Comprehensive business intelligence platform powered by artificial intelligence',
+      category: 'Micro SAAS',
+      features: [
+        'AI-powered analytics',
+        'Predictive insights',
+        'Automated reporting',
+      ],
+      savings: 'Save 50% vs. competitors',
+    },
+  ];
+
+  return (
+    <>
+      <Head>
+<title>
+          2033 Revolutionary Technology Pricing | Zion Tech Group - AI
+          Consciousness, Quantum DNA Computing, Space Mining
+        </title>
+        <meta
+          name='description'
+          content="Discover competitive pricing for Zion Tech Group's revolutionary 2033 technology solutions. From AI consciousness evolution to quantum DNA computing and space mining automation."
+        />
+        <meta
+          name='keywords'
+          content='AI consciousness pricing, quantum DNA computing cost, space mining automation price, neuromorphic computing pricing, photonic computing cost, swarm robotics pricing'
+        />
+        <meta name='author' content='Zion Tech Group' />
+        <meta name='robots' content='index, follow' />
+        <meta
+          property='og:title'
+          content='2033 Revolutionary Technology Pricing | Zion Tech Group'
+        />
+        <meta
+          property='og:description'
+          content='Competitive pricing for revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions.'
+        />
+        <meta property='og:type' content='website' />
+        <meta
+          property='og:url'
+          content='https://ziontechgroup.com/pricing-2033'
+        />
+        <meta
+          property='og:image'
+          content='https://ziontechgroup.com/og-image.svg'
+        />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta
+          name='twitter:title'
+          content='2033 Revolutionary Technology Pricing | Zion Tech Group'
+        />
+        <meta
+          name='twitter:description'
+          content='Competitive pricing for revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions.'
+        />
+        <link rel='canonical' href='https://ziontechgroup.com/pricing-2033' />
+      </Head>
+
+      <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white'>
+        {/* Header */}
+        <div className='relative overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5'></div>
+          <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
+            <div className='text-center'>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className='mb-6'
+              >
+                <div className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium'>
+                  <Crown className='w-4 h-4' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <Head>
@@ -397,6 +767,7 @@ export default function Pricing2033Page(req, res) {
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -416,11 +787,14 @@ export default function Pricing2033Page(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="text-center">
               <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -446,6 +820,8 @@ export default function Pricing2033Page(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 transition={{ duration: 0.6 }} className="mb-6">
                 <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium">
                   <Crown className="w-4 h-4" />
@@ -453,6 +829,7 @@ export default function Pricing2033Page(req, res) {
                 </div>
               </motion.div>
               <motion.h1
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -507,6 +884,25 @@ export default function Pricing2033Page(req, res) {
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+                transition={{ duration: 0.6, delay: 0.1 }} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+=======
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+transition={{ duration: 0.6, delay: 0.1 }}
+                className='text-4xl md:text-5xl lg:text-6xl font-bold mb-6'
+              >
+                <span className='bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                  Revolutionary Technology
+                </span>
+                <br />
+                <span className='text-white'>Pricing</span>
+              </motion.h1>
+              <motion.p
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 transition={{ duration: 0.6, delay: 0.2 }} className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
                 Experience the future of technology with our revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions at competitive prices.
               </motion.p>
@@ -526,6 +922,7 @@ export default function Pricing2033Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -766,10 +1163,51 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Pricing Tiers */  } catch (error) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                transition={{ duration: 0.6, delay: 0.3 }} className="flex items-center justify-center space-x-4 mb-8">
+                <span className={`text-sm ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
+=======
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+transition={{ duration: 0.6, delay: 0.2 }}
+                className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8'
+              >
+                Experience the future of technology with our revolutionary AI
+                consciousness, quantum DNA computing, and space mining
+                automation solutions at competitive prices.
+              </motion.p>
+              {/* Billing Toggle */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+transition={{ duration: 0.6, delay: 0.3 }}
+                className='flex items-center justify-center space-x-4 mb-8'
+              >
+                <span
+                  className={`text-sm ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}
+                >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                  Monthly
+                </span>
+                <button
+                  onClick={() =>
+                    setBillingCycle(
+                      billingCycle === 'monthly' ? 'yearly' : 'monthly'
+                    )
+                  }
+                  className='relative w-16 h-8 bg-gray-700 rounded-full p-1 transition-colors duration-200'
+                >
+                  <div
+                    className={`w-6 h-6 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full transition-transform duration-200 ${
+<<<<<<< HEAD
+                      billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-0'
+        {/* Pricing Tiers */  } catch (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
                   />
                 </button>
@@ -795,12 +1233,15 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
                 <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -845,17 +1286,22 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <div className={`relative bg-gray-900/50 border border-purple-500/30 rounded-2xl p-8 h-full backdrop-blur-sm ${
                     tier.popular ? 'border-purple-500/50 shadow-2xl shadow-purple-500/25' : ''
                   }`}>
@@ -865,6 +1311,7 @@ price: billing_cycle === 'monthly' ? 999 : 799,
                       <div className="mb-4">
                         <span className="text-4xl font-bold text-white">${tier.price}</span>
                         <span className="text-gray-400">{tier.period}</span>
+<<<<<<< HEAD
                       </div>
                       {tier.savings && (
                         <div className="text-green-400 text-sm font-medium">{tier.savings}</div>
@@ -907,6 +1354,87 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+                      billingCycle === 'yearly'
+                        ? 'translate-x-8'
+                        : 'translate-x-0'
+                    }`}
+                  />
+                </button>
+                <span
+                  className={`text-sm ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}
+                >
+                  Yearly
+                  <span className='ml-2 px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full'>
+                    Save 20%
+                  </span>
+                </span>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+        {/* Pricing Tiers */}
+<div className='relative py-20'>
+          <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5'></div>
+          <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+              {pricingTiers.map((tier, index) => (
+                <motion.div
+                  key={tier.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+className={`relative ${tier.popular ? 'scale-105' : ''}`}
+                >
+                  {tier.popular && (
+                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+                      <div className='px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-full'>
+                        Most Popular
+                      </div>
+                    </div>
+                  )}
+
+<div
+                    className={`relative bg-gray-900/50 border border-purple-500/30 rounded-2xl p-8 h-full backdrop-blur-sm ${
+                      tier.popular
+                        ? 'border-purple-500/50 shadow-2xl shadow-purple-500/25'
+                        : ''
+                    }`}
+                  >
+                    <div className='text-center mb-8'>
+                      <h3 className='text-2xl font-bold text-white mb-2'>
+                        {tier.name}
+                      </h3>
+                      <p className='text-gray-400 mb-6'>{tier.description}</p>
+
+                      <div className='mb-4'>
+                        <span className='text-4xl font-bold text-white'>
+                          ${tier.price}
+                        </span>
+                        <span className='text-gray-400'>{tier.period}</span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                      </div>
+
+                      {tier.savings && (
+<<<<<<< HEAD
+                        <div className="text-green-400 text-sm font-medium">{tier.savings}</div>
+=======
+                        <div className='text-green-400 text-sm font-medium'>
+                          {tier.savings}
+                        </div>
+                      )}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                    </div>
+
+                    <ul className='space-y-4 mb-8'>
+                      {tier.features.map((feature, idx) => (
+                        <li key={idx} className='flex items-start space-x-3'>
+                          <Check className='w-5 h-5 text-green-400 flex-shrink-0 mt-0.5' />
+                          <span className='text-gray-300'>{feature}</span>
+                        </li>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -947,17 +1475,21 @@ price: billing_cycle === 'monthly' ? 999 : 799,
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+<<<<<<< HEAD
                 Service Category Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -974,6 +1506,46 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+                      ))}
+                    </ul>
+                    <button
+                      onClick={() => setSelectedPlan(tier.name)}
+                      className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 ${
+                        tier.popular
+                          ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:from-purple-700 hover:to-cyan-700 shadow-lg'
+                          : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-purple-500/30'
+                      }`}
+                    >
+                      Get Started
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* Service Categories Pricing */}
+<div className='relative py-20'>
+          <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5'></div>
+          <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center mb-16'>
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                Service Category Pricing
+              </h2>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Explore our comprehensive service categories with competitive
+                pricing and significant savings compared to market alternatives.
+              </p>
+            </div>
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+              {serviceCategories.map((category, index) => (
+                <motion.div
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   key={category.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -989,6 +1561,7 @@ price: billing_cycle === 'monthly' ? 999 : 799,
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1024,10 +1597,55 @@ price: billing_cycle === 'monthly' ? 999 : 799,
                       <li key={idx} className="flex items-center space-x-2">
                         <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-sm text-gray-300">{service}</span>
+=======
+                  transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>
+                      <category.icon className="w-6 h-6 text-white" />
+=======
+                  key={category.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className='bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300'
+                >
+                  <div className='flex items-center space-x-3 mb-4'>
+                    <div
+                      className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}
+                    >
+                      <category.icon className='w-6 h-6 text-white' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                    </div>
+                    <div>
+                      <h3 className='text-xl font-bold text-white'>
+                        {category.name}
+                      </h3>
+                      <p className='text-sm text-gray-400'>
+                        {category.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className='mb-6'>
+                    <div className='text-3xl font-bold text-purple-400 mb-2'>
+                      {category.avgPrice}
+                    </div>
+                    <div className='text-green-400 text-sm font-medium'>
+                      {category.savings}
+                    </div>
+                  </div>
+
+                  <ul className='space-y-2 mb-6'>
+                    {category.services.map((service, idx) => (
+                      <li key={idx} className='flex items-center space-x-2'>
+                        <Check className='w-4 h-4 text-green-400 flex-shrink-0' />
+                        <span className='text-sm text-gray-300'>{service}</span>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </li>
                     ))}
                   </ul>
                   <a
+<<<<<<< HEAD
                     href="/services" className="inline-flex items-center space-x-2 text-purple-400 hover:text-cyan-400 transition-colors duration-200 text-sm font-medium">
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4" />
@@ -1044,6 +1662,14 @@ price: billing_cycle === 'monthly' ? 999 : 799,
                   </Link>
                 </motion.div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+href='/services'
+                    className='inline-flex items-center space-x-2 text-purple-400 hover:text-cyan-400 transition-colors duration-200 text-sm font-medium'
+                  >
+                    <span>Learn More</span>
+<<<<<<< HEAD
+                    <ArrowRight className="w-4 h-4" />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1058,17 +1684,21 @@ price: billing_cycle === 'monthly' ? 999 : 799,
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+<<<<<<< HEAD
                 Popular Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1089,6 +1719,35 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+                    <ArrowRight className='w-4 h-4' />
+                  </a>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* Popular Services */}
+<div className='relative py-20'>
+          <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5'></div>
+          <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center mb-16'>
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                Popular Services
+              </h2>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Our most requested revolutionary technology solutions with
+                competitive pricing and exceptional value.
+              </p>
+            </div>
+
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+              {popularServices.map((service, index) => (
+                <motion.div
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   key={service.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1105,18 +1764,22 @@ price: billing_cycle === 'monthly' ? 999 : 799,
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <p className="text-gray-400 text-sm mb-3">{service.description}</p>
                       <div className="inline-flex items-center px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1244,11 +1907,32 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+                  key={service.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className='bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300'
+                >
+                  <div className='flex items-start justify-between mb-4'>
+                    <div className='flex-1'>
+                      <h3 className='text-xl font-bold text-white mb-2'>
+                        {service.name}
+                      </h3>
+                      <p className='text-gray-400 text-sm mb-3'>
+                        {service.description}
+                      </p>
+                      <div className='inline-flex items-center px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                        {service.category}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         {service.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1286,10 +1970,45 @@ price: billing_cycle === 'monthly' ? 999 : 799,
                     </a>
                     <a
                       href={`tel:${contactInfo.mobile}`} className="px-4 py-2 bg-gray-800/50 border border-purple-500/30 text-purple-300 text-sm font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200">
+=======
+                      </div>
+                    </div>
+                    <div className='text-right ml-4'>
+                      <div className='text-2xl font-bold text-purple-400'>
+                        {service.price}
+                      </div>
+                      <div className='text-green-400 text-xs'>
+                        {service.savings}
+                      </div>
+                    </div>
+                  </div>
+
+                  <ul className='space-y-2 mb-6'>
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className='flex items-center space-x-2'>
+                        <Check className='w-4 h-4 text-green-400 flex-shrink-0' />
+                        <span className='text-sm text-gray-300'>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+<div className='flex space-x-3'>
+                    <a
+                      href='/contact'
+                      className='flex-1 px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 text-center'
+                    >
+                      Get Quote
+                    </a>
+                    <a
+                      href={`tel:${contactInfo.mobile}`}
+                      className='px-4 py-2 bg-gray-800/50 border border-purple-500/30 text-purple-300 text-sm font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200'
+                    >
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       Call Now
                     </a>
                   </div>
                 </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1301,6 +2020,8 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1315,12 +2036,15 @@ price: billing_cycle === 'monthly' ? 999 : 799,
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1330,13 +2054,17 @@ price: billing_cycle === 'monthly' ? 999 : 799,
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Join the future of technology with our revolutionary AI, quantum computing, and cutting-edge solutions. 
                 Join the future of technology with our revolutionary AI, quantum computing, and cutting-edge solutions.
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 Get in touch with our experts to discuss your transformation journey and pricing options.
               </p>
@@ -1364,9 +2092,52 @@ price: billing_cycle === 'monthly' ? 999 : 799,
                 <a
                   href={`tel:${contactInfo.mobile}`} className="px-8 py-4 bg-gray-800/50 border border-purple-500/30 text-purple-300 font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200">
                   <Phone className="w-5 h-5 mr-2 inline" />
+=======
+                Get in touch with our experts to discuss your transformation journey and pricing options.
+=======
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* Call to Action */}
+<div className='relative py-20'>
+          <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5'></div>
+          <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-2xl p-12 backdrop-blur-sm text-center'>
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
+                Ready to Transform Your Business?
+              </h2>
+              <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
+                Join the future of technology with our revolutionary AI, quantum
+                computing, and cutting-edge solutions. Get in touch with our
+                experts to discuss your transformation journey and pricing
+                options.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+              </p>
+
+              <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4'>
+                <a
+                  href='/contact'
+                  className='px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg hover:shadow-purple-500/25'
+                >
+                  Start Your Journey
+<<<<<<< HEAD
+                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+=======
+                  <ArrowRight className='w-5 h-5 ml-2 inline' />
+                </a>
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                <a
+                  href={`tel:${contactInfo.mobile}`}
+                  className='px-8 py-4 bg-gray-800/50 border border-purple-500/30 text-purple-300 font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200'
+                >
+                  <Phone className='w-5 h-5 mr-2 inline' />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   Call Now
                 </a>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1387,10 +2158,13 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="mt-12 pt-8 border-t border-purple-500/20">
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-300">
                   <div className="flex items-center space-x-2">
                     <Phone className="w-4 h-4 text-purple-400" />
+<<<<<<< HEAD
                     <span>{contactInfo.mobile}</span>
                   </div>
                   <div className="flex items-center space-x-2">
@@ -1399,6 +2173,23 @@ price: billing_cycle === 'monthly' ? 999 : 799,
                   </div>
                   <div className="flex items-center space-x-2">
                     <MapPin className="w-4 h-4 text-purple-400" />
+=======
+=======
+              {/* Contact Info */}
+<div className='mt-12 pt-8 border-t border-purple-500/20'>
+                <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-300'>
+                  <div className='flex items-center space-x-2'>
+                    <Phone className='w-4 h-4 text-purple-400' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                    <span>{contactInfo.mobile}</span>
+                  </div>
+                  <div className='flex items-center space-x-2'>
+                    <Mail className='w-4 h-4 text-purple-400' />
+                    <span>{contactInfo.email}</span>
+                  </div>
+                  <div className='flex items-center space-x-2'>
+                    <MapPin className='w-4 h-4 text-purple-400' />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <span>{contactInfo.address}</span>
                   </div>
                 </div>
@@ -1409,17 +2200,21 @@ price: billing_cycle === 'monthly' ? 999 : 799,
       </div>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 };
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1435,6 +2230,11 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </div>;
                     </div>;
                     <div className="text - right ml - 4">;
@@ -1513,7 +2313,13 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

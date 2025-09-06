@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -10,6 +11,8 @@ import path from 'path';
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const CERTS_FILE = path.join(
   process.cwd()
   'data'
@@ -35,6 +38,7 @@ export default async function handler(
 ) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 }
@@ -51,9 +55,37 @@ export default async function handler(
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
+=======
+}
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (req && req.method !== 'GET') {
     res && res.setHeader('Allow', 'GET');
     return res && res.status(405).json({ error: 'Method Not Allowed' });
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs-extra";
+import path from "path";
+const CERTS_FILE = path.join(process.cwd(), "data", "certifications", "certifications.json");
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "GET") {
+    res.setHeader("Allow", "GET");
+    return res.status(405).json({ error: "Method Not Allowed" })
+  res: NextApiResponse
+) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', 'GET');
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  }
+  try {
+    const certifications = (await fs.pathExists(CERTS_FILE))
+      ? await fs.readJSON(CERTS_FILE)
+      : [];
+    return res.status(200).json({ certifications });
+  } catch (e) {
+    return res.status(500).json({ error: 'Failed to load certifications' });
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
   try {
     const certifications = (await fs && fs.pathExists(CERTS_FILE))
@@ -116,4 +148,11 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

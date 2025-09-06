@@ -35,11 +35,14 @@ export interface FilterSidebarProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   selected_skills: string[];
   toggle_skill: (skill: string) => void;
@@ -48,6 +51,7 @@ export interface FilterSidebarProps {
   selected_regions: string[];
   toggle_region: (region: string) => void,
   price_range: [number, number];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -64,6 +68,8 @@ export interface FilterSidebarProps {
   selected_regions: string[];
   toggle_region: (region: string) => void,
   price_range: [number, number];
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   setExperienceRange: (range: [number, number]) => void;
   expanded_sections: {
     skills: boolean;
@@ -97,6 +103,7 @@ export interface FilterComponentProps {
   toggleSection: () => void;
   isMobileFilterOpen?: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -136,6 +143,8 @@ export interface FilterComponentProps {;
 export interface SkillsFilterProps extends FilterComponentProps {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   selectedSkills: string[]
 
@@ -259,6 +268,7 @@ export interface RegionFilterProps extends FilterComponentProps {
 export interface ExperienceFilterProps extends FilterComponentProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   experience_range: [number, number];
@@ -268,6 +278,8 @@ export interface ExperienceFilterProps extends FilterComponentProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   setExperienceRange: (range: [number, number]) => void;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export interface SkillsFilterProps extends FilterComponentProps {
   selectedSkills: string[],
@@ -342,13 +354,17 @@ export interface RegionFilterProps extends FilterComponentProps {;
 export interface ExperienceFilterProps extends FilterComponentProps {;
   experienceRange: [number, number],;
   experience_range: [number, number];  setExperienceRange: (range: [number, number]) => void;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 export interface PriceFilterProps extends FilterComponentProps {
   priceRange: [number, number];
   setPriceRange: (range: [number, number]) => void;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -359,6 +375,8 @@ export interface PriceFilterProps extends FilterComponentProps {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface FilterSidebarProps {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -369,9 +387,12 @@ export interface SearchFilterProps {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export interface SortFilterProps {
   sortOption: string;
@@ -411,6 +432,7 @@ export interface SortFilterProps {;
 =======
 }
 export interface SearchFilterProps {
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -471,3 +493,6 @@ export interface SortFilterProps {;
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

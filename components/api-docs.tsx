@@ -1,12 +1,16 @@
 <<<<<<< HEAD
 import { GetServerSideProps } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
       destination: '/developers/docs'
       permanent: true
     }
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };      permanent: true}}
 
 }
@@ -49,4 +53,13 @@ function ApiDocsRedirect() {
 
 }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+export const getServerSideProps: GetServerSideProps;
+export default function ApiDocsRedirect() {
+  return null;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

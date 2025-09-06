@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react";
 import { Star } from "lucide-react";
@@ -26,6 +27,8 @@ import { useReviews } from "@/hooks/useReviews";
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -39,7 +42,6 @@ import {useAuth} from "@/hooks/useAuth";
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
 import {useState} from "react";
 import {Star} from "lucide-react";
@@ -68,6 +70,7 @@ import { ReviewsList } from "@/components/reviews/ReviewsList",
 import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
 import { useReviews } from "@/hooks/useReviews",
 import { Project } from "@/types/projects",
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 <<<<<<< HEAD
 =======
@@ -184,6 +187,9 @@ import { useReviews } from "@/hooks/useReviews",
 import { Project } from "@/types/projects",
 import { useAuth } from "@/hooks/useAuth",  
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { useAuth } from "@/hooks/useAuth",  
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const isCompleted = project.status === "completed",
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,
@@ -236,6 +242,7 @@ import { useAuth } from "@/hooks/useAuth",
                       Your review is{" "}
                       {userReview.status === "approved"
                         ? "published"
+<<<<<<< HEAD
 <<<<<<< HEAD
                         : "pending approval"}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -567,6 +574,9 @@ export function ProjectReviewSection({ project } ProjectReviewSectionProps) {;
 =======
                         : "pending approval"}      {(isClient || isTalent) && (;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                        : "pending approval"}      {(isClient || isTalent) && (;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       {(isClient || isTalent) && (
 
@@ -598,6 +608,7 @@ export function ProjectReviewSection({ project } ProjectReviewSectionProps) {;
         <LeaveReviewModal
           projectId={project.id}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -619,6 +630,8 @@ export function ProjectReviewSection({ project } ProjectReviewSectionProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </p>;
                     {user_review.status === "pending" && (
                       <Button;

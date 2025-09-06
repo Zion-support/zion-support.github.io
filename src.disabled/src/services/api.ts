@@ -10,6 +10,7 @@ export class apiService {;
       console && console.error("Error fetching "data": ", error)}
       throw error}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       throw error,
 
@@ -18,6 +19,8 @@ export default new apiService(),
 export class apiService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api";,} async get() {; try {; const response = await fetch("${this && this.baseUrl}/api");,} return await response && response.json();,} } catch (error) {; console && console.error("Error fetching data:",error);,} throw error;,} } export default new apiService();,}
 export default new apiService()}}
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
       throw error,
@@ -29,12 +32,20 @@ export default new apiService(),
 export class apiService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api";,} async get() {; try {; const response = await fetch("${this && this.baseUrl}/api");,} return await response && response.json();,} } catch (error) {; console && console.error("Error fetching data:",error);,} throw error;,} } export default new apiService();,}
 export default new apiService()}
 }
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export class apiService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api";,} async get() {; try {; const response = await fetch("${this && this.baseUrl}/api");,} return await response && response.json();,} } catch (error) {; console && console.error("Error fetching data:",error);,} throw error;,} } export default new apiService();,}
 export default new apiService()}
 export class apiService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api",} async get() {; try {; const response = await fetch("${this && this.baseUrl}/api"),} return await response && response.json(),} } catch (error) {; console && console.error("Error fetching data:",error),} throw error,} } export default new apiService(),}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+export default new apiService(),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 export class apiService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api";,} async get() {; try {; const response = await fetch("${this && this.baseUrl}/api");,} return await response && response.json();,} } catch (error) {; console && console.error("Error fetching data:",error);,} throw error;,} } export default new apiService();,}
 export default new apiService()}

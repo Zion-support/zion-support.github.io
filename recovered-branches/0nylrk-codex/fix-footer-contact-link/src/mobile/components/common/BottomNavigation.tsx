@@ -23,16 +23,20 @@ export function BottomNavigation() {;
   const location = useLocation();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const navItems = [;
     { path: "/mobile", icon: <Home />, label: "Home" },;
     { path: "/mobile/browse", icon: <Search />, label: "Browse" },;
     { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },;
     { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },;
+<<<<<<< HEAD
 <<<<<<< HEAD
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],;
 
@@ -50,6 +54,9 @@ import React from "react",
 =======
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],;import React from "react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    { path: "/mobile/profile", icon: <User />, label: "Profile" }],;import React from "react",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Link, useLocation } from "react-router-dom",
 import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -64,6 +71,7 @@ export function BottomNavigation() {
     { path: "/mobile/browse", icon: <Search />, label: "Browse" },
     { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },
     { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },
+<<<<<<< HEAD
 <<<<<<< HEAD
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],
 <<<<<<< HEAD
@@ -320,3 +328,6 @@ export function BottomNavigation() {;
 =======
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    { path: "/mobile/profile", icon: <User />, label: "Profile" }],
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

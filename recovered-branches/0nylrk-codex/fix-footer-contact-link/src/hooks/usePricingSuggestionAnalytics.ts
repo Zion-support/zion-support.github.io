@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { supabase } from "@/integrations/supabase/client";
 =======
@@ -17,6 +18,11 @@ interface PricingSuggestionAnalytics {
 import {useState, useEffect} from 'react';
 import { supabase } from '@/integrations / supabase / client';interface PricingSuggestionAnalytics {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import {useState, useEffect} from 'react';
+import { supabase } from '@/integrations / supabase / client';interface PricingSuggestionAnalytics {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   total_suggestions: number;
   acceptance_rate: number;
   averagePriceGap: number,
@@ -28,6 +34,7 @@ import { supabase } from '@/integrations / supabase / client';interface PricingS
     suggested_min: number;
     suggested_max: number;
     actual_value?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
     accepted: boolean;
 <<<<<<< HEAD
@@ -100,6 +107,12 @@ import {supabase} from "@/integrations/supabase/client";
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",interface PricingSuggestionAnalytics {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    accepted: boolean;import {useState, useEffect} from 'react';
+import {supabase} from "@/integrations/supabase/client";
+import { useState, useEffect } from 'react',
+import { supabase } from "@/integrations/supabase/client",interface PricingSuggestionAnalytics {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   totalSuggestions: number,
   acceptanceRate: number,
   averagePriceGap: number,
@@ -112,6 +125,7 @@ import { supabase } from "@/integrations/supabase/client",interface PricingSugge
     actualValue?: number,
     accepted: boolean,
     createdAt: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
     type: 'client' | 'talent'
 <<<<<<< HEAD
@@ -234,6 +248,9 @@ export function usePricingSuggestionAnalytics(days = 30) {
 =======
     type: 'client' | 'talent'        setAnalytics({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    type: 'client' | 'talent'        setAnalytics({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           ...mockData;
           isLoading: false
           error: null
@@ -267,6 +284,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
           error: null
         }),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -555,3 +573,9 @@ export function usePricingSuggestionAnalytics(days = 30) {;
         //   .from('pricing_suggestions')
         //   .select(...)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        // In a real implementation with Supabase, you might do:
+        // const { data, error } = await supabase
+        //   .from('pricing_suggestions')
+        //   .select(...)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

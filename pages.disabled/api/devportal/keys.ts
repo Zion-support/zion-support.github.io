@@ -8,6 +8,7 @@ export default function handler("req": NextApiRequest, "res": NextApiResponse) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -41,6 +42,9 @@ export default function KeysPage() {
   if (req.method === 'GET') {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  if (req.method === 'GET') {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt);
     return res.status(200).json({ data: keys })}
   if (req.method === 'POST') {
@@ -56,6 +60,7 @@ export default function KeysPage() {
 export default function KeysPage() {
   return (
     < 0) return res.status(404).json({ "error": { code: 'not_found', "message": 'Key not found' } });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,6 +95,8 @@ export default function KeysPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (action === 'regenerate') {
       const { token, hash } = generateApiToken();
       keys[idx].tokenHash = hash;
@@ -130,6 +137,9 @@ export default function KeysPage() {
   )}
 import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler(req: 'NextApiRequest',res: NextApiResponse) { const userId = getUserIdFromRequest(req); if (req.method === 'GET') { const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ data: keys })} if (req.method === 'POST') { const { name,scopes,autoApprove } = req.body || {}; const parsedScopes: ApiScope[] = Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ data: { key,token } })} if (req.method === 'PUT') { const { id,action,scopes } = req.body || {}; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ data: { key: keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ data: 'keys[idx]' })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ data: 'keys[idx]' })} return res.status(400).json({ error: { code: 'invalid_action',message: 'Unknown action' } })} if (req.method === 'DELETE') { const { id } = req.query; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ data: 'keys[idx]' })} return res.status(405).json({ error: { code: 'method_not_allowed',message: 'Method not allowed' } })} )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler(req: NextApiRequest,res: NextApiResponse) { const userId = getUserIdFromRequest(req); if (req.method === 'GET') { const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ data: keys })} if (req.method === 'POST') { const { name,scopes,autoApprove } = req.body || {}; const parsedScopes: ApiScope[] = Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ data: { key,token } })} if (req.method === 'PUT') { const { id,action,scopes } = req.body || {}; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ data: { key: keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ data: keys[idx] })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ data: keys[idx] })} return res.status(400).json({ error: { code: 'invalid_action',message: 'Unknown action' } })} if (req.method === 'DELETE') { const { id } = req.query; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ data: keys[idx] })} return res.status(405).json({ error: { code: 'method_not_allowed',message: 'Method not allowed' } })} )}
 <<<<<<< HEAD
 =======
@@ -139,9 +149,12 @@ import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from 
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       return res && res.status(200).json({ "data": { key: keys[idx], token } })}
+<<<<<<< HEAD
 =======
 import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler(req: NextApiRequest,res: NextApiResponse) { const userId = getUserIdFromRequest(req); if (req.method === 'GET') { const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ data: keys })} if (req.method === 'POST') { const { name,scopes,autoApprove } = req.body || {}; const parsedScopes: ApiScope[] = Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ data: { key,token } })} if (req.method === 'PUT') { const { id,action,scopes } = req.body || {}; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ data: { key: keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ data: keys[idx] })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ data: keys[idx] })} return res.status(400).json({ error: { code: 'invalid_action',message: 'Unknown action' } })} if (req.method === 'DELETE') { const { id } = req.query; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ data: keys[idx] })} return res.status(405).json({ error: { code: 'method_not_allowed',message: 'Method not allowed' } })} )}      return res && res.status(200).json({ "data": { key: keys[idx], token } })}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (action === 'update_scopes') {
       keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes;
       saveApiKeys(keys);
@@ -164,8 +177,11 @@ import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler(req: 'NextApiRequest',res: NextApiResponse) { const userId = getUserIdFromRequest(req); if (req && req.method === 'GET') { const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ data: keys })} if (req && req.method === 'POST') { const { name,scopes,autoApprove } = req && req.body || {}; const parsedScopes: ApiScope[] = Array && Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ data: { key,token } })} if (req && req.method === 'PUT') { const { id,action,scopes } = req && req.body || {}; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ data: { key: keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ data: 'keys[idx]' })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ data: 'keys[idx]' })} return res && res.status(400).json({ error: { code: 'invalid_action',message: 'Unknown action' } })} if (req && req.method === 'DELETE') { const { id } = req && req.query; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ data: 'keys[idx]' })} return res && res.status(405).json({ error: { code: 'method_not_allowed',message: 'Method not allowed' } })} )}
@@ -185,6 +201,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -193,6 +210,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       return res.status(200).json({ "data": { key: keys[idx], token } })}
     if (action === 'update_scopes') {
       keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { listPipelineForVendor } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -6,6 +7,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const vendorId = String(req.query.vendorId |"");
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextApiRequest, NextApiResponse } from "next";
 import { listPipelineForVendor } from "../../../utils/vendor-store";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -46,6 +49,16 @@ function handler() {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { listPipelineForVendor } from '../../../utils/vendor-store';
+  const vendorId = null;
+  res.status(200).json({ items })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -24,6 +24,7 @@ export type TimelineType = "fixed" | "flexible";
 export type BudgetType = "fixed" | "hourly" | "range";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -35,6 +36,8 @@ export type BudgetType = "fixed" | "hourly" | "range";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface ListingItem {
   id: string;
   title: string;
@@ -64,6 +67,7 @@ export interface ContactInfo {;
 
 ;
 export interface ListingItem {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -147,6 +151,8 @@ export interface Budget {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   amount: number;
   maxAmount?: number;
   type: BudgetType;
@@ -154,6 +160,7 @@ export interface Budget {
 <<<<<<< HEAD
 export interface QuoteFormData {
 
+<<<<<<< HEAD
 export interface QuoteFormData {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -173,12 +180,17 @@ export interface QuoteFormData {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export interface QuoteFormData {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   serviceType: ServiceType;
   serviceCategory: ServiceCategory;
   specificItem: ListingItem | null;
   projectName: string;
   projectDescription: string;
   startDate?: Date;
+<<<<<<< HEAD
 <<<<<<< HEAD
   endDate?: Date;
 <<<<<<< HEAD
@@ -244,6 +256,12 @@ export interface QuoteRequest {;
   id: string;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  endDate?: Date;  timeline: TimelineType;
+export interface QuoteRequest {
+
+export interface QuoteRequest {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   talent_id: string;
   talent_name?: string;
   requester_id?: string;
@@ -261,6 +279,7 @@ export interface QuoteRequest {;
   is_archived: boolean;
   viewed_at?: string;
   replied_at?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -365,3 +384,5 @@ export interface QuoteRequest {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

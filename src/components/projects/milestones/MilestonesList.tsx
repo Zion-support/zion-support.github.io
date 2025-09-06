@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from 'react',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
@@ -59,6 +60,12 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+<<<<<<< HEAD
+if (isLoading) {
+    return (
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         ))}
 <<<<<<< HEAD
       </div>;
@@ -81,6 +88,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 =======
@@ -92,6 +100,8 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
@@ -101,9 +111,12 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         description={isClient ? 
           "Break down the project into manageable milestones to track progress and payments." : 
           "No milestones have been created for this project yet."}
@@ -123,9 +136,12 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (milestones && milestones.length === 0 && !showAddForm) {;
     return (
       <EmptyState
@@ -143,6 +159,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="space-y-6">;
       {isClient && !showAddForm && (;
         <div className="flex justify-end">;
@@ -157,11 +174,16 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 
       )}
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+      )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <AddMilestoneForm 
@@ -174,6 +196,8 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       {showAddForm && (;
         <Card>;
@@ -192,12 +216,15 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       
       <div className="space-y-4">
         {milestones.map((milestone) => (
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       <div className="space-y-4">;
         {milestones && milestones.map((milestone,) => (;
@@ -317,4 +344,48 @@ if ( {) {
 ";
 
             <AddMilestoneForm
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import React, { useState } from 'react';
+import {
+  Milestone,
+  MilestoneStatus,
+  MilestoneActivity,;
+} from '@/hooks/useMilestones';
+import { useAuth } from '@/hooks/useAuth';
+import { MilestoneCard } from './MilestoneCard';
+import { AddMilestoneForm } from './AddMilestoneForm';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+// lucide-react doesn't export PlusIcon, use our icon wrapper
+import { Plus } from 'lucide-react';
+import { EmptyState } from '@/components/ui/empty-state';
+
+import React, { useState } from 'react';
+import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
+import { useAuth  } from '@/hooks/useAuth';
+import { MilestoneCard  } from './MilestoneCard';
+import { AddMilestoneForm  } from './AddMilestoneForm';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card';
+// lucide-react doesn't export PlusIcon, use our icon wrapper
+import { Plus } from 'lucide-react'
+import { EmptyState } from '@/components/ui/empty-state';
+interface MilestonesListProps {
+  milestones: Milestone[];
+  activities: Record<string, MilestoneActivity[]>,
+  isLoading: boolean;
+  isClient: boolean;
+  onCreateMilestone: (data: any) => Promise<Milestone | null>;
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,
+  onDeleteMilestone: (id: string) => Promise<boolean>;
+  onUploadDeliverable: (id: string, file: File) => Promise<any>;
+  isSubmitting: boolean;
+  onApprove?: (id: string) => Promise<void>;
+  onReject?: (id: string) => Promise<void>
+}
+export const MilestonesList: React.FC<MilestonesListProps> = ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Component to show service details for the selected country
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
@@ -188,11 +189,34 @@ import {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Server, Clock, MapPin } from 'lucide-react'
+import Image from "next/image";
+interface ServiceDetailsProps {
+  country: string
+// Component to show service details for the selected country
+export function ServiceDetails({ country }: ServiceDetailsProps) {
+  // Get datacenters for regions (simplified - in production this would come from a real database)
+  const getDatacenters = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
@@ -445,6 +469,7 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
         </p>
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 }
@@ -485,12 +510,20 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
         </p>;
       </CardFooter>;
     </Card>;
+<<<<<<< HEAD
   )
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  );
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 }operate during business hours (8AM-6PM $ {;
   timezone ;
 }) . `+ `Response times are typically within 4 hours for metropolitan areas. `+ `Please have site access permissions and contact details ready for our technicians. `+ `For remote locations, additional travel fees may apply.` 
 };";
+<<<<<<< HEAD
 return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="overflow-hidden rounded-lg mb-4 relative h-48" > <Image /> </div> <div className="space-y-4" > <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <MapPin className="mr-2 h-4 w-4 text-zion-purple" /> Service Locations </h4> <divkey= {
   idx "
 }className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"> {;
@@ -578,8 +611,20 @@ return (<Card className="bg - zion - blue - dark border - zion - blue-light" > <
 <<<<<<< HEAD
 }</div> </div> <div> <h4 className="text - lg font - medium text - white mb - 2 flex items - center" > <Clock className="mr - 2 h - 4 w - 4 text - zion - purple" /> Service Instructions </h4> </p> </div> <div className="bg - zion - blue rounded - lg p - 4 border border - zion - blue - light" > <h4 className="text - lg font - medium text - white mb - 2" >What's Included</h4> <ul className="list - disc list - inside text - zion - slate - light space - y-1" > <li > Transportation to your site</li> <li > First hour of onsite technical support</li> <li > Basic hardware diagnosis</li> <li > Network connectivity troubleshooting</li> <li > Equipment installation assistance</li> </ul> </div> </div> </CardContent> </p> </CardFooter> </Card>);
 }'"}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 }</div> </div> <div> <h4 className="text - lg font - medium text - white mb - 2 flex items-center" > <Clock className="mr - 2 h - 4 w - 4 text - zion-purple" /> Service Instructions </h4> </p> </div> <div className="bg - zion - blue rounded - lg p - 4 border border - zion - blue-light" > <h4 className="text - lg font - medium text - white mb-2" >What's Included</h4> <ul className="list - disc list - inside text - zion - slate - light space-y-1" > <li > Transportation to your site</li> <li > First hour of onsite technical support</li> <li > Basic hardware diagnosis</li> <li > Network connectivity troubleshooting</li> <li > Equipment installation assistance</li> </ul> </div> </div> </CardContent> </p> </CardFooter> </Card>);
 }'"}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="overflow-hidden rounded-lg mb-4 relative h-48" > <Image /> </div> <div className="space-y-4" > <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <MapPin className="mr-2 h-4 w-4 text-zion-purple" /> Service Locations </h4> <div key= {;
+  idx ";
+}className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light" > {;
+  dc ;
+}</div>) ) ";
+}</div> </div> <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <Clock className="mr-2 h-4 w-4 text-zion-purple" /> Service Instructions </h4> </p> </div> <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light" > <h4 className="text-lg font-medium text-white mb-2" >What's Included</h4> <ul className="list-disc list-inside text-zion-slate-light space-y-1" > <li>Transportation to your site</li> <li>First hour of onsite technical support</li> <li>Basic hardware diagnosis</li> <li>Network connectivity troubleshooting</li> <li>Equipment installation assistance</li> </ul> </div> </div> </CardContent> </p> </CardFooter> </Card>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

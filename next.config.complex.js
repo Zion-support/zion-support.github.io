@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 /** @type {import ('next').NextConfig} */;
 const next_config = {
@@ -9,7 +12,10 @@ const next_config = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   page_extensions: ['tsxtsjsxjs'],
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 /** @type {import('next').NextConfig} */;
 
 const nextConfig = {;
@@ -34,6 +40,7 @@ const nextConfig = {;
   reactStrictMode: true,;
   reactStrictMode: true;
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -43,6 +50,8 @@ const nextConfig = {;
   reactStrictMode: true;
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   compress: true,;
   poweredByHeader: false,;
   eslint: { ignoreDuringBuilds: true },;
@@ -83,6 +92,7 @@ module.exports = nextConfig,;
   dist_dir: '.next';
 },
 module.exports = next_config,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 <<<<<<< HEAD
@@ -158,3 +168,5 @@ module.exports = nextConfig,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

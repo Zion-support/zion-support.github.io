@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -81,6 +82,10 @@ import {cn} from "@/lib/utils";
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react',
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -101,6 +106,7 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { SEO } from "@/components/SEO",
 import { useNavigate } from "react-router-dom",
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { cn } from "@/lib/utils",
 <<<<<<< HEAD
 
@@ -116,6 +122,9 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
 =======
 import { cn } from "@/lib/utils",const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { cn } from "@/lib/utils",const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   switch (type) {
     case 'message':
       return <MessageCircle className={cn(className, "text-blue-500")} />,
@@ -131,6 +140,7 @@ import { cn } from "@/lib/utils",const getNotificationIcon = (type: Notification
       return <AlertCircle className={cn(className, "text-yellow-500")} />,
     default:
       return <Bell className={cn(className, "text-gray-500")} />
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -404,6 +414,11 @@ const NotificationCard: React.FC<{;
   },
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }  };
+  },
+  
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <divclassName={cn(
       "border rounded-lg shadow-sm p-4 mb-3 group transition-colors"
@@ -424,6 +439,7 @@ const NotificationCard: React.FC<{;
               <ChevronRight className="ml-1 h-4 w-4" />;
             </Button>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           ;
@@ -460,6 +476,8 @@ export default function NotificationsPage() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </div>;
       </div>;
     </div>;
@@ -563,6 +581,7 @@ function NotificationsPage() {
     markAllAsRead;
     dismiss_notification;
     loading;
+<<<<<<< HEAD
 <<<<<<< HEAD
     filter;
 <<<<<<< HEAD
@@ -891,12 +910,16 @@ export default function NotificationsPage() {;
 =======
     filter;            </TabsContent>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    filter;            </TabsContent>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </Tabs>;
         </div>;
       </main>;
       <Footer />;
 
     </>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -980,3 +1003,6 @@ return (<> <SEO title="Notifications | Zion AI Marketplace" description="View an
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

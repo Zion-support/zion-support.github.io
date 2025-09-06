@@ -1,8 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useEffect, useState  } from 'react';
 import {useEffect, useState} from 'react';
 import CourseCard, { Course } from '../../components/learn/CourseCard';
 import FilterBar from '../../components/learn/FilterBar';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const [filters, setFilters] = useState({
     category: ''
@@ -10,6 +17,7 @@ import FilterBar from '../../components/learn/FilterBar';
     isFree: ''
   });  const [courses, setCourses] = useState<Course[]>([]);
 
+<<<<<<< HEAD
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     async function load() {
@@ -157,6 +165,13 @@ import FilterBar from '../../components/learn/FilterBar';
     isFree: ''
   });  const [courses, setCourses] = useState<Course[]>([]);
 
+=======
+=======
+export default function LearnMarketplace() {
+  const [filters, setFilters] = useState({ category: '', level: '', isFree: '' });
+  const [courses, setCourses] = useState<Course[]>([]),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     async function load() {
@@ -198,6 +213,7 @@ export default function LearnMarketplace(req, res) {
   useEffect(() => {;
     async function load() {;
       setLoading(true);
+<<<<<<< HEAD
 
       const params = new URLSearchParams();
       setLoading(false);
@@ -205,12 +221,30 @@ export default function LearnMarketplace(req, res) {
     load ();
   }, [filters]);
 ;
+=======
+<<<<<<< HEAD
+
+      const params = new URLSearchParams();
+      setLoading(false);
+=======
+      setCourses(data.courses || []);
+setLoading(false);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    }
+    load ();
+  }, [filters]);
+<<<<<<< HEAD
+;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
       setCourses(data.courses || []);
       setLoading(false)
     }
     load()
   }, [filters]);
+<<<<<<< HEAD
 =======
 export default function LearnMarketplace() {
 
@@ -219,6 +253,8 @@ export default function LearnMarketplace() {
       setLoading(false);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -229,19 +265,34 @@ export default function LearnMarketplace() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between gap-4">
         <div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+          <h1 className='text-2xl font-semibold'>Zion Academy</h1>
+          <div className='text-gray-500 text-sm'>
+            Courses • Certifications • Career Boost
+          </div>
+        </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>
       <FilterBar {...filters} onChange={setFilters} />
       {loading ? (
         <div>Loading...</div>
       ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
           {courses.map(c => (            <CourseCard key={c.id} course={c} />
@@ -253,6 +304,8 @@ export default function LearnMarketplace() {
 
 }
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     <div className='space-y-6'>;
       <div className='flex items-end justify-between gap-4'>;
@@ -272,12 +325,22 @@ export default function LearnMarketplace() {
           {courses && courses.map(c => (            <CourseCard key={c && c.id} course={c} />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {courses.map((c) => (
+=======
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {courses.map((c) => (
+=======
+<div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+          {courses.map(c => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <CourseCard key={c.id} course={c} />
           ))}
         </div>;
       )}
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -301,6 +364,9 @@ export default function LearnMarketplace() {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className='space - y-6'>;
       <div className='flex items - end justify - between gap - 4'>;
         <div>;
@@ -318,16 +384,20 @@ export default function LearnMarketplace() {
     </div>);
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -336,3 +406,9 @@ export default function LearnMarketplace() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+    </div>
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

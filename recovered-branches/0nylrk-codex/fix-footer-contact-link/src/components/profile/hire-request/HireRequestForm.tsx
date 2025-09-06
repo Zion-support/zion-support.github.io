@@ -33,6 +33,7 @@ export interface HireRequestFormProps {
   onClose: () => void
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   initialJobTitle?: string;
 <<<<<<< HEAD
 import { TimelineField } from "./TimelineField",
@@ -119,6 +120,17 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
     userDetails
   });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  initialJobTitle?: string;  onSubmitSuccess?: () => void
+}
+export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
+
+    initialJobTitle;
+    userDetails
+  });    initialJobTitle;
+    userDetails
+  });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -139,6 +151,7 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             disabled={isSubmitting}
           >
             Cancel
+<<<<<<< HEAD
 <<<<<<< HEAD
           </Button>
 <<<<<<< HEAD
@@ -482,3 +495,6 @@ return (<Form {
 =======
           </Button>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          </Button>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

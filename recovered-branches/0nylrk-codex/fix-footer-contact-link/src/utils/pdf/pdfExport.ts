@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,9 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Resume  } from '@/types/resume';
 import { jsPDF  } from 'jspdf';
 import 'jspdf-autotable';
@@ -21,6 +25,7 @@ import { addWorkExperienceSection  } from './sections/workExperienceSection';
 import { addEducationSection  } from './sections/educationSection';
 import { addCertificationsSection  } from './sections/certificationsSection';
 import { addPortfolioSection } from './sections/portfolioSection';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface ExportOptions {
 <<<<<<< HEAD
@@ -63,6 +68,9 @@ export interface ExportOptions {;
 =======
 export interface ExportOptions {  theme: 'light' | 'dark';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export interface ExportOptions {  theme: 'light' | 'dark';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   includePortfolio?: boolean;
 
   maxProjects?: number
@@ -78,11 +86,15 @@ export async function exportResumeToPDF(
   resume: Resume
   options: Partial<ExportOptions> = {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 ): Promise<Blob> {;
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -102,6 +114,8 @@ export async function exportResumeToPDF(
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions;
   // Create new PDF document (A4)
   const doc = new jsPDF({
@@ -113,6 +127,7 @@ export async function exportResumeToPDF(
   await loadCustomFonts(doc, fontFamily);
   // Set up colors based on theme
   const colors = getPdfThemeColors(theme);
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Set background color
 <<<<<<< HEAD
@@ -214,6 +229,9 @@ const default_options: ExportOptions = {
 =======
   // Set background color}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // Set background color}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 export async function exportResumeToPDF (
   resume: Resume,

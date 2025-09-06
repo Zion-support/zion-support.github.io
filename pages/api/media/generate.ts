@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -6,10 +7,21 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from "next";
 import { buildPressRelease } from "../../../utils/mediaKit";
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { buildPressRelease } from '[^']*';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const { type;
+    res.status(200).json({ ok: true, text, fallback: true })
+  } catch (e: any) {
+    res.status(500).json({ ok: false, error: e?.message || 'Unknown error' })
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (req.method !== "POST") {
       res.setHeader("Allow", "POST");
@@ -77,10 +89,53 @@ function handler() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     const text = buildPressRelease(type, { companyName, date, raiseAmount, tokenName } as any);
+=======
+  try {
+    const {
+      type = 'launch',
+      companyName = 'Zion',
+      date = new Date().toISOString().substring(0, 10),
+      raiseAmount,
+      tokenName,
+    } = req.body || {};
+
+    const apiKey = process.env.OPENAI_API_KEY;
+    if (apiKey) {
+      try {
+        const { OpenAI } = await import('openai');
+        const client = new OpenAI({ apiKey });
+        const prompt = `Write a concise ${type} press release for ${companyName} (date ${date}) with clear headlines, 2 paragraphs, and one quote.`;
+        const completion = await client.chat.completions.create({
+          model: 'gpt-4o-mini',
+          messages: [
+            { role: 'system', content: 'You are a seasoned tech PR writer.' },
+{ role: 'user', content: prompt },
+          ],
+          temperature: 0.4,
+          max_tokens: 500,
+        });
+        const text = completion.choices?.[0]?.message?.content?.trim();
+        if (text) {
+          res.status(200).json({ ok: true, text });
+          return;
+        }
+      } catch (_) {
+        // fall through to template
+      }
+    }
+
+const text = buildPressRelease(type, {
+      companyName,
+      date,
+      raiseAmount,
+      tokenName,
+    } as any);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     res.status(200).json({ ok: true, text, fallback: true });
   } catch (e: any) {
     res.status(500).json({ ok: false, error: e?.message || 'Unknown error' });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -137,3 +192,8 @@ function handler() {
 >>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

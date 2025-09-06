@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import { useState } from 'react';
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline';
@@ -178,6 +179,8 @@ function ContactPage() {
       </div>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   {
     name: 'Email'
     description: 'Get in touch with our team'
@@ -217,6 +220,7 @@ function ContactPage() {
               <div key={method.name} className="flex flex-col group">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
                   <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+<<<<<<< HEAD
 <<<<<<< HEAD
                   {method.name}
 <<<<<<< HEAD
@@ -279,6 +283,9 @@ export default function ContactPage() {
 =======
                   {method.name}export default function ContactPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  {method.name}export default function ContactPage() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -582,6 +589,7 @@ export default function ContactPage() {
                   Message
                 </label>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <textarea
                   id="message"
                   name="message"
@@ -644,6 +652,8 @@ export default function ContactPage() {
               </div>;
             ))}
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div className="mt-2.5">
                   <textarea
                     name="message"
@@ -826,6 +836,7 @@ export default function ContactPage() {
             <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               Learn More <span aria-hidden="true">→</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
             </Link>
 =======
             </form>
@@ -861,3 +872,13 @@ export default Page;
 
 export default Page;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            </Link>          </div>
+        </div>
+      </div>
+    </div>
+  )
+};
+
+export default Page;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

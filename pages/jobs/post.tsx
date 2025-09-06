@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useState } from 'react';
@@ -12,11 +13,23 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       <Head>
         <title>Post a Job - Zion</title>
       </Head>
       <h1 className='text-2xl font-semibold'>Post a Job</h1>
+<<<<<<< HEAD
+=======
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import { useState } from 'react';
+import EnhancedButton from '../../components/ui/EnhancedButton';
+const PostJob: NextPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className='grid md:grid-cols-2 gap-6'>
         <form className='space-y-4'>
 import type { NextPage } from 'next',
@@ -24,12 +37,16 @@ import Head from 'next/head',
 import { useState } from 'react',
 import EnhancedButton from '../../components/ui/EnhancedButton',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       <Head>;
         <title>Post a Job - Zion</title>;
@@ -44,6 +61,7 @@ import EnhancedButton from '../../components/ui/EnhancedButton',
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -52,6 +70,8 @@ import EnhancedButton from '../../components/ui/EnhancedButton',
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <input
               value={title}
               onChange={e => setTitle(e && e.target.value)}
@@ -90,6 +110,7 @@ import EnhancedButton from '../../components/ui/EnhancedButton',
               onClick={() => setPreview(p => !p)}
             >;
               {preview ? 'Edit' : 'Preview'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             </EnhancedButton>;
@@ -142,16 +163,21 @@ export default PostJob;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const PostJob: NextPage = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [budget, setBudget] = useState('');
   const [preview, setPreview] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-6 pb-20">
       <Head>
@@ -163,9 +189,12 @@ const PostJob: NextPage = () => {
       <div className="grid md:grid-cols-2 gap-6">
         <form className="space-y-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           <div>
             <label className="block text-sm font-medium mb-1">Title</label>
@@ -182,13 +211,17 @@ const PostJob: NextPage = () => {
           <div className="flex gap-2">
             <EnhancedButton type="button" variant="secondary" onClick={() => setPreview((p) => !p)}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </EnhancedButton>
             <EnhancedButton type="submit">Post Job</EnhancedButton>
           </div>
         </form>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <aside className="border rounded-md p-4">
@@ -201,6 +234,8 @@ const PostJob: NextPage = () => {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {preview ? (
             <div className="space-y-2">
               <div>
@@ -208,6 +243,7 @@ const PostJob: NextPage = () => {
                 <div className='font-medium'>{title |'Untitled job'}</div>
                 <div className="text-sm opacity-70">Title</div>
                 <div className="font-medium">{title || 'Untitled job'}</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -233,12 +269,15 @@ const PostJob: NextPage = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>
               <div>
                 <div className="text-sm opacity-70">Budget</div>
                 <div className="font-medium">{budget ? `$${budget}` : 'Not specified'}</div>
               </div>
               <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className='text-sm opacity-70'>Description</div>
                 <p className='whitespace-pre-wrap'>
@@ -259,6 +298,20 @@ const PostJob: NextPage = () => {
   );
 }
 export default PostJob;
+=======
+            <p className='text-sm opacity-80'>
+              Click Preview to see how your job will appear to talent.
+            </p>
+          )}
+        </aside>
+      </div>
+    </div>
+);
+};
+
+export default PostJob;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                 <div className="text-sm opacity-70">Description</div>
                 <p className="whitespace-pre-wrap">{description || 'No description provided.'}</p>
@@ -277,6 +330,7 @@ export default PostJob;
   );
 },;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default PostJob;
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -291,6 +345,9 @@ export default PostJob;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Head from 'next / head';
 import {useState} from 'react';
 import EnhancedButton from '../../components / ui / EnhancedButton';
@@ -373,6 +430,7 @@ import EnhancedButton from '../../components / ui / EnhancedButton';
     </div>);
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -499,3 +557,8 @@ export default PostJob;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export default PostJob;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

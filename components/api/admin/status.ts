@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -22,10 +23,13 @@ import {
   isInternalAgentRequest,;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 } from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const session = getSessionFromReq(req);
@@ -90,4 +94,14 @@ res.status(200).json({ status, insights });  res.status(200).json({ status, insi
 ;
 res.status (200).json ({ status, insights });  res.status (200).json ({ status, insights });
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const session = null;
+  res.status(200).json({ status, insights })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,6 +10,9 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { jsPDF  } from 'jspdf';
 import { Education  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
@@ -24,6 +28,7 @@ export function addEducationSection(;
   education: Education[];
   colors: PdfThemeColors;
   startY: number
+<<<<<<< HEAD
 <<<<<<< HEAD
 ): number {
 <<<<<<< HEAD
@@ -119,6 +124,9 @@ if (education && education.length === 0) return startY;
 =======
 ): number {  });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+): number {  });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   for (const edu of sortedEducation) {
     // Check if we need to add a new page
     if (yPos > 260) {
@@ -151,6 +159,7 @@ if (education && education.length === 0) return startY;
       const descriptionLines = doc && doc.splitTextToSize(edu && edu.description, 170);
       doc && doc.text(descriptionLines, 20, yPos + 16);
       
+<<<<<<< HEAD
 <<<<<<< HEAD
       yPos += (descriptionLines && descriptionLines.length * 5) + 20
 
@@ -267,6 +276,9 @@ export function addEducationSection(;
 =======
       yPos += (descriptionLines && descriptionLines.length * 5) + 20    }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      yPos += (descriptionLines && descriptionLines.length * 5) + 20    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   return yPos + 5
 import {jsPDF} from 'jspdf';

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -9,6 +10,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
 // In-memory demo store per process
@@ -115,6 +118,7 @@ function handler() {
   }
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -139,3 +143,22 @@ function handler() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {};
+(global as any).__ZION_DID_STORE__ = store;
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).end();
+  const { payload, message, signature } = req.body || {};
+if (!payload || !payload.address)
+    return res.status(400).json({ error: 'Missing payload' });
+  const key = `${payload.address}`;
+  store[key] = { payload, message, signature, updatedAt: Date.now() };
+  return res.status(200).json({ ok: true });
+
+  return res.status(200).json({ ok: true })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -11,6 +11,7 @@ import React from "react";
 import {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -37,10 +38,13 @@ import {
   Card,
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -123,6 +127,11 @@ import { Progress } from "@/components/ui/progress";
 export function TeamStats() {;
   return (import React from "react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Progress } from "@/components/ui/progress";
+export function TeamStats() {;
+  return (import React from "react",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Progress } from "@/components/ui/progress",
 export function TeamStats() {
@@ -143,6 +152,7 @@ export function TeamStats() {
         </div>
         
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -185,10 +195,17 @@ export function TeamStats() {
           </div>
         </div>        <div className="pt-4 text-center border-t border-border mt-4">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <p className="text-xl font-bold">24</p>
+            </div>
+          </div>
+        </div>        <div className="pt-4 text-center border-t border-border mt-4">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
             View Full Analytics
           </button>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </CardContent>
 <<<<<<< HEAD
@@ -205,12 +222,16 @@ export function TeamStats() {
 =======
       </CardContent>  );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </CardContent>  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
   )
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Progress } from "@/components/ui/progress";
 export function TeamStats() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (;
 <<<<<<< HEAD
@@ -246,6 +267,9 @@ export function TeamStats() {;
 =======
   return (;          <div className="flex items-center justify-between text-sm">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (;          <div className="flex items-center justify-between text-sm">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <span>Team capacity</span>;
             <span className="font-medium">32 / 50 seats used</span>;
           </div>;
@@ -258,6 +282,7 @@ export function TeamStats() {;
         </div>;
 
         <div className="pt-4 text-center border-t border-border mt-4">;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
 <<<<<<< HEAD
@@ -329,6 +354,9 @@ function TeamStats() {
 =======
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;            View Full Analytics;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;            View Full Analytics;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </button>;
         </div>;
       </CardContent>;
@@ -338,6 +366,7 @@ function TeamStats() {
     </Card>
 
     </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 <<<<<<< HEAD
@@ -381,3 +410,8 @@ function TeamStats() {
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  );}  );
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

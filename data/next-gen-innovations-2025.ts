@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16,6 +17,9 @@ export interface NextGenInnovation2025 {;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   name: string;
   tagline: string;
@@ -80,6 +84,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       address: "364 E Main St STE 1008 Middletown DE 19709"
 <<<<<<< HEAD
     }
@@ -143,6 +148,9 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
 =======
       address: "364 E Main St STE 1008 Middletown DE 19709"],
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"],
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 ],
       mobile: "+1 302 464 0950",      mobile: '+1 302 464 0950',
@@ -161,6 +169,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -175,3 +184,5 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

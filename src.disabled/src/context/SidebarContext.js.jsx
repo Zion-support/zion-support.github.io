@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,10 +21,14 @@ import React,{ createContext,useContext,useState } from \'react\'; const Sidebar
 =======
 import _React,{ createContext,useContext,useState } from 'react'; const SidebarProvider({ children }) {; const [isSidebarOpen,setIsSidebarOpen] = useState(false); const toggleSidebar = () => {; setIsSidebarOpen(!isSidebarOpen)}; return(<SidebarContext.Provider value = {; { isSidebarOpen,setIsSidebarOpen,; toggleSidebar}}>; {children}; </SidebarContext.Provider>)}; export function useSidebar() {; const context = useContext(SidebarContext); if(context === null) {; throw new Error('useSidebar must be used within a SidebarProvider')}; return context};import React,{ createContext,useContext,useState } from \'react\'; const SidebarProvider({ children }) {; const [isSidebarOpen,setIsSidebarOpen] = useState(false); const toggleSidebar = () => {; setIsSidebarOpen(!isSidebarOpen)}; return (<SidebarContext&& SidebarContext.Provider value = { { isSidebarOpen,setIsSidebarOpen, toggleSidebar}}>; {children}; </SidebarContext && SidebarContext.Provider>)}; export function useSidebar() {; const context = useContext(SidebarContext); if(context === null) {; throw new Error(\'useSidebar must be used within a SidebarProvider\')}; return context};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React,{ createContext,useContext,useState } from \'react\'; const SidebarProvider({ children }) {; const [isSidebarOpen,setIsSidebarOpen] = useState(false); const toggleSidebar = () => {; setIsSidebarOpen(!isSidebarOpen)}; return (<SidebarContext&& SidebarContext.Provider value = { { isSidebarOpen,setIsSidebarOpen, toggleSidebar}}>; {children}; </SidebarContext && SidebarContext.Provider>)}; export function useSidebar() {; const context = useContext(SidebarContext); if(context === null) {; throw new Error(\'useSidebar must be used within a SidebarProvider\')}; return context};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const React,{ createContext,useContext,useState } from "react"; const SidebarProvider({ children }) {; const [isSidebarOpen,setIsSidebarOpen] = useState(false); const toggleSidebar = () => {; setIsSidebarOpen(!isSidebarOpen)}; return (<SidebarContext&& SidebarContext.Provider value = { { isSidebarOpen,setIsSidebarOpen, toggleSidebar}}>; {children}; </SidebarContext && SidebarContext.Provider>)}; export function useSidebar() {; const context = useContext(SidebarContext); if(context === null) {; throw new Error("useSidebar must be used within a SidebarProvider")}; return context};''"
 
 import _React,{ createContext,useContext,useState } from 'react'; const SidebarProvider({ children }) {; const [isSidebarOpen,setIsSidebarOpen] = useState(false); const toggleSidebar = () => {; setIsSidebarOpen(!isSidebarOpen)}; return (<SidebarContext&& SidebarContext.Provider value = { { isSidebarOpen,setIsSidebarOpen, toggleSidebar}}>; {children}; </SidebarContext && SidebarContext.Provider>)}; export function useSidebar() {; const context = useContext(SidebarContext); if(context === null) {; throw new Error('useSidebar must be used within a SidebarProvider')}; return context};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,3 +72,8 @@ import React,{ createContext,useContext,useState } from \'react\'; const Sidebar
 const React,{ createContext,useContext,useState } from "react"; const SidebarProvider({ children }) {; const [isSidebarOpen,setIsSidebarOpen] = useState(false); const toggleSidebar = () => {; setIsSidebarOpen(!isSidebarOpen)}; return(<SidebarContext.Provider value = {; { isSidebarOpen,setIsSidebarOpen,; toggleSidebar}}>; {children}; </SidebarContext.Provider>)}; export function useSidebar() {; const context = useContext(SidebarContext); if(context === null) {; throw new Error("useSidebar must be used within a SidebarProvider")}; return context};''"
 import _React,{ createContext,useContext,useState } from 'react'; const SidebarProvider({ children }) {; const [isSidebarOpen,setIsSidebarOpen] = useState(false); const toggleSidebar = () => {; setIsSidebarOpen(!isSidebarOpen)}; return(<SidebarContext.Provider value = {; { isSidebarOpen,setIsSidebarOpen,; toggleSidebar}}>; {children}; </SidebarContext.Provider>)}; export function useSidebar() {; const context = useContext(SidebarContext); if(context === null) {; throw new Error('useSidebar must be used within a SidebarProvider')}; return context};
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import React,{ createContext,useContext,useState } from \'react\'; const SidebarProvider({ children }) {; const [isSidebarOpen,setIsSidebarOpen] = useState(false); const toggleSidebar = () => {; setIsSidebarOpen(!isSidebarOpen)}; return(<SidebarContext.Provider value = {; { isSidebarOpen,setIsSidebarOpen,; toggleSidebar}}>; {children}; </SidebarContext.Provider>)}; export function useSidebar() {; const context = useContext(SidebarContext); if(context === null) {; throw new Error(\'useSidebar must be used within a SidebarProvider\')}; return context};
+const React,{ createContext,useContext,useState } from "react"; const SidebarProvider({ children }) {; const [isSidebarOpen,setIsSidebarOpen] = useState(false); const toggleSidebar = () => {; setIsSidebarOpen(!isSidebarOpen)}; return(<SidebarContext.Provider value = {; { isSidebarOpen,setIsSidebarOpen,; toggleSidebar}}>; {children}; </SidebarContext.Provider>)}; export function useSidebar() {; const context = useContext(SidebarContext); if(context === null) {; throw new Error("useSidebar must be used within a SidebarProvider")}; return context};''"
+import _React,{ createContext,useContext,useState } from 'react'; const SidebarProvider({ children }) {; const [isSidebarOpen,setIsSidebarOpen] = useState(false); const toggleSidebar = () => {; setIsSidebarOpen(!isSidebarOpen)}; return(<SidebarContext.Provider value = {; { isSidebarOpen,setIsSidebarOpen,; toggleSidebar}}>; {children}; </SidebarContext.Provider>)}; export function useSidebar() {; const context = useContext(SidebarContext); if(context === null) {; throw new Error('useSidebar must be used within a SidebarProvider')}; return context};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

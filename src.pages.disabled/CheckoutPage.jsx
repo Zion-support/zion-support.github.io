@@ -1,6 +1,4 @@
 import React from \'react\';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
 import _React from 'react';
@@ -11,6 +9,7 @@ ursor/add-new-services-and-deploy-updates-0462
 <<<<<<< HEAD
 
 import _React from 'react';
+<<<<<<< HEAD
 
 =======
 =======
@@ -27,6 +26,8 @@ ursor/add-new-services-and-deploy-updates-0462
 
 import _React from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import _React from 'react';
 import _React from 'react';
 import _React from 'react';

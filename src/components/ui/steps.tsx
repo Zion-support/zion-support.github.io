@@ -1,6 +1,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import React from 'react';
+import { cn } from '@/lib/utils';
+import { CheckIcon } from 'lucide-react';
+
+interface StepProps {
+  status: "incomplete" | "current" | "complete";
+  label: string;
+  description?: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  className?: string
+}
+export function Step({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 status;
   label;
@@ -40,6 +56,11 @@ export function Step({  className}: StepProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <li
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className={cn(
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -277,6 +298,9 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
           
+=======
+      className;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
@@ -349,6 +373,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
             className="h-full bg-zion-purple transition-all";
             style={{;
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
+<<<<<<< HEAD
           />;
         </div>;
       </div>;
@@ -458,6 +483,20 @@ if (status = "current") {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+          />
+        </div>
+      </div>
+    </div>
+  );
+
+}/> </div> </div> </div>) ;
+}"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

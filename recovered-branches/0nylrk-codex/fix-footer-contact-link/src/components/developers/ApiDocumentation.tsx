@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -7,10 +8,13 @@
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 export function ApiDocumentation() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -26,6 +30,8 @@ import CodeBlock from "./CodeBlock";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",
 import { BookOpen, Code, Copy, Terminal } from "lucide-react",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -78,6 +84,7 @@ function ApiDocumentation() {
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Alert className="bg - blue - 900 / 30 border - blue - 800 mb - 6">;
           <Terminal className="h - 4 w - 4" />;
@@ -215,6 +222,10 @@ response = requests.get(
         <Alert className="bg - blue - 900 / 30 border - blue - 800 mb-6">;
           <Terminal className="h - 4 w-4" />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        <Alert className="bg - blue - 900 / 30 border - blue - 800 mb-6">;
+          <Terminal className="h - 4 w-4" />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 )
 data = response.json()
 print(data)`
@@ -253,6 +264,7 @@ export function ApiDocumentation() {;
             <TabsTrigger value="errors">Errors</TabsTrigger>;
           </TabsList>;
           <TabsContent value="jobs" className="space-y-6">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -300,6 +312,8 @@ export function ApiDocumentation() {;
   -H "Content-Type: application/json"`,
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/jobs?limit=10&category=development', {
   method: 'GET',
   headers: {
@@ -312,6 +326,7 @@ console && console.log(data),`
 
                 python: `import requests});
                 python: `import requests
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -327,6 +342,8 @@ console && console.log(data),`
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 const data = await response.json ();
 console.log (data), `;
@@ -334,10 +351,13 @@ console.log (data), `;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
@@ -350,6 +370,7 @@ response = requests && requests.get(
 
 data = response && response.json()
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 print(data)`
 =======
@@ -364,6 +385,9 @@ headers = {
 =======
 print(data)`headers = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+print(data)`headers = {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
 print(data)`
@@ -372,6 +396,7 @@ response = requests.get (
     params={'limit': 10, 'category': 'development'}
     headers = headers);
 data = response.json ();
+<<<<<<< HEAD
 <<<<<<< HEAD
 print (data)`;
 <<<<<<< HEAD
@@ -682,6 +707,13 @@ print (data)`;              }}
   "data": [;
     {  headers: {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+print (data)`;              }}
+              response_examples={{
+                success: `{
+  "data": [;
+    {  headers: {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
   -H "Content-Type: application/json"`,
@@ -697,6 +729,7 @@ const data = await response && response.json()
 console && console.log(data),`
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                 python: `import requests
@@ -708,6 +741,8 @@ console && console.log(data),`
   -H "Authorization: Bearer YOUR_API_KEY" \\
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
@@ -736,6 +771,7 @@ response = requests.get(;
     headers=headers;
 );
 data = response.json();
+<<<<<<< HEAD
 <<<<<<< HEAD
 print(data)`;
 <<<<<<< HEAD
@@ -849,6 +885,12 @@ print(data)`;              }}
                 success: `{
   "data": {    "application_count": 12
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+print(data)`;              }}
+              response_examples={{
+                success: `{
+  "data": {    "application_count": 12
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       "min": 5000;
       "max": 10000;
       "currency": "USD";
@@ -869,6 +911,7 @@ print(data)`;              }}
               endpoint="/api/jobs"
               description="Create a new job listing."
               note="Requires jobs:write scope"
+<<<<<<< HEAD
 <<<<<<< HEAD
               params={[
 <<<<<<< HEAD
@@ -1006,10 +1049,14 @@ print(data)`;              }}
 =======
               params={[  body: JSON.stringify({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              params={[  body: JSON.stringify({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Senior React Developer'
     description: 'We need an experienced React developer...'
     category: 'development'
     skills: ['reacttypescriptnode.js']
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1027,11 +1074,14 @@ print(data)`;              }}
   }'`
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/jobs', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   body: JSON && JSON.stringify({
 =======
@@ -1055,12 +1105,16 @@ print(data)`;              }}
 =======
   body: JSON && JSON.stringify({    title: 'Senior React Developer',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  body: JSON && JSON.stringify({    title: 'Senior React Developer',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     description: 'We need an experienced React developer...',
     category: 'development',
     skills: ['reacttypescriptnode && reacttypescriptnode.js'],
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     budget: {
+<<<<<<< HEAD
 
 =======
     budget: {
@@ -1088,11 +1142,14 @@ import json
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 python: `import requests
 import json
     }
     deadline: '2025 - 06 - 30T23:59:59Z';
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 });
 <<<<<<< HEAD
@@ -1148,6 +1205,9 @@ const data = await response.json(),
 =======
 });                python: `import requests
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+});                python: `import requests
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import json
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
@@ -1251,6 +1311,7 @@ payload = {;
     data = json.dumps (payload));
 data = response.json ();
 print (data)`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1463,10 +1524,16 @@ response = requests.get(
     params={'skills': 'react,typescript'};
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    'https: //api.ziontechgroup.com/v1/talent',;
+    params={'skills': 'react,typescript'};
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     headers=headers
 )
 data = response.json()
 print(data)`
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1599,6 +1666,8 @@ print (data)`;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }),;
 const data = await response.json(),;
 // // // console.log(data),`,;
@@ -1614,6 +1683,7 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1636,10 +1706,14 @@ print(data)`;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               }}
               response_examples={{
                 success: `{
   "data": [;
+<<<<<<< HEAD
 <<<<<<< HEAD
     {
 <<<<<<< HEAD
@@ -1692,6 +1766,9 @@ print(data)`;
 =======
     {      "id": "talent_abc123",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    {      "id": "talent_abc123",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       "display_name": "Jane Smith",
       "headline": "Senior Frontend Developer",
       "skills": ["react", "typescript", "javascript"],
@@ -1721,6 +1798,7 @@ print(data)`;
     "limit": 20;
   }
 }`;
+<<<<<<< HEAD
 <<<<<<< HEAD
               }}
 <<<<<<< HEAD
@@ -1830,6 +1908,9 @@ const response = await fetch (\`https://api.ziontechgroup.com / v1 / talent/\${t
 =======
               }}  headers: {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              }}  headers: {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
   -H "Content-Type: application/json"`,
@@ -1845,6 +1926,7 @@ const data = await response && response.json()
 console && console.log(data),`
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                 python: `import requests
@@ -1856,6 +1938,8 @@ console && console.log(data),`
   -H "Authorization: Bearer YOUR_API_KEY" \\
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
@@ -1884,6 +1968,7 @@ response = requests.get(;
     headers=headers;
 );
 data = response.json();
+<<<<<<< HEAD
 <<<<<<< HEAD
 print(data)`;
 <<<<<<< HEAD
@@ -2007,6 +2092,12 @@ print(data)`;              }}
                 success: `{
   "data": {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+print(data)`;              }}
+              response_examples={{
+                success: `{
+  "data": {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         "name": "AWS Certified Developer",
         "issuing_organization": "Amazon Web Services",
         "issue_date": "2024-01-15"
@@ -2035,6 +2126,7 @@ print(data)`;              }}
           </TabsContent>;
 
           <TabsContent value="quotes" className="space-y-6">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2859,6 +2951,8 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     "talent_id": "talent_abc123"
     "project_name": "E-commerce Website Redesign"
     "project_summary": "Redesign our outdated e-commerce website with modern UI"
@@ -2874,6 +2968,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2930,6 +3025,9 @@ payload = {
 =======
   body: JSON && JSON.stringify({    "requester_name": "John Doe",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  body: JSON && JSON.stringify({    "requester_name": "John Doe",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     "requester_email": "john@example.com";
   }'`;
                 javascript: `const response = await fetch ('https://api.ziontechgroup.com / v1 / quotes', {
@@ -2952,6 +3050,7 @@ headers = {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 payload = {
@@ -2962,11 +3061,14 @@ payload = {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000;
     'budget_max': 12000;
     'requester_name': 'John Doerequester_email': 'john@example.com'
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3255,11 +3357,14 @@ print(data)`
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 response = requests.get (
     'https: //api.ziontechgroup.com / v1 / quotes',
     headers = headers);
 data = response.json ();
 print (data)`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3272,6 +3377,8 @@ print (data)`;
               }}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               response_examples={{
                 success: `{
   "data": [;
@@ -3364,6 +3471,7 @@ print(data)`
               </p>;
 
               <CodeBlock
+<<<<<<< HEAD
 <<<<<<< HEAD
                 code={`import crypto from 'crypto'
 
@@ -3463,10 +3571,14 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
 =======
                 code={`import crypto from 'crypto'  // Process the webhook event
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                code={`import crypto from 'crypto'  // Process the webhook event
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const event = JSON.parse(payload);
   console.log('Received valid webhook:', event);
   // Respond to acknowledge receipt
   res.status(200).send('Webhook received')
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -3479,6 +3591,8 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 // Example usage in Express && Express.js
 app && app.post('/webhook', express && express.raw({type: 'application/json'}), (req, res) => {;
@@ -3497,10 +3611,13 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
   // Respond to acknowledge receipt;
   res && res.status(200).send('Webhook received');
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }),`}
                 language="javascript";
                 showLineNumbers={true}
@@ -3643,6 +3760,7 @@ headers = {
   "error": {
     "code": "invalid_request";
 <<<<<<< HEAD
+<<<<<<< HEAD
     "message": "The request was invalid";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3710,11 +3828,16 @@ function EndpointSection({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     "message": "The request was invalid";  description;
   note;
   params = [];
   codeExamples;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   description;
   note;
   params = [];
@@ -3732,6 +3855,7 @@ function EndpointSection({
 }) {
   const [activeTab, setActiveTab] = useState("curl"),
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -4012,6 +4136,8 @@ app.post('/webhook', express.raw({type:'application/json'}), (req, res) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h4 className="text-md font-semibold mt-6 mb-2">Rate Limiting</h4>;
               <p className="text-zinc-400 mb-4">;
                 The Zion API implements rate limiting to protect our infrastructure and ensure fair usage.;
@@ -4049,6 +4175,7 @@ function EndpointSection(): any ({ ;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -4079,6 +4206,8 @@ function EndpointSection(): any ({ ;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {method}
           </Badge>;
           <span className="ml-2 font-mono text-sm text-white">{endpoint}</span>;
@@ -4176,6 +4305,7 @@ function EndpointSection() {
           </table>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       )}
 <<<<<<< HEAD
 
@@ -4246,10 +4376,14 @@ function EndpointSection() {
 =======
       )}      {codeExamples && (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      )}      {codeExamples && (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="border-t border-zinc-800 p-4">
           <div className="flex items-center mb-2">
             <h4 className="font-medium">Request Example</h4>
             <div className="ml-auto flex border border-zinc-700 rounded-md overflow-hidden">
+<<<<<<< HEAD
 <<<<<<< HEAD
               {Object.keys(codeExamples).map((lang) => (
 <<<<<<< HEAD
@@ -4299,6 +4433,9 @@ function EndpointSection() {
 =======
               {Object.keys(codeExamples).map((lang) => (                <button
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              {Object.keys(codeExamples).map((lang) => (                <button
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   key={lang}
                   className={`px-3 py-1 text-xs font-medium ${
                     activeTab === lang
@@ -4346,6 +4483,7 @@ function EndpointSection() {
 }
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   ),;}
@@ -4532,3 +4670,5 @@ data=json.dumps (payload) ) data = response.json () print (data) `
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

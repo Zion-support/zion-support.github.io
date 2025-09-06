@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 } from '../components/salary/InsightCharts';
 
@@ -7,10 +8,21 @@ type InsightResponse = {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {;
   LineChart,;
   BarChart,;
   DonutChart,;
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
+type InsightResponse = any;
+import {
+  LineChart
+  BarChart
+  DonutChart;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 } from '../components/salary/InsightCharts';
 type InsightResponse = {;
   recommendedHourlyUsd: number;
@@ -20,12 +32,15 @@ type InsightResponse = {;
   maxHourlyUsd: number;
   confidence: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   trend_monthly: { label: string; value: number }[];
   regional_comparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
@@ -57,17 +72,72 @@ type InsightResponse = {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [remote, setRemote] = useState(true);
   const [employmentType, setEmploymentType] = useState<'contract' | 'freelance' | 'full-time'>('contract');
+=======
+  trendMonthly: { label: string; value: number }[];
+  regionalComparison: { region: string; medianHourlyUsd: number }[];
+  tags: string[];
+  gptRecommendation?: string;
+};
+
+export default function SalaryInsightsPage() {
+  const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
+  const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
+  const [region, setRegion] = useState('Remote, Global');
+const [experienceLevel, setExperienceLevel] = useState<
+    'Junior' | 'Mid' | 'Senior' | 'Lead'
+  >('Senior');
+  const [remote, setRemote] = useState(true);
+  const [employmentType, setEmploymentType] = useState<
+    'contract' | 'freelance' | 'full-time'
+  >('contract');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<InsightResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+=======
+  useEffect(() => {
+// Lightweight login check via Supabase client if available; otherwise public mode
+    (async () => {
+      try {
+        const { supabase } = await import('../utils/supabase/client');
+        const user = await supabase.auth.getUser();
+setIsLoggedIn(!!user.data.user);
+      } catch {
+        setIsLoggedIn(false);
+      }
+    })();
+  }, []);
+  async function fetchInsights() {
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch('/api/salary-insights', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+roleTitle,
+          skills: skills
+            .split(',')
+            .map(s => s.trim())
+            .filter(Boolean)
+          region
+          experienceLevel
+          remote
+          employmentType
+        })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       });
       if (!res && res.ok) throw new Error('Failed to fetch insights');
       const json = (await res && res.json()) as InsightResponse;
       setData(json);
+<<<<<<< HEAD
       const json = (await res.json()) as InsightResponse;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       setData(json)
@@ -80,6 +150,12 @@ type InsightResponse = {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+    } catch (e: any) {
+      setError(e.message |'Unexpected error');
+    } finally {
+      setLoading(false);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
 
@@ -103,6 +179,22 @@ type InsightResponse = {;
     fetchInsights();
     // eslint-disable-next-line react-hooks/exhaustive-deps;
   }, []);
+<<<<<<< HEAD
+=======
+  function saveInsight() {
+const payload = {
+      createdAt: new Date().toISOString(),
+      input: {
+        roleTitle,
+        skills,
+        region,
+        experienceLevel,
+        remote,
+        employmentType,
+      },
+      output: data,
+    };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     (async () => {
       try {
         const { supabase } = await import('../utils/supabase/client');
@@ -115,9 +207,12 @@ type InsightResponse = {;
           // Attempt to save to Supabase if table exists
           await supabase.from('salary_insights').insert({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         const { supabase } = await import ('../utils / supabase / client');
         const user = await supabase.auth.get_user ();
         setIsLoggedIn (!!user.data.user);
@@ -204,15 +299,24 @@ if ( {) {
           await supabase.from ('salary_insights').insert ({
             user_id: user.data.user.id,
             payload,
+=======
+            user_id: user.data.user.id,
+payload,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           });
           alert ('Insight saved to your profile');
           return;
         }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         }
       } catch {;
         // fall back;
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -234,10 +338,24 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+=======
+      } catch {
+        // fall back
+      }
+      try {
+        const key = 'zion.salary-insights.history';
+        const history = JSON.parse(localStorage.getItem(key) |'[]');
+        history.unshift(payload);
+        localStorage.setItem(key, JSON.stringify(history.slice(0, 50)));
+alert('Insight saved locally');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       } catch {}
     })();
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -246,6 +364,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       } catch {}
     })();
   }
@@ -258,6 +378,7 @@ if ( {) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
   const donutData = useMemo(() => {
+<<<<<<< HEAD
     if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
         alert('Insight saved locally')
       } catch {}
@@ -267,12 +388,16 @@ if ( {) {
     })()
   }
   const donutData = useMemo(() => {
+=======
+    if (!data) return [] as { label: string; value: number }[];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     const min = data.minHourlyUsd;
     const median = data.medianHourlyUsd;
     const max = data.maxHourlyUsd;
     const lower = Math.max(0, median - min);
     const upper = Math.max(0, max - median);
     return [
+<<<<<<< HEAD
         const key = 'zion.salary - insights.history';
         const history = JSON.parse (local_storage.get_item (key) || '[]');
         history.unshift (payload);
@@ -325,6 +450,57 @@ if (return [] as { label: string, value: number }[], ) {
               <div>
                 <label className="block text-sm mb-2" htmlFor="input-Experience">Experience</label>
                 <select value={experienceLevel} onChange={(e) => setExperienceLevel(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
+=======
+      { label: 'Below Median', value: lower || 1 },
+      { label: 'Median', value: median || 1 },
+{ label: 'Above Median', value: upper || 1 },
+    ];
+  }, [data]);
+  return (
+    <div>
+<div className='relative overflow-hidden rounded-xl bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 p-6 text-white shadow'>
+        <div className='relative z-10'>
+          <h1 className='text-2xl font-semibold'>Salary Insights</h1>
+          <p className='opacity-90'>
+            Benchmark rates and set competitive offers in real-time.
+          </p>
+        </div>
+        <div className='absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl' />
+      </div>
+      <div className='mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6'>
+        <div className='lg:col-span-1 space-y-4'>
+          <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
+            <h2 className='font-medium mb-3'>Filters</h2>
+            <label className='block text-sm mb-2'>Role title</label>
+            <input
+              value={roleTitle}
+              onChange={e => setRoleTitle(e.target.value)}
+              className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm'
+              placeholder='e.g., Senior AI Engineer'
+            />
+            <label className='block text-sm mt-3 mb-2'>Skills</label>
+            <input
+              value={skills}
+              onChange={e => setSkills(e.target.value)}
+              className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm'
+              placeholder='Comma-separated'
+            />
+            <label className='block text-sm mt-3 mb-2'>Region</label>
+            <input
+              value={region}
+              onChange={e => setRegion(e.target.value)}
+              className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm'
+              placeholder='City, Country'
+            />
+            <div className='grid grid-cols-2 gap-3 mt-3'>
+              <div>
+                <label className='block text-sm mb-2'>Experience</label>
+                <select
+                  value={experienceLevel}
+                  onChange={e => setExperienceLevel(e.target.value as any)}
+                  className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm'
+                >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   <option>Junior</option>
                   <option>Mid</option>
                   <option>Senior</option>
@@ -332,16 +508,34 @@ if (return [] as { label: string, value: number }[], ) {
                 </select>
               </div>
               <div>
+<<<<<<< HEAD
                 <label className="block text-sm mb-2" htmlFor="input-Employment">Employment</label>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <select value={employmentType} onChange={(e) => setEmploymentType(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
                   <option value="contract">Contract</option>
                   <option value="freelance">Freelance</option>
                   <option value="full-time">Full-time</option>
+=======
+<label className='block text-sm mb-2'>Employment</label>
+                <select
+                  value={employmentType}
+                  onChange={e => setEmploymentType(e.target.value as any)}
+                  className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm'
+                >
+                  <option value='contract'>Contract</option>
+                  <option value='freelance'>Freelance</option>
+                  <option value='full-time'>Full-time</option>
+                </select>
+              </div>
+            </div>
+
+<div className='flex items-center gap-2 mt-3'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               <input
                 id='remote'
                 type='checkbox'
                 checked={remote}
+<<<<<<< HEAD
             <div className="flex items-center gap-2 mt-3">
               <input id="remote" type="checkbox" checked={remote} onChange={(e) => setRemote(e.target.checked)} />
               <label htmlFor="remote" className="text-sm" htmlFor="input-Remote role">Remote role</label>
@@ -357,6 +551,7 @@ if (return [] as { label: string, value: number }[], ) {
               </label>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
               {loading ? 'Calculating…' : 'Update Insights'}
@@ -369,6 +564,34 @@ if (return [] as { label: string, value: number }[], ) {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                onChange={e => setRemote(e.target.checked)}
+              />
+              <label htmlFor='remote' className='text-sm'>
+                Remote role
+              </label>
+            </div>
+            {!isLoggedIn && (
+              <div className='mt-3 text-xs text-gray-500'>
+                Advanced filters are available when you sign in.
+              </div>
+            )}
+
+<button
+              onClick={fetchInsights}
+              disabled={loading}
+              className='mt-4 w-full rounded bg-indigo-600 text-white py-2 text-sm hover:bg-indigo-700 disabled:opacity-50'
+            >
+              {loading ? 'Calculating…' : 'Update Insights'}
+            </button>
+          </div>
+
+<div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
+            <h3 className='font-medium mb-2'>Actions</h3>
+            <div className='flex flex-col gap-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <button
                 onClick={saveInsight}
                 className='rounded border border-gray-300 dark:border-gray-700 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-900'>;
@@ -384,6 +607,7 @@ if (return [] as { label: string, value: number }[], ) {
                 onClick={() =>;
                   alert('This would suggest a resume rate optimization.');
                 }
+<<<<<<< HEAD
             <h3 className="font-medium mb-2">Actions</h3>
             <div className="flex flex-col gap-2">
               <button onClick={saveInsight} className="rounded border border-gray-300 dark:border-gray-700 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-900">Save insight</button>
@@ -399,6 +623,32 @@ if (return [] as { label: string, value: number }[], ) {
             <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
               <div className='text - xs text - gray - 500'>Recommended Monthly</div>;
               <div className='text - xl font - semibold'>;
+=======
+                className='rounded bg-blue-600 text-white py-2 text-sm hover:bg-blue-700'
+              >
+                Optimize Resume Rate
+              </button>
+            </div>
+          </div>
+        </div>
+
+<div className='lg:col-span-2 space-y-6'>
+          {error && (
+            <div className='rounded border border-red-300 bg-red-50 text-red-800 p-3 text-sm'>
+              {error}
+            </div>
+          )}
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
+            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
+              <div className='text-xs text-gray-500'>Recommended Hourly</div>
+              <div className='text-xl font-semibold'>
+                {data ? `$${data.recommendedHourlyUsd}` : '—'}
+              </div>
+            </div>
+            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
+              <div className='text-xs text-gray-500'>Recommended Monthly</div>
+              <div className='text-xl font-semibold'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 {data ? `$${data.recommendedMonthlyUsd}` : '—'}
               </div>;
             </div>;
@@ -453,14 +703,37 @@ if (return [] as { label: string, value: number }[], ) {
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />;
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+              {data && (
+                <table className='w-full mt-3 text-sm'>
+                  <thead>
+                    <tr className='text-left text-xs text-gray-500'>
+                      <th className='py-1'>Region</th>
+                      <th className='py-1'>Median (USD/hr)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {data.regionalComparison.map(r => (
+                      <tr
+                        key={r.region}
+                        className='border-t border-gray-100 dark:border-gray-900'
+                      >
+                        <td className='py-1'>{r.region}</td>
+                        <td className='py-1'>${r.medianHourlyUsd}</td>
+                      </tr>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     ))}
                   </tbody>;
                 </table>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -518,6 +791,14 @@ if (return [] as { label: string, value: number }[], ) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+            </div>
+
+<div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
+              <h3 className='font-medium mb-3'>Distribution</h3>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {data ? (
                 <div className='flex flex - col items - center gap - 3'>;
                   <DonutChart;
@@ -527,6 +808,7 @@ if (return [] as { label: string, value: number }[], ) {
                   <div className='flex gap-2 flex-wrap justify-center text-xs'>;
                     {donutData && donutData.map(d => (;
                       <span
+<<<<<<< HEAD
                         key={d && d.label}
                         className='rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0 && 0.5'>;
                         {d && d.label}
@@ -556,17 +838,30 @@ if (return [] as { label: string, value: number }[], ) {
                   <div className="flex gap-2 flex-wrap justify-center text-xs">
                     {donutData.map((d) => (
                       <span key={d.label} className="rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0.5">{d.label}</span>
+=======
+                        key={d.label}
+                        className='rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0.5'
+                      >
+                        {d.label}
+                      </span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     ))}
                   </div>
                 </div>
               ) : (
+<<<<<<< HEAD
+=======
+<div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />
+              )}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
           {data?.gptRecommendation && (
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
+<div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <h3 className='font-medium mb-2'>GPT Recommendation</h3>
               <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap'>
                 {data.gptRecommendation}
+<<<<<<< HEAD
               </p>            </div>
           )}
           {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
@@ -585,10 +880,24 @@ if (return [] as { label: string, value: number }[], ) {
             </div>
           )}
           {data && (
+=======
+              </p>
+            </div>
+          )}
+          {data && (
+<div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
+              <h3 className='font-medium mb-3'>Signals</h3>
+              <div className='flex gap-2 flex-wrap'>
+                <span className='rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs'>
+                  Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr
+                </span>
+                {data.tags.map(t => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   <span
                     key={t}
                     className='rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs'>;
                     {t}
+<<<<<<< HEAD
                   </span>                ))}            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">;
               <h3 className="font-medium mb-3">Signals</h3>;
               <div className="flex gap-2 flex-wrap">;
@@ -678,5 +987,16 @@ if (return [] as { label: string, value: number }[], ) {
         </div>;
       </div>;
     </div>);
+=======
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

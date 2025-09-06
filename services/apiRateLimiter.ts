@@ -1,14 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   burst_limit: number,
   window_size: number;
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface RateLimitRule {
 =======
@@ -27,6 +31,9 @@ export interface RateLimitConfig {
 =======
 export interface RateLimitRule {export interface RateLimitConfig {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export interface RateLimitRule {export interface RateLimitConfig {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface RateLimitConfig {;
   requestsPerMinute: number;
   requestsPerHour: number;
@@ -42,6 +49,7 @@ export interface RateLimitConfig {
   requestsPerMinute: number;
   requestsPerHour: number;
   requestsPerDay: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -79,6 +87,9 @@ export interface RateLimitRule {
 =======
 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface RateLimitStats {
   endpoint: string;
   method: string;
@@ -87,6 +98,7 @@ export interface RateLimitStats {
   averageResponseTime: number;
   last_request: Date;
   current_usage: {
+<<<<<<< HEAD
 <<<<<<< HEAD
     minute: number;
 <<<<<<< HEAD
@@ -219,11 +231,14 @@ export interface RateLimitViolation {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   endpoint: string;
+=======
+    minute: number;  endpoint: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   method: string;
   timestamp: Date;
   reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded';
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
@@ -248,12 +263,15 @@ export class APIRateLimiterService {
   reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   private apiKey: string;
 
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -267,6 +285,8 @@ export class APIRateLimiterService {
   }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
     try {
 
@@ -285,6 +305,7 @@ export class APIRateLimiterService {
   }
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -305,6 +326,8 @@ export class APIRateLimiterService {
     } catch (error) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Mock response for demo;
       return {
         ...rule;
@@ -414,6 +437,7 @@ if ( {) {
             requestsPerMinute: 10;
             requestsPerHour: 100;
 <<<<<<< HEAD
+<<<<<<< HEAD
             requestsPerDay: 1000;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -451,6 +475,9 @@ if ( {) {
 =======
             requestsPerDay: 1000;        }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            requestsPerDay: 1000;        }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       ];
     }
   }
@@ -602,12 +629,15 @@ export class APIRateLimiterService {;
           updated_at: new Date ();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           updated_at: new Date ();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
@@ -615,6 +645,7 @@ export class APIRateLimiterService {;
       ];
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -632,6 +663,8 @@ export class APIRateLimiterService {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'PATCH',
         headers: {
@@ -661,6 +694,7 @@ export class APIRateLimiterService {;
     try {
       const params = endpoint ? `?endpoint=${encodeURIComponent(endpoint)}` : '';
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/stats${params}`, {
+<<<<<<< HEAD
 <<<<<<< HEAD
         headers: {
 <<<<<<< HEAD
@@ -919,6 +953,9 @@ if ( {) {
 =======
         headers: {    } catch (error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        headers: {    } catch (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Mock stats for demo;
       return [;
         {
@@ -948,8 +985,11 @@ if ( {) {
             hour: 95,
             day: 650;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }
 
 export interface RateLimitConfig {;
@@ -960,17 +1000,21 @@ export interface RateLimitConfig {;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }
         }
       ]
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -993,6 +1037,8 @@ export interface RateLimitConfig {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {
     try {
 
@@ -1008,6 +1054,7 @@ export interface RateLimitConfig {;
       }
 
       return await response && response.json()
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1067,6 +1114,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (error) {
       // Mock API key creation for demo;
       return {
@@ -1081,11 +1130,14 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         id: `key_${Date.now ()}`;
         name;
         key: `zion_${Math.random ().to_string (36).substr (2, 9)}`;
@@ -1098,6 +1150,7 @@ if ( {) {
   }
   async getAPIKeys (): Promise < APIKey[]> {=======      // Mock API keys for demo;
       return [;
+<<<<<<< HEAD
 <<<<<<< HEAD
         {;
           endpoint:'/api/users',;
@@ -1233,6 +1286,8 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {
           id: 'key_1';
           name: 'Web Application';
@@ -1255,11 +1310,14 @@ if ( {) {
             requestsPerDay: 5000;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   }
 
@@ -1275,6 +1333,7 @@ if ( {) {
     }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1346,10 +1405,13 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (error) {
       // Mock violations for demo;
       return [;
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
           id: 'violation_1';
 <<<<<<< HEAD
@@ -1478,12 +1540,16 @@ if ( {) {
 =======
           id: 'violation_1';          api_key: 'zion_web123';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          id: 'violation_1';          api_key: 'zion_web123';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           endpoint: '/api / users';
           method: 'GET',
           timestamp: new Date (Date.now () - 1000 * 60 * 30), // 30 minutes ago;
           reason: 'rate_limit_exceeded';
           ip_address: '192.168.1.100',
           user_agent: 'Mozilla / 5.0 (Windows NT 10.0, Win64, x64) AppleWebKit / 537.36';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1578,12 +1644,15 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       return acc
     }, {} as Record<string, number>);
     return {
       overview: {
         totalRequests;
         blockedRequests;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1874,6 +1943,12 @@ export const API_RATE_LIMITER_PRICING = {
       blocked_requests: number;
       active_rules: number,  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    overview: {
+      total_requests: number;
+      blocked_requests: number;
+      active_rules: number,  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   professional: {
     name: 'Professional';
     price: 79;
@@ -1887,6 +1962,7 @@ export const API_RATE_LIMITER_PRICING = {
     name: 'Enterprise';
     price: 199;
     period: '/month';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2302,3 +2378,8 @@ topEndpoints: stats .sort ( (a, b) => b.totalRequests - a.totalRequests) .slice 
   }
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  }
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

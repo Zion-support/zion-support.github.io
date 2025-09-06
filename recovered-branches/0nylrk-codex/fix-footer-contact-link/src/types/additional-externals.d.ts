@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -50,6 +51,8 @@ declare module 'react-router-dom';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 declare module 'aria-query',;
 declare module '@babel/core',;
 declare module '@babel/generator',;
@@ -111,6 +114,7 @@ declare module 'react - beautiful - dnd';
 declare module 'react - redux';
 declare module 'semver';
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare module 'ws';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -144,3 +148,6 @@ declare module "react-router-dom";
 =======
 declare module 'ws';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+declare module 'ws';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

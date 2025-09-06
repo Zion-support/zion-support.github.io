@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -138,7 +141,10 @@ import { MobileEmailCapture } from "@/components/mobile-app/MobileEmailCapture",
 import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",
 import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload",
 import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",const MobileLaunchPage: React.FC = () => {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <AppLayout>
       <SEO
@@ -146,6 +152,7 @@ import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",const Mo
         description="Download the Zion mobile app for iOS and Android. Hire AI talent, find tech jobs, and manage projects on the go."
         keywords="Zion mobile app, AI talent app, tech job app, project management app, iOS app, Android app"
         canonical="/mobile-launch"
+<<<<<<< HEAD
 <<<<<<< HEAD
       />
 
@@ -178,6 +185,10 @@ export default MobileLaunchPage;
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export default MobileLaunchPage;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default MobileLaunchPage,
 import React from "react",;
 import { SEO } from "@/components/SEO",;
@@ -190,6 +201,7 @@ import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",;
 import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload",;
 import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",;
 const MobileLaunchPage: React.FC = () => {;
+<<<<<<< HEAD
   return (;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -336,3 +348,6 @@ export default MobileLaunchPage;
 const MobileLaunchPage: React.FC = () => {;
   return (;export default MobileLaunchPage;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (;export default MobileLaunchPage;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

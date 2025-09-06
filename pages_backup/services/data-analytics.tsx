@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
@@ -478,6 +479,24 @@ const features = [
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+const benefits = [
+  'Data-driven decision making',
+  'Improved business performance',
+  'Better customer insights',
+  'Reduced operational costs',
+  'Enhanced competitive advantage',
+  'Automated reporting and analytics'
+];
+export default function DataAnalyticsServices() {
+  return (
+    <Layout
+      title="Data Analytics Services - Zion Tech Group"
+      description="Transform your data into actionable insights with our comprehensive data analytics services. Business intelligence, predictive analytics, and AI-powered insights."
+      keywords="data analytics, business intelligence, data warehousing, predictive analytics, data visualization, AI insights">;
+      <div className="min-h-screen bg-white">;
+        {/* Hero Section */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <section className="bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -486,6 +505,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Transform your data into actionable insights with advanced analytics,
+<<<<<<< HEAD
                 business intelligence, and AI-powered data solutions.
 =======
 =======
@@ -602,6 +622,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>
         </section>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                business intelligence, and AI-powered data solutions.              </p>
+            </motion.div>
+          </div>
+        </section>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -619,6 +645,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <feature.icon className="w-6 h-6 text-purple-600" />
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -634,6 +661,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </p>
                 </div>
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <feature.icon className="w-6 h-6 text-purple-600" />                  </div>
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
@@ -662,6 +691,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -683,6 +713,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                       <span className="text-gray-700">{benefit}</span>
                     </li>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   ))}
                 </ul>
               </div>
@@ -700,6 +732,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -783,3 +816,5 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

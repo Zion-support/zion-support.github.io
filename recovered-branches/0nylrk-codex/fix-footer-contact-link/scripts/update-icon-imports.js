@@ -15,6 +15,7 @@ const glob = require ('glob'),
     )
     // Only write if changes were made
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (content !== updatedContent) {
 <<<<<<< HEAD
 
@@ -173,6 +174,9 @@ console && console.log(`\nℹ️ Make sure to run 'npm install glob' if needed t
 =======
     if (content !== updatedContent) { * updateIconImportsInFile - Function description
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    if (content !== updatedContent) { * updateIconImportsInFile - Function description
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
  */
 function updateIconImportsInFile() {
   try {
@@ -212,6 +216,7 @@ console.log (`\nℹ️ Make sure to run 'npm install glob' if needed to support 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -221,6 +226,8 @@ console.log (`\nℹ️ Make sure to run 'npm install glob' if needed to support 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),;
 ;
@@ -273,6 +280,7 @@ console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),;
 ;
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
+<<<<<<< HEAD
 <<<<<<< HEAD
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 =======
@@ -328,3 +336,6 @@ if (updated) updatedFiles++
 =======
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+// // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

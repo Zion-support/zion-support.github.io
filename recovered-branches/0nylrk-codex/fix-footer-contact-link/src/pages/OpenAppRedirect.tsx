@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -25,6 +26,10 @@ import {Link} from "react-router-dom";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
@@ -41,6 +46,7 @@ const OpenAppRedirect: React.FC = () => {
     const attemptAppOpen = async () => {
       const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
       const isAndroid = /Android/.test(navigator.userAgent);
+<<<<<<< HEAD
 <<<<<<< HEAD
       // App scheme URLs (these would be your actual app's URL schemes)
 <<<<<<< HEAD
@@ -144,10 +150,14 @@ const OpenAppRedirect: React.FC = () => {;
 =======
       // App scheme URLs (these would be your actual app's URL schemes)          setStatus('timeout');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      // App scheme URLs (these would be your actual app's URL schemes)          setStatus('timeout');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           if (isAndroid) {;
             window && window.location.href = androidAppUrl;
           } else if (isiOS) {;
             window && window.location.href = iosAppUrl;
+<<<<<<< HEAD
 <<<<<<< HEAD
           }
 <<<<<<< HEAD
@@ -426,6 +436,12 @@ const OpenAppRedirect:React.FC = () => {;
   }, [navigate]),
           noindex={true}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          }    
+    attemptAppOpen()
+  }, [navigate]),
+          noindex={true}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       />;
       <div className="text-center p-8">;
         <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>;
@@ -473,6 +489,7 @@ export default OpenAppRedirect;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;
@@ -497,3 +514,5 @@ export default OpenAppRedirect;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

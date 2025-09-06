@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // Use the centralized icon wrapper to avoid missing icons;
 <<<<<<< HEAD
@@ -108,6 +109,12 @@ export const getTypeIcon = (type: NotificationType) => {
     case 'message':;
       return <span className="text-blue-500">💬</span>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+// Use the centralized icon wrapper to avoid missing icons;
+  switch (type) {
+    case 'message':;
+      return <span className="text-blue-500">💬</span>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
@@ -115,6 +122,7 @@ export const getTypeIcon = (type: NotificationType) => {
 
 export const getTypeIcon = (type: NotificationType) => {;
   switch (type) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
     case 'message':;
 =======
@@ -124,6 +132,9 @@ export const getTypeIcon = (type: NotificationType) => {;
 =======
     case 'message':;      return <span className="text-blue-500">💬</span>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    case 'message':;      return <span className="text-blue-500">💬</span>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     case 'quote_request':;
       return <span className="text-purple-500">📝</span>;
     case 'booking_confirmation':;
@@ -145,6 +156,7 @@ export const getTypeIcon = (type: NotificationType) => {;
   }
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface NotificationItemProps {
 <<<<<<< HEAD
@@ -235,6 +247,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
 =======
 interface NotificationItemProps {export const NotificationItem: React.FC<NotificationItemProps> = ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+interface NotificationItemProps {export const NotificationItem: React.FC<NotificationItemProps> = ({;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   notification,;
   onMarkAsRead,;
   onDismiss;
@@ -242,6 +257,7 @@ interface NotificationItemProps {export const NotificationItem: React.FC<Notific
   const navigate = useNavigate(),;
   const handleClick = () => {;
     if (!notification.read) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
       onMarkAsRead(notification.id);
 <<<<<<< HEAD
@@ -254,13 +270,25 @@ interface NotificationItemProps {export const NotificationItem: React.FC<Notific
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
+=======
+      onMarkAsRead(notification.id);    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // If there's an action URL, navigate to it
     if (notification.action_url) {
       navigate(notification.action_url)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  }
+  },
+
+  },
+  };
+  },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 interface NotificationItemProps {;
   notification: Notification,;
@@ -278,13 +306,13 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
   const handleClick = () => {;
     if (!notification && notification.read) {;
       onMarkAsRead(notification && notification.id);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     // If there's an action URL, navigate to it;
     if (notification && notification.action_url) {;
       navigate(notification && notification.action_url);
     }
   }
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   };
   },
@@ -336,6 +364,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
     }
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div
       className={cn(
@@ -346,6 +376,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
                 variant="link"
                 size="sm"
                 className="text-zion-cyan p-0 h-auto"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -426,6 +457,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;
         <TooltipProvider>;
           <Tooltip>;
@@ -433,6 +466,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
             </TooltipContent>;
           </Tooltip>;
         </TooltipProvider>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <TooltipProvider>;
           <Tooltip>;
@@ -476,6 +510,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
 =======
       </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
     </div>);
 }
@@ -488,6 +525,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
   )
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -495,3 +533,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

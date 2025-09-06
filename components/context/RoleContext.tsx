@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, {
   createContext
   useContext
@@ -91,16 +94,37 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+export type UserRole = any;
+  return ctx
+}
+export type UserRole = 'client' | 'talent';
+type RoleContextValue = {
+role: UserRole;
+  setRole: (role: UserRole) => void;
+};
+
+const RoleContext = createContext<RoleContextValue | undefined>(undefined);
+
+export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [role, setRole] = useState<UserRole>('client');
   useEffect(() => {
     try {
-      const saved =
+const saved =
         typeof window !== 'undefined'
           ? window.localStorage.getItem('zion_user_role')
           : null;
+<<<<<<< HEAD
       if (saved === 'client' |saved === 'talent') {
         setRole(saved);      }      const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion_user_role') : null;
       if (saved === 'client' |saved === 'talent') {
@@ -111,7 +135,14 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
 =======
   children
 }) => {export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+      if (saved === 'client' || saved === 'talent') {
+        setRole(saved);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
     } catch {}
   }, []);
@@ -124,6 +155,7 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
     try {
       if (typeof window !== 'undefined') {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -132,17 +164,26 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         window.localStorage.setItem('zion_user_role', role)
 
         window.localStorage.setItem('zion_user_role', role);      }
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+window.localStorage.setItem('zion_user_role', role);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
     } catch {}
   }, [role]);
   const value = useMemo(() => ({ role, setRole }), [role]);
+<<<<<<< HEAD
 <<<<<<< HEAD
   return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>;};  return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>
 
@@ -157,6 +198,8 @@ const ctx = useContext(RoleContext);
   }, [role]);
   const value = useMemo(() => ({ role, setRole }), [role])
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
 export function useRole(): any (): RoleContextValue {;
@@ -226,4 +269,17 @@ const ctx = useContext (RoleContext);
 }
   return ctx;  return ctx;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+
+return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>;
+};
+
+export function useRole(): RoleContextValue {
+  const ctx = useContext(RoleContext);
+  if (!ctx) throw new Error('useRole must be used within RoleProvider');
+return ctx;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

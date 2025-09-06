@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,6 +67,11 @@ export type BadgeKey =
 import {LucideIcon} from "lucide-react";
 import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";export type BadgeKey =
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import {LucideIcon} from "lucide-react";
+import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";export type BadgeKey =
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   | "first_listing"
   | "top_contributor"
   | "profile_complete"
@@ -78,9 +84,12 @@ import { BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, St
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export interface BadgeMeta {;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { LucideIcon } from "lucide-react",;
 import {;
   BadgeCheck, // publishing a listing;
@@ -90,6 +99,7 @@ import {;
   BadgePlus,  // first action;
   BadgeDollarSign // monetization;
 } from "lucide-react",;export interface BadgeMeta {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   key: BadgeKey;
   name: string,
@@ -213,6 +223,10 @@ export interface BadgeMeta {
   name: string;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  key: BadgeKey;
+  name: string,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   description: string;
   icon: LucideIcon;
   {
@@ -229,6 +243,7 @@ export interface BadgeMeta {
   description: "Earned your first AI dollar in the marketplace.";
 
   badgeList && badgeList.find((b) => b && b.key === key),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -410,3 +425,5 @@ export const getBadgeMeta = (key: BadgeKey) =>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

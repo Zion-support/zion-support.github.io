@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 
@@ -25,6 +26,8 @@ const ext = (url: string) => (
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default function ServicesAdvertisingPage() {
 	return (
@@ -35,6 +38,7 @@ export default function ServicesAdvertisingPage() {
   const benefits = [
     '1000% ROI target with measurable KPIsTransparent pricing with market referencesFast onboarding with templates and playbooksEnterprise-grade security and compliance24/7 support with SLAsProven architectures and reference implementationsNo long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling'
     'Flexible deployment: SaaS or self-hosted options'
+<<<<<<< HEAD
 <<<<<<< HEAD
   ]
 				{/* New: Core micro SaaS and AI additions */}
@@ -51,18 +55,27 @@ export default function ServicesAdvertisingPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   ],
+=======
+
+  ],
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 				{/* New: Core micro SaaS and AI additions */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   ],
 =======
+=======
+
+  ],
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ],
 
 
@@ -73,6 +86,7 @@ export default function ServicesAdvertisingPage() {
 						<li>Typical SMB budget: $20–$80/mo</li>
 						<li>References: {ext('https://buffer.com/pricing')}, {ext('https://www.hootsuite.com/plans')}</li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -81,6 +95,8 @@ export default function ServicesAdvertisingPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 					</ul>
 				</section>
   const pricingRefs = [
@@ -95,6 +111,7 @@ export default function ServicesAdvertisingPage() {
 						<li>Typical budget: $10–$30/mo + usage</li>
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.pinecone.io/pricing/')}</li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -103,6 +120,8 @@ export default function ServicesAdvertisingPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 					</ul>
 				</section>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -133,7 +152,10 @@ export default function ServicesAdvertisingPage() {
               {[
 
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                 { name: 'API Security Scanner', price: '$299/mo', href: '/services/api-security-scanner', points: ['OWASP Top 10CI/CD checksPII detection'] },
                 { name: 'Email DMARC Analyzer', price: '$99/mo', href: '/services/email-dmarc-analyzer', points: ['DMARC/SPF/DKIMBIMI readinessWeekly reports'] },
@@ -145,16 +167,20 @@ export default function ServicesAdvertisingPage() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2 mb-3">{o.name}</div>
                   <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -175,6 +201,8 @@ export default function ServicesAdvertisingPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
           </section>
           <section>
@@ -197,6 +225,7 @@ export default function ServicesAdvertisingPage() {
 						<li>Typical budget: $40–$200/mo</li>
 						<li>References: {ext('https://apify.com/pricing')}, {ext('https://www.browserless.io/pricing')}</li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -205,6 +234,8 @@ export default function ServicesAdvertisingPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -214,6 +245,7 @@ export default function ServicesAdvertisingPage() {
 						<li>Typical budget: $30–$150/mo</li>
 						<li>References: {ext('https://k6.io/pricing')}, {ext('https://jmeter.apache.org/')}</li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -222,6 +254,8 @@ export default function ServicesAdvertisingPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -231,6 +265,7 @@ export default function ServicesAdvertisingPage() {
 						<li>Typical budget: $15–$60/mo</li>
 						<li>References: {ext('https://dmarc.org/overview/')}, {ext('https://postmarkapp.com/support/category/dmarc')}</li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -239,6 +274,8 @@ export default function ServicesAdvertisingPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -248,6 +285,7 @@ export default function ServicesAdvertisingPage() {
 						<li>Typical budget: $10–$60/mo + usage</li>
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.descript.com/pricing')}</li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -256,6 +294,8 @@ export default function ServicesAdvertisingPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 					</ul>
 				</section>
 				<section id="ai-evaluation-orchestrator" className="space-y-6">
@@ -337,11 +377,14 @@ export default function ServicesAdvertisingPage() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
           </section>
           <section>
@@ -461,11 +504,14 @@ export default function ServicesAdvertisingPage() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
             <div className="text-center mt-6">
               <Button href="/market-pricing" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">More Market References</Button>
@@ -476,6 +522,7 @@ export default function ServicesAdvertisingPage() {
             <div className="flex flex-wrap items-center justify-center gap-3">
               {anchors.map((a) => (
                 <a key={a.title} href={a.href} className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 text-gray-200">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -495,6 +542,8 @@ export default function ServicesAdvertisingPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
           </section>
           <section>
@@ -511,12 +560,15 @@ export default function ServicesAdvertisingPage() {
                 <MapPin className="w-5 h-5 text-emerald-400" />
                 <span className="text-gray-200 text-sm">{contact.address}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               </Link>
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
           </section>
           <section>
@@ -529,6 +581,12 @@ export default function ServicesAdvertisingPage() {
                 { name: 'Domain & DNS Monitor', price: '$89/mo', href: '/domain-dns-monitor' },
                 { name: 'Uptime & SLO Monitor', price: '$99/mo', href: '/uptime-slo-monitor' },
                 { name: 'PDF Render API', price: '$49/mo', href: '/pdf-render-api' },
+<<<<<<< HEAD
+=======
+=======
+const ext = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor' }
                 { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor'   } catch (error) {
     console.error("Error:", error);
@@ -540,6 +598,10 @@ export default function ServicesAdvertisingPage() {
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2">{o.name}</div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 };
                 </Link>
@@ -548,7 +610,10 @@ export default function ServicesAdvertisingPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 };
 
@@ -556,9 +621,12 @@ export default function ServicesAdvertisingPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 import React from 'react',
 import SEO from '../components / SEO',
@@ -951,6 +1019,7 @@ return (
 
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -2091,6 +2160,9 @@ export default function ServicesAdvertisingPage(req, res) {
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2">{o.name}</div>
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </a>
               ))}
             </div>
@@ -2100,6 +2172,7 @@ export default function ServicesAdvertisingPage(req, res) {
     </UltraAdvancedFuturisticBackground>
   )
 }
+<<<<<<< HEAD
 };
                 </Link>
               ))  } catch (error) {
@@ -2526,3 +2599,6 @@ return (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

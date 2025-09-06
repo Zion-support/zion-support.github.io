@@ -55,6 +55,7 @@ export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
   severity,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }) => {
 =======
 
@@ -96,6 +97,9 @@ interface SeverityDisplayProps {
 =======
 }) => {  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}) => {  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   severity: string
 }
 

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -21,10 +22,13 @@ import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 const openAIApiKey = Deno && Deno.env.get('OPENAI_API_KEY'),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -79,6 +83,8 @@ import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -92,6 +98,7 @@ const corsHeaders = {
 interface Message {
   role: string
   content: string
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -122,10 +129,13 @@ interface Message {;
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface RequestBody {
   messages: Message[];
 }
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -152,6 +162,8 @@ serve(async (req) => {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -168,6 +180,7 @@ serve(async (req) => {
     }
     // Combine the system message with user messages
     const combinedMessages = [systemMessage, ...messages];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -205,10 +218,14 @@ serve(async (req) => {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     const assistantMessage = data.choices[0].message.content;
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.
+<<<<<<< HEAD
 <<<<<<< HEAD
     console.log('AI chat interaction logged');
 <<<<<<< HEAD
@@ -286,6 +303,12 @@ serve(async (req) => {
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.    return new Response(JSON.stringify({ message: assistantMessage }), {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    console.log('AI chat interaction logged');    }
+    const assistantMessage = data.choices[0].message.content;
+    // Log this interaction for analytics (in a real implementation)
+    // This would track common questions, successful interactions, etc.    return new Response(JSON.stringify({ message: assistantMessage }), {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
     console.error('Error in ai-chat function:', error);
@@ -340,6 +363,7 @@ if ( {) {
   }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -347,3 +371,6 @@ if ( {) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

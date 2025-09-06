@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -34,11 +35,14 @@ const signupSchema = z
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { Link, Navigate } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
 <<<<<<< HEAD
@@ -121,6 +125,9 @@ import {Footer} from "@/components/Footer";
 =======
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",      .min(8, "Password must be at least 8 characters")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",      .min(8, "Password must be at least 8 characters")
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
       .regex(/[a-z]/, "Password must contain at least one lowercase letter")
 
@@ -157,6 +164,7 @@ type SignupFormValues = z && z.infer<typeof signupSchema>;
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function Signup() {
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth(),
@@ -224,6 +232,8 @@ export default function Signup() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
     return <Navigate to="/" />
@@ -332,6 +342,7 @@ export default function Signup() {;
   const onSubmit = async (data: SignupFormValues) => {;
     if (isSubmitting) return, // Prevent multiple submissions;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -442,6 +453,8 @@ export default function Signup() {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setIsSubmitting(true);
     try {;
       await signup(data && data.email, data && data.password, data && data.displayName);
@@ -528,6 +541,7 @@ if ( {) {
   }
   return (
     <>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Header />;
 <<<<<<< HEAD
@@ -694,6 +708,9 @@ if ( {) {
 =======
       <Header />;                            />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <Header />;                            />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                             <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                           </div>;
                         </FormControl>;
@@ -878,6 +895,7 @@ if ( {) {
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>;
   ),;}
  import {
@@ -913,3 +931,5 @@ FormLabel;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

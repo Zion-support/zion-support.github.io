@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 
   const [slugs, setSlugs] = React.useState<string[]>([]),
@@ -25,10 +26,20 @@
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import React from 'react';
+  const [slugs, setSlugs] = React.useState<string[]>([]);
+  React.useEffect(() => {
+    // In a real app, list from API or build-time, here we rely on directory hint not available at runtime.
+    setSlugs([])
+  }, []);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div>;
       <h1 className="text - 2xl font - semibold mb - 4">SEO Landing Pages</h1>;
       {slugs.length === 0 ? (
+<<<<<<< HEAD
 
 =======
 }
@@ -37,12 +48,18 @@
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="text - sm text - gray - 500">Generated pages will appear once deployed.</div>) : (
         <ul className="list - disc ml - 5">;
           {slugs.map ((s) => (
             <li key={s}><a className="text - cyan - 600" href={`/seo/${s}`}>{s}</a></li>))}
         </ul>)}
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -87,15 +104,20 @@ export default function SEOIndex() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   );
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <li key={s}><a className="text-cyan-600" href={`/seo/${s}`}>{s}</Link></li>
           ))  } catch (error) {
     console.error("Error:", error);
@@ -115,6 +137,7 @@ export default function SEOIndex() {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -130,3 +153,17 @@ export default function SEOIndex() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+        <div className="text-sm text-gray-500">Generated pages will appear once deployed.</div>
+      ) : (
+        <ul className="list-disc ml-5">
+          {slugs.map((s) => (
+            <li key={s}><a className="text-cyan-600" href={`/seo/${s}`}>{s}</a></li>
+          ))}
+        </ul>
+      )}
+    </div>
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

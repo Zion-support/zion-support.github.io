@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 
 export interface Notification {
@@ -23,6 +24,9 @@ export interface Notification {
 =======
 
 =======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
@@ -35,13 +39,18 @@ import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
   id: string;
   type: "success" | "error" | "warning" | "info";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   title?: string;
   message: string;
   duration?: number;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -140,6 +149,8 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
@@ -231,6 +242,7 @@ interface NotificationContextType {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
     const id = Math.random().toString(36).slice(2),
     setToasts((prev) => [...prev, { id, message, tone }]),
@@ -284,6 +296,8 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <NotificationContext.Provider value={{ notifications, addNotification, removeNotification }}>
       {children}
@@ -305,6 +319,7 @@ const NotificationContainer: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default NotificationSystem;
@@ -354,6 +369,8 @@ const NotificationItem: React.FC<{
 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const colors = {
     success: 'bg-green-500',
     error: 'bg-red-500',
@@ -362,6 +379,7 @@ const NotificationItem: React.FC<{
   };
 
   const Icon = icons[notification.type];
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
 
@@ -422,6 +440,8 @@ if (return null) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
@@ -446,6 +466,7 @@ if (return null) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
@@ -466,3 +487,5 @@ export const useNotifications = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

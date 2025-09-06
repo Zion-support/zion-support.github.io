@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         <ul className="mt-6 space-y-4">
           {items.map((it, idx) => (
@@ -12,12 +13,20 @@
     </EnhancedLayout>
 
 =======
+=======
+                {it.source} · {it.author || 'unknown'} · {new Date(it.created_at).toLocaleString()}
+=======
+  const items: any[] = (data?.items || []).slice(0, 50);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">Innovation Radar</h1>
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Signals generated at {data?.generatedAt |'—'}</p>
+<<<<<<< HEAD
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Signals generated at {data?.generatedAt || '—'}</p>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <ul className="mt-6 space-y-4">
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
@@ -26,7 +35,11 @@
               </a>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
                 {it.source} · {it.author |'unknown'} · {new Date(it.created_at).toLocaleString()}
+<<<<<<< HEAD
                 {it.source} · {it.author || 'unknown'} · {new Date(it.created_at).toLocaleString()}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Query: {it.query}</div>
             </li>
@@ -34,6 +47,7 @@
         </ul>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
   );
 };
 =======
@@ -134,6 +148,9 @@ export default function InnovationRadarPage() {
         </ul>
       </div>
     </EnhancedLayout>
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 };
   );
@@ -155,6 +172,7 @@ export default function InnovationRadarPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -169,3 +187,9 @@ export default function InnovationRadarPage() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

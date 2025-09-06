@@ -28,6 +28,7 @@ import {ProjectReviewSection} from "@/components/projects/reviews/ProjectReviewS
 import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -38,10 +39,13 @@ function ProjectDetailsContent() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 function ProjectDetailsContent() {;
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const { projectId } = useParams() as { projectId?: string };
 =======
@@ -164,6 +168,12 @@ import {
   const { getProjectById, updateProjectStatus } = useProjects();
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const { projectId } = useParams() as { projectId?: string };  const { user } = useAuth();
+  const navigate = useNavigate();
+  const { getProjectById, updateProjectStatus } = useProjects();
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -186,6 +196,7 @@ function ProjectDetailsContent() {
 
       setIsLoading(true),
       const projectData = await getProjectById(projectId),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       if (projectData) {
@@ -211,12 +222,17 @@ function ProjectDetailsContent() {
       
       if (projectData) {        // Now fetch notes
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      
+      if (projectData) {        // Now fetch notes
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         fetchProjectNotes(projectId)
       } else {
         toast({
           title: "Project not found"
           description: "The requested project could not be found."
           variant: "destructive"})
+<<<<<<< HEAD
 <<<<<<< HEAD
         navigate("/dashboard")
 <<<<<<< HEAD
@@ -365,6 +381,9 @@ if ( {) {
 =======
         navigate("/dashboard")    try {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        navigate("/dashboard")    try {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const { data, error } = await supabase;
         .from ("project_notes");
         .select (`;
@@ -377,6 +396,7 @@ if ( {) {
       setIsSubmittingNote (false);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -464,6 +484,9 @@ if ( {) {
 =======
     switch (status) {        // Now fetch notes;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    switch (status) {        // Now fetch notes;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         fetchProjectNotes(projectId);
       } else {;
         toast({;
@@ -471,6 +494,7 @@ if ( {) {
   description: "The requested project could not be found.",;
           variant: "destructive"}),;
         navigate("/dashboard");
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -883,6 +907,10 @@ function ProjectDetailsContent() {;
       setIsLoading(false);
     }    return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      setIsLoading(false);
+    }    return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="container mx-auto py-8">;
         <Card>;
           <CardContent className="flex flex-col items-center justify-center py-10">;
@@ -894,11 +922,15 @@ function ProjectDetailsContent() {;
             <Button onClick={() => navigate("/dashboard")}>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         return <Badge className="bg - green - 100 text - green - 800">Offer Accepted</Badge>;
 =======
         return <Badge className="bg - green - 100 text - green-800">Offer Accepted</Badge>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        return <Badge className="bg - green - 100 text - green-800">Offer Accepted</Badge>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       case "changes_requested":;
         return <Badge variant="secondary">Changes Requested</Badge>;
       case "in_progress":;
@@ -938,6 +970,7 @@ if ( {) {
               The project you're looking for doesn't exist or you don't have access to it.;
             </p>;
             <Button on_click={() => navigate ("/dashboard")}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1062,6 +1095,11 @@ if ( {) {
           </CardContent>;
         </Card>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            </Button>;
+          </CardContent>;
+        </Card>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <SEO
@@ -1701,6 +1739,7 @@ if ( {) {
               </TabsContent>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1780,6 +1819,9 @@ if ( {) {
 =======
 =======                        <img
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======                        <img
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
                         />
@@ -1826,6 +1868,7 @@ if ( {) {
                         <Button
                           variant="outline"
                           size="sm"
+<<<<<<< HEAD
 <<<<<<< HEAD
                           className="mt-2"
 <<<<<<< HEAD
@@ -2402,6 +2445,12 @@ if ( {) {
                           size="sm"
                           className="mt-2"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                          className="mt-2"                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="mt-2"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* Project Status Card */}
             <Card className="mt-6">
               <CardHeader>
@@ -2445,6 +2494,7 @@ if ( {) {
     </>;
   );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -2549,6 +2599,9 @@ export default function ProjectDetails() {
 =======
 }    </>);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}    </>);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 export default /**
  * ProjectDetails - Function description
@@ -2558,6 +2611,7 @@ function ProjectDetails() {
     <ProtectedRoute>;
       <ProjectDetailsContent />;
     </ProtectedRoute>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -2605,3 +2659,6 @@ export default function ProjectDetails() {;
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

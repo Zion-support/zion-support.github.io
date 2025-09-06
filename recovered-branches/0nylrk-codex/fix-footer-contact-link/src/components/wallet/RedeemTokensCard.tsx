@@ -1,10 +1,13 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -32,7 +35,10 @@ import {
   DialogTitle,
   DialogTrigger} from "@/components/ui/dialog",
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 type RewardOption = {
   id: string
   title: string
@@ -318,6 +324,7 @@ if (return, ) {
         </Dialog>;
       </CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Card>;
   );
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -328,6 +335,8 @@ if (return, ) {
 ;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
 ;

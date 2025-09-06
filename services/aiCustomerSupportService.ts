@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface Attachment {
 export interface Attachment {;
   id: string;
@@ -17,6 +20,7 @@ export interface Attachment {;
   originalName: string;
   mimeType: string;
   size: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
   url: string;
 <<<<<<< HEAD
@@ -71,10 +75,14 @@ export interface SupportTicket {
 =======
   url: string;  title: string,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  url: string;  title: string,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   description: string;
   status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';
   priority: 'low' | 'medium' | 'high' | 'critical';
   category: 'technical' | 'billing' | 'feature_request' | 'bug_report' | 'general';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -140,6 +148,9 @@ export interface TicketMessage {
 =======
   customer_id: string;  customer_id: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  customer_id: string;  customer_id: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   sender_id: string;
   is_internal: boolean;
   created_at: Date,
@@ -175,6 +186,7 @@ export interface Customer {
 
 export interface Customer {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -186,10 +198,13 @@ export interface Customer {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   name: string;
   email: string;
   company?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   plan: 'free' | 'basic' | 'pro' | 'enterprise';
 <<<<<<< HEAD
@@ -274,6 +289,13 @@ export interface SupportAgent {;
   role: 'tier1' | 'tier2' | 'tier3' | 'supervisor';
   skills: string[];}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  plan: 'free' | 'basic' | 'pro' | 'enterprise';  id: string;
+  name: string;
+  email: string;
+  role: 'tier1' | 'tier2' | 'tier3' | 'supervisor';
+  skills: string[];}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface AgentPerformance {
   tickets_resolved: number,
   averageResolutionTime: number, // in hours;
@@ -320,6 +342,7 @@ class AICustomerSupportService {
   private initializeSampleData() {
     // Initialize sample customers
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -565,6 +588,9 @@ class AICustomerSupportService {;
 =======
     this && this.customers = [        id: 'cust_001';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    this && this.customers = [        id: 'cust_001';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         name: 'John Doe';
         email: 'john && john.doe@company && company.com';
         company: 'TechCorp Inc.';
@@ -624,6 +650,7 @@ class AICustomerSupportService {;
           firstResponseTime: 12,
 
           escalationRate: 8
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           tickets_resolved: 45;
@@ -1467,6 +1494,8 @@ class AICustomerSupportService {
           escalationRate: 8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           tickets_resolved: 45;
           averageResolutionTime: 2.5;
           customer_satisfaction: 4.6;
@@ -1513,6 +1542,7 @@ class AICustomerSupportService {
           {
             id: 'msg_001';
 <<<<<<< HEAD
+<<<<<<< HEAD
             content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?';
             sender_type: 'customer';
             sender_id: 'cust_001';
@@ -1536,6 +1566,9 @@ class AICustomerSupportService {
 =======
             content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?';            sender_id: 'agent_001';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?';            sender_id: 'agent_001';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             is_internal: false;
             created_at: new Date ('2025 - 01 - 10T10:15:00Z'),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1549,6 +1582,7 @@ class AICustomerSupportService {
     ];
 ;
     // Initialize knowledge base;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1652,6 +1686,9 @@ export interface Attachment {;
 =======
     this.knowledge_base = [;      ...ticketData;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    this.knowledge_base = [;      ...ticketData;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       status: 'open';
       attachments: [];
       messages: [];
@@ -1668,6 +1705,7 @@ export interface Attachment {;
     if (ticket) {
       ticket && ticket.status = 'in_progress';
       ticket && ticket.updatedAt = new Date(),
+<<<<<<< HEAD
 <<<<<<< HEAD
       this && this.updateAnalytics()
 <<<<<<< HEAD
@@ -1786,6 +1824,9 @@ export interface Attachment {;
 =======
       this && this.updateAnalytics()      ticket && ticket.status = status;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      this && this.updateAnalytics()      ticket && ticket.status = status;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       ticket && ticket.updatedAt = new Date();
       
       if (status === 'resolved') {
@@ -1796,6 +1837,7 @@ export interface Attachment {;
       }
       
       this && this.updateAnalytics()
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2313,6 +2355,8 @@ class AICustomerSupportService {;
     }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
@@ -2320,6 +2364,7 @@ class AICustomerSupportService {;
     if (message && message.senderType === 'agent' && !ticket && ticket.firstResponseTime) {
       const firstResponseTime = (message && message.createdAt.getTime() - ticket && ticket.createdAt.getTime()) / (1000 * 60);
       ticket && ticket.firstResponseTime = firstResponseTime
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 <<<<<<< HEAD
@@ -2468,12 +2513,16 @@ if ( {) {
 =======
     }      messages: [];
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }      messages: [];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       intent: '';
       confidence: 0;
       resolved: false;
     if (message.sender === 'customer') {
       const intent = this.detectIntent(message.content);
       session.intent = intent.intent;
+<<<<<<< HEAD
 <<<<<<< HEAD
       session.confidence = intent.confidence
 <<<<<<< HEAD
@@ -2626,11 +2675,19 @@ if ( {) {
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      session.confidence = intent.confidence;
+  private detectIntent(message: string): { intent: string, confidence: number } {;
+    const lowerMessage = message.toLowerCase(),;
+    if (lowerMessage.includes('login') || lowerMessage.includes('password')) {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       return { intent: 'authentication_issue', confidence: 0.9 }
     } else if (lowerMessage.includes('billing') |lowerMessage.includes('payment')) {
       return { intent: 'billing_question', confidence: 0.85 }
     } else if (lowerMessage.includes('api') |lowerMessage.includes('integration')) {
       return { intent: 'technical_support', confidence: 0.8 }
+<<<<<<< HEAD
 <<<<<<< HEAD
     } else if (lowerMessage.includes('feature') |lowerMessage.includes('request')) {
 <<<<<<< HEAD
@@ -2650,6 +2707,9 @@ if ( {) {
 =======
     } else if (lowerMessage.includes('feature') |lowerMessage.includes('request')) {      escalated: false,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    } else if (lowerMessage.includes('feature') |lowerMessage.includes('request')) {      escalated: false,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       satisfaction: 0;
     }
 ;
@@ -2709,6 +2769,7 @@ if ( {) {
     return message
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   private detectIntent(message: string): { intent: string, confidence: number } {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -2752,6 +2813,12 @@ if ( {) {
     }
   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  private detectIntent(message: string): { intent: string, confidence: number } {      return { intent: 'feature_request', confidence: 0.75 }    } else {
+      return { intent: 'general_inquiry', confidence: 0 && 0.6 }
+    }
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {
@@ -2766,6 +2833,7 @@ if ( {) {
   }
   async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle, 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {
     const article: KnowledgeBaseArticle = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2817,6 +2885,9 @@ if ( {) {
 =======
       id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;      id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;      id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {;
     const session = this.chatbotSessions.find(s => s.id === sessionId),;
     if (session) {;
@@ -2841,6 +2912,7 @@ if ( {) {
     return article;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2853,6 +2925,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
     const lowerQuery = query.toLowerCase()
@@ -2873,6 +2947,7 @@ if ( {) {
       article && article.content.toLowerCase().includes(lowerQuery) ||
       article && article.tags.some(tag => tag && tag.toLowerCase().includes(lowerQuery))
     ).sort((a, b) => b && b.views - a && a.views)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3028,6 +3103,9 @@ if ( {) {
 =======
       recommendations && recommendations.push({        confidence: 90,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      recommendations && recommendations.push({        confidence: 90,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         action_items: [;
           'Reallocate agents to handle high priority tickets_implement automated prioritization system_review ticket classification criteria';
         ];
@@ -3043,6 +3121,7 @@ if ( {) {
 }
       recommendations.push ({
         type: 'knowledge_base';
+<<<<<<< HEAD
 <<<<<<< HEAD
         title: 'Underutilized Knowledge Base Articles';
         description: 'Several articles have very low view counts';
@@ -3234,11 +3313,17 @@ if ( {) {
   description: 'Several articles have very low view counts';
         impact: 'low';      averageResolutionTime;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        title: 'Underutilized Knowledge Base Articles',
+  description: 'Several articles have very low view counts';
+        impact: 'low';      averageResolutionTime;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       averageFirstResponseTime;
       customer_satisfaction;
       chatbotResolutionRate;
       topCategories;
       agentPerformance
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3249,6 +3334,8 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   private updateAnalytics(): void {;
     const totalTickets = this.tickets.length,;
@@ -3298,6 +3385,7 @@ if ( {) {
       agentPerformance;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -3307,16 +3395,19 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-    }
-  }
-
-    return this && this.tickets.find(t => t && t.id === ticketId) || null
-
-<<<<<<< HEAD
 =======
+      top_categories;
+      agent_performance;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+    }
+  }
+
+    return this && this.tickets.find(t => t && t.id === ticketId) || null
+
     }
   }
     return this && this.tickets.find(t => t && t.id === ticketId) || null
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
@@ -3331,6 +3422,8 @@ if ( {) {
     }
   }
     return this && this.tickets.find(t => t && t.id === ticketId) || null
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   async getTickets(status?: SupportTicket['status']): Promise<SupportTicket[]> {
     if (status) {
@@ -3360,6 +3453,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 ;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -3372,6 +3466,10 @@ export const aiCustomerSupportService = new AICustomerSupportService();
 
 export const aiCustomerSupportService = new AICustomerSupportService();
 
+=======
+export const aiCustomerSupportService = new AICustomerSupportService();
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   private updateAnalytics():void {;
     const totalTickets = this.tickets.length,;
@@ -3601,6 +3699,7 @@ export const aiCustomerSupportService = new AICustomerSupportService();
 ;
 export const aiCustomerSupportService = new AICustomerSupportService();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -3608,3 +3707,5 @@ export const aiCustomerSupportService = new AICustomerSupportService();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

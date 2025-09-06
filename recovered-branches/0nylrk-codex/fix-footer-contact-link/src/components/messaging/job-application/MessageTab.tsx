@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import React from 'react',
 import { Textarea } from "@/components/ui/textarea",
@@ -10,6 +11,8 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function MessageTab(): any ({;
   message,;
@@ -28,6 +31,7 @@ export function MessageTab(): any ({;
           id="message"
           value={message}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           onChange={(e) => setMessage(e && e.target.value)}
 =======
@@ -48,6 +52,9 @@ import React from 'react',
 =======
           onChange={(e) => setMessage(e && e.target.value)}import React from 'react',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          onChange={(e) => setMessage(e && e.target.value)}import React from 'react',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Textarea } from "@/components/ui/textarea",
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -83,6 +90,7 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
         <Textarea
           id="message"
           value={message}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           onChange={(e) => setMessage(e.target.value)}
@@ -125,6 +133,10 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
       <div>
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>          className="h-32 bg-zion-blue-dark/20 border-zion-purple/30 text-white";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <div>
+        <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>          className="h-32 bg-zion-blue-dark/20 border-zion-purple/30 text-white";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           placeholder="Write a message to the job poster...";
         />;
       </div>;
@@ -191,9 +203,12 @@ function MessageTab() {
           placeholder="https: //..."
         />
       </div>
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     </div>
 
@@ -201,6 +216,7 @@ function MessageTab() {
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -213,6 +229,8 @@ function MessageTab() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 import React from 'react',;
 import { Textarea } from "@/components/ui/textarea",;
@@ -254,6 +272,7 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -273,3 +292,6 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

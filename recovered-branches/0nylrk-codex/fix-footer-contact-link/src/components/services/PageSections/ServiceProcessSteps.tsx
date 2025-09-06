@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,6 +14,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function ServiceProcessSteps() {
   return (
     <div className="my-20">
@@ -72,6 +75,7 @@ export function ServiceProcessSteps() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 }
@@ -90,6 +94,8 @@ export function ServiceProcessSteps() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="grid grid-cols-1 md: grid-cols-4 gap-8">;
         <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">;
           <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">1</div>;

@@ -41,6 +41,7 @@ import {Briefcase, User} from "lucide-react";
 import {HireConfirmationModal} from "@/components/hiring-tracker/HireConfirmationModal";
 import {useState} from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {toast} from "@/hooks/use-toast";
 <<<<<<< HEAD
 =======
@@ -107,10 +108,14 @@ export function ApplicationsTable({
 =======
 import {toast} from "@/hooks/use-toast";export function ApplicationsTable({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {toast} from "@/hooks/use-toast";export function ApplicationsTable({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   applications
   processingId
   onViewApplication
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -147,6 +152,8 @@ export function ApplicationsTable({
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function ApplicationsTable(): any ({ ;
   applications, ;
   processingId, ;
@@ -165,6 +172,7 @@ export function ApplicationsTable({
   const handleHireClick = (application: JobApplication) => {
     setSelectedApplication(application)
     setHireModalOpen(true)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -413,6 +421,8 @@ export function ApplicationsTable({;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>;
       <div className="rounded-md border">;
@@ -426,6 +436,7 @@ export function ApplicationsTable({;
               <TableHead className="text-right">Actions</TableHead>;
             </TableRow>;
           </TableHeader>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <TableBody>;
             {applications && applications.map((application) => (;
@@ -469,6 +480,9 @@ export function ApplicationsTable({;
 =======
           <TableBody>;                      variant="outline"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <TableBody>;                      variant="outline"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       className="cursor-pointer"
                       onClick={() => onViewScore(application)}
                     >;
@@ -482,6 +496,7 @@ export function ApplicationsTable({;
                     >;
                       <Briefcase className="h-3 w-3 mr-1" /> Hire;
                     </ClickableBadge>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -550,6 +565,8 @@ export function ApplicationsTable({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       application={application}
                       processing_id={processing_id}
                       onViewApplication={onViewApplication}
@@ -568,6 +585,7 @@ export function ApplicationsTable({;
         onClose={() => setHireModalOpen(false)}
         application={selectedApplication |undefined}
         onConfirm={handleHireConfirmed}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       />;
@@ -724,6 +742,8 @@ export function ApplicationsTable({ ;
       {/* Hire Confirmation Modal */}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <HireConfirmationModal;
         isOpen={hireModalOpen}
         onClose={() => setHireModalOpen(false)}
@@ -742,6 +762,7 @@ export function ApplicationsTable({ ;
         on_confirm={handleHireConfirmed}
       />;
     </>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -808,3 +829,6 @@ export function ApplicationsTable({ ;
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

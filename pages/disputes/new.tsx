@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react',
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 class ErrorBoundary extends React.Component {
@@ -26,7 +29,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 
@@ -35,6 +41,7 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
 
 import {useCurrentUser} from '../../utils/auth';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -67,11 +74,14 @@ export default function NewDisputePage() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import {useCurrentUser} from '../../utils/auth';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 const REASONS = [
@@ -89,10 +99,14 @@ type ReasonType = (typeof REASONS)[number];
 
 export default function NewDisputePage() {;
 =======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useRouter } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useCurrentUser } from '../../utils/auth';
+<<<<<<< HEAD
 const REASONS = [
   'Scope DisagreementQuality IssuesDelivery DelayPayment IssueCommunication BreakdownOther'] as const;
   const router = useRouter();
@@ -107,21 +121,60 @@ const REASONS = [
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import { useRouter  } from 'next/router';
+import React, { useEffect, useMemo, useState } from 'react',
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import { useCurrentUser } from '../../utils/auth';
+const REASONS = null;
+    reader.readAsDataURL(file)
+  })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+const REASONS = [
+  'Scope DisagreementQuality IssuesDelivery DelayPayment IssueCommunication BreakdownOther'] as const;
+  const router = useRouter();
+<<<<<<< HEAD
+
+  const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
+  const user = useCurrentUser();
+
+
+=======
+  const {
+    projectId: qProjectId,
+    entityType,
+    entityId,
+    talentId,
+    clientId,
+  } = router.query as Record<string, string>;
+  const user = useCurrentUser();
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [projectId, setProjectId] = useState(qProjectId || '');
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
   const [reasonDetails, setReasonDetails] = useState('');
   const [description, setDescription] = useState('');
   const [files, setFiles] = useState<File[]>([]);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try {;
       const res = await fetch('/api/disputes', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
+<<<<<<< HEAD
 <<<<<<< HEAD
         body: JSON.stringify({ projectId, entityType, entityId, clientUserId, talentUserId, reason, reasonDetails, description })}),;
       if (!res.ok) throw new Error('Failed to create');
       const { dispute } = await res.json();
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       if (files && files.length > 0) {;
         const filePayload = await Promise && Promise.all(;
@@ -130,6 +183,7 @@ const REASONS = [
             mimeType: f && f.type,;
             base64: await toBase64(f),;
           }))        );
+<<<<<<< HEAD
 <<<<<<< HEAD
         await fetch(`/api/disputes/${encodeURIComponent(dispute && dispute.id)}/upload`, {;
           method: 'POST',;
@@ -147,6 +201,8 @@ const REASONS = [
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       if (files.length > 0) {;
         const filePayload = await Promise.all(;
           files.map(async (f) => ({;
@@ -161,6 +217,62 @@ const REASONS = [
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+=======
+  const [talentUserId, setTalentUserId] = useState(talentId || '');
+const [clientUserId, setClientUserId] = useState(
+    clientId || (user.role === 'client' ? user.id : '')
+  );
+  const [submitting, setSubmitting] = useState(false);
+  useEffect(() => {
+    if (qProjectId) setProjectId(qProjectId);
+  }, [qProjectId]);
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+if (!projectId || !description || !clientUserId || !talentUserId)
+      return alert('Please fill required fields');
+    setSubmitting(true);
+    try {
+      const res = await fetch('/api/disputes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({
+          projectId,
+          entityType,
+          entityId,
+          clientUserId,
+          talentUserId,
+          reason,
+          reasonDetails,
+          description,
+        }),
+      });
+      if (!res.ok) throw new Error('Failed to create');
+      const { dispute } = await res.json();
+      if (files.length > 0) {
+        const filePayload = await Promise.all(
+files.map(async f => ({
+            fileName: f.name,
+            mimeType: f.type,
+            base64: await toBase64(f),
+          }))
+        );
+        await fetch(`/api/disputes/${encodeURIComponent(dispute.id)}/upload`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ files: filePayload }),
+        });
+      }
+      router.push(`/disputes/${encodeURIComponent(dispute.id)}`);
+    } catch (e: any) {
+      alert(e.message |'Error');
+    } finally {
+      setSubmitting(false);
+    }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
 ;
@@ -170,9 +282,21 @@ const REASONS = [
     } finally {;
   return (
     <EnhancedLayout>
+<<<<<<< HEAD
       <div className="max-w-2xl mx-auto">
         <h1 className="text-2xl font-semibold mb-4">Raise a Dispute</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
+=======
+<<<<<<< HEAD
+      <div className="max-w-2xl mx-auto">
+        <h1 className="text-2xl font-semibold mb-4">Raise a Dispute</h1>
+        <form onSubmit={handleSubmit} className="space-y-4">
+=======
+<div className='max-w-2xl mx-auto'>
+        <h1 className='text-2xl font-semibold mb-4'>Raise a Dispute</h1>
+        <form onSubmit={handleSubmit} className='space-y-4'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div>
             <label className="block text-sm font-medium">Project ID</label>
             <input value={projectId} onChange={e => setProjectId(e.target.value)} required className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black" />
@@ -219,25 +343,48 @@ const REASONS = [
           <div className="pt-2">
             <button disabled={submitting} className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50">{submitting ? 'Submitting...' : 'Submit Dispute'}</button>
           </div>
+<<<<<<< HEAD
         </form>
       </div>
     </EnhancedLayout>
   );
+=======
+<<<<<<< HEAD
+=======
+          <div className='pt-2'>
+            <button
+              disabled={submitting}
+              className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50'
+            >
+              {submitting ? 'Submitting...' : 'Submit Dispute'}
+            </button>
+          </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+        </form>
+      </div>
+    </EnhancedLayout>
+);
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function toBase64(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
 const reader = new FileReader();
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       router && router.push(`/disputes/${encodeURIComponent(dispute && dispute.id)}`);
     } catch (e: any) {;
       alert(e && e.message || 'Error');
     } finally {;
 
       setSubmitting(false);    }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -246,6 +393,9 @@ const reader = new FileReader();
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [talentUserId, setTalentUserId] = useState(talentId || '');
   const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
   const [submitting, setSubmitting] = useState(false);
@@ -265,6 +415,7 @@ import {useCurrentUser} from '../../utils / auth';
 ;
 const REASONS = [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -272,6 +423,8 @@ const REASONS = [
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   'Scope Disagreement',
   'Quality Issues',
   'Delivery Delay',
@@ -280,11 +433,14 @@ const REASONS = [
   'Other',
 ] as const;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 type ReasonType = (typeof REASONS)[number];
 ;
@@ -328,6 +484,7 @@ function handle_submit() {
     try {
       const res = await fetch ('/api / disputes', {
         method: 'POST',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const router = useRouter();
@@ -358,6 +515,50 @@ function handle_submit() {
 <<<<<<< HEAD
 }
 =======
+=======
+
+
+  return (
+
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({
+          project_id,
+          entity_type,
+          entity_id,
+          clientUserId,
+          talentUserId,
+          reason,
+          reason_details,
+          description,
+        }),
+      });      if (throw new Error ('Failed to create')) {
+  $2
+}
+      const { dispute } = await res.json ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        const file_payload = await Promise.all (
+          files.map (async function => ({
+            file_name: f.name,
+            mime_type: f.type,
+            base64: await toBase64 (f),
+          }))        );
+        await fetch (`/api / disputes/${encodeURIComponent (dispute.id)}/upload`, {
+          method: 'POST',
+          headers: { 'Content - Type': 'application / json' },
+          body: JSON.stringify ({ files: file_payload }),
+        });
+      }
+      router.push (`/disputes/${encodeURIComponent (dispute.id)}`);
+    } catch (e: any) {
+      alert (e.message || 'Error');
+    } finally {
+      set_submitting (false);    }
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <EnhancedLayout>;
       <div className='max - w-2xl mx - auto'>;
@@ -454,13 +655,19 @@ function handle_submit() {
               disabled={submitting}
               className='px - 4 py - 2 rounded bg - blue - 600 text - white hover:bg - blue - 700 disabled:opacity - 50';
             >;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {submitting ? 'Submitting...' : 'Submit Dispute'}
             </button>          </div>;
         </form>;
       </div>;
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     reader.onload = () => resolve(String(reader.result));
     reader.onerror = reject;
@@ -475,7 +682,10 @@ function toBase64(): any (file: File): Promise<string> {;
 
 
   });
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
     reader.readAsDataURL(file)
@@ -483,9 +693,12 @@ function toBase64(): any (file: File): Promise<string> {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </EnhancedLayout>);
 function toBase64 (file: File): Promise < string> {
   return new Promise ((resolve, reject) => {
@@ -495,6 +708,7 @@ const reader = new FileReader ();
     reader.readAsDataURL (file);
   });
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 }
@@ -503,11 +717,17 @@ const reader = new FileReader ();
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 function toBase64(file: File): Promise<string> {;
@@ -521,6 +741,14 @@ function toBase64(file: File): Promise<string> {;
   });
 
 <<<<<<< HEAD
+=======
+    reader.onload = () => resolve(String(reader.result));
+    reader.onerror = reject;
+reader.readAsDataURL(file);
+  });
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 }
   } catch (error) {
@@ -528,6 +756,7 @@ function toBase64(file: File): Promise<string> {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -538,3 +767,7 @@ function toBase64(file: File): Promise<string> {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

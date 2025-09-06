@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import { Button  } from '@/components/ui/button';
@@ -21,6 +22,8 @@ interface NotificationFooterProps {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   on_close: () => void;
 }
 
@@ -34,6 +37,7 @@ import {useNavigate} from 'react-router-dom';
 
   onClose: () => void
 }
+<<<<<<< HEAD
 
 =======
 import React from "react";
@@ -111,6 +115,8 @@ interface NotificationFooterProps {
   onClose: () => void;
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {
   const navigate = useNavigate(),
   
@@ -139,6 +145,7 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         onClick={handleViewAll}>;
+<<<<<<< HEAD
 =======
 
         onClick={handleViewAll}>;
@@ -167,6 +174,8 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
 };
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const NotificationFooter: React.FC < NotificationFooterProps> = ({
   on_close,
 }) => {

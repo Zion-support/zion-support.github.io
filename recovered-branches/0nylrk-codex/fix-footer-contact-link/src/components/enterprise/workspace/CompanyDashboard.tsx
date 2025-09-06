@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,6 +34,10 @@ export interface Company {;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { WorkspaceHeader } from "./WorkspaceHeader",
 import { SharedInbox } from "./SharedInbox",
@@ -41,6 +46,7 @@ import { QuickActions } from "./QuickActions",
 import { RecentActivity } from "./RecentActivity";
 import { TalentPool } from "./TalentPool";
 import { RecentActivity } from "./RecentActivity",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { TalentPool } from "./TalentPool",
 <<<<<<< HEAD
@@ -93,6 +99,9 @@ interface CompanyDashboardProps {
 =======
 import { TalentPool } from "./TalentPool",    primaryColor: string,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { TalentPool } from "./TalentPool",    primaryColor: string,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     backgroundColor: string,
     textColor: string
   },
@@ -116,6 +125,7 @@ export interface Company {;
     primaryColor: string;
     backgroundColor: string;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     textColor: string;
 <<<<<<< HEAD
@@ -161,6 +171,12 @@ interface CompanyDashboardProps {;
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+    textColor: string;  teamLimit: number;
+  billingCycle: string;
+  workspaceUrl: string
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 interface CompanyDashboardProps {
 ;
@@ -168,6 +184,7 @@ interface CompanyDashboardProps {;
 
   company: Company;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -205,12 +222,15 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
           <QuickActions />
           <RecentActivity />
           <TalentPool />
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -239,10 +259,13 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
         <div className="space-y-6">
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <TeamStats />
           <SharedInbox />
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -258,6 +281,9 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 }
   )
@@ -265,8 +291,11 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 export function CompanyDashboard({ company }: CompanyDashboardProps) {;
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   company: Company;
 }
@@ -281,6 +310,7 @@ export function CompanyDashboard(): any ({ company }: CompanyDashboardProps) {;
         <div className="lg:col-span-2 space-y-6">;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -290,6 +320,8 @@ export function CompanyDashboard(): any ({ company }: CompanyDashboardProps) {;
 import React from './react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { WorkspaceHeader  } from './WorkspaceHeader';
 import { SharedInbox  } from './SharedInbox';
 import { TeamStats  } from './TeamStats';
@@ -326,6 +358,7 @@ function CompanyDashboard() {
 }  );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function CompanyDashboard({ company } CompanyDashboardProps) {;
   return (;
@@ -367,3 +400,5 @@ export function CompanyDashboard({ company } CompanyDashboardProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

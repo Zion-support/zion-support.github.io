@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -35,6 +36,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -63,6 +66,7 @@ export default function ZionHireAI() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -75,13 +79,18 @@ export default function ZionHireAI() {
 
   return (
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useAuth } from "@/hooks/useAuth",
 import { Link } from "react-router-dom",
 export default function ZionHireAI() {
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
   const { isAuthenticated } = useAuth(),
     return (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <>
       <SEO
         title="Zion Hire AI - White-labeled AI Recruiting Assistant"
@@ -128,7 +137,11 @@ export default function ZionHireAI() {;
         {/* Hero Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section ;
+=======
+        <section;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           className="relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24";
           style={primaryColor ? { backgroundImage:`linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))` } {}}
         >;
@@ -552,30 +565,30 @@ function ZionHireAI() {
         description="Empower your company with AI - powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience.";
       />;
       <Header />;
-      <main className="flex - 1">;
+      <main className="flex-1">;
         {/* Hero Section */}
         <section;
-          className="relative bg - gradient - to - br from - zion - blue to - zion - blue - dark py - 16 md:py - 24";
+          className="relative bg - gradient - to - br from - zion - blue to - zion - blue - dark py - 16 md:py-24";
           style={primary_color ? { background_image: `linear - gradient (to bottom right, ${primary_color}, rgba (25, 33, 52, 1))` } : {}}
         >;
-          <div className="container mx - auto px - 4 md:px - 6">;
-            <div className="grid gap - 6 md:grid - cols - 2 items - center">;
-              <div className="space - y-4">;
-                <h1 className="text - 3xl md:text - 5xl font - bold tracking - tighter text - white">;
+          <div className="container mx - auto px - 4 md:px-6">;
+            <div className="grid gap - 6 md:grid - cols - 2 items-center">;
+              <div className="space-y-4">;
+                <h1 className="text - 3xl md:text - 5xl font - bold tracking - tighter text-white">;
                   {is_whitelabel ? `${brand_name} Recruiting Assistant` : "Zion Hire AI"}
                 </h1>;
-                <p className="text - lg text - zion - slate - light max - w-[600px]">;
+                <p className="text - lg text - zion - slate - light max-w-[600px]">;
                   Empower your team with AI - driven talent acquisition. Streamline your hiring process,
                   improve candidate matches, and enhance the applicant experience.;
                 </p>;
-                <div className="flex flex - col sm:flex - row gap - 3 pt - 4">;
+                <div className="flex flex - col sm:flex - row gap - 3 pt-4">;
                   <Button;
                     size="lg";
-                    className="bg - zion - purple hover:bg - zion - purple - light text - white";
+                    className="bg - zion - purple hover:bg - zion - purple - light text-white";
                     as_child;
                   >;
                     <Link to={is_authenticated ? "/enterprise / admin" : "/login"}>;
-                      Get Started <ArrowRight className="ml - 2 h - 4 w - 4" />;
+                      Get Started <ArrowRight className="ml - 2 h - 4 w-4" />;
                     </Link>;
                   </Button>;
                   <Button;
@@ -585,7 +598,7 @@ function ZionHireAI() {
                     asChild;
                   >;
                     <Link to="/enterprise/demo">;
-                    className="bg - transparent border - white text - white hover:bg - white / 10";
+                    className="bg - transparent border - white text - white hover:bg-white / 10";
                     as_child;
                   >;
                     <Link to="/enterprise / demo">;
@@ -707,6 +720,7 @@ export default function ZionHireAI() {;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -1004,6 +1018,8 @@ function ZionHireAI() {
             </Button>;
           </div>;
         </section>;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </main>;
       <Footer />;
 
@@ -1301,18 +1317,24 @@ reduce time-to-hire, and improve candidate experience. </p> <Button asChild > <L
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ;
     </>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

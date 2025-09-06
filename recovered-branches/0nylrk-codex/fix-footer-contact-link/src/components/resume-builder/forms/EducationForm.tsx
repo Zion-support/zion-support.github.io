@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { EducationForm as EducationFormComponent  } from './education';
 import { EducationFormProps } from './education/types';
@@ -16,6 +17,8 @@ export function EducationForm(props: EducationFormProps) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { EducationForm, as, EducationFormComponent  } from './education';
 import { EducationFormProps  } from './education / types';
 export /**
@@ -41,7 +44,6 @@ export function EducationForm(): any (props: EducationFormProps) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-
 import {EducationForm, as, EducationFormComponent} from './education';
 import {EducationFormProps} from './education/types';
 export function EducationForm(props: EducationFormProps) {
@@ -51,6 +53,7 @@ export function EducationForm(props: EducationFormProps) {
 import { EducationForm as EducationFormComponent } from './education',;
 import { EducationFormProps } from './education/types';
 export function EducationForm(props: EducationFormProps) {;
+<<<<<<< HEAD
   return <EducationFormComponent {...props} />;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -129,6 +132,8 @@ export function EducationForm(props: EducationFormProps) {
 import { EducationForm as EducationFormComponent } from './education',;
 import { EducationFormProps } from './education/types';
 export function EducationForm(props: EducationFormProps) {;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return <EducationFormComponent {...props} />;}
 ;
 }

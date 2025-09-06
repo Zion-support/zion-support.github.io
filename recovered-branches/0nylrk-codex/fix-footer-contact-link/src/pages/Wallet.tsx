@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -16,6 +17,8 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useWallet  } from '@/hooks/useWallet';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
@@ -31,6 +34,7 @@ import {useWallet} from '@/hooks/useWallet';
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from '@/components/ui/card';
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {BadgeDollarSign} from 'lucide-react';
+<<<<<<< HEAD
 export default function WalletPage() {;
 <<<<<<< HEAD
 =======
@@ -61,6 +65,9 @@ import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {BadgeDollarSign} from 'lucide-react';
 export default function WalletPage() {;  const { wallet, transactions, loading } = useWallet();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export default function WalletPage() {;  const { wallet, transactions, loading } = useWallet();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="container max-w-4xl py-10">;
       <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">;
@@ -79,6 +86,7 @@ export default function WalletPage() {;  const { wallet, transactions, loading }
           ) : (;
             <p className="text-2xl font-bold">{wallet?.balance ?? 0} ZION$</p>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         </CardContent>;
@@ -299,12 +307,17 @@ export default function WalletPage() {
             <p className="text - muted - foreground">No earnings yet</p>) : (
             <ul className="space - y-2">;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ))}
             </ul>
           )}          {transactions.filter (t => t.transaction_type === 'earn').length === 0 ? (
             <p className="text - muted-foreground">No earnings yet</p>) : (
             <ul className="space-y-2">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {transactions.filter (t => t.transaction_type === 'earn').map (t => (
                 <li key={t.id} className="flex justify - between border - b py-2">;
                   <span>{t.reason || 'Reward'}</span>;
@@ -350,9 +363,12 @@ export default function WalletPage() {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

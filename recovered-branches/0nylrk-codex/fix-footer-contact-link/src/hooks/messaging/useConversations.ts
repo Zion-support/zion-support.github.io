@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,10 +47,18 @@ import { supabase  } from '@/integrations/supabase/client';
 import { Conversation, ConversationContextData  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';// Allow either UserProfile or UserDetails
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import { UserProfile, UserDetails  } from '@/types/auth';
+import { supabase  } from '@/integrations/supabase/client';
+import { Conversation, ConversationContextData  } from '@/types/messaging';
+import { toast } from '@/hooks/use-toast';// Allow either UserProfile or UserDetails
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle conversation operations
+<<<<<<< HEAD
 <<<<<<< HEAD
  */
 <<<<<<< HEAD
@@ -77,6 +86,9 @@ export function use_conversations (
 =======
  */  user: UserWithProfile;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+ */  user: UserWithProfile;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   set_conversations: (conversations: Conversation[]) => void;
   setUnreadCount: (count: number) => void;
       if (error) throw error;
@@ -85,6 +97,7 @@ export function use_conversations (
       const formattedConversations: Conversation[] = data && data.map(conv => {
         const isUserOne = conv && conv.user_one_id === user && user.id;
         const otherUserId = isUserOne ? conv && conv.user_two_id : conv && conv.user_one_id;
+<<<<<<< HEAD
 <<<<<<< HEAD
         
 
@@ -180,6 +193,9 @@ export function useConversations(;
 =======
                   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           name: isUserOne ? conv.user_two_name : conv.user_one_name;
           avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar;
           last_message: conv.last_message ? {
@@ -188,6 +204,7 @@ export function useConversations(;
             created_at: conv.last_message_time;        }
       });
       setConversations(formattedConversations);
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Calculate total unread count
 <<<<<<< HEAD
@@ -538,10 +555,20 @@ export function useConversations(;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      // Calculate total unread count      }
+      
+      }
+      
+      }
+      
+      }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Send the initial message
       await supabase
         .from('messages')
         .insert({
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -563,6 +590,9 @@ export function useConversations(;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           conversation_id: conversationId,
           sender_id: user.id,
           recipient_id: recipientId,
@@ -574,11 +604,14 @@ export function useConversations(;
       // Update conversations list
       await fetchConversations(),
       
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       // Return the conversation ID
       return conversationId
@@ -593,6 +626,7 @@ export function useConversations(;
       return conversationId
     } catch (error) {
       console.error('Error creating conversation:', error),
+<<<<<<< HEAD
 <<<<<<< HEAD
       toast({
 <<<<<<< HEAD
@@ -1038,3 +1072,6 @@ conversationId = newConversation.id
 =======
       toast({}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      toast({}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

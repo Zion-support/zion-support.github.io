@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',;
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -13,6 +14,8 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface Props {;
   children: React.ReactNode;
 }
@@ -55,13 +58,23 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
 }
 import {logErrorToProduction} from '@/utils/productionLogger'
 
+=======
+import React from 'react';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card';
+import {logErrorToProduction} from '@/utils/productionLogger';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface Props {
   children: React.ReactNode
 }
 interface State {
+<<<<<<< HEAD
 
   hasError: boolean
 
+=======
+  hasError: boolean;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   error?: Error
 }
 export class EquipmentErrorBoundary extends React.Component<Props, State> {
@@ -77,6 +90,7 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <div className="container py-8">
@@ -101,6 +115,9 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
         <div className='container py-8'>
+=======
+<div className='container py-8'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Card className='border-red-200 bg-red-50'>
             <CardContent className='p-8 text-center'>
               <AlertTriangle className='mx-auto mb-4 h-12 w-12 text-red-600' />
@@ -123,6 +140,7 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
                 <Button
                   onClick={() => window.location.reload()}
                   variant='default'
+<<<<<<< HEAD
                 >                  Refresh Page
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <Button onClick={() => window.location.reload()} variant="default">
@@ -131,7 +149,10 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
                 <Button
                   onClick={() => this.setState({ hasError: false, error: undefined })}
                   variant="outline"
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >
+<<<<<<< HEAD
                   <RefreshCw className="h-4 w-4 mr-2" />
                   Try Again
                 </Button>
@@ -154,13 +175,19 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
 =======
 
                 <Button onClick={() => window.location.reload()} variant="default">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   Refresh Page
                 </Button>
               </div>
             </CardContent>
           </Card>
         </div>
+<<<<<<< HEAD
       )
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -294,9 +321,20 @@ if ( {) {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } ;
+<<<<<<< HEAD
 =======
 } ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+);
+    }
+
+    return this.props.children;
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

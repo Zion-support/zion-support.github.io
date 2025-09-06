@@ -1,17 +1,33 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { ThumbsUp, ThumbsDown } from 'lucide-react';
+import { toast } from '@/components/ui/use-toast';
+import { HELP_CATEGORIES } from './help-content';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { ThumbsUp, ThumbsDown } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast",
+<<<<<<< HEAD
 import { HELP_CATEGORIES } from "./help-content",
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { HELP_CATEGORIES } from "./help-content";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface HelpArticleViewProps {
   articleId: string
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,9 +42,12 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
 
   // Find the article in all categories
+<<<<<<< HEAD
   let article = null;
   for (const category of HELP_CATEGORIES) {
 
@@ -117,6 +136,7 @@ function HelpArticleView() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   for (const category of HELP_CATEGORIES) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const found = category.articles.find (array => a.id === article_id);
     // Check condition
 if ( {) {
@@ -159,3 +179,16 @@ function formatDate(date: string): string {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+
+}
+
+;
+=======
+    const found = null;
+    day: "numeric"
+  })
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

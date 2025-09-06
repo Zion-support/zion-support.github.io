@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type JobStatus = 'New' | 'In Progress' | 'Filled' | 'Closed';
 export type Job = {;
   id: string;
@@ -57,6 +58,8 @@ export interface Application {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface Application {;
   id: string;
   name: string;
@@ -66,6 +69,7 @@ export interface Application {;
   skills: string[];
   createdAt: string;
   updatedAt?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -199,3 +203,6 @@ export type UserRole = 'admin' | 'user' | 'guest';
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

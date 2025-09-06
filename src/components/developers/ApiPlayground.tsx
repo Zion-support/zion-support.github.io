@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
@@ -18,6 +19,8 @@ interface Param {;
   name: string,;
   type: string,;
   required?: boolean;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 const options: RequestInit = {
 =======
@@ -114,12 +117,19 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
           'Network error - check CORS configuration or API endpoint';
       } else {
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import CodeBlock from './CodeBlock';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   name: string
 type: string
@@ -465,5 +475,13 @@ if (contentType?.includes ('application/json') ) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+export default ApiPlayground;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+interface Param {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

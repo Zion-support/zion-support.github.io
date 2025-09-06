@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Fragment} from "react";
@@ -41,10 +42,13 @@ import Unauthorized from "@/pages/Unauthorized",;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "@/pages/NotFound";
 import Unauthorized from "@/pages/Unauthorized";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const ErrorRoutes = () => {
@@ -56,11 +60,15 @@ const ErrorRoutes = () => {;
 =======
 const ErrorRoutes = () => {  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const ErrorRoutes = () => {  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <Routes>;
       {/* Error Routes */}
       <Route path="/unauthorized" element={<Unauthorized />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 <<<<<<< HEAD
@@ -79,6 +87,9 @@ export default ErrorRoutes;
 =======
   )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
 import {Fragment} from "react";
@@ -114,6 +125,7 @@ const ErrorRoutes = () => {;
   return (
     <Routes>;
       {/* Error Routes */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default ErrorRoutes;
 <<<<<<< HEAD
@@ -151,3 +163,6 @@ export default ErrorRoutes;
 =======
 export default ErrorRoutes;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export default ErrorRoutes;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

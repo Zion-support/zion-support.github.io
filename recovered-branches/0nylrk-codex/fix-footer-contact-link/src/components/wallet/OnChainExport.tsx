@@ -194,12 +194,17 @@ export function OnChainExport() {;
       if (!ethereum) {;
         toast({;
 <<<<<<< HEAD
+<<<<<<< HEAD
           title: "Wallet not detected",;
           description: "Please install MetaMask or another Ethereum wallet to use this feature",;
 =======
           title: "Wallet not detected",,
   description: "Please install MetaMask or another Ethereum wallet to use this feature",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          title: "Wallet not detected",,
+  description: "Please install MetaMask or another Ethereum wallet to use this feature",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           variant: "destructive";
         }),;
         return;
@@ -217,6 +222,7 @@ export function OnChainExport() {;
       setIsConnected(true),;
       toast({;
 <<<<<<< HEAD
+<<<<<<< HEAD
         title: "Wallet connected",;
         description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`});
     } catch (error: any) {;
@@ -231,6 +237,14 @@ export function OnChainExport() {;
         title: "Connection failed",,
   description: error.message || "Could not connect to wallet",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        title: "Wallet connected",,
+  description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`});
+    } catch (error: any) {;
+      toast({;
+        title: "Connection failed",,
+  description: error.message || "Could not connect to wallet",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         variant: "destructive";
       });
     }
@@ -243,6 +257,7 @@ export function OnChainExport() {;
       await new Promise(resolve => setTimeout(resolve, 2000)),;
       setExportStatus('success'),;
       toast({;
+<<<<<<< HEAD
 <<<<<<< HEAD
         title: "Tokens exported",;
         description: "Your ZION$ tokens have been exported to your wallet"});
@@ -260,6 +275,15 @@ export function OnChainExport() {;
         title: "Export failed",,
   description: error.message || "Could not export tokens";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        title: "Tokens exported",,
+  description: "Your ZION$ tokens have been exported to your wallet"});
+    } catch (error: any) {;
+      setExportStatus('error'),;
+      toast({;
+        title: "Export failed",,
+  description: error.message || "Could not export tokens";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         variant: "destructive";
       });
     } finally {;

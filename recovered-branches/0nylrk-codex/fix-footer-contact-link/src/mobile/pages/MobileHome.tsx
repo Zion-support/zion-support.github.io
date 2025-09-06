@@ -19,6 +19,7 @@ export function MobileHome() {
   const { user } = useAuth();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
 <<<<<<< HEAD
 =======
@@ -41,6 +42,9 @@ import React from "react",
 =======
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';import React from "react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const isClient = user?.userType === 'employer' || user?.userType === 'buyer';import React from "react",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { ClientDashboard } from "../components/dashboard/ClientDashboard",
@@ -57,10 +61,13 @@ export function MobileHome() {
   return (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { TalentDashboard } from "../components/dashboard/TalentDashboard",
 import { useAuth } from "@/hooks/useAuth",
 export function MobileHome() {
@@ -72,6 +79,7 @@ export function MobileHome() {
         title={isClient ? "Client Dashboard" : "Talent Dashboard"}
         showNotifications
         showSettings
+<<<<<<< HEAD
 <<<<<<< HEAD
       />
 <<<<<<< HEAD
@@ -215,3 +223,6 @@ min-h-screen" > <MobileHeader showNotifications showSettings /> </main> <BottomN
 =======
       />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

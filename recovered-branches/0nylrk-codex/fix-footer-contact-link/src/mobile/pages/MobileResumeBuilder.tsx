@@ -12,6 +12,7 @@ import { MobileHeader } from "../components/common/MobileHeader",
 import React from "react";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
 import {MobileResumeBuilder, as, ResumeBuilderComponent} from "../components/resume/MobileResumeBuilder";
@@ -52,6 +53,11 @@ import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
 import {MobileResumeBuilder, as, ResumeBuilderComponent} from "../components/resume/MobileResumeBuilder";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {MobileHeader} from "../components/common/MobileHeader";
+import {BottomNavigation} from "../components/common/BottomNavigation";
+import {MobileResumeBuilder, as, ResumeBuilderComponent} from "../components/resume/MobileResumeBuilder";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function MobileResumeBuilder() {
   return (
@@ -59,6 +65,7 @@ export function MobileResumeBuilder() {
       <MobileHeader
         title="Resume Builder"
         showBack
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -87,6 +94,8 @@ export function MobileResumeBuilder() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation";
@@ -99,6 +108,7 @@ export function MobileResumeBuilder() {
     <div className="min-h-screen">
       <MobileHeader title="Resume Builder" showBack />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       <main className="py-4">
         <ResumeBuilderComponent />
@@ -114,6 +124,8 @@ export function MobileResumeBuilder() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -139,6 +151,7 @@ export function MobileResumeBuilder() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <BottomNavigation />;
+<<<<<<< HEAD
     </div>;
 =======
       <BottomNavigation />
@@ -149,6 +162,9 @@ export function MobileResumeBuilder() {;
       <BottomNavigation />;
     </div>;  );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </div>;  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 import React from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
@@ -170,6 +186,7 @@ function MobileResumeBuilder() {
       <BottomNavigation />;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -221,3 +238,6 @@ export function MobileResumeBuilder() {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

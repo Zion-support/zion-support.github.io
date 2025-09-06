@@ -1,11 +1,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -29,6 +32,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -37,6 +41,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -52,11 +58,14 @@ export default function RequestsPanel() {;
   const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
@@ -92,6 +101,7 @@ function RequestsPanel() {
     setArchiveFilter;
     markAsViewed;
     markAsResponded;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -136,6 +146,9 @@ export default function RequestsPanel() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
 import type { QuoteRequest } from "@/types/quotes",
@@ -150,6 +163,7 @@ export default function RequestsPanel() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
@@ -162,6 +176,8 @@ export default function RequestsPanel() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const {
     quotes,
     unreadCount,
@@ -173,6 +189,7 @@ export default function RequestsPanel() {
     markAsViewed,
     markAsResponded,
     toggleArchive
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -189,6 +206,9 @@ export default function RequestsPanel() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } = useTalentQuotes(),
 
   const handleViewDetails = (quote: QuoteRequest) => {
@@ -196,6 +216,7 @@ export default function RequestsPanel() {
     setShowDetails(true),
     
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -205,10 +226,13 @@ export default function RequestsPanel() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // If status is new, mark as viewed
     if (quote.status === 'new') {
       markAsViewed(quote.id)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -228,12 +252,15 @@ export default function RequestsPanel() {
   },
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   // Filter quotes by archive status
   const activeQuotes = quotes.filter(q => !q.is_archived),
   const archivedQuotes = quotes.filter(q => q.is_archived),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -256,6 +283,8 @@ export default function RequestsPanel() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -294,6 +323,7 @@ export default function RequestsPanel() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <RequestsHeader;
 <<<<<<< HEAD
@@ -309,6 +339,9 @@ export default function RequestsPanel() {;
 =======
             <RequestsHeader            <RequestsHeader
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <RequestsHeader            <RequestsHeader
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
@@ -340,6 +373,7 @@ export default function RequestsPanel() {;
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
+<<<<<<< HEAD
 <<<<<<< HEAD
           isOpen={showDetails}
 <<<<<<< HEAD
@@ -547,3 +581,6 @@ const [showDetails, setShowDetails] = useState (false);
 =======
           isOpen={showDetails}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          isOpen={showDetails}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

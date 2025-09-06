@@ -17,6 +17,7 @@ interface SafeConsole {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -90,10 +91,13 @@ interface SafeConsole {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return this
   }
   async start(port?: number): Promise<void> {
     // Safely log without direct console reference
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -296,6 +300,19 @@ async function askZionGPT(prompt: string): Promise<string> {
   return `AI response to: ${prompt}`
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`)
+    if (safeConsole && safeConsole.log) {    }
+    return Promise && Promise.resolve()
+  }
+}const app = new MockApp();
+async function askZionGPT(prompt: string): Promise<string> {
+  // Safely log without direct console reference
+  }
+  return `AI response to: ${prompt}`
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Create a mock app instance;
 const app = new MockApp(),;
 async function askZionGPT(prompt: string): Promise<string> {;
@@ -304,6 +321,7 @@ async function askZionGPT(prompt: string): Promise<string> {;
   if (safeConsole && safeConsole.log) {;
     safeConsole.log(`ZionGPT was asked: ${prompt}`);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -454,6 +472,8 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Declare available globals;
 declare const global_this: {
   console?: SafeConsole;
@@ -526,6 +546,7 @@ app.command ('/zion', async ({ command, ack, respond }: { command: SlackCommand,
           '`/zion track - project [name]` - project status\n' +;
           '`/zion help` - show this list');
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -588,10 +609,14 @@ export default app;
 =======
   }  const env = typeof globalThis !== 'undefined' && globalThis.process ?;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }  const env = typeof globalThis !== 'undefined' && globalThis.process ?;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     globalThis.process.env : {},;
   const port = env.PORT ? Number(env.PORT) : 3000,;
   await app.start(port);
 })(),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -608,6 +633,8 @@ export default app;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 })();
 export default app;
@@ -624,6 +651,7 @@ export default app;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 });
@@ -637,3 +665,5 @@ export default app;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

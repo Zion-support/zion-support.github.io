@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -17,12 +18,15 @@ import { useTranslation } from "react-i18next",
 import { useTranslationService } from "@/hooks/useTranslationService",
 
 interface TranslatableJobFormProps {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
   onSubmit: (formData: any) => void
   isSubmitting?: boolean
 }
 
+<<<<<<< HEAD
 export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
 
   const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage),
@@ -77,10 +81,13 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       deadline})
   },
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Auto translate content when language tab changes
   const handleTabChange = async (tab: SupportedLanguage) => {
     if (tab !== activeTab) {
       setActiveTab(tab)
+<<<<<<< HEAD
 
       }
     }
@@ -253,6 +260,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
 import React, { useState } from "react",;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -290,6 +299,7 @@ interface TranslatableJobFormProps {;
     if (tab !== activeTab) {;
       setActiveTab(tab);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -386,10 +396,16 @@ interface TranslatableJobFormProps {;
       }
     }      if (error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      }
+    }      if (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         toast({
           title: t('translation.translation_failed')
           description: error
           variant: "destructive"})
+<<<<<<< HEAD
 <<<<<<< HEAD
         return
 <<<<<<< HEAD
@@ -502,6 +518,9 @@ interface TranslatableJobFormProps {;
 =======
         return;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        return;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       toast({;
         title: t('translation.translation_success'),,
   description: t('translation.content_translated')});
@@ -523,6 +542,7 @@ interface TranslatableJobFormProps {;
       promises.push(autoTranslate('title'));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -532,6 +552,8 @@ interface TranslatableJobFormProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     // Description translations
     if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {
@@ -550,6 +572,7 @@ interface TranslatableJobFormProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
@@ -559,6 +582,8 @@ interface TranslatableJobFormProps {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -568,6 +593,7 @@ interface TranslatableJobFormProps {;
 =======
   };
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -592,6 +618,9 @@ interface TranslatableJobFormProps {;
 =======
     return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
         <h1 className="text-2xl font-bold mb-6">{t('jobs.post_job_title')}</h1>
@@ -607,6 +636,7 @@ interface TranslatableJobFormProps {;
             </label>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -618,6 +648,8 @@ interface TranslatableJobFormProps {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (!content) {;
       toast({;
         title: t('translation && translation.no_content'),,
@@ -681,6 +713,7 @@ interface TranslatableJobFormProps {;
             <label htmlFor="title" className="text-lg font-medium">;
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -708,6 +741,9 @@ interface TranslatableJobFormProps {;
 =======
     }            >;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }            >;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {isTranslating ? (;
                 <Loader2 className="h-4 w-4 animate-spin" />;
               ) : (;
@@ -798,6 +834,7 @@ interface TranslatableJobFormProps {;
             <Input
               id="budget"
               value={budget}
+<<<<<<< HEAD
 <<<<<<< HEAD
               onChange={(e) => setBudget(e && e.target.value)}
 <<<<<<< HEAD
@@ -1306,6 +1343,9 @@ if ( {) {
 =======
               onChange={(e) => setBudget(e && e.target.value)}        </Button>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              onChange={(e) => setBudget(e && e.target.value)}        </Button>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>;
     </form>;
   );
@@ -1392,6 +1432,7 @@ if (!description.en && !description.es && !description.pt && !description.ar) re
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1399,3 +1440,6 @@ if (!description.en && !description.es && !description.pt && !description.ar) re
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

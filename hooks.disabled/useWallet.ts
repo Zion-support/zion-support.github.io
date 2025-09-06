@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:hooks.disabled/useWallet.ts
 ========
 =======
@@ -43,6 +44,8 @@ export default function AddToCart.test({ }: AddToCart.testProps) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -65,6 +68,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -129,6 +133,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function UseWallet({ }: UseWalletProps) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   return (
@@ -136,6 +142,7 @@ export default function UseWallet({ }: UseWalletProps) {
       <h1>UseWallet</h1>
       <p>This component is currently under development.</p>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 <<<<<<< HEAD
@@ -315,3 +322,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  );}
+
+}
+
+}
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

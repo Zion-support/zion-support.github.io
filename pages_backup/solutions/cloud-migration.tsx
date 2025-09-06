@@ -2,12 +2,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -19,6 +23,9 @@ import Link from 'next/link';';
 =======
 import React from 'react';import Link from 'next/link';';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from 'react';import Link from 'next/link';';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion';
 import { Cloud,
   Shield,
@@ -73,6 +80,7 @@ const phases = [;
   },
   {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     title: 'Design & Architecture,',;
     description: 'Cloud-native architecture design and security framework implementation.,',;
@@ -83,6 +91,8 @@ const phases = [;
       'Scalability planning',',;
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Design & Architecture,',
     description: 'Cloud-native architecture design and security framework implementation.,',
     icon: Settings,
@@ -90,11 +100,15 @@ const phases = [;
       'Cloud architecture design,',
       'Security framework',',
       'Scalability planning',',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'Cost optimization'';
     ];
   },
   {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -132,6 +146,11 @@ const phases = [;
       'Security updates',',;
 
 =======
+=======
+    ];
+  },
+  {}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Optimization,',
     description: 'Continuous monitoring and optimization for peak performance.,',
     icon: Zap,
@@ -139,7 +158,10 @@ const phases = [;
       'Performance monitoring,',
       'Cost optimization',',
       'Security updates',',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'Continuous improvement'';
     ];
   }
@@ -160,6 +182,7 @@ const services = [;
 
 const services = [;
   {}
+<<<<<<< HEAD
 <<<<<<< HEAD
     title: 'AWS Migration,',
     description: 'Complete migration to Amazon Web Services with best practices and optimization.,',
@@ -186,6 +209,11 @@ const services = [;
       'Azure Storage migration',',;
 
 =======
+=======
+    ];
+  },
+  {}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Azure Migration,',
     description: 'Microsoft Azure cloud migration with enterprise-grade security and compliance.,',
     icon: Shield,
@@ -193,11 +221,15 @@ const services = [;
       'Azure Virtual Machines,',
       'Azure SQL Database',',
       'Azure Storage migration',',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'Azure Functions deployment'';
     ];
   },
   {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -235,6 +267,11 @@ const services = [;
       'Load balancing',',;
 
 =======
+=======
+    ];
+  },
+  {}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Multi-Cloud Strategy,',
     description: 'Hybrid and multi-cloud solutions for maximum flexibility and redundancy.,',
     icon: Globe,
@@ -242,7 +279,10 @@ const services = [;
       'Cross-cloud integration,',
       'Disaster recovery',',
       'Load balancing',',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'Cost optimization'';
     ];
   }
@@ -308,6 +348,7 @@ export default function CloudMigrationPage() {
               <div className="flex items-center justify-center mb-6">";
                 <Cloud className="w-12 h-12 text-blue-400 mr-4" />";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 <h1 className="text-5xl md: text-6xl font-bold">", Cloud,;
 
@@ -315,6 +356,10 @@ export default function CloudMigrationPage() {
                 <h1 className="text-5xl md:text-6xl font-bold">";
                   Cloud;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                <h1 className="text-5xl md:text-6xl font-bold">";
+                  Cloud;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">";
                     Migration Solutions;
                   </span>;
@@ -324,6 +369,7 @@ export default function CloudMigrationPage() {
                 Seamlessly migrate your infrastructure to the cloud with our comprehensive migration services.
                 Reduce costs, improve performance, and enhance security with AWS, Azure, or Google Cloud.,
               </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -343,6 +389,8 @@ export default function CloudMigrationPage() {
                 </Link>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>;
             </motion.div>;
           </div>;
@@ -358,18 +406,24 @@ export default function CloudMigrationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Our Cloud Migration Process,;
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               transition={{ duration: 0.8 }}
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Our Cloud Migration Process;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 A proven methodology that ensures successful cloud migration;
@@ -423,6 +477,7 @@ export default function CloudMigrationPage() {
               animate={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
@@ -438,6 +493,8 @@ export default function CloudMigrationPage() {
               </h2>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Choose from leading cloud providers or implement a multi-cloud strategy;
                 for maximum flexibility and redundancy.;
@@ -453,6 +510,7 @@ export default function CloudMigrationPage() {
                   key={service.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -472,6 +530,8 @@ export default function CloudMigrationPage() {
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8""
                 >;
@@ -489,7 +549,10 @@ export default function CloudMigrationPage() {
                     <ul className="space-y-2">";
                       {service.features.map((feature, featureIndex) => (,
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />";
                           {feature}
                         </li>,
@@ -513,6 +576,7 @@ export default function CloudMigrationPage() {
               animate={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
@@ -528,6 +592,8 @@ export default function CloudMigrationPage() {
               </h2>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our cloud migration services deliver measurable improvements in cost,
                 performance, and security.,
@@ -567,6 +633,7 @@ export default function CloudMigrationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -576,6 +643,8 @@ export default function CloudMigrationPage() {
                 Ready to Move to the Cloud?;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </h2>;
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";
                 Let our cloud migration experts help you seamlessly transition to the cloud;
@@ -608,7 +677,10 @@ export default function CloudMigrationPage() {
         </section>;
       </div>;
     </Layout>;            >
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Move to the Cloud?
               </h2>
@@ -632,10 +704,13 @@ export default function CloudMigrationPage() {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">;
                 Ready to Move to the Cloud?;
@@ -658,5 +733,9 @@ export default function CloudMigrationPage() {
       </div>;
     </Layout>;
   ),;
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,6 +18,9 @@ import {supabase} from '@/integrations/supabase/client';
 import type { Wallet, TokenTransaction } from '@/types/tokens';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function useWallet() {;
   const { user } = useAuth();
   const [wallet, setWallet] = useState<Wallet | null>(null),
@@ -32,6 +36,7 @@ export function useWallet() {;
       return
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
@@ -41,6 +46,8 @@ export function useWallet() {;
 import {useEffect, useState} from 'react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
 import type { Wallet, TokenTransaction } from '@/types / tokens';
@@ -174,6 +181,7 @@ if (return) {
     fetch_transactions ();
   }, [user?.id]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -202,6 +210,9 @@ import { useEffect, useState } from 'react',;
 =======
 ;import { useEffect, useState } from 'react',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;import { useEffect, useState } from 'react',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 import type { Wallet, TokenTransaction } from '@/types/tokens',;
@@ -296,6 +307,7 @@ export function useWallet() {;
     loading,;
     error,;
     fetchWallet,;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -452,3 +464,10 @@ export function useWallet() {;
 
     spendTokens}}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    fetchTransactions;
+    earnTokens;
+
+    spendTokens}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

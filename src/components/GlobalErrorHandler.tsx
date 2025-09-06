@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react',;
 import { toast } from '@/hooks/use-toast',;
 import { Button } from '@/components/ui/button',;
@@ -8,10 +9,35 @@ reportError: (error: Error, context?: any) => void;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+reportError: (error: Error, context?: any) => void;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import { toast  } from '@/hooks/use-toast';
+import { Button  } from '@/components/ui/button';
+import React, {
+  createContext
+  useContext
+  useState
+  useCallback
+  ReactNode
+} from 'react'
+import { toast } from '@/hooks/use-toast'
+import { Button } from '@/components/ui/button'
+import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react'
+import * as Sentry from '@sentry/nextjs';
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface ErrorContextType {
+  reportError: (error: Error, context?: any) => void;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
   clearAllErrors: () => void
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   }, [])
@@ -285,6 +311,7 @@ export function useErrorHandler() {;
 } ;
 =======
   const message = error.message.toLowerCase(),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     clearAllErrors},
@@ -292,3 +319,14 @@ export function useErrorHandler() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    reportError,
+    handleApiError,
+    handleAsyncOperation,
+  };
+    handleAsyncOperation}
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

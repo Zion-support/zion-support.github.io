@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,11 +11,15 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { WorkExperience  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function useWorkExperience() {
 <<<<<<< HEAD
@@ -50,12 +55,16 @@ export function useWorkExperience() {;
 =======
 export function useWorkExperience() {  const { user } = useAuth();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function useWorkExperience() {  const { user } = useAuth();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
   const addWorkExperience = async (resumeId: string, work: WorkExperience): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to update work experience')
+<<<<<<< HEAD
 <<<<<<< HEAD
       return false
 <<<<<<< HEAD
@@ -228,6 +237,12 @@ if ( {) {
         .from('work_history')
         .insert({      return showSuccessToast("Work experience added", "Your work experience has been added to your resume")          company_logo_url: work.company_logo_url,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      return false    try {
+      const { error } = await supabase
+        .from('work_history')
+        .insert({      return showSuccessToast("Work experience added", "Your work experience has been added to your resume")          company_logo_url: work.company_logo_url,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           location: work.location;
         });
 ;
@@ -242,6 +257,7 @@ if (throw error) {
 
       setIsLoading(false)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -266,6 +282,9 @@ if (throw error) {
     setError(null),
 
       return showSuccessToast("Work experience added", "Your work experience has been added to your resume")
+=======
+=======      return showSuccessToast("Work experience added", "Your work experience has been added to your resume")
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (e: any) {
       return handleResumeError(e, 'Could not add work experience')
     } finally {
@@ -279,6 +298,7 @@ if (throw error) {
     }
     setIsLoading(true);
     setError(null);
+<<<<<<< HEAD
 =======
     }
     setIsLoading(true);
@@ -293,6 +313,8 @@ if (throw error) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
     setIsLoading(true),;
     setError(null),;
@@ -324,6 +346,7 @@ if (throw error) {
       return false;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -338,10 +361,14 @@ if (throw error) {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     
     setIsLoading(true),
     setError(null),
+<<<<<<< HEAD
 <<<<<<< HEAD
     
 <<<<<<< HEAD
@@ -390,6 +417,9 @@ if ( {) {
 =======
               company_name: work.company_name;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              company_name: work.company_name;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           role_title: work.role_title;
           start_date: formatDateForDB (work.start_date);
           end_date: work.is_current ? null : formatDateForDB (work.end_date);
@@ -411,6 +441,7 @@ if (throw error) {
       setIsLoading(false)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -422,6 +453,9 @@ if (throw error) {
 =======
 =======      return showSuccessToast("Work experience updated", "Your work experience has been updated")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======      return showSuccessToast("Work experience updated", "Your work experience has been updated")
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (e: any) {
       return handleResumeError(e, 'Could not update work experience')
     } finally {
@@ -436,6 +470,7 @@ if (throw error) {
     }
     setIsLoading(true);
     setError(null);
+<<<<<<< HEAD
 =======
     }
     setIsLoading(true);
@@ -450,6 +485,8 @@ if (throw error) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
     setIsLoading(true),;
     setError(null),;
@@ -478,6 +515,7 @@ if (throw error) {
   const deleteWorkExperience = async (workId: string): Promise<boolean> => {;
     if (!user) {;
       setError('You must be logged in to delete work experience'),;
+<<<<<<< HEAD
 <<<<<<< HEAD
       return false;
 <<<<<<< HEAD
@@ -553,6 +591,13 @@ if (throw error) {
         .delete()
       setIsLoading (false);        .eq('id', workId),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      return false;    try {
+      const { error } = await supabase
+        .from('work_history')
+        .delete()
+      setIsLoading (false);        .eq('id', workId),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       
       if (error) throw error,
       
@@ -580,6 +625,7 @@ if ( {) {
     error;
     addWorkExperience;
     updateWorkExperience;
+<<<<<<< HEAD
 
     deleteWorkExperience
   }
@@ -603,6 +649,11 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      setIsLoading(false)
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
     setIsLoading(true),;
     setError(null),;
@@ -625,6 +676,7 @@ if ( {) {
     addWorkExperience;
     updateWorkExperience;
     deleteWorkExperience;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -663,3 +715,9 @@ if ( {) {
 ;  }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }
+}
+;  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as Sentry from '@sentry/react';
 if (typeof window !== 'undefined') {;
   Sentry.init({;
@@ -18,6 +19,8 @@ if (typeof window !== 'undefined') {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 if (typeof window !== 'undefined') {Sentry.init({;
     dsn: process.env.NEXT_PUBLIC_SENTRY_DSN |'';
     tracesSampleRate: 0.1;
@@ -31,6 +34,7 @@ if (typeof window !== 'undefined') {;
     dsn: process.env.NEXT_PUBLIC_SENTRY_DSN || '',;
     tracesSampleRate: 0.1,;
     integrations: [];
+<<<<<<< HEAD
 <<<<<<< HEAD
     enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
 <<<<<<< HEAD
@@ -65,3 +69,6 @@ if (typeof window !== 'undefined') {;
 =======
     enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

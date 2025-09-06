@@ -3,11 +3,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}          price: priceId,
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -102,6 +105,7 @@ export default withErrorLogging(handler);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
 =======
@@ -122,6 +126,8 @@ export default function handler(req,res) { res.status(200).json({ message: 'Chec
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
@@ -131,6 +137,7 @@ export default function handler(req,res) { res.status(200).json({ message: "Chec
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -144,14 +151,18 @@ export default function handler(req, res) {
 =======
 =======      url: session.url
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      url: session.url
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     })
   } catch (err) {,
     // console.error('Checkout session API error:, err),
     res.statusCode = 500,
     res.json({ error: err.message || 'Checkout session creation failed' })
-  }
+  };
 };
 export default withErrorLogging(handler),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -172,6 +183,9 @@ export default withErrorLogging(handler),
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default withErrorLogging(handler);

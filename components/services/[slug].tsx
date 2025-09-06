@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -11,9 +14,30 @@
  
  
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../../components/layout/Layout';
+import { Check, Mail, MapPin, Phone, ExternalLink  } from 'lucide-react';
+import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services';
+import { extraServices  } from '../../data/extra-services';
+import { additionalEnhancedServices  } from '../../data/additional-real-services';
+import { newlyAddedServices  } from '../../data/newly-added-services';
+import { curatedMarketServices  } from '../../data/curated-market-services';
+import { new2025Services  } from '../../data/new-2025-services';
+import { marketValidatedServices  } from '../../data/market-validated-services';
+import { moreRealServices2025  } from '../../data/more-real-services-2025';
+import { verified2025Additions  } from '../../data/verified-2025-additions';
+import { realServicesQ12025  } from '../../data/real-services-q1-2025';
+import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025';
+type Service = any;
+export default ServiceDetail
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }function getAllServices () : Service[] {
   return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])
 }return {
@@ -191,8 +215,14 @@ null;
 }<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 export default ServiceDetail
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -235,12 +265,23 @@ type Service = typeof enhancedRealMicroSaasServices[number];
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  service.name 
+}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link> 
+};
+export default ServiceDetail
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 export default ServiceDetail
 export default ServiceDetail
 }
+<<<<<<< HEAD
   service.name 
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
 };
@@ -398,9 +439,15 @@ export default ServiceDetail;
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

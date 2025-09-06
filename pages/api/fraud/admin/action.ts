@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -86,13 +87,35 @@ export default async function handler(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { getFraudStore } from '../../../../utils/fraud/store';
+import { AdminActionType } from '../../../../utils/fraud/types';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { fraudId, action, reason, adminId } = req.body || {};
+  if (!fraudId || !action) {
+    res.status(400).json({ error: 'Missing fraudId or action' });
+return;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
+
+  const act = (action as string).toUpperCase() as AdminActionType;
+  if (!['SUSPEND', 'WARN', 'IGNORE'].includes(act)) {
+    res.status(400).json({ error: 'Invalid action' });
+    return;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  }
+
   const store = getFraudStore();
+<<<<<<< HEAD
   const fraud = store && store.getById(fraudId);
   if (!fraud) {
     return res && res.status(404).json({ error: "Fraud record not found" });
@@ -355,6 +378,7 @@ export default async function handler(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -363,3 +387,20 @@ export default async function handler(req, res) {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  await store.recordAction({
+    fraudId,
+    action: act,
+    adminId: adminId || null,
+    reason: reason || null,
+  });
+  const newStatus =
+    act === 'IGNORE' ? 'IGNORED' : act === 'WARN' ? 'WARNED' : 'SUSPENDED';
+  await store.updateEventStatus(fraudId, newStatus);
+
+  res.status(200).json({ ok: true, status: newStatus });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

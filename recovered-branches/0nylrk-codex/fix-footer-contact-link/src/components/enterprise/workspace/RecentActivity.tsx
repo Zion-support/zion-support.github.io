@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -16,10 +17,15 @@ import {Badge} from "@/components/ui/badge";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Badge } from "@/components/ui/badge",
 <<<<<<< HEAD
@@ -158,6 +164,16 @@ import { Badge } from "@/components/ui/badge",      id: "act-1",
     },
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Badge } from "@/components/ui/badge",      id: "act-1",
+      user: "Michael Chen",
+      action: "posted a new job",
+      target: "Senior React Developer",
+      timestamp: "1h ago",      type: "job"
+    }
+    },
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       id: "act-4"
       user: "Emily Davis"
@@ -166,6 +182,7 @@ import { Badge } from "@/components/ui/badge",      id: "act-1",
       timestamp: "2d ago"
       type: "comment"
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -194,6 +211,10 @@ import {Badge} from "@/components/ui/badge";
 }
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const getBadgeForType = (type: string) => {
     switch (type) {
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>,
@@ -207,17 +228,23 @@ import {Badge} from "@/components/ui/badge";
         return <Badge variant="outline">Activity</Badge>
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   },
 
   }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <Card>
@@ -257,6 +284,7 @@ import {Badge} from "@/components/ui/badge";
     </Card>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 
@@ -269,6 +297,9 @@ import {Badge} from "@/components/ui/badge";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -285,6 +316,7 @@ import { Badge } from "@/components/ui/badge",;
       action: "scheduled an interview with",;
       target: "Alex Morgan",;
       timestamp: "Yesterday",;
+<<<<<<< HEAD
 <<<<<<< HEAD
       type: "interview";
 <<<<<<< HEAD
@@ -321,6 +353,9 @@ import { Badge } from "@/components/ui/badge",;
 =======
       type: "interview";      case "candidate":;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      type: "interview";      case "candidate":;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;
       case "interview":;
         return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>;
@@ -339,6 +374,7 @@ import { Badge } from "@/components/ui/badge",;
         </div>;
 
         <div className="p-3 text-center border-t border-border">;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
 <<<<<<< HEAD
@@ -469,6 +505,9 @@ function RecentActivity() {
 =======
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;            View All Activity;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;            View All Activity;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </button>;
         </div>;
       </CardContent>;
@@ -527,6 +566,7 @@ default:
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -537,3 +577,5 @@ default:
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

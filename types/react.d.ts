@@ -45,6 +45,7 @@ declare module "react" {
     props: P,
     key: React.Key | null;
 
+
   the code-base.  If you have `@types/react` available in `node_modules`,;
   TypeScript will prefer those and ignore this file, because paths declared in;
   `typeRoots` are merged with normal type resolution.;
@@ -161,12 +162,14 @@ declare namespace React {;
   }
 }
 
+
   }
 }
   TypeScript will prefer those and ignore this file, because paths declared in;
   `type_roots` are merged with normal type resolution.;
 */;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Function Component (very trimmed-down).;
   export interface FC<P = Record<string, unknown>> {(props: P): ReactElement | null;
@@ -437,3 +440,6 @@ declare namespace React {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

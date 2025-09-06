@@ -1,11 +1,15 @@
 import type { NextPage } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import Head from 'next / head';
 import {useMemo, useState} from 'react';
 import Pagination from '../../components / ui / Pagination';
 import {TrustBadge, MicroTestimonial} from '../../components / ui / Badges';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,10 +54,19 @@ interface Talent {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+interface Talent {
+<<<<<<< HEAD
+import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
+
+interface Talent {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   name: string;
   title: string;
   badges: Array<'Verified' | 'Pro' | 'Top Rated'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -81,6 +94,9 @@ interface Talent {;
 <<<<<<< HEAD
 =======
 =======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   testimonial?: { quote: string; author: string }
 const mock_talent: Talent[] = Array.from ({ length: 47 }).map ((_, i) => ({
   id: String (i + 1),
@@ -93,6 +109,7 @@ const mock_talent: Talent[] = Array.from ({ length: 47 }).map ((_, i) => ({
       : ['Top Rated']) as Talent['badges'],
   testimonial:;
     i % 5 === 0;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
@@ -104,10 +121,32 @@ const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
 const TalentDirectory: NextPage = () => {
 
   return (
+=======
+
+=======
+  testimonial?: { quote: string, author: string }
+}
+
+const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
+  id: String(i + 1);
+  name: `Talent ${i + 1}`,
+  title: 'Full-Stack Developer',
+badges: (i % 3 === 0
+    ? ['Verified']
+    : i % 3 === 1
+      ? ['Pro']
+      : ['Top Rated']) as Talent['badges']
+  testimonial:
+    i % 5 === 0
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' }
+      : undefined
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }));
 const TalentDirectory: NextPage = () => {
   const [page, setPage] = useState(1);
   const pageSize = 10;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const total = mockTalent.length;
   const pageItems = useMemo(() => {
@@ -120,6 +159,9 @@ import Pagination from '../../components/ui/Pagination';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   testimonial?: { quote: string; author: string };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  testimonial?: { quote: string; author: string };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges';
 interface Talent {;
   id: string;
@@ -147,6 +189,7 @@ const TalentDirectory: NextPage = () => {
   const pageSize = 10,
   const total = mockTalent.length,
   const pageItems = useMemo(() => {
+<<<<<<< HEAD
     const start = (page - 1) * pageSize,
     return mockTalent.slice(start, start + pageSize)
   }, [page]),
@@ -210,10 +253,18 @@ const TalentDirectory: NextPage = () => {;
 =======
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
+    const start = (page - 1) * pageSize,
+    return mockTalent.slice(start, start + pageSize)
+  }, [page]),
+  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         page={page}
         page_size={page_size}
         total={total}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
@@ -226,10 +277,14 @@ const TalentDirectory: NextPage = () => {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="space-y-6 pb-16">
       <Head>
         <title>Talent - Zion</title>
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -253,12 +308,39 @@ const TalentDirectory: NextPage = () => {;
       <h1 className="text-2xl font-semibold">Explore Talent</h1>
       <div className="grid sm: grid-cols-2 lg:grid-cols-3 gap-4">
       <h1 className='text-2xl font-semibold'>Explore Talent</h1>
+=======
+      <h1 className="text-2xl font-semibold">Explore Talent</h1>
+
+      <div className="grid sm: grid-cols-2 lg:grid-cols-3 gap-4">
+        {pageItems.map((t) => (
+          <article key={t.id} className="border rounded-md p-4 space-y-2">
+            <div className="flex items-center justify-between">
+              <h3 className="font-semibold">{t.name}</h3>
+              <div className="flex gap-1">
+              </div>
+            </div>
+            <div className="text-sm opacity-80">{t.title}</div>
+            {t.testimonial && (
+=======
+    const start = (page - 1) * pageSize;
+return mockTalent.slice(start, start + pageSize);
+  }, [page]);
+  return (
+    <div className='space-y-6 pb-16'>
+      <Head>
+        <title>Talent - Zion</title>
+      </Head>
+
+<h1 className='text-2xl font-semibold'>Explore Talent</h1>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
         {pageItems.map(t => (
           <article key={t.id} className='border rounded-md p-4 space-y-2'>
             <div className='flex items-center justify-between'>
               <h3 className='font-semibold'>{t.name}</h3>
               <div className='flex gap-1'>
+<<<<<<< HEAD
                 {t.badges.map(b => (                  <TrustBadge key={b} type={b} />
                 ))}
       <h1 className="text-2xl font-semibold">Explore Talent</h1>
@@ -373,20 +455,54 @@ export default TalentDirectory;
         ))}
       </div>
       <Pagination
+=======
+                {t.badges.map(b => (
+                  <TrustBadge key={b} type={b} />
+                ))}
+              </div>
+            </div>
+<div className='text-sm opacity-80'>{t.title}</div>
+            {t.testimonial && (
+              <MicroTestimonial
+                quote={t.testimonial.quote}
+                author={t.testimonial.author}
+              />
+            )}
+          </article>
+        ))}
+      </div>
+
+<Pagination
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         page={page}
         pageSize={pageSize}
         total={total}
         onChange={setPage}
       />
+<<<<<<< HEAD
     </div>
   );
 }
 export default TalentDirectory;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    </div>
+  )
+
+};
+
+export default TalentDirectory;
+        on_change={set_page}
+      />;
+    </div>);
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default TalentDirectory;
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -398,6 +514,8 @@ export default TalentDirectory;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <MicroTestimonial quote={t.testimonial.quote} author={t.testimonial.author} />
             )  } catch (error) {
     console.error("Error:", error);
@@ -416,6 +534,7 @@ export default TalentDirectory;
   );
 },;
 export default TalentDirectory;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -441,3 +560,5 @@ export default TalentDirectory;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

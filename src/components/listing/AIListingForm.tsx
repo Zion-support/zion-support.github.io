@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   }) => void
   isLoading: boolean;  initialValues?: {
@@ -20,29 +23,65 @@
     keyFeatures?: string
     targetAudience?: string
   }
+=======
+import React, { useState } from 'react';
+import { useToast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Sparkles } from 'lucide-react';
+
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Sparkles } from 'lucide-react'
+interface AIListingFormProps {
+  onSubmit: (formData: {
+    title: string;
+    category: string;
+    keyFeatures: string;
+    targetAudience: string
+targetAudience?: string;
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export function AIListingForm({
-  onSubmit
-  isLoading
-  initialValues = {}
+  onSubmit,
+  isLoading,
+  initialValues = {},
 }: AIListingFormProps) {
-  const { toast } = useToast()
-  const [title, setTitle] = useState(initialValues.title |'')
-  const [category, setCategory] = useState(initialValues.category |'')
+  const { toast } = useToast();
+  const [title, setTitle] = useState(initialValues.title || '');
+  const [category, setCategory] = useState(initialValues.category || '');
   const [keyFeatures, setKeyFeatures] = useState(
-    initialValues.keyFeatures |''
-  )
+    initialValues.keyFeatures || ''
+  );
   const [targetAudience, setTargetAudience] = useState(
-    initialValues.targetAudience |''
-  )
+    initialValues.targetAudience || ''
+  );
+
   const handleSubmit = () => {
     if (!title |!category) {
       toast({
+<<<<<<< HEAD
       return
+=======
+title: 'Missing required fields',
+        description: 'Please provide at least a title and category.',
+        variant: 'destructive',
+      });
+      return;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
     onSubmit({
     })
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className='space-y-4'>
       <div className='space-y-2'>
@@ -168,6 +207,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           disabled={isLoading}
         />
       </div>
+<<<<<<< HEAD
       <div className="space-y-2">
         <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>
         <Textarea
@@ -507,17 +547,37 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
+=======
+      <Button
+        onClick={handleSubmit}
+        disabled={isLoading || !title || !category}
+        className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       >
         {isLoading ? (
           <>Generating Optimized Content...</>
         ) : (
           <>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+            <Sparkles className="h-4 w-4 mr-2" />
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+<Sparkles className='h-4 w-4 mr-2' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             Generate Optimized Content
           </>
         )}
       </Button>
     </div>
+<<<<<<< HEAD
   )
 }: AIListingFormProps) {
   if (!title |!category) {
@@ -634,6 +694,20 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+  );
+}: AIListingFormProps) {;
+  if (!title || !category) {;
+  toast ({;
+  return;
+}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {";
+  isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) ;
+}</Button> </div>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

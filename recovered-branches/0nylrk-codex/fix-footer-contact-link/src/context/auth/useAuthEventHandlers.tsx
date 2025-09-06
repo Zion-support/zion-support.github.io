@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -17,12 +18,17 @@ import {useNavigate} from 'react-router-dom';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth";
 import { checkNewRegistration } from "@/utils/authUtils";
 import { useNavigate } from 'react-router-dom';
 import type { UserProfile } from "@/types/auth",
 import { checkNewRegistration } from "@/utils/authUtils",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useNavigate } from 'react-router-dom',
 <<<<<<< HEAD
@@ -80,12 +86,16 @@ export function useAuthEventHandlers(
 =======
 import { useNavigate } from 'react-router-dom',      }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { useNavigate } from 'react-router-dom',      }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }, 0);
     }, 0),
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Check if user needs to complete onboarding
     if (!mappedUser.profileComplete && navigate) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       setOnboardingStep('profile'),
 <<<<<<< HEAD
@@ -188,6 +198,9 @@ export function useAuthEventHandlers(;
 =======
       setOnboardingStep('profile'),      description: `You're now signed in as ${mappedUser && mappedUser.displayName || mappedUser && mappedUser.email}`,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      setOnboardingStep('profile'),      description: `You're now signed in as ${mappedUser && mappedUser.displayName || mappedUser && mappedUser.email}`,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       variant: "default"}),;
 
     // Check for new registration and send welcome email if needed;
@@ -255,6 +268,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
@@ -264,6 +278,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     handleSignedOut
   },
@@ -284,6 +300,7 @@ export function useAuthEventHandlers(): any (;
 ) {;
   const navigate = useNavigate(),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -300,6 +317,8 @@ export function useAuthEventHandlers(): any (;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }  }
 }

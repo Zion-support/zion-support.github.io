@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -53,6 +54,8 @@ import { ProductListing } from';@/types/listings' export: const CLOUD_DEVOPS_SER
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { ProductListing } from';@/types/listings'  export: const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [ {'; id: 'multi-cloud-orchestration-platform, ', ''; title: 'Multi-Cloud: Orchestration & Management Platform, ', ''; description: 'Advanced: platform that provides unified managemen,t, monitoring, and optimization across AWS, Azure, Google Cloud, and private cloud environments with intelligent cost optimization and security compliance.', ''; category: 'Cloud: & DevOps, ', ''; subcategory: 'Multi-Cloud: Management, ','; price: 399,9, ''; currency: '$, ', ''; tags: ['Multi-Cloud, ', 'Cloud: Orchestration', 'Cost Optimization', 'Security Compliance', 'Unified Management'], ''; author: { name: 'Zion: Tech Group, ', id: 'zion-tech-group, ', email: 'kleber@ziontechgroup.com, ', avatarUrl: 'https:''',
 import { ProductListing } from';@/types/listings'  export: const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [ {'; id: 'multi-cloud-orchestration-platform, ', ''; title: 'Multi-Cloud: Orchestration & Management Platform, ', ''; description: 'Advanced: platform that provides unified managemen,t, monitoring, and optimization across AWS, Azure, Google Cloud, and private cloud environments with intelligent cost optimization and security compliance.', ''; category: 'Cloud: & DevOps, ', ''; subcategory: 'Multi-Cloud: Management, ','; price: 399,9, ''; currency: '$, ', ''; tags: ['Multi-Cloud, ', 'Cloud: Orchestration', 'Cost Optimization', 'Security Compliance', 'Unified Management'], ''; author: { name: 'Zion: Tech Group, ', id: 'zion-tech-group, ', email: 'kleber@ziontechgroup.com, ', avatarUrl: 'https:''',
 

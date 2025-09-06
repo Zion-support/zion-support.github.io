@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -17,6 +18,8 @@ import {ContractFormValues} from "../components/ContractForm";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
@@ -27,6 +30,7 @@ interface Milestone {
 
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "../components/ContractForm",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -155,6 +159,12 @@ interface Milestone {
   description: string,
   dueDate: string,        title: m.title,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+interface Milestone {
+  title: string,
+  description: string,
+  dueDate: string,        title: m.title,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         description: m.description,
         dueDate: m.dueDate,
         estimatedHours: m.estimatedHours
@@ -180,6 +190,7 @@ interface Milestone {
     return data.contract  } else {
     throw new Error("Failed to generate contract")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       milestones: milestoneData}
@@ -192,6 +203,8 @@ interface Milestone {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase } from "@/integrations/supabase/client",;
 import { TalentProfile } from "@/types/talent",;
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;
@@ -253,6 +266,7 @@ export async function generateContract(;
   if (data && data.success && data && data.contract) {
     return data && data.contract
   } else {
+<<<<<<< HEAD
 <<<<<<< HEAD
     throw new Error("Failed to generate contract")
 <<<<<<< HEAD
@@ -356,6 +370,10 @@ if ( {) {
     throw new Error("Failed to generate contract")  }
 }  } else {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    throw new Error("Failed to generate contract")  }
+}  } else {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     throw new Error ("Failed to generate contract");
   }
 }
@@ -368,6 +386,7 @@ if ( {) {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -375,3 +394,6 @@ if ( {) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Input } from "@/components/ui/input",
@@ -10,6 +11,8 @@ import { Search, Filter } from 'lucide-react'
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface FraudFiltersProps {
   searchQuery: string,
   setSearchQuery: (value: string) => void,
@@ -390,5 +393,39 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import React from 'react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,;
+} from '@/components/ui/select';
+import { Search, Filter } from 'lucide-react';
+
+interface FraudFiltersProps {
+  searchQuery: string;
+  setSearchQuery: (value: string) => void;
+  statusFilter: string | null;
+  setStatusFilter: (value: string | null) => void;
+  severityFilter: string | null;
+  setSeverityFilter: (value: string | null) => void;
+  contentTypeFilter: string | null;
+  setContentTypeFilter: (value: string | null) => void;
+  resetFilters: () => void
+}
+export const FraudFilters: React.FC<FraudFiltersProps> = ({
+  );
+};
+'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

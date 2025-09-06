@@ -3,6 +3,7 @@
 import Link from 'next/link';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
 import {
 =======
@@ -84,15 +85,32 @@ import {
   Clock,;
   Globe2,;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2;
   Crown, Award, Target, Users, Clock, Globe2
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+ } from 'lucide-react';
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
+import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
+import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
+const contactInfo = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const pricingTiers = [
   {
     name: 'Starter'
@@ -100,6 +118,7 @@ const pricingTiers = [
     period: '/month'
     description: 'Perfect for small businesses and startups'
     features: [
+<<<<<<< HEAD
 
   CheckCircle,
   ArrowRight,
@@ -162,32 +181,47 @@ const pricingTiers = [
     price: '$999'
     period: '/month'
     description: 'Ideal for growing businesses and enterprises'
+=======
+'Basic AI integration',
+      'Standard support',
+      'Core features access',
+      'Email support',
+      'Basic analytics',
+      'Mobile app access',
+    ],
+    popular: false,
+    color: 'from-blue-600 to-cyan-600',
+    cta: 'Get Started',
+    href: '/contact',
+  },
+  {
+    name: 'Professional',
+    price: '$999',
+    period: '/month',
+    description: 'Ideal for growing businesses and enterprises',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     features: [
-      'Advanced AI capabilities'
-      'Priority support'
-      'Full feature access'
-      'Phone & email support'
-      'Advanced analytics'
-      'API access'
-      'Custom integrations'
-      'Training & onboarding'
-    ]
-    popular: true
-    color: 'from-purple-600 to-pink-600'
-    cta: 'Start Free Trial'
-    href: '/contact'
-  },  {      'Advanced AI capabilitiesPriority supportFull feature accessPhone & email supportAdvanced analyticsAPI accessCustom integrationsTraining & onboarding'
-    ];
-    popular: true
-    color: 'from-purple-600 to-pink-600'
-    cta: 'Start Free Trial'
-    href: '/contact'
-  }
-    name: 'Enterprise'
-    price: 'Custom'
-    period: ''
-    description: 'Tailored solutions for large organizations'
+'Advanced AI capabilities',
+      'Priority support',
+      'Full feature access',
+      'Phone & email support',
+      'Advanced analytics',
+      'API access',
+      'Custom integrations',
+      'Training & onboarding',
+    ],
+    popular: true,
+    color: 'from-purple-600 to-pink-600',
+    cta: 'Start Free Trial',
+    href: '/contact',
+  },
+  {
+    name: 'Enterprise',
+    price: 'Custom',
+    period: '',
+    description: 'Tailored solutions for large organizations',
     features: [
+<<<<<<< HEAD
       'Custom AI development'
       'Dedicated support team'
       'White-label solutions'
@@ -324,6 +358,174 @@ const service_pricing = [;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+=======
+'Custom AI development',
+      'Dedicated support team',
+      'White-label solutions',
+      '24/7 phone support',
+      'Custom analytics',
+      'Full API access',
+      'Custom integrations',
+      'Dedicated account manager',
+      'SLA guarantees',
+      'On-premise deployment',
+    ],
+    popular: false,
+    color: 'from-indigo-600 to-purple-600',
+    cta: 'Contact Sales',
+    href: '/contact',
+  },
+];
+
+const servicePricing = [
+  {
+    category: '🚀 2028 Futuristic Innovations',
+services: futuristic2028Services.slice(0, 6),
+  },
+  {
+    category: '🏙️ Smart City & Infrastructure'
+    services: emergingTech2028Services
+      .filter(
+        s =>
+          s.category.includes('Smart City') |
+          s.category.includes('Infrastructure')
+      )
+      .slice(0, 4)
+  }
+  {
+    category: '⚛️ Quantum & Advanced Tech'
+    services: futuristic2028Services
+      .filter(s => s.category.includes('Quantum'))
+      .slice(0, 4)
+  }
+  {
+    category: '🤖 AI & Machine Learning'
+    services: emergingTech2028Services
+      .filter(s => s.category.includes('AI'))
+      .slice(0, 4),
+  },
+];
+export default function Revolutionary2028Pricing() {
+  return (
+    <>
+      <Head>
+        <title>2028 Revolutionary Pricing - Zion Tech Group</title>
+<meta
+          name='description'
+          content='Competitive pricing for our cutting-edge 2028 services. Transparent pricing with flexible plans for AI, quantum computing, and futuristic technology solutions.'
+        />
+        <meta
+          name='keywords'
+          content='2028 pricing, AI services pricing, quantum computing pricing, technology pricing, Zion Tech Group pricing'
+        />
+        <meta
+          property='og:title'
+          content='2028 Revolutionary Pricing - Zion Tech Group'
+        />
+        <meta
+          property='og:description'
+          content='Competitive pricing for our cutting-edge 2028 services with transparent plans and flexible options.'
+        />
+        <meta
+          property='og:url'
+          content='https://ziontechgroup.com/revolutionary-2028-pricing'
+        />
+        <meta property='og:type' content='website' />
+        <link
+          rel='canonical'
+          href='https://ziontechgroup.com/revolutionary-2028-pricing'
+        />
+      </Head>
+
+      <UltraFuturisticNavigation2028 />
+      {/* Hero Section */}
+<section className='relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900/20 to-blue-900/20 overflow-hidden'>
+        {/* Animated Background */}
+        <div className='absolute inset-0'>
+          <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse'></div>
+          <div className='absolute top-1/2 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000'></div>
+          <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000'></div>
+        </div>
+
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+className='space-y-8'
+          >
+            <div className='inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm'>
+              <DollarSign className='w-4 h-4' />
+              <span>Transparent Pricing</span>
+            </div>
+            <h1 className='text-5xl md:text-7xl font-bold text-white leading-tight'>
+              <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent'>
+                Revolutionary
+              </span>
+              <br />
+              <span className='text-white'>2028 Pricing</span>
+            </h1>
+            <p className='text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed'>
+              Experience cutting-edge technology at competitive prices. Our
+              transparent pricing model ensures you get maximum value for your
+              investment in the future.
+            </p>
+            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
+              <Link
+                href='/contact'
+                className='px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2'
+              >
+                <span>Get Started</span>
+                <ArrowRight className='w-5 h-5' />
+              </Link>
+              <Link
+                href='/2028-services-showcase'
+                className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2'
+              >
+                <span>View Services</span>
+                <Rocket className='w-5 h-5' />
+              </Link>
+            </div>
+            {/* Pricing Stats */}
+<div className='grid grid-cols-1 md:grid-cols-4 gap-8 pt-16'>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-purple-400'>30%</div>
+                <div className='text-purple-300'>Lower than Market</div>
+              </div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-blue-400'>99.9%</div>
+                <div className='text-blue-300'>Uptime Guarantee</div>
+              </div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-pink-400'>24/7</div>
+                <div className='text-pink-300'>Expert Support</div>
+              </div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-cyan-400'>30-Day</div>
+                <div className='text-cyan-300'>Free Trial</div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      {/* Pricing Tiers */}
+<section className='py-20 bg-black/50'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              Choose Your{' '}
+              <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
+                Plan
+              </span>
+            </h2>
+            <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
+              Flexible pricing plans designed to scale with your business. Start
+              small and grow with us.
+            </p>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             {pricingTiers.map((tier, index) => (
               <motion.div
                 key={tier.name}
@@ -350,6 +552,7 @@ const service_pricing = [;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 export default /**
@@ -609,11 +812,21 @@ function Revolutionary2028Pricing() {
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-medium flex items-center space-x-2">
                       <Crown className="w-4 h-4" />
+=======
+=======
+                className={`relative ${tier.popular ? 'scale-105' : ''}`}
+              >
+                {tier.popular && (
+<div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+                    <div className='bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-medium flex items-center space-x-2'>
+                      <Crown className='w-4 h-4' />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <span>Most Popular</span>
                     </div>
                   </div>
                 )}
 
+<<<<<<< HEAD
                     <div className="mb-8">
                       <div className="flex items-baseline space-x-2">
                         <span className="text-4xl font-bold text-white">{tier.price}</span>
@@ -631,6 +844,40 @@ function Revolutionary2028Pricing() {
                         </li>;
                       ))}
 =======
+=======
+<div
+                  className={`relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-2 ${tier.popular ? 'border-purple-500/60' : 'border-purple-500/30'} rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105`}
+                >
+                  <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+                  <div className='relative z-10'>
+                    <h3 className='text-2xl font-bold text-white mb-2'>
+                      {tier.name}
+                    </h3>
+                    <p className='text-purple-300 mb-6'>{tier.description}</p>
+                    <div className='mb-8'>
+                      <div className='flex items-baseline space-x-2'>
+                        <span className='text-4xl font-bold text-white'>
+                          {tier.price}
+                        </span>
+                        <span className='text-purple-300'>{tier.period}</span>
+                      </div>
+                      {tier.name === 'Enterprise' && (
+                        <p className='text-sm text-purple-300 mt-2'>
+                          Contact us for custom pricing
+                        </p>
+                      )}
+                    </div>
+                    <ul className='space-y-3 mb-8'>
+                      {tier.features.map((feature, featureIndex) => (
+                        <li
+                          key={featureIndex}
+                          className='flex items-center space-x-3'
+                        >
+                          <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
+                          <span className='text-purple-200'>{feature}</span>
+                        </li>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       ))}
                     </ul>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -653,7 +900,7 @@ function Revolutionary2028Pricing() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Service Pricing */}
-      <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
+<section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -664,6 +911,7 @@ function Revolutionary2028Pricing() {
             </h2>
             <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
               Detailed pricing for our individual services. Mix and match to
+<<<<<<< HEAD
               create your perfect solution.            </p>
           </div>
           {servicePricing.map((category, categoryIndex) => (      <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">
@@ -679,6 +927,14 @@ function Revolutionary2028Pricing() {
           </div>
           {servicePricing.map((category, categoryIndex) => (
 
+=======
+              create your perfect solution.
+            </p>
+          </div>
+          {servicePricing.map((category, categoryIndex) => (
+<div key={category.category} className='mb-16'>
+              <h3 className='text-3xl font-bold text-white mb-8 text-center'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {category.category}
               </h3>;
               <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
@@ -844,7 +1100,11 @@ function Revolutionary2028Pricing() {
                         </h4>;
                         <p className='text - purple - 300 mb - 4 text - sm'>;
                           {service.description}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     initial={{ opacity: 0, x: serviceIndex % 2 === 0 ? -30 : 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
@@ -897,10 +1157,43 @@ function Revolutionary2028Pricing() {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+                        </p>
+                        <div className='mb-4'>
+                          <div className='flex items-center space-x-2 mb-2'>
+                            <Star className='w-4 h-4 text-yellow-400' />
+                            <span className='text-white font-medium'>
+                              {service.rating}
+                            </span>
+                            <span className='text-purple-300 text-sm'>
+                              ({service.reviews} reviews)
+                            </span>
+                          </div>
+                          <div className='text-sm text-purple-300'>
+                            <span className='font-medium'>Setup:</span>{' '}
+                            {service.setupTime}
+                          </div>
+                        </div>
+                        <div className='flex items-center justify-between'>
+                          <Link
+                            href={service.link}
+                            className='px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 text-sm'
+                          >
+                            Learn More
+                          </Link>
+                          <div className='text-right'>
+                            <div className='text-xs text-purple-300'>Trial</div>
+                            <div className='text-white font-medium'>
+                              {service.trialDays} days
+                            </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           </div>
                         </div>
                       </div>
@@ -911,7 +1204,7 @@ function Revolutionary2028Pricing() {
             </div>;
           ))}
       {/* Value Proposition */}
-      <section className='py-20 bg-black/50'>
+<section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -957,6 +1250,7 @@ function Revolutionary2028Pricing() {
               unmatched features.
             </p>
           </div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div            </h2>
 <<<<<<< HEAD
 
@@ -973,6 +1267,10 @@ function Revolutionary2028Pricing() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
 <<<<<<< HEAD
 
@@ -1095,6 +1393,7 @@ function Revolutionary2028Pricing() {
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
 =======
 
@@ -1105,6 +1404,12 @@ function Revolutionary2028Pricing() {
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+=======
+className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1115,6 +1420,7 @@ function Revolutionary2028Pricing() {
                 superior technology and features.
               </p>
               <div className='text-3xl font-bold text-green-400'>30%</div>
+<<<<<<< HEAD
               <div className='text-purple-300'>Lower than Market</div>            </motion.div>            >
 <<<<<<< HEAD
 
@@ -1130,6 +1436,9 @@ function Revolutionary2028Pricing() {
               </p>
               <div className="text-3xl font-bold text-green-400">30%</div>
               <div className="text-purple-300">Lower than Market</div>
+=======
+              <div className='text-purple-300'>Lower than Market</div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
             <motion.div
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'>;
@@ -1156,7 +1465,9 @@ function Revolutionary2028Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1171,6 +1482,11 @@ function Revolutionary2028Pricing() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1181,6 +1497,7 @@ function Revolutionary2028Pricing() {
                 you pay, with clear value for every dollar.
               </p>
               <div className='text-3xl font-bold text-blue-400'>100%</div>
+<<<<<<< HEAD
               <div className='text-blue-300'>Transparent Pricing</div>            </motion.div>            >
 <<<<<<< HEAD
 
@@ -1192,6 +1509,9 @@ function Revolutionary2028Pricing() {
               <h3 className="text-2xl font-bold text-white mb-4">No Hidden Costs</h3>
               <p className="text-blue-300 mb-6">
                 Transparent pricing with no surprise fees. What you see is what you pay
+=======
+              <div className='text-blue-300'>Transparent Pricing</div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 with clear value for every dollar.
               </p>
               <div className="text-3xl font-bold text-blue-400">100%</div>
@@ -1233,8 +1553,15 @@ function Revolutionary2028Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <Award className='w-16 h-16 text-pink-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1245,6 +1572,7 @@ function Revolutionary2028Pricing() {
                 that justify every penny of investment.
               </p>
               <div className='text-3xl font-bold text-pink-400'>5x</div>
+<<<<<<< HEAD
               <div className='text-pink-300'>ROI Guarantee</div>            </motion.div>            >
 <<<<<<< HEAD
 
@@ -1260,6 +1588,9 @@ function Revolutionary2028Pricing() {
               </p>
               <div className="text-3xl font-bold text-pink-400">5x</div>
               <div className="text-pink-300">ROI Guarantee</div>
+=======
+              <div className='text-pink-300'>ROI Guarantee</div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
           </div>
         </div>
@@ -1300,8 +1631,13 @@ function Revolutionary2028Pricing() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+=======
+<section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 <<<<<<< HEAD
 
@@ -1316,13 +1652,20 @@ function Revolutionary2028Pricing() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='space-y-8'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to{' '}
@@ -1375,8 +1718,7 @@ function Revolutionary2028Pricing() {
                 <span>No Credit Card Required</span>
               </div>
               <div className='flex items-center space-x-2'>
-                <CheckCircle className='w-5 h-5 text-green-400' />                <span>Cancel Anytime</span>              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-green-400" />
+                <CheckCircle className='w-5 h-5 text-green-400' />
                 <span>Cancel Anytime</span>
               </div>
             </div>
@@ -1384,6 +1726,7 @@ function Revolutionary2028Pricing() {
         </div>
       </section>
       <UltraFuturisticFooter2028 />
+<<<<<<< HEAD
 
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div            </h2>;
@@ -1535,5 +1878,9 @@ function Revolutionary2028Pricing() {
     </>
   );
 
+=======
+    </>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

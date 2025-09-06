@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -17,11 +18,14 @@ import React, { useState } from 'react';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Dialog;
   DialogContent;
   DialogHeader;
   DialogTitle;
+<<<<<<< HEAD
 <<<<<<< HEAD
   DialogDescription;
 <<<<<<< HEAD
@@ -57,12 +61,16 @@ import React, { useState } from 'react',
 =======
   DialogDescription;import React, { useState } from 'react',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  DialogDescription;import React, { useState } from 'react',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogDescription,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -74,12 +82,15 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   DialogFooter} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Textarea } from "@/components/ui/textarea",
 import { useMessaging } from "@/context/MessagingContext",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -138,6 +149,8 @@ export function MessageTalentModal({
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   jobTitle
 }: MessageTalentModalProps) {
@@ -145,6 +158,7 @@ export function MessageTalentModal({
   const { createConversation } = useMessaging(),
   const navigate = useNavigate(),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -155,6 +169,8 @@ export function MessageTalentModal({
   jobTitle
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }: MessageTalentModalProps) {
   const { createConversation } = useMessaging();
 
@@ -163,6 +179,7 @@ export function MessageTalentModal({
 =======
   const navigate = useNavigate();
   const { createConversation } = useMessaging(),
+<<<<<<< HEAD
 <<<<<<< HEAD
   const navigate = useNavigate(),
 <<<<<<< HEAD
@@ -203,10 +220,14 @@ export function MessageTalentModal({
 =======
   const navigate = useNavigate(),  const handleSendMessage = async () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const navigate = useNavigate(),  const handleSendMessage = async () => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (!message.trim()) {
       toast({
         title: "Message required"
         description: "Please enter a message before sending."
+<<<<<<< HEAD
 <<<<<<< HEAD
         variant: "destructive"
 <<<<<<< HEAD
@@ -243,6 +264,9 @@ export function MessageTalentModal(): any ({;
 =======
         variant: "destructive"      });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        variant: "destructive"      });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       return;
     }
       });
@@ -302,6 +326,7 @@ function MessageTalentModal() {
       await create_conversation (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -351,6 +376,8 @@ function MessageTalentModal() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         talent.user_id;
 
     try {;
@@ -366,6 +393,7 @@ function MessageTalentModal() {
       // Create conversation with this talent;
       await createConversation(;
         talent && talent.user_id;
+<<<<<<< HEAD
 <<<<<<< HEAD
         message;
 <<<<<<< HEAD
@@ -681,6 +709,12 @@ export function MessageTalentModal({;
     } finally {;
       setIsSubmitting(false);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        message;        variant: "destructive";
+      });
+    } finally {;
+      setIsSubmitting(false);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   }
 
@@ -693,6 +727,7 @@ export function MessageTalentModal({;
         <DialogHeader>;
           <DialogTitle className="text-white flex items-center gap-3">;
             <Avatar className="h-8 w-8 border border-zion-purple/20">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -714,6 +749,9 @@ export function MessageTalentModal({;
 =======
               <AvatarFallback className="bg-zion-blue-dark text-white">;              <AvatarFallback className="bg-zion-blue-dark text-white">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <AvatarFallback className="bg-zion-blue-dark text-white">;              <AvatarFallback className="bg-zion-blue-dark text-white">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>
@@ -722,6 +760,7 @@ export function MessageTalentModal({;
           <DialogDescription className="text-zion-slate">
             Send a direct message to start a conversation.
             {talent.professional_title && (
+<<<<<<< HEAD
 <<<<<<< HEAD
               <span className="block mt-1 text-zion-cyan">{talent.professional_title}</span>
 <<<<<<< HEAD
@@ -871,6 +910,9 @@ export function MessageTalentModal({;
 =======
               <span className="block mt-1 text-zion-cyan">{talent.professional_title}</span>              placeholder="Write your message here...";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <span className="block mt-1 text-zion-cyan">{talent.professional_title}</span>              placeholder="Write your message here...";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             />;
           </div>;
         </div>;
@@ -962,6 +1004,7 @@ return (<Dialog open= {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -969,3 +1012,6 @@ return (<Dialog open= {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

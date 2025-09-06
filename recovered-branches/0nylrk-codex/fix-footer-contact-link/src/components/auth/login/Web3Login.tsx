@@ -17,11 +17,14 @@ export function Web3Login() {;
       setIsLoading(true);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
@@ -67,6 +70,7 @@ export function Web3Login() {
 
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   }
 =======
@@ -111,6 +115,12 @@ export function Web3Login() {
   },
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }    }
+
+  },
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       disabled={isLoading}
     >
       {isLoading ? (
@@ -126,6 +136,7 @@ export function Web3Login() {
           <span className="sr-only">Sign in with Web3</span>
           <Wallet className="h-5 w-5" />
         </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -292,6 +303,13 @@ import { useState } from './react';
   )
 }import { useState } from './react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      )}
+    </Button>
+  )
+}import { useState } from './react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from '@/components / ui / button';
 import { use_auth } from '@/hooks / use_auth';
 import { Wallet } from '@/components / icons';
@@ -302,6 +320,7 @@ export /**
 function Web3Login() {
   const { loginWithWeb3 } = use_auth ();
   const [is_loading, setIsLoading] = useState (false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -390,3 +409,6 @@ return (<Button type="button" variant="outline" className="w-full border border-
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

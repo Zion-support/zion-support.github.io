@@ -17,6 +17,7 @@ import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
 import type { KycProfile, KycRole } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
@@ -64,6 +65,7 @@ function load (): Record < string, KycProfile> {
   } catch {
     return {}
   }
+<<<<<<< HEAD
 /**
  * save - Function description
  */
@@ -83,9 +85,22 @@ function handler() {
   const {    user_id,
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+=======
+const DATA_DIR = null;
+    optionalDocuments: getOptionalDocuments(role)})
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+function save(db: Record<string, KycProfile>) {
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+  fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
   const {    userId
     role
     fullLegalName
@@ -104,8 +119,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     businessRegistrationNumber,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+    role
+    fullLegalName
+    business_name
+    businessRegistrationNumber
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  const {
+    userId,
+    role,
+    fullLegalName,
+    businessName,
+    businessRegistrationNumber,
+} = req.body as {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     userId?: string;
 =======
 <<<<<<< HEAD
@@ -149,6 +181,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lastUpdatedAt: now
       auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]
     } as KycProfile);
+<<<<<<< HEAD
   profile && profile.role = role;
   if (fullLegalName) profile && profile.fullLegalName = fullLegalName;
   if (businessName) profile && profile.businessName = businessName;
@@ -269,13 +302,27 @@ export default function handler(req, res) {
   if (fullLegalName) profile.fullLegalName = fullLegalName;
   if (businessName) profile.businessName = businessName;
   if (businessRegistrationNumber) profile.businessRegistrationNumber = businessRegistrationNumber;
+=======
+
+  profile.role = role;
+  if (fullLegalName) profile.fullLegalName = fullLegalName;
+  if (businessName) profile.businessName = businessName;
+if (businessRegistrationNumber)
+    profile.businessRegistrationNumber = businessRegistrationNumber;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   profile.lastUpdatedAt = now;
   db[userId] = profile;
   save(db);
 
   res.status(200).json({
+<<<<<<< HEAD
     ok: true, profile,
     requiredDocuments: getRequiredDocuments(role),
+=======
+<<<<<<< HEAD
+    ok: true, profile
+    requiredDocuments: getRequiredDocuments(role)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     optionalDocuments: getOptionalDocuments(role)})
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -335,11 +382,25 @@ if (
   db[user_id] = profile;
   save (db);
   res.status (200).json ({
+<<<<<<< HEAD
     ok: true,
     profile,
     required_documents: getRequiredDocuments (role),
 optional_documents: getOptionalDocuments (role),
+=======
+    ok: true
+    profile
+    required_documents: getRequiredDocuments (role)
+optional_documents: getOptionalDocuments (role)
+=======
+ok: true,
+    profile,
+    requiredDocuments: getRequiredDocuments(role),
+    optionalDocuments: getOptionalDocuments(role),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   });
+
 }
 <<<<<<< HEAD
 =======

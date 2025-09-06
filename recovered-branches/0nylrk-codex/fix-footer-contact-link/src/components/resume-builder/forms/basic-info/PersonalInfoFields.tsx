@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {
   FormField
@@ -97,6 +100,7 @@ import { Input } from "@/components/ui/input";
 import { Control } from "react-hook-form";
 import { BasicInfoFormData } from "./schema";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -110,6 +114,8 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
 interface PersonalInfoFieldsProps {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   control: Control<BasicInfoFormData>;
 }
 
@@ -132,6 +138,7 @@ function PersonalInfoFields() {
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Full Name</FormLabel>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -204,6 +211,8 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </FormItem>;
         )}
       />;
@@ -215,10 +224,13 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
           <FormItem>;
             <FormLabel>Professional Title</FormLabel>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <FormControl>;
               <Input placeholder="Senior Software Engineer" {...field} />;
             </FormControl>;
@@ -244,6 +256,7 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
         name="phone"
         render={({ field }) => (;
           <FormItem>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <FormLabel>Phone</FormLabel>;
 =======
@@ -284,6 +297,9 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
 =======
             <FormLabel>Phone</FormLabel>;      />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <FormLabel>Phone</FormLabel>;      />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         )}
       />
       <FormField

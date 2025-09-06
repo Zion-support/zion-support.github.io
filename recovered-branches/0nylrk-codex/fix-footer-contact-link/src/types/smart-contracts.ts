@@ -1,6 +1,7 @@
 export type BlockchainNetwork = "ethereum" | "polygon" | "none";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -18,6 +19,10 @@ export interface SmartContractInfo {;
 export interface SmartContractInfo {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export interface SmartContractInfo {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   transactionHash?: string;
   networkName?: BlockchainNetwork;
@@ -28,6 +33,9 @@ export interface SmartContractInfo {;
   createdAt: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   createdBy: string
   status: 'draft' | 'deployed' | 'executed' | 'cancelled'
 <<<<<<< HEAD
@@ -35,6 +43,7 @@ export interface SmartContractInfo {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+<<<<<<< HEAD
 export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';
 }
 <<<<<<< HEAD
@@ -60,12 +69,16 @@ export interface EscrowContractDetails {
 ;
 export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export interface EscrowContractDetails {;
 
 export interface EscrowContractDetails {
 
 export interface EscrowContractDetails {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -75,6 +88,8 @@ export interface EscrowContractDetails {;
   client: string;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   talent: string;
   amount: number;
   currency: string;
@@ -91,6 +106,7 @@ export interface EscrowContractDetails {;
   completionDeadline: string;
   arbitrator?: string;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 export interface DeploymentOptions {;
@@ -110,12 +126,17 @@ export interface DeploymentOptions {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+export interface DeploymentOptions {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   network: BlockchainNetwork;
   walletAddress?: string;
-<<<<<<< HEAD
   useEscrow: boolean
 
   deployToChain: boolean
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -168,6 +189,9 @@ export interface EscrowContractDetails {;
   deployToChain: boolean
   arbitrator?: string;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  arbitrator?: string;}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface DeploymentOptions {
   network: BlockchainNetwork;
   wallet_address?: string;
@@ -188,6 +212,7 @@ export interface DeploymentOptions {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -195,3 +220,5 @@ export interface DeploymentOptions {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

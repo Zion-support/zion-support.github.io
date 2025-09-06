@@ -66,6 +66,7 @@ interface EquipmentDetails {
   rating?: number;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -105,6 +106,8 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     images: [
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";    images: [
@@ -207,6 +210,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
 },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -288,11 +292,14 @@ export default function EquipmentDetail() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },
 
   const handleBuyNow = () => {
     setIsAdding(true),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -323,6 +330,8 @@ export default function EquipmentDetail() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <>
@@ -358,6 +367,7 @@ export default function EquipmentDetail() {
                           className="w-full h-full object-cover"
                         />
                       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -418,11 +428,14 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     warranty: "2 years manufacturer warranty",;
     returnPolicy: "30-day return policy for unused items in original packaging"
 };
   "audio-mixer-pro": {;
     id: "audio-mixer-pro",;
+<<<<<<< HEAD
 <<<<<<< HEAD
     name: "AudioMixer Pro Digital Mixing Console",;
     description: "Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.";
@@ -483,6 +496,10 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
     name: "AudioMixer Pro Digital Mixing Console",,
   description: "Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.";    ];
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    name: "AudioMixer Pro Digital Mixing Console",,
+  description: "Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.";    ];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     features: [;
       "32-channel digital mixer with 24 premium mic preamps";
       "16 motorized faders with touch-sensitive control";
@@ -633,6 +650,7 @@ if ( {) {
     return (
       <>;
         <Header />;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="min - h-screen bg - zion - blue py - 12 px - 4">;
           <div className="container mx - auto">;
@@ -822,6 +840,9 @@ export default function EquipmentDetail() {;
 =======
         <div className="min - h-screen bg - zion - blue py - 12 px-4">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        <div className="min - h-screen bg - zion - blue py - 12 px-4">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="container mx-auto">;
             <div className="text - center py-20">;
               <h1 className="text - 3xl font - bold text - white mb-4">Equipment Not Found</h1>;
@@ -836,6 +857,7 @@ export default function EquipmentDetail() {;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
         <div className="container mx-auto">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
+<<<<<<< HEAD
 <<<<<<< HEAD
             {/* Left Column - Images */}
 <<<<<<< HEAD
@@ -1203,6 +1225,9 @@ export default function EquipmentDetail() {;
 =======
             {/* Left Column - Images */}            <div className="lg:col-span-1">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            {/* Left Column - Images */}            <div className="lg:col-span-1">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
                 {/* Category and Brand */}
                 <div className="flex flex-wrap gap-2 mb-3">;
@@ -1231,6 +1256,7 @@ export default function EquipmentDetail() {;
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment && equipment.name}</h1>;
                 <p className="text-zion-cyan mb-4">Brand: {equipment && equipment.brand}</p>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1327,6 +1353,11 @@ export default function EquipmentDetail() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                              : "text-zion-slate-light"
+                          }`}                              : "text-zion-slate-light"
+                          }`}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         />;
                       ))}
                     </div>;
@@ -1353,6 +1384,7 @@ export default function EquipmentDetail() {;
                       <span>Out of Stock</span>;
                     </div>;
                   )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1482,6 +1514,11 @@ export default function EquipmentDetail() {;
                     <button 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+                    <button 
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => prev + 1)}
                       disabled={!equipment.inStock}
@@ -1491,6 +1528,7 @@ export default function EquipmentDetail() {;
                   </div>
                 </div>
                 {/* Purchase Buttons */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className="space-y-3 mb-6">
 <<<<<<< HEAD
@@ -1672,6 +1710,9 @@ export default function EquipmentDetail() {;
 =======
                 <div className="space-y-3 mb-6">                {/* Purchase Buttons */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                <div className="space-y-3 mb-6">                {/* Purchase Buttons */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div className="space-y-3 mb-6">;
                   <Button ;
                     onClick={handleBuyNow}
@@ -1689,6 +1730,7 @@ export default function EquipmentDetail() {;
                   >;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1704,6 +1746,8 @@ export default function EquipmentDetail() {;
                 {/* Additional Info */}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">;
                   {/* Shipping */}
 
@@ -1903,6 +1947,7 @@ export default function EquipmentDetail() {;
                       </div>;
                     </div>)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2085,3 +2130,5 @@ if (!equipment) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

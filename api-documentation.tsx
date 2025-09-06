@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -19,7 +22,10 @@ const APIDocumentation: React.FC = () => {
             Welcome to the Zion Tech Group API documentation. Our RESTful API provides access to all our services and features.
           </p>
         </div>
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">Authentication</h2>
@@ -33,7 +39,10 @@ const APIDocumentation: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">Endpoints</h2>
           <div className="space-y-6">
@@ -234,5 +243,9 @@ else:
   );
 };
 
+<<<<<<< HEAD
 export default APIDocumentation;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+export default APIDocumentation;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

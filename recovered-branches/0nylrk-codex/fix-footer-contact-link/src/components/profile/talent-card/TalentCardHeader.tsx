@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -21,14 +22,19 @@ import { BadgeCheck } from "lucide-react",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {BadgeCheck} from "lucide-react";
 import {TalentCardAvatar} from "./TalentCardAvatar";
 import {TalentCardAvailability} from "./TalentCardAvailability";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { BadgeCheck } from "lucide-react",
 import { TalentCardAvatar } from "./TalentCardAvatar";
@@ -36,6 +42,7 @@ import { TalentCardAvailability } from "./TalentCardAvailability";
 interface TalentCardHeaderProps {
 
   fullName: string
+<<<<<<< HEAD
 <<<<<<< HEAD
   professionalTitle: string
 =======
@@ -75,6 +82,13 @@ import React from "react",
 }
   availabilityType;import React from "react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  professionalTitle: string  profilePicture?: string;
+  availabilityType: string,;
+  yearsExperience: number;
+}
+  availabilityType;import React from "react",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { BadgeCheck } from "lucide-react",
 import { TalentCardAvatar } from "./TalentCardAvatar";
 import { TalentCardAvailability } from "./TalentCardAvailability";
@@ -90,6 +104,7 @@ interface TalentCardHeaderProps {
 import { TalentCardAvatar } from "./TalentCardAvatar",
 import { TalentCardAvailability } from "./TalentCardAvailability",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -97,6 +112,8 @@ import { TalentCardAvailability } from "./TalentCardAvailability",
 interface TalentCardHeaderProps {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   fullName: string,
   professionalTitle: string,
   profilePicture?: string,
@@ -123,6 +140,7 @@ interface TalentCardHeaderProps {
       <div className="flex-1">;
         <div className="flex items-center justify-between">;
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -357,3 +375,10 @@ yearsExperience
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;
             )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            {fullName}
+            {/* AI score could be used for verification badge */}
+            {yearsExperience > 5 && (;
+              <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;
+            )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

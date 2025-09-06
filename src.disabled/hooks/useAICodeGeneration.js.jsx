@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { useState,useCallback,useRef,useEffect } from";react" import { useAnalytics } from";";./useAnalytics" export: const useAICodeGeneration = () => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [isGenerating,setIsGenerating] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [generatedCode,setGeneratedCode] = useState("";";) const [codeAnalysis,setCodeAnalysis] = useState(null) const [suggestions,setSuggestions] = useState([]) const [history,setHistory] = useState([]) const generationTimeoutRef = useRef(null)"";'"'"
 =======
 <<<<<<< HEAD
@@ -20,6 +21,8 @@ const { useState,useCallback,useRef,useEffect } from";react" import { useAnalyti
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
@@ -57,4 +60,7 @@ const { useState,useCallback,useRef,useEffect } from";react" import { useAnalyti
 =
 const { useState,useCallback,useRef,useEffect } from";react" import { useAnalytics } from";";./useAnalytics" export: const useAICodeGeneration = () => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [isGenerating,setIsGenerating] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [generatedCode,setGeneratedCode] = useState("";";) const [codeAnalysis,setCodeAnalysis] = useState(null) const [suggestions,setSuggestions] = useState([]) const [history,setHistory] = useState([]) const generationTimeoutRef = useRef(null)"";'"'"
 >const { useState,useCallback,useRef,useEffect } from";react" import { useAnalytics } from";";./useAnalytics" export: const useAICodeGeneration = () => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [isGenerating,setIsGenerating] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [generatedCode,setGeneratedCode] = useState("";";) const [codeAnalysis,setCodeAnalysis] = useState(null) const [suggestions,setSuggestions] = useState([]) const [history,setHistory] = useState([]) const generationTimeoutRef = useRef(null)"";'"'"
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

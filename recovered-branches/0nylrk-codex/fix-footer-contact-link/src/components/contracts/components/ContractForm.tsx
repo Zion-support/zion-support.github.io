@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -9,6 +10,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState, useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -25,6 +28,7 @@ import {ProjectDetailsFields} from "./ProjectDetailsFields";
 import {PaymentTermsFields} from "./PaymentTermsFields";
 import {AdditionalClausesFields} from "./AdditionalClausesFields";
 import {DeploymentOptions} from "@/types/smart-contracts";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -107,6 +111,8 @@ const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required");
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");
   startDate: z.date({
 
@@ -129,6 +135,7 @@ const formSchema = z && z.object({;
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
   const { toast } = useToast();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -199,6 +206,8 @@ export function ContractForm({
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { toast } = useToast(),
 
   const form = useForm<ContractFormValues>({
@@ -213,6 +222,7 @@ export function ContractForm({
   
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -221,10 +231,13 @@ export function ContractForm({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Update form when initialValues change
   useEffect(() => {
     if (initialValues) {
       Object.keys(initialValues).forEach((key) => {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -390,6 +403,12 @@ export function ContractForm({;
         form.setValue(typedKey, initialValues[typedKey])
       })
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+          const typedKey = key as keyof ContractFormValues,
+        form.setValue(typedKey, initialValues[typedKey])
+      })
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const onSubmit = async (values: ContractFormValues) => {
     setIsGenerating(true)
     try {
@@ -397,6 +416,7 @@ export function ContractForm({;
         values
         talent
         clientName
+<<<<<<< HEAD
 <<<<<<< HEAD
         generatedMilestones
 <<<<<<< HEAD
@@ -426,11 +446,15 @@ export function ContractForm({;
 =======
         generatedMilestones      );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        generatedMilestones      );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       ),
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       onContractGenerated(contract)
     } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       console.error("Error generating contract:", error),
 <<<<<<< HEAD
@@ -973,6 +997,12 @@ export function ContractForm({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      console.error("Error generating contract:", error),            form={form}
+            talent={talent}
+            handleMilestonesGenerated={handleMilestonesGenerated}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}>;
             {isGenerating ? (;
@@ -982,6 +1012,7 @@ export function ContractForm({;
               </>;
             ) : (;
               "Generate Contract";
+<<<<<<< HEAD
 <<<<<<< HEAD
             )}
 <<<<<<< HEAD
@@ -1137,11 +1168,15 @@ export function ContractForm({;
 =======
             )}        >;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            )}        >;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           Reset Form;
         </Button>;
       </DialogFooter>;
 
     </>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -1208,3 +1243,6 @@ talent.full name
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

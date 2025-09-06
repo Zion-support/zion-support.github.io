@@ -10,7 +10,10 @@ import Link from 'next/link';
 export default function ResourcesPage() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -175,4 +178,18 @@ import React from 'react';
 ;
 export default ResourcesPage;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+              <div className='mt-3 text-cyan-300'>Open →</div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </UltraFuturisticBackground>
+);
+
+export default ResourcesPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

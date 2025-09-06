@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 };
 }
@@ -40,9 +41,18 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const messageChannelHandler = {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  sendMessage: (message: string) => {},
+  receiveMessage: (callback: (message: string) => void) => {},
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
   sendMessage: (message: any) => {},
   receiveMessage: (callback: any) => {},
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
@@ -53,14 +63,28 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 type MessageHandler = {
   sendMessage: (message: unknown) => void;
   receiveMessage: (callback: (message: unknown) => void) => void
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
+<<<<<<< HEAD
 export const messageChannelHandler: MessageHandler = {
   sendMessage: (_message) => {
     // No-op: placeholder for message channel integration
   },
   receiveMessage: (_callback) => {
     // No-op: placeholder for message listener registration
+=======
+  sendMessage: (message: string) => {
+    // Implementation for sending messages
+    // eslint-disable-next-line no-console
+    console.log('Sending message: ', message);
+  }, receiveMessage: (_callback: (message: string) => void) => {
+    // Implementation for receiving messages
+    // eslint-disable-next-line no-console
+    console.log('Setting up message receiver');
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -69,8 +93,11 @@ export const messageChannelHandler: MessageHandler = {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
-}
+};
+};
 };
 ,
 <<<<<<< HEAD
@@ -144,6 +171,7 @@ export default MessageChannelHandler;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -156,6 +184,11 @@ export default MessageChannelHandler;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }}}};
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 ;
@@ -172,7 +205,12 @@ export default MessageChannelHandler;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 };
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

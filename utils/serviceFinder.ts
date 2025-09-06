@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -27,6 +28,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface Service {
   id: string;
   name: string,
@@ -55,6 +59,7 @@ export default {
 // Service finder utility
 export const findService = ("_serviceName": string) => {
   // Implementation placeholder
+<<<<<<< HEAD
 <<<<<<< HEAD
   return null;
 };
@@ -122,3 +127,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   return null
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return null
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

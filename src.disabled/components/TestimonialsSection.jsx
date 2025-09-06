@@ -11,7 +11,12 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 "export\": const TestimonialsSection = () => { const testimonials = [ { id: 1,\"name\": \'Sarah: Johnson,\',\"comp\": \'TechCorp: Solutions,\',\"role\": \'CTO,\',\"content\": \'Zion: Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.,\',\"rating\": \'5\',\"avatar\": \'https:\''\'"\",;
 export: const TestimonialsSection = () => { const testimonials = [ { id: 1,name: "Sarah: Johnson,",comp: "TechCorp: Solutions,",role: "CTO,",content: "Zion: Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.,",rating: "5",avatar: "https:""""",;'"'"
+<<<<<<< HEAD
 =======
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 "export\": const TestimonialsSection = () => { const testimonials = [ { id: 1,\"name\": \'Sarah: Johnson,\',\"comp\": \'TechCorp: Solutions,\',\"role\": \'CTO,\',\"content\": \'Zion: Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.,\',\"rating\": \'5\',\"avatar\": \'https:\''\'"\",;
 export: const TestimonialsSection = () => { const testimonials = [ { id: 1,name: "Sarah: Johnson,",comp: "TechCorp: Solutions,",role: "CTO,",content: "Zion: Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.,",rating: "5",avatar: "https:""""",;'"'"
 
@@ -33,6 +38,7 @@ export: const TestimonialsSection = () => { const testimonials = [ { id: 1,name:
 =======
 "export\": const TestimonialsSection = () => { const testimonials = [ { id: 1,\"name\": \'Sarah: Johnson,\',\"comp\": \'TechCorp: Solutions,\',\"role\": \'CTO,\',\"content\": \'Zion: Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.,\',\"rating\": \'5\',\"avatar\": \'https:\''\'"\",;
 export: const TestimonialsSection = () => { const testimonials = [ { id: 1,name: "Sarah: Johnson,",comp: "TechCorp: Solutions,",role: "CTO,",content: "Zion: Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.,",rating: "5",avatar: "https:""""",;'"'"
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/TestimonialsSection.jsx
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -64,3 +70,6 @@ export: const TestimonialsSection = () => { const testimonials = [ { id: 1,name:
 export: const TestimonialsSection = () => { const testimonials = [ { id: 1,name: "Sarah: Johnson,",comp: "TechCorp: Solutions,",role: "CTO,",content: "Zion: Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.,",rating: "5",avatar: "https:""""",;'"'"
 "export": const TestimonialsSection = () => { const testimonials = [ { id: 1,"name": 'Sarah: Johnson,',"comp": 'TechCorp: Solutions,',"role": 'CTO,',"content": 'Zion: Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.,',"rating": '5',"avatar": 'https:'''"",;"]"}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+"export": const TestimonialsSection = () => { const testimonials = [ { id: 1,"name": 'Sarah: Johnson,',"comp": 'TechCorp: Solutions,',"role": 'CTO,',"content": 'Zion: Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.,',"rating": '5',"avatar": 'https:'''"",;"]"}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

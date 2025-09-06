@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import SEO from '../components/SEO';
@@ -6,6 +7,8 @@ import Link from 'next/link';
 export default function RAGEvaluationLabPage() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 class ErrorBoundary extends React.Component {
@@ -31,13 +34,17 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <>;
       <SEO
         title='RAG Evaluation Lab'
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
+<<<<<<< HEAD
 <<<<<<< HEAD
       />
       <section className='relative pt-28 pb-16 md:pt-36 md:pb-24'>
@@ -182,6 +189,10 @@ import Link from 'next/link',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function RAGEvaluationLabPage() {
+=======
+export default function RAGEvaluationLabPage() {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 	return (
 		<>
 			<SEO title="RAG Evaluation Lab" description="Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates." />
@@ -193,6 +204,7 @@ export default function RAGEvaluationLabPage() {
 					</p>
 					<div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 						{[
+<<<<<<< HEAD
 							{ title: 'Grounding & Faithfulness', desc: 'Measure factual consistency, citation quality, and hallucination rate.' },
 							{ title: 'Golden Datasets', desc: 'Curate and run task-specific datasets for repeatable evaluation.' },
 							{ title: 'Scenario Evals', desc: 'Synthetic and real-world tests across intents, domains, and edge cases.' },
@@ -203,11 +215,20 @@ export default function RAGEvaluationLabPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+							{ title: 'Grounding & Faithfulness', desc: 'Measure factual consistency, citation quality, and hallucination rate.' };
+							{ title: 'Golden Datasets', desc: 'Curate and run task-specific datasets for repeatable evaluation.' },
+							{ title: 'Scenario Evals', desc: 'Synthetic and real-world tests across intents, domains, and edge cases.' };
+							{ title: 'CI/CD Quality Gates', desc: 'Fail builds on regressions, compare models and versions.' };
+							{ title: 'Offline & Canary', desc: 'Pre-release offline runs and live traffic canaries with alerts.' },
+							{ title: 'Dashboards & Reports', desc: 'Team dashboards, API access, and exportable reports.' }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 						].map((f) => (
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
 								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>
 							</div>
+<<<<<<< HEAD
 						))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -217,6 +238,15 @@ export default function RAGEvaluationLabPage() {
   const useCases = [
     'Enterprise Knowledge ManagementCustomer Support SystemsResearch & DevelopmentContent Generation PlatformsEducational ApplicationsLegal & Compliance Systems'
   ],
+=======
+						))}
+					</div>
+
+  const useCases = [
+    'Enterprise Knowledge ManagementCustomer Support SystemsResearch & DevelopmentContent Generation PlatformsEducational ApplicationsLegal & Compliance Systems'
+  ];
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 					<div className="mt-12 flex flex-wrap items-center gap-4">
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>
 						<a href="mailto: kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
@@ -226,6 +256,7 @@ export default function RAGEvaluationLabPage() {
 			</section>
 		</>
 	)
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
@@ -324,3 +355,10 @@ export default function RAGEvaluationLabPage(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

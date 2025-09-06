@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -9,10 +10,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   };
   const data = readOrgData();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -22,10 +27,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const data = readOrgData();
   const parseArray = (v?: string | string[]) => {
     if (!v) return undefined;
     return Array && Array.isArray(v)
+<<<<<<< HEAD
+=======
+=======
+import {readOrgData, filterOrgData} from '../../../utils/org-data';
+import type { OrgFilters, RoleType } from '../../../types/org';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+return Array.isArray(v)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       ? v
       : v
           .split(',')
@@ -33,6 +52,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           .filter(Boolean);
   }
   const filters: OrgFilters = {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const filters: OrgFilters = {
     view: (req && req.query.view as OrgFilters['view']) || 'all';
@@ -49,8 +72,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(200).json(filtered);  return res.status(200).json(filtered)
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {readOrgData, filterOrgData} from '../../../utils / org - data';
 import type { OrgFilters, RoleType } from '../../../types / org';
 ;
@@ -116,4 +142,30 @@ const filters: OrgFilters = {
   const filtered = filterOrgData (data, filters);
   return res.status (200).json (filtered);  return res.status (200).json (filtered);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+    view: (req.query.view as OrgFilters['view']) |'all'
+    roleTypes: parseArray(req.query.roleTypes) as RoleType[] | undefined
+    departments: parseArray(req.query.departments)
+    categories: parseArray(req.query.categories)
+    zones: parseArray(req.query.zones)
+    regions: parseArray(req.query.regions)
+    countries: parseArray(req.query.countries)
+    search: (req.query.search as string) |undefined
+    teamOnly: req.query.teamOnly === 'true' ? true : undefined,  }
+const filters: OrgFilters = {
+    view: (req.query.view as OrgFilters['view']) |'all';
+    roleTypes: parseArray(req.query.roleTypes) as RoleType[] | undefined;
+    departments: parseArray(req.query.departments);
+    categories: parseArray(req.query.categories);
+    zones: parseArray(req.query.zones);
+    regions: parseArray(req.query.regions);
+    countries: parseArray(req.query.countries);
+    search: (req.query.search as string) |undefined
+    teamOnly: req.query.teamOnly === 'true' ? true : undefined}
+  const filtered = filterOrgData(data, filters);
+  return res.status(200).json(filtered);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

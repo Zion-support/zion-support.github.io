@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type SearchType = 'all' | 'talent' | 'jobs' | 'projects';
 export type ParsedFilters = {;
   type: SearchType;
@@ -136,6 +137,8 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };
 
   query: string,
@@ -258,6 +261,7 @@ export const suggestDidYouMean = (query: string) =>: any {
   // Add did you mean functionality here;
   return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 }
@@ -271,3 +275,6 @@ export const suggestDidYouMean = (query: string) =>: any {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

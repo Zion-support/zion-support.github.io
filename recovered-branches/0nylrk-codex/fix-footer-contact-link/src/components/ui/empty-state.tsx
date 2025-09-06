@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -17,11 +18,16 @@ import {Link} from "react-router-dom";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Link } from "react-router-dom",
 <<<<<<< HEAD
@@ -80,10 +86,14 @@ export function EmptyState(): any ({;
 =======
 import { Link } from "react-router-dom",  icon;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Link } from "react-router-dom",  icon;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   title;
   description;
   action;
   secondaryAction;
+<<<<<<< HEAD
 <<<<<<< HEAD
   className}: EmptyStateProps) {;
 <<<<<<< HEAD
@@ -112,6 +122,9 @@ import { Link } from "react-router-dom",  icon;
 =======
   className}: EmptyStateProps) {;    text: string,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  className}: EmptyStateProps) {;    text: string,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     href?: string,
     onClick?: () => void
   },
@@ -129,6 +142,7 @@ export function EmptyState({;
   title;
   description;
   action;
+<<<<<<< HEAD
 <<<<<<< HEAD
   secondaryAction;
 <<<<<<< HEAD
@@ -189,6 +203,11 @@ export function EmptyState({
 
       className={cn(        "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  secondaryAction;    <div
+
+      className={cn(        "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         className
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -227,6 +246,7 @@ export function EmptyState({;
         className;
       )}
     >
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">
 <<<<<<< HEAD
@@ -288,6 +308,9 @@ export function EmptyState({;
 =======
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">              className="bg-zion-purple hover:bg-zion-purple-light"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6">              className="bg-zion-purple hover:bg-zion-purple-light"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               onClick={action && action.onClick}>;
               {action && action.text}
             </Button>;
@@ -298,18 +321,22 @@ export function EmptyState({;
               size="lg" 
               className="bg-zion-purple hover:bg-zion-purple-light"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               onClick={action.onClick}
             >
               {action.text}
             </Button>
           )
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -332,11 +359,14 @@ export function EmptyState({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {secondaryAction && (
           secondaryAction.href ? (
             <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">
               <Link to={secondaryAction.href}>{secondaryAction.text}</Link>
             </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
           ) : (
 <<<<<<< HEAD
@@ -374,6 +404,9 @@ export function EmptyState({;
 =======
           ) : (              size="lg"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          ) : (              size="lg"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               className="border-zion-blue-light hover:bg-zion-blue-light"
               onClick={secondaryAction && secondaryAction.onClick}>;
               {secondaryAction && secondaryAction.text}
@@ -384,6 +417,7 @@ export function EmptyState({;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -544,3 +578,6 @@ className?: string
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

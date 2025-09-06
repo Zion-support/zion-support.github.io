@@ -1,12 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 }};
@@ -24,10 +30,20 @@
 ; // TODO/FIXME comments; if (line && line.match(/TODO|FIXME|HACK|XXX/)) {; analysis && analysis.issues.push({; line: lineNum, type: 'todo-comment', message: 'TODO/FIXME comment found',
     severity: 'low'})};
 ; // Unused imports (basic check); if (line && line.match(/^import.*from/) && !line && line.includes('//')) {; const importMatch = line && line.match(/import\s+(\w+)/); if (importMatch) {; const importName = importMatch[1]; if (importName ! = = 'React' && !content && content.includes(importName)) {; analysis && analysis.issues.push({; line: lineNum, type: 'unused-import', message: `Potentially unused import ${importName}`; severity: 'medium'})}}}});
+<<<<<<< HEAD
 ; return analysis} catch (error) {; this && this.log(`Error analyzing file ${filePath}: ${error && error.message}`); return null}};; async walkDirectory(dir) {; const analyses = [];
 =======
 ; async walkDirectory(dir) {; const analyses = [];
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+; return analysis} catch (error) {; this && this.log(`Error analyzing file ${filePath}: ${error && error.message}`); return null}};
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+; async walkDirectory(dir) {; const analyses = [];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ; try {; const items = fs && fs.readdirSync(dir);
 ; for (const item of items) {; const fullPath = path && path.join(dir, item); const stat = fs && fs.statSync(fullPath);
 ; if (stat && stat.isDirectory()) {; if (!fullPath && fullPath.includes('node_modules') &&; !fullPath && fullPath.includes('.git') &&; !fullPath && fullPath.includes('dist') &&; !fullPath && fullPath.includes('build') &&; !fullPath && fullPath.includes('.next') &&; !fullPath && fullPath.includes('coverage') &&; !fullPath && fullPath.includes('logs')) {; const subAnalyses = await this && this.walkDirectory(fullPath); analyses && analyses.push(...subAnalyses)}} else if (stat && stat.isFile()) {; const ext = path && path.extname(fullPath); if (['.js', '.jsx', '.ts', '.tsx'].includes(ext)) {; const analysis = await this && this.analyzeFile(fullPath); if (analysis) {; analyses && analyses.push(analysis)}}}}} catch (error) {; this && this.log(`Error walking directory ${dir}: ${error && error.message}`)};
@@ -35,8 +51,16 @@
 ; generateReport(analyses) {; const totalFiles = analyses && analyses.length; const totalIssues = analyses && analyses.reduce((sum, analysis) = > sum + analysis && analysis.issues.length, 0);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 };
 <<<<<<< HEAD
+=======
+; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ; analyses && analyses.forEach(analysis = > {; analysis && analysis.issues.forEach(issue = > {; // Count by type; issuesByType[issue && issue.type] = (issuesByType[issue && issue.type] || 0) + 1;
 ; // Count by severity; issuesBySeverity[issue && issue.severity]++})});
 ; const report = {; timestamp: new Date().toISOString(), summary: {
@@ -86,6 +110,37 @@ const monitor = new CodeQualityMonitor();
     severity: 'medium'})}; // Console statements; if (line.match(/console\.(log|warn|error|info|debug)/)) {analysis.issues.push({; line: lineNum, type: 'console-statement', message: 'Console statement found - should be removed in production'
     severity: 'medium'})}; // TODO/FIXME comments; if (line.match(/TODO|FIXME|HACK|XXX/)) {analysis.issues.push({; line: lineNum, type: 'todo-comment', message: 'TODO/FIXME comment found'
     severity: 'low'})}; // Unused imports (basic check); if (line.match(/^import.*from/) && !line.includes('//')) {const importMatch = line.match(/import\s+(\w+)/); if (importMatch) {; const importName = importMatch[1]; if (importName ! = = 'React' && !content.includes(importName)) {; analysis.issues.push({; line: lineNum, type: 'unused-import', message: `Potentially unused import ${importName}`; severity: 'medium'})}}}}); return analysis} catch (error) {this.log(`Error analyzing file ${filePath}: ${error.message}`); return null}}; async walkDirectory(dir) {const analyses = []; try {; const items = fs.readdirSync(dir); for (const item of items) {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; if (!fullPath.includes('node_modules') &&; !fullPath.includes('.git') &&; !fullPath.includes('dist') &&; !fullPath.includes('build') &&; !fullPath.includes('.next') &&; !fullPath.includes('coverage') &&; !fullPath.includes('logs')) {; const subAnalyses = await this.walkDirectory(fullPath); analyses.push(...subAnalyses)}} else if (stat.isFile()) {const ext = path.extname(fullPath); if (['.js', '.jsx', '.ts', '.tsx'].includes(ext)) {; const analysis = await this.analyzeFile(fullPath); if (analysis) {; analyses.push(analysis)}}}}} catch (error) {this.log(`Error walking directory ${dir}: ${error.message}`)}; return analyses}; generateReport(analyses) {const totalFiles = analyses.length; const totalIssues = analyses.reduce((sum, analysis) = > sum + analysis.issues.length, 0); const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 }; analyses.forEach(analysis = > {analysis.issues.forEach(issue = > {; // Count by type; issuesByType[issue.type] = (issuesByType[issue.type] |0) + 1; // Count by severity; issuesBySeverity[issue.severity]++})}); const report = {timestamp: new Date().toISOString(), summary: {
+<<<<<<< HEAD
+=======
+=======
+}};
+; async analyzeFile(filePath) {; try {; const content = fs.readFileSync(filePath, 'utf8'); const stats = fs.statSync(filePath);
+; const analysis = {; file: filePath, size: stats.size, lines: content.split('\n').length,
+    issues: []};
+; // Check for common code quality issues; const lines = content.split('\n');
+; lines.forEach((line, index) = > {; const lineNum = index + 1;
+; // Trailing spaces; if (line.match(/[ \t]+$/)) {; analysis.issues.push({; line: lineNum, type: 'trailing-spaces', message: 'Trailing spaces found',
+    severity: 'low'})};
+; // Long lines (over 120 characters); if (line.length > 120) {; analysis.issues.push({; line: lineNum, type: 'long-line', message: `Line is ${line.length} characters long (max: 120)`,
+    severity: 'medium'})};
+; // Console statements; if (line.match(/console\.(log|warn|error|info|debug)/)) {; analysis.issues.push({; line: lineNum, type: 'console-statement', message: 'Console statement found - should be removed in production',
+    severity: 'medium'})};
+; // TODO/FIXME comments; if (line.match(/TODO|FIXME|HACK|XXX/)) {; analysis.issues.push({; line: lineNum, type: 'todo-comment', message: 'TODO/FIXME comment found',
+    severity: 'low'})};
+; // Unused imports (basic check); if (line.match(/^import.*from/) && !line.includes('//')) {; const importMatch = line.match(/import\s+(\w+)/); if (importMatch) {; const importName = importMatch[1]; if (importName ! = = 'React' && !content.includes(importName)) {; analysis.issues.push({; line: lineNum, type: 'unused-import', message: `Potentially unused import ${importName}`; severity: 'medium'})}}}});
+; return analysis} catch (error) {; this.log(`Error analyzing file ${filePath}: ${error.message}`); return null}};
+; async walkDirectory(dir) {; const analyses = [];
+; try {; const items = fs.readdirSync(dir);
+; for (const item of items) {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath);
+; if (stat.isDirectory()) {; if (!fullPath.includes('node_modules') &&; !fullPath.includes('.git') &&; !fullPath.includes('dist') &&; !fullPath.includes('build') &&; !fullPath.includes('.next') &&; !fullPath.includes('coverage') &&; !fullPath.includes('logs')) {; const subAnalyses = await this.walkDirectory(fullPath); analyses.push(...subAnalyses)}} else if (stat.isFile()) {; const ext = path.extname(fullPath); if (['.js', '.jsx', '.ts', '.tsx'].includes(ext)) {; const analysis = await this.analyzeFile(fullPath); if (analysis) {; analyses.push(analysis)}}}}} catch (error) {; this.log(`Error walking directory ${dir}: ${error.message}`)};
+; return analyses};
+; generateReport(analyses) {; const totalFiles = analyses.length; const totalIssues = analyses.reduce((sum, analysis) = > sum + analysis.issues.length, 0);
+; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 };
+; analyses.forEach(analysis = > {; analysis.issues.forEach(issue = > {; // Count by type; issuesByType[issue.type] = (issuesByType[issue.type] || 0) + 1;
+; // Count by severity; issuesBySeverity[issue.severity]++})});
+; const report = {; timestamp: new Date().toISOString(), summary: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       , totalFiles; totalIssues; issuesByType; issuesBySeverity
     }
     files: analyses.filter(analysis = > analysis.issues.length > 0)
@@ -98,6 +153,10 @@ const monitor = new CodeQualityMonitor();
 } catch (error) {this.log(`❌ Error running code quality monitor: ${error.message}`); process.exit(1)}}}
 // Run the code quality monitor;
 const monitor = new CodeQualityMonitor();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 monitor.run().catch(error = > {process.exit(1)});
 }};
 ; async analyzeFile(filePath) {; try {; const content = fs.readFileSync(filePath, 'utf8'); const stats = fs.statSync(filePath);
@@ -150,10 +209,16 @@ const monitor = new CodeQualityMonitor();
 monitor.run().catch(error = > {; process.exit(1)});
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 ; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 };
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 };
 ;
@@ -199,10 +264,13 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     };
   };
+<<<<<<< HEAD
 =======
 ; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 }
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ,
   async analyzeFile(filePath) {,
     try {,
@@ -275,8 +343,8 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
                 message: `Potentially unused import ${importName}`,
                 severity: 'medium',
               }),
-            }
-};
+            };
+          };
         };
       }),
 ,
@@ -284,8 +352,8 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
     } catch (error) {,
       this.log(`Error analyzing file ${filePath}: ${error.message}`),
       return null,
-    }
-};
+    };
+  };
 ,
   async walkDirectory(dir) {,
     const analyses = [],
@@ -314,6 +382,7 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
             const analysis = await this.analyzeFile(fullPath),
             if (analysis) {,
               analyses.push(analysis),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -536,6 +605,8 @@ monitor.run().catch(error = > {_; process.exit(1)})
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             };
           };
         };
@@ -1066,9 +1137,12 @@ monitor.run().catch(error => {,;
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     }),
+<<<<<<< HEAD
 =======
 };    }),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ,
     const report = {,
       timestamp: new Date().toISOString(),
@@ -1076,6 +1150,9 @@ monitor.run().catch(error => {,;
         totalFiles,
         totalIssues,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         issuesByType,
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1135,15 +1212,19 @@ monitor.run().catch(error => {,;
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     };
+<<<<<<< HEAD
 =======
         issuesByType,    };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ,
     if (issuesByType['console-statement'] > 0) {,
       recommendations.push({,
         type: 'console-statement',
         priority: 'medium',
         message: 'Remove console statements from production code',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1168,12 +1249,18 @@ monitor.run().catch(error => {,;
         action: 'Replace console statements with proper logging or remove them',
       }),    };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ,
     if (issuesByType['unused-import'] > 0) {,
       recommendations.push({,
         type: 'unused-import',
         priority: 'medium',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         message: 'Remove unused imports',
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1226,14 +1313,20 @@ monitor.run().catch(error => {,;
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   };
+<<<<<<< HEAD
 =======
         message: 'Remove unused imports',  };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ,
   async saveReport(report) {,
     try {,
       const reportDir = path.dirname(this.reportFile),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       if (!fs.existsSync(reportDir)) {,
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1266,15 +1359,21 @@ monitor.run().catch(error => {,;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     };
   };
+<<<<<<< HEAD
 =======
       if (!fs.existsSync(reportDir)) {,    }
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ,
   async checkGitStatus() {,
     try {,
       const status = execSync('git status --porcelain', {,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         cwd: this.projectRoot,
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1354,9 +1453,12 @@ monitor.run().catch(error => {,;
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       };
+<<<<<<< HEAD
 =======
         cwd: this.projectRoot,      };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ,
       // Check git status,
       const isClean = await this.checkGitStatus(),
@@ -1388,6 +1490,7 @@ monitor.run().catch(error => {,;
 ,
       if (report.summary.totalIssues > 0) {,
 <<<<<<< HEAD
+<<<<<<< HEAD
         this.log('\n🚨 Issues by type: '),
         Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,
 <<<<<<< HEAD
@@ -1408,6 +1511,9 @@ monitor.run().catch(error => {,;
 =======
           this.log(`  ${type}: ${count}`),        }),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        }),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ,
         this.log('\n💡 Recommendations: '),
         report.recommendations.forEach(rec => {,
@@ -1415,6 +1521,9 @@ monitor.run().catch(error => {,;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           this.log(`    Action: ${rec.action}`),
 =======
 <<<<<<< HEAD
@@ -1490,12 +1599,15 @@ monitor.run().catch(error => {,
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 }}
+<<<<<<< HEAD
 =======
           this.log(`    Action: ${rec.action}`),        }),
 ,
         // If there are many issues and git is clean, suggest running the lint fixer,
         if (report.summary.totalIssues > 50 && isClean) {,}}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ; async analyze_file (file_path) { try { const content = fs.readFileSync (file_path, 'utf8'); const stats = fs.stat_sync (file_path);
 ; const analysis = { file: file_path, size: stats.size, lines: content.split ('\n').length,
     issues: []}
@@ -1611,6 +1723,9 @@ if ( {) {
 const monitor = new CodeQualityMonitor ();
 monitor.run ().catch (error = > { process.exit (1)});
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1627,9 +1742,12 @@ monitor.run().catch(error = > {; process.exit(1)});
 
   process.exit(1);
 });
+<<<<<<< HEAD
 =======
 ;});
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   },;
 ,;
@@ -1943,15 +2061,30 @@ monitor.run().catch(error => {,;
 monitor.run().catch(error = > {; process.exit(1)});
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   process.exit(1)
 }),
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+monitor.run().catch(error = > {; process.exit(1)});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

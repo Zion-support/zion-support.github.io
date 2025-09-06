@@ -4,6 +4,7 @@ interface ApiParameter {
   "name": string;
   type: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   required: boolean;
   description: string;
   location: 'query' | 'body' | 'header' | 'path'}
@@ -16,6 +17,13 @@ interface ApiResponse {
 interface ApiResponse {
   "status": number,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  required: boolean,
+  description: string;
+  location: 'query' | 'body' | 'header' | 'path'}
+interface ApiResponse {
+  "status": number,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   description: string;
   schema?: unknown}
 interface ApiExample {
@@ -25,10 +33,14 @@ interface ApiExample {
 interface Endpoint {
   "path": string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   method: HttpMethod;
 =======
   method: HttpMethod,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  method: HttpMethod,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   description: string;
   parameters?: ApiParameter[];
   responses?: ApiResponse[];

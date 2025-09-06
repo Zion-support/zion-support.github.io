@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -17,6 +18,10 @@ export type ReferralStatus = 'pending' | 'completed' | 'expired';
 <<<<<<< HEAD
 =======
 =======
+=======
+export type ReferralStatus = 'pending' | 'completed' | 'expired';
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface ReferralCode {
 export type ReferralStatus = 'pending' | 'completed' | 'expired';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -32,6 +37,7 @@ export interface ReferralCode {
   code: string;
   created_at: string
   updated_at: string
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -83,6 +89,8 @@ export interface Referral {
   code: string;
   created_at: string
   updated_at: string
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }export interface Referral {
 
 export interface Referral {;
@@ -91,10 +99,13 @@ export interface Referral {
 export interface Referral {;
 export interface Referral {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   referrer_id: string;
   referred_id: string | null;
@@ -106,6 +117,7 @@ export interface Referral {
   referrer_user_type: string | null;
   created_at: string;
   completed_at: string | null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -138,6 +150,8 @@ export interface ReferralReward {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   reward_issued: boolean
   reward_issued_at: string | null
 }
@@ -145,6 +159,7 @@ export interface ReferralReward {;
 export interface ReferralReward {
 
 export interface ReferralReward {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -159,6 +174,8 @@ export interface ReferralReward {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   user_id: string;
   referral_id: string;
@@ -176,6 +193,7 @@ export interface ReferralReward {
   created_at: string;
   expires_at: string | null;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 export interface ReferralStats {;
@@ -197,6 +215,11 @@ export interface ReferralStats {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+export interface ReferralStats {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   totalReferrals: number;
   pendingReferrals: number;
 <<<<<<< HEAD
@@ -268,6 +291,7 @@ export interface ReferralStats {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -282,3 +306,6 @@ export interface ReferralStats {;
 =======
 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

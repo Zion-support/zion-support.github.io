@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Project } from '@/types/projects',
 import { useState } from "react",
 import { Star } from 'lucide-react'
@@ -12,6 +13,8 @@ interface ProjectReviewSectionProps {
   project: Project
 }
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth(),
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
@@ -30,6 +33,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     ? talentProfile?.full_name || "Talent" 
     : clientProfile?.full_name || "Client",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -42,6 +46,10 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
+  const hasLeftReview = userReview != null,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth(),
@@ -64,6 +72,53 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
   
+=======
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { ReviewsList } from "@/components/reviews/ReviewsList",
+import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
+import { useReviews } from "@/hooks/useReviews";
+import { useAuth } from "@/hooks/useAuth";
+interface ProjectReviewSectionProps {
+  project: Project
+export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
+  const { user } = useAuth();
+  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id);
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+  const isCompleted = null;
+import { Button } from '@/components/ui/button'
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { ReviewsList } from '@/components/reviews/ReviewsList'
+import { LeaveReviewModal } from '@/components/reviews/LeaveReviewModal'
+import { useReviews } from '@/hooks/useReviews'
+import { useAuth } from '@/hooks/useAuth'
+interface ProjectReviewSectionProps {
+  project: Project
+export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
+  const { user } = useAuth()
+  const { reviews, userReview, isLoading, reportReview } = useReviews(
+    project.id
+  )
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false)
+  const isCompleted = project.status === 'completed'
+  const isClient = user?.id === project.client_id
+  const isTalent = user?.id === project.talent_id
+  const clientProfile = project?.talent_profile
+  const talentProfile = project.talent_profile
+  // Determine who the current user needs to review
+  const revieweeId = isClient ? project.talent_id : project.client_id
+  const revieweeName = isClient
+    ? talentProfile?.full_name |'Talent'
+    : clientProfile?.full_name |'Client'
+  const canLeaveReview = isCompleted && (isClient |isTalent) && !userReview
+  const hasLeftReview = userReview != null
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Card className='mt-6'>
       <CardHeader>
@@ -80,11 +135,14 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       
 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <CardContent>
         {isCompleted ? (
           <div className="space-y-6">
@@ -117,22 +175,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
 import { Project } from '@/types/projects',;
 import { useState } from "react",;
 import { Star } from 'lucide-react';
-<<<<<<< HEAD
-import { Button } from '@/components/ui/button';
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
-} from '@/components/ui/card';
-import { ReviewsList } from '@/components/reviews/ReviewsList';
-import { LeaveReviewModal } from '@/components/reviews/LeaveReviewModal';
-import { useReviews } from '@/hooks/useReviews';
-import { useAuth } from '@/hooks/useAuth';
-interface ProjectReviewSectionProps {;
-  project: Project;
 
+<<<<<<< HEAD
 export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionProps) {;
   const { user } = useAuth();
   const { reviews, userReview, isLoading, reportReview } = useReviews(;
@@ -183,6 +227,8 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
                     <Button onClick={(,) => setIsReviewModalOpen(true)}>;                      Leave Review;
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       Leave Review;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     </Button>;
@@ -199,6 +245,7 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
                       </Button>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     )}
                   </div>;
                 ) : null}
@@ -207,6 +254,8 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                     )}
                   </div>
@@ -226,12 +275,15 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
 
         <LeaveReviewModal
 <<<<<<< HEAD
+<<<<<<< HEAD
           projectId = {project && project.id,}          revieweeId = {revieweeId,}
           revieweeName = {revieweeName,}
           isOpen = {isReviewModalOpen,}
           onClose = {(,) => setIsReviewModalOpen(false),}
         />;      )}
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           revieweeId = {revieweeId,}
           revieweeName = {revieweeName,}
@@ -239,7 +291,11 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
           onClose = {(,) => setIsReviewModalOpen(false),}
 
       )}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     </Card>;
   );
@@ -389,5 +445,13 @@ function ProjectReviewSection() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+;
+=======
+    </Card>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

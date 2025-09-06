@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   }
     } catch (error) {
@@ -98,6 +101,24 @@ export function PointsBadge() {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+=======
+import React, { useState } from 'react';
+import { Gift, RefreshCw } from 'lucide-react'
+import { usePoints  } from '@/hooks/usePoints';
+import { useAuth  } from '@/hooks/useAuth';
+import Link from 'next/link';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components/ui/tooltip';
+import { LoginModal  } from '@/components/auth/LoginModal';
+import { Button  } from '@/components/ui/button';
+import {logErrorToProduction} from '@/utils/productionLogger';
+export function PointsBadge() {
+
+  const { isAuthenticated } = useAuth();
+  const { ledger, balance, loading, fetchLedger } = usePoints();
+  const [loginOpen, setLoginOpen] = useState(false);
+  const [isRefreshing, setIsRefreshing] = useState(false);
+  const points = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <TooltipProvider>;
 
@@ -296,6 +317,7 @@ export function PointsBadge() {;
       {!isAuthenticated && (;
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
       )}
+<<<<<<< HEAD
     </TooltipProvider>;
   );
 }
@@ -319,6 +341,13 @@ export function PointsBadge() {;
 =======
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+    </TooltipProvider>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

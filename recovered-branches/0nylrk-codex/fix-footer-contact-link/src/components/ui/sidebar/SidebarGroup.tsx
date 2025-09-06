@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from "react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { cn } from "@/lib/utils";
 import React from "react",
 import { cn } from "@/lib/utils",
@@ -10,6 +14,7 @@ interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,9 +24,10 @@ interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { cn } from "@/lib/utils",
-
 
 import {cn} from "@/lib/utils";
 interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
@@ -103,6 +109,7 @@ import { cn } from "@/lib/utils",;
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
   className?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   children?: React.ReactNode;
 }
 =======
@@ -139,6 +146,12 @@ export function SidebarGroup({ className, children, ...props }: SidebarGroupProp
 export function SidebarGroup({ className, children, ...props }: SidebarGroupProps) {;
   return (;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  children?: React.ReactNode
+};
+export function SidebarGroup({ className, children, ...props }: SidebarGroupProps) {;
+  return (;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
 ;
@@ -162,6 +175,7 @@ function SidebarGroup() {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -169,3 +183,6 @@ function SidebarGroup() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

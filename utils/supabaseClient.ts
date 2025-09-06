@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 export type ZionSupabase = SupabaseClient | undefined;
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { createClient, SupabaseClient } from '@supabase/supabase-js',;
 export type ZionSupabase = SupabaseClient | undefined,;
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || '',;
@@ -19,6 +22,7 @@ export function getSupabaseClient(): ZionSupabase {try {;
       }
       return browser_client;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -106,3 +110,5 @@ export function getSupabaseClient(): ZionSupabase {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

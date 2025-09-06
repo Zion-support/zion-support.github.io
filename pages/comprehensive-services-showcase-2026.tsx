@@ -1,8 +1,11 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -27,6 +30,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -44,6 +48,8 @@ import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Search,
   Filter,
@@ -59,16 +65,20 @@ import {
   Globe,
   Robot,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {;
   Search, Filter, Star, Users, TrendingUp,;
   Clock, Zap, Shield, Cloud, Brain,;
   Database, Globe, Robot, Cube, Sparkles;
 } from 'lucide-react',;
 interface Service {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -84,12 +94,15 @@ interface Service {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { motion } from 'framer-motion';
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
 import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
 import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -98,6 +111,36 @@ import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import { motion  } from 'framer-motion';
+import { innovativeMicroSaasServices2026  } from '../data/2026-innovative-micro-saas-expansion';
+import { specializedITSolutions2026  } from '../data/2026-specialized-it-solutions';
+import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
+import { Search, Filter, Star, Users, TrendingUp;
+  Clock, Zap, Shield, Cloud, Brain;
+  Database, Globe, Robot, Cube, Sparkles
+ } from 'lucide-react';
+import {
+  Search
+  Filter
+  Star
+  Users
+  TrendingUp
+  Clock
+  Zap
+  Shield
+  Cloud
+  Brain
+  Database
+  Globe
+  Robot
+  Cube
+  Sparkles;
+} from 'lucide-react';
+interface Service {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   name: string;
   tagline: string;
@@ -109,6 +152,7 @@ import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
   icon: string;
   color: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   realImplementation: boolean;
   implementationDetails: string;
@@ -119,12 +163,19 @@ import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
     mobile: string;
     email: string;
     address: string;
+=======
+    mobile: string;
+    email: string;
+    address: string;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     website: string;
 
   customers: number;
   rating: number;
 
+<<<<<<< HEAD
   reviews: number;
 const ComprehensiveServicesShowcase2026: React.FC = () => {;
 =======
@@ -227,10 +278,28 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+    website: string
+  },
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number
+}
+
+const ComprehensiveServicesShowcase2026: React.FC;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  reviews: number;
+const ComprehensiveServicesShowcase2026: React.FC = () => {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const allServices = [
@@ -278,6 +347,54 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
   const allServices = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+  const allServices = [
+<<<<<<< HEAD
+
+=======
+...innovativeMicroSaasServices2026,
+    ...specializedITSolutions2026,
+    ...emergingTechServices2026,
+  ];
+
+  const categories = [
+    'all',
+    'Business Intelligence & Analytics',
+    'Content Creation & Marketing',
+    'Customer Service & Support',
+    'E-commerce & Retail',
+    'HR & Recruitment',
+    'Financial Management',
+    'Project Management',
+    'Education & Training',
+    'Healthcare & Medical',
+    'Cloud Infrastructure & DevOps',
+    'Cybersecurity & Threat Intelligence',
+    'Data Engineering & Analytics',
+    'API Management & Integration',
+    'Network Monitoring & Management',
+    'Database Management & Optimization',
+    'IT Service Management',
+    'Backup & Disaster Recovery',
+    'Quantum Computing & AI',
+    'Blockchain & Web3',
+    'Internet of Things (IoT)',
+    'Edge Computing & 5G',
+    'AR/VR & Immersive Technology',
+    'Robotics & Automation',
+    'Digital Twin & Simulation',
+  ];
+
+  const priceRanges = [
+    { value: 'all', label: 'All Prices' },
+    { value: '0-100', label: '$0 - $100' },
+    { value: '100-200', label: '$100 - $200' },
+    { value: '200-400', label: '$200 - $400' },
+    { value: '400-600', label: '$400 - $600' },
+{ value: '600+', label: '$600+' },
+  ];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const filteredServices = allServices.filter(service => {
     const matchesSearch =
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
@@ -303,13 +420,24 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           default: return true
         }
       })();
+<<<<<<< HEAD
     return matchesSearch && matchesCategory && matchesPrice;  });
+=======
+
+    return matchesSearch && matchesCategory && matchesPrice;
+  });
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'popularity':
         return b.popular ? 1 : -1;
       case 'price-low':
+<<<<<<< HEAD
         return (
+=======
+return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           parseInt(a.price.replace('$', '')) -
           parseInt(b.price.replace('$', ''))
         );
@@ -317,6 +445,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         return (
           parseInt(b.price.replace('$', '')) -
           parseInt(a.price.replace('$', ''))
+<<<<<<< HEAD
         );      case 'rating':
         return b.rating - a.rating;
       case 'customers':
@@ -326,6 +455,20 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
   });
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
+=======
+        );
+      case 'rating':
+        return b.rating - a.rating;
+      case 'customers':
+        return b.customers - a.customers;
+default:
+        return 0;
+    }
+  });
+  const getCategoryIcon = (category: string) => {
+    const iconMap: { [key: string]: React.ReactNode } = {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'Business Intelligence & Analytics': <Database className='w-5 h-5' />
       'Content Creation & Marketing': <Sparkles className='w-5 h-5' />
       'Customer Service & Support': <Users className='w-5 h-5' />
@@ -354,6 +497,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     return iconMap[category] |<Sparkles className='w-5 h-5' />;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -369,6 +513,10 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const allServices = [;
     ...innovativeMicroSaasServices2026,;
     ...specializedITSolutions2026,;
@@ -402,13 +550,17 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     'Robotics & Automation',;
     'Digital Twin & Simulation',  ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     'allBusiness Intelligence & AnalyticsContent Creation & MarketingCustomer Service & SupportE-commerce & RetailHR & RecruitmentFinancial ManagementProject Management';
     'Education & TrainingHealthcare & MedicalCloud Infrastructure & DevOpsCybersecurity & Threat IntelligenceData Engineering & AnalyticsAPI Management & IntegrationNetwork Monitoring & ManagementDatabase Management & Optimization';
     'IT Service ManagementBackup & Disaster RecoveryQuantum Computing & AIBlockchain & Web3Internet of Things (IoT)Edge Computing & 5GAR/VR & Immersive TechnologyRobotics & Automation';
     'Digital Twin & Simulation'
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -447,12 +599,15 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const priceRanges = [;
     { value: 'all', label: 'All Prices' },;
     { value: '0-100', label: '$0 - $100' },;
     { value: '100-200', label: '$100 - $200' },;
     { value: '200-400', label: '$200 - $400' },;
     { value: '400-600', label: '$400 - $600' },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const getCategoryIcon = (category: string) => {
@@ -509,6 +664,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           case '0-100':;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             return price <= 100;
           case '100-200':;
             return price > 100 && price <= 200;
@@ -516,7 +673,10 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
             return price > 200 && price <= 400;
           case '400-600':;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [search_term, setSearchTerm] = useState ('');
   const [selected_category, setSelectedCategory] = useState ('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState ('all');
@@ -585,7 +745,10 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           case '200 - 400':;
             return price > 200 && price <= 400;
           case '400 - 600':;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             return price > 400 && price <= 600;
           case '600+':;
             return price > 600;
@@ -596,9 +759,12 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       })();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''));
       case 'price-high':
         return parseInt(b.price.replace('$', '')) - parseInt(a.price.replace('$', ''));
@@ -622,6 +788,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         return b.rating - a.rating;
       case 'customers':;
 <<<<<<< HEAD
+<<<<<<< HEAD
         return b.customers - a.customers,;
       default: return 0;
       } catch (error) {
@@ -629,15 +796,20 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   }),
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
       'Business Intelligence & Analytics': <Database className="w-5 h-5" />,
@@ -667,6 +839,39 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     },
     return iconMap[category] || <Sparkles className="w-5 h-5" />
   },
+<<<<<<< HEAD
+=======
+=======
+'Business Intelligence & Analytics': <Database className='w-5 h-5' />,
+      'Content Creation & Marketing': <Sparkles className='w-5 h-5' />,
+      'Customer Service & Support': <Users className='w-5 h-5' />,
+      'E-commerce & Retail': <Globe className='w-5 h-5' />,
+      'HR & Recruitment': <Users className='w-5 h-5' />,
+      'Financial Management': <TrendingUp className='w-5 h-5' />,
+      'Project Management': <Clock className='w-5 h-5' />,
+      'Education & Training': <Brain className='w-5 h-5' />,
+      'Healthcare & Medical': <Shield className='w-5 h-5' />,
+      'Cloud Infrastructure & DevOps': <Cloud className='w-5 h-5' />,
+      'Cybersecurity & Threat Intelligence': <Shield className='w-5 h-5' />,
+      'Data Engineering & Analytics': <Database className='w-5 h-5' />,
+      'API Management & Integration': <Zap className='w-5 h-5' />,
+      'Network Monitoring & Management': <Globe className='w-5 h-5' />,
+      'Database Management & Optimization': <Database className='w-5 h-5' />,
+      'IT Service Management': <Users className='w-5 h-5' />,
+      'Backup & Disaster Recovery': <Cloud className='w-5 h-5' />,
+      'Quantum Computing & AI': <Brain className='w-5 h-5' />,
+      'Blockchain & Web3': <Cube className='w-5 h-5' />,
+      'Internet of Things (IoT)': <Zap className='w-5 h-5' />,
+      'Edge Computing & 5G': <Globe className='w-5 h-5' />,
+      'AR/VR & Immersive Technology': <Cube className='w-5 h-5' />,
+      'Robotics & Automation': <Robot className='w-5 h-5' />,
+      'Digital Twin & Simulation': <Cube className='w-5 h-5' />,
+    };
+    return iconMap[category] || <Sparkles className='w-5 h-5' />;
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
         {/* Hero Section */  } catch (error) {
@@ -674,6 +879,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <div className="relative overflow-hidden">
@@ -683,6 +889,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
               initial={{ opacity: 0, y: 20 }  } catch (error) {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -695,6 +903,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="text-center"
 
@@ -1295,14 +1504,19 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>
             </div>
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>
       {/* Search and Filters */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
@@ -1351,7 +1565,10 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
             </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* Category Filter */}
             <div>;
               <select
@@ -1416,6 +1633,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 </option>
               </select>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
@@ -1423,13 +1641,18 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Services Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-white mb-2">
@@ -1444,16 +1667,20 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
             {sortedServices.map((service, index) => (
               <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -1488,6 +1715,8 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
               >
                 {/* Service Header */}
@@ -1498,8 +1727,11 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white">{service.name}</h3>
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <p className="text-sm text-gray-300">{service.category}</p>
                     </div>
                   </div>
@@ -1507,6 +1739,7 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
                     <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">
                       Popular
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1539,6 +1772,8 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-2xl font-bold text-white">
                     {service.price}<span className="text-sm text-gray-400">{service.period}</span>
@@ -1547,6 +1782,7 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
                     {service.trialDays} days free trial
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1563,12 +1799,15 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                   <ul className="space-y-1">
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <li key={idx} className="text-xs text-gray-300 flex items-center">
                         <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1603,6 +1842,8 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div className="grid grid-cols-3 gap-4 mb-4 text-center">
                   <div>
                     <div className="text-lg font-bold text-white">{service.rating}</div>
@@ -1617,6 +1858,7 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
                     <div className="text-xs text-gray-400">Setup</div>
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1633,10 +1875,13 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div className="mb-4 p-3 bg-white/5 rounded-lg">
                   <div className="text-xs text-gray-300 mb-1">Market Size: {service.marketSize}</div>
                   <div className="text-xs text-gray-300">Growth Rate: {service.growthRate}</div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1661,11 +1906,14 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-3 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Learn More & Get Started
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1726,6 +1974,8 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
           <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30">
             <div className="text-center">
@@ -1765,6 +2015,7 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
                 >
                   Email Us
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -1776,10 +2027,13 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <a
                   href="tel:+13024640950"
                   className="bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300"
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
                   Call Us
 
@@ -2032,11 +2286,19 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+            </div>
+<<<<<<< HEAD
+          </div>
+        </div>
+      </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   /* CTA Button */
 }<a > Learn More & Get Started </Link> </div> </div> </motion.div>) )
 }</div> </div> <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30"> <div className="text-center"> <h2 className="text-3xl font-bold text-white mb-4"> text-xl text-gray-300 mb-8 max-w-2xl mx-auto"> Get in touch with our team to discuss how our innovative services can help you achieve your goals. </p> <div className=" grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"> <div className=" text-center"> <div className=" w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Users className=" w-8 h-8 text-cyan-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">Expert Team</h3> <p className=" text-gray-300 text-sm">Dedicated professionals ready to help</p> </div> <div className=" text-center"> <div className=" w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Zap className=" w-8 h-8 text-blue-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">Fast Implementation</h3> <p className=" text-gray-300 text-sm">Quick setup and deployment</p> </div> <div className=" text-center"> <div className=" w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Shield className=" w-8 h-8 text-purple-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">24/7 Support</h3> <p className=" text-gray-300 text-sm">Round-the-clock assistance</p> </div> </div> <div className=" flex flex-col sm:flex-row gap-4 justify-center items-center"> <a href=" mailto:kleber@ziontechgroup.com"className=" bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"> Email Us </Link> <a href=" tel:+13024640950"className=" bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300" > Call Us </Link> </div> </div> </div> </div> </div>)
 }
 export default ComprehensiveServicesShowcase2026;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2045,6 +2307,8 @@ export default ComprehensiveServicesShowcase2026;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   /* CTA Button */ 
 }<a > Learn More & Get Started </Link> </div> </div> </motion.div>) ) 
@@ -2067,6 +2331,7 @@ export default ComprehensiveServicesShowcase2026,
                   <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">;
                     <Users className="w-8 h-8 text-cyan-400" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -2074,6 +2339,8 @@ export default ComprehensiveServicesShowcase2026,
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </div>;
                   <div className='text - xs text - gray - 400'>Customers</div>;
                 </div>;
@@ -2172,16 +2439,20 @@ export default ComprehensiveServicesShowcase2026,
                 className='bg - white / 10 text - white px - 8 py - 3 rounded - lg font - semibold border border - white / 30 hover:bg - white / 20 transition - all duration - 300';
               >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Call Us;
               </a>            </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default ComprehensiveServicesShowcase2026;
 =======
@@ -2230,3 +2501,44 @@ export default ComprehensiveServicesShowcase2026;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export default ComprehensiveServicesShowcase2026;
+=======
+            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+              <a
+                href='mailto:kleber@ziontechgroup.com'
+                className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'
+              >
+                Email Us
+              </a>
+              <a
+                href='tel:+13024640950'
+                className='bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300'
+              >
+                Call Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+  );
+};
+
+  /* Category Filter */ 
+}<div> <select </option>) ) 
+}</select> </div> {
+  /* Price Range Filter */ 
+}<div> <select </option>) ) 
+}</select> </div> {
+  /* Sort By */ 
+}<div> <select > <option value="popularity" className="bg-gray-800 text-white" >Sort by Popularity</option> <option value="price-low" className="bg-gray-800 text-white" >Price: Low to High</option> <option value="price-high" className="bg-gray-800 text-white" >Price: High to Low</option> <option value="rating" className="bg-gray-800 text-white" >Sort by Rating</option> <option value="customers" className="bg-gray-800 text-white" >Sort by Customers</option> </select> </div> </div> </div> </div> </h2> <p className="text-gray-300" > Discover innovative solutions tailored to your business needs </p> </div> Popular </div>) 
+}</div> </li>) ) 
+}</ul> </div> </div> {
+  /* CTA Button */ 
+}<a > Learn More & Get Started </Link> </div> </div> </motion.div>) ) 
+}</div> </div> <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30"> <div className="text-center"> <h2 className="text-3xl font-bold text-white mb-4"> text-xl text-gray-300 mb-8 max-w-2xl mx-auto"> Get in touch with our team to discuss how our innovative services can help you achieve your goals. </p> <div className=" grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"> <div className=" text-center"> <div className=" w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Users className=" w-8 h-8 text-cyan-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">Expert Team</h3> <p className=" text-gray-300 text-sm">Dedicated professionals ready to help</p> </div> <div className=" text-center"> <div className=" w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Zap className=" w-8 h-8 text-blue-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">Fast Implementation</h3> <p className=" text-gray-300 text-sm">Quick setup and deployment</p> </div> <div className=" text-center"> <div className=" w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Shield className=" w-8 h-8 text-purple-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">24/7 Support</h3> <p className=" text-gray-300 text-sm">Round-the-clock assistance</p> </div> </div> <div className=" flex flex-col sm:flex-row gap-4 justify-center items-center"> <a href=" mailto:kleber@ziontechgroup.com"className=" bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"> Email Us </Link> <a href=" tel:+13024640950"className=" bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300" > Call Us </Link> </div> </div> </div> </div> </div>) 
+};
+export default ComprehensiveServicesShowcase2026;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

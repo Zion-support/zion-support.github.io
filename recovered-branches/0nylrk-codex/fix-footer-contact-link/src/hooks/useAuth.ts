@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -12,6 +13,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useContext  } from 'react';
 import { AuthContext  } from '@/context/auth/AuthContext';
 import type { AuthContextType } from '@/types/auth';
@@ -24,6 +27,7 @@ export const useAuth = (): AuthContextType => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -61,6 +65,12 @@ import {AuthContext} from '@/context/auth/AuthContext';
 import type { AuthContextType } from '@/types/auth';
 export const useAuth = (): AuthContextType => {;  const context = useContext(AuthContext);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {useContext} from 'react';
+import {AuthContext} from '@/context/auth/AuthContext';
+import type { AuthContextType } from '@/types/auth';
+export const useAuth = (): AuthContextType => {;  const context = useContext(AuthContext);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider");
   }
@@ -69,6 +79,9 @@ export const useAuth = (): AuthContextType => {;  const context = useContext(Aut
   // returned value matches `AuthContextType` exactly.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return context as AuthContextType
 <<<<<<< HEAD
 }
@@ -95,6 +108,7 @@ if ( {) {
     throw new Error ('use_auth must be used within an AuthProvider');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -107,6 +121,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useContext } from 'react',;
 import { AuthContext } from '@/context/auth/AuthContext',;
 import type { AuthContextType } from '@/types/auth',;
@@ -133,6 +149,7 @@ export const useAuth = ():AuthContextType => {;
   }
   // TypeScript can sometimes lose the narrowing performed above and;
   // assume `context` might still be `{}`. Casting here ensures the;
+<<<<<<< HEAD
   // returned value matches `AuthContextType` exactly.;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -160,6 +177,10 @@ export const useAuth = ():AuthContextType => {;
   // returned value matches `AuthContextType` exactly.
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // returned value matches `AuthContextType` exactly.
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ;
   return context as AuthContextType,;
@@ -171,6 +192,7 @@ export const useAuth = ():AuthContextType => {;
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -178,3 +200,6 @@ export const useAuth = ():AuthContextType => {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

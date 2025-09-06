@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -88,6 +89,98 @@ import { useRouter } from 'next/router';
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Menu;
+	X;
+	ChevronDown;
+	ChevronRight;
+	Phone;
+	Mail;
+	MapPin;
+	Globe;
+	ArrowRight;
+	Sparkles;
+	Brain;
+	Atom;
+	Shield;
+	DollarSign;
+	FileText;
+	BarChart3;
+	MessageSquare;
+	Truck;
+	Users;
+	Database;
+	Cpu;
+	Cloud;
+	Play;
+	Search;
+	ShieldCheck;
+	TrendingUp;
+	Rocket;
+	Zap;
+	Check;
+	Star;
+	Clock;
+	Target;
+	Building;
+	Award;
+	ChartBar;
+	Lock;
+	Smartphone;
+	Palette;
+	Calendar;
+	CreditCard;
+	Settings;
+	Code;
+	BookOpen;
+	Activity;
+	Bot;
+	ChevronRight as ChevronRightIcon;
+	Eye;
+	FlaskConical;
+	Link as LinkIcon
+ } from 'lucide-react';
+import Button from '../ui/Button';
+export default function NeoFuturisticNavigation() {
+	const [isOpen, setIsOpen] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
+	const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+	const router = null;
+	return (
+		<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+			isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-gray-700/50' : 'bg-transparent'
+		}`}> 
+			{/* Scroll Progress Bar */}
+			<div className="absolute top-0 left-0 h-1 w-full bg-transparent">
+				<div
+					className="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600"
+					style={{ width: `${(typeof window !== 'undefined' && document.body.scrollHeight > 0) ? (Math.min(100, (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)) : 0}%` }}
+				/>
+			</div>
+			<div className="max-w-7xl mx-auto px-4">
+				<div className="flex items-center justify-between h-20">
+					{/* Logo */}
+					<Link href="/" className="flex items-center space-x-3 group">
+						<div className="relative">
+							<div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+								<Sparkles className="w-6 h-6 text-white" />
+							</div>
+							<div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+						</div>
+						<div className="hidden sm:block">
+							<div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+								Zion Tech Group
+							</div>
+							<div className="text-xs text-gray-400">Revolutionary Technology</div>
+						</div>
+					</Link>
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Menu
   X
@@ -907,6 +1000,10 @@ export default function NeoFuturisticNavigation() {
         <div className='flex items-center justify-between h-20'>
           {/* Logo */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Link href='/' className='flex items-center space-x-3 group'>
             <div className='relative'>
               <div className='w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
@@ -1145,11 +1242,15 @@ export default function NeoFuturisticNavigation() {
               )}
             </div>
           </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {/* Mobile Menu Button */}
           <button
             className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors'
             onClick={() => setIsOpen(!isOpen)}
+<<<<<<< HEAD
 =======
           >;
             {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
@@ -1171,10 +1272,30 @@ export default function NeoFuturisticNavigation() {
                   onClick={() => toggleDropdown('mobile-services')}
                 >;
                   <span>Services</span>;
+=======
+          >
+            {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
+          </button>
+        </div>
+      </div>
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-gray-700/50'>
+          <div className='max-w-7xl mx-auto px-4 py-6'>
+            <div className='space-y-6'>
+              {/* Services Section */}
+              <div>
+                <button
+                  className='flex items-center justify-between w-full text-left text-white font-semibold mb-4'
+                  onClick={() => toggleDropdown('mobile-services')}
+                >
+                  <span>Services</span>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <ChevronRight
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
                   />
                 </button>
+<<<<<<< HEAD
 
 =======
 
@@ -1217,6 +1338,9 @@ export default function NeoFuturisticNavigation() {
                     <div className='pt-3'>
 
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
                     {serviceCategories.map((category, index) => (
@@ -1426,6 +1550,7 @@ export default function NeoFuturisticNavigation() {
                     variant='secondary'
                     size='lg'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   `w-4 h-4 transition-transform duration-300 $ {
   activeDropdown === 'services' ? 'rotate-180' : ''
@@ -1468,6 +1593,8 @@ export default function NeoFuturisticNavigation() {
 }</nav>) 								<div className="mt-6 space-y-3">
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     className='w-full'>;
                         <ArrowRight className='w - 4 h - 4 ml - 2' />;
                       </Button>;
@@ -1792,6 +1919,62 @@ export default function NeoFuturisticNavigation() {
 			)}
 		</nav>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                    className='w-full'
+                  >
+                    Contact Us
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+  `w-4 h-4 transition-transform duration-300 $ {
+  activeDropdown === 'services' ? 'rotate-180' : ''
+}`
+}/> </button> </div>) )
+}</div> </div>) )
+}</div> <div className="mt-6 pt-6 border-t border-gray-700/50" > <div className="flex items-center justify-between" > <div className="text-gray-400 text-sm" > <span className="text-cyan-400 font-semibold" >500+</span> Revolutionary Services Available </div> <Button href="/services" variant="quantum" size="sm" > View All Services <ArrowRight className="w-4 h-4 ml-2" /> </Button> </div> </div> </div>)
+}</div> > <span>Popular</span> <ChevronDown className= {
+  `w-4 h-4 transition-transform duration-300 $ {
+  activeDropdown === 'popular'? 'rotate-180': ''
+}`
+}/> </button>) )
+}</div> </div>)
+}</div>) )
+}</div> </div>)
+}</div> </div> </button> </div> </div> <span>Services</span> <ChevronRight className= {
+  `w-5 h-5 transition-transform duration-300 $ {
+  activeDropdown === 'mobile-services'? 'rotate-90': ''
+}`
+}/> </button>) )
+}</div> </div>) )
+}<div className="pt-3" > <Button href="/services" variant="quantum" size="sm" className="w-full" > View All Services <ArrowRight className="w-4 h-4 ml-2" /> </Button> </div> </div>)
+}</div> {
+  /* Company Section */
+}<div> <span>Company</span> <ChevronRight className= {
+  `w-5 h-5 transition-transform duration-300 $ {
+  activeDropdown === 'mobile-company'? 'rotate-90': ''
+}`
+}/> </button>) )
+}</div>)
+}</div> {
+  /* Resources Section */
+}<div> <span>Resources</span> <ChevronRight className= {
+  `w-5 h-5 transition-transform duration-300 $ {
+  activeDropdown === 'mobile-resources'? 'rotate-90': '' 
+}` 
+}/> </button>) ) 
+}</div>) 
+}</div> </div> </div> <div className="mt-6 space-y-3" > <Button href="/services" variant="quantum" size="lg" className="w-full" > Explore Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/contact" variant="secondary" size="lg" className="w-full" > Contact Us </Button> </div> </div> </div> </div> </div>) 
+}</nav>)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

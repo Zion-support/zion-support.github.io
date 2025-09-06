@@ -1,4 +1,15 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react'
+
+export type BadgeKey = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+import {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react'
@@ -275,6 +286,7 @@ export const getBadgeMeta = (key: BadgeKey) =>: any;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 export const getBadgeMeta = (key: BadgeKey) =>
+<<<<<<< HEAD
   badgeList.find((b) => b.key === key),
 
 import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react';
@@ -347,4 +359,15 @@ export const getBadgeMeta = (key: BadgeKey) =>;
   badgeList.find((b) => b.key === key);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+export const getBadgeMeta = (key: BadgeKey) =>: any;
+  badge_list.find (boolean => b.key === key);
+export const getBadgeMeta = (key: BadgeKey) =>: any;
+  badge_list.find ((b) => b.key === key);
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  badgeList.find(b => b.key === key);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

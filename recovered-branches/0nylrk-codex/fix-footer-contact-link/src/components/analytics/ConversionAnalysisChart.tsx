@@ -26,6 +26,7 @@ import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -94,6 +95,8 @@ import React from "react";
 import {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Card,
   CardContent,
   CardDescription,
@@ -140,6 +143,7 @@ import {
 import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -165,6 +169,12 @@ interface ConversionAnalysisProps {
 }
 
 <<<<<<< HEAD
+=======
+  const dataKeys = data && data.length > 0
+    ? Object.keys(data[0]).filter(key => key !== 'date')
+    : [],
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
@@ -178,6 +188,7 @@ interface ConversionAnalysisProps {
           dataKeys={dataKeys}
           type="bar"
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -212,6 +223,8 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
           dataKeys={dataKeys}
           type="bar"
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: ConversionAnalysisProps) {
   const dataKeys = data && data.length > 0
     ? Object.keys(data[0]).filter(key => key !== 'date')
@@ -260,6 +273,7 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
         />;
       </CardContent>;
     </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -336,3 +350,5 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

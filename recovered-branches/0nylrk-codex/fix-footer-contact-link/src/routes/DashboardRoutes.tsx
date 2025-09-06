@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -9,6 +10,8 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
@@ -32,6 +35,7 @@ import DeveloperPortal from "@/pages/DeveloperPortal";
 import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const DashboardRoutes = () => {
 =======
@@ -43,6 +47,9 @@ import {Fragment} from "react";
 =======
 const DashboardRoutes = () => {import {Fragment} from "react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const DashboardRoutes = () => {import {Fragment} from "react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import Dashboard from "@/pages/Dashboard";
@@ -400,6 +407,7 @@ const DashboardRoutes = () => {;
         }
       />
       <Route
+<<<<<<< HEAD
 <<<<<<< HEAD
         path="/contract-builder"
 =======
@@ -779,12 +787,16 @@ export default DashboardRoutes;
 =======
         path="/contract-builder"        }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        path="/contract-builder"        }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       />;
     </Routes>);
 }
 ;
 export default DashboardRoutes;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -824,3 +836,5 @@ export default DashboardRoutes;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 }</div> </div>) import fs from 'fs';
@@ -58,6 +61,11 @@ export async function getServerSideProps() {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     items = json.items || [];
+=======
+import fs from 'fs';
+import path from 'path';
+type NewsItem = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     generatedAt = json.generatedAt || ''
   } catch {}
   return { props: { items, generatedAt } }
@@ -91,6 +99,7 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
 
 );
 }
+<<<<<<< HEAD
   );
 }
 
@@ -116,4 +125,9 @@ function NewsDigestPage() {
           </div>))}
       </div>;
     </div>);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

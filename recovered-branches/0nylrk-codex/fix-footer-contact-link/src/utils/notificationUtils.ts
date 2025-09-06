@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import {supabase} from "@/integrations/supabase/client";
@@ -8,6 +11,7 @@ type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | '
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -76,6 +80,8 @@ export async function createNotification({;
 export async function createNotification({
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   userId,
   title,
   message,
@@ -94,6 +100,7 @@ export async function createNotification({
   type: NotificationType;
   relatedId?: string | null;
   sendEmail?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
   actionUrl?: string | null
 <<<<<<< HEAD
@@ -119,6 +126,9 @@ export async function createNotification({
 =======
   actionUrl?: string | null  actionText?: string | null
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  actionUrl?: string | null  actionText?: string | null
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }) {
   void actionUrl;
   void actionText;
@@ -126,6 +136,7 @@ export async function createNotification({
     // Call the create_notification database function
 
     const { data, error } = await supabase.rpc('create_notification', {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -135,12 +146,15 @@ export async function createNotification({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   actionText?: string | null
 }) {
   void actionUrl,
   void actionText,
   try {
     // Call the create_notification database function
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     const { data, error } = await supabase.rpc('create_notification', {
@@ -155,6 +169,8 @@ export async function createNotification({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       _user_id: userId,
       _title: title,
       _message: message,
@@ -164,6 +180,7 @@ export async function createNotification({
     
     if (error) throw error,
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -185,6 +202,8 @@ export async function createNotification({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase } from "@/integrations/supabase/client",;
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',;
 /**;
@@ -227,6 +246,7 @@ export async function createNotification({;
       await supabase.functions.invoke('send-notification-email', {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -237,10 +257,13 @@ export async function createNotification({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         body: { user_id: userId, notification_id: notificationId }
       })
     }
     return { success: true, notificationId: data }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -255,11 +278,17 @@ export async function createNotification({;
   }
 }      success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    return { success: false, error }
+  }
+}      success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       talentNotification,
 
 success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
       talentNotification,
       adminNotification
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -278,10 +307,13 @@ success: talentNotification && talentNotification.success && adminNotification &
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {;
     console.error('Error creating notification:', error),;
   } catch (error) {;
     console.error('Error creating notification:', error),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -299,12 +331,16 @@ success: talentNotification && talentNotification.success && adminNotification &
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return { success: false, error }
   }
 }
 
 /**
  * Creates a hire request notification for admin and talent
+<<<<<<< HEAD
 <<<<<<< HEAD
  */
 <<<<<<< HEAD
@@ -834,6 +870,12 @@ function createTestNotification() {
   }
   const messages = {  const actions = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+ */  const titles = {
+    'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update'
+  }
+  const messages = {  const actions = {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     'message': { url: '/messages', text: 'View Messages' }
     'quote_request': { url: '/quotes', text: 'View Quote' }
     'booking_confirmation': { url: '/bookings', text: 'View Booking' }
@@ -842,6 +884,7 @@ function createTestNotification() {
     'system': { url: '/dashboard', text: 'Learn More' }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     actionText: actions[randomType].text
@@ -865,6 +908,8 @@ function createTestNotification() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   return create_notification ({
     user_id;
@@ -903,6 +948,7 @@ export async function createSystemNotification({;
     actionUrl,;
     actionText;
   }),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -956,6 +1002,8 @@ export async function createTestNotification(userId: string) {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ;
 export async function createTestNotification(userId:string) {;
@@ -1063,7 +1111,10 @@ case 'talent invited':
 ;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

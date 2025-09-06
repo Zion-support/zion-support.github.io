@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -21,6 +22,10 @@ import {useAuth} from "@/hooks/useAuth";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -40,6 +45,7 @@ import { ForumPost, ForumCategory } from "@/types/community",
 import { useAuth } from "@/hooks/useAuth",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -49,6 +55,8 @@ import { useAuth } from "@/hooks/useAuth",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface PostFormValues {
 
   title: string
@@ -58,6 +66,7 @@ interface PostFormValues {
   tags: string
 }
 // Mock post data
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -106,11 +115,14 @@ const mockPost: ForumPost = {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function EditPostPage() {;
   const { postId } = useParams() as { postId?: string };  const navigate = useNavigate();
   const { toast } = useToast();
   const { user } = useAuth();
   const [post, setPost] = useState<ForumPost | null>(mockPost);
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(true);
 <<<<<<< HEAD
@@ -218,6 +230,9 @@ export default function EditPostPage() {
 =======
   const [isLoading, setIsLoading] = useState(true);  if (isLoading) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [isLoading, setIsLoading] = useState(true);  if (isLoading) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   useEffect(() => {;
     // In a real app, we would fetch the post data here;
@@ -226,6 +241,7 @@ export default function EditPostPage() {
   }, [postId]);
   if (isLoading) {;
     return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -241,6 +257,8 @@ export default function EditPostPage() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (isLoading) {;
     return (
       <AppLayout>;
@@ -260,6 +278,7 @@ export default function EditPostPage() {
         </div>;
       </AppLayout>;
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 
@@ -388,6 +407,9 @@ export default function EditPostPage() {
 =======
   }    return (        <div className="container py-8">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }    return (        <div className="container py-8">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <h1 className="text-2xl font-bold mb-4">Permission Denied</h1>;
           <p className="mb-4">You don't have permission to edit this post.</p>;
           <Button asChild>;
@@ -405,6 +427,7 @@ export default function EditPostPage() {
       // For now, we'll just simulate a successful update
       toast({
         title: "Post updated"
+<<<<<<< HEAD
 <<<<<<< HEAD
         description: "Your post has been updated successfully"
 <<<<<<< HEAD
@@ -434,6 +457,9 @@ export default function EditPostPage() {
 =======
         description: "Your post has been updated successfully"      // Redirect back to the post
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        description: "Your post has been updated successfully"      // Redirect back to the post
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       navigate(`/community/post/${postId}`)
     } catch (error) {
       toast({
@@ -471,6 +497,7 @@ export default function EditPostPage() {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
   }
@@ -486,6 +513,11 @@ export default function EditPostPage() {
 
   },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }    }
+
+  },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
 
@@ -503,6 +535,7 @@ export default function EditPostPage() {
         title="Edit Post | Community Forum | Zion AI Marketplace"
         description="Edit your discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, edit post"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -591,6 +624,16 @@ import { useState, useEffect } from "react",;
     </AppLayout>
   )import { useState, useEffect } from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+        <PostForm
+          initialValues={initialValues}
+          onSubmit={handleSubmit}
+          isEditing={true}        />
+      </div>
+    </AppLayout>
+  )import { useState, useEffect } from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Link, useNavigate, useParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
@@ -721,6 +764,7 @@ export default function EditPostPage() {;
           </Link>;
           <span className="text-muted-foreground">/</span>;
           <span className="text-sm font-medium">Edit</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>;
 <<<<<<< HEAD
@@ -939,3 +983,6 @@ return (<AppLayout> <SEO title="Edit Post | Community Forum | Zion AI Marketplac
 =======
         </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 =======
@@ -14,10 +15,15 @@ import fs from "fs";
 import fs from 'fs';
 import path from 'path';import fs from "fs";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import fs from 'fs';
+import path from 'path';import fs from "fs";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import path from "path";
 
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -53,6 +59,12 @@ export interface TokenTransaction {;
 export interface TokenTransaction {;
 =======  id: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======export interface TokenTransaction {
+
+export interface TokenTransaction {;
+=======  id: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   userId: string;
   type: "earn" | "spend" | "transfer";
   amount: number,
@@ -63,6 +75,7 @@ export interface TokenTransaction {;
 <<<<<<< HEAD
 export interface TokenConfig {
 
+<<<<<<< HEAD
 export interface TokenConfig {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -74,6 +87,10 @@ export interface TokenConfig {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export interface TokenConfig {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   name: string;
   symbol: string;
   total_supply: number;
@@ -100,6 +117,7 @@ function loadTransactions(): TokenTransaction[] {
   } catch {
     return [];
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -433,6 +451,9 @@ export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'times
 =======
 }  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   transactions.push (new_transaction);
   save_transactions (transactions);
@@ -454,11 +475,14 @@ if ( {) {
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         balance += tx.amount;
       } else if (tx.type === "spend") {
         balance -= tx.amount;

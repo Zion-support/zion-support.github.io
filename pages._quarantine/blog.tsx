@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,11 +14,14 @@ import type { NextPage } from \'next\'; import Layout from \'../components/Layou
 >>>>>>> main
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 interface BlogProps {
   // Add props here as neededimport React from 'react';
 import * as React from 'react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 interface BlogProps {
@@ -44,10 +48,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface BlogProps {
   // Add props here as needed
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -104,6 +111,11 @@ interface BlogProps {
 interface BlogProps {
   // Add props here as needed
 }
+=======
+interface BlogProps {
+  // Add props here as needed
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from 'react';
 interface BlogProps {
@@ -111,7 +123,10 @@ interface BlogProps {
 import React from 'react';interface BlogProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function Blog({ }: BlogProps) {
   return (
     <div>
@@ -119,6 +134,7 @@ export default function Blog({ }: BlogProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -195,3 +211,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

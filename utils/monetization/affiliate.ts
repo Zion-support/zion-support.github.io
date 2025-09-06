@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {;
 =======
 <<<<<<< HEAD
@@ -7,6 +8,8 @@ export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AF
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function affiliate (url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {
   // Check condition
@@ -34,6 +37,7 @@ if (return url, ) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -83,3 +87,6 @@ export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AF
 =======
   }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

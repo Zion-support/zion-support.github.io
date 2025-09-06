@@ -2,6 +2,7 @@ import React from react' interface ImportMetaEnv { readonly VITE_APP_TITLE: stri
 import React from
   react' interface ImportMetaEnv { readonly "VITE_APP_TITLE": string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string'',
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from react' interface ImportMetaEnv { readonly VITE_APP_TITLE: string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string'',
 <<<<<<< HEAD
 =======
@@ -40,3 +41,7 @@ import React from react' interface ImportMetaEnv { readonly VITE_APP_TITLE: stri
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

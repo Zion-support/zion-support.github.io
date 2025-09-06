@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,6 +13,8 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 "use client",
 import { useEffect  } from './react';,
 interface FirstInputEntry extends PerformanceEntry {
@@ -25,6 +28,7 @@ export /**
 function Analytics() {
   useEffect (() => {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -125,10 +129,13 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }
         }
       });
       observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"] });
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Cumulative Layout Shift monitoring;
 <<<<<<< HEAD
@@ -205,6 +212,9 @@ if ( {) {
 =======
       // Cumulative Layout Shift monitoring;      }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      // Cumulative Layout Shift monitoring;      }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   }, []);
   return null, // This component doesn't render anything;

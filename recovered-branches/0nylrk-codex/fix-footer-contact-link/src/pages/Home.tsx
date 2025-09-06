@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -28,6 +29,8 @@ import {FeatureHighlights} from "@/components/home/FeatureHighlights";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -43,6 +46,7 @@ import { QuickAccess } from "@/components/home/QuickAccess",
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs",
+<<<<<<< HEAD
 import { FeatureHighlights } from "@/components/home/FeatureHighlights",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -77,6 +81,9 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs",
 import { FeatureHighlights } from "@/components/home/FeatureHighlights",export default function Home() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { FeatureHighlights } from "@/components/home/FeatureHighlights",export default function Home() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -110,6 +117,7 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights",export d
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class ErrorBoundary extends React.Component {
@@ -135,6 +143,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -149,6 +159,7 @@ import {QuickAccess} from "@/components/home/QuickAccess";
 import {FeatureCTAs} from "@/components/home/FeatureCTAs";
 import {FeatureHighlights} from "@/components/home/FeatureHighlights";
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -307,6 +318,8 @@ import {QuickAccess} from "@/components/home/QuickAccess";
 import {FeatureCTAs} from "@/components/home/FeatureCTAs";
 import {FeatureHighlights} from "@/components/home/FeatureHighlights";
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -342,6 +355,7 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     </div>);
 }
@@ -375,3 +389,5 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

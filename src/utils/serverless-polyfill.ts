@@ -28,6 +28,7 @@ declare global {
 }
 
 // CRITICAL: Self polyfill - must be first
+<<<<<<< HEAD
 if (typeof self === 'undefined') {
   if (typeof global !== 'undefined') {
     (global as any).self = global
@@ -260,7 +261,10 @@ const tsHelpers = {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           t[symbol] = s[symbol]
       }
     }
@@ -303,7 +307,10 @@ const tsHelpers = {;
   
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
 <<<<<<< HEAD
     function adopt(value: any) { return value instanceof P ? value : new P(function (resolve: any) { resolve(value) }) }
@@ -507,11 +514,14 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     return false;
   };
   const originalOnUnhandledRejection = window.onunhandledrejection;
   window.onunhandledrejection = function(event) {;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return false
 };
 
@@ -685,6 +695,8 @@ export default {}, // Ensure this can be imported as a module
 export default {}; // Ensure this can be imported as a module
   
 }, // Ensure this can be imported as a module'"
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {
   setTimeout((,) => verifyPolyfills(), 100)
@@ -696,6 +708,7 @@ if (process.env.NODE_ENV === 'development') {
   console.log('Serverless polyfill verification:', checks)
   return Object.values(checks).every(Boolean)
 }
+<<<<<<< HEAD
 
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {
@@ -716,5 +729,12 @@ export const verifyPolyfills = () => {;
 if (process.env.NODE_ENV === 'development') {;
   setTimeout(() => verifyPolyfills(), 100);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default {}, // Ensure this can be imported as a module;
+=======
+export default {}, // Ensure this can be imported as a module;
+=======
+export default {}, // Ensure this can be imported as a module
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

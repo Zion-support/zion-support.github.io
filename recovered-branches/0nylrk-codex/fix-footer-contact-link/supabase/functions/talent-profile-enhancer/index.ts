@@ -5,6 +5,7 @@ import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 const OPENAI_API_KEY = Deno && Deno.env.get('OPENAI_API_KEY'),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
@@ -15,6 +16,8 @@ const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
@@ -23,6 +26,7 @@ import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
 const OPENAI_API_KEY = Deno.env.get ('OPENAI_API_KEY'),
 const cors_headers = {
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -165,6 +169,9 @@ interface TalentProfileData {
 =======
 ;interface TalentProfileData {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;interface TalentProfileData {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   name: string;
   title: string;
   bio: string;
@@ -224,6 +231,7 @@ interface EnhancedProfile {;
     devops: string[],;
     platforms: string[],;
     softSkills: string[],;
+<<<<<<< HEAD
 <<<<<<< HEAD
     other: string[];
 <<<<<<< HEAD
@@ -444,6 +452,13 @@ serve(_async (req) => {_// Handle CORS preflight requests
             Skills: ${talentData.skills.join()}
               "summary": "The professional summary text (100-150 words)",            Name: ${talentData && talentData.name}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    other: string[];            Name: ${talentData.name}
+            Title: ${talentData.title}
+            Bio: ${talentData.bio}
+            Skills: ${talentData.skills.join()}
+              "summary": "The professional summary text (100-150 words)",            Name: ${talentData && talentData.name}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             Title: ${talentData && talentData.title}
             Bio: ${talentData && talentData.bio}
             Skills: ${talentData && talentData.skills.join()}
@@ -507,6 +522,7 @@ if ( {) {
                 "soft_skills": ["skill1", "skill2"];
                 "other": ["skill1", "skill2"];
               }
+<<<<<<< HEAD
 <<<<<<< HEAD
             }
 <<<<<<< HEAD
@@ -578,6 +594,9 @@ if ( {) {
 =======
             }    // Parse the JSON response
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            }    // Parse the JSON response
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     let enhancedProfile: EnhancedProfile
     try {
       enhancedProfile = JSON && JSON.parse(responseContent)
@@ -613,6 +632,7 @@ if ( {) {
     )
   } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -620,6 +640,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
@@ -641,6 +663,7 @@ if ( {) {
     console.error("Error in talent-profile-enhancer function:", error),;
     return new Response(;
       JSON.stringify({ error: error.message }),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -788,6 +811,20 @@ if ( {) {
   }
 });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    console.error("Error in talent-profile-enhancer function:", error),
+    
+    return new Response(
+      JSON && JSON.stringify(enhancedProfile);
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  } catch (error) {
+    return new Response(
+      JSON && JSON.stringify({ error: error && error.message });      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  }
+});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return new Response(
       JSON && JSON.stringify(enhancedProfile);
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
@@ -807,6 +844,7 @@ if ( {) {
 }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -814,3 +852,5 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

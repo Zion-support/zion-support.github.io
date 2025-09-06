@@ -30,6 +30,7 @@ import React from \'react\' export default OpenApp const OpenApp = () => { retur
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -57,11 +58,14 @@ import _React from 'react' export default OpenApp const OpenApp = () => { return
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import _React from 'react' export default OpenApp const OpenApp = () => { return (<> <Helmet> <title > Open App - Zion Tech Group</title> <meta name='description' content='Open Zion Tech Group applications. Access our web and mobile apps for seamless service delivery.' / / /> </Helmet> <div className='min - h-screen bg - gray - 50 py - 12'> <div className='max - w-7xl mx - auto px - 4 "sm": px: - 6 lg:px: - 8'> <div className='text - center mb - 12'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 4'> Open App </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Launch and access Zion Tech Group applications for seamless service delivery. </p> </div> <div className='bg - white rounded - lg shadow - lg p - 8'> <p className='text - gray - 600 text - center'> App launcher coming soon. We"re building comprehensive application access. </p> </div> </div> </div> </>)}'';
 ursor/add-new-services-and-deploy-updates-0462
 :src.pages.disabled/OpenApp.jsx
 import _React from 'react' export default OpenApp const OpenApp = () => { return (<> <Helmet> <title > Open App - Zion Tech Group</title> <meta name='description' content='Open Zion Tech Group applications. Access our web and mobile apps for seamless service delivery.' / / /> </Helmet> <div className='min - h-screen bg - gray - 50 py - 12'> <div className='max - w-7xl mx - auto px - 4 "sm": px: - 6 lg:px: - 8'> <div className='text - center mb - 12'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 4'> Open App </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Launch and access Zion Tech Group applications for seamless service delivery. </p> </div> <div className='bg - white rounded - lg shadow - lg p - 8'> <p className='text - gray - 600 text - center'> App launcher coming soon. We"re building comprehensive application access. </p> </div> </div> </div> </>)}'';
 :temp_exclude/src.pages.disabled/OpenApp.jsx
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -83,6 +87,8 @@ import _React from 'react' export default OpenApp const OpenApp = () => { return
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import _React from 'react' export default OpenApp const OpenApp = () => { return (<> <Helmet> <title > Open App - Zion Tech Group</title> <meta name='description' content='Open Zion Tech Group applications. Access our web and mobile apps for seamless service delivery.' / / /> </Helmet> <div className='min - h-screen bg - gray - 50 py - 12'> <div className='max - w-7xl mx - auto px - 4 "sm": px: - 6 lg:px: - 8'> <div className='text - center mb - 12'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 4'> Open App </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Launch and access Zion Tech Group applications for seamless service delivery. </p> </div> <div className='bg - white rounded - lg shadow - lg p - 8'> <p className='text - gray - 600 text - center'> App launcher coming soon. We"re building comprehensive application access. </p> </div> </div> </div> </>)}'';
 import _React from 'react' export default OpenApp const OpenApp = () => { return (<> <Helmet> <title > Open App - Zion Tech Group</title> <meta name='description' content='Open Zion Tech Group applications. Access our web and mobile apps for seamless service delivery.' / / /> </Helmet> <div className='min - h-screen bg - gray - 50 py - 12'> <div className='max - w-7xl mx - auto px - 4 "sm": px: - 6 lg:px: - 8'> <div className='text - center mb - 12'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 4'> Open App </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Launch and access Zion Tech Group applications for seamless service delivery. </p> </div> <div className='bg - white rounded - lg shadow - lg p - 8'> <p className='text - gray - 600 text - center'> App launcher coming soon. We"re building comprehensive application access. </p> </div> </div> </div> </>)}'';
 import _React from 'react' export default OpenApp const OpenApp = () => { return (<> <Helmet> <title > Open App - Zion Tech Group</title> <meta name='description' content='Open Zion Tech Group applications. Access our web and mobile apps for seamless service delivery.' / / /> </Helmet> <div className='min - h-screen bg - gray - 50 py - 12'> <div className='max - w-7xl mx - auto px - 4 "sm": px: - 6 lg:px: - 8'> <div className='text - center mb - 12'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 4'> Open App </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Launch and access Zion Tech Group applications for seamless service delivery. </p> </div> <div className='bg - white rounded - lg shadow - lg p - 8'> <p className='text - gray - 600 text - center'> App launcher coming soon. We"re building comprehensive application access. </p> </div> </div> </div> </>)}'';

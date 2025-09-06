@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies.ts
 <<<<<<< HEAD:pages/api/enterprise/companies.ts
 <<<<<<< HEAD
 =======
@@ -17,6 +18,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/enterprise/companies.ts
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/enterprise/companies.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { store } from "../../../utils/data/enterpriseStore";
 export default function handler($2) {;
@@ -168,6 +172,21 @@ export default function handler($2) {;
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies.ts
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/enterprise/companies.ts
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+  if (req.method;
+    return res.status(201).json(created)
+    });
+    return res.status(201).json(created);
+  }
+
+  return res.status(405).json({ error: 'method_not_allowed' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/enterprise/companies.ts

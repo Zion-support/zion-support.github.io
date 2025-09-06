@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import {useState, useEffect} from 'react';
 =======
@@ -20,6 +19,11 @@ import {useState, useEffect} from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import {useState, useEffect} from 'react';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function useIsMobile() {
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" ? window.innerWidth < 768 : false,
@@ -36,6 +40,9 @@ export function useIsMobile() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return isMobile
 <<<<<<< HEAD
 }
@@ -76,11 +83,15 @@ function useIsMobile() {
     // Check condition
 if ( {) {
   $2}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       window.addEventListener ('resize', handle_resize);
       return () => window.removeEventListener ('resize', handle_resize);
     }
     return undefined;
+<<<<<<< HEAD
 <<<<<<< HEAD
   }, []);
 <<<<<<< HEAD
@@ -108,6 +119,9 @@ import { useState, useEffect } from 'react',;
 =======
   }, []);import { useState, useEffect } from 'react',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }, []);import { useState, useEffect } from 'react',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState(;
     typeof window !== 'undefined' ? window.innerWidth < 768 : false;
@@ -134,6 +148,7 @@ export function useIsMobile() {;
   return is_mobile;
 }}
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState(;
@@ -169,3 +184,5 @@ return isMobile
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

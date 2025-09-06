@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,6 +107,13 @@ interface DisputeStatusBadgeProps {
 }
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {export /**
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+interface DisputeStatusBadgeProps {
+  status: 'open' | 'under_review' | 'resolved' | 'closed'
+}
+export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {export /**
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
  * DisputeStatusBadge - Function description
  */
 function DisputeStatusBadge() {
@@ -136,6 +144,7 @@ function DisputeStatusBadge() {
       variant = "outline",
       message = "This dispute has been closed",
       break,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -191,6 +200,8 @@ function DisputeStatusBadge() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from "lucide-react",;
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
@@ -200,7 +211,10 @@ interface DisputeStatusBadgeProps {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
   let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
   let message = "This item has an open dispute",;
@@ -221,6 +235,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
       <TooltipTrigger asChild>;
         <Badge variant={variant} className="flex items-center gap-1">;
           <ShieldAlert className="h-3 w-3" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <span>Under Dispute</span>;
 <<<<<<< HEAD
@@ -307,3 +322,6 @@ message
 =======
           <span>Under Dispute</span>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <span>Under Dispute</span>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

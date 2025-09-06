@@ -1,5 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
       default:        return <Badge variant="outline">{status}</Badge>
+=======
+<<<<<<< HEAD
+      default:
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
         return <Badge variant="outline">{status}</Badge>
@@ -40,7 +45,35 @@ export function MyApplications() {
   if (isLoading) {
 =======
 import {ApplicationStatus} from "@/types/jobs";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import { useState } from 'react';
+import { useJobApplications } from '@/hooks/useJobApplications';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Loader2, MessageSquare, ExternalLink } from 'lucide-react';
+import { formatDistanceToNow } from 'date-fns';
+import Link from 'next/link';
+import { ApplicationStatus } from '@/types/jobs';
+
+import { useState } from "react",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Loader2, MessageSquare, ExternalLink } from 'lucide-react'
+import { formatDistanceToNow } from "date-fns",
+import Link from "next/link";
+import { ApplicationStatus } from "@/types/jobs";
+export function MyApplications() {
+  const { applications, isLoading, error } = useJobApplications();
+  const getStatusBadge = null;
+  if (isLoading) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
       <div className="flex justify-center items-center p-8">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -294,10 +327,13 @@ export function MyApplications() {;
         </Card>
       ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>;
   );
 }
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     </div>;
   );
@@ -399,6 +435,7 @@ if ( {) {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+<<<<<<< HEAD
 =======
 
                   {application.cover_letter}
@@ -408,3 +445,23 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    </div>
+  );
+
+};
+<p> {;
+  error ;
+}</p> </div>) ";
+}You haven't submitted any applications yet. </p> <Button className="mt-4" asChild> <Link href="/jobs" >Browse Jobs</Link> </Button> </CardContent> </Card> </CardTitle> {;
+  getStatusBadge (application.status) ;
+}</div> {;
+  application.cover letter ;
+}</p>) ";
+}<div className="flex justify-between items-center" > <Button variant="outline" size="sm" className="text-xs" asChild > </Link> </Button> <Button variant="default" size="sm" className="text-xs" asChild > </Link> </Button> </div> </div> </CardContent> </Card>) ) ;
+}</div>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -66,6 +66,7 @@ export function BasicInfoForm({
   skills = [],
   yearsExperience = 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -144,6 +145,12 @@ import React, { useState, useEffect } from "react",;
         if (value !== undefined) {
           form.setValue(key as keyof BasicInfoFormData, value as any)import React, { useState, useEffect } from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    if (initialData) {
+      Object.entries(initialData).forEach(([key, value]) => {
+        if (value !== undefined) {
+          form.setValue(key as keyof BasicInfoFormData, value as any)import React, { useState, useEffect } from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { Button } from "@/components/ui/button",;
@@ -178,6 +185,7 @@ export function BasicInfoForm({;
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -185,6 +193,8 @@ export function BasicInfoForm({;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 
     <Form {...form}>;
@@ -202,11 +212,14 @@ export function BasicInfoForm({;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               yearsExperience={yearsExperience || 0}
 
   }, [initialData, form]);
@@ -246,6 +259,7 @@ export function BasicInfoForm({;
               yearsExperience={yearsExperience |0}
               yearsExperience={yearsExperience || 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -253,6 +267,8 @@ export function BasicInfoForm({;
               location={form.getValues("location")}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               rateType="hourly"
             />
           </div>
@@ -262,6 +278,7 @@ export function BasicInfoForm({;
         </div>
       </form>
     </Form>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 <<<<<<< HEAD
@@ -324,6 +341,9 @@ export function BasicInfoForm({;
 =======
   )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useEffect } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -361,6 +381,7 @@ function BasicInfoForm() {
       ...initial_data}});
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -463,3 +484,5 @@ if (initialData) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,11 +11,14 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface ContentGenerationRequest {
 export interface ContentGenerationRequest {;
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
   topic: string;
   tone: 'professional' | 'casual' | 'friendly' | 'formal';
+<<<<<<< HEAD
 <<<<<<< HEAD
   length: 'short' | 'medium' | 'long';
 <<<<<<< HEAD
@@ -53,6 +57,9 @@ export interface ContentGenerationRequest {
 =======
   length: 'short' | 'medium' | 'long';}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  length: 'short' | 'medium' | 'long';}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface ContentGenerationResponse {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   content: string;
@@ -62,6 +69,7 @@ export interface ContentGenerationResponse {
   suggestions: string[];
   metadata: {
     title: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -99,6 +107,8 @@ export interface ContentGenerationResponse {;
   suggestions: string[];
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   metadata: {
     title: string,
   description: string
@@ -109,6 +119,7 @@ export interface ContentGenerationResponse {;
 export interface ContentTemplate {
 
 export interface ContentTemplate {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -372,12 +383,19 @@ if ( {) {
 =======
   type: string;      }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  id: string;
+  name: string,
+  description: string;
+  type: string;      }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {
         id: 'social - media - campaign';
         name: 'Social Media Campaign',
   description: 'Complete social media content strategy and posts';
       {
         id: 'landing - page - copy';
+<<<<<<< HEAD
 <<<<<<< HEAD
         name: 'Landing Page Copy';
 <<<<<<< HEAD
@@ -453,6 +471,9 @@ ${request.topic} represents a significant opportunity for organizations looking 
 =======
         name: 'Landing Page Copy';    return {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        name: 'Landing Page Copy';    return {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       content: mockContent;
       wordCount: mockContent && mockContent.split(' ').length;
       seoScore: 85;
@@ -469,6 +490,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
     seoScore: number;
     readabilityScore: number;
     suggestions: string[]
+<<<<<<< HEAD
 <<<<<<< HEAD
     keywordDensity: Record<string, number>
 <<<<<<< HEAD
@@ -605,6 +627,9 @@ ${request.topic} represents a significant opportunity for organizations looking 
 =======
     keywordDensity: Record<string, number>      seo_score: Math.floor (Math.random () * 30) + 70;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    keywordDensity: Record<string, number>      seo_score: Math.floor (Math.random () * 30) + 70;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       readability_score: Math.floor (Math.random () * 30) + 70;
       suggestions: [;
         'Add more headings for better structure_include internal links to related content_optimize meta description';
@@ -613,6 +638,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'content': 2.1;
         'seo': 1.8,
         'marketing': 1.5;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -639,6 +665,8 @@ ${request.topic} represents a significant opportunity for organizations looking 
     return {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       seoScore: Math.floor(Math.random() * 30) + 70,;
       readabilityScore: Math.floor(Math.random() * 30) + 70,;
       suggestions: [;
@@ -647,6 +675,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
       keywordDensity: {;
         'content': 2.1,;
         'seo': 1.8,;
+<<<<<<< HEAD
 <<<<<<< HEAD
         'marketing': 1.5;
 <<<<<<< HEAD
@@ -741,6 +770,9 @@ ${request.topic} represents a significant opportunity for organizations looking 
 =======
         'marketing': 1.5;// Pricing tiers for the AI Content Generator;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        'marketing': 1.5;// Pricing tiers for the AI Content Generator;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const AI_CONTENT_PRICING = {
   starter: {
     name: 'Starter';
@@ -756,6 +788,7 @@ export const AI_CONTENT_PRICING = {
     price: 299;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
@@ -763,10 +796,13 @@ export const AI_CONTENT_PRICING = {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     period: '/month',
     period: '/month',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -803,10 +839,13 @@ export const AI_CONTENT_PRICING = {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     features: [;
       'Unlimited content generations_custom templates_advanced analytics_dedicated support_highest quality_white - label options_custom integrationsSLA guarantee';
     ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   },;
@@ -907,3 +946,11 @@ export const AI_CONTENT_PRICING = {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  },
+};
+
+  }
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

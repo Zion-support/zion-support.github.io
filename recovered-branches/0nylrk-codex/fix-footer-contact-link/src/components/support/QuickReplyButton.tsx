@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import {Button} from "@/components/ui/button";
@@ -27,6 +28,8 @@ import { cn } from "@/lib/utils",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface QuickReplyButtonProps {
   text: string;
   onClick: () => void
@@ -71,7 +74,16 @@ interface QuickReplyButtonProps {
   text: string;
   onClick: () => void;
 }
+<<<<<<< HEAD
 export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
+=======
+export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {  return (
+    <Button
+
+      variant="outline"
+      size="sm"
+      className={cn(
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         "border-zion-purple/30 hover: bg-zion-purple hover:text-white",
 <<<<<<< HEAD
@@ -185,6 +197,7 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
@@ -198,3 +211,6 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

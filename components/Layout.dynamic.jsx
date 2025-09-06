@@ -1,7 +1,10 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEADexport default Layout.dynamic;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 ;
 const Layout.dynamic = () => {
@@ -12,5 +15,9 @@ const Layout.dynamic = () => {
 }
 ;
 
+<<<<<<< HEAD
 export default Layout.dynamic;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+export default Layout.dynamic;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

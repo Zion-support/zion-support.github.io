@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,6 +19,8 @@ import _React from';react'';"export": const LoadingOverlay = ({ visible = false 
 <<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
@@ -79,6 +82,7 @@ import React from\';react\'';\"export\": const LoadingOverlay = ({ visible = fal
 const React from";react"";export: const LoadingOverlay = ({ visible = false }) => {" if (!visible) return null return () <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">" <Loader2 className="h-8 w-8 animate-spin text-white" />" </div>" ) } export default LoadingOverlay"";""";'"'"
 import _React from';react'';"export": const LoadingOverlay = ({ visible = false }) => {' if (!visible) return null return () <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>' <Loader2 className='h-8 w-8 animate-spin text-white' />' </div>' ) } export default LoadingOverlay'';''';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -112,3 +116,5 @@ import React from\';react\'';\"export\": const LoadingOverlay = ({ visible = fal
 const React from";react"";export: const LoadingOverlay = ({ visible = false }) => {" if (!visible) return null return () <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">" <Loader2 className="h-8 w-8 animate-spin text-white" />" </div>" ) } export default LoadingOverlay"";""";'"'"
 import _React from';react'';"export": const LoadingOverlay = ({ visible = false }) => {' if (!visible) return null return () <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>' <Loader2 className='h-8 w-8 animate-spin text-white' />' </div>' ) } export default LoadingOverlay'';''';
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

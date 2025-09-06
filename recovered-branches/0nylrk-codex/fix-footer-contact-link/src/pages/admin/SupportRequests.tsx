@@ -424,12 +424,17 @@ const MOCK_SUPPORT_REQUESTS = [;
               </div>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
@@ -441,6 +446,7 @@ const MOCK_SUPPORT_REQUESTS = [;
                 </SelectContent>
               </Select>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Select value={priorityFilter |""} onValueChange={value => setPriorityFilter(value |null)}>
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
 =======
@@ -448,6 +454,11 @@ const MOCK_SUPPORT_REQUESTS = [;
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+              <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -459,6 +470,7 @@ const MOCK_SUPPORT_REQUESTS = [;
                 </SelectContent>
               </Select>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Select value={categoryFilter |""} onValueChange={value => setCategoryFilter(value |null)}>
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -467,6 +479,11 @@ const MOCK_SUPPORT_REQUESTS = [;
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+              <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>

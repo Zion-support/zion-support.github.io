@@ -3,6 +3,7 @@
 export function ConversationsList({ ;
   conversations;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -34,6 +35,8 @@ interface ConversationsListProps {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function ConversationsList({
   conversations;
 
@@ -42,6 +45,7 @@ export function ConversationsList({
   markAsRead
 
 export function ConversationsList({ ;
+<<<<<<< HEAD
 <<<<<<< HEAD
   conversations;
 <<<<<<< HEAD
@@ -97,6 +101,11 @@ export function ConversationsList({
   setActiveConversation, 
   markAsRead 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  conversations;  activeConversation, 
+  setActiveConversation, 
+  markAsRead 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }: ConversationsListProps) {
   return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
@@ -113,6 +122,7 @@ export function ConversationsList({
         </div>
       ) : (
         <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           {conversations.map((conversation) => (
 <<<<<<< HEAD
@@ -172,6 +182,9 @@ export function ConversationsList({ ;
 =======
           {conversations.map((conversation) => (    <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          {conversations.map((conversation) => (    <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="p-3 border-b border-zion-purple/20">;
         <h3 className="font-medium text-white">Conversations</h3>;
       </div>;
@@ -200,10 +213,13 @@ export function ConversationsList({ ;
               onClick={() => {;
                 setActiveConversation(conversation);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               }}
             />;
           ))}

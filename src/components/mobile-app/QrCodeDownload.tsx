@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+
+import React from "react";
+import { QrCode } from 'lucide-react'
+import { AppStoreButtons } from "./AppStoreButtons";
+export const QrCodeDownload: React.FC;
+}
+import React from "react"
+import { QrCode } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export const QrCodeDownload: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -193,6 +204,7 @@ import { AppStoreButtons } from "./AppStoreButtons",;export const QrCodeDownload
 };
 
 "
+<<<<<<< HEAD
 
 ";
                   {/* This would be replaced with an actual QR code in production */}
@@ -210,4 +222,11 @@ import { AppStoreButtons } from "./AppStoreButtons",;export const QrCodeDownload
 <<<<<<< HEAD
   )
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+  )
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

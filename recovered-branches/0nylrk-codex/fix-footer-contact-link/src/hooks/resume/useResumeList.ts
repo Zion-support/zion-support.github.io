@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,10 +11,14 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function useResumeList() {
 <<<<<<< HEAD
@@ -48,6 +53,9 @@ export function useResumeList() {;
 =======
 export function useResumeList() {  const { user } = useAuth();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function useResumeList() {  const { user } = useAuth();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -67,6 +75,7 @@ export function useResumeList() {  const { user } = useAuth();
         setResumes([]);
         return []
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Transform data to match Resume type
 <<<<<<< HEAD
@@ -202,6 +211,10 @@ if ( {) {
       // Transform data to match Resume type  }
 }      }));
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      // Transform data to match Resume type  }
+}      }));
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setResumes(transformedResumes);
       return transformedResumes
     } catch (e: any) {

@@ -1,17 +1,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Badge } from "@/components/ui/badge";
 import { ProfileSkill } from "@/types/profile";
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Badge } from "@/components/ui/badge",
 import { ProfileSkill } from "@/types/profile",
 import {Badge} from "@/components/ui/badge";
 import {ProfileSkill} from "@/types/profile";
 import { Badge } from "@/components/ui/badge",
 import { ProfileSkill } from "@/types/profile",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -48,6 +52,8 @@ interface ProfileSkillsProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ProfileSkillsProps {
   skills: ProfileSkill[];
 }
@@ -67,6 +73,7 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
                 </span>
               )}
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <div className="h-2 w-full bg-zion-blue-light rounded-full overflow-hidden">
@@ -98,6 +105,12 @@ interface ProfileSkillsProps {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
               <div
                 className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
+=======
+
+            <div className="h-2 w-full bg-zion-blue-light rounded-full overflow-hidden">
+              <div
+                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 style={{ width: `${(skill.level / 5) * 100}%` }}
               />
             </div>
@@ -107,6 +120,9 @@ interface ProfileSkillsProps {;
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 import { Badge } from "@/components/ui/badge",;
 import { ProfileSkill } from "@/types/profile";
@@ -151,6 +167,7 @@ export function ProfileSkills(): any ({ skills }: ProfileSkillsProps) {;
         ))}
       </div>;
     </div>;
+<<<<<<< HEAD
   );
 }
 <<<<<<< HEAD
@@ -222,6 +239,8 @@ export function ProfileSkills(): any ({ skills }: ProfileSkillsProps) {;
         ))}
       </div>;
     </div>;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Badge } from "@/components/ui/badge",;
 import { ProfileSkill } from "@/types/profile",;
 ;

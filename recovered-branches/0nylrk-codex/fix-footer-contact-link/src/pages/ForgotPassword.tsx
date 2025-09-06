@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -27,6 +28,10 @@ import {Footer} from "@/components/Footer";
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
@@ -62,6 +67,7 @@ const forgotPasswordSchema = z.object({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -74,6 +80,8 @@ const forgotPasswordSchema = z.object({
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const forgotPasswordSchema = z.object({
   email: z.string().email("Please enter a valid email")})
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
@@ -85,6 +93,7 @@ export default function ForgotPassword() {
 export default function ForgotPassword() {
   const { resetPassword, isLoading } = useAuth(),
   const [submitted, setSubmitted] = useState(false),
+<<<<<<< HEAD
 <<<<<<< HEAD
   
 <<<<<<< HEAD
@@ -266,6 +275,9 @@ export default function ForgotPassword() {;
 =======
               <div className="bg-zion-blue-dark rounded-lg p-6">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <div className="bg-zion-blue-dark rounded-lg p-6">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {submitted ? (;
                 <div className="text-center py-8">;
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">;
@@ -279,10 +291,13 @@ export default function ForgotPassword() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <Link
                       to="/login"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;                    <Link
@@ -334,6 +349,7 @@ export default function ForgotPassword() {;
                 </Form>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -382,6 +398,13 @@ export default function ForgotPassword() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+;
+
+;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { useForm, type UseFormReturn } from "react-hook-form",;
@@ -454,6 +477,7 @@ export default function ForgotPassword() {;
                 <Form {...form}>;
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <FormField;
 <<<<<<< HEAD
 
@@ -491,3 +515,6 @@ return (<> <Header /> <div className="flex min-h-screen bg-zion-blue"> <div clas
 =======
                     <FormField;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    <FormField;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

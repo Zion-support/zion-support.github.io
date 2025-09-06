@@ -143,6 +143,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 export default function Nextgenai2026services({ }: Nextgenai2026servicesProps) {
+<<<<<<< HEAD
 =======
 
 module.exports = interface NextGenAi2026Service { id: string name: string tagline: string price: string description: string features: string[]; link: string category: string realImplementation: boolean contactInfo: { mobile: string email: string address strin,g}export const nextGenAI2026Services NextGenAi2026Service[] = [{ id: "2026-next-gen-ai,","; name: "2026 Next-Gen AI Platform","; tagline: "Next-generation AI fo,r 202,6,","; price: "$299/month",",
@@ -152,12 +153,15 @@ interface Nextgenai2026servicesProps {
   // Add props here as needed
 }export default function Nextgenai2026services({ }: Nextgenai2026servicesProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div>
       <h1>Nextgenai2026services</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,6 +215,8 @@ interface Nextgenai2026servicesProps {
 
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
 
@@ -220,6 +226,7 @@ interface Nextgenai2026servicesProps {
 
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -270,3 +277,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

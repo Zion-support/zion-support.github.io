@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import React from 'react'
@@ -95,6 +96,10 @@ function TransportationLogisticsSolutions() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
+=======
+import React from 'react';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Head from 'next/head';
 import React from 'react'
 import Head from 'next/head'
@@ -103,10 +108,17 @@ import Head from 'next/head',;
 import React from 'react'
 import Head from 'next/head'
 export default function TransportationLogisticsSolutions() {
+<<<<<<< HEAD
+=======
+=======
+export default function Page() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <Head>
         <title>Transportation & Logistics Solutions | Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="AI and optimization solutions for transportation and logistics: routing, supply chain, and real-time visibility." />
         <link rel="canonical" href="https://ziontechgroup.com/transportation-logistics-solutions" />
       </Head>
@@ -117,6 +129,30 @@ export default function TransportationLogisticsSolutions() {
         </section>
       </div>
     </>
+=======
+<meta
+          name='description'
+          content='AI and optimization solutions for transportation and logistics: routing, supply chain, and real-time visibility.'
+        />
+        <link
+          rel='canonical'
+          href='https://ziontechgroup.com/transportation-logistics-solutions'
+        />
+      </Head>
+      <div className='min-h-screen bg-black text-white'>
+        <section className='container mx-auto px-4 py-20'>
+          <h1 className='text-4xl font-bold mb-6'>
+            Transportation & Logistics Solutions
+          </h1>
+          <p className='text-gray-300'>
+            We help optimize routes, reduce costs, and increase reliability with
+            AI-driven logistics platforms.
+          </p>
+        </section>
+      </div>
+    </>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 import React from 'react',
 import Head from 'next / head',
@@ -139,6 +175,7 @@ function TransportationLogisticsSolutions() {
       </div>;
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
@@ -168,3 +205,8 @@ export default function TransportationLogisticsSolutions() {_return (
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

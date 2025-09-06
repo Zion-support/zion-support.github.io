@@ -2,15 +2,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 type EmptyStateCardProps = {;
-  type: 'active' | 'archived';
+  type: 'active' | 'archived'
 };
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -64,6 +68,8 @@ type EmptyStateCardProps = {;
   type: 'active' | 'archived'
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 type EmptyStateCardProps = {
   type: "active" | "archived"
 };
@@ -77,6 +83,7 @@ import { MessageSquare, ArchiveIcon } from "lucide-react",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -110,6 +117,8 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageSquare, ArchiveIcon } from "lucide-react";
@@ -133,6 +142,7 @@ type EmptyStateCardProps = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -149,6 +159,8 @@ type EmptyStateCardProps = {
     </Card>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }
         </p>
       </CardContent>

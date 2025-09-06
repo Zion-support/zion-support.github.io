@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -58,10 +59,18 @@ import { supabase } from '@/integrations/supabase/client',
 import { MilestoneActivity } from './types',
 export const useRecordActivity = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export const useRecordActivity = () => {;
+  const { user } = useAuth();import { useAuth } from '@/hooks/useAuth',
+import { supabase } from '@/integrations/supabase/client',
+import { MilestoneActivity } from './types',
+export const useRecordActivity = () => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     milestoneId: string,
     action: string,
     previousStatus: string | null,
     newStatus: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -76,12 +85,15 @@ export const useRecordActivity = () => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     comment?: string
   ) => {
     if (!user) return null
     try {
       const { data, error } = await supabase
         .from('milestone_activities')
+<<<<<<< HEAD
 <<<<<<< HEAD
         .insert({
 <<<<<<< HEAD
@@ -211,10 +223,18 @@ if (throw error) {
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)    }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        .insert({          comment})
+        .select(`
+          *,
+          created_by_profile:profiles!user_id(display_name, avatar_url)
+        `)    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };
   
   return {
     recordMilestoneActivity
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -237,6 +257,8 @@ if (throw error) {
 import { useAuth } from '@/hooks/useAuth',;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase } from '@/integrations/supabase/client',;
 import { MilestoneActivity } from './types',;
 export const useRecordActivity = () => {;
@@ -290,6 +312,7 @@ export const useRecordActivity = () => {;
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -297,3 +320,6 @@ export const useRecordActivity = () => {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -46,11 +47,22 @@ export default async function handler(
     const { roomName, identity, name, audioOnly } = req.body |{}
     if (!roomName |!identity) {
       return res.status(400).json({ error: "Missing roomName or identity" });
+=======
+import { AccessToken } from 'livekit-server-sdk';
+
+  }
+  try {
+    const { roomName, identity, name, audioOnly } = req.body || {};
+
+    if (!roomName || !identity) {
+return res.status(400).json({ error: 'Missing roomName or identity' });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     if (!LIVEKIT_API_KEY |!LIVEKIT_API_SECRET |!LIVEKIT_HOST) {
       return res.status(500).json({ error: "LiveKit env vars not configured" });
     }
     const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
+<<<<<<< HEAD
       identity: String(identity)
       name: name ? String(name) : String(identity)
       ttl: 60 * 60, // 1 hour
@@ -221,10 +233,29 @@ if ( {) {
     return res.status(200).json({
       token
       url: LIVEKIT_HOST
+=======
+      identity: String(identity),
+      name: name ? String(name) : String(identity),
+      ttl: 60 * 60, // 1 hour
+    });
+    at.addGrant({
+roomJoin: true,
+      room: String(roomName),
+      canPublish: audioOnly ? false : true,
+      canPublishData: true,
+      canSubscribe: true,
+    });
+
+    const token = await at.toJwt();
+    return res.status(200).json({
+      token,
+url: LIVEKIT_HOST,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     });
   } catch (err: any) {
     console.error("Token error", err);
     return res.status(500).json({ error: "Failed to create token" });
+<<<<<<< HEAD
 
   } catch (error) {
     console.error("Error:", error);
@@ -281,3 +312,6 @@ if ( {) {
 >>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

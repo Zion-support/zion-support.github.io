@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { QrCodeIcon } from 'lucide-react'
@@ -22,10 +23,18 @@ export const DownloadSection: React.FC = () => {
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.
               </p>
 =======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 appStoreUrl = {appStoreUrl,}
                 googlePlayUrl = {googlePlayUrl,}
                 onAppStoreClick = {(,) => logInfo("App Store button clicked"),}
                 onGooglePlayClick = {() => logInfo("Google Play button clicked"),}
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 
@@ -36,8 +45,18 @@ appStoreUrl = {appStoreUrl,}
               
 import React from "react",
 import { QrCodeIcon } from 'lucide-react'
+<<<<<<< HEAD
 import { AppStoreButtons } from "./AppStoreButtons",
 import { logInfo } from '@/utils/productionLogger',
+=======
+import { AppStoreButtons } from "./AppStoreButtons";
+import { logInfo } from '@/utils/productionLogger';
+export const DownloadSection: React.FC;
+}
+import React from "react"
+import { QrCodeIcon } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons"
+import { logInfo } from '@/utils/productionLogger'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export const DownloadSection: React.FC = () => {
   // These would typically come from environment variables or a config
   const appStoreUrl = "#", // Replace with actual App Store URL when available
@@ -124,6 +143,32 @@ export const DownloadSection: React.FC = () => {;
                 onGooglePlayClick={() => logInfo("Google Play button clicked")}
               />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+              <div className="text - sm text - gray - 400">;
+                <p > Compatible with iOS 14+ and Android 8.0+</p>;
+                <p > Free download, in - app purchases available</p>;
+              </div>;
+            </div>;
+            <div className="flex - shrink - 0 bg - white dark: bg - zion - blue - dark p - 4 rounded - lg">;
+              <div className="w - 36 h - 36 flex items - center justify - center bg - white dark:bg - zion - blue rounded - lg">;
+                <QrCodeIcon className="w - full h - full p - 2" />;
+
+                {/* This would be replaced with an actual QR code in production */}
+              </div>;
+              <p className="text - center text - xs mt - 2 text - zion - blue - dark">Scan to download</p>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </section>);
+}
+<<<<<<< HEAD
+
+              />;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="text-sm text-gray-400">;
                 <p>Compatible with iOS 14+ and Android 8.0+</p>;
                 <p>Free download, in-app purchases available</p>;
@@ -156,4 +201,23 @@ export const DownloadSection: React.FC = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+              <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
+                <QrCodeIcon className="w-full h-full p-2" />
+                {/* This would be replaced with an actual QR code in production */}
+              </div>
+              <p className="text-center text-xs mt-2 text-zion-blue-dark">Scan to download</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  )
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

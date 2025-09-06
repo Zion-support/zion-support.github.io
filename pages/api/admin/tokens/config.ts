@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,13 +15,19 @@ const body = req.body || {};
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { getConfig } from "../../../../utils/token/service",;
 import { tokenStore } from "../../../../utils/token/storage",;
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     return res.status(200).json(getConfig())
   }
+<<<<<<< HEAD
   if (req.method === "POST") {
 <<<<<<< HEAD
     const body = req.body || {},
@@ -123,6 +130,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
   return res.status(405).json({ error: "Method not allowed" })
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 
@@ -131,3 +139,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(405).json({ error: "Method not allowed" })
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  
+  if (req.method === 'POST') {
+    const { updated } = req.body || {};
+    if (updated) {
+      tokenStore.setConfig(updated);
+      return res.status(200).json({ success: true });
+    }
+  }
+  
+  return res.status(405).json({ error: "Method not allowed" });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

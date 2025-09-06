@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 =======
 <<<<<<< HEAD
@@ -17,6 +18,8 @@ import { useState  } from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from 'react';
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -34,6 +37,7 @@ import {format} from "date-fns";
 import {CalendarIcon, Loader2} from "lucide-react";
 import {AIEnhancementButton} from "@/components/ai-enhancement/AIEnhancementButton";
 import {AIEnhancementDialog} from "@/components/ai-enhancement/AIEnhancementDialog";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -60,6 +64,9 @@ import { useState } from 'react',
 =======
 import { useState } from 'react',import { useState } from 'react',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { useState } from 'react',import { useState } from 'react',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
 import { z } from "zod",
@@ -73,6 +80,7 @@ import { Textarea } from "@/components/ui/textarea",
 import { cn } from "@/lib/utils",
 import { Switch } from "@/components/ui/switch",
 import { format } from "date-fns",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { CalendarIcon, Loader2 } from "lucide-react",
 <<<<<<< HEAD
@@ -157,11 +165,15 @@ export function WorkExperienceItemForm({;
 =======
 import { CalendarIcon, Loader2 } from "lucide-react",export function WorkExperienceItemForm({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { CalendarIcon, Loader2 } from "lucide-react",export function WorkExperienceItemForm({;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   initialData;
   onSubmit;
 export function WorkExperienceItemForm({
   initialData,
   onSubmit,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -170,8 +182,11 @@ export function WorkExperienceItemForm({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   onCancel}: WorkExperienceItemFormProps) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -485,6 +500,9 @@ export function WorkExperienceItemForm({;
 =======
   onCancel}: WorkExperienceItemFormProps) {  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  onCancel}: WorkExperienceItemFormProps) {  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <>;
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(handleFormSubmit)} className="space-y-6">;
@@ -685,6 +703,7 @@ function WorkExperienceItemForm() {
 
             />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -842,6 +861,12 @@ function WorkExperienceItemForm() {
                 control={form && form.control}
                 name="end_date"              <FormField
                 control={form && form.control}
+=======
+              <FormField
+                control={form && form.control}
+                name="end_date"              <FormField
+                control={form && form.control}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 name="end_date"
                 render={({ field }) => (;
                   <FormItem className="flex flex-col">;
@@ -857,6 +882,7 @@ function WorkExperienceItemForm() {
                             )}>;
                             {field && field.value ? (;
                               format(field && field.value, "MMM yyyy");
+<<<<<<< HEAD
 <<<<<<< HEAD
                             ) : (;
 =======
@@ -1060,6 +1086,9 @@ function WorkExperienceItemForm() {
 =======
                             ) : (;                              <span>Select date</span>;                        />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                            ) : (;                              <span>Select date</span>;                        />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </PopoverContent>;
                     </Popover>;
                     <FormMessage />;          <FormField
@@ -1076,6 +1105,7 @@ function WorkExperienceItemForm() {
                       options={{
 
                         enhancementType: "work-description",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         content: field && field.value || "",
 
@@ -1237,11 +1267,15 @@ function WorkExperienceItemForm() {
 =======
                         content: field && field.value || "",                    >;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                        content: field && field.value || "",                    >;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       AI Writer;
                     </Button>;
                   </div>;
                 </div>;
                 <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1266,6 +1300,11 @@ function WorkExperienceItemForm() {
                   <Textarea;
                     placeholder="Describe your responsibilities, achievements, and skills used in this role...";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+                  <Textarea;
+                    placeholder="Describe your responsibilities, achievements, and skills used in this role...";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     className="min-h-[150px]";
 }
 ;
@@ -1315,6 +1354,7 @@ setIsEnhancementDialogOpen (false)
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1322,3 +1362,6 @@ setIsEnhancementDialogOpen (false)
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

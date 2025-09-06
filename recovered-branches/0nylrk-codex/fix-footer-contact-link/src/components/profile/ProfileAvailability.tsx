@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -26,6 +27,8 @@ import { Calendar, Clock, Check } from "lucide-react";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Availability} from "@/types/profile";
 import {Badge} from "@/components/ui/badge";
 import {Calendar, Clock, Check} from "lucide-react";
@@ -49,6 +52,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       case 'unavailable': return 'Currently Unavailable'
       default: return ''
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -155,6 +159,11 @@ import {Badge} from "@/components/ui/badge";
 import {Calendar, Clock, Check} from "lucide-react";
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {Badge} from "@/components/ui/badge";
+import {Calendar, Clock, Check} from "lucide-react";
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   };
 import { Availability } from "@/types/profile",
@@ -186,6 +195,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       case 'unavailable': return 'Currently Unavailable';
       default: return '';
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   },
 =======
@@ -228,6 +238,9 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
 =======
   },        >
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  },        >
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {getStatusText(availability.status)}
         </Badge>
         {availability.nextAvailable && availability.status !== 'available' && (
@@ -283,7 +296,10 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
                   <span>{slot && slot.hours}</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))}
           </div>;
         </div>;
@@ -291,6 +307,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
 
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -464,3 +481,6 @@ function ProfileAvailability() {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

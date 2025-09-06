@@ -1,29 +1,40 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)'';
 
 
 import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)'';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e && e.preventDefault() if (!email) return setIsLoading(true)'';
 import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e && e.preventDefault() if (!email) return setIsLoading(true)'';
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e && e.preventDefault() if (!email) return setIsLoading(true)'';
+import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e && e.preventDefault() if (!email) return setIsLoading(true)'';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('', ') const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e && e.preventDefault() if (!email) return setIsLoading(true)'';
 
 import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)'';
+<<<<<<< HEAD
 =======
 import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)'';=======import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)'';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e && e.preventDefault() if (!email) return setIsLoading(true)'';
 
 import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('', ') const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e && e.preventDefault() if (!email) return setIsLoading(true)'';
@@ -42,6 +53,7 @@ const React,{ useState } from";react" import { Link } from";";react-router-dom" 
 import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)'';
 import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('', ') const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)'';
 :temp_exclude/src.disabled/components/Footer.jsx
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -76,3 +88,8 @@ import _React,{ useState } from';react' import { Link } from';';react-router-dom
 import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e && e.preventDefault() if (!email) return setIsLoading(true)'';
 import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e && e.preventDefault() if (!email) return setIsLoading(true)'';
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)'';
+import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e && e.preventDefault() if (!email) return setIsLoading(true)'';
+import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e && e.preventDefault() if (!email) return setIsLoading(true)'';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

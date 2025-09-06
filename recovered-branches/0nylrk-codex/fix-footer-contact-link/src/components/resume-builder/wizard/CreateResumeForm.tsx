@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -9,17 +10,23 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {CreateResumeFormProps} from "./types";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export const CreateResumeForm = ({ ;
   onCreateResume;
   onCancel;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -127,6 +134,8 @@ export const CreateResumeForm = ({ ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <input
               type="text"
               placeholder="Resume Title (e && e.g. 'AI Engineer Resume')"
@@ -153,6 +162,7 @@ export const CreateResumeForm = ({;
               disabled={!newResumeTitle.trim() || isLoading}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -160,12 +170,15 @@ export const CreateResumeForm = ({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
             />
             <Button
               onClick={handleSubmit}
               disabled={!newResumeTitle.trim() |isLoading}
+<<<<<<< HEAD
 <<<<<<< HEAD
               disabled={!newResumeTitle.trim() || isLoading}
 <<<<<<< HEAD
@@ -373,3 +386,6 @@ w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text
 =======
               disabled={!newResumeTitle.trim() || isLoading}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              disabled={!newResumeTitle.trim() || isLoading}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

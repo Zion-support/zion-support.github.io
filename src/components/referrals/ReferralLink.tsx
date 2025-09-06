@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -6,6 +7,26 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input",
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 =======
+=======
+=======
+
+import { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import {
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 interface ReferralLinkProps {
   referralLink: string;
@@ -21,6 +42,40 @@ export function ReferralLink({
     onCopy()
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
+<<<<<<< HEAD
+=======
+  }
+  return (
+    <Card className='mt-6'>
+      <CardHeader>
+        <CardTitle className='flex items-center gap-2'>
+          <Link className='h-5 w-5' />
+          Your Referral Link
+        </CardTitle>
+        <CardDescription>
+          Share this link with others to earn rewards when they join and
+          complete onboarding
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className='flex flex-col space-y-3'>
+          <div className='flex space-x-2'>
+            <Input
+              value = {referralLink,}
+              readOnly
+              className='font-mono text-sm'
+            />
+            <Button
+              variant='outline'
+              size='icon'
+              onClick={handleCopy}
+              aria-label='Copy referral link'
+            >
+              <Copy className='h-4 w-4' />
+              <span className='sr-only'>Copy</span>
+            </Button>
+          </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 import { useState } from 'react';
 import { Button } from '@/components / ui / button';
@@ -72,6 +127,7 @@ export function ReferralLink(): any ({;
   onShare,;
 }: ReferralLinkProps) {;
   const [copied, setCopied] = useState(false);
+<<<<<<< HEAD
 
   const handleCopy = () => {;
     onCopy();
@@ -246,6 +302,15 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!;
             <p className="text-sm text-green-600 dark:text-green-500">;
 
+<<<<<<< HEAD
+=======
+
+
+
+=======
+  const handleCopy = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 
     <Card className="mt - 6">;
@@ -323,6 +388,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
           )}
         </div>
       </CardContent>
+<<<<<<< HEAD
 
       <CardFooter className="border-t bg-muted/50 p-4">
         <div className="flex flex-col sm:flex-row w-full justify-between items-center gap-4">
@@ -332,6 +398,20 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
               variant="outline" 
 
+=======
+<CardFooter className='border-t bg-muted/50 p-4'>
+        <div className='flex flex-col sm:flex-row w-full justify-between items-center gap-4'>
+          <p className='text-sm text-muted-foreground'>
+            Share on social media:
+          </p>
+          <div className='flex space-x-2'>
+            <Button
+              variant='outline'
+              size='sm'
+              className='flex items-center gap-2'
+              onClick={() => onShare('twitter')}            <Button
+              variant="outline"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               size="sm"
               className="flex items-center gap-2"
 
@@ -346,6 +426,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               <Facebook className="h-4 w-4" />
               Facebook
             </Button>
+<<<<<<< HEAD
 
 
 
@@ -359,6 +440,15 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
 
 
+=======
+            <Button
+              variant='outline'
+              size='sm'
+              className='flex items-center gap-2'
+              onClick={() => onShare('linkedin')}
+            >
+              <Share className='h-4 w-4' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               LinkedIn
             </Button>
           </div>
@@ -502,6 +592,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -513,6 +604,13 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
         </div>
       </CardContent>
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

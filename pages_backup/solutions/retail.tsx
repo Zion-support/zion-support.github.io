@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { ShoppingCart, Users, BarChart, Smartphone, Package } from 'lucide-react';
 import React from 'react';
@@ -34,6 +35,8 @@ const features = [;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import * as React from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
@@ -64,6 +67,7 @@ import {
 const features = [
   {
     icon: ShoppingCart,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import Layout from '../../components/Layout';
@@ -101,6 +105,8 @@ const features = [;
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'E-commerce Platform',
     description: 'Complete online shopping experience with advanced features'
   },
@@ -125,6 +131,7 @@ const features = [;
     description: 'Real-time inventory tracking and automated reordering'
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     icon: ArrowRight,
@@ -313,6 +320,8 @@ export default function RetailSolutions() {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Layout
       title="Retail Solutions - Zion Tech Group"
@@ -335,6 +344,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Transform your retail business with modern e-commerce, omnichannel,
+<<<<<<< HEAD
                 and customer experience solutions.
 =======
 =======
@@ -378,6 +388,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Transform your retail business with modern e-commerce, omnichannel,
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 and customer experience solutions.              </p>
             </motion.div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -516,6 +528,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <span className="text-gray-700">{benefit}</span>
                     </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   ))}
                 </ul>
               </div>
@@ -539,6 +552,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
                   ))}            </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  ))}            </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
         </section>
 
@@ -565,6 +581,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     </>
 
@@ -574,6 +591,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">;

@@ -40,6 +40,7 @@ function EmptyState() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 
@@ -52,6 +53,9 @@ export function EmptyState() {
 =======
 }export function EmptyState() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}export function EmptyState() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Card className="bg-muted/30">
       <CardContent className="pt-6 text-center">
@@ -62,6 +66,7 @@ export function EmptyState() {
         <Button className="mt-4" asChild>
           <Link to="/jobs">Browse Jobs</Link>
         </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </CardContent>
 <<<<<<< HEAD
@@ -104,6 +109,9 @@ export function EmptyState() {
 =======
       </CardContent>    </Card>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </CardContent>    </Card>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 }
     </Card>
@@ -129,6 +137,7 @@ export function EmptyState() {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
@@ -143,3 +152,5 @@ export function EmptyState() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

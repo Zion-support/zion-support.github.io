@@ -1,13 +1,24 @@
 <<<<<<< HEAD
 ;
 interface PerformanceMetrics {
+<<<<<<< HEAD
   loadTime: number, firstContentfulPaint: number
   largestContentfulPaint: number, firstInputDelay: number
   cumulativeLayoutShift: number
+=======
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 export function usePerformanceMonitor() {
 
+<<<<<<< HEAD
 export function usePerformanceMonitor() {;
+=======
+export function usePerformanceMonitor(): PerformanceMetrics | null {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
@@ -19,6 +30,7 @@ export function usePerformanceMonitor() {;
   }
     setIsSupported(true);
     const observer = new PerformanceObserver((list) => {
+<<<<<<< HEAD
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'navigation') {
@@ -190,6 +202,8 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
   }
     setIsSupported(true);
     const observer = new PerformanceObserver((list) => {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const updateMetrics = () => {
       const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const memory = (window.performance as any).memory;

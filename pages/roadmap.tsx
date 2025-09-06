@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 type RoadmapInputs = {
 
@@ -42,11 +45,14 @@ type RoadmapInputs = {
     const metrics: string[] = [
       'Weekly active contributorsVerified engagements (intros, briefs, scopes)On-chain/escrow settlement volumeTime-to-hire and time-to-payRetention and NPS']
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   priorities: string;
 },
 type Stage = {
@@ -90,6 +96,7 @@ function generate_stages ({ milestones, keywords, priorities }: RoadmapInputs): 
       .map ((s) => String (s)),
     const metrics: string[] = [;
       'Weekly active contributors_verified engagements (intros, briefs, scopes)On - chain / escrow settlement volume_time - to - hire and time - to - pay_retention and NPS'],
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return { id, name, theme, objective, highlights, metrics }
@@ -106,6 +113,18 @@ function defaultOperatorPrompt(): string {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    return { id, name, theme, objective, highlights, metrics }
+  });
+}
+=======
+import Head from 'next/head';
+import React, { useMemo, useState } from 'react';
+type RoadmapInputs = any;
+function defaultOperatorPrompt(): string {
+  return `You are Zion's Product Operator.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 Inputs you will receive:
 - milestones (string list)
 - keywords (string list)
@@ -117,6 +136,7 @@ Goals:
 4) Include explicit risks and validation signals per stage
 5) Output concise, skimmable, exec-ready text
 Format:
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import Head from 'next/head',;
@@ -136,6 +156,8 @@ function defaultOperatorPrompt (): string {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 type RoadmapInputs = {
   milestones: string;
   keywords: string;
@@ -208,6 +230,10 @@ Goals:;
 4) Include explicit risks and validation signals per stage;
 5) Output concise, skimmable, exec - ready text;
 Format:;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 Zion v{n} — {theme}
 Objective: ...;
 Highlights:;
@@ -223,25 +249,67 @@ Validation:;
 
     () => generateStages({ milestones, keywords, priorities });
 
+<<<<<<< HEAD
+=======
+=======
+Zion v{n} — {theme}
+Objective: ...
+Highlights:
+- ...
+Metrics:
+- ...
+Risks:
+- ...
+Validation:
+- ...
+`;
+
+export default function RoadmapPage(): JSX.Element {
+  const [milestones, setMilestones] = useState(
+    'MVP live; First 50 users; First 10 paid engagements'
+  );
+  const [keywords, setKeywords] = useState(
+    'AI-native, trustless, talent-first, sovereign tools'
+  );
+  const [priorities, setPriorities] = useState(
+    'governance, scale, regional expansion'
+  );
+  const [copied, setCopied] = useState(false);
+
+  const stages = useMemo(
+    () => generateStages({ milestones, keywords, priorities }),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     [milestones, keywords, priorities]
   )
   const operatorPrompt = useMemo(() => defaultOperatorPrompt(), [])
   const copyPrompt = async () => {
     try {
+<<<<<<< HEAD
 
       await navigator.clipboard.writeText(operatorPrompt);
       setCopied(true);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      await navigator.clipboard.writeText(operatorPrompt);
+      setCopied(true);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setTimeout(() => setCopied(false), 1500);
     } catch {;
       setCopied(false);
       } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 =======
 
       setTimeout(() => setCopied(false), 1500)
@@ -275,6 +343,8 @@ export default function RoadmapPage (): JSX.Element {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },
   return (
     <>;
@@ -312,18 +382,35 @@ export default function RoadmapPage (): JSX.Element {
   }
 }
                   rows={3  } catch (error) {
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   },
 
+=======
+                  className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
+                  placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors"
+=======
+      await navigator.clipboard.writeText(operatorPrompt);
+      setCopied(true);
+setTimeout(() => setCopied(false), 1500);
+    } catch {
+      setCopied(false);
+    }
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <Head>
         <title>Zion Roadmap</title>
+<<<<<<< HEAD
         <meta name="description" content="Zion 10-stage product evolution and roadmap generator." />
       </Head>
       <main className="min-h-screen bg-white text-gray-900">
@@ -398,6 +485,54 @@ export default function RoadmapPage (): JSX.Element {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<meta
+          name='description'
+          content='Zion 10-stage product evolution and roadmap generator.'
+        />
+      </Head>
+      <main className='min-h-screen bg-white text-gray-900'>
+        <div className='mx-auto w-full max-w-6xl px-6 py-12'>
+          <header className='mb-8'>
+            <h1 className='text-4xl font-extrabold tracking-tight sm:text-5xl'>
+              Zion Roadmap
+            </h1>
+            <p className='mt-3 text-gray-700'>
+              Public-facing product evolution from v1 → v10 with a generator for
+              operators.
+            </p>
+          </header>
+
+          <section className='mb-10 grid gap-6 rounded-lg border border-gray-200 bg-gray-50 p-6 md:grid-cols-3'>
+            <div className='md:col-span-1'>
+              <h2 className='text-xl font-semibold'>Generator Inputs</h2>
+              <p className='mt-1 text-sm text-gray-600'>
+                Tune the roadmap with current context and focus.
+              </p>
+            </div>
+            <div className='md:col-span-2 grid gap-4'>
+              <div>
+                <label className='block text-sm font-medium text-gray-700'>
+                  Milestones achieved so far
+                </label>
+                <textarea
+                  value={milestones}
+                  onChange={e => setMilestones(e.target.value)}
+                  rows={3}
+                  className='mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none'
+                  placeholder='e.g., MVP live; 100 design partners; 1k weekly active contributors'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                />
+              </div>
+              <div>
+                <label className='block text-sm font-medium text-gray-700'>
+                  Vision keywords
+                </label>
+                <input
+                  value={keywords}
+<<<<<<< HEAD
+                  onChange={(e) => setKeywords(e.target.value)}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   value={keywords  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -408,6 +543,7 @@ export default function RoadmapPage (): JSX.Element {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -429,6 +565,23 @@ export default function RoadmapPage (): JSX.Element {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+                  className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
+                  placeholder="e.g., AI-native, trustless, talent-first, sovereign tools"
+=======
+                  onChange={e => setKeywords(e.target.value)}
+                  className='mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none'
+                  placeholder='e.g., AI-native, trustless, talent-first, sovereign tools'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                />
+              </div>
+              <div>
+                <label className='block text-sm font-medium text-gray-700'>
+                  Upcoming priorities
+                </label>
+                <input
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   value={priorities  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -439,6 +592,7 @@ export default function RoadmapPage (): JSX.Element {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -451,10 +605,21 @@ export default function RoadmapPage (): JSX.Element {
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+                  className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
+                  placeholder="e.g., governance, scale, regional expansion"
+=======
+                  value={priorities}
+                  onChange={e => setPriorities(e.target.value)}
+                  className='mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none'
+                  placeholder='e.g., governance, scale, regional expansion'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 />
               </div>
             </div>
           </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -475,10 +640,19 @@ export default function RoadmapPage (): JSX.Element {
 
                 onClick={copyPrompt  } catch (error) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+<section className='mb-12'>
+            <div className='mb-3 flex items-center justify-between gap-3'>
+              <h2 className='text-xl font-semibold'>Operator Prompt</h2>
+              <button
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
               >
@@ -514,29 +688,77 @@ export default function RoadmapPage (): JSX.Element {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+                className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
+=======
+                onClick={copyPrompt}
+                className='rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+              >
+                {copied ? 'Copied' : 'Copy'}
+              </button>
+            </div>
+<pre className='whitespace-pre-wrap rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm text-gray-800'>
+              {operatorPrompt}
+            </pre>
+          </section>
+
+          <section>
+            <h2 className='mb-4 text-xl font-semibold'>Zion v1 → v10</h2>
+            <div className='grid gap-6 md:grid-cols-2'>
+              {stages.map(stage => (
+                <article
+                  key={stage.id}
+                  className='rounded-lg border border-gray-200 p-5 shadow-sm'
+                >
+                  <h3 className='text-lg font-bold'>
+                    {stage.name} — {stage.theme}
+                  </h3>
+                  <p className='mt-2 text-gray-700'>
+                    <span className='font-semibold'>Objective:</span>{' '}
+                    {stage.objective}
+                  </p>
+                  <div className='mt-3'>
+                    <p className='font-semibold'>Highlights</p>
+                    <ul className='mt-1 list-disc space-y-1 pl-5 text-gray-800'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       {stage.highlights.map((h, i) => (
                         <li key={i}>{h}</li>
                       ))}
                     </ul>
                   </div>
+<<<<<<< HEAD
                   <div className="mt-3">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <p className="font-semibold">Metrics</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
+=======
+<div className='mt-3'>
+                    <p className='font-semibold'>Metrics</p>
+                    <ul className='mt-1 list-disc space-y-1 pl-5 text-gray-800'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       {stage.metrics.map((m, i) => (
                         <li key={i}>{m}</li>
                       ))}
                     </ul>
                   </div>
+<<<<<<< HEAD
                   <div className="mt-3">
                     <p className="font-semibold">Risks</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
                       <li>Scope creep, unclear ownership</li>
+=======
+<div className='mt-3'>
+                    <p className='font-semibold'>Risks</p>
+                    <ul className='mt-1 list-disc space-y-1 pl-5 text-gray-800'>
+                      <li>Scope creep; unclear ownership</li>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <li>Model hallucinations or bias affecting matches</li>
                       <li>Regulatory and payment-compliance variability</li>
                     </ul>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -549,9 +771,22 @@ export default function RoadmapPage (): JSX.Element {
                       <li>Leading indicator movement on activation and retention</li>
                       <li>Faster time-to-hire and time-to-pay</li>
                       <li>Positive contributor NPS and dispute resolution rates</li>
+=======
+<div className='mt-3'>
+                    <p className='font-semibold'>Validation</p>
+                    <ul className='mt-1 list-disc space-y-1 pl-5 text-gray-800'>
+                      <li>
+                        Leading indicator movement on activation and retention
+                      </li>
+                      <li>Faster time-to-hire and time-to-pay</li>
+                      <li>
+                        Positive contributor NPS and dispute resolution rates
+                      </li>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </ul>
                   </div>
                 </article>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -572,6 +807,8 @@ export default function RoadmapPage (): JSX.Element {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };
   return (;
     <>;
@@ -598,7 +835,10 @@ export default function RoadmapPage (): JSX.Element {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
                   onChange={(e) => setMilestones(e.target.value)  } catch (error) {
     console.error("Error:", error);
@@ -645,12 +885,16 @@ export default function RoadmapPage (): JSX.Element {
   }
 }
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none";
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   placeholder="e.g., governance, scale, regional expansion";
                 />;
               </div>;
             </div>;
           </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -780,10 +1024,13 @@ export default function RoadmapPage (): JSX.Element {
 }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>;
           </section>;
         </div>;
       </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   );
@@ -812,3 +1059,16 @@ export default function RoadmapPage (): JSX.Element {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+=======
+              ))}
+            </div>
+          </section>
+        </div>
+      </main>
+    </>
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

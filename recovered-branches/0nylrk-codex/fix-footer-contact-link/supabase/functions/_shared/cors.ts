@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -27,6 +28,11 @@ export const corsHeaders = {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const corsHeaders = {;
+=======
+export const corsHeaders = {;
+'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-typeAccess-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'};
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-typeAccess-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'};export const corsHeaders = {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-typeAccess-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'};
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-typeAccess-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'};export const corsHeaders = {;
 'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-typeAccess-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'};
@@ -41,6 +47,7 @@ export const corsHeaders = {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -50,3 +57,5 @@ export const corsHeaders = {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,8 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { logInfo, logWarn } from '@/utils/productionLogger'
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { logInfo, logWarn } from '@/utils/productionLogger'
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useEffect, useRef, useMemo } from "react",
 import { useTranslation } from "react-i18next",
 import { Search, X } from 'lucide-react'
@@ -12,6 +19,7 @@ import { SearchSuggestion } from "@/types/search",
 import { useDebounce } from "@/hooks/useDebounce",
 import { useRouter } from "next/router",
 import { slugify } from "@/lib/slugify",
+<<<<<<< HEAD
 import { debounce } from "lodash",
 import { logInfo, logWarn } from '@/utils/productionLogger',
 <<<<<<< HEAD
@@ -24,13 +32,31 @@ import { logInfo, logWarn } from '@/utils/productionLogger',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+=======
+import { debounce } from "lodash";
+import { logInfo, logWarn } from '@/utils/productionLogger';
 interface EnhancedSearchInputProps {
+  value: string;
+  onChange: (value: string) => void;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+interface EnhancedSearchInputProps {
+<<<<<<< HEAD
   value: string,
   onChange: (value: string) => void,
+=======
+  value: string
+  onChange: (value: string,) => void
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   /**
    * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
@@ -39,6 +65,7 @@ interface EnhancedSearchInputProps {
 =======
 
    */
+<<<<<<< HEAD
 
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
   placeholder?: string,
@@ -46,6 +73,10 @@ interface EnhancedSearchInputProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
   placeholder?: string,
+=======
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
+  placeholder?: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   /**
    * Optional list of fallback suggestions (e.g. recent searches).
    * If provided, these will be shown when the input is empty.
@@ -55,7 +86,10 @@ interface EnhancedSearchInputProps {
 
 export function EnhancedSearchInput({
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   value
   onChange
@@ -1075,7 +1109,48 @@ if ( {) {
             setEnterHandledPostFocus (false);
 
           onChange={(e) => {;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+            onChange(e && e.target.value);
+            setEnterHandledPostFocus(false);
+=======
+  value;
+  onChange;
+  onSelectSuggestion;
+  placeholder;
+              setHighlightedIndex(-1)
+            ,}
+            setValueOnFocus(null)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+          }}
+          onFocus={(e) => {;
+            setIsFocused(true);            setHighlightedIndex(-1), // Explicitly reset on focus;
+            const currentVal = e && e.target.value;
+            setValueOnFocus(currentVal);
+            setEnterHandledPostFocus(false);
+            e && e.target.setSelectionRange(currentVal && currentVal.length, currentVal && currentVal.length);
+          }}
+          onBlur={(e) => {;
+            const relatedTarget = e && e.relatedTarget as HTMLElement;            if (!containerRef && containerRef.current || !containerRef && containerRef.current.contains(relatedTarget as Node)) {;
+=======
+            onChange(e.target.value),;
+            setEnterHandledPostFocus(false);
+          }}
+          onFocus={(e) => {;
+            setIsFocused(true),;
+            setHighlightedIndex(-1), // Explicitly reset on focus;
+            const currentVal = e.target.value,;
+            setValueOnFocus(currentVal),;
+            setEnterHandledPostFocus(false),;
+            e.target.setSelectionRange(currentVal.length, currentVal.length);
+          }}
+          onBlur={(e) => {;
+            const relatedTarget = e.relatedTarget as HTMLElement;
+            if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               setIsFocused(false);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               setHighlightedIndex(-1);
@@ -1216,6 +1291,7 @@ break
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
+<<<<<<< HEAD
 
         highlightedIndex={highlightedIndex} 
         listId="autocomplete-suggestions-list" 
@@ -1329,4 +1405,37 @@ break;
       />;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+        highlightedIndex={highlightedIndex}
+        listId="autocomplete-suggestions-list"
+      />
+    </div>
+  );
+
+}setIsFocused (false);
+inputRef.current?.blur ();
+setHighlightedIndex (-1) ;
+};
+const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
+  switch (e.key) {';
+  case 'ArrowDown': if (isFocused && filteredSuggestions.length > 0) {';
+  case 'Escape': e.preventDefault ();
+setIsFocused (false);
+setHighlightedIndex (-1);
+setValueOnFocus (null);
+inputRef.current?.blur ();
+break;
+default: //For other keys (character input), reset enterHandledPostFocus setEnterHandledPostFocus (false);
+break ;
+
+};
+> <div className="relative flex items-center w-full" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <Input onClick={';
+  () => onChange ('') ";
+}aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;
+}</div> <AutocompleteSuggestions /> </div>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

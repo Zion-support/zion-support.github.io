@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -31,11 +34,26 @@ export default async function handler(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { v4 as uuidv4 } from '[^']*';
+import { readJsonFile, writeJsonFile } from '[^']*';
+import type { Job } from '../../utils/types';
+import { rateLimit } from '[^']*';
+const FILE = null;
+  res.status(405).end('Method Not Allowed')
+}
+export default async function handler(
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -65,13 +83,21 @@ export default async function handler(
 =======
   if (req && req.method === "GET") {
     const jobs = readJsonFile<Job[]>(FILE, []);
+<<<<<<< HEAD
     res && res.status(200).json({ jobs });
     return;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+    res.status(200).json({ jobs });
+return;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
   } catch (error) {
@@ -324,6 +350,7 @@ if ( {) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const {
+<<<<<<< HEAD
       title
       description
       category
@@ -387,9 +414,39 @@ required_skills = [],
 category: String(category || ""),
       requiredSkills: Array && Array.isArray(requiredSkills)
         ? requiredSkills && requiredSkills.map(String)
+<<<<<<< HEAD
         : [],
       budgetMinUsd: typeof budgetMinUsd === "number" ? budgetMinUsd : undefined,
       budgetMaxUsd: typeof budgetMaxUsd === "number" ? budgetMaxUsd : undefined,
+=======
+=======
+      title,
+      description,
+      category,
+      requiredSkills = [],
+      budgetMinUsd,
+      budgetMaxUsd,
+      deliveryDeadlineIso,
+clientEmail,
+    } = req.body || {};
+
+    if (!title || !description || !clientEmail) {
+      res.status(400).json({ error: 'Missing required fields' });
+      return;
+    }
+    const nowIso = new Date().toISOString();
+    const job: Job = {
+id: uuidv4(),
+      title: String(title),
+      description: String(description),
+      category: String(category || ''),
+      requiredSkills: Array.isArray(requiredSkills)
+        ? requiredSkills.map(String)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+        : []
+      budgetMinUsd: typeof budgetMinUsd === "number" ? budgetMinUsd : undefined
+      budgetMaxUsd: typeof budgetMaxUsd === "number" ? budgetMaxUsd : undefined
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -458,6 +515,7 @@ category: String(category || ""),
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         )
       )
+<<<<<<< HEAD
         job && job.category = "Cloud";
       else job && job.category = "General";
 
@@ -726,9 +784,29 @@ res.setHeader("Allow", "GET, POST");
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+        job.category = 'Cloud';
+      else job.category = 'General';
+    }
+    const jobs = readJsonFile<Job[]>(FILE, []);
+    jobs.unshift(job);
+    writeJsonFile<Job[]>(FILE, jobs);
+    res.status(201).json({ job });
+return;
+  }
+
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

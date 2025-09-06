@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,6 +27,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -65,6 +68,7 @@ export default function CaseStudiesPage() {;
       <SEO
         title='Case Studies | Zion Tech Group'
         description='Proven outcomes across AI, cloud, and automation projects.'
+<<<<<<< HEAD
         canonical='https://ziontechgroup && ziontechgroup.com/case-studies/'
       />;
       <div className='container mx-auto px-4 py-16 text-white'>;
@@ -144,6 +148,7 @@ function CaseStudiesPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 }
     </UltraFuturisticBackground>
   );
@@ -154,3 +159,21 @@ function CaseStudiesPage() {
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+        canonical='https://ziontechgroup.com/case-studies/'
+      />
+      <div className='container mx-auto px-4 py-16 text-white'>
+        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+          Case Studies
+        </h1>
+        <p className='mt-4 text-gray-300 max-w-3xl'>
+          Explore measurable results and implementation details across
+          industries. Want a tailored reference? Contact
+          kleber@ziontechgroup.com.
+        </p>
+      </div>
+    </UltraFuturisticBackground>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

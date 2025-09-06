@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -9,6 +10,8 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import Login from "@/pages/Login";
@@ -19,6 +22,7 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 import Onboarding from "@/pages/Onboarding";
 import TalentOnboarding from "@/pages/TalentOnboarding";
 import ServiceOnboarding from "@/pages/ServiceOnboarding";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const AuthRoutes = () => {
@@ -31,6 +35,9 @@ import {Fragment} from "react";
 =======
 const AuthRoutes = () => {import {Fragment} from "react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const AuthRoutes = () => {import {Fragment} from "react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Route, Routes} from "react-router-dom";
 import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
@@ -105,10 +112,13 @@ import Onboarding from "@/pages/Onboarding",;
 import TalentOnboarding from "@/pages/TalentOnboarding",;
 import ServiceOnboarding from "@/pages/ServiceOnboarding",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const AuthRoutes = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -142,6 +152,7 @@ const AuthRoutes = () => {;
         element={
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <ProtectedRoute>;
             <TalentOnboarding />;
@@ -168,11 +179,14 @@ const AuthRoutes = () => {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <ProtectedRoute>;
             <ServiceOnboarding />;
           </ProtectedRoute>;
         } ;
       />;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </Routes>;
 <<<<<<< HEAD
@@ -203,6 +217,9 @@ export default AuthRoutes;
 =======
     </Routes>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </Routes>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
 },
@@ -210,6 +227,7 @@ export default AuthRoutes;
   return (
     <Routes>;
       {/* Auth Routes */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default AuthRoutes;
 <<<<<<< HEAD
@@ -248,3 +266,6 @@ export default AuthRoutes;
 =======
 export default AuthRoutes;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export default AuthRoutes;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

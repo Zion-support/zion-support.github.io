@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -18,12 +19,17 @@ import {MobileChatView} from "../components/messaging/MobileChatView";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { MobileConversationList } from "../components/messaging/MobileConversationList";
 import { MobileChatView } from "../components/messaging/MobileChatView";
 import { MobileConversationList } from "../components/messaging/MobileConversationList",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { MobileChatView } from "../components/messaging/MobileChatView",
 <<<<<<< HEAD
@@ -183,6 +189,9 @@ const mockConversations = [;
 =======
 import { MobileChatView } from "../components/messaging/MobileChatView",const mockConversations = [;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { MobileChatView } from "../components/messaging/MobileChatView",const mockConversations = [;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   {;
     id: "1",;
     name: "Sarah Johnson",;
@@ -247,6 +256,7 @@ const mockMessages: Message[] = [;
             status: "Online";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -261,6 +271,8 @@ const mockMessages: Message[] = [;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     id: "4",
     content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?",
@@ -286,6 +298,7 @@ const mockMessages: Message[] = [;
             name: currentContact?.name || "",
             status: "Online"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -427,6 +440,8 @@ export function MobileMessages() {;
               conversations={mockConversations}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               onSelectConversation={handleSelectConversation}
             />;
           </main>;

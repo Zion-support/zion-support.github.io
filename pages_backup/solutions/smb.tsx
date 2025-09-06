@@ -2,6 +2,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
@@ -21,6 +24,7 @@ import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'luci
 export default function SMBSolutionsPage() {
   const smbServices = [;
     {}
+<<<<<<< HEAD
       title: "Cost-Effective IT","
       description: "Affordable technology solutions for small and medium businesses","
       icon: DollarSign,
@@ -43,6 +47,30 @@ export default function SMBSolutionsPage() {
       description: "Technology solutions that grow with your business","
       icon: Building2,
       features: ["Scalable Infrastructure", "Future-Proof", "Growth Support"]"
+=======
+      title: "Cost-Effective IT",",
+  description: "Affordable technology solutions for small and medium businesses",";
+      icon: DollarSign,;
+      features: ["Budget-Friendly", "Scalable Solutions", "ROI Focused"]";
+    },;
+    {}
+      title: "Quick Setup",",
+  description: "Rapid deployment of essential business systems",";
+      icon: Zap,;
+      features: ["Fast Implementation", "Minimal Downtime", "Easy Migration"]";
+    },;
+    {}
+      title: "Team Collaboration",",
+  description: "Tools and systems to enhance team productivity",";
+      icon: Users,;
+      features: ["Communication Tools", "Project Management", "File Sharing"]";
+    },;
+    {}
+      title: "Business Growth",",
+  description: "Technology solutions that grow with your business",";
+      icon: Building2,;
+      features: ["Scalable Infrastructure", "Future-Proof", "Growth Support"]";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
 ;  ];
   return (;
@@ -57,6 +85,7 @@ export default function SMBSolutionsPage() {
 =======
 =======
 import React from 'react';
+<<<<<<< HEAD
 =======
 import * as React from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -194,6 +223,8 @@ export default function SMBSolutionsPage() {;
       <div className="min-h-screen bg-gray-50">";
   ];
 import React from 'react';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Head from 'next/head';
 import Link from 'next/link';
 import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
@@ -224,7 +255,10 @@ export default function SMBSolutionsPage() {;
       features: ["Scalable Infrastructure", "Future-Proof", "Growth Support"]";
     }
 ;  ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Layout)
       title="SMB Solutions - Zion Tech Group""
@@ -249,6 +283,7 @@ export default function SMBSolutionsPage() {;
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -352,6 +387,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">"
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="container mx-auto px-4 text-center">";
 
             <h2 className="text-3xl md: text-4xl font-bold mb-6">", Grow Your Business Today,;
@@ -372,6 +409,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
     </Layout>;
   );
 =======
@@ -433,3 +471,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     </Layout>;  );
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </Layout>;  );
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

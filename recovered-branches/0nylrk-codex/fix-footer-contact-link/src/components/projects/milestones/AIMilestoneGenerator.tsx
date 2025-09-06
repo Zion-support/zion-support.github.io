@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
@@ -17,6 +18,8 @@ export function AIMilestoneGenerator({;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Button} from '@/components/ui/button';
 import {Card, CardContent} from '@/components/ui/card';
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from '@/components/ui/accordion';
@@ -35,11 +38,15 @@ interface AIMilestoneGeneratorProps {;
 
 export function AIMilestoneGenerator(): any ({;
 
+<<<<<<< HEAD
 export function AIMilestoneGenerator({;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function AIMilestoneGenerator({;
 import React, { useState } from 'react';  },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function AIMilestoneGenerator({;
@@ -381,6 +388,12 @@ export function AIMilestoneGenerator({;
 =======
   return (    }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function AIMilestoneGenerator({;
+import React, { useState } from 'react';  },
+
+  return (    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   return (
     <div className="space-y-4">;
@@ -426,6 +439,7 @@ export function AIMilestoneGenerator({;
                       <input
                         type="checkbox"                        id={`milestone-${index}`}
                         checked={selectedMilestones[index] |false}
+<<<<<<< HEAD
 <<<<<<< HEAD
                         onChange={() => toggleMilestoneSelection(index)}
                         className="mr-2 w-4 h-4 rounded text-primary";
@@ -587,12 +601,16 @@ if ( {) {
 =======
                         onChange={() => toggleMilestoneSelection(index)}                            AI Suggested;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                        onChange={() => toggleMilestoneSelection(index)}                            AI Suggested;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           </Badge>;
                         </div>;
                       </AccordionTrigger>;
                     </div>;
 
                       onClick={(e) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -602,6 +620,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         e.stopPropagation(),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         handleAddSingleMilestone(milestone)
@@ -611,6 +631,7 @@ if ( {) {
                       onClick={(e) => {;
                         e.stopPropagation(),;
                         handleAddSingleMilestone(milestone),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -861,3 +882,5 @@ return (<div className="space-y-4" > <div className="flex items-center justify-b
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

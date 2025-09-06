@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -140,6 +141,8 @@ export default function HelpCenter() {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
 import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
@@ -214,6 +217,7 @@ import { Search } from "lucide-react",export default function HelpCenter() {
               <TabsTrigger value="faq">FAQ</TabsTrigger>
               <TabsTrigger value="contact">Contact Us</TabsTrigger>
             </TabsList>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <TabsContent value="articles">
@@ -327,6 +331,8 @@ function HelpCenter() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react",;
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
@@ -351,11 +357,16 @@ export default function HelpCenter() {;
   const handleBackToCategories = () => {;
     setSelectedCategory(null),;
 <<<<<<< HEAD
+<<<<<<< HEAD
     setSelectedArticle(null);
   };
+=======
+    setSelectedArticle(null)
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleBackToArticles = () => {;
-    setSelectedArticle(null);
-  };
+    setSelectedArticle(null)
+};
   return (;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -435,6 +446,7 @@ export default function HelpCenter() {;
             <TabsContent value="articles">;
               {!selectedCategory && !selectedArticle && (;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <HelpCategoryList;
                   categories={HELP_CATEGORIES} ;
                   onCategorySelect={handleCategorySelect}
@@ -478,6 +490,8 @@ export default function HelpCenter() {;
             <TabsContent value="articles">;
               {!selectedCategory && !selectedArticle && (;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -504,6 +518,7 @@ export default function HelpCenter() {;
                     variant="ghost"
                     onClick={handleBackToArticles}
                     className="mb-4">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -555,6 +570,8 @@ export default function HelpCenter() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div className="space-y-6">
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
@@ -693,6 +710,7 @@ export default function HelpCenter() {;
         </div>
       </div>
     </AppLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -936,6 +954,10 @@ export default function HelpCenter() {;
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  );
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </AppLayout>);
 }    </AppLayout>);
 }

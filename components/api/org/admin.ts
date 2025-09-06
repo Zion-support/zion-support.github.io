@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 type AdminAction =
 import {readOrgData, writeOrgData} from '../../../utils / org - data';
@@ -10,6 +11,17 @@ const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev - admin - key';
 type AdminAction =;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import {readOrgData, writeOrgData} from '../../../utils/org-data';
+import type { OrgData, BasePerson } from '../../../types/org';
+const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
+type AdminAction = any;
+    return res.status(200).json({ ok: true })
+const ADMIN_KEY = process.env.ORG_ADMIN_KEY |'dev-admin-key';
+type AdminAction =
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   | { type: 'invite'; section: keyof OrgData; person: BasePerson }
   | {
       type: 'promote';
@@ -18,6 +30,7 @@ type AdminAction =;
       updates: Partial < BasePerson>;
     }
   | { type: 'deactivate'; section: keyof OrgData; id: string }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -28,6 +41,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process && process.env.ORG_ADMIN_KEY || 'dev-admin-key';
@@ -42,6 +57,7 @@ type AdminAction =
   | { type: 'promote', section: keyof OrgData, id: string, updates: Partial<BasePerson> }
   | { type: 'deactivate', section: keyof OrgData, id: string }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -50,6 +66,13 @@ type AdminAction =
   const key = req.headers['x-admin-key'];
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 
 ;
@@ -62,12 +85,29 @@ type AdminAction =
     return res && res.status(401).json({ error: 'Unauthorized' });
   }
     // @ts-expect-error Indexing into dynamic section
+<<<<<<< HEAD
+=======
+const arr: BasePerson[] = data[section] || [];
+    // prevent duplicates
+    if (arr.some(p => p.id === action.person.id)) {
+      return res.status(400).json({ error: 'ID already exists' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
     arr && arr.push({ ...action && action.person, active: true });
     // @ts-expect-error write back dynamic section
     data[section] = arr as any;
     writeOrgData(data);
+<<<<<<< HEAD
   }
+=======
+return res.status(200).json({ ok: true });
+  }
+  if (action.type === 'promote') {
+    const section = action.section;
+    // @ts-expect-error Indexing into dynamic section
+const arr: BasePerson[] = data[section] || [];
+    const idx = arr.findIndex(p => p.id === action.id);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     if (idx === -1) return res.status(404).json({ error: 'Not found' });
     arr[idx] = { ...arr[idx], ...action.updates }
 
@@ -82,6 +122,7 @@ type AdminAction =
     data[section] = arr as any;
     writeOrgData(data);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     return res.status(200).json({ ok: true })
@@ -93,13 +134,26 @@ type AdminAction =
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+return res.status(200).json({ ok: true });
+  }
+  if (action.type === 'deactivate') {
+    const section = action.section;
+    // @ts-expect-error Indexing into dynamic section
+const arr: BasePerson[] = data[section] || [];
+    const idx = arr.findIndex(p => p.id === action.id);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (idx === -1) return res.status(404).json({ error: 'Not found' });
     arr[idx] = { ...arr[idx], active: false }
     // @ts-expect-error write back dynamic section
     data[section] = arr as any;
     writeOrgData(data);
+<<<<<<< HEAD
     return res.status(200).json({ ok: true });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -108,11 +162,20 @@ return res.status(400).json({ error: 'Unknown action' });    return res.status(2
   return res.status(400).json({ error: 'Unknown action' });
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+return res.status(200).json({ ok: true });
+  }
+
+  return res.status(400).json({ error: 'Unknown action' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 return res.status(400).json({ error: 'Unknown action' });    return res.status(200).json({ ok: true })
   }
   return res.status(400).json({ error: 'Unknown action' });
 }
+<<<<<<< HEAD
 
   if (action && action.type === 'deactivate') {
     const section = action && action.section;
@@ -230,6 +293,7 @@ return res.status (400).json ({ error: 'Unknown action' });    return res.status
   return res.status (400).json ({ error: 'Unknown action' });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -239,3 +303,7 @@ return res.status (400).json ({ error: 'Unknown action' });    return res.status
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

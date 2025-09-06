@@ -105,6 +105,7 @@ interface PricingSuggestionBoxProps {;
     return null
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 
 
@@ -118,6 +119,11 @@ interface PricingSuggestionBoxProps {;
   }
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  }
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const confidenceColor = {
     High: "bg-green-100 text-green-800"
     Medium: "bg-yellow-100 text-yellow-800"

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,6 +9,8 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState } from "../../../utils/sync/storage",;
@@ -53,6 +56,9 @@ proposals: scopedEvents.filter((e) => e.type === "proposal").length
         talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length
         daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length
 
+=======
+  const state = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
   }
   return res.status(405).json({ error: "Method not allowed" })

@@ -1,5 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
+import Link from 'next / link';
+import { cn } from '@/lib / utils';interface InteractiveFeaturesProps {
+  class_name?: string,
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  style?: React.CSSProperties;
+}
+interface InteractiveFeaturesProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -358,9 +371,28 @@ export default InteractiveFeatures;
 }
 ;
 export default InteractiveFeatures;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import React from 'react';
+import {
+  Card
+  CardContent
+  CardHeader
+  CardTitle
+  CardDescription
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
+  );
+
+export default InteractiveFeatures;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

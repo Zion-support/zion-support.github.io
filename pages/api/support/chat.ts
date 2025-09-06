@@ -2,7 +2,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -19,6 +22,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import OpenAI from 'openai';
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { readJson } from '../../../utils/fsDb';
 import { HelpArticle, matchIntent } from '../../../utils/support';
 import { logSupportEventToOperator } from '../../../utils/operator';
@@ -109,17 +114,34 @@ export default async function handler(
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
   // Build context with top matched articles as brief references
+<<<<<<< HEAD
   const matchedArticles = articles.filter((a) =>
     intent.matchedArticleIds.includes(a.id),
+=======
+const matchedArticles = articles.filter(a =>
+    intent.matchedArticleIds.includes(a.id)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
   const context = matchedArticles
+<<<<<<< HEAD
     .map((a) => `- ${a.title}: /help/${a.slug}`)
     .join("\n");
+=======
+    .map(a => `- ${a.title}: /help/${a.slug}`)
+    .join('\n');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
   const sysMessage = {
+<<<<<<< HEAD
     role: "system" as const,
     content:
       SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : ""),
+=======
+    role: 'system' as const,
+    content:
+<<<<<<< HEAD
+      SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : "")
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };
 
 <<<<<<< HEAD
@@ -223,8 +245,22 @@ function handler() {
       messages: [sys_message, ...messages]
 
       temperature: 0.2
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : ''),
+  };
+
+  try {
+    const completion = await openai.chat.completions.create({
+      model: 'gpt-4o-mini',
+messages: [sysMessage, ...messages],
+      temperature: 0.2,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     });
 
     const assistantMessage =
@@ -321,12 +357,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     });
 <<<<<<< HEAD
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 =======
 >>>>>>> main
   }
@@ -335,3 +373,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

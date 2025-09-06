@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { MessageSquare } from 'lucide-react'
@@ -11,6 +12,8 @@ export function ChatAssistantTrigger() {
 
   const [isOpen, setIsOpen] = useState(false),
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Handle sending messages to the AI chat assistant
 =======
 // Handle sending messages to the AI chat assistant
@@ -186,17 +189,43 @@ export function ChatAssistantTrigger() {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { useState } from 'react';
+import { MessageSquare } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ChatAssistant } from '@/components/ChatAssistant';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+import { useState } from "react",
+import { MessageSquare } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+import { ChatAssistant } from "@/components/ChatAssistant";
+import {logErrorToProduction} from '@/utils/productionLogger';
+export function ChatAssistantTrigger() {
+
+  const [isOpen, setIsOpen] = useState(false);
+  // Handle sending messages to the AI chat assistant
+  const handleSendMessage = null;
+            role: 'Virtual Assistant'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }}
           onSendMessage={handleSendMessage}
         />;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>;
   );
 }
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     </>;
   );
@@ -280,4 +309,29 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    </>
+  );
+
+};
+return (<> <Button > <MessageSquare className="h-5 w-5" /> </Button> {;
+  isOpen && (<ChatAssistant isOpen= {;
+  isOpen ;
+}onClose= {;
+  () => setIsOpen (false) ;
+}recipient= {;
+  {';
+  id: 'ai-assistant', name: 'AI Assistant',  avatarUrl: 'https://placehold.co/64x64?text=AI', role: 'Virtual Assistant' ;
+
+}onSendMessage= {;
+  handleSendMessage ;
+}/>) ;
+}</>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

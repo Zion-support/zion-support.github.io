@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -47,6 +48,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -55,6 +58,7 @@ import {Button} from "@/components/ui/button";
 import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";
 export default function Profile() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -69,12 +73,17 @@ import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",import { useNavigate } from "react-router-dom";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { toast } from "sonner";
 export default function Profile() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -243,6 +252,7 @@ export default function Profile() {
   }
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <>
       <Header />
       <div className="min-h-screen bg-zion-blue">
@@ -292,6 +302,9 @@ export default function Profile() {
 =======
                     navigate("/")                  }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    navigate("/")                  }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   variant="outline"
                   className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
                 >
@@ -304,6 +317,7 @@ export default function Profile() {
       </div>
       <Footer />
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
@@ -352,6 +366,9 @@ import React, { useEffect } from 'react',;
 =======
   )import React, { useEffect } from 'react',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )import React, { useEffect } from 'react',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -426,6 +443,7 @@ if ( {) {
                   }}
                   variant="outline";
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text - white";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -464,6 +482,9 @@ if ( {) {
 =======
                   className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text-white";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text-white";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >;
                   Logout;
                 </Button>;
@@ -476,6 +497,7 @@ if ( {) {
 
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
@@ -520,3 +542,6 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-cente
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

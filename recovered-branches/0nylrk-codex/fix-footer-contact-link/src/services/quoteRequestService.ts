@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,12 +61,22 @@ import { supabase } from '@/integrations / supabase / client';
 import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {supabase} from "@/integrations/supabase/client";
+
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+
+import { supabase } from '@/integrations / supabase / client';
+import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase } from "@/integrations/supabase/client";
 import {supabase} from "@/integrations/supabase/client";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { supabase } from "@/integrations/supabase/client",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -98,6 +107,8 @@ export const quoteRequestService = {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return data && data.map((item: any) => ({
 
       .select(`;
@@ -128,6 +139,7 @@ export const quoteRequestService = {
       talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
   };
   
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -320,6 +332,9 @@ export const quoteRequestService = {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
     const updates: any = { status }
@@ -380,6 +395,7 @@ export const quoteRequestService = {;
       updates.replied_at = new Date().toISOString()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -436,6 +452,8 @@ export const quoteRequestService = {;
 import { supabase } from "@/integrations/supabase/client",;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
 export const quoteRequestService = {;
   // Get all quote requests (for admin);
@@ -527,6 +545,7 @@ export const quoteRequestService = {;
       .delete();
       .eq('id', id),;
     if (error) throw error;
+<<<<<<< HEAD
 <<<<<<< HEAD
     return true;
 <<<<<<< HEAD
@@ -668,3 +687,6 @@ if (throw error) {
 =======
     return true;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    return true;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

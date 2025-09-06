@@ -15,6 +15,7 @@ import {cn} from "@/lib/utils";
 import {SafeRef} from "@/types/ref-types";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,10 +60,15 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
 interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLButtonElement> {;
   icon?: React && React.ReactNode;interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLButtonElement> {;
+  icon?: React && React.ReactNode;interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   icon?: React.ReactNode,
   active?: boolean,
   href?: string,
   target?: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
   badge?: React.ReactNode
 <<<<<<< HEAD
@@ -80,6 +86,9 @@ import React, { forwardRef } from "react",;
 =======
   badge?: React.ReactNodeimport React, { forwardRef } from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  badge?: React.ReactNodeimport React, { forwardRef } from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { ChevronDown } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 import { SafeRef } from "@/types/ref-types",;
@@ -88,6 +97,7 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   active?: boolean,;
   href?: string,;
   target?: string,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   badge?: React.ReactNode;
 <<<<<<< HEAD
@@ -185,6 +195,9 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
 =======
   badge?: React.ReactNode;          )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  badge?: React.ReactNode;          )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         >
           <div className="flex items-center gap-2">
             {icon && <span className="text-muted-foreground">{icon}</span>}
@@ -193,6 +206,7 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
           {badge && <span>{badge}</span>}
         </a>
       )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     }
@@ -260,6 +274,9 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="flex items-center gap-2">;
             {icon && <span className="text-muted-foreground">{icon}</span>}
             <span>{children}</span>;
@@ -267,6 +284,7 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
           {badge && <span>{badge}</span>}
         </a>;
       );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     }
@@ -287,6 +305,8 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           className={cn (
             "flex w - full items - center justify - between rounded - md px - 3 py - 2 text - sm hover: bg - accent";
             active && "bg - accent font - medium text - accent - foreground",
@@ -313,6 +333,7 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
         </div>;
         {badge && <span>{badge}</span>}
       </button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -367,12 +388,15 @@ SidebarMenuItem.displayName = "SidebarMenuItem",
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     );
   }
 
 SidebarMenuItem.displayName = "SidebarMenuItem",
 ),
 ),
+<<<<<<< HEAD
 
 SidebarMenuItem.displayName = "SidebarMenuItem",
 
@@ -385,6 +409,15 @@ SidebarMenuItem.displayName = "SidebarMenuItem",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+SidebarMenuItem.displayName = "SidebarMenuItem",
+
+  }
+
+SidebarMenuItem.displayName = "SidebarMenuItem",
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   children: React.ReactNode
@@ -396,6 +429,7 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
       <div className="pl-2">{children}</div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -431,12 +465,15 @@ SidebarMenuItem && SidebarMenuItem.displayName = "SidebarMenuItem";
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface SidebarMenuGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   title: string,;
   children: React && React.ReactNode;
 }
 const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
 <<<<<<< HEAD
@@ -498,6 +535,9 @@ export { SidebarMenuItem, SidebarMenuGroup };
 =======
   return (        type="button";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (        type="button";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         className={cn (
           "flex w - full items - center justify - between rounded - md px - 3 py - 2 text - sm hover: bg - accent";
           active && "bg - accent font - medium text - accent - foreground",
@@ -583,6 +623,7 @@ className)
 },;
 export { SidebarMenuItem, SidebarMenuGroup };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 export { SidebarMenuItem, SidebarMenuGroup };
@@ -590,3 +631,5 @@ export { SidebarMenuItem, SidebarMenuGroup };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

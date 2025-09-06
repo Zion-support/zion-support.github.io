@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -22,6 +23,8 @@ type FormData = z.infer<typeof formSchema>,
 interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const formSchema = z && z.object({;
   title: z && z.string().min(3, "Title must be at least 3 characters");
   keyFeatures: z && z.string(),;
@@ -137,6 +140,22 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
     }
   },
 
+=======
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
+import { Loader, Sparkles } from 'lucide-react'
+import { supabase } from "@/integrations/supabase/client",
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
+import { useForm } from "react-hook-form",
+import z from "zod",
+import { zodResolver } from "@hookform/resolvers/zod";
+import {logErrorToProduction} from '@/utils/productionLogger';
+const formSchema = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -265,6 +284,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
                   Generate Description;
                 </>;
               )}
+<<<<<<< HEAD
             </Button>;
           </form>;
         </Form>;
@@ -277,5 +297,37 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+;
+=======
+            </Button>
+          </form>
+        </Form>
+      </CardContent>
+    </Card>
+  );
+
+}catch (error) {';
+  logErrorToProduction ('Error generating description:', {;
+  data: error ;
+});
+toast ({;
+  ;
+}finally {;
+  setIsLoading (false) ;
+
+};
+>Service Title</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";
+}/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Key Features</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";
+}/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Target Audience</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";
+}/> <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" > {";
+  isLoading ? (<> <Loader className="mr-2 h-4 w-4 animate-spin" /> Generating Description... </>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Description </>) ;
+}</Button> </form> </Form> </CardContent> </Card>) ;
+}'"
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

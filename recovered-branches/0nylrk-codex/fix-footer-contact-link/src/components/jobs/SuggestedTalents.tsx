@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,6 +16,8 @@ import { JobMatchCard } from "./JobMatchCard";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { useEffect, useState } from "react",
 import { supabase } from "@/integrations/supabase/client",
@@ -25,7 +28,10 @@ interface SuggestedTalentsProps {
   jobTitle?: string
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function SuggestedTalents(): any ({ jobId, jobTitle }: SuggestedTalentsProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -40,12 +46,15 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   const [isProcessing, setIsProcessing] = useState(false),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function SuggestedTalents(): any ({ jobId, jobTitle }: SuggestedTalentsProps) {;
 
@@ -58,6 +67,7 @@ export function SuggestedTalents(): any ({ jobId, jobTitle }: SuggestedTalentsPr
       const { data, error } = await supabase;
         .from("suggested_talents");
         .select(;
+<<<<<<< HEAD
 <<<<<<< HEAD
           `;
 =======
@@ -131,6 +141,9 @@ function SuggestedTalents() {
 =======
           `;            id;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          `;            id;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             user_id;
             full_name;
             professional_title;
@@ -141,6 +154,7 @@ function SuggestedTalents() {
             key_projects;
             skills;
             location;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -158,14 +172,17 @@ function SuggestedTalents() {
       if (error) throw error;
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setTalents(data || []);
     } catch (error) {;
       console && console.error("Error fetching suggested talents:", error);
       toast({;
-        title: "Error",;
-        description:;
+        title: "Error",,
+  description:;
           "Failed to load suggested talents. Please try again later.",;
         variant: "destructive",;
+<<<<<<< HEAD
 
       });
     } finally {;
@@ -210,6 +227,8 @@ interface SuggestedTalentsProps {
   description:;
           "Failed to load suggested talents. Please try again later.",;
         variant: "destructive",;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         .select(`
           *,
           talent_profile:talent_id(
@@ -251,6 +270,7 @@ interface SuggestedTalentsProps {
     console.log("View talent profile:", talentId);
     toast({
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -457,6 +477,12 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
     // // // console.log("View talent profile:", talentId),
     toast({  };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const handleViewProfile = (talentId: string) => {
+    // Implement logic to view talent profile
+    // // // console.log("View talent profile:", talentId),
+    toast({  };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const handleViewProfile = (talentId: string) => {;
     // Implement logic to view talent profile;
@@ -480,6 +506,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
     setIsProcessing(true);
     fetchSuggestedTalents().finally(() => {;
       setIsProcessing(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
     });
 <<<<<<< HEAD
@@ -753,6 +780,9 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
 =======
     });      <CardContent className="pt-6">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    });      <CardContent className="pt-6">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {isLoading ? (
           <div>Loading suggested talents...</div>
         ) : talents.length === 0 ? (
@@ -824,6 +854,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
               />
             ))}
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         )}
 <<<<<<< HEAD
@@ -943,3 +974,6 @@ const handleViewProfile = (talentId: string) => {
 =======
         )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

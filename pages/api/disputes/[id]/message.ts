@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -108,18 +109,35 @@ export default async function handler(
   const { id } = req.query;
   if (typeof id !== "string")
     return res.status(400).json({ error: "Invalid id" });
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getDisputeById, upsertDispute } from '[^']*';
+import { parseUserFromRequest, ensureInvolvedOrAdmin } from '[^']*';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { id } = req.query;
+  if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
+  const user = null;
+  return res.status(405).end('Method Not Allowed')
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const user = parseUserFromRequest(req);
   if (req.method === "POST") {
     const dispute = await getDisputeById(id);
     if (!dispute) return res.status($1).json({ $2 });
     try {
+<<<<<<< HEAD
       ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
+=======
+ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (e: any) {
       return res.status(e.statusCode |403).json({ error: "Forbidden" });
     }
     const { body } = req.body |{}
     if (!body |typeof body !== "string")
       return res.status(400).json({ error: "Message body required" });
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const now = new Date().toISOString();
@@ -131,11 +149,22 @@ export default async function handler(
         user && user.role === "admin"
           ? "admin"
           : user && user.id === dispute && dispute.clientUserId
+=======
+    const now = new Date().toISOString();
+    dispute.messages.push({
+      id: `${Date.now()}`
+      authorUserId: user.id
+      authorRole:
+        user.role === "admin"
+          ? "admin"
+          : user.id === dispute.clientUserId
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ? "client"
             : "talent"
       body
       createdAt: now
     });
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -179,11 +208,14 @@ function handler() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     dispute.updatedAt = now;
     await upsertDispute(dispute);
     return res.status(201).json({ dispute });
   }
 
+<<<<<<< HEAD
 res.setHeader("Allow", "POST");
   return res.status(405).end("Method Not Allowed");
 }
@@ -268,3 +300,9 @@ export default async function handler(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  res.setHeader('Allow', 'POST');
+  return res.status(405).end('Method Not Allowed');
+
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

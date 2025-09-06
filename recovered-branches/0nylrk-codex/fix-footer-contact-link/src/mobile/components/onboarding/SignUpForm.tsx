@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -20,6 +21,8 @@ export function SignUpForm() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react",
 import { Label } from "@/components/ui/label",
 import { Input } from "@/components/ui/input",
@@ -58,6 +61,7 @@ export function SignUpForm() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+<<<<<<< HEAD
 <<<<<<< HEAD
     setError("")
 <<<<<<< HEAD
@@ -155,6 +159,9 @@ import React, { useState } from "react",;
 =======
     setError("")import React, { useState } from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    setError("")import React, { useState } from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Label } from "@/components/ui/label",;
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
@@ -199,6 +206,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert",;
         }
 
         navigate("/mobile");
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -389,6 +397,11 @@ if ( {) {
       }
     } catch (err: any) {;  
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      await loginWithGoogle();
+      }
+    } catch (err: any) {;  
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleGoogleLogin = async () => {
     try {
       await loginWithGoogle ();
@@ -398,14 +411,18 @@ if ( {) {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-4 px-4">;
       <h2 className="text-xl font-medium text-center">;
         {signupMode ? "Create your account" : "Welcome back"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -448,10 +465,13 @@ if ( {) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         <Button 
           variant="outline" 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -467,6 +487,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -489,6 +511,7 @@ if ( {) {
       <form onSubmit={handleSubmit} className="space-y-4">
         {signupMode && (
           <div className="space-y-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Label htmlFor="name">Full name</Label>
 <<<<<<< HEAD
@@ -648,6 +671,9 @@ export function SignUpForm() {;
 =======
             <Label htmlFor="name">Full name</Label>      {error && (;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <Label htmlFor="name">Full name</Label>      {error && (;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <Alert variant="destructive">;
           <AlertCircle className="h-4 w-4" />;
           <AlertDescription>{error}</AlertDescription>;
@@ -656,6 +682,7 @@ export function SignUpForm() {;
       <form onSubmit={handleSubmit} className="space-y-4">;
         {signupMode && (;
           <div className="space-y-2">;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Label htmlFor="name">Full name</Label>;
 <<<<<<< HEAD
@@ -695,6 +722,9 @@ export function SignUpForm() {;
 =======
             <Label htmlFor="name">Full name</Label>;          <Input
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <Label htmlFor="name">Full name</Label>;          <Input
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             id="email"
             name="email"
             type="email"
@@ -707,6 +737,7 @@ export function SignUpForm() {;
         </div>;
 
         <div className="space-y-2">;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Label htmlFor="password">Password</Label>;
 
@@ -773,6 +804,9 @@ export function SignUpForm() {;
 =======
           <Label htmlFor="password">Password</Label>;          className="w-full py-6"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <Label htmlFor="password">Password</Label>;          className="w-full py-6"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           disabled={isLoading}
         >
           {isLoading
@@ -786,6 +820,7 @@ export function SignUpForm() {;
       <p className="text-center text-sm">
         {signupMode
           ? "Already have an account? "
+<<<<<<< HEAD
 <<<<<<< HEAD
           : "Don't have an account? "
 <<<<<<< HEAD
@@ -801,6 +836,9 @@ export function SignUpForm() {;
 =======
           : "Don't have an account? "          />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          : "Don't have an account? "          />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </div>;
         <Button
           type="submit" 
@@ -817,6 +855,7 @@ export function SignUpForm() {;
       <p className="text-center text-sm">;
         {signupMode;
           ? "Already have an account? ";
+<<<<<<< HEAD
 <<<<<<< HEAD
           : "Don't have an account? ";
 <<<<<<< HEAD
@@ -914,11 +953,15 @@ export function SignUpForm() {;
 =======
           : "Don't have an account? ";        </Button>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          : "Don't have an account? ";        </Button>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </p>;
     </div>;
   );
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -942,6 +985,8 @@ export function SignUpForm() {;
 ;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space - y-4 px-4">;
       <h2 className="text - xl font - medium text-center">;
@@ -1060,6 +1105,7 @@ export function SignUpForm() {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1067,3 +1113,6 @@ export function SignUpForm() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

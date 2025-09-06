@@ -1,13 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from '[^']*';
 import { requireUser } from '[^']*';
 import { sendMessage } from '[^']*';
 import { ConversationContext } from '[^']*';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../utils/auth';
 import { sendMessage } from '../../../utils/messaging/storage';
 import { ConversationContext } from '../../../utils/messaging/types';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 
 import { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../utils/auth";
@@ -154,11 +158,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   };
   if (!recipientId || !body) return res.status(400).json({ error: 'Missing required fields' });
   const { conversation, message } = sendMessage({
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     senderId: user.id,
     recipientId,
     body,
     linkUrl,
     attachmentBase64,
+<<<<<<< HEAD
 <<<<<<< HEAD
     attachmentName,
     context
@@ -224,3 +231,11 @@ export default function handler(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    attachmentName,
+context,
+  });
+  res.status(200).json({ conversation, message });
+
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

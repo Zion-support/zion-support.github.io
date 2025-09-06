@@ -67,14 +67,19 @@ export function ReviewsList({
     return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="space - y-4">;
 =======
       <div className="space-y-4">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <div className="space-y-4">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {Array (3);
           .fill (0);
           .map ((_, i) => (
             <div;
+<<<<<<< HEAD
 <<<<<<< HEAD
               key={i}
               className="border rounded-lg p-4 bg-card animate-pulse"
@@ -189,6 +194,9 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
               className="border rounded-lg p-4 bg-card animate-pulse"
+=======
+              key={i}              className="border rounded-lg p-4 bg-card animate-pulse"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <div className="flex items-center gap-3 mb-3">
                 <div className="h-10 w-10 rounded-full bg-muted"></div>
@@ -235,6 +243,7 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
       </div>
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -312,3 +321,8 @@ if ( {) {
 ;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

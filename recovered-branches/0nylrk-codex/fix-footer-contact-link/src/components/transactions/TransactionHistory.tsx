@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -9,6 +10,8 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import React, { useState } from "react";
@@ -21,6 +24,7 @@ import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} f
 import {Badge} from "@/components/ui/badge";
 import {Skeleton} from "@/components/ui/skeleton";
 import {ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {formatDistanceToNow} from "date-fns";
 <<<<<<< HEAD
@@ -146,6 +150,9 @@ interface Transaction {;
 =======
 import {formatDistanceToNow} from "date-fns";interface Transaction {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {formatDistanceToNow} from "date-fns";interface Transaction {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string,;
   user_id: string,;
   provider_id: string,;
@@ -514,6 +521,7 @@ interface Transaction {_id: string;
       
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
       
@@ -523,6 +531,8 @@ interface Transaction {_id: string;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       toast({
         title: "Success"
         description: data.message |"Transaction updated successfully"})
@@ -533,6 +543,7 @@ interface Transaction {_id: string;
         title: "Error"
         description: error.message |"Failed to update transaction"
         variant: "destructive"})
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 <<<<<<< HEAD
@@ -566,6 +577,9 @@ interface Transaction {_id: string;
 =======
     }  const getStatusBadge = (status: string, inEscrow: boolean) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }  const getStatusBadge = (status: string, inEscrow: boolean) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     switch(status) {
       case 'pending':
         return inEscrow ? (
@@ -601,6 +615,7 @@ interface Transaction {_id: string;
             <AlertCircle className="w-3 h-3 mr-1" /> Unknown
           </Badge>
         )
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 <<<<<<< HEAD
@@ -1187,6 +1202,9 @@ export function TransactionHistory() {_const { user} = useAuth();
 =======
     }                          )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }                          )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         </CardDescription>
                       </div>
                       {getStatusBadge(transaction.status, transaction.in_escrow)}
@@ -1205,6 +1223,7 @@ export function TransactionHistory() {_const { user} = useAuth();
                         {new Date(transaction.created_at).toLocaleDateString()}
                         ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true })})
                       </span>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </div>
 <<<<<<< HEAD
@@ -1229,6 +1248,9 @@ export function TransactionHistory() {_const { user} = useAuth();
 =======
                     </div>                      <div className="flex justify-between items-center text-sm mt-1">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    </div>                      <div className="flex justify-between items-center text-sm mt-1">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         <span className="text-zion-slate-light">
                           {transaction.completed_at ? 'Completed:' :
                            transaction.refunded_at ? 'Refunded:' : 'Cancelled:'}
@@ -1291,6 +1313,7 @@ export function TransactionHistory() {_const { user} = useAuth();
                 ? `You don't have any ${filter} transactions. Try changing the filter or make a new transaction.`;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1316,6 +1339,8 @@ export function TransactionHistory() {_const { user} = useAuth();
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Check condition
 if (throw error) {
   $2
@@ -1554,6 +1579,7 @@ if ( {) {
       </div>;
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
                           ).toLocaleDateString()}
@@ -1641,3 +1667,9 @@ if ( {) {
   );
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}      </div>;
+    </div>;
+  );
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

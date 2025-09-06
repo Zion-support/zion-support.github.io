@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export type IntegrationCategory = 'crm' | 'ats';
 <<<<<<< HEAD
@@ -69,6 +73,7 @@ export interface IntegrationProviderMeta {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   category: IntegrationCategory, description?: string,  oauthScopes?: string[];
 =======
@@ -89,6 +94,14 @@ export interface IntegrationProviderMeta {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   icon?: string
 }
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+export type IntegrationCategory = any;
+  events: ZapierEvent[]
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface SyncRules {
   // CRM rules;
   autoCreateContacts?: boolean;
@@ -96,6 +109,7 @@ export interface SyncRules {
   // ATS rules;
 <<<<<<< HEAD
   autoSyncApplicants?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
   autoUploadResumes?: boolean;
 export interface ProviderConnection {
@@ -105,20 +119,44 @@ export interface ProviderConnection {;
   status: SyncStatus;  accessToken?: string;  refreshToken?: string;
 =======
 <<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+autoUploadResumes?: boolean;
+
+export interface ProviderConnection {
+  providerId: IntegrationProviderId;
+  status: SyncStatus;
+  accessToken?: string;
+  refreshToken?: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   expiresAt?: number;
   connectedAt?: number;
   syncRules?: SyncRules;
   lastSyncAt?: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 
+<<<<<<< HEAD
+=======
+=======
+lastError?: string | null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface SyncLogEntry {
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -218,6 +256,7 @@ export interface IntegrationsState {;
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
+<<<<<<< HEAD
   events: ZapierEvent[];  events: ZapierEvent[]
 }
 <<<<<<< HEAD
@@ -276,7 +315,14 @@ export interface IntegrationsState {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 export interface ZapierEvent {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  events: ZapierEvent[];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

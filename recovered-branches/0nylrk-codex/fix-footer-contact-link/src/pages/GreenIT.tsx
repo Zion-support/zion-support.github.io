@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -26,6 +27,10 @@ export default function GreenIT() {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -33,6 +38,7 @@ import { Leaf, Server, Cloud } from "lucide-react",
 import { Link } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
 import { Link } from "react-router-dom",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { AppLayout } from "@/layout/AppLayout",
 <<<<<<< HEAD
@@ -81,11 +87,15 @@ export default function GreenIT() {
 =======
 import { AppLayout } from "@/layout/AppLayout",    {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { AppLayout } from "@/layout/AppLayout",    {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       title: "Optimized Cooling Systems"
       description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures."
       icon: Cloud}
     {
       title: "Renewable Energy Integration"
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint."
 <<<<<<< HEAD
@@ -286,6 +296,9 @@ import { SEO } from "@/components/SEO",;
 =======
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint."import { SEO } from "@/components/SEO",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint."import { SEO } from "@/components/SEO",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
 import { Leaf, Server, Cloud } from "lucide-react",;
@@ -329,6 +342,7 @@ export default function GreenIT() {;
                   <p className="text-zion-slate-light text-lg mb-6">;                    for reducing your carbon footprint.;
                   </p>;
                   <div className="mt-8">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
 <<<<<<< HEAD
@@ -378,6 +392,9 @@ export default function GreenIT() {;
 =======
                     <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;                      Explore Green IT Solutions;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;                      Explore Green IT Solutions;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </Button>;
                   </div>;
                 </div>;
@@ -390,6 +407,7 @@ export default function GreenIT() {;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -521,6 +539,9 @@ export default function GreenIT() {;
 =======
           </div>;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          </div>;}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </AppLayout>);
 }
     </AppLayout>);
@@ -555,18 +576,24 @@ Green IT Solutions - Sustainable Technology"description=" Explore eco-friendly I
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ;
     </AppLayout>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

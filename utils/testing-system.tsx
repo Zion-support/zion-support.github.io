@@ -30,12 +30,16 @@ import &quot;@testing-library/jest-dom&quot;; interface HTMLElement { click(): v
 export const testingSystem = {
   // Add testing utilities here
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 };
 ;import "@testing-library/jest-dom;
@@ -187,6 +191,10 @@ export class TestingSystem {,
       default: ,
         break
     }
+<<<<<<< HEAD
+=======
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 };
 <<<<<<< HEAD

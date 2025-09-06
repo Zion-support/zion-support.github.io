@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([]),
 export default function CloudAutomationHub() {_const [logs, _setLogs] = useState<any[]>([]);
@@ -165,6 +166,13 @@ import { useEffect, useState } from 'react';
 import { useEffect, useState } from 'react';
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import { useEffect, useState } from 'react';
+
+=======
+import { useEffect, useState  } from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([])
   useEffect(() => {
@@ -176,22 +184,30 @@ export default function CloudAutomationHub() {
 export default function CloudAutomationHub() {_const [logs, _setLogs] = useState<any[]>([]);
 ursor/fix-lint-push-and-merge-to-main-ce13
   useEffect__(() => {
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     fetch('/api/automation/cloud-logs')
       .then((r) => r.json())
       .then((d) => setLogs(d.logs |[]))
       .catch(() => setLogs([]))
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 
   }, []),
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  }, []);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-6">
       <div>
@@ -203,6 +219,7 @@ ursor/fix-lint-push-and-merge-to-main-ce13
           <h3 className="font-semibold">Roadmap (Autonomous)</h3>
           <p className="text-sm text-gray-600 dark:text-gray-400">Docs/ROADMAP.md</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         </Link>
@@ -243,10 +260,13 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>
       <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
         <h2 className="font-semibold mb-3">Recent Automation Logs</h2>
         <ul className="space-y-2 text-sm">
+<<<<<<< HEAD
 <<<<<<< HEAD
           {logs.length === 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>}
           {logs.map((log) => (
@@ -290,6 +310,8 @@ ursor/fix-lint-push-and-merge-to-main-ce13
               <span>{log.generatedAt |log.file}</span>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {logs.length === 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -298,6 +320,7 @@ ursor/fix-lint-push-and-merge-to-main-ce13
           {logs.map((log) => (
             <li key={log.id} className="flex items-center justify-between">
               <span>{log.generatedAt || log.file}</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           {logs.map((log) => (
@@ -324,10 +347,14 @@ ursor/fix-lint-push-and-merge-to-main-ce13
               <span className="text-gray-600">{log.insights?.theme}</span>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              <span className="text-gray-600">{log.insights?.theme}</span>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </li>
           ))}
         </ul>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -336,6 +363,8 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="flex items-center gap-3">
         <a href="https: //github.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700">View Workflow</a>
         <a href="/api/automation/cloud-logs" className="inline-flex items-center px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700">Refresh Logs</a>
@@ -344,8 +373,13 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   )
+=======
+  )
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useEffect, useState } from 'react';
 export default function CloudAutomationHub(req, res) {
   try {
@@ -358,7 +392,10 @@ export default function CloudAutomationHub(req, res) {
   }, []);
   return (;
     <div className="space-y-6">;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
 
@@ -383,6 +420,7 @@ function CloudAutomationHub() {
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -540,3 +578,8 @@ function CloudAutomationHub() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

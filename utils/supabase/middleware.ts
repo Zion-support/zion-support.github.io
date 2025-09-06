@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,6 +15,8 @@ export function middleware(request: NextRequest) {const { pathname } = request.n
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { NextResponse } from 'next/server',;
 import type { NextRequest } from 'next/server',;
 export function middleware(request: NextRequest) {;
@@ -41,6 +44,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -48,6 +52,8 @@ export const config = {matcher: ['/dashboard/dashboard/']}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {;
@@ -64,6 +70,7 @@ export function middleware(request: NextRequest) {;
     return res.status(500).json({ error: "Internal server error" });
   }
   return NextResponse.next ();
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -109,10 +116,14 @@ export const config = {
 =======
 }export const config = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}export const config = {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   matcher: ['/dashboard / dashboard/']}
 
 ;
 export const config = {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   matcher: ['/dashboard/dashboard/']};
 <<<<<<< HEAD
@@ -138,3 +149,6 @@ export const config = {;
 =======
   matcher: ['/dashboard/dashboard/']};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  matcher: ['/dashboard/dashboard/']};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

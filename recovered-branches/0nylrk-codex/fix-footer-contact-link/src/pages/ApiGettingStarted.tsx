@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -18,10 +19,13 @@ import {CodeBlock} from "@/components/developers/CodeBlock";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function ApiGettingStarted() {
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY"`,;
+<<<<<<< HEAD
 const quickStartJs = `import axios from 'axios';
 import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
@@ -46,10 +50,13 @@ export function ApiGettingStarted() {
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY"`,;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const quickStartJs = `import axios from 'axios';export function ApiGettingStarted() {
 
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -77,6 +84,12 @@ const quickStartJs = `import axios from 'axios';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
+=======
+  -H "Authorization: Bearer YOUR_API_KEY"`
+const quickStartJs = `import axios from 'axios';
+  -H "Authorization: Bearer YOUR_API_KEY"`,
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const quickStartJs = `import axios from 'axios',const quickStartJs = `import axios from 'axios';
 const response = await axios.get ('https://api.zionai.com / v1 / jobs', {
 
@@ -106,6 +119,7 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
 console.log(response.data),`;
 
 // // // console.log(response.data),`,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -164,6 +178,8 @@ console.log(response.data),`;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </p>
 
         <CodeBlock code={authExample} language="bash" showLineNumbers={false} />
@@ -238,6 +254,7 @@ console.log(response.data),`;
       </div>
     </ApiDocsLayout>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 
@@ -279,6 +296,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
@@ -356,6 +375,7 @@ console && console.log(response && response.data),`;
         </ul>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -377,11 +397,14 @@ console && console.log(response && response.data),`;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
 ;
 
 export default ApiGettingStarted;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -451,6 +474,8 @@ console.log (response.data), `;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <a;
             href="#";
             className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors";
@@ -468,7 +493,10 @@ export default ApiGettingStarted;
 
 export default ApiGettingStarted;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

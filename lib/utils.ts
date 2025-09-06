@@ -80,6 +80,7 @@ export function slugify(str: string): string {
     .replace(/[\s_-]+/g, '-')
     .replace(/^-+|-+$/g, '');
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
@@ -100,6 +101,9 @@ export const placeholder = 'placeholder';
 =======
 }  return twMerge(clsx(inputs));}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}  return twMerge(clsx(inputs));}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return twMerge(clsx(inputs));}
   return twMerge(clsx(inputs));
 }
@@ -117,6 +121,7 @@ origin/automation-improvements-final
     month: "long", day: "numeric"
     year: "numeric"
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""
 =======
@@ -143,10 +148,14 @@ import { type ClassValue, clsx } from 'clsx';,
 =======
 const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""import { type ClassValue, clsx } from 'clsx';,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""import { type ClassValue, clsx } from 'clsx';,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { twMerge } from 'tailwind-merge';,
 
 export function cn(...inputs: ClassValue[]) {}
   return twMerge(clsx(inputs));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -189,12 +198,16 @@ export function formatDate(date: Date | string | number): string {
 =======
 }export function formatDate(date: Date | string | number): string {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}export function formatDate(date: Date | string | number): string {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return new Intl && Intl.DateTimeFormat("en-US", {
     month: "long", day: "numeric",
     year: "numeric",
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -307,10 +320,17 @@ origin/main
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+};
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 }
 }
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -323,3 +343,5 @@ ursor/integrate-build-improve-and-re-verify-8f7d}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

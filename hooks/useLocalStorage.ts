@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react';
 =======
 <<<<<<< HEAD
@@ -14,6 +15,8 @@ import React from 'react';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {const [storedValue, setStoredValue] = useState<T>(() => {;    try {;
       const item = window.localStorage.getItem(key);
@@ -22,6 +25,7 @@ export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {const [stor
   });
   const setValue = (valu:e:T | ((va:l:T) => T)) => {try {;
       const valueToStore = value instanceof Function ? value(storedValue) :value;import { useState, useEffect } from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -48,6 +52,9 @@ import { useState } from &apos;react&apos;; export const useLocalStorage = <T>(k
 =======
   // Get from local storage then parse stored json or return initialValueimport { useState } from &apos;react&apos;; export const useLocalStorage = <T>(key: string,initialValue: T) => { const [storedValue,setStoredValue] = useState<T>(() => { try { const item = window.localStorage.getItem(key); return item ? JSON.parse(item) : initialValue} catch (error) { return initialValue} }); const setValue = (value: T | ((val: T) => T)) => { try { const valueToStore = value instanceof Function ? value(storedValue) : value; setStoredValue(valueToStore); window.localStorage.setItem(key,JSON.stringify(valueToStore))} catch (error) { } }; return [storedValue,setValue] as const}; export default useLocalStorage;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // Get from local storage then parse stored json or return initialValueimport { useState } from &apos;react&apos;; export const useLocalStorage = <T>(key: string,initialValue: T) => { const [storedValue,setStoredValue] = useState<T>(() => { try { const item = window.localStorage.getItem(key); return item ? JSON.parse(item) : initialValue} catch (error) { return initialValue} }); const setValue = (value: T | ((val: T) => T)) => { try { const valueToStore = value instanceof Function ? value(storedValue) : value; setStoredValue(valueToStore); window.localStorage.setItem(key,JSON.stringify(valueToStore))} catch (error) { } }; return [storedValue,setValue] as const}; export default useLocalStorage;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const { useState } from "react"; export const useLocalStorage = <T>(key: string,initialValue: T) => { const [storedValue,setStoredValue] = useState<T>(() => { try { const item = window.localStorage.getItem(key); return item ? JSON.parse(item) : initialValue} catch (error) { return initialValue} }); const setValue = (value: T | ((val: T) => T)) => { try { const valueToStore = value instanceof Function ? value(storedValue) : value; setStoredValue(valueToStore); window.localStorage.setItem(key,JSON.stringify(valueToStore))} catch (error) {} }; return [storedValue,setValue] as const}; export default useLocalStorage;''"
 import React from 'react';
 
@@ -122,6 +129,7 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {,
   const setValue = (value: T | ((val: T) => T)) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     try {;
 =======
@@ -135,6 +143,9 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {,
 =======
     try {;      const valueToStore = value instanceof Function ? value(storedValue) : value;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    try {;      const valueToStore = value instanceof Function ? value(storedValue) : value;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setStoredValue(valueToStore),
       window.localStorage.setItem(key, JSON.stringify(valueToStore))} catch (error) {
       console.error(`Error setting localStorage key "${key}":`, error)}
@@ -147,6 +158,7 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -156,10 +168,13 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Get from local storage then parse stored json or return initialValue
 interface UseLocalStorageProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -171,6 +186,8 @@ interface UseLocalStorageProps {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
     try {
       const item = window && window.localStorage.getItem(key);
@@ -188,6 +205,7 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -195,6 +213,8 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Save to local storage
       if (typeof window !== 'undefined') {
         window && window.localStorage.setItem(key, JSON && JSON.stringify(valueToStore));
@@ -205,6 +225,7 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
   return [storedValue, setValue] as const}
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -313,6 +334,12 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
 =======
 };      console.error(`Error setting localStorage key "${key}":`, error)}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======}
+};
+}
+};      console.error(`Error setting localStorage key "${key}":`, error)}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   return [storedValue, setValue] as const}
 }
@@ -321,6 +348,7 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
 };
   return [storedValue, setValue] as const}
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 <<<<<<< HEAD
@@ -358,6 +386,10 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
 }
 };export const useLocalStorage = <T>(key: string, initialValue: T) => {  const [storedValue, setStoredValue] = useState<T>(() => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+};export const useLocalStorage = <T>(key: string, initialValue: T) => {  const [storedValue, setStoredValue] = useState<T>(() => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (typeof window === 'undefined') {
       return initialValue;
     }
@@ -387,9 +419,12 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
   };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return [storedValue, setValue] as const};
 export default useLocalStorage;export default function UseLocalStorage({ }: UseLocalStorageProps) {
   return (
@@ -399,6 +434,7 @@ export default useLocalStorage;export default function UseLocalStorage({ }: UseL
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -432,3 +468,7 @@ export default useLocalStorage;export default function UseLocalStorage({ }: UseL
 }}
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

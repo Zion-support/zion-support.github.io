@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -110,6 +111,8 @@ export default function DeploymentNotification({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   actions?: {;
     label: string;
     action: 'deploy' | 'view' | 'retry' | 'configure' | 'dismiss';
@@ -171,6 +174,7 @@ export default function DeploymentNotification({updates;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },;
@@ -222,6 +226,8 @@ import {Rocket;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Zap;
 } from './lucide-react';,
 interface DeploymentUpdate {
@@ -254,6 +260,7 @@ function DeploymentNotification() {
   const getUpdateIcon = (type: string) =>: any {
     switch (type) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       case 'deployment_started': return <Activity className="w - 5 h - 5 text - blue - 400" />,
       case 'deployment_completed': return <CheckCircle className="w - 5 h - 5 text - green - 400" />,
       case 'deployment_failed': return <AlertCircle className="w - 5 h - 5 text - red - 400" />,
@@ -261,13 +268,18 @@ function DeploymentNotification() {
       case 'update_available': return <Clock className="w - 5 h - 5 text - yellow - 400" />,
       default: return <Rocket className="w - 5 h - 5 text - gray - 400" />;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       case 'deployment_started': return <Activity className="w - 5 h - 5 text - blue-400" />,
       case 'deployment_completed': return <CheckCircle className="w - 5 h - 5 text - green-400" />,
       case 'deployment_failed': return <AlertCircle className="w - 5 h - 5 text - red-400" />,
       case 'instance_ready': return <Rocket className="w - 5 h - 5 text - purple-400" />,
       case 'update_available': return <Clock className="w - 5 h - 5 text - yellow-400" />,
       default: return <Rocket className="w - 5 h - 5 text - gray-400" />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   },
   const getUpdateColor = (type: string) =>: any {
@@ -283,33 +295,45 @@ function DeploymentNotification() {
   const getVerticalIcon = (vertical: string) =>: any {
     switch (vertical) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       case "HEALTH": return <Shield className="w - 4 h - 4 text - blue - 400" />,
       case "EDUCATION": return <Building2 className="w - 4 h - 4 text - green - 400" />,
       case "LAW": return <Shield className="w - 4 h - 4 text - purple - 400" />,
       case "GOV": return <Users className="w - 4 h - 4 text - red - 400" />,
       default: return <Globe className="w - 4 h - 4 text - gray - 400" />;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       case "HEALTH": return <Shield className="w - 4 h - 4 text - blue-400" />,
       case "EDUCATION": return <Building2 className="w - 4 h - 4 text - green-400" />,
       case "LAW": return <Shield className="w - 4 h - 4 text - purple-400" />,
       case "GOV": return <Users className="w - 4 h - 4 text - red-400" />,
       default: return <Globe className="w - 4 h - 4 text - gray-400" />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   },
   const getGovernanceIcon = (type: string) =>: any {
     switch (type) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       case "ADMIN": return <Users className="w - 4 h - 4 text - yellow - 400" />,
       case "DAO_LITE": return <Users className="w - 4 h - 4 text - blue - 400" />,
       case "DAO_FULL": return <Zap className="w - 4 h - 4 text - purple - 400" />,
       default: return <Users className="w - 4 h - 4 text - gray - 400" />;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       case "ADMIN": return <Users className="w - 4 h - 4 text - yellow-400" />,
       case "DAO_LITE": return <Users className="w - 4 h - 4 text - blue-400" />,
       case "DAO_FULL": return <Zap className="w - 4 h - 4 text - purple-400" />,
       default: return <Users className="w - 4 h - 4 text - gray-400" />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   },
   const format_timestamp = (timestamp: string) =>: any {
@@ -338,16 +362,20 @@ if ( {) {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },
   // Check condition
 if (return null, ) {
   $2
 }
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="fixed top - 4 right - 4 z - 50 space - y-3 max - w-md">;
       {updates.map ((update) => (
@@ -482,6 +510,12 @@ export default function DeploymentNotification({;
       {updates.map ((update) => (  return (;
     <div className="fixed top-4 right-4 z-50 space-y-3 max-w-md">;
       {updates.map((update) => (;
+=======
+    <div className="fixed top - 4 right - 4 z - 50 space - y-3 max-w-md">;
+      {updates.map ((update) => (  return (;
+    <div className="fixed top-4 right-4 z-50 space-y-3 max-w-md">;
+      {updates.map((update) => (;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div;
           key={update.id}
           className={`group relative backdrop - blur - sm rounded - xl border p - 4 transition - all duration - 300 hover:shadow - lg ${getUpdateColor (update.type)}`}
@@ -496,11 +530,15 @@ export default function DeploymentNotification({;
                 {update.title}
               </h4>;
               <p className="text - white / 80 text - xs leading-relaxed">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {update.message}
               </p>;
             </div>;
             <button;
+<<<<<<< HEAD
 <<<<<<< HEAD
               onClick={() => onDismiss?.(update.id)}
               className="p-1 text-white/60 hover:text-white/80 transition-colors";
@@ -627,11 +665,40 @@ export default function DeploymentNotification({;
                       ? 'bg-blue-600 hover:bg-blue-700 text-white';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              on_click={() => on_dismiss?.(update.id)}
+              className="p - 1 text - white / 60 hover:text - white / 80 transition-colors";
+            >;
+              <X className="w - 4 h-4" />;
+            </button>;
+          </div>;
+          {/* Instance Details (if available) */}          {/* Progress Bar (for deployment updates) */}
+          {update.progress !== undefined && (
+            <div className="mb - 3 space-y-2">;
+              <div className="flex justify - between text - xs text-white / 70">;
+                <span > Deployment Progress</span>;
+                <span>{update.progress}%</span>;
+              </div>;
+              <div className="w - full bg - white / 20 rounded - full h-2">;
+                <div;
+                  className="bg - blue - 400 h - 2 rounded - full transition - all duration - 500 ease-out";
+                  style={{ width: `${update.progress}%` }}
+                ></div>;
+              </div>;
+          {/* Action Buttons */}
+          {update.actions && update.actions.length > 0 && (
+            <div className="flex gap - 2 pt - 2 border - t border-white / 20">;
+              {update.actions.map ((action, index) => (
+                <button;
+                  key={index}
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white';                      ? 'bg-blue-600 hover:bg-blue-700 text-white';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       : action.action === 'view';
                       ? 'bg-green-600 hover:bg-green-700 text-white';
                       : 'bg-white/20 hover:bg-white/30 text-white/80';
                   }`}
                 >;
+<<<<<<< HEAD
                   {action.action === 'deploy' && <Play className="w-3 h-3" />}
                   {action.action === 'view' && <Eye className="w-3 h-3" />}
                   {action.action === 'retry' && <Rocket className="w-3 h-3" />}
@@ -652,12 +719,23 @@ export default function DeploymentNotification({;
           {/* Timestamp */}
           <div className="absolute bottom-2 right-4 text-xs text-white/60">;
             {formatTimestamp(update.timestamp)}
+=======
+                  {action.action === 'deploy' && <Play className="w - 3 h-3" />}
+                  {action.action === 'view' && <Eye className="w - 3 h-3" />}
+                  {action.action === 'retry' && <Rocket className="w - 3 h-3" />}
+                  {action.action === 'configure' && <Settings className="w - 3 h-3" />}
+                  <span>{action.label}</span>;
+          {/* Timestamp */}
+          <div className="absolute bottom - 2 right - 4 text - xs text-white / 60">;
+            {format_timestamp (update.timestamp)}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>;
         </div>;
       ))}
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -783,6 +861,8 @@ export function DeploymentNotificationExample() {;
     </div>);
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <DeploymentNotification;
       updates={updates}
       on_dismiss={handle_dismiss}

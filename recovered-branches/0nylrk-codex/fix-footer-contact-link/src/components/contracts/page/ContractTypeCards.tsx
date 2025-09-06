@@ -18,6 +18,7 @@ import {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -174,6 +175,12 @@ export function ContractTypeCards({
   onSmartClick
 }: ContractTypeCardsProps) {      <Card>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function ContractTypeCards({
+  onStandardClick
+  onSmartClick
+}: ContractTypeCardsProps) {      <Card>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
             <CardTitle className="flex items-center gap-2">
@@ -199,12 +206,16 @@ export function ContractTypeCards({
         </CardContent>
         <CardFooter>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function ContractTypeCards(): any ({;
   onStandardClick,;
   onSmartClick,;
 }: ContractTypeCardsProps) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
 <<<<<<< HEAD
@@ -270,10 +281,14 @@ export function ContractTypeCards({ onStandardClick, onSmartClick } ContractType
 =======
   return (    <div className="grid md:grid-cols-2 gap-6 mb-10">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (    <div className="grid md:grid-cols-2 gap-6 mb-10">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -304,6 +319,8 @@ interface ContractTypeCardsProps {;
             Standard Contracts;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </CardTitle>;
           <CardDescription>;
             Generate traditional legal agreements for your projects;
@@ -333,6 +350,7 @@ interface ContractTypeCardsProps {;
       </Card>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -356,6 +374,9 @@ interface ContractTypeCardsProps {;
 =======
 }    </div>);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}    </div>);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
 }
@@ -379,6 +400,7 @@ onSmartClick: () => void
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -386,3 +408,5 @@ onSmartClick: () => void
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

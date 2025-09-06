@@ -7,6 +7,7 @@ import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from '@jest/globals';
 import App from '../App';
 
+<<<<<<< HEAD
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
@@ -67,19 +68,25 @@ import { render, screen, describe, it, expect } from 'lucide-react'; import App 
 });'});
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { render, screen, describe, it, expect } from 'lucide-react'; import App from '../App'; describe('App',() => { it('renders without crashing',() => { render(<App />); expect(screen.getByRole('main')).toBeInTheDocument()}
 }); it('displays correct content',() => { render(<App />)}
 }); it('handles user interactions',() => { render(<App />)})}
 });'
 import { render, screen } from '@testing-library/react'
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { describe, it, expect } from 'vitest'
 import App from '../App'
 describe('App'
   it('renders without crashing'
     expect(screen.getByRole('main'
   it('displays correct content'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -131,3 +138,7 @@ describe('App'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+});
+</App>'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

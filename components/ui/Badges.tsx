@@ -1,14 +1,25 @@
 import React from 'react';
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+=======
+export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' }) {
+  const colorMap = null;
+export function TrustBadge({
+  type
+}: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   type: 'Verified' | 'Pro' | 'Top Rated';
 }) {
   const colorMap = {
@@ -41,6 +52,7 @@ export function MicroTestimonial({
       <figcaption className='mt-2 font-medium opacity-80'>;
         — {author}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' }) {
@@ -71,9 +83,18 @@ export /**
  */
 function MicroTestimonial() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      </figcaption>
+    </figure>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <figure className='border rounded - md p - 3 text - sm'>;
       <blockquote className='italic opacity - 90'>“{quote}”</blockquote>;
@@ -157,6 +178,7 @@ export function MicroTestimonial(_{_quote, _author}: {_quote: string; author: st
       <figcaption className="mt-2 font-medium opacity-80">— {_author}</figcaption>
 
     </figure>
+<<<<<<< HEAD
   )
 
 }
@@ -284,6 +306,7 @@ function MicroTestimonial() {
 }
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -295,3 +318,10 @@ function MicroTestimonial() {
 }
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

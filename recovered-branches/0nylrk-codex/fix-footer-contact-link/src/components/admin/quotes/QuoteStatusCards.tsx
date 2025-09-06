@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -6,6 +7,11 @@ import { Badge } from "@/components/ui/badge";
 
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+=======
+
+import React from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Badge } from "@/components/ui/badge";interface QuoteStatusCardsProps {
   status_counts: {
 
@@ -117,6 +123,7 @@ import { Badge } from "@/components/ui/badge";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -135,6 +142,8 @@ import { Badge } from "@/components/ui/badge",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface QuoteStatusCardsProps {
   statusCounts: {
     new: number,
@@ -236,6 +245,7 @@ interface QuoteStatusCardsProps {
       </Card>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>
   );
 }
@@ -245,6 +255,8 @@ interface QuoteStatusCardsProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
   statusCounts,;
@@ -265,6 +277,7 @@ interface QuoteStatusCardsProps {;
 }
 ;
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (;
 <<<<<<< HEAD
@@ -322,6 +335,9 @@ export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
 =======
   return (;            Unreviewed quote requests;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (;            Unreviewed quote requests;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </p>;
         </CardContent>;
       </Card>
@@ -453,6 +469,7 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = (_{_statusCount
 
 export default QuoteStatusCards;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -460,3 +477,6 @@ export default QuoteStatusCards;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

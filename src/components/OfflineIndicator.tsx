@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from 'react',
 import { WifiOff, Wifi } from 'lucide-react'
 import { Alert, AlertDescription } from '@/components/ui/alert',
@@ -13,6 +14,8 @@ import { useState, useEffect } from 'react';
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { WifiOff, Wifi } from 'lucide-react'
 import { useState, useEffect } from 'react',
 import { WifiOff, Wifi } from 'lucide-react'
@@ -140,10 +143,18 @@ export const OfflineIndicator = () => {;
         <div className="flex items-center gap-2">
           {isOnline ? (
             <Wifi className="h-4 w-4" />
+=======
+import { Alert, AlertDescription } from '@/components/ui/alert';
+export const OfflineIndicator = null;
+      <Alert variant={isOnline ? 'default' : 'destructive'}>
+        <div className='flex items-center gap-2'>
+            <Wifi className='h-4 w-4' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           ) : (
             <WifiOff className="h-4 w-4" />
 <<<<<<< HEAD
           )}
+<<<<<<< HEAD
           <AlertDescription>;
             {isOnline ? (;
               'Connection restored';
@@ -153,6 +164,25 @@ export const OfflineIndicator = () => {;
 <<<<<<< HEAD
           </AlertDescription>;
 =======
+=======
+          <AlertDescription>
+<<<<<<< HEAD
+            {isOnline ? (
+              'Connection restored'
+            ) : (
+              'You are offline. Some features may not work.'
+            )}
+=======
+            {isOnline
+              ? 'Connection restored'
+              : 'You are offline. Some features may not work.'}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+          </AlertDescription>
+        </div>
+      </Alert>
+    </div>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>;
@@ -196,6 +226,14 @@ export const OfflineIndicator = () => {;
   )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+);
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

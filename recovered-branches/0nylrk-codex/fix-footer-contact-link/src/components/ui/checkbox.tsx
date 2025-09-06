@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 'use client';
 =======
@@ -10,6 +11,9 @@ import React from 'react';
 =======
 import {cn} from '@/lib/utils';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {cn} from '@/lib/utils';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 "use client"
 "use client"
@@ -20,8 +24,11 @@ import * as React from 'react';
 import * as CheckboxPrimitive from '@radix - ui / react - checkbox';
 import {Check} from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {cn} from '@/lib/utils';
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 'use client';
 
@@ -29,6 +36,7 @@ import * as React from 'react';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 import {Check} from 'lucide-react';
 import {cn} from '@/lib/utils';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -56,12 +64,18 @@ import {cn} from '@/lib/utils';
 "use client"
 "use client"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+"use client"
+"use client"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import * as React from "react"
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
 import { Check } from "lucide-react"
 
 import { cn } from "@/lib/utils"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -215,6 +229,8 @@ const Checkbox = React.forwardRef<
       className
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     )}
     {...props}
   >
@@ -228,6 +244,7 @@ const Checkbox = React.forwardRef<
 ))
 Checkbox.displayName = CheckboxPrimitive.Root.displayName
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -274,3 +291,5 @@ export { Checkbox }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

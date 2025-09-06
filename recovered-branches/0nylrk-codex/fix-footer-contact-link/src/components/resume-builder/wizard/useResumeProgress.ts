@@ -1,12 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { useState, useEffect } from "react";
 import { Resume } from "@/types/resume";
 export const useResumeProgress = (resume: Resume | null) => {
 import {useState, useEffect} from 'react';
 import {Resume} from '@/types/resume';
+<<<<<<< HEAD
 export const useResumeProgress = (resume: Resume | null) => {;
 =======
 <<<<<<< HEAD
@@ -45,6 +49,9 @@ import {useState, useEffect} from 'react';
 import {Resume} from '@/types/resume';
 export const useResumeProgress = (resume: Resume | null) => {;  const [progress, setProgress] = useState(0);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export const useResumeProgress = (resume: Resume | null) => {;  const [progress, setProgress] = useState(0);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   useEffect(() => {
     // Calculate progress based on completed sections
@@ -52,6 +59,7 @@ export const useResumeProgress = (resume: Resume | null) => {;  const [progress,
       setProgress(0);
       return;
     }
+<<<<<<< HEAD
 import { useState, useEffect } from 'react',;
 import { Resume } from '@/types/resume',;
 export const useResumeProgress = (resume: Resume | null) => {;
@@ -86,6 +94,8 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from 'react',;
 import { Resume } from '@/types/resume',;
 export const useResumeProgress = (resume: Resume | null) => {;
@@ -107,6 +117,7 @@ if ( {) {
     completed += 1,;
     // Work experience (1 point if at least one entry);
     if (resume.work_experience && resume.work_experience.length > 0) {;
+<<<<<<< HEAD
       completed += 1;
 <<<<<<< HEAD
 =======
@@ -150,6 +161,9 @@ if ( {) {
 =======
       completed += 1;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+      completed += 1;      completed += 1;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -160,11 +174,14 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Skills (1 point if at least one entry)
@@ -174,18 +191,22 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Certifications (1 point if at least one entry)
     if (resume.certifications && resume.certifications.length > 0) {
       completed += 1;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -197,6 +218,8 @@ if ( {) {
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return progress
 ;
@@ -214,6 +237,7 @@ if ( {) {
     setProgress(progressPercentage);
   }, [resume]);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -240,6 +264,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Check condition
 if ( {) {
   $2
@@ -337,7 +363,10 @@ if ( {) {
     if (resume && resume.certifications && resume && resume.certifications.length > 0) {
       completed += 1
     }};
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { useState, useEffect } from 'react',;
 import { Resume } from '@/types/resume',;

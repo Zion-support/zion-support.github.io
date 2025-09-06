@@ -63,6 +63,7 @@ module.exports = MetricsCollector;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -75,6 +76,8 @@ module.exports = MetricsCollector;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const fs = require('fs') const path = require('path') class MetricsCollector { constructor() { this.metrics = { requests: '0',errors: '0',responseTime: '[]',memoryUsage: '[]',timestamp: Date.now() }} recordRequest(responseTime) { this.metrics.requests++; this.metrics.responseTime.push(responseTime); if ( { this.metrics.responseTime = this.metrics.responseTime.slice(-1000)} } recordError() { this.metrics.errors++} recordMemoryUsage() { const usage = process.memoryUsage() { { this.metrics.responseTime = this.metrics.responseTime.slice(-1000)} } recordError() { this.metrics.errors++} recordMemoryUsage() { const usage = process.memoryUsage(}); this.metrics.memoryUsage.push({ timestamp: Date.now(),rss: 'usage.rss',heapTotal: 'usage.heapTotal',heapUsed: 'usage.heapUsed',external: 'usage.external' }); if ( { this.metrics.memoryUsage = this.metrics.memoryUsage.slice(-100)} } getMetrics() { const avgResponseTime = this.metrics.responseTime.length > 0 ? this.metrics.responseTime.reduce((a,b) => a + b,0) / this.metrics.responseTime.length :) { { this.metrics.memoryUsage = this.metrics.memoryUsage.slice(-100)} } getMetrics() { const avgResponseTime = this.metrics.responseTime.length > 0 ? this.metrics.responseTime.reduce((a,b) => a + b,0) / this.metrics.responseTime.length :} ;0; return {; ...this.metrics,avgResponseTime: Math.round(avgResponseTime),errorRate: this.metrics.requests > 0 ? (this.metrics.errors / this.metrics.requests) * 100 : 0 }} saveMetrics() { const metricsPath = path.join(process.cwd(),'monitoring-metrics.json;';); fs.writeFileSync(metricsPath,JSON.stringify(this.getMetrics(),null,2))} } module.exports = MetricsCollector;
 
 
@@ -90,6 +93,7 @@ const fs = require('fs') const path = require('path') class MetricsCollector { c
 const fs = require('fs') const path = require('path') class MetricsCollector { constructor() { this.metrics = { requests: '0',errors: '0',responseTime: '[]',memoryUsage: '[]',timestamp: Date.now() }} recordRequest(responseTime) { this.metrics.requests++; this.metrics.responseTime.push(responseTime); if ( { this.metrics.responseTime = this.metrics.responseTime.slice(-1000)} } recordError() { this.metrics.errors++} recordMemoryUsage() { const usage = process.memoryUsage() { { this.metrics.responseTime = this.metrics.responseTime.slice(-1000)} } recordError() { this.metrics.errors++} recordMemoryUsage() { const usage = process.memoryUsage(}); this.metrics.memoryUsage.push({ timestamp: Date.now(),rss: 'usage.rss',heapTotal: 'usage.heapTotal',heapUsed: 'usage.heapUsed',external: 'usage.external' }); if ( { this.metrics.memoryUsage = this.metrics.memoryUsage.slice(-100)} } getMetrics() { const avgResponseTime = this.metrics.responseTime.length > 0 ? this.metrics.responseTime.reduce((a,b) => a + b,0) / this.metrics.responseTime.length :) { { this.metrics.memoryUsage = this.metrics.memoryUsage.slice(-100)} } getMetrics() { const avgResponseTime = this.metrics.responseTime.length > 0 ? this.metrics.responseTime.reduce((a,b) => a + b,0) / this.metrics.responseTime.length :} ;0; return {; ...this.metrics,avgResponseTime: Math.round(avgResponseTime),errorRate: this.metrics.requests > 0 ? (this.metrics.errors / this.metrics.requests) * 100 : 0 }} saveMetrics() { const metricsPath = path.join(process.cwd(),'monitoring-metrics.json;';); fs.writeFileSync(metricsPath,JSON.stringify(this.getMetrics(),null,2))} } module.exports = MetricsCollector;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -111,3 +115,5 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

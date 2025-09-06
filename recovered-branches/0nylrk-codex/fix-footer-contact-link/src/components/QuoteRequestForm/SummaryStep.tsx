@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -12,6 +13,8 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useEffect, useState} from "react";
 import {QuoteFormData} from "@/types/quotes";
 import {Card, CardContent} from "@/components/ui/card";
@@ -19,6 +22,7 @@ import {Label} from "@/components/ui/label";
 import {Textarea} from "@/components/ui/textarea";
 import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {toast} from "@/hooks/use-toast";
 <<<<<<< HEAD
@@ -106,6 +110,9 @@ interface SummaryStepProps {;
 =======
 import {toast} from "@/hooks/use-toast";  formData: QuoteFormData,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {toast} from "@/hooks/use-toast";  formData: QuoteFormData,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
   // Run AI matching when the component mounts;
@@ -156,6 +163,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
         `,
         
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -179,6 +187,8 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
           queryString;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           formData && formData.serviceType;
           3;
         );
@@ -237,6 +247,7 @@ if (return) {
         setIsMatching (false);
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -251,6 +262,8 @@ if (return) {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         );
         setMatches(results)
       } catch (error) {
@@ -266,6 +279,7 @@ if (return) {
     },
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
       } finally {
@@ -276,6 +290,8 @@ if (return) {
     runMatching()
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }, [formData]);
   const handleSelectMatch = (match: MatchResult) => {
     // Update the form with the selected match
@@ -286,6 +302,7 @@ if (return) {
     toast({
       title: "Match Selected"
       description: `You've selected ${match.item.title}`})
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -302,11 +319,14 @@ if (return) {
   },
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item),
   
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -316,6 +336,8 @@ if (return) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
@@ -324,6 +346,7 @@ if (return) {
       handleSelectMatch(matchResult)
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -337,12 +360,15 @@ if (return) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },
   
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -399,6 +425,8 @@ if (return) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* AI Matching Results */}
       <AIMatchingResults
         serviceType={formData.serviceType}
@@ -462,6 +490,7 @@ if (return) {
                     {formData.startDate.toLocaleDateString()}
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               )}
 <<<<<<< HEAD
@@ -797,6 +826,9 @@ serviceType={formData.serviceType}
 =======
               )}        matches={matchItems}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              )}        matches={matchItems}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         onSelectMatch={handleItemSelect}
         isLoading={isMatching}
       />;
@@ -815,6 +847,7 @@ serviceType={formData.serviceType}
               {formData && formData.specificItem && (;
                 <div>;
                   <Label className="text-zion-slate-light">Selected Item</Label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <div className="text-white">{formData && formData.specificItem.title}</div>;
 =======
@@ -1159,3 +1192,7 @@ if ( {) {
                   <div className="text-white">{formData && formData.specificItem.title}</div>;                </div>;
               )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  <div className="text-white">{formData && formData.specificItem.title}</div>;                </div>;
+              )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

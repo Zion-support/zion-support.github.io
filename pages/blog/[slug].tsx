@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -12,6 +13,8 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import ReactMarkdown from 'react-markdown',;
 import { useRouter } from 'next/router',;
@@ -27,6 +30,7 @@ import path from 'path',;
 function parseMarkdown(filePath: string): BlogPost | null {
   if (!fs.existsSync(filePath)) {
     return null
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -37,6 +41,8 @@ function parseMarkdown(filePath: string): BlogPost | null {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
@@ -45,6 +51,7 @@ import { BLOG_POSTS } from '@/data/blog-posts';
 import { AuthorBio } from '@/components/blog/AuthorBio';
 import { SocialShareButtons } from '@/components/blog/SocialShareButtons';
 import { CommentsSection } from '@/components/blog/CommentsSection';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -56,15 +63,30 @@ import { CommentsSection } from '@/components/blog/CommentsSection';
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+import React from 'react',
+import ReactMarkdown from 'react-markdown';
+import { useRouter  } from 'next/router';
+import AdvancedSEO from '@/components/seo/AdvancedSEO';
+import { BLOG_POSTS  } from '@/data/blog-posts';
+import { AuthorBio  } from '@/components/blog/AuthorBio';
+import { SocialShareButtons  } from '@/components/blog/SocialShareButtons';
+import { CommentsSection  } from '@/components/blog/CommentsSection';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { BlogPost } from '@/types/blog';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function parseMarkdown(filePath: string): BlogPost | null {
   if (!fs.existsSync(filePath)) {
     return null
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   const match = raw.match(/---\n([\s\S]+?)\n---\n([\s\S]*)/)
@@ -124,6 +146,16 @@ interface BlogPostPageProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  const raw = null;
+interface BlogPostPageProps {
+  /**
+   * Preloaded blog post for static generation. Can be null if not found.
+   */
+initialPost: BlogPost | null;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   const router = useRouter()
   const { slug } = router.query
@@ -131,16 +163,28 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   const [error, setError] = React.useState<string | null>(null)
   React.useEffect(() => {
     if (initialPost && initialPost.slug === slug) {
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       setError(null), // Clear any previous error
+=======
+<<<<<<< HEAD
+
+
+      setError(null), // Clear any previous error
+=======
+      setPost(initialPost);
+setError(null); // Clear any previous error
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } else if (slug) {
       // This case handles if the slug changes and initialPost is not for the current slug
       // Or if initialPost was null from getStaticProps (which shouldn't happen if notFound is true)
       // For now, we will rely on getStaticProps to provide the correct post or a 404.
       // If initialPost is null and getStaticProps didn't return notFound, that's an inconsistent state.
       // The previous logic tried a fallback here, but we aim to make getStaticProps authoritative.
+<<<<<<< HEAD
 
         setError(null)
       } else {
@@ -156,9 +200,28 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         setError('Article not found')
+=======
+<<<<<<< HEAD
+
+
+        setError(null)
+=======
+const directFallback = BLOG_POSTS.find(p => p.slug === slug) || null;
+      if (directFallback) {
+        setPost(directFallback);
+        setError(null);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      } else {
+        // If getStaticProps is working correctly, this path (slug exists, no initialPost, no fallback)
+        // should ideally not be hit frequently, as getStaticProps would have returned notFound.
+        // However, to maintain some robustness for dynamic client-side slug changes not triggering a new getStaticProps:
+        setPost(null);
+        setError('Article not found');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
     }
   }, [slug, initialPost])
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   if (error) {
@@ -184,6 +247,8 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function parseMarkdown(filePath: string): BlogPost | null {;
   if (!fs.existsSync(filePath)) {;
     return null;
@@ -191,6 +256,7 @@ function parseMarkdown(filePath: string): BlogPost | null {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
@@ -205,6 +271,11 @@ function parseMarkdown(filePath: string): BlogPost | null {;
   const body = (post as any).body || post.content;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+  }
+
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       set_post (initial_post),
       set_error (null), // Clear any previous error;
     } else // Check condition
@@ -233,6 +304,7 @@ if ( {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
@@ -265,11 +337,28 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  if (error) {
+return <div>{error}</div>;
+  }
+  if (!post) {
+    return <div>Article not found</div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  }
+  const articleLd = {
+    author: post.author.name,
+    publishedTime: post.publishedDate,
+tags: post.tags || [],
+  };
+  const body = (post as any).body || post.content;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>;
       <AdvancedSEO;
         title={post.title}
         description={post.excerpt}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -281,11 +370,14 @@ if ( {) {
         <h1>{post.title}</h1>;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {post.excerpt && <p className="lead">{post.excerpt}</p>}
         <div className="flex items - center gap - 3 mb - 6">;
           <img;
             src={post.author.avatar_url}
             alt={post.author.name}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -374,15 +466,20 @@ interface BlogPostPageProps {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             className="w-10 h-10 rounded-full"
             onError={(e) => {
               const target = e.currentTarget as HTMLImageElement
               target.src = '/images/blog-placeholder.svg'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {post.author.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -390,11 +487,15 @@ interface BlogPostPageProps {;
 }
               </p>;
             )  } catch (error) {
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
           />
           <div>
 
@@ -451,6 +552,40 @@ interface BlogPostPageProps {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+        image={post.featuredImage}
+type='article'
+        article={articleLd}
+      />
+      <main className='prose dark:prose-invert max-w-3xl mx-auto py-8'>
+        <h1>{post.title}</h1>
+        {post.excerpt && <p className='lead'>{post.excerpt}</p>}
+        <div className='flex items-center gap-3 mb-6'>
+          <img
+            src={post.author.avatarUrl}
+            alt={post.author.name}
+            className='w-10 h-10 rounded-full'
+            onError={e => {
+              const target = e.currentTarget as HTMLImageElement;
+              target.src = '/images/blog-placeholder.svg';
+            }}
+          />
+          <div>
+            <p className='m-0 font-medium'>{post.author.name}</p>
+            {post.author.title && (
+              <p className='m-0 text-sm text-zion-slate-light'>
+                {post.author.title}
+              </p>
+            )}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+          </div>
+        </div>
+        {post.featuredImage && (
+<div className='aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6'>
+            <img
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               src={post.featuredImage  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -461,6 +596,7 @@ interface BlogPostPageProps {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -473,10 +609,14 @@ interface BlogPostPageProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="object-cover w-full h-full"
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+              className="object-cover w-full h-full"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement
                 target.src = '/images/blog-placeholder.svg'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
   params}: {
@@ -548,6 +688,8 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -560,7 +702,10 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
         <ReactMarkdown>{body}</ReactMarkdown>;
         <AuthorBio author={post.author} />;
@@ -595,9 +740,12 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({;
   // Validate slug to prevent malformed paths;
   if (!/^[a-z0-9-]+$/.test(slug)) {;
     return { notFound: true   } catch (error) {
+<<<<<<< HEAD
 
               }  } catch (error) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -628,6 +776,7 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({;
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -638,3 +787,55 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+=======
+              src={post.featuredImage}
+              alt={post.title}
+              className='object-cover w-full h-full'
+              onError={e => {
+                const target = e.currentTarget as HTMLImageElement;
+                target.src = '/images/blog-placeholder.svg';
+              }}
+            />
+          </div>
+        )}
+        <ReactMarkdown>{body}</ReactMarkdown>
+        <AuthorBio author={post.author} />
+        <SocialShareButtons title={post.title} />
+        <CommentsSection slug={post.slug} />
+      </main>
+    </>
+);
+};
+export default BlogPostPage;
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const dir = path.join(process.cwd(), 'content', 'blog');
+  const files = fs.readdirSync(dir).filter(f => f.endsWith('.md'));
+  const paths = files.map(f => ({
+    params: { slug: f.replace(/\.md$/, '') },
+  }));
+  // Use `blocking` so new posts added after build can be generated on demand
+  return { paths, fallback: 'blocking' };
+};
+
+export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
+  params,
+}: {
+  params?: { slug?: string };
+}) => {
+  const slug = params?.slug as string
+  // Validate slug to prevent malformed paths
+  if (!/^[a-z0-9-]+$/.test(slug)) {
+return { notFound: true };
+  }
+  const filePath = path.join(process.cwd(), 'content', 'blog', `${slug}.md`);
+  const post = parseMarkdown(filePath);
+  if (!post) {
+    return { notFound: true };
+  }
+  return { props: { initialPost: post }, revalidate: 60 };
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

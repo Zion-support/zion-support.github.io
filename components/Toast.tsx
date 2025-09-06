@@ -140,13 +140,19 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
       return `${baseStyles} translate-x-0 opacity-100`;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     
     return `${baseStyles} translate-x-full opacity-0`
 };
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     return `${baseStyles} translate-x-full opacity-0`;
   };
@@ -241,8 +247,11 @@ export const useToastNotifications = () => {
 
   return {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     success: (title: string, message?: string, options?: Partial<Toast>) => 
       addToast({ type: 'success', title, message, ...options }),
     error: (title: string, message?: string, options?: Partial<Toast>) => 
@@ -254,7 +263,10 @@ export const useToastNotifications = () => {
   }
 };
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     success: (title: string, message?: string, options?: Partial<Toast>) =>
       addToast({ type: "success", title, message, ...options }),
     error: (title: string, message?: string, options?: Partial<Toast>) =>
@@ -266,6 +278,10 @@ export const useToastNotifications = () => {
   };
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

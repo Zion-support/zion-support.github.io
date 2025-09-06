@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,10 +11,14 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { jsPDF  } from 'jspdf';
 import { Certification  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
 import { formatDate } from '../formatters';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function addCertificationsSection(
 <<<<<<< HEAD
@@ -49,6 +54,9 @@ export function addCertificationsSection(;
 =======
 export function addCertificationsSection(  doc: jsPDF;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function addCertificationsSection(  doc: jsPDF;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   certifications: Certification[];
   colors: PdfThemeColors;
   startY: number
@@ -67,6 +75,7 @@ export function addCertificationsSection(  doc: jsPDF;
       yPos = 20
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10)
@@ -80,6 +89,8 @@ export function addCertificationsSection(  doc: jsPDF;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       doc.addPage();
       yPos = 20
     }
@@ -139,6 +150,7 @@ export function addCertificationsSection(;
       doc.setFontSize(10);
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -315,3 +327,5 @@ doc.text (cert.issuing organization, 20, yPos + 5);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

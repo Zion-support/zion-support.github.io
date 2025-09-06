@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default TestimonialsSection' ,'
 =======
 
@@ -68,6 +69,9 @@ const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; "l
 =======
 </p>'</p>'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+</p>'</p>'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 </p>'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -79,6 +83,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 </p>'
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -126,3 +131,7 @@ const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; "l
 const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default TestimonialsSection' ,'
 </p>'</p>'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default TestimonialsSection' ,'
+</p>'</p>'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

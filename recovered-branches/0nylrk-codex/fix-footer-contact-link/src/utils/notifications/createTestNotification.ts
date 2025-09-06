@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 import { NotificationType  } from './types';
 import { createNotification } from './createNotification';
 import {NotificationType} from './types';
@@ -23,12 +22,19 @@ import {createNotification} from './createNotification';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import {NotificationType} from './types';
+import {createNotification} from './createNotification';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 /**
  * Demo function to create test notifications for the current user
  */
 export async function createTestNotification(userId: string) {
   try {
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -74,6 +80,8 @@ export async function createTestNotification(userId: string) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {NotificationType} from './types';
 import {create_notification} from './create_notification';
 /**;
@@ -96,6 +104,7 @@ function createTestNotification() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
     'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!'
@@ -106,6 +115,8 @@ function createTestNotification() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const actions = {
     'message': { url: '/messages', text: 'View Messages' }
     'quote_request': { url: '/quotes', text: 'View Quote' }
@@ -113,6 +124,7 @@ function createTestNotification() {
     'hire_request': { url: '/dashboard', text: 'View Request' }
     'onboarding': { url: '/profile', text: 'Complete Profile' }
     'system': { url: '/dashboard', text: 'Learn More' }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -147,6 +159,9 @@ import { NotificationType } from './types',;
 =======
   }import { NotificationType } from './types',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }import { NotificationType } from './types',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { createNotification } from './createNotification',;
 /**;
  * Demo function to create test notifications for the current user;
@@ -179,6 +194,7 @@ export async function createTestNotification(userId: string) {;
   });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -201,6 +217,12 @@ export async function createTestNotification(userId: string) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
+=======
+}
+;
+
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 
 }
@@ -225,6 +247,7 @@ export async function createTestNotification(userId: string) {;
   });
 }}
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 /**;
  * Demo function to create test notifications for the current user;
@@ -273,3 +296,5 @@ export async function createTestNotification(userId:string) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

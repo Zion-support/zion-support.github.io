@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -34,12 +35,17 @@ import { Footer } from "@/components/Footer",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface AppLayoutProps {
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { AppHeader } from "./AppHeader";
 import { Footer } from "@/components/Footer";
 import { AppHeader } from "./AppHeader",
 import { Footer } from "@/components/Footer",interface AppLayoutProps {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   children: React.ReactNode;
   hideFooter?: boolean;
 }
@@ -50,6 +56,9 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
       <AppHeader />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <main className="flex-grow">
 <<<<<<< HEAD
         {children}
@@ -61,6 +70,7 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
 =======
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -97,6 +107,8 @@ interface AppLayoutProps {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import { AppHeader } from "./AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -124,6 +136,7 @@ interface AppLayoutProps {;
 ;
 export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -162,6 +175,8 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from './react';
 import { AppHeader } from './AppHeader';
 import { Footer } from '@/components / Footer';
@@ -203,6 +218,7 @@ hideFooter?: boolean
 ;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -210,3 +226,6 @@ hideFooter?: boolean
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

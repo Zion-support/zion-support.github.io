@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const { wallet, loading } = useWallet();
   return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -16,9 +19,28 @@ export function TokenDisplay() {
   const { wallet, loading } = useWallet(),
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+import { useWallet } from "@/hooks/useWallet",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button";
+import Skeleton from "@/components/ui/skeleton";
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import Skeleton from '@/components/ui/skeleton'
+export function TokenDisplay() {
+  const { wallet, loading } = useWallet();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -54,7 +76,10 @@ export function TokenDisplay() {
               Use your tokens to boost visibility, access premium features, or convert to credits.
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,12 +95,19 @@ export function TokenDisplay() {
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Button variant="outline" size="sm">
+=======
+            <div className='mt-2'>
+              <Button variant='outline' size='sm'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 View Wallet
               </Button>
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -191,3 +223,10 @@ function TokenDisplay() {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 ;
+=======
+        )}
+      </CardContent>
+    </Card>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

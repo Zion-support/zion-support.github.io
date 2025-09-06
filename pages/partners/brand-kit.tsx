@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       <p>Download assets and messaging to promote Zion AI Marketplace.</p>
       <ul className="list-disc pl-6">
@@ -41,6 +42,8 @@ export default function BrandKit() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </ul>
       <div className="mt-4 p-4 rounded border">
         <h2 className="font-medium mb-2">Smart CTA</h2>
@@ -48,6 +51,7 @@ export default function BrandKit() {
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -78,3 +82,22 @@ export default function BrandKit() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+=======
+export default function BrandKit() {
+  return (
+<div className='space-y-4'>
+      <h1 className='text-2xl font-semibold'>Influencer Brand Kit</h1>
+      <p>Download assets and messaging to promote Zion AI Marketplace.</p>
+      <ul className=&quot;list-disc pl-6&quot;>
+        <li><a className=&quot;text-blue-600 underline&quot; href=&quot;/brand-kit.txt&quot;>Brand Kit (txt)</Link></li>
+      </ul>
+      <div className='mt-4 p-4 rounded border'>
+        <h2 className='font-medium mb-2'>Smart CTA</h2>
+        <p>Invite your AI audience to earn & help them get hired.</p>
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

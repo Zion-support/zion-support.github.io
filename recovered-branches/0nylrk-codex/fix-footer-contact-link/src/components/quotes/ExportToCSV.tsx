@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -16,10 +17,15 @@ import type { QuoteRequest } from "@/types/quotes";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button",
 import { Download } from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
 import { Download } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import type { QuoteRequest } from "@/types/quotes",
 <<<<<<< HEAD
@@ -103,10 +109,14 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
 =======
 import type { QuoteRequest } from "@/types/quotes",      quote.id;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import type { QuoteRequest } from "@/types/quotes",      quote.id;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       quote.talent_name |'Unknown';
       quote.requester_name;
       quote.requester_email;
       quote.project_name;
+<<<<<<< HEAD
 <<<<<<< HEAD
       quote.project_summary;
 <<<<<<< HEAD
@@ -256,10 +266,14 @@ import type { QuoteRequest } from "@/types/quotes",      quote.id;
 =======
       quote.project_summary;    // Download file and clean up
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      quote.project_summary;    // Download file and clean up
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     link.click(),
     setTimeout(() => {
       document.body.removeChild(link),
       URL.revokeObjectURL(url)
+<<<<<<< HEAD
 <<<<<<< HEAD
     }, 100)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -377,6 +391,9 @@ import { Button } from "@/components/ui/button",;
 =======
     }, 100)import { Button } from "@/components/ui/button",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }, 100)import { Button } from "@/components/ui/button",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Download } from "lucide-react",;
 import type { QuoteRequest } from "@/types/quotes",;
 ;
@@ -404,6 +421,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
       quote.requester_email,;
       quote.project_name,;
       quote.project_summary,;
+<<<<<<< HEAD
 <<<<<<< HEAD
       quote.budget_display || ;
         (quote.budget_min && quote.budget_max ;
@@ -480,6 +498,25 @@ new Date (quote.created at) .toLocaleDateString () ]);
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       onClick={handleExport}
+=======
+
+      onClick={handleExport}
+      className="flex items-center gap-2"
+      disabled={quotes.length === 0}
+
+    >;
+
+      <Download size={16} />;
+      Export CSV;
+    </Button>;
+  )
+};
+      quote.budget_display ||;
+        (quote.budget_min && quote.budget_max;
+          ? `$${quote.budget_min} - $${quote.budget_max}`;
+          : quote.budget_min;
+            ? `$${quote.budget_min}`;      onClick={handleExport}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className="flex items-center gap-2"
       disabled={quotes.length === 0}
 
@@ -506,6 +543,7 @@ new Date (quote.created at) .toLocaleDateString () ]);
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -525,3 +563,5 @@ new Date (quote.created at) .toLocaleDateString () ]);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

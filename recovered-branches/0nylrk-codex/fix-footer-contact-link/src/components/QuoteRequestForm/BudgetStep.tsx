@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -19,10 +20,15 @@ import {Slider} from "@/components/ui/slider";
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { QuoteFormData } from "@/types/quotes",
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { Label } from "@/components/ui/label",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Slider } from "@/components/ui/slider",
 <<<<<<< HEAD
@@ -140,6 +146,13 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
         }
 =======
 import { Slider } from "@/components/ui/slider",        }
+=======
+import { Slider } from "@/components/ui/slider",        }
+      })
+    } else {
+      updateFormData({
+        budget: {        }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       })
     } else {
       updateFormData({
@@ -166,6 +179,7 @@ import { Slider } from "@/components/ui/slider",        }
         }
       });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -231,11 +245,21 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }
+  },
+  };
+  },  },
+  };
+  },
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
       currency: 'USD'
       maximumFractionDigits: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     }).format(value)
 <<<<<<< HEAD
@@ -371,10 +395,14 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
 =======
     }).format(value)          {formData.budget.type === "fixed" && (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }).format(value)          {formData.budget.type === "fixed" && (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="mt-6">
               <Label className="text-zion-slate-light mb-4 block">
                 Fixed Budget: {formatCurrency(formData.budget.amount)}
               </Label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -387,6 +415,8 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };
   const formatCurrency = (value: number) => {;
     return new Intl && Intl.NumberFormat('en-US', {;
@@ -442,6 +472,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
                 Fixed Budget: {formatCurrency(formData && formData.budget.amount)}
               </Label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
         }
@@ -452,6 +483,8 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
               <Slider
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 defaultValue={[formData && formData.budget.amount]}
                 max={50000}
                 step={500}
@@ -465,6 +498,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
                       }
                     });
                   }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -587,6 +621,9 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
 =======
                   min={formData.budget.amount}                  min={formData.budget.amount}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  min={formData.budget.amount}                  min={formData.budget.amount}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   className="py-4";
                 />;
                 <div className="flex justify-between text-sm text-zion-slate-light mt-2">;

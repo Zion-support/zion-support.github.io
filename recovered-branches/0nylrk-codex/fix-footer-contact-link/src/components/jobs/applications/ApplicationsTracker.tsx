@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { Button } from "@/components/ui/button";
@@ -5,6 +6,10 @@ import { ApplicationStatus } from "@/types/jobs";
 
 =======
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { ApplicationCard } from "./ApplicationCard";
 import { LoadingState } from "./LoadingState";
@@ -17,10 +22,13 @@ import { ApplicationStatus } from "@/types/jobs";
 export function ApplicationsTracker() {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { applications, isLoading, error } = useJobApplications();
 
   const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(;
@@ -41,6 +49,7 @@ export function ApplicationsTracker() {
   const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all'),
 
   if (isLoading) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -117,6 +126,8 @@ export function ApplicationsTracker() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return <LoadingState />
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -135,9 +146,12 @@ export function ApplicationsTracker() {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 =======
   if (error) {;
@@ -153,6 +167,7 @@ export function ApplicationsTracker() {;
   
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -164,10 +179,13 @@ export function ApplicationsTracker() {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const filteredApplications =;
     statusFilter === "all";
       ? applications;
       : applications && applications.filter((app) => app && app.status === statusFilter);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -175,6 +193,8 @@ export function ApplicationsTracker() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-6">;
       <div className="flex flex-wrap gap-2">;
@@ -230,6 +250,7 @@ export function ApplicationsTracker() {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -242,10 +263,13 @@ export function ApplicationsTracker() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
         {filteredApplications.map((application) => (
           <ApplicationCard key={application.id} application={application} />
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>
 <<<<<<< HEAD
@@ -270,12 +294,16 @@ export function ApplicationsTracker() {;
 =======
       </div>      {filteredApplications.length === 0 && (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </div>      {filteredApplications.length === 0 && (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="text-center p-8">
           <p className="text-muted-foreground">
             No applications with this status.
           </p>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -293,6 +321,8 @@ export function ApplicationsTracker() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState  } from './react';
 import { useJobApplications  } from '@/hooks / useJobApplications';
 import { ApplicationCard  } from './ApplicationCard';
@@ -310,10 +340,13 @@ function ApplicationsTracker() {
     "all",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 ;
   // Check condition

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -47,11 +48,20 @@ import { Button  } from '@/components/ui/button';
 import { Sparkles, Loader2  } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';interface AIEnhancementButtonProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+import { useState  } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Sparkles, Loader2  } from 'lucide-react';
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';interface AIEnhancementButtonProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   currentContent: string
   enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general'
   context?: string;
   onEnhanced: (enhancedContent: string) => void
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -92,11 +102,14 @@ import {Sparkles, Loader2} from 'lucide-react';
   buttonText?: string;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   className?: string;
 }
 export function AIEnhancementButton({
 
 export function AIEnhancementButton({;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -115,6 +128,11 @@ export function AIEnhancementButton({;
   context;
   onEnhanced;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  enhancementType;
+  context;
+  onEnhanced;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   buttonText = "Enhance with AI";
 
@@ -157,6 +175,7 @@ export function AIEnhancementButton({;
     }
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -242,6 +261,8 @@ export function AIEnhancementButton({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
     setError(null),;
     const enhancedContent = await enhanceContent(;
@@ -253,6 +274,7 @@ export function AIEnhancementButton({
       onEnhanced(enhancedContent);
     }
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -270,10 +292,14 @@ export function AIEnhancementButton({
 =======
       <Button
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <Button
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       type="button"
       variant="ghost"
       size="sm"
       className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
+<<<<<<< HEAD
 <<<<<<< HEAD
       onClick={handleEnhance}
 <<<<<<< HEAD
@@ -373,6 +399,9 @@ import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
 =======
       onClick={handleEnhance}import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      onClick={handleEnhance}import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface AIEnhancementButtonProps {
   current_content: string,
   enhancement_type: 'summary' | 'work - description' | 'skill - categorization' | 'general',
@@ -389,6 +418,7 @@ function AIEnhancementButton() {
   const [error, set_error] = useState < string | null>(null);
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -456,3 +486,5 @@ context);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

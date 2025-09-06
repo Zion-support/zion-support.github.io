@@ -256,6 +256,7 @@ function getAllFiles(dir, extensions) {;
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     const items = fs.readdirSync(dir);
+<<<<<<< HEAD
 =======
     let content = fs.readFileSync (file_path, 'utf8'),
     const original_content = content,
@@ -269,6 +270,8 @@ if ( {) {
 const fs = require('fs'),;
 const path = require('path'),;    const items = fs.readdirSync(dir);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
@@ -478,6 +481,7 @@ async function main() {;
   console.log('🔍 Scanning for merge conflicts...');
   const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md']);
   let fixedCount = 0;
+<<<<<<< HEAD
   for (const file of files) {;
     try {;
       const content = fs.readFileSync(file, 'utf8');
@@ -506,6 +510,8 @@ async function main() {;
 =======
   let fixedCount = 0;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   for (const file of files) {;
     try {;
       const content = fs.readFileSync(file, 'utf8'),;
@@ -554,6 +560,7 @@ main().catch(console.error);
 =======
 ;
 main().catch(console.error),;
+<<<<<<< HEAD
 main().catch(console.error),;main().catch(console.error);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -562,3 +569,7 @@ main().catch(console.error),;
 main().catch(console.error),;
 main().catch(console.error);
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+main().catch(console.error),;
+main().catch(console.error);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

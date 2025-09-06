@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -14,10 +15,14 @@ import * as TooltipPrimitive from '@radix-ui/react-tooltip';
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {cn} from '@/lib/utils';
 const TooltipProvider = TooltipPrimitive.Provider;
 const Tooltip = TooltipPrimitive.Root;
 const TooltipTrigger = TooltipPrimitive.Trigger;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -42,6 +47,8 @@ import * as TooltipPrimitive from "@radix-ui/react-tooltip"
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { cn } from "@/lib/utils"
 
 const TooltipProvider = TooltipPrimitive.Provider
@@ -49,6 +56,7 @@ const TooltipProvider = TooltipPrimitive.Provider
 const Tooltip = TooltipPrimitive.Root
 
 const TooltipTrigger = TooltipPrimitive.Trigger
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -65,6 +73,8 @@ const TooltipTrigger = TooltipPrimitive.Trigger
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const TooltipContent = React.forwardRef<
   React.ElementRef<typeof TooltipPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>
@@ -127,6 +137,7 @@ TooltipContent.display_name = TooltipPrimitive.Content.display_name;
 ;
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -176,3 +187,6 @@ export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

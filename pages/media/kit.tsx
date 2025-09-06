@@ -3,6 +3,10 @@ import Head from 'next/head',
 import {useCallback, useMemo, useState} from 'react';
 import Head from 'next/head';
 import DatePicker from 'react-datepicker';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import type {
   MediaBundle
@@ -15,9 +19,12 @@ import {
   buildTimeline;
   MediaBundle,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import {useCallback, useMemo, useState} from 'react';
@@ -27,7 +34,10 @@ import Head from 'next/head';
 import DatePicker from 'react-datepicker';
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   MediaAsset,;
   PressReleaseType,;
 } from '../../utils/mediaKit';
@@ -37,6 +47,14 @@ import {;
   buildTimeline,;
 } from '../../utils/mediaKit';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
+import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
+const KitPage = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const KitPage = () => {
 import { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
@@ -45,10 +63,15 @@ import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/medi
 import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
 const KitPage = () => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 } from '../../utils/mediaKit';
 const KitPage = () => {;
@@ -58,6 +81,7 @@ import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/
 
 const KitPage = () => {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -80,11 +104,16 @@ const KitPage = () => {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [bundle, setBundle] = useState<MediaBundle>('general');
   const [startDate, setStartDate] = useState<Date>(new Date());
   const [companyName, setCompanyName] = useState('Zion');
   const [raiseAmount, setRaiseAmount] = useState('$5M');
   const [tokenName, setTokenName] = useState('ZION');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const onGenerateTimeline = useCallback(() => {
@@ -129,17 +158,29 @@ const res = await fetch(asset.path);
     const page = pdfDoc.addPage([612, 792]);
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
 
+=======
+=======
+const [timeline, setTimeline] = useState<{ label: string; date: string }[]>(
+    []
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
   const assets: MediaAsset[] = useMemo(
     () => getDefaultAssets(bundle)
     [bundle]
   );
   const onGenerateTimeline = useCallback(() => {
+<<<<<<< HEAD
     setTimeline(buildTimeline(startDate));  }, [startDate]);
+=======
+    setTimeline(buildTimeline(startDate));
+  }, [startDate]);
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const onDownloadZip = useCallback(async () => {
     const JSZip = (await import('jszip')).default;
     const zip = new JSZip();
     // Add static/dynamic assets
+<<<<<<< HEAD
      else if (asset.type === 'binary' && asset.path) {
         const res = await fetch(asset.path);
         const blob = await res.blob();
@@ -158,11 +199,34 @@ const res = await fetch(asset.path);
       date: nowStr
       tokenName
     });    zip.file('press-releases/seed-round.md', prSeed);
+=======
+else if (asset.type === 'binary' && asset.path) {
+        const res = await fetch(asset.path);
+        const blob = await res.blob();
+        zip.file(asset.filename, blob);
+      }
+    }
+    // Add press releases
+    const nowStr = new Date().toISOString().substring(0, 10);
+const prSeed = buildPressRelease('seed-round', {
+      companyName,
+      date: nowStr,
+      raiseAmount,
+    });
+    const prLaunch = buildPressRelease('launch', { companyName, date: nowStr });
+    const prToken = buildPressRelease('token-sale', {
+      companyName,
+      date: nowStr,
+      tokenName,
+    });
+    zip.file('press-releases/seed-round.md', prSeed);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     zip.file('press-releases/launch.md', prLaunch);
     if (bundle === 'web3') zip.file('press-releases/token-sale.md', prToken);
     // Add timeline if generated
     if (timeline.length > 0) {
       const tl = timeline.map(t => `${t.label}: ${t.date}`).join('\n');
+<<<<<<< HEAD
       zip.file('rollout-timeline.txt', tl);
     }
     const blob = await zip.generateAsync({ type: 'blob' });
@@ -227,12 +291,24 @@ const res = await fetch(asset.path);
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+zip.file('rollout-timeline.txt', tl);
+    }
+    const blob = await zip.generateAsync({ type: 'blob' });
+    const { saveAs } = await import('file-saver');
+    saveAs(blob, `zion-media-kit-${bundle}.zip`);
+  }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]);
+
+  const onGeneratePdf = useCallback(async () => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const pdfDoc = await PDFDocument.create();
     const page = pdfDoc.addPage([612, 792]);
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 
   const assets: MediaAsset[] = useMemo(;
@@ -297,6 +373,14 @@ const res = await fetch(asset.path);
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    const drawText = (text: string, x: number, y: number, size = 12) => {
+page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
+    };
+
+    let y = 760;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     drawText('Zion Media Kit', 50, y, 18);
 import {useCallback, useMemo, useState} from 'react';
 import Head from 'next / head';
@@ -387,11 +471,14 @@ if ( {) {
     draw_text ('Assets:', 50, y);
     y -= 16;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     assets.slice (0, 8).for_each (array => {
       draw_text (`- ${a.filename}`, 60, y);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       y -= 14;
     });
     // Check condition
@@ -400,6 +487,7 @@ if ( {) {
 }
       pdf_doc.add_page ([612, 792]);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Check condition
@@ -415,6 +503,8 @@ if ( {) {
     const pdfBytes = await pdfDoc && pdfDoc.save();
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const blob = new Blob([pdfBytes], { type: 'application/pdf' });
     const url = URL && URL.createObjectURL(blob);
     const link = document && document.createElement('a');
@@ -423,6 +513,7 @@ if ( {) {
     link && link.click();
     URL && URL.revokeObjectURL(url);
   }, [assets, bundle, timeline]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -443,6 +534,8 @@ if ( {) {
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const PressReleaseCard = ({
     type
     title
@@ -455,6 +548,7 @@ if ( {) {
     type: PressReleaseType;
     title: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     const text = buildPressRelease(type, {;
       companyName,;
@@ -466,11 +560,16 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const drawText = (text: string, x: number, y: number, size = 12) => {;
       page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
     },;
     let y = 760;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     drawText('Zion Media Kit', 50, y, 18), y -= 24,;
     drawText(`Bundle: ${bundle}`, 50, y), y -= 16,;
     drawText('Assets:', 50, y), y -= 16,;
@@ -500,11 +599,15 @@ if ( {) {
     const text = buildPressRelease(type, { companyName, date: nowStr, raiseAmount, tokenName }),
     const onCopy = () => navigator.clipboard.writeText(text),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
     const onCopy = () => navigator && navigator.clipboard.writeText(text);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    const onCopy = () => navigator && navigator.clipboard.writeText(text);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
       <div className="p-4 border rounded-lg space-y-2">
         <div className="flex items-center justify-between">
@@ -513,11 +616,24 @@ if ( {) {
         </div>
         <pre className="whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto">{text}</pre>
       </div>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+    );  }
+    )
+  },
+=======
+    );
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div>
       <Head>
         <title>Media Kit - Zion</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <section className="grid md:grid-cols-3 gap-6">
@@ -528,11 +644,21 @@ if ( {) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
         <meta name="description" content="Zion media kit: brand, assets, legal, and rollout playbooks." />
+=======
+        <meta name="description" content="Zion media kit: brand, assets, legal, and rollout playbooks." />
+=======
+<meta
+          name='description'
+          content='Zion media kit: brand, assets, legal, and rollout playbooks.'
+        />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </Head>
       <div className='space-y-8'>
         <header className='flex items-center justify-between'>
           <h1 className='text-2xl font-bold'>Media Kit</h1>
           <div className='flex gap-2'>
+<<<<<<< HEAD
 =======
 
     const text = buildPressRelease(type, {;
@@ -562,6 +688,8 @@ if ( {) {
     );  };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <button
               onClick={onDownloadZip}
               className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700'>;
@@ -570,19 +698,25 @@ if ( {) {
             <button
               onClick={onGeneratePdf}
 <<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-              Generate PDF;
-            </button>;
-          </div>;
-        </header>;
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+              Generate PDF;
+            </button>;
+          </div>;
+        </header>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <button
                     key={b}
                     onClick={() => setBundle(b)}
@@ -613,9 +747,12 @@ if ( {) {
                 onChange={e => setTokenName(e && e.target.value)}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <section className='grid md:grid - cols - 3 gap - 6'>;
           <div className='p - 4 border rounded - lg'>;
             <h3 className='font - semibold mb - 2'>Bundle</h3>;
@@ -655,10 +792,13 @@ if ( {) {
                 on_change={e => setTokenName (e.target.value)}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 placeholder='Token name';
               />;
             </div>;
@@ -666,9 +806,12 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
             <p className="text-xs text-gray-500 mt-2">Toggle to tailor assets and legal docs.</p>
           </div>
@@ -686,6 +829,7 @@ if ( {) {
               <DatePicker selected={startDate} onChange={(d)=>d && setStartDate(d)} className="w-full border rounded px-2 py-1" />
               <button onClick={onGenerateTimeline} className="px-3 py-1 rounded bg-green-600 text-white hover:bg-green-700">Generate</button>
             </div>
+<<<<<<< HEAD
             {timeline.length>0 && (
               <ul className="mt-3 text-sm list-disc list-inside space-y-1">
 <<<<<<< HEAD
@@ -712,11 +856,17 @@ if ( {) {
                   <span className='text-gray-400 text-xs'>generated</span>;
                 )}              </li>;
 
+=======
+<<<<<<< HEAD
+            {timeline.length>0 && (
+              <ul className="mt-3 text-sm list-disc list-inside space-y-1">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {assets.map(a => (
               <li key={a.filename} className="flex items-center justify-between border rounded p-2">
                 <span className="text-sm">{a.filename}</span>
                 {a.path ? <a href={a.path} download className="text-blue-600 text-sm">Download</a> : <span className="text-gray-400 text-xs">generated</span>}
               </li>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
@@ -725,10 +875,14 @@ if ( {) {
         </section>;
               </ul>
             )  } catch (error) {
+=======
+            ))  } catch (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
           </div>
         </section>
         <section className='p-4 border rounded-lg'>
@@ -933,14 +1087,57 @@ export default KitPage;
         </section>
 <<<<<<< HEAD
         <section className='p-4 border rounded-lg space-y-4'>
+=======
+=======
+            {timeline.length > 0 && (
+              <ul className='mt-3 text-sm list-disc list-inside space-y-1'>
+                {timeline.map(t => (
+                  <li key={t.label}>
+                    <span className='font-medium'>{t.label}:</span> {t.date}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </section>
+
+<section className='p-4 border rounded-lg'>
+          <h3 className='font-semibold mb-3'>Assets Included</h3>
+          <ul className='grid md:grid-cols-2 gap-3'>
+            {assets.map(a => (
+              <li
+                key={a.filename}
+                className='flex items-center justify-between border rounded p-2'
+              >
+                <span className='text-sm'>{a.filename}</span>
+                {a.path ? (
+                  <a href={a.path} download className='text-blue-600 text-sm'>
+                    Download
+                  </a>
+                ) : (
+                  <span className='text-gray-400 text-xs'>generated</span>
+                )}
+              </li>
+            ))}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+          </ul>
+        </section>
+
+<section className='p-4 border rounded-lg space-y-4'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <h3 className='font-semibold'>Prewritten Press Releases</h3>
           <div className='grid md:grid-cols-3 gap-4'>
             <PressReleaseCard type='seed-round' title='Seed round' />
             <PressReleaseCard type='launch' title='Launch' />
             {bundle === 'web3' && (
               <PressReleaseCard type='token-sale' title='Token sale' />
+<<<<<<< HEAD
             )}          </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            )}          </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 export default KitPage;
             ))}
@@ -955,10 +1152,20 @@ export default KitPage;
           <div className="grid md:grid-cols-3 gap-4">
             <PressReleaseCard type="seed-round" title="Seed round" />
             <PressReleaseCard type="launch" title="Launch" />
+<<<<<<< HEAD
+=======
+=======
+            )}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
         </section>
       </div>
     </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
         <section className='p-4 border rounded-lg space-y-4'>;
@@ -973,12 +1180,16 @@ export default KitPage;
       </div>;
     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 
 },;
 =======
+<<<<<<< HEAD
   );
 
 },;
@@ -1064,3 +1275,10 @@ export default KitPage;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+);
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+export default KitPage;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

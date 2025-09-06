@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -35,6 +36,8 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import _React from 'react';,
 ';
 import '@testing-library/jest-dom';';
@@ -91,11 +94,16 @@ describe('AccessibilityManager', () => {'}
   test('applies correct styling', () => {'}
     render(<AccessibilityManager />);,
 <<<<<<< HEAD
+<<<<<<< HEAD
   });import _React from 'react'
 =======
   });
 import _React from 'react'
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+  });
+import _React from 'react'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ''
 import '@testing-library/jest-dom';'
 import AccessibilityManager from '../components/AccessibilityManager';'
@@ -133,8 +141,11 @@ describe('AccessibilityManager', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 });
 });
 });
@@ -164,9 +175,12 @@ describe('AccessibilityManager', () => {'}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import _React from 'react'
 '
+<<<<<<< HEAD
 =======
 });'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import '@testing-library/jest-dom';
 import AccessibilityManager from '../components/AccessibilityManager';
 describe('AccessibilityManager', () => {'
@@ -175,6 +189,7 @@ describe('AccessibilityManager', () => {'
   test('displays correct content', () => {'
   test('handles user interactions', () => {'
   test('applies correct styling', () => {'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -187,3 +202,5 @@ describe('AccessibilityManager', () => {'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

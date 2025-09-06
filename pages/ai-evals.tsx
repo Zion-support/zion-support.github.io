@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import React from 'react';
@@ -8,16 +9,21 @@ import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import Head from 'next/head',;
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',;
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import React from 'react',;
@@ -26,12 +32,16 @@ import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolograp
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
 ;
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react'
 import Head from 'next/head'
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground'
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -41,12 +51,18 @@ import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function AIEvalsPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950'
 		email: 'kleber@ziontechgroup.com'
 		address: '364 E Main St STE 1008 Middletown DE 19709'
 		website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -67,6 +83,18 @@ export default function AIEvalsPage() {_const _contactInfo = {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+import React from 'react',
+import Head from 'next/head',
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
+import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
+export default function AIEvalsPage() {
+	const contactInfo = null;
+	return (
+		<QuantumHolographicMatrixBackground intensity={1.5}>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			<Head>
 				<title>AI Evaluations Platform | Zion Tech Group</title>
 				<meta name="description" content="Automated LLM evaluation with accuracy, faithfulness, latency, and cost metrics. Integrate with CI and guardrails." />
@@ -77,6 +105,7 @@ export default function AIEvalsPage() {_const _contactInfo = {
 					<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">AI Evaluations</h1>
 					<p className="text-xl text-gray-300">Benchmark models and prompts with real metrics and safety checks. Ship reliable AI faster.</p>
 					<div className="mt-6 flex justify-center gap-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl w-4 h-4 mr-2"><Rocket />Get a Demo</a>
 						<a href="/resources" className="border-gray-600 text-gray-200">Read Docs</a>
@@ -95,6 +124,10 @@ export default function AIEvalsPage() {_const _contactInfo = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 					</div>
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
@@ -107,6 +140,7 @@ export default function AIEvalsPage() {_const _contactInfo = {
 									<li key={i} className="flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400"><Check /> <span>{i}</span></li>
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 								))  } catch (error) {
@@ -129,6 +163,8 @@ export default function AIEvalsPage() {_const _contactInfo = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 				</div>
 				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
@@ -158,27 +194,38 @@ export default function AIEvalsPage() {_const _contactInfo = {
 
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 					</div>
 				</div>
 			</div>
 		</QuantumHolographicMatrixBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 	);
 };
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 	)
+=======
+	)
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -191,6 +238,11 @@ export default function AIEvalsPage() {_const _contactInfo = {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',
 import Head from 'next / head',
 import QuantumHolographicMatrixBackground from '../components / ui / QuantumHolographicMatrixBackground',
@@ -268,6 +320,7 @@ return (
   </QuantumHolographicMatrixBackground>);
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 			<div className=&quot;min-h-screen py-20 px-4 sm:px-6 lg:px-8&quot;>
@@ -423,3 +476,8 @@ export default function AIEvalsPage() {_const _contactInfo = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

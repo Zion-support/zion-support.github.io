@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { useState } from "react";
 import { format } from "date-fns";
@@ -121,6 +124,7 @@ import {cn} from "@/lib/utils";
 import {QuoteFormData} from "@/types/quotes";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="space-y-6">
       <div>
 <<<<<<< HEAD
@@ -157,6 +161,8 @@ import {QuoteFormData} from "@/types/quotes";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="space-y-4">
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from "react";
 import {format} from "date-fns";
 import {Calendar} from "@/components/ui/calendar";
@@ -176,7 +182,10 @@ import { CalendarIcon } from "@/components/icons",
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
 import { cn } from "@/lib/utils",
 import { QuoteFormData } from "@/types/quotes",        <div className="space-y-4">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="flex items-center space-x-4">
             <div
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
@@ -191,6 +200,7 @@ import { QuoteFormData } from "@/types/quotes",        <div className="space-y-4
                 I have specific start and end dates
               </p>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <div
@@ -210,6 +220,10 @@ import { QuoteFormData } from "@/types/quotes",        <div className="space-y-4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+            <div
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.timeline === "flexible"
                   ? "bg-zion-purple/20 border-zion-purple"
@@ -227,6 +241,7 @@ import { QuoteFormData } from "@/types/quotes",        <div className="space-y-4
           {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md: grid-cols-2 gap-4 mt-6">          {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -367,6 +382,8 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
               <div>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <Label className="block mb-2 text-zion-slate-light">
                   End Date
                 </Label>
@@ -397,6 +414,7 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                       disabled={(date) =>
                         date < (formData.startDate |new Date())
                       }
@@ -415,6 +433,8 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",;
 import { format } from "date-fns",;
 import { Calendar } from "@/components/ui/calendar",;
@@ -426,6 +446,7 @@ import { cn } from "@/lib/utils",;
 import { QuoteFormData } from "@/types/quotes",;
 interface TimelineStepProps {;
   formData: QuoteFormData,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   updateFormData: (data: Partial<QuoteFormData>) => void;
 =======
@@ -447,6 +468,9 @@ interface TimelineStepProps {;
 =======
   updateFormData: (data: Partial<QuoteFormData>) => void;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  updateFormData: (data: Partial<QuoteFormData>) => void;}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
   return (;
@@ -497,6 +521,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                     <Calendar;
                       mode="single";
                       selected={formData.startDate}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -578,6 +603,9 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
 =======
                       onSelect={(date) => updateFormData({ startDate: date })}                      <CalendarIcon className="mr - 2 h - 4 w-4" />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                      onSelect={(date) => updateFormData({ startDate: date })}                      <CalendarIcon className="mr - 2 h - 4 w-4" />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       {form_data.end_date ? (
                         format (form_data.end_date, "PPP")) : (
                         <span > Pick a date</span>)}
@@ -594,6 +622,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                       initial_focus;
                       className="p - 3 pointer - events-auto";
                       disabled={(date) =>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                         date < (form_data.start_date || new Date ());
                       }
@@ -693,3 +722,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                         date < (form_data.start_date || new Date ())
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                        date < (form_data.start_date || new Date ())
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,6 +19,8 @@ export default function FounderJournalPage() {
   return <BookBuilder />
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import dynamic from 'next/dynamic',;
 const BookBuilder = dynamic(() => import('../../components/book/BookBuilder'), { ssr: false }),
 
@@ -34,6 +37,7 @@ export default function FounderJournalPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -50,3 +54,12 @@ export default function FounderJournalPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import dynamic from 'next/dynamic';
+const BookBuilder = null;
+export default function FounderJournalPage() {
+  return <BookBuilder />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

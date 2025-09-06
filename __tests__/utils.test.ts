@@ -65,6 +65,7 @@ describe('Utils', () => {
   it('should work correctly', () => {
     expect(true).toBe(true);
   });
+<<<<<<< HEAD
 });module.exports = {};
 module.exports = {};
 describe('Utils', () => {
@@ -82,3 +83,11 @@ describe('Utils', () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+});
+
+export {};
+
+module.exports = {};
+module.exports = {};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -14,6 +15,9 @@ export interface TenantInfo {;
 =======
 export interface TenantInfo {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+export interface TenantInfo {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   brand_name: string;
   subdomain: string;
@@ -23,6 +27,7 @@ export interface TenantInfo {
   theme_preset: string;
   landing_page_copy: {
     headline: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,6 +66,8 @@ export interface TenantResponse {;
   error?: string;
 }
 ;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
 export interface TenantResponse {
@@ -73,6 +80,7 @@ export interface TenantResponse {
   error?: string;
 export interface TenantResponse {;
   tenant: TenantInfo | null;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     subtitle: string,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -81,12 +89,17 @@ export interface TenantResponse {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     cta: string;
   };
+=======
+    subtitle: string,    cta: string
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   is_active: boolean;
 
 }
 
 export interface TenantResponse {
   tenant: TenantInfo | null;
+<<<<<<< HEAD
   error?: string;
 }
 <<<<<<< HEAD
@@ -144,3 +157,6 @@ export interface TenantResponse {
   tenant: TenantInfo | null;
   error?: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  error?: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

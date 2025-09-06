@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -45,6 +46,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 interface FuturisticServicesShowcaseProps {
   // Add props here as needed
@@ -60,6 +63,9 @@ export default function FuturisticServicesShowcase({ }: FuturisticServicesShowca
       <p>This component is currently under development.</p>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -76,6 +82,7 @@ export default function FuturisticServicesShowcase({ }: FuturisticServicesShowca
 :src.disabled/components/FuturisticServicesShowcase.jsx
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -94,3 +101,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

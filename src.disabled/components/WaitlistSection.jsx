@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -20,11 +21,15 @@ export: function WaitlistSection () { const [email,setEmail] = useState (") cons
 =======
 "export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e.preventDefault () '';"";""}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+"export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e.preventDefault () '';"";""}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
 
 "export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e.preventDefault () '';"";""}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -86,9 +91,14 @@ export: function WaitlistSection () { const [email,setEmail] = useState (") cons
 "export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e && e.preventDefault () '';"";""}"export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e && e.preventDefault () '';"";""}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 "export\": function WaitlistSection () { const [email,setEmail] = useState (\') const handleSubmit = e => { e && e.preventDefault () \'';\"";
 export: function WaitlistSection () { const [email,setEmail] = useState (") const handleSubmit = e => { e && e.preventDefault () "";"";"""
 "export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e && e.preventDefault () '';"";""}
 "export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e && e.preventDefault () '';"";""}
 "export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e && e.preventDefault () '';"";""}
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

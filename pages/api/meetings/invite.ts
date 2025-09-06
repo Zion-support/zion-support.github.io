@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -10,11 +11,23 @@ const key = process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { createClient } from '[^']*';
+const url = null;
+    return res.status(200).json({ ok: true, skipped: true })
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 
+=======
+  if (req.method !== "POST") {
+    res.setHeader("Allow", "POST");
+    return res.status(405).json({ error: "Method not allowed" });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   try {
     const { projectId, roomName, inviterName } = req.body |{}
@@ -32,6 +45,7 @@ export default async function handler(
   } catch (e) {
     console.error(e);
     return res.status(500).json({ ok: false, error: "Failed to send invite" });
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -127,3 +141,8 @@ if ( {) {
 >>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }
+
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

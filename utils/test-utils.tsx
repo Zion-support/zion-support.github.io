@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import { render, RenderOptions } from '@testing-library/react',
 import { ThemeProvider } from 'next-themes',
@@ -7,6 +8,8 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
     <ThemeProvider attribute="class" defaultTheme="light">
       {children}
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
   return (
     <ThemeProvider attribute="class" default_theme="light">;
@@ -41,10 +44,13 @@ import React from 'react';
 export const createMockProps = (overrides = {}) => ({
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </ThemeProvider>;
   );
 },;
@@ -71,6 +77,7 @@ export const mockNextRouter = () => ({;
   defaultLocale: 'en',;
   domainLocales: [],;
   isPreview: false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -132,6 +139,10 @@ export const createMockProps = (overrides = {}) => ({;
 });
 export const createMockProps = (overrides = {}) => ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+});
+export const createMockProps = (overrides = {}) => ({;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 });

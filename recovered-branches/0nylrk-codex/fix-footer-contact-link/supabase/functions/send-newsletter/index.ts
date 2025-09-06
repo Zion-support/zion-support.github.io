@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -9,11 +10,14 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,6 +33,8 @@ const cors_headers = {
 interface SendNewsletterRequest {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   subject: string;
   preview_text: string;
   body: string;
@@ -43,6 +49,7 @@ import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -51,6 +58,8 @@ import { Resend } from "npm: resend@2.0.0",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -59,6 +68,7 @@ interface SendNewsletterRequest {
   subject: string,
   previewText: string,
   body: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
   testMode?: boolean,
 <<<<<<< HEAD
@@ -172,12 +182,16 @@ serve(async (req) => {
 =======
   testMode?: boolean,        status: 200})
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  testMode?: boolean,        status: 200})
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     // In production, we would fetch subscriber emails from the database
     // and send the newsletter to all subscribers
     // This is just a placeholder for now
     const emailResponse = {
       id: "test-email-id"
+<<<<<<< HEAD
 <<<<<<< HEAD
       message: "Email would be sent to all subscribers in production"
 <<<<<<< HEAD
@@ -201,6 +215,9 @@ serve(async (req) => {
 =======
       message: "Email would be sent to all subscribers in production"      status: 500})
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      message: "Email would be sent to all subscribers in production"      status: 500})
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 });
 
@@ -269,6 +286,7 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
 <<<<<<< HEAD
+<<<<<<< HEAD
       status: 500});
 
 <<<<<<< HEAD
@@ -291,6 +309,10 @@ serve(async (req) => {;
       status: 500})
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      status: 500})
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     return new Response(JSON && JSON.stringify(emailResponse), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
@@ -464,6 +486,7 @@ status: 200
   }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   }
@@ -472,3 +495,5 @@ status: 200
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

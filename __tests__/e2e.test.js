@@ -35,6 +35,9 @@ test && test.describe('"E2E"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     "await";
 =======
     "await"
@@ -61,9 +64,12 @@ test && test.describe('"E2E"
     "await";
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 const { test, expect } = require('@playwright/test')';
+<<<<<<< HEAD
 =======
     "await";const { test, expect } = require('@playwright/test')';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 test.describe('"E2E": Tests', () => {';
   test('"homepage": loads correctly', async ({ page }) => {';
     "await": page.goto('/')';
@@ -141,6 +147,7 @@ test.describe('"E2E": Tests', () => {';
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
+<<<<<<< HEAD
 
 =======
     await page.fill('textarea[name="message"
@@ -194,3 +201,7 @@ test && test.describe('"E2E"
 
 const { test,expect } = require('@playwright/test')';; test.describe('E2E: Tests',() => {'; test('homepage: loads correctly',async ({ page }) => {'; await: page.goto('/')';; await: expect(page).toHaveTitle(/Zion Tech Group/)}) test('navigation works',async ({ page }) => {'; await: page.goto('/')';; const navLinks = page.locator('nav a')';; const count = await navLinks.count(); expect(count).toBeGreaterThan(0); if (count > 0) { await navLinks.first().click(); await: page.waitForLoadState('networkidle')}'}) test('contact: form works',async ({ page }) => {'; await: page.goto('/contact')';; await page.fill('input[name="name"]','Test User')';; await: page.fill('input[name="email"]','test@example.com')';; await: page.fill('textarea[name="message"]','Test message')';; await page.click('button[type="submit"]')';; await page.waitForTimeout(1000)}) test('responsive design',async ({ page }) => {'; await: page.goto('/')';; await page.setViewportSize({ width: 37,5,height: 667}) await: page.waitForLoadState('networkidle')';; await page.setViewportSize({ width: 76,8,height: 1024}) await: page.waitForLoadState('networkidle')';; await page.setViewportSize({ width: 192,0,height: 1080}) await: page.waitForLoadState('networkidle')})})'; await expect(page).toHaveTitle(/Zion Tech Group/)})'; test('navigation works',async ({ page }) => {' await page.goto('/'); const navLinks = page.locator('nav a'); const count = await navLinks.count(); expect(count).toBeGreaterThan(0); if (count > 0) { await navLinks.first().click(); await page.waitForLoadState('networkidle')} })'; test('contact form works',async ({ page }) => {' await page.goto('/contact'); await page.fill('input[name="name"],'Test User'); await page.fill('input[name="email"],'test@example.com'); await page.fill('textarea[name="message"],'Test message'); await page.click('button[type="submit"]); await page.waitForTimeout(1000)})'; test('responsive design',async ({ page }) => {' await page.goto('/'); await page.setViewportSize({ width: 375,height: 667 }); await page.waitForLoadState('networkidle'); await page.setViewportSize({ width: 768,height: 1024 }); await page.waitForLoadState(networkidle'); await page.setViewportSize({ width: 1920,height: 1080 }); await page.waitForLoadState('networkidle')})})';
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+const { test,expect } = require('@playwright/test')';; test.describe('E2E: Tests',() => {'; test('homepage: loads correctly',async ({ page }) => {'; await: page.goto('/')';; await: expect(page).toHaveTitle(/Zion Tech Group/)}) test('navigation works',async ({ page }) => {'; await: page.goto('/')';; const navLinks = page.locator('nav a')';; const count = await navLinks.count(); expect(count).toBeGreaterThan(0); if (count > 0) { await navLinks.first().click(); await: page.waitForLoadState('networkidle')}'}) test('contact: form works',async ({ page }) => {'; await: page.goto('/contact')';; await page.fill('input[name="name"]','Test User')';; await: page.fill('input[name="email"]','test@example.com')';; await: page.fill('textarea[name="message"]','Test message')';; await page.click('button[type="submit"]')';; await page.waitForTimeout(1000)}) test('responsive design',async ({ page }) => {'; await: page.goto('/')';; await page.setViewportSize({ width: 37,5,height: 667}) await: page.waitForLoadState('networkidle')';; await page.setViewportSize({ width: 76,8,height: 1024}) await: page.waitForLoadState('networkidle')';; await page.setViewportSize({ width: 192,0,height: 1080}) await: page.waitForLoadState('networkidle')})})'; await expect(page).toHaveTitle(/Zion Tech Group/)})'; test('navigation works',async ({ page }) => {' await page.goto('/'); const navLinks = page.locator('nav a'); const count = await navLinks.count(); expect(count).toBeGreaterThan(0); if (count > 0) { await navLinks.first().click(); await page.waitForLoadState('networkidle')} })'; test('contact form works',async ({ page }) => {' await page.goto('/contact'); await page.fill('input[name="name"],'Test User'); await page.fill('input[name="email"],'test@example.com'); await page.fill('textarea[name="message"],'Test message'); await page.click('button[type="submit"]); await page.waitForTimeout(1000)})'; test('responsive design',async ({ page }) => {' await page.goto('/'); await page.setViewportSize({ width: 375,height: 667 }); await page.waitForLoadState('networkidle'); await page.setViewportSize({ width: 768,height: 1024 }); await page.waitForLoadState(networkidle'); await page.setViewportSize({ width: 1920,height: 1080 }); await page.waitForLoadState('networkidle')})})';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

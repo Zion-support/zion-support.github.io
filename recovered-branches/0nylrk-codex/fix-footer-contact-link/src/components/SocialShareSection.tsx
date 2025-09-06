@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -22,6 +23,10 @@ export function SocialShareSection() {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "./ui/button",
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons";
 import { toast } from "./ui/use-toast";
@@ -60,6 +65,7 @@ export function SocialShareSection() {
   const shareToLinkedIn = () => {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank")
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -107,10 +113,14 @@ export function SocialShareSection() {
 =======
     const shareLinks = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    const shareLinks = [
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       name: "Twitter"
       icon: <Twitter className="h-5 w-5" />
       color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80"
+<<<<<<< HEAD
 <<<<<<< HEAD
       onClick: shareToTwitter
 <<<<<<< HEAD
@@ -162,10 +172,14 @@ export function SocialShareSection() {
 =======
       onClick: shareToTwitter    {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      onClick: shareToTwitter    {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       name: "LinkedIn"
       icon: <Linkedin className="h-5 w-5" />
       color: "bg-[#0077B5] hover:bg-[#0077B5]/80"
       onClick: shareToLinkedIn
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -210,6 +224,10 @@ import {toast} from "./ui/use-toast";
 
     },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }],
 
   return (
@@ -225,6 +243,7 @@ import {toast} from "./ui/use-toast";
               <Button
                 key={index}
                 className={`${link.color} text-white`}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 size="sm"
 <<<<<<< HEAD
@@ -472,6 +491,15 @@ function SocialShareSection() {
       <div className="container mx - auto px - 4 sm:px - 6 lg:px-8">;
         <div className="max - w-4xl mx - auto flex flex - col md:flex - row items - center justify - between gap - 6 bg - zion - blue - light border border - zion - purple / 20 rounded - lg p-6">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                size="sm"    {;
+      name: "LinkedIn",;
+      icon: <Linkedin className="h-5 w-5" />,;
+      color: "bg-[#0077B5] hover:bg-[#0077B5]/80",;
+      onClick: shareToLinkedIn;    <section className="py - 12 bg - zion-blue">;
+      <div className="container mx - auto px - 4 sm:px - 6 lg:px-8">;
+        <div className="max - w-4xl mx - auto flex flex - col md:flex - row items - center justify - between gap - 6 bg - zion - blue - light border border - zion - purple / 20 rounded - lg p-6">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div>;
             <h3 className="text - xl font - bold text - white mb-2">Share Zion with Your Network</h3>;
             <p className="text - zion - slate-light">Help others discover the future of AI & tech marketplace</p>;
@@ -492,6 +520,7 @@ function SocialShareSection() {
       </div>;
     </section>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -618,3 +647,5 @@ export function SocialShareSection() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

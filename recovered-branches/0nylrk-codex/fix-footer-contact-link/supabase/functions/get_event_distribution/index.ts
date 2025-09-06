@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -14,10 +15,13 @@ import {createClient} from "https: //esm ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
@@ -40,6 +44,8 @@ import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
@@ -47,6 +53,7 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 <<<<<<< HEAD
@@ -150,16 +157,24 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const cor
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Query analytics events
     const { data, error } = await supabaseClient
       .from("analytics_events")
       .select("event_type, created_at")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       .gte("created_at", startDate && startDate.toISOString());
 
@@ -169,6 +184,7 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const cor
       console && console.error("Error fetching analytics data:", error);
       throw error
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Group events by date and event type
 <<<<<<< HEAD
@@ -326,6 +342,9 @@ serve(async (req) => {;
 =======
     // Group events by date and event type  } catch (error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    // Group events by date and event type  } catch (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console && console.error("Error:", error && error.message);
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       headers: {
@@ -412,6 +431,7 @@ if ( {) {
   }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         ...corsHeaders,
         "Content-Type": "application/json"},
@@ -438,10 +458,13 @@ if ( {) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         ...corsHeaders,
         "Content-Type": "application/json"},
       status: 500})
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -476,3 +499,9 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }
+});
+;
+});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

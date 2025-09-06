@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import React from "react",
@@ -23,6 +26,7 @@ export function SidebarItem(): any ({ className, children, active, ...props }: S
 
         "flex items-center px-3 py-2 text-sm font-medium rounded-md"
         active ? "bg-primary/10 text-primary" : "text-muted-foreground hover: bg-accent hover:text-accent-foreground",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -61,6 +65,8 @@ export function SidebarItem(): any ({ className, children, active, ...props }: S
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         className
 
       )}
@@ -119,9 +125,12 @@ export function SidebarItem({ className, children, active, ...props }: SidebarIt
         active ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-accent hover:text-accent-foreground";
         className;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from "react",
 import { cn } from "@/lib/utils",

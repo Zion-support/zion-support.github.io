@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -32,6 +33,8 @@ export default function Proposals({
             </div>;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   data
 }: {
   data: { updatedAt: string | null; proposals: any[] }
@@ -53,7 +56,10 @@ export default function Proposals({
               by {p.author} · {new Date(p.created_at).toLocaleString()}
             </div>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <a
               className='text-blue-600 underline'
               href={p && p.url}
@@ -67,6 +73,10 @@ export default function Proposals({
       </ul>
     </div>
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export async function getStaticProps() {;
   try{;
     const p = path && path.join(process && process.cwd(),'datagovernanceproposals && datagovernanceproposals.json');
@@ -74,11 +84,14 @@ export async function getStaticProps() {;
     return { props: { data: JSON && JSON.parse(raw) } }
   }catch{;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   try{
     </div>;
   );
@@ -88,4 +101,9 @@ export async function getStaticProps() {;
     return { props: { data: { updated_at: null, proposals: [] } } }
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

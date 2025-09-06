@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import {Button} from "@/components/ui/button";
@@ -31,6 +32,8 @@ import { Star } from "lucide-react",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface SaveTalentButtonProps {
   talentId: string,
   onSave: (talentId: string) => void,
@@ -67,7 +70,10 @@ export function SaveTalentButton({
   onSave
   isSaved
 }: SaveTalentButtonProps) {import React from "react";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
 interface SaveTalentButtonProps {
@@ -139,6 +145,7 @@ export function SaveTalentButton({
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -146,3 +153,5 @@ export function SaveTalentButton({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

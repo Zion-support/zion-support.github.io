@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { GraduationCap, Users, BookOpen, Laptop, Globe } from 'lucide-react';
 import React from 'react';
@@ -283,6 +284,8 @@ export default function EducationSolutionsPage() {
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">"
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 ;];
 const solutions = [;
@@ -429,6 +432,7 @@ const benefits = [;
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Transform education with innovative technology solutions designed
 <<<<<<< HEAD
+<<<<<<< HEAD
                 for schools, universities, and educational institutions.
 =======
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -455,6 +459,8 @@ const benefits = [;
               </div>
             </div>
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 for schools, universities, and educational institutions.              </p>
             </motion.div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -512,6 +518,7 @@ const benefits = [;
                     <feature.icon className="w-6 h-6 text-blue-600" />
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
@@ -527,6 +534,8 @@ const benefits = [;
               ))}
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -534,6 +543,7 @@ const benefits = [;
                     {feature.description}
                   </p>
                 </div>
+<<<<<<< HEAD
               ))}
             </div>,
           </div>;
@@ -548,6 +558,8 @@ const benefits = [;
                     {feature.description}
                   </p>
                 </div>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Virtual Classrooms,',,
   description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
   },;
@@ -885,6 +897,7 @@ export default function EducationSolutionsPage() {;
                 </button>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -895,6 +908,10 @@ export default function EducationSolutionsPage() {;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de            </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de            </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
         </section>
 
@@ -921,6 +938,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de            </div>
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     </>
 
@@ -930,6 +948,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de            </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">;

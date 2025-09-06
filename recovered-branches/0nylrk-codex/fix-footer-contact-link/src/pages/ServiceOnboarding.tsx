@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -37,6 +38,8 @@ class ErrorBoundary extends React.Component {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
 import {Header} from "@/components/Header";
@@ -89,6 +92,7 @@ export default function ServiceOnboarding() {
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
 import { Header } from "@/components/Header",
+<<<<<<< HEAD
 import { Footer } from "@/components/Footer",
 =======
 import React from "react";
@@ -97,14 +101,17 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { useAuth } from "@/hooks/useAuth";
+=======
+import { Footer } from "@/components/Footer",import { useAuth } from "@/hooks/useAuth";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Navigate } from "react-router-dom";
 export default function ServiceOnboarding() {
   const { user, isLoading } = useAuth();
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
 export default function ServiceOnboarding() {
   const { user, isLoading } = useAuth(),
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -113,10 +120,13 @@ export default function ServiceOnboarding() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // If not authenticated, redirect to login;
   if (!isLoading && !user) {;
     return <Navigate to="/login" replace />;
 
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -271,17 +281,26 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <ServiceProviderRegistrationForm />;
 =======
+=======
+  // If not authenticated, redirect to login
+  if (!isLoading && !user) {
+    return <Navigate to="/login" replace />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   return (
   }
   return (          <ServiceProviderRegistrationForm />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </div>;
       </div>;
       <Footer />;
 
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
@@ -320,3 +339,6 @@ if ( {) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,6 @@
   const handleChange = (values: number[]) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     setPriceRange([values[0], values[1]]);
   };
 <<<<<<< HEAD
@@ -7,6 +8,10 @@
     setPriceRange([values[0], values[1]])
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    setPriceRange([values[0], values[1]])
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { ChevronDown, ChevronUp } from "lucide-react",
 import { Slider } from "@/components/ui/slider",
 import { PriceFilterProps } from "@/types/filters",
@@ -47,6 +52,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleChange = (values: number[]) => {;
+<<<<<<< HEAD
     setPriceRange([values[0], values[1]]);
   };
 =======
@@ -63,6 +69,10 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
     setPriceRange([values[0], values[1]])
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    setPriceRange([values[0], values[1]])
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
@@ -75,6 +85,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -115,11 +126,14 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {expanded && (;
         <div className="mt-6">;
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">;
             <span>${priceRange[0]}/hr</span>;
             <span>${priceRange[1]}/hr</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>;
 <<<<<<< HEAD
@@ -161,6 +175,9 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 =======
           </div>;          <Slider
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          </div>;          <Slider
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             value={[priceRange[0], priceRange[1]]}
             min={50}
             max={200}

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "export\": const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
 export: const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [""
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -30,3 +31,6 @@ export: const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [""
 =======
 "export": const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = ["]"
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+"export": const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = ["]"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

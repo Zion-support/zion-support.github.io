@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -28,6 +29,8 @@ import {createClient} from '@supabase/supabase-js';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import fs from 'fs/promises';
 import { createReadStream  } from 'fs';
 import path from 'path',
@@ -38,6 +41,7 @@ const {
   SUPABASE_SERVICE_ROLE_KEY
   OPENAI_API_KEY
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -53,6 +57,8 @@ const {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 } = process.env
 if (!SUPABASE_URL |!SUPABASE_SERVICE_ROLE_KEY |!OPENAI_API_KEY) {
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY')
@@ -79,10 +85,13 @@ if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {;
   process.exit(1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 async function fetchData() {
@@ -125,6 +134,7 @@ function buildTrainingPairs(records) {
       prompt: `Create a job description titled "${stripPii(job.title)}"`
 
       completion: stripPii(job.description)
+<<<<<<< HEAD
 <<<<<<< HEAD
     })
 <<<<<<< HEAD
@@ -334,6 +344,13 @@ async function createFineTune(filePath) {
 }
 async function saveJsonl(pairs, filePath) {  // // // console.log('Fine-tune job created:', job.id)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    })    })
+  }
+  return pairs
+}
+async function saveJsonl(pairs, filePath) {  // // // console.log('Fine-tune job created:', job.id)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 async function createFineTune(filePath) {;
   const formData = new FormData(),;
@@ -361,6 +378,7 @@ async function createFineTune(filePath) {;
     });
   }),;
   const job = await jobRes.json(),;
+<<<<<<< HEAD
 <<<<<<< HEAD
   // // // console.log('Fine-tune job created:', job.id);
 <<<<<<< HEAD
@@ -542,6 +560,9 @@ main ().catch ((err) => {
 =======
   // // // console.log('Fine-tune job created:', job.id);}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // // // console.log('Fine-tune job created:', job.id);}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 async function main() {
 
   const records = await fetchData()
@@ -553,10 +574,19 @@ async function main() {
 main().catch((err) => {
   console.error('Training workflow failed', err)
 
+<<<<<<< HEAD
+=======
 main().catch((err) => {
   console.error('Training workflow failed', err)
 }),
 ;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+main().catch((err) => {
+  console.error('Training workflow failed', err)
+}),
+;
+<<<<<<< HEAD
 
 main().catch((err) => {
   console.error('Training workflow failed', err)
@@ -753,3 +783,5 @@ await createFineTune ('training-data.jsonl')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

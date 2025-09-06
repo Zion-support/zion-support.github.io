@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Label } from "@/components/ui/label",
 import { Input } from "@/components/ui/input",
@@ -98,6 +99,8 @@ export function SignUpForm() {;
     } else if (!strongPasswordRegex.test(formData.password)) {;
       errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.';
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 
 import { useRouter } from 'next/router';
@@ -111,9 +114,12 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function SignUpForm() {;
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 ;
 import { use_router } from 'next / router';
@@ -163,9 +169,12 @@ function SignUpForm() {
       setShowVerificationMessage(false), // Reset verification message;
       if (signupMode) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
         const result = await signUp(formData && formData.email, formData && formData.password, {;
           name: formData && formData.name}),;        if (result?.error) {;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         if (result?.error) {;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -183,6 +192,7 @@ function SignUpForm() {
         } else {;
           // Only navigate if email verification is not required;
 <<<<<<< HEAD
+<<<<<<< HEAD
           router && router.push("/mobile")
 };
       } else {;
@@ -190,6 +200,9 @@ function SignUpForm() {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         if (error) {;
           throw new Error(error);
         }
@@ -214,16 +227,23 @@ function SignUpForm() {
     }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const handleGoogleLogin = async () => {;
     try {;
       await loginWithGoogle();
     } catch (err: any) {;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   
 <<<<<<< HEAD
@@ -238,10 +258,37 @@ function SignUpForm() {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
 
+=======
+import React, { useState } from "react",
+import { Label } from "@/components/ui/label",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
+import { useRouter  } from 'next/router';
+import Link from 'next/link',
+import { useAuth } from "@/context/auth/AuthProvider",
+
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import { useAuth } from "@/context/auth/AuthProvider"
+import { AlertCircle } from 'lucide-react'import { useRouter } from 'next/router'
+import { AlertCircle } from 'lucide-react'
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
+import {logErrorToProduction} from '@/utils/productionLogger';
+export function SignUpForm() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
+  const router = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="space-y-2">
         <Button 
           variant="outline" 
@@ -257,6 +304,7 @@ function SignUpForm() {
           Continue with Google
         </Button>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -279,6 +327,11 @@ function SignUpForm() {
           variant="outline" 
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+        <Button 
+          variant="outline" 
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -349,6 +402,7 @@ function SignUpForm() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -357,6 +411,8 @@ function SignUpForm() {
 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Error Alert */}
       {error && (
         <Alert variant="destructive" className="mb-4">
@@ -378,6 +434,7 @@ function SignUpForm() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -389,6 +446,10 @@ function SignUpForm() {
       )}
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+      )}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <form onSubmit={handleSubmit} className="space-y-4">
         {signupMode && (
           <div className="space-y-2">
@@ -409,12 +470,15 @@ function SignUpForm() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               value={formData.name}
               onChange={handleInputChange}
               required;
@@ -424,12 +488,15 @@ function SignUpForm() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               placeholder="Enter your full name"
             />
             {fieldErrors.name && (
@@ -453,12 +520,15 @@ function SignUpForm() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             value={formData.email}
             onChange={handleInputChange}
             required;
@@ -467,9 +537,12 @@ function SignUpForm() {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             placeholder="Enter your email"
           />
           {fieldErrors.email && (
@@ -488,12 +561,15 @@ function SignUpForm() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             value={formData.password}
             onChange={handleInputChange}
             required;
@@ -502,9 +578,12 @@ function SignUpForm() {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             placeholder="Create a password"
           />
           <PasswordStrengthMeter password={formData.password} />
@@ -519,6 +598,7 @@ function SignUpForm() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -527,6 +607,8 @@ function SignUpForm() {
         
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <Button
           type="submit"
           className="w-full py-6"
@@ -542,6 +624,7 @@ function SignUpForm() {
           )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       
 <<<<<<< HEAD
 =======
@@ -549,6 +632,8 @@ function SignUpForm() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <p className="text-center text-sm">
         {signupMode
           ? "Already have an account? "
@@ -640,6 +725,23 @@ function SignUpForm() {
           : "Don't have an account? ";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }
+<<<<<<< HEAD
+=======
+
+        </Button>;
+      </form>;
+
+      <p className="text-center text-sm">;
+        {signupMode;
+          ? "Already have an account? ";
+          : "Don't have an account? ";
+        }
+        <Link
+          href="/login"
+<<<<<<< HEAD
+          className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer">;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <Link;
           href="/login";
           className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer";
@@ -651,9 +753,12 @@ function SignUpForm() {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   error;
 }= await login (form_data.email, form_data.password);
@@ -691,5 +796,51 @@ if ( {) {
 }</Button> </form> <Link href="/login" className="p - 0 h - auto text - zion - cyan hover: text - zion - cyan - light cursor-pointer" > Sign In </Link> </p> </div>);
 }"}
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+;
+=======
+          className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer"
+        >
+          Sign In
+        </Link>
+      </p>
+    </div>
+  );
+
+}else {;
+  const {;
+  error ;
+}= await login (formData.email, formData.password);
+if (error) {;
+  throw new Error (error) ;
+
+}</h2> <div className="space-y-2" > <Button > <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" > <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" /> <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" /> <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" /> <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" /> </svg> Continue with Google </Button> <Button variant="outline" className="w-full py-6 relative" > <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" > <path d="M24 12.073c0-5.8-4.85-10.5-10.826-10.5-6.02 0-10.93 4.7-10.93 10.5 0 5.234 3.875 9.575 8.95 10.359v-7.318h-2.696v-3.041h2.696V9.898c0-2.586 1.581-4.016 4.003-4.016 1.159 0 2.37.204 2.37.204v2.543h-1.334c-1.316 0-1.727.8-1.727 1.622v1.95h2.938l-.47 3.04h-2.468v7.318C20.125 21.648 24 17.307 24 12.073z" fill="#1877F2" /> </svg> Continue with Facebook </Button> </div> <div className="relative flex items-center"> <div className="flex-grow border-t border-border"></div> <span className="mx-2 text-xs text-muted-foreground">OR</span> <div className="flex-grow border-t border-border" ></div> </div> <AlertCircle className="h-4 w-4" /> <AlertDescription> {;
+  error ;
+}</AlertDescription> </Alert>) ;
+}{;
+  /* Verification Message */ ;
+}{";
+  showVerificationMessage && (<Alert className="mb-4 border-blue-500 bg-blue-50"> <AlertCircle className="h-4 w-4" /> <AlertDescription> Please check your email and click the verification link before signing in. </AlertDescription> </Alert>) ";
+}<Input id="name" name="name" value= {;
+  formData.name ;
+}onChange= {;
+  handleInputChange ;
+}required /> {";
+  fieldErrors.name && (<p className="text-red-500 text-sm"> {;
+  fieldErrors.name ;
+}</p>) ;
+}</div>) ";
+}<div className="space-y-2" > <Label htmlFor="email" >Email address</Label> <Input /> {";
+  fieldErrors.email && (<p className="text-red-500 text-sm"> {;
+  fieldErrors.email ;
+}</p>) ";
+}</div> <div className="space-y-2" > <Label htmlFor="password" >Password</Label> <Input) ;
+}</div> <Button > {";
+  isLoading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Please wait... </>) : (signupMode ? "Create Account" : "Sign In") ";
+}</Button> </form> <Link href="/login" className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer" > Sign In </Link> </p> </div>) ;
+}"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

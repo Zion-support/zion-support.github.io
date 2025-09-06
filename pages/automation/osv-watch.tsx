@@ -1,5 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+=======
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // @ts-ignore
 import data from '../../data/security/osv-report.json';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -8,6 +13,7 @@ import data from '../../data/security/osv-report.json',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore;
 import data from '../../data/security/osv-report.json',
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
@@ -16,19 +22,35 @@ import data from '../../data/security/osv-report.json',
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/security/osv-report.json',
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function OsvWatchPage() {
 
   const results: any[] = (data?.results |[]).slice(0, 50)
 
+<<<<<<< HEAD
+=======
+=======
+  const results: any[] = (data?.results || []).slice(0, 50);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">OSV Vulnerability Watch</h1>
+<<<<<<< HEAD
 
 
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {results.length === 0 ? (
           <p className="mt-6 text-sm">No known vulnerabilities found.</p>
         ) : (
@@ -39,6 +61,7 @@ export default function OsvWatchPage() {
                 <ul className="list-disc ml-5 mt-2">
                   {r.vulns.slice(0, 5).map((v, i) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</a> — {v.summary |''}</li>
                     <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</a> — {v.summary || ''}</li>
 =======
@@ -48,6 +71,8 @@ export default function OsvWatchPage() {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   ))}
                 </ul>
               </li>
@@ -56,6 +81,7 @@ export default function OsvWatchPage() {
         )}
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
   );
@@ -186,15 +212,20 @@ export default function OsvWatchPage() {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   );
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</Link> — {v.summary || ''}</li>
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -222,6 +253,7 @@ export default function OsvWatchPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -237,3 +269,9 @@ export default function OsvWatchPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

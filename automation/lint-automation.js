@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
@@ -38,6 +39,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 );
     fs.appendFileSync(this.logFile, logMessage);,
   }
@@ -64,13 +67,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 module.exports = LintAutomation;
 ;
 
 module.exports = LintAutomation;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -84,12 +91,18 @@ module.exports = LintAutomation;
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
 module.exports = LintAutomation;
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -149,12 +162,15 @@ module.exports = LintAutomation;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 #!/usr/bin/env node
 /**
  * Lint Automation Script
@@ -215,7 +231,10 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-c10a
       this.log('TypeScript type check completed successfully');
 
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   automation.start().catch(console.error);
       this.log('TypeScript type check completed successfully');
 
@@ -251,6 +270,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       this.log('TypeScript type check completed successfully');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -259,6 +279,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 this.log('Type check completed successfully');
       // Run smoke tests
       this.log('Running smoke tests...');
@@ -270,6 +293,7 @@ this.log('Type check completed successfully');
       this.log(`Lint automation "failed": ${error.message}`);
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -306,6 +330,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       return false;
     }
   }
@@ -340,6 +366,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -350,6 +377,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 }
 
@@ -360,6 +389,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -379,10 +409,18 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Run the automation
 if (require.main === module) {
   const automation = new LintAutomation();
   automation.run().catch(console.error);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -401,16 +439,21 @@ module.exports = LintAutomation;
 module.exports = LintAutomation;
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 module.exports = LintAutomation;
 
 module.exports = LintAutomation;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 module.exports = LintAutomation;
 
@@ -518,6 +561,7 @@ module.exports = LintAutomation;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -548,6 +592,8 @@ module.exports = LintAutomation;
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class LintAutomation { constructor() { this.logFile = path.join(__dirname,'logs','lint-automation.log'); this.ensureLogDir()} ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;  console.log(logMessage.trim());   console.log(message);  console.log(logMessage.trim()); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a fs.appendFileSync(this.logFile,logMessage)} async runLint() { try { this.log('Starting lint automation...'); this.log('Running ESLint...'); execSync('npm run lint',{ stdio: 'pipe' }); this.log('ESLint completed successfully'); this.log('Running TypeScript type check...'); execSync('npm run type-check',{ stdio: 'pipe' });  this.log('Type check completed successfully'); this.log('Running smoke tests...'); execSync('npm run test:smoke',{ stdio: 'pipe' }); this.log('Smoke tests completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); try { this.log('Attempting to fix linting issues...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('Lint fixes applied successfully'); return true} catch (fixError) { this.log(`Failed to fix linting issues: ${fixError.message}`); return false} } } async run() { this.log('Lint Automation started'); const success = await this.runLint(); if (success) { this.log('Lint automation completed successfully'); process.exit(0)} else { this.log('Lint automation failed'); process.exit(1)} } } if (require.main === module) { const automation = new LintAutomation();  automation.run().catch(error => { console.error('Fatal error:',error); process.exit(1)});  automation.start().catch(console.error);  this.log('TypeScript type check completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); return false} } async runLintFix() { try { this.log('Starting lint fix automation...'); this.log('Running ESLint with auto-fix...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('ESLint auto-fix completed'); this.log('Lint fix automation completed successfully'); return true} catch (error) { this.log(`Lint fix automation failed: ${error.message}`); return false} } async run() { this.log('=== Lint Automation Started ==='); const fixSuccess = await this.runLintFix(); const lintSuccess = await this.runLint(); if (fixSuccess && lintSuccess) { this.log('=== Lint Automation Completed Successfully ===')} else { this.log('=== Lint Automation Completed with Issues ===')} } } if (require.main === module) { const automation = new LintAutomation(); automation.run().catch(console.error); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a } module.exports = LintAutomation;
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class LintAutomation { constructor() { this.logFile = path.join(__dirname,'logs','lint-automation.log'); this.ensureLogDir()} ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;  console.log(logMessage.trim());   console.log(message);  console.log(logMessage.trim()); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a fs.appendFileSync(this.logFile,logMessage)} async runLint() { try { this.log('Starting lint automation...'); this.log('Running ESLint...'); execSync('npm run lint',{ stdio: 'pipe' }); this.log('ESLint completed successfully'); this.log('Running TypeScript type check...'); execSync('npm run type-check',{ stdio: 'pipe' });  this.log('Type check completed successfully'); this.log('Running smoke tests...'); execSync('npm run test:smoke',{ stdio: 'pipe' }); this.log('Smoke tests completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); try { this.log('Attempting to fix linting issues...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('Lint fixes applied successfully'); return true} catch (fixError) { this.log(`Failed to fix linting issues: ${fixError.message}`); return false} } } async run() { this.log('Lint Automation started'); const success = await this.runLint(); if (success) { this.log('Lint automation completed successfully'); process.exit(0)} else { this.log('Lint automation failed'); process.exit(1)} } } if (require.main === module) { const automation = new LintAutomation();  automation.run().catch(error => { console.error('Fatal error:',error); process.exit(1)});  automation.start().catch(console.error);  this.log('TypeScript type check completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); return false} } async runLintFix() { try { this.log('Starting lint fix automation...'); this.log('Running ESLint with auto-fix...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('ESLint auto-fix completed'); this.log('Lint fix automation completed successfully'); return true} catch (error) { this.log(`Lint fix automation failed: ${error.message}`); return false} } async run() { this.log('=== Lint Automation Started ==='); const fixSuccess = await this.runLintFix(); const lintSuccess = await this.runLint(); if (fixSuccess && lintSuccess) { this.log('=== Lint Automation Completed Successfully ===')} else { this.log('=== Lint Automation Completed with Issues ===')} } } if (require.main === module) { const automation = new LintAutomation(); automation.run().catch(console.error); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a } module.exports = LintAutomation;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class LintAutomation { constructor() { this.logFile = path.join(__dirname,'logs','lint-automation.log'); this.ensureLogDir()} ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;  console.log(logMessage.trim());   console.log(message);  console.log(logMessage.trim()); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a fs.appendFileSync(this.logFile,logMessage)} async runLint() { try { this.log('Starting lint automation...'); this.log('Running ESLint...'); execSync('npm run lint',{ stdio: 'pipe' }); this.log('ESLint completed successfully'); this.log('Running TypeScript type check...'); execSync('npm run type-check',{ stdio: 'pipe' });  this.log('Type check completed successfully'); this.log('Running smoke tests...'); execSync('npm run test:smoke',{ stdio: 'pipe' }); this.log('Smoke tests completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); try { this.log('Attempting to fix linting issues...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('Lint fixes applied successfully'); return true} catch (fixError) { this.log(`Failed to fix linting issues: ${fixError.message}`); return false} } } async run() { this.log('Lint Automation started'); const success = await this.runLint(); if (success) { this.log('Lint automation completed successfully'); process.exit(0)} else { this.log('Lint automation failed'); process.exit(1)} } } if (require.main === module) { const automation = new LintAutomation();  automation.run().catch(error => { console.error('Fatal error:',error); process.exit(1)});  automation.start().catch(console.error);  this.log('TypeScript type check completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); return false} } async runLintFix() { try { this.log('Starting lint fix automation...'); this.log('Running ESLint with auto-fix...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('ESLint auto-fix completed'); this.log('Lint fix automation completed successfully'); return true} catch (error) { this.log(`Lint fix automation failed: ${error.message}`); return false} } async run() { this.log('=== Lint Automation Started ==='); const fixSuccess = await this.runLintFix(); const lintSuccess = await this.runLint(); if (fixSuccess && lintSuccess) { this.log('=== Lint Automation Completed Successfully ===')} else { this.log('=== Lint Automation Completed with Issues ===')} } } if (require.main === module) { const automation = new LintAutomation(); automation.run().catch(console.error); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a } module.exports = LintAutomation;
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class LintAutomation { constructor() { this.logFile = path.join(__dirname,'logs','lint-automation.log'); this.ensureLogDir()} ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;  console.log(logMessage.trim());   console.log(message);  console.log(logMessage.trim()); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a fs.appendFileSync(this.logFile,logMessage)} async runLint() { try { this.log('Starting lint automation...'); this.log('Running ESLint...'); execSync('npm run lint',{ stdio: 'pipe' }); this.log('ESLint completed successfully'); this.log('Running TypeScript type check...'); execSync('npm run type-check',{ stdio: 'pipe' });  this.log('Type check completed successfully'); this.log('Running smoke tests...'); execSync('npm run test:smoke',{ stdio: 'pipe' }); this.log('Smoke tests completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); try { this.log('Attempting to fix linting issues...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('Lint fixes applied successfully'); return true} catch (fixError) { this.log(`Failed to fix linting issues: ${fixError.message}`); return false} } } async run() { this.log('Lint Automation started'); const success = await this.runLint(); if (success) { this.log('Lint automation completed successfully'); process.exit(0)} else { this.log('Lint automation failed'); process.exit(1)} } } if (require.main === module) { const automation = new LintAutomation();  automation.run().catch(error => { console.error('Fatal error:',error); process.exit(1)});  automation.start().catch(console.error);  this.log('TypeScript type check completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); return false} } async runLintFix() { try { this.log('Starting lint fix automation...'); this.log('Running ESLint with auto-fix...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('ESLint auto-fix completed'); this.log('Lint fix automation completed successfully'); return true} catch (error) { this.log(`Lint fix automation failed: ${error.message}`); return false} } async run() { this.log('=== Lint Automation Started ==='); const fixSuccess = await this.runLintFix(); const lintSuccess = await this.runLint(); if (fixSuccess && lintSuccess) { this.log('=== Lint Automation Completed Successfully ===')} else { this.log('=== Lint Automation Completed with Issues ===')} } } if (require.main === module) { const automation = new LintAutomation(); automation.run().catch(console.error); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a } module.exports = LintAutomation;
 
@@ -560,15 +606,22 @@ module.exports = LintAutomation;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class LintAutomation { constructor() { this.logFile = path.join(__dirname,'logs','lint-automation.log'); this.ensureLogDir()} ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;  console.log(logMessage.trim());   console.log(message);  console.log(logMessage.trim()); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a fs.appendFileSync(this.logFile,logMessage)} async runLint() { try { this.log('Starting lint automation...'); this.log('Running ESLint...'); execSync('npm run lint',{ stdio: 'pipe' }); this.log('ESLint completed successfully'); this.log('Running TypeScript type check...'); execSync('npm run type-check',{ stdio: 'pipe' });  this.log('Type check completed successfully'); this.log('Running smoke tests...'); execSync('npm run test:smoke',{ stdio: 'pipe' }); this.log('Smoke tests completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); try { this.log('Attempting to fix linting issues...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('Lint fixes applied successfully'); return true} catch (fixError) { this.log(`Failed to fix linting issues: ${fixError.message}`); return false} } } async run() { this.log('Lint Automation started'); const success = await this.runLint(); if (success) { this.log('Lint automation completed successfully'); process.exit(0)} else { this.log('Lint automation failed'); process.exit(1)} } } if (require.main === module) { const automation = new LintAutomation();  automation.run().catch(error => { console.error('Fatal error:',error); process.exit(1)});  automation.start().catch(console.error);  this.log('TypeScript type check completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); return false} } async runLintFix() { try { this.log('Starting lint fix automation...'); this.log('Running ESLint with auto-fix...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('ESLint auto-fix completed'); this.log('Lint fix automation completed successfully'); return true} catch (error) { this.log(`Lint fix automation failed: ${error.message}`); return false} } async run() { this.log('=== Lint Automation Started ==='); const fixSuccess = await this.runLintFix(); const lintSuccess = await this.runLint(); if (fixSuccess && lintSuccess) { this.log('=== Lint Automation Completed Successfully ===')} else { this.log('=== Lint Automation Completed with Issues ===')} } } if (require.main === module) { const automation = new LintAutomation(); automation.run().catch(console.error); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a } module.exports = LintAutomation;
 
+<<<<<<< HEAD
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class LintAutomation { constructor() { this.logFile = path.join(__dirname,'logs','lint-automation.log'); this.ensureLogDir()} ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;  console.log(logMessage.trim());   console.log(message);  console.log(logMessage.trim()); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a fs.appendFileSync(this.logFile,logMessage)} async runLint() { try { this.log('Starting lint automation...'); this.log('Running ESLint...'); execSync('npm run lint',{ stdio: 'pipe' }); this.log('ESLint completed successfully'); this.log('Running TypeScript type check...'); execSync('npm run type-check',{ stdio: 'pipe' });  this.log('Type check completed successfully'); this.log('Running smoke tests...'); execSync('npm run test:smoke',{ stdio: 'pipe' }); this.log('Smoke tests completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); try { this.log('Attempting to fix linting issues...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('Lint fixes applied successfully'); return true} catch (fixError) { this.log(`Failed to fix linting issues: ${fixError.message}`); return false} } } async run() { this.log('Lint Automation started'); const success = await this.runLint(); if (success) { this.log('Lint automation completed successfully'); process.exit(0)} else { this.log('Lint automation failed'); process.exit(1)} } } if (require.main === module) { const automation = new LintAutomation();  automation.run().catch(error => { console.error('Fatal error:',error); process.exit(1)});  automation.start().catch(console.error);  this.log('TypeScript type check completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); return false} } async runLintFix() { try { this.log('Starting lint fix automation...'); this.log('Running ESLint with auto-fix...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('ESLint auto-fix completed'); this.log('Lint fix automation completed successfully'); return true} catch (error) { this.log(`Lint fix automation failed: ${error.message}`); return false} } async run() { this.log('=== Lint Automation Started ==='); const fixSuccess = await this.runLintFix(); const lintSuccess = await this.runLint(); if (fixSuccess && lintSuccess) { this.log('=== Lint Automation Completed Successfully ===')} else { this.log('=== Lint Automation Completed with Issues ===')} } } if (require.main === module) { const automation = new LintAutomation(); automation.run().catch(console.error); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a } module.exports = LintAutomation;
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class LintAutomation { constructor() { this.logFile = path.join(__dirname,'logs','lint-automation.log'); this.ensureLogDir()} ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;  console.log(logMessage.trim());   console.log(message);  console.log(logMessage.trim()); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a fs.appendFileSync(this.logFile,logMessage)} async runLint() { try { this.log('Starting lint automation...'); this.log('Running ESLint...'); execSync('npm run lint',{ stdio: 'pipe' }); this.log('ESLint completed successfully'); this.log('Running TypeScript type check...'); execSync('npm run type-check',{ stdio: 'pipe' });  this.log('Type check completed successfully'); this.log('Running smoke tests...'); execSync('npm run test:smoke',{ stdio: 'pipe' }); this.log('Smoke tests completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); try { this.log('Attempting to fix linting issues...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('Lint fixes applied successfully'); return true} catch (fixError) { this.log(`Failed to fix linting issues: ${fixError.message}`); return false} } } async run() { this.log('Lint Automation started'); const success = await this.runLint(); if (success) { this.log('Lint automation completed successfully'); process.exit(0)} else { this.log('Lint automation failed'); process.exit(1)} } } if (require.main === module) { const automation = new LintAutomation();  automation.run().catch(error => { console.error('Fatal error:',error); process.exit(1)});  automation.start().catch(console.error);  this.log('TypeScript type check completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); return false} } async runLintFix() { try { this.log('Starting lint fix automation...'); this.log('Running ESLint with auto-fix...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('ESLint auto-fix completed'); this.log('Lint fix automation completed successfully'); return true} catch (error) { this.log(`Lint fix automation failed: ${error.message}`); return false} } async run() { this.log('=== Lint Automation Started ==='); const fixSuccess = await this.runLintFix(); const lintSuccess = await this.runLint(); if (fixSuccess && lintSuccess) { this.log('=== Lint Automation Completed Successfully ===')} else { this.log('=== Lint Automation Completed with Issues ===')} } } if (require.main === module) { const automation = new LintAutomation(); automation.run().catch(console.error); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a } module.exports = LintAutomation;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class LintAutomation { constructor() { this.logFile = path.join(__dirname,'logs','lint-automation.log'); this.ensureLogDir()} ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;  console.log(logMessage.trim());   console.log(message);  console.log(logMessage.trim()); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a fs.appendFileSync(this.logFile,logMessage)} async runLint() { try { this.log('Starting lint automation...'); this.log('Running ESLint...'); execSync('npm run lint',{ stdio: 'pipe' }); this.log('ESLint completed successfully'); this.log('Running TypeScript type check...'); execSync('npm run type-check',{ stdio: 'pipe' });  this.log('Type check completed successfully'); this.log('Running smoke tests...'); execSync('npm run test:smoke',{ stdio: 'pipe' }); this.log('Smoke tests completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); try { this.log('Attempting to fix linting issues...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('Lint fixes applied successfully'); return true} catch (fixError) { this.log(`Failed to fix linting issues: ${fixError.message}`); return false} } } async run() { this.log('Lint Automation started'); const success = await this.runLint(); if (success) { this.log('Lint automation completed successfully'); process.exit(0)} else { this.log('Lint automation failed'); process.exit(1)} } } if (require.main === module) { const automation = new LintAutomation();  automation.run().catch(error => { console.error('Fatal error:',error); process.exit(1)});  automation.start().catch(console.error);  this.log('TypeScript type check completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); return false} } async runLintFix() { try { this.log('Starting lint fix automation...'); this.log('Running ESLint with auto-fix...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('ESLint auto-fix completed'); this.log('Lint fix automation completed successfully'); return true} catch (error) { this.log(`Lint fix automation failed: ${error.message}`); return false} } async run() { this.log('=== Lint Automation Started ==='); const fixSuccess = await this.runLintFix(); const lintSuccess = await this.runLint(); if (fixSuccess && lintSuccess) { this.log('=== Lint Automation Completed Successfully ===')} else { this.log('=== Lint Automation Completed with Issues ===')} } } if (require.main === module) { const automation = new LintAutomation(); automation.run().catch(console.error); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a } module.exports = LintAutomation;
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class LintAutomation { constructor() { this.logFile = path.join(__dirname,'logs','lint-automation.log'); this.ensureLogDir()} ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;  console.log(logMessage.trim());   console.log(message);  console.log(logMessage.trim()); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a fs.appendFileSync(this.logFile,logMessage)} async runLint() { try { this.log('Starting lint automation...'); this.log('Running ESLint...'); execSync('npm run lint',{ stdio: 'pipe' }); this.log('ESLint completed successfully'); this.log('Running TypeScript type check...'); execSync('npm run type-check',{ stdio: 'pipe' });  this.log('Type check completed successfully'); this.log('Running smoke tests...'); execSync('npm run test:smoke',{ stdio: 'pipe' }); this.log('Smoke tests completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); try { this.log('Attempting to fix linting issues...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('Lint fixes applied successfully'); return true} catch (fixError) { this.log(`Failed to fix linting issues: ${fixError.message}`); return false} } } async run() { this.log('Lint Automation started'); const success = await this.runLint(); if (success) { this.log('Lint automation completed successfully'); process.exit(0)} else { this.log('Lint automation failed'); process.exit(1)} } } if (require.main === module) { const automation = new LintAutomation();  automation.run().catch(error => { console.error('Fatal error:',error); process.exit(1)});  automation.start().catch(console.error);  this.log('TypeScript type check completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); return false} } async runLintFix() { try { this.log('Starting lint fix automation...'); this.log('Running ESLint with auto-fix...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('ESLint auto-fix completed'); this.log('Lint fix automation completed successfully'); return true} catch (error) { this.log(`Lint fix automation failed: ${error.message}`); return false} } async run() { this.log('=== Lint Automation Started ==='); const fixSuccess = await this.runLintFix(); const lintSuccess = await this.runLint(); if (fixSuccess && lintSuccess) { this.log('=== Lint Automation Completed Successfully ===')} else { this.log('=== Lint Automation Completed with Issues ===')} } } if (require.main === module) { const automation = new LintAutomation(); automation.run().catch(console.error); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a } module.exports = LintAutomation;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class LintAutomation { constructor() { this.logFile = path.join(__dirname,'logs','lint-automation.log'); this.ensureLogDir()} ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;  console.log(logMessage.trim());   console.log(message);  console.log(logMessage.trim()); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a fs.appendFileSync(this.logFile,logMessage)} async runLint() { try { this.log('Starting lint automation...'); this.log('Running ESLint...'); execSync('npm run lint',{ stdio: 'pipe' }); this.log('ESLint completed successfully'); this.log('Running TypeScript type check...'); execSync('npm run type-check',{ stdio: 'pipe' });  this.log('Type check completed successfully'); this.log('Running smoke tests...'); execSync('npm run test:smoke',{ stdio: 'pipe' }); this.log('Smoke tests completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); try { this.log('Attempting to fix linting issues...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('Lint fixes applied successfully'); return true} catch (fixError) { this.log(`Failed to fix linting issues: ${fixError.message}`); return false} } } async run() { this.log('Lint Automation started'); const success = await this.runLint(); if (success) { this.log('Lint automation completed successfully'); process.exit(0)} else { this.log('Lint automation failed'); process.exit(1)} } } if (require.main === module) { const automation = new LintAutomation();  automation.run().catch(error => { console.error('Fatal error:',error); process.exit(1)});  automation.start().catch(console.error);  this.log('TypeScript type check completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); return false} } async runLintFix() { try { this.log('Starting lint fix automation...'); this.log('Running ESLint with auto-fix...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('ESLint auto-fix completed'); this.log('Lint fix automation completed successfully'); return true} catch (error) { this.log(`Lint fix automation failed: ${error.message}`); return false} } async run() { this.log('=== Lint Automation Started ==='); const fixSuccess = await this.runLintFix(); const lintSuccess = await this.runLint(); if (fixSuccess && lintSuccess) { this.log('=== Lint Automation Completed Successfully ===')} else { this.log('=== Lint Automation Completed with Issues ===')} } } if (require.main === module) { const automation = new LintAutomation(); automation.run().catch(console.error); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a } module.exports = LintAutomation;
+ursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class LintAutomation { constructor() { this.logFile = path.join(__dirname,'logs','lint-automation.log'); this.ensureLogDir()} ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;  console.log(logMessage.trim());   console.log(message);  console.log(logMessage.trim()); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a fs.appendFileSync(this.logFile,logMessage)} async runLint() { try { this.log('Starting lint automation...'); this.log('Running ESLint...'); execSync('npm run lint',{ stdio: 'pipe' }); this.log('ESLint completed successfully'); this.log('Running TypeScript type check...'); execSync('npm run type-check',{ stdio: 'pipe' });  this.log('Type check completed successfully'); this.log('Running smoke tests...'); execSync('npm run test:smoke',{ stdio: 'pipe' }); this.log('Smoke tests completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); try { this.log('Attempting to fix linting issues...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('Lint fixes applied successfully'); return true} catch (fixError) { this.log(`Failed to fix linting issues: ${fixError.message}`); return false} } } async run() { this.log('Lint Automation started'); const success = await this.runLint(); if (success) { this.log('Lint automation completed successfully'); process.exit(0)} else { this.log('Lint automation failed'); process.exit(1)} } } if (require.main === module) { const automation = new LintAutomation();  automation.run().catch(error => { console.error('Fatal error:',error); process.exit(1)});  automation.start().catch(console.error);  this.log('TypeScript type check completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); return false} } async runLintFix() { try { this.log('Starting lint fix automation...'); this.log('Running ESLint with auto-fix...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('ESLint auto-fix completed'); this.log('Lint fix automation completed successfully'); return true} catch (error) { this.log(`Lint fix automation failed: ${error.message}`); return false} } async run() { this.log('=== Lint Automation Started ==='); const fixSuccess = await this.runLintFix(); const lintSuccess = await this.runLint(); if (fixSuccess && lintSuccess) { this.log('=== Lint Automation Completed Successfully ===')} else { this.log('=== Lint Automation Completed with Issues ===')} } } if (require.main === module) { const automation = new LintAutomation(); automation.run().catch(console.error); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a } module.exports = LintAutomation;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class LintAutomation { constructor() { this.logFile = path.join(__dirname,'logs','lint-automation.log'); this.ensureLogDir()} ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;  console.log(logMessage.trim());   console.log(message);  console.log(logMessage.trim()); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a fs.appendFileSync(this.logFile,logMessage)} async runLint() { try { this.log('Starting lint automation...'); this.log('Running ESLint...'); execSync('npm run lint',{ stdio: 'pipe' }); this.log('ESLint completed successfully'); this.log('Running TypeScript type check...'); execSync('npm run type-check',{ stdio: 'pipe' });  this.log('Type check completed successfully'); this.log('Running smoke tests...'); execSync('npm run test:smoke',{ stdio: 'pipe' }); this.log('Smoke tests completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); try { this.log('Attempting to fix linting issues...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('Lint fixes applied successfully'); return true} catch (fixError) { this.log(`Failed to fix linting issues: ${fixError.message}`); return false} } } async run() { this.log('Lint Automation started'); const success = await this.runLint(); if (success) { this.log('Lint automation completed successfully'); process.exit(0)} else { this.log('Lint automation failed'); process.exit(1)} } } if (require.main === module) { const automation = new LintAutomation();  automation.run().catch(error => { console.error('Fatal error:',error); process.exit(1)});  automation.start().catch(console.error);  this.log('TypeScript type check completed successfully'); this.log('Lint automation completed successfully'); return true} catch (error) { this.log(`Lint automation failed: ${error.message}`); return false} } async runLintFix() { try { this.log('Starting lint fix automation...'); this.log('Running ESLint with auto-fix...'); execSync('npm run lint:fix',{ stdio: 'pipe' }); this.log('ESLint auto-fix completed'); this.log('Lint fix automation completed successfully'); return true} catch (error) { this.log(`Lint fix automation failed: ${error.message}`); return false} } async run() { this.log('=== Lint Automation Started ==='); const fixSuccess = await this.runLintFix(); const lintSuccess = await this.runLint(); if (fixSuccess && lintSuccess) { this.log('=== Lint Automation Completed Successfully ===')} else { this.log('=== Lint Automation Completed with Issues ===')} } } if (require.main === module) { const automation = new LintAutomation(); automation.run().catch(console.error); ursor/migrate-github-actions-to-pm2-and-clean-up-f06c ursor/migrate-github-actions-to-pm2-and-clean-up-c10a } module.exports = LintAutomation;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -591,6 +644,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -598,3 +652,5 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -36,6 +37,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -93,6 +96,7 @@ import { SEO } from "@/components/SEO",
 import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm",
 import { TenantsList } from "@/components/admin/whitelabel/TenantsList",
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
   // Check if user has admin role
@@ -113,15 +117,21 @@ import { useAuth } from "@/hooks/useAuth";
 =======
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",import { useAuth } from "@/hooks/useAuth";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",import { useAuth } from "@/hooks/useAuth";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Navigate } from "react-router-dom";
 export default function WhitelabelManager() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("tenants");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   // Check if user has admin role
 <<<<<<< HEAD
@@ -137,6 +147,7 @@ export default function WhitelabelManager() {
   }
   return (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   including content, users, and analytics. Tenant admins cannot access data from other tenants.
@@ -229,6 +240,8 @@ export default function WhitelabelManager() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -243,6 +256,7 @@ export default function WhitelabelManager() {;
   const [activeTab, setActiveTab] = useState("tenants"),;
   // Check if user has admin role;
   const isAdmin = user?.role === "admin";
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (!isAdmin) {;
     return <Navigate to="/unauthorized" />;
@@ -344,10 +358,14 @@ export default function WhitelabelManager() {;
 =======
   if (!isAdmin) {;;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  if (!isAdmin) {;;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
             <TabsList className="mb-8">;
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
             <TabsList className="mb-8">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -404,6 +422,8 @@ export default function WhitelabelManager() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </p>;
                 <table>;
                   <thead>;
@@ -421,10 +441,13 @@ export default function WhitelabelManager() {;
       </main>;
       <Footer />;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>;
   );
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
     </>);
@@ -447,6 +470,7 @@ including content, users, and analytics. Tenant admins cannot access data from o
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -460,3 +484,6 @@ including content, users, and analytics. Tenant admins cannot access data from o
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,12 +11,16 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {
   const [isUnderDispute, setIsUnderDispute] = useState(false);
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
   const [disputeId, setDisputeId] = useState<string | null>(null),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -291,16 +296,27 @@ if ( {) {
       }
       try {    isLoading
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    const checkDispute = async () => {
+      if (!projectId && !milestoneId) {
+        setIsLoading(false),
+        return
+      }
+      try {    isLoading
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     isLoading 
 
     isLoading 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
@@ -318,6 +334,7 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
     check_dispute ();
   }, [project_id, milestone_id]);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -394,6 +411,9 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
 =======
 }  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
 import { useState, useEffect } from "react",;

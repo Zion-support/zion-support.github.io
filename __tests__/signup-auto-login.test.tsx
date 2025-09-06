@@ -67,8 +67,17 @@ describe('Signup Auto Login', () => {
 // Mock test for signup auto login
 describe('Signup Auto Login', () => {
   it('should render without crashing', () => {
+<<<<<<< HEAD
     expect(true).toBe(true);module.exports = {};module.exports = {};
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+    expect(true).toBe(true);
+
+
+module.exports = {};
+module.exports = {};
+module.exports = {};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

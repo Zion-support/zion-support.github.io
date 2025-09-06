@@ -120,6 +120,9 @@ function getAllFiles(dir, extensions) {;
     for (const item of items) {;
       const fullPath = path.join(dir, item);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const stat = fs.statSync(fullPath);
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -172,9 +175,12 @@ const path = require('path');
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 console.log('🚀 Starting comprehensive merge conflict resolution and PR merging...'),;
+<<<<<<< HEAD
 =======
       const stat = fs.statSync(fullPath);console.log('🚀 Starting comprehensive merge conflict resolution and PR merging...'),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {;
   try {;
@@ -193,8 +199,8 @@ function fixMergeConflicts(filePath) {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const originalContent = content;
-    // Remove merge conflict markers and keep HEAD version;    const originalContent = content;
     // Remove merge conflict markers and keep HEAD version;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -218,6 +224,10 @@ function fixMergeConflicts(filePath) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (content !== originalContent) {;
 =======
+=======
+    const originalContent = content;
+    // Remove merge conflict markers and keep HEAD version;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     content = content.replace(/    content = content.replace(/    if (content !== originalContent) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -433,12 +443,17 @@ function main() {
         files = files.concat(getAllFiles(fullPath, extensions));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       } else if (extensions.some(ext => item.endsWith(ext))) {;        files.push(fullPath);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
       } else if (extensions.some(ext => item.endsWith(ext))) {;
         files.push(fullPath);
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+      } else if (extensions.some(ext => item.endsWith(ext))) {;
+        files.push(fullPath);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
     }
   } catch (error) {
@@ -600,8 +615,14 @@ async function main() {
       console.log('⚠️  Merge conflicts detected. Resolving...'),;
       // Find files with merge conflicts;
 
+
         for (const file of files) {;
+<<<<<<< HEAD
           if (file.trim()) {;            }
+=======
+          if (file.trim()) {;
+            }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             execSync(`git add "${file}"`);
           }
         }
@@ -609,8 +630,13 @@ async function main() {
         execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
       }
     }
+<<<<<<< HEAD
     let fixedCount = 0;    for (const file of files) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    let fixedCount = 0;
+    for (const file of files) {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       try {;
         const content = fs.readFileSync(file, 'utf8'),;
           if (fixMergeConflicts(file)) {;
@@ -668,11 +694,16 @@ async function main() {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 main().catch(console.error),;            fixedCount++;
 =======
 main().catch(console.error),;
             fixedCount++;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+main().catch(console.error),;
+            fixedCount++;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }
         }
       } catch (error) {
@@ -741,6 +772,7 @@ if (|| content.includes (') {
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -757,6 +789,9 @@ if (|| content.includes (') {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 main().catch(console.error);
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,6 +19,8 @@ export interface UserDetails {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id?: string;
   name?: string;
   email?: string;
@@ -27,6 +30,7 @@ export interface UserDetails {
   headline?: string;
   profile_complete?: boolean;
   role?: string;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -43,6 +47,9 @@ export interface UserDetails {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id?: string;
   name?: string;
   email?: string;
@@ -114,6 +121,7 @@ export interface UserDetails {;
   updatedAt?: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -139,6 +147,8 @@ export interface UserDetails {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ;
 export interface AuthContextType {;
@@ -158,6 +168,7 @@ export interface AuthContextType {;
   loginWithFacebook: () => Promise<void>,;
   loginWithTwitter: () => Promise<void>,;
   loginWithWeb3: () => Promise<void>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -439,6 +450,12 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   const signIn = async (email: string, password: string) => {
     // This would be replaced with actual Supabase auth    // Mock implementation
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}  // Mock auth functions for now - these would connect to Supabase in a real implementation
+
+  const signIn = async (email: string, password: string) => {
+    // This would be replaced with actual Supabase auth    // Mock implementation
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setUser({
       id: "google-user-id"
       email: "google@example.com"
@@ -446,6 +463,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: "Google User"
       profileComplete: true
     })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -466,6 +484,8 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const loginWithFacebook = async () => {
     // // // console.log("Facebook login requested"),  const loginWithFacebook = async () => {
     // // // console.log("Facebook login requested"),
@@ -477,6 +497,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: "Facebook User"
       profileComplete: true
     })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -497,6 +518,8 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const loginWithTwitter = async () => {
     // // // console.log("Twitter login requested"),  const loginWithTwitter = async () => {
     // // // console.log("Twitter login requested"),
@@ -510,10 +533,13 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
     })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   };
 
@@ -533,6 +559,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
 
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -609,6 +636,11 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
     const ethereum = (window as any).ethereum,
     if (!ethereum) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    // // // console.log("Web3 login requested"),
+    const ethereum = (window as any).ethereum,
+    if (!ethereum) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {
   const context = useContext(AuthContext);
@@ -620,6 +652,7 @@ export function useAuth(): AuthContextType {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -641,6 +674,8 @@ export function useAuth(): AuthContextType {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {;
@@ -648,11 +683,14 @@ export function useAuth(): AuthContextType {;
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       console.warn("No wallet detected"),
       return
 ;
@@ -706,6 +744,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {;
     // Mock implementation;
     console && console.log("Profile update requested with:", data);
     if (user) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
       setUser({ ...user, ...data });
 <<<<<<< HEAD
@@ -879,6 +918,9 @@ if ( {) {
 =======
       setUser({ ...user, ...data });      displayName: "Google User",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      setUser({ ...user, ...data });      displayName: "Google User",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       name: "Google User",;
       profileComplete: true;
     })
@@ -916,6 +958,7 @@ if ( {) {
     } catch (err) {
       console.error ('Web3 login failed', err);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -1325,3 +1368,9 @@ export function useAuth(): AuthContextType {;
     signOut;
     signUp;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }    isLoading;
+    signIn;
+    signOut;
+    signUp;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -15,6 +16,8 @@ import { toast } from "sonner";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useRef } from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -68,6 +71,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     if (e.target.files) {;
       addScreenshots(Array.from(e.target.files));
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   },
 <<<<<<< HEAD
@@ -160,10 +164,14 @@ type Screenshot = {
 =======
   },    if (imageFiles.length === 0) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  },    if (imageFiles.length === 0) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       toast.error("Please select valid image files")
       return
     }
     // Limit the number of screenshots
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -172,6 +180,8 @@ type Screenshot = {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     const maxScreenshots = platform === "ios" ? 10 : 8,
     const availableSlots = maxScreenshots - screenshots.length,
@@ -180,6 +190,7 @@ type Screenshot = {
 
   
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -238,6 +249,8 @@ type Screenshot = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),
       return
   },;
@@ -296,6 +309,7 @@ type Screenshot = {
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -329,6 +343,9 @@ import React, { useState, useRef } from "react";
 =======
   import React, { useState, useRef } from "react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  import React, { useState, useRef } from "react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Upload, Trash2, Plus} from "lucide-react";
@@ -390,6 +407,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div
@@ -410,6 +428,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -417,6 +437,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
               ? "border-zion-cyan bg-zion-cyan/10"
             isDragging 
               ? "border-zion-cyan bg-zion-cyan/10" 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -430,6 +451,10 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 
 =======              : "border-zion-purple/30"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+=======              : "border-zion-purple/30"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }`}
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
@@ -445,6 +470,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
             accept="image/*"
             onChange={handleFileSelect}
             className="hidden"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -580,6 +606,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 };
 <<<<<<< HEAD
@@ -741,6 +769,7 @@ if ( {) {
     </Card>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -823,3 +852,6 @@ return filtered;
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

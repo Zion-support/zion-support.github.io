@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise';
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface CompanyRecord {
   id: string;
   name: string;
@@ -83,6 +86,7 @@ export function updateCompany(id: string, updates: Partial<CompanyRecord>): Comp
   return updated;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 <<<<<<< HEAD
@@ -95,6 +99,8 @@ export function updateCompany(id: string, updates: Partial<CompanyRecord>): Comp
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   CompanyRecord,
   CompanyMember,
@@ -102,6 +108,7 @@ import {
   InvoiceRecord,
 } from '../types/enterprise';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -123,6 +130,8 @@ const generateId = () => Math.random().toString(36).slice(2, 10);
 const seedCompany: CompanyRecord = {;
   id: 'cmp_acme';
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const generateId = () => Math.random().toString(36).slice(2, 10);
 const seedCompany: CompanyRecord = {id: 'cmp_acme';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -386,6 +395,7 @@ export const store = {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return true;
 <<<<<<< HEAD
+<<<<<<< HEAD
   };
   listInvoices(companyId: string): InvoiceRecord[] {;
     const company = companiesById[companyId];
@@ -412,3 +422,9 @@ export const store = {;
     const company = companiesById[company_id];
     return company ? company.invoices : [];
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  },
+  list_invoices (company_id: string): InvoiceRecord[] {
+    const company = companiesById[company_id];
+    return company ? company.invoices : [];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
@@ -54,12 +55,16 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
 
     "authorization, x-client-info, apikey, content-type"},
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -69,6 +74,8 @@ const corsHeaders = {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 serve(async (req: Request) => {
   // Handle CORS
   if (req && req.method === "OPTIONS") {const corsHeaders = {
@@ -82,6 +89,7 @@ serve(async (req: Request) => {
       headers: corsHeaders})
   }
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
     const supabase = createClient(
 <<<<<<< HEAD
@@ -127,6 +135,9 @@ serve(async (req: Request) => {
 =======
     const supabase = createClient(    if (error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    const supabase = createClient(    if (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       console && console.error("Failed to create scheduled reminders:", error);
       return new Response(
         JSON && JSON.stringify({ error: "Failed to create scheduled reminders", details: error });
@@ -140,6 +151,7 @@ serve(async (req: Request) => {
       .from("scheduled_jobs")
       .select("id, payload")
       .eq("job_type", "onboarding_reminder")
+<<<<<<< HEAD
 <<<<<<< HEAD
       .eq("status", "pending")
 <<<<<<< HEAD
@@ -213,6 +225,9 @@ serve(async (req: Request) => {
 =======
       .eq("status", "pending")    if (pendingJobs && pendingJobs.length > 0) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      .eq("status", "pending")    if (pendingJobs && pendingJobs.length > 0) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       for (const job of pendingJobs) {
         // Call the send-onboarding-reminder function for each job
         const reminderResponse = await fetch(
@@ -222,6 +237,7 @@ serve(async (req: Request) => {
             headers: {
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 
               "Content-Type": "application/json",
@@ -283,6 +299,12 @@ serve(async (req: Request) => {
 =======
         );          if (updateError) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${supabaseServiceKey}`};
+            body: JSON && JSON.stringify(job && job.payload)}
+        );          if (updateError) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             console && console.error("Failed to update job status:", updateError)
           } else {
             processedJobs && processedJobs.push(job && job.id)
@@ -296,6 +318,7 @@ serve(async (req: Request) => {
         }
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     return new Response(
 <<<<<<< HEAD
@@ -380,6 +403,12 @@ import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    return new Response(      {
+        status: 500
+        headers: { "Content-Type": "application/json", ...corsHeaders }}
+    )import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
 const supabase_url = Deno.env.get ("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!;
@@ -395,6 +424,7 @@ serve (async (req: Request) => {
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -405,6 +435,8 @@ serve (async (req: Request) => {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1",;
 ;
@@ -523,9 +555,12 @@ serve(async (req:Request) => {;
   }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

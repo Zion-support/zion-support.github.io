@@ -46,6 +46,7 @@ import { toast } from "@/components/ui/use-toast";
 import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleViewProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   articleId: string;
 }
@@ -143,6 +144,8 @@ if ( {) {
   
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   articleId: string
 }
 
@@ -161,7 +164,10 @@ import { toast } from "@/components/ui/use-toast",;
 import { HELP_CATEGORIES } from "./help-content",;
 interface HelpArticleViewProps {;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   let article;
   for (const category of HELP_CATEGORIES) {
     const found = category.articles.find((a) => a.id === articleId);
@@ -177,6 +183,7 @@ interface HelpArticleViewProps {;
 
   const handleFeedback = (type: "helpful" | "not-helpful") => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     (setFeedbackGiven(type),
       // In a real implementation, this would send feedback to the server
       toast({
@@ -191,6 +198,8 @@ interface HelpArticleViewProps {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   return (
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setFeedbackGiven(type),
     
     // In a real implementation, this would send feedback to the server
@@ -201,6 +210,7 @@ interface HelpArticleViewProps {;
         : "We'll work on improving this article."})
   },
     return (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <div>
       <Card className="p-6">
@@ -210,12 +220,20 @@ interface HelpArticleViewProps {;
           <span>Last updated: {formatDate(article.lastUpdated)}</span>
         </div>
 =======
+=======
+    <div>
+      <Card className="p-6">
+        <h2 className="text-2xl font-bold mb-4">{article.title}</h2>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         <div className="flex items-center text-sm text-zion-slate-light mb-6">
           <span>Last updated: {formatDate(article.lastUpdated)}</span>
         </div>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="prose dark:prose-invert max-w-none mb-8">
           {article.content.split("\n").map((paragraph, idx) => (
             <p key={idx}>{paragraph}</p>
@@ -234,6 +252,7 @@ interface HelpArticleViewProps {;
             <div className="flex items-center space-x-3">
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="flex items-center space-x-3">
 =======
@@ -281,6 +300,9 @@ interface HelpArticleViewProps {;
 =======
             <div className="flex items-center space-x-3">              <Button
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <div className="flex items-center space-x-3">              <Button
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 variant="outline"
                 size="sm"
                 className={
@@ -391,11 +413,15 @@ interface HelpArticleViewProps {;
                 disabled={feedback_given !== null}
               >;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <ThumbsDown className="h - 4 w - 4 mr - 2" />;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
                 <ThumbsDown className="h - 4 w - 4 mr-2" />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                <ThumbsDown className="h - 4 w - 4 mr-2" />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 No;
               </Button>;
             </div>;
@@ -488,7 +514,10 @@ function formatDate(date: string): string {
   });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

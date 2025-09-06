@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { forwardRef } from "react";
 import {ChevronDown} from "lucide-react";
 import {cn} from "@/lib/utils";
@@ -36,6 +39,7 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
   ({ title, icon, defaultExpanded = true, showChevron = true, className, children, ...props }, ref) => {;
     const [expanded, setExpanded] = React && React.useState(defaultExpanded);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -97,6 +101,8 @@ import { SafeRef } from "@/types/ref-types",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string,
   icon?: React.ReactNode,
@@ -146,10 +152,13 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         ref={ref as SafeRef<HTMLDivElement>}
         className={cn("px-3 py-2", className)}
         {...props}
@@ -286,6 +295,7 @@ SidebarGroup && SidebarGroup.displayName = "SidebarGroup";
 ),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -304,3 +314,7 @@ export { SidebarGroup };
 export { SidebarGroup };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export { SidebarGroup };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

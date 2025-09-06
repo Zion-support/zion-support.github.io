@@ -1,7 +1,10 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { forwardRef } from "react";
 import {Slot} from "@radix-ui/react-slot";
 import {cn} from "@/lib/utils";
@@ -9,6 +12,7 @@ interface SidebarMenuButtonProps extends React && React.ButtonHTMLAttributes<HTM
           "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors"
           "text-muted-foreground hover: text-foreground hover:bg-accent"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -54,11 +58,14 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButton
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string,
   children?: React.ReactNode,
   asChild?: boolean
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -190,6 +197,11 @@ SidebarMenuButton.displayName = "SidebarMenuButton",
           "text-muted-foreground hover:text-foreground hover:bg-accent",
           "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors",
+          "text-muted-foreground hover:text-foreground hover:bg-accent",
+          "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 );
 SidebarMenuButton.displayName = "SidebarMenuButton";
 );
@@ -227,6 +239,7 @@ SidebarMenuButton.displayName = "SidebarMenuButton",
 );
 
 SidebarMenuButton.displayName = "SidebarMenuButton";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -289,3 +302,5 @@ SidebarMenuButton.displayName = "SidebarMenuButton";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

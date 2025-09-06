@@ -1,14 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import {Check, ExternalLink} from 'lucide-react';
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 import SEO from '../components/SEO',
 import { Check, ExternalLink } from 'lucide-react',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -31,6 +35,10 @@ import { Check, ExternalLink } from 'lucide-react',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function BrowserAutomationCloudPage() {
 	return (
 		<>
@@ -59,10 +67,13 @@ export default function BrowserAutomationCloudPage() {
 							<p className="mt-2 text-gray-300">SAML/SCIM, VPC deploy, dedicated subnets, custom guards & retries.</p>
 							<p className="mt-4 text-3xl font-bold">Custom</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 						</div>
 					</div>
 					<div className="mt-8 flex flex-wrap items-center gap-4">
@@ -105,6 +116,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -113,6 +125,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import SEO from '../components/SEO';
 import {Check, ExternalLink} from 'lucide-react';
@@ -160,6 +174,7 @@ export default function BrowserAutomationCloudPage() {;
 			</main>;
 		</>;
 	);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -425,3 +440,9 @@ return (
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+export default function BrowserAutomationCloudPage () {
+  return (<> <Head> <title>Browser Automation Cloud | Zion Tech Group</title> </div> </div> </div> </section> </main> </>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,6 +69,10 @@ import { format } from 'date-fns',;
 
 import {format} from 'date-fns'; * Formats a date for PDF display;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import {format} from 'date-fns'; * Formats a date for PDF display;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
  * @param date Date or string to format;
  * @returns Formatted date string;
  */;
@@ -78,6 +83,7 @@ export function formatDate(date: Date | string | undefined): string {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -85,6 +91,8 @@ export function formatDate(date: Date | string | undefined): string {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   return format(date, 'MMM yyyy')
 
@@ -95,6 +103,7 @@ export function formatDate(date: Date | string | undefined): string {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -103,6 +112,8 @@ export function formatDate(date: Date | string | undefined): string {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   }
   return format(date, 'MMM yyyy')
@@ -114,6 +125,7 @@ export function formatDate(date: Date | string | undefined): string {;
 }}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -125,3 +137,6 @@ export function formatDate(date: Date | string | undefined): string {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

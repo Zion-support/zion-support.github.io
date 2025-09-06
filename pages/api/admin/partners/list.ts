@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -9,11 +10,14 @@
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../../utils/supabase/server";
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
 ) {
   const usingPlaceholder =
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
@@ -51,6 +55,22 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
           {
           {
 <<<<<<< HEAD
+=======
+    (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
+      "placeholder-key";
+  try {
+    if (usingPlaceholder) {
+      return res.status(200).json({
+        partners: [
+          {
+            code: "aihub"
+            name: "AI Hub"
+            status: "approved"
+            commission_rate: 0.2
+          }
+          {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             code: "promptpro"
             name: "Prompt Pro"
             status: "pending"
@@ -61,6 +81,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     }
     const supabase = getServerSupabase();
     const { data, error } = await supabase
+<<<<<<< HEAD
       .from("partners")
       .select(
         "code, name, status, commission_rate, payout_method, niche, socials, created_at"
@@ -289,3 +310,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      .from('partners')
+.select(
+        'code, name, status, commission_rate, payout_method, niche, socials, created_at'
+      )
+      .order("created_at", { ascending: false });
+    if (error) return res.status(500).json({ error: error.message });
+    return res.status(200).json({ partners: data });
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message });
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

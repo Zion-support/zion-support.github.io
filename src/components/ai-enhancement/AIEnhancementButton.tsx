@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
@@ -15,6 +16,8 @@ interface AIEnhancementButtonProps {
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link",
   size?: "default" | "sm" | "lg" | "icon",
   contentLength?: number
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 =======
 const handleEnhance = async () => {
@@ -205,6 +208,39 @@ export function AIEnhancementButton({;
 <<<<<<< HEAD
   
 <<<<<<< HEAD
+=======
+
+import { useState  } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
+import { useAIContentEnhancer, AIEnhancementOptions  } from '@/hooks/useAIContentEnhancer';
+import { toast } from '@/hooks/use-toast';
+interface AIEnhancementButtonProps {
+  options: AIEnhancementOptions;
+  onEnhanced: (enhancedContent: string) => void;
+  buttonText?: string;
+  className?: string;
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
+  contentLength?: number
+  import { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer'
+import { toast } from '@/hooks/use-toast'
+interface AIEnhancementButtonProps {
+  options: AIEnhancementOptions
+  onEnhanced: (enhancedContent: string) => void
+  buttonText?: string
+  className?: string
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link"
+  size?: "default" | "sm" | "lg" | "icon";  contentLength?: number
+}
+export function AIEnhancementButton({
+  options;
+  onEnhanced;
+  buttonText;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">
@@ -490,6 +526,7 @@ if ( {) {
 ;
 =======
       <span className="text-xs">{buttonText}</span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
       variant={variant}
@@ -501,3 +538,20 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    </Button>
+  );
+
+};";
+<Button type="button" variant="ghost" size="sm" onClick={;
+  handleAccept ";
+}className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) ";
+}Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) ";
+}return (<Button) : (<Sparkles className=" h-4 w-4" />) ;
+}</Button>) ;
+}"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

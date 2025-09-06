@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -9,6 +10,9 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import FeedbackModal from "../../components/ui/FeedbackModal";
@@ -25,6 +29,7 @@ export default function ProjectPage() {
     // For talent view demo, swap role and provide slug
     // "x-demo-user-role": "talent"
     // "x-demo-talent-slug": "ava-chen"} as Record<string, string>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -48,6 +53,8 @@ import FeedbackModal from "../../components/ui/FeedbackModal",
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function ProjectPage() {
   const router = useRouter(),
   const { projectId } = router.query as { projectId?: string },
@@ -56,13 +63,17 @@ export default function ProjectPage() {
   const [error, setError] = useState<string | null>(null),
   const [note, setNote] = useState(""),
 
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const headers = {
     "x-demo-user-role": "client",
     "x-demo-user-id": "client-1",
     // For talent view demo, swap role and provide slug
     // "x-demo-user-role": "talent",
     // "x-demo-talent-slug": "ava-chen"} as Record<string, string>,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -75,10 +86,13 @@ export default function ProjectPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   useEffect(() => {
     async function load() {
       if (!projectId) return
       try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -143,6 +157,13 @@ if (return, ) {
 <<<<<<< HEAD
 
 =======
+=======
+      } catch (e: any) {
+        set_error (e.message);
+      } finally {
+
+        setLoading(false)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -155,9 +176,12 @@ if (return, ) {
 }
     load()
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }, [projectId]),
   const [showFeedback, setShowFeedback] = useState(false),
   async function addNote() {
@@ -167,20 +191,26 @@ if (return, ) {
       body: JSON.stringify({ id: projectId, action: "add_note", content: note })}),
     const json = await res.json(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (json.ok) {
       setProject(json.project)
       setNote("")
       setShowFeedback(true)
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   async function markCompleted() {
     const res = await fetch(`/api/marketplace/projects`, {
@@ -192,6 +222,7 @@ if (return, ) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
@@ -200,13 +231,18 @@ if (return, ) {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
     } catch (error) {
@@ -214,12 +250,16 @@ if (return, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async function markCompleted() {
     const res = await fetch(`/api/marketplace/projects`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json", ...headers },
       body: JSON.stringify({ id: projectId, action: "mark_completed" })}),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -243,12 +283,27 @@ if (return, ) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    const json = await res.json(),
+    if (json.ok) {
+      setProject(json.project)
+
+=======
+import { useEffect, useState } from "react",
+import { useRouter } from "next/router";
+import FeedbackModal from "../../components/ui/FeedbackModal";
+export default function ProjectPage() {
+  const router = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      setShowFeedback(true)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {loading && <div>Loading…</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
       {error && <div className="text-red-600">{error}</div>  } catch (error) {
+<<<<<<< HEAD
 =======
 =======
     load ();
@@ -294,10 +349,13 @@ if ( {) {
 }
     } catch (error) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (json.ok) {
       setProject(json.project)
@@ -311,6 +369,8 @@ if ( {) {
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       {project && (
         <div className="space-y-6">
@@ -318,14 +378,18 @@ if ( {) {
             <h1 className="text-2xl font-semibold">Project Kickoff</h1>
             <span className={`px-2 py-0.5 rounded text-xs ${project.status === "ACTIVE" ? "bg-emerald-100 text-emerald-700" : "bg-gray-200"}`}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {project.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -333,6 +397,8 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </span>
           </div>
           <section className="rounded border p-4">
@@ -348,11 +414,14 @@ if ( {) {
             <h2 className="font-medium mb-2">Timeline</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </span>;
           </div>;
           <section className="rounded border p - 4">;
@@ -367,6 +436,7 @@ if ( {) {
           <section className="rounded border p - 4">;
             <h2 className="font - medium mb - 2">Timeline</h2>;
             <ul className="list - disc pl - 6 space - y-1 text - sm">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {project.timeline?.length ? (
@@ -504,6 +574,9 @@ export default function ProjectPage(req, res) {
                 project.timeline.map((m: any) => (;
                   <li key={m.id}>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+              {project.timeline?.length ? (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <span className="font-medium">{m.title}</span>;
                     {m.dueDateIso && <span> • due {new Date(m.dueDateIso).toLocaleDateString()}</span>  } catch (error) {
     console.error("Error:", error);
@@ -530,6 +603,7 @@ export default function ProjectPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -543,11 +617,14 @@ export default function ProjectPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </ul>
           </section>
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Documents</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -575,11 +652,15 @@ export default function ProjectPage(req, res) {
                     ) : (
                       <span>{d.name}</span>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+              {project.documents?.length ? (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -591,6 +672,9 @@ export default function ProjectPage(req, res) {
 
                     <span className="text-gray-500"> • uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+                    <span className="text-gray-500"> • uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </li>
                 ))
               ) : (
@@ -599,17 +683,21 @@ export default function ProjectPage(req, res) {
             </ul>
           </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <section className="rounded border p-4 space-y-3">
             <h2 className="font-medium">Shared notes/messages</h2>
             <div className="space-y-2">
               {project.notes?.length ? (
                 project.notes.map((n: any) => (
                   <div key={n.id} className="text-sm">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -624,11 +712,14 @@ export default function ProjectPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <span className="text-gray-500"> • {new Date(n.createdAtIso).toLocaleString()}</span>
                   </div>
                 ))
               ) : (
                 <div className="text-sm text-gray-600">No notes yet.</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -653,6 +744,8 @@ export default function ProjectPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
             <div className="flex gap-2">
               <input value={note} onChange={(e) => setNote(e.target.value)} placeholder="Add a note" className="flex-1 border rounded px-3 py-2" />
@@ -664,6 +757,7 @@ export default function ProjectPage(req, res) {
               <button onClick={markCompleted} className="px-4 py-2 rounded bg-emerald-600 text-white">Mark as Completed</button>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
       />
     </div>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -702,6 +796,11 @@ export default function ProjectPage(req, res) {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  );
+};
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -743,6 +842,7 @@ export default function ProjectPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -757,3 +857,20 @@ export default function ProjectPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+            )}
+          </div>
+        </div>
+      )}
+      <FeedbackModal
+        isOpen={showFeedback}
+        onClose={() => setShowFeedback(false)}
+        defaultContext={{ actionType: 'chatbot_use', metadata: { projectId } }}
+        userHeaders={headers}
+      />
+    </div>
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

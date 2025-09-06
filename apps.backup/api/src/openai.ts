@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import OpenAI from 'openai';
 <<<<<<< HEAD
 type OpenAIClient = OpenAI;
@@ -10,6 +11,8 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {
   const prompt = `Create a concise, compelling job post for a ${role}.
@@ -25,6 +28,7 @@ import OpenAI from 'openai',;
 type OpenAIClient = OpenAI,;
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
 <<<<<<< HEAD
+<<<<<<< HEAD
   return new OpenAI({ apiKey });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -34,11 +38,15 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {;
 =======
   return new OpenAI({ apiKey });}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return new OpenAI({ apiKey });}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {;
   const prompt = `Create a concise, compelling job post for a ${role}.;
 Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 Key skills: ${(opts.tags || []).join() || 'N/A'};
@@ -94,6 +102,8 @@ Location: ${opts.location || 'Remote'}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 Key skills: ${(opts.tags || []).join() || 'N/A'};
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai.responses.create({
@@ -101,17 +111,21 @@ Add responsibilities, requirements, and benefits in bullet points.`;
     input: prompt
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 Key skills: ${(opts.tags || []).join() || 'N/A'}
 Add responsibilities, requirements, and benefits in bullet points.`,;
   const completion = await openai.responses.create({;
     model: 'gpt-4o-mini';
     input: prompt;
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -132,6 +146,8 @@ Add responsibilities, requirements, and benefits in bullet points.`,;
   return completion.output_text;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
 type OpenAIClient = OpenAI;
@@ -184,6 +200,7 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 });
   return completion.output_text;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -192,3 +209,6 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

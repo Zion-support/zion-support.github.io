@@ -14,6 +14,7 @@ import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface TalentProfileData {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,6 +104,11 @@ export interface CategorizedSkills {;
   platforms: string[];
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  devops: string[];
+  platforms: string[];
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface EnhancedProfile {
   summary: string,
   categorizedSkills: CategorizedSkills
@@ -111,6 +117,7 @@ export interface EnhancedProfile {
   const [error, setError] = useState<string | null>(null);
   const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
     setIsGenerating(true);
+<<<<<<< HEAD
 <<<<<<< HEAD
     setError(null)
 <<<<<<< HEAD
@@ -173,6 +180,9 @@ export function useTalentProfileEnhancer() {;
 =======
     setError(null)      if (error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    setError(null)      if (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         throw new Error(error.message)
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -224,6 +234,7 @@ export function useTalentProfileEnhancer() {;
 export interface CategorizedSkills {
   programming: string[];
   devops: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
   platforms: string[];
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -286,6 +297,9 @@ export interface CategorizedSkills {
 =======
   platforms: string[];  soft_skills: string[],
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  platforms: string[];  soft_skills: string[],
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   other: string[];
 }
 export interface EnhancedProfile {

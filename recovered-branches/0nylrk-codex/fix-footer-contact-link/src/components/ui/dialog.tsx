@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -24,6 +25,10 @@ import {X} from 'lucide-react';
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {cn} from '@/lib/utils';
 const Dialog = DialogPrimitive.Root;
 const DialogTrigger = DialogPrimitive.Trigger;
@@ -32,6 +37,7 @@ const DialogClose = DialogPrimitive.Close;
 import * as React from "react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 import { X } from "lucide-react"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import * as React from "react"
@@ -73,6 +79,11 @@ const DialogOverlay = React.forwardRef<
 =======
 import { X } from "lucide-react"const DialogOverlay = React.forwardRef<
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import * as React from "react"
+import * as DialogPrimitive from "@radix-ui/react-dialog"
+import { X } from "lucide-react"const DialogOverlay = React.forwardRef<
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   React.ElementRef<typeof DialogPrimitive.Overlay>
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
 ></typeof>(({ className, ...props }, ref) => (
@@ -95,6 +106,7 @@ const DialogOverlay = React && React.forwardRef<;
     className={cn(
       "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       className
@@ -205,11 +217,15 @@ const DialogContent = React.forwardRef<;
 =======
       classNameconst DialogContent = React.forwardRef<;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      classNameconst DialogContent = React.forwardRef<;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   React.ElementRef<typeof DialogPrimitive.Content>,;
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>;
 >(({ className, children, ...props }, ref) => (;
   <DialogPortal>;
     <DialogOverlay />;
+<<<<<<< HEAD
 <<<<<<< HEAD
     <DialogPrimitive.Content;
 <<<<<<< HEAD
@@ -234,6 +250,9 @@ const DialogContent = React.forwardRef<;
 =======
     <DialogPrimitive.Content;      className={cn(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    <DialogPrimitive.Content;      className={cn(
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         'fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg'
         className
       )}
@@ -266,6 +285,7 @@ DialogContent.displayName = DialogPrimitive.Content.displayName
       <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
         <X className="h-4 w-4" />
         <span className="sr-only">Close</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -377,6 +397,11 @@ const DialogHeader = ({
   </DialogPortal>
 ))      className
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </DialogPrimitive.Content>
+  </DialogPortal>
+))      className
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     )}
     {...props}
   />
@@ -393,6 +418,7 @@ const DialogFooter = ({
 }: React</HTMLDivElement>.HTMLAttributes<HTMLDivElement>) => (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   <div
     className={cn(
 
@@ -406,6 +432,8 @@ const DialogFooter = ({
 DialogHeader && DialogHeader.displayName = 'DialogHeader';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const DialogFooter = ({;
   className,;
@@ -418,7 +446,10 @@ const DialogFooter = ({;
 
       className
     className={cn(
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2'
       "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -426,6 +457,7 @@ const DialogFooter = ({;
     )}
     {...props}
   />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -444,6 +476,8 @@ const DialogTitle = React.forwardRef<
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     )}
     {...props}
   />
@@ -463,6 +497,7 @@ const DialogTitle = React && React.forwardRef<;
   React && React.Comp</typeof>onentPropsWithoutRef<typeof DialogPrimitive && DialogPrimitive.Title>;
 >(({ className, ...props }, ref) => (;
   <DialogPrimitive&& DialogPrimitive.Title
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -587,6 +622,14 @@ const DialogDescription = React && React.forwardRef<;
 ;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    ref={ref}
+    className={cn(
+
+      "text-lg font-semibold leading-none tracking-tight",
+
+      className;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {cn} from '@/lib / utils';
 ;
 const Dialog = DialogPrimitive.Root;
@@ -727,12 +770,15 @@ DialogDescription && DialogDescription.displayName = DialogPrimitive && DialogPr
   DialogDescription,
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   />));
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 DialogDescription.display_name = DialogPrimitive.Description.display_name;
 ;
 export {
@@ -744,6 +790,7 @@ export {
   DialogContent,
   DialogHeader,
   DialogFooter,
+<<<<<<< HEAD
 <<<<<<< HEAD
   DialogTitle,
 <<<<<<< HEAD
@@ -768,6 +815,9 @@ export {;
 =======
   DialogTitle,export {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  DialogTitle,export {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Dialog,;
   DialogPortal,;
   DialogOverlay,;
@@ -816,6 +866,7 @@ React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description> > ( ({
   Dialog, DialogPortal, DialogOverlay, DialogClose, DialogTrigger, DialogContent, DialogHeader, DialogFooter, DialogTitle, DialogDescription 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   DialogDescription,
@@ -825,3 +876,5 @@ React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description> > ( ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

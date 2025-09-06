@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -33,10 +34,15 @@ export type {export { urlShortenerService } from './urlShortenerService';
 // Export all micro SaaS services
 export { urlShortenerService } from './urlShortenerService';
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+// Export all micro SaaS services
+export { urlShortenerService } from './urlShortenerService';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export { passwordGeneratorService } from './passwordGeneratorService';
 export { qrCodeService } from './qrCodeService';
 export { fileConverterService } from './fileConverterService';
 export { textAnalysisService } from './textAnalysisService';
+<<<<<<< HEAD
 <<<<<<< HEAD
   ShortUrl;
   UrlAnalytics;
@@ -186,6 +192,8 @@ export type {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export type {
 =======
@@ -474,12 +482,16 @@ export const SERVICES_METADATA = {
       'Language detection'
     ],
     pricing: 'Free (Basic) / $19.99/month (Pro)',
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     apiEndpoint: '/api/text-analysis'
   }
 } as const;
 
 // Service availability and status
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const getServiceStatus = () => {
 <<<<<<< HEAD
@@ -936,6 +948,9 @@ export const getServiceStats = () =>: any {
     total_users: 15420;
     total_requests: 2847500;
 =======
+=======
+export const getServiceStatus = () => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return {
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
     passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
@@ -950,7 +965,10 @@ export const getServiceStats = () => {
   return {
     totalUsers: 15420,
     totalRequests: 2847500,
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     averageResponseTime: 125,
     services: {
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 },
@@ -959,6 +977,7 @@ export const getServiceStats = () => {
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -978,3 +997,7 @@ export const getServiceStats = () => {
   };
 };
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+  };
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

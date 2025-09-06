@@ -1,14 +1,25 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Edit, Trash2 } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { EducationItemProps } from './types'
+=======
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Education  } from '@/types/resume';
+import { EducationItemProps } from './types';
+export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export function EducationItem({
   education
   onEdit
   onDelete
 }: EducationItemProps) {
+<<<<<<< HEAD
 
 import { format } from 'date-fns';
 import { Edit, Trash2 } from 'lucide-react';
@@ -18,6 +29,12 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Education } from '@/types/resume';
 import { EducationItemProps } from './types';
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -107,12 +124,20 @@ import { EducationItemProps } from './types';
             <Button
               variant='ghost'
               size='icon'
+<<<<<<< HEAD
 
 
+=======
+              onClick={() => onDelete(education.id!)}
+              aria-label='Delete education'
+            >
+              <Trash2 className='h-4 w-4' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>
           </div>
         </div>
         {education.description && (
+<<<<<<< HEAD
 
 
               onClick={() => onDelete(education && education.id!)}
@@ -207,12 +232,19 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
 =======
 
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
+=======
+<p className='text-sm mt-3 line-clamp-2'>{education.description}</p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         )}
       </CardContent>
     </Card>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { format } from 'date - fns';
 import { Edit, Trash2 } from 'lucide-react'; import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -295,7 +327,12 @@ function EducationItem() {
 ;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

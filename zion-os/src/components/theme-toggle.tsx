@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -14,12 +15,15 @@ export function ThemeToggle() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (;
     <div className="flex items-center gap-2">;
       <span className="sr-only">Theme</span>;
       <div className="flex rounded-lg border border-white/10 bg-zinc-900/50 p-1">;
         <button;
           onClick={() => setTheme("light")}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -38,6 +42,8 @@ export function ThemeToggle() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 "use client",
 import { use_theme  } from '@/components / theme - provider';,
 import { Moon, Sun, Monitor  } from './lucide-react';,
@@ -48,6 +54,7 @@ function ThemeToggle() {
   const { theme, set_theme } = use_theme ();
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="flex items - center gap - 2">;
       <span className="sr - only">Theme</span>;
       <div className="flex rounded - lg border border - white / 10 bg - zinc - 900 / 50 p - 1">;
@@ -56,12 +63,18 @@ function ThemeToggle() {
       <span className="sr-only">Theme</span>;
       <div className="flex rounded - lg border border - white / 10 bg - zinc - 900 / 50 p-1">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    <div className="flex items - center gap-2">;
+      <span className="sr-only">Theme</span>;
+      <div className="flex rounded - lg border border - white / 10 bg - zinc - 900 / 50 p-1">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <button;
           on_click={() => set_theme ("light")}
           className={`rounded px - 2 py - 1 text - sm transition - colors ${
             theme === "light";
               ? "bg - zion - blue text - white";
               : "text - zinc - 400 hover:text - zinc - 100";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -82,11 +95,15 @@ export function ThemeToggle() {;
 =======
 =======  return (;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======  return (;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="flex items-center gap-2">;
       <span className="sr-only">Theme</span>;
       <div className="flex rounded-lg border border-white/10 bg-zinc-900/50 p-1">;
         <button;
           onClick={() => setTheme("light")}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           className={`rounded px-2 py-1 text-sm transition-colors ${theme === "light";
@@ -99,10 +116,15 @@ export function ThemeToggle() {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          className={`rounded px-2 py-1 text-sm transition-colors ${theme === "light";              ? "bg-zion-blue text-white";
+              : "text-zinc-400 hover:text-zinc-100";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }`}
           aria-label="Switch to light theme";
           aria-pressed={theme === "light"}
         >;
+<<<<<<< HEAD
           <Sun className="h-4 w-4" />;
         </button>;
         <button;
@@ -121,10 +143,16 @@ export function ThemeToggle() {;
               : "text - zinc - 400 hover:text - zinc - 100";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+          <Sun className="h - 4 w-4" />;
+        </button>;
+        <button;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }`}
           aria-label="Switch to system theme";
           aria-pressed={theme === "system"}
         >;
+<<<<<<< HEAD
           <Monitor className="h-4 w-4" />;
         </button>;
         <button;
@@ -175,6 +203,11 @@ export function ThemeToggle() {;
           <Monitor className="h - 4 w-4" />;
         </button>;
         <button;
+=======
+          <Monitor className="h - 4 w-4" />;
+        </button>;
+        <button;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }`}
           aria - label="Switch to dark theme";
           aria - pressed={theme === "dark"}

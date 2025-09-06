@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
@@ -35,6 +36,8 @@ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.fi
 };export default CareersPage;import React, { useState } from 'react';
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 };export default CareersPage;import React, { useState } from 'react';
 
@@ -76,6 +79,7 @@ import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckC
 <<<<<<< HEAD
 export default function Careers() {
 
+<<<<<<< HEAD
 export default function Careers() {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -87,6 +91,10 @@ export default function Careers() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export default function Careers() {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const departments = [
     { id: 'all', name: 'All Departments' }
@@ -221,12 +229,15 @@ export default function Careers() {;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function Careers() {;
   const [selectedDepartment, setSelectedDepartment] = useState('all');
 
@@ -386,11 +397,14 @@ export default function Careers() {;
         </motion.div>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+<<<<<<< HEAD
         {/* Benefits */}
         <motion.div
 
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Benefits */}
         <motion&& motion.div 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -544,12 +558,15 @@ export default function Careers() {;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* General Application */}
         <motion.div 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -598,4 +615,20 @@ export default CareersPage;
               </a>;
             </div>;
           </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+import { Users, Rocket, Brain, Globe, Award, Zap;
+  Heart, Star, ArrowRight, CheckCircle, Briefcase
+ } from 'lucide-react';
+export default function Careers() {
+  const [selectedDepartment, setSelectedDepartment] = useState('all');
+  const departments = null;
+export default CareersPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

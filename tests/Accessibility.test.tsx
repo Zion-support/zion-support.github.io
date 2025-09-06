@@ -2,6 +2,7 @@ import { render, axe, toHaveNoViolations } from 'lucide-react'; import { ModeTog
 });'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/tests/Accessibility.test.tsx
 <<<<<<< HEAD:backup-problematic-files/tests/Accessibility.test.tsx
 </ModeToggle>'
@@ -38,8 +39,13 @@ import { render, axe, toHaveNoViolations } from 'lucide-react'; import { ModeTog
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 </ModeToggle>'
 </ModeToggle>'
 </ModeToggle>'
 </ModeToggle>'
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

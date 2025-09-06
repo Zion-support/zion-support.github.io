@@ -8,6 +8,7 @@ import * as React from "react"
 import {Slot} from "@radix-ui/react-slot"
 import {ChevronRight} from "lucide-react"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   React.ComponentPropsWithoutRef<"nav"> & {
     separator?: React.ReactNode
@@ -57,6 +58,8 @@ const Breadcrumb = React && React.forwardRef<;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const Breadcrumb = React.forwardRef<
   HTMLElement,
   React.ComponentPropsWithoutRef<"nav"> & {
@@ -66,6 +69,7 @@ const Breadcrumb = React.forwardRef<
 >(({ className, separator, ...props }, ref) => (
     ref={ref}
     aria-label="breadcrumb"
+<<<<<<< HEAD
 <<<<<<< HEAD
     className={cn(
 <<<<<<< HEAD
@@ -484,11 +488,15 @@ export {;
 =======
     className={cn(export {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    className={cn(export {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Breadcrumb;
   BreadcrumbList;
   BreadcrumbItem;
   BreadcrumbLink;
   BreadcrumbSeparator;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -505,10 +513,13 @@ export {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
+<<<<<<< HEAD
 <<<<<<< HEAD
   BreadcrumbSeparator,
 <<<<<<< HEAD
@@ -570,3 +581,6 @@ return (<Comp ref= {
 =======
   BreadcrumbSeparator,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  BreadcrumbSeparator,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

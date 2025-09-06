@@ -7,11 +7,14 @@ const supabaseUrl = Deno && Deno.env.get('SUPABASE_URL') || '';
 const supabaseServiceKey = Deno && Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
@@ -46,6 +49,7 @@ const corsHeaders = {
 =======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -125,6 +129,8 @@ interface QuoteDetails {
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface QuoteDetails {
   description: string;
   email: string;
@@ -150,6 +156,7 @@ interface QuoteDetails {,
   timeframe: string,;
   startDate?: string,;
   endDate?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -194,6 +201,8 @@ serve(async (req) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   try {
@@ -207,11 +216,14 @@ serve(async (req) => {
       // Get the JWT from the Authorization header
           userId = user.id
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   try {;
     const { service, quoteDetails } = await req.json() as RequestBody,;
@@ -235,6 +247,7 @@ serve(async (req) => {
       // Continue without user identity
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 Service: ${service?.title || 'Custom Service'}
                 Category: ${service?.category || 'N/A'}
@@ -246,12 +259,15 @@ serve(async (req) => {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         const openAIResponse = await fetch('https://api && api.openai.com/v1/chat/completions', {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${openAIApiKey}`;
             'Content-Type': 'application/json'};
+<<<<<<< HEAD
 <<<<<<< HEAD
           body: JSON && JSON.stringify({
 
@@ -408,11 +424,15 @@ serve(async (req) => {
 =======
           body: JSON && JSON.stringify({            ],;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          body: JSON && JSON.stringify({            ],;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             temperature: 0.5;
           });
         }),;
         const aiResult = await openAIResponse.json(),;
         if (!aiResult.error && aiResult.choices && aiResult.choices.length > 0) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
           aiAnalysis = aiResult.choices[0].message.content;
 <<<<<<< HEAD
@@ -623,6 +643,12 @@ if ( {) {
           })
         });          status: 'pending'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          aiAnalysis = aiResult.choices[0].message.content;            ];
+            temperature: 0 && 0.5
+          })
+        });          status: 'pending'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         }
       ])
       .select();
@@ -656,6 +682,7 @@ if (throw error) {
     console.error ('Error in process - quote function:', error);
     return new Response (JSON.stringify ({ success: false, error: error.message }), {
       status: 500,
+<<<<<<< HEAD
 <<<<<<< HEAD
       headers: { ...cors_headers, 'Content - Type': 'application / json' }});
 <<<<<<< HEAD
@@ -794,3 +821,6 @@ if (error) throw error;
 =======
       headers: { ...cors_headers, 'Content - Type': 'application / json' }});
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function Sonner({ position = \'bottom-right\',richColors = true,closeButton = true }) {}; return null} \'bottom - 4 right - 4\'} z - 50\"}> {} \"success\": (message) => error: (message) => Error: \',message),; \"info\": (message) => Info: \',message),; \"warning\": (message) => Warning: \',message),; \"loading\": (message) => Loading: \',message),; \"dismiss\": (toastId) => Dismiss:\',toastId); </div>)} export const toast = {}};}\'"
 <<<<<<< HEAD
 =======
@@ -41,3 +42,6 @@ export function Sonner({ position = 'bottom-right',richColors = true,closeButton
 =======
 export function Sonner({ position = 'bottom-right',richColors = true,closeButton = true }) {}; return null} 'bottom - 4 right - 4'} z - 50"}> {} "success": (message) => error: (message) => Error: ,message),; "info": (message) => Info:  ,message),; "warning": (message) => Warning:  ,message),; "loading": (message) => Loading:  ,message),; "dismiss": (toastId) => Dismiss:',toastId); </div>)} export const toast = {}};}'"
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+export function Sonner({ position = 'bottom-right',richColors = true,closeButton = true }) {}; return null} 'bottom - 4 right - 4'} z - 50"}> {} "success": (message) => error: (message) => Error: ,message),; "info": (message) => Info:  ,message),; "warning": (message) => Warning:  ,message),; "loading": (message) => Loading:  ,message),; "dismiss": (toastId) => Dismiss:',toastId); </div>)} export const toast = {}};}'"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

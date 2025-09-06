@@ -3,7 +3,18 @@ import {useRouter} from 'next/router';
 import useSWR from 'swr';
 import { TALENT_PROFILES  } from '../../../../data/talent';
 import Link from 'next/link';
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+const fetcher = null;
+          return (
+            <div key={a.id} className="border rounded p-4 bg-white dark:bg-gray-900">
+              <div className="flex items-center justify-between">
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export default function JobApplicantsPage() {
   const router = useRouter()
@@ -11,8 +22,18 @@ export default function JobApplicantsPage() {
   const { data: appsData } = useSWR(
     id ? `/api/applications?jobId=${id}` : null
     fetcher
+<<<<<<< HEAD
   );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
 
+=======
+<<<<<<< HEAD
+  );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
+
+=======
+  );
+  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const job = jobData?.job;
   const applications = (appsData?.applications as any[]) |[];
@@ -41,12 +62,28 @@ export default function JobApplicantsPage() {
   const job = jobData?.job
   const applications = (appsData?.applications as any[]) || []
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   return (
+=======
+  return (
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Applicants</h1>
         <Link href="/client/dashboard"><a className="text-sm underline">Back to Dashboard</Link></Link>
+<<<<<<< HEAD
+=======
+=======
+<div className='space-y-4'>
+      <div className='flex items-center justify-between'>
+        <h1 className='text-2xl font-semibold'>Applicants</h1>
+        <Link href='/client/dashboard'>
+          <a className='text-sm underline'>Back to Dashboard</a>
+        </Link>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>
       {job && <p className='text-sm text-gray-600'>For job: {job.title}</p>}
       <div className='grid gap-3'>
@@ -57,7 +94,14 @@ export default function JobApplicantsPage() {
           const talent = TALENT_PROFILES.find(t => t.slug === a.talentSlug);
             >
               <div className='flex items-center justify-between'>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div>
                   <p className='font-medium'>{talent?.name |a.talentSlug}</p>
                   <p className='text-xs text-gray-500'>
@@ -104,23 +148,35 @@ export default function JobApplicantsPage() {_const _router = useRouter();
 }
         {applications.map((a) => {
           const talent = TALENT_PROFILES.find((t) => t.slug === a.talentSlug)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           return (
             <div key={a.id} className="border rounded p-4 bg-white dark:bg-gray-900">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="font-medium">{talent?.name || a.talentSlug}</p>
                   <p className="text-xs text-gray-500">Status: {a.status} • Applied: {new Date(a.createdAtIso).toLocaleString()}</p>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>
                 <button className="px-2 py-1 text-sm border rounded">Message</button>
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
           );
         })}
+=======
+          );
+        })}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
           )
@@ -142,6 +198,7 @@ export default function JobApplicantsPage() {_const _router = useRouter();
   );
 
 =======
+<<<<<<< HEAD
 
 
   );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
@@ -226,3 +283,9 @@ function JobApplicantsPage() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

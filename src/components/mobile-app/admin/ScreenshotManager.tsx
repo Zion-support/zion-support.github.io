@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState, useRef } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
@@ -47,6 +48,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     // Limit the number of screenshots
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const maxScreenshots = platform === "ios" ? 10 : 8,
     const availableSlots = maxScreenshots - screenshots.length,
     
@@ -300,6 +303,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 };
 =======
           <input
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   )
@@ -308,3 +312,37 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import React, { useState, useRef } from 'react';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Upload, Trash2, Plus } from 'lucide-react';
+import { AppPlatform } from './MetadataManager';
+import { toast } from 'sonner';
+
+import React, { useState, useRef } from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Upload, Trash2, Plus } from 'lucide-react'
+import { AppPlatform } from "./MetadataManager";
+import { toast } from "sonner";
+interface ScreenshotManagerProps {
+  platform: AppPlatform
+}
+  );
+}setScreenshots (prev => [...prev, ...newScreenshots]);
+
+};
+return filtered;
+}) ;
+};
+<CardHeader> <CardTitle className="text-lg" >App Screenshots</CardTitle> </CardHeader> <CardContent> <div className= {;
+  `border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors $ {";
+  isDragging > <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" /> <p className="text-sm mb-2" >Drag & drop screenshots here</p> <input > <Plus className="mr-2 h-4 w-4" /> Select Files </Button> </div> > <Trash2 className="h-3 w-3" /> </button> </div>) ) ;
+}</div> </CardContent> </Card>) ;
+};
+"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

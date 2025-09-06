@@ -1,5 +1,6 @@
 
 import { Loader2 } from 'lucide-react';
+<<<<<<< HEAD
 interface ResultsHeaderProps {;
   isLoading: boolean;
   resultCount: number;
@@ -49,9 +50,26 @@ interface ResultsHeaderProps {;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+
+interface ResultsHeaderProps {
+  isLoading: boolean
+  resultCount: number
+export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
+  return (
+    <div className='flex items-center mb-6 text-zion-slate-light'>
+      {isLoading ? (
+        <div className='flex items-center'>
+  isLoading: boolean;
+  resultCount: number
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   return (
     <div className="flex items-center mb-6 text-zion-slate-light">
@@ -63,7 +81,10 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
       ) : (
         <span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {resultCount === 0 ? (
@@ -130,5 +151,19 @@ function ResultsHeader() {
     </div>));
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+;
+=======
+{resultCount === 0
+            ? 'No talents found. Try adjusting your filters.'
+            : `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`}
+        </span>
+      )}
+    </div>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

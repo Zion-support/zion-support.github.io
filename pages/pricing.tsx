@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,8 @@
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -155,6 +158,17 @@ import {
   Globe2 as Globe2Icon
   Bot as BotIcon
     ChevronRight as ChevronRightIcon
+=======
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon  } from 'lucide-react';
+import Button from '../components/ui/Button',
+import Card from '../components/ui/Card',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices  } from '../data/enhanced-real-micro-saas-services';
+import { nextGenerationAIServices  } from '../data/next-generation-ai-services';
+import { cuttingEdgeITServices  } from '../data/cutting-edge-it-services';
+import { innovativeMicroSaasV2Services  } from '../data/innovative-micro-saas-v2';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 } from 'lucide-react';
 
 <<<<<<< HEAD
@@ -356,6 +370,7 @@ import {
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
+<<<<<<< HEAD
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
@@ -927,6 +942,35 @@ export default function PricingPage() {;
       savings: 'Save 45-65% vs. competitors',
     },  ];
 
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+    },;
+    {;
+      name: 'Cutting-Edge IT Infrastructure',;
+      description: 'Advanced infrastructure solutions',;
+    },;
+    {;
+      name: 'Innovative Micro SaaS',;
+      description: 'Creative and practical SaaS tools',;
+    },;
+    {;
+      name: 'Quantum & Space Technology',;
+      description: 'Quantum computing and space solutions',;
+    },;
+    {;
+      name: 'Enterprise IT Services',;
+      description: 'Comprehensive enterprise solutions',;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+export default function PricingPage() {
+  const contactInfo = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -936,7 +980,17 @@ export default function PricingPage() {;
       period: billingCycle === "monthly" ? "/month" : "/month",
       savings: billingCycle === "yearly" ? "Save 20%" : "",
       features: [
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        'Access to 50+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       ],
       icon: <Sparkles className='w - 8 h - 8' />,
       variant: 'quantum' as const,
@@ -954,6 +1008,34 @@ export default function PricingPage() {;
         'Advanced AI & Quantum Computing',
         'Priority Support (24 / 7)',
         '60 - Day Free Trial',
+=======
+'Access to 50+ Core Services',
+        'Basic AI Integration',
+        'Standard Support (24/7)',
+        '30-Day Free Trial',
+        'Basic Analytics Dashboard',
+        'Email Support',
+        '99.5% Uptime Guarantee',
+        'Standard Security Features',
+      ],
+      icon: <Sparkles className='w-8 h-8' />,
+      variant: 'quantum' as const,
+      popular: false,
+      cta: 'Start Free Trial',
+      ctaVariant: 'secondary' as const,
+    },
+    {
+      name: 'Professional',
+      description: 'Ideal for growing businesses and teams',
+      price: billingCycle === 'monthly' ? 149 : 119,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      features: [
+'Access to 200+ Premium Services',
+        'Advanced AI & Quantum Computing',
+        'Priority Support (24/7)',
+        '60-Day Free Trial',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         'Advanced Analytics & Reporting',
         'Phone & Email Support',
         '99.9% Uptime Guarantee',
@@ -961,6 +1043,7 @@ export default function PricingPage() {;
         'Custom Integrations',
         'Team Collaboration Tools',
         'API Access',
+<<<<<<< HEAD
         'White - label Options',
       ],
       icon: <Crown className='w - 8 h - 8' />,
@@ -979,6 +1062,27 @@ export default function PricingPage() {;
         'Full Quantum AI & Autonomous Systems',
         'Dedicated Support Team (24 / 7)',
         '90 - Day Free Trial',
+=======
+        'White-label Options',
+      ],
+      icon: <Crown className='w-8 h-8' />,
+      variant: 'holographic' as const,
+      popular: true,
+      cta: 'Start Free Trial',
+      ctaVariant: 'primary' as const,
+    },
+    {
+      name: 'Enterprise',
+      description: 'For large organizations and enterprises',
+      price: billingCycle === 'monthly' ? 499 : 399,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      features: [
+'Access to ALL 500+ Services',
+        'Full Quantum AI & Autonomous Systems',
+        'Dedicated Support Team (24/7)',
+        '90-Day Free Trial',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         'Enterprise Analytics & AI Insights',
         'Dedicated Account Manager',
         '99.99% Uptime SLA',
@@ -986,12 +1090,18 @@ export default function PricingPage() {;
         'Custom Development Services',
         'Advanced Team Management',
         'Full API & SDK Access',
+<<<<<<< HEAD
         'Custom Branding & White - label',
         'On - premise Deployment Options',
+=======
+        'Custom Branding & White-label',
+        'On-premise Deployment Options',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         'Advanced AI Training & Customization',
         'Priority Feature Development',
         'Global Infrastructure Access',
       ],
+<<<<<<< HEAD
       icon: <Rocket className='w - 8 h - 8' />,
       variant: 'neural' as const,
       popular: false,
@@ -1190,11 +1300,20 @@ export default function PricingPage() {;
 
 
 =======
+=======
+      icon: <Rocket className='w-8 h-8' />,
+      variant: 'neural' as const,
+      popular: false,
+      cta: 'Contact Sales',
+      ctaVariant: 'primary' as const,
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   ];
 
   // Service category pricing examples
   const serviceCategoryPricing = [
     {
+<<<<<<< HEAD
       category: "Quantum AI & Computing",
       services: [
         "Quantum AI Platform",
@@ -1253,17 +1372,85 @@ export default function PricingPage() {;
       ],
       startingPrice: "$299/month",
       icon: <Rocket className="w-6 h-6" />,
+=======
+      category: 'Quantum AI & Computing',
+services: [
+        'Quantum AI Platform',
+        'Neural Network Training',
+        'Quantum Optimization',
+      ],
+      startingPrice: '$99/month',
+      icon: <Brain className='w-6 h-6' />,
+    },
+    {
+      category: 'Autonomous Systems',
+      services: [
+        'AI Factory Management',
+        'Robotic Process Automation',
+        'Smart Manufacturing',
+      ],
+      startingPrice: '$149/month',
+      icon: <Factory className='w-6 h-6' />,
+    },
+    {
+      category: 'Healthcare & Biotech',
+      services: [
+        'Drug Discovery AI',
+        'Medical Imaging Analysis',
+        'Genomic Research Platform',
+      ],
+      startingPrice: '$199/month',
+      icon: <FlaskConical className='w-6 h-6' />,
+    },
+    {
+      category: 'Cybersecurity',
+      services: [
+        'Quantum Encryption',
+        'Threat Intelligence',
+        'Zero-Trust Security',
+      ],
+      startingPrice: '$129/month',
+      icon: <Shield className='w-6 h-6' />,
+    },
+    {
+      category: 'Financial Technology',
+      services: [
+        'AI Trading Platform',
+        'Risk Management',
+        'Portfolio Optimization',
+      ],
+      startingPrice: '$179/month',
+      icon: <DollarSign className='w-6 h-6' />,
+    },
+    {
+      category: 'Space Technology',
+      services: [
+        'Satellite Management',
+        'Space Data Analytics',
+        'Mission Planning AI',
+      ],
+      startingPrice: '$299/month',
+      icon: <Rocket className='w-6 h-6' />,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     },
   ];
 
   // Value propositions
   const valuePropositions = [
     {
+<<<<<<< HEAD
       title: "Unprecedented ROI",
       description: "Average 300% ROI within 6 months",
       icon: <TrendingUp className="w-8 h-8" />,
       metric: "300%",
       detail: "Average ROI",
+=======
+      title: 'Unprecedented ROI',
+      description: 'Average 300% ROI within 6 months',
+icon: <TrendingUp className='w-8 h-8' />,
+      metric: '300%',
+      detail: 'Average ROI',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     },
     {
       title: "Time to Value",
@@ -1287,13 +1474,20 @@ export default function PricingPage() {;
       detail: "Uptime SLA",
     },
   ];
+<<<<<<< HEAD
 
 >>>>>>> main
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <UltraFuturisticBackground variant="quantum" intensity="high">
       <Head>
@@ -1517,6 +1711,14 @@ export default function PricingPage() {;
             <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              </span>
+            </Button>
+          </div>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
 <<<<<<< HEAD
               href='/comprehensive-pricing-2026'
               variant='primary'
@@ -1526,6 +1728,21 @@ export default function PricingPage() {;
 
           {/* Billing Toggle */}
           <div className='flex items-center justify-center gap-4 mb-8'>;
+=======
+              href='/comprehensive-pricing-2026'
+              variant='primary'
+              size='lg'
+              className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/30'
+            >
+              <span className='flex items-center'>
+                <Rocket className='mr-3 w-6 h-6' />
+                View 2026 Comprehensive Pricing
+              </span>
+            </Button>
+          </div>
+{/* Billing Toggle */}
+          <div className='flex items-center justify-center gap-4 mb-8'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             <span
               className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>;
               Monthly;
@@ -1579,12 +1796,27 @@ export default function PricingPage() {;
               }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              className="relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+            >
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50'            >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+              className='relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50'
+            >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <span
                 className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-transform ${
 
@@ -1604,6 +1836,7 @@ export default function PricingPage() {;
 =======
               />
             </button>
+<<<<<<< HEAD
             <span
               className={`text-lg ${billingCycle === "yearly" ? "text-white" : "text-gray-400"}`}
             >
@@ -1614,9 +1847,20 @@ export default function PricingPage() {;
                   billingCycle === 'yearly' ? 'translate-x-12' : 'translate-x-0'
                 }`}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+<span
+              className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}
+            >
+              Yearly
+              <span className='ml-2 text-sm text-green-400'>Save 20%</span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </span>
           </div>
         </div>
@@ -1625,6 +1869,45 @@ export default function PricingPage() {;
                 variant={tier && tier.variant}
                 interactive={true}
 
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+              />
+            </button>
+<span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
+              Yearly
+              <span className="ml-2 text-sm text-green-400">Save 20%</span>
+            </span>
+          </div>
+        </div>
+className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>;
+              Yearly;
+              <span className='ml-2 text-sm text-green-400'>Save 20%</span>            </span>;
+          </div>;
+        </div>;
+        {/* Pricing Tiers */}
+<<<<<<< HEAD
+        <div className="mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {pricingTiers.map((tier, index) => (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+              <UltraFuturisticCard
+                key={tier && tier.name}
+                variant={tier && tier.variant}
+                interactive={true}
+<<<<<<< HEAD
+
+
+                )}
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                )}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {/* New 2026 Pricing Link */}
           <div className='mb - 8 p - 6 bg - gradient - to - r from - purple - 800 / 60 to - pink - 800 / 60 border border - purple - 700 / 50 rounded - 2xl max - w-4xl mx - auto'>;
             <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -1787,6 +2070,84 @@ export default function PricingPage() {;
                         <span className='text-gray-300'>{feature}</span>;
                       </li>;
 
+<<<<<<< HEAD
+=======
+{/* Pricing Tiers */}
+        <div className="mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {" "}
+=======
+<div className='mb-20'>
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+            {pricingTiers.map((tier, index) => (
+              <UltraFuturisticCard
+                key={tier.name}
+                variant={tier.variant}
+                interactive={true}
+glowIntensity={tier.popular ? 'high' : 'medium'}
+                className={`relative h-full ${tier.popular ? 'scale-105' : ''}`}
+
+              >
+                {tier.popular && (
+<<<<<<< HEAD
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold flex items-center">
+<Star className="w-4 h-4 mr-2" />
+=======
+<div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+                    <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold flex items-center'>
+                      <Star className='w-4 h-4 mr-2' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+<<<<<<< HEAD
+<div className="text-center p-8">
+                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-6">
+=======
+<div className='text-center p-8'>
+                  <div className='inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-6'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                    {tier.icon}
+                  </div>
+<h3 className='text-2xl font-bold text-white mb-2'>
+                  <h3 className='text-2xl font-bold text-white mb-2'>
+                    {tier.name}
+                  </h3>
+                  <p className='text-gray-300 mb-6'>{tier.description}</p>
+                  <div className='mb-6'>
+                    <div className='flex items-baseline justify-center'>
+                      <span className='text-5xl font-bold text-cyan-400'>
+                        ${tier.price}
+                      </span>
+                      <span className="text-xl text-gray-400 ml-2">
+                        {tier.period}
+                      </span>
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <p className="text-gray-300 mb-6">{tier.description}</p>
+                  <div className="mb-6">
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-5xl font-bold text-cyan-400">${tier.price}</span>
+                      <span className="text-xl text-gray-400 ml-2">{tier.period}</span>
+                    </div>
+                    {tier.savings && (
+<div className="text-green-400 text-sm mt-2">{tier.savings}</div>
+                    )}
+                  </div>
+                  <ul className='text-left space-y-3 mb-8'>
+                  <ul className='text-left space-y-3 mb-8'>
+                  <ul className="text-left space-y-3 mb-8">
+                    {tier.features.map((feature, idx) => (
+                      <li key={idx} className='flex items-start'>
+                        <Check className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' />
+                        <span className='text-gray-300'>{feature}</span>
+                      </li>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     ))}
                   </ul>;
 
@@ -1869,7 +2230,8 @@ export default function PricingPage() {;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   >
                     {tier.cta}
-                    <ArrowRight className='ml-2 w-5 h-5' />                  </Button>
+                    <ArrowRight className='ml-2 w-5 h-5' />
+                  </Button>
                 </div>
               </UltraFuturisticCard>
 
@@ -1877,6 +2239,7 @@ export default function PricingPage() {;
           </div>
         </div>
         {/* Value Propositions */}
+<<<<<<< HEAD
         {/* Value Propositions */}
         {/* Value Propositions */}
         <div className="mb-20">
@@ -1909,10 +2272,27 @@ export default function PricingPage() {;
   }
 }
                 </div>
+=======
+<div className='mb-20'>
+          <h2 className='text-3xl font-bold text-white mb-12 text-center'>
+            Why Choose Zion Tech Group?
+          </h2>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {valuePropositions.map((proposition, index) => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               <UltraFuturisticCard
                 key={index}
                 variant={index % 2 === 0 ? 'quantum' : 'holographic'}
                 interactive={true}
+<<<<<<< HEAD
+=======
+className='text-center p-6'
+              >
+                <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-4'>
+                  {proposition.icon}
+                </div>
+                <h3 className='text-xl font-bold text-white mb-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   {proposition.title}
                 </h3>
                 <p className='text-gray-300 text-sm mb-4'>
@@ -1923,7 +2303,8 @@ export default function PricingPage() {;
                 </div>
                 <div className='text-sm text-gray-400'>
                   {proposition.detail}
-                </div>              </UltraFuturisticCard>
+                </div>
+              </UltraFuturisticCard>
             ))}
           </div>
         </div>
@@ -1997,6 +2378,7 @@ export default function PricingPage() {;
           </div>;
         </div>;
         {/* Service Category Pricing Examples */}
+<<<<<<< HEAD
         <div className='mb - 20'>;
           <h2 className='text - 3xl font - bold text - white mb - 12 text - center'>;
             Service Category Pricing;
@@ -2086,6 +2468,13 @@ export default function PricingPage() {;
 }
 =======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+=======
+<div className='mb-20'>
+          <h2 className='text-3xl font-bold text-white mb-12 text-center'>
+            Service Category Pricing
+          </h2>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             {serviceCategoryPricing.map((category, index) => (
               <UltraFuturisticCard
                 key={index}
@@ -2121,7 +2510,11 @@ export default function PricingPage() {;
                       key={idx}
                       className="text-sm text-gray-300 flex items-center"
                     >
+<<<<<<< HEAD
                       <Check className="w-4 h-4 text-green-400 mr-2" />{" "}
+=======
+                      <Check className='w-4 h-4 text-green-400 mr-2' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       {service}
                     </li>
                   ))}
@@ -2135,6 +2528,7 @@ export default function PricingPage() {;
                   ))}
 
                 </ul>
+<<<<<<< HEAD
                 
                 <Button
                   href="/services"
@@ -2145,15 +2539,67 @@ export default function PricingPage() {;
                   Explore Services
                 </Button>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                </ul>
+                
+                <Button
+                  href="/services"
+                  variant="secondary"
+                  size="sm"
+                  className="w-full"
+                >
+                  Explore Services
+<<<<<<< HEAD
+                  <ChevronRight className="ml-2 w-4 h-4" />
+=======
+<Button
+                  href='/services'
+                  variant='secondary'
+                  size='sm'
+                  className='w-full'
+                >
+                  Explore Services
+                  <ChevronRight className='ml-2 w-4 h-4' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                </Button>
+              </UltraFuturisticCard>
+
+            ))}
+
+=======
+
+
+
+=======
+
+=======
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))}
           </div>
         </div>
         {/* Popular Services Pricing */}
-        <div className='mb-20'>
+<div className='mb-20'>
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
             Popular Services Pricing
           </h2>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {popularServices.slice(0, 6).map((service, index) => (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2222,12 +2668,20 @@ export default function PricingPage() {;
 }
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {" "}
+=======
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             {popularServices.slice(0, 6).map((service, index) => (
               <UltraFuturisticCard
                 key={service.id}
                 variant={service.variant as any}
                 interactive={true}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -2237,6 +2691,9 @@ export default function PricingPage() {;
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 className="p-6"
+=======
+className='p-6'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className="text-center mb-4">
                   <div className="text-3xl mb-3">{service.icon}</div>
@@ -2277,14 +2734,19 @@ export default function PricingPage() {;
                   </div>
                   <ul className="text-xs text-gray-300 space-y-1">
                     {service.features.slice(0, 3).map((feature, idx) => (
+<<<<<<< HEAD
                       <li key={idx} className="flex items-center">
                         <Check className="w-3 h-3 text-green-400 mr-2" />{" "}
+=======
+                      <li key={idx} className='flex items-center'>
+                        <Check className='w-3 h-3 text-green-400 mr-2' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <Button
+<Button
                   href={service.link}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2346,6 +2808,19 @@ export default function PricingPage() {;
                   size="sm"
                   className="w-full"
 
+<<<<<<< HEAD
+=======
+
+
+                >
+                  Learn More
+<<<<<<< HEAD
+                  <ExternalLink className="ml-2 w-4 h-4" />
+<<<<<<< HEAD
+=======
+                  <ExternalLink className='ml-2 w-4 h-4' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </Button>
               </UltraFuturisticCard>
 
@@ -2381,6 +2856,19 @@ export default function PricingPage() {;
           </div>
         </div>
         {/* FAQ Section */}
+<<<<<<< HEAD
+=======
+<div className='mb-20'>
+          <h2 className='text-3xl font-bold text-white mb-12 text-center'>
+            Frequently Asked Questions
+          </h2>
+          <div className='max-w-4xl mx-auto space-y-4'>
+            <UltraFuturisticCard variant='quantum' className='p-6'>
+              <h3 className='text-lg font-bold text-white mb-3'>
+                What's included in the free trial?
+              </h3>
+              <p className='text-gray-300'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 All plans include a generous free trial period with full access
                 to the selected services. No credit card required to start your
                 trial.
@@ -2464,18 +2952,31 @@ export default function PricingPage() {;
                 instant deployment with our AI-powered setup wizards.
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
 <<<<<<< HEAD
               </p>            </UltraFuturisticCard>
 =======
         <div className="mb-20">
 =======
               </p>{" "}
+=======
+              </p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </UltraFuturisticCard>
           </div>
         </div>
         {/* Contact Information */}
+<<<<<<< HEAD
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
+=======
+<div className='mb-16'>
+          <h2 className='text-3xl font-bold text-white mb-8 text-center'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             Get In Touch
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -2519,13 +3020,18 @@ export default function PricingPage() {;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {contactInfo.address}
               </p>
+<<<<<<< HEAD
               <p className="text-gray-400 text-sm mt-2">
                 Global operations
               </p>{" "}
+=======
+              <p className='text-gray-400 text-sm mt-2'>Global operations</p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </UltraFuturisticCard>
           </div>
         </div>
         {/* CTA Section */}
+<<<<<<< HEAD
         <div className="text-center">
           <UltraFuturisticCard
             variant="quantum-holographic-advanced"
@@ -2721,6 +3227,9 @@ export default function PricingPage() {;
 =======
         {/* CTA Section */}
         <div className='text-center'>
+=======
+<div className='text-center'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <UltraFuturisticCard
             variant='quantum-holographic-advanced'
             className='p-12'
@@ -2940,6 +3449,7 @@ export default function PricingPage() {;
                 ✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant
                 Setup
               </p>
+<<<<<<< HEAD
             <div className="text-sm text-gray-400">
               <p>✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant Setup</p>
               <p className="mt-2">✓ 24/7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure</p>
@@ -3210,7 +3720,22 @@ export default Page;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+              <p className='mt-2'>
+                ✓ 24/7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure
+              </p>
+            </div>
+          </UltraFuturisticCard>
+        </div>
+      </div>
+</Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

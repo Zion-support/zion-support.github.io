@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -17,6 +18,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {cn} from "@/lib/utils";
@@ -24,6 +27,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Loader2} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {useNavigate} from "react-router-dom";
 <<<<<<< HEAD
@@ -84,6 +88,9 @@ export function PaymentButton(): any ({;
 =======
 import {useNavigate} from "react-router-dom";  amount;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {useNavigate} from "react-router-dom";  amount;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   serviceId;
   providerId;
 
@@ -98,6 +105,7 @@ import {useNavigate} from "react-router-dom";  amount;
   amount: number
   serviceId: string
   providerId: string
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -238,6 +246,8 @@ export function PaymentButton({;
       }
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Call the create-checkout edge function
@@ -249,6 +259,7 @@ export function PaymentButton({;
           userId: user?.id,
           successUrl: redirectUrl || window.location.href,
           cancelUrl: window.location.href}}),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -270,10 +281,14 @@ export function PaymentButton({;
 =======
             if (error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            if (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         throw error
       }
       if (data?.url) {
         // Open Stripe checkout in a new tab
+<<<<<<< HEAD
 <<<<<<< HEAD
         window.open(data.url, '_blank')
 <<<<<<< HEAD
@@ -414,6 +429,9 @@ if ( {) {
 =======
         window.open(data.url, '_blank')      // Reset button state after a short delay
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        window.open(data.url, '_blank')      // Reset button state after a short delay
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setTimeout(() => {
         setIsProcessing(false)
       }, 1500)
@@ -422,6 +440,7 @@ if ( {) {
       className={cn(
         "relative min-w-[120px]";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -436,6 +455,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 
       // Call the create-checkout edge function;
@@ -455,6 +476,7 @@ if ( {) {
   description: "There was a problem initiating your payment. Please try again.",;
         variant: "destructive"});
     } finally {;
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Reset button state after a short delay;
 <<<<<<< HEAD
@@ -494,6 +516,12 @@ if ( {) {
       className={cn(
         "relative min-w-[120px]",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      // Reset button state after a short delay;      onClick={handlePaymentClick}
+      disabled={isProcessing}
+      className={cn(
+        "relative min-w-[120px]",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       onClick={handlePaymentClick}
       disabled={isProcessing}
@@ -506,6 +534,7 @@ if ( {) {
       disabled={isProcessing}
       className={cn(
         "relative min-w-[120px]"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -581,6 +610,10 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </Button>;
   );
+=======
+    </Button>;
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </Button>;
   );
 }
@@ -610,6 +643,7 @@ if ( {) {
         button_text)}
     </Button>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -793,3 +827,5 @@ return (<Button)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

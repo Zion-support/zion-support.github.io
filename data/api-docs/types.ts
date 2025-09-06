@@ -1,5 +1,10 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
+=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
@@ -15,9 +20,19 @@ export interface CodeSample {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+export type HttpMethod = any;
+export interface CodeSample {
+  language: 'curl' | 'javascript' | 'python';
+  code: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface RateLimitInfo {
   tier: 'free' | 'partner' | 'internal';
   limitPerMinute: number;
@@ -79,12 +94,22 @@ export interface EndpointSpec {;
   path: string;
   method: HttpMethod;
   visibility: Visibility;
+<<<<<<< HEAD
   auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>;  query?: Record < string, string>;
   params?: Record < string, string>;
   requestBodySchema?: unknown;
   responseBodySchema?: unknown;
   samples: CodeSample[];
   rate_limits?: RateLimitInfo[];
+=======
+  auth: Array<'jwt' | 'oauth' | 'wallet' | 'apiKey' | 'none'>;
+  query?: Record<string, string>;
+  params?: Record<string, string>;
+  requestBodySchema?: unknown;
+  responseBodySchema?: unknown;
+samples: CodeSample[];
+  rateLimits?: RateLimitInfo[];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   errors?: ErrorCode[];
   tags?: string[];
 <<<<<<< HEAD
@@ -157,6 +182,7 @@ export interface ApiDocsSpec {;
   versions: string[]; // available versions;
   default_version: string;
   sections: SectionSpec[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -310,6 +336,7 @@ export interface ApiDocsSpec {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   product: 'Zion OS';
@@ -317,3 +344,11 @@ export interface ApiDocsSpec {;
   default_version: string;
   sections: SectionSpec[];
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  lastUpdatedIso: string;
+  lastUpdatedIso: string
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

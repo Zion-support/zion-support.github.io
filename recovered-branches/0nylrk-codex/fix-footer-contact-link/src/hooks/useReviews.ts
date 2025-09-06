@@ -47,6 +47,7 @@ if (return) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -130,6 +131,8 @@ import { useAuth } from "@/hooks/useAuth",
     if (!projectId) return,
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     
     setIsLoading(true),
     
@@ -139,6 +142,7 @@ import { useAuth } from "@/hooks/useAuth",
         .select (`;
           *;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -170,6 +174,8 @@ import { useAuth } from "@/hooks/useAuth",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Check if current user has already submitted a review
       if (user) {
         const { data: userReviewData, error: userReviewError } = await supabase
@@ -177,6 +183,7 @@ import { useAuth } from "@/hooks/useAuth",
           .select("*")
           .eq("project_id", projectId)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           .eq("reviewer_id", user.id)
 
@@ -304,6 +311,12 @@ if (return) {
     }
   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          .eq("reviewer_id", user.id)    } finally {
+      setIsLoading(false)
+    }
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         title: "Error",
         description: "Failed to load reviews",
 
@@ -345,10 +358,13 @@ if ( {) {
   description: "Failed to load reviews",
         variant: "destructive"});
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } finally {
       setIsLoading (false);
     }
@@ -371,6 +387,7 @@ if (return) {
     if (!userId) return,
     
     setIsLoading(true),
+<<<<<<< HEAD
 <<<<<<< HEAD
     
 
@@ -466,6 +483,9 @@ if (return) {
 =======
         project_id: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        project_id: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     reviewee_id: string;
     rating: number;
     review_text: string;
@@ -474,12 +494,15 @@ if (return) {
     timeliness_rating?: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     would_work_again?: boolean,
     is_anonymous: boolean;
@@ -512,6 +535,7 @@ if ( {) {
       if (err && err.code === "23505") {
         toast({
 <<<<<<< HEAD
+<<<<<<< HEAD
           title: "Error";
           description: "You have already submitted a review for this project"
           variant: "destructive"})
@@ -526,6 +550,11 @@ if ( {) {
   description: "You have already submitted a review for this project"
           variant: "destructive"})          reviewer_id: user.id});
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          title: "Error",
+  description: "You have already submitted a review for this project"
+          variant: "destructive"})          reviewer_id: user.id});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         .select ();
         .single ();
 ;
@@ -552,16 +581,20 @@ if ( {) {
   description: "You have already submitted a review for this project",
           variant: "destructive"});
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       } else {
         toast ({
           title: "Error",
   description: "Failed to submit review",
           variant: "destructive"});
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -618,6 +651,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         title: "Error",
         description: "You must be logged in to submit a review",
         variant: "destructive"}),
@@ -626,6 +661,7 @@ if ( {) {
     
     setIsSubmitting(true),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -641,6 +677,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try {
       const { data, error } = await supabase
         .from("reviews")
@@ -670,6 +708,7 @@ if ( {) {
           title: "Error",
           description: "Failed to submit review",
 <<<<<<< HEAD
+<<<<<<< HEAD
           variant: "destructive"})
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -683,6 +722,9 @@ import { useState } from "react",;
 =======
           variant: "destructive"})import { useState } from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          variant: "destructive"})import { useState } from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Review, ReviewReport } from "@/types/reviews",;
@@ -757,6 +799,7 @@ if ( {) {
           variant: "destructive"})
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
         toast ({
@@ -765,10 +808,13 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
       return false;
     } finally {
       setIsSubmitting (false);
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 <<<<<<< HEAD
@@ -810,6 +856,9 @@ if ( {) {
 =======
     }  },;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }  },;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Fetch reviews for a user (to display on profile);
   const fetchUserReviews = async (userId: string) => {;
     if (!userId) return,;
@@ -908,6 +957,7 @@ if ( {) {
       setIsSubmitting (false);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -929,11 +979,17 @@ if ( {) {
 =======
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  },
+
+    
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Update a review
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {
     if (!user) return false,
     
     setIsSubmitting(true),
+<<<<<<< HEAD
 <<<<<<< HEAD
     
 <<<<<<< HEAD
@@ -994,6 +1050,9 @@ if ( {) {
 =======
           if (userReview) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          if (userReview) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         setUserReview({ ...userReview, ...updates })
       }
       return true
@@ -1041,6 +1100,7 @@ if ( {) {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   },
@@ -1076,6 +1136,9 @@ if ( {) {
 =======
   }  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Report a review
   const reportReview = async (reviewId: string, reason: string) => {
     if (!user) return false
@@ -1085,6 +1148,7 @@ if ( {) {
         .insert({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -1092,6 +1156,8 @@ if ( {) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           reporter_id: user && user.id,
 
@@ -1100,6 +1166,7 @@ if ( {) {
           reason}),
         
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -1129,6 +1196,11 @@ if ( {) {
         if (error && error.code === "23505") {
           toast({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        // Check for unique constraint violation
+        if (error && error.code === "23505") {
+          toast({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             variant: "destructive"})
 ;
   // Report a review;
@@ -1155,6 +1227,7 @@ if ( {) {
   $2
 }
           toast ({
+<<<<<<< HEAD
             title: "Error",
   description: "You have already reported this review",
             variant: "destructive"});
@@ -1212,13 +1285,16 @@ if ( {) {
           toast({
             title: "Error";
             description: "You have already reported this review"
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             title: "Error",
-            description: "You have already reported this review",
-            variant: "destructive"})
+  description: "You have already reported this review",
+            variant: "destructive"});
         } else {
-          throw error
+          throw error;
         }
       } else {
+<<<<<<< HEAD
         toast({
 <<<<<<< HEAD
 
@@ -1247,6 +1323,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     return false
   }
@@ -1261,6 +1339,7 @@ if ( {) {
     fetchProjectReviews;
     fetchUserReviews;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   },;
   // Update a review;
@@ -1354,6 +1433,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     submitReview;
     updateReview;
 

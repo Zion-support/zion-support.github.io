@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -9,6 +10,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from "react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -23,6 +26,7 @@ export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProp
     isLoading, ;
     error, ;
     updateApplicationStatus, ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -43,6 +47,8 @@ interface JobApplicationsTableProps {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const {
     applications
@@ -50,10 +56,13 @@ interface JobApplicationsTableProps {
     error
     updateApplicationStatus
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
   const {
@@ -74,6 +83,7 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     markApplicationAsViewed;
+<<<<<<< HEAD
 <<<<<<< HEAD
     refetch;
 <<<<<<< HEAD
@@ -134,10 +144,14 @@ import {
 =======
     refetch;      // If it's not already viewed, mark it as viewed;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    refetch;      // If it's not already viewed, mark it as viewed;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const application = applications && applications.find(app => app && app.id === applicationId);
       if (application && !application && application.viewed_at) {;
         await markApplicationAsViewed(applicationId);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -263,11 +277,17 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
       setProcessingId(null);
     }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    } finally {;
+      setProcessingId(null);
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleViewApplication = async (applicationId: string) => {;
     await markApplicationAsViewed(applicationId)
 };
 
   const handleScoreUpdated = (updatedApplication: JobApplication) => {;
+<<<<<<< HEAD
 <<<<<<< HEAD
     refetch();
   };
@@ -331,11 +351,16 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
     refetch()
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    refetch()
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   if (isLoading) {;
     return <LoadingState />;
 
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   return (
@@ -501,6 +526,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         open={showScoreDialog}
         onOpenChange={setShowScoreDialog}
         application={selected_application}

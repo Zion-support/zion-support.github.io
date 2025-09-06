@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -9,10 +10,13 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';
 type ContentType = 'job' | 'profile' | 'service' | 'general';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,11 +36,14 @@ interface TranslationResponse {
 import {useState} from 'react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {supabase} from '@/integrations / supabase / client';
 import {use_language, SupportedLanguage} from '@/context / LanguageContext';
 ;
 type ContentType = 'job' | 'profile' | 'service' | 'general';
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -86,6 +93,8 @@ export function useTranslationService() {;
         body: {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           content;
           sourceLanguage;
           targetLanguages
@@ -101,6 +110,7 @@ export function useTranslationService() {;
           pt: ''
           ar: ''
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         initialTranslations[sourceLanguage] = content;
 <<<<<<< HEAD
@@ -173,6 +183,9 @@ export function useTranslationService() {;
 =======
         initialTranslations[sourceLanguage] = content;      const initialTranslations: Record<SupportedLanguage, string> = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        initialTranslations[sourceLanguage] = content;      const initialTranslations: Record<SupportedLanguage, string> = {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         en: content;
         es: '';
         pt: ''
@@ -198,6 +211,7 @@ export function useTranslationService() {;
         en: content,;
         es: '',;
         pt: '',;
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 export /**
@@ -349,6 +363,8 @@ export function useTranslationService() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         ar: '';
       }
       initial_translations[source_language] = content;
@@ -378,6 +394,7 @@ export function useTranslationService() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
@@ -390,6 +407,9 @@ export function useTranslationService() {;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   const get_translation = (translations: Record < SupportedLanguage, string>, fallback: string = '') =>: any {
     // Check condition

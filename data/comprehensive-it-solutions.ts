@@ -1,13 +1,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ComprehensiveItSolution {
 export interface ComprehensiveItSolution {;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
+=======
+export interface ComprehensiveItSolution {
+id: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string,
@@ -19,6 +26,7 @@ export interface ComprehensiveItSolution {;
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 export interface ComprehensiveItSolution {;
     address: string
 };
@@ -79,17 +87,35 @@ export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
       'Complete full-stack development services from frontend to backend and database design.'
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+    address: string
+  }
+}
+
+export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
+  {
+    id: "full-stack-development";
+    name: "Full-Stack Development Services";
+    tagline: "End-to-end web application development";
+    price: "$80/hour";
+    description: "Complete full-stack development services from frontend to backend and database design.";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     features: [
       "Frontend development";
       "Backend APIs";
       "Database design";
+<<<<<<< HEAD
       "DevOps integration";
       "Testing & deployment"
     ];
     link: "/services/full-stack-development", category: "IT Solutions",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
 <<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -104,16 +130,32 @@ export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
       email: "kleber@ziontechgroup.com",
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+      "DevOps integration",
+      "Testing & deployment"
+    ],
+    link: "/services/full-stack-development";
+    category: "IT Solutions";
+    realImplementation: true;
+    contactInfo: {
+      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -174,6 +216,7 @@ export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -181,3 +224,7 @@ export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
   }
 ];
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

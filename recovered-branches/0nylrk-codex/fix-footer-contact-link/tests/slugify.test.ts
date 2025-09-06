@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { slugify  } from '@/lib/slugify';
 import { unslugify  } from '@/lib/slugify';
 import { slugify } from '@/lib/slugify',;
@@ -45,6 +46,8 @@ it('handles custom separator when unslugifying', () => {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { slugify } from '@/lib / slugify';
 import { unslugify } from '@/lib / slugify';
@@ -60,6 +63,7 @@ it ('allows custom separators', () => {
 it ('converts slug back to title', () => {
   expect (unslugify ('multi - word - title')).to_be ('Multi Word Title');
 it ('handles custom separator when unslugifying', () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
   expect (unslugify ('multi_word_title_')).to_be ('Multi Word Title');
 
@@ -130,3 +134,6 @@ it('handles custom separator when unslugifying', () => {;
 =======
   expect (unslugify ('multi_word_title_')).to_be ('Multi Word Title');>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  expect (unslugify ('multi_word_title_')).to_be ('Multi Word Title');>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

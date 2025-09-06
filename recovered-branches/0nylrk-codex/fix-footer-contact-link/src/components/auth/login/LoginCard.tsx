@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -20,6 +21,12 @@ import { Link } from "react-router-dom",
 =======
   return (import { Link } from "react-router-dom",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+export function LoginCard() {
+  return (import { Link } from "react-router-dom",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function LoginCard() {
   return (
@@ -31,6 +38,7 @@ import { LoginForm } from "./LoginForm",;
 import { SocialLogin } from "./SocialLogin";
 export function LoginCard() {;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   return (
@@ -62,11 +70,17 @@ export function LoginCard() {;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="mx-auto w-full max-w-sm lg:w-96">;
+=======
+
+export function LoginCard() {
+  return (    <div className="mx-auto w-full max-w-sm lg:w-96">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="text-center mb-10">;
         <h2 className="text-3xl font-bold tracking-tight text-white">;
           Welcome back;
         </h2>;
         <p className="mt-2 text-sm text-zion-slate-light">;
+<<<<<<< HEAD
           Don't have an account?{" "}
 <<<<<<< HEAD
           <Link
@@ -173,3 +187,13 @@ export function LoginCard() {
     </div>);
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          Don't have an account?{" "}          </Link>;
+        </p>;
+      </div>;      <div className="bg - zion - blue - dark rounded - lg p-6">;
+        <LoginForm />;
+        <SocialLogin />;
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

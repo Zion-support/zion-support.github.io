@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, DollarSign, Target;
@@ -732,6 +736,7 @@ export default function MarketPricing() {;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -776,26 +781,41 @@ export default function MarketPricing() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+=======
+  const markets = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 'quantum-computing': {
   marketSize: '$8.7B', growthRate: '+45.2%', growthTrend: 'up', description: 'Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.', competitors: [ {
   ];
 pricingAnalysis: {
-  lowEnd: '$0.80 per quantum hour', midRange: '$1.50 per quantum hour', highEnd: '$2.50 per quantum hour', ourPosition: 'Competitive mid-range pricing'
-}
+  lowEnd: '$0.80 per quantum hour', midRange: '$1.50 per quantum hour', highEnd: '$2.50 per quantum hour', ourPosition: 'Competitive mid-range pricing' 
+
+};
 'autonomous-systems': {
   marketSize: '$23.1B', growthRate: '+34.7%', growthTrend: 'up', description: 'Autonomous systems market is growing rapidly with increasing automation in business processes.', competitors: [ {
   ];
 pricingAnalysis: {
-  lowEnd: '$300 per user/month', midRange: '$750 per user/month', highEnd: '$1, 200 per user/month', ourPosition: 'Competitive pricing with AI advantages'
-}
+  lowEnd: '$300 per user/month', midRange: '$750 per user/month', highEnd: '$1, 200 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
+
+};
 'enterprise-it': {
   marketSize: '$1.2T', growthRate: '+12.3%', growthTrend: 'up', description: 'Enterprise IT market continues steady growth with digital transformation initiatives.', competitors: [ {
   ];
 pricingAnalysis: {
   lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
 
+<<<<<<< HEAD
 }
 }
+=======
+<<<<<<< HEAD
+};
+
+};
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 export default MarketPricing;export default MarketPricing;
 
@@ -1683,4 +1703,16 @@ export default MarketPricing;export default MarketPricing
 
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+
+};
+
+};
+
+};
+export default MarketPricing;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

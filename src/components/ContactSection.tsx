@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -81,6 +82,19 @@ export function ContactSection() {
 
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
@@ -109,6 +123,7 @@ const ContactSection: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+<<<<<<< HEAD
     // Handle form submission here
     console.log('Form submitted:', formData);
   };
@@ -205,6 +220,8 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 =======
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setIsSubmitting(true);
     
     try {
@@ -232,7 +249,44 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+import { useState } from "react",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/components/ui/use-toast";
+import z from "zod";
+import { Mail } from 'lucide-react'
+
+export function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: "";
+    email: "";
+    subject: "";
+    message: ""});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+export function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: ""
+    email: ""
+    subject: ""
+    message: ""})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+  const [errors, setErrors] = useState<{
+    name?: string;
+    email?: string;
+    subject?: string;
+    message?: string
+  }>({}),
+
+  const handleChange = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <section className="py-16 px-4 bg-gray-50">
       <div className="container mx-auto max-w-6xl">
@@ -260,7 +314,10 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
           <p className="text-xl text-blue-200 max-w-2xl mx-auto">
             Ready to transform your business with cutting-edge technology? 
             Let&apos;s discuss how we can help you achieve your goals.
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </p>
         </div>
 
@@ -269,6 +326,7 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+<<<<<<< HEAD
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
@@ -297,11 +355,48 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
                   <div>
                     <p className="font-semibold">Address</p>
                     <p className="text-gray-600">123 Tech Street, Innovation City, IC 12345</p>
+=======
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <Mail className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">Email</h4>
+                    <p className="text-blue-200">contact@ziontechgroup.com</p>
+                    <p className="text-blue-200">support@ziontechgroup.com</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+                    <Phone className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">Phone</h4>
+                    <p className="text-blue-200">+1 (302) 464-0950</p>
+                    <p className="text-blue-200">+1 (555) 987-6543</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
+                    <MapPin className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">Office</h4>
+                    <p className="text-blue-200">
+                      364 E Main St STE 1008<br />
+                      Middletown, DE 19709<br />
+                      United States
+                    </p>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </div>
                 </div>
               </div>
             </div>
 
+<<<<<<< HEAD
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <h4 className="text-lg font-semibold mb-4">Why Choose Us?</h4>
               <ul className="space-y-2 text-gray-600">
@@ -311,31 +406,56 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
                 <li>• Competitive Pricing</li>
                 <li>• Fast Implementation</li>
               </ul>
+=======
+            <div className="bg-blue-800/50 p-6 rounded-lg">
+              <div className="flex items-center space-x-3 mb-4">
+                <Clock className="w-6 h-6 text-blue-300" />
+                <h4 className="font-semibold">Business Hours</h4>
+              </div>
+              <div className="space-y-2 text-blue-200">
+                <p>Monday - Friday: 9:00 AM - 6:00 PM EST</p>
+                <p>Saturday: 10:00 AM - 4:00 PM EST</p>
+                <p>Sunday: Closed</p>
+                <p className="text-sm text-blue-300 mt-2">
+                  *24/7 emergency support available for critical issues
+                </p>
+              </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white p-8 rounded-xl shadow-lg">
+          <div>
             <h3 className="text-2xl font-semibold mb-6">Send us a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
+<<<<<<< HEAD
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name
+=======
+                  <label htmlFor="name" className="block text-sm font-medium mb-2">
+                    Full Name *
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </label>
                   <input
                     type="text"
                     id="name"
                     name="name"
+                    required
                     value={formData.name}
                     onChange={handleChange}
+<<<<<<< HEAD
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+=======
+                    className="w-full px-4 py-3 bg-blue-800/50 border border-blue-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent text-white placeholder-blue-300"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     placeholder="Your full name"
                   />
                 </div>
-                
                 <div>
+<<<<<<< HEAD
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address
                   </label>
@@ -768,10 +888,16 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    Email Address *
+                  </label>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <input
                     type="email"
                     id="email"
                     name="email"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf89
@@ -788,6 +914,12 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+=======
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-blue-800/50 border border-blue-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent text-white placeholder-blue-300"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -812,6 +944,7 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
               </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf89
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
@@ -825,6 +958,9 @@ if ( {) {
               </div>
               
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                   Company
@@ -839,6 +975,7 @@ if ( {) {
                   placeholder="Your company name"
                 />
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -875,10 +1012,17 @@ if ( {) {
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  Message *
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </label>
                 <textarea
                   id="message"
                   name="message"
+<<<<<<< HEAD
 <<<<<<< HEAD
                   required
 <<<<<<< HEAD
@@ -899,11 +1043,15 @@ if ( {) {
 =======
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+                  required
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   rows={5}
                   value={formData.message}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-blue-800/50 border border-blue-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent text-white placeholder-blue-300 resize-none"
                   placeholder="Tell us about your project or question..."
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf89
 =======
                   placeholder="Tell us about your project..."
@@ -931,6 +1079,13 @@ if ( {) {
               <button
                 type="submit"
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+                />
+              </div>
+
+              <button
+                type="submit"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 disabled={isSubmitting}
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
@@ -951,6 +1106,7 @@ if ( {) {
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -985,11 +1141,25 @@ export default ContactSection;
 >>>>>>> main
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+export default ContactSection;
+=======
+export default ContactSection;
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
                     <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
                   )}
+<<<<<<< HEAD
 
                 </div>;
               </form>;
@@ -997,6 +1167,9 @@ export default ContactSection;
           </div>;
         </div>;
       </div>;
+
+
+
 
     </section>);
 }set_errors (field_errors);
@@ -1025,6 +1198,7 @@ description: err.message;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -1044,3 +1218,50 @@ export default ContactSection;
 =======
 export default ContactSection;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+
+}setErrors (fieldErrors);
+toast ({;
+  return;
+}setErrors ({;
+  ;
+});
+setIsSubmitting (true);
+}) .catch ( (err) => {;
+  setIsSubmitting (false);
+toast ({;
+  title: "Submission Error";
+description: err.message;
+});
+};";
+}</div> <div> <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1" > Email </label> <Input) ";
+}</div> </div> <div> <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1" > Subject </label> <Input) ";
+}</div> <div> <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1" > Message </label> <Textarea) ;
+}</div> <div> <Button > {';
+  isSubmitting ? 'Sending...' : 'Send Message' ;
+}</Button>) ;
+}</div> </form> </div> </div> </div> </div> </section>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export default ContactSection;
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

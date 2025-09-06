@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import crypto from "crypto";
 export function getSyncSecret(): string | null {;
   const raw = process.env.ZION_SYNC_SECRET || "";
@@ -39,6 +40,12 @@ export function getSyncSecret(): string | null {
 }
 =======export function getSyncSecret(): string | null {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+}
+=======export function getSyncSecret(): string | null {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const raw = process.env.ZION_SYNC_SECRET || '';
   return raw.length > 0 ? raw : null;
 }
@@ -119,6 +126,7 @@ export function generateNonce(): string {
 export function hashData(data: string): string {
   return crypto.createHash("sha256").update(data).digest("hex");
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 };
@@ -132,3 +140,6 @@ export function hashData(data: string): string {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

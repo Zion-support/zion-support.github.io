@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -24,6 +25,8 @@ export { useHireRequest } from '../useHireRequest';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export { useAuthStatus } from './useAuthStatus';
 export { useTalentData } from './useTalentData';
 export { useFilterTalents } from './useFilterTalents';
@@ -43,6 +46,7 @@ export { useTalentData } from './useTalentData',;
 export { useFilterTalents } from './useFilterTalents',;
 export { useUIState } from './useUIState',;
 export { useSavedTalents } from './useSavedTalents',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export { useHireRequest } from '../useHireRequest';
 <<<<<<< HEAD
@@ -70,3 +74,6 @@ export { useHireRequest } from "../useHireRequest";
 =======
 export { useHireRequest } from '../useHireRequest';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export { useHireRequest } from '../useHireRequest';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

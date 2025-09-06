@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { useRouter } from 'next/router',
@@ -9,12 +10,45 @@ import { LogIn, User, Eye, EyeOff } from 'lucide-react'
 import { fireEvent } from '@/lib/analytics',
 import { useAuth } from "@/context/auth/AuthProvider",
 =======
+=======
+=======
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { useForm, ControllerRenderProps } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { LogIn, User, Eye, EyeOff } from 'lucide-react';
+import { fireEvent } from '@/lib/analytics';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,;
+} from '@/components/ui/form';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import Link from 'next/link';
+
+import { useState } from "react";
+import { useRouter  } from 'next/router';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod";
 import { LogIn, User, Eye, EyeOff } from 'lucide-react'
 import { fireEvent  } from '@/lib/analytics';
 import { useAuth } from "@/context/auth/AuthProvider",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 import { useState } from 'react';
@@ -478,6 +512,26 @@ if ( {) {
           }
         })}
         className="space-y-6"
+=======
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage} from "@/components/ui/form",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import Link from "next/link";
+import { Checkbox } from "@/components/ui/checkbox";
+// Form validation schema
+const loginSchema = null;
+          if (firstError) {
+            form.setFocus(firstError)
+          }        })}
+        className='space-y-6'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       >
         <FormField
           control={form.control}
@@ -1004,6 +1058,7 @@ return;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+<<<<<<< HEAD
 =======
   )            Create account;
           </Link>;
@@ -1014,3 +1069,79 @@ return;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+
+
+}else {;
+  fireEvent ('login', {';
+  method: 'email' ;
+}) ;
+
+}finally {;
+  setIsSubmitting (false) ;
+
+};
+const handleResendEmail = async () => {';
+  const email = form.getValues ('email');
+if (!email) {';
+  form.setError ('root', {';
+  message: 'Please enter your email address.' ;
+});
+return ;
+}setIsResending (true);';
+setVerificationMessage ('');
+try {';
+  const response = await fetch ('/api/auth/resend-verification-email', {';
+  method: 'POST';
+headers: {';
+  'Content-Type': 'application/json' ;
+};
+body: JSON.stringify ({;
+  email ;
+}) ;
+});
+const data = await response.json ();
+if (response.ok) {';
+  setVerificationMessage ('Verification email sent. Please check your inbox.') ;
+}else {';
+  setVerificationMessage (data.message || 'Failed to resend verification email.') ;
+
+}catch (err) {';
+  setVerificationMessage ('Failed to resend verification email.') ;
+}finally {;
+  setIsResending (false) ;
+
+};
+const handleCheckStatus = () => {';
+  const email = form.getValues ('email');
+if (!email) {';
+  form.setError ('root', {';
+  message: 'Please enter your email address.' ;
+});
+return ;
+}router.push (`/verify-status?email=$ {;
+  encodeURIComponent (email) ;
+}`) ;
+};
+
+}> {;
+  form.formState.errors.root && (<Alert variant="destructive" className="mb-4" > form.formState.errors.root.message ;
+}</AlertDescription> </Alert>) ;
+}<form ;
+}) ";
+}className="space-y-6" > <FormField text-zion-slate-light">Email address</FormLabel> <FormControl> <div className=" relative"> <Input /> <User className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) ";
+}/> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Password</FormLabel> relative" > <Input /> <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Button) : (<Eye className="h-4 w-4" />) ";
+}</span> </Button> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
+}/> <FormField <FormItem className="flex flex-row items-start space-x-3 space-y-0"> space-y-1 leading-none"> <FormLabel className=" text-zion-slate-light">Remember me</FormLabel> </div> </FormItem>) ";
+}/> </div> <div className=" text-sm"> <Link href=" /forgot-password"className=" font-medium text-zion-cyan hover:text-zion-cyan-light"> Forgot password? </Link> </div> </div> <Button {;
+  verificationMessage ;
+}</p>) ";
+}<div className=" flex justify-between mt-4" > <Button > {';
+  isResending ? 'Sending...': 'Resend / Verify e-mail' ;
+}</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

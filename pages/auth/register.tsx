@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -11,6 +12,8 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -35,6 +38,7 @@ const RegisterPage = () => {
     } else {
       router.push('/auth/login?registrationSuccess=true')
     }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -45,6 +49,8 @@ const RegisterPage = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -53,6 +59,7 @@ import { AuthButtons } from '@/components/AuthButtons';
 import { fireEvent } from '@/lib/analytics';
 import { logInfo } from '@/utils/productionLogger';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React, { useEffect } from 'react',
@@ -110,6 +117,8 @@ const RegisterPage = () => {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const RegisterPage = () => {;
   const router = useRouter();
   useEffect(() => {;
@@ -118,6 +127,7 @@ const RegisterPage = () => {;
   const handleSuccess = ({ email, emailVerificationRequired }: {;
     email: string;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     emailVerificationRequired: boolean;
@@ -144,10 +154,22 @@ import { useRouter } from 'next/router';
 
   },
 
+=======
+
+      router.push ('/auth / login?registration_success = true');
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+    }
+
+
+  },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <Head>
         <title>Create Account - Zion Tech Marketplace</title>
+<<<<<<< HEAD
         <meta name="description" content="Create your Zion Tech Marketplace account" />
       </Head>
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -218,10 +240,40 @@ export default RegisterPage,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               width={48  } catch (error) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<meta
+          name='description'
+          content='Create your Zion Tech Marketplace account'
+        />
+      </Head>
+
+      <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-md w-full space-y-8'>
+          <div>
+            <img
+              className='mx-auto h-12 w-auto'
+              src='/logos/zion-logo.png'
+              alt='Zion Tech'
+              width={48}
+              height={48}
+<<<<<<< HEAD
+              on_error={(e) => {
+                const target = e.current_target as HTMLImageElement,
+                target.style.display = 'none';
+
+=======
+              onError={e => {
+                const target = e.currentTarget as HTMLImageElement;
+                target.style.display = 'none';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+              }}
+              width={48  } catch (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
               <Link;
                 href="/auth/login";
                 className="font-medium text-blue-600 hover:text-blue-500 underline";
@@ -232,10 +284,14 @@ export default RegisterPage,
           </div>;
           <SignupForm onSuccess={handleSuccess} />;
           {/* Social signup options */  } catch (error) {
+=======
+              height={48  } catch (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
           <div className="mt-6">;
             <div className="relative">;
               <div className="absolute inset-0 flex items-center">;
@@ -250,10 +306,17 @@ export default RegisterPage,
           <div className="text-center mt-4">;
             <p className="text-xs text-gray-500">;
               By creating an account, you agree to our{' '  } catch (error) {
+=======
+              onError={(e) => {;
+                const target = e.currentTarget as HTMLImageElement;
+                target.style.display = 'none';
+              }  } catch (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Link href="/legal/terms" className="text-blue-600 hover:text-blue-500">;
                 Terms of Service;
@@ -289,12 +352,21 @@ export default RegisterPage;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+            />
+            <h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>
+              Create your account
+            </h2>
+<<<<<<< HEAD
+            <p className="mt-2 text-center text-sm text-gray-600">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Or{' '  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 =======
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -302,12 +374,21 @@ export default RegisterPage;
               <Link
                 href="/auth/login"
                 className="font-medium text-blue-600 hover:text-blue-500 underline"
+=======
+            <p className='mt-2 text-center text-sm text-gray-600'>
+              Or{' '}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+              <Link
+                href='/auth/login'
+                className='font-medium text-blue-600 hover:text-blue-500 underline'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 sign in if you already have an account
               </Link>
             </p>
           </div>
           <SignupForm onSuccess={handleSuccess} />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -325,10 +406,13 @@ export default RegisterPage;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gray-300" />
+<<<<<<< HEAD
               </div>
               <div className="relative flex justify-center text-sm">
                 <span className="px-2 bg-gray-50 text-gray-500">Or continue with</span>
@@ -367,15 +451,41 @@ export default RegisterPage;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               By creating an account, you agree to our{' '}
+=======
+=======
+          {/* Social signup options */}
+<div className='mt-6'>
+            <div className='relative'>
+              <div className='absolute inset-0 flex items-center'>
+                <div className='w-full border-t border-gray-300' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+              </div>
+              <div className='relative flex justify-center text-sm'>
+                <span className='px-2 bg-gray-50 text-gray-500'>
+                  Or continue with
+                </span>
+              </div>
+            </div>
+            <AuthButtons providers={['google', 'github']} />
+          </div>
+
+          <div className='text-center mt-4'>
+            <p className='text-xs text-gray-500'>
+              By creating an account, you agree to our{' '}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <Link href="/legal / terms" className="text - blue - 600 hover:text - blue - 500">;
                 Terms of Service;
               </Link>{' '}
               and{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               By creating an account, you agree to our{' '  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -394,6 +504,7 @@ export default RegisterPage;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
@@ -404,6 +515,22 @@ export default RegisterPage;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
+=======
+              <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
+=======
+              <Link
+                href='/legal/terms'
+                className='text-blue-600 hover:text-blue-500'
+              >
+                Terms of Service
+              </Link>{' '}
+              and{' '}
+              <Link
+                href='/legal/privacy'
+                className='text-blue-600 hover:text-blue-500'
+              >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Privacy Policy
               </Link>
             </p>
@@ -411,9 +538,15 @@ export default RegisterPage;
         </div>
       </div>
     </>
+<<<<<<< HEAD
   )
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  )
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default RegisterPage,;
 ;
 export default RegisterPage,
@@ -473,6 +606,7 @@ export default RegisterPage,
 }
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 };
@@ -482,12 +616,16 @@ export default RegisterPage;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <Link href="/legal / privacy" className="text - blue - 600 hover: text - blue - 500">;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              <Link href="/legal / privacy" className="text - blue - 600 hover: text - blue - 500">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Privacy Policy;
               </Link>;
             </p>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   );
@@ -497,15 +635,21 @@ export default RegisterPage;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </>);
 },
 export default RegisterPage,
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 },
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -514,3 +658,9 @@ export default RegisterPage,
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+);
+};
+export default RegisterPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,11 +11,15 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useCallback  } from 'react';
 import { PortfolioProject  } from '@/types/resume';
 import { supabase  } from '@/integrations/supabase/client';
 import { useAuth  } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function usePortfolio() {
 <<<<<<< HEAD
@@ -50,6 +55,9 @@ export function usePortfolio() {;
 =======
 export function usePortfolio() {  const { user } = useAuth();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function usePortfolio() {  const { user } = useAuth();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -71,6 +79,7 @@ export function usePortfolio() {  const { user } = useAuth();
       setProjects(data |[]);
       return data |[]
     } catch (e: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -137,6 +146,8 @@ if (throw error) {
 import { useState, useCallback } from 'react',;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { PortfolioProject } from '@/types/resume',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -150,6 +161,7 @@ export function usePortfolio() {;
     if (!user) {;
       setError('You must be logged in to access portfolio projects'),;
       return [];
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 =======
@@ -383,6 +395,15 @@ if ( {) {
       setError(e && e.message);
       toast({        title: "Error",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }    
+    try {
+      const { data, error } = await supabase
+        .from('portfolio_projects')
+        .insert({      console && console.error('Error adding portfolio project:', e);
+      setError(e && e.message);
+      toast({        title: "Error",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         description: `Could not add project: ${e.message}`,
 
@@ -416,6 +437,7 @@ if (throw error) {
 
       setIsLoading(false)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -452,6 +474,12 @@ if (throw error) {
     setError(null);
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======    }
+    setIsLoading(true);
+    setError(null);
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
     setIsLoading(true),;
     setError(null),;
@@ -496,6 +524,7 @@ if (throw error) {
       return false;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -509,11 +538,14 @@ if (throw error) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     
     setIsLoading(true),
     setError(null),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -659,6 +691,12 @@ if ( {) {
         .from('portfolio_projects')
         .update({      toast({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    try {
+      const { error } = await supabase
+        .from('portfolio_projects')
+        .update({      toast({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         title: "Project updated"
         description: "Your portfolio project has been updated"
       });
@@ -670,6 +708,7 @@ if ( {) {
       toast({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         variant: "destructive"
+<<<<<<< HEAD
 <<<<<<< HEAD
       }),
       return false
@@ -767,6 +806,12 @@ if (throw error) {
         description: `Could not update project: ${e.message}`,
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      }),        title: "Error",
+
+        description: `Could not update project: ${e.message}`,
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
     setIsLoading(true),;
     setError(null),;
@@ -810,6 +855,7 @@ if (throw error) {
       return false;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -823,11 +869,14 @@ if (throw error) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     
     setIsLoading(true),
     setError(null),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -844,10 +893,13 @@ if (throw error) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try {
       const { error } = await supabase
         .from('portfolio_projects')
         .delete()
+<<<<<<< HEAD
 <<<<<<< HEAD
         .eq('id', projectId)
 <<<<<<< HEAD
@@ -922,10 +974,17 @@ if (throw error) {
         description: "Your portfolio project has been deleted"
       });      return true
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        .eq('id', projectId)      toast({
+        title: "Project deleted"
+        description: "Your portfolio project has been deleted"
+      });      return true
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (e: any) {
       console && console.error('Error deleting portfolio project:', e);
       setError(e && e.message);
       toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -951,11 +1010,14 @@ if (throw error) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         variant: "destructive"
       }),
       return false
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -965,10 +1027,13 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         title: "Error",
 
         description: `Could not delete project: ${e.message}`,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1141,6 +1206,12 @@ import { toast } from '@/hooks/use-toast',;
     projects;  }
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    is_loading;
+    error;
+    projects;  }
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function usePortfolio() {;
   const { user } = useAuth(),;
   const [isLoading, setIsLoading] = useState(false),;

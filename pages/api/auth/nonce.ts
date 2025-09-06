@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
 function randomString(length: number) {
@@ -15,6 +16,8 @@ function randomString(length: number) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextApiRequest, NextApiResponse } from 'next';
 
   let res = '';
@@ -35,11 +38,17 @@ function randomString(length: number) {
 <<<<<<< HEAD
 function randomString(length: number): string {
   const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+  const charset =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   let res = '';
   const cryptoObj = require('crypto');
   const bytes: Buffer = cryptoObj.randomBytes(length);
   for (let i = 0; i < length; i++) res += charset[bytes[i] % charset.length];
   return res;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -59,9 +68,16 @@ function randomString(length: number) {
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return res
-}
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const nonce = randomString(16)
   res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`)
 <<<<<<< HEAD
@@ -123,6 +139,14 @@ function handler() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+  const nonce = randomString(16);
+  res.setHeader(
+    'Set-Cookie',
+    `siwe-nonce=${nonce}; HttpOnly; Path=/; SameSite=Lax`
+  );
+  res.status(200).json({ nonce });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(200).json({ nonce })
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

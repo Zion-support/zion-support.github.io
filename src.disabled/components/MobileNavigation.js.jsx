@@ -11,7 +11,12 @@ import _React from';react' const MobileNavigation = ({ isOpen,onToggle }) => { c
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from\';react\' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(\') const location = useLocation() const menuRef = useRef(null)\'';\';
 const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(") const location = useLocation() const menuRef = useRef(null)"";";''"
+<<<<<<< HEAD
 =======
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from\';react\' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(\') const location = useLocation() const menuRef = useRef(null)\'';\';
 const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(") const location = useLocation() const menuRef = useRef(null)"";";''"
 
@@ -33,6 +38,7 @@ const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { con
 =======
 import React from\';react\' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(\') const location = useLocation() const menuRef = useRef(null)\'';\';
 const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(") const location = useLocation() const menuRef = useRef(null)"";";''"
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/MobileNavigation.js.jsx
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -64,3 +70,6 @@ import React from\';react\' const MobileNavigation = ({ isOpen,onToggle }) => { 
 const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(") const location = useLocation() const menuRef = useRef(null)"";";''"
 import _React from';react' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(') const location = useLocation() const menuRef = useRef(null)'';';
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import _React from';react' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(') const location = useLocation() const menuRef = useRef(null)'';';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -9,6 +10,8 @@
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {ContractTemplate} from "@/types/contracts";
 import {Button} from "@/components/ui/button";
@@ -17,6 +20,7 @@ import {useContractTemplates} from "@/hooks/useContractTemplates";
 import {Card, CardContent} from "@/components/ui/card";
 import {Separator} from "@/components/ui/separator";
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {useState} from "react";
 <<<<<<< HEAD
@@ -131,6 +135,9 @@ interface TemplateListProps {
 =======
 import {useState} from "react";  if (isLoading) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {useState} from "react";  if (isLoading) {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
       <div className="flex justify-center items-center py-8">;
         <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
@@ -151,6 +158,7 @@ import {useState} from "react";  if (isLoading) {;
     <div className="space-y-3">;
       {templates && templates.map((template) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Card key={template && template.id} className={template && template.is_default ? "border-zion-purple" : ""}>;
 =======
   if (!templates && templates.length) {;
@@ -163,6 +171,9 @@ import {useState} from "react";  if (isLoading) {;
 =======
         <Card key={template && template.id} className={template && template.is_default ? "border-zion-purple" : ""}>;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        <Card key={template && template.id} className={template && template.is_default ? "border-zion-purple" : ""}>;}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { ContractTemplate } from "@/types/contracts",;
 import { Button } from "@/components/ui/button",;
@@ -202,10 +213,13 @@ interface TemplateListProps {
   onSelect: (template: ContractTemplate) => void,
   onEdit: (template: ContractTemplate) => void
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const handleSetDefault = async (templateId: string) => {
     await setDefaultTemplate.mutateAsync(templateId)
@@ -242,10 +256,13 @@ interface TemplateListProps {
                     <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;
                   )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>
                 <p className="text-xs text-muted-foreground">
                   Last updated: {new Date(template.updated_at).toLocaleDateString()}
@@ -270,6 +287,7 @@ interface TemplateListProps {
               </div>
             </div>
             <Separator className="my-3" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -301,6 +319,8 @@ interface TemplateListProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               className="w-full"
             >
               Use This Template
@@ -320,6 +340,7 @@ interface TemplateListProps {
             <AlertDialogCancel>Cancel</AlertDialogCancel>
             <AlertDialogAction
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+<<<<<<< HEAD
 <<<<<<< HEAD
               onClick={handleDeleteConfirm}
 <<<<<<< HEAD
@@ -504,6 +525,9 @@ if ( {) {
 =======
               onClick={handleDeleteConfirm}            >;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              onClick={handleDeleteConfirm}            >;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Use This Template;
             </Button>;
           </CardContent>;
@@ -519,6 +543,7 @@ if ( {) {
       </AlertDialog>;
 
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -600,3 +625,6 @@ if (isLoading) {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

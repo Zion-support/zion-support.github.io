@@ -571,11 +571,14 @@ if ( {) {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (error) {;
       console.error("Error fetching partners:", error),;
       toast({;
@@ -610,11 +613,14 @@ if ( {) {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     setFilteredPartners(filtered)
@@ -698,6 +704,7 @@ if ( {) {
         description: "Failed to update partner settings"
         variant: "destructive"})
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
   }
   const getAudienceSizeLabel = (size: string) => {
@@ -712,6 +719,8 @@ if ( {) {
   }
   };
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   };
 
@@ -780,6 +789,7 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   },
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -791,6 +801,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'pending':
@@ -802,6 +814,7 @@ if ( {) {
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -811,6 +824,8 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const getFraudFlagBadge = (flags: number = 0) => {
     if (flags === 0) return null
       case 'rejected':;
@@ -1058,6 +1073,7 @@ if ( {) {
                 partners={filtered_partners}
                 is_loading={is_loading}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -1066,6 +1082,8 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
@@ -1190,7 +1208,10 @@ if ( {) {
                     variant="destructive" 
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
               <div className="grid grid-cols-2 gap-2">;
                 <div>;
@@ -1352,11 +1373,14 @@ function PartnerTable({
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

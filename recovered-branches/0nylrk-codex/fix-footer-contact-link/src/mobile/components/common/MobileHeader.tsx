@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -20,10 +21,13 @@ import { ChevronLeft, Bell, Settings } from "lucide-react",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import {ChevronLeft, Bell, Settings} from "lucide-react";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {Button} from "@/components/ui/button";
 <<<<<<< HEAD
@@ -56,10 +60,14 @@ interface MobileHeaderProps {
 =======
 import {Button} from "@/components/ui/button";  showBack?: boolean;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {Button} from "@/components/ui/button";  showBack?: boolean;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   showNotifications?: boolean;
   showSettings?: boolean;
   className?: string;
   onNotificationsClick?: () => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { cn } from "@/lib/utils",
@@ -69,6 +77,8 @@ import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   onSettingsClick?: () => void;
 }
   onSettingsClick?: () => void;
@@ -82,6 +92,7 @@ import { Button } from "@/components/ui/button",
   onNotificationsClick;
   onSettingsClick}: MobileHeaderProps) {;
   const navigate = useNavigate();
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
 <<<<<<< HEAD
@@ -100,11 +111,15 @@ interface MobileHeaderProps {
 =======
   return (interface MobileHeaderProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (interface MobileHeaderProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   title: string,
   showBack?: boolean,
   showNotifications?: boolean,
   showSettings?: boolean,
   className?: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
   onNotificationsClick?: () => void,
 <<<<<<< HEAD
@@ -144,6 +159,9 @@ export function MobileHeader({;
 =======
   onNotificationsClick?: () => void,export function MobileHeader({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  onNotificationsClick?: () => void,export function MobileHeader({;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   title;
   showBack = false;
   showNotifications = false;
@@ -154,11 +172,14 @@ export function MobileHeader({
   title;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   title,
   showBack = false,
   showNotifications = false,
@@ -170,6 +191,7 @@ export function MobileHeader({
 
   return (
     <header className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
 <<<<<<< HEAD
@@ -209,6 +231,9 @@ export function MobileHeader({
 =======
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",              onClick={() => navigate(-1)}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",              onClick={() => navigate(-1)}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <ChevronLeft className="h-5 w-5" />
               <span className="sr-only">Back</span>
@@ -273,6 +298,7 @@ interface MobileHeaderProps {;
       <div className="flex items-center justify-between h-14 px-4">;
         <div className="flex items-center">;
 <<<<<<< HEAD
+<<<<<<< HEAD
           {showBack && (;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -324,6 +350,9 @@ interface MobileHeaderProps {;
 =======
           {showBack && (;              size="icon"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          {showBack && (;              size="icon"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               onClick={onNotificationsClick}>;
             <Button ;
               variant="ghost" ;
@@ -372,6 +401,7 @@ export /**
  */
 function MobileHeader() {
   const navigate = use_navigate ();
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -473,3 +503,6 @@ className)
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

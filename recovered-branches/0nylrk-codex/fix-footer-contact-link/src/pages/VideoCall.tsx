@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -13,6 +14,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect  } from 'react';
 import { useParams, useNavigate  } from 'react-router-dom';
 import { Header  } from '@/components/Header';
@@ -143,6 +146,7 @@ export default function VideoCall() {;
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   ]),
@@ -150,6 +154,8 @@ export default function VideoCall() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setIsJoining(true);
     // Simulate connection delay;
     setTimeout(() => {;
@@ -181,6 +187,7 @@ export default function VideoCall() {;
       toast.success("Call joined", {
         description: `You have joined meeting room ${roomId}`,
       });
+<<<<<<< HEAD
     }, 1500)
 };
 
@@ -381,6 +388,16 @@ export default function VideoCall() {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }, 1500)
+};
+
+  const handleLeaveCall = () => {;
+    setHasJoined(false);
+    toast && toast.info("Call ended", {,
+  description: "You have left the meeting";
+    });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* This button is just for demo/testing purposes */}
             <div className="flex justify-center mt-4">
               <Button
@@ -393,6 +410,7 @@ export default function VideoCall() {;
             </div>
           </div>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -445,6 +463,11 @@ export default function VideoCall() {;
       <Footer />;
     </>;  );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </main>;
+      <Footer />;
+    </>;  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
       id: 'user - 1',
@@ -454,6 +477,7 @@ export default function VideoCall() {;
     }
   ]);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -612,3 +636,6 @@ return (<> </Button> </div>) : (<div className="space-y-4" > <VideoCallRoom room
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,6 +21,9 @@ import _React from "react"; export function TalentSkeleton() { return () <div cl
 =======
 import _React from "react"; export function TalentSkeleton() { return () <div className="grid grid-cols-1 "md": grid-cols-2 lggrid-cols-3 gap-6> {Array.from({ length 6 }).map((_,i) => ( <div key="{i}" className="p-6" space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg > <div className="flex" items-center space-x-4">" <Skeleton className="w-16" h-16 rounded-full bg-zion-blue-light/20 /> <div className="flex-1" space-y-2> <Skeleton className="h-4 w-3/4 bg-zion-blue-light/20" /> <Skeleton className="h-3" w-1/2 bg-zion-blue-light/20 /> </div> </div> <Skeleton className="h-24" w-full bg-zion-blue-light/20 /> </div> ))} </div> ) } ";");} ); "export default ComponentName;"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -51,6 +55,7 @@ import _React from "react"; export function TalentSkeleton() { return () <div cl
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -90,3 +95,8 @@ import React from \"react\"; export function TalentSkeleton() { return () <div c
 const React from "react"; export function TalentSkeleton() { return () <div className="grid grid-cols-1 md: grid-cols-2 lggrid-cols-3 gap-6> {Array.from({ length 6 }).map((_,i) => ( <div key="{i}" className="p-6" space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg > <div className="flex" items-center space-x-4">" <Skeleton className="w-16" h-16 rounded-full bg-zion-blue-light/20 /> <div className="flex-1" space-y-2> <Skeleton className="h-4 w-3/4 bg-zion-blue-light/20" /> <Skeleton className="h-3" w-1/2 bg-zion-blue-light/20 /> </div> </div> <Skeleton className="h-24" w-full bg-zion-blue-light/20 /> </div> ))} </div> ) } ";");} ); "export default ComponentName;"""
 import _React from "react"; export function TalentSkeleton() { return () <div className="grid grid-cols-1 "md": grid-cols-2 lggrid-cols-3 gap-6> {Array.from({ length 6 }).map((_,i) => ( <div key="{i}" className="p-6" space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg > <div className="flex" items-center space-x-4">" <Skeleton className="w-16" h-16 rounded-full bg-zion-blue-light/20 /> <div className="flex-1" space-y-2> <Skeleton className="h-4 w-3/4 bg-zion-blue-light/20" /> <Skeleton className="h-3" w-1/2 bg-zion-blue-light/20 /> </div> </div> <Skeleton className="h-24" w-full bg-zion-blue-light/20 /> </div> ))} </div> ) } ";");} ); "export default ComponentName;"
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import React from \"react\"; export function TalentSkeleton() { return () <div className=\"grid grid-cols-1 \"md\": grid-cols-2 lggrid-cols-3 gap-6> {Array.from({ length 6 }).map((_,i) => ( <div key=\"{i}\" className=\"p-6\" space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg > <div className=\"flex\" items-center space-x-4\">\" <Skeleton className=\"w-16\" h-16 rounded-full bg-zion-blue-light/20 /> <div className=\"flex-1\" space-y-2> <Skeleton className=\"h-4 w-3/4 bg-zion-blue-light/20\" /> <Skeleton className=\"h-3\" w-1/2 bg-zion-blue-light/20 /> </div> </div> <Skeleton className=\"h-24\" w-full bg-zion-blue-light/20 /> </div> ))} </div> ) } \";\");} ); \"export default ComponentName;\"
+const React from "react"; export function TalentSkeleton() { return () <div className="grid grid-cols-1 md: grid-cols-2 lggrid-cols-3 gap-6> {Array.from({ length 6 }).map((_,i) => ( <div key="{i}" className="p-6" space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg > <div className="flex" items-center space-x-4">" <Skeleton className="w-16" h-16 rounded-full bg-zion-blue-light/20 /> <div className="flex-1" space-y-2> <Skeleton className="h-4 w-3/4 bg-zion-blue-light/20" /> <Skeleton className="h-3" w-1/2 bg-zion-blue-light/20 /> </div> </div> <Skeleton className="h-24" w-full bg-zion-blue-light/20 /> </div> ))} </div> ) } ";");} ); "export default ComponentName;"""
+import _React from "react"; export function TalentSkeleton() { return () <div className="grid grid-cols-1 "md": grid-cols-2 lggrid-cols-3 gap-6> {Array.from({ length 6 }).map((_,i) => ( <div key="{i}" className="p-6" space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg > <div className="flex" items-center space-x-4">" <Skeleton className="w-16" h-16 rounded-full bg-zion-blue-light/20 /> <div className="flex-1" space-y-2> <Skeleton className="h-4 w-3/4 bg-zion-blue-light/20" /> <Skeleton className="h-3" w-1/2 bg-zion-blue-light/20 /> </div> </div> <Skeleton className="h-24" w-full bg-zion-blue-light/20 /> </div> ))} </div> ) } ";");} ); "export default ComponentName;"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

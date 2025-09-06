@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -8,6 +9,8 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useFetchResume  } from './useFetchResume';
 import { useResumeActions } from './useResumeActions';
 export function useResumeBasic() {
@@ -16,6 +19,7 @@ export function useResumeBasic() {
   const fetchResumeOperations = useFetchResume();
   const resumeActions = useResumeActions();
   return {
+<<<<<<< HEAD
 <<<<<<< HEAD
     // From useFetchResume
 <<<<<<< HEAD
@@ -79,6 +83,9 @@ export function useResumeBasic() {;
 =======
     // From useFetchResume    error: fetchResumeOperations && fetchResumeOperations.error || resumeActions && resumeActions.error;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    // From useFetchResume    error: fetchResumeOperations && fetchResumeOperations.error || resumeActions && resumeActions.error;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     resume: fetchResumeOperations && fetchResumeOperations.resume;
     fetchResume: fetchResumeOperations && fetchResumeOperations.fetchResume;
     

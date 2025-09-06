@@ -25,7 +25,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 '\"export\": function HireNowCTA({ talentName,hourlyRate,onHire }) {\' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ \"projectDescription\": \',\"budget\": \',\',\"startDate\": \',\"message\": \'})\' const handleSubmit = e => {\''\';\''\"";
 
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 '\"export\": function HireNowCTA({ talentName,hourlyRate,onHire }) {\' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ \"projectDescription\": \',\"budget\": \',\',\"startDate\": \',\"message\": \'})\' const handleSubmit = e => {\''\';\''\"";
 '\"export\": function HireNowCTA({ talentName,hourlyRate,onHire }) {\' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ \"projectDescription\": \',\"budget\": \',\',\"startDate\": \',\"message\": \'})\' const handleSubmit = e => {\''\';\''\"";
 :src.disabled/components/profile/HireNowCTA.js.jsx

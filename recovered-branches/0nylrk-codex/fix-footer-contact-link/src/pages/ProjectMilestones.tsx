@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -14,6 +15,8 @@ import React from 'react';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { SEO  } from '@/components/SEO';
 import { AppHeader  } from '@/layout/AppHeader';
 import { Footer  } from '@/components/Footer';
@@ -58,6 +61,7 @@ import { AppHeader } from '@/layout/AppHeader',
 import { Footer } from '@/components/Footer',
 import { ProtectedRoute } from '@/components/ProtectedRoute',
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent',
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -86,6 +90,9 @@ function ProjectMilestones() {
 =======
 import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent',function ProjectMilestones() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent',function ProjectMilestones() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <ProtectedRoute>
       <>
@@ -103,6 +110,7 @@ import { ProjectMilestonesContent } from '@/components/projects/milestones/Proje
 
         <SEO
           title="Payment Milestones | Zion AI Marketplace"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           description="Manage project payment milestones and deliverables"
@@ -127,6 +135,8 @@ function ProjectMilestones() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           description="Manage project payment milestones and deliverables"
 import React from 'react';
 import {SEO} from '@/components / SEO';
@@ -145,6 +155,7 @@ function ProjectMilestones() {
           title="Payment Milestones | Zion AI Marketplace";
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -179,6 +190,8 @@ export default ProjectMilestones;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -186,6 +199,7 @@ export default ProjectMilestones;
 
 ;
 export default ProjectMilestones;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -197,3 +211,5 @@ export default ProjectMilestones;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

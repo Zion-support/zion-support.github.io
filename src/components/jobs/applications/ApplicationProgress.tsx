@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface ApplicationProgressProps {
 
 <<<<<<< HEAD
@@ -8,10 +9,24 @@ import { cn } from "@/lib/utils",
 =======
   status: ApplicationStatus
 
+=======
+import { ApplicationStatus } from '@/types/jobs';
+import { Progress } from '@/components/ui/progress';
+import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
+import { cn } from '@/lib/utils';
+
+import { ApplicationStatus } from "@/types/jobs",
+import { Progress } from "@/components/ui/progress";
+import { CheckCircle2, Circle, CircleDot } from 'lucide-react'
+import { cn } from "@/lib/utils";
+interface ApplicationProgressProps {
+  status: ApplicationStatus;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   className?: string
 }
 export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
   // Define the progress value based on status
+<<<<<<< HEAD
 
   const getProgressValue = () => {
 <<<<<<< HEAD
@@ -105,11 +120,17 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const statusRank_ = statusRank[status],
 
+<<<<<<< HEAD
   const currentRank = statusRank[current],
   const statusRank_ = statusRank[status],
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+=======
+  const getProgressValue = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (currentRank < statusRank_) {
     // This step is complete
     return <CheckCircle2 className="h-4 w-4 text-green-500" />
@@ -281,9 +302,18 @@ if ( {) {
     // This step is upcoming
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  }
+
+}"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

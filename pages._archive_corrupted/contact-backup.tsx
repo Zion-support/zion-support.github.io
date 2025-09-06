@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -63,11 +64,15 @@ import React from "react" import type { NextPage } from 'next' const Contact: Ne
 =======
 import type { NextPage } from 'next'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import type { NextPage } from 'next'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default Contact
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact
 import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact
@@ -132,3 +137,6 @@ import React from "react" import type { NextPage } from 'next' const Contact: Ne
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

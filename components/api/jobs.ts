@@ -1,8 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs-extra";
+import path from "path";
+const JOBS_FILE = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -32,6 +41,7 @@ export default async function handler(
     return res.status(500).json({ error: 'Failed to load jobs' });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") {;
     res.setHeader("Allow", "GET");
@@ -47,6 +57,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== "GET") {
     res && res.setHeader("Allow", "GET");
@@ -73,6 +85,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -85,6 +98,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 };
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
     const jobs = (await fs && fs.pathExists(JOBS_FILE)) ? await fs && fs.readJSON(JOBS_FILE) : [];
@@ -133,5 +148,11 @@ if ( {) {
     return res.status (200).json ({ jobs });
   } catch (e) {
     return res.status (500).json ({ error: "Failed to load jobs" });
+=======
+    return res.status(200).json({ jobs })
+  } catch (e) {
+    return res.status(500).json({ error: "Failed to load jobs" })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

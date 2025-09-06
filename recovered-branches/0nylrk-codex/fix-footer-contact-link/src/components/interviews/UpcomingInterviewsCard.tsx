@@ -24,6 +24,7 @@ import {Avatar} from "@/components/ui/avatar";
 export function UpcomingInterviewsCard() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,6 +51,10 @@ import React, { useEffect, useState } from "react",
 
   const { fetchInterviews } = useInterviews();import React, { useEffect, useState } from "react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  const { fetchInterviews } = useInterviews();import React, { useEffect, useState } from "react",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { useInterviews } from "@/hooks/useInterviews",
@@ -68,6 +73,7 @@ export function UpcomingInterviewsCard() {
   const { fetchInterviews } = useInterviews(),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(true),
@@ -83,6 +89,8 @@ export function UpcomingInterviewsCard() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(true),
 
@@ -93,6 +101,7 @@ export function UpcomingInterviewsCard() {
         const interviews = await fetchInterviews();
         const now = new Date();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -199,11 +208,14 @@ function UpcomingInterviewsCard() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     },
 
     loadInterviews()
   }, []),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -239,6 +251,8 @@ function UpcomingInterviewsCard() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -308,6 +322,7 @@ export function UpcomingInterviewsCard() {;
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>;
 <<<<<<< HEAD
 =======
@@ -363,6 +378,9 @@ export function UpcomingInterviewsCard() {;
 =======
               </div>;    return (    return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              </div>;    return (    return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
           <CardTitle className="text-lg flex items-center">;
@@ -391,6 +409,7 @@ export function UpcomingInterviewsCard() {;
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
           {upcomingInterviews.map(interview => {
 <<<<<<< HEAD
@@ -540,6 +559,9 @@ export function UpcomingInterviewsCard() {;
 =======
           {upcomingInterviews.map(interview => {                    </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          {upcomingInterviews.map(interview => {                    </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   )}
                 </Avatar>;
                 <div className="flex-1">;
@@ -558,6 +580,7 @@ export function UpcomingInterviewsCard() {;
                 </div>;
               </div>;
             );
+<<<<<<< HEAD
 <<<<<<< HEAD
           })}
 
@@ -750,3 +773,6 @@ return (<img src= {
 =======
           })}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          })}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

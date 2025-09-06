@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -12,11 +13,14 @@
 import React from 'react';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button  } from '@/components/ui/button';
 import { useNavigate  } from 'react-router-dom';
 import { XCircle } from 'lucide-react';
 export default function PaymentCanceled() {
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -42,12 +46,15 @@ export default function PaymentCanceled() {;
 =======
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {XCircle} from 'lucide-react';
 export default function PaymentCanceled() {;
   const navigate = useNavigate();
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',
@@ -95,6 +102,8 @@ export default function PaymentCanceled() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   return (
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {XCircle} from 'lucide-react';
@@ -107,7 +116,10 @@ import { useNavigate } from 'react-router-dom',
 import { XCircle } from 'lucide-react',
 export default function PaymentCanceled() {
   const navigate = useNavigate(),  return (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
         <div className="inline-flex h-12 w-12 rounded-full bg-red-100 mb-4 items-center justify-center">
@@ -170,6 +182,9 @@ export default function PaymentCanceled() {
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 <<<<<<< HEAD
 }
@@ -348,6 +363,7 @@ function PaymentCanceled() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+<<<<<<< HEAD
 
 
 
@@ -360,6 +376,8 @@ function PaymentCanceled() {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ;
     </div>);
@@ -385,7 +403,10 @@ function PaymentCanceled() {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

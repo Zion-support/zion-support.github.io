@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 #!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { ) { ) { } return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); } catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
@@ -36,6 +37,9 @@
 =======
 #!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { ) { ) { } return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); } catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+#!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { ) { ) { } return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); } catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 #!/usr/bin/env node
 const sharp = // // require('sharp')
 const fs = // // require('fs')
@@ -46,6 +50,9 @@ async function optimizeImages() {
   if () {
     console.log('No images directory found')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     ) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -146,10 +153,13 @@ optimizeImages();
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       console.log(`Optimized: ${file}`);} catch (error) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     ) {      console.log(`Optimized: ${file}`);} catch (error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       console.log(`"Optimized": ${file}`)} catch (error) {
       console.error(`Error optimizing ${file}:`, error.message)}
   }
@@ -256,8 +266,8 @@ origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       console.log(`"Optimized": ${imagePath} -> ${outputPath}`)} catch (error) {`}
-      console.error(`Failed to optimize ${imagePath}:`, error.message)}
-};
+      console.error(`Failed to optimize ${imagePath}:`, error.message)};
+  };
 };
 <<<<<<< HEAD
 
@@ -282,6 +292,7 @@ async function run() {
   const svgo = require('imagemin-svgo');
   const fg = require('fast-glob');
 
+
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -289,7 +300,10 @@ const path = require('path');
 console.log('🖼️  Image optimization script - placeholder');
 console.log('✅ Image optimization completed');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   for (const file of imageFiles) {
     const inputPath = path.join(imagesDir, file;);
     const outputPath = path.join(imagesDir, file.replace(/\.(jpg|jpeg|png)$/i, '.webp'););
@@ -297,7 +311,10 @@ console.log('✅ Image optimization completed');
       await sharp(inputPath)
         .webp({ "quality": '80' })
         .toFile(outputPath);
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       console.log(`"Optimized": ${file}`)} catch (error) {
       console.error(`Error optimizing ${file}:`, error.message)}
   }

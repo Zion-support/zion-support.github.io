@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -16,6 +17,8 @@ import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 interface TokenRequest {
@@ -26,6 +29,7 @@ interface TokenRequest {
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.0";
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -46,6 +50,9 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface TokenRequest {
   userId: string,
   amount: number,
@@ -55,6 +62,7 @@ interface TokenRequest {
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
 const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, serviceKey),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -124,6 +132,8 @@ serve(async (req) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   if (action === 'earn') {
     return await changeBalance(userId, amount, 'earn', reason)
@@ -153,6 +163,7 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
     const { error } = await supabase
       .from('wallets')
       .insert({ user_id: userId, balance });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -388,6 +399,8 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { serve } from "https://deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.38.0",;
 ;
@@ -482,6 +495,7 @@ if (wallet) {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 ;
@@ -489,3 +503,5 @@ if (wallet) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

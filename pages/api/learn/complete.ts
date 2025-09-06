@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,10 +64,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST'),
     return res.status(405).end('Method Not Allowed')
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const usersPath = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
   const { userId = 'demo-user', courseId, enableBoost } = req.body |{}
   if (!courseId) return res.status(400).json({ error: 'courseId required' })
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -213,6 +223,8 @@ if (user.boostInSearch = enable_boost, ) {
     return res.status(500).json({ error: e?.message ?? 'Failed to complete course' })
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -389,7 +401,55 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    const users = readJson(usersPath);
+    const courses = readJson(coursesPath);
+    const course = courses.find((c: any) => c.id === courseId);
+    if (!course) return res.status(404).json({ error: 'Course not found' });
+
+const user = users[userId] || {
+      userId,
+      name: userId,
+      slug: userId,
+      certifications: [],
+      badges: [],
+      boostInSearch: false,
+      progress: {},
+    };
+    if (!user.certifications.includes(courseId))
+      user.certifications.push(courseId);
+    if (!user.badges.includes(course.certificationBadge))
+      user.badges.push(course.certificationBadge);
+    if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost;
+
+    // Mark progress complete
+    user.progress[courseId] = {
+      completed: true,
+      percent: 100,
+      completedLessons: (course.lessons || []).map((l: any) => l.id),
+    };
+
+    users[userId] = user;
+    writeJson(usersPath, users);
+    return res.status(200).json({ ok: true, user });
+  } catch (e: any) {
+    return res
+      .status(500)
+      .json({ error: e?.message ?? 'Failed to complete course' });
+  }
+
+}}
+    return res.status(200).json({ ok: true, user })
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message ?? 'Failed to complete course' })
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

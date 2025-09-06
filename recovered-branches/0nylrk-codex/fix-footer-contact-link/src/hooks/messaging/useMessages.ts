@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,10 +47,18 @@ import { supabase  } from '@/integrations/supabase/client';
 import { Message, Conversation  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';// Allow either UserProfile or UserDetails
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import { UserProfile, UserDetails  } from '@/types/auth';
+import { supabase  } from '@/integrations/supabase/client';
+import { Message, Conversation  } from '@/types/messaging';
+import { toast } from '@/hooks/use-toast';// Allow either UserProfile or UserDetails
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle message operations
+<<<<<<< HEAD
 <<<<<<< HEAD
  */
 <<<<<<< HEAD
@@ -77,6 +86,9 @@ export function use_messages (
 =======
  */  user: UserWithProfile;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+ */  user: UserWithProfile;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   active_conversation: Conversation | null;
   active_messages: Message[];
   setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
@@ -90,6 +102,7 @@ export function use_messages (
         await markAsRead(conversationId)
       }
     } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       console && console.error('Error fetching messages:', error)
 <<<<<<< HEAD
@@ -187,6 +200,9 @@ import { UserProfile, UserDetails } from '@/types/auth',;
 =======
       console && console.error('Error fetching messages:', error)import { UserProfile, UserDetails } from '@/types/auth',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      console && console.error('Error fetching messages:', error)import { UserProfile, UserDetails } from '@/types/auth',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase } from '@/integrations/supabase/client',;
 import { Message, Conversation } from '@/types/messaging',;
 import { toast } from '@/hooks/use-toast',;
@@ -229,6 +245,7 @@ export function useMessages(;
         await markAsRead(conversationId);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -239,6 +256,8 @@ export function useMessages(;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
     } catch (error) {
       console.error('Error fetching messages:', error)
@@ -250,6 +269,7 @@ export function useMessages(;
 
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -296,6 +316,8 @@ export function useMessages(;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       if (!conversation) {
         throw new Error('Conversation not found')
       }
@@ -317,6 +339,7 @@ export function useMessages(;
       // Update active messages if this conversation is selected
       if (activeConversation && activeConversation.id === conversationId) {
         setActiveMessages(prev => [...prev, data as Message])
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
 <<<<<<< HEAD
@@ -346,6 +369,9 @@ export function useMessages(;
 =======
       }  },;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      }  },;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   /**;
    * Send a message to an existing conversation;
    */;
@@ -374,6 +400,7 @@ export function useMessages(;
       // Update active messages if this conversation is selected;
       if (activeConversation && activeConversation.id === conversationId) {;
         setActiveMessages(prev => [...prev, data as Message]);
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
 <<<<<<< HEAD
@@ -483,6 +510,12 @@ export function useMessages(;
       await fetchConversations(),
               .eq('recipient_id', user && user.id)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      }      
+      // Update conversations list
+      await fetchConversations(),
+              .eq('recipient_id', user && user.id)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         .eq('read', false);
       if (error) throw error;
       // Update active messages to show they've been read
@@ -505,6 +538,7 @@ export function useMessages(;
   }
   return {
     loadMessages;
+<<<<<<< HEAD
 <<<<<<< HEAD
     sendMessage;
 <<<<<<< HEAD
@@ -716,6 +750,9 @@ if ( {) {
 =======
     sendMessage;  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    sendMessage;  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   /**;
   * Mark messages as read;

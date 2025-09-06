@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
@@ -498,6 +499,24 @@ const features = [
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+const benefits = [
+  'Protection against cyber threats and attacks',
+  'Compliance with industry regulations',
+  'Reduced risk of data breaches',
+  'Enhanced customer trust and confidence',
+  'Lower insurance costs and liability',
+  'Peace of mind with 24/7 monitoring'
+];
+export default function CybersecurityServices() {
+  return (
+    <Layout
+      title="Cybersecurity Services - Zion Tech Group"
+      description="Comprehensive cybersecurity services to protect your business from threats. Advanced security solutions, compliance, and 24/7 monitoring."
+      keywords="cybersecurity, security services, data protection, threat monitoring, compliance, security audit">;
+      <div className="min-h-screen bg-white">;
+        {/* Hero Section */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <section className="bg-gradient-to-r from-red-600 to-orange-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -506,6 +525,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Protect your business with comprehensive cybersecurity solutions.
+<<<<<<< HEAD
                 Advanced threat protection, compliance, and 24/7 monitoring.
 =======
 =======
@@ -622,6 +642,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>
         </section>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                Advanced threat protection, compliance, and 24/7 monitoring.              </p>
+            </motion.div>
+          </div>
+        </section>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -639,6 +665,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <feature.icon className="w-6 h-6 text-red-600" />
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -654,6 +681,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </p>
                 </div>
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <feature.icon className="w-6 h-6 text-red-600" />                  </div>
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
@@ -682,6 +711,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -703,6 +733,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                       <span className="text-gray-700">{benefit}</span>
                     </li>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   ))}
                 </ul>
               </div>
@@ -720,6 +752,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -803,3 +836,5 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

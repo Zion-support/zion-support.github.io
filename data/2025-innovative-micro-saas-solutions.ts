@@ -1,9 +1,27 @@
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export const innovativeMicroSaasSolutions2025 = [
 
   {
 
+=======
+id: 'ai-powered-customer-feedback-analyzer',
+    name: 'AI-Powered Customer Feedback Analyzer',
+    description:
+      'Intelligent platform that automatically analyzes customer feedback from multiple channels, providing actionable insights and sentiment analysis to improve customer experience.'
+      'Multi-channel feedback collection (email, social media, surveys, reviews)'
+      'AI-powered sentiment analysis with 95.8% accuracy'
+      'Real-time feedback processing and alerts'
+      'Automated insight generation and recommendations'
+      'Customer satisfaction trend analysis'
+      'Competitor feedback monitoring'
+      'Custom dashboard and reporting'
+      'Integration with CRM and support systems'
+      'Multi-language support'
+      'API access for custom integrations'
+    ]
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     pricing: {
       starter: {
         price: 49
@@ -574,6 +592,7 @@ export const innovativeMicroSaasSolutions2025 = [
     ]
     integrations: [
 <<<<<<< HEAD
+<<<<<<< HEAD
       'CRM systems'
       'E-commerce platforms'
       'Analytics tools'
@@ -610,11 +629,19 @@ export const innovativeMicroSaasSolutions2025 = [
       'E-commerce platforms',
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+      'CRM systems',
+      'E-commerce platforms',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'Analytics tools',
       'Social media platforms',
       'Marketing tools',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -891,6 +918,7 @@ export const innovativeMicroSaasSolutions2025 = [;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 ];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
@@ -898,3 +926,11 @@ export const innovativeMicroSaasSolutions2025 = [;
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'];
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations']
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
+  },
+];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

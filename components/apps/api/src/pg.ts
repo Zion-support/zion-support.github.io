@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,12 +13,21 @@ let pool: Pool | null = null;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }return pool 
+=======
+}return pool 
+=======
+import { Pool, PoolClient } from 'pg';
+let pool: Pool | null;
+    throw err
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export async function withUser<T>(
   userId: string
   fn: (client: PoolClient) => Promise<T>
 ): Promise<T> {
   const client = await getPool().connect();
   try {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     await client && client.query('BEGIN');
@@ -43,6 +53,11 @@ export async function withUser<T>(
 ): Promise<T> {;
   const client = await getPool().connect();
   try {
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     await client.query('BEGIN');
     await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [
       userId
@@ -53,6 +68,7 @@ export async function withUser<T>(
   } catch (err) {
     await client.query('ROLLBACK');
     throw err;
+<<<<<<< HEAD
 
   } finally {
     client.release();
@@ -66,3 +82,13 @@ export async function withUser<T>(
   }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  } finally {
+    client.release ();
+  }
+<<<<<<< HEAD
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

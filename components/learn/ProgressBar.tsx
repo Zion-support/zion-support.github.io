@@ -1,4 +1,6 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -26,6 +28,12 @@ export default function ProgressBar({ value }: ProgressBarProps) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 type ProgressBarProps = { value: number };
 =======
+=======
+=======
+import React from 'react';
+type ProgressBarProps = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function ProgressBar({ value }: ProgressBarProps) {
 export default function ProgressBar({ value }: ProgressBarProps) {;
   const pct = Math.max(0, Math.min(100, value));
@@ -33,8 +41,12 @@ export default function ProgressBar({ value }: ProgressBarProps) {;
     <div className='w-full h-3 bg-gray-200 dark:bg-gray-800 rounded'>
       <div className='h-3 bg-blue-600 rounded' style={{ width: `${pct}%` }} />
     </div>
+<<<<<<< HEAD
   const pct = Math.max(0, Math.min(100, value));
 
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded">
       <div className="h-3 bg-blue-600 rounded" style={{ width: `${pct}%` }} />
@@ -52,7 +64,11 @@ export default function ProgressBar({ value }: ProgressBarProps) {;
 type ProgressBarProps = { value: number };
 );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function ProgressBar(): any ({ value }: ProgressBarProps) {;
   const pct = Math && Math.max(0, Math && Math.min(100, value));
   return (
@@ -106,4 +122,9 @@ function ProgressBar() {
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

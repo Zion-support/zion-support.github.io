@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -9,6 +10,9 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -24,10 +28,13 @@ import {
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
 } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const spaceCapabilities = [
     {
       title: 'Space Exploration'
@@ -58,6 +65,7 @@ import {
       title: 'Sustainable Development'
       description: 'Eco-friendly space infrastructure'
       icon: <Heart className="w-6 h-6" />
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from 'react',
@@ -67,6 +75,8 @@ import SEO from '../components / SEO',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import Layout from '../components/layout/Layout',;
 import SEO from '../components/SEO',;
@@ -79,6 +89,7 @@ import {
   Video, Headphones, Code, Database, Network, Server, 
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -94,6 +105,11 @@ import SEO from '../components/SEO',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import SEO from '../components/SEO',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion',
 import {
   Rocket, Brain, Shield, Zap, Target, Atom, Cpu,
@@ -103,6 +119,7 @@ import {
   Video, Headphones, Code, Database, Network, Server,
   Monitor, Smartphone, Camera, Gamepad2, Palette,
   Music, Film, BookOpenCheck, Building, MessageCircle,
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <Layout>
@@ -188,11 +205,29 @@ import {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
 } from 'lucide-react',
 const SpaceTechnologyPage: React.FC = () => {
   const spaceServices = [
+<<<<<<< HEAD
 
+=======
+    {
+      id: 'space-resource-mining',
+      name: 'Space Resource Mining',
+      description: 'Advanced mining operations for extraterrestrial resources',
+      features: ['Asteroid MiningResource ExtractionProcessing AutomationTransport Logistics'],
+      price: '$4,999',
+      period: 'month',
+      popular: true,
+      icon: <Rocket className="w-8 h-8" />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     },
     {
       id: 'ai-powered-space-tech',
@@ -202,7 +237,11 @@ const SpaceTechnologyPage: React.FC = () => {
       price: '$3,999',
       period: 'month',
       popular: false,
+<<<<<<< HEAD
 
+=======
+      icon: <Brain className="w-8 h-8" />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     },
     {
       id: 'brain-computer-interface',
@@ -212,7 +251,11 @@ const SpaceTechnologyPage: React.FC = () => {
       price: '$3,499',
       period: 'month',
       popular: false,
+<<<<<<< HEAD
 
+=======
+      icon: <Cpu className="w-8 h-8" />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     },
     {
       id: 'autonomous-vehicle-ai',
@@ -222,7 +265,11 @@ const SpaceTechnologyPage: React.FC = () => {
       price: '$2,999',
       period: 'month',
       popular: false,
+<<<<<<< HEAD
 
+=======
+      icon: <Settings className="w-8 h-8" />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     },
     {
       id: 'quantum-space-communications',
@@ -232,7 +279,11 @@ const SpaceTechnologyPage: React.FC = () => {
       price: '$3,799',
       period: 'month',
       popular: false,
+<<<<<<< HEAD
 
+=======
+      icon: <Globe className="w-8 h-8" />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     },
     {
       id: 'space-infrastructure',
@@ -243,21 +294,30 @@ const SpaceTechnologyPage: React.FC = () => {
       period: 'month',
       popular: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       icon: <Building className="w-8 h-8" />
 <<<<<<< HEAD
+=======
+      icon: <Building className="w-8 h-8" />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ],
   const spaceCapabilities = [
     {
@@ -289,6 +349,7 @@ const SpaceTechnologyPage: React.FC = () => {
       title: 'Sustainable Development',
       description: 'Eco-friendly space infrastructure',
       icon: <Heart className="w-6 h-6" />
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -480,11 +541,14 @@ const SpaceTechnologyPage: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   ],
@@ -533,11 +597,17 @@ const SpaceTechnologyPage: React.FC = () => {
   return (
     <Layout>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  ],
+  return (
+    <Layout>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         title="Space Technology Solutions - Zion Tech Group"
         description="Revolutionary space technology solutions for the future. From resource mining to autonomous systems, explore the final frontier."
         keywords="space technology, space mining, AI space systems, brain-computer interface, autonomous vehicles, quantum space communications"
       />
       <main className="relative z-10">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -609,12 +679,18 @@ icon: <Atom className="w - 6 h - 6" />;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+        {/* Hero Section */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
@@ -634,10 +710,13 @@ icon: <Atom className="w - 6 h - 6" />;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-orange-600 bg-clip-text text-transparent">
                 Space Technology
@@ -647,12 +726,15 @@ icon: <Atom className="w - 6 h - 6" />;
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <a
                   href="/contact"
                 <a 
                   href="/contact" 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
@@ -668,9 +750,12 @@ icon: <Atom className="w - 6 h - 6" />;
                 <a
                   href="/contact"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
@@ -679,8 +764,11 @@ icon: <Atom className="w - 6 h - 6" />;
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Demo
@@ -690,6 +778,7 @@ icon: <Atom className="w - 6 h - 6" />;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -726,6 +815,8 @@ icon: <Atom className="w - 6 h - 6" />;
       </section>;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Space Capabilities */}
         <section className="py - 20 px - 4 bg - gradient - to - b from - black to - gray - 900">;
           <div className="max - w-6xl mx - auto">;
@@ -734,6 +825,7 @@ icon: <Atom className="w - 6 h - 6" />;
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -771,6 +863,8 @@ icon: <Atom className="w - 6 h - 6" />;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -783,6 +877,7 @@ icon: <Atom className="w - 6 h - 6" />;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {spaceCapabilities.map((capability, index) => (
                 <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -803,11 +898,14 @@ icon: <Atom className="w - 6 h - 6" />;
                 <motion.div;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   key={capability.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   className="bg - gradient - to - br from - gray - 800 to - gray - 900 p - 6 rounded - xl border border - gray - 700 hover:border - purple - 500 transition - all duration - 300";
@@ -845,10 +943,13 @@ icon: <Atom className="w - 6 h - 6" />;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
                     <div className="p-2 bg-purple-500/20 rounded-lg mr-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -861,11 +962,14 @@ icon: <Atom className="w - 6 h - 6" />;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </div>
                     <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
                   </div>
                   <p className="text-gray-300">{capability.description}</p>
                 </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -928,6 +1032,8 @@ icon: <Atom className="w - 6 h - 6" />;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -940,6 +1046,7 @@ icon: <Atom className="w - 6 h - 6" />;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {spaceServices.map((service, index) => (
                 <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1131,6 +1238,8 @@ icon: <Atom className="w - 6 h - 6" />;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
@@ -1141,9 +1250,12 @@ icon: <Atom className="w - 6 h - 6" />;
 
                   }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 >;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   {service.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -1154,6 +1266,7 @@ icon: <Atom className="w - 6 h - 6" />;
                   <div className="text-center mb-6">
                     <div className="inline-flex p-3 bg-purple-500/20 rounded-full mb-4">
                       {service.icon}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                 >;
@@ -1223,6 +1336,8 @@ icon: <Atom className="w - 6 h - 6" />;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1236,26 +1351,33 @@ icon: <Atom className="w - 6 h - 6" />;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                     <p className="text-gray-300 mb-4">{service.description}</p>
                     <div className="text-3xl font-bold text-purple-400 mb-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       {service.price  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1269,6 +1391,8 @@ icon: <Atom className="w - 6 h - 6" />;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <span className="text-lg text-gray-400">/{service.period}</span>
                     </div>
                   </div>
@@ -1277,6 +1401,7 @@ icon: <Atom className="w - 6 h - 6" />;
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                         {feature}
                       </li>
                     ))}
@@ -1284,6 +1409,8 @@ icon: <Atom className="w - 6 h - 6" />;
                   <a 
                     href="/contact" 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
                   </ul>
@@ -1291,10 +1418,13 @@ icon: <Atom className="w - 6 h - 6" />;
                     href="/contact" 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1306,6 +1436,7 @@ icon: <Atom className="w - 6 h - 6" />;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -1329,11 +1460,17 @@ icon: <Atom className="w - 6 h - 6" />;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                  </ul>
+                  <a
+                    href="/contact"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300"
                   >
                     Get Started
                   </a>
                 </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -1389,6 +1526,8 @@ icon: <Atom className="w - 6 h - 6" />;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -1413,9 +1552,12 @@ icon: <Atom className="w - 6 h - 6" />;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 Ready to Explore Space?
@@ -1425,6 +1567,7 @@ icon: <Atom className="w - 6 h - 6" />;
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <a
                   href="/contact"
                 <a 
@@ -1432,6 +1575,8 @@ icon: <Atom className="w - 6 h - 6" />;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Space Journey
@@ -1447,11 +1592,14 @@ icon: <Atom className="w - 6 h - 6" />;
                 <a
                   href="/contact"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
@@ -1461,18 +1609,24 @@ icon: <Atom className="w - 6 h - 6" />;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
                 </a>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>
             </motion.div>
           </div>
@@ -1481,6 +1635,9 @@ icon: <Atom className="w - 6 h - 6" />;
     </Layout>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 export default SpaceTechnologyPage;
 
@@ -1489,11 +1646,14 @@ export default SpaceTechnologyPage,;
 ;
 ;
 export default SpaceTechnologyPage,
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >;
               <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 500 bg - clip - text text - transparent">;
                 Ready to Explore Space?;
@@ -1511,9 +1671,12 @@ export default SpaceTechnologyPage,
                 <a;
                   href="/contact";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                   className="px - 8 py - 4 border - 2 border - purple - 400 text - purple - 400 font - semibold rounded - lg hover:bg - purple - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >;
                   Schedule Consultation;
                 </a>;
@@ -1523,21 +1686,28 @@ export default SpaceTechnologyPage,
         </section>;
       </main>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>;
   );
 },;
 export default SpaceTechnologyPage;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </Layout>);
 },
 export default SpaceTechnologyPage,
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 },
 
 =======
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -1551,3 +1721,20 @@ export default SpaceTechnologyPage,
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
+import { Rocket, Brain, Shield, Zap, Target, Atom, Cpu;
+  Lock, Cloud, Settings, Eye, Award, Clock, Heart;
+  Lightbulb, Search, Grid, List, TrendingUp;
+  User, ShoppingCart, Bell, HelpCircle, FileText;
+  Video, Headphones, Code, Database, Network, Server;
+  Monitor, Smartphone, Camera, Gamepad2, Palette;
+  Music, Film, BookOpenCheck, Building, MessageCircle;
+  Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
+ } from 'lucide-react';
+const SpaceTechnologyPage: React.FC;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +11,8 @@
 import React from 'react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowLeft, Play, CheckCircle, ArrowRight, Book } from 'lucide-react';
@@ -19,6 +22,7 @@ export default function FirstSteps() {
     "email": 'kleber@ziontechgroup.com',
     "address": '364 E Main St STE 1008 Middletown DE 19709',
     "site": 'https://ziontechgroup.com'
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
   return (
@@ -285,6 +289,8 @@ import React from 'react'; import Head from 'next/head'; import Link from 'next/
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -554,5 +560,9 @@ export default function FirstSteps() {;
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
           {/* Next Steps */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          {/* Next Steps */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

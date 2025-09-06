@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 =======
 import { getUserFromRequest } from '../../../utils/auth';
@@ -38,7 +41,17 @@ import { getUserFromRequest } from '../../../utils/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = getUserFromRequest(req)
   if (!user) return res.status(200).json({ user: null })
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+import { getUserFromRequest } from '../../utils/auth';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const user = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   res.status(200).json({ user })
 <<<<<<< HEAD
 <<<<<<< HEAD

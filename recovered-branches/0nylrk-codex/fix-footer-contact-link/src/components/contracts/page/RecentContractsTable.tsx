@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -21,6 +22,8 @@ interface Contract {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   title: string;
   client: string;
@@ -29,6 +32,7 @@ interface Contract {
   isSmartContract: boolean
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 interface RecentContractsTableProps {;
@@ -48,6 +52,9 @@ import { Button } from "@/components/ui/button",
 =======
 interface RecentContractsTableProps {;import { Button } from "@/components/ui/button",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+interface RecentContractsTableProps {;import { Button } from "@/components/ui/button",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface Contract {
   id: string,
   title: string,
@@ -67,6 +74,7 @@ interface Contract {;
 ;
 interface RecentContractsTableProps {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   contracts: Contract[];
   onViewContract: (contractId: string) => void
@@ -137,6 +145,10 @@ export function RecentContractsTable({ contracts, onViewContract } RecentContrac
 interface RecentContractsTableProps {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+interface RecentContractsTableProps {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <>;
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>;
       <div className="overflow-x-auto rounded-md border">;
@@ -158,6 +170,7 @@ interface RecentContractsTableProps {;
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm">;
                   <Button
                     variant="ghost"
+<<<<<<< HEAD
 <<<<<<< HEAD
                     size="sm"
 =======
@@ -247,6 +260,9 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
 =======
                     size="sm"                  <Button
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    size="sm"                  <Button
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     variant="ghost"
                     size="sm"
     </>
@@ -333,6 +349,7 @@ function RecentContractsTable() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
                   <Button ;
@@ -345,11 +362,14 @@ function RecentContractsTable() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   >;
                     View;
                   </Button>;
                 </td>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -398,6 +418,8 @@ function RecentContractsTable() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </tr>))}
           </tbody>;
         </table>;
@@ -436,6 +458,7 @@ onViewContract: (contractId: string) => void
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -443,3 +466,6 @@ onViewContract: (contractId: string) => void
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

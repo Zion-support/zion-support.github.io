@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from "next",
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -171,6 +172,13 @@ if ( {) {
           talentSlug: existing.talentSlug
           startDateIso: existing.startDateIso
           status: "ACTIVE"
+=======
+import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth";
+import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store";
+import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
+function bad(res: NextApiResponse, message: string, code;
+    return res.status(status).json({ ok: false, error: e?.message || "Server error" })
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           timeline:
             existing.paymentTerms.type === "milestone"
               ? existing.paymentTerms.milestones |[]
@@ -184,6 +192,7 @@ if ( {) {
                   uploadedAtIso: new Date().toISOString()
                 }
               ]
+<<<<<<< HEAD
             : []
           notes: []
         }
@@ -1112,3 +1121,45 @@ if ( {) {
 >>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+            : [],
+          notes: [],
+        };
+        saveProject(project);
+        existing.projectId = project.id;
+        saveOffer(existing);
+return res.json({ ok: true, offer: existing, project });
+      }
+
+      if (action === 'request_changes') {
+        if (user.role !== 'talent')
+          return bad(res, 'Only talent can request changes', 403);
+        existing.status = 'CHANGES_REQUESTED';
+        existing.changeRequestNote = changeRequestNote || '';
+        saveOffer(existing);
+        return res.json({ ok: true, offer: existing });
+      }
+
+      if (action === 'decline') {
+        if (user.role !== 'talent')
+          return bad(res, 'Only talent can decline', 403);
+        existing.status = 'DECLINED';
+        saveOffer(existing);
+        return res.json({ ok: true, offer: existing });
+      }
+
+      return bad(res, 'Unknown action');
+    }
+
+    return bad(res, 'Method not allowed', 405);
+  } catch (e: any) {
+    const status = e?.statusCode || 500;
+    return res
+      .status(status)
+      .json({ ok: false, error: e?.message || 'Server error' });
+  }
+
+}}
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

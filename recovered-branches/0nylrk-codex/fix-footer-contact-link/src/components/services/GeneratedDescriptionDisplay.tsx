@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -21,6 +22,8 @@ import {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import {useToast} from "@/hooks/use-toast";
@@ -29,9 +32,12 @@ import {Card, CardContent, CardHeader, CardTitle, CardFooter} from "@/components
 import {Textarea} from "@/components/ui/textarea";
 import {Check, Pencil} from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -39,6 +45,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/componen
 import { Textarea } from "@/components/ui/textarea",
 import { Check, Pencil } from "lucide-react",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -54,6 +61,8 @@ import { Check, Pencil } from "lucide-react",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -66,6 +75,7 @@ import {
 } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Check, Pencil } from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
@@ -133,6 +143,8 @@ export function GeneratedDescriptionDisplay({
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleSave = () => {;
     onSave(editedDescription);
     setIsEditing(false);
@@ -242,8 +254,11 @@ export function GeneratedDescriptionDisplay({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             )}
+<<<<<<< HEAD
 =======
             )}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { use_toast  } from '@/hooks / use - toast';
 import { Button  } from '@/components / ui / button';
 import {
@@ -257,6 +272,7 @@ import { Textarea  } from '@/components / ui / textarea';
 import { Check, Pencil  } from './lucide-react';
 interface GeneratedDescriptionDisplayProps {
   description: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   on_save: (edited_description: string) => void;
 <<<<<<< HEAD
@@ -371,6 +387,9 @@ function GeneratedDescriptionDisplay() {
 =======
   on_save: (edited_description: string) => void;            Save Changes;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  on_save: (edited_description: string) => void;            Save Changes;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </Button>;
         </CardFooter>;
       )}

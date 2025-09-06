@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -12,6 +13,8 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -28,6 +31,7 @@ import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
 import {AIListingGenerator} from "@/components/listing/AIListingGenerator";
 import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -130,10 +134,13 @@ export function ProductSubmissionForm() {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const productSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   description: z.string().min(10, "Description must be at least 10 characters"),
   price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -514,6 +521,8 @@ export function ProductSubmissionForm() {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     setIsSubmitting(true),
     
@@ -537,11 +546,14 @@ export function ProductSubmissionForm() {;
         .select('id')
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         }
       }
 
@@ -633,6 +645,7 @@ export function ProductSubmissionForm() {;
 
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -885,6 +898,9 @@ export function ProductSubmissionForm() {;
 =======
   return (    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <TabsList className="grid grid-cols-2 mb-6">;
         <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">;
           Manual Creation;
@@ -894,6 +910,7 @@ export function ProductSubmissionForm() {;
           AI-Powered Creation;
         </TabsTrigger>;
       </TabsList>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1110,6 +1127,8 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             />;
             <FormField
               control={form && form.control}
@@ -1125,6 +1144,7 @@ if ( {) {
                 <FormItem>;
                   <FormLabel>Product Title</FormLabel>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1132,6 +1152,8 @@ if ( {) {
                   <FormControl>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <Input placeholder="Enter product title" {...field} />;
                   </FormControl>;
                   <FormDescription>;
@@ -1145,6 +1167,7 @@ if ( {) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -1154,6 +1177,8 @@ if ( {) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             />;
 
             <FormField
@@ -1167,6 +1192,7 @@ if ( {) {
                     <Textarea
                       placeholder="Describe your product in detail..." 
                       className="min-h-32" 
+<<<<<<< HEAD
 <<<<<<< HEAD
                       {...field} 
 <<<<<<< HEAD
@@ -1198,6 +1224,9 @@ if ( {) {
 =======
                       {...field}                     />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                      {...field}                     />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </FormControl>;
                   <FormDescription>;
                     Provide a detailed description of what you're offering;
@@ -1213,6 +1242,7 @@ if ( {) {
                   <FormItem>;
                     <FormLabel > Price (USD)</FormLabel>;
                     <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;
 <<<<<<< HEAD
@@ -1354,6 +1384,9 @@ if ( {) {
 =======
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;                  <FormControl>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                      <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;                  <FormControl>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <Input placeholder="Enter tags separated by commas" {...field} />;
                   </FormControl>;
                   <FormDescription>;
@@ -1391,6 +1424,7 @@ if ( {) {
                     </div>;
                   )}
                 </FormItem>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               )}
 <<<<<<< HEAD
@@ -1759,3 +1793,6 @@ return (<Tabs value= {
 =======
               )}}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              )}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

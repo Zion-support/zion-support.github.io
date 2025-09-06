@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export interface EmergingTechInnovationService {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -33,9 +39,18 @@ export interface EmergingTechInnovationService {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { ServiceVariant } from '../types/service-variants';
+export interface EmergingTechInnovation {
+export interface EmergingTechInnovationService {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   name: string;
   tagline: string;
@@ -65,7 +80,75 @@ export interface EmergingTechInnovationService {;
   contact_info: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;    tagline:
+=======
+    address: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    website: string;
+  }
+
+  real_implementation: boolean;
+  implementation_details: string;
+  launch_date: string;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    website: string
+  },
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  customers: number;
+  rating: number;
+  reviews: number;
+  benefits: string[];
+  capabilities: string[];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+  market_advantage: string;
+;
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }  mobile: '+1 302 464 0950';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup && ziontechgroup.com',};  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup && ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup && ziontechgroup.com'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  marketAdvantage: string
+}
+
+const contact = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    tagline:
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'Next-generation quantum internet infrastructure for unbreakable communication'
     price: '$6,999'
     period: '/month'
@@ -517,13 +600,10 @@ export interface EmergingTechInnovationService {;
       'Threat hunting'
     ]
     marketAdvantage:
-      'Only quantum-powered cybersecurity platform with proven AI integration'
-  }
-];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
-    ];
-    marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
-  }
+      'Only quantum-powered cybersecurity platform with proven AI integration',
+  },
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -3079,6 +3159,12 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

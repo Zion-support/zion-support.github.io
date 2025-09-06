@@ -114,8 +114,8 @@ export function TalentCardSaveButton({;
 
     if (!isAuthenticated) {;
       toast({;
-        title: "Authentication required",;
-        description: "Please log in to save talents to your favorites",;
+        title: "Authentication required",,
+  description: "Please log in to save talents to your favorites",;
         variant: "destructive";
 
 
@@ -217,7 +217,10 @@ export function TalentCardSaveButton({;
       variant: "default";
     })
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (;
     <button;
       className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors";
@@ -233,10 +236,13 @@ export function TalentCardSaveButton({;
     </button>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
 import React from './react';

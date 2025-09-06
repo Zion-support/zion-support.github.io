@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface EmptyFraudStateProps {
   hasFilters: boolean
   onResetFilters: () => void
@@ -7,7 +8,19 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   onResetFilters
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from 'lucide-react'
+
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
+  hasFilters,
+  onResetFilters 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 },) => {
   return (
     <div className="text-center py-12">
@@ -28,6 +41,7 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
 import React from "react"
 import {Button} from "@/components/ui/button"
 import {ShieldAlert} from 'lucide-react'
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",
@@ -180,6 +194,7 @@ export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -187,3 +202,19 @@ export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+interface EmptyFraudStateProps {
+  hasFilters: boolean;
+  onResetFilters: () => void
+}
+
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
+  hasFilters;
+  onResetFilters 
+}) => {
+  return (
+    <div className;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

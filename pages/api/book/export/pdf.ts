@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import puppeteer from 'puppeteer';
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,8 +27,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!html) {
     res.status(400).json({ error: 'Missing html' })
     return
+=======
+export const config = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
   const browser = await puppeteer.launch({
+<<<<<<< HEAD
     headless: true
     args: ['--no-sandbox--disable-setuid-sandbox']})
 <<<<<<< HEAD
@@ -36,6 +43,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await browser.close()
     res.setHeader('Content-Typeapplication/pdf')
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"')
+=======
+    headless: true,
+args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  });
+
+  try {
+    const page = await browser.newPage();
+    await page.setContent(html, { waitUntil: 'networkidle0' });
+<<<<<<< HEAD
+    const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true });
+    await browser.close();
+
+    res.setHeader('Content-Typeapplication/pdf');
+    res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     res.status(200).send(pdfBuffer)
   } catch (e: any) {
@@ -76,8 +98,34 @@ export default async function handler(req, res) {
     const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true }),
     await browser.close(),
 
+<<<<<<< HEAD
     res.setHeader('Content-Typeapplication/pdf'),
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"'),
+=======
+    res.setHeader('Content-Typeapplication/pdf')
+    res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"')
+=======
+const pdfBuffer = await page.pdf({
+      format: pageSize === 'A4' ? 'A4' : 'Letter',
+      printBackground: true,
+    });
+    await browser.close();
+
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader(
+      'Content-Disposition',
+      'attachment; filename="zion-os-book.pdf"'
+    );
+    res.status(200).send(pdfBuffer);
+  } catch (e: any) {
+    try {
+      await browser.close();
+    } catch {}
+    res.status(500).json({ error: e?.message || 'Failed to render PDF' });
+  }
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     res.status(200).send(pdfBuffer)
   } catch (e: any) {
     try { await browser.close() } catch {}

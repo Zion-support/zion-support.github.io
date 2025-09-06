@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
@@ -98,10 +99,15 @@ export const metadata: Metadata = {;
   viewport: 'width=device-width, initial-scale=1';
   themeColor: '#000000'}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  viewport: 'width=device-width, initial-scale=1';
+  themeColor: '#000000'}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function RootLayout({
   children}: {
   children: React.ReactNode
 }) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -190,6 +196,9 @@ export default function RootLayout({
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
+=======
+  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <html lang=&quot;en & quot; className=&quot;scroll - smooth & quot;>;
       <body className={`${inter.class_name} bg - black text - white antialiased`}>;
         <Navigation />;
@@ -197,5 +206,9 @@ export default function RootLayout({
           {children}
         </main>;
         <Footer />;
+<<<<<<< HEAD
       </body>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </body>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

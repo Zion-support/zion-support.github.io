@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import fs from 'fs';
 import path from 'path';
@@ -18,6 +19,8 @@ import { fileURLToPath } from 'url';
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 =======
@@ -84,6 +87,7 @@ import { fileURLToPath } from 'url';
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 const __filename = fileURLToPath(import.meta.url);
+<<<<<<< HEAD
 =======
 import fs from 'fs';
 import path from 'path';
@@ -92,13 +96,18 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const __dirname = path.dirname(__filename);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 function createValidReactComponent(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
   const componentName = fileName
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join('')
@@ -129,7 +138,10 @@ function fixFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     // Basic "heuristic": if the file is very short or empty, rewrite it
     if (content.trim().length < 20) {
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const newContent = createValidReactComponent(filePath);
       fs.writeFileSync(filePath, newContent);
       return true;
@@ -138,6 +150,7 @@ function fixFile(filePath) {
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
+<<<<<<< HEAD
 <<<<<<< HEAD
   }      }
     }
@@ -149,6 +162,8 @@ function fixFile(filePath) {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 function processDirectory(dirPath) {
   let fixedCount = 0;
@@ -206,6 +221,7 @@ origin/automation-improvements-final
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -213,6 +229,8 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -228,6 +246,7 @@ function createValidReactComponent(filePath) {
     .replace(/[^a-zA-Z0-9]/g, "");
   return `import React from "react";
 export default function ${componentName}() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -264,8 +283,11 @@ export default function ${component_name}() {
 }`;
 }
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
 }`;
-}}`;
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+}`;
 }
 
 /**
@@ -500,6 +522,7 @@ function process_directory() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -512,6 +535,9 @@ function process_directory() {
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         const newContent = createValidReactComponent(filePath);
         fs.writeFileSync(filePath, newContent);
         console.log(`Fixed: ${filePath}`);
@@ -530,6 +556,7 @@ function processDirectory(dirPath) {
     }
     return fixedCount;
   } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -579,6 +606,9 @@ origin/automation-improvements-final
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 console && console.log("Starting aggressive fix...");
 const fixedCount = processDirectory(path && path.join(__dirname, "src"));
@@ -589,6 +619,7 @@ console.log ("Starting aggressive fix...");
 const fixed_count = process_directory (path.join (__dirname, "src"));
 console.log (`Fixed ${fixed_count} files`);
 
+<<<<<<< HEAD
 =======
 
 
@@ -603,10 +634,14 @@ console.log (`Fixed ${fixed_count} files`);
 
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 console.log('Starting aggressive fix...');
 const fixedCount = processDirectory(path.join(__dirname, 'src'));
 console.log(`Fixed ${fixedCount} files`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -643,3 +678,6 @@ import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url
 =======
 import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function createValidReactComponent(filePath) { const fileName = path.basename(filePath,path.extname(filePath)); const componentName = fileName .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join('') .replace(/[^a-zA-Z0-9]/g,''); return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); if (content.trim().length < 20) { const newContent = createValidReactComponent(filePath); fs.writeFileSync(filePath,newContent); return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } function processDirectory(dirPath) { let fixedCount = 0; try { const items = fs.readdirSync(dirPath); for (const item of items) { const fullPath = path.join(dirPath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if ( item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') ) { if (fixFile(fullPath)) { fixedCount++} } } return fixedCount} catch (error) { console.error(`Error processing directory ${dirPath}:`,error.message); return 0} } console.log('Starting aggressive fix...'); const fixedCount = processDirectory(path.join(__dirname,'src')); console.log(`Fixed ${fixedCount} files`);
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function createValidReactComponent(filePath) { const fileName = path.basename(filePath,path.extname(filePath)); const componentName = fileName .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join('') .replace(/[^a-zA-Z0-9]/g,''); return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); if (content.trim().length < 20) { const newContent = createValidReactComponent(filePath); fs.writeFileSync(filePath,newContent); return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } function processDirectory(dirPath) { let fixedCount = 0; try { const items = fs.readdirSync(dirPath); for (const item of items) { const fullPath = path.join(dirPath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if ( item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') ) { if (fixFile(fullPath)) { fixedCount++} } } return fixedCount} catch (error) { console.error(`Error processing directory ${dirPath}:`,error.message); return 0} } console.log('Starting aggressive fix...'); const fixedCount = processDirectory(path.join(__dirname,'src')); console.log(`Fixed ${fixedCount} files`);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

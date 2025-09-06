@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -13,10 +14,14 @@
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Star } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 interface ReviewStatsProps {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   ratingDistribution?: Record<number, number>
@@ -52,11 +57,15 @@ interface ReviewStatsProps {
 =======
   ratingDistribution?: Record<number, number>interface ReviewStatsProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  ratingDistribution?: Record<number, number>interface ReviewStatsProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   averageRating: number,
   totalReviews: number,
   ratingDistribution?: Record<number number>
 
 }
+<<<<<<< HEAD
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -421,3 +430,9 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
     if (totalReviews === 0) return 0
     return (count / totalReviews) * 100
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {  // Calculate percentages for distribution if available
+  const getPercentage = (count: number) => {
+    if (totalReviews === 0) return 0
+    return (count / totalReviews) * 100
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

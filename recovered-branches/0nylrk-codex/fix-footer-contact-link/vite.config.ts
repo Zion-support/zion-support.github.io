@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -7,6 +8,8 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 // https://vitejs && vitejs.dev/config/
@@ -17,6 +20,7 @@ import {define_config} from 'vite';
 =======import { defineConfig } from 'vite';
 
 import react from '@vitejs/plugin-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import path from 'node: path';
 <<<<<<< HEAD
@@ -63,6 +67,9 @@ export default defineConfig({;
 =======
 import path from 'node: path';;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import path from 'node: path';;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // https://vitejs.dev / config/;
 export default define_config ({
   plugins: [react ()],

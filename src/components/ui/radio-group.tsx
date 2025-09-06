@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from "react"
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
 import { Circle } from 'lucide-react'
 
 =======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -11,6 +15,7 @@ const RadioGroup = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
 >(({ className, ...props }, ref) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -39,6 +44,9 @@ const RadioGroup = React.forward_ref<;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {...props}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -46,6 +54,7 @@ const RadioGroup = React.forward_ref<;
     />;
   );
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
@@ -61,6 +70,11 @@ const RadioGroupItem = React.forwardRef<;
 
   React.ElementRef<typeof RadioGroupPrimitive.Item>,;
 
+=======
+
+  React.ElementRef<typeof RadioGroupPrimitive.Item>,;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >(({ className, ...props }, ref) => {;
@@ -73,9 +87,12 @@ const RadioGroupItem = React.forwardRef<;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         className
       )}
       {...props}
@@ -87,6 +104,7 @@ const RadioGroupItem = React.forwardRef<;
   )
 })
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -134,3 +152,11 @@ export { RadioGroup, RadioGroupItem }
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+export { RadioGroup, RadioGroupItem }
+
+export { RadioGroup, RadioGroupItem }
+;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

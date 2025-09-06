@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {supabase} from '@/integrations / supabase / client';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
 import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';
@@ -11,6 +14,7 @@ interface MilestoneActivitiesProps {
 }
 interface Activity {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,6 +36,8 @@ interface Activity {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string
   milestone_id: string
   user_id: string
@@ -41,6 +47,7 @@ interface Activity {
   comment: string | null
   created_at: string
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   milestone: {
 <<<<<<< HEAD
@@ -129,6 +136,9 @@ import { Skeleton } from '@/components/ui/skeleton',;
 =======
   milestone: {  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  milestone: {  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   created_by_profile: {
     display_name: string,
     avatar_url: string | null;
@@ -231,6 +241,7 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
         console.error('Error fetching milestone activities:', err);
       } finally {;
 <<<<<<< HEAD
+<<<<<<< HEAD
         setIsLoading(false);
 =======
       } catch (err) {
@@ -242,6 +253,9 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 =======
         setIsLoading(false);      }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        setIsLoading(false);      }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     if (projectId) {
       fetchActivities()
@@ -270,11 +284,14 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
     switch (activity.action) {;
@@ -293,12 +310,15 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
       default:;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return activity.action.replace(/_/g, ' ');
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   if (isLoading) {;
     }
@@ -319,6 +339,7 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
               </div>
             </CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
           </Card>
 =======
   if (isLoading) {;
@@ -337,6 +358,9 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 =======
           </Card>    }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          </Card>    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 
   if (isLoading) {
@@ -470,6 +494,7 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
 
   if (activities.length === 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -507,10 +532,13 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Card>;
         <CardContent className="p-6 text-center">;
           <p className="text-muted-foreground py-8">No activity found for this project</p>;
         </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       </Card>;
 <<<<<<< HEAD
@@ -654,6 +682,9 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
 =======
       </Card>;        </CardContent>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </Card>;        </CardContent>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </Card>;
     </div>;
   );
@@ -665,6 +696,7 @@ if ( {) {
       fetch_activities ();
     }
   }, [project_id]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -791,3 +823,6 @@ default: return activity.action.replace (/ /g, ' ')
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

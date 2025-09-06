@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -21,6 +22,12 @@ import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {
+=======
+import { useState  } from './react';
+import { Card, CardContent, CardFooter  } from '@/components / ui / card';
+import { Button  } from '@/components / ui / button';
+import { Badge  } from '@/components / ui / badge';import {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -55,8 +62,8 @@ if ( {) {
 ;
 
   return (
-    <Card className="h - full flex flex - col">;
-      <div className="relative h - 48 overflow - hidden rounded - t-lg bg - muted">;
+    <Card className="h - full flex flex-col">;
+      <div className="relative h - 48 overflow - hidden rounded - t-lg bg-muted">;
         {project.image_url ? (
           <img;
             src={project.image_url}
@@ -72,6 +79,7 @@ import {Button} from '@/components/ui/button';
 import {Badge} from '@/components/ui/badge';
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from '@/components/ui/alert-dialog';
 import {Edit, Trash2, Github, Link, FileText} from 'lucide-react';
+<<<<<<< HEAD
 import {PortfolioProject} from '@/types/resume';
 <<<<<<< HEAD
 =======
@@ -107,6 +115,9 @@ import { Badge  } from '@/components / ui / badge';import {
 import { Edit, Trash2, Github, Link, FileText  } from './lucide-react';
 import { PortfolioProject  } from '@/types / resume';
 interface ProjectCardProps {
+=======
+import {PortfolioProject} from '@/types/resume';interface ProjectCardProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   project: PortfolioProject;
   on_edit: (project: PortfolioProject) => void;
   on_delete: (project_id: string) => void;
@@ -148,6 +159,7 @@ import {PortfolioProject} from '@/types/resume';interface ProjectCardProps {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -173,10 +185,13 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   const handleDelete = () => {
     if (project.id) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       onDelete(project.id);
@@ -229,12 +244,15 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
 
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       onDelete(project.id);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     }
-    setDeleteDialogOpen(false);
-  };
+    setDeleteDialogOpen(false)
+};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -247,6 +265,8 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
 };
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
         {project.image_url ? (
@@ -286,6 +306,7 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
               ))}
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       </div>
 <<<<<<< HEAD
@@ -301,6 +322,8 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <CardContent className="flex-grow pt-6">
         <div className="space-y-2">
           <h3 className="font-semibold text-lg">{project.title}</h3>

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -13,6 +14,8 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Header} from "@/components/Header";
@@ -25,6 +28,7 @@ import {NotificationCenter} from "@/components/NotificationCenter";
 import {useToast} from "@/hooks/use-toast";
 import {Link} from "react-router-dom";
 export default function Dashboard() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -74,6 +78,11 @@ export default function Dashboard() {
   const { user, logout } = useAuth();
   const { toast } = useToast();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  const { user, logout } = useAuth();
+  const { toast } = useToast();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
 import { Header } from "@/components/Header",
@@ -95,6 +104,7 @@ export default function Dashboard() {
   const { toast } = useToast();
   if (!user) return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 import { useToast } from "@/hooks/use-toast",
@@ -112,6 +122,8 @@ export default function Dashboard() {
   const handleTestNotification = async () => {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const result = await createTestNotification(user && user.id);
     if (result && result.success) {;
       toast({;
@@ -321,6 +333,7 @@ export default function Dashboard() {
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
                         await createOnboardingNotification({
 <<<<<<< HEAD
@@ -1140,6 +1153,9 @@ if ( {) {
 =======
                         await createOnboardingNotification({                  <CommunityDiscussion />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                        await createOnboardingNotification({                  <CommunityDiscussion />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>;
               </div>;
             </div>;
@@ -1150,6 +1166,7 @@ if ( {) {
 
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
@@ -1202,3 +1219,6 @@ return (<> <Header /> <Badge className="bg-zion-purple text-white mb-4" > > <Use
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

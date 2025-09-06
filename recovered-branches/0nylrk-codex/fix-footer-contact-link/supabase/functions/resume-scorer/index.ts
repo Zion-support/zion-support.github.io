@@ -11,6 +11,7 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -113,12 +114,15 @@ serve(async (req) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
   const openAiKey = Deno.env.get("OPENAI_API_KEY") || "",;
   if (!openAiKey) {;
     return new Response(;
+<<<<<<< HEAD
 <<<<<<< HEAD
       JSON.stringify({ error: "OpenAI API key is not configured" }),;
 <<<<<<< HEAD
@@ -135,6 +139,9 @@ serve(async (req) => {
 =======
       JSON.stringify({ error: "OpenAI API key is not configured" }),;      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      JSON.stringify({ error: "OpenAI API key is not configured" }),;      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     )
   }
 
@@ -142,6 +149,7 @@ serve(async (req) => {
 
   try {
     const { applicationId } = await req.json(),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -164,6 +172,9 @@ serve(async (req) => {
 =======
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (!applicationId) {
       throw new Error("Application ID is required")
     }
@@ -171,6 +182,7 @@ serve(async (req) => {
     const { data: application, error: appError } = await supabase
       .from("job_applications")
       .select(`
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -193,6 +205,8 @@ serve(async (req) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
@@ -241,6 +255,7 @@ if ( {) {
         job_id;
         talent_id;
         cover_letter;
+<<<<<<< HEAD
 <<<<<<< HEAD
         resume_id;
 <<<<<<< HEAD
@@ -380,6 +395,9 @@ if ( {) {
 =======
         resume_id;          ).join("\n\n")}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        resume_id;          ).join("\n\n")}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           Education:
           ${resume.education.map((edu: any) =>
             `${edu.degree} in ${edu.field_of_study |""} from ${edu.institution}`
@@ -388,6 +406,7 @@ if ( {) {
           ${resume.resume_skills.map((skill: any) => skill.name).join(", ")}
 
         resumeSkills = resume.resume_skills.map((skill: any) => skill.name)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -403,11 +422,14 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
     }
     // 3. If no resume content, use talent profile and cover letter
     if (!resumeContent) {
       resumeContent = `
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         Bio: ${application.talent_profile?.bio |""}
@@ -424,11 +446,14 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         Bio: ${application && application.talent_profile?.bio || ""}
         Cover Letter: ${application && application.cover_letter || ""}
         Skills: ${application && application.talent_profile?.skills?.join(", ") || ""}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       `;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       resumeSkills = application && application.talent_profile?.skills || []
@@ -460,10 +485,18 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      resumeSkills = application.talent_profile?.skills |[]
+    }
+    // 4. Prepare job details      resumeSkills = application.talent_profile?.skills |[]
+    }
+    // 4. Prepare job details
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         Bio: ${application.talent_profile?.bio || ""}
         Cover Letter: ${application.cover_letter || ""}
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `;
+<<<<<<< HEAD
 <<<<<<< HEAD
       resumeSkills = application.talent_profile?.skills || []
 <<<<<<< HEAD
@@ -483,6 +516,9 @@ if ( {) {
 =======
       resumeSkills = application.talent_profile?.skills || []    );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      resumeSkills = application.talent_profile?.skills || []    );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 ;
   const supabase = createClient(supabaseUrl, supabaseAnonKey),;
@@ -565,6 +601,7 @@ if ( {) {
       resumeSkills = application.talent_profile?.skills || [];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -580,12 +617,16 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
 
     // 4. Prepare job details
     const jobTitle = application.job?.title || "",
     const jobDescription = application.job?.description || "",
     const jobSkills = application.job?.skills || [],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -652,12 +693,16 @@ if ( {) {
 =======
         model: "gpt-4o-mini";          {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        model: "gpt-4o-mini";          {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             role: "system"
             content: `You are an expert resume analyzer that compares resumes against job descriptions
             to determine how well a candidate matches a job. Analyze the resume and job details
             provided, focusing on skills, experience, and qualifications.`
 
           },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -691,6 +736,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             # Resume Content
             ${resumeContent}
             Compare the resume to the job description and provide:
@@ -698,6 +745,7 @@ if ( {) {
             2. A brief summary of why this score was given (1-2 sentences)
             3. A detailed breakdown of how well the candidate's skills and experience align with job requirements
             4. A suggestion categorization: "Strongly Recommended", "Recommended for Review", or "Low Match"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1023,6 +1071,8 @@ if ( {) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const aiResult = await openAIResponse.json(),
     let matchResult,
     
@@ -1033,6 +1083,7 @@ if ( {) {
       
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       // Validate required fields
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
@@ -1040,6 +1091,8 @@ if ( {) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       // Validate required fields
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {      // Validate required fields
@@ -1065,6 +1118,7 @@ if ( {) {
       // Validate required fields
       if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1080,11 +1134,14 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       
       // Validate required fields
       if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {
         throw new Error("Invalid response format")
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
     } catch (error) {
 <<<<<<< HEAD
@@ -1438,6 +1495,13 @@ if ( {) {
     return new Response(    );
   } catch (error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    } catch (error) {      throw new Error(`Failed to update application with score: ${updateError && updateError.message}`)
+    }
+    // 7. Return the match results
+    return new Response(    );
+  } catch (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error ("Error in resume - scorer function:", error);
     return new Response (
       JSON.stringify ({ error: error.message });
@@ -1673,6 +1737,7 @@ headers: {
   }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1680,3 +1745,6 @@ headers: {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

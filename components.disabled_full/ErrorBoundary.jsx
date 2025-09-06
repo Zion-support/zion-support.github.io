@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -70,3 +71,6 @@ const Component = () => {; import _React from "react"; "class": ErrorBoundary ex
 =======
 const Component = () => {; import _React from "react"; "class": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { "hasError": 'fals',e,"error": 'null'} } "static": getDerivedStateFromError(error) { return { hasError tru,e,"error": ''} } componentDidCatch(error,errorInfo) {" } render() { if (this.state.hasError) { return (" <div className="error-boundary"> <h2>Something went wrong.</h2> <details>{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}const Component = () => {; import _React from "react"; "class": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { "hasError": 'fals',e,"error": 'null'} } "static": getDerivedStateFromError(error) { return { hasError tru,e,"error": ''} } componentDidCatch(error,errorInfo) {" } render() { if (this.state.hasError) { return (" <div className="error-boundary"> <h2>Something went wrong.</h2> <details>{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const Component = () => {; import _React from "react"; "class": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { "hasError": 'fals',e,"error": 'null'} } "static": getDerivedStateFromError(error) { return { hasError tru,e,"error": ''} } componentDidCatch(error,errorInfo) {" } render() { if (this.state.hasError) { return (" <div className="error-boundary"> <h2>Something went wrong.</h2> <details>{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}const Component = () => {; import _React from "react"; "class": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { "hasError": 'fals',e,"error": 'null'} } "static": getDerivedStateFromError(error) { return { hasError tru,e,"error": ''} } componentDidCatch(error,errorInfo) {" } render() { if (this.state.hasError) { return (" <div className="error-boundary"> <h2>Something went wrong.</h2> <details>{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

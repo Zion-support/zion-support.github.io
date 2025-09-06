@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import {GradientHeading} from "./GradientHeading";
@@ -40,6 +41,8 @@ import { Button } from "./ui/button",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {GradientHeading} from "./GradientHeading";
 import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";
 import {Button} from "./ui/button";
@@ -54,6 +57,7 @@ import {Button} from "./ui/button";
 import { GradientHeading } from "./GradientHeading",
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",
 import { Button } from "./ui/button",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -72,6 +76,8 @@ import { Button } from "./ui/button",
 const services = [
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   {
     title: "Servers"
     description: "Enterprise-grade servers for any workload with 24/7 maintenance and support"
@@ -92,6 +98,7 @@ const services = [;
     title: "Storage",
     description: "Scalable storage solutions from SSDs to large - scale enterprise storage systems",
     icon: <HardDrive className="h - 10 w-10" />},
+<<<<<<< HEAD
   {
 
     title: "Networking",
@@ -119,6 +126,15 @@ const services = [;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  {
+
+    title: "Networking",
+    description: "Connectivity solutions including switches, routers, and network security devices",
+    icon: <Network className="h-10 w-10" />},
+
+  {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   {
     title: "24x7x365 Support"
     description: "Around-the-clock technical support with rapid response times guaranteed"
@@ -131,6 +147,7 @@ const services = [;
     title: "Equipment Rentals"
     description: "Flexible rental options for temporary projects and scaling requirements"
     icon: <Truck className="h-10 w-10" />}]
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -175,6 +192,8 @@ export function GlobalServiceSection() {
 const services = [;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   {;
     title: "Servers",,
   description: "Enterprise-grade servers for any workload with 24/7 maintenance and support",;
@@ -203,6 +222,7 @@ const services = [;
 export function GlobalServiceSection() {;
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -227,6 +247,8 @@ export function GlobalServiceSection() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { GradientHeading } from "./GradientHeading",;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",;
 import { Button } from "./ui/button",;
@@ -301,6 +323,7 @@ function GlobalServiceSection() {
               <p className="text - zion - slate - light mb-4">{service.description}</p>;
             </div>))}
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="flex justify - center mt - 12">;
           <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white text - lg py - 6 px - 8">;
@@ -387,3 +410,9 @@ icon: <Recycle className="h-10 w-10" />
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        <div className="flex justify - center mt-12">;
+          <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white text - lg py - 6 px-8">;
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

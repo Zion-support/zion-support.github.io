@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,6 +21,8 @@
 =======
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import Card from "./components/Card" describe("Card",() => {" test("renders without crashing",() => {" render(<Card / / />) expect(screen.getByTestId("card")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<Card / / />) }) test("handles user interactions",() => {" render(<Card / / />) }) test("applies correct styling",() => {" render(<Card / / />) }) })'"'"
 import _React from 'react"  import '@testing-library/jest-dom import Card from '../components/Card" describe('Card',() => {' test('renders without crashing',() => {' render(<Card / / />) expect(screen.getByTestId("card")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Card / / />) }) test('handles user interactions',() => {' render(<Card / / />) }) test('applies correct styling',() => {' render(<Card / / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import Card from '../components/Card" describe('Card',() => {' test('renders without crashing',() => {' render(<Card / / />) expect(screen.getByTestId("card")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Card / / />) }) test('handles user interactions',() => {' render(<Card / / />) }) test('applies correct styling',() => {' render(<Card / / />) }) })
@@ -28,6 +31,7 @@ import _React from 'react"  import '@testing-library/jest-dom import Card from '
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -46,11 +50,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Card from '../components/Card';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import _React from 'react"  import '@testing-library/jest-dom import Card from '../components/Card" describe('Card',() => {' test('renders without crashing',() => {' render(<Card / / />) expect(screen.getByTestId("card")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Card / / />) }) test('handles user interactions',() => {' render(<Card / / />) }) test('applies correct styling',() => {' render(<Card / / />) }) })
 <<<<<<< HEAD
@@ -65,6 +72,8 @@ import _React from 'react"  import '@testing-library/jest-dom import Card from '
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   test('displays correct content', () => {
     render(<Card />);
@@ -79,7 +88,10 @@ import _React from 'react"  import '@testing-library/jest-dom import Card from '
   });
 });
 import _React from 'react"  import '@testing-library/jest-dom import Card from '../components/Card" describe('Card',() => {' test('renders without crashing',() => {' render(<Card / / />) expect(screen.getByTestId("card")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Card / / />) }) test('handles user interactions',() => {' render(<Card / / />) }) test('applies correct styling',() => {' render(<Card / / />) }) })
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import Card from "./components/Card" describe("Card",() => {" test("renders without crashing",() => {" render(<Card / / />) expect(screen.getByTestId("card")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<Card / / />) }) test("handles user interactions",() => {" render(<Card / / />) }) test("applies correct styling",() => {" render(<Card / / />) }) })'"'"
 import _React from 'react"  import '@testing-library/jest-dom import Card from '../components/Card" describe('Card',() => {' test('renders without crashing',() => {' render(<Card / / />) expect(screen.getByTestId("card")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Card / / />) }) test('handles user interactions',() => {' render(<Card / / />) }) test('applies correct styling',() => {' render(<Card / / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import Card from '../components/Card" describe('Card',() => {' test('renders without crashing',() => {' render(<Card / / />) expect(screen.getByTestId("card")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Card / / />) }) test('handles user interactions',() => {' render(<Card / / />) }) test('applies correct styling',() => {' render(<Card / / />) }) })

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -24,6 +25,10 @@ import React from "react";
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Card } from "@/components/ui/card";
 import {
   Table;
@@ -35,6 +40,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import {Card} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {Badge} from "@/components/ui/badge";
 <<<<<<< HEAD
@@ -85,6 +91,9 @@ import { Badge } from "@/components/ui/badge",
 =======
 import {Badge} from "@/components/ui/badge";// Sample data for integration sync logs
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {Badge} from "@/components/ui/badge";// Sample data for integration sync logs
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const syncLogs = [
   {
@@ -93,6 +102,7 @@ const syncLogs = [
     event: "contact_synced"
     status: "success"
     timestamp: "2024-05-20T12:30:45Z"
+<<<<<<< HEAD
 <<<<<<< HEAD
     details: "Successfully synced contact data for Job #1234"
 <<<<<<< HEAD
@@ -146,12 +156,16 @@ const syncLogs = [
 =======
     details: "Successfully synced contact data for Job #1234"  {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    details: "Successfully synced contact data for Job #1234"  {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     id: "3"
     integration: "HubSpot"
     event: "deal_updated"
     status: "error"
     timestamp: "2024-05-19T16:45:12Z"
     details: "Failed to update deal - API rate limit exceeded"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -204,6 +218,10 @@ const syncLogs = [
 
   },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   {
     id: "5"
     integration: "Lever"
@@ -211,6 +229,7 @@ const syncLogs = [
     status: "success"
     timestamp: "2024-05-18T09:10:05Z"
     details: "Updated candidate status to 'Interview Scheduled'"
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -329,11 +348,15 @@ export function IntegrationsSyncLog() {
 =======
   }            ))}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }            ))}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </TableBody>
         </Table>
       </div>
     </Card>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -364,6 +387,9 @@ import { Badge } from "@/components/ui/badge",;
 =======
 }// Sample data for integration sync logs;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}// Sample data for integration sync logs;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const syncLogs = [;
   {;
     id: "1",;
@@ -388,6 +414,7 @@ const syncLogs = [;
     status: "success",;
     timestamp: "2024-05-18T09:10:05Z",;
     details: "Updated candidate status to 'Interview Scheduled'";
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -490,6 +517,9 @@ export function IntegrationsSyncLog() {;
 =======
   }  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <Card>;
       <div className="p-4">;
         <Table>;
@@ -515,6 +545,7 @@ export function IntegrationsSyncLog() {;
               </TableRow>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -530,11 +561,14 @@ export function IntegrationsSyncLog() {;
           </TableBody>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </Table>;
       </div>;
     </Card>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -547,6 +581,8 @@ export function IntegrationsSyncLog() {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))}
 import React from './react';
 import { Card } from '@/components / ui / card';
@@ -642,6 +678,7 @@ function IntegrationsSyncLog() {
     </Card>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
     }
@@ -707,3 +744,5 @@ return (<Card> <div className="p-4" > hidden md:table-cell" >Details</TableHead>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -10,12 +11,15 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
 import {Resend} from "npm: resend@2 ;
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {Resend} from "npm: resend@2.0.0";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -133,10 +137,13 @@ serve(async (req) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const { data: interviews, error } = await supabase
       .from('interviews')
       .select(`
         *;
+<<<<<<< HEAD
 <<<<<<< HEAD
         clients: client_id(*)
 <<<<<<< HEAD
@@ -324,12 +331,16 @@ if ( {) {
 =======
         clients: client_id(*)              html: `
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        clients: client_id(*)              html: `
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <h1>Interview Reminder</h1>
                 <p>Your scheduled interview with ${talentName} is starting in 30 minutes.</p>
                 <p><strong>Time:</strong> ${interviewDate && interviewDate.toLocaleTimeString()}</p>
                 <p><strong>Duration:</strong> ${interview && interview.duration_minutes} minutes</p>
                 ${interview && interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview && interview.meeting_link}">${interview && interview.meeting_link}</a></p>` : ''}
                 <p>Please be ready on time!</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -421,12 +432,16 @@ if ( {) {
 =======
             results && results.push(`Reminder sent to client: ${clientEmail}`)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            results && results.push(`Reminder sent to client: ${clientEmail}`)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           try {
             await resend && resend.emails.send({
               from: "Zion Marketplace <onboarding@resend && resend.dev>";
               to: [talentEmail],
 
               subject: `Your interview with ${clientName} is starting soon!`,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -552,6 +567,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
     }
     return new Response(JSON.stringify({ success: true, results }), {
@@ -660,6 +677,7 @@ serve(async (req) => {;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -667,6 +685,8 @@ serve(async (req) => {;
       }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
 
     return new Response(JSON.stringify({ success: true, results }), {
@@ -699,6 +719,7 @@ serve(async (req) => {;
     console.error("Error in send-interview-reminder function:", error),;
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
+<<<<<<< HEAD
 <<<<<<< HEAD
       status: 500});
 <<<<<<< HEAD
@@ -919,3 +940,6 @@ try {
 =======
       status: 500});
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      status: 500});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

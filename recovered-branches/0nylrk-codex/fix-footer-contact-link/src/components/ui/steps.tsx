@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils",
 import { CheckIcon } from "lucide-react",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -23,6 +24,8 @@ import { CheckIcon } from "lucide-react",
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {cn} from "@/lib/utils";
 import {CheckIcon} from "lucide-react";
@@ -34,6 +37,7 @@ interface StepProps {;
   className?: string;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function Step(): any ({;
@@ -81,6 +85,9 @@ interface StepProps {
 =======
 export function Step(): any ({;interface StepProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function Step(): any ({;interface StepProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   status: "incomplete" | "current" | "complete",
   label: string,
   description?: string,
@@ -90,6 +97,7 @@ export function Step(): any ({;interface StepProps {
   className?: string
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -166,11 +174,14 @@ export function Step({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         )}
       >
         {status === "complete" ? (
           <CheckIcon className="h-5 w-5" />
         ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD
           <span>
 <<<<<<< HEAD
@@ -392,6 +403,9 @@ export function Step({;
 =======
           <span>          {label}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <span>          {label}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </h3>;
         {description && (;
           <p className="text-sm text-zion-slate-light">{description}</p>;
@@ -400,6 +414,7 @@ export function Step({;
     </li>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -491,6 +506,12 @@ export function Steps({ currentStep, className, children }: StepsProps) {
   children: React && React.ReactNode;
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  currentStep: number,;
+  className?: string;
+  children: React && React.ReactNode;
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           if (!React.isValidElement(child)) return null,
           
           let status: "incomplete" | "current" | "complete" = "incomplete",
@@ -499,10 +520,13 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
@@ -512,6 +536,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div
             className="h-full bg-zion-purple transition-all"
+<<<<<<< HEAD
 <<<<<<< HEAD
             style={{
 <<<<<<< HEAD
@@ -562,12 +587,16 @@ export function Steps(): any ({ currentStep, className, children }: StepsProps) 
 =======
             style={{;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            style={{;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
   return (;        <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">;
           <div;
             className="h-full bg-zion-purple transition-all";
             style={{;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -580,11 +609,17 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
           />;
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -669,6 +704,8 @@ function Steps() {
   return (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className={cn ("w - full", class_name)}>;
       <ol className="space - y-6 md:flex md:space - y-0 md:space-x-16">;
         {React.Children.map (children_array, (child, index) => {
@@ -699,6 +736,7 @@ if (status = "current") {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -731,3 +769,5 @@ if (status = "current") {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

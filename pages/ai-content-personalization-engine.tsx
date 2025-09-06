@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -81,6 +82,8 @@ export default function AIContentPersonalizationEngine() {
 			pricePerMonthUSD={1299}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			implementationWeeks="Implementation: 2–4 weeks"
 			roiNote="Average ROI 3–6x within 90 days"
 			features={[
@@ -90,6 +93,7 @@ export default function AIContentPersonalizationEngine() {
 				"Journey orchestration across channels"
 				"Privacy-safe profiling and consent management"
 
+<<<<<<< HEAD
 				"Integrations: CDP, ESP, CMS, Web SDK"
 			]}
 			industries={["E‑commerce", "Media", "SaaS", "Education"]}
@@ -107,11 +111,23 @@ export default function AIContentPersonalizationEngine() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import React from 'react';
+			title;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+				"Integrations: CDP, ESP, CMS, Web SDK"
+			]}
+			industries={["E‑commerce", "Media", "SaaS", "Education"]}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			pricePerMonthUSD={1299  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -131,6 +147,8 @@ export default function AIContentPersonalizationEngine() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			implementationWeeks="Implementation: 2–4 weeks"
 			roiNote="Average ROI 3–6x within 90 days"
 			features={[
@@ -140,6 +158,7 @@ export default function AIContentPersonalizationEngine() {
 				"Journey orchestration across channels",
 				"Privacy-safe profiling and consent management",
 				"Integrations: CDP, ESP, CMS, Web SDK"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -158,6 +177,8 @@ export default function AIContentPersonalizationEngine() {
 };
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -172,6 +193,10 @@ export default function AIContentPersonalizationEngine() {
 			canonical="https: //ziontechgroup.com/ai-content-personalization-engine"
 		/>
 	)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			canonical="https: //ziontechgroup.com/ai-content-personalization-engine";
 		/>;
 	);
@@ -179,6 +204,7 @@ export default function AIContentPersonalizationEngine() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -193,3 +219,8 @@ export default function AIContentPersonalizationEngine() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

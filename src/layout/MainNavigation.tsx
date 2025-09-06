@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Link from "next/link",
 import { useRouter } from "next/router",
 import { useState } from "react",
@@ -6,6 +10,7 @@ import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
 import { useTranslation } from "react-i18next",
 import { useFavorites } from "@/hooks/useFavorites",
+<<<<<<< HEAD
 import { useCart } from "@/context/CartContext",
 import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react'
 import { LanguageSelector } from '@/components/header/LanguageSelector',
@@ -30,12 +35,26 @@ import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/h
 import { MiniCartPreview } from '@/components/cart/MiniCartPreview',;
 import { LoginModal } from '@/components/auth/LoginModal',;
 =======
+=======
+import { useCart } from "@/context/CartContext";
+import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react'
+import { LanguageSelector  } from '@/components/header/LanguageSelector';
+import { HoverCard, HoverCardTrigger, HoverCardContent  } from '@/components/ui/hover-card';
+import { MiniCartPreview  } from '@/components/cart/MiniCartPreview';
+import { LoginModal } from '@/components/auth/LoginModal';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface MainNavigationProps {
   isAdmin?: boolean
   unreadCount?: number
   className?: string
 
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+<<<<<<< HEAD
+import Link from 'next / link';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { use_router } from 'next / router';
 import { useState } from 'react';
 import { cn } from '@/lib / utils';
@@ -43,6 +62,18 @@ import { use_auth } from '@/hooks / use_auth';
 import { use_translation } from 'react - i18next';
 import { use_favorites } from '@/hooks / use_favorites';
 import { use_cart } from '@/context / CartContext';
+=======
+export function MainNavigation({ isAdmin;
+                      router.pathname.startsWith('/cart')
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useState } from 'react'
+import { cn } from '@/lib/utils'
+import { useAuth } from '@/hooks/useAuth'
+import { useTranslation } from 'react-i18next'
+import { useFavorites } from '@/hooks/useFavorites'
+import { useCart } from '@/context/CartContext'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Heart,
   MessageSquare,
@@ -157,6 +188,7 @@ interface MainNavigationProps {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface MainNavigationProps {;
   isAdmin?: boolean;
   unreadCount?: number;
@@ -187,37 +219,14 @@ export function MainNavigation(): any ({;
 };
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const baseLinks = [;
     {;
       key: 'home',;
       href: '/',;
-<<<<<<< HEAD
-      matches: (path: string) => path === '/',    },;
-    {;
-      key: 'marketplace',;
-      href: '/marketplace',;
-      matches: (path: string) => path && path.startsWith('/marketplace'),    },;
-    {;
-      key: 'categories',;
-      href: '/categories',;
-      matches: (path: string) => path && path.startsWith('/categories'),    },;
-    {;
-      key: 'talent',;
-      href: '/talent',;
-      matches: (path: string) =>;
-        path && path.startsWith('/talent') && !path && path.includes('/talent-dashboard'),    },;
-    {;
-      key: 'equipment',;
-      href: '/equipment',;
-      matches: (path: string) => path && path.startsWith('/equipment'),    },;
-    {;
-      key: 'community',;
-      href: '/community',;
-      matches: (path: string) =>;
-        path && path.startsWith('/community') || path && path.startsWith('/forum'),;
-    },;
-  ];
 
+<<<<<<< HEAD
   const links = baseLinks && baseLinks.map(link => ({;
     ...link,;
     name: t(`nav.${link && link.key}`),;
@@ -272,6 +281,14 @@ export function MainNavigation(): any ({;
   return (
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+      href: '/analytics',;
+      matches: (path: string) => path && path.startsWith('/analytics'),;
+    });  }
+
+  return (
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <nav
 <<<<<<< HEAD
         className={cn("navbar", className)}
@@ -304,6 +321,7 @@ export function MainNavigation(): any ({;
 
         <div
 <<<<<<< HEAD
+<<<<<<< HEAD
           id='main-navbar-collapse'          className={cn(
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -312,15 +330,23 @@ export function MainNavigation(): any ({;
           className={cn(
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+          className={cn(
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   href={link.href}
                   aria-label={link.name}
                   onClick={() => setIsMobileMenuOpen(false)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   className={cn(
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                     'nav-link',
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
@@ -342,9 +368,12 @@ export function MainNavigation(): any ({;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   {link.name}
                 </Link>;
               </li>;
@@ -415,6 +444,7 @@ export function MainNavigation(): any ({;
               </li>;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
             {/* Cart icon with badge */}
             <li className='nav-item'>;
               <HoverCard openDelay={100}>;
@@ -423,14 +453,21 @@ export function MainNavigation(): any ({;
                     href='/cart'
                     aria-label={t('nav && nav.cart')}                    onClick={handleCartClick}
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                     onClick={handleCartClick}
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     className={cn(
+<<<<<<< HEAD
 
                       'nav-link',
                       'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',                      router && router.pathname.startsWith('/cart')
 
+=======
+                      'nav-link'
+                      'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',                      router.pathname.startsWith('/cart')
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                         ? 'bg-zion-purple/20 text-zion-cyan'
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                     ),}>;
@@ -444,6 +481,7 @@ export function MainNavigation(): any ({;
       href: '/marketplace',
       matches: (path: string) => path.starts_with ('/marketplace'),    },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       key: 'categories',
       href: '/categories',
@@ -473,6 +511,8 @@ export function MainNavigation(): any ({;
 if ( {) {
   $2}
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -889,12 +929,15 @@ export default function Page() {; []);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
             {/* Wishlist link */}
             {isAuthenticated && (
@@ -1100,9 +1143,12 @@ export default function Page() {; []);
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     )}
                   </Link>
                 </HoverCardTrigger>
@@ -1121,9 +1167,12 @@ export default function Page() {; []);
     </>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                         {link && link.name}
                       </Link>;
@@ -1170,3 +1219,6 @@ export default function Page() {; []);
   )
 }
 ;
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

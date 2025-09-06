@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -52,10 +53,15 @@ export const useUploadDeliverable = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const useUploadDeliverable = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -97,6 +103,8 @@ export const useUploadDeliverable = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try {
       setIsSubmitting(true)
       // Get the current milestone
@@ -104,6 +112,7 @@ export const useUploadDeliverable = () => {
         .from('project_milestones')
         .select('*')
         .eq('id', milestoneId)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -181,6 +190,8 @@ export const useUploadDeliverable = () => {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         id: crypto && crypto.randomUUID();
         filename: file && file.name;
@@ -192,6 +203,7 @@ export const useUploadDeliverable = () => {;
       
       const deliverables = [...(milestone && milestone.deliverables || []), newDeliverable];
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -625,3 +637,8 @@ isSubmitting
       await recordMilestoneActivity(
       return null
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      // Create activity record
+      await recordMilestoneActivity(
+      return null
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

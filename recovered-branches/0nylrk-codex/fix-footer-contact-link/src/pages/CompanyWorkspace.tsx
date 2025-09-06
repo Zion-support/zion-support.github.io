@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -42,6 +43,8 @@ export default function CompanyWorkspace() {
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -76,6 +79,7 @@ export default function CompanyWorkspace() {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+<<<<<<< HEAD
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -83,6 +87,8 @@ export default function CompanyWorkspace() {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (isLoading) {
     return (
 
@@ -334,7 +340,10 @@ import { useWhitelabel } from "@/context/WhitelabelContext",;
       <SEO;
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}      />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Header
         customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl}
         customTheme={effectiveTheme}
@@ -350,6 +359,7 @@ import { useWhitelabel } from "@/context/WhitelabelContext",;
       </main>
       <Footer />
     </ProtectedRoute>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
@@ -388,6 +398,9 @@ import React from './react';
 =======
   )import React from './react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )import React from './react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { CompanyDashboard } from '@/components / enterprise / workspace / CompanyDashboard';
@@ -451,6 +464,7 @@ if ( {) {
       </main>;
       <Footer />;
     </ProtectedRoute>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -602,3 +616,8 @@ export default function CompanyWorkspace() {_const { companySlug} = useParams() 
 }
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

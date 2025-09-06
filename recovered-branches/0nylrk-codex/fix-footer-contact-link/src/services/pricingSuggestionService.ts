@@ -23,6 +23,7 @@ export interface ClientBudgetParams {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   category: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   timeline?: string;
 <<<<<<< HEAD
 
@@ -276,10 +277,14 @@ if ( {) {
 =======
   timeline?: string;      minRate += 20;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  timeline?: string;      minRate += 20;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       maxRate += 30
     } else if (lowercaseTitle && lowercaseTitle.includes("junior")) {
       minRate -= 10;
       maxRate -= 15;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low
@@ -292,6 +297,8 @@ if ( {) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     }
     // Generate explanation
@@ -321,6 +328,7 @@ if ( {) {
       min_rate = Math.max (min_rate, 15), // Ensure minimum doesn't go too low;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low
 
 
@@ -340,6 +348,8 @@ if ( {) {
       minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     
     // Generate explanation
@@ -356,12 +366,15 @@ if ( {) {
       minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     
     // Generate explanation
@@ -371,6 +384,7 @@ if ( {) {
     // Generate explanation;
     const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${job_title}", we recommend a budget range of $${min_rate}-$${max_rate}/hour. This aligns with current market trends for similar projects.`;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -382,6 +396,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return {
       min_rate;
       max_rate;
@@ -397,6 +413,7 @@ if ( {) {
 }
 
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
+<<<<<<< HEAD
 <<<<<<< HEAD
   try {
 <<<<<<< HEAD
@@ -428,6 +445,9 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
 =======
   try {;      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  try {;      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
       confidence: "Low",
       explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
@@ -439,6 +459,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -446,6 +467,8 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
   try {;
     // Simulate API call delay
@@ -456,6 +479,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'];
 
     const hasInDemandSkills = skills && skills.some(skill => 
+<<<<<<< HEAD
 <<<<<<< HEAD
       inDemandSkills && inDemandSkills.some(demandSkill => skill && skill.toLowerCase().includes(demandSkill))
 
@@ -532,6 +556,9 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
 =======
       inDemandSkills && inDemandSkills.some(demandSkill => skill && skill.toLowerCase().includes(demandSkill));
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      inDemandSkills && inDemandSkills.some(demandSkill => skill && skill.toLowerCase().includes(demandSkill));
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {;
   try {;
     const { skills, yearsExperience, location } = params,;
@@ -557,6 +584,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
       if (highCostLocations.some(loc => lowercaseLocation.includes(loc))) {;
         locationFactor = 1.2;
       } else if (lowCostLocations.some(loc => lowercaseLocation.includes(loc))) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
         locationFactor = 0.8;
 <<<<<<< HEAD
@@ -655,6 +683,12 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     
     explanation += `, we recommend a rate of $${minRate}-$${maxRate}/hour to remain competitive while maximizing your earning potential.`;
 =======
+=======
+        locationFactor = 0.8;    }
+    if (location) {
+      explanation += `, considering market rates in ${location}`
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     
 
@@ -755,11 +789,15 @@ if ( {) {
       confidence;
       explanation;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     }
   } catch (error) {
     console.error("Error generating rate suggestion:", error),
+<<<<<<< HEAD
 <<<<<<< HEAD
     return {
 <<<<<<< HEAD
@@ -1041,6 +1079,15 @@ export async function trackPricingSuggestion(data: {;
     console && console.error("Error tracking pricing suggestion:", error);
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    return {}) {
+  try {
+    // In a real implementation, this would save to the database
+    // For now, we'll just log it
+
+    console && console.error("Error tracking pricing suggestion:", error);
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 // Function to save pricing analytics data;
 export async /**
@@ -1055,6 +1102,7 @@ function trackPricingSuggestion() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1063,6 +1111,8 @@ function trackPricingSuggestion() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // In a real implementation with Supabase: // await supabase;
     //  .from ('pricing_suggestions');
     //  .insert ([data]),
@@ -1071,6 +1121,7 @@ function trackPricingSuggestion() {
     console.error ("Error tracking pricing suggestion:", error);
     return false;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -1170,3 +1221,6 @@ explanation
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

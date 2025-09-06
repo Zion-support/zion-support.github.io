@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -27,6 +28,8 @@ import { motion } from 'framer-motion';
 import {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Brain
   Star
   Users
@@ -294,6 +297,18 @@ const features = [;
   'Creative consciousness exploration',
   'Spiritual growth pathways',
   'Personal transformation tracking',
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+import { Brain, Star, Users, TrendingUp, Zap, Shield;
+  CheckCircle, Clock, Award, Target, Globe, Sparkles;
+  Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb;
+  ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
+ } from 'lucide-react';
+const contactInfo = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 <<<<<<< HEAD
           ))}
@@ -308,9 +323,40 @@ const features = [;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
   {
+<<<<<<< HEAD
     rating: 5,
     avatar: '👩‍🔬';
   }
+=======
+    name: 'Dr. Sarah Chen',
+    role: 'Clinical Psychologist',
+    company: 'Mindful Wellness Center',
+content:
+      'The AI Consciousness Evolution platform has revolutionized how we approach emotional intelligence training. Our clients show remarkable improvements in self-awareness and empathy.',
+    rating: 5,
+    avatar: '👩‍⚕️',
+  },
+  {
+    name: 'Michael Rodriguez',
+    role: 'CEO',
+    company: 'InnovateTech Solutions',
+content:
+      'Implementing this platform in our leadership development program has transformed our company culture. Our executives are more emotionally intelligent and effective leaders.',
+    rating: 5,
+    avatar: '👨‍💼',
+  },
+  {
+    name: 'Dr. Emily Watson',
+    role: 'Research Director',
+    company: 'Consciousness Research Institute',
+content:
+      "This is the most advanced consciousness development tool I've ever encountered. The AI integration makes personal growth accessible to everyone.",
+    rating: 5,
+    avatar: '👩‍🔬',
+  },
+];
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function AIConsciousnessEvolution2025() {
 
 export default function AIConsciousnessEvolution2025() {
@@ -358,11 +404,35 @@ const testimonials = [;
 
 export default function AIConsciousnessEvolution2025() {;
   return (
+<<<<<<< HEAD
     <Layout>;
       <Head>;
         <title>;
           AI Consciousness Evolution Platform 2025 - Zion Tech Group;
         </title>;
+=======
+    <Layout>
+      <Head>
+<title>
+          AI Consciousness Evolution Platform 2025 - Zion Tech Group
+        </title>
+        <meta
+          name='description'
+          content='Revolutionary AI-powered consciousness evolution platform that enhances emotional intelligence, self-awareness, and personal transformation through advanced technology.'
+        />
+        <meta
+          name='keywords'
+          content='AI consciousness, emotional intelligence, self-awareness, personal development, consciousness evolution, AI training, Zion Tech Group'
+        />
+      </Head>
+      {/* Hero Section */}
+      <div className='relative min-h-screen flex items-center justify-center overflow-hidden'>
+        {/* Animated Background */}
+        <div className='absolute inset-0 bg-gradient-to-br from-purple-900 via-black to-pink-900'>
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(168,85,247,0.15),transparent_50%)]'></div>
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(236,72,153,0.15),transparent_50%)]'></div>
+        </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Floating Elements */}
         <div className='absolute inset-0 overflow-hidden'>;
           {[...Array(15)].map((_, i) => (;
@@ -394,6 +464,7 @@ export default function AIConsciousnessEvolution2025() {;
                 delay: i * 0.3
               }}
               style={{
+<<<<<<< HEAD
                 left: `${Math && Math.random() * 100}%`,
                 top: `${Math && Math.random() * 100}%`,
               }}            />;
@@ -406,6 +477,20 @@ export default function AIConsciousnessEvolution2025() {;
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">;
           <motion&& motion.div
 
+<<<<<<< HEAD
+=======
+
+=======
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+            />
+          ))}
+        </div>
+
+<div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <motion.div
 
 <<<<<<< HEAD
@@ -419,6 +504,7 @@ export default function AIConsciousnessEvolution2025() {;
             {/* Badge */}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -428,6 +514,15 @@ export default function AIConsciousnessEvolution2025() {;
             >
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium mb-6'
+            >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <Sparkles className='w-4 h-4 mr-2' />
               Revolutionary AI Technology
             </motion.div>
@@ -481,7 +576,11 @@ export default function AIConsciousnessEvolution2025() {;
             <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mb - 12'>;
               {[;
                 {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6'>;
               <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent'>;
                 AI Consciousness;
@@ -532,7 +631,38 @@ export default function AIConsciousnessEvolution2025() {;
                   transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}
                   className='text-center'
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                  label: 'Success Rate'
+                  value: '94%'
+                  icon: <Award className='w-8 h-8' />
+                }
+                {
+                  label: 'Active Users'
+                  value: '12.5K+'
+                  icon: <Users className='w-8 h-8' />
+                }
+                {
+                  label: 'Improvement'
+                  value: '300%'
+                  icon: <TrendingUp className='w-8 h-8' />
+                }
+                {
+                  label: 'Satisfaction',
+                  value: '4.9/5',
+                  icon: <Star className='w-8 h-8' />,
+                },
+              ].map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}
+className='text-center'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >
                   <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400'>
                     {stat.icon}
@@ -541,15 +671,25 @@ export default function AIConsciousnessEvolution2025() {;
                     {stat.value}
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <div className='text-sm text-purple-300'>{stat.label}</div>                </motion.div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
             {/* CTA Buttons */}
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>              <motion.button
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
+=======
+=======
+                  <div className='text-sm text-purple-300'>{stat.label}</div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                </motion.div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 =======
@@ -558,6 +698,7 @@ export default function AIConsciousnessEvolution2025() {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* CTA Buttons */}
+<<<<<<< HEAD
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>              <motion.button
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -639,6 +780,21 @@ label: 'Success Rate',
 
             {/* CTA Buttons */}
 
+<<<<<<< HEAD
+=======
+
+=======
+<div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
+              <motion.button
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'
+              >
+                Start Free Trial
+              </motion.button>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <motion.button
                 initial={{ opacity: 0, scale: 0.9 }}
               ))}
@@ -673,6 +829,7 @@ label: 'Success Rate',
               <motion&& motion.button
                 initial={{ opacity: 0, scale: 0 && 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
       {/* Features Section */}
       <section className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
@@ -688,6 +845,20 @@ label: 'Success Rate',
       {/* Features Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+                transition={{ duration: 0.6, delay: 0.8 }}
+className='border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200'
+              >
+                Watch Demo
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+      {/* Features Section */}
+<section className='py-20 bg-black'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 <<<<<<< HEAD
 
@@ -702,7 +873,9 @@ label: 'Success Rate',
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -717,11 +890,17 @@ label: 'Success Rate',
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='text-center mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Revolutionary Features for
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 {' '}
+<<<<<<< HEAD
                 Consciousness Evolution
               </span>
             </h2>
@@ -732,6 +911,12 @@ label: 'Success Rate',
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (          >
+=======
+<<<<<<< HEAD
+
+            className="text-center mb-16"
+          >
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             <h2 className="text-4xl font-bold text-white mb-6">
               Revolutionary Features for
@@ -743,6 +928,19 @@ label: 'Success Rate',
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+                Consciousness Evolution
+              </span>
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Our AI-powered platform combines cutting-edge technology with
+              ancient wisdom to create the most advanced consciousness
+              development experience ever created.
+            </p>
+          </motion.div>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             {features.map((feature, index) => (
               <motion.div
                 Consciousness Evolution;
@@ -770,12 +968,18 @@ label: 'Success Rate',
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300'
 
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
                   <Brain className='w-8 h-8 text-purple-400' />
@@ -785,6 +989,12 @@ label: 'Success Rate',
                 </h3>
                 <p className='text-gray-400'>
                   Advanced AI algorithms guide you through personalized
+<<<<<<< HEAD
+=======
+                  consciousness development exercises.
+                </p>
+                  consciousness development exercises.                </p>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -817,8 +1027,13 @@ label: 'Success Rate',
       </section>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* How It Works Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+<section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
 <<<<<<< HEAD
@@ -833,7 +1048,9 @@ label: 'Success Rate',
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -843,11 +1060,17 @@ label: 'Success Rate',
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='text-center mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               How AI Consciousness Evolution
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 {' '}
+<<<<<<< HEAD
                 Works
               </span>
             </h2>
@@ -861,6 +1084,12 @@ label: 'Success Rate',
               {
                 step: '01'
                 title: 'AI Assessment',          >
+=======
+<<<<<<< HEAD
+
+            className="text-center mb-16"
+          >
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             <h2 className="text-4xl font-bold text-white mb-6">
               How AI Consciousness Evolution
@@ -966,6 +1195,27 @@ label: 'Success Rate',
                   'Our AI analyzes your current consciousness level and creates a personalized development plan.'
                 icon: <Brain className='w-12 h-12' />
               }
+=======
+                Works
+              </span>
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Our revolutionary platform uses advanced AI to create personalized
+              consciousness development experiences that adapt to your unique
+              journey.
+            </p>
+          </motion.div>
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            {[
+              {
+                step: '01',
+                title: 'AI Assessment',
+description:
+                  'Our AI analyzes your current consciousness level and creates a personalized development plan.',
+                icon: <Brain className='w-12 h-12' />,
+              },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               {
                 step: '02'
                 title: 'Personalized Training'
@@ -977,6 +1227,7 @@ label: 'Success Rate',
                 step: '03'
                 title: 'Continuous Evolution'
                 description:
+<<<<<<< HEAD
                   'Real-time feedback and adaptation ensure continuous growth and development.'
                 icon: <TrendingUp className='w-12 h-12' />
               },            ].map((step, index) => (              {
@@ -1085,6 +1336,11 @@ label: 'Success Rate',
           <div className="grid grid - cols - 1 md:grid - cols-3 gap-8">;
             {[;
               {
+=======
+                  'Real-time feedback and adaptation ensure continuous growth and development.',
+                icon: <TrendingUp className='w-12 h-12' />,
+              },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             ].map((step, index) => (
               <motion.div
                 key={step.step}
@@ -1092,6 +1348,7 @@ label: 'Success Rate',
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
                 className='text-center'
 
                 key={step.step}
@@ -1101,9 +1358,15 @@ label: 'Success Rate',
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+className='text-center'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div className='relative mb-8'>
                   <div className='w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -1122,14 +1385,20 @@ label: 'Success Rate',
                 <p className='text-gray-300 leading-relaxed'>
                   {step.description}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             ))}
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </p>              </motion.div>
 
+=======
+                </p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1189,6 +1458,7 @@ label: 'Success Rate',
             ))}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Use Cases Section */}
+<<<<<<< HEAD
       <section className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -1204,6 +1474,10 @@ label: 'Success Rate',
       {/* Use Cases Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+<section className='py-20 bg-black'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
 <<<<<<< HEAD
@@ -1218,7 +1492,9 @@ label: 'Success Rate',
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1228,11 +1504,17 @@ label: 'Success Rate',
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='text-center mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Transform Your Life with
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 {' '}
+<<<<<<< HEAD
                 AI Consciousness
               </span>
             </h2>
@@ -1242,6 +1524,12 @@ label: 'Success Rate',
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {useCases.map((useCase, index) => (          >
+=======
+<<<<<<< HEAD
+
+            className="text-center mb-16"
+          >
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             <h2 className="text-4xl font-bold text-white mb-6">
               Transform Your Life with
@@ -1253,6 +1541,18 @@ label: 'Success Rate',
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+                AI Consciousness
+              </span>
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              From personal development to professional growth, our platform
+              serves diverse needs across multiple domains.
+            </p>
+          </motion.div>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             {useCases.map((useCase, index) => (
               <motion.div
                 AI Consciousness;
@@ -1279,12 +1579,18 @@ label: 'Success Rate',
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300'
 
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
                   <Lightbulb className='w-8 h-8 text-purple-400' />
@@ -1294,6 +1600,12 @@ label: 'Success Rate',
                 </h3>
                 <p className='text-gray-400'>
                   Leverage AI-powered consciousness development for enhanced
+<<<<<<< HEAD
+=======
+                  personal and professional growth.
+                </p>
+                  personal and professional growth.                </p>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1326,8 +1638,13 @@ label: 'Success Rate',
       </section>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Technology Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+<section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
 <<<<<<< HEAD
@@ -1342,7 +1659,9 @@ label: 'Success Rate',
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1352,11 +1671,17 @@ label: 'Success Rate',
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='text-center mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Cutting-Edge
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 {' '}
+<<<<<<< HEAD
                 Technology
               </span>
             </h2>
@@ -1367,6 +1692,12 @@ label: 'Success Rate',
             </p>
           </motion.div>
           <div className='grid grid-cols-2 md:grid-cols-5 gap-6'>            {technology.map((tech, index) => (          >
+=======
+<<<<<<< HEAD
+
+            className="text-center mb-16"
+          >
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             <h2 className="text-4xl font-bold text-white mb-6">
               Cutting-Edge
@@ -1378,6 +1709,19 @@ label: 'Success Rate',
             </p>
           </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+=======
+                Technology
+              </span>
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Our platform leverages the latest advancements in AI, machine
+              learning, and consciousness research to deliver unprecedented
+              results.
+            </p>
+          </motion.div>
+
+          <div className='grid grid-cols-2 md:grid-cols-5 gap-6'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             {technology.map((tech, index) => (
               <motion.div
               Our platform leverages the latest advancements in AI, machine;
@@ -1413,7 +1757,11 @@ label: 'Success Rate',
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                   <Cpu className="w-10 h-10 text-purple-400" />
@@ -1452,16 +1800,18 @@ label: 'Success Rate',
 
 =======
                 className='text-center group'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='text-center group'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300'>
                   <Cpu className='w-10 h-10 text-purple-400' />
                 </div>
-                <p className='text-sm text-gray-300 font-medium'>{tech}</p>              </motion.div>              >
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <Cpu className="w-10 h-10 text-purple-400" />
-                </div>
-                <p className="text-sm text-gray-300 font-medium">{tech}</p>
+                <p className='text-sm text-gray-300 font-medium'>{tech}</p>
               </motion.div>
 <<<<<<< HEAD
 
@@ -1476,8 +1826,13 @@ label: 'Success Rate',
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Testimonials Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+<section className='py-20 bg-black'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 <<<<<<< HEAD
 
@@ -1492,7 +1847,9 @@ label: 'Success Rate',
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1502,11 +1859,17 @@ label: 'Success Rate',
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='text-center mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               What Our Users
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 {' '}
+<<<<<<< HEAD
                 Say
               </span>
             </h2>
@@ -1516,6 +1879,12 @@ label: 'Success Rate',
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (          >
+=======
+<<<<<<< HEAD
+
+            className="text-center mb-16"
+          >
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             <h2 className="text-4xl font-bold text-white mb-6">
               What Our Users
@@ -1526,6 +1895,18 @@ label: 'Success Rate',
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+=======
+                Say
+              </span>
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Join thousands of satisfied users who have transformed their lives
+              with our AI consciousness platform.
+            </p>
+          </motion.div>
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.name}
@@ -1554,7 +1935,9 @@ label: 'Success Rate',
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.2 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1564,6 +1947,11 @@ label: 'Success Rate',
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div className='flex items-center mb-4'>
                   <div className='text-3xl mr-3'>{testimonial.avatar}</div>
@@ -1587,6 +1975,7 @@ label: 'Success Rate',
                     />
                   ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </div>
 
             ))}
@@ -1594,9 +1983,15 @@ label: 'Success Rate',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   ))}
                 </div>
                 <p className="text-gray-300 italic">"{testimonial.content}"</p>
+=======
+                </div>
+                <p className='text-gray-300 italic'>"{testimonial.content}"</p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>
                 <p className='text-gray-300 italic'>"{testimonial.content}"</p>              </motion.div>
 
@@ -1621,6 +2016,7 @@ label: 'Success Rate',
             ))}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Pricing Section */}
+<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -1638,6 +2034,10 @@ label: 'Success Rate',
       {/* Pricing Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+<section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
 <<<<<<< HEAD
@@ -1652,7 +2052,9 @@ label: 'Success Rate',
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1662,11 +2064,17 @@ label: 'Success Rate',
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='text-center mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Choose Your
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 {' '}
+<<<<<<< HEAD
                 Evolution Path
               </span>
             </h2>
@@ -1676,6 +2084,12 @@ label: 'Success Rate',
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {[          >
+=======
+<<<<<<< HEAD
+
+            className="text-center mb-16"
+          >
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             <h2 className="text-4xl font-bold text-white mb-6">
               Choose Your
@@ -1881,18 +2295,87 @@ label: 'Success Rate',
               <motion.div;
 =======
                 popular: true
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                Evolution Path
+              </span>
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Flexible pricing options designed to make consciousness evolution
+              accessible to everyone.
+            </p>
+          </motion.div>
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            {[
+              {
+                name: 'Starter',
+                price: '$99',
+                period: '/month',
+description:
+                  'Perfect for individuals beginning their consciousness journey',
+                features: [
+                  'Basic AI assessment',
+                  '10 consciousness exercises',
+                  'Progress tracking',
+                  'Email support',
+                  'Mobile app access',
+                ],
+                popular: false,
+              },
+              {
+                name: 'Professional',
+                price: '$299',
+                period: '/month',
+description:
+                  'Advanced features for serious consciousness development',
+                features: [
+                  'Advanced AI assessment',
+                  'Unlimited exercises',
+                  'Personalized coaching',
+                  'Priority support',
+                  'Advanced analytics',
+                  'Integration with wearables',
+                  'Group sessions',
+                ],
+                popular: true,
+              },
+              {
+                name: 'Enterprise',
+                price: '$799',
+                period: '/month',
+                description: 'Complete solution for organizations and teams',
+                features: [
+'Everything in Professional',
+                  'Team management',
+                  'Custom integrations',
+                  'Dedicated support',
+                  'White-label options',
+                  'Advanced reporting',
+                  'API access',
+                ],
+                popular: false,
+              },
+            ].map((plan, index) => (
+              <motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 key={plan.name}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className={`relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border rounded-2xl p-8 ${
                   plan.popular
                     ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20'                    : 'border-purple-500/20'
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               };
 
               {
@@ -1900,6 +2383,11 @@ label: 'Success Rate',
                 price: '$299',
                 period: '/month',
 
+=======
+                className={`relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border rounded-2xl p-8 ${
+plan.popular
+                    ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     : 'border-purple-500/20'
 
                     : 'border-purple-500/20'
@@ -1923,22 +2411,35 @@ label: 'Success Rate',
                 }`}
               >;
                 {plan.popular && (
+<<<<<<< HEAD
                     <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-bold">
+=======
+<div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+                    <span className='bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-bold'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       Most Popular
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+<div className='text-center mb-8'>
+                  <h3 className='text-2xl font-bold text-white mb-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     {plan.name}
                   </h3>;
                   <div className='mb - 4'>;
                     <span className='text - 4xl font - bold text - purple - 400'>;
                       {plan.price}
+<<<<<<< HEAD
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
                 <ul className="space-y-3 mb-8">
@@ -1989,6 +2490,20 @@ label: 'Success Rate',
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+=======
+                    </span>
+                    <span className='text-gray-400'>{plan.period}</span>
+                  </div>
+                  <p className='text-gray-300'>{plan.description}</p>
+                </div>
+                <ul className='space-y-3 mb-8'>
+                  {plan.features.map((feature, featureIndex) => (
+                    <li
+                      key={featureIndex}
+                      className='flex items-center text-gray-300'
+                    >
+                      <CheckCircle className='w-5 h-5 text-purple-400 mr-3 flex-shrink-0' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       {feature}
                     </li>;
                   ))}
@@ -2010,10 +2525,16 @@ label: 'Success Rate',
                   ))}
                 </ul>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                <button className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 hover:scale-105'
                     : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'
                 }`}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
@@ -2023,6 +2544,18 @@ label: 'Success Rate',
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+=======
+<button
+                  className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 hover:scale-105'
+                      : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'
+                  }`}
+                >
+                  Get Started
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </button>
               </motion.div>
             ))}
@@ -2033,9 +2566,8 @@ label: 'Success Rate',
           <motion&& motion.div
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* CTA Section */}
-      <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20'>
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div
 
 <<<<<<< HEAD
@@ -2073,6 +2605,7 @@ label: 'Success Rate',
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Evolve Your
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Consciousness?</span>
@@ -2086,10 +2619,30 @@ label: 'Success Rate',
                 Start Free Trial
               </button>
               <button className="border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200">
+=======
+<h2 className='text-4xl font-bold text-white mb-6'>
+              Ready to Evolve Your
+              <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
+                {' '}
+                Consciousness?
+              </span>
+            </h2>
+            <p className='text-xl text-purple-200 mb-8'>
+              Join thousands of users who have already transformed their lives
+              with our revolutionary AI platform. Start your consciousness
+              evolution journey today.
+            </p>
+            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
+              <button className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'>
+                Start Free Trial
+              </button>
+              <button className='border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 Schedule Demo
               </button>
             </div>
             {/* Contact Info */}
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-6'>
               {[
@@ -2106,6 +2659,8 @@ label: 'Success Rate',
                 {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   icon: <MapPin className='w-6 h-6' />
                   label: 'Visit Us'
                   value: contactInfo.address
@@ -2124,6 +2679,26 @@ label: 'Success Rate',
                 { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile }
                 { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email }
 
+=======
+<div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-6'>
+              {[
+                {
+                  icon: <Phone className='w-6 h-6' />
+                  label: 'Call Us'
+                  value: contactInfo.mobile
+                }
+                {
+                  icon: <Mail className='w-6 h-6' />
+                  label: 'Email Us'
+                  value: contactInfo.email
+                }
+                {
+                  icon: <MapPin className='w-6 h-6' />,
+                  label: 'Visit Us',
+                  value: contactInfo.address,
+                },
+              ].map((contact, index) => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo.address }
                   icon: <MapPin className='w-6 h-6' />,
                   label: 'Visit Us',
@@ -2196,7 +2771,9 @@ label: 'Success Rate',
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: 0 && 0.4 + index * 0 && 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -2211,6 +2788,11 @@ label: 'Success Rate',
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='text-center'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >
                   <div className='inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400'>
                     {contact.icon}
@@ -2219,14 +2801,20 @@ label: 'Success Rate',
                     {contact.label}
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               ))}
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <div className='text-white font-medium'>{contact.value}</div>                </motion.div>
 
+=======
+                  <div className='text-white font-medium'>{contact.value}</div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 </motion.div>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -2236,6 +2824,7 @@ label: 'Success Rate',
         </div>
       </section>
     </Layout>
+<<<<<<< HEAD
 );  )
 }
 <<<<<<< HEAD
@@ -2381,4 +2970,10 @@ label: 'Success Rate',
 }
 
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,8 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useEffect, useState } from "react",
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
+=======
+interface StickyActionProps {
+
+interface StickyActionProps {
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useState } from "react";
 import {cn} from "@/lib/utils";
 import {motion, AnimatePresence} from "framer-motion";
@@ -41,6 +48,7 @@ interface StickyActionProps {;
   className?: string;
   children: React && React.ReactNode,;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   showAfterScroll?: number;
 <<<<<<< HEAD
@@ -102,10 +110,14 @@ export function StickyAction(): any ({;
 =======
   showAfterScroll?: number;  children;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  showAfterScroll?: number;  children;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   showAfterScroll = 300;
   position = "bottom";
 }: StickyActionProps) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false);
 <<<<<<< HEAD
@@ -228,12 +240,19 @@ function StickyAction() {
       if (window.scrollY > showAfterScroll) {
         setIsVisible(true)  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [isVisible, setIsVisible] = useState(false);  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > showAfterScroll) {
+        setIsVisible(true)  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <AnimatePresence>
       {isVisible && (
         <motion.div
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -258,6 +277,8 @@ function StickyAction() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
 import React, { useEffect, useState } from "react",;
 import { cn } from "@/lib/utils",;
@@ -276,6 +297,7 @@ export function StickyAction({;
   position = "bottom";
 }: StickyActionProps) {;
   const [isVisible, setIsVisible] = useState(false),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -356,11 +378,18 @@ export function StickyAction({;
         setIsVisible(false);
       }          animate={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        setIsVisible(true);
+      } else {;
+        setIsVisible(false);
+      }          animate={{ opacity: 1, y: 0 }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
           transition={{ duration: 0 && 0.2 }}
           className={cn(
             "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4"
             positionClasses[position]
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -390,6 +419,8 @@ export function StickyAction({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   const position_classes = {
     bottom: "bottom - 4",

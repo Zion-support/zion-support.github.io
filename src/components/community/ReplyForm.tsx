@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6,6 +7,9 @@ import { useState } from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 =======
@@ -24,7 +28,18 @@ import { Textarea } from '@/components/ui/textarea'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { useState } from 'react';
+import { useForm, ControllerRenderProps } from 'react-hook-form';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -34,9 +49,39 @@ import {
   FormItem,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   FormMessage
 } from "@/components/ui/form",
 import { Card, CardContent } from "@/components/ui/card",
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+  FormMessage,;
+} from '@/components/ui/form';
+import { Card, CardContent } from '@/components/ui/card';
+
+import { useState } from "react",
+import { useForm, ControllerRenderProps } from "react-hook-form",
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormMessage
+} from "@/components/ui/form",
+import { Card, CardContent } from "@/components/ui/card";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+interface ReplyFormProps {
+  onSubmit: (content: string) => Promise<void>;
+  parentId?: string
+interface ReplyFormValues {
+  content: string
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 <<<<<<< HEAD
@@ -287,5 +332,16 @@ export default ReplyForm,
 export default ReplyForm;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+}
+export default ReplyForm;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+};
+export default ReplyForm;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

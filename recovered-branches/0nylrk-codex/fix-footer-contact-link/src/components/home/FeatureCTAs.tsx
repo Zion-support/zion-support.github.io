@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -9,12 +10,15 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Link} from "react-router-dom";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export function FeatureCTAs() {
@@ -42,6 +46,8 @@ function FeatureCTAs() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       title: "AI Talent Matching",
       description: "Our AI - powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.";
@@ -52,6 +58,7 @@ function FeatureCTAs() {
     }
     {
       title: "Services Marketplace"
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "Discover professional tech and AI services for your business needs, from development to consulting.";
 <<<<<<< HEAD
@@ -181,10 +188,14 @@ export function FeatureCTAs() {
 =======
       description: "Discover professional tech and AI services for your business needs, from development to consulting.";    {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      description: "Discover professional tech and AI services for your business needs, from development to consulting.";    {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       title: "Community Hub"
       description: "Connect with like-minded professionals, share insights, and stay updated with industry trends.";
       icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />
       link: "/community"
+<<<<<<< HEAD
 <<<<<<< HEAD
       details: "Join thousands of tech professionals in discussions, AMAs with industry leaders, and exclusive community events."
 <<<<<<< HEAD
@@ -271,6 +282,9 @@ export function FeatureCTAs() {
 =======
       details: "Join thousands of tech professionals in discussions, AMAs with industry leaders, and exclusive community events."    }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      details: "Join thousands of tech professionals in discussions, AMAs with industry leaders, and exclusive community events."    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       title: "Developer Tools"
       description: "Access our API documentation, SDKs, and integration guides to build on top of the Zion platform.";
@@ -280,6 +294,7 @@ export function FeatureCTAs() {
       details: "Leverage our robust API with comprehensive documentation, code examples, and developer support.";    }
     {
       title: "Project Management"
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "Streamlined tools to manage projects, track milestones, and ensure successful delivery.";
 <<<<<<< HEAD
@@ -333,11 +348,15 @@ export function FeatureCTAs() {
 =======
       description: "Streamlined tools to manage projects, track milestones, and ensure successful delivery.";    {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      description: "Streamlined tools to manage projects, track milestones, and ensure successful delivery.";    {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       title: "Zion Hire AI"
       description: "AI-powered recruiting assistant to streamline your hiring process and find better matches."
       icon: <Clock className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />
       link: "/zion-hire-ai"
       badge: "Premium"
+<<<<<<< HEAD
 <<<<<<< HEAD
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."
 <<<<<<< HEAD
@@ -438,6 +457,9 @@ export function FeatureCTAs() {;
 =======
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."      icon: <Calendar className="h - 10 w - 10 p - 2 rounded - md bg - red - 100 text - red-700" />,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."      icon: <Calendar className="h - 10 w - 10 p - 2 rounded - md bg - red - 100 text - red-700" />,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       link: "/dashboard / projects",
       details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion.";
     }
@@ -453,6 +475,7 @@ export function FeatureCTAs() {;
   ];
 ;
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -624,6 +647,8 @@ export function FeatureCTAs() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <section className="py-16 bg-gradient-to-b from-background to-background/90">;
       <div className="container mx-auto px-4">;
         <div className="mb-12 text-center">;
@@ -641,6 +666,7 @@ export function FeatureCTAs() {;
 
                   {feature.icon}
                   {feature.badge && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -665,6 +691,8 @@ export function FeatureCTAs() {;
                   )}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>;
                 <CardTitle className="mt-4">{feature.title}</CardTitle>;
                 <CardDescription className="line - clamp-2">{feature.description}</CardDescription>;

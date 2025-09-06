@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { LoginCard } from "./LoginCard";
 
 import { LoginCard } from "./LoginCard";
@@ -55,6 +58,7 @@ function LoginContent() {
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>;
 <<<<<<< HEAD
@@ -112,6 +116,9 @@ export function LoginContent() {
 =======
       </div>;    </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </div>;    </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 }
     </div>
@@ -142,6 +149,7 @@ export function LoginContent() {;
 } export function LoginContent () {
   return (<div className="flex min-h-screen bg-zion-blue" > <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24" > <LoginCard /> </div> <div className="hidden lg:block relative w-0 flex-1" > <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-br from-zion-blue-dark via-zion-purple-dark to-zion-purple-light opacity-80" > <div className="flex flex-col justify-center items-center h-full px-8" > <div className="max-w-md text-center" > <h3 className="text-3xl font-bold text-white mb-4" >Join the Zion Community</h3> <p className="text-lg text-white/80" > Connect with thousands of AI professionals, discover new opportunities, and showcase your services to a global audience. 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
@@ -156,3 +164,6 @@ export function LoginContent() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -13,6 +13,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth",
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { MessageSquare } from "lucide-react",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   isAdmin?: boolean;
@@ -242,6 +243,22 @@ import { MessageSquare } from "lucide-react",  const links = [
       href: "/equipment"
       matches: (path: string) => path.startsWith("/equipment")  // Add authenticated-only links
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { MessageSquare } from "lucide-react",  const links = [
+    {
+      name: "Home"
+      href: "/"
+      matches: (path: string) => path === "/"    {
+      name: "Categories"
+      href: "/categories"
+      matches: (path: string) => path.startsWith("/categories")
+
+    },
+    {
+      name: "Equipment"
+      href: "/equipment"
+      matches: (path: string) => path.startsWith("/equipment")  // Add authenticated-only links
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (isAuthenticated) {
     links.push({
       name: "Dashboard"
@@ -259,6 +276,7 @@ import { MessageSquare } from "lucide-react",  const links = [
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -268,6 +286,8 @@ import { MessageSquare } from "lucide-react",  const links = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <nav className={cn("ml-6 hidden md:flex", className)}>
       <ul className="flex items-center gap-1">
@@ -331,6 +351,7 @@ import { MessageSquare } from "lucide-react",  const links = [
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -338,6 +359,8 @@ import { MessageSquare } from "lucide-react",  const links = [
   return (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <nav className={cn("ml-6 hidden md:flex", className)}>;
       <ul className="flex items-center gap-1">;
 
@@ -447,6 +470,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -456,6 +480,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
 =======
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               )}
@@ -468,6 +494,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
           <li>;
             <Link
               to="/messages"
+<<<<<<< HEAD
 <<<<<<< HEAD
               className={cn(
 
@@ -505,6 +532,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
 =======
               className={cn(            </Link>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              className={cn(            </Link>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </li>;
         ))}
         {/* Messages link with unread counter */}
@@ -526,6 +556,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
               )}
             >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -546,6 +577,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
 =======
               )}                </span>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              )}                </span>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               )}
             </Link>;
           </li>;
@@ -559,6 +593,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
       </ul>;
     </nav>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -787,3 +822,6 @@ link.matches (location.pathname) ? "bg-zion-purple/20 text-zion-cyan" : "text-wh
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -47,6 +47,7 @@ export default AnimatedBackground;
             transform: translateY(0px) rotate(0deg);
           }
         }
+<<<<<<< HEAD
       `}</style>;
     </div>;
   );  return (
@@ -155,4 +156,12 @@ function AnimatedBackground() {
         className="absolute inset-0 opacity-10"
         style={{
           backgroundImage: `
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+      `}</style>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

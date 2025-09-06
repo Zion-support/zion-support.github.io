@@ -1,11 +1,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -29,6 +32,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -37,6 +41,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -52,6 +58,7 @@ import {AlertTriangle, Check, Globe, Search, Loader2} from "lucide-react";
 import {useIsMobile} from "@/hooks/use-mobile";
 import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
 import {useTranslationService} from "@/hooks/useTranslationService";
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function TranslationManager() {;
 <<<<<<< HEAD
@@ -112,11 +119,15 @@ export default function TranslationManager() {
 =======
 export default function TranslationManager() {;  const [searchQuery, setSearchQuery] = useState("");
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export default function TranslationManager() {;  const [searchQuery, setSearchQuery] = useState("");
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [translations, setTranslations] = useState<Record<string, any>>({});
   const [filteredKeys, setFilteredKeys] = useState<string[]>([]);
   const [editingKey, setEditingKey] = useState<string | null>(null);
   const [editedTranslations, setEditedTranslations] = useState<Record<string, Record<SupportedLanguage, string>>>({});
   const [isSaving, setIsSaving] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -155,12 +166,15 @@ export default function TranslationManager() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     supportedLanguages.forEach(lang => {
       const res = i18n.getResourceBundle(lang.code, selectedNamespace),    supportedLanguages.forEach(lang => {
       const res = i18n.getResourceBundle(lang.code, selectedNamespace),
       if (res) {
         // Flatten nested objects for easier management
         const flattenObject = (obj: any, prefix = '') => {
+<<<<<<< HEAD
 <<<<<<< HEAD
           return Object.keys(obj).reduce((acc, key) => {
 <<<<<<< HEAD
@@ -251,6 +265,9 @@ if ( {) {
 =======
           return Object.keys(obj).reduce((acc, key) => {  useEffect(() => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          return Object.keys(obj).reduce((acc, key) => {  useEffect(() => {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // For demo purposes, we're using the loaded translations from i18next;
     const currentTranslations: Record<string, any> = {};
               acc[`${pre}${key}`] = obj[key]
@@ -315,6 +332,7 @@ if ( {) {
       // Update translations with edited values
       const updatedTranslations = { ...translations }
       supportedLanguages.forEach(lang => {
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (!updatedTranslations[lang.code]) {
 =======
@@ -411,6 +429,9 @@ if ( {) {
 =======
         if (!updatedTranslations[lang.code]) {    const allKeys = new Set<string>();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        if (!updatedTranslations[lang.code]) {    const allKeys = new Set<string>();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     Object && Object.values(currentTranslations).forEach(langTranslations => {;
       Object && Object.keys(langTranslations).forEach(key => allKeys && allKeys.add(key));
     });
@@ -464,6 +485,7 @@ if ( {) {
           key.toLowerCase().includes(query) ||;
           (typeof value === 'string' && value.toLowerCase().includes(query));
         ) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
           filtered.push(key);
 =======
@@ -676,6 +698,12 @@ if ( {) {
         description: t("translation.changes_saved")})
     }, 1000)          title: t('translation.translation_failed')
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          filtered.push(key);      toast({
+        title: t("translation.saved")
+        description: t("translation.changes_saved")})
+    }, 1000)          title: t('translation.translation_failed')
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           description: error
           variant: "destructive"})
         return
@@ -683,6 +711,7 @@ if ( {) {
       // Update edited translations with auto-translated content
       setEditedTranslations({
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1205,6 +1234,15 @@ export default function TranslationManager() {;
       <SEO 
         title={t('translation.manager_title')}               {/* Search and filter */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      }),
+      
+
+      <SEO
+        title={t('translation.manager_title')}
+      <SEO 
+        title={t('translation.manager_title')}               {/* Search and filter */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="flex flex-col sm:flex-row gap-4">;
                 <div className="relative flex-1">;
                   <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;        ...editedTranslations;
@@ -1218,6 +1256,7 @@ export default function TranslationManager() {;
                     type="search"
                     placeholder={t('translation && translation.search_placeholder')}
                     className="pl-8"
+<<<<<<< HEAD
 <<<<<<< HEAD
                     value={searchQuery}
 <<<<<<< HEAD
@@ -1335,6 +1374,9 @@ export default function TranslationManager() {;
 =======
                     value={searchQuery}                  value={selectedNamespace}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    value={searchQuery}                  value={selectedNamespace}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   onValueChange={(value) => setSelectedNamespace(value)}
                   className="w-full sm:w-auto";
                 >;
@@ -1454,10 +1496,13 @@ export default function TranslationManager() {;
                           )}
                         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>;
             </div>;
           </CardContent>;
@@ -1466,6 +1511,7 @@ export default function TranslationManager() {;
       <Footer />;
 
     </>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -1636,3 +1682,6 @@ const getMissingLanguages = (key: string) : SupportedLanguage[] => {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

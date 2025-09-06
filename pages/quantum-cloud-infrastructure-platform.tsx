@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -7,6 +8,9 @@ import React from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -33,6 +37,10 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <>;
@@ -75,6 +83,7 @@ import ServiceLanding from '../components/sections/ServiceLanding';
   );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 import React from 'react',
 import Head from 'next/head',
@@ -95,6 +104,11 @@ import ServiceLanding from '../components/sections/ServiceLanding',
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import Head from 'next/head',
+import ServiceLanding from '../components/sections/ServiceLanding',
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function QuantumCloudInfrastructurePlatformPage() {
 	return (
 		<>
@@ -125,6 +139,7 @@ export default function QuantumCloudInfrastructurePlatformPage() {
 	)
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -154,6 +169,9 @@ export default function QuantumCloudInfrastructurePlatformPage() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>;
       <Head>;
@@ -189,6 +207,7 @@ export default function QuantumCloudInfrastructurePlatformPage() {
           'Energy',
           'Media',
         ]}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import Head from 'next/head',
@@ -244,12 +263,15 @@ export default function QuantumCloudInfrastructurePlatformPage() {
 }
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         canonical='https: //ziontechgroup.com / quantum - cloud - infrastructure - platform';
       />;
     </>);
 ;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -259,3 +281,8 @@ export default function QuantumCloudInfrastructurePlatformPage() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+export default function QuantumCloudInfrastructurePlatformPage() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

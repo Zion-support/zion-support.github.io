@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -14,6 +15,9 @@ export interface TalentProfile {;
 =======
 export interface TalentProfile {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+export interface TalentProfile {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   user_id: string;
   full_name: string;
@@ -22,6 +26,7 @@ export interface TalentProfile {
   bio?: string;
   summary?: string;
   location?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     title: string,
@@ -110,10 +115,14 @@ export interface HireRequest {
 =======
     title: string,    description: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    title: string,    description: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }[];
 }
 export interface TalentProfileFilters {
   search?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   skills?: string[];
   availabilities?: string[];
@@ -276,3 +285,6 @@ export interface HireRequest {;
 =======
   skills?: string[];}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  skills?: string[];}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

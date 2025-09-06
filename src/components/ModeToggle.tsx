@@ -1,7 +1,28 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Moon, Sun } from 'lucide-react'
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import { Moon, Sun } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import {
+  Tooltip
+  TooltipContent
+  TooltipProvider
+  TooltipTrigger
+} from '@/components/ui/tooltip'
+import { toast } from '@/hooks/use-toast'
+  darkModeMessages
+  lightModeMessages
+} from '@/utils/themeToggleMessages'
+// Use the ThemeProvider hook directly to ensure no conflicts
+import { useTheme } from '@/components/ThemeProvider'
+import { logIssue } from '@/utils/logIssue'
+import { useEffect, useState } from 'react'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { toast } from "@/hooks/use-toast"
@@ -23,6 +44,12 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 import { useTheme } from "@/components/ThemeProvider"
 import { logIssue } from "@/utils/logIssue"
 import { useEffect, useState } from "react"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     setIsClient(true);
   }, []);
@@ -117,6 +144,39 @@ if ( {) {
   const handleToggle = () => {
     try {
       // Determine the new theme we are switching TO
+=======
+export function ModeToggle() {
+
+  const { theme, toggleTheme } = useTheme();
+  const [isClient, setIsClient] = useState(false);
+  // Ensure we're on the client side to avoid hydration mismatches
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+  // Determine the actual resolved theme for display purposes
+    return theme;
+  })();
+
+  const isDarkMode = resolvedTheme === 'dark';
+
+  const handleToggle = () => {
+    try {
+      // Determine the new theme we are switching TO
+const newTheme = isDarkMode ? 'light' : 'dark';
+
+      logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`);
+
+      // Apply the new theme via ThemeProvider
+      toggleTheme()
+      // Show user feedback with a developer-centric message
+      const messages =
+        newTheme === 'dark' ? darkModeMessages : lightModeMessages
+      const title = messages[Math.floor(Math.random() * messages.length)]
+      toast({
+        title
+        description: `Theme changed to ${newTheme} mode successfully`
+      })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       // Accessibility announcement for screen readers
       const announcement = `Theme switched to ${newTheme} mode`
       // Create a live region announcement
@@ -140,7 +200,23 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+    }
+  }
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  if (!isClient) {
+    // Return a neutral state during SSR to prevent hydration issues
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function ModeToggle() {
 
   const { theme, toggleTheme } = useTheme(),
@@ -460,6 +536,7 @@ export function ModeToggle() {;
             ) : (              <p className="text-xs opacity-60 mt-1">Following system preference</p>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             )}
+<<<<<<< HEAD
           </div>;
         </TooltipContent>;
       </Tooltip>;
@@ -592,9 +669,20 @@ if ( {") {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 =======
+=======
+=======
+          </div>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+  );
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 if (!isClient) {";
   //Return a neutral state during SSR to prevent hydration issues return (<Button variant="ghost" size="icon" disabled aria-label="Loading theme toggle" className="focus-visible:ring-ring relative text-foreground" > <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {;
@@ -610,9 +698,17 @@ if (!isClient) {";
 }/> </span> </Button> </TooltipTrigger> <TooltipContent>) ;
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>) ;
 }'"
+<<<<<<< HEAD
   );
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

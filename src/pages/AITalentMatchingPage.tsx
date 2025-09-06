@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function AITalentMatchingPage() {;
   const benefits = [;
     {;
@@ -40,13 +43,31 @@ export default function AITalentMatchingPage() {
 <<<<<<< HEAD
       icon: <Bot className="h-8 w-8" />},
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+import React from 'react';
+import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate';
+import { Bot, Users, TrendingUp } from 'lucide-react';
+
+export default function AITalentMatchingPage() {
+title: 'Precise Candidate Matching',
+      description:
+        'Leverage AI algorithms to pair your roles with the most qualified experts.',
+      icon: <Bot className='h-8 w-8' />,
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       title: "Streamlined Hiring Workflow",
       description: "Automated screening and ranking saves your team valuable time.",
       icon: <Users className="h-8 w-8" />},
     {
+<<<<<<< HEAD
       title: "Scalable Talent Pools",
       description: "Access a global network of vetted professionals ready for your projects.",
       icon: <TrendingUp className="h-8 w-8" />}],
@@ -178,8 +199,40 @@ function AITalentMatchingPage() {
   ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+      title: 'Scalable Talent Pools',
+      description:
+        'Access a global network of vetted professionals ready for your projects.',
+      icon: <TrendingUp className='h-8 w-8' />,
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: 'Emily Stone',
+      role: 'HR Director',
+      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.",
+      avatar: '/placeholder.svg',
+    },
+    {
+      name: 'Raj Patel',
+      role: 'Startup Founder',
+      text: "The quality of candidates has improved dramatically since using Zion's platform.",
+      avatar: '/placeholder.svg',
+    },
+  ];
+
+  
+    />
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"
@@ -257,6 +310,7 @@ export default function AITalentMatchingPage() {;
       benefits={benefits}
       features={features}
       stats={stats}
+<<<<<<< HEAD
 
     />;
 <<<<<<< HEAD
@@ -285,6 +339,7 @@ const AITalentMatchingPage: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
+<<<<<<< HEAD
 =======
 export default AITalentMatchingPage;
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
@@ -292,3 +347,13 @@ export default AITalentMatchingPage;
   );
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      ctaText="Start Matching Talent"
+      ctaLink="/contact"
+    />
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

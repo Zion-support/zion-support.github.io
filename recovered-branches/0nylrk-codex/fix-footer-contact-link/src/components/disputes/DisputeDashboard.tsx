@@ -10,6 +10,7 @@ import {;
 import { useDisputes } from "@/hooks/useDisputes";
 import { DisputesList } from "./DisputesList";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
 <<<<<<< HEAD
 =======
@@ -113,18 +114,28 @@ import {} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {} from "@/components/ui/card";
+
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from "lucide-react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     refetch()
   }, [refetch]),
 
   const openDisputes = disputes.filter(d => d.status === 'open'),
   const underReviewDisputes = disputes.filter(d => d.status === 'under_review'),
   const resolvedDisputes = disputes.filter(d => d.status === 'resolved'),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
 
         
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -154,10 +165,15 @@ import { ShieldAlert } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from "lucide-react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <Button onClick={refetch} variant="outline">
           Refresh
         </Button>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -188,6 +204,11 @@ import { ShieldAlert } from "lucide-react";
       
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="pb-2">
@@ -197,6 +218,7 @@ import { ShieldAlert } from "lucide-react";
             </CardTitle>
             <CardDescription>Awaiting review</CardDescription>
           </CardHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <CardContent>
 <<<<<<< HEAD
@@ -327,6 +349,9 @@ export function DisputeDashboard() {;
 =======
           <CardContent>        <Card>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <CardContent>        <Card>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
               <span>Under Review</span>
@@ -334,6 +359,7 @@ export function DisputeDashboard() {;
             </CardTitle>
             <CardDescription>Being actively processed</CardDescription>
           </CardHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <CardContent>
 <<<<<<< HEAD
@@ -733,6 +759,9 @@ function DisputeDashboard() {
 =======
           <CardContent>            </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <CardContent>            </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </CardContent>;
         </Card>;
       </div>;
@@ -741,6 +770,7 @@ function DisputeDashboard() {
     </div>);
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -789,3 +819,5 @@ container mx-auto p-4 space-y-6"> <div className=" flex flex-wrap items-center j
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -80,6 +80,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import index from '../pages/index" describe('index Integration Tests',() => {' test('page renders correctly',() => {' render(<index / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<index / />) }) test('page content is accessible',() => {' render(<index / />) }) test('page loads with correct data',() => {' render(<index / />) }) })
 import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import index from '../pages/index" describe('index Integration Tests',() => {' test('page renders correctly',() => {' render(<index / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<index / />) }) test('page content is accessible',() => {' render(<index / />) }) test('page loads with correct data',() => {' render(<index / />) }) })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 <<<<<<< HEAD
@@ -92,3 +93,5 @@ import _React from 'react" import { render,screen } from '@testing-library/react
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

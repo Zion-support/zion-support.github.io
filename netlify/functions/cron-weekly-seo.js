@@ -1,6 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -106,6 +111,20 @@ function score_page() {
     const h1Count = (html.match (/<h1[^>]*>/gi) || []).length,
     const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min (60, h1Count * 10) - Math.min (20, Math.floor (ms / 500)),
     return { url, ms, title, hasMetaDesc, h1Count, score: Math.max (0, score) }
+=======
+const { upsertFile } = require('./_lib/github');
+async function scorePage(url) {
+  const t0 = Date.now();
+  try {
+    const resp = await fetch(url);
+    const html = await resp.text();
+    const ms = Date.now() - t0,
+    const title = (html.match(/<title>(.*?)<\/title>/i) || [])[1] || '';
+    const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test(html);
+    const h1Count = (html.match(/<h1[^>]*>/gi) || []).length,
+    const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min(60, h1Count * 10) - Math.min(20, Math.floor(ms / 500)),
+    return { url, ms, title, hasMetaDesc, h1Count, score: Math.max(0, score) }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e) {
     return { url, error: e.message || String (e), score: 0 }
   }
@@ -264,12 +283,35 @@ exports.handler = async function() {
     for (const p of pages) {
       results.push(await scorePage(`${baseUrl}${p}`))
     }
+<<<<<<< HEAD
     const report = { updatedAt: Date.now(), results },
 
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
 
+=======
+
+    if (owner && repo && token) {
+      await upsertFile({
+        owner,
+        repo,
+        path: 'data/reports/seo/weekly-seo.json',
+        content: JSON.stringify(report, null, 2),
+        message: 'chore(automation): weekly SEO report',
+        token,
+      });
+    }
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ ok: true, pages: results.length }),
+    };
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
+  }
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/seo/weekly-seo.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly SEO report', token })
     }
@@ -278,6 +320,7 @@ exports.handler = async function() {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
 },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -340,6 +383,13 @@ exports.handler = async function() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

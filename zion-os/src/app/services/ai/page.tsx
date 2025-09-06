@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -13,12 +14,15 @@ export default function AIServicesPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">;
         <div className="container mx-auto px-6 text-center">;
           <h1 className="text-5xl font-bold mb-6">🤖 AI Services & Solutions</h1>;
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -57,12 +61,15 @@ export default function AIServicesPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">;
         <div className="container mx-auto px-6 text-center">;
           <h1 className="text-5xl font-bold mb-6">🤖 AI Services & Solutions</h1>;
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -90,6 +97,15 @@ export default function AIServicesPage() {;
             </a>;
             <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition-colors">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            Transform your business with cutting-edge artificial intelligence. From automation to predictive analytics;            we deliver enterprise-grade AI solutions that drive real results.;
+          </p>;
+          <div className="mt-8">;
+            <a href="tel:+13024640950" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - blue - 50 transition - colors mr-4">;
+              Call Now: +1 302 464 0950;
+            </a>;
+            <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition-colors">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Get AI Consultation;
             </a>;
           </div>;
@@ -97,12 +113,17 @@ export default function AIServicesPage() {;
       </div>;
       {/* Contact Info Banner */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="bg-zinc-800 py-4">;
         <div className="container mx-auto px-6 text-center text-sm">;
 =======
       <div className="bg - zinc - 800 py-4">;
         <div className="container mx - auto px - 6 text - center text-sm">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <div className="bg - zinc - 800 py-4">;
+        <div className="container mx - auto px - 6 text - center text-sm">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <span className="mr-8">📱 +1 302 464 0950</span>;
           <span className="mr-8">✉️ kleber@ziontechgroup.com</span>;
           <span>📍 364 E Main St STE 1008, Middletown DE 19709</span>;
@@ -110,6 +131,7 @@ export default function AIServicesPage() {;
       </div>;
       {/* AI Services Grid */}
       <section className="py-20">;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="container mx-auto px-6">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
@@ -284,6 +306,12 @@ export default function AIServicesPage() {;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap-12">;
             {/* ZionGPT Core */}                predictive modeling, and intelligent business intelligence solutions.;
               </p>;
+=======
+        <div className="container mx - auto px-6">;
+          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap-12">;
+            {/* ZionGPT Core */}                predictive modeling, and intelligent business intelligence solutions.;
+              </p>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="space - y-4 mb-8">;
                 <h3 className="text - xl font - semibold text - blue-400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc-300">;
@@ -296,6 +324,7 @@ export default function AIServicesPage() {;
                   <li>• Market trend predictions</li>;
                 </ul>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="bg-zinc-700 rounded-lg p-6 mb-6">;
                 <h4 className="text-lg font-semibold mb-4">Pricing Plans</h4>;
@@ -319,6 +348,8 @@ export default function AIServicesPage() {;
               </div>;
               <a href="https://ziontechgroup.com/ai-analytics" className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="bg - zinc - 700 rounded - lg p - 6 mb-6">;
                 <h4 className="text - lg font - semibold mb-4">Pricing Plans</h4>;
                 <div className="space-y-3">;
@@ -340,11 +371,15 @@ export default function AIServicesPage() {;
                 </div>;
               </div>;
               <a href="https://ziontechgroup.com / ai - analytics" className="block w - full text - center bg - blue - 600 hover:bg - blue - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Learn More About AI Analytics;
               </a>;
             </div>;
             {/* AI Customer Support */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
@@ -378,6 +413,10 @@ export default function AIServicesPage() {;
 =======
                 and automated customer service solutions that never sleep.;
               </p>;
+=======
+                and automated customer service solutions that never sleep.;
+              </p>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="space - y-4 mb-8">;
                 <h3 className="text - xl font - semibold text - blue-400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc-300">;
@@ -390,6 +429,7 @@ export default function AIServicesPage() {;
                   <li>• Performance analytics and reporting</li>;
                 </ul>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="bg-zinc-700 rounded-lg p-6 mb-6">;
                 <h4 className="text-lg font-semibold mb-4">Pricing Plans</h4>;
@@ -413,6 +453,8 @@ export default function AIServicesPage() {;
               </div>;
               <a href="https://ziontechgroup.com/ai-support" className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="bg - zinc - 700 rounded - lg p - 6 mb-6">;
                 <h4 className="text - lg font - semibold mb-4">Pricing Plans</h4>;
                 <div className="space-y-3">;
@@ -434,11 +476,15 @@ export default function AIServicesPage() {;
                 </div>;
               </div>;
               <a href="https://ziontechgroup.com / ai - support" className="block w - full text - center bg - blue - 600 hover:bg - blue - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Learn More About AI Customer Support;
               </a>;
             </div>;
             {/* AI Process Automation */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
@@ -489,6 +535,13 @@ export default function AIServicesPage() {;
                 <h3 className="text - xl font - semibold text - blue-400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc-300">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                document processing, and AI-powered business process optimization.;                document processing, and AI-powered business process optimization.;
+              </p>;
+              <div className="space - y-4 mb-8">;
+                <h3 className="text - xl font - semibold text - blue-400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc-300">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <li>• Intelligent document processing (OCR)</li>;
                   <li>• Workflow automation and optimization</li>;
                   <li>• Process mining and analysis</li>;
@@ -545,11 +598,15 @@ export default function AIServicesPage() {;
                 </div>;
               </div>;
               <a href="https://ziontechgroup.com / ai - automation" className="block w - full text - center bg - blue - 600 hover:bg - blue - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Learn More About AI Process Automation;
               </a>;
             </div>;
             {/* AI Security & Compliance */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
@@ -585,6 +642,10 @@ export default function AIServicesPage() {;
 =======
                 and automated security solutions that adapt to evolving threats.;
               </p>;
+=======
+                and automated security solutions that adapt to evolving threats.;
+              </p>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="space - y-4 mb-8">;
                 <h3 className="text - xl font - semibold text - blue-400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc-300">;
@@ -597,6 +658,7 @@ export default function AIServicesPage() {;
                   <li>• Incident response automation</li>;
                 </ul>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="bg-zinc-700 rounded-lg p-6 mb-6">;
                 <h4 className="text-lg font-semibold mb-4">Pricing Plans</h4>;
@@ -620,6 +682,8 @@ export default function AIServicesPage() {;
               </div>;
               <a href="https://ziontechgroup.com/ai-security" className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="bg - zinc - 700 rounded - lg p - 6 mb-6">;
                 <h4 className="text - lg font - semibold mb-4">Pricing Plans</h4>;
                 <div className="space-y-3">;
@@ -641,7 +705,10 @@ export default function AIServicesPage() {;
                 </div>;
               </div>;
               <a href="https://ziontechgroup.com / ai - security" className="block w - full text - center bg - blue - 600 hover:bg - blue - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Learn More About AI Security & Compliance;
               </a>;
             </div>;
@@ -649,6 +716,7 @@ export default function AIServicesPage() {;
         </div>;
       </section>;
       {/* AI Implementation Process */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-20 bg-zinc-800">;
         <div className="container mx-auto px-6">;
@@ -689,6 +757,8 @@ export default function AIServicesPage() {;
               <h3 className="text-xl font-semibold mb-3">Deployment & Optimization</h3>;
               <p className="text-zinc-300">Launch AI solutions and continuously optimize for maximum performance and ROI.</p>;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className="py - 20 bg - zinc-800">;
         <div className="container mx - auto px-6">;
           <div className="text - center mb-16">;
@@ -727,27 +797,37 @@ export default function AIServicesPage() {;
               <div className="bg - blue - 600 w - 16 h - 16 rounded - full flex items - center justify - center text - 2xl font - bold mx - auto mb-4">6</div>;
               <h3 className="text - xl font - semibold mb-3">Deployment & Optimization</h3>;
               <p className="text - zinc-300">Launch AI solutions and continuously optimize for maximum performance and ROI.</p>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>;
           </div>;
         </div>;
       </section>;
       {/* Call to Action */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">;
         <div className="container mx-auto px-6 text-center">;
           <h2 className="text-4xl font-bold mb-6">Ready to Harness the Power of AI?</h2>;
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple-600">;
         <div className="container mx - auto px - 6 text-center">;
           <h2 className="text - 4xl font - bold mb-6">Ready to Harness the Power of AI?</h2>;
           <p className="text - xl text - blue - 100 mb - 8 max - w-2xl mx-auto">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             Let's discuss how our AI solutions can transform your business operations;
             improve efficiency, and drive unprecedented growth.;
           </p>;
           <div className="space-y-4">;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
               <a href="tel:+13024640950" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-lg">;
@@ -769,6 +849,17 @@ export default function AIServicesPage() {;
             </div>;
             <p className="text - blue - 100 text-sm">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center items-center">;
+              <a href="tel:+13024640950" className="bg - white text - blue - 600 px - 8 py - 4 rounded - lg font - semibold hover:bg - blue - 50 transition - colors text-lg">;
+                📞 Call +1 302 464 0950;
+              </a>;
+              <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 4 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors text-lg">;
+                ✉️ Schedule AI Consultation;
+              </a>;
+            </div>;
+            <p className="text - blue - 100 text-sm">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https: //ziontechgroup.com;
             </p>;
           </div>;

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react'
@@ -96,6 +97,8 @@ export function CodeBlock({;
           {language}
         </div>;
       )}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 ))}
           </div>;
@@ -230,6 +233,7 @@ export default CodeBlock;
 ;
 <<<<<<< HEAD
 export default CodeBlock;
+<<<<<<< HEAD
 =======
         </div>
       )}
@@ -237,3 +241,19 @@ export default CodeBlock;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { useState } from 'react';
+import { Check, Copy } from 'lucide-react';
+import { cn } from '@/lib/utils';
+
+import { useState  } from 'react';
+import { Check, Copy } from 'lucide-react'
+import { cn } from "@/lib/utils";
+interface CodeBlockProps {
+  );
+
+export default CodeBlock;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

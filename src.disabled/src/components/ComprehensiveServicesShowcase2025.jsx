@@ -11,7 +11,12 @@ import { AnimatePresence, motion, ; CheckCircle, ; Clock, ; ExternalLink, ; Mail
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { AnimatePresence,motion } from \'framer-motion\'; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from \'lucide-react\'; import { useState } from \'react\';
 const { AnimatePresence,motion } from "framer-motion"; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from "lucide-react"; import { useState } from "react";''"
+<<<<<<< HEAD
 =======
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { AnimatePresence,motion } from \'framer-motion\'; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from \'lucide-react\'; import { useState } from \'react\';
 const { AnimatePresence,motion } from "framer-motion"; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from "lucide-react"; import { useState } from "react";''"
 

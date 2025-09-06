@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -8,10 +9,23 @@ import { toast } from "@/hooks/use-toast",
 interface ProfileContactProps {
   email?: string,
   profileName: string,
+=======
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Mail, Send } from 'lucide-react';
+import { useState } from 'react';
+import { toast } from '@/hooks/use-toast';
+
+interface ProfileContactProps {
+  email?: string;
+  profileName: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   profileType: 'service' | 'talent'
 }
 
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
+<<<<<<< HEAD
   const [message, setMessage] = useState(""),
   const [subject, setSubject] = useState(""),
   const [isSending, setIsSending] = useState(false),
@@ -169,6 +183,37 @@ export function ProfileContact(): any ({;
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
               className="bg-zion-blue border-zion-blue-light text-white"
+=======
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+  const [isSending, setIsSending] = useState(false);
+  const handleSendMessage = null;
+  return (
+    <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
+      <h3 className='text-xl font-bold text-white mb-4 flex items-center'>
+        <Mail className='mr-2 h-5 w-5 text-zion-cyan' />
+        Contact
+      </h3>
+      {email && (
+        <div className='mb-4 text-zion-slate-light'>
+          <span className='block'>Email: </span>
+          <a
+            href={`mailto:${email}`}
+            className='text-zion-cyan hover:underline truncate block'
+          >
+            {email}
+          </a>
+        </div>
+      )}
+<form onSubmit={handleSendMessage}>
+        <div className='space-y-4'>
+          <div>
+            <Input
+              placeholder='Subject'
+              value={subject}
+              onChange={e => setSubject(e.target.value)}
+              className='bg-zion-blue border-zion-blue-light text-white'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               required
             />
           </div>
@@ -176,6 +221,7 @@ export function ProfileContact(): any ({;
             <Textarea
               placeholder={`Message to ${profileName}...`}
               value={message}
+<<<<<<< HEAD
               onChange={(e) => setMessage(e.target.value)}
               className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
               required
@@ -188,10 +234,25 @@ export function ProfileContact(): any ({;
           >
             <Send className="mr-2 h-4 w-4" />
             {isSending ? "Sending..." : "Send Message"}
+=======
+onChange={e => setMessage(e.target.value)}
+              className='bg-zion-blue border-zion-blue-light text-white min-h-[120px]'
+              required
+            />
+          </div>
+          <Button
+            type='submit'
+            className='w-full bg-zion-cyan hover:bg-zion-cyan/90'
+            disabled={isSending}
+          >
+            <Send className='mr-2 h-4 w-4' />
+            {isSending ? 'Sending...' : 'Send Message'}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </Button>
         </div>
       </form>
     </div>
+<<<<<<< HEAD
   )
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -339,3 +400,11 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
+=======
+  );
+`mailto:$ {;
+  email ;
+}` ";
+}className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>) ;
+}'"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -22,6 +22,7 @@ import {useState} from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter  } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
+<<<<<<< HEAD
 
 const categories: GrantCategory[] = [
   'Ecosystem Tools',
@@ -65,10 +66,19 @@ export default function ApplyGrantPage() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
+export default function ApplyGrantPage() {
+  const router = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function ApplyGrantPage() {
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
@@ -97,7 +107,11 @@ export default function ApplyGrantPage() {;
   const [timeline, setTimeline] = useState('');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -111,11 +125,20 @@ export default function ApplyGrantPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
+    'USDC'
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [supportingLinks, setSupportingLinks] = useState<string>('');
 =======
   const [budgetAmount, setBudgetAmount] = useState<number>(0);  const [supportingLinks, setSupportingLinks] = useState<string>('');
@@ -243,6 +266,7 @@ export default function ApplyGrantPage() {;
 =======
             onClick={() => save(true)}
 
+<<<<<<< HEAD
   }
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
@@ -252,11 +276,77 @@ export default function ApplyGrantPage() {;
 
   return (
 
+=======
+  const _save = async (_submit: boolean) => {
+    try {
+      setLoading(true),
+      setError(null),
+      const resp = await fetch('/api/grants', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          program,
+          projectName,
+          teamInfo,
+          proposalSummary,
+          timeline,
+          budgetAmount: Number(budgetAmount || 0),
+          budgetCurrency,
+          supportingLinks: supportingLinks
+            .split('\n')
+            .map((s) => s.trim())
+            .filter(Boolean),
+          pitchDeckUrl,
+          region,
+          sector: (sector as any) || undefined,
+          submit})}),
+      const data = await resp.json()
+      if (!resp.ok) throw new Error(data?.error || 'Failed'),
+  const save = async (submit: boolean) => {
+    try {
+      setLoading(true);
+      setError(null)
+      const resp = await fetch('/api/grants', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+program,
+          projectName,
+          teamInfo,
+          proposalSummary,
+          timeline,
+          budgetAmount: Number(budgetAmount || 0),
+          budgetCurrency,
+          supportingLinks: supportingLinks
+            .split('\n')
+            .map(s => s.trim())
+            .filter(Boolean)
+          pitchDeckUrl
+          region
+          sector: (sector as any) |undefined
+          submit
+        })
+      });
+      const data = await resp.json();
+      if (!resp.ok) throw new Error(data?.error |'Failed');
+      router.push(`/grants/${data.id}`);
+    } catch (e: any) {
+      setError(e.message);
+    } finally {
+      setLoading(false);
+    }
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 
   };
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 
 
@@ -292,7 +382,7 @@ export default function ApplyGrantPage() {;
   return (
 <<<<<<< HEAD
     <EnhancedLayout>
-      <h1 className='text-2xl font-semibold mb-4'>
+<h1 className='text-2xl font-semibold mb-4'>
         Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}
       </h1>
       <div className='grid gap-4 max-w-3xl'>
@@ -438,13 +528,19 @@ export default function ApplyGrantPage() {;
             className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'
           >
             Submit for Review
-          </button>        </div>
+          </button>
+        </div>
       </div>
     </EnhancedLayout>
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 =======
@@ -557,9 +653,16 @@ export default function ApplyGrantPage() {;
   );
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

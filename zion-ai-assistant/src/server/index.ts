@@ -27,6 +27,7 @@ if ( {) {
       return res.status (400).json ({ error: "Invalid input", details: error.issues });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import "dotenv/config";
@@ -68,6 +69,8 @@ app.listen(port, () => {// // // console.log(`zion-ai-assistant listening on htt
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import "dotenv/config",;
 import express from "express",;
 import cors from "cors",;

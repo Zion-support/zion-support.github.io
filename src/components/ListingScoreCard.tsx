@@ -1,11 +1,44 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { StarIcon } from 'lucide-react'
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import useState
+=======
+<<<<<<< HEAD
+import { cn } from '@/lib / utils';
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+import { StarIcon } from 'lucide-react';
+<<<<<<< HEAD
+=======
+import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { StarIcon } from 'lucide-react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+import Image from 'next/image'; // Import next/image
+import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image
+import React, { useState } from 'react'; // Import useState
+import { Star } from 'lucide-react'
+=======
+import Image from 'next / image'; // Import next / image;
+import React, { useState } from 'react'; // Import useStateimport Image from 'next / image'; // Import next / image;
+import React, { useState } from 'react'; // Import useState;
+import { Star } from 'lucide-react';
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+interface ListingScoreCardProps {
+  title: string;
+  description: string;
+  image?: string;
+  category: string;
+  tags?: string[];
+  author?: string;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 interface ListingScoreCardProps {
   title: string,
@@ -18,10 +51,17 @@ interface ListingScoreCardProps {
   aiScore?: number,
   rating?: number,
   reviewCount?: number,
+=======
+  authorImage?: string;
+  aiScore?: number;
+  rating?: number;
+  reviewCount?: number;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   className?: string
 }
 
 export function ListingScoreCard({ 
+<<<<<<< HEAD
   title, 
   description, 
   image, 
@@ -388,7 +428,26 @@ export function ListingScoreCard({;
         </p>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+  title;
+  description;
+  image;
+  category;
+  tags;
+  author;
+  authorImage;
+  aiScore;
+  rating;
+                    star <= Math.round(rating) 
+                      ? "text-zion-cyan fill-zion-cyan" 
+                      : "text-zion-slate-light"
+                  )}
+                />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ))}
             </div>
             <span className="text-sm text-zion-slate-light ml-1">
@@ -567,6 +626,7 @@ export function ListingScoreCard({;
             <span className="text-sm text-zion-slate-light">{author}</span>
           </div>
         )}
+<<<<<<< HEAD
       </div>;
     </div>;
 <<<<<<< HEAD
@@ -577,6 +637,7 @@ export function ListingScoreCard({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
+<<<<<<< HEAD
 =======
                 {author.charAt(0)}
               </div>
@@ -585,3 +646,11 @@ export function ListingScoreCard({;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

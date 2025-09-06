@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { Interface } from 'ethers';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextApiRequest, NextApiResponse } from 'next',;
 =======
 
@@ -45,7 +48,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return res.status(400).json({ error: 'bytecode and constructorArgs are required' })
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+import { Interface } from '[^']*';
+// Simple ABI for demonstration (release/refund)
+const abi = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 <<<<<<< HEAD
   const { bytecode, constructorArgs } = req.body |{}
@@ -73,10 +84,13 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   try {
     const iface = new Interface(abi),
@@ -95,7 +109,19 @@ import { Interface } from 'ethers';
 // Simple ABI for demonstration (release/refund);
 import { Interface } from 'ethers';
 // Simple ABI for demonstration (release/refund);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+    };
+return res.status(200).json({ abi, tx });
+  } catch (e: any) {
+    return res
+      .status(400)
+      .json({ error: e?.message || 'Failed to prepare deployment tx' });
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   }
 }

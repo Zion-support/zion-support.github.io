@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { createContext, useContext, useState, ReactNode } from "react";
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -41,6 +42,8 @@ interface AccessibilityContextType {
 import React, { create_context, useContext, useState, ReactNode } from './react';
 ;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { createContext, useContext, ReactNode } from "react";
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -48,9 +51,12 @@ interface AccessibilityContextType {
   announceToScreenReader: (message: string) => void;
   setFocus: (elementId: string) => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
@@ -79,6 +85,9 @@ interface AccessibilityProviderProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
   children,
 }) => {
@@ -139,6 +148,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
@@ -173,12 +183,16 @@ const AccessibilityContext = createContext<;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>
       {children}
     </AccessibilityContext.Provider>
   );
+};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
@@ -256,6 +270,8 @@ export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
 =======
 };
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
@@ -265,5 +281,8 @@ export const useAccessibility = () => {
   }
   return context;
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

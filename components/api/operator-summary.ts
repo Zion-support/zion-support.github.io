@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -7,6 +8,22 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const r = null;
+    res.status(200).json({ summary, timestamp: new Date().toISOString() })
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+    const r = await fetch(
+      `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.host}/api/metrics`
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     );
     const metrics = await r && r.json();
     const jobs24 =
@@ -28,6 +45,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       `Treasury stable and contributors earning consistently across regions`
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   } catch (e) {
@@ -35,6 +53,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 export default async /**
  * handler - Function description
@@ -65,8 +85,21 @@ function handler() {
     ];
 ;
     res.status (200).json ({ summary, timestamp: new Date ().toISOString () });
+<<<<<<< HEAD
   } catch (e) {
     res.status (200).json ({ summary: [], error: 'Failed to compute summary' });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
+=======
+=======
+    res.status(200).json({ summary, timestamp: new Date().toISOString() });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  } catch (e) {
+    res.status (200).json ({ summary: [], error: 'Failed to compute summary' });
+  }
+<<<<<<< HEAD
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

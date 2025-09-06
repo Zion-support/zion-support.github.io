@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -17,12 +18,16 @@ import EmptyState from '../../components/ui/EmptyState';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const Messages: NextPage = () => {
   return (
     <div className="space-y-6 pb-16">
       <Head>
         <title>Messages - Zion</title>
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,10 +41,13 @@ const Messages: NextPage = () => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <h1 className="text-2xl font-semibold">Messages</h1>
       <EmptyState
         title="No messages yet"
         description="Start a conversation by requesting a quote or responding to an existing one."
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -65,6 +73,8 @@ export default Messages;
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import EmptyState from '../../components / ui / EmptyState',
@@ -78,6 +88,7 @@ const Messages: NextPage = () => {
       <EmptyState;
         title="No messages yet";
         description="Start a conversation by requesting a quote or responding to an existing one.";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         icon={<span>📫</span>}
 <<<<<<< HEAD
@@ -112,6 +123,9 @@ export default Messages
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+        icon={<span>📫</span>}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default Messages,;
         icon={<span>📫</span>  } catch (error) {
     console.error("Error:", error);
@@ -129,6 +143,7 @@ export default Messages,;
   }
 }
       />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -160,3 +175,23 @@ export default Messages;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    </div>;
+  );
+},;
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import EmptyState from '../../components/ui/EmptyState';
+const Messages: NextPage;
+        icon={<span>📫</span>}
+        primaryAction={{ label: 'Explore talent', href: '/talent' }}
+        secondaryAction={{ label: 'Browse services', href: '/services' }}
+      />
+    </div>
+);
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+export default Messages;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

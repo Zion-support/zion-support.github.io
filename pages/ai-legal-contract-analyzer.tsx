@@ -1,10 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 
+=======
+import Head from 'next/head';
+<<<<<<< HEAD
+
+=======
+import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale  } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+export default function AILegalContractAnalyzerPage() {
+  const service = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Phone
   Mail
@@ -14,10 +27,13 @@ import {
   Star
   Scale;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );  if (!service) return null;
 
   return (
@@ -77,6 +93,7 @@ import {
               <a
                 href='/contact'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                 className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2'>;
@@ -100,6 +117,10 @@ import {
 import Head from 'next / head';
 import {
 =======
+=======
+import Head from 'next / head';
+import {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from 'react';
 
@@ -108,13 +129,17 @@ import Head from 'next/head';
 import {
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Phone,
   Mail,
   MapPin,
   Check,
   ArrowRight,
 
+<<<<<<< HEAD
 =======
   Star,;
   Scale,;
@@ -127,6 +152,10 @@ import {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  Star,;
+  Scale,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 } from 'lucide-react';
 import Layout from '../components / layout / Layout';
 ;
@@ -218,6 +247,7 @@ if (return null) {
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         <div className="bg - amber - 50 rounded - lg p - 8 text - center">;
@@ -225,16 +255,21 @@ if (return null) {
           <p className="text - lg text - gray - 700 mb - 6">;
             Accelerate your legal work with AI - powered contract analysis and document review tools.;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </p>;
           <div className="flex justify - center gap - 4">;
             <a href="/contact" className="bg - amber - 600 text - white px - 6 py - 3 rounded - lg hover: bg - amber - 700">;
               Get Started;
             </a>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             <a href="/about" className="border border - amber - 600 text - amber - 600 px - 6 py - 3 rounded - lg hover:bg - amber - 50">;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Learn More;
             </a>;
           </div>;
@@ -242,6 +277,7 @@ if (return null) {
       </main>;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -268,6 +304,16 @@ export default function AILegalContractAnalyzerPage() {
 
 
 <<<<<<< HEAD
+=======
+export default function AILegalContractAnalyzerPage() {
+  const service = enhancedRealMicroSaasServices.find(s =>
+<<<<<<< HEAD
+    s.link.endsWith('/ai-legal-contract-analyzer');
+  );  if (!service) return null;
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default function AILegalContractAnalyzerPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-legal-contract-analyzer'));
@@ -275,36 +321,52 @@ export default function AILegalContractAnalyzerPage() {
 
 
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-react',
 import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function AILegalContractAnalyzerPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-legal-contract-analyzer'))
   if (!service) return null,
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 export default function AILegalContractAnalyzerPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-legal-contract-analyzer'))
   if (!service) return null,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+    s.link.endsWith('/ai-legal-contract-analyzer')
+  );
+  if (!service) return null;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Layout>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -318,6 +380,16 @@ export default function AILegalContractAnalyzerPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <link rel="canonical" href="https://ziontechgroup.com/ai-legal-contract-analyzer" />
+=======
+        <link rel="canonical" href="https://ziontechgroup.com/ai-legal-contract-analyzer" />
+=======
+<meta name='description' content={service.description} />
+        <link
+          rel='canonical'
+          href='https://ziontechgroup.com/ai-legal-contract-analyzer'
+        />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -347,6 +419,7 @@ export default function AILegalContractAnalyzerPage() {
 
 
 =======
+<<<<<<< HEAD
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-amber-400 mt-0.5"><Check /><span>{feat}</span></li>
 <<<<<<< HEAD
 =======
@@ -367,10 +440,60 @@ export default function AILegalContractAnalyzerPage() {
                 <div className="flex items-center space-x-2 w-4 h-4 text-amber-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{service.contactInfo.address}</span></div>
+=======
+                  <li
+                    key={i}
+                    className='flex items-start space-x-3 text-slate-200 w-5 h-5 text-amber-400 mt-0.5'
+                  >
+                    <Check />
+                    <span>{feat}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className='bg-black/30 rounded-2xl border border-amber-500/30 p-6 h-fit'>
+              <div className='flex items-end justify-between mb-3'>
+                <div>
+                  <div className='text-3xl font-bold text-white text-slate-400 text-base'>
+                    {service.price}
+                    <span>{service.period}</span>
+                  </div>
+                  <div className='text-slate-400'>
+                    {service.trialDays}-day free trial • Setup:{' '}
+                    {service.setupTime}
+                  </div>
+                </div>
+                <div className='flex items-center text-yellow-400 w-4 h-4 mr-1'>
+                  <Star />
+                  {service.rating.toFixed(1)}
+                </div>
+              </div>
+              <a
+                href='/contact'
+                className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2'
+              >
+                Review Contracts Faster
+                <ArrowRight />
+              </a>
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>
+                <div className='flex items-center space-x-2 w-4 h-4 text-amber-400'>
+                  <Phone />
+                  <span>{service.contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center space-x-2 w-4 h-4 text-purple-400'>
+                  <Mail />
+                  <span>{service.contactInfo.email}</span>
+                </div>
+                <div className='flex items-center space-x-2 w-4 h-4 text-green-400 text-xs'>
+                  <MapPin />
+                  <span>{service.contactInfo.address}</span>
+                </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 
 
 
@@ -399,3 +522,23 @@ export default function AILegalContractAnalyzerPage() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<div className="bg-amber-50 rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-bold mb-4">Streamline Legal Work</h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Accelerate your legal work with AI-powered contract analysis and document review tools.
+          </p>
+          <div className="flex justify-center gap-4">
+            <a href="/contact" className="bg-amber-600 text-white px-6 py-3 rounded-lg hover: bg-amber-700">
+              Get Started
+            </a>
+            <a href="/about" className="border border-amber-600 text-amber-600 px-6 py-3 rounded-lg hover:bg-amber-50">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </main>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

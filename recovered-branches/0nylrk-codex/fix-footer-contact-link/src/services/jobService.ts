@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -75,6 +76,20 @@ export async function createJob(jobData: any) {
       .single();
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "sonner",
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "sonner";
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "sonner",
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "sonner";
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "sonner",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       .select()
       .single();
     if (error) throw error;
@@ -92,12 +107,15 @@ export async function createJob(jobData: any) {
     throw new Error(error.message || "Failed to create job")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console && console.error("Error creating job:", error);
     throw new Error(error && error.message || "Failed to create job")
 
@@ -143,12 +161,16 @@ export async function updateJob(jobId: string, jobData: any) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
     throw new Error(error.message || "Failed to update job");
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
 export async function getJobById(jobId: string) {
   try {
     const { data, error } = await supabase
+<<<<<<< HEAD
 <<<<<<< HEAD
       .from("jobs")
       .select("*")
@@ -222,6 +244,8 @@ export async function getJobById(jobId: string) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       .from('jobs')
       .select('*')
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -263,6 +287,7 @@ export async function createJob(jobData: any) {;
 if (throw error) {
   $2
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -270,6 +295,9 @@ if (throw error) {
 =======
 }    return data;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}    return data;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error: any) {
     console.error("Error fetching job:", error);
     toast.error("Failed to load job details");
@@ -324,10 +352,13 @@ if (throw error) {
     return null;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }  }
 
@@ -336,6 +367,7 @@ if (throw error) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -374,3 +406,6 @@ if (throw error) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

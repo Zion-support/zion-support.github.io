@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -22,6 +23,10 @@ import {toast} from "sonner";
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -29,6 +34,7 @@ import { Download } from "lucide-react",
 import { AppPlatform, AppMetadataValues } from "./MetadataManager";
 import { toast } from "sonner";
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { toast } from "sonner",
 <<<<<<< HEAD
@@ -133,6 +139,9 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 =======
 import { toast } from "sonner",        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { toast } from "sonner",        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       } else {
         // Convert object to CSV format
         const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'],
@@ -141,6 +150,7 @@ import { toast } from "sonner",        fileName = `zion-app-metadata-${platform}
           metadata.shortDescription,
           metadata.longDescription,
           metadata.version,
+<<<<<<< HEAD
 <<<<<<< HEAD
           metadata.platform
 <<<<<<< HEAD
@@ -314,6 +324,9 @@ if ( {) {
 =======
           metadata.platform  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          metadata.platform  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle className="text-lg">Export & Analytics</CardTitle>
@@ -349,6 +362,7 @@ if ( {) {
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -581,6 +595,11 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
         content = headers && headers.join() + '\n' + values && values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+        content = headers && headers.join() + '\n' + values && values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 CSV;
               </Button>;
             </div>;
@@ -588,6 +607,7 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
             </Button>;
           </div>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       </CardContent>;
 <<<<<<< HEAD
@@ -611,6 +631,9 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
 =======
       </CardContent>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </CardContent>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
     </Card>);
 }
@@ -643,6 +666,7 @@ return (<Card className="bg-zion-blue border-zion-purple/30" > text-lg">Export &
   )
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -650,3 +674,6 @@ return (<Card className="bg-zion-blue border-zion-purple/30" > text-lg">Export &
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

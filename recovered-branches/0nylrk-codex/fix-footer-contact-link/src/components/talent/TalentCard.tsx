@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -66,10 +67,17 @@ export function TalentCard({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+export function TalentCard(): any ({;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   talent;
   onViewProfile;
   onRequestHire;
   isSaved;
+<<<<<<< HEAD
 <<<<<<< HEAD
   onToggleSave;
   isAuthenticated
@@ -164,6 +172,9 @@ export function TalentCard(): any ({;
 =======
   onToggleSave;  isAuthenticated;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  onToggleSave;  isAuthenticated;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }: TalentCardProps) {;
   const navigate = useNavigate();
 
@@ -197,6 +208,7 @@ export function TalentCard(): any ({;
   };
   const skills = talent && talent.skills?.slice(0, 5) || [];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Extract skills - limit to 5 for display;
@@ -375,6 +387,12 @@ export function TalentCard({;
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (              <Button
+                variant="ghost"
+                size="sm"
+                className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 onClick={handleToggleSave}>;
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />;
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>;
@@ -382,6 +400,7 @@ export function TalentCard({;
             </div>;
             <p className="text-zion-cyan font-medium">{talent && talent.professional_title}</p>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -401,6 +420,8 @@ export function TalentCard({;
             {/* Location & Availability */}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent && talent.location && (;
                 <div className="flex items-center text-zion-slate-light">;
@@ -415,6 +436,7 @@ export function TalentCard({;
                 </div>;
               )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -475,6 +497,8 @@ export function TalentCard({;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>;
           </div>;
         </div>;
@@ -491,6 +515,7 @@ export function TalentCard({;
               ))}              )}
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>;
         {/* Skills */}
@@ -566,6 +591,13 @@ export function TalentCard({;
               <div className="text-zion-slate-light">Rate not specified</div>;
             )}            )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        )}                <span className="text-zion-slate-light font-normal">/hr</span>;
+              </div>;
+            ) : (;
+              <div className="text-zion-slate-light">Rate not specified</div>;
+            )}            )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           </div>;
 
@@ -583,6 +615,7 @@ export function TalentCard({;
             )}
             <Button
               size="sm"
+<<<<<<< HEAD
 <<<<<<< HEAD
               variant="ghost"
 <<<<<<< HEAD
@@ -829,6 +862,9 @@ if ( {) {
 =======
               variant="ghost"            </Button>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              variant="ghost"            </Button>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>;
         </div>;
       </div>;

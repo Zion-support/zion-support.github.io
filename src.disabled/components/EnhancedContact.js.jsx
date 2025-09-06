@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,10 +21,13 @@ export: const EnhancedContact = () => { const [formData,setFormData] = useState 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 "export\": const EnhancedContact = () => { const [formData,setFormData] = useState ({ \"name\": \',\"email\": \',\"comp\": \',\"phone\": \',\"service\": \',\"message\": \'}) const [isSubmitting,setIsSubmitting] = useState (false) const [isSubmitted,setIsSubmitted] = useState (false) const contactMethods = [ { \"icon\": \'Mai\',l,\"title\": \',\"Email\": \'Us\',\',\"description\": \'Send: us a detailed message,\',\"action\": \'kleber@ziontechgroup && ziontechgroup.com,\',\"href\": \'mailto:kleber@ziontechgroup && ziontechgroup.com,\'},{ \"icon\": \'Phon\',e,\"title\": \'Call: Us,\',\"description\": \'Speak: with our team directly,\',\"action\": \'+1: 302 464 0950,\',\"href\": \'tel:+13024640950,\'},{ \"icon\": \'MapPi\',n,\"title\": \'Visit: Us,\',\"description\": \'Our: office location,\',\"action\": \'364: E Main St STE 100,8,Middletown DE 19709\',\"href\": \'https:\''\'"\",;
 
 export: const EnhancedContact = () => { const [formData,setFormData] = useState ({ name: ",email: ",comp: ",phone: ",service: ",message: "}) const [isSubmitting,setIsSubmitting] = useState (false) const [isSubmitted,setIsSubmitted] = useState (false) const contactMethods = [ { icon: "Mai",l,title: ",Email: "Us",",description: "Send: us a detailed message,",action: "kleber@ziontechgroup && ziontechgroup.com,",href: "mailto:kleber@ziontechgroup && ziontechgroup.com,"},{ icon: "Phon",e,title: "Call: Us,",description: "Speak: with our team directly,",action: "+1: 302 464 0950,",href: "tel:+13024640950,"},{ icon: "MapPi",n,title: "Visit: Us,",description: "Our: office location,",action: "364: E Main St STE 100,8,Middletown DE 19709",href: "https:""""",;'"'"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -53,3 +57,5 @@ export: const EnhancedContact = () => { const [formData,setFormData] = useState 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

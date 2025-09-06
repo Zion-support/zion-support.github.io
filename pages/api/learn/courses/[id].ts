@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -170,6 +173,15 @@ export default function handler(req, res) {
     const courses = JSON.parse(raw);
     const { id } = req.query;
     const course = courses.find((c: any) => c.id === id);
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const dataPath = null;
+    res.status(200).json({ course })
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message ?? 'Failed to load course' })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
   }

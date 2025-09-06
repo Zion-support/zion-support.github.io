@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const { applications, isLoading } = useJobApplications(jobId);
   const [analyticsData, setAnalyticsData] = useState<{
@@ -64,6 +65,8 @@ interface HiringAnalyticsProps {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from './react';
 import { useJobApplications } from '@/hooks / useJobApplications';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -71,6 +74,7 @@ import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, T
 
 interface HiringAnalyticsProps {
   job_id?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -152,6 +156,9 @@ interface HiringAnalyticsProps {;
 =======
 }      }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}      }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Calculate conversion rate
       const conversionRate = hiredApplications.length > 0
         ? Math.round((hiredApplications.length / applications.length) * 100)
@@ -234,6 +241,7 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
       setAnalyticsData({;
         statusDistribution;
         timeToHire: avgTimeToHire,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -370,6 +378,8 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   
   if (!applications || applications.length === 0) {
@@ -386,18 +396,28 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
   }
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],
   
 
   return (  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+  
+  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],
+  
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     ),;
   }
@@ -456,6 +476,7 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
               data={analyticsData && analyticsData.funnelData}
               layout="vertical">;              <XAxis type="number" />;
               <YAxis dataKey="name" type="category" width={100} />;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Tooltip />;
               <Bar dataKey="value" fill="#8884d8" radius={[0, 4, 4, 0]}>;
@@ -714,16 +735,22 @@ if ( {) {
 =======
               <Tooltip />;            <BarChart
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <Tooltip />;            <BarChart
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               data={analyticsData && analyticsData.funnelData}
               layout="vertical">;
               <XAxis type="number" />;
               <YAxis dataKey="name" type="category" width={100} />;
               <Tooltip />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </Bar>;
             </BarChart>;
           </ResponsiveContainer>;
@@ -731,6 +758,7 @@ if ( {) {
       </Card>;
 
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -797,3 +825,6 @@ if (applications && applications.length > 0) {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

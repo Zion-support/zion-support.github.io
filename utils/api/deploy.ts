@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from "fs";
 import path from "path";
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface DeployConfig {
   instanceName: string;
   governanceMode: string;
@@ -54,6 +57,7 @@ export async function deployInstance(config: DeployConfig): Promise<DeployResult
     };
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -100,15 +104,14 @@ function toSlug(name: string): string {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     .toLowerCase();
+=======
+}    .toLowerCase();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     .replace(/[^a-z0-9]+/g, "-");
     .replace(/(^-|-$)+/g, "");
     .slice(0, 64);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -121,10 +124,13 @@ function toSlug(name: string): string {;
     .slice(0, 64);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   // Schedule launch stream (/summit);
   ensureDir(eventsDir),;
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -251,6 +257,8 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -285,6 +293,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     );
     assets.push({ kind: "config", path: daoConfigPath, description: "DAO configuration" });
 <<<<<<< HEAD
+<<<<<<< HEAD
     logs.push({ timestamp: nowIso(), level: "info", action: "dao_configured" });
 <<<<<<< HEAD
   }
@@ -311,6 +320,9 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
 =======
     logs.push({ timestamp: nowIso(), level: "info", action: "dao_configured" });  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    logs.push({ timestamp: nowIso(), level: "info", action: "dao_configured" });  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
@@ -343,6 +355,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     );
     assets.push({ kind: "config", path: tokenConfigPath, description: "Token configuration" });
 <<<<<<< HEAD
+<<<<<<< HEAD
     logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" });
 <<<<<<< HEAD
   }
@@ -370,6 +383,9 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
 =======
     logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" });  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" });  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ;
 
@@ -408,6 +424,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       `# Public Roadmap\n\n- Q1: Launch core modules\n- Q2: DAO consolidation\n- Q3: Nation builder\n`;
     );
     assets.push({ kind: "file", path: roadmapPath, description: "Public roadmap" });
+<<<<<<< HEAD
 <<<<<<< HEAD
     writeTextFile(;
 <<<<<<< HEAD
@@ -638,6 +655,9 @@ if ( {) {
 =======
     writeTextFile(;    ensureDir(docsDir);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    writeTextFile(;    ensureDir(docsDir);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     writeTextFile(;
       bookPath,;
       `# ${input.instanceName}: Founder Story & System Manifesto\n\nThis book captures the origin and guiding principles of ${input.instanceName}.\n`;
@@ -691,6 +711,7 @@ if ( {) {
     );
   ),;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       changelogPath;
@@ -1345,3 +1366,7 @@ if ( {) {
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

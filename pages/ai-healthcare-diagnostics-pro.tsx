@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -8,10 +9,16 @@ import Link from 'next/link';
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Stethoscope, Brain, Eye, Heart;
   Microscope, Shield, BarChart3;
   TrendingUp, Target, Users, CheckCircle;
@@ -20,9 +27,12 @@ import { Stethoscope, Brain, Eye, Heart;
   Activity, Zap, Pill, Syringe, Hospital, Ambulance
  } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 class ErrorBoundary extends React.Component {
@@ -45,6 +55,7 @@ class ErrorBoundary extends React.Component {
     }
     
     return this.props.children;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
@@ -150,6 +161,12 @@ class ErrorBoundary extends React.Component {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+  }
+}
+import React from 'react';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Link from 'next/link';
 
 const AIHealthcareDiagnosticsPro: React.FC = () => {;
@@ -197,6 +214,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
       color: 'from-yellow-500 to-orange-500',;
     },  ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import Layout from '../components/layout/Layout',
@@ -213,6 +231,8 @@ import Link from 'next/link',
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Head from 'next / head';
 import Layout from '../components / layout / Layout';
 import {motion} from 'framer-motion';
@@ -221,6 +241,7 @@ import Link from 'next / link';
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -281,6 +302,18 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       description:;
         'AI - powered analysis of X - rays, CT scans, MRIs, and ultrasounds for faster, more accurate diagnoses.',
       benefits: [;
+=======
+const AIHealthcareDiagnosticsPro: React.FC = () => {
+  const features = [;
+    {
+      icon: Brain,
+      description:;
+=======
+const AIHealthcareDiagnosticsPro: React.FC;
+      description:
+        'AI-powered analysis of X-rays, CT scans, MRIs, and ultrasounds for faster, more accurate diagnoses.'
+      benefits: [
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         '95% accuracy rate',
         '80% faster diagnosis',
         'Reduced radiologist workload',
@@ -289,9 +322,15 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
     {
       icon: Heart,
       title: 'Cardiology',
+<<<<<<< HEAD
       description:;
         'Early detection of heart disease, arrhythmias, and cardiovascular risks through AI analysis of ECG and imaging data.',
       benefits: [;
+=======
+      description:
+        'Early detection of heart disease, arrhythmias, and cardiovascular risks through AI analysis of ECG and imaging data.',
+      benefits: [
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         'Early disease detection',
         'Risk stratification',
         'Preventive care',
@@ -300,9 +339,15 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
     {
       icon: Brain,
       title: 'Neurology',
+<<<<<<< HEAD
       description:;
         "AI detection of brain tumors, strokes, Alzheimer's, and neurological disorders from imaging and clinical data.",
       benefits: [;
+=======
+      description:
+        "AI detection of brain tumors, strokes, Alzheimer's, and neurological disorders from imaging and clinical data.",
+      benefits: [
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         'Early intervention',
         'Treatment planning',
         'Outcome prediction',
@@ -311,13 +356,20 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
     {
       icon: Microscope,
       title: 'Pathology',
+<<<<<<< HEAD
       description:;
         'Digital pathology analysis for cancer detection, grading, and personalized treatment recommendations.',
       benefits: [;
+=======
+      description:
+        'Digital pathology analysis for cancer detection, grading, and personalized treatment recommendations.',
+      benefits: [
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         'Precision medicine',
         'Faster results',
         'Standardized analysis',
       ],
+<<<<<<< HEAD
     },  ];
 ;
   const pricing_plans = [;
@@ -328,17 +380,37 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       description: 'Perfect for small clinics and practices',
       features: [;
         'Up to 1, 000 diagnostic scans / month',
+=======
+    },
+  ];
+
+  const pricingPlans = [
+    {
+name: 'Starter',
+      price: '$4,999',
+      period: '/month',
+      description: 'Perfect for small clinics and practices',
+      features: [
+        'Up to 1,000 diagnostic scans/month',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         'Basic AI diagnostic models',
         'Standard reporting dashboard',
         'Email support',
         'HIPAA compliance',
+<<<<<<< HEAD
         'API access (5, 000 calls / month)',
       ],
       color: 'from - blue - 500 to - cyan - 500',
+=======
+        'API access (5,000 calls/month)',
+      ],
+      color: 'from-blue-500 to-cyan-500',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       popular: false,
     },
     {
       name: 'Professional',
+<<<<<<< HEAD
       price: '$12, 999',
       period: '/month',
       description: 'Ideal for hospitals and medical centers',
@@ -353,10 +425,27 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         'Training & certification',
       ],
       color: 'from - purple - 500 to - pink - 500',
+=======
+      price: '$12,999',
+      period: '/month',
+      description: 'Ideal for hospitals and medical centers',
+      features: [
+        'Up to 10,000 diagnostic scans/month',
+        'Advanced AI diagnostic models',
+        'Multi-modal imaging support',
+        'Real-time monitoring & alerts',
+        'Priority support',
+        'API access (50,000 calls/month)',
+        'Custom integrations',
+        'Training & certification',
+      ],
+      color: 'from-purple-500 to-pink-500',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       popular: true,
     },
     {
       name: 'Enterprise',
+<<<<<<< HEAD
       price: '$29, 999',
       period: '/month',
       description: 'For large healthcare networks',
@@ -526,42 +615,140 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       name: 'Cardiology',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       description:;
+=======
+      price: '$29,999',
+      period: '/month',
+      description: 'For large healthcare networks',
+      features: [
+        'Unlimited diagnostic scans',
+        'Custom AI model development',
+        'Full multi-modal support',
+        'Dedicated account manager',
+        '24/7 phone support',
+        'Unlimited API access',
+        'White-label solutions',
+        'On-premise deployment',
+        'Custom compliance features',
+      ],
+      color: 'from-green-500 to-emerald-500',
+      popular: false,
+    },
+  ];
+
+  const integrations = [
+    {
+name: 'PACS Systems',
+      icon: Database,
+      description: 'DICOM integration with major PACS vendors',
+      color: 'from-blue-500 to-cyan-500',
+    },
+    {
+      name: 'EHR Platforms',
+      icon: Database,
+      description: 'Epic, Cerner, Allscripts, athenahealth',
+      color: 'from-green-500 to-emerald-500',
+    },
+    {
+      name: 'LIS Systems',
+      icon: Microscope,
+      description: 'Lab information systems integration',
+      color: 'from-purple-500 to-pink-500',
+    },
+    {
+      name: 'RIS Systems',
+      icon: BarChart3,
+      description: 'Radiology information systems',
+      color: 'from-orange-500 to-red-500',
+    },
+    {
+      name: 'Medical Devices',
+      icon: Stethoscope,
+      description: 'CT, MRI, X-ray, ultrasound machines',
+      color: 'from-indigo-500 to-blue-500',
+    },
+    {
+      name: 'Cloud Platforms',
+      icon: Cpu,
+      description: 'AWS, Azure, Google Cloud, IBM Cloud',
+      color: 'from-yellow-500 to-orange-500',
+    },
+  ];
+
+  const specialties = [
+    {
+      icon: Heart,
+name: 'Cardiology',
+      description:
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         'Heart disease detection, ECG analysis, cardiovascular risk assessment',
       accuracy: '99.1%',
     },
     {
       icon: Brain,
       name: 'Neurology',
+<<<<<<< HEAD
       description:;
+=======
+<<<<<<< HEAD
+      description:;
+=======
+      description:
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         'Brain tumor detection, stroke diagnosis, neurological disorder analysis',
       accuracy: '98.9%',
     },
     {
       icon: Activity,
       name: 'Pulmonology',
+<<<<<<< HEAD
       description:;
+=======
+<<<<<<< HEAD
+      description:;
+=======
+      description:
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         'Lung cancer screening, pneumonia detection, respiratory disease analysis',
       accuracy: '99.3%',
     },
     {
       icon: Eye,
       name: 'Ophthalmology',
+<<<<<<< HEAD
       description:;
+=======
+<<<<<<< HEAD
+      description:;
+=======
+      description:
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         'Retinal disease detection, glaucoma screening, diabetic retinopathy',
       accuracy: '98.7%',
     },
     {
       icon: Shield,
       name: 'Hepatology',
+<<<<<<< HEAD
       description:;
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+      description:;
+=======
+      description:
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         'Liver disease detection, cirrhosis assessment, tumor identification',
       accuracy: '99.0%',
     },
     {
       icon: Microscope,
       name: 'Nephrology',
+<<<<<<< HEAD
       description:;
         'Kidney disease detection, renal function analysis, transplant assessment',
       accuracy: '98.8%',
@@ -599,6 +786,44 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         {/* Floating Elements */}
 =======
 <<<<<<< HEAD
+=======
+      description:
+        'Kidney disease detection, renal function analysis, transplant assessment',
+      accuracy: '98.8%',
+    },
+  ];
+
+  return (
+    <Layout>
+      <Head>
+        <title>AI Healthcare Diagnostics Pro - Zion Tech Group</title>
+<meta
+          name='description'
+          content='Revolutionize healthcare with AI-powered diagnostics. Achieve 99.2% accuracy in disease detection, reduce diagnosis time by 80%, and improve patient outcomes with our advanced AI platform.'
+        />
+        <meta
+          name='keywords'
+          content='AI healthcare, medical diagnostics, medical imaging, disease detection, healthcare AI, medical AI, diagnostic accuracy'
+        />
+        <meta
+          property='og:title'
+          content='AI Healthcare Diagnostics Pro - Zion Tech Group'
+        />
+        <meta
+          property='og:description'
+          content='Revolutionize healthcare with AI-powered diagnostics. Achieve 99.2% accuracy in disease detection and reduce diagnosis time by 80%.'
+        />
+        <meta property='og:type' content='website' />
+        <meta
+          property='og:url'
+          content='https://ziontechgroup.com/ai-healthcare-diagnostics-pro'
+        />
+        <link
+          rel='canonical'
+          href='https://ziontechgroup.com/ai-healthcare-diagnostics-pro'
+        />
+      </Head>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
         {/* Background Effects */}
@@ -609,6 +834,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         <div className='absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-pulse'></div>
         <div className='absolute bottom-32 right-16 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse delay-1000'></div>
         <div className='absolute top-1/2 left-1/4 w-1 h-1 bg-green-400 rounded-full opacity-80 animate-pulse delay-500'></div>
+<<<<<<< HEAD
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -676,10 +902,15 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 className="mb-8"
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -710,6 +941,10 @@ className="mb-8"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+className='mb-8'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4" />
@@ -722,6 +957,7 @@ className="mb-8"
               <br />
               <span className="text-white">Diagnostics Pro</span>
             </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -757,6 +993,8 @@ className="mb-8"
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
@@ -773,13 +1011,17 @@ className="mb-8"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
                 <div className="text-3xl font-bold text-green-400 mb-2">99.2%</div>
                 <div className="text-gray-300">Diagnostic Accuracy</div>
               </motion.div>
               <motion.div
+<<<<<<< HEAD
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -790,6 +1032,20 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
 =======
 =======
 <<<<<<< HEAD
+=======
+                className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"
+              >
+                <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
+                <div className="text-gray-300">Faster Diagnosis</div>
+              </motion.div>
+              <motion.div
+            </div>
+            {/* CTA Buttons */}
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
               Transform healthcare delivery with the world's most advanced AI
               diagnostic platform. Achieve 99.2% accuracy in disease detection
@@ -797,15 +1053,25 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
               early intervention.
             </p>
             {/* Key Metrics */}
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto'>              <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className='bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm'
+=======
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto'>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+className='bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div className='text-3xl font-bold text-green-400 mb-2'>
                   99.2%
                 </div>
+<<<<<<< HEAD
                 <div className='text-gray-300'>Diagnostic Accuracy</div>              </motion.div>
 =======
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
@@ -1028,11 +1294,61 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
 
+=======
+                <div className='text-gray-300'>Diagnostic Accuracy</div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+className='bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm'
+              >
+                <div className='text-3xl font-bold text-cyan-400 mb-2'>80%</div>
+                <div className='text-gray-300'>Faster Diagnosis</div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+className='bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm'
+              >
+                <div className='text-3xl font-bold text-purple-400 mb-2'>
+                  24/7
+                </div>
+                <div className='text-gray-300'>Continuous Monitoring</div>
+              </motion.div>
+            </div>
+            {/* CTA Buttons */}
+<div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25'
+              >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                Schedule Demo
+              </motion.button>
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+
+                className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300"
+              >
+
+=======
+                transition={{ duration: 0.6, delay: 1.0 }}
+className='px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300'
+              >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Contact Sales
               </motion.button>
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1055,12 +1371,16 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Features Section */}
 
       <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -1086,18 +1406,33 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+=======
+{/* Features Section */}
+      <section className='py-20 bg-gray-900 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]'></div>
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+className='text-center mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Powered by <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Advanced AI</span>
@@ -1106,6 +1441,7 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
               Our platform combines cutting-edge artificial intelligence with deep medical expertise to deliver unprecedented diagnostic accuracy and speed.
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <motion.div
@@ -1172,10 +1508,25 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-green-500/30 transition-all duration-300 group'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1189,12 +1540,15 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
               </motion.div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))}
 
           </div>;
         </div>;
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -1235,10 +1589,32 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      {/* Medical Specialties Section */}
+
+=======
+                <h3 className='text-xl font-semibold text-white mb-4'>
+                  {feature.title}
+                </h3>
+                <p className='text-gray-300 leading-relaxed'>
+                  {feature.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+{/* Medical Specialties Section */}
+      <section className='py-20 bg-black relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]'></div>
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
 =======
 
@@ -1247,6 +1623,14 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+
+
+=======
+className='text-center mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Medical <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Specialties</span>
@@ -1254,6 +1638,7 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI platform covers all major medical specialties with specialized models trained on millions of cases for maximum accuracy.
             </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1374,11 +1759,27 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• X-ray analysis</li>
+              <li>• CT scan interpretation</li>
+              <li>• MRI diagnostics</li>
+              <li>• Ultrasound imaging</li>
+            </ul>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {specialties.map((specialty, index) => (
+              <motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300'
           </motion.div>
@@ -1418,6 +1819,11 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center">
@@ -1429,9 +1835,12 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
                   </div>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))}
 
           </div>;
@@ -1440,6 +1849,7 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -1447,10 +1857,15 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
       {/* Use Cases Section */}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+      {/* Use Cases Section */}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,73,153,0.06),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -1476,13 +1891,42 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+=======
+
+=======
+                <h3 className='text-xl font-semibold text-white mb-3'>
+                  {specialty.name}
+                </h3>
+                <p className='text-gray-300 leading-relaxed'>
+                  {specialty.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+{/* Use Cases Section */}
+      <section className='py-20 bg-gray-900 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,73,153,0.06),transparent_50%)]'></div>
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+
+
+=======
+className='text-center mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Transform Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Practice</span>
@@ -1491,6 +1935,7 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
               From radiology to pathology, our AI platform adapts to your specific medical specialty and workflow requirements.
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <motion.div
@@ -1521,11 +1966,20 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+            {useCases.map((useCase, index) => (
+              <motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm'
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -1565,6 +2019,11 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -1575,6 +2034,7 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
                     <p className="text-gray-300 mb-4 leading-relaxed">{useCase.description}</p>
                     <div className="space-y-2">
                       {useCase.benefits.map((benefit, benefitIndex) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -1594,6 +2054,17 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                        <div
+                          key={benefitIndex}
+                          className='flex items-center space-x-2 text-sm'
+                        >
+                          <CheckCircle className='w-4 h-4 text-green-400' />
+                          <span className='text-gray-300'>{benefit}</span>
+                        </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       ))}
                     </div>;
                   </div>;
@@ -1602,6 +2073,7 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
             ))}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 =======
           </div>;
@@ -1626,13 +2098,33 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
           <motion.div
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+          </div>
+        </div>
+      </section>
+      {/* Pricing Section */}
+<section className='py-20 bg-black relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]'></div>
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+
+
+=======
+className='text-center mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Choose Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Plan</span>
@@ -1641,6 +2133,7 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
               Flexible pricing options designed to scale with your healthcare practice. Start with our Starter plan and upgrade as you grow.
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1667,12 +2160,21 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 border rounded-2xl p-8 backdrop-blur-sm ${
+<<<<<<< HEAD
 <<<<<<< HEAD
                   plan.popular
                     ? 'border-green-500/50 shadow-lg shadow-green-500/25'                    : 'border-gray-700/50'
@@ -1723,6 +2225,8 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -1730,6 +2234,7 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
                       Most Popular
                     </div>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1748,10 +2253,14 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
                 <div className="text-center mb-8">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                <div className="text-center mb-8">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center space-x-1 mb-2">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400">{plan.period}</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1772,6 +2281,38 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
 <<<<<<< HEAD
+=======
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+=======
+plan.popular
+                    ? 'border-green-500/50 shadow-lg shadow-green-500/25'
+                    : 'border-gray-700/50'
+                }`}
+              >
+                {plan.popular && (
+<div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+                    <div className='bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium'>
+                      Most Popular
+                    </div>
+                  </div>
+                )}
+<div className='text-center mb-8'>
+                  <h3 className='text-2xl font-bold text-white mb-2'>
+                    {plan.name}
+                  </h3>
+                  <div className='flex items-baseline justify-center space-x-1 mb-2'>
+                    <span className='text-4xl font-bold text-white'>
+                      {plan.price}
+                    </span>
+                    <span className='text-gray-400'>{plan.period}</span>
+                  </div>
+                  <p className='text-gray-300'>{plan.description}</p>
+                </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -1779,6 +2320,7 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
                       className='flex items-center space-x-3'
                     >
                       <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
+<<<<<<< HEAD
                       <span className='text-gray-300'>{feature}</span>                    </li>
                   ))}
                 </ul>
@@ -1822,11 +2364,30 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 
 
                 <button className={`w-full py-3 px-6 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>
+=======
+                      <span className='text-gray-300'>{feature}</span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                    </li>
+                  ))}
+                </ul>
+
+<<<<<<< HEAD
+
+                <button className={`w-full py-3 px-6 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>
+=======
+<button
+                  className={`w-full py-3 px-6 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105`}
+                >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   Get Started
                 </button>
               </motion.div>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))}
 
           </div>;
@@ -1835,6 +2396,7 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 
 
       {/* Integrations Section */}
+<<<<<<< HEAD
       <section className='py-20 bg-gray-900 relative overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0 && 0.08),transparent_50%)]'></div>;
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
@@ -1873,13 +2435,35 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+<<<<<<< HEAD
+      <section className='py-20 bg-gray-900 relative overflow-hidden'>;
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0 && 0.08),transparent_50%)]'></div>;
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
+
+=======
+<section className='py-20 bg-gray-900 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]'></div>
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+
+
+=======
+className='text-center mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Seamless <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Integrations</span>
@@ -1890,6 +2474,7 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 <<<<<<< HEAD
 =======
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1956,11 +2541,19 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {integrations.map((integration, index) => (
+              <motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1999,10 +2592,16 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${integration.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                   <integration.icon className="w-8 h-8 text-white" />
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             initial={{ opacity: 0, y: 30 }}
@@ -2039,11 +2638,14 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))}
 
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
@@ -2078,16 +2680,51 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                <h3 className='text-xl font-semibold text-white mb-2'>
+                  {integration.name}
+                </h3>
+                <p className='text-gray-300 text-sm'>
+                  {integration.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+<section className='py-20 bg-gradient-to-r from-green-900/20 via-emerald-900/20 to-cyan-900/20 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]'></div>
+        <div className='relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+<h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              Ready to{' '}
+              <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>
+                Transform
+              </span>{' '}
+              Healthcare?
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
               Join leading healthcare institutions worldwide who have already
               revolutionized patient care with AI-powered diagnostics.
             </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <button className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25'>
@@ -2105,12 +2742,15 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Schedule Demo
               </button>
               <button className='px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300'>
                 Contact Sales
               </button>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -2134,6 +2774,8 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
               <p>;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Questions? Call us at{' '}
                 <a
                   href='tel:+13024640950'
@@ -2144,11 +2786,16 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
                 <a
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   href='mailto: kleber@ziontechgroup.com'
                   className='text-green-400 hover:text-green-300'
                 >
                   kleber@ziontechgroup.com
                 </a>
+<<<<<<< HEAD
               </p>            </div>
             <div className="mt-8 text-sm text-gray-400">
               <p>Questions? Call us at <a href="tel:+13024640950" className="text-green-400 hover:text-green-300">+1 302 464 0950</Link> or email <a href="mailto:kleber@ziontechgroup.com" className="text-green-400 hover:text-green-300">kleber@ziontechgroup.com</Link></p>
@@ -2161,10 +2808,16 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              </p>
+            </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </motion.div>
         </div>
       </section>
     </Layout>
+<<<<<<< HEAD
 <<<<<<< HEAD
   ),
 };
@@ -2182,6 +2835,16 @@ export default AIHealthcareDiagnosticsPro,
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+);
+};
+
+export default AIHealthcareDiagnosticsPro;
+<<<<<<< HEAD
+
+},
+export default AIHealthcareDiagnosticsPro,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
                   href='mailto: kleber@ziontechgroup && ziontechgroup.com'
@@ -2193,6 +2856,7 @@ export default AIHealthcareDiagnosticsPro,
         </div>;
       </section>;
     </Layout>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   ),;
@@ -2211,6 +2875,13 @@ export default AIHealthcareDiagnosticsPro;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+export default AIHealthcareDiagnosticsPro;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </motion.div>;
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {integrations.map ((integration, index) => (
               <motion.div;
@@ -2243,7 +2914,10 @@ export default AIHealthcareDiagnosticsPro;
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >;
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
               Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?;
@@ -2271,6 +2945,7 @@ export default AIHealthcareDiagnosticsPro;
 export default AIHealthcareDiagnosticsPro;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -2282,3 +2957,7 @@ export default AIHealthcareDiagnosticsPro;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

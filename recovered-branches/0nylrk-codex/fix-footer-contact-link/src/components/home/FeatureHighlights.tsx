@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -16,10 +17,15 @@ import {Check} from "lucide-react";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Check } from "lucide-react",
 <<<<<<< HEAD
@@ -87,6 +93,11 @@ import { Check } from "lucide-react",        "Post jobs and receive AI-matched a
       ]
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Check } from "lucide-react",        "Post jobs and receive AI-matched applicants";
+      ]
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {;
       title: "For Talent & Service Providers",;
       features: [;import React from './react';
@@ -169,6 +180,7 @@ function FeatureHighlights() {
     {
       title: "For Talent & Service Providers"
 <<<<<<< HEAD
+<<<<<<< HEAD
       features: [
 <<<<<<< HEAD
 
@@ -223,6 +235,9 @@ function FeatureHighlights() {
 =======
       features: [        "White-labeled talent portal with your company branding";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      features: [        "White-labeled talent portal with your company branding";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         "Dedicated account management and priority support";
         "Custom talent pools and preferred provider networks";
         "Advanced analytics and reporting capabilities";
@@ -231,6 +246,7 @@ function FeatureHighlights() {
         "Custom talent pools and preferred provider networks",
         "Advanced analytics and reporting capabilities",
         "API access for seamless integration with your HR systems",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -280,6 +296,8 @@ function FeatureHighlights() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         "Customizable workflow and approval processes"
       ]
@@ -349,6 +367,7 @@ import { Check } from "lucide-react",;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         "API access for seamless integration with your HR systems",;
@@ -394,6 +413,8 @@ import { Check } from "lucide-react",;
                 </ul>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </CardContent>;
             </Card>;
           ))}

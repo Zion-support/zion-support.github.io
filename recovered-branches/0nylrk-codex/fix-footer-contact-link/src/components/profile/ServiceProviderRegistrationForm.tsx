@@ -70,6 +70,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useAuth } from "@/hooks/useAuth";
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -140,11 +141,15 @@ export function ServiceProviderRegistrationForm() {
 =======
 import { useAuth } from "@/hooks/useAuth",    message: "Rate must be a number"}),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { useAuth } from "@/hooks/useAuth",    message: "Rate must be a number"}),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   availability: z.enum(["available", "limited", "unavailable"]),
   enhancedProfile: z.boolean().default(true),
   website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()}),
 
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -171,6 +176,8 @@ export function ServiceProviderRegistrationForm() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Initialize form with default values
   const form = useForm<ServiceFormValues>({
     resolver: zodResolver(serviceProfileSchema)
@@ -189,6 +196,7 @@ export function ServiceProviderRegistrationForm() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const serviceInput = form.getValues("services");
     if (serviceInput && !serviceTags.includes(serviceInput)) {
 
@@ -198,10 +206,13 @@ export function ServiceProviderRegistrationForm() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const serviceInput = form.getValues("services"),
     if (serviceInput && !serviceTags.includes(serviceInput)) {      setServiceTags([...serviceTags, serviceInput]),
       form.setValue("services", "")
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -269,6 +280,8 @@ export function ServiceProviderRegistrationForm() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
@@ -367,6 +380,7 @@ export function ServiceProviderRegistrationForm() {;
       },;
       reader.readAsDataURL(file);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   },
 <<<<<<< HEAD
@@ -512,6 +526,14 @@ export function ServiceProviderRegistrationForm() {;
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return      toast({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  },  // Generate enhanced profile with AI
+  const generateEnhancedProfile = async () => {
+      toast({
+        title: "More information needed"
+        description: "Please provide at least a detailed bio before generating enhanced content."})
+      return      toast({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         title: "Enhanced Profile Generated"
         description: "AI has created a professional bio and suggested additional services for your profile."})
     } catch (error: any) {
@@ -519,6 +541,7 @@ export function ServiceProviderRegistrationForm() {;
       toast({
         title: "Generation failed"
         description: error.message |"There was an error generating your enhanced profile. Please try again."
+<<<<<<< HEAD
 <<<<<<< HEAD
         variant: "destructive"})
 <<<<<<< HEAD
@@ -757,6 +780,12 @@ if ( {) {
     }
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        variant: "destructive"})        }
+      }
+    }
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -773,6 +802,7 @@ if ( {) {
         description: "Please add at least one service to your profile."
         variant: "destructive"})
       return
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -942,6 +972,8 @@ if ( {) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },;
   // Handle form submission;
   const onSubmit = async (values: ServiceFormValues) => {;
@@ -968,6 +1000,7 @@ if ( {) {
   $2
 }
         throw new Error ("User not authenticated");
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
 <<<<<<< HEAD
@@ -1013,6 +1046,9 @@ if ( {) {
 =======
       }    try {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      }    try {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // For actual implementation with Supabase;
       if (!user?.id) {;
         throw new Error("User not authenticated");
@@ -1052,6 +1088,7 @@ if ( {) {
 
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1112,6 +1149,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Get user email for notification;
       const { data: userData } = await supabase && supabase.auth.getUser(),;
       const userEmail = userData && userData.user?.email;
@@ -1125,6 +1164,7 @@ if ( {) {
       /*
       const { error: serviceError } = await supabase
         .from('service_profiles')
+<<<<<<< HEAD
 <<<<<<< HEAD
         .insert({
 <<<<<<< HEAD
@@ -1281,6 +1321,9 @@ if ( {) {
 =======
         .insert({            }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        .insert({            }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           })
         } catch (emailError) {
           console.error("Failed to send notification email:", emailError),
@@ -1302,6 +1345,7 @@ if ( {) {
         variant: "destructive"})
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 <<<<<<< HEAD
@@ -1329,6 +1373,9 @@ if ( {) {
 =======
     }  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="max-w-4xl mx-auto p-4 md:p-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
@@ -1429,6 +1476,7 @@ if ( {) {
                           </FormControl>
                           <FormMessage className="text-red-400" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                         </FormItem>
 <<<<<<< HEAD
 
@@ -1449,6 +1497,9 @@ if ( {) {
 =======
                         </FormItem>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                        </FormItem>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Get user email for notification;
       const { data: userData } = await supabase.auth.getUser(),;
       const userEmail = userData.user?.email,;
@@ -1517,6 +1568,7 @@ if ( {) {
     } finally {;
       setIsSubmitting(false);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
   return (;
@@ -1613,6 +1665,8 @@ if ( {) {
     }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 
   return (              {/* Basic Information */}
@@ -1655,6 +1709,7 @@ if ( {) {
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white";
                                 placeholder="City, State/Province, Country";
         <Form {...form}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <form on_submit={form.handle_submit (on_submit)}>;
             <CardContent className="space - y-8">;
@@ -1837,6 +1892,8 @@ if ( {) {
         <Form {...form}>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <form onSubmit={form.handleSubmit(onSubmit)}>;
             <CardContent className="space-y-8">;
               {/* Basic Information */}
@@ -1931,6 +1988,7 @@ if ( {) {
                   </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div className="col-span-1">;
 
 =======
@@ -2014,6 +2072,9 @@ if ( {) {
 =======
                   <div className="col-span-1">;                {/* Upload Avatar */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  <div className="col-span-1">;                {/* Upload Avatar */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div className="space-y-2">;
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>;
                   <div className="flex items-center gap-6">;
@@ -2035,6 +2096,7 @@ if ( {) {
 
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">;
                       <Upload className="mr-2 h-4 w-4" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <span>Upload Photo</span>;
 
@@ -2124,6 +2186,9 @@ if ( {) {
 =======
                       <span>Upload Photo</span>;                    For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                      <span>Upload Photo</span>;                    For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </p>;
                 </div>;
               </div>;
@@ -2149,6 +2214,7 @@ if ( {) {
                     </FormItem>;
                   )}
                 />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2305,6 +2371,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <Button
                       type="button"
                       variant="outline"
@@ -2329,6 +2397,7 @@ if ( {) {
                     {serviceTags && serviceTags.length === 0 && (;
                       <p className="text-zion-slate text-sm italic">No services added yet</p>;
                     )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2366,10 +2435,16 @@ if ( {) {
                 </div>;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  </div>;
+                </div>;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div className="space-y-4">;
                   <h3 className="text-lg font-medium text-white">Pricing & Availability</h3>;
                   <FormField
                     control={form && form.control}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     name="hourlyRate"
 <<<<<<< HEAD
@@ -2679,6 +2754,9 @@ if ( {) {
 =======
                     name="hourlyRate"                              <input
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    name="hourlyRate"                              <input
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                                 type="radio"
                                 id="limited"
                                 value="limited"
@@ -2692,6 +2770,7 @@ if ( {) {
                               </label>;
                             </div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                             <div className="flex items-center space-x-2">;
 
@@ -2819,6 +2898,9 @@ if ( {) {
 =======
                             <div className="flex items-center space-x-2">;                              <input;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                            <div className="flex items-center space-x-2">;                              <input;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                                 type="radio";
                                 id="unavailable";
                                 value="unavailable";
@@ -2826,6 +2908,7 @@ if ( {) {
                                 on_change={() => field.on_change ("unavailable")}
                                 className="text - zion - purple focus:ring - zion-purple";
                               />;
+<<<<<<< HEAD
 <<<<<<< HEAD
                               <label html_for="unavailable" className="text - white flex items - center gap - 2">;
                                 <div className="h - 2 w - 2 rounded - full bg - red - 500"></div>;
@@ -2844,11 +2927,16 @@ if ( {) {
                               <label html_for="unavailable" className="text - white flex items - center gap-2">;
                                 <div className="h - 2 w - 2 rounded - full bg - red-500"></div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                              <label html_for="unavailable" className="text - white flex items - center gap-2">;
+                                <div className="h - 2 w - 2 rounded - full bg - red-500"></div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                                 Currently Unavailable;
                               </label>;
                             </div>;
                           </div>;
                         </FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3089,3 +3177,5 @@ max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

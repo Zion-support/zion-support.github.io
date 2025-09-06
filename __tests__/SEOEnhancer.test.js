@@ -80,6 +80,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 import _React from 'react"  import '@testing-library/jest-dom import SEOEnhancer from '../components/SEOEnhancer" describe('SEOEnhancer',() => {' test('renders without crashing',() => {' render(<SEOEnhancer / />) expect(screen.getByTestId("seoenhancer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SEOEnhancer / />) }) test('handles user interactions',() => {' render(<SEOEnhancer / />) }) test('applies correct styling',() => {' render(<SEOEnhancer / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import SEOEnhancer from '../components/SEOEnhancer" describe('SEOEnhancer',() => {' test('renders without crashing',() => {' render(<SEOEnhancer / />) expect(screen.getByTestId("seoenhancer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SEOEnhancer / />) }) test('handles user interactions',() => {' render(<SEOEnhancer / />) }) test('applies correct styling',() => {' render(<SEOEnhancer / />) }) })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 <<<<<<< HEAD
@@ -92,3 +93,5 @@ import _React from 'react"  import '@testing-library/jest-dom import SEOEnhancer
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

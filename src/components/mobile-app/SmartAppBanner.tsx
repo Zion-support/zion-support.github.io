@@ -1,8 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import React, { useState, useEffect } from 'react';
+import { safeStorage } from '@/utils/safeStorage';
+import { X, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { useIsMobile } from '@/hooks/use-mobile';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React, { useState, useEffect } from "react",
 import { safeStorage } from "@/utils/safeStorage",
 import { X, ArrowRight } from 'lucide-react'
+<<<<<<< HEAD
 import Link from "next/link",
 import { useIsMobile } from "@/hooks/use-mobile",
 interface SmartAppBannerProps {
@@ -12,12 +22,44 @@ interface SmartAppBannerProps {
   googlePlayUrl?: string,
   delay?: number, // Delay in milliseconds before showing the banner
 =======
+=======
+import Link from "next/link";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useIsMobile } from "@/hooks/use-mobile";
 interface SmartAppBannerProps {
   appName?: string;
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
+<<<<<<< HEAD
+}
+export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
+  const [isVisible, setIsVisible] = useState(false),
+  const isMobile = useIsMobile(),
+  
+  useEffect(() => {
+    // Only show banner on mobile devices and if it hasn't been dismissed
+    if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
+      const timer = setTimeout(() => {
+        setIsVisible(true)
+      return () => clearTimeout(timer)
+    }
+    return undefined
+  }, [isMobile, delay])
+  const dismissBanner = () => {
+    setIsVisible(false)
+    safeStorage.setItem("smartBannerDismissed", "true")
+  }
+  const resetBanner = () => {
+    safeStorage.removeItem("smartBannerDismissed")
+    setIsVisible(true)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 
@@ -527,6 +569,11 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

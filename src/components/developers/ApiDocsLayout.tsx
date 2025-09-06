@@ -30,6 +30,10 @@ export default ApiDocsLayout;
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
+=======
+import { SearchSuggestion } from '@/types/search';
+import React, { useState } from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Search } from 'lucide-react'
@@ -68,6 +72,11 @@ import {
  docsSearchSuggestions
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+interface ApiDocsLayoutProps {
+  children: React.ReactNode
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 =======
 
@@ -440,5 +449,15 @@ if ( {) {
 <<<<<<< HEAD
 export default ApiDocsLayout;
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+export default ApiDocsLayout;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
+  const router = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

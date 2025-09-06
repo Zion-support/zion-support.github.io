@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -47,6 +48,10 @@ import { Control } from "react-hook-form",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   FormField;
@@ -58,6 +63,7 @@ import {
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import {Control} from "react-hook-form";
@@ -104,11 +110,14 @@ import { Card, CardContent } from "@/components/ui/card",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: (name: string, value: any) => void,
   skills: string[],
   yearsExperience: number,
+<<<<<<< HEAD
 <<<<<<< HEAD
   location?: string,
 <<<<<<< HEAD
@@ -155,14 +164,15 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   rateType
 }) => {
+=======
+  location?: string,}) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleSuggestionApplied = (rate: number) => {
     setValue("hourlyRate", rate)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
   },
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -181,6 +191,8 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
   },
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-4">
       <FormField
@@ -194,6 +206,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
                 type="number"
                 min="1"
                 step="0.01"
+<<<<<<< HEAD
 <<<<<<< HEAD
                 placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}
 <<<<<<< HEAD
@@ -231,6 +244,9 @@ interface RateOptimizationSectionProps {;
 =======
                 placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}interface RateOptimizationSectionProps {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}interface RateOptimizationSectionProps {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   control: Control<any>,;
   setValue: (name: string, value: any) => void,;
   skills: string[],;
@@ -239,6 +255,7 @@ interface RateOptimizationSectionProps {;
   rateType: "hourly" | "fixed";
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
@@ -295,10 +312,14 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
 =======
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="space-y-4">;
       <FormField
         control={control}
         name="hourlyRate"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         render={({ field }) => (;
@@ -387,10 +408,14 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 =======
             <FormControl>;            <FormControl>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <FormControl>;            <FormControl>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <Input;
                 type="number";
                 min="1";
                 step="0.01";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -409,6 +434,9 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 =======
                 placeholder={rate_type === "hourly" ? "e.g. 45" : "e.g. 1000"}                placeholder={rateType === "hourly" ? "e.g. 45" :"e.g. 1000"}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                placeholder={rate_type === "hourly" ? "e.g. 45" : "e.g. 1000"}                placeholder={rateType === "hourly" ? "e.g. 45" :"e.g. 1000"}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {...field}
               />;
             </FormControl>;
@@ -423,6 +451,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
         <CardContent className="pt-4">;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           <TalentRateRecommender
 <<<<<<< HEAD
 =======
@@ -436,11 +465,15 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 =======
           <TalentRateRecommender          <TalentRateRecommender
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <TalentRateRecommender          <TalentRateRecommender
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </FormItem>)}
       />;
       <Card>;
         <CardContent className="pt-4">;
           <TalentRateRecommender;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -528,6 +561,12 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            years_experience={years_experience}
+            location={location}
+            onSuggestionApplied={handleSuggestionApplied}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
             rate_type={rate_type}
           />;
@@ -535,6 +574,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
       </Card>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -587,3 +627,6 @@ return (<div className="space-y-4" > <FormField control= {
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

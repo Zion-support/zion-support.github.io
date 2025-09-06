@@ -111,6 +111,7 @@ const 500: React.FC<500Props> = ({ className }) => {
   return (
     <div className='min-h-screen flex items-center justify-center'>
       Something went wrong.
+<<<<<<< HEAD
     </div>;
   );export default function FiveHundred(){;
   return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>;
@@ -121,6 +122,7 @@ const 500: React.FC<500Props> = ({ className }) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -128,3 +130,10 @@ const 500: React.FC<500Props> = ({ className }) => {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

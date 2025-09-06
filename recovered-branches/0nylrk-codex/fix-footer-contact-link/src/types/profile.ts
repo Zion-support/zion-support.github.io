@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -13,12 +14,15 @@
   name: string,
   level: number, // 1 - 5;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface ProfileSkill {
   name: string;
   level: number; // 1-5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   endorsements?: number;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -33,6 +37,8 @@ export interface ProfileProject {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
@@ -49,6 +55,7 @@ export interface ProfileProject {
 
 }
 export interface ProfileExperience {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,10 +92,13 @@ export interface ProfileExperience {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   role: string;
   company: string,
   description: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   startDate: string;
   endDate?: string;
@@ -110,10 +120,13 @@ export interface Availability {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   status: 'available' | 'limited' | 'unavailable';
   next_available?: string;
   message?: string,
   available_hours?: { day: string, hours: string }[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -143,6 +156,8 @@ export interface Availability {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 export interface ProfileData {
   id: string;
@@ -185,6 +200,7 @@ export interface ProfileData {;
   availability: Availability;
   hourlyRate?: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
   contactEmail?: string;
 }
 <<<<<<< HEAD
@@ -200,6 +216,8 @@ export interface ProfileData {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   contactEmail?: string
 };
 export interface ProfileProject {;
@@ -251,6 +269,7 @@ export interface ProfileData {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -258,3 +277,5 @@ export interface ProfileData {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

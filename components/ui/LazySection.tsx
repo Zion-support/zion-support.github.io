@@ -1,11 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
  const getInitialPosition = () => {
   switch (direction) {
   case 'up': 
 =======
 =======
+=======
 
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 interface LazySectionProps {
@@ -15,6 +22,7 @@ interface LazySectionProps {
   delay?: number;
   direction?: 'up' | 'down' | 'left' | 'right'
 }
+<<<<<<< HEAD
 export const LazySection: React.FC<LazySectionProps> = ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   children
@@ -49,11 +57,31 @@ export const LazySection: React.FC<LazySectionProps> = ({
       case 'right':
         return { opacity: 0, x: -50 }
       default:
+=======
+
+export const LazySection: React.FC<LazySectionProps> = ({
+  children;
+  className;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
   const getAnimatePosition = () => {
     switch (direction) {
       case 'up':
+<<<<<<< HEAD
+=======
+return { opacity: 1, y: 0 };
+      case 'down':
+        return { opacity: 1, y: 0 }
+      case 'left':
+        return { opacity: 1, x: 0 }
+      case 'right':
+        return { opacity: 1, x: 0 }
+      default:
+        return { opacity: 1, y: 0 }
+    }
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     >
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -112,6 +140,7 @@ export const LazySection: React.FC<LazySectionProps> = ({;
     </motion && motion.div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 };
 export default LazySection;      case 'down':;
@@ -134,3 +163,10 @@ export default LazySection;      case 'down':;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+};
+
+export default LazySection;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

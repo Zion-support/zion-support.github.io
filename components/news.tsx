@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 featured: true
@@ -7,8 +8,15 @@ featured: true
 featured: true 
  featured: true 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
+=======
+import React from 'react';
+  const featuredNews = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 {
+<<<<<<< HEAD
 
 
 };
@@ -56,6 +64,8 @@ return (<UltraFuturisticBackground> <div className="min-h-screen" > <Head> <titl
 =======
 };
 {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
  featured: true 
 };
 {;
@@ -97,11 +107,15 @@ TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap;
 Clock, BookOpen, Video, Podcast, FileText, Search;
 }from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 return (<UltraFuturisticBackground> <div className="min - h-screen" > <Head> <title > News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title> <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." /> </Head> id: 1;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 return (<UltraFuturisticBackground> <div className="min-h-screen" > <Head> <title > News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title> <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." /> </Head> id: 1;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+return (<UltraFuturisticBackground> <div className="min-h-screen" > <Head> <title > News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title> <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." /> </Head> id: 1;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 title: "Zion Tech Group Launches Revolutionary Quantum AI Platform";
 excerpt: "Our latest quantum AI platform combines quantum computing with artificial intelligence to deliver unprecedented performance and capabilities for enterprise applications.";
 category: "Product Launch";
@@ -311,6 +325,7 @@ type: 'Conference';
 date: '2024 - 02 - 15';
 time: '9:00 AM - 6:00 PM';
 <<<<<<< HEAD
+<<<<<<< HEAD
 location: 'San Francisco, CA';
 description: 'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -318,6 +333,10 @@ description: 'Join industry leaders and researchers for a deep dive into the fut
 location: 'San Francisco, CA',
   description: 'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+location: 'San Francisco, CA',
+  description: 'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 {
   id: 2;
@@ -528,11 +547,15 @@ please contact our communications team. </p> <div className="flex flex - col sm:
   {
   once: true;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }> <h2 className="text - 4xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 600 bg - clip - text text - transparent" > Get in Touch </h2> <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto" > Have questions about our news or want to learn more about our latest developments? Contact our team. </p> <span > Contact Us</span> <ArrowRight className="w - 5 h - 5" /> </a> <a href="/about" className="border border - purple - 500 text - purple - 400 hover:bg - purple - 500 hover:text - white px - 8 py - 3 rounded - lg font - semibold transition - all duration - 300" > About Zion Tech Group </a> </div> </motion.div> </div> </section> </div>);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 }> <h2 className="text - 4xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 600 bg - clip-text text-transparent" > Get in Touch </h2> <p className="text - xl text - gray - 300 mb - 8 max-w-3xl mx-auto" > Have questions about our news or want to learn more about our latest developments? Contact our team. </p> <span > Contact Us</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/about" className="border border - purple - 500 text - purple - 400 hover:bg - purple - 500 hover:text - white px - 8 py - 3 rounded - lg font - semibold transition-all duration-300" > About Zion Tech Group </a> </div> </motion.div> </div> </section> </div>);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}> <h2 className="text - 4xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 600 bg - clip-text text-transparent" > Get in Touch </h2> <p className="text - xl text - gray - 300 mb - 8 max-w-3xl mx-auto" > Have questions about our news or want to learn more about our latest developments? Contact our team. </p> <span > Contact Us</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/about" className="border border - purple - 500 text - purple - 400 hover:bg - purple - 500 hover:text - white px - 8 py - 3 rounded - lg font - semibold transition-all duration-300" > About Zion Tech Group </a> </div> </motion.div> </div> </section> </div>);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }title: "Partnership with TechCorp Announced for Cloud Infrastructure";
 excerpt: "Strategic collaboration to deliver next-generation cloud automation solutions for enterprise clients worldwide.";
 date: "2025-01-18";
@@ -547,7 +570,10 @@ image: "🤝"
 }
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 image: "🤝" 
 }
 };
@@ -567,7 +593,10 @@ image: "🌱"
 }
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 image: "🌱" 
 };
 {;
@@ -586,7 +615,10 @@ image: "📊"
 }
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 image: "📊" 
 };
 {;
@@ -597,6 +629,7 @@ excerpt: "Published in leading AI journal, our research explores the future of s
 date: "2025-01-12";
 category: "Research";
 author: "Prof. Maria Garcia";
+<<<<<<< HEAD
 <<<<<<< HEAD
 readTime: "7 min read";
 image: "📚"
@@ -670,6 +703,8 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Upcoming Events Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1263,6 +1298,21 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
 ;
   const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"];
 ;
+=======
+readTime: "7 min read";
+image: "📚"
+}];
+min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white"> <main className=" container mx-auto px-6 py-12"> <section className=" text-center mb-16"> <h1 className=" text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent"> Latest News </h1> > {
+  category
+}</button>) )
+}</div> <span>•</span> <span> {
+  article.date
+}</span> <span>•</span> <span> {
+  article.readTime 
+}</span> </div> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read Full Article </button> </div> </div> </div>) ) 
+}</div> <button className=" w-full px-4 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read More </button> </article>) ) 
+}</div> Get the latest news and updates delivered directly to your inbox. Never miss an important announcement. </p> <input type=" email"placeholder=" Enter your email"className=" flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50"/> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200" > Subscribe </button> </div> </div> </div> </section> </main> </div> </>)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
         <meta name="description" content="Stay informed with the latest news, company updates, and industry insights from Zion Tech Group." />;
         <meta property="og:title" content="News - Zion Tech Group" />;
@@ -1270,6 +1320,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1283,6 +1334,8 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* Featured Article */}
             {newsArticles && newsArticles.filter(article => article && article.featured).map((article) => (;
               <div key={article && article.id} className="bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 mb-12 border border-cyan-400/30">;
@@ -1383,6 +1436,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
                     placeholder="Enter your email"
                     className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50"
 <<<<<<< HEAD
+<<<<<<< HEAD
                   />
                   <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">
 
@@ -1445,6 +1499,8 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Subscribe;
                   </button>;
                 </div>;
@@ -1453,6 +1509,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
           </section>;
         </main>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1464,3 +1521,20 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                  />
+                  <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </>
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

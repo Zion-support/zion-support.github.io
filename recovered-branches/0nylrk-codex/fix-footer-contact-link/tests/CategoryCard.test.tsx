@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,6 +20,11 @@ import {render, screen} from '@testing-library/react';
 import {MemoryRouter} from 'react-router-dom';
 import {CategoryCard} from '@/components/CategoryCard';import {render, screen} from '@testing-library/react',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {render, screen} from '@testing-library/react';
+import {MemoryRouter} from 'react-router-dom';
+import {CategoryCard} from '@/components/CategoryCard';import {render, screen} from '@testing-library/react',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {MemoryRouter} from 'react-router-dom',
 import {CategoryCard} from '@/components/CategoryCard',
 
@@ -26,6 +32,7 @@ import { render, screen } from '@testing-library/react',
 import { MemoryRouter } from 'react-router-dom',
 import { CategoryCard } from '@/components/CategoryCard',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -68,6 +75,14 @@ import {CategoryCard} from '@/components/CategoryCard';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {render, screen} from '@testing-library/react';
+import {MemoryRouter} from 'react-router-dom';
+import {CategoryCard} from '@/components/CategoryCard';
+import {render, screen} from '@testing-library/react';
+import {MemoryRouter} from 'react-router-dom';
+import {CategoryCard} from '@/components/CategoryCard';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 it('renders category card with link to slug', () => {
   render(
     <MemoryRouter>
@@ -93,6 +108,7 @@ it ('renders category card with link to slug', () => {
   const link = screen.getByRole ('link', { name: /test category / i });
   expect (link).toHaveAttribute ('href / category / test - category');
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 it ('normalizes slug with special characters', () => {
       <CategoryCard title='R & D Tools!' description='desc' icon='*' />;
@@ -218,6 +234,8 @@ it ('treats underscores as spaces in slug', () => {
   );
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const link = screen.getByRole('link', { name: /test category/i });
   expect(link).toHaveAttribute('href/category/test-category');
 });
@@ -233,6 +251,7 @@ it('treats underscores as spaces in slug', () => {
       <CategoryCard title='AI_Tools' description='desc' icon='*' />
   const link = screen.getByRole('link', { name: /ai_tools/i });
 <<<<<<< HEAD
+<<<<<<< HEAD
   expect(link).toHaveAttribute('href/category/ai-tools');
 <<<<<<< HEAD
 >>>>>>> main
@@ -243,3 +262,6 @@ it('treats underscores as spaces in slug', () => {
 =======
   expect(link).toHaveAttribute('href/category/ai-tools');>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  expect(link).toHaveAttribute('href/category/ai-tools');>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

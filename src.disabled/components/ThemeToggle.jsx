@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,10 +21,14 @@ import React from';react' const ThemeToggle = () => { const [isDark,setIsDark] =
 =======
 import React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';''}"export\": const ThemeToggle = () => { useEffect ( () => { const savedTheme = localStorage && localStorage.getItem (\'theme\') const prefersDark = window && window.matchMedia (\' (prefers - color - scheme: dark) ) .matches\'';\''\"",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+"export\": const ThemeToggle = () => { useEffect ( () => { const savedTheme = localStorage && localStorage.getItem (\'theme\') const prefersDark = window && window.matchMedia (\' (prefers - color - scheme: dark) ) .matches\'';\''\"",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export: const ThemeToggle = () => { useEffect ( () => { const savedTheme = localStorage && localStorage.getItem ("theme") const prefersDark = window && window.matchMedia (" (prefers - color - scheme: dark) ) .matches"";"""",;"""
 
 import React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';''}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,3 +72,8 @@ import React from';react' const ThemeToggle = () => { const [isDark,setIsDark] =
 export: const ThemeToggle = () => { useEffect ( () => { const savedTheme = localStorage.getItem ("theme") const prefersDark = window.matchMedia (" (prefers - color - scheme: dark) ) .matches"";"""",;"""
 import React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';''}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+"export\": const ThemeToggle = () => { useEffect ( () => { const savedTheme = localStorage.getItem (\'theme\') const prefersDark = window.matchMedia (\' (prefers - color - scheme: dark) ) .matches\'';\''\"",;
+export: const ThemeToggle = () => { useEffect ( () => { const savedTheme = localStorage.getItem ("theme") const prefersDark = window.matchMedia (" (prefers - color - scheme: dark) ) .matches"";"""",;"""
+import React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';''}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -5,6 +5,7 @@ export { ProjectActions } from "./ProjectActions";
 export { ProjectHeader } from "./ProjectHeader";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export { MilestoneActivities } from './MilestoneActivities';
 export { MilestoneManager } from './MilestoneManager';
@@ -23,3 +24,5 @@ export { ProjectHeader } from './ProjectHeader';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

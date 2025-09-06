@@ -2,6 +2,43 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+import * as React from 'react'
+=======
+import * as React from 'react';
+import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+import * as React from 'react'
+import {
+  RefreshCw
+  Wifi
+  Server
+  ShoppingCart
+  Users
+  Wrench
+  Lightbulb
+} from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+export interface EmptyStateProps {
+  type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading';
+  title?: string;
+  description?: string;
+  action?: {
+    label: string;
+    onClick: () => void
+  }
+  icon?: React.ReactNode
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
+=======
 import React from 'react';
 import * as React from 'react';
 import {;
@@ -153,6 +190,18 @@ export function EmptyState({
 
       
       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+=======
+  const { t } = useTranslation();
+  const content = defaultContent[type];
+  const displayTitle = title || content.title;
+  const displayDescription = description || content.description;
+  const displayIcon = icon || content.icon;
+
+return (
+    <div className='flex flex-col items-center justify-center py-12 px-6 text-center'>
+      <div className='mb-4'>{displayIcon}</div>
+      <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         {displayTitle}
       </h3>
       
@@ -326,6 +375,7 @@ export function ProductsEmptyState ({
   isAuthenticated?: boolean }) {
   const action = onAddProduct
     ? {
+<<<<<<< HEAD
 
       {type === 'error' && (;
         <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>;
@@ -340,6 +390,18 @@ export function ProductsEmptyState ({
             <Link href='https://status && status.zion.ai' className='underline'>;
               {t('general && general.status_page')}
 
+=======
+        label: isAuthenticated ? 'Add Product' : 'Login to Add Product'
+        onClick: onAddProduct
+      }
+    : onRetry
+      ? { label: 'Try Again', onClick: onRetry }
+      : undefined
+  const customDescription = isAuthenticated
+    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
+    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!"
+      />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   )
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
       />
@@ -357,6 +419,7 @@ export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
       />
   )
 export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
+<<<<<<< HEAD
       />
   )
 } 
@@ -537,6 +600,7 @@ export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -544,3 +608,11 @@ export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  
+    />
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

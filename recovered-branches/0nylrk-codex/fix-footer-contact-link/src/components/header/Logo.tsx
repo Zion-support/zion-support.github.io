@@ -1,10 +1,13 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import { Link } from "react-router-dom";
 import { useWhitelabel } from "@/context/WhitelabelContext";
@@ -22,6 +25,7 @@ export function Logo(): any ({ customLogo, customColor }: LogoProps) {;
   // Use the white-label color if available and no specific customColor is provided;
   const colorToUse = customColor || (isWhitelabel ? primaryColor : undefined);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   if (logoToUse) {;
@@ -56,6 +60,9 @@ interface LogoProps {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   customColor?: string;
+=======
+  if (logoToUse) {;  customColor?: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
 import React from 'react',;
@@ -68,6 +75,7 @@ interface LogoProps {;
 
 export function Logo({ customLogo, customColor }: LogoProps) {
   const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel(),
+<<<<<<< HEAD
 
 export function Logo({ customLogo, customColor }: LogoProps) {;
   const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel();
@@ -115,6 +123,9 @@ export function Logo({ customLogo, customColor }: LogoProps) {
 =======
       return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Link to="/" className="flex items-center">;
         <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" />;
       </Link>;
@@ -141,6 +152,7 @@ export function Logo({ customLogo, customColor }: LogoProps) {
       </div>;
     </Link>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -172,10 +184,13 @@ interface LogoProps {
   return (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <Link to="/" className="flex items-center">
       <div className="text-2xl font-bold" style={colorToUse ? { color: colorToUse } : {}}>
         {isWhitelabel ? brandName : 'Zion'}<span className="text-zion-cyan">AI</span>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </Link>
 <<<<<<< HEAD
@@ -217,6 +232,9 @@ function Logo() {
 =======
     </Link>  // Use the white - label logo if available and no specific custom_logo is provided;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </Link>  // Use the white - label logo if available and no specific custom_logo is provided;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const logoToUse = custom_logo || (is_whitelabel ? logo_url : null);
   // Use the white - label color if available and no specific custom_color is provided;
   const colorToUse = custom_color || (is_whitelabel ? primary_color : undefined);
@@ -240,6 +258,7 @@ if ( {) {
         <span className="text - zion-cyan">AI</span>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Link>);
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -253,6 +272,8 @@ if ( {) {
 }
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </Link>;
   );
 import React from './react';
@@ -261,7 +282,10 @@ import { use_whitelabel  } from '@/context / WhitelabelContext';
 interface LogoProps {
   custom_logo?: string;
   custom_color?: string;}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
 import React from 'react',;
@@ -306,6 +330,7 @@ export function Logo({ customLogo, customColor } LogoProps) {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -313,3 +338,6 @@ export function Logo({ customLogo, customColor } LogoProps) {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

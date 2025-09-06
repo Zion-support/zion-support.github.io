@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -8,6 +9,8 @@
 
   description: string,
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface ListingCategory {
   id: string;
   name: string,
@@ -31,11 +34,15 @@ export interface ListingCategory {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 export interface ProductListing {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface ProductListing {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   title: string,
   description: string;
@@ -54,6 +61,7 @@ export interface ProductListing {
 export interface ListingCategory {;
   id: string,;
   name: string,,
+<<<<<<< HEAD
   description: string,;
   icon: string;
 }
@@ -165,13 +173,15 @@ export type ListingView = 'grid' | 'list';
 export interface ListingCategory {;
   id: string,;
   name: string,;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   description: string,;
   icon: string;
 }
 ;
 export interface ProductListing {;
   id: string,;
-  title: string,;
+  title: string,,
   description: string,;
   category: string,;
   subcategory?: string, // Adding optional subcategory field;
@@ -203,6 +213,7 @@ export interface ListingItem {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -210,11 +221,23 @@ export interface ListingItem {;
 =======
   image?: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  image?: string,  review_count?: number;
+  featured?: boolean,
+  ai_score?: number, // Added ai_score as optional property;
+  location?: string, // Adding location property to fix TypeScript errors;
+  availability?: string, // Adding availability property to fix TypeScript errors;
+  id: string;
+  title: string;
+  category: string;
+  image?: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   description?: string;
 }
 
 export interface ListingCategory {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -278,3 +301,6 @@ export type ListingView = "grid" | "list";
 =======
 export type ListingView = 'grid' | 'list';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export type ListingView = 'grid' | 'list';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

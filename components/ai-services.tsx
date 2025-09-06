@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
  export default function AIServices () {
 export default function AIServices () {
  export default function AIServices () {
@@ -6,6 +7,8 @@ export default function AIServices () {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   
 }> <Head> <title>AI Services | Zion Tech Group</title> </div>) ) 
 }</div>) ) 
@@ -24,8 +27,11 @@ export default function AIServices () {
  export default function AIServices() {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function AIServices () {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }> <Head> <title>AI Services | Zion Tech Group</title> </div>) )
@@ -41,6 +47,14 @@ export default function AIServices () {
 }</div>) )
 }</ul> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our AI Service Portfolio </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business and accelerate innovation </p> </motion.div> </li>) )
 }</ul> <motion.a > Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </motion.a> </motion.div>) )
+=======
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight  } from 'lucide-react';
+import SEO from '../components/SEO';
+const aiServices = null;
+export default function AIServices() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }</div> </div> </section> <motion.div initial= {
 <<<<<<< HEAD
 
@@ -51,7 +65,16 @@ export default function AIServices () {
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+  duration: 0.8, delay: 0.4 
+
+}> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-gray-400 mb-8" > Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <motion.button > Schedule Consultation </motion.button> <motion.button
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <QuantumHolographicMatrixBackground intensity={1.5}>
       <Head>
@@ -138,12 +161,15 @@ export default function AIServices () {
         </section>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
@@ -344,6 +370,7 @@ function AIServices() {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 >
                   View Case Studies
@@ -361,6 +388,8 @@ function AIServices() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text-white mb-6">;
                 Ready to Transform Your Business with AI?;
@@ -389,5 +418,36 @@ function AIServices() {
         </section>;
       </div>;
     </>),
+=======
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your Business with AI?
+              </h2>
+              <p className="text-xl text-gray-400 mb-8">
+                Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300"
+                >
+                  Schedule Consultation
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-cyan-500 hover:text-white transition-all duration-300"
+                >
+                  View Case Studies
+                </motion.button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+  )
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

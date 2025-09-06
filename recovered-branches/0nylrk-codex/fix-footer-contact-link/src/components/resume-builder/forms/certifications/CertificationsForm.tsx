@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -11,6 +12,10 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { Button  } from '@/components/ui/button';
@@ -23,6 +28,7 @@ import { zodResolver  } from '@hookform/resolvers/zod';
 import { format  } from 'date-fns';
 import { CertificationsList  } from './CertificationsList';
 import { CertificationFormFields  } from './CertificationFormFields';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { CertificationFormValues, certificationSchema } from './types';
 <<<<<<< HEAD
@@ -65,6 +71,9 @@ interface CertificationsFormProps {
 =======
 import { CertificationFormValues, certificationSchema } from './types';interface CertificationsFormProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { CertificationFormValues, certificationSchema } from './types';interface CertificationsFormProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   resumeId: string
   certifications: Certification[]
@@ -73,6 +82,7 @@ import { CertificationFormValues, certificationSchema } from './types';interface
   onBack: () => void
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -280,6 +290,10 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
   };
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  };
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!);
     form.reset({
@@ -290,6 +304,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this certification?')) {
       await deleteCertification(id)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     }
@@ -441,10 +456,13 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
 
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -456,6 +474,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },;
 
   const handleEdit = (cert: Certification) => {;
@@ -463,6 +483,7 @@ if ( {) {
     form && form.reset({;
       ...cert,;
       issue_date: formatDateValue(cert && cert.issue_date),;
+<<<<<<< HEAD
 <<<<<<< HEAD
       expiration_date: formatDateValue(cert && cert.expiration_date)});
   };
@@ -498,6 +519,10 @@ if ( {) {
       expiration_date: formatDateValue(cert && cert.expiration_date)})
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      expiration_date: formatDateValue(cert && cert.expiration_date)})
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
       }
     }
@@ -552,6 +577,7 @@ if ( {) {
                 onClick={() => {;
                   if (editingId) {;
                     setEditingId(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -831,3 +857,5 @@ form.reset ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

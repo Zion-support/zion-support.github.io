@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -24,6 +25,10 @@ import {Button} from "@/components/ui/button";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useRef } from "react",
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -42,6 +47,7 @@ export const AppScreenshots: React.FC = () => {;
 export const AppScreenshots: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -162,6 +168,8 @@ export const AppScreenshots: React.FC = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
@@ -174,6 +182,7 @@ export const AppScreenshots: React.FC = () => {;
                 <img
                   src={screenshot.src}
                   alt={screenshot.alt}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -208,10 +217,13 @@ export const AppScreenshots: React.FC = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Button 
             variant="ghost" 
             size="icon" 
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -229,6 +241,8 @@ export const AppScreenshots: React.FC = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             onClick={() => scroll("right")}
           >
             <ChevronRight className="h-6 w-6" />
@@ -236,6 +250,7 @@ export const AppScreenshots: React.FC = () => {;
         </div>
       </div>
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 <<<<<<< HEAD
@@ -258,6 +273,9 @@ export const AppScreenshots: React.FC = () => {;
 =======
   )},
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )},
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useRef } from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -278,6 +296,7 @@ export const AppScreenshots: React.FC = () => {;
         behavior: "smooth"});
     }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (;
 <<<<<<< HEAD
@@ -379,6 +398,9 @@ export const AppScreenshots:React.FC = () => {;
 =======
   return (;                  className="w-full h-full object-cover"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (;                  className="w-full h-full object-cover"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 />;
               </div>;
             ))}
@@ -396,6 +418,7 @@ export const AppScreenshots:React.FC = () => {;
       </div>;
     </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 
@@ -412,6 +435,10 @@ export const AppScreenshots:React.FC = () => {;
   )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
+=======
+  )
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { ChevronLeft, ChevronRight } from './lucide-react';
 import { Button } from '@/components / ui / button';
 // These would be replaced with actual screenshots;
@@ -486,7 +513,10 @@ if ( {) {
 
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

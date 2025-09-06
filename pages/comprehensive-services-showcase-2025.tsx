@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -57,6 +58,8 @@ import Link from 'next/link';
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {motion, AnimatePresence} from 'framer-motion';
 import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search, Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart,} from 'lucide-react';
 
@@ -69,7 +72,10 @@ const contactInfo = {
 };
 
 const categories = [
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   'All Services',
   'AI & Machine Learning',
   'Customer Success',
@@ -83,15 +89,23 @@ const categories = [
   'Business Intelligence',
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+const pricingRanges = [
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   'All Prices',
   'Under $300',
   '$300 - $500',
   '$500 - $800',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   '$800+',];
 
 export default function ComprehensiveServicesShowcase2025() {;
@@ -119,6 +133,7 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
   try {
 
 =======
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -144,16 +159,42 @@ import React, { useState } from 'react';
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin;
+  Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search;
+  Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart
+ } from 'lucide-react';
+import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
+const contactInfo = null;
+export default function ComprehensiveServicesShowcase2025() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+const [sortBy, setSortBy] = useState<
+    'name' | 'price' | 'rating' | 'popularity'
+  >('popularity');
+  // Filter services based on selections
+  const filteredServices = comprehensiveRealServices2025.filter(service => {
+    const categoryMatch =
+      selectedCategory === 'All Services' |
+      service.category.includes(selectedCategory);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     let priceMatch = true;
     if (selectedPriceRange !== 'All Prices') {;
       const price = parseInt(service && service.price.replace('$', ''));
@@ -170,20 +211,33 @@ import React, { useState } from 'react';
         case '$800+':;
           priceMatch = price > 800;
 <<<<<<< HEAD
+<<<<<<< HEAD
           break;
+=======
+=======
+break;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
     }
     const searchMatch =
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
       service.category.toLowerCase().includes(searchQuery.toLowerCase());
+<<<<<<< HEAD
     return categoryMatch && priceMatch && searchMatch;  });
+=======
+
+    return categoryMatch && priceMatch && searchMatch;
+  });
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
         return a.name.localeCompare(b.name);
       case 'price':
+<<<<<<< HEAD
         return (
           parseInt(a.price.replace('$', '')) -
           parseInt(b.price.replace('$', ''))
@@ -197,13 +251,34 @@ import React, { useState } from 'react';
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+return (
+          parseInt(a.price.replace('$', '')) -
+          parseInt(b.price.replace('$', ''))
+        );
+      case 'rating':
+        return b.rating - a.rating;
+      case 'popularity':
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+default:
+        return 0;
+    }
+  });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const getPriceRange = (price: string) => {
     const numPrice = parseInt(price.replace('$', ''));
     if (numPrice < 300) return 'Under $300';
     if (numPrice <= 500) return '$300 - $500';
     if (numPrice <= 800) return '$500 - $800';
+<<<<<<< HEAD
     return '$800+';
   }
+=======
+return '$800+';
+  };
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat =>
       category.toLowerCase().includes(cat.id.toLowerCase())
@@ -214,12 +289,18 @@ import React, { useState } from 'react';
     const categoryData = categories.find(cat =>
       category.toLowerCase().includes(cat.id.toLowerCase())
     );
+<<<<<<< HEAD
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';  }
 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';  }
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
   return (
@@ -279,10 +360,13 @@ import Link from 'next/link';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
   // Filter services based on selections;
   const filteredServices = comprehensiveRealServices2025.filter(service => {;
@@ -357,13 +441,25 @@ import Link from 'next/link';
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <Head>
         <title>Comprehensive Services Showcase 2025 | Zion Tech Group</title>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <meta name="description" content="Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="AI services, micro SAAS, IT solutions, business automation, customer success, supply chain optimization, financial planning, sales intelligence" />
         <meta property="og:title" content="Comprehensive Services Showcase 2025 | Zion Tech Group" />
@@ -371,6 +467,36 @@ import Link from 'next/link';
         <meta property="og:url" content="https://ziontechgroup.com/comprehensive-services-showcase-2025" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-services-showcase-2025" />
+<<<<<<< HEAD
+=======
+=======
+<meta
+          name='description'
+          content='Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with cutting-edge technology.'
+        />
+        <meta
+          name='keywords'
+          content='AI services, micro SAAS, IT solutions, business automation, customer success, supply chain optimization, financial planning, sales intelligence'
+        />
+        <meta
+          property='og:title'
+          content='Comprehensive Services Showcase 2025 | Zion Tech Group'
+        />
+        <meta
+          property='og:description'
+          content='Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms.'
+        />
+        <meta
+          property='og:url'
+          content='https://ziontechgroup.com/comprehensive-services-showcase-2025'
+        />
+        <meta property='og:type' content='website' />
+        <link
+          rel='canonical'
+          href='https://ziontechgroup.com/comprehensive-services-showcase-2025'
+        />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </Head>
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -430,6 +556,7 @@ import Link from 'next/link';
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{comprehensiveRealServices2025.length}+</div>
                   <div className="text-gray-400">Real Services</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
@@ -438,6 +565,8 @@ import Link from 'next/link';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-400 mb-2">$2.5B+</div>
@@ -450,6 +579,7 @@ import Link from 'next/link';
                 <div className="text-center">
                   <div className="text-3xl font-bold text-green-400 mb-2">400%</div>
                   <div className="text-gray-400">Average ROI</div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <div className='text-gray-400'>Real Services</div>
@@ -508,6 +638,12 @@ import Link from 'next/link';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+                </div>
+                <div className='text-gray-400'>Real Services</div>
+              </div>
+            </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* Contact CTA */}
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
               <Link
@@ -517,6 +653,7 @@ import Link from 'next/link';
                 <ArrowRight className='w-5 h-5 ml-2 inline' />;
               </Link>;
               <a
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -532,6 +669,8 @@ import Link from 'next/link';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Filters and Search Section */}
       <section className='py-12 bg-gray-900 border-b border-gray-800'>;
         <div className='container mx-auto px-4'>;
@@ -544,6 +683,7 @@ import Link from 'next/link';
                 placeholder='Search services...'
                 value={searchQuery}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                 onChange={e => setSearchQuery(e && e.target.value)}
@@ -553,6 +693,8 @@ import Link from 'next/link';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* Category Filter */}
             <div className='flex flex-wrap gap-2'>;
               {categories && categories.map(category => (;
@@ -569,12 +711,15 @@ import Link from 'next/link';
                 </button>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
             </div>;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* Price Range Filter */}
             <div className='flex items-center gap-2'>;
               <Filter className='w-5 h-5 text-gray-400' />;
@@ -589,6 +734,7 @@ import Link from 'next/link';
                   </option>;
                 ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
               </select>;
@@ -596,6 +742,8 @@ import Link from 'next/link';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* View Mode Toggle */}
             <div className='flex items-center gap-2 bg-gray-800 rounded-lg p-1'>;
               <button
@@ -616,6 +764,7 @@ import Link from 'next/link';
                     : 'text-gray-400 hover:text-white';
                 }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
               >;
@@ -625,11 +774,14 @@ import Link from 'next/link';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* Sort Options */}
             <div className='flex items-center gap-2'>;
               <span className='text-gray-400 text-sm'>Sort by:</span>;
               <select
                 value={sortBy}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -858,6 +1010,8 @@ if (return '$500 - $800') {
                 className='px - 3 py - 2 bg - gray - 800 border border - gray - 700 rounded - lg text - white text - sm focus:outline - none focus:ring - 2 focus:ring - cyan - 500';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >;
                 <option value='popularity'>Popularity</option>;
                 <option value='name'>Name</option>;
@@ -868,6 +1022,7 @@ if (return '$500 - $800') {
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -882,6 +1037,8 @@ if (return '$500 - $800') {
                   key={service && service.id}
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
@@ -896,6 +1053,7 @@ if (return '$500 - $800') {
                       </div>;
                     )}
                     {/* Service Icon */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -939,6 +1097,8 @@ if (return '$500 - $800') {
                     <div className='text - 6xl mb - 6'>{service.icon}</div>;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     {/* Service Info */}
                     <h3 className='text - 2xl font - bold text - white mb - 3'>;
                       {service.name}
@@ -946,11 +1106,14 @@ if (return '$500 - $800') {
                     <p className='text - gray - 300 mb - 4 line - clamp - 3'>;
                       {service.description}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                     </p>;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     {/* Price */}
                     <div className='flex items - center justify - between mb - 6'>;
                       <div className='text - 3xl font - bold text - cyan - 400'>;
@@ -963,6 +1126,7 @@ if (return '$500 - $800') {
                         <Star className='w - 5 h - 5 text - yellow - 400 fill - current' />;
                         <span className='text - white font - semibold'>;
                           {service.rating}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -995,6 +1159,8 @@ if (return '$500 - $800') {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     {/* Key Features */}
                     <div className='space-y-2 mb-6'>;
                       {service && service.features.slice(0, 3).map((feature, idx) => (;
@@ -1005,6 +1171,7 @@ if (return '$500 - $800') {
                           </span>;
                         </div>;
                       ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1026,10 +1193,13 @@ if (return '$500 - $800') {
                     </div>;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     {/* Category and Setup */}
                     <div className='flex items - center justify - between mb - 6 text - sm'>;
                       <span className='px - 3 py - 1 bg - gray - 700 text - gray - 300 rounded - full'>;
                         {service.category}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1046,6 +1216,8 @@ if (return '$500 - $800') {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     {/* Key Benefits */}
                     <div className='mb-6'>;
                       <h4 className='text-white font-semibold mb-3'>;
@@ -1061,6 +1233,7 @@ if (return '$500 - $800') {
                           </div>;
                         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                       </div>;
@@ -1068,6 +1241,8 @@ if (return '$500 - $800') {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     {/* CTA Button */}
                     <Link
                       href={service && service.link}
@@ -1104,6 +1279,7 @@ if (return '$500 - $800') {
                                 Popular;
                               </span>;
                             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1175,6 +1351,8 @@ if (return '$500 - $800') {
                       </div>;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       {/* Price and Rating */}
                       <div className='text - right'>;
                         <div className='text - 3xl font - bold text - cyan - 400 mb - 2'>;
@@ -1189,6 +1367,7 @@ if (return '$500 - $800') {
                             {service.rating}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
                           </div>;
                           <p className='text-gray-300 mb-3'>;
@@ -1696,15 +1875,76 @@ if (return '$500 - $800') {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                          </span>
+                          <span className='text-gray-400'>
+                            ({service.reviews})
+                          </span>
+                        </div>
+                        <span className='text-sm text-gray-400'>
+                          {getPriceRange(service.price)}
+                        </span>
+                      </div>
+                    </div>
+                    {/* Features and Benefits */}
+                    <div className='mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6'>
+                      <div>
+                        <h4 className='text-white font-semibold mb-3'>
+                          Key Features:
+                        </h4>
+                        <div className='space-y-2'>
+                          {service.features.slice(0, 4).map((feature, idx) => (
+                            <div key={idx} className='flex items-center'>
+                              <CheckCircle className='w-4 h-4 text-green-400 mr-3 flex-shrink-0' />
+                              <span className='text-gray-300 text-sm'>
+                                {feature}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+<div>
+                        <h4 className='text-white font-semibold mb-3'>
+                          Key Benefits:
+                        </h4>
+                        <div className='space-y-2'>
+                          {service.keyBenefits
+                            .slice(0, 4)
+                            .map((benefit, idx) => (
+                              <div key={idx} className='flex items-center'>
+                                <div className='w-2 h-2 bg-cyan-400 rounded-full mr-3'></div>
+                                <span className='text-gray-300 text-sm'>
+                                  {benefit}
+                                </span>
+                              </div>
+                            ))}
+                        </div>
+                      </div>
+                    </div>
+                    {/* CTA and Additional Info */}
+                    <div className='mt-6 flex flex-col lg:flex-row items-center justify-between gap-4'>
+                      <div className='flex items-center gap-4 text-sm text-gray-400'>
+                        <span>Market: {service.marketSize}</span>
+                        <span>Growth: {service.growthRate}</span>
+                        <span>ROI: {service.roi}</span>
+                      </div>
+                      <Link
+                        href={service.link}
+                        className='px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2 inline" />
                       </Link>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </motion.div>
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -1894,7 +2134,10 @@ if (return '$500 - $800') {
   }
 }
                   className="px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-all duration-300"
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >
                   {contactInfo.website}
                 </a>
@@ -1904,6 +2147,7 @@ if (return '$500 - $800') {
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 <<<<<<< HEAD
 =======
@@ -1911,6 +2155,10 @@ if (return '$500 - $800') {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 href={`mailto:${contactInfo && contactInfo.email}`}
                 className='flex items-center px-6 py-3 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300'>;
                 <Mail className='w-5 h-5 mr-2' />;
@@ -1918,6 +2166,7 @@ if (return '$500 - $800') {
               </a>;
             </div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1942,6 +2191,8 @@ if (return '$500 - $800') {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <a
                   href={`tel:${contactInfo.mobile}`}
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
@@ -1949,6 +2200,7 @@ if (return '$500 - $800') {
                   <Phone className="w-5 h-5 mr-2 inline" />
                   {contactInfo.mobile}
                 </a>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2010,6 +2262,8 @@ export default function ComprehensiveServicesShowcase2025() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion, AnimatePresence } from 'framer-motion';
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
@@ -2033,6 +2287,7 @@ const pricingRanges = [;
 export default function ComprehensiveServicesShowcase2025(req, res) {
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -2041,10 +2296,13 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2122,6 +2380,8 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
   // Filter services based on selections;
   const filteredServices = comprehensiveRealServices2025.filter(service => {;
@@ -2177,11 +2437,14 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
 }
   }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const getPriceRange = (price: string) => {
     const numPrice = parseInt(price.replace('$', '')),
     if (numPrice < 300) return 'Under $300',
@@ -2189,6 +2452,7 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
     if (numPrice <= 800) return '$500 - $800',
     return '$800+'
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2203,10 +2467,13 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       category.toLowerCase().includes(cat.id.toLowerCase())
     ),
     return categoryData ? categoryData.icon : Globe
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2221,10 +2488,13 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       category.toLowerCase().includes(cat.id.toLowerCase())
     ),
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2234,10 +2504,13 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <Head>
         <title>Comprehensive Services Showcase 2025 | Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 </div>
@@ -2349,11 +2622,16 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
                 </Link>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>
             </motion.div>
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 },
 export default ComprehensiveServicesShowcase2025,
@@ -2361,9 +2639,12 @@ export default ComprehensiveServicesShowcase2025,
 },
 export default ComprehensiveServicesShowcase2025,
         {/* Filters and Search Section */}
+<<<<<<< HEAD
 =======
 {/* Filters and Search Section */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <section className="py-12 bg-gray-900 border-b border-gray-800">
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
@@ -2403,6 +2684,7 @@ export default ComprehensiveServicesShowcase2025,
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)}
                   className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 >
                   <Phone className="w-5 h-5 mr-2" />
@@ -2434,6 +2716,34 @@ export default ComprehensiveServicesShowcase2025,
                 <p>Visit us at: <a href={contactInfo.website} className="text-cyan-400 hover:text-cyan-300 transition-colors">{contactInfo.website}</Link></p>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+                >
+                  {pricingRanges.map((range) => (
+                    <option key={range} value={range}>{range}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* View Mode Toggle */}
+              <div className="flex items-center gap-2 bg-gray-800 rounded-lg p-1">
+                <button
+                  onClick={() => setViewMode('grid')}
+                  className={`p-2 rounded-md transition-all duration-300 ${
+                    viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
+                  }`}
+                >
+                  <Grid className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={() => setViewMode('list')}
+                  className={`p-2 rounded-md transition-all duration-300 ${
+                    viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
+                  }`}
+                >
+                  <List className="w-5 h-5" />
+                </button>
+              </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
               {/* Sort Options */}
               <div className="flex items-center gap-2">
@@ -2538,11 +2848,14 @@ export default ComprehensiveServicesShowcase2025,
                         </div>
                       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             <div className='text-center text-gray-400'>;
               <p className='mb-2'>{contactInfo && contactInfo.address}</p>;
@@ -2552,6 +2865,7 @@ export default ComprehensiveServicesShowcase2025,
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -2559,3 +2873,10 @@ export default ComprehensiveServicesShowcase2025,
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  );
+
+export default ComprehensiveServicesShowcase2025;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

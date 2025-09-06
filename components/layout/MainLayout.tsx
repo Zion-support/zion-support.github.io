@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
@@ -83,6 +84,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -116,9 +120,13 @@ export default function MainLayout({
   canonical 
 }: MainLayoutProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <Head>
@@ -126,6 +134,7 @@ export default function MainLayout({
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
         <title>{title}</title>
         <meta name="description" content={description} />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         {keywords && <meta name="keywords" content={keywords} />}
@@ -151,11 +160,14 @@ export default function MainLayout({
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         <meta name="keywords" content={keywords} />
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {canonical && <link rel="canonical" href={canonical} />}
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <div className="min-h-screen bg-gray-50">
@@ -179,6 +191,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="min-h-screen flex flex-col">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Header />
@@ -190,6 +205,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
       </div>
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -226,3 +242,6 @@ export default MainLayout;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

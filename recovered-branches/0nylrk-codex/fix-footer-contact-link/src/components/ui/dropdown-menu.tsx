@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -17,6 +18,10 @@ import * as React from "react"
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
 import { Check, ChevronRight, Circle } from "lucide-react"
 
@@ -32,6 +37,7 @@ const DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup
 const DropdownMenuSubTrigger = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.SubTrigger>
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubTrigger> & {
+<<<<<<< HEAD
 <<<<<<< HEAD
     inset?: boolean
 <<<<<<< HEAD
@@ -93,6 +99,9 @@ const DropdownMenuSubTrigger = React.forwardRef<;
 =======
     inset?: boolean  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    inset?: boolean  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 >(({ class_name, inset, children, ...props }, ref) => (
   <DropdownMenuPrimitive.SubTrigger;
     ref={ref}
@@ -107,6 +116,7 @@ const DropdownMenuSubTrigger = React.forwardRef<;
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",
       inset && "pl-8",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -149,11 +159,16 @@ className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",
       inset && "pl-8",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",
+      inset && "pl-8",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className
     )}
     {...props}
   >;
     {children}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -187,6 +202,11 @@ className={cn(
     <ChevronRight className="ml-auto h-4 w-4" />
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    <ChevronRight className="ml-auto h-4 w-4" />
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   </DropdownMenuPrimitive.SubTrigger>
 ))
 DropdownMenuSubTrigger.displayName =
@@ -197,6 +217,7 @@ const DropdownMenuSubContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DropdownMenuPrimitive.SubContent
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
     className={cn(
 <<<<<<< HEAD
@@ -223,12 +244,16 @@ const DropdownMenuSubContent = React.forwardRef<
 =======
     className={cn(      className
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    className={cn(      className
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     )}
     {...props}
   />;
 ));
 DropdownMenuSubContent.displayName =;
   DropdownMenuPrimitive.SubContent.displayName;
+<<<<<<< HEAD
 <<<<<<< HEAD
 const DropdownMenuContent = React.forwardRef<;
 <<<<<<< HEAD
@@ -311,6 +336,9 @@ className={cn(
 =======
 const DropdownMenuContent = React.forwardRef<;        className
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const DropdownMenuContent = React.forwardRef<;        className
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       )}
       {...props}
     />;
@@ -318,6 +346,7 @@ const DropdownMenuContent = React.forwardRef<;        className
 ));
 DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName;
 const DropdownMenuItem = React.forwardRef<;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -330,6 +359,8 @@ const DropdownMenuItem = React.forwardRef<;
 className={cn (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent data-[state = open]:bg - accent & quot;,
       inset && &quot;pl - 8&quot;,
       class_name)}
@@ -439,6 +470,7 @@ const DropdownMenuItem = React.forwardRef<;
       inset && "pl-8",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -477,6 +509,10 @@ className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      inset && "pl-8",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className
     )}
     {...props}
@@ -484,6 +520,7 @@ className={cn(
 ));
 DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName;
 const DropdownMenuCheckboxItem = React.forwardRef<;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -557,6 +594,11 @@ className={cn(
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>,;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>,;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
@@ -591,6 +633,7 @@ className={cn (
         <Check className=&quot;h - 4 w - 4&quot; />;
       </DropdownMenuPrimitive.ItemIndicator>;
     </span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     {children}
 <<<<<<< HEAD
@@ -791,6 +834,9 @@ const DropdownMenuLabel = React.forwardRef<;
 =======
     {children}  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    {children}  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 >(({ class_name, inset, ...props }, ref) => (
   <DropdownMenuPrimitive.Label;
     ref={ref}
@@ -803,6 +849,7 @@ const DropdownMenuLabel = React.forwardRef<;
       "px-2 py-1.5 text-sm font-semibold",
       inset && "pl-8",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -852,6 +899,10 @@ className={cn(
       "px-2 py-1.5 text-sm font-semibold",
       inset && "pl-8",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      "px-2 py-1.5 text-sm font-semibold",
+      inset && "pl-8",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className
     )}
     {...props}
@@ -859,6 +910,7 @@ className={cn(
 ));
 DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName;
 const DropdownMenuSeparator = React.forwardRef<;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -880,6 +932,8 @@ const DropdownMenuSeparator = React.forwardRef<;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
 =======className={cn (
@@ -903,6 +957,7 @@ const DropdownMenuSeparator = React.forward_ref<;
       className={cn (&quot;ml - auto text - xs tracking - widest opacity - 60 & quot;, class_name)}
       {...props}
     />);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -993,6 +1048,9 @@ export {
 =======
 }  DropdownMenu,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}  DropdownMenu,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -1093,6 +1151,7 @@ React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator> > ( ({
 ;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   DropdownMenuRadioGroup}
@@ -1100,3 +1159,5 @@ React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator> > ( ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

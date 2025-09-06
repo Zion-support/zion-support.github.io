@@ -1,11 +1,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -29,6 +32,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -37,6 +41,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -55,6 +61,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {useNavigate} from "react-router-dom";
 export default function ContentGenerator() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -140,11 +147,14 @@ export default function ContentGenerator() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Redirect if not logged in
   React.useEffect(() => {
     if (!isLoading && !user) {
       toast.error("You must be logged in to access this page");
       navigate("/login?redirect=/content-generator")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -192,6 +202,8 @@ export default function ContentGenerator() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -226,6 +238,7 @@ export default function ContentGenerator() {;
       toast && toast.error("You must be logged in to access this page");
       navigate("/login?redirect=/content-generator");
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }, [user, isLoading, navigate]);
 <<<<<<< HEAD
@@ -280,12 +293,16 @@ export default function ContentGenerator() {;
 =======
   }, [user, isLoading, navigate]);      setPreviewContent(data);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }, [user, isLoading, navigate]);      setPreviewContent(data);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       toast && toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`);
     } catch (error) {;
       console && console.error("Error generating content:", error);
       toast && toast.error("Failed to generate content. Please try again.");
     } finally {;
       setIsGenerating(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 <<<<<<< HEAD
@@ -664,6 +681,9 @@ export default function ContentGenerator() {;
 =======
     }                    <Input
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }                    <Input
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       id="topic"
                       placeholder={contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g., May Platform Updates"}
                       className="bg-zion-blue border border-zion-blue-light text-white"
@@ -698,6 +718,7 @@ export default function ContentGenerator() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -705,6 +726,8 @@ export default function ContentGenerator() {;
       }),;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       if (error) throw error,;
       toast.success(`Test newsletter sent to ${testEmail}!`);
     } catch (error) {;
@@ -779,6 +802,7 @@ export default function ContentGenerator() {;
                       <div className="flex items-center justify-between">;
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>;
                         <Switch;
+<<<<<<< HEAD
 <<<<<<< HEAD
                           id="includeImage";
 =======
@@ -890,6 +914,9 @@ export default function ContentGenerator() {;
 =======
                           id="includeImage";                    onClick={generateContent}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                          id="includeImage";                    onClick={generateContent}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     disabled={isGenerating}
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
                   <Button;
@@ -1043,6 +1070,7 @@ export default function ContentGenerator() {;
 
     </>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
@@ -1151,3 +1179,6 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-cente
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

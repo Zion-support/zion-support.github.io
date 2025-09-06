@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 /**
  * Environment Polyfill for Browser
  * 
  * This polyfill ensures that process.env is always available in the browser environment.
  * It prevents the "Cannot read properties of undefined (reading 'env')" error.
  */
+=======
+<<<<<<< HEAD
+// Export a safe environment accessor
+export const safeEnv = {
+  NODE_ENV:
+    (typeof (globalThis as any).process !== 'undefined' &&
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 // Define safe defaults for environment variables
@@ -231,10 +239,34 @@ export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (
 // // // console.log('✅ Environment polyfill loaded successfully');
 export default safeEnv;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 console.log ('✅ Environment polyfill loaded successfully');
 export default safe_env;
 export default safe_env;
 export default safe_env;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+/**
+ * Environment Polyfill for Browser
+ *
+ * This polyfill ensures that process.env is always available in the browser environment.
+ * It prevents the "Cannot read properties of undefined (reading 'env')" error.
+ */
+// Define safe defaults for environment variables
+        NODE_ENV: 'production',
+        NEXT_PUBLIC_APP_URL: '',
+        NEXT_PUBLIC_SUPABASE_URL: '',
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: '',
+      };
+
+console.log('✅ Environment polyfill loaded successfully');
+
+export default safeEnv;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

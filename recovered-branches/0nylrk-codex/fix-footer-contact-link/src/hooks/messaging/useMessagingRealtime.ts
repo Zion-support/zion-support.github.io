@@ -23,6 +23,7 @@ export function useMessagingRealtime (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -37,11 +38,14 @@ import { toast } from '@/hooks/use-toast';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // Allow either UserProfile or UserDetails
@@ -76,6 +80,8 @@ export function useMessagingRealtime(;
         'postgres_changes', 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         { 
           event: 'INSERT', 
           schema: 'public', 
@@ -96,6 +102,7 @@ export function useMessagingRealtime(;
       .subscribe();
 
     return () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -127,6 +134,8 @@ export function useMessagingRealtime(;
       supabase && supabase.removeChannel(subscription)
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   }, [user, activeConversation, fetchConversations, setActiveMessages])    // Subscribe to new messages;
     const subscription = supabase;

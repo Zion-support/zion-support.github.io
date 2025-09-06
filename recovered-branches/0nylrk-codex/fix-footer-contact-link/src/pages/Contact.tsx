@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import { useState } from "react",
@@ -22,6 +23,9 @@ export default function Contact() {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -46,6 +50,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -56,6 +61,9 @@ import {useState} from "react";
 =======
 import React from 'react';import {useState} from "react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from 'react';import {useState} from "react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {SEO} from "@/components/SEO";
@@ -68,6 +76,7 @@ import {toast} from "@/components/ui/use-toast";
 import z from "zod";
 import {ChatAssistant} from "@/components/ChatAssistant";
 import {Mail, MessageSquare, MapPin, Phone} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {AppLayout} from "@/layout/AppLayout";
 <<<<<<< HEAD
@@ -293,11 +302,22 @@ import {AppLayout} from "@/layout/AppLayout";    message: ""
       // Basic validation with Zod
       const schema = z.object({  // Handle sending messages to the AI chat assistant
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {AppLayout} from "@/layout/AppLayout";    message: ""
+  }),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isChatOpen, setIsChatOpen] = useState(false),  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    try {
+      // Basic validation with Zod
+      const schema = z.object({  // Handle sending messages to the AI chat assistant
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -313,12 +333,16 @@ import {AppLayout} from "@/layout/AppLayout";    message: ""
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
         })}),
       
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -328,6 +352,8 @@ import {AppLayout} from "@/layout/AppLayout";    message: ""
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
@@ -337,6 +363,7 @@ import {AppLayout} from "@/layout/AppLayout";    message: ""
       toast({
         title: "Chat Error"
         description: "There was an error communicating with our AI assistant. Please try again."
+<<<<<<< HEAD
 <<<<<<< HEAD
         variant: "destructive"
 <<<<<<< HEAD
@@ -708,6 +735,9 @@ if ( {) {
 =======
         variant: "destructive"    <AppLayout>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        variant: "destructive"    <AppLayout>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <SEO
         title="Contact Zion - Get in Touch" 
         description="Have questions or want to learn more? Contact the Zion team about our AI and tech marketplace platform." 
@@ -753,6 +783,7 @@ if ( {) {
                   disabled={isSubmitting}>;
                   {isSubmitting ? "Sending..." : "Send Message"}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -983,6 +1014,8 @@ export default function Contact() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </Button>;
               </form>;
             </div>;
@@ -1001,6 +1034,7 @@ export default function Contact() {;
                       <p className="text-zion-slate-light">Get instant answers to your questions</p>;
                     </div>;
                   </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1223,16 +1257,25 @@ export default function Contact() {;
                     onClick={() => setIsChatOpen(true)}
                     className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
                   <Button;
+=======
+                  <Button;
+                    onClick={() => setIsChatOpen(true)}
+                    className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
+                  <Button;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     onClick={() => setIsChatOpen(true)}
                     className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}>;
                   {isSubmitting ? "Sending..." : "Send Message"}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   >;
                     Chat With Our AI Assistant;
                   </Button>;
@@ -1259,6 +1302,7 @@ export default function Contact() {;
                 as_child;
               >;
                 <a href="mailto:support@ziontechgroup.com">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Mail className="mr - 2 h - 5 w - 5" />;
 
@@ -1299,6 +1343,9 @@ export default function Contact() {;
 =======
                   <Mail className="mr - 2 h - 5 w-5" />;      {isChatOpen && (;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  <Mail className="mr - 2 h - 5 w-5" />;      {isChatOpen && (;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <ChatAssistant
           isOpen={isChatOpen}
           onClose={() => setIsChatOpen(false)}
@@ -1312,6 +1359,7 @@ export default function Contact() {;
           onSendMessage={handleSendMessage}
         />;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1434,3 +1482,6 @@ return (<AppLayout> <SEO /> <main className="min-h-screen bg-zion-blue pt-24 pb-
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

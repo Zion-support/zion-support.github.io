@@ -1,8 +1,14 @@
 
 <<<<<<< HEAD:pages/api-disabled/api/design-map.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD:pages/api-disabled/api/design-map.ts
 ;
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {;
+=======
+<<<<<<< HEAD
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/design-map.ts
   try {
     // Mock design map data;
     const designMap = {;
@@ -177,6 +183,7 @@ export default async function handler(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD:pages/api-disabled/api/design-map.ts
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -190,6 +197,22 @@ export default async function handler(req, res) {;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/design-map.ts
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import {
+  getZionDesignMap,
+  buildTokenSet,
+  fetchLovableTokens,
+} from '../../utils/design-map';
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  try {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/design-map.ts
     const base = getZionDesignMap();
     const [localTokens, cmsTokens] = await Promise.all([;
       buildTokenSet();
@@ -219,6 +242,7 @@ export default async function handler(req, res) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
   } catch (error) {;
     console.error("Error:", error);
@@ -282,6 +306,7 @@ export default async function handler(req, res) {;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+<<<<<<< HEAD:pages/api-disabled/api/design-map.ts
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -292,3 +317,11 @@ export default async function handler(req, res) {;
 }
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/design-map.ts
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/design-map.ts

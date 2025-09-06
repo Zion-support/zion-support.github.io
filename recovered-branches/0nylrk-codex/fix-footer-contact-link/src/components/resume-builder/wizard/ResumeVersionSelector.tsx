@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react";
 import {
@@ -28,6 +29,8 @@ import { useResume } from "@/hooks/useResume";
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 =======
 =======
@@ -46,6 +49,7 @@ import {Input} from '@/components/ui/input';
 import {Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle} from '@/components/ui/dialog';
 import {Save, ChevronDown, Plus, Loader2} from 'lucide-react';
 import {Resume} from '@/types/resume';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {useResume} from '@/hooks/useResume';
 <<<<<<< HEAD
@@ -83,10 +87,14 @@ interface ResumeVersionSelectorProps {
 =======
 import {useResume} from '@/hooks/useResume';interface ResumeVersionSelectorProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {useResume} from '@/hooks/useResume';interface ResumeVersionSelectorProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -102,10 +110,13 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function ResumeVersionSelector({
   currentResume,
   onResumeChange,
 }: ResumeVersionSelectorProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -114,6 +125,8 @@ export function ResumeVersionSelector({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { createResume, fetchResume } = useResume();
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
   const [newResumeTitle, setNewResumeTitle] = useState("");
@@ -128,6 +141,7 @@ export function ResumeVersionSelector({
         await fetchResume(resumeId);
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -164,6 +178,11 @@ export function ResumeVersionSelector({
 import { useState } from 'react',;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        setNewResumeTitle('')
+
+        setNewResumeTitle('')
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
@@ -196,6 +215,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         await fetchResume(resumeId),;
         onResumeChange(resumeId),;
         setSaveDialogOpen(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
         setNewResumeTitle('');
 <<<<<<< HEAD
@@ -318,6 +338,9 @@ onClick={handleCreateNewVersion}
 =======
         setNewResumeTitle('');              className="gap-2"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        setNewResumeTitle('');              className="gap-2"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
               <Save className="h-4 w-4" />
@@ -331,6 +354,7 @@ onClick={handleCreateNewVersion}
 }
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
@@ -350,3 +374,6 @@ onClick={handleCreateNewVersion}
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

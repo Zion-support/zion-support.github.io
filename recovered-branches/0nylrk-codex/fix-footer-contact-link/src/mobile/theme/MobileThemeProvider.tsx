@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -46,6 +47,8 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 import React from "react";
 import { useTheme } from "@/hooks/useTheme";
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { theme } = useTheme();
   return (
     <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>
@@ -58,7 +61,10 @@ import React from "react",
 import { useTheme } from "@/hooks/useTheme",
 import React from './react';
 import { use_theme } from '@/hooks / use_theme';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface MobileThemeProviderProps {
   children: React.ReactNode;
 }
@@ -81,6 +87,7 @@ export function MobileThemeProvider(): any ({ children }: MobileThemeProviderPro
     <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -90,6 +97,8 @@ export function MobileThemeProvider(): any ({ children }: MobileThemeProviderPro
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -97,6 +106,7 @@ export function MobileThemeProvider(): any ({ children }: MobileThemeProviderPro
 
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -174,3 +184,6 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

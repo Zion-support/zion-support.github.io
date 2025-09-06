@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 <<<<<<< HEAD
@@ -13,7 +16,21 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { randomUUID } from '[^']*';
+import { promises as fs } from '[^']*';
+const Epub = null;
+  return text
+    .split(/\n\n+/)
+    .map((p) => `<p>${escapeHtml(p)}</p>`)
+    .join('\n')
+}
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { NextApiRequest, NextApiResponse } from "next";
 import { randomUUID } from "crypto";
 import { promises as fs } from "fs";
@@ -23,6 +40,11 @@ export const config = {
     bodyParser: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      sizeLimit: "10mb",
+    },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
       sizeLimit: "10mb"
     }
@@ -37,6 +59,11 @@ export const config = {
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },;
+=======
+sizeLimit: '10mb',
+    },
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 };
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -70,6 +97,7 @@ export default async function handler(
     res && res.status(405).json({ error: "Method not allowed" });
     return;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   }
 
@@ -79,6 +107,8 @@ export default async function handler(
   if (!project?.meta || !Array && Array.isArray(project?.chapters)) {
     res && res.status(400).json({ error: "Invalid payload" });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return;
   }
   const tmpPath = `/tmp/${randomUUID()}.epub`;
@@ -161,6 +191,40 @@ export default async function handler(req, res) {
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.epub"'),
     res.status(200).send(buf)
 
+<<<<<<< HEAD
+=======
+
+
+=======
+  }
+
+  const { project } = req.body as { project: any };
+  if (!project?.meta || !Array.isArray(project?.chapters)) {
+    res.status(400).json({ error: 'Invalid payload' });
+return;
+  }
+  const tmpPath = `/tmp/${randomUUID()}.epub`;
+  const options = {
+title: project.meta.title,
+    author: project.meta.author,
+    publisher: project.meta.publisher || 'Zion',
+    content: project.chapters.map((ch: any) => ({
+      title: ch.title,
+      data: chapterToHtml(ch.content),
+    })),
+  };
+
+  try {
+    await new Epub(options, tmpPath).promise;
+    const buf = await fs.readFile(tmpPath);
+res.setHeader('Content-Type', 'application/epub+zip');
+    res.setHeader(
+      "Content-Disposition"
+      'attachment; filename="zion-os-book.epub"'
+    );
+    res.status(200).send(buf);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (e: any) {
     res.status(500).json({ error: e?.message |"Failed to build EPUB" });
   } finally {
@@ -168,6 +232,7 @@ export default async function handler(req, res) {
       await fs.unlink(tmpPath);
     } catch {}
   }
+<<<<<<< HEAD
 }
 ;
   const tmpPath = `/tmp/${randomUUID()}.epub`;
@@ -193,11 +258,14 @@ export default async function handler(req, res) {
     try { await fs.unlink(tmpPath) } catch {}
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 function chapterToHtml(text: string): string {
   if (!text) return '';
   return text
     .split(/\n\n+/)
+<<<<<<< HEAD
     .map((p) => `<p>${escapeHtml(p)}</p>`)
     .join('\n')
 }
@@ -332,6 +400,7 @@ export default async function handler(
       'attachment; filename="zion - os - book.epub"',
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -407,3 +476,19 @@ export default async function handler(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+.map(p => `<p>${escapeHtml(p)}</p>`)
+    .join('\n');
+
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+
+}}}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

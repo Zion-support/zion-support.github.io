@@ -13,6 +13,14 @@ export default function GrantDetailPage() {;
   const router = useRouter();
   const { id } = router && router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
   const router = useRouter();
+=======
+import { useEffect, useState  } from 'react';
+import { useRouter  } from 'next/router';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type { GrantApplication } from '../../types/grants';
+export default function GrantDetailPage() {
+  const router = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [item, setItem] = useState<GrantApplication | null>(null);
   const [loading, setLoading] = useState(true);
   const [updateContent, setUpdateContent] = useState('');
@@ -21,6 +29,7 @@ export default function GrantDetailPage() {;
     if (!id) return;
     setLoading(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
     fetch(`/api/grants/${id}`)
       .then(r => r.json())
       .then(d => setItem(d.record))
@@ -28,6 +37,8 @@ export default function GrantDetailPage() {;
   const addUpdate = async () => {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (!id |!updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
     if (!id || !updateContent.trim()) return;
 
@@ -35,16 +46,26 @@ export default function GrantDetailPage() {;
     if (!id || !updateContent.trim()) return;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+fetch(`/api/grants/${id}`)
+      .then(r => r.json())
+      .then(d => setItem(d.record))
+      .finally(() => setLoading(false));
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }, [id]);
+
   const addUpdate = async () => {
-    if (!id |!updateContent.trim()) return;
-    const resp = await fetch(`/api/grants/${id}/updates`, {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ content: updateContent })
+    if (!id || !updateContent.trim()) return;
+const resp = await fetch(`/api/grants/${id}/updates`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ content: updateContent }),
     });
       const u = await resp.json();
       setItem(prev =>
@@ -65,6 +86,16 @@ export default function GrantDetailPage() {;
         <div>Not found</div>;
       </EnhancedLayout>;
     );
+<<<<<<< HEAD
+=======
+  return (
+    <EnhancedLayout>
+      <div className='flex items-center justify-between mb-4'>
+        <div>
+          <h1 className='text-2xl font-semibold'>{item.projectName}</h1>
+          <div className='text-sm text-gray-600 dark:text-gray-400'>
+            {item.sector |'General'} • {item.region |'Global'} •{' '}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             {item.program === 'incubator' ? 'Incubator' : 'Grant'}
           </div>;
         </div>;
@@ -81,6 +112,7 @@ export default function GrantDetailPage() {;
                         href={l}
                         target='_blank'
 <<<<<<< HEAD
+<<<<<<< HEAD
                         rel='noreferrer'>;
                         {l}
                       </a>;
@@ -96,6 +128,63 @@ export default function GrantDetailPage() {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                        rel='noreferrer'
+                      >
+                        {l}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </section>
+
+<section className='border rounded p-4 bg-white/70 dark:bg-black/40'>
+            <h2 className='font-medium mb-2'>Updates</h2>
+            <div className='space-y-3'>
+              {(item.updates |[])
+                .slice()
+                .reverse()
+                .map(u => (
+                  <div key={u.id} className='text-sm'>
+                    <div className='text-xs text-gray-500'>
+                      {new Date(u.createdAt).toLocaleString()}
+                    </div>
+                    <div className='whitespace-pre-wrap'>{u.content}</div>
+                  </div>
+                ))}
+              {(!item.updates |item.updates.length === 0) && (
+                <div className='text-sm text-gray-600'>No updates yet.</div>
+              )}
+              <div className='pt-2'>
+                <textarea
+                  className='w-full border rounded p-2'
+                  rows={3}
+                  placeholder='Post an update or progress note'
+                  value={updateContent}
+                  onChange={e => setUpdateContent(e.target.value)}
+                />
+                <button
+                  onClick={addUpdate}
+                  className='mt-2 px-3 py-2 bg-gray-900 text-white rounded'
+                >
+                  Add Update
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+<aside className='space-y-4'>
+          <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>
+            <h3 className='font-medium mb-2'>Milestones</h3>
+            <ul className='space-y-2'>
+              {(item.milestones |[]).map(m => (
+                <li key={m.id} className='text-sm flex items-start gap-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <span
                     className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emerald-500' : 'bg-gray-400'}`}
                   />;
@@ -117,6 +206,7 @@ export default function GrantDetailPage() {;
                   </div>;
                 </li>;
               ))}
+<<<<<<< HEAD
                     <div className="font-medium">{m.title}</div>
                     {m.description && <div className="text-gray-600">{m.description}</div>}
                     {m.trancheAmount ? <div className="text-xs text-gray-600">Tranche: {m.trancheAmount} {m.trancheCurrency}</div> : null}
@@ -131,15 +221,33 @@ export default function GrantDetailPage() {;
           <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
             <h3 className="font-medium mb-2">Team</h3>
             <div className="text-sm whitespace-pre-wrap">{item.teamInfo}</div>
+=======
+              {(!item.milestones |item.milestones.length === 0) && (
+                <div className='text-sm text-gray-600'>
+                  Milestones will appear here.
+                </div>
+              )}
+            </ul>
+            <div className='mt-3 text-sm'>
+              Funds Released: {item.fundsReleased |0}
+            </div>
+          </section>
+          <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>
+            <h3 className='font-medium mb-2'>Team</h3>
+            <div className='text-sm whitespace-pre-wrap'>{item.teamInfo}</div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           </section>
         </aside>
       </div>
     </EnhancedLayout>
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </EnhancedLayout>
   );
 }
@@ -326,6 +434,7 @@ export default function GrantDetailPage() {;
     </EnhancedLayout>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
@@ -333,3 +442,9 @@ export default function GrantDetailPage() {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

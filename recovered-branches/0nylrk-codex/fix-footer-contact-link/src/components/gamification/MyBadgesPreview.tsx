@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { BadgeEarned } from "./BadgeEarned";
 import { badgeList, BadgeKey } from "./badgeConfig";
@@ -21,11 +22,16 @@ const earnedBadges: { badge: BadgeKey; date: string }[] = [
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   { badge: "first_listing", date: "2024-12-16" },
   { badge: "profile_complete", date: "2024-11-22" },
   { badge: "first_action", date: "2024-09-08" },
 ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -40,6 +46,8 @@ const earnedBadges: { badge: BadgeKey; date: string }[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { BadgeEarned } from "./BadgeEarned",
 import { badgeList, BadgeKey } from "./badgeConfig",
@@ -49,6 +57,7 @@ const earnedBadges: { badge: BadgeKey, date: string }[] = [
   { badge: "first_listing", date: "2024-12-16" },
   { badge: "profile_complete", date: "2024-11-22" },
   { badge: "first_action", date: "2024-09-08" }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -72,11 +81,14 @@ const earnedBadges: { badge: BadgeKey; date: string }[] = [
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   { badge: "first_listing", date: "2024-12-16" }
   { badge: "profile_complete", date: "2024-11-22" }
   { badge: "first_action", date: "2024-09-08" }
 ];
 export const MyBadgesPreview: React.FC = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -89,6 +101,8 @@ export const MyBadgesPreview: React.FC = () => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 // Dummy data for demo: what badges this user earned (with fake dates);
 const earnedBadges: { badge: BadgeKey; date: string }[] = [;
@@ -97,6 +111,7 @@ const earnedBadges: { badge: BadgeKey; date: string }[] = [;
   { badge: "first_action", date: "2024-09-08" },;
 ];
 export const MyBadgesPreview: React.FC = () => {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
@@ -189,6 +204,9 @@ export const MyBadgesPreview:React.FC = () => {;
 =======
   return (};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from "react",;
 import { BadgeEarned } from "./BadgeEarned",;
@@ -235,6 +253,7 @@ export const MyBadgesPreview: React.FC = () => {;
           <BadgeEarned key={badge} badge={badge} earnedDate={date} />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -245,3 +264,5 @@ export const MyBadgesPreview: React.FC = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

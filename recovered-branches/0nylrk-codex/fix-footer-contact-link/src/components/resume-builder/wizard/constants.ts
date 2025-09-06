@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -58,6 +59,10 @@ export const RESUME_STEPS = [;
 { id: 'basic - info', label: 'Basic Info' }
   { id: 'work - experience', label: 'Work Experience' }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+{ id: 'basic - info', label: 'Basic Info' }
+  { id: 'work - experience', label: 'Work Experience' }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   { id: 'basic-info', label: 'Basic Info' },;
   { id: 'work-experience', label: 'Work Experience' },;
   { id: 'education', label: 'Education' },;
@@ -73,6 +78,7 @@ export const RESUME_STEPS = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -85,3 +91,6 @@ export const RESUME_STEPS = [;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

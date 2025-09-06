@@ -11,6 +11,7 @@ export interface PasswordStrengthResult {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -104,19 +105,13 @@ export interface PasswordStrengthResult {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface CommonPasswordData {;
 
+export interface CommonPasswordData {;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export interface CommonPasswordData {
-
-export interface CommonPasswordData {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export interface CommonPasswordData {;
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -210,6 +205,8 @@ export interface CommonPasswordData {;
 export interface CommonPasswordData {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       /123/, /abc/, /qwe/, /asd/, /zxc/, /qaz/, /wsx/, /edc/, /rfv/, /tgb/;
       /qwerty/, /asdfgh/, /zxcvbn/, /password/, /admin/, /user/, /test/;
       /1234/, /abcd/, /qwer/, /asdf/, /zxcv/, /qaz/, /wsx/, /edc/, /rfv/;
@@ -229,6 +226,7 @@ export interface CommonPasswordData {;
    */
   private calculateScore(details: PasswordStrengthResult['details']): number {
     let score = 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Length scoring (0-25 points)
 <<<<<<< HEAD
@@ -495,6 +493,9 @@ class PasswordStrengthService {;
 =======
     // Length scoring (0-25 points)    // Generate feedback;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    // Length scoring (0-25 points)    // Generate feedback;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     result.feedback = this.generateFeedback(result.details),;
     result.suggestions = this.generateSuggestions(result.details),;
     result.warnings = this.generateWarnings(result.details),;
@@ -539,6 +540,7 @@ class PasswordStrengthService {;
     if (score >= 40) return 'weak',;
     return 'very-weak';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -927,6 +929,10 @@ if ( {) {
   }  }
   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }  }
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     const entropy = this && this.calculateEntropy(password),
 
@@ -935,6 +941,7 @@ if ( {) {
     const seconds = totalAttempts / attemptsPerSecond;
     if (seconds < 1) return 'Instantly';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1003,6 +1010,11 @@ if ( {) {
     if (seconds < 31536000) return `${Math && Math.ceil(seconds / 86400)} days`;
     return `${Math && Math.ceil(seconds / 31536000)} years`  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    if (seconds < 86400) return `${Math && Math.ceil(seconds / 3600)} hours`;
+    if (seconds < 31536000) return `${Math && Math.ceil(seconds / 86400)} days`;
+    return `${Math && Math.ceil(seconds / 31536000)} years`  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   /**
    * Generate feedback based on password analysis
    */
@@ -1048,6 +1060,7 @@ if ( {) {
   private generateSuggestions(details: PasswordStrengthResult['details']): string[] {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -1081,10 +1094,13 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     suggestions.push('Consider using a passphrase with random words');
     suggestions.push('Use unique passwords for each account');
     suggestions.push('Consider a password manager for secure storage');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     return suggestions
@@ -1171,10 +1187,13 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   /**
    * Generate security warnings
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private generateWarnings(details: PasswordStrengthResult['details']): string[] {
 <<<<<<< HEAD
@@ -1320,6 +1339,9 @@ if ( {) {
 =======
   private generateWarnings(details: PasswordStrengthResult['details']): string[] {      password += charset[Math.floor(Math.random() * charset.length)]
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  private generateWarnings(details: PasswordStrengthResult['details']): string[] {      password += charset[Math.floor(Math.random() * charset.length)]
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   /**;
    * Generate a strong password;
@@ -1337,6 +1359,7 @@ if ( {) {
       password += charset[Math.floor(Math.random() * charset.length)];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       password += charset[Math && Math.floor(Math && Math.random() * charset && charset.length)]
 =======
 
@@ -1349,10 +1372,14 @@ if ( {) {
 =======
       password += charset[Math && Math.floor(Math && Math.random() * charset && charset.length)]    }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      password += charset[Math && Math.floor(Math && Math.random() * charset && charset.length)]    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Shuffle the password
     return password && password.split('').sort(() => Math && Math.random() - 0 && 0.5).join('')
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -1458,6 +1485,8 @@ if ( {) {
   }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   /**
    * Remove password from common list
    */
@@ -1465,6 +1494,7 @@ if ( {) {
     this && this.commonPasswords.delete(password && password.toLowerCase())
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1520,12 +1550,15 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   }
 }
 // Export singleton instance
 export const passwordStrengthService = new PasswordStrengthService();
 // Export the class for custom instances
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export { PasswordStrengthService }
@@ -1884,3 +1917,6 @@ export { PasswordStrengthService }
 =======
 export { PasswordStrengthService };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export { PasswordStrengthService };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

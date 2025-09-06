@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 };
@@ -22,6 +23,9 @@ const fixApi = () => {
       content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
 
     
@@ -68,8 +72,8 @@ const fix_accessibility = () =>: any {
 ;
     // Fix the malformed JSX structure;
     content = content.replace (
-      /<h2 className="text - 3xl font - bold text - gray-900 mb-6">\s*<\/div>\s*<\/div>\s*<\/section>\s*<section className="py-20 bg-white">/g,
-      '<h2 className="text - 3xl font - bold text - gray-900 mb-6">\n                  Accessibility Standards\n                </h2>\n                <p className="text - lg text - gray - 600 max-w-3xl mx-auto">\n                  We follow international accessibility standards to ensure our platform is usable by everyone.\n                </p>\n              </div>\n            </div>\n          </div>\n        </section>\n        <section className="py-20 bg-white">');
+      /<h2 className="text - 3xl font - bold text - gray - 900 mb - 6">\s*<\/div>\s*<\/div>\s*<\/section>\s*<section className="py - 20 bg - white">/g,
+      '<h2 className="text - 3xl font - bold text - gray - 900 mb - 6">\n                  Accessibility Standards\n                </h2>\n                <p className="text - lg text - gray - 600 max - w-3xl mx - auto">\n                  We follow international accessibility standards to ensure our platform is usable by everyone.\n                </p>\n              </div>\n            </div>\n          </div>\n        </section>\n        <section className="py - 20 bg - white">');
 ;
     fs.writeFileSync ('pages / accessibility.tsx', content);
     console.log ('✅ Fixed accessibility.tsx');

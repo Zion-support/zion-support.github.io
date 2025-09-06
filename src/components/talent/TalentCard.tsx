@@ -10,9 +10,12 @@ import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
 import { FavoriteButton } from "@/components/FavoriteButton",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export const TalentCard = React && React.memo(TalentCardComponent);
 TalentCard && TalentCard.displayName = 'TalentCard';import React from 'react';
@@ -26,8 +29,11 @@ import { TalentProfile } from "@/types/talent";
 import { RatingStars  } from '@/components/RatingStars';
 import { useAuth  } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -44,12 +50,15 @@ import { useCart } from '@/context/CartContext',
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface TalentCardProps {
   talent: TalentProfile,
   onViewProfile: (id: string) => void,
@@ -60,12 +69,15 @@ export interface TalentCardProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import { useRouter } from 'next/router',;
 import { Badge } from "@/components/ui/badge",;
@@ -86,9 +98,12 @@ export interface TalentCardProps {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 <<<<<<< HEAD
 ;
@@ -144,10 +159,13 @@ const TalentCardComponent = ({;
   },;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleRequestHire = (e: React && React.MouseEvent,) => {;
     e && e.preventDefault(),;
     e && e.stopPropagation(),;    if (onRequestHire) {;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (onRequestHire) {;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       onRequestHire(talent);
@@ -166,12 +184,15 @@ const TalentCardComponent = ({;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       onClick={handleViewProfile}
       tabIndex={0}
 
@@ -179,6 +200,7 @@ const TalentCardComponent = ({;
       <div className="p-6">
         <div className="flex items-start">
           {/* Avatar */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <div className="relative mr-4">
@@ -194,6 +216,10 @@ const TalentCardComponent = ({;
               {talent && talent.profile_picture_url ? (;                <img
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+
+                <img
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                 <img
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -204,6 +230,7 @@ const TalentCardComponent = ({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   className="w-full h-full object-cover"
@@ -229,6 +256,13 @@ const TalentCardComponent = ({;
                   {talent.full_name?.charAt(0) || "T"}
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+
+                  {talent.full_name?.charAt(0) || "T"}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>
               )}
             </div>
@@ -254,6 +288,7 @@ const TalentCardComponent = ({;
             </div>;
             <p className="text-white font-medium">{talent && talent.professional_title}</p>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             
@@ -283,11 +318,15 @@ const TalentCardComponent = ({;
 =======
             {/* Location & Availability */}
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+            {/* Location & Availability */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             </div>;
           </div>;
         </div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -296,6 +335,8 @@ const TalentCardComponent = ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Skills */}
         {skills.length > 0 && (
           <div className="mt-4">
@@ -318,21 +359,28 @@ const TalentCardComponent = ({;
                 </span>
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>;
 <<<<<<< HEAD
           </div>;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         )}
 ;
 =======
           </div>;        )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Hourly Rate & Actions */}
         <div className="mt-5 flex items-center justify-between">
           <div>
@@ -344,6 +392,7 @@ const TalentCardComponent = ({;
             ) : (
               <div className="text-zion-slate-light">Rate not specified</div>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           </div>
@@ -360,6 +409,9 @@ const TalentCardComponent = ({;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="flex items-center gap-2">
             {isAuthenticated && (
               <Button
@@ -370,12 +422,15 @@ const TalentCardComponent = ({;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 onClick={handleRequestHire}
 
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
@@ -388,14 +443,18 @@ const TalentCardComponent = ({;
               variant="ghost"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               onClick={(e) => {
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
               onClick={(e) => {
               onClick={(e) => {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -404,6 +463,8 @@ const TalentCardComponent = ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 e.stopPropagation(),
                 handleViewProfile()
               }}
@@ -612,6 +673,7 @@ if ( {) {
       </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Card>;
   );
 },;
@@ -620,6 +682,8 @@ TalentCard.displayName = 'TalentCard';
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     </Card>);
 },
@@ -634,4 +698,13 @@ TalentCard.displayName = 'TalentCard',
 
 export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+export interface TalentCardProps {
+  );
+};
+"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

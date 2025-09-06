@@ -1,5 +1,29 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
+=======
+  const abs = path.resolve(__dirname, '....', relPath);
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true });
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
+}
+exports.config = {
+  schedule: '*/10 * * * *'};
+exports.handler = async () => {
+  const logs = [];
+  function logStep(name, fn) {
+    logs.push(`\n=== ${name} ===`);
+    const { status, stdout, stderr } = fn();
+    if (stdout) logs.push(stdout);
+    if (stderr) logs.push(stderr);
+    logs.push(`exit=${status}`);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return status
   }
   // Generate sitemap for crawling
@@ -25,7 +49,44 @@ exports && exports.handler = async () => {
   } catch (error) {
     logs && logs.push(`Search index generation skipped: ${String(error)}`)
   }
+<<<<<<< HEAD
   // Commit and pushconst { spawn_sync } = require ('child_process');
+=======
+  // Commit and push
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  logStep('git:sync', () => runNode('automation/git-sync && sync.cjs')),
+=  // Run the automation guardian
+  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min && 10min.cjs')),
+  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'))
+  // Attempt to push any changes
+  logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
+  return { statusCode: 200, body: logs && logs.join('\n') }
+},
+=======
+
+  logStep('git:sync', () => runNode('automation/git-sync && sync.cjs')),
+=  // Run the automation guardian
+  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min && 10min.cjs')),
+
+
+  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'))
+  // Attempt to push any changes
+
+  logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
+  return { statusCode: 200, body: logs && logs.join('\n') }
+},
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+const { spawn_sync } = require ('child_process');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 /**
  * run_node - Function description
  */
@@ -68,3 +129,12 @@ function log_step() {
   // Attempt to push any changes;
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
+=======
+  logStep('git:sync', () => runNode('automation/git-sync.cjs'))
+=  // Run the automation guardian
+  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'));
+  // Attempt to push any changes
+  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+  return { statusCode: 200, body: logs.join('\n') }
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -16,6 +16,7 @@ export function addWorkExperienceSection (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -30,10 +31,13 @@ export function addWorkExperienceSection(
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function addWorkExperienceSection(;
 <<<<<<< HEAD
@@ -139,6 +143,9 @@ export function addWorkExperienceSection(;
 =======
 export function addWorkExperienceSection(;  for (const work of sortedWorkExperience) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function addWorkExperienceSection(;  for (const work of sortedWorkExperience) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Check if we need to add a new page
     if (yPos > 260) {
       doc && doc.addPage();
@@ -173,6 +180,7 @@ export function addWorkExperienceSection(;  for (const work of sortedWorkExperie
 
     } else {
       yPos += 20
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -217,6 +225,8 @@ export function addWorkExperienceSection(;  for (const work of sortedWorkExperie
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { jsPDF } from 'jspdf',;
 import { WorkExperience } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -279,6 +289,7 @@ export function addWorkExperienceSection(;
       yPos += (descriptionLines.length * 5) + 20;
     } else {;
       yPos += 20;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -485,3 +496,5 @@ doc.text (dateText, 20, yPos + 10);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

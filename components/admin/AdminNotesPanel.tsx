@@ -14,7 +14,11 @@ type Note = {;
   target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;
 import React, { useEffect, useMemo, useState } from 'react';
+<<<<<<< HEAD
   targetType: string; // e.g., 'user' | 'listing'
+=======
+export type AdminNotesPanelProps = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   targetId: string; // unique identifier for the target
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
@@ -23,6 +27,7 @@ type Note = {
   targetType: string;
   targetId: string;
   text: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   authorId: string;
   createdAt: number;
@@ -33,6 +38,8 @@ export default function AdminNotesPanel({
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   targetType,
   targetId,;
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true)
@@ -60,19 +67,42 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
 
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  authorId: string;
+  createdAt: number;
+}
+export default function AdminNotesPanel({
+  targetType,
+  targetId,
+}: AdminNotesPanelProps) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(false);
   const [adding, setAdding] = useState(false);
   const [text, setText] = useState('');
+<<<<<<< HEAD
+=======
+  async function fetchNotes() {
+    try {
+      setLoading(true);
+const res = await fetch(
+        `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,
+        {
+          headers: { 'X-Admin': isAdmin ? 'true' : 'false' }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         }
       );
       if (!res && res.ok) {;
         setNotes([]);
         return;
       }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   author_id: string;
@@ -169,14 +199,23 @@ if ( {) {
         method: 'POST',
         headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
         body: JSON.stringify({ targetType, targetId, text })});
+=======
+      const data = await res.json();
+      setNotes(data.notes |[]);
+    } finally {
+      setLoading(false);
+    }
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   useEffect(() => {
-    if (isAdmin) fetchNotes();    if (isAdmin) fetchNotes()
+if (isAdmin) fetchNotes();
   }, [isAdmin, targetType, targetId]);
   async function addNote() {
     if (!text.trim()) return;
     setAdding(true);
     try {
       const res = await fetch('/api/admin/notes', {
+<<<<<<< HEAD
         method: 'POST'
         headers: {
           'Content-Type': 'application/json'
@@ -186,12 +225,36 @@ if ( {) {
         body: JSON.stringify({ targetType, targetId, text })
     } finally {
       setAdding(false);    }      if (!res.ok) {
+=======
+        method: 'POST',
+headers: {
+          'Content-Type': 'application/json',
+          'X-Admin': isAdmin ? 'true' : 'false',
+          'X-Admin-User': adminId,
+        },
+        body: JSON.stringify({ targetType, targetId, text }),
+      });
+      if (!res.ok) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         alert('Failed to add note');
         return;
       }
       setText('');
+<<<<<<< HEAD
       setAdding(false);    }
 
+<<<<<<< HEAD
+=======
+
+=======
+      await fetchNotes();
+    } finally {
+      setAdding(false);
+      await fetchNotes()
+    } finally {
+      setAdding(false)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   }
 
@@ -205,6 +268,7 @@ if ( {) {
 
     return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     }
@@ -215,6 +279,9 @@ if ( {) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
       <div className='rounded border p-3'>
+=======
+<div className='rounded border p-3'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className='flex items-center gap-2 text-sm'>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <input
@@ -497,6 +564,7 @@ if ( {) {
               <li key={n.id} className='rounded border p-2 text-sm'>
                 <div className='opacity-60 text-xs mb-1'>
                   {new Date(n.createdAt).toLocaleString()} • {n.authorId}
+<<<<<<< HEAD
                 </div>                <div>{n.text}</div>          <ul className="space-y-2">
             {notes.map((n) => (
               <li key={n.id} className="rounded border p-2 text-sm">
@@ -506,6 +574,10 @@ if ( {) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                </div>
+                <div>{n.text}</div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </li>
             ))}
           </ul>
@@ -513,11 +585,14 @@ if ( {) {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -814,4 +889,11 @@ if ( {) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -20,6 +21,8 @@ export function useReferrals() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from "react",
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
@@ -88,6 +91,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   useEffect(() => {
@@ -112,10 +116,13 @@ if ( {) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         .single(),
 
       if (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         console && console.error("Error fetching referral code:", error);
 <<<<<<< HEAD
@@ -172,6 +179,9 @@ if ( {) {
 =======
         console && console.error("Error fetching referral code:", error);    } finally {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        console && console.error("Error fetching referral code:", error);    } finally {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setIsLoading (false);
     }
   },
@@ -222,6 +232,7 @@ if ( {) {
       if (refError) throw refError,
       
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -474,6 +485,15 @@ if ( {) {
       if (!user) {
         toast({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      // Get rewards
+      const { data: rewards, error: rewardsError } = await supabase
+        .from('referral_rewards')
+        .select('amount')  const generateReferralCode = async () => {
+    try {
+      if (!user) {
+        toast({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           title: "Authentication required",
           description: "You need to be logged in to generate a referral code",
@@ -482,6 +502,7 @@ if ( {) {
 
         return
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       const { data, error } = await supabase.rpc('generate_referral_code', {
@@ -599,11 +620,17 @@ if (throw error) {
       const { data, error } = await supabase && supabase.rpc('generate_referral_code', {
         user_id: user && user.id
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      const { data, error } = await supabase && supabase.rpc('generate_referral_code', {
+        user_id: user && user.id
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         variant: "destructive"})
     }
   }
   // Get the referral link for the current user
   const getReferralLink = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (!referralCode) return "";
 <<<<<<< HEAD
@@ -651,6 +678,8 @@ if (throw error) {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (!referralCode) return "";  // Copy the referral link to clipboard
   const copyReferralLink = () => {
     const link = getReferralLink(),
@@ -886,6 +915,7 @@ export function useReferrals() {;
       console.error("Error in fetchReferralCode:", error);
     } finally {;
 <<<<<<< HEAD
+<<<<<<< HEAD
       setIsLoading(false);
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1055,6 +1085,9 @@ if ( {) {
 =======
       setIsLoading(false);  return {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      setIsLoading(false);  return {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     referral_code;
     is_loading;
     stats;
@@ -1065,6 +1098,7 @@ if ( {) {
     copyReferralLink;
     shareOnSocialMedia;
     fetchReferralStats;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1560,3 +1594,9 @@ toast ({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  }
+}  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

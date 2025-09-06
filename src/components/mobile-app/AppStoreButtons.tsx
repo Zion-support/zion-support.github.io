@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Apple, GithubIcon } from 'lucide-react'
@@ -10,7 +11,30 @@ interface AppStoreButtonsProps {
   googlePlayUrl?: string,
   onAppStoreClick?: () => void,
   onGooglePlayClick?: () => void
+=======
+<<<<<<< HEAD
+=======
+appStoreUrl?: string;
+=======
+import React from 'react';
+import { Apple, GithubIcon } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { logInfo } from '@/utils/productionLogger';
+
+import React from "react",
+import { Apple, GithubIcon } from 'lucide-react'
+import { cn } from "@/lib/utils";
+import { logInfo } from '@/utils/productionLogger';
+interface AppStoreButtonsProps {
+  className?: string;
+  appStoreUrl?: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  googlePlayUrl?: string;
+  onAppStoreClick?: () => void;
+  onGooglePlayClick?: () => void;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -444,6 +468,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
 },
 ;
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     </div>;
@@ -452,3 +477,11 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+};
+"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

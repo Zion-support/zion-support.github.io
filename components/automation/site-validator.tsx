@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
  
 
 }
 type Props = { report: Report | null }
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
  
@@ -22,6 +25,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     const file = path.join(process.cwd(), 'publicautomationsite-validator.json');
     const raw = fs.readFileSync(file, 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
     const data = JSON.parse(raw);
 <<<<<<< HEAD
 
@@ -30,6 +34,9 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 =======
     const data = JSON.parse(raw)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    const data = JSON.parse(raw)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 type Props = { report: Report | null },;
 export const getStaticProps: GetStaticProps<Props> = async () => {;
@@ -57,10 +64,15 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default function SiteValidator(): any ({ report }: Props) {
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export default function SiteValidator(): any ({ report }: Props) {
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default function SiteValidator({ report }: Props) {
 =======
@@ -117,6 +129,12 @@ export default function SiteValidator({ report }: Props) {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!report) return <div>No validation report yet.</div>;
+=======
+import fs from 'fs',
+import path from 'path';
+import type { GetStaticProps } from 'next';
+type Broken = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">;
       <header className="space-y-1">;
@@ -217,6 +235,12 @@ export default function SiteValidator({ report }: Props) {
     </div>
 );
 }
+<<<<<<< HEAD
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

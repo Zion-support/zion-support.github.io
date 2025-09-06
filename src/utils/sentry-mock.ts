@@ -10,8 +10,12 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Mock implementation for Sentry to prevent Node.js module import issues during build
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 <<<<<<< HEAD
@@ -33,6 +37,79 @@ const mockSentry = {
   captureEvent: noop,
   addBreadcrumb: noop,
 
+<<<<<<< HEAD
+=======
+=======
+  startTransaction: () => mockTransaction,
+  finishTransaction: noop,
+  // Error boundary and React integration
+  ErrorBoundary: ({ children }: any) => children,
+  withErrorBoundary: (component: any) => component,
+  showReportDialog: noop,
+// Browser-specific methods
+  onLoad: noop,
+  wrap: (fn: (...args: any[]) => any) => fn,
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  // Server-specific methods (Node.js)
+  Handlers: {
+    requestHandler:
+      () => (_req: any, _res: any, next: (...args: any[]) => any) =>
+        next(),
+    errorHandler:
+      () => (_err: any, _req: any, _res: any, next: (...args: any[]) => any) =>
+        next(),
+    tracingHandler:
+      () => (_req: any, _res: any, next: (...args: any[]) => any) =>
+        next(),
+  },
+
+  // Integrations
+  Integrations: {
+    BrowserTracing: class BrowserTracing {
+      constructor() {}
+    },
+    Replay: class Replay {
+      constructor() {}
+    },
+    Breadcrumbs: class Breadcrumbs {
+      constructor() {}
+    },
+  },
+
+  // Utilities
+  withScope: (callback: (scope: any) => void) => callback({}),
+  configureScope: noop,
+  getCurrentHub: () => ({
+    getClient: () => mockSentry,
+    getScope: () => ({}),
+    pushScope: () => ({}),
+    popScope: () => true,
+    withScope: (callback: (scope: any) => void) => callback({}),
+  }),
+};
+
+export default mockSentry;
+=======
+  configureScope: noop,
+  withScope: (callback: (...args: any[]) => any) => callback(mockScope),
+  setUser: noop,
+  setTag: noop,
+  setTags: noop,
+  setExtra: noop,
+  setExtras: noop,
+  setContext: noop,
+  getCurrentHub: () => mockHub,
+  getClient: noopReturn,
+  // Transaction and performance monitoring
+  startTransaction: () => mockTransaction,
+<<<<<<< HEAD
+  finishTransaction: noop, // Error boundary and React integration
+=======
+  finishTransaction: noop,
+  // Error boundary and React integration
+>>>>>>> main
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ErrorBoundary: ({ children }: any) => children,
   withErrorBoundary: (component: any) => component,
   showReportDialog: noop,
@@ -359,6 +436,7 @@ export const Severity = mockSentry && mockSentry.Severity;
 // Additional exports for compatibility
 export { mockSentry as Sentry }
 // All exports are already defined above
+<<<<<<< HEAD
 
   // Browser-specific methods
 
@@ -462,7 +540,12 @@ export { mock_sentry as Sentry }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Service {;
   id: string;
 =======
@@ -14,6 +15,8 @@ export interface Service {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface Service {
   id: string,
   name: string,
@@ -26,11 +29,15 @@ export interface Service {
     enterprise: string,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface Service {id: string;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   name: string;
-  category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics';
+  category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics',
   description: string;
+<<<<<<< HEAD
   features: string[];
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -55,11 +62,19 @@ export interface Service {id: string;
     phone: string;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  features: string[];  pricing: {;
+    starter: string;
+    professional: string;
+    enterprise: string;
+=======    custom?: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     address: string;
   }
 }
 ;
 export const services: Service[] = [;
+<<<<<<< HEAD
   // AI Services;
 <<<<<<< HEAD
   {;
@@ -819,3 +834,6 @@ export interface Service {id: string;
 export const services: Service[] = [;
   // AI Services;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // AI Services;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

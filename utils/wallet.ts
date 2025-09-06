@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type WalletProvider = any;
 export function getEthereumProvider(): WalletProvider | null {;
   if (typeof window === 'undefined') return null;
@@ -108,6 +109,9 @@ if ( {) {
 =======
   if (typeof window === 'undefined' || !window && window.ethereum) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     });
     return accounts;
   } catch (error) {
@@ -120,6 +124,7 @@ if ( {) {
   }
   try {
     const accounts = await window.ethereum.request({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       method: "eth_accounts",
@@ -141,14 +146,20 @@ if ( {) {
 =======
       method: "eth_accounts",    });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      method: "eth_accounts",    });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return accounts;
   } catch (e) {;
     return null;
   }
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (typeof window === "undefined" || !window.ethereum) {
     throw new Error("MetaMask is not installed");
   }

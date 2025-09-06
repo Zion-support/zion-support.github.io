@@ -1,15 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -23,10 +27,13 @@ import { Progress } from "@/components/ui/progress",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Trophy } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -51,6 +58,8 @@ import { Progress } from "@/components/ui/progress",
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 
@@ -59,17 +68,21 @@ import {Progress} from "@/components/ui/progress";
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ReputationDisplayProps {
 
   reputation: number
   size?: 'sm' | 'md' | 'lg'
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   size = 'md'
 }: ReputationDisplayProps) => {
@@ -135,12 +148,15 @@ interface ReputationDisplayProps {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     lg: {
       container: "text-base"
       icon: "w-5 h-5"
       progress: "h-3"
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -202,6 +218,10 @@ import {Progress} from "@/components/ui/progress";
 import {Progress} from "@/components/ui/progress";import {Trophy} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {Progress} from "@/components/ui/progress";import {Trophy} from "lucide-react";
+import {Progress} from "@/components/ui/progress";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ReputationDisplayProps {;
   reputation: number,;
   size?: 'sm' | 'md' | 'lg';
@@ -228,6 +248,7 @@ export const ReputationDisplay = ({ ;
         <span className="text-muted-foreground">rep</span>;
       </div>;
       <Progress value={progress} className={sizeClasses[size].progress} />;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="text-xs text-muted-foreground">;
 <<<<<<< HEAD
@@ -367,6 +388,9 @@ export const ReputationDisplay = ({ ;
 =======
       <div className="text-xs text-muted-foreground">;      </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <div className="text-xs text-muted-foreground">;      </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </div>;
 size = 'md' 
 }: ReputationDisplayProps) => {
@@ -385,6 +409,7 @@ export default ReputationDisplay;
 export default ReputationDisplay;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -392,3 +417,6 @@ export default ReputationDisplay;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

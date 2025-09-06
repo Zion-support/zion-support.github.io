@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -9,12 +10,15 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import React from "react";
 import {CheckCircle, Circle, ArrowRight} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {Link} from "react-router-dom";
 <<<<<<< HEAD
@@ -131,13 +135,19 @@ export function OnboardingTracker({
 =======
 import {Link} from "react-router-dom";;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {Link} from "react-router-dom";;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function OnboardingTracker({;
   steps,;
   title = "Complete Your Profile",;
   className;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   title?: string;
   className?: string;
@@ -156,6 +166,7 @@ export function OnboardingTracker({;
         <h3 className="text-lg font-medium text-white">{title}</h3>;
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -188,6 +199,8 @@ export function OnboardingTracker({;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div 
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -202,6 +215,7 @@ export function OnboardingTracker({;
               {step && step.completed ? (;
                 <CheckCircle className="h-5 w-5 text-zion-cyan" />;
               ) : (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -421,3 +435,5 @@ return (<div className= {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Performance optimizer utilities
 export const optimizeImages = () => {
   console.log('Optimizing images...');
@@ -36,6 +37,8 @@ export const preloadCriticalResources = () => {
   const criticalResources = ['/fonts/main.woff2', '/css/critical.css'];
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const images = document && document.querySelectorAll('img');
   images && images.forEach(img => {
@@ -62,6 +65,7 @@ export const preloadCriticalResources = () => {
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const optimizeImages = () => {
   const images = document.querySelectorAll('img');
@@ -168,3 +172,5 @@ link.rel = "preload";
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

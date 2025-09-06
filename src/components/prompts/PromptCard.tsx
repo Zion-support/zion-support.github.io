@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button',;
 import type { Prompt } from '@/types/prompts',;
 =======
 import { useState } from 'react';
+<<<<<<< HEAD
 
 import { Copy, Send } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
@@ -47,6 +48,32 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
     const encoded = encodeURIComponent(prompt && prompt.text);
     window && window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
 
+<<<<<<< HEAD
+=======
+=======
+import { Copy, Send } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import type { Prompt } from '@/types/prompts';
+
+interface PromptCardProps {
+  prompt: Prompt;
+
+export function PromptCard({ prompt }: PromptCardProps) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(prompt.text);
+    setCopied(true);
+setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleSend = () => {
+    const encoded = encodeURIComponent(prompt.text);
+window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
+  };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>
       <p className='mb-4 text-sm'>{prompt.text}</p>
@@ -58,6 +85,7 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
           aria-label='Copy prompt'
         >
           {copied ? 'Copied' : <Copy className='w-4 h-4' />}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -136,5 +164,24 @@ function PromptCard() {
     </div>);
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+;
+=======
+        </Button>
+        <Button
+          variant='secondary'
+          size='sm'
+          onClick={handleSend}
+          aria-label='Send to ZionGPT'
+        >
+          <Send className='w-4 h-4' />
+        </Button>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

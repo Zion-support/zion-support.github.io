@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {
   Card
@@ -42,6 +45,7 @@ import { Award } from "lucide-react",
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Award} from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+<<<<<<< HEAD
 import { Award } from "lucide-react",
 <<<<<<< HEAD
 =======
@@ -279,6 +283,9 @@ import {Award} from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Award } from "lucide-react",                        ? "bg-slate-200 text-slate-800"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Award } from "lucide-react",                        ? "bg-slate-200 text-slate-800"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         : entry.rank === 3
                           ? "bg-amber-200 text-amber-800"
                           : "bg-muted text-muted-foreground"
@@ -350,6 +357,7 @@ export function ReferralLeaderboard() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </span>;
@@ -372,6 +380,8 @@ export function ReferralLeaderboard() {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <span className="font-medium">{entry.name}</span>;
               </div>;
               <span className="text-sm">;

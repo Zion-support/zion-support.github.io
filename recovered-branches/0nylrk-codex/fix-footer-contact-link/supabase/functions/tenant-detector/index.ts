@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
@@ -13,11 +14,14 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';
 <<<<<<< HEAD
@@ -72,6 +76,9 @@ if (!supabaseUrl |!supabaseServiceKey) {
 =======
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';  throw new Error('Required environment variables are not set')
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';  throw new Error('Required environment variables are not set')
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 serve(async (req) => {
@@ -118,6 +125,7 @@ serve(async (req) => {
             .eq('subdomain', subdomain)
             .eq('is_active', true)
 <<<<<<< HEAD
+<<<<<<< HEAD
             .single();
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -158,6 +166,9 @@ interface TenantInfo {;
 =======
             .single();  theme_preset: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            .single();  theme_preset: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 const cors_headers = {
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Methods': 'GET, POST, OPTIONSAccess - Control - Allow - Headers': 'Content - Type, Authorization, x - client - info_access - Control - Max - Age': '86400'}
@@ -252,6 +263,7 @@ if ( {) {
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
             tenant_info = subdomain_result.data as TenantInfo;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -336,6 +348,9 @@ if ( {) {
 =======
             tenant_info = subdomain_result.data as TenantInfo;    return new Response (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            tenant_info = subdomain_result.data as TenantInfo;    return new Response (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       JSON.stringify ({
         tenant: tenant_info,
         status: 'success';
@@ -351,6 +366,7 @@ if ( {) {
       JSON.stringify ({
         error: error.message || 'Internal server error',
         status: 'error';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -439,11 +455,19 @@ if ( {) {
         headers: {  }
 });          'Content - Type': 'application / json',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      });
+      {
+        status: 500;
+        headers: {  }
+});          'Content - Type': 'application / json',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           ...cors_headers}}
     );
   }
 });
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -587,3 +611,5 @@ if (subdomainParam) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

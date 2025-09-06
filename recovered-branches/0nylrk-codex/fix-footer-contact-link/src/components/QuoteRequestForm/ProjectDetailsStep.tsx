@@ -65,6 +65,7 @@ export function ProjectDetailsStep({
       <div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <h3 className="text-xl font-semibold text-white mb-4">
           Tell us about your project
         </h3>
@@ -98,6 +99,11 @@ export function ProjectDetailsStep({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        <h3 className="text-xl font-semibold text-white mb-4">
+          Tell us about your project
+        </h3>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="space-y-4">
           <div>
             <Label htmlFor="projectName" className="text-zion-slate-light">
@@ -133,6 +139,7 @@ export function ProjectDetailsStep({
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -140,12 +147,15 @@ export function ProjectDetailsStep({
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">
           Contact Information
         </h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -174,6 +184,8 @@ export function ProjectDetailsStep({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <Label htmlFor="name" className="text-zion-slate-light">
@@ -241,6 +253,7 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               placeholder="Your name";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -270,6 +283,9 @@ value={formData.contactInfo.name}
 =======
               value={formData.contactInfo.name}          <div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              value={formData.contactInfo.name}          <div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <Label htmlFor="company" className="text-zion-slate-light">
               Company
             </Label>
@@ -293,6 +309,7 @@ value={formData.contactInfo.name}
             <Label htmlFor="email" className="text-zion-slate-light">
               Email
             </Label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -379,6 +396,8 @@ export function ProjectDetailsStep(): any ({ formData, updateFormData }: Project
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <Input
               id="email"
               type="email"
@@ -404,6 +423,7 @@ export function ProjectDetailsStep(): any ({ formData, updateFormData }: Project
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -443,6 +463,8 @@ export function ProjectDetailsStep(): any ({ formData, updateFormData }: Project
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
 import { QuoteFormData  } from '@/types / quotes';
 import { Input  } from '@/components / ui / input';
@@ -450,6 +472,7 @@ import { Label  } from '@/components / ui / label';
 import { Textarea  } from '@/components / ui / textarea';
 interface ProjectDetailsStepProps {
   form_data: QuoteFormData;
+<<<<<<< HEAD
 <<<<<<< HEAD
   updateFormData: (data: Partial < QuoteFormData>) => void;
 =======
@@ -459,10 +482,14 @@ interface ProjectDetailsStepProps {
 =======
   updateFormData: (data: Partial < QuoteFormData>) => void;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  updateFormData: (data: Partial < QuoteFormData>) => void;}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             />;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
@@ -472,6 +499,8 @@ interface ProjectDetailsStepProps {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div>;
         <h3 className="text - xl font - semibold text - white mb-4">;
           Contact Information;
@@ -561,6 +590,7 @@ interface ProjectDetailsStepProps {
     </div>);}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   )
 
@@ -619,3 +649,6 @@ updateFormData: (data: Partial<QuoteFormData>) => void
 =======
   )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

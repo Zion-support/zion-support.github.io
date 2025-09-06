@@ -17,6 +17,7 @@ import { TalentProfile } from "@/types/talent";
 import { SmartContractInfo } from "@/types/smart-contracts";
 import { TalentProfile } from "@/types/talent",
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { SmartContractInfo } from "@/types/smart-contracts",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
@@ -82,6 +83,9 @@ interface ContractPreviewProps {
 =======
 import { SmartContractInfo } from "@/types/smart-contracts",interface ContractPreviewProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { SmartContractInfo } from "@/types/smart-contracts",interface ContractPreviewProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   contractContent?: string,
   generatedContract?: string, // Added to support both naming conventions
   status?: 'draft' | 'ready' | 'pending',
@@ -93,6 +97,7 @@ export function ContractPreview({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   generatedContract,
   status = 'ready',
   onDeploy,
@@ -100,6 +105,8 @@ export function ContractPreview({
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   generatedContract
   status = 'ready'
   onDeploy
@@ -131,6 +138,7 @@ export function ContractPreview({
   onDeploy, ;
   onSign;
   onClose;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -168,6 +176,9 @@ export function ContractPreview({
 =======
 =======          <Badge
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======          <Badge
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             variant="secondary"
             className="text-sm bg-green-100 text-green-800"
           >
@@ -195,6 +206,7 @@ export function ContractPreview({
         {status === 'ready' ? (;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -202,6 +214,8 @@ export function ContractPreview({
           <Badge
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             variant="secondary"
             className="text-sm bg-green-100 text-green-800">;
             Ready to Sign;
@@ -228,6 +242,7 @@ export function ContractPreview({
       <div className="border rounded-lg p-6 bg-muted/50">;
         {/* Render the contract content as markdown or formatted text */}
         <div className="prose prose-sm max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-p:text-muted-foreground">;
+<<<<<<< HEAD
 <<<<<<< HEAD
           {displayContent}
 <<<<<<< HEAD
@@ -386,6 +401,10 @@ export function ContractPreview({
           {displayContent}            variant="secondary";
             className="text - sm bg - green - 100 text - green-800";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          {displayContent}            variant="secondary";
+            className="text - sm bg - green - 100 text - green-800";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >;
             Ready to Sign;
           </Badge>) : status === 'pending' ? (

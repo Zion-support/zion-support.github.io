@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPoweredDevOpsPlatformPage() {
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 class ErrorBoundary extends React.Component {
@@ -30,7 +33,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <>;
@@ -67,6 +73,7 @@ import React from 'react';
   );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 import React from 'react',
 import Head from 'next/head',
@@ -86,6 +93,11 @@ import ServiceLanding from '../components/sections/ServiceLanding',
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import Head from 'next/head',
+import ServiceLanding from '../components/sections/ServiceLanding',
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPoweredDevOpsPlatformPage() {
 	return (
@@ -117,6 +129,7 @@ export default function AIPoweredDevOpsPlatformPage() {
 	)
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -145,6 +158,9 @@ export default function AIPoweredDevOpsPlatformPage() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>;
       <Head>;
@@ -173,6 +189,7 @@ export default function AIPoweredDevOpsPlatformPage() {
           'Rollback orchestration with blast radius limits',
           'Incident prediction, runbooks, and guardrails',
         ]}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import Head from 'next/head',
@@ -228,6 +245,8 @@ export default function AIPoweredDevOpsPlatformPage() {
 }
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         industries={['SaaS', 'E - commerce', 'Fintech', 'Media', 'Enterprise IT']}
         canonical='https: //ziontechgroup.com / ai - powered - devops - platform';
       />;
@@ -235,6 +254,7 @@ export default function AIPoweredDevOpsPlatformPage() {
 ;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -244,3 +264,12 @@ export default function AIPoweredDevOpsPlatformPage() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import React from 'react',
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function AIPoweredDevOpsPlatformPage() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

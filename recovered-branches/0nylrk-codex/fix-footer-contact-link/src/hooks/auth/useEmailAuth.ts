@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -18,6 +19,8 @@ import {cleanupAuthState} from "@/utils/authUtils";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast";
@@ -26,6 +29,7 @@ import type { UserProfile } from "@/types/auth";
 import {cleanupAuthState} from "@/utils/authUtils";
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { cleanupAuthState } from "@/utils/authUtils",
 <<<<<<< HEAD
@@ -106,6 +110,12 @@ import { cleanupAuthState } from "@/utils/authUtils",        email;
       if (error) {
         toast({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { cleanupAuthState } from "@/utils/authUtils",        email;
+        password});
+      if (error) {
+        toast({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           title: "Login failed";
           variant: "destructive"});          title: "Login failed",
   description: error && error.message,
@@ -131,6 +141,7 @@ import { cleanupAuthState } from "@/utils/authUtils",        email;
           description: error.message,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           variant: "destructive"}),
           variant: "destructive"});
           variant: "destructive"}),
@@ -148,10 +159,15 @@ import { cleanupAuthState } from "@/utils/authUtils",        email;
           variant: "destructive"});
           variant: "destructive"}),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          variant: "destructive"});
+          variant: "destructive"}),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         return { error }
       }
       return { data }
     } catch (error: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       console.error("Login error:", error),
@@ -164,6 +180,8 @@ import { cleanupAuthState } from "@/utils/authUtils",        email;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       console.error ("Login error:", error);
       toast ({
@@ -236,20 +254,23 @@ import { cleanupAuthState } from "@/utils/authUtils",        email;
       }
 ;
       toast({;
-        title: "Signup successful",;
-        description: "Check your email for verification instructions."}),;
+        title: "Signup successful",,
+  description: "Check your email for verification instructions."}),;
       return { data }
     } catch (error: any) {;
       console.error("Signup error:", error),;
       toast({;
-        title: "Signup failed",;
-        description: error.message || "An unexpected error occurred",;
+        title: "Signup failed",,
+  description: error.message || "An unexpected error occurred",;
         variant: "destructive"}),;
       return { error }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const { data, error } = await supabase && supabase.auth.signUp({
   const signup = async (email: string, password: string, user_data?: any) => {
     try {
@@ -294,12 +315,15 @@ if ( {) {
           title: "Signup failed",
           description: error.message,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           variant: "destructive"});
         return { error };
       }
@@ -311,6 +335,7 @@ if ( {) {
     } catch (error: any) {
       console && console.error("Signup error:", error);
       toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -329,6 +354,9 @@ if ( {) {
 =======
         title: "Signup failed";      toast ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        title: "Signup failed";      toast ({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         title: "Signup successful",
         description: "Check your email for verification instructions."});
       return { data }
@@ -348,6 +376,7 @@ if ( {) {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
         title: "Signup failed",
         description: error.message || "An unexpected error occurred",
@@ -360,6 +389,8 @@ if ( {) {
     } finally {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setIsLoading(false)
     }
   },
@@ -375,6 +406,7 @@ if ( {) {
       if (error) {
         toast({
           title: "Password reset failed",
+<<<<<<< HEAD
 <<<<<<< HEAD
           description: error.message,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -401,6 +433,9 @@ if ( {) {
 =======
   description: error.message
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  description: error.message
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const resetPassword = async (email: string) => {
     try {
 
@@ -428,16 +463,20 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         redirectTo: `${window.location.origin}/update-password`}),
 
       if (error) {
         toast({
           title: "Password reset failed",
           description: error.message,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -447,6 +486,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           variant: "destructive"}),
         return { error }
       }
@@ -462,7 +503,10 @@ if ( {) {
   description: error.message || "An unexpected error occurred",;
         variant: "destructive"}),;
       return { error }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           variant: "destructive"});
         return { error };
       }
@@ -473,6 +517,7 @@ if ( {) {
       return {}
     } catch (error: any) {
       console && console.error("Password reset error:", error);
+<<<<<<< HEAD
 <<<<<<< HEAD
       toast({
 <<<<<<< HEAD
@@ -590,6 +635,9 @@ import { useState } from "react",;
 =======
       toast({import { useState } from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      toast({import { useState } from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;
@@ -621,6 +669,7 @@ export const useEmailAuth = (;
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -628,3 +677,6 @@ export const useEmailAuth = (;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

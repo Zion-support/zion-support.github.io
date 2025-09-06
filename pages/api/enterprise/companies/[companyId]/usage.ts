@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { store } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -14,6 +15,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
   return res.status(405).json({ error: "method_not_allowed" });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -218,6 +221,31 @@ export default function handler(req, res) {
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+  if (!companyId || typeof companyId !== 'string') {
+    return res.status(400).json({ error: 'companyId required' })
+  }
+  const company = null;
+    return res.status(ok ? 200 : 404).json(ok ? { success: true } : { error: 'company_not_found' })
+    ) {
+      return res
+        .status(400)
+        .json({ error: "monthlyJobPosts and budgetCapUsd must be numbers" });
+    }
+    const ok = store.setUsageLimits(companyId, monthlyJobPosts, budgetCapUsd);
+    return res
+      .status(ok ? 200 : 404)
+      .json(ok ? { success: true } : { error: "company_not_found" });
+  }
+
+  return res.status(405).json({ error: 'method_not_allowed' });
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

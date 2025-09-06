@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Download } from 'lucide-react';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 interface Resume {
@@ -9,7 +23,13 @@ interface Resume {
   url: string;
   status?: 'draft' | 'published' | 'archived';
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+import { Resume } from '@/types/resume';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from 'react',
 import { Card, CardContent } from "@/components/ui/card",
@@ -39,12 +59,68 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Button 
             variant="ghost" 
             size="sm" 
             onClick={onDownload} 
             disabled={isLoading}
             className="h-8 w-8 p-0"
+=======
+          >
+            <Download className="h-4 w-4 text-zion-cyan" />
+            <span className="sr-only">Download Resume</span>
+          </Button>
+        </div>
+            {resume.basic_info.summary}
+          </p>
+        )}
+        {resume.skills && resume.skills.length > 0 && (
+          <div className='flex flex-wrap gap-1 mt-2'>
+            {resume.skills.slice(0, 5).map((skill, index) => (
+              <Badge
+                key={index}
+                variant='outline'
+<<<<<<< HEAD
+                className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
+        
+        {resume.skills && resume.skills.length > 0 && (
+          <div className="flex flex-wrap gap-1 mt-2">
+            {resume.skills.slice(0, 5).map((skill, index) => (
+              <Badge 
+                key={index} 
+                variant="outline"
+                className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
+=======
+                className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'
+              >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                {skill.name}
+              </Badge>
+            ))}
+            {resume.skills.length > 5 && (
+<<<<<<< HEAD
+                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge 
+              <Badge 
+                variant="outline"
+                className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"
+=======
+<Badge
+                variant='outline'
+                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+              >
+                +{resume.skills.length - 5} more
+              </Badge>
+            )}
+          </div>
+        )}
+      </CardContent>;
+    </Card>;
+  );
+};
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
           {resume.status && (
             <Badge className={getStatusColor(resume.status)}>
@@ -171,7 +247,9 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
       </CardContent>
     </Card>
   );
+<<<<<<< HEAD
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
           </div>
@@ -185,3 +263,9 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

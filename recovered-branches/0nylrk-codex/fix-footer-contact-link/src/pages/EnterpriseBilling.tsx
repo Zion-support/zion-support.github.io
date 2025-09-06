@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -33,6 +34,8 @@ class ErrorBoundary extends React.Component {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -83,6 +86,7 @@ import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard",
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
 import { Navigate } from "react-router-dom",
 
   // Check if user has billing permissions
@@ -92,6 +96,14 @@ import { Navigate } from "react-router-dom",
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { Navigate } from "react-router-dom",import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+export default function EnterpriseBilling() {
+  const { user } = useAuth();
+
+  // Check if user has billing permissions
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   // Check if user has billing permissions;
   const hasBillingAccess = user?.role === "enterprise_admin" || ;
@@ -131,6 +143,7 @@ export default function EnterpriseBilling() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -202,6 +215,8 @@ export default function EnterpriseBilling() {
   }
   return (
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -273,6 +288,7 @@ export default function EnterpriseBilling() {;
     </ProtectedRoute>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -305,6 +321,8 @@ export default function EnterpriseBilling() {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
   }
@@ -348,6 +366,7 @@ if ( {) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;}
@@ -367,3 +386,5 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

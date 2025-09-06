@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 export type ModerationModalProps = {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export type ModerationModalProps = {
 
@@ -399,6 +402,10 @@ export type ModerationModalProps = {;
 
 export type ModerationModalProps = {
   flag: any | null;
+=======
+import React, { useState } from 'react';
+export type ModerationModalProps = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   onClose: () => void;
   onAction: (
     action: 'approve' | 'remove' | 'warn' | 'ban'
@@ -415,7 +422,10 @@ export default function ModerationModal({
 }: ModerationModalProps) {;
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
       <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>
@@ -509,10 +519,12 @@ export default function ModerationModal({
             className='px-3 py-2 rounded bg-gray-800 text-white'
           >
             Ban User
-          </button>        </div>
+          </button>
+        </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }        <div className="p-4 border-t flex items-center justify-end gap-2">
           <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
           <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
@@ -526,6 +538,7 @@ export default function ModerationModal({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 }
@@ -534,3 +547,9 @@ export default function ModerationModal({
 }
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

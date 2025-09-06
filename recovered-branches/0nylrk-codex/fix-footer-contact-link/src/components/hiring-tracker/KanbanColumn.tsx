@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -18,12 +19,17 @@ import {CandidateCard} from "./CandidateCard";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Droppable } from "react-beautiful-dnd",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge";
 import { CandidateCard } from "./CandidateCard";
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { CandidateCard } from "./CandidateCard",
 <<<<<<< HEAD
@@ -154,6 +160,17 @@ import { CandidateCard } from "./CandidateCard",export function KanbanColumn({
   const getBadgeVariant = (columnId: string) => {
     switch (columnId) {import { Droppable } from './react - beautiful - dnd';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { CandidateCard } from "./CandidateCard",export function KanbanColumn({
+  id,
+  title,
+  description,
+  applications,}: KanbanColumnProps) {
+  // Add color based on column type
+
+  const getBadgeVariant = (columnId: string) => {
+    switch (columnId) {import { Droppable } from './react - beautiful - dnd';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { JobApplication } from '@/types / jobs';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -180,6 +197,7 @@ function KanbanColumn() {
         return "default";
       case "hired":;
         return "success";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -234,11 +252,14 @@ function KanbanColumn() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       case "rejected":
         return "bg-red-50"
       default:
         return "bg-muted/30"
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -305,6 +326,8 @@ export function KanbanColumn({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       case "rejected":;
         return "bg-red-50",;
       default:;
@@ -312,6 +335,7 @@ export function KanbanColumn({;
     }
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -344,6 +368,8 @@ export function KanbanColumn({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>
       <CardHeader className="pb-2">
@@ -361,6 +387,7 @@ export function KanbanColumn({;
               {...provided.droppableProps}
               className="min-h-full space-y-2"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
               {applications.map((application, index) => (
 <<<<<<< HEAD
@@ -418,10 +445,14 @@ export function KanbanColumn({;
 =======
               {applications.map((application, index) => (        return "destructive",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              {applications.map((application, index) => (        return "destructive",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       default:;
         return "outline";
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -514,6 +545,9 @@ export function KanbanColumn({;
 =======
 ;              )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;              )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>;
           )}
                 />))}
@@ -670,6 +704,7 @@ return (<Card className= {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -677,3 +712,6 @@ return (<Card className= {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

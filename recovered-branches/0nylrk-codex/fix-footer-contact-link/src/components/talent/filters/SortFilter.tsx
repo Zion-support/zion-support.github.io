@@ -64,6 +64,7 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
 =======
@@ -84,6 +85,8 @@ export function SortFilter(): any ({ sortOption, setSortOption }: SortFilterProp
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {;
   Select,;
   SelectContent,;
@@ -115,6 +118,7 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
           <SelectItem value="relevance">Relevance</SelectItem>;
           <SelectItem value="rating">Highest Rating</SelectItem>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <SelectItem value="experience">Most Experienced</SelectItem>;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -130,6 +134,13 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+=======
+          <SelectItem value="experience">Most Experienced</SelectItem>;  );
+}
+
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Select,
   SelectContent,
   SelectItem,
@@ -185,6 +196,7 @@ function SortFilter() {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -195,3 +207,5 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

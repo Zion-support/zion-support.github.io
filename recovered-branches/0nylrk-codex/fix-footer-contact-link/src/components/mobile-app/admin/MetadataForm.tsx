@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
@@ -20,6 +23,7 @@ import {
   FormItem
   FormLabel
   FormMessage
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -44,12 +48,15 @@ import {;
   Form,
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   FormControl,
   FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -171,6 +178,8 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { control, register, watch, setValue } = form;
 
   const keywords = watch("keywords");
@@ -192,6 +201,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       if (value && !keywords.includes(value)) {
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -546,6 +556,8 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <Input ;
                       placeholder="Brief description of your app";
                       maxLength={platform === "ios" ? 170 :80}
@@ -588,6 +600,7 @@ if ( {) {
               )}
             />;
             <FormField;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -645,11 +658,14 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               control={control}
               name="longDescription"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Long Description</FormLabel>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <FormControl>
 <<<<<<< HEAD
@@ -678,6 +694,9 @@ if ( {) {
 =======
                   <FormControl>                      placeholder="Detailed description of your app"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  <FormControl>                      placeholder="Detailed description of your app"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       className="min-h-32"
                       maxLength={maxDescriptionLength}
                       {...field}
@@ -688,6 +707,7 @@ if ( {) {
                   </FormDescription>
                 </FormItem>
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
             />
 <<<<<<< HEAD
@@ -749,6 +769,9 @@ if ( {) {
 =======
             />              />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            />              />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
               <div className="flex flex-wrap gap-2 mt-2">;
                 {keywords && keywords.map((keyword, index) => (;
@@ -762,6 +785,7 @@ if ( {) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                       type="button"
@@ -869,12 +893,16 @@ if ( {) {
 =======
                       type="button"            <FormField
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                      type="button"            <FormField
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               control={control}
               name="version"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>App Version</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1032,6 +1060,10 @@ if (value && !keywords.includes (value) ) {
 
 ););
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+););
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <Input 
                       placeholder="e.g., 1.0.0"
                       {...field}

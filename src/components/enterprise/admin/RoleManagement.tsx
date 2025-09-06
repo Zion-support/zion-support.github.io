@@ -1,22 +1,33 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import React from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
 <<<<<<< HEAD
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
@@ -34,6 +45,8 @@ export function RoleManagement() {
   const teamMembers = [
     {
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   TableRow,
 } from '@/components / ui / table';
 import { Badge } from '@/components / ui / badge';
@@ -134,10 +147,13 @@ import {;
   TableCell,;
   TableHead,;
   TableHeader,;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   TableRow,;
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import { Switch } from '@/components/ui/switch';
+<<<<<<< HEAD
 import { toast } from '@/hooks/use-toast';import { InfoIcon } from 'lucide-react';
 import {;
   Tooltip,;
@@ -225,6 +241,38 @@ export function RoleManagement() {;
     Viewer: 'Read-only access to candidates',;
   };
 
+=======
+import { toast } from '@/hooks/use-toast';
+import { InfoIcon } from 'lucide-react';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,;
+} from '@/components/ui/tooltip';
+
+import React from "react";
+import {
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Switch } from "@/components/ui/switch";
+import { toast } from "@/hooks/use-toast";
+import { InfoIcon } from 'lucide-react'
+import {
+  Tooltip;
+  TooltipContent;
+  TooltipProvider;
+  TooltipTrigger} from "@/components/ui/tooltip",
+
+export function RoleManagement() {
+  // Mock team members data
+  const teamMembers = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
 
@@ -938,6 +986,12 @@ export function RoleManagement() {;
                 </TableCell>;
               </TableRow>;
             ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
           </TableBody>;
@@ -1018,8 +1072,19 @@ export function RoleManagement() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
+<<<<<<< HEAD
 =======
                     checked={member.permissions.viewBilling}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+          </TableBody>
+        </Table>
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

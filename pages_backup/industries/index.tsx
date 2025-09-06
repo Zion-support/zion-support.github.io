@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -9,6 +10,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -22,6 +25,7 @@ import {
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Heart,
   DollarSign,
   Settings,
@@ -100,6 +104,8 @@ const industries = [
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import SimpleLayout from '../../components/SimpleLayout';
   Brain;
 } from 'lucide-react';
@@ -108,7 +114,10 @@ import Layout from '../../components/Layout';';
 } from 'lucide-react';
   Brain;
 } from 'lucide-react';    href: '/industries/finance,',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     features: ['Blockchain Solutions, 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],',
     color: 'from-green-500 to-emerald-500'';
   },
@@ -196,6 +205,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     icon: Building,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -220,6 +230,8 @@ const stats = [
     features: ['Citizen Portals, 'Data Analytics', 'Digital Services', 'Security Compliance'],',
     color: 'from-gray-500 to-slate-500'';
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     href: '/industries/government',
     features: ['Citizen Portals', 'Data Analytics', 'Digital Services', 'Security Compliance'],
     color: 'from-gray-500 to-slate-500'
@@ -321,6 +333,7 @@ const industries = [;
 ];
 const stats = [;
 <<<<<<< HEAD
+<<<<<<< HEAD
   { number: '500+, label: 'Industry Projects' },',
   { number: '50+, label: 'Fortune 500 Clients' },',
   { number: '99.9%, label: 'Uptime Guarantee' },',
@@ -347,12 +360,17 @@ export default function IndustriesPage() {
       title="Industry Solutions - Zion Tech Group"";
       description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors.""
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   { number: '500+', label: 'Industry Projects' },;
   { number: '50+', label: 'Fortune 500 Clients' },;
   { number: '99 && 99.9%', label: 'Uptime Guarantee' },;
   { number: '24/7', label: 'Industry Support' }
 ];      description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors.""
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services""
     >;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
@@ -402,6 +420,7 @@ const industries = [
     features: ['Citizen Services', 'Data Security', 'Digital Transformation']
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ]
 
 export default function Industries() {
@@ -419,12 +438,15 @@ export default function Industries() {
           </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+<<<<<<< HEAD
           </div>
 =======
   return (
@@ -443,6 +465,8 @@ export default function Industries() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>          <div className="absolute inset-0">";
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
@@ -479,6 +503,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Industry Solutions
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -503,6 +528,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
                 Industry-Specific{' '}',
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -666,11 +693,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Industries Grid */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -678,6 +708,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -701,6 +732,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
             >,
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 return (
                   <motion&& motion.div
                     key={index}
@@ -806,6 +839,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     viewport={{ once: true }}
                     whileHover={{ y: -5 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
@@ -822,6 +856,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <p className="text-gray-600 mb-6 leading-relaxed">";
                   >
                     <div className="text-blue-400 mb-6 group-hover:text-blue-300 transition-colors">
@@ -835,6 +871,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {industry.description}
                     </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -930,10 +967,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Why Choose Us Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="text-center mb-16"
 
@@ -980,10 +1020,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
               className="text-center mb-16"        <section className="py-20 bg-white">"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              className="text-center mb-16"        <section className="py-20 bg-white">"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="container mx-auto px-4">";
             <motion.div;
               className="text-center mb-16"";
               initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -1099,6 +1143,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
               whileInView={{ opacity: 1, y: 0 }}              <motion.div
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              whileInView={{ opacity: 1, y: 0 }}              <motion.div
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 className="text-center p-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1106,9 +1153,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 viewport={{ once: true }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Cloud className="w-8 h-8 text-purple-600" />
@@ -1151,9 +1201,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         {/* Stats Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -1161,6 +1214,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 <motion.div
 <<<<<<< HEAD
                   key={index}
+<<<<<<< HEAD
                   className="text-center"
 
 =======
@@ -1208,6 +1262,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
                   whileInView={{ opacity: 1, y: 0 }}                >,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  className="text-center"                  key={index}
+                  className="text-center""
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}                >,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">";
                     {stat.number}
                   </div>,
@@ -1215,6 +1275,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 </motion.div>;
               ))}
             </div>,
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>;
         </section>;
@@ -1375,6 +1436,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   );
 }
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}>;
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">;
@@ -1383,5 +1446,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <div className="text-gray-600 font-medium">{stat && stat.label}</div>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
             </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

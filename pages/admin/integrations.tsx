@@ -1,15 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head';
 import React, { useState } from 'react';
 import { useEffect, useMemo, useState } from 'react';
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
   id: string;
   name: string;
   category: 'crm' | 'ats';
   description?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -25,17 +29,22 @@ function StatusIcon(): any ({;
 
     status === 'connected' ? '✅' : status === 'warning' ? '⚠️' : '❌';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <span className='text-xl' title={status}>;
       {label}
     </span>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 import { useEffect, useMemo, useState } from 'react';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
 interface ConnectionMap { [providerId: string]: any }
@@ -45,6 +54,7 @@ interface ConnectionMap {;
   [key: string]: boolean,;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from 'react';
 import { useEffect, useMemo, useState } from 'react';
@@ -60,6 +70,10 @@ import { useEffect, useMemo, useState } from 'react';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import React, { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string   } catch (error) {
     console.error("Error:", error);
@@ -80,14 +94,26 @@ function StatusIcon({ status }: { status: 'connected' | 'warning' | 'disconnecte
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function AdminIntegrationsPage() {
+=======
+export default function AdminIntegrationsPage() {
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+  [key: string]: boolean;
+
+const AdminIntegrationsPage: React.FC = () => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [providers, setProviders] = useState<ProviderMeta[]>([]);
   const [connections, setConnections] = useState<ConnectionMap>({});
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [syncRules, setSyncRules] = useState<any>({ autoCreateContacts: true, pushNotesMode: 'auto', autoSyncApplicants: true, autoUploadResumes: true }),
   async function refresh() {
@@ -194,10 +220,47 @@ export default function AdminIntegrationsPage() {
         body: JSON && JSON.stringify({ providerId }),;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+const [syncRules, setSyncRules] = useState<any>({
+    autoCreateContacts: true,
+    pushNotesMode: 'auto',
+    autoSyncApplicants: true,
+    autoUploadResumes: true,
+  });
+  async function refresh() {
+    const [p, s] = await Promise.all([
+      fetch('/api/integrations/providers').then(r => r.json())
+      fetch('/api/integrations/status').then(r => r.json())
+    ]);
+    setProviders(p.providers |[]);
+    setConnections(s.connections |{});
+  }
+  useEffect(() => {
+    refresh();
+  }, []);
+
+  async function connect(providerId: string) {
+    setLoading(true)
+    try {
+      // Open mock oauth popup
+window.open(
+        `/api/integrations/oauth/${providerId}/start`,
+        'oauth',
+        'width=500,height=700'
+      );
+      await new Promise(r => setTimeout(r, 500));
+      await fetch('/api/integrations/connect', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ providerId, syncRules })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       });
       await refresh();
     } finally {;
       setLoading(false);
+<<<<<<< HEAD
     }  }
 <<<<<<< HEAD
 =======
@@ -212,6 +275,40 @@ export default function AdminIntegrationsPage() {
         body: JSON && JSON.stringify({ providerId }),;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+    }  }
+=======
+    }
+  }
+
+  async function disconnect(providerId: string) {
+    setLoading(true)
+    try {
+await fetch('/api/integrations/disconnect', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ providerId }),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      });
+      await refresh();
+    } finally {;
+      setLoading(false);
+<<<<<<< HEAD
+    }  }
+=======
+    }
+  }
+
+  async function resync(providerId: string) {
+    setLoading(true)
+    try {
+await fetch('/api/integrations/resync', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ providerId }),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       });
       await refresh();
     } finally {;
@@ -219,10 +316,13 @@ export default function AdminIntegrationsPage() {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [syncRules, setSyncRules] = useState<any>({ autoCreateContacts: true, pushNotesMode: 'auto', autoSyncApplicants: true, autoUploadResumes: true });
   async function refresh() {
     const [p, s] = await Promise.all([
@@ -246,10 +346,13 @@ export default function AdminIntegrationsPage() {
       await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
       await refresh();
 <<<<<<< HEAD
+<<<<<<< HEAD
     } finally {
       setLoading(false);
     }  }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } finally { setLoading(false);   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -295,6 +398,7 @@ export default function AdminIntegrationsPage() {
     ats: providers.filter(p => p.category === 'ats')
   }), [providers]);
 
+<<<<<<< HEAD
   const grouped = useMemo(
     () => ({
       crm: providers.filter(p => p.category === 'crm'),
@@ -359,48 +463,119 @@ export default function AdminIntegrationsPage() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
   function Card({ p }: { p: ProviderMeta }) {
     const conn = connections[p.id] |{ status: 'disconnected' }
     const isConnected = conn.status === 'connected';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
       <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex flex-col gap-3 bg-white/60 dark:bg-black/40">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="h-8 w-8 rounded bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-xs">{p.name.slice(0,2)}</div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div>
               <div className="font-semibold">{p.name}</div>
               <div className="text-xs text-gray-500">{p.description}</div>
+=======
+            <div>
+<<<<<<< HEAD
+              <div className="font-semibold">{p.name}</div>
+              <div className="text-xs text-gray-500">{p.description}</div>
+=======
+              <div className='font-semibold'>{p.name}</div>
+              <div className='text-xs text-gray-500'>{p.description}</div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
           </div>
           <StatusIcon status={conn.status} />
         </div>
+<<<<<<< HEAD
         <div className="flex items-center gap-2">
           {!isConnected && (
             <button onClick={() => connect(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-black text-white text-sm">Connect</button>
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+        <div className="flex items-center gap-2">
+          {!isConnected && (
+            <button onClick={() => connect(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-black text-white text-sm">Connect</button>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
               <button onClick={() => resync(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-blue-600 text-white text-sm">Resync Now</button>
               <button onClick={() => setSelected(p.id)} className="px-3 py-1.5 rounded border text-sm">Configure</button>
               <button onClick={() => disconnect(p.id)} disabled={loading} className="px-3 py-1.5 rounded border text-sm">Disconnect</button>
             </>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+<div className='flex items-center gap-2'>
+          {!isConnected && (
+            <button
+              onClick={() => connect(p.id)}
+              disabled={loading}
+              className='px-3 py-1.5 rounded bg-black text-white text-sm'
+            >
+              Connect
+            </button>
+          )}
+          {isConnected && (
+            <>
+              <button
+                onClick={() => resync(p.id)}
+                disabled={loading}
+                className='px-3 py-1.5 rounded bg-blue-600 text-white text-sm'
+              >
+                Resync Now
+              </button>
+              <button
+                onClick={() => setSelected(p.id)}
+                className='px-3 py-1.5 rounded border text-sm'
+              >
+                Configure
+              </button>
+              <button
+                onClick={() => disconnect(p.id)}
+                disabled={loading}
+                className='px-3 py-1.5 rounded border text-sm'
+              >
+                Disconnect
+              </button>
+            </>
+          )}
+        </div>
+      </div>
+);
+  }
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   function RulesModal() {
     if (!selected) return null,
     const provider = providers.find(p => p.id === selected)!,
     const isCrm = provider.category === 'crm',
+<<<<<<< HEAD
 <<<<<<< HEAD
     return (
       <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
@@ -478,6 +653,9 @@ export default function AdminIntegrationsPage() {
       await refresh()
     } finally { setLoading(false) }
   }
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async function resync(providerId: string) {
     setLoading(true);
     try {
@@ -485,6 +663,10 @@ export default function AdminIntegrationsPage() {
       await refresh()
     } finally { setLoading(false) }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const grouped = useMemo(;
     () => ({;
       crm: providers && providers.filter(p => p && p.category === 'crm'),;
@@ -492,6 +674,7 @@ export default function AdminIntegrationsPage() {
     }),;
     [providers];
   );
+<<<<<<< HEAD
   function Card(): any ({ p }: { p: ProviderMeta }) {;
     const conn = connections[p && p.id] || { status: 'disconnected' };
     const isConnected = conn && conn.status === 'connected';
@@ -511,10 +694,50 @@ export default function AdminIntegrationsPage() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+  function Card(): any ({ p }: { p: ProviderMeta }) {;
+    const conn = connections[p && p.id] || { status: 'disconnected' };
+    const isConnected = conn && conn.status === 'connected';
+    return (
+<<<<<<< HEAD
+=======
+<div className='fixed inset-0 bg-black/40 flex items-center justify-center'>
+        <div className='w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800'>
+          <div className='font-semibold mb-2'>Sync Rules — {provider.name}</div>
+          <div className='space-y-3 text-sm'>
+            {isCrm ? (
+              <>
+                <label className='flex items-center gap-2'>
+                  <input
+                    type='checkbox'
+                    checked={!!syncRules.autoCreateContacts}
+                    onChange={e =>
+                      setSyncRules({
+                        ...syncRules
+                        autoCreateContacts: e.target.checked
+                      })
+                    }
+                  />{' '}
+                  Auto-create contacts
+                </label>
+                <div>
+                  <div className='mb-1'>Push notes:</div>
+                  <div className='flex gap-3'>
+                    <label className='flex items-center gap-2'>
+                      <input
+                        type='radio'
+                        name='pushNotes'
+                        checked={syncRules.pushNotesMode === 'auto'}
+                        onChange={() =>
+                          setSyncRules({ ...syncRules, pushNotesMode: 'auto' })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         }
                       />{' '}
                       Auto;
                     </label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -529,6 +752,8 @@ export default function AdminIntegrationsPage() {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <label className='flex items - center gap - 2'>;
                       <input;
                         type='radio';
@@ -539,11 +764,15 @@ export default function AdminIntegrationsPage() {
                             ...sync_rules,
                             pushNotesMode: 'manual',
                           });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         }
                       />{' '}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
                       Manual only;
                     </label>                  </div>;
                 </div>;
@@ -556,6 +785,25 @@ export default function AdminIntegrationsPage() {
                       });
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+                      Manual only
+                    </label>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <>
+<label className='flex items-center gap-2'>
+                  <input
+                    type='checkbox'
+                    checked={!!syncRules.autoSyncApplicants}
+                    onChange={e =>
+                      setSyncRules({
+                        ...syncRules
+                        autoSyncApplicants: e.target.checked
+                      })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     }
                   />{' '}
                   Auto-sync applicants;
@@ -568,6 +816,7 @@ export default function AdminIntegrationsPage() {
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP
               </code>
             </li>          </ul>
+<<<<<<< HEAD
 =======
 
                     checked={!!syncRules && syncRules.autoUploadResumes}
@@ -698,6 +947,51 @@ export default function AdminIntegrationsPage() {
   return (
     <>
       <Head>
+=======
+
+
+        </section>
+
+=======
+                    checked={!!syncRules.autoUploadResumes}
+                    onChange={e =>
+                      setSyncRules({
+                        ...syncRules
+                        autoUploadResumes: e.target.checked
+                      })
+                    }
+                  />{' '}
+                  Auto-upload resumes
+                </label>
+              </>
+            )}
+          </div>
+          <div className='mt-4 flex justify-end gap-2'>
+            <button
+              className='px-3 py-1.5 rounded border text-sm'
+              onClick={() => setSelected(null)}
+            >
+              Close
+            </button>
+            <button
+              className='px-3 py-1.5 rounded bg-black text-white text-sm'
+              onClick={async () => {
+                await connect(provider.id);
+                setSelected(null);
+              }}
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <>
+<Head>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <title>Admin Integrations • Zion</title>
       </Head>
       <main className='container mx-auto px-4 py-8'>
@@ -727,12 +1021,16 @@ export default function AdminIntegrationsPage() {
           <ul className='list-disc pl-6 text-sm mt-2'>
             <li>
               New Zion Job Posted → GET{' '}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code>
             </li>
             <li>
               Talent Matched → GET{' '}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
@@ -775,10 +1073,24 @@ export default function AdminIntegrationsPage() {
           <ManualOverrideForm />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+              <code>
+                /api/integrations/zapier/talent-matched?since=TIMESTAMP
+              </code>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+<h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>
+          <ManualOverrideForm />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </section>
       </main>
       <RulesModal />
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -814,10 +1126,20 @@ export default function AdminIntegrationsPage() {
   );
 function ManualOverrideForm() {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  );
+function ManualOverrideForm() {;
+=======
+);
+
+function ManualOverrideForm() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [jobId, setJobId] = useState('');
   const [disableCrmSync, setDisableCrmSync] = useState(false);
   const [disableAtsSync, setDisableAtsSync] = useState(false);
   const [message, setMessage] = useState('');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -846,6 +1168,8 @@ function ManualOverrideForm() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
   } catch (error) {
     console.error("Error:", error);
@@ -858,6 +1182,10 @@ function ManualOverrideForm() {
   const [disableAtsSync, setDisableAtsSync] = useState(false),
   const [message, setMessage] = useState(''),
   async function save() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setMessage(''),
     const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) }),
     if (res.ok) setMessage('Saved'), else setMessage('Error'),
@@ -866,6 +1194,7 @@ function ManualOverrideForm() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
@@ -885,6 +1214,20 @@ function ManualOverrideForm() {
   return (
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+    setMessage('');
+const res = await fetch('/api/integrations/overrides', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }),
+    });
+    if (res.ok) setMessage('Saved');
+    else setMessage('Error');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  }
+  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl'>;
       <div className='grid grid-cols-1 gap-3'>;
         <label className='text-sm'>;
@@ -926,6 +1269,7 @@ function ManualOverrideForm() {
   );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -933,6 +1277,9 @@ function ManualOverrideForm() {
   return (
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl">
       <div className="grid grid-cols-1 gap-3">
         <label className="text-sm">Job/Post ID
@@ -946,6 +1293,7 @@ function ManualOverrideForm() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 );
@@ -966,6 +1314,8 @@ function ManualOverrideForm() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       </div>);  }
   return (
@@ -1079,10 +1429,13 @@ function save() {
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 }
@@ -1093,15 +1446,19 @@ function save() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ),
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1110,3 +1467,8 @@ function save() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

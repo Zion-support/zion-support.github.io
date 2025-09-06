@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -92,6 +91,16 @@ const corsHeaders = {
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {Configuration, OpenAIApi} from "npm: openai@4 ;
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
@@ -139,6 +148,7 @@ serve(async (req) => {;
         });
         {
           status: 400
+<<<<<<< HEAD
 <<<<<<< HEAD
           headers: { ...corsHeaders, "Content-Type": "application/json" }
 <<<<<<< HEAD
@@ -215,10 +225,17 @@ if ( {) {
     }
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          headers: { ...corsHeaders, "Content-Type": "application/json" }        }
+      );
+    }
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const configuration = new Configuration({
       apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});
     const openai = new OpenAIApi(configuration);
     const prompt = `Generate an optimized marketplace listing for the following product:
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -251,10 +268,16 @@ Target Audience: ${targetAudience |"General users"}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
     const configuration = new Configuration({;
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
     const openai = new OpenAIApi(configuration),;
+<<<<<<< HEAD
 <<<<<<< HEAD
     const prompt = `Generate an optimized marketplace listing for the following product:;
 <<<<<<< HEAD
@@ -279,10 +302,14 @@ Title: ${title}
 =======
     const prompt = `Generate an optimized marketplace listing for the following product:;Title: ${title}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    const prompt = `Generate an optimized marketplace listing for the following product:;Title: ${title}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 Category: ${category}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -330,6 +357,8 @@ Please create:;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 Format the response as a JSON object with the following structure: {
   "description": "The optimized description here..."
   "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
@@ -375,6 +404,7 @@ Format the response as a JSON object with the following structure: {
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
@@ -560,6 +590,9 @@ Format the response as a JSON object with the following structure:;
 =======
 =======      }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======      }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     );
   }
 });
@@ -588,6 +621,7 @@ Format the response as a JSON object with the following structure:;
   }
 });
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 
@@ -741,3 +775,5 @@ headers: {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

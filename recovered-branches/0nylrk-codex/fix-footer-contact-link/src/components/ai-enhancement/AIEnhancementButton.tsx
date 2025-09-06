@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -16,6 +17,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Sparkles, Loader2, RefreshCw, Check, X  } from '@/components/icons';
@@ -23,7 +26,10 @@ import { useAIContentEnhancer, AIEnhancementOptions  } from '@/hooks/useAIConten
 import { toast } from '@/hooks/use-toast';
 interface AIEnhancementButtonProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
@@ -38,6 +44,7 @@ import {toast} from '@/hooks/use-toast';
   buttonText?: string;
   className?: string;
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
+<<<<<<< HEAD
 <<<<<<< HEAD
   size?: "default" | "sm" | "lg" | "icon";
 <<<<<<< HEAD
@@ -72,6 +79,9 @@ export function AIEnhancementButton(): any ({;
 =======
   size?: "default" | "sm" | "lg" | "icon";  options;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  size?: "default" | "sm" | "lg" | "icon";  options;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   onEnhanced;
 
   buttonText = "Enhance with AI";
@@ -83,6 +93,7 @@ export function AIEnhancementButton(): any ({;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
   const [showActions, setShowActions] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<string | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -119,6 +130,8 @@ import { toast } from '@/hooks/use-toast',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
   onEnhanced: (enhancedContent: string) => void,
@@ -163,6 +176,7 @@ export function AIEnhancementButton({
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),
   const [showActions, setShowActions] = useState(false),
   const [generatedContent, setGeneratedContent] = useState<string | null>(null),
+<<<<<<< HEAD
 <<<<<<< HEAD
   
 <<<<<<< HEAD
@@ -277,6 +291,9 @@ export function AIEnhancementButton({;
 =======
         return;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        return;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
       setGeneratedContent(enhancedContent);
       setShowActions(true);
@@ -287,6 +304,7 @@ export function AIEnhancementButton({;
 =======
 
   
+<<<<<<< HEAD
 
   
 <<<<<<< HEAD
@@ -305,6 +323,10 @@ export function AIEnhancementButton({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleAccept = () => {
     if (generatedContent) {
       onEnhanced(generatedContent);
@@ -329,6 +351,7 @@ export function AIEnhancementButton({;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -343,11 +366,15 @@ export function AIEnhancementButton({;
 =======
     return (  },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    return (  },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   
   const handleRegenerate = async () => {
     await handleEnhance()
   },
   
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const handleCancel = () => {
@@ -386,6 +413,12 @@ export function AIEnhancementButton({;
 =======
     setGeneratedContent(null)  if (showActions) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  const handleCancel = () => {
+    setShowActions(false);
+    setGeneratedContent(null)  if (showActions) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
       <div className="flex gap-2 items-center">
         <Button
@@ -429,6 +462,7 @@ export function AIEnhancementButton({;
   return (
     <Button
       type="button"
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -529,6 +563,10 @@ export function AIEnhancementButton({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  },;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleAccept = () => {;
     if (generatedContent) {;
       onEnhanced(generatedContent);
@@ -541,6 +579,7 @@ export function AIEnhancementButton({;
   };
 
   const handleRegenerate = async () => {;
+<<<<<<< HEAD
 <<<<<<< HEAD
     await handleEnhance();
   };
@@ -1004,6 +1043,9 @@ return
 =======
     await handleEnhance()
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    await handleEnhance()
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
   const handleCancel = () => {;
@@ -1032,6 +1074,7 @@ return
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -1041,3 +1084,7 @@ return
       variant={variant}
       size={size}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      variant={variant}
+      size={size}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

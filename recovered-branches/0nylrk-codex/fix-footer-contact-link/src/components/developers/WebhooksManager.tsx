@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -9,6 +10,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState, useEffect} from "react";
 import {format} from "date-fns";
 import {Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X} from "lucide-react";
@@ -25,6 +28,7 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -107,6 +111,10 @@ import { useState, useEffect } from "react",
 
 export function WebhooksManager() {import { useState, useEffect } from "react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+export function WebhooksManager() {import { useState, useEffect } from "react",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { format } from "date-fns",
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",
 import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks",
@@ -133,6 +141,7 @@ export function WebhooksManager() {
     createWebhook,
     toggleWebhook,
     deleteWebhook,
+<<<<<<< HEAD
 <<<<<<< HEAD
     testWebhook,
 <<<<<<< HEAD
@@ -233,6 +242,13 @@ export function WebhooksManager() {
       selectedEvents
       webhookSecret.trim() === "" ? undefined : webhookSecret    ),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    testWebhook,    await createWebhook(
+      webhookName
+      webhookUrl
+      selectedEvents
+      webhookSecret.trim() === "" ? undefined : webhookSecret    ),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     
     setShowCreateDialog(false),
     resetWebhookForm()
@@ -241,7 +257,10 @@ export function WebhooksManager() {
   const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
     await toggleWebhook(webhookId, !currentStatus)
   },
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const handleDeleteWebhook = async (webhookId: string) => {
     await deleteWebhook(webhookId)
@@ -255,6 +274,7 @@ export function WebhooksManager() {
     setWebhookName("");
     setWebhookUrl("");
     setWebhookSecret("");
+<<<<<<< HEAD
 <<<<<<< HEAD
     setSelectedEvents([])
 <<<<<<< HEAD
@@ -318,6 +338,9 @@ export function WebhooksManager() {
 =======
     setSelectedEvents([])  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    setSelectedEvents([])  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
         <CardTitle className="text-xl flex items-center">
@@ -373,6 +396,7 @@ export function WebhooksManager() {
                   <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -407,6 +431,8 @@ export function WebhooksManager() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",;
@@ -448,6 +474,7 @@ export function WebhooksManager() {;
   // Load webhooks on mount;
   useEffect(() => {;
     fetchWebhooks();
+<<<<<<< HEAD
 <<<<<<< HEAD
   }, []),;
 <<<<<<< HEAD
@@ -792,6 +819,9 @@ export function WebhooksManager() {;
 =======
   }, []),;                  <Input
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }, []),;                  <Input
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     id="webhook-secret"
                     type="password"
                     value={webhookSecret}
@@ -809,6 +839,7 @@ export function WebhooksManager() {;
                           checked={selectedEvents && selectedEvents.includes(event && event.value)}
                           onCheckedChange={() => toggleEvent(event && event.value)}
                         />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1323,6 +1354,8 @@ function WebhooksManager() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </div>;
                 </div>;
               </div>;
@@ -1434,6 +1467,7 @@ function WebhooksManager() {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -1447,6 +1481,8 @@ function WebhooksManager() {
             }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }
         }}
 
@@ -1475,6 +1511,7 @@ function WebhooksManager() {
                       <SelectValue placeholder="Select an event type" />;
                     </SelectTrigger>;
                     <SelectContent className="bg-zinc-900 border-zinc-800">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1581,6 +1618,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     The event type will determine the structure of the test payload.;
                   </p>;
                 </div>;
@@ -1615,6 +1654,7 @@ if ( {) {
                     <Label>Response Status</Label>;
                     <Badge;
                       className={;
+<<<<<<< HEAD
 <<<<<<< HEAD
                         testResult && testResult.status >= 200 && testResult.status < 300;
 =======
@@ -1700,6 +1740,12 @@ if ( {) {
               </DialogFooter>;
             </>;          )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                        testResult && testResult.status >= 200 && testResult.status < 300;                  Test Another Event;
+                </Button>;
+              </DialogFooter>;
+            </>;          )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </DialogContent>
       </Dialog>
       {/* Delete Webhook Confirmation Dialog */}
@@ -1720,6 +1766,7 @@ if ( {) {
               Cancel
             </AlertDialogCancel>
             <AlertDialogAction
+<<<<<<< HEAD
 <<<<<<< HEAD
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
 <<<<<<< HEAD
@@ -1802,6 +1849,9 @@ if ( {) {
 =======
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}              This action will permanently remove this webhook.;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}              This action will permanently remove this webhook.;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               You will no longer receive events at this endpoint.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
@@ -1824,6 +1874,7 @@ if ( {) {
   )
 }
               className="bg-red-600 hover: bg-red-700";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -1999,3 +2050,5 @@ clearTestResult ();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

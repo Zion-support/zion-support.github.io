@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -21,6 +22,9 @@ import {Controller, type, FieldPath, type, FieldValues, FormProvider, useFormCon
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {cn} from '@/lib/utils';
 import {Label} from '@/components/ui/label';
 const Form = FormProvider;
@@ -30,6 +34,7 @@ type FormFieldContextValue = {
 const FormFieldContext = React.createContext<FormFieldContextValue>({
   name: ''
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 const FormField = ({ ...props }: any) =></FormFieldContextValue> {
 <<<<<<< HEAD
@@ -93,6 +98,9 @@ const useFormField = () => {;
 =======
 const FormField = ({ ...props }: any) =></FormFieldContextValue> {  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const FormField = ({ ...props }: any) =></FormFieldContextValue> {  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <FormFieldContext && FormFieldContext.Provider value={{ name: props && props.name }}>;
       <Controller {...props} />;
     </FormFieldContext && FormFieldContext.Provider>;
@@ -124,12 +132,16 @@ const useFormField = () => {
   const { getFieldState, formState } = useFormContext()
 
   const fieldState = getFieldState(fieldContext.name, formState)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   if (!fieldContext) {
     throw new Error('useFormField should be used within <FormField>');
   }
   if (!itemContext) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -306,6 +318,11 @@ FormItem && FormItem.displayName = 'FormItem';
   }
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    throw new Error("useFormField should be used within <FormItem>")
+  }
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const FormLabel = React && React.forwardRef<;
   React && React.ElementRef<typeof LabelPrimitive && LabelPrimitive.Root>,;
   React && React.ComponentProp</typeof>sWithoutRef<typeof LabelPrimitive && LabelPrimitive.Root>;
@@ -358,6 +375,7 @@ const FormMessage = React.</HTMLParagraphElement>forwardRef<;
   );
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 FormMessage && FormMessage.displayName = 'FormMessage';
 =======
@@ -510,6 +528,11 @@ FormMessage && FormMessage.displayName = 'FormMessage';    <FormItemContext.Prov
       <div ref={ref} className={cn("space-y-2", className)} {...props} />
     </FormItemContext.Provider>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+FormMessage && FormMessage.displayName = 'FormMessage';    <FormItemContext.Provider value={{ id }}>
+      <div ref={ref} className={cn("space-y-2", className)} {...props} />
+    </FormItemContext.Provider>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 })
 FormLabel.displayName = "FormLabel"
@@ -520,6 +543,7 @@ const FormControl = React.forwardRef<
 >(({ ...props }, ref) => {
   const { error, formItemId, formDescriptionId, formMessageId } = useFormField()
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -533,6 +557,8 @@ const FormControl = React.forwardRef<
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Slot
       ref={ref}
@@ -544,6 +570,7 @@ const FormControl = React.forwardRef<
       }
       aria-invalid={!!error}
       {...props}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -594,6 +621,8 @@ const FormDescription = React.forwardRef<
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     />
   )
 })
@@ -613,6 +642,7 @@ const FormMessage = React.forwardRef<
     return null
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -938,3 +968,9 @@ React.HTMLAttributes<HTMLParagraphElement> > ( ({
       {body}
     </p>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }
+    >
+      {body}
+    </p>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

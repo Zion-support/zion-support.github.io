@@ -22,6 +22,7 @@ interface TalentCardAvailabilityProps {;
 
 export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
@@ -161,6 +162,14 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
     switch (status) {;
       case 'full-time':;        return 'Full-time';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {
+};
+  // Format availability status;
+  const getAvailabilityColor = (status: string) => {;
+    switch (status) {;
+      case 'full-time':;        return 'Full-time';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       case 'part-time':;
         return 'Part-time';
       case 'project-based':;
@@ -169,6 +178,7 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
         return status;
 
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -201,6 +211,9 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
 =======
   },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
       <Clock className="h-3 w-3" />
@@ -213,6 +226,7 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
   return (
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
@@ -299,3 +313,5 @@ default: </div>)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -239,6 +240,15 @@ import { Card } from "@/components/ui/card",  const handleItemSelect = (item: Li
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+import { useState } from "react",
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
+import { Input } from "@/components/ui/input",
+import { Card } from "@/components/ui/card",  const handleItemSelect = (item: ListingItem) => {
+    updateFormData({
+      specificItem: item,
+      serviceCategory: item.category,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       serviceType: item.category.toLowerCase() as ServiceType,
     })
 };
@@ -272,6 +282,7 @@ import { Card } from "@/components/ui/card",  const handleItemSelect = (item: Li
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             onClick={() => handleTypeSelect("service")}
           >
@@ -300,6 +311,8 @@ import { Card } from "@/components/ui/card",  const handleItemSelect = (item: Li
             className={`p-4 cursor-pointer border-2 transition-colors ${
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               formData.serviceType === "talent"
                 ? "bg-zion-purple/20 border-zion-purple"
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
@@ -311,6 +324,7 @@ import { Card } from "@/components/ui/card",  const handleItemSelect = (item: Li
               AI specialists, developers, consultants
             </p>
           </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <Card
@@ -330,6 +344,10 @@ import { Card } from "@/components/ui/card",  const handleItemSelect = (item: Li
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+          <Card
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -344,6 +362,7 @@ import { Card } from "@/components/ui/card",  const handleItemSelect = (item: Li
           </Card>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       {formData.serviceType && (
@@ -671,6 +690,14 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
             Select a specific {formData.serviceType}
           </h3>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
+            <Input
+          <h3 className="text-xl font-semibold text-white">
+            Select a specific {formData.serviceType}
+          </h3>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             on_click={() => handleTypeSelect ("service")}
           >;
             <h4 className="font - medium text-white">Services</h4>;
@@ -739,6 +766,7 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
                     rating={Math.floor (Math.random () * 2) + 3}
                     review_count={Math.floor (Math.random () * 50) + 10}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     image={item.image}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -776,3 +804,6 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
 =======
                     image={item.image}}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    image={item.image}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

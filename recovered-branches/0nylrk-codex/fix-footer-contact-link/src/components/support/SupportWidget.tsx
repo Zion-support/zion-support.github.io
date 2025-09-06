@@ -16,6 +16,7 @@ export function SupportWidget() {;
   const { theme } = useTheme();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   return (
@@ -36,6 +37,8 @@ import { MessageSquare, Info, X } from "lucide-react",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -54,6 +57,7 @@ export function SupportWidget() {
       {!isOpen && (;
         <Button
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { cn } from "@/lib/utils",
@@ -91,10 +95,16 @@ export function SupportWidget() {;
       {!isOpen && (
         <Button
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      {/* Fixed button in the bottom right */}
+      {!isOpen && (
+        <Button
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       {/* Fixed button in the bottom right */}
       {!isOpen && (
         <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -102,6 +112,8 @@ export function SupportWidget() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           onClick={() => setIsOpen(true)}
           size="icon";
           className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50";
@@ -110,6 +122,7 @@ export function SupportWidget() {;
           <MessageSquare className="h-6 w-6" />;
         </Button>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -134,6 +147,8 @@ export function SupportWidget() {;
 import React, { useState } from "react",
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button",
 import { ChatBotPanel } from "./ChatBotPanel",
 import { MessageSquare, Info, X } from "lucide-react",
@@ -192,6 +207,7 @@ import { useTheme } from "@/hooks/useTheme",;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export function SupportWidget() {;
   const [isOpen, setIsOpen] = useState(false),;
@@ -236,6 +252,8 @@ export function SupportWidget() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <Button
                 variant="ghost"
                 size="icon"

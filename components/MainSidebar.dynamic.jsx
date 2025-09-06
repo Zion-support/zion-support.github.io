@@ -1,7 +1,10 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEADexport default MainSidebar.dynamic;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 ;
 const MainSidebar.dynamic = () => {
@@ -12,5 +15,9 @@ const MainSidebar.dynamic = () => {
 }
 ;
 
+<<<<<<< HEAD
 export default MainSidebar.dynamic;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+export default MainSidebar.dynamic;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

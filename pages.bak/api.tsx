@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = default function APIPage() { return null}
 =======
 <<<<<<< HEAD
@@ -17,12 +18,13 @@ module.exports = default function APIPage() { return null}
 module.exports = default function APIPage() { return null}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
+=======
+import React from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 module.exports = default function APIPage() { return null}
 import React from 'react';
 interface ApiProps {
   // Add props here as needed
-
-
 
 module.exports = default function APIPage() { return null}
 module.exports = default function APIPage() { return null}
@@ -35,12 +37,12 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 module.exports = default function APIPage() { return null}
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react';
 interface ApiProps {
   // Add props here as needed
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -78,18 +80,20 @@ module.exports = default function APIPage() { return null}
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-import React from 'react';
 =======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+interface ApiProps {
+  // Add props here as needed
+
+module.exports = default function APIPage() { return null}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+import React from 'react';
 import React from 'react';
 import * as React from 'react';
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 interface ApiProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -146,6 +150,8 @@ interface ApiProps {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function Api({ }: ApiProps) {
   return (
     <div>
@@ -153,6 +159,7 @@ export default function Api({ }: ApiProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -223,10 +230,13 @@ export default function Api({ }: ApiProps) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -238,6 +248,8 @@ export default function Api({ }: ApiProps) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 }
 }
@@ -245,6 +257,7 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -276,3 +289,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -19,6 +19,7 @@ import {toast} from "@/hooks/use-toast";
 export default function Onboarding() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28,6 +29,41 @@ export default function Onboarding() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { user, updateProfile, isLoading } = useAuth();
 =======
+=======
+import { useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection",
+import { ProfileSetup } from "@/components/onboarding/ProfileSetup",
+import { Steps, Step } from "@/components/ui/steps",
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+export default function Onboarding() {  const { user, updateProfile, isLoading } = useAuth();
+  const [currentStep, setCurrentStep] = useState(0);
+
+  const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
+  const navigate = useNavigate();
+
+  const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
+    switch (type) {
+
+  // Convert our user types to match what's expected in the database;
+  const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {;
+    switch (type) {;
+      case "serviceProvider": return "creator";
+      case "talent":;
+        return "jobSeeker";
+
+  // Convert our user types to match what's expected in the database;
+  const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {;
+    switch (type) {;
+      case "serviceProvider": return "creator";
+      case "talent":;
+        return "jobSeeker";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
@@ -104,6 +140,7 @@ export default function Onboarding() {
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
   const navigate = useNavigate();
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
 export default function Onboarding() {
@@ -113,6 +150,8 @@ export default function Onboarding() {
   const navigate = useNavigate(),
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   // Convert our user types to match what's expected in the database
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
@@ -135,6 +174,7 @@ export default function Onboarding() {
     
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -148,6 +188,9 @@ export default function Onboarding() {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Direct to specific registration page based on user type
     if (type === "serviceProvider") {
       navigate('/service-onboarding')
@@ -158,6 +201,7 @@ export default function Onboarding() {
 
   const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
     if (!user |!userType) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       toast({
 <<<<<<< HEAD
@@ -180,6 +224,9 @@ export default function Onboarding() {
 =======
       toast({        title: "Authentication Error",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      toast({        title: "Authentication Error",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         description: "Your session may have expired. Please log in again.",
         variant: "destructive"}),
       navigate('/login'),
@@ -187,6 +234,7 @@ export default function Onboarding() {
     }
     
     const dbUserType = mapUserTypeToDatabase(userType),
+<<<<<<< HEAD
 <<<<<<< HEAD
     
 <<<<<<< HEAD
@@ -233,10 +281,14 @@ export default function Onboarding() {
 =======
           // Update onboarding milestone
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          // Update onboarding milestone
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       await supabase.rpc('update_onboarding_milestone', {
         _user_id: user.id
         _milestone: 'profile_completed'
         _status: true
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -299,16 +351,16 @@ export default function Onboarding() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: 'Error'
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         description: 'There was a problem updating your profile. Please try again.'
         variant: 'destructive'})
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
 
   },
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -660,6 +712,15 @@ export default function Onboarding() {;
   )
 }
 =======
+=======
+  const steps = [
+    { label: "Select Role", description: "Choose how you'll use the platform" }
+    { label: "Create Profile", description: "Tell us about yourself" }]
+  if (!user) {                <Button
+                  variant="outline"
+                  className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light"
+                  onClick={() => setCurrentStep(0)}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { useState } from './react';
 import { use_navigate } from './react-router-dom';
@@ -821,6 +882,7 @@ if ( {) {
                 </Button>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>)}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 <<<<<<< HEAD
@@ -832,6 +894,10 @@ if ( {) {
               </div>;
             )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              </div>;
+            )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 ;
           <div className="bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light">;
@@ -863,6 +929,7 @@ if ( {) {
                 </Button>;
               </div>;
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -946,3 +1013,5 @@ return null;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

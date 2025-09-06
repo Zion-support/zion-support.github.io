@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,6 +15,8 @@ import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
 export function ClientOnboardingSteps() {;
   const onboardingStatus = useOnboardingStatus();
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const steps: OnboardingStep[] = [
     {
       id: "post-job",
@@ -36,6 +39,7 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { PlusCircle, SendIcon, InboxIcon } from "lucide-react";
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
 export function ClientOnboardingSteps() {  const onboardingStatus = useOnboardingStatus();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   const steps: OnboardingStep[] = [
@@ -71,6 +75,8 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
 import { PlusCircle, SendIcon, InboxIcon } from "lucide-react";
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
 export function ClientOnboardingSteps() {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const onboardingStatus = useOnboardingStatus();
 import { PlusCircle, SendIcon, InboxIcon } from "lucide-react",

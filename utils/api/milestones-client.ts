@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export async function fetchMilestones(projectId: string) {;
   const res = await fetch(`/api/projects/${projectId}/milestones`, {;
     headers: { 'Content-Type': 'application/json' };
@@ -10,6 +11,8 @@ export async function fetchMilestones(projectId: string) {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface Milestone {
   id: string;
   title: string,
@@ -60,6 +63,7 @@ export async function updateMilestoneStatus(
   if (!res.ok) throw new Error(await res.text());
   return res.json();
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -78,6 +82,8 @@ function fetch_milestones() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }}
 ;
 export async function createMilestone(projectId: string, payload: any) {;
@@ -88,7 +94,10 @@ export async function createMilestone(projectId: string, payload: any) {;
     body: JSON.stringify(payload)}),;
   if (!res.ok) throw new Error(await res.text()),;
   return res.json();}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 export async function createMilestone(projectId: string, payload: any) {;
   const res = await fetch(`/api/projects/${projectId}/milestones`, {;
@@ -102,6 +111,7 @@ export async function createMilestone(projectId: string, payload: any) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 export async function updateMilestoneStatus() {
   const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {method: 'PATCH';
@@ -188,6 +198,8 @@ export async function createMilestone(projectId: string, payload: any) {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 =======
   }}
@@ -202,8 +214,33 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
   if (!res.ok) throw new Error(await res.text());
   return res.json();
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
+=======
+export async function fetchMilestones(projectId: string) {;
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
+    headers: { 'Content-Type': 'application/json' },;
+    credentials: 'include'}),;
+  if (!res.ok) throw new Error('Failed to load milestones'),;
+  return res.json();
+    credentials: 'include'});
+  if (!res.ok) throw new Error('Failed to load milestones');
+  return res.json();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }}
+;
+export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {;
+  const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {;
+    method: 'PATCH',;
+    headers: { 'Content-Type': 'application/json' },;
+    credentials: 'include',;
+    body: JSON.stringify(body)}),;
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   } catch (error) {
     console.error("Error:", error);
@@ -224,6 +261,7 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 }
@@ -236,3 +274,5 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

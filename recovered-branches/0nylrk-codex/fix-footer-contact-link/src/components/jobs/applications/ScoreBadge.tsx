@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -79,6 +80,8 @@ interface ScoreBadgeProps {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 import { JobApplication } from "@/types/jobs",;
 interface ScoreBadgeProps {;
@@ -87,6 +90,7 @@ interface ScoreBadgeProps {;
 ;
 export function ScoreBadge({ application }: ScoreBadgeProps) {;
   const score = application.match_score || 0,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -100,6 +104,8 @@ export function ScoreBadge({ application }: ScoreBadgeProps) {;
   // Determine color based on score;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   let className = "text-gray-700 bg-gray-100";
   if (score >= 80) className = "text-green-700 bg-green-100";
   else if (score >= 60) className = "text-blue-700 bg-blue-100";
@@ -110,6 +116,7 @@ export function ScoreBadge({ application }: ScoreBadgeProps) {;
     <span className={`rounded-full px-2 py-1 text-xs font-medium ${className}`}>;
       {score ? `${score}%` : "Not scored"}
     </span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 <<<<<<< HEAD
@@ -203,3 +210,6 @@ export function ScoreBadge({ application } ScoreBadgeProps) {;
 =======
   );}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  );}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -16,6 +19,7 @@ import {Textarea} from '@/components / ui / textarea';
 import {Popover, PopoverContent, PopoverTrigger} from '@/components / ui / popover';
 import {AIMilestoneGenerator} from './AIMilestoneGenerator';  projectScope?: string;
   projectStartDate?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   projectEndDate?: string;
 <<<<<<< HEAD
@@ -63,11 +67,15 @@ export function AddMilestoneForm({;
 =======
   projectEndDate?: string;  onSubmit;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  projectEndDate?: string;  onSubmit;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   isSubmitting;
   onCancel;
   projectScope = '';
   projectStartDate = '';
   projectEndDate = null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -119,6 +127,12 @@ import React from 'react',;
 
 =======import React from 'react',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      });
+      return
+
+=======import React from 'react',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
@@ -166,6 +180,7 @@ export function AddMilestoneForm({;
   projectEndDate = null,;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 =======
@@ -179,11 +194,14 @@ export function AddMilestoneForm({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   projectType = 'Other';
 }: AddMilestoneFormProps) {;
   const form = useForm<MilestoneFormValues>({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;
+<<<<<<< HEAD
 <<<<<<< HEAD
       title: '',;
       description: '',;
@@ -308,6 +326,11 @@ export function AddMilestoneForm({;
   description: '',;
       amount: 0}}),;  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      title: '',,
+  description: '',;
+      amount: 0}}),;  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="space-y-6">;
       {/* AI Milestone Generator */}
       {projectScope && projectStartDate && (;
@@ -317,6 +340,7 @@ export function AddMilestoneForm({;
           endDate={projectEndDate}
           projectType={projectType}
           onAddMilestones={handleAddMilestones}
+<<<<<<< HEAD
 <<<<<<< HEAD
           onAddMilestone={handleAddMilestone}
 <<<<<<< HEAD
@@ -343,6 +367,9 @@ export function AddMilestoneForm({;
 =======
           onAddMilestone={handleAddMilestone}      <Form {...form}>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          onAddMilestone={handleAddMilestone}      <Form {...form}>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
 
       <Form {...form}>;

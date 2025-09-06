@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,11 +11,15 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Skill  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { handleResumeError, showSuccessToast } from './useResumeUtils';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function useSkills() {
 <<<<<<< HEAD
@@ -50,12 +55,16 @@ export function useSkills() {;
 =======
 export function useSkills() {  const { user } = useAuth();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function useSkills() {  const { user } = useAuth();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
   const addSkill = async (resumeId: string, skill: Skill): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to add skills')
+<<<<<<< HEAD
 <<<<<<< HEAD
       return false
 <<<<<<< HEAD
@@ -210,6 +219,12 @@ export function useSkills() {;
         .from('resume_skills')
         .insert({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      return false    try {
+      const { error } = await supabase
+        .from('resume_skills')
+        .insert({;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setIsLoading(true),;
     setError(null),;
     try {;
@@ -236,6 +251,7 @@ export function useSkills() {;
       return false;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -248,10 +264,14 @@ export function useSkills() {;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     
     setIsLoading(true),
     setError(null),
+<<<<<<< HEAD
 <<<<<<< HEAD
     
 <<<<<<< HEAD
@@ -371,6 +391,9 @@ export function useSkills() {;
 =======
           return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete skill')
     } finally {
@@ -392,6 +415,7 @@ function use_skills() {
     // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -576,3 +600,6 @@ deleteSkill
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

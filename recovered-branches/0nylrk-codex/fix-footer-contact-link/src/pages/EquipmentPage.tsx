@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 import React from 'react',
@@ -34,6 +35,10 @@ const EquipmentPage = () => {
 =======
 const EquipmentPage = () => {const EquipmentPage = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from "react";
+const EquipmentPage = () => {const EquipmentPage = () => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const EquipmentPage = () => {;
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -76,6 +81,7 @@ const EquipmentPage = () => {;
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 =======
@@ -104,6 +110,9 @@ export default EquipmentPage,
 =======
   )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
 const EquipmentPage = () =>: any {
@@ -143,6 +152,7 @@ export default EquipmentPage;
 export default EquipmentPage,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -151,3 +161,5 @@ export default EquipmentPage,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 import { createNotification  } from './createNotification';
 import { OnboardingNotificationParams } from './types';
 import {createNotification} from './createNotification';
@@ -14,15 +13,20 @@ import {OnboardingNotificationParams} from './types';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {createNotification} from './createNotification';
 import {OnboardingNotificationParams} from './types';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 /**
  * Creates an onboarding notification for a user
  */
@@ -37,6 +41,7 @@ export async function createOnboardingNotification({  missingMilestone;
   let actionText = '';
   if (userRole === 'talent') {
     switch (missingMilestone) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       case 'profile_completed':
 <<<<<<< HEAD
@@ -211,6 +216,9 @@ import { createNotification } from './createNotification',;
 =======
       case 'profile_completed':import { createNotification } from './createNotification',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      case 'profile_completed':import { createNotification } from './createNotification',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { OnboardingNotificationParams } from './types',;
 /**;
  * Creates an onboarding notification for a user;
@@ -274,6 +282,7 @@ export async function createOnboardingNotification({;
     }
   }
   ;
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -326,3 +335,8 @@ case 'talent invited':
 ;
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+;
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

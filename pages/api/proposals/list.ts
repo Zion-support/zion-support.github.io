@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -177,3 +178,23 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { listProposals } from '[^']*';
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const proposals = null;
+    res.status(200).json({ proposals })
+  } catch (error: any) {
+    res.status(500).json({ error: error?.message || 'Failed to list proposals' })
+  }
+  try {
+    const proposals = await listProposals();
+    return res.status(200).json({ proposals });
+  } catch (error: any) {
+    return res
+      .status(500)
+      .json({ error: error?.message |"Failed to list proposals" });
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

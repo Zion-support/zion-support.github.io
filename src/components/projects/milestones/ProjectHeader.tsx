@@ -1,8 +1,27 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 return (
     <div className='flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b'>;
       <div className='flex items-center'>;
+=======
+return (
+    <div className='flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b'>;
+      <div className='flex items-center'>;
+=======
+import React from 'react';
+import { useRouter  } from 'next/router';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft } from 'lucide-react'
+interface ProjectHeaderProps {
+  title: string
+export function ProjectHeader({ title }: ProjectHeaderProps) {
+  const router = useRouter(); // Changed from useNavigate to useRouter
+  return (
+    <div className='flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b'>
+      <div className='flex items-center'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <Button
           variant='ghost'
           size='sm'
@@ -13,6 +32,10 @@ return (
         </Button>;
         <h1 className='text-2xl md:text-3xl font-bold truncate max-w-xl'>;
           {title}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         </h1>;
       </div>;
@@ -20,6 +43,7 @@ return (
   );
 
   )
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 }
@@ -48,3 +72,14 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+
+}
+;
+=======
+        </h1>
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

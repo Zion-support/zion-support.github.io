@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -12,10 +13,14 @@
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function useFetchResume() {
 <<<<<<< HEAD
@@ -50,6 +55,9 @@ export function useFetchResume() {;
 =======
 export function useFetchResume() {  const { user } = useAuth();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function useFetchResume() {  const { user } = useAuth();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -67,6 +75,7 @@ export function useFetchResume() {  const { user } = useAuth();
           setResume(null);
           setIsLoading(false);
           return null
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -94,6 +103,8 @@ export function useFetchResume() {;
 import {useState} from 'react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {supabase} from '@/integrations / supabase / client';
 import {Resume} from '@/types / resume';
 import {use_auth} from '@/hooks / use_auth';
@@ -111,6 +122,7 @@ function useFetchResume() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
       set_error ('You must be logged in to access resumes');
 =======
@@ -241,6 +253,9 @@ if ( {) {
 =======
       set_error ('You must be logged in to access resumes');      if (skillsError) throw skillsError;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      set_error ('You must be logged in to access resumes');      if (skillsError) throw skillsError;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Fetch certifications
       const { data: certData, error: certError } = await supabase
         .from('certifications')
@@ -330,6 +345,7 @@ if (throw cert_error) {
 ;
 
     resume;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -590,3 +606,6 @@ is active: resumeData.is active
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

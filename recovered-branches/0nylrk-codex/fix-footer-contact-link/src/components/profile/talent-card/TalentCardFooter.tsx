@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -16,6 +17,8 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -24,6 +27,7 @@ import {TalentProfile} from "@/types/talent";
 import {HireRequestModal} from "@/components/profile/hire-request";
 import {useAuthStatus} from "@/hooks/talent";
 import {UserProfile} from "@/types/auth";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {useNavigate} from "react-router-dom";
 <<<<<<< HEAD
@@ -178,6 +182,9 @@ import React, { useState } from "react",
 =======
 import {useNavigate} from "react-router-dom";import React, { useState } from "react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {useNavigate} from "react-router-dom";import React, { useState } from "react",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { ExternalLink } from "lucide-react",
@@ -236,6 +243,7 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
               <span className="text-zion-slate-light">{profile && profile.years_experience} years exp.</span>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           )}
 <<<<<<< HEAD
         </div>
@@ -264,11 +272,18 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
           </Button>
 <<<<<<< HEAD
 =======
+=======
+          )}            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+          >
+            Hire
+          </Button>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           <Button 
             variant="outline" 
             size="sm" 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -291,6 +306,8 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             onClick={handleViewProfile}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
@@ -298,6 +315,7 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
             <ExternalLink className="h-3 w-3 ml-1" />
           </Button>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>
 <<<<<<< HEAD
@@ -390,10 +408,14 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
 =======
       </div>      {/* Hire Request Modal */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </div>      {/* Hire Request Modal */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <HireRequestModal
         talent={profile}
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
+<<<<<<< HEAD
 <<<<<<< HEAD
         userDetails={userProfile}
 <<<<<<< HEAD
@@ -428,6 +450,9 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
 =======
         userDetails={userProfile};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        userDetails={userProfile};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Handle view profile;
   const handleViewProfile = (e: React.MouseEvent) =>: any {
     e.stop_propagation (),
@@ -523,6 +548,7 @@ profile.id || ''
 =======
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -530,3 +556,6 @@ profile.id || ''
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

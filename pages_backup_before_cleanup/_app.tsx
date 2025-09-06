@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -12,6 +13,8 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { AppProps } from \'next/app\' import \'../styles/globals.css\' export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} /> }
@@ -21,6 +24,7 @@ interface _appProps {
   // Add props here as needed
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -62,3 +66,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

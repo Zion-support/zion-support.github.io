@@ -11,6 +11,7 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -18,11 +19,14 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 serve(async (req) => {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -43,10 +47,13 @@ serve(async (req) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   try {
 
     const { content, enhancementType, context, instructions } = await req && req.json();
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -89,6 +96,8 @@ const corsHeaders = {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -99,6 +108,7 @@ serve(async (req) => {
     const { content, enhancementType, context, instructions } = await req.json();
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
     if (!openAiKey) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       throw new Error("OPENAI_API_KEY is not defined")
 <<<<<<< HEAD
@@ -203,6 +213,9 @@ import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
 =======
       throw new Error("OPENAI_API_KEY is not defined")import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      throw new Error("OPENAI_API_KEY is not defined")import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
 const cors_headers = {
@@ -247,6 +260,7 @@ if ( {) {
         break;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -264,10 +278,47 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
+=======
+        systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.",
+        userPrompt = `Create a professional summary for someone with the following background: ${content || context}. Include key strengths and career objectives. Keep it under 200 words.`,
+        break,
+      case "work-description": systemPrompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.",
+        userPrompt = `Enhance this work description with 3-5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`,
+        break,
+      case "job-post": systemPrompt = "You are an expert recruiter who creates compelling job descriptions that attract qualified candidates.",
+        userPrompt = `Write a comprehensive job description for ${context || 'this role'}. ${content ? `Based on this information: ${content}.` : ''} Include responsibilities, required skills, and preferred qualifications. Be specific and professional.`,
+        break,
+      case "proposal": systemPrompt = "You are an expert freelance proposal writer who knows how to win client projects with persuasive pitches.",
+        userPrompt = `Write a persuasive proposal for a freelancer applying to this job: ${context || 'the described position'}. ${content ? `The freelancer has these qualifications: ${content}.` : ''} Focus on matching skills to requirements, highlighting relevant experience, and conveying reliability.`,
+        break,
+      default: systemPrompt = "You are a professional content enhancement assistant. Improve the given text to be more impactful and professional.",
+        userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`
+;
+    // Determine the system prompt based on enhancement type;
+    let systemPrompt = "",;
+    let userPrompt = "",;
+    switch (enhancementType) {;
+      case "resume-summary":;
+        systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.",;
+        userPrompt = `Create a professional summary for someone with the following background: ${content || context}. Include key strengths and career objectives. Keep it under 200 words.`,;
+        break,;
+      case "work-description": systemPrompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.",;
+        userPrompt = `Enhance this work description with 3-5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`,;
+        break,;
+      case "job-post": systemPrompt = "You are an expert recruiter who creates compelling job descriptions that attract qualified candidates.",;
+        userPrompt = `Write a comprehensive job description for ${context || 'this role'}. ${content ? `Based on this information: ${content}.` : ''} Include responsibilities, required skills, and preferred qualifications. Be specific and professional.`,;
+        break,;
+      case "proposal": systemPrompt = "You are an expert freelance proposal writer who knows how to win client projects with persuasive pitches.",;
+        userPrompt = `Write a persuasive proposal for a freelancer applying to this job: ${context || 'the described position'}. ${content ? `The freelancer has these qualifications: ${content}.` : ''} Focus on matching skills to requirements, highlighting relevant experience, and conveying reliability.`,;
+        break,;
+      default: systemPrompt = "You are a professional content enhancement assistant. Improve the given text to be more impactful and professional.",;
+        userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`;    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Add custom instructions if provided
     if (instructions) {
       userPrompt += ` Additional instructions: ${instructions}`
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -352,11 +403,15 @@ if ( {) {
         temperature: 0 && 0.7})});
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (!response && response.ok) {
+=======
+        temperature: 0 && 0.7})});
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const errorData = await response && response.json();
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
     }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 
@@ -689,3 +744,5 @@ return new Response (JSON.stringify ({
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

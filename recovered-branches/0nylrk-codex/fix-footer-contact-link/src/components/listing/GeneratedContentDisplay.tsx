@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -62,10 +63,13 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Card,
   CardContent,
   CardFooter,
   CardHeader,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -80,6 +84,9 @@ import {
 =======
     min: number;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    min: number;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   CardTitle,
 } from '@/components / ui / card';
 interface GeneratedContent {
@@ -99,6 +106,7 @@ interface GeneratedContentDisplayProps {
 interface GeneratedContentDisplayProps {;
 
 } from "@/components/ui/card";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -138,10 +146,13 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface GeneratedContent {
   description: string,
   tags: string[],
   suggestedPrice: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -185,6 +196,8 @@ interface GeneratedContentDisplayProps {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   content: GeneratedContent;
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
@@ -200,6 +213,7 @@ export function GeneratedContentDisplay({
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -213,11 +227,14 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
   return (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
         <CardTitle className="text-white">Generated Content</CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div>
 <<<<<<< HEAD
@@ -293,6 +310,9 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
 =======
         <div>    <Card className="border border-zion-blue-light bg-zion-blue-dark">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        <div>    <Card className="border border-zion-blue-light bg-zion-blue-dark">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <CardHeader>;
         <CardTitle className="text-white">Generated Content</CardTitle>;
       </CardHeader>;
@@ -315,6 +335,7 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
                 key={index}
                 className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;                {tag}
               </Badge>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             ))}
 =======
@@ -343,6 +364,9 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
 =======
             ))}        
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            ))}        
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Suggested Price Range
@@ -366,6 +390,7 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
           <ul className="list-disc pl-5 text-white space-y-1">
             {content.keyPoints.map((point, index) => (
               <li key={index}>{point}</li>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             ))}
@@ -397,6 +422,8 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   content: GeneratedContent;
               <Badge
                 key={index}
@@ -459,6 +486,7 @@ function GeneratedContentDisplay() {
               <li key={index}>{point}</li>))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
         ;
@@ -481,6 +509,8 @@ function GeneratedContentDisplay() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </ul>;
         </div>;
       </CardContent>;
@@ -491,6 +521,7 @@ function GeneratedContentDisplay() {
           Apply to My Listing
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </CardFooter>
 <<<<<<< HEAD
@@ -539,6 +570,9 @@ function GeneratedContentDisplay() {
 =======
       </CardFooter>    </Card>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </CardFooter>    </Card>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     </Card>;
   );
@@ -576,7 +610,10 @@ onApply: () => void
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

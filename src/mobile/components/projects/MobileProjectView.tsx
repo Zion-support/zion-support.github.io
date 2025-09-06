@@ -1,6 +1,48 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 id: string;
+=======
+
+import React from "react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from 'lucide-react'
+import { Progress } from "@/components/ui/progress",
+import { SeverityIndicator } from "../common/SeverityIndicator";
+import { useRouter  } from 'next/router';
+import { toast } from "sonner";
+import React from 'react'
+import { Card, CardContent } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
+import {
+  CheckCircle
+  ChevronRight
+  FileText
+  MessageSquare
+  Video
+} from 'lucide-react'
+import { Progress } from '@/components/ui/progress'
+import { SeverityIndicator } from '../common/SeverityIndicator'
+import { useRouter } from 'next/router'
+import { toast } from 'sonner'
+interface Milestone {
+  id: string;
+  title: string;
+  dueDate: string;
+  status: "completed" | "in_progress" | "pending";
+  paymentStatus: "paid" | "pending" | "overdue";
+  amount: string
+interface ProjectViewProps {
+  project: {
+    id: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     title: string;
     client: {
       name: string;
@@ -11,6 +53,7 @@ id: string;
     status: string;
     totalAmount: string;
     progress: number;
+<<<<<<< HEAD
 
 import React from 'react';
 import { Card, CardContent } from '@/components / ui / card';
@@ -101,7 +144,18 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+=======
+    description: string
+  }
+  milestones: Milestone[]
+export function MobileProjectView({ project, milestones }: ProjectViewProps) {
+  const router = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 <<<<<<< HEAD
     <div className="space-y-6 px-4 pb-24">
@@ -439,6 +493,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
               </CardContent>;
             </Card>;
           ))}
+<<<<<<< HEAD
         </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -458,6 +513,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 }
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
@@ -468,3 +524,12 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
+=======
+;
+=======
+        </div>
+      </section>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

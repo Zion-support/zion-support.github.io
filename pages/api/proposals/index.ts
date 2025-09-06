@@ -1,7 +1,10 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 
@@ -66,11 +69,22 @@ async function ensureStore() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+const FILE_PATH = path.join(process.cwd(), 'data', 'proposals', 'index.json');
+
+async function ensureStore() {
+  await fs.ensureFile(FILE_PATH);
+  try {
+    const raw = await fs.readFile(FILE_PATH, 'utf8');
+if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
@@ -92,6 +106,59 @@ async function ensureStore() {;
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
+<<<<<<< HEAD
+=======
+) {;
+  await ensureStore();
+  if (req.method === "GET") {
+    const data = await fs.readJson(FILE_PATH);
+    return res.status(200).json(data);
+  }
+  if (req.method === 'POST') {
+    const body = req.body || {};
+    const data = await fs.readJson(FILE_PATH);
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  if (req && req.method === "POST") {
+    const body = req && req.body || {};
+    const data = await fs && fs.readJson(FILE_PATH);
+    const item = {
+      id: body && body.id
+      title: body && body.title
+      targetInstitution: body && body.targetInstitution
+      regionalScope: body && body.regionalScope
+      type: body && body.type
+      status: body && body.status || "Draft"
+      createdAt: new Date().toISOString()
+    };
+    data && data.items.unshift(item);
+    await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 });
+    return res && res.status(201).json(item);
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import fs from './fs - extra';
+import path from './path';
+const FILE_PATH = path.join (process.cwd (), "dataproposalsindex.json");
+async /**
+ * ensure_store - Function description
+ */
+function ensure_store() {
+  await fs.ensure_file (FILE_PATH);
+  try {
+    const raw = await fs.read_file (FILE_PATH, "utf8");
+    if (await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 })) {
+  $2
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  } catch {
+    await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 });
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 ) {
 =======
@@ -282,6 +349,7 @@ if ( {) {
     const body = req.body || {}
     const data = await fs.read_json (FILE_PATH);
     const item = {
+<<<<<<< HEAD
       id: body.id,
       title: body.title,
       target_institution: body.target_institution,
@@ -289,6 +357,16 @@ if ( {) {
       type: body.type,
       status: body.status || "Draft",
       created_at: new Date ().toISOString (),
+=======
+<<<<<<< HEAD
+      id: body.id
+      title: body.title
+      target_institution: body.target_institution
+      regional_scope: body.regional_scope
+      type: body.type
+      status: body.status || "Draft"
+      created_at: new Date ().toISOString ()
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     data.items.unshift (item);
     await fs.write_json (FILE_PATH, data, { spaces: 2 });
@@ -397,6 +475,7 @@ export default async function handler(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -404,3 +483,23 @@ export default async function handler(req, res) {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+id: body.id,
+      title: body.title,
+      targetInstitution: body.targetInstitution,
+      regionalScope: body.regionalScope,
+      type: body.type,
+      status: body.status || 'Draft',
+      createdAt: new Date().toISOString(),
+    };
+    data.items.unshift(item);
+    await fs.writeJson(FILE_PATH, data, { spaces: 2 });
+    return res.status(201).json(item);
+  }
+  res.status(405).json({ error: 'Method not allowed' });
+
+}}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

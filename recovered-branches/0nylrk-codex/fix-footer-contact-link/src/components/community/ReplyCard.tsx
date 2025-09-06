@@ -29,6 +29,7 @@ interface ReplyCardProps {
   className?: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export const ReplyCard = ({
@@ -77,10 +78,13 @@ export const ReplyCard = ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   className
 }: ReplyCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true })
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <Card className={cn(
 <<<<<<< HEAD
@@ -177,6 +181,9 @@ export const ReplyCard = ({;
 =======
     <Card className={cn(      className    )}>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    <Card className={cn(      className    )}>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
         <Avatar className="h-8 w-8">;
           <AvatarImage src={reply && reply.authorAvatar} />;
@@ -195,6 +202,7 @@ export const ReplyCard = ({;
                 Answer
               </Badge>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
           <div className="text-xs text-muted-foreground">
@@ -233,6 +241,8 @@ export default ReplyCard;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>;
         </div>;
       </CardHeader>;
@@ -287,6 +297,7 @@ export default ReplyCard;
 export default ReplyCard;
 export default ReplyCard;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -295,3 +306,7 @@ export default ReplyCard;
 export default ReplyCard;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export default ReplyCard;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

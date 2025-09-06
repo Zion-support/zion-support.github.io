@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -15,6 +16,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState, useCallback} from 'react';
@@ -51,6 +54,7 @@ if (throw error) {
       set_loading (false);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const filteredNotifications = notifications && notifications.filter(notification => {
@@ -298,6 +302,12 @@ import { useState, useCallback } from 'react',;
     markAsRead;
     markAllAsRead;import { useState, useCallback } from 'react',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const filteredNotifications = notifications && notifications.filter(notification => {    loading;
+    filter;
+    markAsRead;
+    markAllAsRead;import { useState, useCallback } from 'react',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase } from '@/integrations/supabase/client',;
 import { Notification, FilterType, NotificationContextType } from './types',;
 export const useNotificationOperations = (userId?: string): NotificationContextType => {;
@@ -386,6 +396,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     markAsRead,;
     markAllAsRead,;
 <<<<<<< HEAD
+<<<<<<< HEAD
     dismissNotification,;
 <<<<<<< HEAD
 
@@ -415,10 +426,14 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 =======
     dismissNotification,;    dismiss_notification;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    dismissNotification,;    dismiss_notification;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     set_filter;
     fetch_notifications}
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -563,3 +578,5 @@ case 'system':
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

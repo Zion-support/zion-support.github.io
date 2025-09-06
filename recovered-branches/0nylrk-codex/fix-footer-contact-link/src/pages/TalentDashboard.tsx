@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -52,6 +55,7 @@ import { Avatar } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge",
 import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps",
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { MyApplications } from "@/components/jobs/MyApplications",
 =======
 import { useState, useEffect } from "react";
@@ -90,17 +94,23 @@ import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
 =======
 import { MyApplications } from "@/components/jobs/MyApplications",import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { MyApplications } from "@/components/jobs/MyApplications",import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 function TalentDashboardContent() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <SEO
@@ -249,8 +259,11 @@ function TalentDashboardContent() {;
                       )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </Avatar>;
                     <div>;
                       <CardTitle>{user?.displayName || "User"}</CardTitle>;
@@ -283,6 +296,7 @@ function TalentDashboardContent() {;
                   </Button>;
                 </div>;
               </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             </Card>;
 <<<<<<< HEAD
@@ -346,6 +360,9 @@ function TalentDashboardContent() {;
 =======
             </Card>;            {/* New Onboarding Progress Tracker */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            </Card>;            {/* New Onboarding Progress Tracker */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <TalentOnboardingSteps />
 
             {/* Upcoming Interviews Card */}
@@ -431,10 +448,13 @@ function TalentDashboardContent() {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default function TalentDashboard() {
   return (
@@ -444,6 +464,7 @@ export default function TalentDashboard() {
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -483,6 +504,8 @@ export default function TalentDashboard() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from './react';
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
@@ -668,6 +691,7 @@ function TalentDashboard() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;
@@ -695,3 +719,5 @@ export default function TalentDashboard() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

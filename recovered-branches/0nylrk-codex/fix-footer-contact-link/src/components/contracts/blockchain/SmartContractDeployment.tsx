@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -26,6 +27,10 @@ import {toast} from "sonner";
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -37,6 +42,7 @@ import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",
 import { Loader2, ShieldCheck, Download } from "lucide-react";
 import { toast } from "sonner";
 import { Loader2, ShieldCheck, Download } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { toast } from "sonner",
 <<<<<<< HEAD
@@ -92,12 +98,16 @@ export function SmartContractDeployment({
 =======
 import { toast } from "sonner",  isDeploying
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { toast } from "sonner",  isDeploying
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
 
     network: 'none'
     useEscrow: true
     deployToChain: false
+<<<<<<< HEAD
 <<<<<<< HEAD
     walletAddress: ''
 <<<<<<< HEAD
@@ -270,6 +280,9 @@ if ( {) {
 =======
     walletAddress: ''              checked={deploymentOptions.deployToChain}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    walletAddress: ''              checked={deploymentOptions.deployToChain}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               onCheckedChange={(checked) => setDeploymentOptions({
                 ...deploymentOptions;
                 deployToChain: checked
@@ -284,6 +297,7 @@ import { Input } from "@/components/ui/input",;
 import { Switch } from "@/components/ui/switch",;
 import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",;
 import { Loader2, ShieldCheck, Download } from "lucide-react",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { toast } from "sonner",;
 <<<<<<< HEAD
@@ -328,6 +342,9 @@ export function SmartContractDeployment({;
 =======
 import { toast } from "sonner",;  isDeploying;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { toast } from "sonner",;  isDeploying;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }: SmartContractDeploymentProps) {;
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({;
     network: 'none',;
@@ -374,6 +391,7 @@ import { toast } from "sonner",;  isDeploying;
           <ShieldCheck className="h-5 w-5 text-primary" />;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -412,12 +430,16 @@ import { toast } from "sonner",;  isDeploying;
 =======
   }  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           Smart Contract Deployment;
         </CardTitle>;
         <CardDescription>;
           Deploy your agreement as a smart contract for enhanced security and automation;
         </CardDescription>;
       </CardHeader>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -441,6 +463,8 @@ import { toast } from "sonner",;  isDeploying;
               })}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             />
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>
           </div>
@@ -453,7 +477,18 @@ import { toast } from "sonner",;  isDeploying;
                   onValueChange={(value) => setDeploymentOptions({
                     ...deploymentOptions;
                     network: value as BlockchainNetwork
+<<<<<<< HEAD
 
+=======
+                <RadioGroup 
+                  defaultValue={deploymentOptions.network}
+                  onValueChange={(value) => setDeploymentOptions({;
+                    ...deploymentOptions,;
+                    network: value as BlockchainNetwork;
+                  onValueChange={(value) => setDeploymentOptions({;
+                    ...deploymentOptions,;
+                    network: value as BlockchainNetwork;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   })}
                   className="flex flex-col space-y-1"
                 >
@@ -470,6 +505,7 @@ import { toast } from "sonner",;  isDeploying;
               <div className="space-y-2">
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>
 
+<<<<<<< HEAD
                   })}
                 />
               </div>
@@ -513,6 +549,8 @@ import { toast } from "sonner",;  isDeploying;
               <div className="space-y-2">
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               })}
 
             />;
@@ -541,6 +579,7 @@ import { toast } from "sonner",;  isDeploying;
                 </RadioGroup>;
               </div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -577,6 +616,8 @@ import { toast } from "sonner",;  isDeploying;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <Input 
                   id="wallet-address" 
                   placeholder="0x..." 
@@ -612,6 +653,7 @@ import { toast } from "sonner",;  isDeploying;
               </div>;
             </>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -695,6 +737,8 @@ import { toast } from "sonner",;  isDeploying;
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </Button>;
       </CardFooter>;
     </Card>;
@@ -766,6 +810,7 @@ import { toast } from "sonner",;  isDeploying;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
           ;
@@ -779,10 +824,13 @@ import { toast } from "sonner",;  isDeploying;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>;
           </div>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -897,3 +945,8 @@ flex items-center gap-2"> <ShieldCheck className=" h-5 w-5 text-primary"/> Smart
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+;}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

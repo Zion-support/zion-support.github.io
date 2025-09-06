@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -15,6 +16,10 @@ import { cn } from "@/lib/utils";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { ApplicationStatus } from "@/types/jobs",
 import { Progress } from "@/components/ui/progress",
 import { CheckCircle2, Circle, CircleDot } from "lucide-react";
@@ -28,6 +33,7 @@ export function ApplicationProgress({
   className
 }: ApplicationProgressProps) {
 import { CheckCircle2, Circle, CircleDot } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { cn } from "@/lib/utils",
 <<<<<<< HEAD
@@ -74,6 +80,12 @@ import { cn } from "@/lib/utils",  // Define the progress value based on status
   const getProgressValue = () => {
     switch (status) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { cn } from "@/lib/utils",  // Define the progress value based on status
+
+  const getProgressValue = () => {
+    switch (status) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function ApplicationProgress(): any ({;
   status,;
@@ -99,6 +111,7 @@ function ApplicationProgress() {
   const getProgressValue = () =>: any {
     switch (status) {
       case "new":;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -143,12 +156,15 @@ function ApplicationProgress() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       case "new": return 20,
       case "viewed": return 40,
       case "shortlisted": return 60,
       case "interview": return 80,
       case "hired": return 100,
       case "rejected": return 100,
+<<<<<<< HEAD
 <<<<<<< HEAD
       default: return 0
 <<<<<<< HEAD
@@ -193,6 +209,9 @@ function ApplicationProgress() {
 =======
       default: return 0      <div className="flex justify-between text-xs text-muted-foreground">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      default: return 0      <div className="flex justify-between text-xs text-muted-foreground">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
           <span className="mt-1">Submitted</span>
@@ -217,6 +236,7 @@ function ApplicationProgress() {
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -244,6 +264,12 @@ function StatusIcon({
 =======
     }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  )
+}
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
   // Helper to determine if this step is active, completed, or inactive
@@ -328,6 +354,7 @@ function StatusIcon(): any ({;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -343,6 +370,9 @@ function StatusIcon(): any ({;
 =======
   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
 
@@ -355,6 +385,7 @@ function StatusIcon(): any ({;
   } else {;
     // This step is upcoming;
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -513,3 +544,6 @@ return (<div className= {
 =======
   }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

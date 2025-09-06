@@ -1,5 +1,6 @@
 import useSWR from 'swr';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 const fetcher = (url: string) => fetch(url).then(r => r.json());
@@ -9,6 +10,13 @@ export function useProjectDisputeStatus(projectId: string): {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+const fetcher = null;
+const fetcher = (url: string) => fetch(url).then(r => r.json());
+export function useProjectDisputeStatus(projectId: string): {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   hasActiveDispute: boolean;
   isLoading: boolean;
 } {
@@ -51,12 +59,15 @@ export default function UnderDisputeBadge(): any ({;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   projectId,
 }: {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -65,6 +76,7 @@ export default function UnderDisputeBadge(): any ({;
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
   return (
+<<<<<<< HEAD
     <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>;
       Under Dispute;
     </span>;
@@ -148,4 +160,19 @@ if (return null) {
     <span className="inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow-300 text-xs">;
       Under Dispute;
     </span>);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+    <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>
+      Under Dispute
+    </span>
+  );
+  return (
+    <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">
+      Under Dispute
+    </span>
+);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

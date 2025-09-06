@@ -28,7 +28,10 @@ import {
   CardDescription,
   CardContent,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {;
   Card,;
@@ -54,6 +57,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",
 import { useJobMatches } from "@/hooks/useJobMatches",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Skeleton } from "@/components/ui/skeleton",
 <<<<<<< HEAD
@@ -112,6 +116,13 @@ import { Skeleton } from "@/components/ui/skeleton",    useJobMatches(jobId);
   
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Skeleton } from "@/components/ui/skeleton",    useJobMatches(jobId);
+
+  const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),
+  
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (isLoading) {
     return (
       <Card>
@@ -131,6 +142,7 @@ import { Skeleton } from "@/components/ui/skeleton",    useJobMatches(jobId);
                 <Skeleton className="h-4 w-48" />
                 <Skeleton className="h-4 w-32" />
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             </div>
 <<<<<<< HEAD
@@ -168,6 +180,9 @@ import React from "react",;
 =======
             </div>import React from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            </div>import React from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",;
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",;
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",;
@@ -288,6 +303,7 @@ if ( {) {
           key={match.id}
           match_id={match.id}
 <<<<<<< HEAD
+<<<<<<< HEAD
           talent_id={match.talent_profile?.id || ""}
 <<<<<<< HEAD
 
@@ -398,6 +414,9 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Sk
 =======
           talent_id={match.talent_profile?.id || ""}    </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          talent_id={match.talent_profile?.id || ""}    </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </div>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 

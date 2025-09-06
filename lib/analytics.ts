@@ -168,7 +168,78 @@ if ( {) {
       event_label: metric.id,
       non_interaction: true,
     });
+<<<<<<< HEAD
   }  action: string;
+=======
+  }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+// Track events
+}
+;
+// Track events;
+<<<<<<< HEAD
+=======
+=======
+
+<<<<<<< HEAD
+}
+;
+// Track events;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+export const event = ({
+  action
+  category
+  label
+  value
+}: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+      value: Math.round(metric.value),
+      event_category: 'Web Vitals',
+      event_label: metric.id,
+      non_interaction: true,;
+
+    });
+=======
+declare global {
+  interface Window {
+    gtag: (
+      command: string,
+      targetId: string,
+      config?: Record<string, unknown>
+    ) => void;
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+  }
+}
+// Track events
+export const event = ({
+
+  action,
+  category,
+  label,
+  value,
+}: {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  action: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   category: string;
   label?: string;
   value?: number;

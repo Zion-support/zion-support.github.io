@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,10 +10,13 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useRef, useEffect} from 'react';
 import {useAnalytics} from '@/context/AnalyticsContext';
 export function useTrackUserBehavior(componentName: string) {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -72,6 +76,8 @@ export function useTrackUserBehavior(componentName: string) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         trackEvent('button_click', {
           component: componentName;
           elementId: buttonId
@@ -80,6 +86,7 @@ export function useTrackUserBehavior(componentName: string) {;
       }
     }
     // Track form submissions
+<<<<<<< HEAD
 <<<<<<< HEAD
     const trackFormSubmits = (e: Event) => {
 <<<<<<< HEAD
@@ -183,6 +190,9 @@ import { useAnalytics } from '@/context/AnalyticsContext',;
 =======
     const trackFormSubmits = (e: Event) => {import { useAnalytics } from '@/context/AnalyticsContext',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    const trackFormSubmits = (e: Event) => {import { useAnalytics } from '@/context/AnalyticsContext',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function useTrackUserBehavior(componentName: string) {;
   const { trackEvent } = useAnalytics(),;
   const componentRef = useRef<HTMLDivElement>(null),;
@@ -224,6 +234,7 @@ export function useTrackUserBehavior(componentName: string) {;
   return componentRef;
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -353,3 +364,6 @@ return componentRef
 =======
 ;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -27,6 +27,7 @@ interface TalentProfileProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   onMessageTalent
 }: TalentProfileProps) {
   const { isAuthenticated } = useAuth(),
@@ -43,6 +44,8 @@ interface TalentProfileProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {Handshake, MessageSquare, Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -59,11 +62,14 @@ import {useAuth} from "@/hooks/useAuth";
 import {Availability} from "@/types/profile";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface TalentProfileProps {;
   profile: TalentProfileType,;
   onRequestHire: () => void,;
@@ -71,6 +77,7 @@ interface TalentProfileProps {;
 }
 
 export function TalentProfile(): any ({ ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -93,6 +100,8 @@ export function TalentProfile(): any ({ ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Handshake, MessageSquare, Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -118,6 +127,7 @@ export function TalentProfile({
   onMessageTalent
 }: TalentProfileProps) {
   const { isAuthenticated } = useAuth();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -320,6 +330,12 @@ export function TalentProfile({;
     name: skill
     level: 3 // Default level since we don't have this data      {/* Profile Header */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // Create proper skills array for ProfileSkills component
+  const skillsArray = profile.skills?.map(skill => ({
+    name: skill
+    level: 3 // Default level since we don't have this data      {/* Profile Header */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <ProfileHero
         name={profile && profile.full_name}
         title={profile && profile.professional_title}
@@ -352,6 +368,7 @@ export function TalentProfile({;
             </div>
           </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -402,6 +419,12 @@ import React from './react';
 =======
           import React from './react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          
+
+          
+          import React from './react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Handshake, MessageSquare, Star } from './lucide-react';
 import { Button } from '@/components / ui / button';
 import { HireNowCTA } from './HireNowCTA';

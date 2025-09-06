@@ -1,7 +1,7 @@
 "export": interface ZionService {
    id: string;
-   title: string,
-  description: string;
+   title: string;
+   description: string;
    category,:  "Micro": SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech'';
    price: string;
    billing: 'month' | 'year' | 'project' | 'hour';
@@ -13,9 +13,9 @@
    mobile: string;
    email: string;
    address: string;
-export: interface ZionService { id: string; title: string,
-  description: string; category,: Micro: SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech'';; price: string; billing: 'month' | 'year' | 'project' | 'hour';; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; contactInfo: { mobile: string; email: string; address: string} website: 'strin',g} ctaLabel: 'string: href: string: external?: boolean'} export: const zionTechGroup2025Services: ZionService[] = ['';,;
+export: interface ZionService { id: string; title: string; description: string; category,: Micro: SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech'';; price: string; billing: 'month' | 'year' | 'project' | 'hour';; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; contactInfo: { mobile: string; email: string; address: string} website: 'strin',g} ctaLabel: 'string: href: string: external?: boolean'} export: const zionTechGroup2025Services: ZionService[] = ['';,;
    website: strin,g} "ctaLabel": string: href: string: external?: boolean} "export": const zionTechGroup2025Services: ZionService[] = ['',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,3 +59,7 @@ export: interface ZionService { id: string; title: string,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

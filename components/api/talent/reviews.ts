@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -41,7 +42,21 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     // In a real implementation, validate and insert review into Supabase
   }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -49,6 +64,7 @@ export default async function handler(
   if (req.method === 'GET') {
 <<<<<<< HEAD
     // In a real implementation, fetch reviews from Supabase by talent id/slug
+<<<<<<< HEAD
     const { slug } = req.query as { slug?: string }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -69,6 +85,15 @@ export default async function handler(
 =======
     return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
 
+=======
+    const { slug } = req.query as { slug?: string };
+    return res.status(200).json({ slug, reviews: [], average: null, count: 0 });
+  }
+
+  if (req.method === 'POST') {
+    // In a real implementation, validate and insert review into Supabase
+return res.status(201).json({ ok: true });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
   if (req.method === 'POST') {
     // In a real implementation, validate and insert review into Supabase
@@ -172,6 +197,7 @@ return res;
 return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
+<<<<<<< HEAD
     .end('Method Not Allowed');    return res.status(201).json({ ok: true })
   }
   return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
@@ -214,9 +240,16 @@ return res
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    .end('Method Not Allowed');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

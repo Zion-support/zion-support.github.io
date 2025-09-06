@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,10 +11,14 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect  } from 'react';
 import { useNavigate  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
 <<<<<<< HEAD
@@ -75,6 +80,9 @@ import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
 =======
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {cn} from '@/lib/utils';
 interface WizardStep {;
   title: string,,
@@ -94,6 +102,7 @@ interface OnboardingWizardProps {;
   className?: string;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function OnboardingWizard(): any ({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;
 
@@ -153,6 +162,9 @@ import { useState, useEffect } from 'react',;
 =======
 export function OnboardingWizard(): any ({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;import { useState, useEffect } from 'react',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function OnboardingWizard(): any ({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;import { useState, useEffect } from 'react',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useNavigate } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
@@ -176,6 +188,7 @@ interface OnboardingWizardProps {;
   onComplete: () => void,;
   onSkip: () => void,;
   className?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -460,6 +473,8 @@ function OnboardingWizard() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       title: "Preview your profile"
       description: "See how clients will view your profile"
@@ -467,6 +482,7 @@ function OnboardingWizard() {
       action: {
         text: "Preview Profile"
         url: `/talent/${user?.id}`
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -484,11 +500,14 @@ function OnboardingWizard() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       },
       skipText: "Skip for now"
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -520,6 +539,8 @@ function OnboardingWizard() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ];
   const steps = type === 'client' ? clientSteps : talentSteps;
   // Navigate to the specified URL
@@ -571,6 +592,7 @@ function OnboardingWizard() {
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
@@ -581,10 +603,13 @@ function OnboardingWizard() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   
   
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -593,6 +618,8 @@ function OnboardingWizard() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
       <CardHeader>
@@ -601,12 +628,15 @@ function OnboardingWizard() {
             "Ready to find top IT talent?" :
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   // Define steps based on user type;
   const clientSteps: WizardStep[] = [;
@@ -709,6 +739,7 @@ function OnboardingWizard() {
     {
       title: "Complete your profile"
 <<<<<<< HEAD
+<<<<<<< HEAD
       description: "Add your skills, experience, and preferences";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -803,6 +834,9 @@ function OnboardingWizard() {
 =======
       description: "Add your skills, experience, and preferences";            "Ready to find top IT talent?" :;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      description: "Add your skills, experience, and preferences";            "Ready to find top IT talent?" :;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {steps[currentStep].icon}
           </div>;
           <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep].title}</h3>;

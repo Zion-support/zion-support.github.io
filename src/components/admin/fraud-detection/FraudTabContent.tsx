@@ -1,6 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import React from 'react';
+import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
+
+import React from "react";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
+import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 import React from 'react';
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
@@ -52,6 +63,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return (
+<<<<<<< HEAD
         <div className="bg-amber-50 dark: bg-amber-950/20 p-8 rounded-lg text-center">
           <AlertTriangle className="mx-auto h-12 w-12 text-amber-500 mb-4" />
           <h3 className="text-xl font-medium mb-4">Pending Review Flags</h3>
@@ -217,5 +229,18 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+};
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      );
+
+    default:
+      return null;
+  }
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

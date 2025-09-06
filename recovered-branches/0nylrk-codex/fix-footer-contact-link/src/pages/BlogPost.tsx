@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 // Importing the sample blog posts - in a real app, you would fetch this from an API
@@ -10,11 +11,14 @@ export default function BlogPost() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState, useEffect} from "react";
 import {useParams, Link, useNavigate} from "react-router-dom";
 import {SEO} from "@/components/SEO";
 import {Button} from "@/components/ui/button";
 import {ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { useState, useEffect } from "react";
@@ -35,6 +39,8 @@ import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { BlogPost as BlogPostType } from "@/types/blog";
 import {Separator} from "@/components/ui/separator";
 import {AppLayout} from "@/layout/AppLayout";
@@ -74,6 +80,7 @@ export default function BlogPost() {
     const currentPost = BLOG_POSTS.find((p) => p.slug === slug);
 
     if (currentPost) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       setPost(currentPost);
 <<<<<<< HEAD
@@ -133,11 +140,14 @@ export default function BlogPost() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Find related posts (same category, excluding current post)
       const related = BLOG_POSTS.filter(p =>
         p.id !== currentPost.id &&
         (p.category === currentPost.category |
          p.tags.some(tag => currentPost.tags.includes(tag)))
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -182,11 +192,15 @@ export default function BlogPost() {
          p.tags.some(tag => currentPost.tags.includes(tag)))
       setRelatedPosts(related)    } else {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      setRelatedPosts(related)    } else {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Post not found
       navigate("/blog", { replace: true });
     }
 
     // Scroll to top when post changes
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     window.scrollTo(0, 0)
@@ -251,6 +265,9 @@ export default function BlogPost() {
 =======
     window.scrollTo(0, 0)    return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    window.scrollTo(0, 0)    return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
 
       <AppLayout>
@@ -260,6 +277,9 @@ export default function BlogPost() {
       </AppLayout>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     )
 <<<<<<< HEAD
 =======
@@ -296,9 +316,8 @@ export default function BlogPost() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   }
-  };
-
-  };
+  }
+};
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -411,6 +430,7 @@ export default function BlogPost() {;
         </div>;
       </AppLayout>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     );
@@ -469,6 +489,11 @@ export default function BlogPost() {;
   }
     return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    );
+  }
+    return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <AppLayout>
       <SEO
         title={post.title}
@@ -506,6 +531,7 @@ export default function BlogPost() {;
             {/* Author and metadata */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">
               <div className="flex items-center mb-4 sm:mb-0">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -656,12 +682,18 @@ export default function BlogPost() {;
                   src={post.author.avatarUrl}
                   alt={post.author.name}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+                <img
+                  src={post.author.avatarUrl}
+                  alt={post.author.name}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   className="w-12 h-12 rounded-full mr-3"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.src =
                       "https: //images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80";
                   }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 />
                 <div>
@@ -732,10 +764,13 @@ export default function BlogPost() {;
                         rel="noopener noreferrer"
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
                       >
                         <Twitter className="h-4 w-4 mr-2" />
                         <span>Twitter</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -786,6 +821,10 @@ export default function BlogPost() {;
                         rel="noopener noreferrer"
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;            <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                        rel="noopener noreferrer"
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;            <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="flex items-center mb-4 sm:mb-0">;
                 <img;
                   src={post.author.avatarUrl} ;
@@ -831,6 +870,7 @@ export default function BlogPost() {;
                     </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -847,6 +887,9 @@ export default function BlogPost() {;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   )}
 <<<<<<< HEAD
 
@@ -1017,6 +1060,7 @@ export default function BlogPost() {;
 <<<<<<< HEAD
                 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               />;
             </div>;
           </div>;
@@ -1101,6 +1145,11 @@ export default function BlogPost() {;
 =======
               ))}            </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  #{tag}
+                </span>;
+              ))}            </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             <Separator className="my-12 bg-zion-blue-light" />;
 
@@ -1124,6 +1173,7 @@ export default function BlogPost() {;
                             target && target.src = "https: //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";
                 </span>;
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
             </div>;
             ;
@@ -1160,10 +1210,13 @@ export default function BlogPost() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           }}
                         />;
                       </div>;
                       <div className="p-4">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1519,6 +1572,12 @@ if ( {) {
                 variant="outline"
                 className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"    </AppLayout>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <div className="flex justify-between items-center mt-12">;
+              <Button
+                variant="outline"
+                className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"    </AppLayout>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ); export default function BlogPost () {
   const {
   slug 
@@ -1578,6 +1637,7 @@ return (<AppLayout> <SEO <Button variant="outline" className="border-zion-blue-l
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1585,3 +1645,6 @@ return (<AppLayout> <SEO <Button variant="outline" className="border-zion-blue-l
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

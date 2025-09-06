@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -44,6 +45,8 @@ export default function GovernancePulsePage() {
     </EnhancedLayout>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
   );
 };
@@ -75,6 +78,7 @@ export default function GovernancePulsePage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -85,3 +89,29 @@ export default function GovernancePulsePage() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  const items: any[] = (data?.items || []).slice(0, 60);
+  return (
+    <EnhancedLayout>
+      <div className="max-w-5xl mx-auto py-10">
+        <h1 className="text-3xl font-bold">Governance Pulse</h1>
+        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt |'—'}</p>
+        <ul className="mt-6 space-y-4">
+          {items.map((it, idx) => (
+            <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
+              <a href={it.url} target="_blank" rel="noreferrer" className="font-medium underline">
+                {it.title}
+              </a>
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                {it.space} · {it.state} · Start {new Date(it.start * 1000).toLocaleString()} · End {new Date(it.end * 1000).toLocaleString()}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </EnhancedLayout>
+  )
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

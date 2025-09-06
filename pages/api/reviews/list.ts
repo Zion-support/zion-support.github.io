@@ -14,6 +14,7 @@ export default async function handler(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     }
@@ -211,6 +212,18 @@ export default async function handler(
     });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readReviews, readProjects } from '[^']*';
+import type { PublicReview, ReviewsSummary } from '../../../types/reviews';
+import { TALENT_PROFILES } from '[^']*';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' })
+  }
+  try {
+    const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     if (!targetType || !targetId) {
       return res.status(400).json({ error: "Missing targetType or targetId" });
     }
@@ -218,6 +231,7 @@ export default async function handler(
       return res.status(400).json({ error: "Invalid targetType" });
     }
 
+<<<<<<< HEAD
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
 
@@ -304,9 +318,39 @@ const { targetType, targetId } = req.query as {
       });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+    const all = null;
+    return res.status(200).json({ summary, reviews: publicReviews })
+          x.projectId === r.projectId &&
+          x.fromRole !== r.fromRole &&
+          x.toRole !== r.toRole &&
+          x.approved &&
+!x.removed
+      );
+      return counterpartExists;
+    });
+    // Map to public reviews (mask anonymous author)
+    const publicReviews: PublicReview[] = filtered
+.sort(
+        (a, b) =>
+          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+      )
+      .map(r => {
+        let authorName = r.fromId;
+        if (r.fromRole === 'talent') {
+          const t = TALENT_PROFILES.find(tp => tp.slug === r.fromId);
+          authorName = t ? t.name : r.fromId;
+        }
+        if (r.anonymous) authorName = 'Anonymous';
+        return {
+          ...r,
+          authorName,
+        };
+      });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     const totalReviews = publicReviews.length;
     const averageRating = totalReviews
-      ? Math.round(
+? Math.round(
           (publicReviews.reduce((sum, r) => sum + r.rating, 0) / totalReviews) *
             10,
         ) / 10
@@ -523,6 +567,7 @@ if (author_name = "Anonymous") {
       .status(500)
       .json({ error: "Internal server error", details: error?.message });
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -530,9 +575,17 @@ if (author_name = "Anonymous") {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

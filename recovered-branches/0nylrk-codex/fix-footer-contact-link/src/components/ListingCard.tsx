@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {cn} from "@/lib/utils";
 import {Badge} from "@/components/ui/badge";
 import {Link} from "react-router-dom";
@@ -7,6 +8,8 @@ import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {cn} from "@/lib/utils";
 import {Badge} from "@/components/ui/badge";
@@ -14,6 +17,7 @@ import {Link} from "react-router-dom";
 interface ListingCardProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ListingCardProps {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -123,11 +127,14 @@ export function ListingCard({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Link
       to={`/profile/${profileId}`}
       className={cn(
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -150,6 +157,8 @@ import { Link } from "react-router-dom",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ListingCardProps {
   id?: string,
   title: string,
@@ -160,6 +169,7 @@ interface ListingCardProps {
   author?: string,
   authorImage?: string,
   className?: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
   profileType?: 'service' | 'talent'
 <<<<<<< HEAD
@@ -376,11 +386,15 @@ export function ListingCard({;
 =======
   profileType?: 'service' | 'talent'        {author && (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  profileType?: 'service' | 'talent'        {author && (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {authorImage ? (
               <img src={authorImage} alt={author} className="h-8 w-8 rounded-full mr-2" />
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -393,6 +407,8 @@ export function ListingCard({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         {author && (;
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">;

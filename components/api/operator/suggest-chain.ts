@@ -1,4 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { CHAINS } from '../../../utils/chains';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const stake = Number(stakeUsd || 0);
 
@@ -17,8 +29,19 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { CHAINS } from '../../../utils/chains';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { region, stakeUsd } = req.body || {},
+  const stake = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default async function handler(
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -30,6 +53,7 @@ export default async function handler(
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (req.method !== 'POST')
+<<<<<<< HEAD
     return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body |{};export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body || {};export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -45,12 +69,22 @@ export default async function handler(
   const stake = Number(stakeUsd || 0);
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    return res.status(405).json({ error: 'Method not allowed' });
+  const { region, stakeUsd } = req.body || {};
+  const stake = Number(stakeUsd || 0);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Simple heuristics
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche)
   // - High stake: prefer high trust L2s (Arbitrum/Optimism) or Ethereum
@@ -111,6 +145,9 @@ export default async function handler(
 
 
   let candidates = ['polygon', 'bnb', 'avalanche'];
+=======
+let candidates = ['polygon', 'bnb', 'avalanche'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   if (stake > 5000) candidates = ['arbitrum', 'optimism', 'ethereum'];
   const regionLc = (region |'').toString().toLowerCase();
   if (regionLc.includes('apac') |regionLc.includes('asia')) {
@@ -143,6 +180,7 @@ export default async function handler(
   const ranked = candidates && candidates.map(k => ({ key: k, chain: (CHAINS as any)[k] }));
   res
     .status(200)
+<<<<<<< HEAD
     .json({ recommendation: ranked[0], alternatives: ranked && ranked.slice(1) });
 <<<<<<< HEAD
 =======
@@ -242,6 +280,7 @@ if (||) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -249,3 +288,11 @@ if (||) {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    .json({ recommendation: ranked[0], alternatives: ranked.slice(1) });
+  res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

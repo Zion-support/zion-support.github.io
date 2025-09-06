@@ -3,6 +3,7 @@ const scriptPath = path && path.join(__dirname, '../../scripts/update-icon-impor
 
 console && console.log('Running icon import updater...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -19,12 +20,15 @@ console.log('Running icon import updater...');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { exec } from 'child_process',
 import path from 'path',
 const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js'),
 
 // // // console.log('Running icon import updater...'),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -34,11 +38,14 @@ const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js'),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 exec(`node ${scriptPath}`, (error, stdout, stderr) => {
   if (error) {
     console && console.error(`Error executing script: ${error}`);
     return
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -57,6 +64,8 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {
   if (stderr) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console && console.error(stderr)
   }
 });
@@ -90,6 +99,7 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {;
   // // // console.log('Icon imports updated successfully!');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 });
 });
@@ -104,6 +114,8 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   
   console && console.log(stdout);
@@ -115,6 +127,7 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {;
   
   console && console.log('Icon imports updated successfully!')
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -198,3 +211,5 @@ return
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

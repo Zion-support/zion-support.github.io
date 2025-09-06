@@ -7,6 +7,12 @@
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
+=======
+
+import React from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { CreditCard, Plus, Trash } from 'lucide-react'
 
 <<<<<<< HEAD
@@ -31,6 +37,7 @@ import { CreditCard, Plus, Trash } from 'lucide-react'
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function PaymentMethods() {
   // Mock payment methods
+<<<<<<< HEAD
 
   const paymentMethods = [
     {
@@ -75,15 +82,53 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+=======
+id: 'pm-1',
+      type: 'credit_card',
+      brand: 'Visa',
+      last4: '4242',
+      expMonth: 12,
+      expYear: 2025,
+      isDefault: true,
+    },
+    {
+      id: 'pm-2',
+      type: 'credit_card',
+      brand: 'Mastercard',
+      last4: '8888',
+      expMonth: 4,
+      expYear: 2026,
+      isDefault: false,
+    },
+  ];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Card>
       <CardHeader>
         <CardTitle>Payment Methods</CardTitle>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         <CardDescription>Manage your payment methods for automatic billing</CardDescription>
+=======
+<CardDescription>
+          Manage your payment methods for automatic billing
+        </CardDescription>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       </CardHeader>
 
       <CardContent className="space-y-4">
@@ -300,6 +345,7 @@ export function PaymentMethods() {;
                 <p className='font-medium'>
                   {method.brand} •••• {method.last4}
                   {method.isDefault && (
+<<<<<<< HEAD
                     <span className='ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5'>                      Default
                     </span>
                   )}
@@ -310,21 +356,40 @@ export function PaymentMethods() {;
             </div>
             <div className='flex gap-2'>
 
+=======
+                    <span className='ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       Default
                     </span>
                   )}
                 </p>
+<<<<<<< HEAD
 
+=======
+<p className='text-sm text-muted-foreground'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   Expires {method.expMonth}/{method.expYear}
                 </p>
               </div>
             </div>
+<<<<<<< HEAD
 
+=======
+<div className='flex gap-2'>
+              {!method.isDefault && (
+                <Button size='sm' variant='ghost'>
+                  Set Default
+                </Button>
+              )}
+              <Button size='sm' variant='ghost' className='text-destructive'>
+                <Trash className='h-4 w-4' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>
 
             </div>
           </div>
         ))}
+<<<<<<< HEAD
       </CardContent>;
       <CardFooter>;
         <Button className='gap-1'>;
@@ -434,9 +499,25 @@ function PaymentMethods() {
   );
 }
 ;
+<<<<<<< HEAD
 =======
       </CardContent>
       <CardFooter>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      </CardContent>
+      <CardFooter>
+<Button className='gap-1'>
+          <Plus className='h-4 w-4' />
+          Add Payment Method
+        </Button>
+      </CardFooter>
+    </Card>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -56,6 +56,7 @@ if (typeof window !== 'undefined') { window.addEventListener('load',() => { cons
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD:temp_exclude/src.disabled/src/utils/performance-monitor.js
+<<<<<<< HEAD:temp_exclude/src.disabled/src/utils/performance-monitor.js
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -80,3 +81,5 @@ if (typeof window !== 'undefined') { window.addEventListener('load',() => { cons
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/src/utils/performance-monitor.js
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/src/utils/performance-monitor.js
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:src.disabled/src/utils/performance-monitor.js

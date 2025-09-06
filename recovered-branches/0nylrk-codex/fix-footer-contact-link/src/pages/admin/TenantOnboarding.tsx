@@ -33,6 +33,7 @@ import { toast } from "sonner",
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,6 +70,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -90,6 +93,7 @@ export default function TenantOnboarding() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -104,166 +108,7 @@ export default function TenantOnboarding() {;
     custom_domain: "",;
     is_co_branded: true;
   });
-
-  // Check if user has admin role;
-  const isAdmin = user?.role === "admin";
-
-  if (!isAdmin) {;
-    return <Navigate to="/unauthorized" />;
-  }
-
-  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    const { name, value } = e && e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSelectChange = (name: string, value: string) => {;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSwitchChange = (name: string, checked: boolean) => {;
-    setFormData(prev => ({ ...prev, [name]: checked }));
-  };
-
-  const handleSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    setIsSubmitting(true),;
-
-    try {;
-      // Generate subdomain if not provided;
-      const subdomain = formData && formData.subdomain || formData && formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
-
-      // Create landing page copy;
-      const landingPageCopy = {;
-        headline: "AI Hiring Assistant",;
-        subtitle: `Find the best talent for your ${formData && formData.industry || "company"}`,;
-        cta: "Get Started";
-      };
-
 =======
-
-import React, { useState } from "react",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { SEO } from "@/components/SEO",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Navigate } from "react-router-dom",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Input } from "@/components/ui/input",;
-import { Label } from "@/components/ui/label",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-import { toast } from "sonner",;
-import { supabase } from "@/integrations/supabase/client",;
-import { Switch } from "@/components/ui/switch",;
-;
-export default function TenantOnboarding() {;
-  const { user } = useAuth(),;
-  const [activeTab, setActiveTab] = useState("company"),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const [formData, setFormData] = useState({;
-    brand_name:"",;
-    subdomain:"",;
-    logo_url:"",;
-    primary_color:"#9b87f5",;
-    theme_preset:"light",;
-    company_size:"",;
-    industry:"",;
-    custom_domain:"",;
-    is_co_branded:true;
-  }),;
-  ;
-  // Check if user has admin role;
-  const isAdmin = user?.role === "admin",;
-  ;
-  if (!isAdmin) {;
-    return <Navigate to="/unauthorized" />,;
-  }
-;
-  const handleInputChange = (e:React.ChangeEvent<HTMLInputElement>) => {;
-    const { name, value } = e.target,;
-    setFormData(prev => ({ ...prev, [name]:value })),;
-  },;
-  ;
-  const handleSelectChange = (name:string, value:string) => {;
-    setFormData(prev => ({ ...prev, [name]:value })),;
-  },;
-  ;
-  const handleSwitchChange = (name:string, checked:boolean) => {;
-    setFormData(prev => ({ ...prev, [name]:checked })),;
-  },;
-  ;
-  const handleSubmit = async (e:React.FormEvent) => {;
-    e.preventDefault(),;
-    setIsSubmitting(true),;
-    ;
-    try {;
-      // Generate subdomain if not provided;
-      const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),;
-      ;
-      // Create landing page copy;
-      const landingPageCopy = {;
-        headline:"AI Hiring Assistant",;
-        subtitle:`Find the best talent for your ${formData.industry || "company"}`,;
-        cta:"Get Started";
-      },;
-      ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      // Submit to Supabase;
-      const { data, error } = await supabase;
-        .from('whitelabel_tenants');
-        .insert({;
-<<<<<<< HEAD
-          brand_name: formData && formData.brand_name,;
-          subdomain: subdomain,;
-          custom_domain: formData && formData.custom_domain || null,;
-          primary_color: formData && formData.primary_color,;
-          logo_url: formData && formData.logo_url || null,;
-          theme_preset: formData && formData.theme_preset,;
-          landing_page_copy: landingPageCopy,;
-          is_active: true,;
-          account_manager_id: user && user.id,;
-          dns_verified: false,;
-          email_template_override: null;
-        });
-        .select('id, brand_name, subdomain');
-        .single();
-
-      if (error) throw error;
-
-      toast && toast.success("Tenant created successfully!", {;
-        description: `${data && data.brand_name} is now available at ${data && data.subdomain}.ziontechmarketplace && ziontechmarketplace.com`;
-      });
-
-      // Reset form;
-      setFormData({;
-        brand_name: "",;
-        subdomain: "",;
-        logo_url: "",;
-        primary_color: "#9b87f5",;
-        theme_preset: "light",;
-        company_size: "",;
-        industry: "",;
-        custom_domain: "",;
-        is_co_branded: true;
-      });
-
-    } catch (error: any) {;
-      console && console.error("Error creating tenant:", error);
-      toast && toast.error("Failed to create tenant", { ;
-        description: error && error.message ;
-      });
-    } finally {;
-      setIsSubmitting(false);
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -286,6 +131,132 @@ export default function TenantOnboarding() {
   const [formData, setFormData] = useState({
 
     brand_name: ""
+    subdomain: ""
+    logo_url: ""
+    primary_color: "#9b87f5"
+    theme_preset: "light"
+    company_size: ""
+    industry: ""
+    custom_domain: ""
+    is_co_branded: true  });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
+  // Check if user has admin role;
+  const isAdmin = user?.role === "admin";
+
+  if (!isAdmin) {;
+    return <Navigate to="/unauthorized" />;
+  }
+
+  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+    const { name, value } = e && e.target;
+    setFormData(prev => ({ ...prev, [name]: value }))
+};
+
+  const handleSelectChange = (name: string, value: string) => {;
+    setFormData(prev => ({ ...prev, [name]: value }))
+};
+
+  const handleSwitchChange = (name: string, checked: boolean) => {;
+    setFormData(prev => ({ ...prev, [name]: checked }))
+};
+
+  const handleSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    setIsSubmitting(true),;
+
+    try {;
+      // Generate subdomain if not provided;
+      const subdomain = formData && formData.subdomain || formData && formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+      // Create landing page copy;
+      const landingPageCopy = {;
+        headline: "AI Hiring Assistant",;
+        subtitle: `Find the best talent for your ${formData && formData.industry || "company"}`,;
+        cta: "Get Started"
+};
+      // Submit to Supabase;
+      const { data, error } = await supabase;
+        .from('whitelabel_tenants');
+        .insert({;
+          brand_name: formData && formData.brand_name,;
+          subdomain: subdomain,;
+          custom_domain: formData && formData.custom_domain || null,;
+          primary_color: formData && formData.primary_color,;
+          logo_url: formData && formData.logo_url || null,;
+          theme_preset: formData && formData.theme_preset,;
+          landing_page_copy: landingPageCopy,;
+          is_active: true,;
+          account_manager_id: user && user.id,;
+          dns_verified: false,;
+          email_template_override: null;
+        });
+        .select('id, brand_name, subdomain');
+        .single();
+
+      if (error) throw error;
+
+      toast && toast.success("Tenant created successfully!", {,
+  description: `${data && data.brand_name} is now available at ${data && data.subdomain}.ziontechmarketplace && ziontechmarketplace.com`;
+      });
+
+      // Reset form;
+      setFormData({;
+        brand_name: "",;
+        subdomain: "",;
+        logo_url: "",;
+        primary_color: "#9b87f5",;
+        theme_preset: "light",;
+        company_size: "",;
+        industry: "",;
+        custom_domain: "",;
+        is_co_branded: true;
+      });
+
+    } catch (error: any) {;
+      console && console.error("Error creating tenant:", error);
+      toast && toast.error("Failed to create tenant", { ,
+  description: error && error.message ;
+      });
+    } finally {;
+<<<<<<< HEAD
+      setIsSubmitting(false);
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+import React, { useState } from "react",
+=======
+      setIsSubmitting(false);import React, { useState } from "react",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { toast } from "sonner",
+import { supabase } from "@/integrations/supabase/client";
+import { Switch } from "@/components/ui/switch";
+export default function TenantOnboarding() {
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("company");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+
+<<<<<<< HEAD
+    brand_name: ""
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     subdomain: ""
     logo_url: ""
     primary_color: "#9b87f5"
@@ -408,6 +379,7 @@ export default function TenantOnboarding() {
   const isAdmin = user?.role === "admin";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (!isAdmin) {;
     return <Navigate to="/unauthorized" />;
@@ -497,10 +469,13 @@ export default function TenantOnboarding() {
   }),
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   
   // Check if user has admin role
   const isAdmin = user?.role === "admin",
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -595,6 +570,12 @@ export default function TenantOnboarding() {
   }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {      // Submit to Supabase
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  if (!isAdmin) {
+    return <Navigate to="/unauthorized" />
+  }
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {      // Submit to Supabase
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const { data, error } = await supabase
         .from('whitelabel_tenants')
         .insert({
@@ -610,6 +591,7 @@ export default function TenantOnboarding() {
           dns_verified: false
           email_template_override: null
         })
+<<<<<<< HEAD
 <<<<<<< HEAD
         .select('id, brand_name, subdomain')
 <<<<<<< HEAD
@@ -644,6 +626,9 @@ export default function TenantOnboarding() {
 =======
         .select('id, brand_name, subdomain')      // Reset form
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        .select('id, brand_name, subdomain')      // Reset form
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setFormData({
         brand_name: ""
         subdomain: ""
@@ -655,6 +640,7 @@ export default function TenantOnboarding() {
         custom_domain: ""
         is_co_branded: true
       })
+<<<<<<< HEAD
 <<<<<<< HEAD
     } catch (error: any) {
 <<<<<<< HEAD
@@ -698,11 +684,20 @@ export default function TenantOnboarding() {
 
   },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    } catch (error: any) {      })
+    } finally {
+      setIsSubmitting(false)
+    }
+
+  },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <>;
       <SEO
         title="Tenant Onboarding - Zion AI Marketplace"
+<<<<<<< HEAD
 <<<<<<< HEAD
         description="Onboard a new white-label tenant to the Zion AI Marketplace platform."
 <<<<<<< HEAD
@@ -944,6 +939,9 @@ if (throw error) {
 =======
         description="Onboard a new white-label tenant to the Zion AI Marketplace platform."                    <TabsTrigger value="company">Company Info</TabsTrigger>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        description="Onboard a new white-label tenant to the Zion AI Marketplace platform."                    <TabsTrigger value="company">Company Info</TabsTrigger>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <TabsTrigger value="branding">Branding</TabsTrigger>;
                     <TabsTrigger value="domain">Domain Setup</TabsTrigger>;
                   </TabsList>;
@@ -1038,6 +1036,7 @@ if (throw error) {
                         placeholder="hire && hire.yourcompany.com"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1053,6 +1052,8 @@ if (throw error) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -1289,6 +1290,7 @@ export default function TenantOnboarding() {;
                         name="logo_url"
                         value={formData && formData.logo_url}
 <<<<<<< HEAD
+<<<<<<< HEAD
                         onChange={handleInputChange}
 <<<<<<< HEAD
                         placeholder="https://example.com/logo.png";
@@ -1466,6 +1468,9 @@ export default function TenantOnboarding() {;
 =======
                         onChange={handleInputChange}                  </Button>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                        onChange={handleInputChange}                  </Button>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>;
               </form>;
             </CardContent>;
@@ -1474,10 +1479,13 @@ export default function TenantOnboarding() {;
       </main>;
       <Footer />;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>;
   );
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
     </>);
@@ -1543,6 +1551,7 @@ Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label 
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1556,3 +1565,6 @@ Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

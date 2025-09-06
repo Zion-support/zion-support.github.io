@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -59,12 +60,17 @@
 
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export type InnovativeMicroSaasV2 = {
   "id": string;
-  title: string,
+  title: string;
   description: string;
   price?: string};
 export const "innovativeMicroSaasV2": InnovativeMicroSaasV2[] = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -122,9 +128,17 @@ export type InnovativeMicroSaasV2 = { id: string; title: string,
 export type InnovativeMicroSaasV2 = { id: string; title: string,
   description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+
+export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+
+export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-export type InnovativeMicroSaasV2 = { id: string; title: string,
-  description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
 ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -132,27 +146,23 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export type InnovativeMicroSaasV2 = {
   "id": string;
-  title: string,
+  title: string;
   description: string;
   price?: string};
 export const "innovativeMicroSaasV2": InnovativeMicroSaasV2[] = [];
-export type InnovativeMicroSaasV2 = { id: string; title: string,
-  description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
 
-export type InnovativeMicroSaasV2 = { id: string; title: string,
-  description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
-export type InnovativeMicroSaasV2 = { id: string; title: string,
-  description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
-export type InnovativeMicroSaasV2 = { id: string; title: string,
-  description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
-export type InnovativeMicroSaasV2 = { id: string; title: string,
-  description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
 export type InnovativeMicroSaasV2 = {
   "id": string;
-  title: string,
+  title: string;
   description: string;
   price?: string};
 export const "innovativeMicroSaasV2": InnovativeMicroSaasV2[] = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
 export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
@@ -228,3 +238,11 @@ export type InnovativeMicroSaasV2 = { id: string; title: string,
 =======
 export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

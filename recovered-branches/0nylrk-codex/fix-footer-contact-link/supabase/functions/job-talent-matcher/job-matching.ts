@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -19,6 +20,8 @@ import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
@@ -34,6 +37,7 @@ const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {JobData, MatchResult} from "./types.ts";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
 <<<<<<< HEAD
@@ -196,12 +200,20 @@ import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";    // Us
   } catch (error) {
     console && console.error("Error in processJobMatching:", error);  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";    // Use OpenAI to find best matches
+    const bestMatches = await findBestMatches(jobDetails, talents);
+    return bestMatches
+  } catch (error) {
+    console && console.error("Error in processJobMatching:", error);  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 /**
  * Stores match results in the database and creates notifications
  * @param jobId The ID of the job
  * @param matchedTalents Array of match results
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 export async function storeMatchResults(jobId: string, matchedTalents: MatchResult[], jobTitle: string): Promise<void> {
 <<<<<<< HEAD
@@ -240,12 +252,16 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
 =======
 export async function storeMatchResults(jobId: string, matchedTalents: MatchResult[], jobTitle: string): Promise<void> {    if (matchError) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export async function storeMatchResults(jobId: string, matchedTalents: MatchResult[], jobTitle: string): Promise<void> {    if (matchError) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       console && console.error(`Error storing match for talent ${match && match.talentId}:`, matchError)
     } else {
       // Create notifications for each matched talent
 
       await supabase && supabase.rpc('create_notification', {
         _user_id: match && match.talentId;
+<<<<<<< HEAD
 <<<<<<< HEAD
         _title: "New Job Match",
 
@@ -392,6 +408,10 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
         _title: "New Job Match",  
   await Promise.all(matchInsertPromises)  await Promise.all(matchInsertPromises);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        _title: "New Job Match",  
+  await Promise.all(matchInsertPromises)  await Promise.all(matchInsertPromises);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,
@@ -582,6 +602,7 @@ await Promise.all (matchInsertPromises)
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   await Promise.all (matchInsertPromises);
@@ -592,3 +613,6 @@ await Promise.all (matchInsertPromises)
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

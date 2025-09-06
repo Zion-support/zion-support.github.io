@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,10 +25,17 @@ export function useResumeEnhancer() {
 export function useResumeEnhancer() {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+export function useResumeEnhancer() {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function useResumeEnhancer() {;
 <<<<<<< HEAD
@@ -75,6 +83,9 @@ const { data, error } = await supabase && supabase.functions.invoke('resume-enha
 =======
 export function useResumeEnhancer() {;          context
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function useResumeEnhancer() {;          context
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         }
       });
       if (error) {      return null
@@ -86,6 +97,7 @@ export function useResumeEnhancer() {;          context
     enhanceContent;
     isEnhancing;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     error
 <<<<<<< HEAD
@@ -146,6 +158,9 @@ function useResumeEnhancer() {
 =======
     error          context;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    error          context;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         }
       });
 ;
@@ -171,6 +186,7 @@ if ( {) {
     error;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -186,6 +202,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
 

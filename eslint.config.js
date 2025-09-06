@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import js from '@eslint/js';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -141,6 +142,10 @@ export default [
       parser: typescriptParser,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+import { FlatCompat } from '@eslint/eslintrc';
+import js from '@eslint/js';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
@@ -153,6 +158,7 @@ const compat = new FlatCompat({
   recommendedConfig: js.configs.recommended,
   allConfig: js.configs.all,
 });
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import react from 'eslint-plugin-react';
@@ -163,10 +169,13 @@ import globals from 'globals';
 >>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-module.exports = [
+export default [
   ...compat.extends('next/core-web-vitals'),
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -175,32 +184,18 @@ module.exports = [
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     ignores: [
       'node_modules/**',
       'dist/**',
       'build/**',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      '.next/**',
-      'out/**',
-      'dist/**',
-      'node_modules/**',
-      'temp_exclude/**',
-      'src.disabled/**',
-      'src.pages.disabled/**',
-=======
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       'coverage/**',
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
       'scripts/**',
       'automation/**',
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       'backup-problematic-files/**',
       'src.disabled/**',
       'components.disabled/**',
@@ -260,97 +255,31 @@ module.exports = [
       '*.js',
       'src_backup_temp/**',
       'temp-backup/**',
-      'tests.disabled/**',
+      'temp_exclude/**',
+      'temp_components/**',
+      'temp_broken_files/**',
+      'temp_working/**',
+      'zion-os.disabled/**',
+      'zion-ai-assistant/**',
       'tools/**',
       'utils/**',
-      'zion-ai-assistant/**',
-      'zion-os.disabled/**',
       'recovered-branches/**',
-      'services-broken.tsx',
-      'services/**',
-      'setupTests.ts',
-      'solutions.disabled/**',
-      'src.broken/**',
-      'src.corrupted/**',
-      'src.pages.disabled/**',
-      'src_backup/**',
-      'vite.config-backup.ts',
-      'vite.config.ts',
+      'pages._archive_corrupted/**',
+      'pages.bak/**',
       'pages.disabled_full/**',
-      'pages.old/**',
       'pages_api.disabled/**',
-      'pages_backup/**',
-      'pages_backup_before_cleanup/**',
-      'pages_backup_conflict/**',
       'pages_backup_conflicts/**',
       'pages_disabled/**',
-      'pages_minimal/**',
-      'playwright.config.ts',
-      'pm2-automation/**',
-      'providers/**',
-      'public/**',
-      'pages.bak/**',
-      'pages.blog.disabled/**',
-      'pages.broken/**',
-      'pages.corrupted.*/**',
-      'pages.disabled.full/**',
-      'pages.disabled_auto/**',
-      'out/**',
-      'pages-backup/**',
-      'pages-disabled/**',
-      'pages-quarantine/**',
-      'pages.__backup/**',
-      'pages._archive_corrupted/**',
-      'pages._quarantine/**',
-      'components/**',
-      'content-hub.tsx',
-      'contracts.disabled/**',
-      'cypress.config.ts',
-      'cypress/**',
-      'dao/**',
-      'data.disabled/**',
-      'data/**',
-      'deployments/**',
-      'fix_typescript_syntax_errors.jsx',
-      'fix_utils_files.ts',
-      'hooks.disabled/**',
-      'hooks/**',
-      'jest.config.jsx',
-      'jest.config.ts',
-      'jest.setup.jsx',
-      'lib.broken/**',
-      'lib.disabled/**',
-      'lib/**',
-      'lib_backup/**',
-      'lint-target/**',
-      'middleware.security.ts',
-      'middleware/**',
-      'netlify/**',
-      'next-env.d.ts',
-      '.next/**',
-      'App.smoke.test.tsx',
-      'App.test.ts',
-      'App.test.tsx',
-      'App.tsx',
-      'AppMinimal.test.tsx',
-      'ai-optimization-backups/**',
-      'api-documentation.tsx',
-      'api.disabled.temp/**',
-      'api.tsx',
-      'apps.backup/**',
-      'apps/**',
-      'automation.tsx',
-      'automation_backup/**',
-      'blockchain-solutions.tsx',
-      'blog/**',
-      'browserstack.config.ts',
-      'case-studies.tsx',
-      'component-library.tsx',
-      'components.disabled_full/**'
+      'src.pages.disabled/**',
+      'vite.config-backup.ts'
     ],
   },
   {
+<<<<<<< HEAD
     files: ['**/*.{js,jsx,ts,tsx}'],
+=======
+    files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
@@ -364,10 +293,7 @@ module.exports = [
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
-<<<<<<< HEAD
-=======
         afterAll: 'readonly',
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       },
       parser: typescriptParser,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -375,18 +301,17 @@ module.exports = [
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-<<<<<<< HEAD
-          jsx: true
-        }
-      }
+          jsx: true,
+        },
+      },
     },
     plugins: {
-      react,
+      '@typescript-eslint': typescript,
+      'react': react,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-      '@typescript-eslint': tseslint,
-      'jsx-a11y': jsxA11y
+      '@next/next': nextPlugin,
     },
+<<<<<<< HEAD
     rules: {
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
@@ -530,27 +455,51 @@ module.exports = [
       "**/pm2/**/*.js"
     ],
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'warn'
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/display-name': 'off',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/ban-ts-comment': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      'no-unused-vars': 'off',
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'prefer-const': 'error',
+      'no-debugger': 'warn',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
     },
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  },
+  {
+    files: ['**/*.js'],
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
       globals: {
-        window: 'readonly',
-        document: 'readonly',
         console: 'readonly',
         process: 'readonly',
         Buffer: 'readonly',
-        global: 'readonly',
         __dirname: 'readonly',
         __filename: 'readonly',
+        global: 'readonly',
         module: 'readonly',
         require: 'readonly',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         exports: 'readonly',
       },
     },
@@ -558,6 +507,7 @@ module.exports = [
       'no-console': 'off',
     },
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1156,3 +1106,6 @@ module.exports = [
   }
 ];
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

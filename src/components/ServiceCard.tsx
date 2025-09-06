@@ -10,6 +10,7 @@ interface ServiceCardProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   icon: string;
   features: string[];
   className?: string;
@@ -55,6 +56,21 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
   return (
 <<<<<<< HEAD
+=======
+  icon?: string;
+  features?: string[];
+  className?: string;
+}
+
+const ServiceCard: React.FC<ServiceCardProps> = ({
+  title,
+  description,
+  icon,
+  features = [],
+  className = ''
+}) => {
+  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <motion.div 
       className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 ${className}`}
       whileHover={{ y: -5 }}
@@ -70,6 +86,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <h3 className="text-xl font-semibold mb-3 text-white text-center">{title}</h3>
       <p className="text-gray-300 mb-4 text-center">{description}</p>
       {features.length > 0 && (
+<<<<<<< HEAD
         <ul className="space-y-2">
 =======
     <div className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 ${className}`}>
@@ -87,6 +104,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 
         </div>
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <ul className="space-y-2">
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {features.map((feature, index) => (
@@ -96,6 +115,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             </li>
           ))}
         </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       )}
@@ -121,6 +141,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+=======
+      )}
+    </motion.div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };

@@ -45,8 +45,14 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
 <<<<<<< HEAD
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>;
   );
+=======
+    </div>
+<<<<<<< HEAD
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 =======
     </div>
@@ -67,9 +73,24 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+
+}) ;
+}{";
+  typeof count === 'number' && (<span className="text-xs ml-1" > ({;
+  count ;
+}) </span> ;
+}</div>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

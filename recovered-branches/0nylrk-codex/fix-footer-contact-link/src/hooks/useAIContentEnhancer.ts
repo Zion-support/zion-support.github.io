@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -9,6 +10,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {toast} from '@/hooks/use-toast';
@@ -18,6 +21,7 @@ type EnhancementType =
   | 'job-post'
   | 'proposal'
   | 'general';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export interface AIEnhancementOptions {
@@ -31,6 +35,8 @@ export interface AIEnhancementOptions {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   enhancementType: EnhancementType;
   content?: string;
   context?: string
@@ -52,6 +58,7 @@ type EnhancementType =;
   | 'proposal';
   | 'general';
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -117,6 +124,8 @@ export interface AIEnhancementOptions {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           content;
           enhancementType;
           context
@@ -124,6 +133,7 @@ export interface AIEnhancementOptions {
         }
       });
       if (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         throw new Error(error.message)
@@ -134,11 +144,17 @@ export interface AIEnhancementOptions {
       
       return data && data.enhancedContent
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+      
+      return data && data.enhancedContent
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (err: any) {
       const errorMessage = err && err.message || 'Failed to enhance content';
 
       setError(errorMessage);
       toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
         title: "AI Enhancement Failed";
         description: errorMessage
@@ -162,6 +178,10 @@ import { useState } from 'react',;
         title: "AI Enhancement Failed",
   description: errorMessageimport { useState } from 'react',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        title: "AI Enhancement Failed",
+  description: errorMessageimport { useState } from 'react',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from '@/hooks/use-toast',;
 type EnhancementType =;
@@ -198,6 +218,7 @@ export function useAIContentEnhancer() {;
         }
       }),;
       if (error) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
         throw new Error(error.message);
 <<<<<<< HEAD
@@ -240,6 +261,9 @@ export function useAIContentEnhancer() {;
 =======
         throw new Error(error.message);        variant: "destructive"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        throw new Error(error.message);        variant: "destructive"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       });
       console && console.error('Enhancement error:', err);
       return null
@@ -253,6 +277,7 @@ export /**
  */
 function useAIContentEnhancer() {
   const [is_enhancing, setIsEnhancing] = useState (false);
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [error, set_error] = useState < string | null>(null);
 <<<<<<< HEAD
@@ -442,3 +467,7 @@ error
   const [error, set_error] = useState < string | null>(null);  }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [error, set_error] = useState < string | null>(null);  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

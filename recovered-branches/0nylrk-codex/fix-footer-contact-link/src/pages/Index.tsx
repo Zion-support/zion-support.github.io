@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -9,6 +10,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {TrustedBySection} from "@/components/TrustedBySection";
@@ -32,6 +35,7 @@ import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarCh
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default function Index() {
 export default function Index() {;
@@ -51,6 +55,8 @@ export default function Index() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
 import { Header } from "@/components/Header",
@@ -94,6 +100,7 @@ import {
       link: "/match"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -101,6 +108,8 @@ import {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default function Index() {;
 
@@ -112,6 +121,7 @@ export default function Index() {;
     }
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
     }
@@ -120,11 +130,14 @@ export default function Index() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       title: t("home.tool_talent")
       description: t("home.tool_talent_desc")
       icon: <Users className="h-6 w-6 text-zion-purple" />
       link: "/talent"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -175,10 +188,15 @@ export default function Index() {;
 
     },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       title: t("home.tool_equipment")
       description: t("home.tool_equipment_desc")
       icon: <Settings className="h-6 w-6 text-zion-purple" />
+<<<<<<< HEAD
 <<<<<<< HEAD
       link: "/equipment"
 <<<<<<< HEAD
@@ -230,10 +248,14 @@ export default function Index() {;
 =======
       link: "/equipment"    {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      link: "/equipment"    {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       title: "Mobile App"
       description: "Take Zion with you on the go with our mobile app for iOS and Android"
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />
       link: "/mobile-launch"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -266,6 +288,8 @@ export default function Index() {;
   const toolsFeatures = [;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {;
       title: t("home && home.tool_ai_matcher"),,
   description: t("home && home.tool_ai_matcher_desc"),;
@@ -301,6 +325,7 @@ export default function Index() {;
   description: "Take Zion with you on the go with our mobile app for iOS and Android",;
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,;
       link: "/mobile-launch";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -419,6 +444,8 @@ function Index() {
 import { Header } from "@/components/Header",;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Footer } from "@/components/Footer",;
 import { TrustedBySection } from "@/components/TrustedBySection",;
 import { TestimonialCarousel } from "@/components/TestimonialCarousel",;
@@ -519,6 +546,7 @@ export default function Index() {;
               </Link>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -528,6 +556,8 @@ export default function Index() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))}
           </div>
         </div>
@@ -547,6 +577,7 @@ export default function Index() {;
       <FloatingCTA />
       <Footer />
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 <<<<<<< HEAD
@@ -686,6 +717,9 @@ function Index() {
 =======
   )      {/* Quick Access Tools Section */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )      {/* Quick Access Tools Section */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className="py-16 bg-zion-blue-dark">;
         <div className="container mx-auto px-4">;
           <div className="text-center mb-12">;
@@ -739,6 +773,7 @@ function Index() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 =======
@@ -749,6 +784,9 @@ function Index() {
 =======
     <div className="min - h-screen bg - zion - blue text-white">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    <div className="min - h-screen bg - zion - blue text-white">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <SEO;
         title={t ("home.seo_title")}
         description={t ("home.seo_description")}

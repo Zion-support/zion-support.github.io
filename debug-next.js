@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,6 +61,8 @@ const path = require('path');
 
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 console.log('🔍 Debugging Next.js project structure...');
 
 // Check if we're in a valid Next.js project
@@ -104,10 +107,14 @@ const path = require ('path'),
 console.log ('🔍 Debugging Next.js project structure...'),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 console.log('🔍 Debugging Next.js project structure...'),;
 // Check if we're in a valid Next.js project;
 console.log('📁 Current directory:', process.cwd()),;
@@ -130,10 +137,14 @@ if (fs.existsSync('package.json')) {;
   const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   console.log('📦 Next.js version:', packageJson.dependencies?.next || 'Not found'),;
   console.log('📦 React version:', packageJson.dependencies?.react || 'Not found');
 
@@ -151,10 +162,14 @@ if (fs.existsSync('pages')) {;
   const pages = fs.readdirSync('pages');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   console.log('📄 Pages found:', pages.length),;
   console.log('📄 Main pages:', pages.filter(p => p.includes('index') || p.includes('_app')));
 
@@ -175,6 +190,9 @@ const problematicFiles = [];
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -216,7 +234,10 @@ for (const file of allFiles) {;
       problematicFiles.push(file);
 =======
     if (content.includes('      problematicFiles.push(file);
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   } catch (error) {
     // Skip files that can't be read
@@ -269,6 +290,7 @@ console.log('✅ Debug completed');
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 ;
+<<<<<<< HEAD
 console.log('✅ Debug completed'),;console.log('✅ Debug completed');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -276,3 +298,7 @@ console.log('✅ Debug completed'),;console.log('✅ Debug completed');
 console.log('✅ Debug completed'),;
 console.log('✅ Debug completed');
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+console.log('✅ Debug completed'),;
+console.log('✅ Debug completed');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

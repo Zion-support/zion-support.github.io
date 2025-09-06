@@ -181,6 +181,7 @@ interface WhitelabelProviderProps {
 <<<<<<< HEAD
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
 
+<<<<<<< HEAD
 
 export const useWhitelabel = (): WhitelabelContextType => {;
 
@@ -210,6 +211,11 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
 
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);  const { tenant, isLoading } = useWhitelabelTenant();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
+
+  const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);  const { tenant, isLoading } = useWhitelabelTenant();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   useEffect(() => {
     if (!isLoading && tenant) {
       setContextValue({
@@ -222,6 +228,7 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
         tenant: tenant,
       });
     } else if (!isLoading) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       setContextValue(defaultContext);
     }
@@ -359,6 +366,13 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
   // `WhitelabelProvider`. The runtime check above guarantees it's defined.;
   return context as WhitelabelContextType
 };
+=======
+      setContextValue(defaultContext)
+  // Cast is used here because the context default is `null` until provided by;
+  // `WhitelabelProvider`. The runtime check above guarantees it's defined.;
+  return context as WhitelabelContextType
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   useEffect(() => {;
     if (!isLoading && tenant) {;
       setContextValue({;
@@ -374,6 +388,7 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
       {children}
 
     </WhitelabelContext && WhitelabelContext.Provider>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 };
@@ -570,3 +585,7 @@ export const WhitelabelProvider = ({ children } WhitelabelProviderProps) => {;
   )
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

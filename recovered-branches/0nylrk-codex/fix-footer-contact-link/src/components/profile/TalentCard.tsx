@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -121,6 +122,10 @@ export interface TalentCardProps {;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   talent: TalentProfile,;
   onViewProfile: (id: string) => void,;
   onRequestHire: (talent: TalentProfile) => void,;
@@ -151,6 +156,7 @@ export function TalentCard(): any ({;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   },;
   const handleToggleSave = (e: React.MouseEvent) => {;
     e.preventDefault(),;
@@ -171,6 +177,8 @@ export function TalentCard(): any ({;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };
 
   const handleToggleSave = (e: React && React.MouseEvent) => {;
@@ -185,6 +193,7 @@ export function TalentCard(): any ({;
   const skills = talent && talent.skills?.slice(0, 5) || [];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
@@ -195,6 +204,8 @@ export function TalentCard(): any ({;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>;
       <div className="p-6">;
@@ -210,6 +221,7 @@ export function TalentCard(): any ({;
           {/* Main Info */}
           <div className="flex-1">;
             <div className="flex justify-between items-start">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;
 <<<<<<< HEAD
@@ -359,6 +371,9 @@ export function TalentCard({;
 =======
               <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;            {/* Location & Availability */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;            {/* Location & Availability */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent && talent.location && (;
                 <div className="flex items-center text-zion-slate-light">;
@@ -373,6 +388,7 @@ export function TalentCard({;
                 </div>;
               )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -433,6 +449,8 @@ export function TalentCard({;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>;
           </div>;
         </div>;
@@ -449,6 +467,7 @@ export function TalentCard({;
               ))}              )}
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>;
         {/* Skills */}
@@ -519,6 +538,13 @@ export function TalentCard({;
               <div className="text-zion-slate-light">Rate not specified</div>;
             )}            )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        )}                <span className="text-zion-slate-light font-normal">/hr</span>;
+              </div>;
+            ) : (;
+              <div className="text-zion-slate-light">Rate not specified</div>;
+            )}            )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           </div>;
 

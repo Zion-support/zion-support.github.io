@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function PrivacyPage() {;
   return (;
 
+<<<<<<< HEAD
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-gray-600 to-gray-800 text-white py-20">;
@@ -28,12 +32,23 @@ export default function PrivacyPage() {;
           </h1>;
           <p className="text - xl md:text - 2xl text - gray - 100 max - w-3xl mx-auto">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    <div className="min-h-screen bg-white">;    <div className="min-h-screen bg-white">;
+      {/* Hero Section */}
+      <section className="bg - gradient - to - r from - gray - 600 to - gray - 800 text - white py-20">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text-center">;
+          <h1 className="text - 4xl md:text - 6xl font - bold mb-6">;
+            Privacy Policy;
+          </h1>;
+          <p className="text - xl md:text - 2xl text - gray - 100 max - w-3xl mx-auto">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             Your privacy is important to us. Learn how we collect, use, and protect your personal information.;
           </p>;
         </div>;
       </section>;
       {/* Privacy Content */}
       <section className="py-20">;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="prose prose-lg max-w-none">;
@@ -113,6 +128,8 @@ export default function PrivacyPage() {;
               </ul>;
               <p className="text-gray-600">;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="prose prose - lg max-w-none">;
             <div className="mb-12">;
@@ -190,11 +207,15 @@ export default function PrivacyPage() {;
                 <li > Incident response procedures</li>;
               </ul>;
               <p className="text - gray-600">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.;
               </p>;
             </div>;
             <div className="mb-12">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Your Rights and Choices</h2>;
               <p className="text-gray-600 mb-4">;
@@ -214,6 +235,12 @@ export default function PrivacyPage() {;
               <p className="text - gray - 600 mb-4">;
                 Depending on your location, you may have certain rights regarding your personal information:;
               </p>;
+=======
+              <h2 className="text - 2xl font - bold text - gray - 900 mb-4">Your Rights and Choices</h2>;
+              <p className="text - gray - 600 mb-4">;
+                Depending on your location, you may have certain rights regarding your personal information:;
+              </p>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <ul className="list - disc pl - 6 text - gray - 600 mb-4">;
                 <li><strong > Access:</strong> Request access to your personal information</li>;
                 <li><strong > Correction:</strong> Request correction of inaccurate information</li>;
@@ -223,11 +250,15 @@ export default function PrivacyPage() {;
                 <li><strong > Withdrawal:</strong> Withdraw consent where processing is based on consent</li>;
               </ul>;
               <p className="text - gray-600">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 To exercise these rights, please contact us using the information provided below.;
               </p>;
             </div>;
             <div className="mb-12">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Cookies and Tracking Technologies</h2>;
               <p className="text-gray-600 mb-4">;
@@ -245,6 +276,12 @@ export default function PrivacyPage() {;
               <p className="text - gray - 600 mb-4">;
                 We use cookies and similar tracking technologies to enhance your experience on our website. These technologies help us:;
               </p>;
+=======
+              <h2 className="text - 2xl font - bold text - gray - 900 mb-4">Cookies and Tracking Technologies</h2>;
+              <p className="text - gray - 600 mb-4">;
+                We use cookies and similar tracking technologies to enhance your experience on our website. These technologies help us:;
+              </p>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <ul className="list - disc pl - 6 text - gray - 600 mb-4">;
                 <li > Remember your preferences and settings</li>;
                 <li > Analyze website traffic and usage patterns</li>;
@@ -252,11 +289,15 @@ export default function PrivacyPage() {;
                 <li > Improve website functionality and performance</li>;
               </ul>;
               <p className="text - gray-600">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 You can control cookie settings through your browser preferences. However, disabling certain cookies may affect website functionality.;
               </p>;
             </div>;
             <div className="mb-12">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h2 className="text-2xl font-bold text-gray-900 mb-4">International Data Transfers</h2>;
               <p className="text-gray-600 mb-4">;
@@ -276,6 +317,12 @@ export default function PrivacyPage() {;
               <p className="text - gray - 600 mb-4">;
                 Your information may be transferred to and processed in countries other than your own. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards, including:;
               </p>;
+=======
+              <h2 className="text - 2xl font - bold text - gray - 900 mb-4">International Data Transfers</h2>;
+              <p className="text - gray - 600 mb-4">;
+                Your information may be transferred to and processed in countries other than your own. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards, including:;
+              </p>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <ul className="list - disc pl - 6 text - gray - 600 mb-4">;
                 <li > Standard contractual clauses</li>;
                 <li > Adequacy decisions</li>;
@@ -285,11 +332,15 @@ export default function PrivacyPage() {;
             <div className="mb-12">;
               <h2 className="text - 2xl font - bold text - gray - 900 mb-4">Children's Privacy</h2>;
               <p className="text - gray-600">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Our services are not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us immediately.;
               </p>;
             </div>;
             <div className="mb-12">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Changes to This Privacy Policy</h2>;
               <p className="text-gray-600">;
@@ -297,10 +348,15 @@ export default function PrivacyPage() {;
               <h2 className="text - 2xl font - bold text - gray - 900 mb-4">Changes to This Privacy Policy</h2>;
               <p className="text - gray-600">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <h2 className="text - 2xl font - bold text - gray - 900 mb-4">Changes to This Privacy Policy</h2>;
+              <p className="text - gray-600">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. We encourage you to review this Privacy Policy periodically.;
               </p>;
             </div>;
             <div className="mb-12">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>;
               <p className="text-gray-600 mb-4">;
@@ -327,6 +383,19 @@ export default function PrivacyPage() {;
                 <p className="text - gray - 600 mb-2">;
                   <strong > Phone:</strong> <a href="tel:+13024640950" className="text - blue - 600 hover:text - blue-700">+1 (302) 464 - 0950</a>;
                 </p>;
+=======
+              <h2 className="text - 2xl font - bold text - gray - 900 mb-4">Contact Us</h2>;
+              <p className="text - gray - 600 mb-4">;
+                If you have any questions about this Privacy Policy or our data practices, please contact us:;
+              </p>;
+              <div className="bg - gray - 50 p - 6 rounded-lg">;
+                <p className="text - gray - 600 mb-2">;
+                  <strong > Email:</strong> <a href="mailto:privacy@ziontechgroup.com" className="text - blue - 600 hover:text - blue-700">privacy@ziontechgroup.com</a>;
+                </p>;
+                <p className="text - gray - 600 mb-2">;
+                  <strong > Phone:</strong> <a href="tel:+13024640950" className="text - blue - 600 hover:text - blue-700">+1 (302) 464 - 0950</a>;
+                </p>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <p className="text - gray - 600 mb-2">;
                   <strong > Address:</strong> Zion Tech Group, 123 Innovation Drive, Tech Valley, CA 94000, United States;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -334,6 +403,7 @@ export default function PrivacyPage() {;
               </div>;
             </div>;
             <div className="mb-12">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Additional Information for EU Residents</h2>;
               <p className="text-gray-600 mb-4">;
@@ -351,6 +421,12 @@ export default function PrivacyPage() {;
               <p className="text - gray - 600 mb-4">;
                 If you are located in the European Union, you have additional rights under the General Data Protection Regulation (GDPR):;
               </p>;
+=======
+              <h2 className="text - 2xl font - bold text - gray - 900 mb-4">Additional Information for EU Residents</h2>;
+              <p className="text - gray - 600 mb-4">;
+                If you are located in the European Union, you have additional rights under the General Data Protection Regulation (GDPR):;
+              </p>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <ul className="list - disc pl - 6 text - gray - 600 mb-4">;
                 <li > Right to lodge a complaint with a supervisory authority</li>;
                 <li > Right to data portability</li>;
@@ -358,7 +434,10 @@ export default function PrivacyPage() {;
                 <li > Right to be forgotten</li>;
               </ul>;
               <p className="text - gray-600">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Our legal basis for processing your personal information includes consent, contract performance, legal obligations, legitimate interests, and vital interests.;
               </p>;
             </div>;
@@ -366,6 +445,7 @@ export default function PrivacyPage() {;
         </div>;
       </section>;
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-20 bg-gray-50">;
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
@@ -395,6 +475,21 @@ export default function PrivacyPage() {;
             </a>;
             <a href="/terms" className="border - 2 border - gray - 300 text - gray - 700 px - 8 py - 3 rounded - lg text - lg font - semibold hover:border - gray - 400 transition-colors">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <section className="py - 20 bg - gray-50">;
+        <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text-center">;
+          <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb-6">;
+            Questions About Privacy?;
+          </h2>;
+          <p className="text - xl text - gray - 600 mb - 8 max - w-2xl mx-auto">;
+            We're committed to transparency and protecting your privacy. Contact us if you have any questions or concerns.;
+          </p>;
+          <div className="flex flex - col sm:flex - row gap - 4 justify-center">;
+            <a href="/contact" className="bg - blue - 600 text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - blue - 700 transition-colors">;
+              Contact Us;
+            </a>;
+            <a href="/terms" className="border - 2 border - gray - 300 text - gray - 700 px - 8 py - 3 rounded - lg text - lg font - semibold hover:border - gray - 400 transition-colors">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               View Terms of Service;
             </a>;
           </div>;

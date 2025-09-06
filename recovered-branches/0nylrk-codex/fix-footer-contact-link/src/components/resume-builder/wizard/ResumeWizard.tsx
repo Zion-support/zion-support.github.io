@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -12,6 +13,8 @@
 import {useState, useEffect} from 'react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {use_auth} from '@/hooks / use_auth';
 import {use_resume} from '@/hooks / use_resume';
 import {Tabs} from '@/components / ui / tabs';
@@ -22,6 +25,7 @@ import {AlertCircle, FilePlus, Loader2} from 'lucide-react';
 import {Button} from '@/components / ui / button';
 import {Resume} from '@/types / resume';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Import components;
 =======
@@ -38,6 +42,9 @@ import { useState, useEffect  } from 'react';
 =======
 // Import components;import { useState, useEffect  } from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+// Import components;import { useState, useEffect  } from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useAuth  } from '@/hooks/useAuth';
 import { useResume  } from '@/hooks/useResume';
 import { Tabs  } from '@/components/ui/tabs';
@@ -77,6 +84,7 @@ import {ResumeSteps} from './ResumeSteps';
 import {ResumeStepContent} from './ResumeStepContent';
 import {useResumeProgress} from './useResumeProgress';
 import {ResumeVersionSelector} from './ResumeVersionSelector';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {RESUME_STEPS} from './constants';
 <<<<<<< HEAD
@@ -131,6 +139,9 @@ export function ResumeWizard() {;
 =======
 import {RESUME_STEPS} from './constants';  // Use the extracted hook for progress calculation
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {RESUME_STEPS} from './constants';  // Use the extracted hook for progress calculation
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 =======
@@ -168,6 +179,7 @@ import {RESUME_STEPS} from './constants';  // Use the extracted hook for progres
   };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -177,6 +189,8 @@ import {RESUME_STEPS} from './constants';  // Use the extracted hook for progres
 import { useState, useEffect } from 'react',;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useAuth } from '@/hooks/useAuth',;
 import { useResume } from '@/hooks/useResume',;
 import { Tabs } from '@/components/ui/tabs',;
@@ -204,6 +218,7 @@ export function ResumeWizard() {;
     createResume;
   } = useResume(),;
   const [activeTab, setActiveTab] = useState('basic-info'),;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [showNewResumeForm, setShowNewResumeForm] = useState(false),;
 <<<<<<< HEAD
@@ -353,6 +368,9 @@ export function ResumeWizard() {;
 =======
   const [showNewResumeForm, setShowNewResumeForm] = useState(false),;  if (error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [showNewResumeForm, setShowNewResumeForm] = useState(false),;  if (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
       <Alert variant="destructive" className="mb-6">
         <AlertCircle className="h-4 w-4" />
@@ -360,6 +378,7 @@ export function ResumeWizard() {;
         <AlertDescription>{error}</AlertDescription>
       </Alert>
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   if (!resume && !showNewResumeForm) {
@@ -371,6 +390,11 @@ export function ResumeWizard() {;
 
   }
   if (showNewResumeForm) {
+=======
+
+  }
+  if (showNewResumeForm) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
   }
@@ -388,6 +412,7 @@ export function ResumeWizard() {;
   if (showNewResumeForm) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -400,11 +425,14 @@ export function ResumeWizard() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
       <CreateResumeForm
         onCreateResume={handleCreateNewResume}
         onCancel={() => setShowNewResumeForm(false)}
         isLoading={isLoading}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -489,6 +517,8 @@ export function ResumeWizard() {;
               steps={RESUME_STEPS} 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               activeTab={activeTab} 
               onChange={setActiveTab} 
             />;
@@ -497,6 +527,7 @@ export function ResumeWizard() {;
 
               <ResumeStepContent 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -526,12 +557,15 @@ export function ResumeWizard() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 activeTab={activeTab}
                 resume={resume as Resume}
                 onNextStep={nextStep}
                 onPrevStep={prevStep}
               />;
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -551,6 +585,8 @@ export function ResumeWizard() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </Tabs>;
         </CardContent>;
       </Card>;
@@ -722,6 +758,7 @@ const [showNewResumeForm, setShowNewResumeForm] = useState (false);
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 <<<<<<< HEAD
@@ -732,6 +769,8 @@ const [showNewResumeForm, setShowNewResumeForm] = useState (false);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export /**
  * ResumeWizard - Function description
  */
@@ -744,6 +783,7 @@ function ResumeWizard() {
     fetch_resume;
     create_resume;
   } = use_resume ();
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -759,3 +799,6 @@ function ResumeWizard() {
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

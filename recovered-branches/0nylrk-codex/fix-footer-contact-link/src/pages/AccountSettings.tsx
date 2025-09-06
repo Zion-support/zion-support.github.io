@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -12,6 +13,8 @@
 import {useState, useEffect} from 'react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
 import {SEO} from '@/components / SEO';
@@ -26,6 +29,7 @@ import {Label} from '@/components / ui / label';
 import {toast} from 'sonner';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -37,6 +41,8 @@ import {toast} from 'sonner';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect  } from 'react';
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
@@ -72,6 +78,7 @@ import {toast} from 'sonner';
 export default function AccountSettings() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -82,16 +89,21 @@ export default function AccountSettings() {;
   const { user } = useAuth();
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   useEffect(() => {
     try {
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   useEffect(() => {;
     try {;
@@ -101,6 +113,7 @@ export default function AccountSettings() {;
         setDisplayWeb3(!!parsed && parsed.displayWeb3);
         setDidHandle(parsed && parsed.didHandle || '');
         setEnableBackup(!!parsed && parsed.enableBackup);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -170,6 +183,8 @@ export default function AccountSettings() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -196,6 +211,7 @@ export default function AccountSettings() {;
         const parsed = JSON.parse(saved),;
         setDisplayWeb3(!!parsed.displayWeb3),;
         setDidHandle(parsed.didHandle || ''),;
+<<<<<<< HEAD
 <<<<<<< HEAD
         setEnableBackup(!!parsed.enableBackup);
 <<<<<<< HEAD
@@ -243,11 +259,17 @@ export default function AccountSettings() {;
       console && console.error('Error loading account settings', e);
     }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        setEnableBackup(!!parsed.enableBackup);    } catch (e) {;
+      console && console.error('Error loading account settings', e);
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleSave = () => {
     setIsSubmitting(true);
   }, []),
   }, []),  }, []),
   }, []),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -301,6 +323,11 @@ export default function AccountSettings() {;
   const handleSave = () => {
     setIsSubmitting(true),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  const handleSave = () => {
+    setIsSubmitting(true),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           'account_settings';
           JSON && JSON.stringify({ displayWeb3, didHandle, enableBackup });
         );
@@ -317,6 +344,7 @@ export default function AccountSettings() {;
         toast && toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
         return;
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -609,6 +637,11 @@ export default function AccountSettings() {;
     } catch (error: any) {;
       toast && toast.error(error && error.message || 'Failed to connect wallet');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      toast && toast.success(`Wallet connected: ${address && address.slice(0, 6)}...${address && address.slice(-4)}`);
+    } catch (error: any) {;
+      toast && toast.error(error && error.message || 'Failed to connect wallet');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   }
   },
@@ -617,12 +650,15 @@ export default function AccountSettings() {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 
     <>;
@@ -656,6 +692,7 @@ export default function AccountSettings() {;
                 <Switch
                   id="displayWeb3"
                   checked={displayWeb3}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   onCheckedChange={setDisplayWeb3}
 <<<<<<< HEAD
@@ -1386,6 +1423,9 @@ if ( {) {
 =======
                   onCheckedChange={setDisplayWeb3}                </p>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  onCheckedChange={setDisplayWeb3}                </p>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>;
             </CardContent>;
           </Card>;
@@ -1394,6 +1434,7 @@ if ( {) {
       <Footer />;
 
     </>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -1465,3 +1506,6 @@ try {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

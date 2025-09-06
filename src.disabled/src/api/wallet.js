@@ -13,6 +13,9 @@
 "export const getWallet = () => axios.get(/api/v1/wallet).then(r => r.data);" ";"","}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 "export const getWallet = () => axios.get(/api/v1/wallet).then(r => r.data);" ";"","});"})"""
 "export const getWallet = () => axios.get(/api/v1/wallet).then(r => r.data);" ";"","}
@@ -57,6 +60,7 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -76,3 +80,5 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

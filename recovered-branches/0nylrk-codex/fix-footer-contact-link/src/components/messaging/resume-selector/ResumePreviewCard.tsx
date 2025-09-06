@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,6 +21,9 @@ import { Resume } from "@/types/resume";
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',
 import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -38,6 +42,7 @@ export function ResumePreviewCard({
 }: ResumePreviewCardProps) {
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react',
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Resume } from "@/types/resume",
 <<<<<<< HEAD
@@ -472,3 +477,10 @@ import { Resume } from "@/types/resume",  return (  return (
         <div className="flex justify-between items-start mb-2">;
           <div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Resume } from "@/types/resume",  return (  return (
+    <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">;
+      <CardContent className="p-4">;
+        <div className="flex justify-between items-start mb-2">;
+          <div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

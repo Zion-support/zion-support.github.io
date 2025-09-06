@@ -3,6 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar'
 import { Badge } from '@/components / ui / badge';
 import { Crown, Medal, Trophy } from './lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -73,6 +74,8 @@ interface LeaderboardEntry {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   badges: string[]
 }
 export function PartnerLeaderboard() {
@@ -83,6 +86,7 @@ export function PartnerLeaderboard() {
       id: "1"
       rank: 1
       name: "AI Tech Guru"
+<<<<<<< HEAD
 <<<<<<< HEAD
       avatar: "", // URL would be here
 <<<<<<< HEAD
@@ -131,6 +135,9 @@ export function PartnerLeaderboard() {
 =======
       avatar: "", // URL would be here    {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      avatar: "", // URL would be here    {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       id: "2"
       rank: 2
@@ -140,6 +147,7 @@ export function PartnerLeaderboard() {
       earnings: 3625
 
       badges: ["silver"]
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -195,6 +203,10 @@ export function PartnerLeaderboard() {
 
     },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
 
       id: "4"
@@ -206,6 +218,7 @@ export function PartnerLeaderboard() {
 
       badges: []
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -236,6 +249,8 @@ export function PartnerLeaderboard() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   ];
   // Function to render rank badge
@@ -272,6 +287,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
 import { Crown, Medal, Trophy } from "lucide-react",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -323,6 +339,8 @@ interface LeaderboardEntry {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function PartnerLeaderboard() {;
   // Placeholder data - would come from API in real implementation;
   const leaderboard: LeaderboardEntry[] = [;
@@ -372,6 +390,7 @@ export function PartnerLeaderboard() {;
       badges: ["newcomer"];
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -530,6 +549,9 @@ function PartnerLeaderboard() {
 =======
   ];                  }`}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  ];                  }`}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >
                   <div className="flex items-center gap-3">
                     <div className="flex items-center justify-center h-8 w-8 rounded-full bg-zion-blue-light">
@@ -555,6 +577,7 @@ function PartnerLeaderboard() {
                       {entry.badges.includes("gold") && (
                         <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">
                           Elite
+<<<<<<< HEAD
 <<<<<<< HEAD
                         </Badge>
 <<<<<<< HEAD
@@ -808,6 +831,9 @@ export function PartnerLeaderboard() {;
 =======
                         </Badge>            )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                        </Badge>            )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
         </CardContent>
       </Card>
@@ -868,8 +894,11 @@ export function PartnerLeaderboard() {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             )}
           </div>;
         </CardContent>;
@@ -896,6 +925,7 @@ export function PartnerLeaderboard() {;
       </Card>;
 
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -963,3 +993,6 @@ return (<div className="space-y-6"> <Card className="bg-zion-blue-dark border-zi
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

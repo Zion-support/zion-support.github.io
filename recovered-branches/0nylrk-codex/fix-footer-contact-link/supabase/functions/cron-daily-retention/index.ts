@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21,10 +22,15 @@ import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "";
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
+<<<<<<< HEAD
 <<<<<<< HEAD
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 <<<<<<< HEAD
@@ -243,6 +249,14 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);          headers
     const response = await fetch(`${supabaseUrl}/functions/v1/process-retention-emails`, {    return new Response(JSON.stringify({
       success: false    return new Response(JSON.stringify({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const supabase = createClient(supabaseUrl, supabaseServiceKey);          headers: { "Content-Type": "application/json" }})
+      }
+    }
+    // Call the process-retention-emails function
+    const response = await fetch(`${supabaseUrl}/functions/v1/process-retention-emails`, {    return new Response(JSON.stringify({
+      success: false    return new Response(JSON.stringify({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       success: false
       status: 200,
       headers: { "Content - Type": "application / json" }});
@@ -260,6 +274,7 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);          headers
       error: error && error.message}), {
       status: 500,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       headers: { "Content - Type": "application / json" }});
 =======
@@ -306,6 +321,9 @@ import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 =======
       headers: { "Content - Type": "application / json" }});import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      headers: { "Content - Type": "application / json" }});import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
 // Initialize Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "",;
@@ -347,6 +365,7 @@ serve(async (req) => {;
   }
 });  }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -441,3 +460,6 @@ error: error.message
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

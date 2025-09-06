@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -58,11 +59,14 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { IntegrationCards } from "./IntegrationCards";
 import { ZapierIntegration } from "./ZapierIntegration";
 import { Badge } from "@/components/ui/badge";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -130,10 +134,13 @@ export function IntegrationsHub() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="flex gap-2">
           <Button variant="outline">View Documentation</Button>
           <Button>Connect New Integration</Button>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>
 <<<<<<< HEAD
@@ -164,6 +171,9 @@ export function IntegrationsHub() {
 =======
       </div>      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </div>      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <Card>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-center">
@@ -188,6 +198,7 @@ export function IntegrationsHub() {
             </div>
           </CardContent>
         </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -216,6 +227,8 @@ export function IntegrationsHub() {
         <Card className="md:col-span-2">
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <CardHeader className="pb-2">
             <CardTitle className="text-lg">Recent Activity</CardTitle>
           </CardHeader>
@@ -251,6 +264,7 @@ export function IntegrationsHub() {
           </CardFooter>
         </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>
 <<<<<<< HEAD
 
@@ -281,10 +295,14 @@ export function IntegrationsHub() {
 =======
       </div>      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </div>      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <TabsList className="grid grid-cols-3 md: w-[400px]">
           <TabsTrigger value="marketplace">Marketplace</TabsTrigger>
           <TabsTrigger value="zapier">Zapier</TabsTrigger>
           <TabsTrigger value="webhooks">Webhooks</TabsTrigger>
+<<<<<<< HEAD
 <<<<<<< HEAD
         </TabsList>
 <<<<<<< HEAD
@@ -348,6 +366,9 @@ export function IntegrationsHub() {
 =======
         </TabsList>          <TabsContent value="webhooks" className="m-0">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        </TabsList>          <TabsContent value="webhooks" className="m-0">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <Card>
               <CardHeader>
                 <CardTitle>Webhook Management</CardTitle>
@@ -358,6 +379,7 @@ export function IntegrationsHub() {
               <CardContent>
                 <WebhookManager />
               </CardContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
             </Card>
 <<<<<<< HEAD
@@ -388,6 +410,9 @@ export function IntegrationsHub() {
 =======
             </Card>            <Card className="mt-6">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            </Card>            <Card className="mt-6">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <CardHeader>
                 <CardTitle>Synchronization Log</CardTitle>
                 <CardDescription>
@@ -402,6 +427,7 @@ export function IntegrationsHub() {
         </div>
       </Tabs>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -430,6 +456,9 @@ export function IntegrationsHub() {;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -461,6 +490,7 @@ export function IntegrationsHub() {;
               <CardTitle className="text-lg">Status</CardTitle>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Badge variant="outline" className="bg-green-100 text-green-800">;
 ;
 <<<<<<< HEAD
@@ -474,6 +504,9 @@ export function IntegrationsHub() {;
 =======
               <Badge variant="outline" className="bg-green-100 text-green-800">;  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <Badge variant="outline" className="bg-green-100 text-green-800">;  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Healthy;
               </Badge>;
             </div>;
@@ -517,6 +550,7 @@ export function IntegrationsHub() {;
       </Tabs>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     </div>;
 =======
@@ -532,10 +566,13 @@ export function IntegrationsHub() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 }
 ;  );  );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -551,3 +588,6 @@ export function IntegrationsHub() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

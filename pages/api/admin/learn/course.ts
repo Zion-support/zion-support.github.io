@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from 'next',;
@@ -119,8 +123,28 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (existingIndex >= 0) {
 
+<<<<<<< HEAD
     } else {
       courses.push (body);
+=======
+
+=======
+import fs from 'fs';
+import path from 'path';
+  }
+  try {
+
+    const existingIndex = courses.findIndex((c: any) => c.id === body.id);
+    if (existingIndex >= 0) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      courses[existingIndex] = { ...courses[existingIndex], ...body };
+    } else {
+      courses.push(body);
+    }
+
+<<<<<<< HEAD
+    fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2)),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -199,7 +223,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2));
+    
+    res.status(200).json({ ok: true, course: newCourse });
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message ?? 'Failed to save course' });
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

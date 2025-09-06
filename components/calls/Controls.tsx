@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -27,6 +28,11 @@ type Props = {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   room: Room | null;
   onLeave: () => void;
+=======
+import React from 'react';
+import type { Room } from 'livekit-client';
+type Props = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
 <<<<<<< HEAD
 
@@ -40,6 +46,7 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
   const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600';
   const toggleMic = async () => {
     if (!room) return;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     const enabled =
@@ -70,6 +77,8 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
   return (
   };
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   accent?: 'blue' | 'cyan';};type Props = {;
 =======
   accent?: 'blue' | 'cyan'
@@ -118,10 +127,39 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
     } catch (e) {
       console.warn('Screen share failed', e)
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+const enabled =
+      await room.localParticipant.setMicrophoneEnabled(!micEnabled);
+    setMicEnabled(enabled);
+  };
+
+  const toggleCam = async () => {
+    if (!room) return;
+    const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);
+setCamEnabled(enabled);
+  };
+
+  const toggleScreenShare = async () => {
+    if (!room) return;
+    try {
+const enabled =
+        await room.localParticipant.setScreenShareEnabled(!sharing);
+      setSharing(enabled);
+    } catch (e) {
+      console.warn('Screen share failed', e);
+    }
+  };
+
+  return (
+<div className='flex items-center gap-3'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className='flex items-center gap-3'>
       <button
@@ -148,6 +186,7 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
         Leave
       </button>
     </div>
+<<<<<<< HEAD
 );
 }
 
@@ -258,8 +297,14 @@ if (return) {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

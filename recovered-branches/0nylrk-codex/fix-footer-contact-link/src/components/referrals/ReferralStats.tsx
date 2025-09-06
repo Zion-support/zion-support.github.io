@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -19,6 +20,10 @@ import { Award, Share, Star, TrendingUp } from "lucide-react",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ReferralStatsProps {
   stats: ReferralStatsType;
   isLoading: boolean
@@ -48,6 +53,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       icon: <Award className="h-5 w-5 text-muted-foreground" />
       description: "Credits earned from referrals"
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -93,6 +99,9 @@ function ReferralStats() {
 =======
 =======  ];
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======  ];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   return (
     <div className="grid gap - 4 md:grid - cols - 2 lg:grid - cols-4">;
@@ -248,6 +257,7 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
     </div>
@@ -259,3 +269,5 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

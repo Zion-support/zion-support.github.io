@@ -1,5 +1,28 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+return (
+    <>;
+      <SEO
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+        title='Hiring Tracker | Zion AI Marketplace'
+        description='Manage your candidate pipeline in the Zion AI Marketplace.'
+=======
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { KanbanBoard } from '@/components/hiring-tracker/KanbanBoard';
+import { HiringAnalytics } from '@/components/hiring-tracker/HiringAnalytics';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { SEO } from '@/components/SEO';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { Briefcase } from 'lucide-react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { useState } from "react",
@@ -10,17 +33,30 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { Briefcase } from 'lucide-react'
+<<<<<<< HEAD
 
 function HiringTrackerContent() {
   const router = useRouter(),
   const jobId = router.query.jobId as string,
   const [activeTab, setActiveTab] = useState<string>("kanban"),
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <SEO 
         title="Hiring Tracker | Zion AI Marketplace" 
         description="Manage your candidate pipeline in the Zion AI Marketplace." 
+=======
+function HiringTrackerContent() {
+            <p className='text-muted-foreground mt-1'>
+  return (
+    <>
+      <SEO
+        title="Hiring Tracker | Zion AI Marketplace"
+        description="Manage your candidate pipeline in the Zion AI Marketplace."
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       />
       <main className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-8">
@@ -53,17 +89,36 @@ return (
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
+=======
+
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+<Tabs
+          defaultValue='kanban'
+          onValueChange={setActiveTab}
+          className='mb-8'
+        >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <TabsList>
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           
@@ -71,6 +126,8 @@ return (
             <KanbanBoard jobId={jobId} />
           </TabsContent>
           
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 
@@ -98,6 +155,13 @@ return (
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <TabsContent value="analytics" className="mt-6">
+=======
+          <TabsContent value='kanban' className='mt-6'>
+            <KanbanBoard jobId={jobId} />
+          </TabsContent>
+
+          <TabsContent value='analytics' className='mt-6'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             <HiringAnalytics jobId={jobId} />
           </TabsContent>
         </Tabs>
@@ -105,7 +169,10 @@ return (
     </>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
   );
@@ -203,6 +270,7 @@ export default function HiringTracker() {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react';
 import { use_router } from 'next / router';
 import { KanbanBoard } from '@/components / hiring - tracker / KanbanBoard';
@@ -292,6 +360,12 @@ function HiringTracker() {
 =======
 import React from "react";
 import MainLayout from "../components/layout/MainLayout";
+=======
+=======
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const HiringTracker: React.FC = () => {
   return (
@@ -310,5 +384,18 @@ export default HiringTracker;
 export default function HiringTracker() {
   return (
     <ProtectedRoute>
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+      <HiringTrackerContent />
+    </ProtectedRoute>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

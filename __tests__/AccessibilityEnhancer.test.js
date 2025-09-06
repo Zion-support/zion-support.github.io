@@ -16,6 +16,7 @@
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
 =======
 import _React from 'react';  import '@testing-library/jest-dom'; import AccessibilityEnhancer from '../components/AccessibilityEnhancer'; describe('AccessibilityEnhancer',() => { test('renders without crashing',() => { render(<AccessibilityEnhancer />); expect(screen.getByTestId('accessibilityenhancer')).toBeInTheDocument()}); test('displays correct content',() => { render(<AccessibilityEnhancer />)}); test('handles user interactions',() => { render(<AccessibilityEnhancer />)}); test('applies correct styling',() => { render(<AccessibilityEnhancer />)})});
@@ -37,6 +38,8 @@ import { render, screen } from '@testing-library/react';
 
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -99,6 +102,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -107,6 +111,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -118,6 +124,7 @@ describe('AccessibilityEnhancer'
   test('handles user interactions'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AccessibilityEnhancer from "./components/AccessibilityEnhancer"; describe('AccessibilityEnhancer', () => { test("renders without crashing",() => { render(<AccessibilityEnhancer />); expect(screen.getByTestId("accessibilityenhancer")).toBeInTheDocument()}); test("displays correct content",() => { render(<AccessibilityEnhancer />)}); test("handles user interactions",() => { render(<AccessibilityEnhancer />)}); test("applies correct styling"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -156,3 +163,8 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Accessib
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+});
+});
+import _React from 'react';  import '@testing-library/jest-dom'; import AccessibilityEnhancer from '../components/AccessibilityEnhancer'; describe('AccessibilityEnhancer',() => { test('renders without crashing',() => { render(<AccessibilityEnhancer />); expect(screen.getByTestId('accessibilityenhancer')).toBeInTheDocument()}); test('displays correct content',() => { render(<AccessibilityEnhancer />)}); test('handles user interactions',() => { render(<AccessibilityEnhancer />)}); test('applies correct styling',() => { render(<AccessibilityEnhancer />)})});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 =======
@@ -22,7 +25,14 @@ export type CuttingEdgeAIService = {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
+<<<<<<< HEAD
   name: string,
+=======
+=======
+export type CuttingEdgeAIService = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  name: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   description: string;
   category:
     | 'AI Consciousness'
@@ -73,8 +83,11 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     id: 'ai - creative - studio',
     name: 'AI Creative Studio',
     description:;
@@ -84,12 +97,29 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     features: [;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+    id: 'ai-creative-studio'
+    name: 'AI Creative Studio'
+    description:
+      'Generate brand-consistent images and short-form videos with approvals and rights management.'
+    category: 'AI Creativity'
+    pricing: { starter: '$149/mo' }
+    features: [
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       'Brand kit',
       'Image & video gen',
       'Review & approvals',
       'Rights management',
     ],
     integrations: ['Canva', 'Figma'],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     useCases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com/services/ai-creative-studio',
     realService: true,
@@ -555,7 +585,17 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+    useCases: ['Marketing velocity', 'Cost savings'],
+    link: 'https://ziontechgroup.com/services/ai-creative-studio',
+    realService: true,
+  },
+];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

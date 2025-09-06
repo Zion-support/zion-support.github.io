@@ -69,10 +69,12 @@ export default function IncubatorPage() {
           </Link>
           <Link href={{ pathname: '/grants', query: { program: 'incubator' } }}>
             <a className='px-4 py-2 border rounded'>View Incubator Projects</a>
-          </Link>        </div>
+          </Link>
+        </div>
       </div>
     </EnhancedLayout>;
   );
+<<<<<<< HEAD
 }      <div className="max-w-3xl">
 <<<<<<< HEAD
 
@@ -129,4 +131,10 @@ function IncubatorPage() {
           <Link href={{ pathname: '/grants', query: { program: 'incubator' } }}><a className="px-4 py-2 border rounded">View Incubator Projects</a></Link>;
       </div>;
     </EnhancedLayout>);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

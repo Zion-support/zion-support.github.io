@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 const NotFound = () => {
@@ -19,6 +22,7 @@ const NotFound = () => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
+<<<<<<< HEAD
 =======
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
@@ -28,6 +32,8 @@ import { useEffect } from "react";
 import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const NotFound = () => {
   const location = useLocation();
 import { useLocation } from "react-router-dom",
@@ -39,6 +45,7 @@ import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
 import { useLocation } from "react-router-dom",
 import { useEffect } from "react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -58,6 +65,8 @@ const NotFound = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const NotFound = () => {
   const location = useLocation(),
 
@@ -68,13 +77,17 @@ const NotFound = () => {
     )const NotFound = () => {
   const location = useLocation(),
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const NotFound = () => {
   const location = useLocation(),
 
 const NotFound = () => {
   const location = useLocation(),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -85,6 +98,8 @@ const NotFound = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   useEffect(() => {
     console.error(
 <<<<<<< HEAD
@@ -117,6 +132,7 @@ const NotFound = () => {
         <a href="/" className="text-blue-500 hover: text-blue-700 underline">
           Return to Home
         </Link>      </div>
+<<<<<<< HEAD
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -223,6 +239,12 @@ export default NotFound;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
+=======
+    </div>
+  )
+};
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { use_location } from './react-router-dom';
 import { useEffect } from './react';
 const NotFound = () =>: any {
@@ -250,6 +272,7 @@ export default NotFound;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 },;
@@ -270,3 +293,5 @@ export default NotFound;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37,10 +38,13 @@ const Jobs: NextPage = () => {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       name: 'Zion Tech Solutions',
       same_as: 'https://ziontechgroup.netlify.app',
       logo: 'https://ziontechgroup.netlify.app / logo.png'},
     jobLocationType: 'TELECOMMUTE'} as const,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -167,6 +171,9 @@ export default Jobs,;
 =======
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         datePosted={job.datePosted  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -208,6 +215,7 @@ export default Jobs,;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -223,12 +231,17 @@ export default Jobs,;
         base_salary={job.base_salary}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        valid_through={job.valid_through}
+        base_salary={job.base_salary}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       />;
       <main>;
         <h1 > Jobs</h1>;
         <p>{job.title}</p>;
         <p>{job.description}</p>;
       </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -269,3 +282,35 @@ export default Jobs;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+    </div>;
+  );
+},;
+=======
+import type { NextPage } from 'next';
+import Seo from '../components/seo/Seo';
+import { JobPostingJsonLd } from 'next-seo';
+const Jobs: NextPage;
+      <JobPostingJsonLd
+        datePosted={job.datePosted}
+        description={job.description}
+        employmentType={job.employmentType}
+        hiringOrganization={job.hiringOrganization}
+        jobLocationType={job.jobLocationType}
+        title={job.title}
+        validThrough={job.validThrough}
+        baseSalary={job.baseSalary}
+      />
+      <main>
+        <h1>Jobs</h1>
+        <p>{job.title}</p>
+        <p>{job.description}</p>
+      </main>
+    </div>
+);
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+export default Jobs;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

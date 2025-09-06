@@ -2,6 +2,7 @@ import React from 'react';
 import * as React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {cn} from '@/lib/utils';
 =======
 
@@ -60,6 +61,8 @@ const Card = React && React.forwardRef<;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     ref={ref}
     className={cn(
       'rounded-lg border bg-card text-card-foreground shadow-sm'  <div
@@ -71,6 +74,7 @@ const Card = React && React.forwardRef<;
       "rounded-lg border bg-card text-card-foreground shadow-sm",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -80,19 +84,25 @@ const Card = React && React.forwardRef<;
       className
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     )}
     {...props}
   />
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ))
 Card.displayName = "Card"
 
 const CardHeader = React.forwardRef<
   HTMLDivElement,
+<<<<<<< HEAD
 <<<<<<< HEAD
   React.HTMLAttributes<HTMLDivElement>
 <<<<<<< HEAD
@@ -163,6 +173,9 @@ CardHeader && CardHeader.displayName = 'CardHeader';
 =======
   React.HTMLAttributes<HTMLDivElement>CardHeader && CardHeader.displayName = 'CardHeader';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  React.HTMLAttributes<HTMLDivElement>CardHeader && CardHeader.displayName = 'CardHeader';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const CardTitle = React && React.forwardRef<;
   HTMLParagraphElement,;
@@ -178,6 +191,7 @@ const CardTitle = React && React.forwardRef<;
 =======
       'text-2xl font-semibold leading-none tracking-tight'
       "text-2xl font-semibold leading-none tracking-tight",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -204,10 +218,13 @@ const CardDescription = React.forwardRef<
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ))
 CardTitle.displayName = "CardTitle"
 
 const CardDescription = React.forwardRef<
+<<<<<<< HEAD
 <<<<<<< HEAD
   HTMLParagraphElement,
 <<<<<<< HEAD
@@ -319,6 +336,9 @@ const Card = React.forward_ref<;
 =======
   HTMLParagraphElement,    className={cn (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  HTMLParagraphElement,    className={cn (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'rounded - lg border bg - card text - card - foreground shadow - sm',
       class_name)}
     {...props}
@@ -360,6 +380,7 @@ const CardFooter = React.forwardRef<
   />
     ref={ref}
     className={cn ('text - sm text - muted - foreground', class_name)}
+<<<<<<< HEAD
 <<<<<<< HEAD
     {...props}
 <<<<<<< HEAD
@@ -588,3 +609,6 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 =======
     {...props}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    {...props}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

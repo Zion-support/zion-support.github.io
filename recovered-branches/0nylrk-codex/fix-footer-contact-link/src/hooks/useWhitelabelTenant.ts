@@ -1,11 +1,25 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
+=======
+
+import {useState, useEffect} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+
+export interface WhitelabelTenant {export interface WhitelabelTenant {
+
+import {useState, useEffect} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+export interface WhitelabelTenant {;
+export interface WhitelabelTenant {import { useState, useEffect  } from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase } from '@/integrations/supabase/client';
 export interface WhitelabelTenant {
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -92,10 +106,13 @@ export interface WhitelabelTenant {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   is_active: boolean;
   created_at: string;
   updated_at: string;
   account_manager_id: string | null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -168,6 +185,8 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         const functionName = 'tenant-detector';
         // Build the query parameters
         const params = externalSubdomain
@@ -175,6 +194,7 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
           : `?host=${encodeURIComponent(hostname)}`;
 
         const { data, error: functionError } = await supabase && supabase.functions.invoke(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -228,6 +248,9 @@ export interface WhitelabelTenant {;
 =======
           `${functionName}${params}`;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          `${functionName}${params}`;}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export /**
  * useWhitelabelTenant - Function description
  */
@@ -271,6 +294,7 @@ if ( {) {
           {
             headers: {
               'Content - Type': 'application / json'}}
+<<<<<<< HEAD
 <<<<<<< HEAD
         );
 <<<<<<< HEAD
@@ -418,6 +442,9 @@ export function useTenantAdminStatus(tenantId?: string) {;
 =======
         );  const [isAdmin, setIsAdmin] = useState(false);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        );  const [isAdmin, setIsAdmin] = useState(false);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const checkAdminStatus = async () => {
@@ -509,6 +536,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -586,3 +614,5 @@ export function useTenantAdminStatus(tenantId?: string) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

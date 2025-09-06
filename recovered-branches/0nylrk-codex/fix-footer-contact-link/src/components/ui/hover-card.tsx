@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -19,6 +20,10 @@ import * as React from "react"
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card"
 
 import { cn } from "@/lib/utils"
@@ -34,6 +39,7 @@ const HoverCardContent = React.forwardRef<
     ref={ref}
     align={align}
     sideOffset={sideOffset}
+<<<<<<< HEAD
 <<<<<<< HEAD
     className={cn(
 <<<<<<< HEAD
@@ -60,11 +66,15 @@ const HoverCardContent = React.forwardRef<
 =======
     className={cn(      className
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    className={cn(      className
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     )}
     {...props}
   />;
 ));
 HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -77,6 +87,8 @@ HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export { HoverCard, HoverCardTrigger, HoverCardContent }
 export { HoverCard, HoverCardTrigger, HoverCardContent }
 ;
@@ -149,6 +161,7 @@ React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>)
 ;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 export { HoverCard, HoverCardTrigger, HoverCardContent }
@@ -156,3 +169,5 @@ export { HoverCard, HoverCardTrigger, HoverCardContent }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

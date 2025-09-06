@@ -172,6 +172,7 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map(category => (
         <Card          key={category.id}
+<<<<<<< HEAD
           className="cursor-pointer hover:border-zion-purple/50 transition-colors"
           onClick={() => onCategorySelect(category.id)}
         >
@@ -322,6 +323,8 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
       {filteredCategories.map(category => (
         <Card
           key={category.id}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           className="cursor-pointer hover:border-zion-purple/50 transition-colors"
           onClick={() => onCategorySelect(category.id)}
         >
@@ -339,6 +342,7 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
           </CardContent>
         </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -351,6 +355,8 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       ))}
     </div>
   );
@@ -358,11 +364,14 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       ))}
 import React from './react';
 import {

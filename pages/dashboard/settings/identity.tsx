@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useState } from 'react',;
 import Head from 'next/head',;
 import type { KycProfile } from '../../../utils/kyc',;
@@ -13,10 +17,13 @@ export default function IdentitySettingsPage() {
   const [profile, setProfile] = useState<KycProfile | null>(null),
   const [error, setError] = useState(''),
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useState } from 'react';
 
 import Head from 'next/head';
@@ -28,6 +35,7 @@ export default function IdentitySettingsPage() {
   const [profile, setProfile] = useState<KycProfile | null>(null)
   const [error, setError] = useState('')
   async function load() {
+<<<<<<< HEAD
 
 
     try {
@@ -143,10 +151,13 @@ export default function IdentitySettingsPage() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (e) {
       setError('Failed to fetch')
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -195,6 +206,8 @@ export default function IdentitySettingsPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../../utils/kyc';
@@ -205,6 +218,7 @@ export default function IdentitySettingsPage(req, res) {
   const [profile, setProfile] = useState<KycProfile | null>(null);
   const [error, setError] = useState('');
   async function load() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -221,6 +235,10 @@ export default function IdentitySettingsPage(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try {
       const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`);
       const data = await res.json();
@@ -233,6 +251,7 @@ export default function IdentitySettingsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
     } catch (error) {
     console.error("Error:", error);
@@ -277,10 +296,16 @@ export default function IdentitySettingsPage(req, res) {
         <div className="mb-4 text-sm text-gray-600">
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          <ProfileBadges profile={profile || undefined} />
+        </div>
+        <div className="mb-4 text-sm text-gray-600">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </main>
     </>
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -290,6 +315,8 @@ export default function IdentitySettingsPage(req, res) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -302,7 +329,10 @@ export default function IdentitySettingsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </main>
     </>
   )
@@ -310,6 +340,7 @@ export default function IdentitySettingsPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -319,3 +350,55 @@ export default function IdentitySettingsPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import React, { useEffect, useState } from 'react',
+import Head from 'next/head';
+import type { KycProfile } from '../../../utils/kyc';
+import { ProfileBadges } from '../../../components/ui/ProfileBadges';
+  const [userId, setUserId] = useState('demo-user');
+  const [profile, setProfile] = useState<KycProfile | null>(null),
+  const [error, setError] = useState('');
+  async function load() {
+    try {
+      const res = null;
+    }
+  }
+  useEffect(() => {
+    load()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+  return (
+    <>
+      <Head>
+        <title>Identity Settings - Zion</title>
+<meta
+          name='description'
+          content='Manage your identity verification status'
+        />
+      </Head>
+      <main className='max-w-3xl mx-auto px-4 py-8'>
+        <h1 className='text-2xl font-bold mb-4'>Identity</h1>
+
+        <div className='mb-4'>
+          <ProfileBadges profile={profile || undefined} />
+        </div>
+
+        <div className='mb-4 text-sm text-gray-600'>
+          Status: {profile ? profile.status : 'not_started'} • AML:{' '}
+          {profile ? profile.amlStatus : 'unknown'}
+        </div>
+
+        <a
+          href='/verify'
+          className='inline-block rounded bg-blue-600 text-white px-4 py-2'
+        >
+          Go to verification
+        </a>
+
+        {error && <div className='mt-3 text-sm text-red-600'>{error}</div>}
+      </main>
+    </>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

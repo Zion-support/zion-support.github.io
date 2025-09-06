@@ -1,14 +1,30 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from "react",
 import Link from "next/link",
 import { ArrowRight, Phone } from 'lucide-react'
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { AppStoreButtons } from "./AppStoreButtons",
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Button } from "@/components/ui/button";
+import { AppStoreButtons } from "./AppStoreButtons";
+export const MobileAppHero: React.FC;
+}
+import React from "react"
+import Link from "next/link"
+import { ArrowRight, Phone } from 'lucide-react'import { Button } from "@/components/ui/button"
+import { AppStoreButtons } from "./AppStoreButtons"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config
   const appStoreUrl = "#", // Replace with actual App Store URL when available
@@ -142,6 +158,7 @@ export const MobileAppHero: React.FC = () => {;
 };
 
 "
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -150,6 +167,12 @@ export const MobileAppHero: React.FC = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 ";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

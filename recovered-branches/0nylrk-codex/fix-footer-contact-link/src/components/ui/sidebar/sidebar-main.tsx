@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -6,6 +7,10 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
 =======
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { CSSProperties } from "react"
 import { Sheet, SheetContent } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
@@ -21,6 +26,7 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
 export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   if (props.collapsible === "none") {
@@ -33,6 +39,8 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (props.collapsible === &quot;none&quot;) {
     return (
       <div
@@ -42,6 +50,7 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
   if (props.collapsible === &quot;none&quot;) {
 
   if (props.collapsible === "none") {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -255,6 +264,15 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
       >;
         {props.children}    >;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    return (
+      <div
+        className={cn(
+          "flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",        ref={ref}
+        {...props}
+      >;
+        {props.children}    >;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* This is what handles the sidebar gap on desktop */}
 <div
         className={cn(
@@ -272,6 +290,7 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
           props.variant === "floating" || props.variant === "inset"
             ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)))]"
             : "group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -391,6 +410,8 @@ export const SidebarRail = React.forwardRef<
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           props.className
         )}
@@ -426,6 +447,7 @@ export const SidebarRail = React.forwardRef<
         "[[data-side=right][data-collapsible=offcanvas]_&]:-left-2",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
@@ -435,12 +457,15 @@ export const SidebarRail = React.forwardRef<
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         props.className
       )}
       {...props}
     />
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 })
 <<<<<<< HEAD
@@ -511,11 +536,15 @@ export const SidebarInset = React.forwardRef<
 =======
 })        props.className
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+})        props.className
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       )}
       {...props}
     />
   )
 })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -665,3 +694,6 @@ SidebarInset.displayName = "SidebarInset"
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

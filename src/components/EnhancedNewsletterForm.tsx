@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
     setIsSubmitting(true),
@@ -33,6 +38,17 @@ import { useToast } from "@/hooks/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export function EnhancedNewsletterForm() {
+=======
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useState, useRef } from 'react';
+import { Mail } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+export function EnhancedNewsletterForm() {
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [email, setEmail] = useState("");
 <<<<<<< HEAD
 =======
@@ -49,6 +65,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
+<<<<<<< HEAD
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const lastSubmit = useRef(0);
@@ -303,6 +320,16 @@ import { logErrorToProduction } from '@/utils/productionLogger';
     }
   },
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  const EMAIL_REGEX = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
@@ -370,6 +397,11 @@ import { logErrorToProduction } from '@/utils/productionLogger';
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -464,3 +496,123 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 
 }
 
+<<<<<<< HEAD
+=======
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok) {
+        // Handle different success statuses
+        if (data.status === 'already_subscribed') {
+          toast({
+            title: 'Already subscribed',
+            description: data.message || "You're already subscribed!",
+          });
+        } else {
+          toast({
+            title: 'Success!',
+            description: data.message || 'Thanks for subscribing!',
+          });
+        }
+        setIsSubmitted(true);
+        setEmail('');
+      } else {
+        // Handle error responses
+        logErrorToProduction('Newsletter subscription failed:', { data: data });
+        toast({
+          title: 'Subscription failed',
+          description: data.error || 'Please try again.',
+          variant: 'destructive'
+        });
+      }
+    } catch (err: any) {
+      logErrorToProduction('Newsletter subscription error:', { data: err });
+      toast({
+        title: 'Error',
+        description: 'Something went wrong. Please try again.',
+        variant: 'destructive'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  if (isSubmitted) {
+    return (
+      <div className="text-center py-8">
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
+          <Mail className="w-8 h-8 text-green-600" />
+        </div>
+        <h3 className="text-lg font-semibold text-gray-900 mb-2">
+          Thank you for subscribing!
+        </h3>
+        <p className="text-gray-600 mb-4">
+          You'll receive our latest updates and exclusive content.
+        </p>
+        <Button
+          onClick={() => setIsSubmitted(false)}
+          variant="outline"
+          size="sm"
+        >
+          Subscribe another email
+        </Button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="max-w-md mx-auto">
+      <div className="text-center mb-6">
+        <h3 className="text-xl font-semibold text-gray-900 mb-2">
+          Stay Updated
+        </h3>
+        <p className="text-gray-600">
+          Get the latest news, updates, and exclusive content delivered to your inbox.
+        </p>
+      </div>
+
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="flex space-x-2">
+          <Input
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            disabled={isSubmitting}
+            className="flex-1"
+          />
+          <Button
+            type="submit"
+            disabled={isSubmitting || !email.trim()}
+            className="px-6"
+          >
+            {isSubmitting ? (
+              <div className="flex items-center space-x-2">
+                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                <span>Subscribing...</span>
+              </div>
+            ) : (
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4" />
+                <span>Subscribe</span>
+              </div>
+            )}
+          </Button>
+        </div>
+        
+        <p className="text-xs text-gray-500 text-center">
+          We respect your privacy. Unsubscribe at any time.
+        </p>
+      </form>
+    </div>
+  );
+}
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

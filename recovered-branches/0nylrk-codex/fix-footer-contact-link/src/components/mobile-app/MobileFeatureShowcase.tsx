@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React from "react";
@@ -52,6 +53,8 @@ import React from "react",
 import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
 export const MobileFeatureShowcase: React.FC = () => {
@@ -70,6 +73,7 @@ export const MobileFeatureShowcase: React.FC = () => {
     {
       icon: <Users className="h-8 w-8 text-zion-cyan" />,
       title: "Hire from Anywhere",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface.";
@@ -211,6 +215,26 @@ export const MobileFeatureShowcase: React.FC = () => {
     },
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
+    }
+    },      description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
+
+    },
+
+    }
+    },
+    {
+      icon: <Star className="h-8 w-8 text-zion-purple" />
+      title: "AI-Match Instantly"
+      description: "Get matched with the perfect talent or jobs using our advanced AI algorithm."    {
+      icon: <Mail className="h-8 w-8 text-zion-purple" />
+      title: "Instant Messaging"
+      description: "Chat with candidates or clients and receive notifications in real-time."
+
+    },
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ],
 
 }
@@ -239,6 +263,7 @@ export const MobileFeatureShowcase: React.FC = () => {
     },;
     {;
       icon: <Smartphone className="h-8 w-8 text-zion-cyan" />,;
+<<<<<<< HEAD
 <<<<<<< HEAD
       title: "Biometric Security",;
       description: "Login quickly and securely with Face ID or Touch ID on supported devices.";
@@ -338,6 +363,10 @@ export const MobileFeatureShowcase: React.FC = () => {
       title: "Biometric Security",,
   description: "Login quickly and securely with Face ID or Touch ID on supported devices.";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      title: "Biometric Security",,
+  description: "Login quickly and securely with Face ID or Touch ID on supported devices.";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",;
 export const MobileFeatureShowcase: React.FC = () => {;
@@ -388,12 +417,16 @@ export const MobileFeatureShowcase: React.FC = () => {;
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
       icon: <Users className="h - 8 w - 8 text - zion - cyan" />,
 =======
       icon: <Users className="h - 8 w - 8 text - zion-cyan" />,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      icon: <Users className="h - 8 w - 8 text - zion-cyan" />,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       title: "Hire from Anywhere",
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface.";
     }
@@ -449,6 +482,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;
@@ -466,3 +500,5 @@ export const MobileFeatureShowcase: React.FC = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

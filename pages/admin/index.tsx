@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link';
 import Link from 'next/link',;
 import Link from 'next/link';
@@ -54,11 +55,14 @@ function AdminIndex() {
 import Link from 'next/link';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Link from 'next/link',;
 import Link from 'next/link';
 
 
 export default function AdminIndex() {
+<<<<<<< HEAD
   return (
     <div className="space-y-2">
       <h1 className="text-2xl font-semibold">Admin</h1>
@@ -76,11 +80,31 @@ export default function AdminIndex() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
+=======
+=======
+import React from 'react';
+export default function Page() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+    <div className='space-y-2'>
+      <h1 className='text-2xl font-semibold'>Admin</h1>
+      <ul className='list-disc pl-6'>
+        <li>
+          <Link href='/admin/partners'>
+            <a className='text-blue-600 underline'>Partners</a>
+          </Link>
+        </li>
+      </ul>
+    </div>
+  );
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -102,3 +126,7 @@ export default function AdminIndex() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

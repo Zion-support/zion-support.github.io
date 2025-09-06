@@ -3,16 +3,20 @@ import { Button } from "@/components/ui/button";
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Link  } from './react-router-dom';
 import { use_auth  } from '@/hooks / use_auth';
 import { use_toast  } from '@/hooks / use - toast';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Button  } from '@/components / ui / button';
 =======
@@ -171,6 +175,13 @@ import { useToast } from "@/hooks/use-toast";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";  if (!user) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Button  } from '@/components / ui / button';import { Link } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
+import { useToast } from "@/hooks/use-toast";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";  if (!user) {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
       <div className="hidden md: flex items-center space-x-4">
         <Link to="/login" className="text-zion-slate-light hover:text-white">Login</Link>
@@ -189,6 +200,7 @@ import { Button } from "@/components/ui/button";  if (!user) {;
         </Link>;
       </div>;
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
@@ -327,6 +339,9 @@ import { Button } from "@/components/ui/button";  if (!user) {;
 =======
   }  )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Link } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
 import { useToast } from "@/hooks/use-toast",;
@@ -402,10 +417,13 @@ export function UserMenu() {;
     </DropdownMenu>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
       toast ({
         title: "Error signing out",
@@ -477,6 +495,7 @@ if ( {) {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 ;
@@ -525,3 +544,5 @@ const handleSignOut = async () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

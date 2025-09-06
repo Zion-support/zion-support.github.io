@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { FormEvent, useState } from 'react';
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {FormEvent, useState} from 'react';
 export default function VendorRegisterPage() {;
 =======
@@ -184,6 +188,40 @@ function on_submit() {
       if (!res.ok) throw new Error(data?.error |'Failed to submit');
       setMessage('Application submitted. Await approval.');
 
+=======
+import { FormEvent, useState } from 'react';
+export default function VendorRegisterPage() {
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState<string | null>(null),
+
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+    setMessage(null);
+          slug: String(payload.slug),
+          name: String(payload.name),
+          servicesOffered: String(payload.servicesOffered || '')
+.split(',')
+            .map(s => s.trim())
+            .filter(Boolean)
+          teamSize: Number(payload.teamSize |0)
+          about: String(payload.about |'')
+          verificationDocs: String(payload.verificationDocs |'')
+            .split(',')
+            .map(s => s.trim())
+            .filter(Boolean)
+          caseStudies: []
+        })
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.error |'Failed to submit');
+      setMessage('Application submitted. Await approval.');
+      form.reset();
+    } catch (err: any) {
+      setMessage(err.message);
+    } finally {
+      setLoading(false);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       form.reset()
     } catch (err: any) {
       setMessage(err.message)
@@ -193,7 +231,7 @@ function on_submit() {
   }
 
   return (
-    <div className='max-w-2xl mx-auto space-y-6'>
+<div className='max-w-2xl mx-auto space-y-6'>
       <h1 className='text-2xl font-semibold'>
         Apply to become a Vendor Partner
       </h1>
@@ -259,6 +297,7 @@ function on_submit() {
       {message && <div className='text-sm'>{message}</div>}
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
+<<<<<<< HEAD
 );
 }
 
@@ -514,6 +553,13 @@ function on_submit() {
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -258,6 +259,10 @@ const "Products": NextPage = () => {
 import { ArrowRight, Star, Download, Eye, Code, Database, Shield, Zap, CheckCircle } from 'lucide-react';
 const "Products": NextPage = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { ArrowRight, Star, Download, Eye, Code, Database, Shield, Zap, CheckCircle } from 'lucide-react';
+const "Products": NextPage = () => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import type { NextPage } from 'next';
@@ -267,6 +272,7 @@ import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
@@ -274,6 +280,8 @@ import Link from 'next/link';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const products = [{
       title: \'ZionAI Platform\',
       \"description\": \'Enterprise-grade AI platform for building, deploying, and managing machine learning models at scale.\',
@@ -387,6 +395,7 @@ import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -424,6 +433,8 @@ import Link from 'next/link';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const categories = [\'All Products\',
     \'AI & Machine Learning\',
     \'Cloud Solutions\',
@@ -437,6 +448,7 @@ import Link from 'next/link';
     'Cybersecurity',
     'Data Analytics',
     'IoT Platforms',
+<<<<<<< HEAD
 <<<<<<< HEAD
     'Blockchain'
 <<<<<<< HEAD
@@ -475,6 +487,9 @@ import Link from 'next/link';
 =======
     'Blockchain'  ];
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    'Blockchain'  ];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const benefits = [{
       \"title\": \'Enterprise Ready\',
       \"description\": \'Built for scale with enterprise-grade security and reliability.\',
@@ -518,6 +533,7 @@ import Link from 'next/link';
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"flex flex-wrap justify-center gap-4\">
 <<<<<<< HEAD
+<<<<<<< HEAD
             {categories.map((category) => (
 =======
 =======
@@ -538,6 +554,9 @@ import {ArrowRight,, Star,, Download,, Eye,, Code,, Database,, Shield,, Zap,, Ch
 =======
             {categories.map((category) => (import {ArrowRight,, Star,, Download,, Eye,, Code,, Database,, Shield,, Zap,, CheckCircle} from 'lucide-react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            {categories.map((category) => (import {ArrowRight,, Star,, Download,, Eye,, Code,, Database,, Shield,, Zap,, CheckCircle} from 'lucide-react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const "Products": NextPage = () => {;
   const products = [{;
       title: \'ZionAI Platform\',;
@@ -648,6 +667,7 @@ const "Products": NextPage = () => {;
       \"color\": \'from-yellow-500 to-orange-500\',;
       \"href\": \'/products/blockchain-suite\';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
@@ -660,6 +680,8 @@ const "Products": NextPage = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ];
   const benefits = [{
       \"title\": \'Enterprise Ready\',
@@ -737,17 +759,21 @@ const "Products": NextPage = () => {;
             {categories && categories.map((category) => (;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <button
                 key={category}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-colors ${
                   category === \'All Products\'
                     ? \'bg-blue-600 text-white\'
                     : \'bg-white text-gray-700 \"hover\": bg-blue-50\'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 }`}>;
@@ -766,6 +792,8 @@ const "Products": NextPage = () => {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 }`}
               >
                 {category}
@@ -775,6 +803,7 @@ const "Products": NextPage = () => {;
         </div>
       </section>
       {/* Products Grid */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -787,6 +816,8 @@ const "Products": NextPage = () => {;
       <section className=\"py-20\">
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
             <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">
@@ -797,6 +828,7 @@ const "Products": NextPage = () => {;
               your most complex business challenges.
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -851,6 +883,9 @@ const "Products": NextPage = () => {;
 =======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">                }`}>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">                }`}>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {category}
               </button>;
             ))}
@@ -863,6 +898,7 @@ const "Products": NextPage = () => {;
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
@@ -870,6 +906,8 @@ const "Products": NextPage = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {products.map((product) => (
               <div
                 key={product.title}
@@ -889,6 +927,7 @@ const "Products": NextPage = () => {;
                       <span className=\"ml-1 text-sm text-gray-500\">({product.reviews})</span>
                     </div>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -967,10 +1006,17 @@ const "Products": NextPage = () => {;
                   <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">                  <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </h3>
                   <p className=\"text-gray-600 mb-4\">
                     {product.description}
                   </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1011,6 +1057,8 @@ const "Products": NextPage = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <div className=\"mb-4\">
                     <p className=\"text-lg font-semibold text-blue-600\">{product.pricing}</p>
                   </div>
@@ -1018,6 +1066,7 @@ const "Products": NextPage = () => {;
                   <div className="mb-4">
                     <p className="text-lg font-semibold text-blue-600">{product.pricing}</p>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <ul className="space-y-2 mb-6">
 <<<<<<< HEAD
@@ -1064,11 +1113,15 @@ const "Products": NextPage = () => {;
 =======
                   <ul className="space-y-2 mb-6">                      <li key={feature} className=\"flex items-center text-sm text-gray-600\">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  <ul className="space-y-2 mb-6">                      <li key={feature} className=\"flex items-center text-sm text-gray-600\">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         <div className=\"w-2 h-2 bg-blue-600 rounded-full mr-3\"></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1153,6 +1206,8 @@ const "Products": NextPage = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     {product.features.slice(0, 3).map((feature) => (
                       <li key={feature} className=\"flex items-center text-sm text-gray-600\">
                         <div className=\"w-2 h-2 bg-blue-600 rounded-full mr-3\"></div>
@@ -1216,6 +1271,7 @@ const "Products": NextPage = () => {;
                         {feature}
                       </li>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1265,6 +1321,10 @@ const "Products": NextPage = () => {;
                     ))}                  <div className=\"flex gap-3\">
                   <div className="flex gap-3">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    ))}                  <div className=\"flex gap-3\">
+                  <div className="flex gap-3">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </ul>;
                   <div className=\"flex gap-3\">;
                   <div className="flex gap-3">;
@@ -1272,6 +1332,7 @@ const "Products": NextPage = () => {;
                   <div className="flex gap-3">;
                   <div className=\"flex gap-3\">;
                   <div className="flex gap-3">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1306,6 +1367,9 @@ const "Products": NextPage = () => {;
 =======
 =======                    <Link
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======                    <Link
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       href={product && product.href}
                       className=\"flex-1 bg-blue-600 \"hover\": bg-blue-700 text-white py-2 px-4 rounded-lg font-medium text-center transition-colors flex items-center justify-center\">;
                       <Eye className=\"h-4 w-4 mr-2\" />;
@@ -1322,14 +1386,18 @@ const "Products": NextPage = () => {;
         </div>;
       </section>;
       {/* Benefits Section */}
+<<<<<<< HEAD
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
@@ -1396,6 +1464,10 @@ const "Products": NextPage = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {benefits.map((benefit) => (
               <div key={benefit.title} className=\"text-center\">
                 <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
@@ -1410,10 +1482,13 @@ const "Products": NextPage = () => {;
               </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))}
           </div>
         </div>
@@ -1428,6 +1503,7 @@ const "Products": NextPage = () => {;
               Choose the plan that best fits your business needs and scale as you grow.
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1465,6 +1541,9 @@ const "Products": NextPage = () => {;
 =======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">      <section className=\"py-20 bg-gray-50\">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">      <section className=\"py-20 bg-gray-50\">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
             <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">;
@@ -1522,6 +1601,7 @@ const "Products": NextPage = () => {;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1567,6 +1647,8 @@ const "Products": NextPage = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {[{
                 name: \'Starter\',
                 \"price\": \'$299\',
@@ -1609,10 +1691,13 @@ const "Products": NextPage = () => {;
                 ]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               }
             ].map((plan) => (
               <div
@@ -1634,6 +1719,7 @@ const "Products": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 =======
@@ -1642,6 +1728,8 @@ const "Products": NextPage = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
@@ -1711,6 +1799,7 @@ const "Products": NextPage = () => {;
                       Most Popular;
                     </span>;
                   </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 )}
 <<<<<<< HEAD
@@ -2062,3 +2151,13 @@ export default Products;
                   <p className=\"text-gray-600\">{plan.description}</p>
                 </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                )}                  </div>
+                  <p className=\"text-gray-600\">{plan.description}</p>
+                </div>                  </div>
+                  <p className=\"text-gray-600\">{plan.description}</p>
+                </div>
+                  </div>
+                  <p className=\"text-gray-600\">{plan.description}</p>
+                </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

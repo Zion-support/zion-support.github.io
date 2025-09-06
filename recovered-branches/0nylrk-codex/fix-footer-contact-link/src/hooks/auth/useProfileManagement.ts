@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@ import type { UserProfile } from "@/types/auth";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth";
@@ -37,6 +40,7 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       setIsLoading(true),;
       if (!data.id) {;
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -79,6 +83,8 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
         description: error.message || "An unexpected error occurred",;
         variant: "destructive"}),;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       // Update profiles table
       const { error: profileError } = await supabase
@@ -112,6 +118,7 @@ if ( {) {
           title: "Profile update failed",
           description: profileError.message,
           variant: "destructive"}),
+<<<<<<< HEAD
 <<<<<<< HEAD
         return { error: profileError }
 =======
@@ -206,6 +213,9 @@ if ( {) {
 =======
         return { error: profileError }      toast ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        return { error: profileError }      toast ({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         title: "Profile updated",
         description: "Your profile has been updated successfully."});
 ;
@@ -351,6 +361,7 @@ return {
   return { updateProfile }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   return { updateProfile }
@@ -359,3 +370,5 @@ return {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

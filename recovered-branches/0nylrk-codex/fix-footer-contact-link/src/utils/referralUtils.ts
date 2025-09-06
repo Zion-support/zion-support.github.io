@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -28,6 +29,8 @@ import {format} from 'date-fns';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 /**
  * Formats a date for display in the referral system
  * @param date Date or string to format
@@ -36,6 +39,7 @@ import {format} from 'date-fns';
 export function formatDate(date: Date | string | undefined): string {
 
   if (!date) return '-'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -47,6 +51,8 @@ export function formatDate(date: Date | string | undefined): string {
 import {format} from 'date - fns';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 /**;
 * Formats a date for display in the referral system;
 * @param date Date or string to format;
@@ -59,6 +65,7 @@ if (return '-', ) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -67,6 +74,8 @@ if (return '-', ) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   try {
     // Check condition
 if ( {) {
@@ -80,6 +89,7 @@ if ( {) {
   
   const url = new URL(window && window.location.href);
   const refCode = url && url.searchParams.get('ref');
+<<<<<<< HEAD
 <<<<<<< HEAD
   
 
@@ -190,6 +200,9 @@ if (return null) {
 =======
    * Stores referral code in localStorage when detected in URL;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+   * Stores referral code in localStorage when detected in URL;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
  */;
 export function checkUrlForReferralCode(): string | null {;
   if (typeof window === 'undefined') return null,;
@@ -218,14 +231,18 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   return localStorage.getItem('referral_code')
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -236,6 +253,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 /**;
 * Track referral when a user signs up;
 */;
@@ -244,6 +263,7 @@ export async /**
  */
 function track_referral() {
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     const refCode = localStorage && localStorage.getItem('referral_code');
@@ -261,6 +281,8 @@ function track_referral() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 /**
  * Track referral when a user signs up
  */
@@ -273,6 +295,7 @@ function track_referral() {
         userId;
         email
         ipAddress: '', // This will be captured by the server
+<<<<<<< HEAD
 <<<<<<< HEAD
       })});
 <<<<<<< HEAD
@@ -452,3 +475,6 @@ export async function trackReferral(userId:string, email:string) {;
 =======
       })});
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      })});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

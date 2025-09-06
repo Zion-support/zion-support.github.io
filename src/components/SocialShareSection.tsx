@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Button } from "./ui/button",
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
@@ -46,6 +47,8 @@ export function SocialShareSection() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const shareLinks = [
     {
       name: "Twitter",
@@ -73,6 +76,19 @@ export function SocialShareSection() {
     }],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import { Button } from './ui/button';
+import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
+import { toast } from './ui/use-toast';
+import { useTranslation } from 'react-i18next';
+export function SocialShareSection() {
+  const { t } = useTranslation();
+  // Current URL is not available during SSR, guard with typeof check
+  const shareUrl = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 =======
 return (
@@ -303,5 +319,41 @@ export function SocialShareSection() {;
             ))}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+          <div className='flex flex - wrap gap - 3'>;
+            {share_links.map ((link, index) => (              <Button;
+                key = {index, }
+                className={`${link.color} text - white`}
+                size='sm';
+                on_click={link.on_click}
+                aria - label={link.name}
+                title={link.name}              >;
+                {link.icon}
+                <span className='sr - only'>{link.name}</span>;
+                <span aria - hidden='true'>{link.name}</span>;
+              </Button>))}
+          </div>;
+        </div>;
+      </div>;
+    </section>);
+  navigator.clipboard.write_text (window.location.href) .then ( () => {
+  toast ({
+}) .catch ( () => {
+  toast ({
+  title: t ('errors.failed to copy');
+});
+}
+<<<<<<< HEAD
+}</div> </div> </div> </section>);
+}'";
+}
+;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}</div> </div> </div> </section>)
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

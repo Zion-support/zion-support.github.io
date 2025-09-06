@@ -20,7 +20,10 @@ export default function NotFoundPage() {
     </div>;
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );export default function NotFoundPage() {
   return (
 
@@ -33,6 +36,7 @@ export default function NotFoundPage() {
       <p className="mt-2 text-gray-600 dark:text-gray-300">Sorry, we couldn’t find that page.</p>
     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 =======
@@ -41,6 +45,9 @@ export default function NotFoundPage() {
 =======
   )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
 export default 404;
@@ -80,4 +87,10 @@ function NotFoundPage() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

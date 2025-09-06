@@ -1,9 +1,12 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   attachment_url?: string,
   attachment_name?: string;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   attachment_url?: string,
   attachment_name?: string;
 }
@@ -17,6 +20,7 @@ export interface Conversation {
   created_at: string;
   read: boolean;
   sender_name?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   sender_avatar?: string;
 <<<<<<< HEAD
@@ -53,11 +57,15 @@ export interface Conversation {
 =======
   sender_avatar?: string;  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  sender_avatar?: string;  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   name: string;
   avatar_url?: string;
   last_message?: {
 
     content: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
     created_at: string;
 
@@ -225,6 +233,9 @@ export interface MessagingContextType {;
 =======
     created_at: string;   * Set the currently active conversation. Passing `null` will clear the;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    created_at: string;   * Set the currently active conversation. Passing `null` will clear the;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
    * selection.;
    */;
   setActiveConversation: (value: Conversation | null) => void,;
@@ -232,6 +243,7 @@ export interface MessagingContextType {;
   loadMessages: (conversationId: string) => Promise<void>;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -247,3 +259,6 @@ export interface MessagingContextType {;
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

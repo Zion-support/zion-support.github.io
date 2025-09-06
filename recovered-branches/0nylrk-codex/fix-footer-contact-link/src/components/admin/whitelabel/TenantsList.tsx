@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/button";import {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   DropdownMenuTrigger,;
 
 =======
@@ -48,6 +49,9 @@ import { Button } from "@/components/ui/button";import {;
 =======
   DropdownMenuTrigger,;} from "@/components/ui/table";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  DropdownMenuTrigger,;} from "@/components/ui/table";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -55,6 +59,7 @@ import {
   DropdownMenuItem,
 DropdownMenuTrigger,;
   DropdownMenuTrigger,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -104,6 +109,11 @@ export function TenantsList() {;
 import { toast } from "@/hooks/use-toast";
 import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";    loadTenants();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  DropdownMenuTrigger,import { Badge } from "@/components/ui/badge";
+import { toast } from "@/hooks/use-toast";
+import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";    loadTenants();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }, []);
 
       setIsLoading(true);
@@ -121,6 +131,7 @@ import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";    loadTenants()
 
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -130,6 +141,8 @@ import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";    loadTenants()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Edit,
   MoreHorizontal,
@@ -137,6 +150,7 @@ import {
   Power,
   PowerOff,
   Users,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -519,6 +533,8 @@ export function TenantsList() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const verifyDns = async (tenant: WhitelabelTenant) => {;
     try {;
       // In a real implementation, this would verify DNS records;
@@ -532,6 +548,7 @@ export function TenantsList() {;
 =======
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1354,3 +1371,5 @@ return (Refresh </Button> </div> </div>) : (<div className="rounded-md border" >
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

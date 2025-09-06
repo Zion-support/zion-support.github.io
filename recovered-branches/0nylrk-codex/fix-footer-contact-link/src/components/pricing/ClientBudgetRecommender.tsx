@@ -30,6 +30,7 @@ interface ClientBudgetRecommenderProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import {Button} from "@/components/ui/button";
 import {getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
@@ -44,6 +45,8 @@ interface ClientBudgetRecommenderProps {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
@@ -189,6 +192,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -197,6 +201,8 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setSuggestion(result);
     } catch (error) {;
       console && console.error("Error generating budget suggestion:", error);
@@ -347,6 +353,7 @@ if ( {) {
             onApplySuggestion={handleApplySuggestion}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -360,6 +367,8 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>;
     </div>;
   )

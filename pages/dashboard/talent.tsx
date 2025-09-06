@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton';
@@ -7,6 +8,9 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useEffect, useState} from 'react';
 const STEPS = [
   { key: 'profile', label: 'Profile completed' }
@@ -14,11 +18,20 @@ const STEPS = [
   { key: 'availability', label: 'Availability set' }
   { key: 'match', label: 'First match received' }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import EnhancedCard from '../../components/ui/EnhancedCard',
+import EnhancedButton from '../../components/ui/EnhancedButton';
+import { useEffect, useState } from 'react';
+const STEPS = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
@@ -31,6 +44,7 @@ const STEPS = [
 type StepKey = typeof STEPS[number]['key'];
 
 export default function TalentDashboard() {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({
 
@@ -66,6 +80,8 @@ export default function TalentDashboard() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     profile: false
     skills: false
     availability: false
@@ -76,6 +92,7 @@ export default function TalentDashboard() {
     match: false,;
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ profile: false, skills: false, availability: false, match: false }),
@@ -84,6 +101,12 @@ export default function TalentDashboard() {
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.talent');
+=======
+  useEffect(() => {
+    try {
+      const raw = window.localStorage.getItem('onboarding.talent');
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       if (raw) setCompleted(JSON.parse(raw))
     } catch {}
 
@@ -91,6 +114,7 @@ export default function TalentDashboard() {
   useEffect(() => {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -125,6 +149,8 @@ export default function TalentDashboard() {
   }, []);
   useEffect(() => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function TalentDashboard() {;
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({;
     profile: false,;
@@ -144,6 +170,19 @@ export default function TalentDashboard() {;
       window && window.localStorage.setItem(;
         'onboarding && onboarding.talent',;
         JSON && JSON.stringify(completed);
+<<<<<<< HEAD
+=======
+=======
+      if (raw) setCompleted(JSON.parse(raw));
+    } catch {}
+  }, []);
+  useEffect(() => {
+try {
+      window.localStorage.setItem(
+        'onboarding.talent'
+        JSON.stringify(completed)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       );
     } catch {}
   }, [completed]);
@@ -155,16 +194,22 @@ export default function TalentDashboard() {;
   const toggle = (key: StepKey) =>;
 
     setCompleted(c => ({ ...c, [key]: !c[key] }));
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useEffect, useState } from 'react';
 const STEPS = [;
   { key: 'profile', label: 'Profile completed' },;
   { key: 'skills', label: 'Skills added' },;
+<<<<<<< HEAD
 <<<<<<< HEAD
   { key: 'availability', label: 'Availability set' },;
   { key: 'match', label: 'First match received' }] as const,;
@@ -192,6 +237,10 @@ export default function TalentDashboard(req, res) {
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100),
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] })),
 =======
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className='space-y-4'>;
       <EnhancedCard>;
@@ -208,6 +257,10 @@ export default function TalentDashboard(req, res) {
           <div
             className='h-2 rounded bg-blue-600'
             style={{ width: `${progress}%` }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           />        </div>;
       </EnhancedCard>;
@@ -219,6 +272,20 @@ export default function TalentDashboard(req, res) {
             <li key={s && s.key} className='flex items-center justify-between'>;
               <div className='flex items-center gap-2'>;
 
+<<<<<<< HEAD
+=======
+=======
+          />
+        </div>
+      </EnhancedCard>
+      <EnhancedCard>
+<h2 className='font-semibold mb-2'>Checklist</h2>
+        <ul className='space-y-2'>
+          {STEPS.map(s => (
+            <li key={s.key} className='flex items-center justify-between'>
+              <div className='flex items-center gap-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <span
                   className={`inline-flex h-5 w-5 items-center justify-center rounded-full border ${completed[s && s.key] ? 'bg-emerald-500 text-white border-emerald-500' : 'border-gray-300 dark:border-gray-700'}`}>;
                   {completed[s && s.key] ? '✓' : ''}
@@ -243,9 +310,12 @@ export default function TalentDashboard(req, res) {
             </li>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try { window.localStorage.setItem('onboarding.talent', JSON.stringify(completed)) } catch {}
   }, [completed]);
 
@@ -254,12 +324,17 @@ export default function TalentDashboard(req, res) {
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] }));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <div className="space-y-4">
@@ -289,6 +364,7 @@ export default function TalentDashboard(req, res) {
                 <button onClick={() => toggle(s.key)} className="text-xs text-gray-500 hover:underline">Undo</button>
               ) : (
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <EnhancedButton
                   onClick={() => toggle(s.key)}
                   variant='secondary'
@@ -314,13 +390,19 @@ export default function TalentDashboard(req, res) {
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'skills' ? 'Add skills' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
     console.error("Error:", error);
@@ -334,6 +416,7 @@ export default function TalentDashboard(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -341,12 +424,15 @@ export default function TalentDashboard(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </ul>;
       </EnhancedCard>;
     </div>;
   );
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -358,6 +444,8 @@ export default function TalentDashboard(req, res) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 }
 import EnhancedCard from '../../components / ui / EnhancedCard';
@@ -449,6 +537,10 @@ function TalentDashboard() {
                   className='text - xs py - 1 px - 2';
                 >;
                   {s.key === 'skills' ? 'Add skills' : 'Mark done'}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </EnhancedButton>              )}
             </li>))}
         </ul>;
@@ -456,16 +548,20 @@ function TalentDashboard() {
     </div>);
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -474,3 +570,15 @@ function TalentDashboard() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                </EnhancedButton>
+              )}
+            </li>
+          ))}
+        </ul>
+      </EnhancedCard>
+    </div>
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

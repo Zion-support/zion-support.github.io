@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -15,6 +16,8 @@ interface FeatureCardProps {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   className?: string;
 }
 
@@ -26,6 +29,7 @@ export default function FeatureCard({
   gradient, 
   className = '' 
 }: FeatureCardProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <div className={`feature-card group ${className}`}>
@@ -71,6 +75,9 @@ export default function FeatureCard({
 }: FeatureCardProps) {
   className?: string;  className?: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  className?: string;  className?: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 export default /**
  * FeatureCard - Function description
@@ -78,6 +85,7 @@ export default /**
 function FeatureCard() {
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -114,6 +122,8 @@ function FeatureCard() {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </ul>;
     </div>);
 }

@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -69,10 +68,16 @@ import {processJobMatching, storeMatchResults} from "./job-matching.ts";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
+import {processJobMatching, storeMatchResults} from "./job-matching ;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { processJobMatching, storeMatchResults } from "./job-matching.ts",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -94,6 +99,8 @@ import { processJobMatching, storeMatchResults } from "./job-matching.ts",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -101,6 +108,7 @@ const corsHeaders = {
 // Initialize the Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
 const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",
+<<<<<<< HEAD
 <<<<<<< HEAD
 const supabase = createClient(supabaseUrl, supabaseAnonKey),
 
@@ -154,6 +162,9 @@ serve(async (req) => {
 =======
 const supabase = createClient(supabaseUrl, supabaseAnonKey),    if (!jobId) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const supabase = createClient(supabaseUrl, supabaseAnonKey),    if (!jobId) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       throw new Error("Job ID is required")
     }
     // 1. Retrieve job details
@@ -165,6 +176,7 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey),    if (!jobId) {
 =======
     if (jobError) {
       throw new Error(`Failed to fetch job: ${jobError && jobError.message}`)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -181,6 +193,8 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey),    if (!jobId) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     // 2. Retrieve all talent profiles
     const { data: talents, error: talentsError } = await supabase
@@ -202,6 +216,7 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey),    if (!jobId) {
         { headers: { ...corsHeaders, "Content-Type": "application/json" } }
       )
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     // 3. Use AI to normalize skills and find matches
 <<<<<<< HEAD
@@ -315,6 +330,9 @@ const corsHeaders = {;
 =======
     // 3. Use AI to normalize skills and find matches    return new Response(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    // 3. Use AI to normalize skills and find matches    return new Response(
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       JSON && JSON.stringify({ error: error && error.message });
       { 
         status: 500, 
@@ -404,6 +422,7 @@ if ( {) {
       {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }
+<<<<<<< HEAD
 
       }
 <<<<<<< HEAD
@@ -432,10 +451,16 @@ if ( {) {
 =======
     );  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      }
+    );  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 });
 
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -527,3 +552,6 @@ serve(async (req) => {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

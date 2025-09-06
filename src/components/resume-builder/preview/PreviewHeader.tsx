@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Button } from '@/components/ui/button',;
 import { ArrowLeft, FileText, Link } from 'lucide-react';
@@ -23,6 +24,8 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
         body * {;
           visibility: hidden;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { PdfExportButton } from '../PdfExportButton';
 import { Resume } from '@/types/resume';
 import { useState } from 'react';
@@ -145,11 +148,34 @@ import { useIsMobile } from '@/hooks/use-mobile';
         className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>;
         <PdfExportButton resume={resume} />;
 
+<<<<<<< HEAD
+=======
+=======
+  const [isPrinting, setIsPrinting] = useState(false);
+  const isMobile = null;
+  return (
+    <div className={`flex ${isMobile ? 'flex-col' : 'justify-between'} items-${isMobile ? 'stretch' : 'center'} gap-3`}>
+      <Button 
+        variant="outline" 
+        onClick={onBack} 
+        className="gap-2 no-print"
+      >
+        <ArrowLeft className="h-4 w-4" />
+        Back
+      </Button>
+      <div
+        className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}
+      >
+        <PdfExportButton resume={resume} />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <Button
           variant='outline'
           onClick={handleBrowserPrint}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           disabled={isPrinting}
+<<<<<<< HEAD
 <<<<<<< HEAD
           className="gap-2"
         >
@@ -158,6 +184,8 @@ import { useIsMobile } from '@/hooks/use-mobile';
         </Button>
         
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -169,6 +197,16 @@ import { useIsMobile } from '@/hooks/use-mobile';
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Button variant="outline" className="gap-2">
           <Link className="h-4 w-4" />
+=======
+          className='gap-2'
+        >
+          <FileText className='h-4 w-4' />
+          Print
+        </Button>
+
+        <Button variant='outline' className='gap-2'>
+          <Link className='h-4 w-4' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           Add to Profile
         </Button>
       </div>
@@ -245,5 +283,14 @@ import { useIsMobile } from '@/hooks/use-mobile';
 }
 
     </div>
+<<<<<<< HEAD
   )
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  )
+=======
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

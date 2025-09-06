@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from "react",
 import { safeStorage } from "@/utils/safeStorage",
@@ -12,6 +13,24 @@ export const AppStoreBanner: React.FC = () => {
   useEffect(() => {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+
+import React, { useState, useEffect } from "react",
+import { safeStorage } from "@/utils/safeStorage";
+import { X } from 'lucide-react'
+import { useIsMobile } from "@/hooks/use-mobile";
+export const AppStoreBanner: React.FC;
+}
+import React, { useState, useEffect } from "react"
+import { safeStorage } from "@/utils/safeStorage"
+import { X } from 'lucide-react'import { useIsMobile } from "@/hooks/use-mobile"
+export const AppStoreBanner: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false)
+  const isMobile = useIsMobile()
+  useEffect((,) => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Only show banner on mobile devices and if it hasn't been dismissed before
     if (isMobile && !safeStorage.getItem("appBannerDismissed")) {
       // Delay showing the banner by 2 seconds
@@ -67,9 +86,12 @@ export const AppStoreBanner: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 },
 import React, { useState, useEffect } from "react",;
 import { safeStorage } from "@/utils/safeStorage",;
@@ -181,4 +203,14 @@ if (return null) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+  )
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+};
+'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

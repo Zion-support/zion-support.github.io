@@ -15,6 +15,7 @@ interface BudgetFieldsProps {
   talent?: TalentProfile;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -99,6 +100,11 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+
+export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>;
       <FormField

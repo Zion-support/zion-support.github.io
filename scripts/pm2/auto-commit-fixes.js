@@ -24,6 +24,7 @@ const { execSync } = require('child_process');
 
 =======
 
+
 }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -51,6 +52,9 @@ class AutoCommitFixes {,;
     } catch (error) {,;
       console.error('Error writing to log: file:', error.message);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     },;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -88,4 +92,7 @@ class AutoCommitFixes { constructor () { this.project_root = process.cwd (); thi
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

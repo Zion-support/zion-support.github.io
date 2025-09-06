@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -8,6 +9,8 @@
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState, useEffect} from "react";
 import {useSearchParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -61,6 +64,7 @@ import { PageHero } from "@/components/services/PageSections/PageHero",
 import { CountryTabs } from "@/components/services/PageSections/CountryTabs",
 import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection",
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",
 =======
 import { useState, useEffect } from "react";
@@ -84,6 +88,9 @@ import { ServiceIncludes } from "@/components/services/PageSections/ServiceInclu
 =======
 import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
 export default function ITOnsiteServicesPage() {
   const [searchParams] = useSearchParams();
@@ -111,6 +118,7 @@ export default function ITOnsiteServicesPage() {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -118,6 +126,8 @@ export default function ITOnsiteServicesPage() {
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }, [success]);
   // Popular countries for the featured cards
   const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
@@ -143,6 +153,7 @@ export default function ITOnsiteServicesPage() {
     "Singapore",
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -155,6 +166,8 @@ export default function ITOnsiteServicesPage() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Filter countries based on search query
   const filteredCountries = onsiteServicePricing
     .filter((country) =>
@@ -162,6 +175,7 @@ export default function ITOnsiteServicesPage() {
     )
     .sort((a, b) => {
       // First, sort by popular status
+<<<<<<< HEAD
 <<<<<<< HEAD
       const aIsPopular = popularCountries.includes(a.country);
       const bIsPopular = popularCountries.includes(b.country);
@@ -183,10 +197,14 @@ export default function ITOnsiteServicesPage() {
 =======
   const handleCountrySelect = (country: CountryPricing) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const handleCountrySelect = (country: CountryPricing) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setSelectedCountry(country)
     // Scroll to the service details section
     setTimeout(() => {
       document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })
+<<<<<<< HEAD
 <<<<<<< HEAD
     }, 100)
 <<<<<<< HEAD
@@ -206,12 +224,16 @@ export default function ITOnsiteServicesPage() {
 =======
     }, 100)  const handleCountrySelect = (country: CountryPricing) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }, 100)  const handleCountrySelect = (country: CountryPricing) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     (setSelectedCountry(country),
       // Scroll to the service details section
       setTimeout(() => {
         document
           .getElementById("service-details")
           ?.scrollIntoView({ behavior: "smooth" });
+<<<<<<< HEAD
 <<<<<<< HEAD
       }, 100));
   };
@@ -220,20 +242,28 @@ export default function ITOnsiteServicesPage() {
       }, 100))
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      }, 100))
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   }
 
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <AppLayout>
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -303,6 +333,8 @@ export default function ITOnsiteServicesPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Show success toast if redirected from successful payment;
   useEffect(() => {;
     if (success === "true") {;
@@ -338,6 +370,7 @@ export default function ITOnsiteServicesPage() {;
     // Scroll to the service details section;
     setTimeout(() => {;
       document && document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' });
+<<<<<<< HEAD
 <<<<<<< HEAD
     }, 100);
   };
@@ -381,6 +414,10 @@ export default function ITOnsiteServicesPage() {;
     }, 100)
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }, 100)
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               popularCountries={popularCountries}
               filteredCountries={filteredCountries}
               handleCountrySelect={handleCountrySelect}
@@ -606,6 +643,7 @@ if (return 1) {
 ;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -613,3 +651,5 @@ if (return 1) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

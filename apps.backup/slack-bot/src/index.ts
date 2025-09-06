@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { App } from '@slack/bolt';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
@@ -33,6 +34,8 @@ function help_text (): string {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 app.command ('/zion', async ({ command, ack, respond }) => {
   await ack (),
@@ -105,6 +108,7 @@ if ( {) {
   console.log (`⚡️ Zion Slack bot running on port ${port}`);
 })(),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -204,6 +208,8 @@ function helpText(): string {;
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 app.command('/zion', async ({ command, ack, respond }) => {;
 =======
@@ -285,12 +291,16 @@ app.command('/zion', async ({ command, ack, respond }) => {
 =======
 })
 (async () => {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 (async () => {
   const port = Number(process.env.SLACK_PORT || 3001),
   await app.start(port),
   // eslint-disable-next-line no-console
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   // // // console.log(`⚡️ Zion Slack bot running on port ${port}`)
@@ -583,3 +593,6 @@ import dotenv from 'dotenv';
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

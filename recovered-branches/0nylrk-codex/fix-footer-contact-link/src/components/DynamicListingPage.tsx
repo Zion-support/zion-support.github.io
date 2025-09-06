@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -17,6 +18,10 @@ import {useState, useEffect} from "react";
 
 import React from 'react';import {useState, useEffect} from "react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import React from 'react';import {useState, useEffect} from "react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useNavigate} from "react-router-dom";
 import {GradientHeading} from "@/components/GradientHeading";
 import {ProductListingCard} from "@/components/ProductListingCard";
@@ -27,6 +32,7 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {Slider} from "@/components/ui/slider";
 import {ProductListing, ListingView} from "@/types/listings";
 import {Search, Filter, LayoutGrid, List, Star} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {toast} from "@/hooks/use-toast";
 <<<<<<< HEAD
@@ -148,6 +154,9 @@ interface PriceRange {;
 =======
 import {toast} from "@/hooks/use-toast";  min: number,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {toast} from "@/hooks/use-toast";  min: number,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   max: number;
 }interface DynamicListingPageProps {;
   title: string,,
@@ -157,6 +166,7 @@ import {toast} from "@/hooks/use-toast";  min: number,;
   categoryFilters: { label: string, value: string }[],;
   initialPrice?: PriceRange;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -200,6 +210,8 @@ export function DynamicListingPage({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   initialPrice = { min: 0, max: 10000 }
 }: DynamicListingPageProps) {
   const navigate = useNavigate(),
@@ -210,6 +222,7 @@ export function DynamicListingPage({;
   const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice),
 
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -288,6 +301,8 @@ export function DynamicListingPage({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       listing.price <= currentPriceFilter[1]
     );
     const matchesRating =
@@ -313,6 +328,7 @@ export function DynamicListingPage({;
               title: listing.title
               category: listing.category
               image: listing.images?.[0]
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -331,6 +347,9 @@ export function DynamicListingPage({;
 }: DynamicListingPageProps) {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const navigate = useNavigate(),;
   const [searchQuery, setSearchQuery] = useState(""),;
   const [selectedCategory, setSelectedCategory] = useState("all"),;
@@ -354,6 +373,7 @@ export function DynamicListingPage({;
               category: listing.category,;
               image: listing.images?.[0];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -412,11 +432,18 @@ export function DynamicListingPage({;
         });
       }  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            }
+          }
+        });
+      }  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="min-h-screen bg-zion-blue py-12 px-4">;
       <div className="container mx-auto">;
         <div className="text-center mb-12">;
           <GradientHeading>{title}</GradientHeading>;
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -458,6 +485,8 @@ export function DynamicListingPage({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   }}
                 >
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
@@ -481,6 +510,7 @@ export function DynamicListingPage({;
                   Category;
                 </label>;
                 <Select
+<<<<<<< HEAD
 <<<<<<< HEAD
                   value={selectedCategory} 
                   onValueChange={(value: string) => {;
@@ -553,6 +583,9 @@ export function DynamicListingPage({;
 =======
             {description}                    setSelectedCategory(value);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            {description}                    setSelectedCategory(value);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     defaultValue={[priceRange && priceRange.min, priceRange && priceRange.max]}
                     min={priceRange && priceRange.min}
                     max={priceRange && priceRange.max}
@@ -699,6 +732,7 @@ value={selectedCategory}
                     ))}
                   </SelectContent>
                 </Select>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -913,6 +947,8 @@ defaultValue={_[priceRange.min, priceRange.max]}
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       className={`${;
                         selectedRating === rating ;
                           ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ;
@@ -961,6 +997,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
               <Button
                 variant="outline" 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -968,6 +1005,8 @@ defaultValue={_[priceRange.min, priceRange.max]}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       )}
                     </Button>;
                   ))}
@@ -998,6 +1037,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
                   setSearchQuery("");
                   setSelectedCategory("all")
 <<<<<<< HEAD
+<<<<<<< HEAD
                   setCurrentPriceFilter([priceRange.min, priceRange.max]);
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1025,6 +1065,9 @@ defaultValue={_[priceRange.min, priceRange.max]}
 =======
                   setCurrentPriceFilter([priceRange.min, priceRange.max]);                  setSelectedRating(null)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  setCurrentPriceFilter([priceRange.min, priceRange.max]);                  setSelectedRating(null)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 }}
               >
                 Reset Filters
@@ -1035,6 +1078,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
             <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="relative flex-grow">
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
 <<<<<<< HEAD
@@ -1372,6 +1416,9 @@ defaultValue={_[priceRange.min, priceRange.max]}
 =======
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />            {isLoading ? (;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />            {isLoading ? (;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;
                 {[1, 2, 3, 4].map((i) => (;
                   <div key={i} className="rounded-lg overflow-hidden border border-zion-blue-light">;
@@ -1395,6 +1442,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
                   <ProductListingCard
                     key={listing && listing.id}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -1406,6 +1454,8 @@ defaultValue={_[priceRange.min, priceRange.max]}
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <ProductListingCard 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -1439,6 +1489,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
                 <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <Button
                   variant="outline"
@@ -1461,6 +1512,8 @@ defaultValue={_[priceRange.min, priceRange.max]}
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ) :filteredListings.length > 0 ? (;
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" :"grid-cols-1"}`}>;
                 {filteredListings.map((listing) => (;
@@ -1483,6 +1536,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
                     setCurrentPriceFilter([priceRange.min, priceRange.max]),;
                     setSelectedRating(null),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
                     listing={listing}
@@ -1493,6 +1547,8 @@ defaultValue={_[priceRange.min, priceRange.max]}
                   }}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
                 >;
                   Clear all filters;
@@ -1503,6 +1559,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -1526,11 +1583,15 @@ defaultValue={_[priceRange.min, priceRange.max]}
 =======
   );                  onClick={() => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  );                  onClick={() => {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     setSearchQuery(""),;
                     setSelectedCategory("all");
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
                     setSelectedRating(null);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1544,6 +1605,8 @@ defaultValue={_[priceRange.min, priceRange.max]}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   }}
                   className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
                 >;

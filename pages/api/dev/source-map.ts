@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -292,6 +295,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
   res.setHeader("Allow", "GET, POST")
+<<<<<<< HEAD
 
   res.status(405).end("Method Not Allowed")
 }
@@ -379,6 +383,11 @@ export default function handler(req, res) {
   }
 }
   res.setHeader("Allow", "GET, POST"),
+=======
+=======
+  const identity = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   res.status(405).end("Method Not Allowed")
 ;
   res.setHeader("Allow", "GET, POST");

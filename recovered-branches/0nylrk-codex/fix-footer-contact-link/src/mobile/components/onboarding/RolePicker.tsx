@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -30,6 +31,10 @@ import { Briefcase, Users, Check } from "lucide-react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -38,6 +43,7 @@ import { Briefcase, Users, Check } from './lucide-react';
 type UserRole = "talent" | "client" | null;
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -554,3 +560,9 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Briefcase, Users, Check } from "lucide-react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card",
+import { Briefcase, Users, Check } from "lucide-react",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

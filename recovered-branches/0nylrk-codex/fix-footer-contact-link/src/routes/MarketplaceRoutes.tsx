@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -42,6 +43,8 @@ import ServiceDescriptionGenerator from "@/pages/ServiceDescriptionGenerator";
 import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage";
 import SearchPage from "@/pages/SearchPage";
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import Marketplace from "@/pages/Marketplace",
@@ -140,6 +143,9 @@ const MarketplaceRoutes = () => {
     </Routes>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 }
 export default MarketplaceRoutes;
@@ -450,6 +456,7 @@ export default MarketplaceRoutes;
 },;
 export default MarketplaceRoutes;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 export default MarketplaceRoutes;
@@ -457,3 +464,5 @@ export default MarketplaceRoutes;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

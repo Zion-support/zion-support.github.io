@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -90,6 +91,8 @@ return (
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 export default function AISalesIntelligencePlatform() {
 	return (
@@ -131,6 +134,7 @@ export default function AISalesIntelligencePlatform() {
 				"Forecasting with scenario simulations"
 				"CRM automations for notes, tasks, and next steps"
 
+<<<<<<< HEAD
 				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
 			]}
 			industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
@@ -159,6 +163,14 @@ export default function AISalesIntelligencePlatform() {_return (
 		/>
 	)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+			title;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
+			]}
+			industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
 
@@ -191,10 +203,13 @@ return (
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			pricePerMonthUSD={1499  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -208,6 +223,7 @@ return (
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -230,6 +246,8 @@ return (
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			implementationWeeks="Implementation: 1–3 weeks"
 			roiNote="Average ROI 3–8x within 60 days"
 			features={[
@@ -239,6 +257,7 @@ return (
 				"Forecasting with scenario simulations",
 				"CRM automations for notes, tasks, and next steps",
 				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -257,6 +276,8 @@ return (
 };
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -286,6 +307,10 @@ return (
 			canonical="https: //ziontechgroup.com/ai-sales-intelligence-platform"
 		/>
 	)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			canonical="https: //ziontechgroup.com/ai-sales-intelligence-platform";
 		/>;
 	);
@@ -303,6 +328,7 @@ return (
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
@@ -317,3 +343,10 @@ return (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

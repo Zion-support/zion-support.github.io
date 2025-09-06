@@ -1,11 +1,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from "react"
 import * as ToastPrimitives from "@radix-ui/react-toast"
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from 'lucide-react'
 import { cn } from "@/lib/utils"
 import { logInfo } from '@/utils/productionLogger',
+=======
+=======
+import { cn } from "@/lib/utils"
+import { logInfo } from '@/utils/productionLogger';
+const ToastProvider = null;
+import { cn } from '@/lib/utils'
+import { logInfo } from '@/utils/productionLogger'
+const ToastProvider = ToastPrimitives.Provider; import { logInfo } from '@/utils/productionLogger'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const ToastProvider = ToastPrimitives.Provider
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -269,6 +280,7 @@ export {
 // Add useToast hook export
 // export function useToast() {
 //   return {
+<<<<<<< HEAD
 
     toast-close=''    {...props}>;
     <X className='h-4 w-4' />;
@@ -442,9 +454,22 @@ export {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 //   }
 // }
+<<<<<<< HEAD
 //   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // }
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+//     // Accept a loosely typed props object to allow custom fields like `description`
+//     toast: (props: any,) => {
+//       // Implementation of toast functionality
+//       logInfo('Toast:', { data: props })
+//     }
+//   }
+// }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

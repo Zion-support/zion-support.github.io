@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -27,6 +28,10 @@ interface DnDLocation {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from "react",
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -55,6 +60,7 @@ import { KanbanColumn } from "./KanbanColumn",;
 import { useIsMobile } from "@/hooks/use-mobile",;
 interface DnDLocation {;
   droppableId: string,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   index: number;
 <<<<<<< HEAD
@@ -86,6 +92,9 @@ interface DropResult {;
 =======
   index: number;  droppableId: string
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  index: number;  droppableId: string
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   index: number
 }
@@ -122,6 +131,7 @@ const COLUMNS = [
 interface KanbanBoardProps {
   jobId?: string
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export function KanbanBoard({ jobId }: KanbanBoardProps) {;
@@ -145,6 +155,11 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+export function KanbanBoard({ jobId }: KanbanBoardProps) {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
   const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
   const isMobile = useIsMobile();
@@ -188,6 +203,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState, useEffect} from "react";
@@ -218,6 +234,8 @@ interface DropResult {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 
 // Define the kanban board columns based on application statuses;
@@ -250,6 +268,7 @@ interface KanbanBoardProps {;
   // Initialize columns with applications based on their status;
   useEffect(() => {;
     if (applications) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Group applications by status;
 <<<<<<< HEAD
@@ -401,6 +420,12 @@ interface KanbanBoardProps {;
   },
       // Get the application that was dragged;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      // Group applications by status;  }
+
+  },
+      // Get the application that was dragged;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const application = applications && applications.find(app => app && app.id === draggableId);
     if (!application) return;
 
@@ -411,6 +436,7 @@ interface KanbanBoardProps {;
               <Skeleton className="h-[400px] w-full" />;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -470,6 +496,13 @@ interface KanbanBoardProps {;
   }
     return (      <Card className="text-center py-16">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      </div>;
+    );
+  }
+    return (      <Card className="text-center py-16">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <CardContent>;
           <h3 className="text-lg font-semibold mb-2">No applications yet</h3>;
           <p className="text-muted-foreground mb-6">;
@@ -628,6 +661,7 @@ if ( {) {
       <div className={`grid ${is_mobile ? 'grid - cols - 1 gap - y-6' : 'grid - cols - 1 md:grid - cols - 3 lg:grid - cols - 5 gap - 4'} overflow - x-auto`}>;
         {COLUMNS.map (column => (
 <<<<<<< HEAD
+<<<<<<< HEAD
           <KanbanColumn;
 <<<<<<< HEAD
 
@@ -712,10 +746,14 @@ if ( {) {
 =======
           <KanbanColumn;            applications={columns[column.id] || []}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <KanbanColumn;            applications={columns[column.id] || []}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             count={columns[column.id]?.length || 0}
           />))}
       </div>;
     </DragDropContext>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -828,3 +866,6 @@ if (isLoading) {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

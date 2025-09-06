@@ -51,6 +51,7 @@ export const QrCodeDownload: React.FC = () => {
               </p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,6 +91,11 @@ export const QrCodeDownload: React.FC = () => {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+              <AppStoreButtons 
+                className="mb-8" 
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <AppStoreButtons
                 className="mb-8"
                 appStoreUrl={appStoreUrl}
@@ -120,6 +126,7 @@ export const QrCodeDownload: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -135,6 +142,9 @@ import {AppStoreButtons} from "./AppStoreButtons";
 =======
   )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
   )
 };
@@ -144,6 +154,7 @@ import {AppStoreButtons} from "./AppStoreButtons";
 }
 
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -156,6 +167,8 @@ import {AppStoreButtons} from "./AppStoreButtons";
   )
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 },
 import React from "react",;
 import { QrCode } from "lucide-react",;

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -9,6 +10,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase  } from '@/integrations/supabase/client';
@@ -18,6 +21,7 @@ import { TalentProfile  } from '@/types/talent';
 import { ContractFormValues } from "@/components/contracts/components/ContractForm";
 export function useSmartContracts() {
   const { user } = useAuth();
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(false);
 <<<<<<< HEAD
@@ -73,6 +77,9 @@ export function useSmartContracts() {
 =======
   const [isLoading, setIsLoading] = useState(false);    values: ContractFormValues
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [isLoading, setIsLoading] = useState(false);    values: ContractFormValues
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     talent: TalentProfile
     clientName: string
   ): Promise<string> => {
@@ -83,6 +90,7 @@ export function useSmartContracts() {
       const { data, error } = await supabase && supabase.functions.invoke("generate-smart-contract", {
 
         body: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -96,6 +104,8 @@ setIsLoading(true),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           projectName: values && values.projectName;
           scopeSummary: values && values.scopeSummary;
           startDate: values && values.startDate.toISOString();
@@ -105,6 +115,7 @@ setIsLoading(true),
           additionalClauses: values && values.additionalClauses || []}
 
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (error) throw error;
 =======
@@ -133,6 +144,9 @@ setIsLoading(true),
 =======
       if (error) throw error;          talentName: talent.full_name,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      if (error) throw error;          talentName: talent.full_name,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           clientName: clientName,
           projectName: values.projectName,
           scopeSummary: values.scopeSummary,
@@ -147,6 +161,7 @@ setIsLoading(true),
       
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -159,6 +174,9 @@ setIsLoading(true),
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         return data.solidityCode
 import {useState} from 'react';
 import {use_auth} from '@/hooks / use_auth';
@@ -206,6 +224,7 @@ if ( {) {
       } else {
         throw new Error ("Failed to generate Solidity contract");
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
     } catch (err: any) {
 <<<<<<< HEAD
@@ -306,15 +325,21 @@ if ( {) {
 =======
     } catch (err: any) {      return mockSmartContractInfo
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    } catch (err: any) {      return mockSmartContractInfo
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (err: any) {
       console.error("Error deploying smart contract:", err);
       toast.error("Failed to deploy smart contract");
       setDeploymentStatus('error');
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       return null
 import { useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -509,6 +534,7 @@ export function useSmartContracts() {;
       toast && toast.error("Failed to deploy smart contract");
       setDeploymentStatus('error');
       return null
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 =======
@@ -783,3 +809,6 @@ deploymentStatus
 =======
     }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

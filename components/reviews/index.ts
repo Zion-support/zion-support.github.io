@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 export { default as StarRating } from './StarRating',
@@ -13,6 +16,7 @@ export { default as StarRating } from './StarRating',;
 export { default as ReviewForm } from './ReviewForm',;
 export { default as ReviewCard } from './ReviewCard',;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export { default as ReviewSummary } from './ReviewSummary';export { default as ReviewSummary } from './ReviewSummary';
 export { default as ReviewSummary } from './ReviewSummary';
@@ -57,3 +61,7 @@ export { default as ReviewSummary } from './ReviewSummary';
 export { default as ReviewSummary } from './ReviewSummary';
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+export { default as ReviewSummary } from './ReviewSummary';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,11 +1,14 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <Card className="bg-muted/30 border border-dashed">;
@@ -23,6 +26,7 @@
     </Card>;
   );
 import { Card, CardContent  } from '@/components / ui / card';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Button  } from '@/components / ui / button';
 <<<<<<< HEAD
@@ -168,3 +172,6 @@ export function NoJobsCard({ onUpdateProfile } NoJobsCardProps) {;
 =======
 import { Button  } from '@/components / ui / button';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Button  } from '@/components / ui / button';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

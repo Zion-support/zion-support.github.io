@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -28,10 +29,15 @@
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
 import AIAssistant from '../../components/ui/AIAssistant';
+<<<<<<< HEAD
 
 const NewProposal: NextPage = () => {
   const [jobBrief, setJobBrief] = useState('')
@@ -57,11 +63,16 @@ const NewProposal: NextPage = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+const NewProposal: NextPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div>
       <Head>
         <title>New Proposal - Zion AI Marketplace</title>
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -106,6 +117,46 @@ const NewProposal: NextPage = () => {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<h1 className='text-2xl font-semibold mb-4'>Create Proposal</h1>
+
+      <div className='grid gap-4'>
+        <label className='text-sm'>
+          Job Description / Brief
+          <textarea
+            value={jobBrief}
+            onChange={e => setJobBrief(e.target.value)}
+            rows={6}
+            className='mt-1 w-full rounded-md border p-3'
+          />
+        </label>
+        <label className='text-sm'>
+          Your Resume Summary
+          <textarea
+            value={resumeSummary}
+            onChange={e => setResumeSummary(e.target.value)}
+            rows={4}
+            className='mt-1 w-full rounded-md border p-3'
+          />
+        </label>
+        <label className='text-sm'>
+          Relevant Experience Highlights
+          <textarea
+            value={relevantExperience}
+            onChange={e => setRelevantExperience(e.target.value)}
+            rows={6}
+            className='mt-1 w-full rounded-md border p-3'
+          />
+        </label>
+      </div>
+
+      <div className='mt-6 flex items-center justify-between'>
+        <h2 className='text-lg font-semibold'>Proposal / Cover Letter</h2>
+        <AIAssistant
+<<<<<<< HEAD
+          buttonLabel="Generate Pitch Based on Profile & Job"
+          title="Generate Proposal"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           defaultPrompt={pitchPrompt  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -121,6 +172,7 @@ const NewProposal: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -170,6 +222,26 @@ export default NewProposal;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+          buttonLabel='Generate Pitch Based on Profile & Job'
+          title='Generate Proposal'
+          defaultPrompt={pitchPrompt}
+          onAccept={setCoverLetter}
+          authorizationToken={operatorToken}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+        />
+      </div>
+<textarea
+        value={coverLetter}
+        onChange={e => setCoverLetter(e.target.value)}
+        rows={14}
+        className='mt-2 w-full rounded-md border p-3'
+      />
+    </div>
+<<<<<<< HEAD
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 },
 export default NewProposal,
@@ -178,6 +250,7 @@ export default NewProposal,
 },
 export default NewProposal,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -189,12 +262,15 @@ export default NewProposal;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 },
 export default NewProposal,
 },
 
 export default NewProposal,;
 export default NewProposal,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -227,3 +303,12 @@ export default NewProposal,
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+=======
+  );
+};
+
+export default NewProposal;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

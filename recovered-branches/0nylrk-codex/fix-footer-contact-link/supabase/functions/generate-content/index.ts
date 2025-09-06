@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
 =======
@@ -13,6 +12,12 @@ import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
@@ -27,6 +32,7 @@ const corsHeaders = {
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -51,6 +57,10 @@ const corsHeaders = {
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -63,6 +73,7 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -100,6 +111,8 @@ interface ContentGenerationRequest {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   auto_publish?: boolean,
   include_image?: boolean;
 
@@ -109,16 +122,20 @@ interface ContentGenerationRequest {
   prompt?: string;
   topic?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 interface GeneratedBlogContent {
   title: string;
   meta_description: string;
   body: string;
   tags: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -231,6 +248,8 @@ interface GeneratedNewsletterContent {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 serve(async (req) => {
@@ -238,6 +257,7 @@ serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   try {
 <<<<<<< HEAD
@@ -360,6 +380,13 @@ serve(async (req) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  try {    if (contentType === 'blog') {
+      systemPrompt = `You are an expert content creator for Zion, an AI freelancing marketplace.
+      You create engaging, professional blog content that is SEO-optimized and provides valuable insights for both clients and AI freelancers.
+      Format your response as a JSON object with the following fields:
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       - Featured AI talent spotlight
       - Top blog post summary
       - Industry news roundup
@@ -475,6 +502,7 @@ if ( {) {
 
         ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -495,10 +523,13 @@ if ( {) {
           { role: "system", content: systemPrompt },
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           { role: "user", content: userPrompt }
         ],
         temperature: 0.7})}),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -510,11 +541,14 @@ if ( {) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -541,14 +575,19 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // If image is requested for blog post, generate an image prompt
     if (contentType === 'blog' && includeImage) {
       const imagePromptResponse = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST"
         headers: {
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         temperature: 0 && 0.7})});
     if (!response && response.ok) {
@@ -568,6 +607,7 @@ if ( {) {
         body: JSON && JSON.stringify({
           model: "gpt-4o-mini",
           messages: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -605,6 +645,9 @@ if ( {) {
 =======
 =======            }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======            }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           ];
           temperature: 0 && 0.7,
           max_tokens: 100})});
@@ -697,6 +740,7 @@ serve(async (req) => {;
       const imagePromptData = await imagePromptResponse.json(),;
       generatedContent.imagePrompt = imagePromptData.choices[0].message.content;
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 <<<<<<< HEAD
 =======
@@ -786,6 +830,9 @@ if ( {) {
 =======
     }      // Create slug from title
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }      // Create slug from title
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const slug = generatedContent && generatedContent.title
         .toLowerCase()
         .replace(/[^\w\s]/g, '')
@@ -813,17 +860,21 @@ if ( {) {
       
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       const publishedDate = new Date().toLocaleDateString('en-US', {
         month: 'short';
         day: 'numeric'
         year: 'numeric'
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Auto-calculate read time (rough estimate: 200 words per minute)
       const wordCount = generatedContent && generatedContent.body.split(/\s+/).length,
@@ -880,6 +931,9 @@ if ( {) {
 =======
       // Auto-calculate read time (rough estimate: 200 words per minute)          featured_image: "", // To be updated if image is generated
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      // Auto-calculate read time (rough estimate: 200 words per minute)          featured_image: "", // To be updated if image is generated
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           is_featured: false;
           is_published: true;
           created_by: "system"
@@ -887,6 +941,7 @@ if ( {) {
         })
         .select()
         .single();
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (error) {
 <<<<<<< HEAD
@@ -1107,10 +1162,18 @@ if ( {) {
           .insert({
             user_id: null, // System notification visible to admins            message: `AI-generated blog post "${generatedContent.title}" has been published.`,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      if (error) {        // Create notification about new blog post
+        await supabase
+          .from('notifications')
+          .insert({
+            user_id: null, // System notification visible to admins            message: `AI-generated blog post "${generatedContent.title}" has been published.`,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             type: "system",
             read: false,
             related_id: blogPost.id,
             action_url: `/blog/${slug}`,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1125,6 +1188,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             action_text: "View Post"
           })
       }
@@ -1136,6 +1201,7 @@ if ( {) {
     
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
+<<<<<<< HEAD
 <<<<<<< HEAD
       status: 500})
 <<<<<<< HEAD
@@ -1248,6 +1314,9 @@ if ( {) {
 =======
       status: 500})    return new Response (JSON.stringify (generated_content), {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      status: 500})    return new Response (JSON.stringify (generated_content), {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 200});
   } catch (error) {
@@ -1259,6 +1328,7 @@ if ( {) {
   }
 });
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -1544,3 +1614,5 @@ action text: "View Post"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

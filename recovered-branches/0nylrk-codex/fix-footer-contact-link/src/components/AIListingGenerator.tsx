@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -19,6 +20,10 @@
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -28,6 +33,7 @@ import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components
 import {Skeleton} from "@/components/ui/skeleton";
 import {Sparkles, ArrowRight} from "@/components/icons";
 import {supabase} from "@/integrations/supabase/client";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {Badge} from "@/components/ui/badge";
 <<<<<<< HEAD
@@ -168,6 +174,9 @@ import React, { useState } from "react",;
 =======
 import {Badge} from "@/components/ui/badge";import React, { useState } from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {Badge} from "@/components/ui/badge";import React, { useState } from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -234,8 +243,21 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         break;
+=======
+  const [category, setCategory] = useState(initialValues && initialValues.category || "");
+  const [keyFeatures, setKeyFeatures] = useState(initialValues && initialValues.keyFeatures || "");
+  const [targetAudience, setTargetAudience] = useState(initialValues && initialValues.targetAudience || "");
+  const [isLoading, setIsLoading] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
+
+  const handleInputChange = (e: { target: { value: string } }, field: string) => {;
+    switch(field) {;
+      case 'title':;
+        setTitle(e && e.target.value);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       case 'category':;
         setCategory(e && e.target.value);
         break;
@@ -245,6 +267,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       case 'targetAudience':;
         setTargetAudience(e && e.target.value),;
         break;
+<<<<<<< HEAD
 
 
   },
@@ -284,12 +307,18 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+  },
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleGenerate = async () => {
     if (!title |!category) {
       toast({
         title: "Missing required fields"
         description: "Please provide at least a title and category."
         variant: "destructive"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -317,6 +346,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         title: "Missing required fields"
         description: "Please provide at least a title and category."
         variant: "destructive"
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       });
         break;      });
       return;
@@ -359,10 +390,13 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         variant: "destructive";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       });
       return;
     }
@@ -449,6 +483,7 @@ if ( {) {
       ;
       if (data.error) {;
         throw new Error(data.error),;
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
 <<<<<<< HEAD
@@ -713,6 +748,12 @@ if ( {) {
     }
   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      }    } finally {
+      setIsLoading (false);
+    }
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       toast({
         title: "Content Applied"
         description: "The generated content has been applied to your listing."
@@ -734,6 +775,7 @@ if ( {) {
       setGeneratedContent(data && data.generated);    }
 
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1193,6 +1235,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <>;
                 <Sparkles className="h-4 w-4 mr-2" />;
                 Generate Optimized Content;
@@ -1201,6 +1245,7 @@ if ( {) {
           </Button>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1212,6 +1257,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {isLoading && (;
         <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">;
           <CardHeader>;
@@ -1407,6 +1454,7 @@ if ( {) {
                   <li key={index}>{point}</li>))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
             ;
@@ -1427,6 +1475,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </ul>;
             </div>;
           </CardContent>;

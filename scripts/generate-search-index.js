@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
@@ -27,12 +28,30 @@
 
 
 #!/usr/bin/env node;
+=======
+
+
+
+
+
+#!/usr/bin/env node;
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 #!/usr/bin/env node;
 ;
 
 #!/usr/bin/env node;
 ;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 #!/usr/bin/env node;
 <<<<<<< HEAD
@@ -64,6 +83,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -75,6 +95,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const fs = require('fs');
 const path = require('path');
 const PAGES_DIR = path.join(__dirname, '..pages');
@@ -192,9 +214,13 @@ const OUTPUT_DIR = path.join(__dirname, '..public', 'search');  }
     extensions:['.tsx.ts', '.jsx.js'];
     exclude:[];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const fs = require('fs'),;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+const fs = require('fs'),;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const path = require('path'),;
 const PAGES_DIR = path.join(__dirname, '..pages'),;
 const OUTPUT_DIR = path.join(__dirname, '..publicsearch'),;
@@ -209,11 +235,14 @@ const CONTENT_TYPES = {;
     path: path.join(PAGES_DIR, 'blog'),;
     extensions: ['.tsx.ts.jsx.js'],;
 <<<<<<< HEAD
+<<<<<<< HEAD
     exclude: [];  }
 },
   }
 },
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     exclude: [];
 
 
@@ -224,7 +253,10 @@ const CONTENT_TYPES = {;
   }
 },
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
 function extractTextFromJSX(content) {
@@ -237,6 +269,9 @@ function extractTextFromJSX(content) {
     .replace(/\s+/g, ' ') // Normalize whitespace
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     .trim()
 <<<<<<< HEAD
 
@@ -280,9 +315,12 @@ function extractTextFromJSX(content) {;
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 }
+<<<<<<< HEAD
 =======
     .trim()}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function generateSearchIndex() {
   const searchIndex = {
 
@@ -295,15 +333,22 @@ function generateSearchIndex() {
             // Skip excluded files
             if (config.exclude.some(excluded => fileName.startsWith(excluded))) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             // Skip excluded files
             if (config.exclude.some(excluded => fileName.startsWith(excluded))) {
               return
             }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             try {
 
 <<<<<<< HEAD
@@ -504,12 +549,16 @@ function generateSearchIndex() {;
 
 =======
     });
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }),;
   // Ensure output directory exists;
   if (!fs.existsSync(OUTPUT_DIR)) {;
     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   })
@@ -525,6 +574,8 @@ function generateSearchIndex() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
@@ -597,9 +648,12 @@ module.exports = { generateSearchIndex }
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 #!/usr/bin/env node,"}),"})
+<<<<<<< HEAD
 =======
   // Ensure output directory exists#!/usr/bin/env node,"}),"})
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import fs from,"}),"})
   'fs',"}),"})
 import path from,"}),"})
@@ -614,11 +668,16 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       filelist = walk(full, filelist),"}),"})
     } else if (/\.(md|tsx?|jsx?)$/i && i.test(entry && entry.name)) {,"}),"})
 <<<<<<< HEAD
+<<<<<<< HEAD
       filelist && filelist.push(full),"}),"})    }"}),"})
 =======
       filelist && filelist.push(full),"}),"})
     }"}),"})
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+      filelist && filelist.push(full),"}),"})
+    }"}),"})
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }"}),"})
   return filelist,"}),"})
 }"}),"})
@@ -642,7 +701,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
   if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir, { "recursive": true }),"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 <<<<<<< HEAD
+<<<<<<< HEAD
   console && console.log(`✅ Search index "generated": ${outPath} (${index && index.length} items)`),"}),"})}"}),"})
+=======
+  console && console.log(`✅ Search index "generated": ${outPath} (${index && index.length} items)`),"}),"})
+}"}),"})
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ,"}),"})
 main(),"}),"})
 ,"}),"})
@@ -1030,6 +1094,7 @@ module.exports = { generateSearchIndex },
   // // // console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`)
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -1039,6 +1104,8 @@ main();  const indexPath = path.join(OUTPUT_DIR, 'index.json'),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Write search index;
   const indexPath = path.join(OUTPUT_DIR, 'index.json'),;
   fs.writeFileSync(indexPath, JSON.stringify(searchIndex, null, 2)),;
@@ -1054,6 +1121,7 @@ module.exports = { generateSearchIndex },;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1063,3 +1131,5 @@ module.exports = { generateSearchIndex },;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

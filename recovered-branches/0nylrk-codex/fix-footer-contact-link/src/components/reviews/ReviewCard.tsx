@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -22,6 +23,8 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ReviewCardProps {
   review: Review;
   onReport: (reviewId: string, reason: string) => Promise<boolean>
@@ -42,6 +45,7 @@ import { Star, Flag, User } from "lucide-react",
 import { Review } from "@/types/reviews",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useState } from "react";
 import { formatDistanceToNow } from "date-fns";
@@ -51,6 +55,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -106,6 +112,7 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
     if (!rating) return null;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -115,6 +122,8 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
       <div className="flex">;
         {[1, 2, 3, 4, 5].map((star) => (;
@@ -141,6 +150,7 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
       </div>
     )
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   
 =======
@@ -299,6 +309,9 @@ if (return null) {
 =======
       <div className="border rounded-lg p-4 bg-card">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <div className="border rounded-lg p-4 bg-card">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="flex justify-between items-start mb-3">
         <div className="flex items-center gap-3">
           {review.is_anonymous ? (
@@ -316,6 +329,7 @@ if (return null) {
                 />
               ) : (
                 <AvatarFallback>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -429,6 +443,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 </AvatarFallback>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               )}
             </Avatar>;
           )}
@@ -437,6 +453,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
             <div className="font-medium">
               {review.is_anonymous
                 ? "Anonymous"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -504,6 +521,10 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
         <div className="flex">{renderStars(review.rating)}</div>
+=======
+          {renderStars(review.rating)}
+        </div>        <div className="flex">{renderStars(review.rating)}</div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
@@ -611,6 +632,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
             )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             {review.quality_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
                 Quality
@@ -656,6 +678,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
         <div className="border-t pt-3 mt-3">
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="flex flex-wrap gap-2">
             {review.communication_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
@@ -787,11 +811,14 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {review && review.quality_rating && (;
               <Badge variant="outline" className="flex gap-1 items-center">;
                 Quality;
@@ -923,6 +950,7 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -954,3 +982,7 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

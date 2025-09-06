@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -19,6 +20,35 @@ interface PerformanceMetrics {;
   lcp: number, // Largest Contentful Paint;
   cls: number, // Cumulative Layout Shift;
   fid: number, // First Input Delay;
+=======
+=======
+import React, { useState, useEffect } from 'react';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+import { Progress  } from '@/components/ui/progress';
+import { Activity, Zap, Package, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, RefreshCw, BarChart3, Clock, Globe } from 'lucide-react'
+import { bundleMonitor  } from '@/utils/bundleMonitor';
+import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
+interface PerformanceMetrics {
+  bundleSize: number;
+  loadTime: number;
+  performanceScore: number;
+  chunkCount: number;
+  cacheHitRate: number;
+  fcp: number, // First Contentful Paint
+  lcp: number, // Largest Contentful Paint
+  cls: number, // Cumulative Layout Shift
+  fid: number, // First Input Delay
+}
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+import React, { useState, useEffect } from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Progress } from '@/components/ui/progress'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -80,6 +110,7 @@ interface PerformanceMetrics {
   bundleSize: number
   loadTime: number
   performanceScore: number
+<<<<<<< HEAD
   chunkCount: number;
   cacheHitRate: number;
   }
@@ -430,9 +461,34 @@ export function PerformanceDashboard() {;
     return () => clearInterval(interval)
   }, []),
 =======
+<<<<<<< HEAD
       });    }
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  chunkCount: number
+  cacheHitRate: number
+  fcp: number; // First Contentful Paint
+  lcp: number; // Largest Contentful Paint
+  cls: number; // Cumulative Layout Shift
+  fid: number; // First Input Delay
+interface BundleChunk {
+  name: string;
+  size: number;
+  loadTime: number;
+  cached: boolean;
+  type: string
+export function PerformanceDashboard() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),
+  const [chunks, setChunks] = useState<BundleChunk[]>([]),
+  const [isLoading, setIsLoading] = useState(false);
+  const [lastUpdated, setLastUpdated] = useState<Date | null>(null),
+
+  const collectMetrics = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -976,6 +1032,7 @@ export function PerformanceDashboard() {;
               </div>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>;
         </CardContent>;
       </Card>;
@@ -983,6 +1040,8 @@ export function PerformanceDashboard() {;
   );
 } ;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         </CardContent>;
       </Card>;
@@ -1141,6 +1200,7 @@ export function PerformanceDashboard() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -1148,3 +1208,13 @@ export function PerformanceDashboard() {;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

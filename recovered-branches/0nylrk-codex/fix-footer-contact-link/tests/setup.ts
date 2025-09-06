@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import '@testing - library / jest - dom',
 import { after_each, vi } from 'vitest',
@@ -31,6 +34,7 @@ import { cleanup } from '@testing-library/react',;
 afterEach(() => {;
   cleanup(),;
   vi.restoreAllMocks();
+<<<<<<< HEAD
 <<<<<<< HEAD
 });
 <<<<<<< HEAD
@@ -78,3 +82,6 @@ import { cleanup } from '@testing-library/react',;
 =======
 });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

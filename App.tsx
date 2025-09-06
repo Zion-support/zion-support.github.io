@@ -75,6 +75,7 @@ export default function App(): JSX.Element {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
 <<<<<<< HEAD
@@ -123,9 +124,11 @@ import NotFound from './src/pages/NotFound';
 // Lazy load pages for better performance
 const SolutionsPage = lazy(() => import('./src/pages/Solutions').then(module => ({ default: module.default })));
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-function App() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <main>
       <h1>Hello App</h1>
@@ -145,6 +148,8 @@ function App() {
 
   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <ParticleBackground />
       <Header />
@@ -213,6 +218,7 @@ function App() {
       <Footer />
       <ChatAssistant />
       <ScrollToTop />
+<<<<<<< HEAD
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -402,3 +408,8 @@ function App() {
 
 export default App;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+    </div>
+  );
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

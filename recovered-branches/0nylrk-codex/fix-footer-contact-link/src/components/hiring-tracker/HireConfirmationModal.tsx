@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -12,10 +13,15 @@ import React, { useState } from 'react';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Dialog;
   DialogContent;
   DialogDescription;
+<<<<<<< HEAD
 <<<<<<< HEAD
   DialogHeader;
 <<<<<<< HEAD
@@ -46,6 +52,9 @@ import {
 =======
   DialogHeader;  DialogTitle} from "@/components/ui/dialog",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  DialogHeader;  DialogTitle} from "@/components/ui/dialog",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
@@ -53,6 +62,7 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -80,6 +90,8 @@ export function HireConfirmationModal({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -90,6 +102,7 @@ import {supabase} from "@/integrations/supabase/client";
 import {TalentProfile} from "@/types/talent";
 import {useAuth} from "@/hooks/useAuth";
 import {JobApplication} from "@/types/jobs";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -110,6 +123,8 @@ export function HireConfirmationModal({ ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   isOpen;
 export function HireConfirmationModal({ ;
 
@@ -124,6 +139,7 @@ export function HireConfirmationModal({ ;
   const [projectDescription, setProjectDescription] = useState('');
   const [updateAvailability, setUpdateAvailability] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
   const { user } = useAuth();
 <<<<<<< HEAD
@@ -160,6 +176,9 @@ import React, { useState } from 'react',
 =======
   const { user } = useAuth();import React, { useState } from 'react',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const { user } = useAuth();import React, { useState } from 'react',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Dialog,
   DialogContent,
@@ -175,6 +194,7 @@ import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -186,6 +206,8 @@ import { TalentProfile } from "@/types/talent",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useAuth } from "@/hooks/useAuth",
 import { JobApplication } from "@/types/jobs",
 export interface HireConfirmationModalProps {
@@ -241,6 +263,7 @@ export function HireConfirmationModal({;
         title: 'Required fields missing',,
   description: 'Please fill in both project name and description.',;
         variant: 'destructive'}),;
+<<<<<<< HEAD
 <<<<<<< HEAD
       return;
 <<<<<<< HEAD
@@ -608,6 +631,9 @@ if ( {) {
 =======
       return;            return;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      return;            return;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }
           console && console.error('Error updating availability:', error);
           toast({;
@@ -617,6 +643,7 @@ if ( {) {
           setIsLoading(false);
           return;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
 <<<<<<< HEAD
@@ -729,6 +756,9 @@ if ( {) {
 =======
       };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setIsLoading(true),;
     // Create a new project;
     try {;
@@ -812,6 +842,7 @@ if ( {) {
     } finally {;
       setIsLoading(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
@@ -839,6 +870,8 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
 
   },
@@ -853,6 +886,7 @@ if ( {) {
               id="updateAvailability"
               className="h-4 w-4"
               checked={updateAvailability}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1068,3 +1102,6 @@ if (!projectName || !projectDescription) {
 =======
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

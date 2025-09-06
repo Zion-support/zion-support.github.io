@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21,6 +22,8 @@ interface FeatureCardProps {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   key?: string | number; // Added key prop;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
@@ -38,6 +41,7 @@ export function FeatureCard(): any ({;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     <div
+<<<<<<< HEAD
       className={cn(
 
 =======
@@ -95,6 +99,9 @@ interface FeatureCardProps {
 =======
       className={cn(interface FeatureCardProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      className={cn(interface FeatureCardProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   title: string,
   description: string,
   icon: React.ReactNode,
@@ -113,6 +120,7 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -121,6 +129,9 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div>
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>
         <p className="text-zion-slate-light">{description}</p>
@@ -131,6 +142,7 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
       <div>;
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>;
         <p className="text-zion-slate-light">{description}</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>;
 <<<<<<< HEAD
@@ -161,6 +173,9 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
 =======
       </div>;  );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </div>;  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { cn  } from '@/lib / utils';
 import React from './react';
 interface FeatureCardProps {
@@ -235,6 +250,7 @@ key?: string | number, //Added key prop
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -242,3 +258,5 @@ key?: string | number, //Added key prop
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

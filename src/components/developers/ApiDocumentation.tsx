@@ -46,6 +46,8 @@ function ApiDocumentation() {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",
 import { BookOpen, Terminal } from 'lucide-react'
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Alert, AlertDescription } from "@/components/ui/alert",
@@ -82,6 +84,59 @@ interface EndpointSectionProps {;
   responseExamples?: { success: string }
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+=======
+export function ApiDocumentation() {
+  return (
+    <Card className;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Alert, AlertDescription } from '@/components/ui/alert'
+import { Badge } from '@/components/ui/badge'
+import CodeBlock from './CodeBlock'
+import { logInfo } from '@/utils/productionLogger'
+interface EndpointParam {
+  name: string
+type: string
+description: string
+required?: boolean
+}interface EndpointSectionProps {
+  method: string
+endpoint: string
+description: string
+note?: string
+params?: EndpointParam[]
+codeExamples?: Record<string string>
+responseExamples?: {
+  success: string
+}export function ApiDocumentation () {
+  return (<Card className="bg-zinc-900 border-zinc-800 text-white" > text-xl flex items-center"> <BookOpen className=" mr-2"size= {
+  20 "
+}/> API Documentation </CardTitle> <CardDescription className=" text-zinc-400"> Reference documentation for integrating with the Zion Marketplace API. </CardDescription> </CardHeader> <CardContent> <Alert className=" bg-blue-900/30 border-blue-800 mb-6"> <Terminal className=" h-4 w-4"/> <AlertDescription> Make sure to include your API key in all requests as a Bearer token in the Authorization header. </AlertDescription> </Alert> <Tabs defaultValue=" jobs"className=" space-y-4"> <TabsList className=" bg-zinc-800 border-zinc-700"> <TabsTrigger value=" jobs">Jobs</TabsTrigger> <TabsTrigger value=" talent">Talent</TabsTrigger> <TabsTrigger value=" quotes">Quotes</TabsTrigger> <TabsTrigger value=" webhooks">Webhooks</TabsTrigger> <TabsTrigger value=" errors">Errors</TabsTrigger> </TabsList> <TabsContent value=" jobs"className=" space-y-6"> <EndpointSection headers=headers) data = response.json () print (data) `
+}responseExamples= {
+  {
+  success: ` {"
+  " data": [ {
+}`
+}/> <EndpointSection const response = await fetch (\`https://api.ziontechgroup.com/v1/jobs/\$ {
+  jobId
+}\`, {
+  method: 'GET'
+headers: {'
+  'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function ApiDocumentation() {
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
@@ -3042,7 +3097,10 @@ function EndpointSection({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   const [activeTab, setActiveTab] = useState('curl')
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className='border border-zinc-800 rounded-md'>
       <div className='p-4'>
@@ -3347,6 +3405,7 @@ function EndpointSection({;
           <CodeBlock code={responseExamples.success} language='json' />        </div>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -3365,6 +3424,7 @@ function EndpointSection({;
 ;
 =======
       {responseExamples && (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     </div>
@@ -3375,3 +3435,9 @@ function EndpointSection({;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

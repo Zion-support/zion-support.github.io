@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Calendar, ArrowRight } from 'lucide-react';
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Calendar, ArrowRight } from 'lucide-react'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export function EnterpriseCTA() {
   return (
     <section id='contact' className='py-20 px-4 md:px-6'>
@@ -57,6 +67,7 @@ export function EnterpriseCTA() {
                     <div className='h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0'>
                       <span className='text-primary text-sm font-medium'>
                         4
+<<<<<<< HEAD
                       </span>                    </div>
 
 <<<<<<< HEAD
@@ -136,6 +147,9 @@ export function EnterpriseCTA() {
                   <li className="flex gap-3">
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <span className="text-primary text-sm font-medium">4</span>
+=======
+                      </span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                     <p>Free consultation on implementation</p>
                   </li>
@@ -157,6 +171,7 @@ import { Button } from "@/components/ui/button";
 
 
     </section>
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -261,4 +276,14 @@ export function EnterpriseCTA() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+    </section>);
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

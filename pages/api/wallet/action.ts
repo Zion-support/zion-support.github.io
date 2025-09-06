@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,6 +32,8 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextApiRequest, NextApiResponse } from "next";
 import { handleAction } from "../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -106,6 +109,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!userId || !action) return res.status(400).json({ error: "userId and action required" }),
   try {
     const tx = handleAction(userId, action, metadata),
+<<<<<<< HEAD
+=======
+=======
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
+  const { userId, action, metadata } = req.body || {}
+  if (!userId || !action) return res.status(400).json({ error: "userId and action required" })
+  try {
+    const tx = handleAction(userId, action, metadata)
+>>>>>>> main
+=======
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+  const { userId, action, metadata } = req.body || {},
+  if (!userId || !action) return res.status(400).json({ error: "userId and action required" });
+  try {
+    const tx = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return res.status(200).json({ tx })
   } catch (err: any) {
     return res.status(400).json({ error: err.message })

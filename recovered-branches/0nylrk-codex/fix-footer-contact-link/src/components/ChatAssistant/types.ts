@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Message {
 =======
 
@@ -32,11 +33,22 @@ export interface Message {;
   id: string;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+export interface Message {;
+
+export interface Message {export interface Message {;
+
+export interface Message {
+export interface Message {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
   read?: boolean
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -80,6 +92,8 @@ export interface Recipient {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface Message {;
   id: string,;
   role: 'user' | 'assistant',;
@@ -90,6 +104,7 @@ export interface Message {;
 ;
 export interface Recipient {;
   id: string,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   name: string,;
 <<<<<<< HEAD
@@ -127,3 +142,13 @@ export interface Recipient {
 =======
   name: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  name: string,;  avatarUrl?: string;
+
+  role?: string;
+}
+
+export interface Recipient {
+  id: string;
+  name: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

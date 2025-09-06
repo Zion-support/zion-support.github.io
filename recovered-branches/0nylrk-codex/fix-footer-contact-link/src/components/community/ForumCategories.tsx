@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -20,6 +21,10 @@ import {ForumCategory, ForumCategoryInfo} from "@/types/community";
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Link } from "react-router-dom",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
@@ -36,6 +41,7 @@ import { ForumCategory, ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
   {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -80,12 +86,18 @@ const categories: ForumCategoryInfo[] = [
   }
 import { ForumCategory, ForumCategoryInfo } from "@/types/community",  {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    icon: "Briefcase"
+  }
+import { ForumCategory, ForumCategoryInfo } from "@/types/community",  {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     id: "project-help"
     name: "Project Help"
     description: "Get help with your ongoing projects and collaboration."
     adminOnly: false
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     icon: "MessageSquare"
 <<<<<<< HEAD
@@ -346,6 +358,9 @@ import { Link } from './react-router-dom';
 =======
     icon: "MessageSquare"import { Link } from './react-router-dom';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    icon: "MessageSquare"import { Link } from './react-router-dom';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
 import { use_auth } from '@/hooks / use_auth';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from '@/components / icons';
@@ -394,6 +409,7 @@ const icon_map = {
   MessageSquare;
   Code;
   FileText;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -604,3 +620,7 @@ export default ForumCategories;
 
 export default ForumCategories;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+export default ForumCategories;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

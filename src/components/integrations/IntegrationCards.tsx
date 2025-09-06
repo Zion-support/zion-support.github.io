@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { logDebug } from '@/utils/productionLogger',
@@ -17,11 +18,50 @@ interface IntegrationCardProps {
   href?: string,
   onConnect?: () => void
 }
-
 =======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import React from "react";
+import { logDebug  } from '@/utils/productionLogger';
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react'
+
+interface IntegrationCardProps {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  status?: "connected" | "disconnected" | "pending";
+  href?: string;
+  onConnect?: () => void
+import React from 'react'
+import { Button } from '@/components/ui/button'
+import {
+  Card
+  CardContent
+  CardFooter
+  CardHeader
+} from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+  ArrowRight
+  Check
+  ExternalLink
+  Slack
+  Briefcase
+  Users
+} from 'lucide-react'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface IntegrationCardProps {
   title: string
   description: string
@@ -124,6 +164,7 @@ export function IntegrationCard({
               href={href}
               target='_blank'
               rel='noopener noreferrer'
+<<<<<<< HEAD
 
 import React from "react";
 import { logDebug } from '@/utils/productionLogger';
@@ -188,6 +229,19 @@ export function IntegrationCard({;
 }
 
 export function IntegrationCard(): any ({;
+=======
+              className='flex items-center gap-1'
+            >
+              <span>Manage</span>
+              <ExternalLink className='h-3.5 w-3.5' />
+            </a>
+          </Button>
+        ) : (
+          <Button variant='default' className='w-full' onClick={onConnect}>
+            <span>Connect</span>
+            <ArrowRight className='ml-1.5 h-3.5 w-3.5' />
+export function IntegrationCard({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   title;
   description;
   icon;
@@ -274,6 +328,7 @@ export function IntegrationCard(): any ({;
           </Button>
 
         )}
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />;
@@ -307,6 +362,11 @@ export function IntegrationCards() {
         onConnect={() => logDebug('Connect Teams clicked')}
 =======
 
+=======
+      </CardFooter>
+    </Card>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export function IntegrationCards() {
   return (
     <div className='grid md:grid-cols-3 gap-6'>;
@@ -331,6 +391,7 @@ export function IntegrationCards() {
       <IntegrationCard
         title="Salesforce"
         description="Sync leads and opportunities with Salesforce."
+<<<<<<< HEAD
 
         icon={<Briefcase className="h-5 w-5" />}
 
@@ -535,9 +596,29 @@ function IntegrationCards() {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+        icon = {<Briefcase className="h-5 w-5" />,}
+        onConnect = {() => logDebug('Connect Salesforce clicked'),}
+      />
+      <IntegrationCard
+        title='Microsoft Teams'
+        description='Receive updates through Microsoft Teams.'
+        icon={<Users className='h-5 w-5' />}
+        onConnect={() => logDebug('Connect Teams clicked')}
+        icon = {<Users className="h-5 w-5" />,}
+        onConnect = {() => logDebug('Connect Teams clicked'),}
+      />
+    </div>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -2,12 +2,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, FileText, Lock, Database, Phone, Mail } from 'lucide-react';;
 import React from 'react';
 import Link from 'next/link';';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Building, 
   Shield, 
@@ -60,6 +64,8 @@ import Layout from '../../components/Layout';
 import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, FileText, Lock, Database, Phone, Mail } from 'lucide-react';;
 import React from 'react';
 import Link from 'next/link';';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion';import Layout from '../../components/Layout';
 const services = [
   {
@@ -70,6 +76,7 @@ const services = [
       'Online service applications,',
       'Digital document submission',',
       'Status tracking systems',',
+<<<<<<< HEAD
 <<<<<<< HEAD
       'Multi-language support'';
     ];
@@ -123,6 +130,23 @@ const services = [;
       'Identity verification',',;
 
 =======
+=======
+    title: 'Citizen Service Portals,',,
+  description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.,',;
+import Layout from '../../components/Layout';
+const services = [;
+  {;
+    title: 'Citizen Service Portals',,
+  description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.',;
+    icon: Globe,;
+    features: [,;
+      'Online service applications,',;
+      'Digital document submission',',;
+      'Status tracking systems',',;      'Compliance monitoring'';
+    ];
+  },
+  {}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Digital Identity Solutions,',
     description: 'Secure digital identity verification and management systems for citizens.,',
     icon: Users,
@@ -130,11 +154,15 @@ const services = [;
       'Biometric authentication,',
       'Digital ID cards',',
       'Identity verification',',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'Fraud prevention'';
     ];
   },
   {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -172,6 +200,11 @@ const services = [;
       'Predictive modeling',',;
 
 =======
+=======
+    ];
+  },
+  {}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Government Analytics,',
     description: 'Data analytics platforms for informed policy-making and resource allocation.,',
     icon: BarChart3,
@@ -179,11 +212,15 @@ const services = [;
       'Performance metrics,',
       'Trend analysis',',
       'Predictive modeling',',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'Resource optimization'';
     ];
   },
   {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -309,6 +346,14 @@ const benefits = [;
   description: 'Government-grade security measures protect sensitive citizen and government data.,',;
     icon: Shield;  {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;];
+const benefits = [;
+  {}
+    title: 'Enhanced Security,',,
+  description: 'Government-grade security measures protect sensitive citizen and government data.,',;
+    icon: Shield;  {}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Improved Efficiency,',
     description: 'Digital processes streamline government operations and reduce administrative burden.,',
     icon: BarChart3;
@@ -352,6 +397,7 @@ export default function GovernmentPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
@@ -409,6 +455,8 @@ export default function GovernmentPage() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto"">;
               <div className="flex items-center justify-center mb-6">";
@@ -427,7 +475,10 @@ export default function GovernmentPage() {;
             </motion && motion.div>;
           </div>;
         </section>;              className="text-center mb-16"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Government Technology Services
@@ -448,8 +499,11 @@ export default function GovernmentPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">";
@@ -509,7 +563,10 @@ export default function GovernmentPage() {;
                     {service && service.features.map((feature, featureIndex) => (,;
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";                        {feature}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </li>,
                     ))}
                   </ul>,
@@ -528,6 +585,7 @@ export default function GovernmentPage() {;
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">"
@@ -558,6 +616,8 @@ export default function GovernmentPage() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>,;
           </div>;
         </section>;
@@ -570,7 +630,10 @@ export default function GovernmentPage() {;
             </div>;
           </div>;
         </section>;              className="text-center mb-16"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Why Choose Our Government Solutions?
@@ -584,6 +647,7 @@ export default function GovernmentPage() {;
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={benefit.title}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -612,6 +676,8 @@ export default function GovernmentPage() {;
         </section>
         {/* CTA Section */}
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </motion && motion.div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
               {benefits && benefits.map((benefit, index) => (,;
@@ -629,12 +695,16 @@ export default function GovernmentPage() {;
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
                   key={benefit && benefit.title}        {/* CTA Section */}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-blue-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
@@ -645,6 +715,8 @@ export default function GovernmentPage() {;
                 Ready to Transform Government?;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </h2>;
               <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">";
                 Let our government technology experts help you implement solutions that enhance;
@@ -677,7 +749,10 @@ export default function GovernmentPage() {;
         </section>;
       </div>;
     </Layout>;            >
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Government?
               </h2>
@@ -701,10 +776,13 @@ export default function GovernmentPage() {;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">;
                 Ready to Transform Government?;
@@ -727,5 +805,9 @@ export default function GovernmentPage() {;
       </div>;
     </Layout>;
   ),;
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

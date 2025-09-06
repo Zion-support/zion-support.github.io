@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import {
@@ -37,6 +38,8 @@ import { HELP_CATEGORIES } from "./help-content",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -47,9 +50,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { HELP_CATEGORIES } from "./help-content",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface HelpArticleListProps {
   categoryId: string,
   onArticleSelect: (articleId: string) => void,
@@ -87,6 +93,7 @@ interface HelpArticleListProps {;
 export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
   const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
   if (!category) {;
+<<<<<<< HEAD
     return <div>Category not found</div>;
 <<<<<<< HEAD
 =======
@@ -160,6 +167,9 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
   if (!category) {;
     return <div>Category not found</div>;  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    return <div>Category not found</div>;  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div>
       <div className="mb-6">
         <h2 className="text-2xl font-bold mb-2">{category.name}</h2>
@@ -261,6 +271,7 @@ function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     day: "numeric"
@@ -425,12 +436,15 @@ year: "numeric"
     month: "long"
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     day: "numeric"
 
     </div>;
   );  })
   })
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -450,3 +464,5 @@ function formatDate(date: string): string {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

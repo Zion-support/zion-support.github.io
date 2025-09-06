@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -54,6 +55,8 @@ import { useState } from 'react',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -66,6 +69,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -101,6 +105,8 @@ import { supabase } from "@/integrations/supabase/client",
 interface ServiceQuoteModalProps {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   open: boolean
   onOpenChange: (open: boolean) => void
@@ -121,10 +127,13 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   const [formData, setFormData] = useState({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {useState} from 'react';
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog";
@@ -166,6 +175,7 @@ export function ServiceQuoteModal(): any ({ open, onOpenChange, service }: Servi
   description: '',;
     email: '',;
     budget: BUDGET_RANGES[0].value,;
+<<<<<<< HEAD
 <<<<<<< HEAD
     timeframe: TIMELINE_OPTIONS[0].value}),;
 
@@ -448,6 +458,20 @@ function ServiceQuoteModal() {
         description: "There was an error submitting your quote request. Please try again."
         variant: "destructive"})
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    timeframe: TIMELINE_OPTIONS[0].value}),;    try {
+      // Call Supabase function to process the quote;
+      const { data, error } = await supabase.functions.invoke ('process - quote', {
+        body: {
+          service: service ? {      // Show success message
+      toast({
+        title: "Quote Request Submitted!"
+        description: "We've sent your request to the service provider. They will contact you soon."})
+      // Close the modal and reset form      toast({
+        title: "Error"
+        description: "There was an error submitting your quote request. Please try again."
+        variant: "destructive"})
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             id: service.id,
             title: service.title,
             category: service.category} : null,
@@ -501,6 +525,7 @@ if (throw error) {
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -525,6 +550,8 @@ if (throw error) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">
@@ -544,6 +571,7 @@ if (throw error) {
               </div>
               <div className="space-y-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Label htmlFor="description" className="text-white">Project Description</Label>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -560,6 +588,9 @@ if (throw error) {
 =======
                 <Label htmlFor="description" className="text-white">Project Description</Label>                <Textarea
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                <Label htmlFor="description" className="text-white">Project Description</Label>                <Textarea
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   id="description"
                   name="description"
                   value={formData.description}
@@ -581,6 +612,7 @@ if (throw error) {
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">
                     {BUDGET_RANGES.map((range) => (
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -659,6 +691,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Show success message;
       toast({;
         title: "Quote Request Submitted!",,
@@ -723,6 +757,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">;
                     <SelectValue placeholder="Select your budget range" />;
                   </SelectTrigger>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;
 <<<<<<< HEAD
@@ -976,6 +1011,9 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 =======
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;                          "bg-zion-blue-dark border-zion-blue-light text-white"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;                          "bg-zion-blue-dark border-zion-blue-light text-white"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         )}>;
                         <CalendarIcon className="mr-2 h-4 w-4" />;
                         {endDate ? format(endDate, "PPP") : <span>Pick a date</span>}
@@ -1008,6 +1046,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   id="email"
                   name="email"
                   type="email"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1075,6 +1114,9 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 =======
                   {endDate && (              </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  {endDate && (              </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>;
 
 =======              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-md p-4">;
@@ -1099,6 +1141,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
             </div>;
 
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1218,6 +1261,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <Button
                   type="submit"
                   disabled={isSubmitting}
@@ -1225,6 +1270,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1237,6 +1283,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   const next_step = () =>: any {
     if (setCurrentStep ('timeline')) {
@@ -1455,6 +1503,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 >;
                   {is_submitting ? "Submitting..." : "Submit Request"}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </Button>)}
 
 <<<<<<< HEAD
@@ -1637,3 +1686,6 @@ return (<Dialog open= {
 =======
                 </Button>)}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                </Button>)}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -9,6 +10,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -19,6 +22,7 @@ import {ExportPanel} from "./ExportPanel";
 import {Button} from "@/components/ui/button";
 import {toast} from "sonner";
 export type AppPlatform = "ios" | "android";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -89,6 +93,8 @@ export type AppMetadataValues = {
   platform: AppPlatform
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 const defaultValues: AppMetadataValues = {
   appTitle: "Zion AI Marketplace"
@@ -126,6 +132,7 @@ const defaultValues: AppMetadataValues = {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -255,6 +262,11 @@ export const MetadataManager: React.FC = () => {
     try {
       // This would be implemented with actual API calls in production    <div className="bg-zion-blue-dark rounded-lg p-6">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    setIsSaving(true)
+    try {
+      // This would be implemented with actual API calls in production    <div className="bg-zion-blue-dark rounded-lg p-6">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Tabs defaultValue="ios" className="w-full">
         <div className="flex justify-between items-center mb-6">
           <TabsList className="bg-zion-blue">
@@ -271,6 +283,7 @@ export const MetadataManager: React.FC = () => {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -293,6 +306,8 @@ export const MetadataManager: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             onClick={currentForm.handleSubmit(handleSaveMetadata)}
             disabled={isSaving}
           >
@@ -328,6 +343,7 @@ export const MetadataManager: React.FC = () => {
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
@@ -350,6 +366,9 @@ export const MetadataManager: React.FC = () => {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 },
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -360,6 +379,7 @@ import { ChangelogManager } from "./ChangelogManager",;
 import { ExportPanel } from "./ExportPanel",;
 import { Button } from "@/components/ui/button",;
 import { toast } from "sonner",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export type AppPlatform = "ios" | "android",;
 <<<<<<< HEAD
@@ -451,6 +471,9 @@ export const MetadataManager: React.FC = () => {;
 =======
 export type AppPlatform = "ios" | "android",;    } finally {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export type AppPlatform = "ios" | "android",;    } finally {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setIsSaving(false);
     }
   };
@@ -477,6 +500,7 @@ export type AppPlatform = "ios" | "android",;    } finally {;
       setIsSaving (false);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -508,6 +532,12 @@ export type AppPlatform = "ios" | "android",;    } finally {;
         </TabsContent>;
       </Tabs>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            </div>;
+          </div>;
+        </TabsContent>;
+      </Tabs>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
     </div>);
 }
@@ -542,6 +572,7 @@ return (<div className="bg-zion-blue-dark rounded-lg p-6" > <Tabs defaultValue="
   )
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -549,3 +580,6 @@ return (<div className="bg-zion-blue-dark rounded-lg p-6" > <Tabs defaultValue="
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

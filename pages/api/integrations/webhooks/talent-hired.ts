@@ -1,6 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,6 +24,7 @@ try {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 =======
 
 
@@ -26,6 +32,20 @@ try {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readState, writeState } from '[^']*';
+import { ats } from '[^']*';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { talent } = req.body as { talent?: Record<string, any> },
+  if (!talent) return res.status(400).json({ error: 'Missing talent payload' });
+  const state = null;
+    results.push({ providerId: conn.providerId, ok: true })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { ats } from "../../../../lib/integrations/connectors";
@@ -57,6 +77,7 @@ export default async function handler(
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   const state = readState();
+<<<<<<< HEAD
   const atsProviders = state && state.connections.filter(
     (c) =>
 <<<<<<< HEAD
@@ -217,8 +238,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
     write_state ((s) => s.logs.push (log));
     results.push ({ provider_id: conn.provider_id, ok: true });
+=======
+const atsProviders = state.connections.filter(
+    c =>
+      c.providerId === 'greenhouse' ||
+      c.providerId === 'lever' ||
+      c.providerId === 'workable' ||
+      c.providerId === 'bamboohr'
+  );
+  const results: any[] = [];
+  const result = await ats.updateStatus(conn, {
+      applicantId: talent.id,
+      status: 'hired',
+    });
+    writeState((s) => s.logs.push(log));
+    results.push({ providerId: conn.providerId, ok: true });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
   res.status (200).json ({ ok: true, results });
+<<<<<<< HEAD
+=======
+  res.status(200).json({ ok: true, results });
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -275,6 +318,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -282,3 +326,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -117,6 +117,7 @@ export interface SearchSuggestion {
   iconUrl?: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface SearchHighlight {
   before: string;
   match: string;
@@ -132,6 +133,8 @@ export interface FilterOptions {
   ratingOptions: number[];
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 export interface SearchHighlight {;
   before: string,;
@@ -139,7 +142,10 @@ export interface SearchHighlight {;
   type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',
   icon_url?: string;
 }  }[];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   locations: {
     label: string;
     value: string;
@@ -155,6 +161,7 @@ export interface SearchSuggestion {;
 
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -220,12 +227,17 @@ export interface FilterOptions {;
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 export interface SearchSuggestion {
   text: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

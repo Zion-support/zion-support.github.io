@@ -1,12 +1,15 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {
   Table
@@ -16,6 +19,7 @@ import {
   TableHeader
   TableRow
 } from "./ui/table";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export function ComparisonSection() {
@@ -74,6 +78,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
@@ -93,12 +99,15 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
                 {[
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { GradientHeading  } from './GradientHeading';
 import { Button  } from './ui / button';
@@ -149,6 +158,7 @@ function ComparisonSection() {
                     traditional: "$1, 200 / mo",
                     zion: "$650 / mo",
                     savings: "45%",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   },
 
@@ -262,6 +272,9 @@ function ComparisonSection() {
 =======
                   },                      {item.service}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  },                      {item.service}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </TableCell>;
                     <TableCell className="text - center text - zion - slate-light">;
                       {item.traditional}
@@ -271,6 +284,7 @@ function ComparisonSection() {
                     </TableCell>;
                     <TableCell className="text - center text - green - 400 font-bold">;
                       {item.savings}
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -291,11 +305,17 @@ function ComparisonSection() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+            
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
               Calculate Your Savings
             </Button>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>
 <<<<<<< HEAD
@@ -312,11 +332,15 @@ function ComparisonSection() {
 =======
       </div>  );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </div>  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
   )
 import { GradientHeading } from "./GradientHeading",;
 import { Button } from "./ui/button",;
 import { CheckCircle2 } from "lucide-react",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",;
 <<<<<<< HEAD
@@ -385,6 +409,9 @@ export function ComparisonSection() {;
 =======
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",;        <div className="max-w-4xl mx-auto">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",;        <div className="max-w-4xl mx-auto">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="bg-zion-blue-light rounded-lg border border-zion-purple/20 overflow-hidden">;
             <Table>;
               <TableHeader>;
@@ -404,6 +431,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
                 {[;          <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">;
             <div className="flex items-start">;
               <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <p className="text-white">;
 <<<<<<< HEAD
@@ -439,6 +467,9 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
 =======
               <p className="text-white">;                  Results may vary based on specific requirements and service;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <p className="text-white">;                  Results may vary based on specific requirements and service;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   levels;
                 </span>;
               </p>;
@@ -455,6 +486,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
     </section>;
   );
     </section>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
@@ -496,3 +528,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}  );
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,12 +1,16 @@
 <<<<<<< HEAD
 import { GetServerSideProps } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
       destination: '/academy/founder-course'
       permanent: false
     }
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };      permanent: false}}
 
 }
@@ -49,4 +53,13 @@ function LaunchRedirect() {
 
 }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+export const getServerSideProps: GetServerSideProps;
+export default function LaunchRedirect() {
+  return null;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -33,11 +33,16 @@ import {supportedLocales, isRtl} from '../../utils/i18n';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const localeToFlag: Record<string, string> = {
+<<<<<<< HEAD
 
+<<<<<<< HEAD
   en: 'us'
   pt: 'br'
   es: 'es'
@@ -49,6 +54,19 @@ const localeLabelKey: Record<string, string> = {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  en: 'us',
+  pt: 'br',
+  es: 'es',
+=======
+  en: 'us';
+  pt: 'br';
+  es: 'es';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  ar: 'sa'},
+const localeLabelKey: Record<string, string> = {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   en: 'lang.english',
   pt: 'lang.portuguese',
   es: 'lang.spanish',
@@ -56,10 +74,36 @@ const localeLabelKey: Record<string, string> = {
 };  ar: 'lang.arabic'},
 export default function LanguageSwitcher() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  en: 'lang.english';
+  pt: 'lang.portuguese';
+  es: 'lang.spanish';
+  ar: 'lang.arabic'},
+
+export default function LanguageSwitcher() {
+  const { t } = useTranslation();
+  const [open, setOpen] = useState(false);
+  const current = null;
+  en: 'us'
+  pt: 'br'
+  es: 'es'
+  ar: 'sa'
+};  ar: 'sa'}
+const localeLabelKey: Record<string, string> = {
+  en: 'lang.english'
+  pt: 'lang.portuguese'
+  es: 'lang.spanish'
+  ar: 'lang.arabic'
+};  ar: 'lang.arabic'}
+export default function LanguageSwitcher() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const current = i18n.resolvedLanguage |i18n.language |'en';
@@ -68,8 +112,9 @@ export default function LanguageSwitcher() {;
     localStorage.setItem('preferredLanguage', lng);
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lng);
-    setOpen(false);
-  }
+setOpen(false);
+  };
+
   return (
     <div className='relative'>;
       <button
@@ -98,6 +143,11 @@ export default function LanguageSwitcher() {;
             <li key={lng}>;
               <button
                 role='option'
+<<<<<<< HEAD
+=======
+                aria-selected={current.startsWith(lng)}
+                className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="relative">;
       <button
@@ -124,6 +174,7 @@ export default function LanguageSwitcher() {;
       )}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </div>
+<<<<<<< HEAD
 );
 }
   );
@@ -224,6 +275,7 @@ function LanguageSwitcher() {
         </ul>)}
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
               >
                 <span className={_`fi fi-${localeToFlag[lng]}`}></span>
                 <span>{_t(localeLabelKey[lng])}</span>
@@ -262,3 +314,9 @@ function LanguageSwitcher() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -48,9 +51,19 @@ export default async function handler(
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { appendLog, optimizePrompt } from '@/utils/zionBrain';
+function isAuthorized(req: NextApiRequest): boolean {
+  const token = null;
+    return res.status(500).json({ error: 'Optimization failure' })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   export default async function handler(
     req: NextApiRequest
@@ -81,6 +94,7 @@ function handler() {
     const super_token = process.env.SUPERADMIN_TOKEN;
     return !super_token || token === super_token;
   }
+<<<<<<< HEAD
   export default async /**
  * handler - Function description
  */
@@ -136,4 +150,6 @@ function handler() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }

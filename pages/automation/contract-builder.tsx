@@ -1,7 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useMemo, useState } from 'react',;
 import DatePicker from 'react-datepicker',;
 import { useRouter } from 'next/router',;
 type PaymentType = 'hourly' | 'fixed',
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -13,6 +18,10 @@ type PaymentType = 'hourly' | 'fixed',
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -46,7 +55,10 @@ export default function ContractBuilderPage() {
   }, [router.isReady, router.query, talentName, projectName])
   const canSubmit = useMemo(() => {
     return (
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       talentName.trim().length > 0 &&
       projectName.trim().length > 0 &&
       scopeSummary.trim().length > 0 &&
@@ -55,6 +67,7 @@ export default function ContractBuilderPage() {
       (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0)
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount])
@@ -62,6 +75,8 @@ export default function ContractBuilderPage() {
   }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount])
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async function submitForm(event: React.FormEvent) {
     event.preventDefault()
     if (!canSubmit) return
@@ -107,6 +122,7 @@ export default function ContractBuilderPage() {
       setContract(data.contract)
     } catch (e: any) {
       setError(e?.message |'Failed to generate contract')
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -218,11 +234,14 @@ if ( {) {
       set_error (e?.message || 'Failed to generate contract');
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } finally {
       set_loading (false);
     }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     URL.revokeObjectURL(url)
   }
@@ -232,10 +251,13 @@ if ( {) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setLoading(true),
     setError(null),
     setContract(''),
 
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -244,6 +266,8 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -292,7 +316,10 @@ export default function ContractBuilderPage(req, res) {
     setLoading(true);
     setError(null);
     setContract('');
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try {
       const body = {;
         talentName;
@@ -310,6 +337,7 @@ export default function ContractBuilderPage(req, res) {
                 paymentSchedule  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 =======
@@ -386,6 +414,16 @@ export default function ContractBuilderPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import React, { useEffect, useMemo, useState } from 'react',
+import DatePicker from 'react-datepicker';
+import { useRouter } from 'next/router';
+type PaymentType = any;
+    URL.revokeObjectURL(url)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="max-w-5xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">Contract Builder</h1>
@@ -452,6 +490,7 @@ export default function ContractBuilderPage(req, res) {
               <div className="md:col-span-3">
                 <label className="block text-sm font-medium mb-1">Payment schedule</label>
                 <input className="w-full input input-bordered" value={paymentSchedule} onChange={(e) => setPaymentSchedule(e.target.value)} placeholder="e.g., 50% upfront, 50% on delivery" />
+<<<<<<< HEAD
 
               </div>
             </div>
@@ -472,6 +511,12 @@ export default function ContractBuilderPage(req, res) {
       {contract && (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+              </div>
+            </div>
+          )}
+        </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div>
           <label className="block text-sm font-medium mb-2">Optional clauses</label>
           <div className="space-y-2">
@@ -514,6 +559,7 @@ export default function ContractBuilderPage(req, res) {
           <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>
       </form>
@@ -523,6 +569,10 @@ export default function ContractBuilderPage(req, res) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+        </div>
+      </form>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   /**
  * copyToClipboard - Function description
  */
@@ -643,6 +693,7 @@ if (return, ) {
           {error && <span className="text - red - 600 text - sm">{error}</span>}
         </div>;
       </form>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {contract && (
 <<<<<<< HEAD
@@ -653,10 +704,14 @@ if (return, ) {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      {contract && (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </article>;
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -668,6 +723,8 @@ if (return, ) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="mt-8">
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-2xl font-semibold">Generated Contract</h2>
@@ -677,6 +734,7 @@ if (return, ) {
             </div>
           </div>
           <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             {contract}
@@ -690,15 +748,20 @@ if (return, ) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   );
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {contract  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -718,6 +781,7 @@ if (return, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -733,3 +797,14 @@ if (return, ) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+            {contract}
+          </article>
+        </div>
+      )}
+    </div>
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

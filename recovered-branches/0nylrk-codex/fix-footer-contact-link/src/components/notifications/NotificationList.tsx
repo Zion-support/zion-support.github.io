@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -22,6 +23,8 @@ interface NotificationListProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   loading: boolean,
   error: string | null,
   notifications: Notification[],
@@ -34,6 +37,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
   loading;
   error;
   notifications;
+<<<<<<< HEAD
 <<<<<<< HEAD
   onMarkAsRead;
 <<<<<<< HEAD
@@ -54,6 +58,9 @@ import React from 'react',;
 =======
   onMarkAsRead;import React from 'react',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  onMarkAsRead;import React from 'react',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import { Skeleton } from '@/components/ui/skeleton',;
 import { Button } from '@/components/ui/button',;
@@ -67,6 +74,7 @@ interface NotificationListProps {;
   onDismiss: (id: string) => Promise<void>,;
   onRetry: () => void;
 }
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 <<<<<<< HEAD
@@ -138,10 +146,14 @@ export const NotificationList: React.FC < NotificationListProps> = ({
   loading;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   error;
   notifications;
   onMarkAsRead;  on_dismiss,
   on_retry;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -438,3 +450,9 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
     <ScrollArea className="flex - 1 overflow - y-auto max-h-[350px]">;
       {error ? (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}) => {
+  return (
+    <ScrollArea className="flex - 1 overflow - y-auto max-h-[350px]">;
+      {error ? (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

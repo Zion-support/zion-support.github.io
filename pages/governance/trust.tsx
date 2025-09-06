@@ -1,13 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function GovernanceTrustPage() {
   return (
     <>
       <Head>
         <title>Zion Governance & Trust</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -62,18 +66,35 @@ export default function GovernanceTrustPage() {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>
             ))}
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className='space-y-4'>
+=======
+=======
+
+<section className='space-y-4'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <h2 className='text-2xl font-semibold'>Governance</h2>
           <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <div className='font-medium mb-1'>Core Stewards</div>
               <div className='text-sm text-gray-600 dark:text-gray-400'>
                 Appointed via DAO ratification, accountable to publish roadmaps
+<<<<<<< HEAD
                 Appointed via DAO ratification, accountable to publish roadmaps,
                 risk registers, and post-mortems.
               </div>
@@ -91,6 +112,11 @@ export default function GovernanceTrustPage() {
               </div>
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                risk registers, and post-mortems.
+              </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Governance</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
@@ -100,8 +126,11 @@ export default function GovernanceTrustPage() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <div className='font-medium mb-1'>Delegated Voting</div>
@@ -123,6 +152,7 @@ export default function GovernanceTrustPage() {
               <div className='text-sm text-gray-600 dark:text-gray-400'>
                 Charter versions, MOUs, audits, and on-chain dashboards are
                 publicly accessible and time-stamped.
+<<<<<<< HEAD
               </div>            </div>
           </div>
         </section>
@@ -177,6 +207,13 @@ export default function GovernanceTrustPage(req, res) {
                 <div className="text-sm text-gray-600 dark:text-gray-400">{opt.desc}</div>;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+              </div>
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>;
             ))}
           </div>;
@@ -267,6 +304,7 @@ import Link from 'next / link';
           </p>;
           <Link href='/foundation#charter'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -303,12 +341,15 @@ import Link from 'next / link';
   )
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <a className='underline text - sm'>Open Charter Generator</a>;
           </Link>;
         </section>;
       </div>;
     </>);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -324,10 +365,14 @@ import Link from 'next / link';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             ))  } catch (error) {
+=======
+  } catch (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
           </div>
         </section>
 <<<<<<< HEAD
@@ -373,6 +418,11 @@ import Link from 'next / link';
         </section>
 <<<<<<< HEAD
         <section className='space-y-2'>
+=======
+=======
+
+<section className='space-y-2'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <h2 className='text-2xl font-semibold'>Operator Prompt</h2>
           <p className='text-sm text-gray-600 dark:text-gray-400'>
             Write a legal-neutral foundation charter for a decentralized AI
@@ -386,6 +436,7 @@ import Link from 'next / link';
       </div>
     </>
   );
+<<<<<<< HEAD
 =======
         <section className="space-y-2">
           <h2 className="text-2xl font-semibold">Operator Prompt</h2>
@@ -526,3 +577,6 @@ export default function GovernanceTrustPage(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

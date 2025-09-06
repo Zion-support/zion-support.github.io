@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -22,10 +23,13 @@ import { Badge } from "@/components/ui/badge",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Badge} from "@/components/ui/badge";
 import {Star} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {cn} from "@/lib/utils";
 <<<<<<< HEAD
@@ -60,11 +64,15 @@ interface ProfileHeroProps {
 =======
 import {cn} from "@/lib/utils";  avatarUrl?: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {cn} from "@/lib/utils";  avatarUrl?: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   coverImageUrl?: string;
   location?: string;
   rating?: number;
   reviewCount?: number;
   aiScore?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Star } from "lucide-react",
@@ -115,6 +123,12 @@ interface ProfileHeroProps {
 
 export function ProfileHero(): any ({;interface ProfileHeroProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  profileType: 'service' | 'talent';
+}
+
+export function ProfileHero(): any ({;interface ProfileHeroProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   name: string,
   title: string,
   avatarUrl?: string,
@@ -123,6 +137,7 @@ export function ProfileHero(): any ({;interface ProfileHeroProps {
   rating?: number,
   reviewCount?: number,
   aiScore?: number,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -199,6 +214,11 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 }
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  profileType: 'service' | 'talent'
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
 import { Badge } from "@/components/ui/badge",;
 import { Star } from "lucide-react",;
@@ -247,6 +267,7 @@ export function ProfileHero({;
                 <AvatarImage src={avatarUrl} alt={name} />;
               ) : (;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -262,6 +283,9 @@ export function ProfileHero({;
 =======
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;                  {name.substring(0, 2).toUpperCase()}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;                  {name.substring(0, 2).toUpperCase()}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </AvatarFallback>
               )}
             </Avatar>
@@ -270,6 +294,7 @@ export function ProfileHero({;
                 <h1 className="text-2xl md:text-3xl font-bold text-white">{name}</h1>
                 <Badge
                   variant="outline"
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className={cn(
 <<<<<<< HEAD
@@ -396,6 +421,9 @@ export function ProfileHero({;
 =======
                   className={cn(                </Badge>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  className={cn(                </Badge>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>;
 
               <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>;
@@ -424,10 +452,13 @@ export function ProfileHero({;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 )}
                   </div>;
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
                 )}
                   </div>;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </div>;
                 )}
                 
@@ -444,6 +475,7 @@ export function ProfileHero({;
                   <div className="px-2 py-0 && 0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">;
                     AI Match: {aiScore}%;
                   </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 )}
@@ -533,6 +565,9 @@ function ProfileHero() {
 =======
                 )}              </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                )}              </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>;
           </div>;
         </div>;

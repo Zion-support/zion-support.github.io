@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,6 +12,8 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -21,6 +24,7 @@ const FutureOfWorkAndAutomation: NextPage = () => {
         <title>FutureOfWorkAndAutomation - Zion Tech Solutions</title>
         <meta name="description" content="FutureOfWorkAndAutomation page" />
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -33,11 +37,19 @@ const FutureOfWorkAndAutomation: NextPage = () => {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+const FutureOfWorkAndAutomation: NextPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <main>
         <h1>FutureOfWorkAndAutomation</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   ),
 };
@@ -66,6 +78,18 @@ export default FutureOfWorkAndAutomation,
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+);
+};
+
+export default FutureOfWorkAndAutomation;
+<<<<<<< HEAD
+
+},
+export default FutureOfWorkAndAutomation,
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <main>;
         <h1>FutureOfWorkAndAutomation</h1>;
         <p>This page is under construction.</p>;
@@ -73,6 +97,7 @@ export default FutureOfWorkAndAutomation,
     </div>;
   ),;
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default FutureOfWorkAndAutomation;
 <<<<<<< HEAD
@@ -92,6 +117,11 @@ export default FutureOfWorkAndAutomation;
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export default FutureOfWorkAndAutomation;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Head from 'next / head';
       <main>;
         <h1 > FutureOfWorkAndAutomation</h1>;
@@ -102,6 +132,7 @@ import Head from 'next / head';
 ;
 export default FutureOfWorkAndAutomation;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -145,3 +176,9 @@ export default FutureOfWorkAndAutomation,
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

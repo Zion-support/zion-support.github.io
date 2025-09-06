@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 interface SkeletonProps {
@@ -78,10 +79,13 @@ interface ServiceCardSkeletonProps {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface HeroSkeletonProps {
   className?: string
 }
@@ -114,10 +118,13 @@ export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) =>
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface StatsSkeletonProps {
   className?: string
 
@@ -126,11 +133,21 @@ interface StatsSkeletonProps {
 interface StatsSkeletonProps {
   class_name?: string;
 }
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+  rounded?: string
+}
+
+const Skeleton: React.FC<SkeletonProps> = ({ 
+  className;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -138,6 +155,8 @@ interface StatsSkeletonProps {
   );
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '' }) => {;
   return (
@@ -217,6 +236,7 @@ interface SkeletonProps {
   height?: string;
   width?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -226,3 +246,11 @@ interface SkeletonProps {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+);
+};
+
+export default Skeleton;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

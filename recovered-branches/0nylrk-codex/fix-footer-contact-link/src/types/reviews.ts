@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -29,10 +30,15 @@ export type ReviewStatus = "pending" | "approved" | "rejected";
 export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export type ReviewStatus = 'pending' | 'approved' | 'rejected';
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface Review {
 export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 
 export interface Review {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -51,6 +57,9 @@ export interface Review {
 =======
 export interface Review {export interface Review {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export interface Review {export interface Review {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   project_id: string;
   reviewer_id: string;
@@ -69,6 +78,7 @@ export interface Review {export interface Review {
   report_count: number;
   reviewer_profile?: {
     display_name: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
     avatar_url?: string;
   };
@@ -95,11 +105,14 @@ export interface ReviewReport {;
     display_name: string
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     avatar_url?: string
 };
 }
 
 export interface ReviewReport {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -110,10 +123,15 @@ export interface ReviewReport {
 
 export interface ReviewReport {export interface ReviewReport {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+export interface ReviewReport {export interface ReviewReport {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   review_id: string;
   reporter_id: string;
   reason: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   status: 'pending' | 'resolved' | 'dismissed';
@@ -189,3 +207,6 @@ export interface ReviewReport {;
 =======
   status: 'pending' | 'resolved' | 'dismissed';}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  status: 'pending' | 'resolved' | 'dismissed';}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

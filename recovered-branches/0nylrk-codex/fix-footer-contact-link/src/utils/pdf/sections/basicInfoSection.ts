@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -173,6 +174,17 @@ export function addBasicInfoSection(  doc: jsPDF;
 ): number {
   // Add header with name and title  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import { jsPDF  } from 'jspdf';
+import { ResumeBasicInfo  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addBasicInfoSection(  doc: jsPDF;
+  basicInfo: ResumeBasicInfo;
+  colors: PdfThemeColors
+): number {
+  // Add header with name and title  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return yPos
 import {jsPDF} from 'jspdf';
 import {ResumeBasicInfo} from '@/types / resume';
@@ -217,6 +229,7 @@ if ( {) {
     y_pos += (summary_lines.length * 6) + 10;
   }
   return y_pos;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -283,3 +296,6 @@ yPos += 10;
 =======
 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

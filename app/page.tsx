@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link';
 
 <<<<<<< HEAD
@@ -90,6 +91,8 @@ export default function Home() {
 }
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import Link from "next/link";
 
@@ -101,7 +104,10 @@ interface CardProps {
   icon?: string;
 }
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function ServiceCard({
   title,
   href,
@@ -151,6 +157,7 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -166,10 +173,13 @@ export default function HomePage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
           >
             Explore Services
           </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -191,10 +201,13 @@ export default function HomePage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <a
             href="https://ziontechgroup.com"
             target="_blank"
             rel="noopener noreferrer"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
@@ -221,10 +234,16 @@ export default function HomePage() {
           >
             Visit Main Site
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+            className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus-visible:focus"
+          >
+            Visit Main Site
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </a>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -310,6 +329,10 @@ export default function HomePage() {
       {/* Featured Services */}
       <section className="py-12">
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+      {/* Featured Services */}
+      <section className="py-12">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Our Core Services
@@ -378,6 +401,7 @@ export default function HomePage() {
             icon="☁️"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -391,6 +415,8 @@ export default function HomePage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           />
         </div>
       </section>
@@ -407,6 +433,7 @@ export default function HomePage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -467,6 +494,8 @@ export default function HomePage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">⚡</span>
@@ -510,6 +539,7 @@ export default function HomePage() {
             <p className="text-gray-600">
               Round-the-clock technical support and maintenance
             </p>
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -628,11 +658,14 @@ export default function HomePage() {
                 Learn More →
               </Link>
             </div>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-16 px-4 bg-blue-600 text-white">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
@@ -794,6 +827,8 @@ function FeatureCard({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
       {/* CTA Section */}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className="text-center py-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
           Ready to Transform Your Business?

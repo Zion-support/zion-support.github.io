@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -70,6 +71,13 @@ interface VerifiedBadgeProps {;
 
 export function VerifiedBadge({ verified, size = "sm" }: VerifiedBadgeProps) {
   if (!verified) return null;
+=======
+  verified: boolean,
+  size?: 'sm' | 'md' | 'lg'}
+
+export function VerifiedBadge({ verified, size = "sm" }: VerifiedBadgeProps) {
+  if (!verified) return null;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import { CheckCircle } from 'lucide-react',;
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
@@ -83,6 +91,7 @@ interface VerifiedBadgeProps {;
   size?: 'sm' | 'md' | 'lg'
 }
 export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -131,11 +140,16 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const sizeClasses = {
     sm: 'h-3.5 w-3.5'
     md: 'h-4 w-4'
     lg: 'h-5 w-5'  return (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
@@ -150,6 +164,7 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
     </TooltipProvider>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 =======
@@ -162,6 +177,9 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
 =======
   )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
 import React from 'react';
@@ -186,6 +204,7 @@ if (return null) {
   }
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -248,3 +267,5 @@ export function VerifiedBadge({ verified, size = 'sm' } VerifiedBadgeProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

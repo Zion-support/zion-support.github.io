@@ -101,7 +101,10 @@ export default function ProfilePage() {
 =======
   CheckCircle2,
 } from "lucide-react";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
@@ -123,6 +126,7 @@ import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, Chec
     const fetchProfile = async () => {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -138,6 +142,8 @@ import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, Chec
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setIsLoading(true),
       setIsError(false),
       try {
@@ -151,6 +157,9 @@ import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, Chec
         toast({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           title: "Error"
           description: "Failed to load profile. Please try again later."
           variant: "destructive"})
@@ -350,6 +359,7 @@ import {;
 } from "lucide-react",;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (profileId) {
       fetchProfile();
     }
@@ -402,6 +412,8 @@ import {;
     }
   }, [profileId]),
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function ProfilePage() {;
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
@@ -409,7 +421,10 @@ export default function ProfilePage() {;
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   useEffect(() => {;
     const fetchProfile = async () => {;
@@ -432,6 +447,7 @@ export default function ProfilePage() {;
       <SEO
 
         title={`${profileData.full_name} | Talent Profile`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -461,10 +477,16 @@ export default function ProfilePage() {;
           profileData.bio || "View the profile of this talented individual."
         }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+        description={
+          profileData.bio || "View the profile of this talented individual."
+        }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       />
       <AppHeader />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -565,6 +587,9 @@ export default function ProfilePage() {;
 =======
   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <>;
       <SEO      />;
       <AppHeader />;
@@ -654,6 +679,7 @@ export default function ProfilePage() {;
             </div>;
             {/* Bio Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
 <<<<<<< HEAD
@@ -738,11 +764,16 @@ export default function ProfilePage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             {/* Portfolio Section */}
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>;
               <p className="text-zion-slate-light">{profileData && profileData.bio || "No bio provided."}</p>;
             </div>;            {/* Portfolio Section */}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>
               <div className="space-y-3">
@@ -800,6 +831,7 @@ export default function ProfilePage() {;
                   >
                     <Github className="h-6 w-6" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                   </Link>
@@ -822,6 +854,8 @@ export default function ProfilePage() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 )}
                 {profileData && profileData.twitter_link && (;
                   <a
@@ -850,6 +884,7 @@ export default function ProfilePage() {;
                     rel="noopener noreferrer"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
@@ -868,6 +903,10 @@ export default function ProfilePage() {;
                   </Link>
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  </Link>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 )}
               </div>
             </div>
@@ -879,6 +918,7 @@ export default function ProfilePage() {;
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -1294,3 +1334,7 @@ if (isLoading) {
 ;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

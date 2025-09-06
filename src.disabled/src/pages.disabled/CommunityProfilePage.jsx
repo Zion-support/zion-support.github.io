@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -27,6 +31,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface CommunityProfilePageProps {
   // Add props here as needed
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -59,21 +64,29 @@ interface CommunityProfilePageProps {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 }
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 export default function CommunityProfilePage({ }: CommunityProfilePageProps) {
+<<<<<<< HEAD
 =======
 =======export default function CommunityProfilePage({ }: CommunityProfilePageProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div>
       <h1>CommunityProfilePage</h1>
       <p>This component is currently under development.</p>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,6 +109,7 @@ export default function CommunityProfilePage({ }: CommunityProfilePageProps) {
 :src.disabled/src/pages.disabled/CommunityProfilePage.jsx
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -124,3 +138,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

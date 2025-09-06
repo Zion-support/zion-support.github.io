@@ -60,6 +60,7 @@ export type ProjectParticipants = {;
 
   clientUserId: string;
   talentUserId: string;
+<<<<<<< HEAD
 }
 export type Project = {  id: string;
   title: string;
@@ -118,7 +119,32 @@ export function getDaysUntilDue(milestone: Milestone): number | null {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+};
+
+export type Project = {
+  id: string;
+  name: string;
+  participants: ProjectParticipants;
+  milestones: Milestone[];
+  createdAt: string;
+  updatedAt: string;
+};
+
+export function isMilestoneStatus(value: string): value is MilestoneStatus {
+  return (
+    value === 'Pending' ||
+    value === 'In Progress' ||
+    value === 'Submitted' ||
+    value === 'Approved' ||
+    value === 'Paid'
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

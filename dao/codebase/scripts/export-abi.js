@@ -1,7 +1,11 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 =======
@@ -50,6 +54,32 @@ function main() {
       console && console.log('Exported ABI for', name)
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+const fs = require('fs');
+const path = require('path');
+function main() {
+  const outDir = path.join(__dirname, '../abi');
+  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir);
+  const artifactsDir = path.join(__dirname, '../artifacts/contracts');
+  const abis = [
+    ['VoteToken.solVoteToken'],
+    ['ZionDAO.solZionDAO'],
+    ['QuorumEngine.solQuorumEngine'],
+    ['DelegateRegistry.solDelegateRegistry'],
+    ['ConstitutionStorage.solConstitutionStorage'],
+    ['Treasure/Disbursements.solDisbursements'],
+    ['Treasure/EpochManager.solEpochManager']];
+  for (const [rel, name] of abis) {
+    const p = path.join(artifactsDir, rel, `${name}.json`);
+    if (fs.existsSync(p)) {
+      const json = JSON.parse(fs.readFileSync(p, 'utf8')),
+      fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(json.abi, null, 2));
+      console.log('Exported ABI for', name)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } else {
       console.warn('Missing artifact for', name)
     }
@@ -58,10 +88,14 @@ function main() {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 =======
@@ -74,7 +108,14 @@ function main() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   for (const [rel, name] of abis) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+main();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

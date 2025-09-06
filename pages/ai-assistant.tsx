@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -10,15 +11,28 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const AIAssistant: React.FC = () => {
 import React from 'react',
 import Head from 'next/head';
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+<<<<<<< HEAD
+
+=======
+import Button from '../components/ui/Button';
+export default function AIAssistantPage() {
+import Layout from '../components/layout/Layout';
+const AIAssistant: React.FC = () => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Layout>;
       <Head>;
@@ -26,10 +40,13 @@ import Head from 'next/head';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/ai-assistant' />;
       </Head>;
@@ -41,10 +58,13 @@ import Head from 'next/head';
             </h1>;
             <p className='text-gray-300 text-lg'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <title > AI Assistant | Zion Tech Group</title>;
         <meta;
           name='description';
@@ -62,12 +82,15 @@ import Head from 'next/head';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Automate research, summarization, drafting, scheduling, and inbox;
               triage.;
             </p>;
@@ -75,6 +98,7 @@ import Head from 'next/head';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -84,6 +108,9 @@ import Head from 'next/head';
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white'>;
           <section className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
             {[;
@@ -109,6 +136,7 @@ import Head from 'next/head';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -118,6 +146,9 @@ import Head from 'next/head';
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Request a Demo;
             </Button>;
           </div>;
@@ -125,6 +156,7 @@ import Head from 'next/head';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -134,6 +166,9 @@ import Head from 'next/head';
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="bg - blue - 50 rounded - lg p - 8 text - center">;
           <h2 className="text - 2xl font - bold mb - 4">Ready to Get Started?</h2>;
           <p className="text - lg text - gray - 700 mb - 6">;
@@ -147,6 +182,7 @@ import Head from 'next/head';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -156,6 +192,9 @@ import Head from 'next/head';
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Learn More;
             </a>;
           </div>;
@@ -163,6 +202,7 @@ import Head from 'next/head';
       </main>;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -182,6 +222,10 @@ import Head from 'next/head';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <Head>
@@ -211,6 +255,49 @@ import Head from 'next/head';
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+}
+
+import Button from '../components/ui/Button';
+export default function AIAssistantPage() {
+  return (
+    <>
+      <Head>
+        <title>AI Assistant | Zion Tech Group</title>
+        <meta name="description" content="AI Assistant that automates research, drafting, scheduling, and customer responses." />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-assistant" />
+      </Head>
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
+        <div className="max-w-6xl mx-auto space-y-10">
+          <header className="text-center">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">AI Assistant</h1>
+            <p className="text-gray-300 text-lg">Automate research, summarization, drafting, scheduling, and inbox triage.</p>
+          </header>
+          <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              'Research and summarize documents and web sourcesDraft emails, posts, briefs, and reportsAuto-schedule meetings and follow-upsIntegrations: Gmail, Google Drive, Slack, CalendarTeam approvals and audit trailStarting at $99/mo'
+            ].map((f) => (
+              <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
+            ))}
+          </section>
+          <div className="text-center">
+            <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
+          </div>
+        </div>
+<<<<<<< HEAD
+      </div>
+    </>
+  )
+}
+
+
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="bg-blue-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-lg text-gray-700 mb-6">
@@ -228,6 +315,7 @@ import Head from 'next/head';
       </main>
     </Layout>
   );
+<<<<<<< HEAD
 
 }
 =======
@@ -400,3 +488,6 @@ export default function AIAssistantPage() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

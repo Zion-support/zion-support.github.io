@@ -38,14 +38,18 @@ import { format } from "date-fns",
 import { Link } from "react-router-dom",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface JobsListProps {
   filter?: JobStatus,
   onSelectJob?: (jobId: string, jobTitle: string) => void
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -59,10 +63,16 @@ interface JobsListProps {
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const { user } = useAuth();
+  const [jobs, setJobs] = useState<Job[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   useEffect(() => {
 
     const fetchJobs = async () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       if (!user) return,
@@ -88,6 +98,10 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
       if (!user) return;
       if (!user) return,  const { user } = useAuth();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      if (!user) return;
+      if (!user) return,  const { user } = useAuth();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true);
 <<<<<<< HEAD
@@ -104,6 +118,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
@@ -114,12 +129,15 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
       try {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         let query = supabase
           .from("jobs")
           .select("*")
           .eq("client_id", user.id)
           .order("created_at", { ascending: false })
         if (filter) {
+<<<<<<< HEAD
 <<<<<<< HEAD
           query = query.eq("status", filter)
 <<<<<<< HEAD
@@ -438,6 +456,9 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
 =======
           query = query.eq("status", filter)          }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          query = query.eq("status", filter)          }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </p>;
         <Button asChild className="mt-4">;
           <Link to="/post-job">Post Your First Job</Link>;
@@ -554,6 +575,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
               {job.skills.slice(0, 3).map((skill, index) => (;
               <Link to={`/jobs/${job.id}`}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
               {job && job.skills.slice(0, 3).map((skill, index) => (;
@@ -590,6 +612,8 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
                 <Eye className="h-4 w-4 mr-1" /> View Details;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </Link>;
             </Button>;
             <div className="flex gap-2">;
@@ -604,6 +628,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
             </div>;
           </CardFooter>;
         </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       ))}
 <<<<<<< HEAD
@@ -657,6 +682,9 @@ if (return) {
 =======
       ))}}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      ))}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       try {
         let query = supabase;
           .from ("jobs");
@@ -892,6 +920,7 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -899,3 +928,6 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

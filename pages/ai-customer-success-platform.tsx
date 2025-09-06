@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
@@ -16,11 +17,14 @@ import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[s
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 ;
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
@@ -28,10 +32,13 @@ import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[s
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function AICustomerSuccessPlatform() {
 	return (
 		<ServiceLanding
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 export default function AICustomerSuccessPlatform() {
@@ -44,6 +51,8 @@ export default function AICustomerSuccessPlatform() {
 			pricePerMonthUSD={1999}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			implementationWeeks="Implementation: 2–4 weeks"
 			roiNote="Average ROI 4–10x within 90 days"
 			features={[
@@ -53,6 +62,7 @@ export default function AICustomerSuccessPlatform() {
 				"Expansion signals for upsell/cross-sell"
 				"Executive QBR reports and cohort analytics"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 				"Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment"
 			]}
@@ -72,6 +82,11 @@ export default function AICustomerSuccessPlatform() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 ;
 export default /**
@@ -98,6 +113,7 @@ return (
     industries={["SaaS", "Fintech", "Media", "E‑commerce"]}
     canonical="https: //ziontechgroup.com / ai - customer - success - platform";
   />);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -170,11 +186,17 @@ export default function AICustomerSuccessPlatform() {_return (
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			pricePerMonthUSD={1999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -197,6 +219,8 @@ export default function AICustomerSuccessPlatform() {_return (
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			implementationWeeks="Implementation: 2–4 weeks"
 			roiNote="Average ROI 4–10x within 90 days"
 			features={[
@@ -205,6 +229,7 @@ export default function AICustomerSuccessPlatform() {_return (
 				"Playbook automation (email, CS tasks, in-app guides, offers)",
 				"Expansion signals for upsell/cross-sell",
 				"Executive QBR reports and cohort analytics",
+<<<<<<< HEAD
 				"Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment"
 <<<<<<< HEAD
 =======
@@ -224,6 +249,12 @@ export default function AICustomerSuccessPlatform() {_return (
 };
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+			title;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+				"Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -237,6 +268,10 @@ export default function AICustomerSuccessPlatform() {_return (
 			canonical="https: //ziontechgroup.com/ai-customer-success-platform"
 		/>
 	)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			canonical="https: //ziontechgroup.com/ai-customer-success-platform";
 		/>;
 	);
@@ -245,6 +280,7 @@ export default function AICustomerSuccessPlatform() {_return (
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -260,3 +296,10 @@ export default function AICustomerSuccessPlatform() {_return (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

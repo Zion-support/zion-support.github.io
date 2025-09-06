@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -19,6 +20,8 @@
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 
 export default function App() {
@@ -79,17 +82,40 @@ import React, { Suspense, lazy } from 'react';
 import React from 'react';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { ThemeProvider } from './components/ThemeProvider';
 import ScrollToTop from './components/ScrollToTop';
 import { BackToTopButton } from './components/BackToTopButton';
-// Pages are handled by Next.js in the app directory
+
+// Simple Home component
+const Home = () => (
+  <div className="hero">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-white mb-4">
+        Zion Tech Group
+      </h1>
+      <p className="text-xl text-blue-100 mb-8">
+        AI, Micro SaaS, and IT Services
+      </p>
+      <p className="text-gray-300 mb-8">
+        Leading technology solutions in AI, cybersecurity, cloud, and digital transformation.
+      </p>
+      <div className="cta-buttons">
+        <button className="btn-primary">
+          Get Started
+        </button>
+        <button className="btn-secondary">
+          Learn More
+        </button>
+      </div>
+    </div>
+  </div>
+);
 
 function App() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React, { Suspense, lazy } from 'react';
@@ -145,12 +171,25 @@ const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ d
         </Router>
       </ErrorBoundary>
     </ThemeProvider>
+=======
+    <Router>
+      <div className="min-h-screen flex flex-col">
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="*" element={<Home />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 }
 <<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -217,3 +256,6 @@ export default App;
 =======
 export default App;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+export default App;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,15 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { execSync } from "child_process";
 
 console.log("🔧 Performing selective merge of main source files...");
 
 // List of main source directories to merge
 <<<<<<< HEAD
+<<<<<<< HEAD
 const mainSourceDirs = [  'pages/',
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const mainSourceDirs = [
 #!/usr / bin / env node;
 import {exec_sync} from 'child_process';
@@ -20,7 +27,10 @@ console.log ('🔧 Performing selective merge of main source files...');
 const mainSourceDirs = [;
 
   'pages/',
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   'components/',
   'utils/',
   'types/',
@@ -97,10 +107,14 @@ const mergeSpecificFiles = () =>: any {
     return true;
   } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.error("Error in selective merge:", error.message);    } catch (error) {
 =======
     } catch (error) {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+    } catch (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       console && console.error('Error committing changes:', error && error.message);
     }
   } else {

@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 export { useMilestones } from './milestones/useMilestones';
@@ -27,9 +30,9 @@ export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export { useMilestones } from './milestones/useMilestones',;
 
-
 export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones/types';
 export { useMilestones } from './milestones/useMilestones',;
+<<<<<<< HEAD
 export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones/types';
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -57,3 +60,6 @@ export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones
 export { useMilestones } from './milestones/useMilestones',;
 export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones/types';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones/types';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -14,10 +15,13 @@ import React from "react",
 import { Star } from "lucide-react",
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from "react",
 import { Star } from "lucide-react",
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -82,6 +86,11 @@ import React from "react",
 import { Star } from "lucide-react",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from "react",
+import { Star } from "lucide-react",
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
@@ -117,6 +126,7 @@ import { Star } from "lucide-react",
               </div>
               <div className="text-zion-slate-light">{stat.label}</div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -160,6 +170,8 @@ export const CommunityTrust: React.FC = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           ))}
         </div>
 
@@ -187,6 +199,7 @@ export const CommunityTrust: React.FC = () => {;
     </section>
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   )
@@ -200,6 +213,8 @@ export const CommunityTrust: React.FC = () => {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="w - 6 h - 6 text - zion - cyan";
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>;
               <div className="text - zion - slate-light">{stat.label}</div>;
             </div>))}
@@ -210,7 +225,10 @@ export const CommunityTrust: React.FC = () => {;
             {[1, 2, 3, 4, 5].map ((star) => (
               <Star;
                 key={star}                className="w - 6 h - 6 text - zion-cyan";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 fill="current_color";
               />))}
           </div>;
@@ -230,6 +248,7 @@ export const CommunityTrust: React.FC = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
@@ -240,5 +259,7 @@ export const CommunityTrust: React.FC = () => {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 

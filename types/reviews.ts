@@ -27,6 +27,7 @@ export type ReviewCategoryScores = {;
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 export type ProjectStatus = 'InProgress' | 'Completed';
+<<<<<<< HEAD
 export type Project = {;
   id: string;
   clientId: string, // slug for client/user;
@@ -336,6 +337,10 @@ export interface Review {
 export type ProjectStatus = 'InProgress' | 'Completed';
 export type Project = {  id: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export type Project = {
+  id: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   userId: string;
   serviceId: string;
   rating: number;
@@ -354,7 +359,7 @@ export type ReviewCategoryScores = {
   talentSlug: string, // slug from TALENT_PROFILES;
   title: string;
   status: ProjectStatus,;
-  completedAt?: string, // ISO string
+  completedAt?: string, // ISO string;
 };
 export type ReviewRole = 'client' | 'talent';
 export type ReviewCategoryScores = {
@@ -366,6 +371,9 @@ export type Review = {
   id: string;
   projectId: string;
   fromRole: ReviewRole;
+
+
+
 
   fromId: string, // clientId or talentSlug depending on fromRole;
   toRole: ReviewRole, // opposite of fromRole;
@@ -380,6 +388,7 @@ export type Review = {
   removed?: boolean,;
   createdAt: string, // ISO;
 },;
+
 
 export type ReviewsSummary = {
   averageRating: number;
@@ -441,6 +450,9 @@ export type ReviewsSummary = {
 }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

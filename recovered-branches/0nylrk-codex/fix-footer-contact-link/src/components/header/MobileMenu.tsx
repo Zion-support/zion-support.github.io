@@ -21,6 +21,7 @@ export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
   const location = useLocation();
   const { user } = useAuth();
@@ -107,6 +108,12 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {  con
   const isAuthenticated = !!user,
       {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {  const location = useLocation(),
+  const { user } = useAuth(),
+  const isAuthenticated = !!user,
+      {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       name: "Browse"
       href: "/talent"
       icon: Search
@@ -133,6 +140,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {  con
     },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -141,11 +149,14 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {  con
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       name: "Post Job"
       href: "/post-job"
       icon: BriefcaseIcon
       matches: (path: string) => path.startsWith("/post-job")
+<<<<<<< HEAD
 <<<<<<< HEAD
       authRequired: true
 <<<<<<< HEAD
@@ -172,11 +183,15 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {  con
 =======
       authRequired: true    {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      authRequired: true    {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       name: "Messages"
       href: "/messages"
       icon: MessageSquare
       matches: (path: string) => path.startsWith("/messages") |path.startsWith("/inbox")
       badge: unreadCount
+<<<<<<< HEAD
 <<<<<<< HEAD
       authRequired: true
 <<<<<<< HEAD
@@ -301,10 +316,14 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {  con
 =======
       authRequired: true          <Link
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      authRequired: true          <Link
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             key={item.name}
             to={item.href}
             className={cn(
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               "flex items-center px-6 py-3 text-base font-medium",
 
@@ -499,6 +518,9 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
 =======
               "flex items-center px-6 py-3 text-base font-medium",          <Link
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              "flex items-center px-6 py-3 text-base font-medium",          <Link
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             key={item && item.name}
             to={item && item.href}
             className={cn(                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
@@ -514,6 +536,7 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
             {item && item.name}          </Link>;
         ))}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -531,6 +554,8 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               )}
             </div>;
             {item && item.name}
@@ -547,6 +572,7 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
@@ -554,6 +580,8 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       </nav>;
     </div>;
@@ -659,6 +687,7 @@ function MobileMenu() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;}
@@ -744,3 +773,5 @@ return ()
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

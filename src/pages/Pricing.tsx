@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
@@ -56,10 +57,29 @@ const Pricing: React.FC = () => {
         "Up to 5 users",
         "Basic analytics"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Pricing: React.FC = () => {
+  const plans = [
+    {
+      name: 'Micro SaaS MVP',
+      price: '$8k - $20k',
+      period: '2-4 weeks',
+      description: 'Perfect for validating your micro SaaS idea',
+      features: [
+        'Core features only',
+        'Basic Stripe integration',
+        'Simple analytics',
+        'Email support',
+        '2 weeks maintenance'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       ],
       popular: false
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       name: 'Professional',
       price: { monthly: 299, annual: 239 },
@@ -72,11 +92,24 @@ const Pricing: React.FC = () => {
         '10GB storage',
         'Advanced analytics',
         'API access'
+=======
+      name: 'AI Discovery',
+      price: '$5k - $12k',
+      period: '2-3 weeks',
+      description: 'Explore AI possibilities for your business',
+      features: [
+        'Use case design',
+        'Technology selection',
+        'Implementation roadmap',
+        'Proof of concept',
+        'Consultation included'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       ],
       limitations: [],
       popular: true
     },
     {
+<<<<<<< HEAD
       name: 'Enterprise',
       price: { monthly: 599, annual: 479 },
       description: 'For large organizations with complex needs',
@@ -90,6 +123,18 @@ const Pricing: React.FC = () => {
         'Full API access',
         'Custom integrations',
         'SLA guarantee'
+=======
+      name: 'IT Infrastructure',
+      price: '$10k - $30k',
+      period: '4-8 weeks',
+      description: 'Complete IT infrastructure setup',
+      features: [
+        'Cloud migration',
+        'DevOps setup',
+        'Security hardening',
+        'Monitoring & alerting',
+        '3 months support'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       ],
       limitations: [],
 =======
@@ -147,6 +192,7 @@ const Pricing: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
     }
   ];
@@ -455,63 +501,25 @@ const Pricing: React.FC = () => {
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="container mx-auto px-4">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Pricing Plans
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose the perfect plan for your business needs. All plans include our core services with flexible options.
+          <h1 className="text-5xl font-bold text-white mb-6">Pricing Plans</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Choose the perfect plan for your business needs. All plans include our commitment to quality and support.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <PricingCard
-            name="Starter"
-            price="$2,500"
-            period="month"
-            description="Perfect for small businesses getting started with AI and automation"
-            features={[
-              "Basic AI services",
-              "Micro SaaS development",
-              "IT support",
-              "Email support",
-              "Monthly reports"
-            ]}
-            isPopular={false}
-          />
-          <PricingCard
-            name="Professional"
-            price="$7,500"
-            period="month"
-            description="Ideal for growing businesses that need advanced AI and automation"
-            features={[
-              "Advanced AI services",
-              "Custom micro SaaS",
-              "Full IT services",
-              "Priority support",
-              "Weekly reports",
-              "API access"
-            ]}
-            isPopular={true}
-          />
-          <PricingCard
-            name="Enterprise"
-            price="$25,000"
-            period="month"
-            description="Complete solution for large enterprises with complex needs"
-            features={[
-              "Full AI suite",
-              "White-label solutions",
-              "Dedicated team",
-              "24/7 support",
-              "Custom integrations",
-              "SLA guarantee"
-            ]}
-            isPopular={false}
-          />
+          {plans.map((plan, index) => (
+            <PricingCard key={index} {...plan} />
+          ))}
         </div>
 
         <div className="text-center">
+<<<<<<< HEAD
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Ready to Get Started?</h2>
           <p className="text-gray-600 mb-8">
             Contact us today to discuss your specific needs and get a custom quote.
@@ -606,6 +614,23 @@ const Pricing: React.FC = () => {
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+          <h2 className="text-2xl font-bold text-white mb-4">Need a custom solution?</h2>
+          <p className="text-gray-300 mb-6">
+            Contact us to discuss your specific requirements and get a tailored quote.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Contact Sales
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 function PricingCard({ name, price, period, description, features, popular }: {
   name: string;
@@ -616,43 +641,42 @@ function PricingCard({ name, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
-    <div className={`p-8 rounded-lg border-2 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} relative`}>
+    <div className={`bg-white/10 backdrop-blur-sm p-8 rounded-2xl border transition-all duration-300 hover:bg-white/20 ${
+      popular ? 'border-blue-500 ring-2 ring-blue-100' : 'border-white/20'
+    }`}>
       {popular && (
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-            Most Popular
-          </span>
+        <div className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold inline-block mb-4">
+          Most Popular
         </div>
       )}
-      <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
-      <div className="mb-4">
-        <span className="text-4xl font-bold text-gray-900">{price}</span>
-        <span className="text-gray-600 ml-2">{period}</span>
-      </div>
-      <p className="text-gray-600 mb-6">{description}</p>
+      <h3 className="text-2xl font-bold text-white mb-2">{name}</h3>
+      <div className="text-3xl font-bold text-white mb-2">{price}</div>
+      <div className="text-gray-300 mb-4">{period}</div>
+      <p className="text-gray-300 mb-6">{description}</p>
       <ul className="space-y-3 mb-8">
         {features.map((feature, index) => (
-          <li key={index} className="text-sm text-gray-600 flex items-center">
-            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></span>
+          <li key={index} className="flex items-center text-gray-300">
+            <span className="text-green-400 mr-2">✓</span>
             {feature}
           </li>
         ))}
       </ul>
-      <a
-        href={`mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry - ${name} Plan`}
+      <Link
+        to="/contact"
         className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
           popular
             ? 'bg-blue-600 text-white hover:bg-blue-700'
-            : 'bg-gray-900 text-white hover:bg-gray-800'
+            : 'bg-white/20 text-white hover:bg-white/30'
         }`}
       >
         Get Started
-      </a>
+      </Link>
     </div>
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -876,3 +900,6 @@ export default function PricingPage() {
   );
 }
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+export default Pricing;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -69,6 +69,7 @@ if ( {) {
 }
     chrome.tabs.create ({ url: `${BASE_URL}/notifications` });
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 
@@ -143,3 +144,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 =======
   }>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

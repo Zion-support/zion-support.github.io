@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,15 +37,41 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   try {
+<<<<<<< HEAD
     const apiKey = process.env.OPENAI_API_KEY,
     if (apiKey) {
       const { OpenAI } = await import('openai'),
       const openai = new OpenAI({ apiKey }),
+=======
+    const apiKey = process.env.OPENAI_API_KEY
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('AllowPOST');
+    return res.status(405).end('Method Not Allowed')
+  }
+
+  const { prompt } = req.body || {};
+  if (!prompt) return res.status(400).json({ error: 'prompt required' });
+  try {
+    const apiKey = process.env.OPENAI_API_KEY;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    if (apiKey) {
+      const { OpenAI } = await import('openai');
+      const openai = new OpenAI({ apiKey });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const resp = await openai.chat.completions.create({
         model: 'gpt-4o-mini',
         messages: [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' },
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' }
 <<<<<<< HEAD
 =======
@@ -75,12 +104,38 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+{
+            role: 'system',
+            content:
+              'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.',
+          },
+          { role: 'user', content: String(prompt) },
+        ],
+      });
+      const text = resp.choices?.[0]?.message?.content || 'No response';
+      return res.status(200).json({ text });
+    }
+
+    // Fallback without API key
+    return res.status(200).json({
+      text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.',
+    });
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message ?? 'Coach error' });
+  }
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       return res.status(200).json({ text })
     }
     // Fallback without API key

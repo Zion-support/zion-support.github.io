@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,10 +21,13 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ' \' \' \' \' \' const listingsSchema = z && z.array(listingSchema) export function ServiceTypeStep({ formData,updateFormData }) { \' const [searchQuery,setSearchQuery] = useState(\') const debouncedQuery = useDebounce(searchQuery,300) const [listings,setListings] = useState([]) const [loading,setLoading] = useState(false) const [error,setError] = useState(null)\';\";\";
 
 " " " " " " const listingsSchema = z && z.array(listingSchema) export function ServiceTypeStep({ formData,updateFormData }) { " const [searchQuery,setSearchQuery] = useState(") const debouncedQuery = useDebounce(searchQuery,300) const [listings,setListings] = useState([]) const [loading,setLoading] = useState(false) const [error,setError] = useState(null)";";";"""
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -53,3 +57,5 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

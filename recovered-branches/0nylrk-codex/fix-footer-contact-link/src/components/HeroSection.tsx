@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 export function HeroSection() {
@@ -8,6 +12,7 @@ export function HeroSection() {
 
       
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -23,6 +28,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button",
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { GradientHeading } from "@/components/GradientHeading";
 import { Link } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading",
@@ -32,16 +39,20 @@ import { Link } from "react-router-dom",
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden py-20 md:py-32">;
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -92,10 +103,14 @@ export function HeroSection() {
 =======
             <div className="container relative z-10 px-4 mx-auto text-center">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <div className="container relative z-10 px-4 mx-auto text-center">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <GradientHeading className="mb-6 text-5xl md:text-7xl font-bold">
           The Future of Tech & AI Marketplace
         </GradientHeading>
         <p className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-3xl mx-auto">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           The world's first free marketplace dedicated to high-tech and artificial intelligence.
@@ -107,6 +122,8 @@ export function HeroSection() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           The world's first free marketplace dedicated to high-tech and
           artificial intelligence. Publish, connect, and thrive — all in one
           place.
@@ -114,6 +131,7 @@ export function HeroSection() {
         <div className="flex flex-col sm: flex-row justify-center gap-4">
 
       <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -148,6 +166,8 @@ export function HeroSection() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -160,10 +180,14 @@ export function HeroSection() {;
     <section className="relative overflow-hidden py-20 md:py-32">;
       {/* Background gradient effect */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>;
       ;
       <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>;
@@ -230,6 +254,7 @@ function HeroSection() {
           </Button>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>;
 <<<<<<< HEAD
 
@@ -280,3 +305,6 @@ function HeroSection() {
 =======
       </div>;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </div>;}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -17,10 +17,13 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
 export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const dateObj = new Date(date);
   switch (format) {
     case 'short':
@@ -273,6 +276,7 @@ if ( {) {
   return seconds <= 5 ? 'just now' : `${Math.floor (seconds)} seconds ago`;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
   return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`;
@@ -283,6 +287,9 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

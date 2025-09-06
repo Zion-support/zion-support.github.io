@@ -25,7 +25,10 @@ export: const AnalyticsDashboard = ({ className = ",showRealTime = true,refreshI
 "export\": const AnalyticsDashboard = ({ className = \',showRealTime = true,refreshInterval = 5000}) => { const { isTracking,currentSession,performanceMetrics,events,getAnalyticsSummary,trackEvent,trackConversion} = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enablePerformanceTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'tru\',e,\"enableHeatmapTracking\": \'fals\',e}) const [isExpanded,setIsExpanded] = useState (false) const [selectedTimeRange,setSelectedTimeRange] = useState (\'24h\') const [analyticsSummary,setAnalyticsSummary] = useState (null) \'';\"";
 
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 "export\": const AnalyticsDashboard = ({ className = \',showRealTime = true,refreshInterval = 5000}) => { const { isTracking,currentSession,performanceMetrics,events,getAnalyticsSummary,trackEvent,trackConversion} = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enablePerformanceTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'tru\',e,\"enableHeatmapTracking\": \'fals\',e}) const [isExpanded,setIsExpanded] = useState (false) const [selectedTimeRange,setSelectedTimeRange] = useState (\'24h\') const [analyticsSummary,setAnalyticsSummary] = useState (null) \'';\"";
 "export\": const AnalyticsDashboard = ({ className = \',showRealTime = true,refreshInterval = 5000}) => { const { isTracking,currentSession,performanceMetrics,events,getAnalyticsSummary,trackEvent,trackConversion} = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enablePerformanceTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'tru\',e,\"enableHeatmapTracking\": \'fals\',e}) const [isExpanded,setIsExpanded] = useState (false) const [selectedTimeRange,setSelectedTimeRange] = useState (\'24h\') const [analyticsSummary,setAnalyticsSummary] = useState (null) \'';\"";
 :src.disabled/components/AnalyticsDashboard.js.jsx

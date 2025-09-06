@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,6 +21,9 @@ import _React from "react"; export function ModeToggle() { return () <button cla
 =======
 import _React from "react"; export function ModeToggle() { return () <button className="p-2 rounded-lg bg-zion-slate/10 "hover": bg-zion-slate/20 transition-colors> <svg className="w-5 h-5 text-zion-slate-light" fill="none" stroke="currentColor" viewBox="0" 0 24 24 > <path" strokeLinecap="round strokeLinejoin=round" strokeWidth={2}" d="M20.354" 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z /> </svg> </button> )} ";");} ); "export default ComponentName;"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -51,6 +55,7 @@ import _React from "react"; export function ModeToggle() { return () <button cla
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -90,3 +95,8 @@ import React from \"react\"; export function ModeToggle() { return () <button cl
 const React from "react"; export function ModeToggle() { return () <button className="p-2 rounded-lg bg-zion-slate/10 hover: bg-zion-slate/20 transition-colors> <svg className="w-5 h-5 text-zion-slate-light" fill="none" stroke="currentColor" viewBox="0" 0 24 24 > <path" strokeLinecap="round strokeLinejoin=round" strokeWidth={2}" d="M20.354" 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z /> </svg> </button> )} ";");} ); "export default ComponentName;"""
 import _React from "react"; export function ModeToggle() { return () <button className="p-2 rounded-lg bg-zion-slate/10 "hover": bg-zion-slate/20 transition-colors> <svg className="w-5 h-5 text-zion-slate-light" fill="none" stroke="currentColor" viewBox="0" 0 24 24 > <path" strokeLinecap="round strokeLinejoin=round" strokeWidth={2}" d="M20.354" 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z /> </svg> </button> )} ";");} ); "export default ComponentName;"
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import React from \"react\"; export function ModeToggle() { return () <button className=\"p-2 rounded-lg bg-zion-slate/10 \"hover\": bg-zion-slate/20 transition-colors> <svg className=\"w-5 h-5 text-zion-slate-light\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0\" 0 24 24 > <path\" strokeLinecap=\"round strokeLinejoin=round\" strokeWidth={2}\" d=\"M20.354\" 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z /> </svg> </button> )} \";\");} ); \"export default ComponentName;\"
+const React from "react"; export function ModeToggle() { return () <button className="p-2 rounded-lg bg-zion-slate/10 hover: bg-zion-slate/20 transition-colors> <svg className="w-5 h-5 text-zion-slate-light" fill="none" stroke="currentColor" viewBox="0" 0 24 24 > <path" strokeLinecap="round strokeLinejoin=round" strokeWidth={2}" d="M20.354" 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z /> </svg> </button> )} ";");} ); "export default ComponentName;"""
+import _React from "react"; export function ModeToggle() { return () <button className="p-2 rounded-lg bg-zion-slate/10 "hover": bg-zion-slate/20 transition-colors> <svg className="w-5 h-5 text-zion-slate-light" fill="none" stroke="currentColor" viewBox="0" 0 24 24 > <path" strokeLinecap="round strokeLinejoin=round" strokeWidth={2}" d="M20.354" 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z /> </svg> </button> )} ";");} ); "export default ComponentName;"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

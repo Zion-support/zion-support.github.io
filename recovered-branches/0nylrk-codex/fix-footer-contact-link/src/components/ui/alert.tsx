@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -14,6 +15,9 @@ import {cva, type, VariantProps} from 'class-variance-authority';
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {cn} from '@/lib/utils';
 const alertVariants = cva(
   'relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground'
@@ -30,6 +34,7 @@ const alertVariants = cva(
     }
   }
 );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -54,6 +59,8 @@ import { cva, type VariantProps } from "class-variance-authority"
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { cn } from "@/lib/utils"
 
 const alertVariants = cva(
@@ -78,15 +85,19 @@ const Alert = React.forwardRef<
   />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const Alert = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
 ></typeof>(({ className, variant, ...props }, ref) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -178,6 +189,8 @@ Alert && Alert.displayName = 'Alert';
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const AlertTitle = React && React.forwardRef<;
   HTMLParagraphElement,;
   React && React.HTMLAttributes<HTMLHeadingE</HTMLHeadingElement>lement>;
@@ -203,11 +216,14 @@ const AlertTitle = React.forward_ref<;
   />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ));
 AlertTitle.displayName = 'AlertTitle';
 const AlertDescription = React.forwardRef<
@@ -229,6 +245,7 @@ const AlertDescription = React && React.forwardRef<;
 AlertDescription.display_name = 'AlertDescription';
 ;
 export { Alert, AlertTitle, AlertDescription }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -323,11 +340,15 @@ React.HTMLAttributes<HTMLParagraphElement> > ( ({
 =======
 ;));
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;));
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 AlertDescription.displayName = 'AlertDescription';
 export { Alert, AlertTitle, AlertDescription }
 ))
 AlertDescription.displayName = "AlertDescription"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -344,3 +365,5 @@ export { Alert, AlertTitle, AlertDescription }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -23,6 +24,10 @@ import {EmptyFraudState} from "./EmptyFraudState";
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
@@ -31,6 +36,7 @@ import { SeverityDisplay } from "./SeverityDisplay",
 import { ActionButtons } from "./ActionButtons";
 import { EmptyFraudState } from "./EmptyFraudState";
 import { ActionButtons } from "./ActionButtons",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { EmptyFraudState } from "./EmptyFraudState",
 <<<<<<< HEAD
@@ -90,12 +96,16 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
 =======
 import { EmptyFraudState } from "./EmptyFraudState",}) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { EmptyFraudState } from "./EmptyFraudState",}) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (isLoading) {
     return (
 
       <div className="flex justify-center items-center h-64">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
     )
 <<<<<<< HEAD
@@ -122,6 +132,9 @@ import React from "react",;
 =======
     )import React from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    )import React from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
 import { FraudFlag } from "@/types/fraud",;
@@ -132,6 +145,7 @@ import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex 
       </div>;
     );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -225,6 +239,12 @@ import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex 
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
   }    <Table>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }
+  if (flags.length === 0) {
+    return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
+  }    <Table>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <TableHeader>;
         <TableRow>;
           <TableHead>Severity</TableHead>;
@@ -261,6 +281,7 @@ import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {new Date(flag && flag.timestamp).toLocaleDateString()} {new Date(flag && flag.timestamp).toLocaleTimeString()}
@@ -286,6 +307,8 @@ import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex 
               }>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {flag && flag.status}
               </Badge>;
             </TableCell>;
@@ -293,6 +316,7 @@ import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex 
               <ActionButtons
                 flagId={flag && flag.id} 
                 status={flag && flag.status} 
+<<<<<<< HEAD
 <<<<<<< HEAD
                 onAction={onAction} 
 <<<<<<< HEAD
@@ -529,3 +553,6 @@ onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') 
 =======
                 onAction={onAction} 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                onAction={onAction} 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

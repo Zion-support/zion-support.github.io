@@ -36,6 +36,7 @@ export function useAuthOperations(
   useEffect(() => {
 =======
 
+<<<<<<< HEAD
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import type { UserProfile } from "@/types / auth";
@@ -53,6 +54,8 @@ function useAuthOperations() {
   }, []);
 ;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const login = async ({ email, password }: { email: string, password: string }) => {
     setIsLoading (true);
     try {
@@ -173,10 +176,13 @@ function useAuthOperations() {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           description: error.message});
         return { data: null, error: error.message }
           title: "Error during signup",
@@ -211,6 +217,7 @@ if ( {) {
     }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const logout = async () => {
     setIsLoading (true);
@@ -218,16 +225,21 @@ if ( {) {
 =======
       const { error } = await supabase.auth.signOut(),
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       if (error) {
         toast({
           variant: "destructive";
           title: "Oh no! Something went wrong.",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           description: error.message})
 
       } else {
@@ -333,7 +345,10 @@ if ( {) {
       setIsLoading (false);
     }
   },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const updateProfile = async (profileData: Partial<UserProfile>) => {
     setIsLoading(true)
@@ -392,10 +407,13 @@ if ( {) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           return { ...prevUser, ...profileData }
       // Optimistically update the local user state;
       set_user ((prev_user) => {
@@ -491,10 +509,13 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const loginWithFacebook = async () => {
     setIsLoading (true);
     try {
@@ -547,6 +568,7 @@ if ( {) {
         toast({;
           variant: "destructive",;
 <<<<<<< HEAD
+<<<<<<< HEAD
           title: "Oh no! Something went wrong.",;
           description: error.message});
 <<<<<<< HEAD
@@ -556,6 +578,10 @@ if ( {) {
           title: "Oh no! Something went wrong.",,
   description: error.message});
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          title: "Oh no! Something went wrong.",,
+  description: error.message});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   }
   const loginWithGoogle = async () => {

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from; \'next/head\'; export default function TermsPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Terms of Service - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Terms of Service for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Terms of Service</h1> <p className=\'text-gray-700 leading-7\'> These terms govern your use of our website and services. By accessing or; using our site,you agree to these terms. For more details,please reach out via the Contact page. </p> </div> )}
 =======
 =======
@@ -19,10 +20,13 @@ import Head from; \'next/head\'; export default function TermsPage() { return ( 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Head from; \'next/head\'; export default function TermsPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Terms of Service - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Terms of Service for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Terms of Service</h1> <p className=\'text-gray-700 leading-7\'> These terms govern your use of our website and services. By accessing or; using our site,you agree to these terms. For more details,please reach out via the Contact page. </p> </div> )}
 import React from 'react';
 interface TermsProps {
   // Add props here as needed
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -51,11 +55,14 @@ import React from 'react';
 import React from 'react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import * as React from 'react';
 
 interface TermsProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,6 +72,8 @@ interface TermsProps {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function Terms({ }: TermsProps) {
   return (
     <div>
@@ -72,6 +81,7 @@ export default function Terms({ }: TermsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -190,3 +200,6 @@ export default function Terms(): any ({ }: TermsProps) {;
 =======
 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

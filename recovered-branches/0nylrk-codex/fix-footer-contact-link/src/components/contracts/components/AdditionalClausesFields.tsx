@@ -8,6 +8,7 @@ import {;
   FormLabel,;
   FormControl,;
 <<<<<<< HEAD
+<<<<<<< HEAD
   FormDescription,;
 
 =======
@@ -56,10 +57,14 @@ import { Checkbox } from "@/components/ui/checkbox";
 =======
   FormDescription,;} from "@/components/ui/form";import { Checkbox } from "@/components/ui/checkbox";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  FormDescription,;} from "@/components/ui/form";import { Checkbox } from "@/components/ui/checkbox";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { ContractFormValues } from "./ContractForm";
 interface AdditionalClausesFieldsProps {;
   form: UseFormReturn<ContractFormValues>;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -68,6 +73,8 @@ interface AdditionalClausesFieldsProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function AdditionalClausesFields({
   form
@@ -75,6 +82,7 @@ export function AdditionalClausesFields({
   return (
     <FormField
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -223,6 +231,9 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
 =======
       name="additionalClauses"      render={() => (;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      name="additionalClauses"      render={() => (;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <FormItem>;
           <div className="mb-4">;
             <FormLabel>Additional Clauses</FormLabel>;
@@ -241,6 +252,7 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                           ? field && field.onChange([...currentValues, "nda"]);
                           : field && field.onChange(;
                               currentValues && currentValues.filter((value) => value !== "nda"),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -294,11 +306,16 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
             <FormField;                      onCheckedChange={(checked) => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
+            <FormField;                      onCheckedChange={(checked) => {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         const currentValues = field.value || [];
                         return checked
                           ? field.onChange([...currentValues, "nda"])
                           : field.onChange(
                               currentValues.filter((value) => value !== "nda"),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -331,6 +348,8 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                             );
                       }}
                     />
@@ -346,6 +365,7 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                 </FormItem>
               )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -364,6 +384,8 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                             );
                       }}
                     />;
@@ -375,6 +397,7 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
                   <FormControl>;
                     <Checkbox
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                       checked={field.value?.includes("ip")}
@@ -396,6 +419,8 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       checked={field && field.value?.includes("ip")}
 
                               currentValues.filter((value) => value !== "ip"),
@@ -406,6 +431,7 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                       onCheckedChange={(checked) => {;
                         const currentValues = field && field.value || [];
                         return checked;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -481,6 +507,8 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                             );
                       }}
                     />
@@ -505,6 +533,7 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -512,6 +541,8 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                             );
                       }}
                     />;
@@ -523,6 +554,7 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
                   <FormControl>;
                     <Checkbox
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -632,12 +664,18 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                               ),
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                                (value) => value !== "termination",
+                              ),
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       checked={field.value?.includes('termination')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
                         return checked;
                           ? field.onChange([...currentValues, 'termination']);
                           : field.onChange(;
+<<<<<<< HEAD
 <<<<<<< HEAD
                               currentValues.filter((value) => value !== 'termination');
 <<<<<<< HEAD
@@ -726,6 +764,9 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
 =======
                               currentValues.filter((value) => value !== 'termination');                    <FormDescription>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                              currentValues.filter((value) => value !== 'termination');                    <FormDescription>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       Define conditions for ending the contract;
                     </FormDescription>;
                   </div>;
@@ -744,11 +785,14 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                     <Checkbox
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                       checked={field && field.value?.includes("revisions")}
                       onCheckedChange={(checked) => {;
@@ -766,6 +810,7 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
               control={form.control}
               name="additional_clauses";
                                 (value) => value !== "revisions",
+<<<<<<< HEAD
 <<<<<<< HEAD
                               ),
 <<<<<<< HEAD
@@ -822,6 +867,9 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
 =======
                               ),                            );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                              ),                            );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       }}
                     />
                   </FormControl>
@@ -841,6 +889,7 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
       )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     />
     />;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -850,6 +899,8 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                             );
                       }}
@@ -878,6 +929,7 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                       Define how changes to the contract are handled;
                     </FormDescription>;
                   </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -920,3 +972,6 @@ FormDescription interface AdditionalClausesFieldsProps {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

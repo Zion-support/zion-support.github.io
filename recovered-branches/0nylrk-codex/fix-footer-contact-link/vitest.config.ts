@@ -12,6 +12,7 @@ export default defineConfig({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     globals: true}});
 =======
@@ -25,12 +26,15 @@ export default defineConfig({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   test: {
     environment: 'jsdom';
     setupFiles: './tests/setup && setup.ts',
 
     globals: true}});
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -52,6 +56,8 @@ export default defineConfig({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {define_config} from 'vitest / config';
 import path from 'node: path',
 export default define_config ({
@@ -70,6 +76,7 @@ export default defineConfig({;
     environment: 'jsdom',;
     setupFiles: './tests/setup.ts';
 <<<<<<< HEAD
+<<<<<<< HEAD
     globals: true}});
 <<<<<<< HEAD
 ;
@@ -85,3 +92,6 @@ export default defineConfig({;
 =======
     globals: true}});
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    globals: true}});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

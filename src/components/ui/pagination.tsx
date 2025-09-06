@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import * as React from &quot;react & quot;
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
@@ -105,6 +106,8 @@ type PaginationLinkProps = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 interface PaginationButtonProps
 =======
@@ -124,6 +127,7 @@ interface PaginationButtonProps
   page: number
   isActive?: boolean
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const PaginationLink = ({
@@ -143,6 +147,10 @@ const PaginationLink = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+const PaginationLink = ({
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ...props
 }: PaginationLinkProps) => (
   <a
@@ -153,6 +161,7 @@ const PaginationLink = ({
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -161,6 +170,8 @@ const PaginationLink = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         variant: isActive ? "outline" : "ghost",
 
         size}),
@@ -169,6 +180,7 @@ const PaginationLink = ({
     {...props}
   />
 )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -183,6 +195,9 @@ PaginationLink.displayName = "PaginationLink"
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -193,6 +208,7 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
       aria-label={`Page ${page}`}
       aria-current={isActive ? 'page' : undefined}
       className={cn(;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         buttonVariants({ variant: 'ghost', size: 'icon' }),;
@@ -210,6 +226,9 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         className;
       )}
       {...props}
@@ -237,6 +256,7 @@ const PaginationPrevious = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -248,6 +268,9 @@ PaginationPrevious.displayName = "PaginationPrevious"
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const PaginationNext = ({
   className,
 =======
@@ -268,6 +291,7 @@ const PaginationNext = ({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -276,6 +300,8 @@ PaginationNext.displayName = "PaginationNext"
 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const PaginationEllipsis = ({
   className,
   ...props
@@ -289,6 +315,7 @@ const PaginationEllipsis = ({
     <span className="sr-only">More pages</span>
   </span>
 )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -416,3 +443,6 @@ export {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

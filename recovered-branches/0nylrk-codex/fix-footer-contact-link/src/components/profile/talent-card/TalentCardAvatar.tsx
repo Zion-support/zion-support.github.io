@@ -28,13 +28,17 @@ interface TalentCardAvatarProps {;
   fullName: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 
 import React from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -167,6 +171,12 @@ interface TalentCardAvatarProps {
   profilePicture?: string,
   fullName: string}
 
+=======
+interface TalentCardAvatarProps {
+  profilePicture?: string,
+  fullName: string}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======}
 import React from './react';
 import { Avatar, AvatarImage, AvatarFallback  } from '@/components / ui / avatar';
@@ -187,6 +197,7 @@ function TalentCardAvatar() {
       .toUpperCase ();
   }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -234,3 +245,6 @@ fullName: string
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

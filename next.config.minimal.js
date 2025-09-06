@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -52,6 +53,8 @@ const nextConfig = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 /** @type {import ('next').NextConfig} */;
 const next_config = {
@@ -86,6 +89,7 @@ module.exports = next_config;
 };
 
 module.exports = nextConfig;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -255,6 +259,42 @@ module.exports = nextConfig;
 =======
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+module.exports = nextConfig;
+
+  pageExtensions: ["tsx", "ts", "jsx", "js"],
+  images: {
+    domains: ["localhost", "ziontechgroup.com"],
+  },
+  output: "standalone",
+  trailingSlash: false,
+  distDir: '.next',
+};
+/** @type {import('next').NextConfig} */;
+const nextConfig = {;
+  reactStrictMode:true,;
+  eslint:{ ignoreDuringBuilds:true },;
+  typescript:{ ignoreBuildErrors:true },;
+  pageExtensions:['tsx', 'ts', 'jsx', 'js'],;
+  images:{;
+    domains:["localhost", "ziontechgroup.com"],;
+  },;
+  output:'standalone',;
+  trailingSlash:false,;
+  distDir:'.next',;
+};
+;
+module.exports = nextConfig;};
+};
+;
+export default nextConfig;
+const nextConfig = {,
+  reactStrictMode: true,
+  compress: true,
+  poweredByHeader: false,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 module.exports = nextConfig;
 module.exports = nextConfig;
 
@@ -450,6 +490,7 @@ module.exports = nextConfig;
 module.exports = nextConfig;
 module.exports = nextConfig;
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -463,3 +504,5 @@ module.exports = nextConfig;
 module.exports = nextConfig;
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

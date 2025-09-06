@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { BadgeCheck } from 'lucide-react'
@@ -8,15 +9,39 @@ interface TalentCardHeaderProps {
   professionalTitle: string,
   profilePicture?: string,
   availabilityType: string,
+=======
+<<<<<<< HEAD
+yearsExperience
+=======
+import React from 'react';
+import { BadgeCheck } from 'lucide-react';
+import { TalentCardAvatar } from './TalentCardAvatar';
+import { TalentCardAvailability } from './TalentCardAvailability';
+
+interface TalentCardHeaderProps {
+  fullName: string;
+  professionalTitle: string;
+  profilePicture?: string;
+  availabilityType: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   yearsExperience: number
 }
 
 export function TalentCardHeader({ 
+<<<<<<< HEAD
   fullName,
   professionalTitle, 
   profilePicture, 
   availabilityType,
   yearsExperience
+=======
+  fullName;
+  professionalTitle;
+  profilePicture;
+  availabilityType;
+  yearsExperience
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }: TalentCardHeaderProps) {
   return (
     <div className='flex items-start gap-4 mb-4'>
@@ -41,6 +66,7 @@ export function TalentCardHeader(): any ({;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -48,6 +74,8 @@ export function TalentCardHeader(): any ({;
       
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="flex-1">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">
@@ -61,6 +89,7 @@ export function TalentCardHeader(): any ({;
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />
             )}
           </h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
           
           <TalentCardAvailability availabilityType={availabilityType} />
@@ -81,15 +110,20 @@ interface TalentCardHeaderProps {;
   availabilityType: string,;
   yearsExperience: number;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     </div>;
   )
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ;
 export function TalentCardHeader({;
@@ -115,6 +149,7 @@ export function TalentCardHeader({;
         </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         <p className='text-zion-cyan text-sm'>{professionalTitle}</p>;      </div>;
     </div>;
   );
@@ -122,11 +157,16 @@ export function TalentCardHeader({;
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from 'react';
 import { BadgeCheck } from 'lucide-react';
@@ -165,5 +205,17 @@ function TalentCardHeader() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+;
+=======
+          <TalentCardAvailability availabilityType={availabilityType} />
+        </div>
+        <p className='text-zion-cyan text-sm'>{professionalTitle}</p>
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

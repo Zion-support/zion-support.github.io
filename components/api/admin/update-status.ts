@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -13,12 +14,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return;
   }
   if (!isInternalAgentRequest(req)) {
     res && res.status(401).json({ error: 'Unauthorized' });
     return;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const body = req && req.body || {};
@@ -35,12 +39,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import { isInternalAgentRequest } from '../../../utils/adminAuth';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method Not Allowed' });
+  res.status(200).json({ ok: true });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return
   }
   if (!isInternalAgentRequest(req)) {
     res && res.status(401).json({ error: 'Unauthorized' });
     return
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   const body = req && req.body || {};
@@ -136,6 +150,14 @@ if ( {) {
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+  const body = null;
+  res.status(200).json({ ok: true })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

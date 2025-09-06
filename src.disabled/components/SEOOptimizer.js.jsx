@@ -25,7 +25,10 @@ import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen
 import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {\''\';
 
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {\''\';
 import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {\''\';
 :src.disabled/components/SEOOptimizer.js.jsx

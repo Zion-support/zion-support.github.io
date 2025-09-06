@@ -5,6 +5,7 @@ export const AppStoreBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const isMobile = useIsMobile();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -31,6 +32,8 @@ import React, { useState, useEffect } from "react",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { X } from "lucide-react",
 import { useIsMobile } from "@/hooks/use-mobile",
 export const AppStoreBanner: React.FC = () => {
@@ -79,6 +82,7 @@ export const AppStoreBanner: React.FC = () => {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -213,6 +217,8 @@ export default AppStoreBanner;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from './react';
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 },
 import React, { useState, useEffect } from "react",;
@@ -235,7 +241,10 @@ export const AppStoreBanner: React.FC = () => {;
         </div>;
       </div>;
     </div>;import React, { useState, useEffect } from './react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { X  } from './lucide-react';
 import { useIsMobile  } from '@/hooks / use - mobile';
 export const AppStoreBanner: React.FC = () => {
@@ -294,6 +303,7 @@ if (return null) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -305,6 +315,8 @@ if (return null) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 
   ),;

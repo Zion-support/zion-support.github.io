@@ -13,6 +13,7 @@ import { BrowseCards } from "../components/browse/BrowseCards",
 const jobsData = [
   {
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Mock data for demonstration
@@ -20,6 +21,8 @@ const jobsData = [
 const jobsData = [
   {
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -27,6 +30,7 @@ import {BrowseFilters} from "../components/browse/BrowseFilters";
 import {BrowseCards} from "../components/browse/BrowseCards";
 import {Button} from "@/components/ui/button";
 import {useAuth} from "@/hooks/useAuth";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -40,6 +44,8 @@ import {useAuth} from "@/hooks/useAuth";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -124,6 +130,7 @@ const talentsData = [
 export function MobileBrowse() {
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
 <<<<<<< HEAD
@@ -217,6 +224,9 @@ export function MobileBrowse() {;
 =======
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");export function MobileBrowse() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");export function MobileBrowse() {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
@@ -225,6 +235,7 @@ export function MobileBrowse() {
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs"),
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -250,6 +261,8 @@ export function MobileBrowse() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="min-h-screen">
       <MobileHeader
@@ -345,6 +358,7 @@ const talentsData = [;
 
 export function MobileBrowse() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -352,12 +366,15 @@ export function MobileBrowse() {;
   const { user } = useAuth();
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
             onClick={() => setBrowseType("jobs")}
           >;
             Jobs;
           </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -380,6 +397,8 @@ export function MobileBrowse() {;
 import React, { useState } from './react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
 import { BrowseFilters } from '../components / browse / BrowseFilters';
@@ -498,6 +517,7 @@ function MobileBrowse() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       <BrowseFilters type={browseType} />;
       <div className="py-4 px-4">;
@@ -510,6 +530,9 @@ function MobileBrowse() {
 =======
         <BrowseCards          items={browseType === "jobs" ? jobsData : talentsData}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        <BrowseCards          items={browseType === "jobs" ? jobsData : talentsData}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           type={browseType}
           onViewDetails={handleViewDetails}
 

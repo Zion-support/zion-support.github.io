@@ -12,6 +12,7 @@ import React from "react";
 import {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -39,10 +40,13 @@ import {
   Card,
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
+<<<<<<< HEAD
 <<<<<<< HEAD
   CardTitle,;
 <<<<<<< HEAD
@@ -80,6 +84,13 @@ import { CreditCard, Plus, Trash } from "lucide-react";
 
 =======} from "@/components/ui/card";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  CardTitle,;} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { CreditCard, Plus, Trash } from "lucide-react";
+
+=======} from "@/components/ui/card";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
@@ -108,6 +119,7 @@ export function PaymentMethods() {
   ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -134,11 +146,14 @@ export function PaymentMethods() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from "lucide-react",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -157,12 +172,15 @@ import { CreditCard, Plus, Trash } from "lucide-react",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       id: "pm-2",
       type: "credit_card",
       brand: "Mastercard",
       last4: "8888",
       expMonth: 4,
+<<<<<<< HEAD
 <<<<<<< HEAD
       expYear: 2026,
 <<<<<<< HEAD
@@ -283,6 +301,13 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button",;
 import { CreditCard, Plus, Trash } from "lucide-react",;export function PaymentMethods() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      expYear: 2026,  )
+import React from "react",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { CreditCard, Plus, Trash } from "lucide-react",;export function PaymentMethods() {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Mock payment methods;
   const paymentMethods = [;
     {;
@@ -301,6 +326,7 @@ import { CreditCard, Plus, Trash } from "lucide-react",;export function PaymentM
       brand: "Mastercard",;
       last4: "8888",;
       expMonth: 4,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -364,12 +390,15 @@ function PaymentMethods() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <CardDescription>;
           Manage your payment methods for automatic billing;
         </CardDescription>;
       </CardHeader>;
 
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -379,6 +408,8 @@ function PaymentMethods() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
       <CardContent className="space-y-4">;
         {payment_methods.map ((method) => (
@@ -424,6 +455,7 @@ function PaymentMethods() {
       </CardFooter>;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
   );
 }
@@ -437,3 +469,6 @@ function PaymentMethods() {
 =======
 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -3,16 +3,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 "await";
 =======
 <<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
+<<<<<<< HEAD
 describe('Basic Test', () => {
   it('should work', () => {
     expect(true).toBe(true);
@@ -34,6 +38,8 @@ const { describe, it, expect, vi, beforeEach } = require(
 =======
 "await";const { describe, it, expect, vi, beforeEach } = require(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   'vitest')'
   'node-mocks-http')'

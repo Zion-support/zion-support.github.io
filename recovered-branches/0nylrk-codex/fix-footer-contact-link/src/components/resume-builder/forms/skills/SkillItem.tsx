@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -17,6 +18,8 @@ import { SkillItemProps } from "./types";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';
 import { Trash2  } from './lucide-react';
@@ -101,6 +104,7 @@ import { SkillItemProps } from './types',  return (
         size="icon"
         className="h-5 w-5 p-0 ml-1"
 <<<<<<< HEAD
+<<<<<<< HEAD
         onClick={() => onDelete(skill.id!, category)}
       >
         <Trash2 className="h-3 w-3" />
@@ -113,6 +117,13 @@ import { SkillItemProps } from './types',  return (
 
   )
 },
+=======
+  );
+
+  )
+},
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
   )
 },

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -35,6 +36,8 @@ interface VideoCallRoomProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -61,6 +64,7 @@ interface VideoCallRoomProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -72,6 +76,8 @@ interface VideoCallRoomProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface VideoCallRoomProps {
   room?: string,
   token?: string,
@@ -134,6 +140,7 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
   return (
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -144,6 +151,8 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -153,6 +162,7 @@ interface VideoCallRoomProps {;
   serverUrl?: string,;
   onDisconnect?: () => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
   className?: string;
 =======
   );
@@ -161,6 +171,9 @@ interface VideoCallRoomProps {;
 =======
   className?: string;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  className?: string;}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
   return (;
@@ -217,6 +230,7 @@ function VideoCallRoom() {
         </div>;
       </CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Card>;
   ),;}
  interface VideoCallRoomProps {
@@ -243,3 +257,7 @@ className?: string
     </Card>);
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </Card>);
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

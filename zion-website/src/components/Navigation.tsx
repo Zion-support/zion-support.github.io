@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -152,6 +153,8 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
 import React from 'react';
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -193,11 +196,15 @@ export default function Navigation() {
             <div className=&quot;text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200&quot;>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   return (
 =======
 const Navigation: React.FC<NavigationProps> = ({ className }) => {  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const Navigation: React.FC<NavigationProps> = ({ className }) => {  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <header className="bg-white shadow-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
@@ -271,6 +278,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {  return (
                     {item.name}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </Link>
 =======
                   </a>
@@ -304,6 +312,8 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {  return (
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 </Link>))}
               </div>;
               <div className=&quot;py - 6&quot;>;
@@ -319,5 +329,9 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {  return (
           </div>;
         </Dialog.Panel>;
       </Dialog>;
+<<<<<<< HEAD
     </header>);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </header>);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

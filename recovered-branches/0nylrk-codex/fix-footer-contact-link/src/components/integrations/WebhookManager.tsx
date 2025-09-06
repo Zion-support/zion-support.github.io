@@ -20,6 +20,7 @@ export function WebhookManager() {;
     webhooks;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
     loading, ;
@@ -34,6 +35,9 @@ import React, { useEffect, useState } from "react",
 =======
     loading, ;import React, { useEffect, useState } from "react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    loading, ;import React, { useEffect, useState } from "react",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -42,6 +46,7 @@ import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { PlusCircle, Save, Trash, Play } from "lucide-react",
 import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     loading,
@@ -97,12 +102,16 @@ export function WebhookManager() {
 =======
     loading  const [newWebhook, setNewWebhook] = useState({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    loading  const [newWebhook, setNewWebhook] = useState({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     name: ""
     url: ""
     selectedEvent: "" as WebhookEventType
     eventTypes: [] as WebhookEventType[]
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     secret: ""
 <<<<<<< HEAD
@@ -153,6 +162,9 @@ export function WebhookManager() {
 =======
     secret: ""  ],
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    secret: ""  ],
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   
   useEffect(() => {
     fetchWebhooks()
@@ -167,10 +179,13 @@ export function WebhookManager() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error("This event is already added");
       return
@@ -181,6 +196,7 @@ export function WebhookManager() {
       selectedEvent: "" as WebhookEventType
     })
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -197,6 +213,8 @@ export function WebhookManager() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error("This event is already added"),
       return
@@ -205,6 +223,7 @@ export function WebhookManager() {
       ...newWebhook,
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
       selectedEvent: "" as WebhookEventType
+<<<<<<< HEAD
 <<<<<<< HEAD
     })
 <<<<<<< HEAD
@@ -276,6 +295,9 @@ export function WebhookManager() {
 =======
     })    // Reset form
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    })    // Reset form
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setNewWebhook({
       name: ""
       url: ""
@@ -283,6 +305,7 @@ export function WebhookManager() {
       eventTypes: []
       secret: ""
     })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -294,6 +317,8 @@ export function WebhookManager() {
   }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType)
   }
@@ -304,6 +329,7 @@ export function WebhookManager() {
   },
   
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -317,6 +343,8 @@ export function WebhookManager() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-8">
       <Card>
@@ -339,6 +367,7 @@ export function WebhookManager() {
             </div>
             <div className="space-y-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Label htmlFor="webhook-url">URL</Label>
 <<<<<<< HEAD
 
@@ -360,6 +389,9 @@ import React, { useEffect, useState } from "react",;
 =======
               <Label htmlFor="webhook-url">URL</Label>import React, { useEffect, useState } from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <Label htmlFor="webhook-url">URL</Label>import React, { useEffect, useState } from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -448,6 +480,7 @@ export function WebhookManager() {;
           <CardDescription>;
             Define webhooks to notify external systems when events occur in Zion.;
           </CardDescription>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         </CardHeader>;
 <<<<<<< HEAD
@@ -840,6 +873,9 @@ if ( {) {
 =======
         </CardHeader>;              placeholder="A secret key to verify the webhook source"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        </CardHeader>;              placeholder="A secret key to verify the webhook source"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               value={newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
             />
@@ -856,6 +892,7 @@ if ( {) {
       </Card>
       <div>
         <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1019,6 +1056,8 @@ if ( {) {
               If provided, this secret will be used to sign the webhook payload.;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </p>;
           </div>;
         </CardContent>;
@@ -1039,6 +1078,7 @@ if ( {) {
                 <CardHeader className="pb-2">;
                   <div className="flex justify - between items-start">;
                     <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <CardTitle className="text - lg">{webhook.name}</CardTitle>;
                       <CardDescription className="truncate max - w-md">;
@@ -1065,6 +1105,11 @@ if ( {) {
                       <CardDescription className="truncate max-w-md">;
                         {webhook.url}                          size="sm"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                      <CardTitle className="text-lg">{webhook.name}</CardTitle>;
+                      <CardDescription className="truncate max-w-md">;
+                        {webhook.url}                          size="sm"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >
                           {webhook.is_active ? 'Disable' : 'Enable'}
@@ -1080,6 +1125,7 @@ if ( {) {
                       <div className="flex flex-wrap gap-2 mt-1">
                         {webhook.event_types.map(event => (
                           <ClickableBadge key={event} variant="secondary">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1216,6 +1262,10 @@ if ( {) {
 
                             {eventOptions.find(e => e.value === event)?.label || event}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+                            {eventOptions.find(e => e.value === event)?.label || event}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </CardDescription>;
                     </div>;
                     <div className="flex items-center">;
@@ -1240,10 +1290,13 @@ if ( {) {
                         >;
                           {webhook.is_active ? 'Disable' :'Enable'}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         </Button>;
                       </div>;
                     </div>;
@@ -1251,11 +1304,14 @@ if ( {) {
                 </CardHeader>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                 <CardContent className="py-2">;
                   <div className="flex flex - col space-y-2">;
@@ -1272,6 +1328,7 @@ if ( {) {
                       {webhook.last_triggered_at;
                         ? `Last triggered: ${new Date (webhook.last_triggered_at).toLocaleString ()}`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1281,10 +1338,13 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         : 'Never triggered'}
                     </div>;
                   </div>;
                 </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1362,6 +1422,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       ))}
                     </SelectContent>;
                   </Select>;
@@ -1369,6 +1431,7 @@ if ( {) {
               </Card>;
             ))}
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         )}
 <<<<<<< HEAD
@@ -1497,6 +1560,9 @@ if ( {) {
 =======
         )}                  </pre>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        )}                  </pre>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>;
               </div>;
             </CardContent>;

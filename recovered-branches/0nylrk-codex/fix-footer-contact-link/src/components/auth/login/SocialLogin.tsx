@@ -17,10 +17,13 @@ export function SocialLogin() {
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     useAuth();
 
   return (
@@ -39,6 +42,7 @@ export function SocialLogin() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -48,6 +52,8 @@ export function SocialLogin() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <Button
           type="button"
           variant="outline"
@@ -95,6 +101,7 @@ export function SocialLogin() {
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => loginWithTwitter()}
 <<<<<<< HEAD
+<<<<<<< HEAD
           disabled={isLoading}
 <<<<<<< HEAD
         >
@@ -119,6 +126,9 @@ export function SocialLogin() {
 =======
           disabled={isLoading}  )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          disabled={isLoading}  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Facebook, Twitter } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -133,6 +143,7 @@ export function SocialLogin() {;
         <div className="absolute inset-0 flex items-center">;
           <div className="w-full border-t border-zion-blue-light" />;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="relative flex justify-center text-sm">;
 <<<<<<< HEAD
@@ -205,6 +216,9 @@ function SocialLogin() {
 =======
         <div className="relative flex justify-center text-sm">;          on_click={() => loginWithGoogle ()}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        <div className="relative flex justify-center text-sm">;          on_click={() => loginWithGoogle ()}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           disabled={is_loading}
         >;
           <span className="sr-only">Sign in with Google</span>;
@@ -258,6 +272,7 @@ function SocialLogin() {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -265,3 +280,6 @@ function SocialLogin() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

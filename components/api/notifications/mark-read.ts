@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   try {
@@ -29,6 +30,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='));
   if (match) return decodeURIComponent(match.split('=')[1]);
   if (req && req.method !== 'POST')
@@ -38,7 +41,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (match) return decodeURIComponent(match && match.split('=')[1]);
   return 'demo-user-1'
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import { supabase } from '../../../utils/supabase/client';
+function getUserId(req: NextApiRequest): string {
+    return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   try {
     const userId = getUserId(req);
     const { error } = await supabase
@@ -46,6 +57,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .update({ read_status: true })
       .eq('id', id)
       .eq('user_id', userId);
+<<<<<<< HEAD
     if (error) return res && res.status(200).json({ ok: true }); // tolerate in dev
 
     return res && res.status(200).json({ ok: true });
@@ -64,6 +76,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+    if (error) return res && res.status(200).json({ ok: true }); // tolerate in dev
+
+    return res && res.status(200).json({ ok: true });
+=======
+
+if (error) return res.status(200).json({ ok: true }); // tolerate in dev
+
+    return res.status(200).json({ ok: true });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  } catch (e) {
+    return res && res.status(500).json({ error: 'Unexpected error' });
+  }
+<<<<<<< HEAD
+    return res && res.status(200).json({ ok: true })
+  } catch (e) {
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase } from '../../../utils / supabase / client';
 ;
 function getUserId (req: NextApiRequest): string {
@@ -123,6 +154,7 @@ function handler() {
     return res.status (500).json ({ error: 'Unexpected error' });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     const {_error} = await supabase
       .from('notifications')
@@ -148,3 +180,7 @@ function handler() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

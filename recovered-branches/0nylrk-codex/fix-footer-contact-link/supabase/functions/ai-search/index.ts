@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -91,6 +90,16 @@ const corsHeaders = {
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {Configuration, OpenAIApi} from "npm: openai@4 ;
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
@@ -105,6 +114,7 @@ import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) =>
       )
     }
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -146,10 +156,13 @@ import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) =>
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const completion = await openai && openai.chat.completions && completions.create({
       model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }];
       temperature: 0 && 0.1});
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -206,6 +219,8 @@ import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) =>
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (_) {
       filters = { type: null, skills: null, location: null, budget: null, availability: null }
     }
@@ -213,6 +228,7 @@ import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) =>
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 });
 <<<<<<< HEAD
@@ -383,3 +399,6 @@ serve(async (req) => {;
 =======
 });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

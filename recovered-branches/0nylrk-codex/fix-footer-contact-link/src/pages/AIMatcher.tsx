@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,12 +28,15 @@ export default function AIMatcherPage() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { GradientHeading } from "@/components/GradientHeading",
 import { AIMatchmaker } from "@/components/AIMatchmaker",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
 =======
@@ -54,6 +58,9 @@ import { toast } from "@/hooks/use-toast";
 =======
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",import { toast } from "@/hooks/use-toast";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",import { toast } from "@/hooks/use-toast";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { MatchResult } from "@/lib/ai-matchmaking";
 export default function AIMatcherPage() {
   const navigate = useNavigate();
@@ -64,8 +71,11 @@ export default function AIMatcherPage() {
     let itemType = "service";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const category = match.item.category.toLowerCase()
     if (category.includes("talent") |category === "engineering" |
         category === "data science" |category === "development") {
@@ -187,7 +197,10 @@ export default function AIMatcherPage() {
         specificItem: match.item
       }
     })  return (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <>
       <Header />
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -228,6 +241,7 @@ export default function AIMatcherPage() {
                 </SelectContent>
               </Select>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <AIMatchmaker
@@ -447,6 +461,8 @@ export default function AIMatcherPage() {;
 <<<<<<< HEAD
             <AIMatchmaker;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             <AIMatchmaker
 
@@ -538,6 +554,7 @@ if (|| category === "hardware") {) {
             <AIMatchmaker;
               service_type={selected_category === "all" ? "" : selected_category}
 <<<<<<< HEAD
+<<<<<<< HEAD
               onMatchSelect={handleMatchSelect}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -602,3 +619,6 @@ min-h-screen bg-zion-blue py-12 px-4"> <div className=" container mx-auto"> <div
 =======
               onMatchSelect={handleMatchSelect}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              onMatchSelect={handleMatchSelect}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

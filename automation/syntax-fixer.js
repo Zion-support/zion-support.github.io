@@ -168,6 +168,7 @@ if ( {) {
     });
 }
 
+
   },
 ,
   async fixExportIssues() {,
@@ -332,6 +333,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -351,6 +353,8 @@ if ( {) {
 =======
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async run() {this.log("🚀 Starting Syntax Fixer");
     try {;
       await this.fixSyntaxErrors();
@@ -381,6 +385,7 @@ export default SyntaxFixer;
         content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,')
         if (content !== fs.readFileSync(file, &quot;utf8&quot;)) {
           modified = true
+<<<<<<< HEAD
         }
         if (modified) {
           fs.writeFileSync(file, content)
@@ -431,6 +436,8 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
 =======
 ;          modified = true
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         },
 ,
         if (modified) {,
@@ -439,6 +446,9 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
           this.log(`Fixed export issues in ${file}`)
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       } catch (error) {,
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -497,15 +507,19 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
             files.push(fullPath)
+<<<<<<< HEAD
 =======
       } catch (error) {,            files.push(fullPath)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }
         })
       }
       walkDir(srcDir)
     }
     return files
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -547,6 +561,8 @@ this.log("=" * 50),
       this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 this.log("=" * 50),
       this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -691,6 +707,7 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 ;
 export default SyntaxFixer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -707,3 +724,5 @@ this.log("=" * 50)this.log("=" * 50),      this.log(`🎯 Syntax Fixer completed
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

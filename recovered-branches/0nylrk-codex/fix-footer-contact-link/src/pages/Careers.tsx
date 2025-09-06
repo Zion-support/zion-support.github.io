@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,6 +23,10 @@ import {AppLayout} from "@/layout/AppLayout";
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -29,6 +34,7 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AppLayout } from "@/layout/AppLayout";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { AppLayout } from "@/layout/AppLayout",
 <<<<<<< HEAD
@@ -151,11 +157,18 @@ import { AppLayout } from "@/layout/AppLayout",        title: "Senior Frontend E
         type: "Full-time",
         department: "Engineering",        title: "Product Manager",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { AppLayout } from "@/layout/AppLayout",        title: "Senior Frontend Engineer",
+        location: "Remote",
+        type: "Full-time",
+        department: "Engineering",        title: "Product Manager",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         location: "New York, NY",
         type: "Full-time",
         department: "Product",
         description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."
       },
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -172,6 +185,9 @@ import { AppLayout } from "@/layout/AppLayout",        title: "Senior Frontend E
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {
         title: "UX/UI Designer"
         location: "Remote"
@@ -186,6 +202,7 @@ import { AppLayout } from "@/layout/AppLayout",        title: "Senior Frontend E
         location: "Remote"
         type: "Full-time"
         department: "Marketing"
+<<<<<<< HEAD
 <<<<<<< HEAD
         description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."
 <<<<<<< HEAD
@@ -254,12 +271,16 @@ import { AppLayout } from "@/layout/AppLayout",        title: "Senior Frontend E
 =======
         description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."      {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."      {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         title: "Talent Acquisition Specialist"
         location: "Remote"
         type: "Full-time"
         department: "Operations"
         description: "Help connect the right talent with the right opportunities on our platform through personalized matching."
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
     ]
 <<<<<<< HEAD
@@ -285,6 +306,9 @@ import { AppLayout } from "@/layout/AppLayout",        title: "Senior Frontend E
 =======
     ]  // Benefits list
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    ]  // Benefits list
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const benefits = [
     {
       title: "Flexible Work"
@@ -293,6 +317,7 @@ import { AppLayout } from "@/layout/AppLayout",        title: "Senior Frontend E
         <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
         </svg>
+<<<<<<< HEAD
 <<<<<<< HEAD
       )
 <<<<<<< HEAD
@@ -319,6 +344,9 @@ import { AppLayout } from "@/layout/AppLayout",        title: "Senior Frontend E
 =======
       )    {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      )    {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       title: "Health & Wellness"
       description: "Comprehensive health insurance and wellness programs to keep you at your best."
       icon: (
@@ -326,6 +354,7 @@ import { AppLayout } from "@/layout/AppLayout",        title: "Senior Frontend E
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
         </svg>
       )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -688,6 +717,10 @@ export default function Careers() {;
 
     },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     marketing: [;
       {;
         title: "Growth Marketing Manager",;
@@ -713,6 +746,7 @@ export default function Careers() {;
         department: "Operations",,
   description: "Help connect the right talent with the right opportunities on our platform through personalized matching.";
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
     ];
 <<<<<<< HEAD
@@ -1296,6 +1330,12 @@ export default function Careers() {;
                         </div>;
                       </CardContent>;            </Tabs>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    ];                            Apply Now;
+                          </Button>;
+                        </div>;
+                      </CardContent>;            </Tabs>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>;
           ;
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">;
@@ -1303,6 +1343,7 @@ export default function Careers() {;
               We're always looking for talented individuals who are passionate about AI and technology. ;
               Send us your resume and let's start a conversation.;
             </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
 <<<<<<< HEAD
@@ -1343,15 +1384,21 @@ export default function Careers() {;
 =======
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;              Send General Application;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;              Send General Application;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </Button>;
           </div>;
         </div>;
       </main>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </AppLayout>;
   );
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     </AppLayout>);
 }
@@ -1441,18 +1488,24 @@ return (<AppLayout> <SEO /> <main className="min-h-screen bg-zion-blue pt-24 pb-
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ;
     </AppLayout>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

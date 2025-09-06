@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 export default function LinksReportRedirect() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
+<<<<<<< HEAD
       window.location.replace('/reports/links/index.html')
     }
   }, []);
@@ -59,6 +60,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -70,3 +72,11 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+      window.location.replace('/reports/links/index.html');
+    }
+  }, []);
+  return null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

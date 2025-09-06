@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import {useRouter} from 'next/router';
 import useSWR from 'swr';
@@ -228,6 +229,18 @@ import {useRouter} from 'next/router';
 import useSWR from 'swr';
 
 import {useEffect, useState} from 'react';
+=======
+import { useRouter  } from 'next/router';
+import {useRouter} from 'next/router';
+import useSWR from 'swr';
+<<<<<<< HEAD
+
+import {useEffect, useState} from 'react';
+=======
+import { useEffect, useState } from 'react';
+const fetcher = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export default function EditJobPage() {
 export default function EditJobPage() {;
@@ -258,6 +271,10 @@ export default function EditJobPage(req, res) {
   const [category, setCategory] = useState('');
   useEffect(() => {
     if (job) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setTitle(job.title |'');
       setDescription(job.description |'');
       setCategory(job.category |'');    }
@@ -292,6 +309,29 @@ export default function EditJobPage(req, res) {
   return (
     <div className="max-w-2xl mx-auto space-y-4">
       <h1 className="text-2xl font-semibold">Edit Job</h1>
+<<<<<<< HEAD
+=======
+=======
+      setTitle(job.title || '');
+      setDescription(job.description || '');
+setCategory(job.category || '');
+    }
+  }, [job]);
+  async function save() {
+    await fetch(`/api/jobs/${id}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ title, description, category }),
+    });
+    router.push('/client/dashboard');
+  }
+
+  if (!job) return <div>Loading…</div>;
+  return (
+<div className='max-w-2xl mx-auto space-y-4'>
+      <h1 className='text-2xl font-semibold'>Edit Job</h1>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div>
         <label className="block text-sm font-medium">Title</label>
         <input className="mt-1 w-full border rounded p-2" value={title} onChange={(e) => setTitle(e.target.value)} />
@@ -308,6 +348,10 @@ export default function EditJobPage(req, res) {
         <button className="px-4 py-2 rounded bg-black text-white" onClick={save}>Save</button>
       </div>
     </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   )
   } catch (error) {
@@ -315,6 +359,7 @@ export default function EditJobPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (!job) return <div>Loading…</div>;
 
@@ -330,6 +375,8 @@ export default function EditJobPage(req, res) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       body: JSON && JSON.stringify({ title, description, category }),;
     });
     router && router.push('/client/dashboard');  }
@@ -344,9 +391,15 @@ export default function EditJobPage(req, res) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

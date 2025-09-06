@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 =======
@@ -313,6 +316,7 @@ if ( {) {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 }
 
 =======
@@ -340,6 +344,13 @@ const remote = await fetchFromGitHub (),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   const remote = await fetchFromGitHub(),
+=======
+  const remote = await fetchFromGitHub()
+>>>>>>> main
+=======
+    const repoUrl = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return res.status(200).json({ logs: remote })
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

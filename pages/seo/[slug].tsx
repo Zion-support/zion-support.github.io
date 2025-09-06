@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import TalentGrid from '../../components/seo/TalentGrid';
@@ -77,16 +78,38 @@ export type LandingPayload = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+
+=======
+import React from 'react';
+import { useRouter  } from 'next/router';
+import TalentGrid from '../../components/seo/TalentGrid';
+import FAQ from '../../components/seo/FAQ';
+export type LandingPayload = any;
+export type LandingPayload = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   title: string;
   h1: string;
   body_html: string;
   region?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   service?: string;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   faq: Array<{ q: string; a: string }>;}
+=======
+  faq: Array<{ q: string; a: string }>;}
+=======
+  service?: string;
+  faq: Array<{ q: string; a: string }>;
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function SEOLandingPage() {
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
@@ -97,11 +120,16 @@ export default function SEOLandingPage() {
     if (dataParam) {
       try {
         setPayload(JSON.parse(decodeURIComponent(dataParam)));
+<<<<<<< HEAD
         return;
+=======
+return;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       } catch {}
     }
     // Fallback: render a basic placeholder until a generated page is deployed
     setPayload({
+<<<<<<< HEAD
       title: String(slug).replace(/-/g, ' ')
       h1: String(slug).replace(/-/g, ' ')
       bodyHtml: '<p>Localized marketplace landing page.</p>'
@@ -110,6 +138,19 @@ export default function SEOLandingPage() {
       faq: []
     });  }, [router.isReady, slug]);
   if (!payload) return null;
+=======
+      title: String(slug).replace(/-/g, ' '),
+      h1: String(slug).replace(/-/g, ' '),
+      bodyHtml: '<p>Localized marketplace landing page.</p>',
+      region: undefined,
+      service: undefined,
+      faq: [],
+    });
+  }, [router.isReady, slug]);
+
+  if (!payload) return null;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   faq: Array<{ q: string; a: string }>;};
 
@@ -119,6 +160,7 @@ export default function SEOLandingPage() {;
 },;
 export default function SEOLandingPage(req, res) {
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const router = useRouter();
   const { slug } = router && router.query as { slug?: string };
@@ -130,12 +172,17 @@ export default function SEOLandingPage(req, res) {
     const dataParam = (router && router.query?.data as string) || '';
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   service?: string,;
   faq: Array<{ q: string, a: string }>;
 },;
 export default function SEOLandingPage(req, res) {
   try {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
   const router = useRouter();
@@ -149,10 +196,13 @@ export default function SEOLandingPage(req, res) {
         setPayload(JSON && JSON.parse(decodeURIComponent(dataParam)));
         return;
 <<<<<<< HEAD
+<<<<<<< HEAD
       } catch {}
     }
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       } catch {  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -165,15 +215,39 @@ export default function SEOLandingPage(req, res) {
 }
     // Fallback: render a basic placeholder until a generated page is deployed
     setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
+<<<<<<< HEAD
+=======
+=======
+  return (
+<div className='max-w-4xl mx-auto'>
+      <head>
+        <title>{payload.title}</title>
+        <meta
+          name='description'
+          content={`${payload.title} • Zion Marketplace`}
+        />
+      </head>
+      <h1 className='text-2xl font-semibold mb-4'>{payload.h1}</h1>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div
         className='prose dark:prose-invert max-w-none'
         dangerouslySetInnerHTML={{ __html: payload.bodyHtml }}
       />
       <div className='mt-8'>
+<<<<<<< HEAD
         <h2 className='text-lg font-semibold mb-2'>Featured Talent</h2>        <TalentGrid region={payload.region} service={payload.service} />
       </div>
       <FAQ items={payload.faq} />
     </div>
+=======
+        <h2 className='text-lg font-semibold mb-2'>Featured Talent</h2>
+        <TalentGrid region={payload.region} service={payload.service} />
+      </div>
+      <FAQ items={payload.faq} />
+    </div>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
       <h1 className="text-2xl font-semibold mb-4">{payload.h1}</h1>
@@ -181,6 +255,7 @@ export default function SEOLandingPage(req, res) {
       <div className="mt-8">
         <h2 className="text-lg font-semibold mb-2">Featured Talent</h2>
         <TalentGrid region={payload.region} service={payload.service} />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -198,20 +273,26 @@ export default function SEOLandingPage(req, res) {
         setPayload(JSON && JSON.parse(decodeURIComponent(dataParam)));
         return;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         return
       } catch {}
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
     // Fallback: render a basic placeholder until a generated page is deployed
     setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
   }, [router.isReady, slug]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -221,6 +302,9 @@ export default function SEOLandingPage(req, res) {
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (!payload) return null;
 
   return (
@@ -230,10 +314,13 @@ export default function SEOLandingPage(req, res) {
       <FAQ items={payload.faq} />
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         dangerouslySetInnerHTML={{ __html: payload && payload.bodyHtml }}
       />;
 
@@ -245,6 +332,7 @@ export default function SEOLandingPage(req, res) {
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -255,6 +343,8 @@ export default function SEOLandingPage(req, res) {
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   faq: Array<{ q: string; array: string }>;}
 ;
 export default /**
@@ -316,6 +406,7 @@ if (return null) {
     </div>);
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -332,12 +423,16 @@ if (return null) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -346,3 +441,8 @@ if (return null) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

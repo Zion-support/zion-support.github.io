@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import Link from "next/link",
@@ -15,6 +16,8 @@ interface QuickAccessProps {
 
 export function QuickAccess({ className, style }: QuickAccessProps) {
   const { t } = useTranslation(),
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const quickLinks = [
     {
       title: t('home.tool_ai_matcher'),
@@ -660,9 +663,42 @@ export default QuickAccess }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default QuickAccess;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+import React from "react",
+import Link from "next/link",
+import { useTranslation } from "react-i18next";
+import { cn } from "@/lib/utils";
+import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from 'lucide-react'
+
+import React from 'react'
+import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
+import { cn } from '@/lib/utils'
+import {
+  ArrowRight
+  Search
+  Users
+  Briefcase
+  Settings
+  MessageSquare
+  Smartphone
+} from 'lucide-react'
+interface QuickAccessProps {
+  className?: string;
+  style?: React.CSSProperties
+export function QuickAccess({ className, style }: QuickAccessProps) {
+  );
+
+export default QuickAccess;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

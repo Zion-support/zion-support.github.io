@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,6 +16,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -54,9 +57,39 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       model: 'gpt-4o-mini'
       messages: [
 
+<<<<<<< HEAD
     drafted.push({ title: ch.title, content: text })
   }
   res.status(200).json({ chapters: drafted })
+=======
+
+=======
+    res.status(405).json({ error: 'Method not allowed' });
+    return
+  }
+
+  const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] };
+  const apiKey = null;
+    const completion = await client.chat.completions.create({
+      model: 'gpt-4o-mini'
+      messages: [
+        { role: 'system', content: system },
+        { role: 'user', content: prompt },
+      ],
+      temperature: 0.7,
+    });
+    const text = completion.choices?.[0]?.message?.content || '';
+    drafted.push({ title: ch.title, content: text });
+  }
+
+  res.status(200).json({ chapters: drafted });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    drafted.push({ title: ch.title, content: text })
+  }
+  res.status(200).json({ chapters: drafted })
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -291,8 +324,12 @@ export default async function handler(req, res) {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

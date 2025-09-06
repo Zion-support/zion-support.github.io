@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ReactNode } from 'react';
 import {ReactNode} from 'react';
@@ -41,6 +42,11 @@ import { ReactNode } from "react";
 // Extend FeatureCardProps to include key for mapping
 declare module "@/components/FeatureCard" {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+import { ReactNode } from "react";
+// Extend FeatureCardProps to include key for mapping
+declare module "@/components/FeatureCard" {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   export interface FeatureCardProps {
     title: string,
   description: string;
@@ -51,6 +57,7 @@ declare module "@/components/FeatureCard" {
     image?: string;
     tags?: string[];
     author?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -243,6 +250,8 @@ declare module '@/components/ProductListingCard' {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     author_image?: string;
     ai_score?: number;
     rating?: number;

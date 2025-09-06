@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',;
 import Link from 'next/link',;
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary',;
@@ -24,6 +25,18 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
   },
 
 =======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+=======
+import React from 'react';
+import Link from 'next/link';
+import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
+import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react'
+import { logErrorToProduction } from '@/utils/productionLogger';
+import { logInfo, logErrorToProduction as prodLogError } from '@/utils/productionLogger';
+interface PageErrorFallbackProps extends FallbackProps {
+  pageName?: string
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
   },
@@ -38,8 +51,14 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-zion-blue flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
+=======
+<<<<<<< HEAD
+    <div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>;
+      <div className='max-w-2xl w-full'>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Main Error Card */}
         <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
           <div className="text-center mb-6">
@@ -453,7 +472,28 @@ export default function PageErrorBoundary({;
       onReset={() => {;
         // Reset any application state if needed;
         logInfo(`Resetting error boundary for ${pageName || 'page'}`);
+<<<<<<< HEAD
       }}
+=======
+
+
+
+
+=======
+    <ErrorBoundary
+      FallbackComponent={FallbackComponent}
+      onError={handleError}
+      onReset={() => {
+        // Reset any application state if needed
+        logInfo(`Resetting error boundary for ${pageName || 'page'}`)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      }}
+<<<<<<< HEAD
+    >
+      {children}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     >;
       {children}
     </ErrorBoundary>;
@@ -540,5 +580,16 @@ interface PageErrorBoundaryProps {;
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+}
+}
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    </ErrorBoundary>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

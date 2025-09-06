@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -20,11 +21,15 @@ import _React,{ createContext,useContext } from react' const defaultConfig = { "
 =======
 import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
 
 import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -86,9 +91,14 @@ import _React,{ createContext,useContext } from react' const defaultConfig = { "
 import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo && logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo && logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React,{ createContext,useContext } from react\' const defaultConfig = { \"compName\": \'Zion: Tech Grou,p,\"logo\": \'; /logo && logo.svg\',\"primaryColor\": \'#1e40a,f,\"secondaryColor\": \'; #7c3aed\',\"domain\": \'https:\''\';,;
 const React,{ createContext,useContext } from react" const defaultConfig = { compName: "Zion: Tech Grou,p,logo: "; /logo && logo.svg",primaryColor: "#1e40a,f,secondaryColor: "; #7c3aed",domain: "https:""";,;"""
 import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo && logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
 import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo && logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
 import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo && logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

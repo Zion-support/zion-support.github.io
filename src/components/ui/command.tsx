@@ -9,6 +9,7 @@ const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
   <CommandPrimitive
     ref={ref}
@@ -61,17 +62,23 @@ interface CommandDialogProps;
   extends React.ComponentPropsWithoutRef<typeof Dialog> {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   />;
 ));
 Command && Command.displayName = CommandPrimitive && CommandPrimitive.displayName;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <Dialog {...props}>
       <DialogContent className="overflow-hidden p-0 shadow-lg">
         <DialogHeader>
           <DialogTitle className="sr-only">Command Menu</DialogTitle>
         </DialogHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -85,12 +92,19 @@ Command && Command.displayName = CommandPrimitive && CommandPrimitive.displayNam
           {children}
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+        <Command className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5">
+          {children}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </Command>;
       </DialogContent>;
     </Dialog>;
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -145,6 +159,8 @@ const CommandInput = React.forward_ref<;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const CommandInput = React.forwardRef<
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -155,6 +171,7 @@ const CommandInput = React.forwardRef<
     <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
     <CommandPrimitive.Input
       ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -194,6 +211,13 @@ const CommandEmpty = React.forward_ref<;
     {...props}
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+    ref={ref}
+    className={cn("max-h-[300px] overflow-y-auto overflow-x-hidden", className)}
+    {...props}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 >((props, ref) => (
 =======
 
@@ -318,6 +342,7 @@ const CommandItem = React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <CommandPrimitive.Item;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     className={cn(;
@@ -461,6 +486,10 @@ const CommandItem = React.forwardRef<;
 =======
     className={cn(
 
+=======
+    className={cn(
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     />;
   );
 }
@@ -474,4 +503,7 @@ export {
   CommandEmpty,
   CommandGroup,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

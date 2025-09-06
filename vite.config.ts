@@ -343,6 +343,7 @@ export default defineConfig({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+<<<<<<< HEAD
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
@@ -370,11 +371,16 @@ export default defineConfig({
 =======
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   server: {
     port: 3000,
     host: true
@@ -382,6 +388,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: true
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -408,6 +415,8 @@ export default defineConfig({
 })
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },
   resolve: {
     alias: {
@@ -420,4 +429,7 @@ export default defineConfig({
     }
   }
 })
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

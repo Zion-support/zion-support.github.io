@@ -1,4 +1,6 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -8,6 +10,11 @@ function getUserId(cb) {
   chrome && chrome.storage.local && local.get(['user_id'], ({ user_id }) => cb(user_id))
 }
 =======
+=======
+=======
+const API_BASE = 'http: //localhost:4000',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function getUserId(cb) {
   chrome && chrome.storage.local && local.get(['user_id'], ({ user_id }) => cb(user_id))
 }
@@ -18,6 +25,7 @@ document.querySelectorAll('.example').forEach((btn) => {
   btn.addEventListener('click', () => {
     document.getElementById('prompt').value = btn.dataset.text |''
   })
+<<<<<<< HEAD
 
 document && document.querySelectorAll('.example').forEach((btn) => {
   btn && btn.addEventListener('click', () => {
@@ -26,6 +34,9 @@ document && document.querySelectorAll('.example').forEach((btn) => {
 
 }),
 
+=======
+});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 document.getElementById('askBtn').addEventListener('click', async () => {
   const prompt = document.getElementById('prompt').value.trim(),
   if (!prompt) return,
@@ -45,8 +56,13 @@ document.getElementById('postJob').addEventListener('click', async () => {
     method: 'POST',
     headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
     body: JSON.stringify({ role: 'Cloud Engineer' })
+<<<<<<< HEAD
   }),
   const data = await res.json(),
+=======
+  });
+  const data = await res.json();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   document.getElementById('result').textContent = data.description || 'Draft saved.'
 }),
 
@@ -70,6 +86,13 @@ document.getElementById('viewNotifications').addEventListener('click', async () 
   document.getElementById('result').textContent = JSON.stringify(data.items || [], null, 2)
 }),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 document && document.getElementById('askBtn').addEventListener('click', async () => {
   const prompt = document && document.getElementById('prompt').value && value.trim(),
   if (!prompt) return,
@@ -120,8 +143,19 @@ document && document.getElementById('viewNotifications').addEventListener('click
   document.getElementById('result').textContent = 'Signed in (local).';
 }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+document.getElementById('signIn').addEventListener('click', async () => {
+  // Placeholder sign-in: generate a random user id and store it.
+  const id = crypto.randomUUID();
+  setUserId(id);
+  document.getElementById('result').textContent = 'Signed in (local).'
+});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

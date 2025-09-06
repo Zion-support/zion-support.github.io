@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -15,6 +18,7 @@ export default function AIAutomationPage() {;
         <h1 className="text-4xl font-bold">AI Workflow Automation</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
           Transform your business processes with intelligent automation powered by cutting-edge AI technology;
+<<<<<<< HEAD
 <<<<<<< HEAD
         </p>;
       </div>;
@@ -37,6 +41,8 @@ export default function AIAutomationPage() {;
             <div className="font-semibold">99.9% Accuracy</div>;
             <div className="text-sm opacity-90">Error-free operations</div>;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default /**
  * AIAutomationPage - Function description
  */
@@ -73,11 +79,15 @@ export default function AIAutomationPage() {return (;    <div className="space-y
             <div className="text - 3xl mb-2">🎯</div>;
             <div className="font-semibold">99.9% Accuracy</div>;
             <div className="text - sm opacity-90">Error - free operations</div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>;
         </div>;
       </div>;
       {/* Service Categories */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
         <div className="space-y-6">;
@@ -88,6 +98,8 @@ export default function AIAutomationPage() {return (;    <div className="space-y
               <p className="text-sm opacity-80 mb-3">Automated document classification, extraction, and processing</p>;
               <ul className="text-xs space-y-1 opacity-70">;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;
         <div className="space-y-6">;
           <h2 className="text - 2xl font-semibold">Process Automation</h2>;
@@ -96,12 +108,16 @@ export default function AIAutomationPage() {return (;    <div className="space-y
               <h3 className="font - semibold mb-2">🤖 Document Processing</h3>;
               <p className="text - sm opacity - 80 mb-3">Automated document classification, extraction, and processing</p>;
               <ul className="text - xs space - y-1 opacity-70">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <li>• Invoice processing automation</li>;
                 <li>• Contract analysis and review</li>;
                 <li>• Form data extraction</li>;
                 <li>• Document routing and approval</li>;
               </ul>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="mt-3 text-blue-400 text-sm">Starting at $499/month</div>;
             </div>;
@@ -112,16 +128,24 @@ export default function AIAutomationPage() {return (;    <div className="space-y
 =======
               <div className="mt - 3 text - blue - 400 text-sm">Starting at $499 / month</div>;
             </div>;
+=======
+              <div className="mt - 3 text - blue - 400 text-sm">Starting at $499 / month</div>;
+            </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="bg - zinc - 900 border border - white / 10 rounded - lg p-4">;
               <h3 className="font - semibold mb-2">📧 Email & Communication</h3>;
               <p className="text - sm opacity - 80 mb-3">Intelligent email management and automated responses</p>;
               <ul className="text - xs space - y-1 opacity-70">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <li>• Smart email categorization</li>;
                 <li>• Automated response generation</li>;
                 <li>• Meeting scheduling automation</li>;
                 <li>• Customer inquiry routing</li>;
               </ul>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="mt-3 text-blue-400 text-sm">Starting at $299/month</div>;
             </div>;
@@ -133,6 +157,10 @@ export default function AIAutomationPage() {return (;    <div className="space-y
 =======
               <div className="mt - 3 text - blue - 400 text-sm">Starting at $299 / month</div>;
             </div>;
+=======
+              <div className="mt - 3 text - blue - 400 text-sm">Starting at $299 / month</div>;
+            </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="bg - zinc - 900 border border - white / 10 rounded - lg p-4">;
               <h3 className="font - semibold mb-2">📊 Data Analysis & Reporting</h3>;
               <p className="text - sm opacity - 80 mb-3">Automated data processing and insight generation</p>;
@@ -144,14 +172,19 @@ export default function AIAutomationPage() {return (;    <div className="space-y
                 <li>• Predictive analytics</li>;
               </ul>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className="mt-3 text-blue-400 text-sm">Starting at $399/month</div>;
 =======
               <div className="mt - 3 text - blue - 400 text-sm">Starting at $399 / month</div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <div className="mt - 3 text - blue - 400 text-sm">Starting at $399 / month</div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>;
           </div>;
         </div>;
         <div className="space-y-6">;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <h2 className="text-2xl font-semibold">Industry Solutions</h2>;
           <div className="space-y-4">;
@@ -160,18 +193,24 @@ export default function AIAutomationPage() {return (;    <div className="space-y
               <p className="text-sm opacity-80 mb-3">Patient care optimization and administrative automation</p>;
               <ul className="text-xs space-y-1 opacity-70">;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <h2 className="text - 2xl font-semibold">Industry Solutions</h2>;
           <div className="space-y-4">;
             <div className="bg - zinc - 900 border border - white / 10 rounded - lg p-4">;
               <h3 className="font - semibold mb-2">🏥 Healthcare Automation</h3>;
               <p className="text - sm opacity - 80 mb-3">Patient care optimization and administrative automation</p>;
               <ul className="text - xs space - y-1 opacity-70">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <li>• Appointment scheduling optimization</li>;
                 <li>• Medical record processing</li>;
                 <li>• Insurance claim automation</li>;
                 <li>• Patient communication workflows</li>;
               </ul>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="mt-3 text-blue-400 text-sm">Starting at $799/month</div>;
             </div>;
@@ -182,16 +221,24 @@ export default function AIAutomationPage() {return (;    <div className="space-y
 =======
               <div className="mt - 3 text - blue - 400 text-sm">Starting at $799 / month</div>;
             </div>;
+=======
+              <div className="mt - 3 text - blue - 400 text-sm">Starting at $799 / month</div>;
+            </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="bg - zinc - 900 border border - white / 10 rounded - lg p-4">;
               <h3 className="font - semibold mb-2">🏦 Financial Services</h3>;
               <p className="text - sm opacity - 80 mb-3">Compliance, risk management, and customer service automation</p>;
               <ul className="text - xs space - y-1 opacity-70">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <li>• Fraud detection automation</li>;
                 <li>• Compliance monitoring</li>;
                 <li>• Customer onboarding</li>;
                 <li>• Risk assessment workflows</li>;
               </ul>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="mt-3 text-blue-400 text-sm">Starting at $999/month</div>;
             </div>;
@@ -202,26 +249,38 @@ export default function AIAutomationPage() {return (;    <div className="space-y
 =======
               <div className="mt - 3 text - blue - 400 text-sm">Starting at $999 / month</div>;
             </div>;
+=======
+              <div className="mt - 3 text - blue - 400 text-sm">Starting at $999 / month</div>;
+            </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="bg - zinc - 900 border border - white / 10 rounded - lg p-4">;
               <h3 className="font - semibold mb-2">🏭 Manufacturing & Supply Chain</h3>;
               <p className="text - sm opacity - 80 mb-3">Production optimization and supply chain automation</p>;
               <ul className="text - xs space - y-1 opacity-70">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <li>• Quality control automation</li>;
                 <li>• Inventory optimization</li>;
                 <li>• Predictive maintenance</li>;
                 <li>• Supply chain monitoring</li>;
               </ul>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className="mt-3 text-blue-400 text-sm">Starting at $699/month</div>;
 =======
               <div className="mt - 3 text - blue - 400 text-sm">Starting at $699 / month</div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <div className="mt - 3 text - blue - 400 text-sm">Starting at $699 / month</div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>;
           </div>;
         </div>;
       </div>;
       {/* Implementation Process */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="bg-zinc-900 border border-white/10 rounded-lg p-6">;
         <h2 className="text-2xl font-semibold mb-6 text-center">Implementation Process</h2>;
@@ -269,10 +328,35 @@ export default function AIAutomationPage() {return (;    <div className="space-y
             <div className="font-semibold">Deployment</div>;
             <div className="text - sm opacity-80">Testing & optimization</div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <div className="bg - zinc - 900 border border - white / 10 rounded - lg p-6">;
+        <h2 className="text - 2xl font - semibold mb - 6 text-center">Implementation Process</h2>;
+        <div className="grid grid - cols - 1 md:grid - cols - 4 gap-4">;
+          <div className="text-center">;
+            <div className="text - 2xl mb-2">🔍</div>;
+            <div className="font-semibold">Discovery</div>;
+            <div className="text - sm opacity-80">Process analysis & mapping</div>;
+          </div>;
+          <div className="text-center">;
+            <div className="text - 2xl mb-2">📋</div>;
+            <div className="font-semibold">Design</div>;
+            <div className="text - sm opacity-80">Workflow architecture</div>;
+          </div>;
+          <div className="text-center">;
+            <div className="text - 2xl mb-2">⚙️</div>;
+            <div className="font-semibold">Development</div>;
+            <div className="text - sm opacity-80">AI model training & integration</div>;
+          </div>;
+          <div className="text-center">;
+            <div className="text - 2xl mb-2">🚀</div>;
+            <div className="font-semibold">Deployment</div>;
+            <div className="text - sm opacity-80">Testing & optimization</div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>;
         </div>;
       </div>;
       {/* Pricing Tiers */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="space-y-6">
         <h2 className="text-2xl font-semibold text-center">Pricing Plans</h2>
@@ -350,6 +434,8 @@ export default function AIAutomationPage() {return (;    <div className="space-y
     </div>
   )
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <div className="space-y-6">;
         <h2 className="text - 2xl font - semibold text-center">Pricing Plans</h2>;

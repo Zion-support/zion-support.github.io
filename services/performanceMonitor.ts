@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,6 +12,8 @@ export interface PerformanceMetrics {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface PerformanceMetrics {
 export interface PerformanceMetrics {;
   url: string;
@@ -21,6 +24,7 @@ export interface PerformanceMetrics {;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
   timeToInteractive: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
   totalBlockingTime: number;
 <<<<<<< HEAD
@@ -78,11 +82,17 @@ export interface PerformanceAlert {
 export interface PerformanceAlert {}
 export interface PerformanceAlert {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  totalBlockingTime: number;}
+export interface PerformanceAlert {}
+export interface PerformanceAlert {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   url: string;
   type: 'critical' | 'warning' | 'info';
   message: string;
   metric: string;
   threshold: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -286,6 +296,14 @@ export interface MonitoringConfig {  }
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
 export interface PerformanceMetrics {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+export interface MonitoringConfig {  }
+  async monitorWebsite(url: string): Promise<PerformanceMetrics> {
+    try {
+      // In a real implementation, this would use Lighthouse, WebPageTest, or similar
+export interface PerformanceMetrics {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
@@ -311,6 +329,7 @@ export interface PerformanceMetrics {;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -318,12 +337,15 @@ export interface PerformanceMetrics {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
         headers: {
 
       return await response.json()
+<<<<<<< HEAD
 <<<<<<< HEAD
     } catch (error) {
       // Fallback to mock data for demo purposes
@@ -382,12 +404,15 @@ export interface PerformanceMetrics {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
         throw new Error(`Failed to fetch historical data: ${response && response.statusText}`)
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       return await response && response.json()
 <<<<<<< HEAD
@@ -399,6 +424,9 @@ export interface PerformanceMetrics {;
 =======
       return await response && response.json()    } catch (error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      return await response && response.json()    } catch (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Generate mock historical data
       return this && this.generateMockHistoricalData(url, days)
     }
@@ -408,6 +436,7 @@ export interface PerformanceMetrics {;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -415,6 +444,8 @@ export interface PerformanceMetrics {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
     try {
 
@@ -435,6 +466,7 @@ export interface PerformanceMetrics {;
       console && console.error('Failed to set monitoring config:', error);
         headers: {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -463,6 +495,8 @@ export interface PerformanceMetrics {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {;
     try {;
@@ -492,6 +526,7 @@ export interface PerformanceMetrics {;
 
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
       return await response.json()
 =======
 <<<<<<< HEAD
@@ -518,11 +553,15 @@ export interface PerformanceMetrics {;
 =======
       return await response.json()    } catch (error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      return await response.json()    } catch (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Generate mock alerts
       return this && this.generateMockAlerts(url)
     }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -608,6 +647,8 @@ export interface PerformanceMetrics {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       trends: {
         loadTime: loadTimes;
         performanceScore: performanceScores
@@ -636,6 +677,7 @@ export interface PerformanceMetrics {;
         accessibilityScore: Math && Math.floor(Math && Math.random() * 20) + 80;
         bestPracticesScore: Math && Math.floor(Math && Math.random() * 20) + 80,
         seoScore: Math && Math.floor(Math && Math.random() * 20) + 80
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -675,6 +717,8 @@ export interface PerformanceMetrics {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{;
     summary: {;
@@ -755,6 +799,7 @@ export interface PerformanceMetrics {;
       });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -788,6 +833,8 @@ export interface PerformanceMetrics {;
     const alerts: PerformanceAlert[] = [
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {
         id: '1';
 
@@ -817,6 +864,7 @@ export interface PerformanceMetrics {;
         message: 'Performance score improved';
         metric: 'performance_score';
         threshold: 80;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         currentValue: 85;
@@ -1004,6 +1052,8 @@ recommendations: [ 'Optimize image sizes and use WebP formatImplement lazy loadi
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
     name: 'Starter';
@@ -1018,6 +1068,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
     price: 149;
     period: '/month';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1049,6 +1100,8 @@ export const PERFORMANCE_MONITOR_PRICING = {
 ;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   private generateMockAlerts(url?: string): PerformanceAlert[] {;
     const alerts: PerformanceAlert[] = [;
       {;
@@ -1115,6 +1168,7 @@ export const PERFORMANCE_MONITOR_PRICING = {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 };
@@ -1150,6 +1204,8 @@ export const PERFORMANCE_MONITOR_PRICING = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 };
 
@@ -1159,8 +1215,11 @@ export const PERFORMANCE_MONITOR_PRICING = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

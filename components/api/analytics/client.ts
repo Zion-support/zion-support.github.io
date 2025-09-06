@@ -1,7 +1,20 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       supabase
+=======
+=======
+import { createServerClient } from '../../../utils/supabase/server';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const supabase = null;
+  try {
+    const supabase = createServerClient();
+    const clientId = (req.query.clientId as string) |null
+    const [jobsR, quotesR] = await Promise.allSettled([
+supabase
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         .from('jobs')
         .select('id, client_id, status, posted_at, hired_at')
         .eq('client_id', clientId)
@@ -11,6 +24,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
         .eq('client_id', clientId)
     ]);
     const jobs =
+<<<<<<< HEAD
       jobsR && jobsR.status === 'fulfilled' && jobsR && jobsR.value.data
         ? (jobsR && jobsR.value.data as any[])
         : [];
@@ -19,6 +33,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
         ? (quotesR && quotesR.value.data as any[])
         : [];
     const jobsData = jobs && jobs.length
+=======
+      jobsR.status === 'fulfilled' && jobsR.value.data
+        ? (jobsR.value.data as any[])
+        : [];
+    const quotes =
+      quotesR.status === 'fulfilled' && quotesR.value.data
+        ? (quotesR.value.data as any[])
+        : [];
+    const jobsData = jobs.length
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       ? jobs
       : [
           {
@@ -42,12 +66,17 @@ import type { NextApiRequest, NextApiResponse } from 'next';
             hired_at: '2025-01-06'
           }
         ];
+<<<<<<< HEAD
     const quotesData = quotes && quotes.length
+=======
+    const quotesData = quotes.length
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       ? quotes
       : [
           { id: 21, job_id: 12, status: 'received', created_at: '2025-01-02' }
           { id: 22, job_id: 13, status: 'received', created_at: '2025-01-03' }
         ];
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const supabase = createServerClient();
@@ -64,10 +93,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const quotesData = quotes.length ? quotes : [
       { id: 21, job_id: 12, status: 'received', created_at: '2025-01-02' }
       { id: 22, job_id: 13, status: 'received', created_at: '2025-01-03' }];
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const jobsPosted = jobsData.length;
     const quotesReceived = quotesData.length;
     const filled = jobsData.filter(j => j.status === 'filled');
     const timeToHireDays = filled.length
+<<<<<<< HEAD
     const jobs = jobsR && jobsR.status === 'fulfilled' && jobsR && jobsR.value.data ? jobsR && jobsR.value.data as any[] : [];
     const quotes = quotesR && quotesR.status === 'fulfilled' && quotesR && quotesR.value.data ? quotesR && quotesR.value.data as any[] : [];
     const jobsData = jobs && jobs.length ? jobs : [
@@ -90,6 +123,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         ) / filled && filled.length
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+? filled.reduce(
+          (acc, j) =>
+            acc +
+            (new Date(j.hired_at).getTime() - new Date(j.posted_at).getTime()) /
+              (1000 * 60 * 60 * 24)
+          0
+        ) / filled.length
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const talentViewed = 12; // Placeholder
     const shortlisted = 5; // Placeholder
     const funnel = [
@@ -105,6 +148,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       funnel: [
         { label: 'Post', value: 3 }
         { label: 'Invite', value: 2 }
+<<<<<<< HEAD
 
         { label: 'Hire', value: 2 }]})
 =======
@@ -115,6 +159,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 =======
+=======
+<<<<<<< HEAD
+
+        { label: 'Hire', value: 2 }]})
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     res.status (200).json ({
       jobs_posted: 3,
       quotes_received: 2,
@@ -136,6 +186,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         { label: 'Post', value: 3 }
         { label: 'Invite', value: 2 }
         { label: 'Hire', value: 2 }]});
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
+=======
+  }
+=======
+        { label: 'Hire', value: 2 }
+      ]
+    });
+  }
+        { label: 'Hire', value: 2 }]})
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }

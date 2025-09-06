@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -19,6 +22,7 @@ import { Check, Copy, ExternalLink } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { Check, Copy, ExternalLink } from "lucide-react";
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from "react",
@@ -43,6 +47,12 @@ export function ZapierIntegration() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function ZapierIntegration() {;
+  const [copied, setCopied] = useState(false);
+  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -82,6 +92,7 @@ export function ZapierIntegration() {;
 
   Card,
   CardContent,
+<<<<<<< HEAD
 <<<<<<< HEAD
   CardFooter,
 
@@ -216,11 +227,18 @@ export function ZapierIntegration() {;
                 <label className="text-sm font-medium">Your Zion API Key</label>
                 <div className="flex gap-2">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  CardFooter,            <div className="space-y-4">
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Your Zion API Key</label>
+                <div className="flex gap-2">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="grid md:grid-cols-3 gap-6">;
         <Card className="md:col-span-2">;
           <CardHeader>;
             <div className="flex items-center justify-between">;
               <h3 className="text-lg font-semibold">Zapier Connection</h3>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <Badge variant="outline" className="bg-blue-100 text-blue-800">;
@@ -265,12 +283,16 @@ function ZapierIntegration() {
 =======
               <Badge variant="outline" className="bg-blue-100 text-blue-800">;                Active;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <Badge variant="outline" className="bg-blue-100 text-blue-800">;                Active;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </Badge>;
             </div>;
           </CardHeader>;
           <CardContent>;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -290,6 +312,10 @@ function ZapierIntegration() {
         <Card>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <CardHeader>
             <h3 className="text-lg font-semibold">Popular Zaps</h3>
           </CardHeader>
@@ -323,6 +349,7 @@ function ZapierIntegration() {
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -349,6 +376,8 @@ function ZapierIntegration() {
       <Card>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <CardHeader>
           <h3 className="text-lg font-semibold">Zapier Webhook Triggers</h3>
         </CardHeader>
@@ -356,6 +385,7 @@ function ZapierIntegration() {
           <p className="text-sm text-muted-foreground mb-4">
             Use these webhook triggers to start Zaps when events happen in your
             Zion account.
+<<<<<<< HEAD
 <<<<<<< HEAD
           </p>
 <<<<<<< HEAD
@@ -385,10 +415,14 @@ function ZapierIntegration() {
 =======
           </p>          <div className="grid md: grid-cols-3 gap-4">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          </p>          <div className="grid md: grid-cols-3 gap-4">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Job Posted</h4>
               <p className="text-xs text-muted-foreground mb-3">
                 Triggers when a new job is published on your account.
+<<<<<<< HEAD
 <<<<<<< HEAD
               </p>
 <<<<<<< HEAD
@@ -474,10 +508,14 @@ function ZapierIntegration() {
 =======
               </p>            </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              </p>            </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -495,6 +533,8 @@ function ZapierIntegration() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 }
   )
@@ -528,7 +568,10 @@ export function ZapierIntegration() {;
             <p className="text-sm text-muted-foreground mb-4">;
               Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             <p className="text - sm text - muted - foreground mb-4">;
               Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
@@ -542,6 +585,7 @@ export function ZapierIntegration() {;
                   <Input;
                     value={api_key}
                     read_only;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className="font - mono text - sm";
 <<<<<<< HEAD
@@ -585,6 +629,9 @@ export function ZapierIntegration() {;
 =======
                     className="font - mono text-sm";                </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    className="font - mono text-sm";                </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>;
             </div>;
           </CardContent>;            </div>;
@@ -592,6 +639,7 @@ export function ZapierIntegration() {;
         </CardContent>;
       </Card>;
 
+<<<<<<< HEAD
     </div>;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
@@ -639,3 +687,8 @@ return (<div className="space-y-6" > <div className="grid md:grid-cols-3 gap-6" 
 =======
   );}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </div>;
+
+  );}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

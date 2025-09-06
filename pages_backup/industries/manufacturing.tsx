@@ -2,12 +2,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrench, Activity, Database, FileText, Users } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Settings, 
   Brain, 
@@ -61,6 +65,8 @@ import Layout from '../../components/Layout';
 import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrench, Activity, Database, FileText, Users } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion';import Layout from '../../components/Layout';
 const services = [
   {
@@ -71,6 +77,7 @@ const services = [
       'Real-time production monitoring,',
       'Automated quality control',',
       'Predictive maintenance',',
+<<<<<<< HEAD
 <<<<<<< HEAD
       'Supply chain integration'';
     ];
@@ -124,6 +131,23 @@ const services = [;
       'Data collection systems',',;
 
 =======
+=======
+    title: 'Smart Factory Solutions,',,
+  description: 'IoT-enabled manufacturing systems for intelligent production management.,',;
+import Layout from '../../components/Layout';
+const services = [;
+  {;
+    title: 'Smart Factory Solutions',,
+  description: 'IoT-enabled manufacturing systems for intelligent production management.',;
+    icon: Settings,;
+    features: [,;
+      'Real-time production monitoring,',;
+      'Automated quality control',',;
+      'Predictive maintenance',',;      'Cost optimization'';
+    ];
+  },
+  {}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'IoT Sensor Networks,',
     description: 'Connected sensor systems for comprehensive factory monitoring.,',
     icon: Cpu,
@@ -131,11 +155,15 @@ const services = [;
       'Environmental monitoring,',
       'Equipment status tracking',',
       'Data collection systems',',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'Real-time alerts'';
     ];
   },
   {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -173,6 +201,11 @@ const services = [;
       'Supplier management',',;
 
 =======
+=======
+    ];
+  },
+  {}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Supply Chain Optimization,',
     description: 'AI-driven supply chain management for improved efficiency.,',
     icon: BarChart3,
@@ -180,11 +213,15 @@ const services = [;
       'Demand forecasting,',
       'Inventory optimization',',
       'Supplier management',',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'Logistics coordination'';
     ];
   },
   {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -310,6 +347,14 @@ const benefits = [;
   description: 'Automated processes and AI optimization improve production efficiency.,',;
     icon: Activity;  {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;];
+const benefits = [;
+  {}
+    title: 'Increased Efficiency,',,
+  description: 'Automated processes and AI optimization improve production efficiency.,',;
+    icon: Activity;  {}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Reduced Downtime,',
     description: 'Predictive maintenance prevents unexpected equipment failures.,',
     icon: Wrench;
@@ -353,6 +398,7 @@ export default function ManufacturingPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
@@ -410,6 +456,8 @@ export default function ManufacturingPage() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto"">;
               <div className="flex items-center justify-center mb-6">";
@@ -428,7 +476,10 @@ export default function ManufacturingPage() {;
             </motion && motion.div>;
           </div>;
         </section>;              className="text-center mb-16"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Manufacturing Technology Services
@@ -449,8 +500,11 @@ export default function ManufacturingPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">";
@@ -461,6 +515,7 @@ export default function ManufacturingPage() {;
                   <ul className="space-y-3">";
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
 =======
@@ -528,6 +583,9 @@ export default function ManufacturingPage() {;
 =======
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";              className="text-center mb-16"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";              className="text-center mb-16"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Why Choose Our Manufacturing Solutions?
@@ -577,8 +635,11 @@ export default function ManufacturingPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Manufacturing?;
@@ -808,5 +869,9 @@ export default function ManufacturingPage() {;
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
     </Layout>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </Layout>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

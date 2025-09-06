@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 
@@ -36,19 +37,26 @@ import React, { useMemo, useState } from 'react';
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 type DistributionItem = { label: string, percent: number };
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
 export default function TokenomicsWhitepaperBuilder(req, res) {
   try {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function TokenomicsWhitepaperBuilder() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export default function TokenomicsWhitepaperBuilder() {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
   const [legalReview, setLegalReview] = useState(false);
   const [tokenName, setTokenName] = useState('ZION$');
   const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const [useCases, setUseCases] = useState<string>('Access to premium AI agents, marketplace discounts, reputation staking, governance participation'),;
@@ -56,6 +64,8 @@ export default function TokenomicsWhitepaperBuilder() {;
   const [distribution, setDistribution] = useState<DistributionItem[]>([;
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async function handleGenerate() {
     try {
       setIsGenerating(true);
@@ -82,7 +92,10 @@ export default function TokenomicsWhitepaperBuilder() {;
       setGeneratedMarkdown(data.markdown |'');
     } catch (e) {
       console.error(e);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   
   static getDerivedStateFromError(error) {
@@ -101,6 +114,7 @@ export default function TokenomicsWhitepaperBuilder() {;
     return this.props.children;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 import React, { useMemo, useState } from 'react';
 
@@ -109,26 +123,43 @@ const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepape
 export default function TokenomicsWhitepaperBuilder() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 type DistributionItem = { label: string, percent: number };
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
 export default function TokenomicsWhitepaperBuilder(req, res) {
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function TokenomicsWhitepaperBuilder() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import React, { useMemo, useState } from 'react';
+import Head from 'next/head';
+type DistributionItem = any;
+const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
+export default function TokenomicsWhitepaperBuilder() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
   const [legalReview, setLegalReview] = useState(false);
   const [tokenName, setTokenName] = useState('ZION$');
   const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
+<<<<<<< HEAD
   const [useCases, setUseCases] = useState<string>(
+=======
+const [useCases, setUseCases] = useState<string>(
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     'Access to premium AI agents, marketplace discounts, reputation staking, governance participation'
   );
   const [rewardsLogic, setRewardsLogic] = useState<string>(
     'Earn via contributions, referrals, and successful task completions; burn on dispute resolution fees and premium access'
+<<<<<<< HEAD
   );  const [distribution, setDistribution] = useState<DistributionItem[]>([
     { label: 'Ecosystem & Rewards', percent: 35 }
     { label: 'Community Treasury', percent: 20 }
@@ -136,6 +167,16 @@ export default function TokenomicsWhitepaperBuilder() {;
     { label: 'Investors', percent: 15 }
     { label: 'Liquidity & Market Making', percent: 10 }
     { label: 'Advisors & Partnerships', percent: 5 }
+=======
+  );
+  const [distribution, setDistribution] = useState<DistributionItem[]>([
+    { label: 'Ecosystem & Rewards', percent: 35 },
+    { label: 'Community Treasury', percent: 20 },
+    { label: 'Team & Contributors', percent: 15 },
+    { label: 'Investors', percent: 15 },
+    { label: 'Liquidity & Market Making', percent: 10 },
+{ label: 'Advisors & Partnerships', percent: 5 },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ]);
   const [governance, setGovernance] = useState<string>(
     'One-token-one-vote with quadratic weighting for proposals; staking required for proposal submission; delegated voting supported'
@@ -148,6 +189,7 @@ export default function TokenomicsWhitepaperBuilder() {;
     () => distribution.reduce((acc, d) => acc + (Number(d.percent) |0), 0)
     [distribution]
   );
+<<<<<<< HEAD
   const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
 
@@ -156,6 +198,58 @@ export default function TokenomicsWhitepaperBuilder() {;
 <<<<<<< HEAD
   const previewMarkdown = useMemo(() => {
     return (
+=======
+
+  const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
+  const [isGenerating, setIsGenerating] = useState<boolean>(false);
+
+<<<<<<< HEAD
+  const [activeSection, setActiveSection] =;
+=======
+const [activeSection, setActiveSection] =
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    useState<string>('Executive Summary');
+type DistributionItem = { label: string, percent: number };
+const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
+export default function TokenomicsWhitepaperBuilder(req, res) {
+  try {
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [publicPreview, setPublicPreview] = useState(false);
+  const [legalReview, setLegalReview] = useState(false);
+  const [tokenName, setTokenName] = useState('ZION$');
+  const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
+  const [useCases, setUseCases] = useState<string>('Access to premium AI agents, marketplace discounts, reputation staking, governance participation'),;
+  const [rewardsLogic, setRewardsLogic] = useState<string>('Earn via contributions, referrals, and successful task completions, burn on dispute resolution fees and premium access'),;
+  const [distribution, setDistribution] = useState<DistributionItem[]>([;
+    { label: 'Ecosystem & Rewards', percent: 35 },;
+    { label: 'Community Treasury', percent: 20 },;
+    { label: 'Team & Contributors', percent: 15 },;
+    { label: 'Investors', percent: 15 },;
+    { label: 'Liquidity & Market Making', percent: 10 },;
+    { label: 'Advisors & Partnerships', percent: 5 }]),;
+  const [governance, setGovernance] = useState<string>('One-token-one-vote with quadratic weighting for proposals, staking required for proposal submission, delegated voting supported'),;
+  const [jurisdiction, setJurisdiction] = useState<string>('US');
+  const [operatorPrompt, setOperatorPrompt] = useState<string>(defaultOperatorPrompt);
+  const totalPercent = useMemo(() => distribution.reduce((acc, d) => acc + (Number(d.percent) || 0), 0), [distribution]),;
+  const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
+  const [isGenerating, setIsGenerating] = useState<boolean>(false);
+  const [activeSection, setActiveSection] = useState<string>('Executive Summary');
+
+  const previewMarkdown = useMemo(() => {;
+    return (
+<<<<<<< HEAD
+      generatedMarkdown ||;
+      buildLocalMarkdown({;
+        tokenName,;
+        tokenSupply,;
+        useCases,;
+        rewardsLogic,;
+        distribution,;
+        governance,;
+        jurisdiction,;
+        legalReview,;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       generatedMarkdown |
       buildLocalMarkdown({
         tokenName
@@ -179,15 +273,27 @@ export default function TokenomicsWhitepaperBuilder() {;
     jurisdiction
     legalReview
   ]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async function handleGenerate() {
     try {
       setIsGenerating(true);
       const res = await fetch('/api/whitepaper/generate', {
+<<<<<<< HEAD
         method: 'POST'
         headers: {
           'Content-Type': 'application/json'
           'X-Admin': isAdmin ? 'true' : 'false'
         }
+=======
+        method: 'POST',
+headers: {
+          'Content-Type': 'application/json',
+          'X-Admin': isAdmin ? 'true' : 'false',
+        },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         body: JSON.stringify({
           tokenName
           tokenSupply
@@ -199,6 +305,7 @@ export default function TokenomicsWhitepaperBuilder() {;
           operatorPrompt
           legalReview
         })
+<<<<<<< HEAD
       });
       if (!res.ok) throw new Error('Failed to generate');
       const data = await res.json();
@@ -302,6 +409,9 @@ export default function TokenomicsWhitepaperBuilder() {;
         governance,;
         jurisdiction,;
         legalReview,;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       });
     );
   }, [;
@@ -325,6 +435,7 @@ export default function TokenomicsWhitepaperBuilder() {;
           'X-Admin': isAdmin ? 'true' : 'false',;
         },;
         body: JSON && JSON.stringify({;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -360,6 +471,8 @@ export default function TokenomicsWhitepaperBuilder() {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           tokenName,;
           tokenSupply,;
           useCases,;
@@ -368,6 +481,7 @@ export default function TokenomicsWhitepaperBuilder() {;
           governance,;
           jurisdiction,;
           operatorPrompt,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -387,10 +501,18 @@ export default function TokenomicsWhitepaperBuilder() {;
       setIsGenerating(false);    }
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      alert('Generation failed');
+<<<<<<< HEAD
+    } finally {;
+      setIsGenerating(false);    }
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       const blob = new Blob([previewMarkdown], { type: 'text/markdown,charset=utf-8' });
       const url = URL.createObjectURL(blob);
 
+<<<<<<< HEAD
       const a = document.createElement('a');
       a.href = url;
 
@@ -416,6 +538,66 @@ export default function TokenomicsWhitepaperBuilder() {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+    } finally {
+      setIsGenerating(false);
+    }
+  }
+  async function handleDownload(ext: 'md' | 'pdf') {
+    if (ext === 'md') {
+const blob = new Blob([previewMarkdown], {
+        type: 'text/markdown;charset=utf-8',
+      });
+      const url = URL.createObjectURL(blob);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper.md`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+<<<<<<< HEAD
+
+
+  async function handleDownload(): any (ext: 'md' | 'pdf') {;
+    if (ext === 'md') {;
+      const blob = new Blob([previewMarkdown], {;
+        type: 'text/markdown;charset=utf-8',;
+      });      const url = URL && URL.createObjectURL(blob);
+      const a = document && document.createElement('a');
+      a && a.href = url;
+      a && a.download = `${tokenName && tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper && whitepaper.md`;
+      document && document.body.appendChild(a);
+      a && a.click();
+      document && document.body.removeChild(a);
+      URL && URL.revokeObjectURL(url);    } else {;
+      const res = await fetch('/api/whitepaper/export', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({ markdown: previewMarkdown, tokenName }),;
+
+=======
+URL.revokeObjectURL(url);
+    } else {
+      const res = await fetch('/api/whitepaper/export', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ markdown: previewMarkdown, tokenName }),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      });
+      if (!res && res.ok) {;
+        alert('PDF export failed');
+        return;
+      }
+      const { url } = await res && res.json();
+      window && window.open(url, '_blank');
+    }
+  }
+<<<<<<< HEAD
+
+      const item = { ...copy[index] }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       URL.revokeObjectURL(url)
     } else {
       const res = await fetch('/api/whitepaper/export', {
@@ -434,31 +616,44 @@ export default function TokenomicsWhitepaperBuilder() {;
   function updateDistribution(index: number, key: keyof DistributionItem, value: string) {
     setDistribution((prev) => {
       const copy = [...prev];
+<<<<<<< HEAD
 =======
 }
       const { url } = await res.json();
       window.open(url, '_blank');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+      const { url } = await res.json();
+      window.open(url, '_blank');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
     const { url } = await res.json();
     await navigator.clipboard.writeText(url);
     alert('Shareable link copied to clipboard');
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ;
   function updateDistribution(index: number, key: keyof DistributionItem, value: string) {;
     setDistribution((prev) => {;
       const copy = [...prev];
+<<<<<<< HEAD
 <<<<<<< HEAD
       const item = { ...copy[index] };
       if (key === 'percent') item.percent = Number(value);
@@ -509,6 +704,13 @@ export default function TokenomicsWhitepaperBuilder() {;
     if (!res.ok) {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      const item = { ...copy[index] };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+      if (key === 'percent') item.percent = Number(value);
+      if (key === 'label') item.label = value;
+      copy[index] = item;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const preview_markdown = useMemo (() => {
     return (
       generated_markdown ||;
@@ -567,6 +769,24 @@ function handle_generate() {
       alert ('Generation failed');
     } finally {
       setIsGenerating (false);    }
+<<<<<<< HEAD
+=======
+=======
+  function updateDistribution(
+    index: number
+    key: keyof DistributionItem
+    value: string
+  ) {
+    setDistribution(prev => {
+      const copy = [...prev];
+      const item = { ...copy[index] };
+      if (key === 'percent') item.percent = Number(value);
+      if (key === 'label') item.label = value;
+      copy[index] = item;
+return copy;
+    });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   async /**
  * handle_download - Function description
@@ -602,6 +822,10 @@ if ( {) {
       window.open (url, '_blank');
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   /**
  * update_distribution - Function description
  */
@@ -615,16 +839,36 @@ function update_distribution() {
 if (item.label = value) {
   $2
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       copy[index] = item;
 
 
+=======
+      copy[index] = item;
+
+
+=======
+  function removeDistributionItem(index: number) {
+    setDistribution(prev => prev.filter((_, i) => i !== index));
+  }
+
+  async function handleShareableLink() {
+    const res = await fetch('/api/whitepaper/share', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ markdown: previewMarkdown, publicPreview }),
+    });
+    if (!res.ok) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       alert('Failed to create share link');
       return;
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
     const { url } = await res.json();
@@ -646,12 +890,17 @@ if (item.label = value) {
     'Risks + Disclaimers'
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const sections = [
     'Executive Summary'
     'Market Context'
@@ -660,6 +909,7 @@ if (item.label = value) {
     'Distribution'
     'Governance Model'
     'Risks + Disclaimers'
+<<<<<<< HEAD
 <<<<<<< HEAD
   ];
 
@@ -703,6 +953,9 @@ if ( {) {
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               className='px-3 py-1 rounded-md bg-indigo-600 text-white'>;
         <title > Tokenomics Whitepaper Generator</title>;
       </Head>;
@@ -727,6 +980,7 @@ if ( {) {
               <span > Public after launch</span>;
             </label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             <button;
               on_click={handleShareableLink}
@@ -734,14 +988,19 @@ if ( {) {
             >;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Create Share Link;
             </button>;
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 6'>;
           <div className='space - y-6'>;
             <div className='rounded - lg border p - 4 space - y-4'>;
@@ -799,9 +1058,12 @@ if ( {) {
                     value={jurisdiction}
                     on_change={e => set_jurisdiction (e.target.value)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   >;
                     <option value='US'>US</option>;
                     <option value='EU'>EU</option>;
@@ -809,6 +1071,7 @@ if ( {) {
                     <option value='AE'>UAE</option>;
                   </select>;
                 </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -825,10 +1088,13 @@ if ( {) {
                   <label html_for='legal_review' className='text - sm'>;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Submit to Counsel;
                   </label>                </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -873,10 +1139,13 @@ if ( {) {
                   >;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Add allocation;
                   </button>;
                 </div>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -986,17 +1255,42 @@ function jurisdictionalNote(): any (j: string) {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  ];
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <Head>
         <title>Tokenomics Whitepaper Generator</title>
       </Head>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Whitepaper Generator</h1>
           <div className="flex items-center gap-3 text-sm">
             <label className="inline-flex items-center gap-2">
               <input type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
+<<<<<<< HEAD
+=======
+=======
+<div className='space-y-6'>
+        <div className='flex items-center justify-between'>
+          <h1 className='text-2xl font-semibold'>Whitepaper Generator</h1>
+          <div className='flex items-center gap-3 text-sm'>
+            <label className='inline-flex items-center gap-2'>
+              <input
+                type='checkbox'
+                checked={isAdmin}
+                onChange={e => setIsAdmin(e.target.checked)}
+              />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <span>Admin</span>
             </label>
             <label className="inline-flex items-center gap-2">
@@ -1006,6 +1300,7 @@ function jurisdictionalNote(): any (j: string) {;
             <button onClick={handleShareableLink} className="px-3 py-1 rounded-md bg-indigo-600 text-white">Create Share Link</button>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1023,11 +1318,14 @@ function jurisdictionalNote(): any (j: string) {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="space-y-6">
             <div className="rounded-lg border p-4 space-y-4">
               <h2 className="font-medium">Builder Inputs</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1043,6 +1341,11 @@ function jurisdictionalNote(): any (j: string) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div>
                   <label className="text-xs opacity-70">Token name</label>
                   <input className="w-full border rounded-md px-3 py-2" value={tokenName} onChange={(e) => setTokenName(e.target.value)} />
@@ -1074,6 +1377,7 @@ function jurisdictionalNote(): any (j: string) {;
                 </div>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -1090,6 +1394,9 @@ function jurisdictionalNote(): any (j: string) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>
               </div>
             </div>
@@ -1103,6 +1410,7 @@ function jurisdictionalNote(): any (j: string) {;
                     <input className="col-span-4 border rounded-md px-3 py-2" type="number" min={0} max={100} value={item.percent} onChange={(e) => updateDistribution(idx, 'percent', e.target.value)} />
                     <button onClick={() => removeDistributionItem(idx)} className="col-span-2 px-3 py-2 rounded-md bg-rose-600 text-white">Remove</button>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1119,17 +1427,92 @@ function jurisdictionalNote(): any (j: string) {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div className="flex items-center justify-between text-xs opacity-70">
                   <span>Total: {totalPercent}%</span>
                   <button onClick={addDistributionItem} className="px-3 py-1 rounded-md bg-gray-900 text-white">Add allocation</button>
                 </div>
               </div>
               <div className="mt-3">
+<<<<<<< HEAD
                 <DistributionDonut data={distribution} />
               </div>
             </div>
 <<<<<<< HEAD
             <div className='rounded-lg border p-4 space-y-3'>
+=======
+=======
+                <div className='flex items-center gap-2'>
+                  <input
+                    id='legalReview'
+                    type='checkbox'
+                    checked={legalReview}
+                    onChange={e => setLegalReview(e.target.checked)}
+                  />
+                  <label htmlFor='legalReview' className='text-sm'>
+                    Submit to Counsel
+                  </label>
+                </div>
+              </div>
+            </div>
+
+<div className='rounded-lg border p-4 space-y-3'>
+              <h3 className='font-medium'>Distribution</h3>
+              <div className='space-y-2'>
+                {distribution.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className='grid grid-cols-12 gap-2 items-center'
+                  >
+                    <input
+                      className='col-span-6 border rounded-md px-3 py-2'
+                      value={item.label}
+                      onChange={e =>
+                        updateDistribution(idx, 'label', e.target.value)
+                      }
+                    />
+                    <input
+                      className='col-span-4 border rounded-md px-3 py-2'
+                      type='number'
+                      min={0}
+                      max={100}
+                      value={item.percent}
+                      onChange={e =>
+                        updateDistribution(idx, 'percent', e.target.value)
+                      }
+                    />
+                    <button
+                      onClick={() => removeDistributionItem(idx)}
+                      className='col-span-2 px-3 py-2 rounded-md bg-rose-600 text-white'
+                    >
+                      Remove
+                    </button>
+                  </div>
+                ))}
+                <div className='flex items-center justify-between text-xs opacity-70'>
+                  <span>Total: {totalPercent}%</span>
+                  <button
+                    onClick={addDistributionItem}
+                    className='px-3 py-1 rounded-md bg-gray-900 text-white'
+                  >
+                    Add allocation
+                  </button>
+                </div>
+              </div>
+              <div className='mt-3'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                <DistributionDonut data={distribution} />
+              </div>
+            </div>
+
+<<<<<<< HEAD
+
+                  disabled={!isAdmin || isGenerating}
+
+=======
+<div className='rounded-lg border p-4 space-y-3'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h3 className='font-medium'>Operator Prompt</h3>
               <textarea
                 className='w-full border rounded-md px-3 py-2'
@@ -1140,6 +1523,7 @@ function jurisdictionalNote(): any (j: string) {;
               <div className='flex gap-3'>
                 <button
                   disabled={!isAdmin |isGenerating}
+<<<<<<< HEAD
                   disabled={!isAdmin || isGenerating}
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -1148,6 +1532,9 @@ function jurisdictionalNote(): any (j: string) {;
                   disabled={!isAdmin || isGenerating}
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   onClick={handleGenerate}
                   className='px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50'
                 >
@@ -1158,6 +1545,7 @@ function jurisdictionalNote(): any (j: string) {;
                   className='px-4 py-2 rounded-md border'
                 >
                   Clear AI Draft
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -1184,10 +1572,13 @@ function jurisdictionalNote(): any (j: string) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </button>
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1196,6 +1587,14 @@ function jurisdictionalNote(): any (j: string) {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+            <div className="rounded-lg border p-4 space-y-2">
+              <h3 className="font-medium">Output</h3>
+              <div className="flex gap-3">
+                <button onClick={() => handleDownload('md')} className="px-3 py-2 rounded-md border">Download .md</button>
+                <button onClick={() => handleDownload('pdf')} className="px-3 py-2 rounded-md border">Download PDF</button>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className='rounded-lg border p-4 space-y-2'>
               <h3 className='font-medium'>Output</h3>
               <div className='flex gap-3'>
@@ -1210,10 +1609,34 @@ function jurisdictionalNote(): any (j: string) {;
                   className='px-3 py-2 rounded-md border'
                 >
                   Download PDF
+<<<<<<< HEAD
                 </button>              </div>
             </div>
           </div>
           <div className='rounded-lg border p-4'>
+=======
+                </button>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+              </div>
+            </div>
+          </div>
+
+<<<<<<< HEAD
+          <div className="rounded-lg border p-4">
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex gap-2 overflow-x-auto">
+                {sections.map((s) => (
+                  <button key={s} onClick={() => setActiveSection(s)} className={`px-3 py-1 rounded-md border ${activeSection === s ? 'bg-gray-900 text-white' : ''}`}>{s}</button>
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+=======
+<div className='rounded-lg border p-4'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className='flex items-center justify-between mb-3'>
               <div className='flex gap-2 overflow-x-auto'>
                 {sections.map(s => (
@@ -1225,6 +1648,7 @@ function jurisdictionalNote(): any (j: string) {;
                     {s}
                   </button>
                 ))}
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1289,10 +1713,25 @@ function jurisdictionalNote(): any (j: string) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
             <MarkdownPreview markdown={previewMarkdown} activeSection={activeSection} />
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+              </div>
+              <span className="text-xs opacity-60">Auto-updating preview</span>
+            </div>
+<<<<<<< HEAD
+            <MarkdownPreview markdown={previewMarkdown} activeSection={activeSection} />
+=======
+            <MarkdownPreview
+              markdown={previewMarkdown}
+              activeSection={activeSection}
+            />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
         </div>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -1303,6 +1742,8 @@ function jurisdictionalNote(): any (j: string) {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 }
 
@@ -1310,7 +1751,15 @@ function jurisdictionalNote(): any (j: string) {;
 function buildLocalMarkdown(input: {;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+);
+
+function buildLocalMarkdown(input: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   tokenName: string;
   tokenSupply: string;
   useCases: string;
@@ -1319,6 +1768,7 @@ function buildLocalMarkdown(input: {;
   governance: string;
   jurisdiction: string;
   legalReview: boolean;
+<<<<<<< HEAD
 }) {;
   const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n');
   const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '';
@@ -1327,6 +1777,24 @@ function buildLocalMarkdown(input: {;
 =======
   return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`
 }
+=======
+<<<<<<< HEAD
+}) {;
+  const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n');
+  const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '';
+  return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`
+}
+=======
+}) {
+  const distLines = input.distribution
+    .map(d => `- ${d.label}: ${d.percent}%`)
+    .join('\n');
+  const disclaimer = input.legalReview
+    ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.`
+    : '';
+  return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 function jurisdictionalNote(j: string) {
           <div className='rounded - lg border p - 4'>;
@@ -1366,7 +1834,10 @@ function buildLocalMarkdown() {
  * jurisdictional_note - Function description
  */
 function jurisdictional_note() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   switch (j) {
     case 'US':;
       return 'The token is intended for utility purposes and not as a security within the meaning of U.S. securities laws.';
@@ -1374,6 +1845,7 @@ function jurisdictional_note() {
 function DistributionDonut(): any ({ data }: { data: DistributionItem[] }) {;
   // Simple textual donut placeholder until a chart lib is added;
   const total = data && data.reduce((a, b) => a + b && b.percent, 0) || 1;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1388,6 +1860,11 @@ function DistributionDonut(): any ({ data }: { data: DistributionItem[] }) {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ;
 function jurisdictionalNote(j: string) {;
@@ -1395,17 +1872,41 @@ function jurisdictionalNote(j: string) {;
     case 'US':;
       return 'The token is intended for utility purposes and not as a security within the meaning of U.S. securities laws.';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+    case 'EU':
+return 'Designed for utility under EU frameworks; subject to MiCA and local guidelines as applicable.';
+    case 'SG':
+      return 'Intended utility token under MAS guidance; prospective purchasers should not view it as capital markets products.';
+    case 'AE':
+      return 'Intended utility token within relevant UAE free zone guidance; not an investment product.';
+    default:
+      return 'Intended strictly for utility use.';
+  }
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) || 1,
   return (
+<<<<<<< HEAD
     <div className="space-y-1 text-sm">
+=======
+<<<<<<< HEAD
+    <div className="space-y-1 text-sm">
+=======
+<div className='space-y-1 text-sm'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {data.map((d, idx) => (
         <div key={idx} className="flex items-center gap-2">
           <div className="h-2 bg-gray-200 rounded w-full">
             <div className="h-2 bg-indigo-600 rounded" style={{ width: `${(d.percent / total) * 100}%` }} />
           </div>
           <span className="w-48 truncate">{d.label} ({d.percent}%)</span>
+<<<<<<< HEAD
 =======
     case 'EU':;
       return 'Designed for utility under EU frameworks, subject to MiCA and local guidelines as applicable.',;
@@ -1463,6 +1964,9 @@ function MarkdownPreview(): any ({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         </div>
 <<<<<<< HEAD
+=======
+        </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       ))}
     </div>
   );
@@ -1475,15 +1979,22 @@ function MarkdownPreview({
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }) {  // Very lightweight section filter: split by headings
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}) {
+  // Very lightweight section filter: split by headings
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g)
     const map: Record<string, string> = {}
     sections.forEach((s, i) => {
+<<<<<<< HEAD
       if (i === 0) return; // first is H1
       const [titleLine, ...rest] = s.split('\n');
       map[titleLine.trim()] = rest.join('\n');
@@ -1494,6 +2005,11 @@ function MarkdownPreview({
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
+=======
+if (i === 0) return; // first is H1
+      const [titleLine, ...rest] = s.split('\n');
+      map[titleLine.trim()] = rest.join('\n');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }) {  // Very lightweight section filter: split by headings;
   const parts = useMemo(() => {;
     const sections = markdown && markdown.split(/\n## /g),;
@@ -1502,15 +2018,21 @@ function MarkdownPreview({
       if (i === 0) return; // first is H1;
       const [titleLine, ...rest] = s && s.split('\n');
       map[titleLine && titleLine.trim()] = rest && rest.join('\n');
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     });
+=======
+    });
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return map;  }, [markdown]);
   const content = parts[activeSection] |'';
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <pre className='whitespace-pre-wrap text-sm leading-6'>;
       {content || markdown}
@@ -1527,6 +2049,8 @@ function MarkdownPreview({
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     case 'EU':;
       return 'Designed for utility under EU frameworks; subject to MiCA and local guidelines as applicable.';
     case 'SG':;
@@ -1585,10 +2109,13 @@ if (return) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1604,6 +2131,7 @@ if (return) {
 function MarkdownPreview({ markdown, activeSection }: { markdown: string, activeSection: string }) {
   // Very lightweight section filter: split by headings
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -1614,6 +2142,8 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g),
     const map: Record<string, string> = {},
@@ -1626,6 +2156,7 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   }, [markdown]),
   const content = parts[activeSection] || '',
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <pre className='whitespace-pre-wrap text-sm leading-6'>
       {content || markdown}
@@ -1640,6 +2171,8 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>
   )
 ;
@@ -1665,6 +2198,7 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -1676,3 +2210,24 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+=======
+    return map;
+  }, [markdown]);
+
+  const content = parts[activeSection] || '';
+
+  return (
+<pre className='whitespace-pre-wrap text-sm leading-6'>
+      {content || markdown}
+    </pre>
+  );
+  return (
+<pre className='whitespace-pre-wrap text-sm leading-6'>
+      {content |markdown}
+    </pre>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -5,6 +5,7 @@
 export const monitorContent = async (;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,6 +31,8 @@ export const monitorContent = async (;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   userId: string;
   userEmail: string | undefined;
   contentType: FraudFlag['content_type'];
@@ -45,6 +48,7 @@ export const monitorContent = async (;
     if (analysis && analysis.reasons.some(r => 
       r && r.includes('payment') || 
       r && r.includes('external') || 
+<<<<<<< HEAD
 <<<<<<< HEAD
       r && r.includes('bypass')
 <<<<<<< HEAD
@@ -122,6 +126,9 @@ export const monitorContent = async (;
 =======
       r && r.includes('bypass')    }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      r && r.includes('bypass')    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -149,6 +156,7 @@ export const monitorContent = async (;
     if (severity === 'dangerous') {
       console && console.log('Auto-hiding dangerous content:', contentId);
       // Code to hide content would go here
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -186,6 +194,8 @@ export const monitorContent = async (;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Content monitoring functionality;
 import {FraudFlag, FraudSeverity} from '@/types / fraud';
 import {analyze_content} from './analyze_content';
@@ -223,6 +233,7 @@ if (||) {
       content;
       severity;
       analysis.reasons.join ();
+<<<<<<< HEAD
 <<<<<<< HEAD
       undefined // IP address would be added in a real implementation);
 <<<<<<< HEAD
@@ -371,3 +382,6 @@ if ( {) {
 =======
       undefined // IP address would be added in a real implementation);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      undefined // IP address would be added in a real implementation);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

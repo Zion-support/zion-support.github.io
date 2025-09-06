@@ -7,6 +7,7 @@
 export interface PartnerProfile {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export interface PartnerProfile {;
 <<<<<<< HEAD
@@ -26,16 +27,21 @@ export interface PartnerProfile {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface PartnerProfile {;
 export interface PartnerProfile {export interface PartnerProfile {
 
 export interface PartnerProfile {;
 export interface PartnerProfile {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   user_id: string;
   name: string;
@@ -53,6 +59,7 @@ export interface PartnerProfile {
   bio: string;
   status: "pending" | "approved" | "rejected";
   created_at: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   updated_at: string;
   commission_rate?: number;
@@ -83,12 +90,15 @@ export interface PartnerSettings {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   commission_rate: number;
   fraud_threshold: number;
   is_payouts_enabled: boolean;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
@@ -110,6 +120,8 @@ export interface PartnerReferralLink {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface PartnerReferralLink {;
 
 export interface PartnerSettings {
@@ -124,6 +136,7 @@ export interface PartnerReferralLink {
 export interface PartnerReferralLink {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 export interface PartnerReferralLink {
@@ -131,12 +144,15 @@ export interface PartnerReferralLink {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   name: string;
   url: string;
   campaign?: string;
   source?: string;
   clicks: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
   conversions: number;
   created_at: string;
@@ -160,6 +176,9 @@ export interface PartnerPayout {
 =======
 export interface PartnerPayout {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export interface PartnerPayout {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export interface PartnerPayout {;
 export interface PartnerPayout {  conversions: number
@@ -174,15 +193,19 @@ export interface PartnerPayout {
 export interface PartnerPayout {;
 export interface PartnerPayout {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   partner_id: string;
   amount: number;
   status: "pending" | "processing" | "completed" | "failed";
   method: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -265,6 +288,8 @@ export interface PartnerPayout {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   created_at: string;
   completed_at?: string;
 }

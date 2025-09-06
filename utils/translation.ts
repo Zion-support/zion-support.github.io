@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import i18n from './i18n';
 export type TranslationMap = Record<string, string | undefined>;
@@ -13,6 +14,8 @@ export async function translateTextViaAI(text: string, targets: string[]): Promi
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const res = await fetch('/api/translate', {;
     method: 'POST';
     headers: { 'Content-Type': 'application/json' };
@@ -59,6 +62,7 @@ export async function translateTextViaAI (text: string, targets: string[]): Prom
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -110,3 +114,5 @@ export function getSelectedLanguage(): string {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

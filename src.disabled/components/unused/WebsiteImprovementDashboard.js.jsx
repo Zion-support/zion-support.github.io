@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { ChartBarIcon,CogIcon,ExclamationTriangleIcon,CheckCircleIcon,InformationCircleIcon,XMarkIcon,ArrowUpIcon,ArrowDownIcon,MinusIcon,EyeIcon,GlobeAltIcon } from';';@heroicons/react/24/outline' const WebsiteImprovementDashboard = ({ className = '';';,"showOnLoad": '= false' }) => { const [isOpen,setIsOpen] = useState(showOnLoad) const [activeTab,setActiveTab] = useState('overview';';) const [metrics,setMetrics] = useState({ "loadTime": '0',"firstContentfulPaint": '0',"largestContentfulPaint": '0',"cumulativeLayoutShift": '0',"firstInputDelay": '0',"timeToInteractive": '0'}) const [seoAnalysis,setSeoAnalysis] = useState({ "score": '0',issues[],suggestions[],"metaTags": { title: fals,e,"description": 'fals',e,"keywords": 'fals',e,"canonical": 'fals',e,"ogTags": 'fals',e,"twitterTags": 'false'} }) const [accessibilityReport,setAccessibilityReport] = useState({ "score": '0',issues[],"wcagCompliance": 'Non-Compliant'; ,',"criticalIssues": '0',"warnings": '0'}) const [isAnalyzing,setIsAnalyzing] = useState(false)''';,"criticalIssues": '0',"warnings": '0' }) const [isAnalyzing,setIsAnalyzing] = useState(false)'
 =======
 <<<<<<< HEAD
@@ -21,6 +22,8 @@ import _React,{ useState,useEffect,useCallback } from';react' import { motion,An
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
@@ -60,4 +63,7 @@ import _React,{ useState,useEffect,useCallback } from';react' import { motion,An
 =
 import _React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { ChartBarIcon,CogIcon,ExclamationTriangleIcon,CheckCircleIcon,InformationCircleIcon,XMarkIcon,ArrowUpIcon,ArrowDownIcon,MinusIcon,EyeIcon,GlobeAltIcon } from';';@heroicons/react/24/outline' const WebsiteImprovementDashboard = ({ className = '';';,"showOnLoad": '= false' }) => { const [isOpen,setIsOpen] = useState(showOnLoad) const [activeTab,setActiveTab] = useState('overview';';) const [metrics,setMetrics] = useState({ "loadTime": '0',"firstContentfulPaint": '0',"largestContentfulPaint": '0',"cumulativeLayoutShift": '0',"firstInputDelay": '0',"timeToInteractive": '0'}) const [seoAnalysis,setSeoAnalysis] = useState({ "score": '0',issues[],suggestions[],"metaTags": { title: fals,e,"description": 'fals',e,"keywords": 'fals',e,"canonical": 'fals',e,"ogTags": 'fals',e,"twitterTags": 'false'} }) const [accessibilityReport,setAccessibilityReport] = useState({ "score": '0',issues[],"wcagCompliance": 'Non-Compliant'; ,',"criticalIssues": '0',"warnings": '0'}) const [isAnalyzing,setIsAnalyzing] = useState(false)''';,"criticalIssues": '0',"warnings": '0' }) const [isAnalyzing,setIsAnalyzing] = useState(false)'
 >import _React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { ChartBarIcon,CogIcon,ExclamationTriangleIcon,CheckCircleIcon,InformationCircleIcon,XMarkIcon,ArrowUpIcon,ArrowDownIcon,MinusIcon,EyeIcon,GlobeAltIcon } from';';@heroicons/react/24/outline' const WebsiteImprovementDashboard = ({ className = '';';,"showOnLoad": '= false' }) => { const [isOpen,setIsOpen] = useState(showOnLoad) const [activeTab,setActiveTab] = useState('overview';';) const [metrics,setMetrics] = useState({ "loadTime": '0',"firstContentfulPaint": '0',"largestContentfulPaint": '0',"cumulativeLayoutShift": '0',"firstInputDelay": '0',"timeToInteractive": '0'}) const [seoAnalysis,setSeoAnalysis] = useState({ "score": '0',issues[],suggestions[],"metaTags": { title: fals,e,"description": 'fals',e,"keywords": 'fals',e,"canonical": 'fals',e,"ogTags": 'fals',e,"twitterTags": 'false'} }) const [accessibilityReport,setAccessibilityReport] = useState({ "score": '0',issues[],"wcagCompliance": 'Non-Compliant'; ,',"criticalIssues": '0',"warnings": '0'}) const [isAnalyzing,setIsAnalyzing] = useState(false)''';,"criticalIssues": '0',"warnings": '0' }) const [isAnalyzing,setIsAnalyzing] = useState(false)'
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

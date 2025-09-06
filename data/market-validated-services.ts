@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { ServiceVariant } from '../types/service-variants';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   name: string;
   tagline: string;
@@ -200,6 +215,7 @@
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     id: 'audit-log-vault'
     name: 'Audit Log Vault'
     tagline: 'Tamper-evident logs with retention and export'
@@ -253,6 +269,8 @@
       'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.'
     features: [
 =======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -273,6 +291,74 @@
   }
 ];import { ServiceVariant  } from "../types/service-variants";
 
+=======
+    id: 'audit-log-vault'
+    name: 'Audit Log Vault'
+    tagline: 'Tamper-evident logs with retention and export'
+    price: '$39'
+    period: '/month'
+    description:
+      'Centralize audit logs with WORM retention, export APIs, and fine-grained access for investigations.'
+    features: [
+      'WORM retention'
+      'Export APIs'
+      'Fine-grained access'
+      'Tamper evidence'
+    ]
+    category: 'Enterprise IT - Security'
+    link: 'https://ziontechgroup.com/audit-log-vault'
+    variant: 'quantum-neural'
+    rating: 4.5
+    customers: 420
+    trialDays: 14
+    setupTime: '30 minutes'
+    contactInfo
+  }
+  // AI Channels
+  {
+    id: 'ai-phone-agent'
+    name: 'AI Phone Agent'
+    tagline: 'Voice IVR and call handling with CRM handoff'
+    price: '$129'
+    period: '/month'
+    description:
+      'Handle inbound calls with a natural AI voice, route to agents, and sync transcripts with your CRM.'
+    features: ['Natural TTS/ASR', 'Routing & handoff', 'CRM sync', 'Analytics']
+    category: 'AI & Assistants'
+    link: 'https://ziontechgroup.com/ai-phone-agent'
+    variant: 'quantum-holographic-advanced'
+    rating: 4.6
+    customers: 380
+    trialDays: 7
+    setupTime: '1 hour'
+    contactInfo
+  }
+  // Search and Knowledge
+  {
+    id: 'vector-search-starter'
+    name: 'Vector Search Starter'
+    tagline: 'Deploy a production-grade vector database and APIs'
+    price: '$89'
+    period: '/month'
+    description:
+      'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.'
+    features: [
+      'Managed vector DB',
+      'Ingestion pipelines',
+      'Metadata filters',
+      'Access controls',
+    ],
+    category: 'AI & Search',
+    link: 'https://ziontechgroup.com/vector-search-starter',
+    variant: 'quantum',
+    rating: 4.6,
+    customers: 410,
+    trialDays: 14,
+    setupTime: '2 hours',
+    contactInfo,
+  },
+];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export interface MarketValidatedService {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -427,6 +513,14 @@ export interface MarketValidatedService {;
 }}
 =======
 	setupTime?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 	contactInfo: {mobile: string;
 		email: string;
@@ -441,6 +535,8 @@ const contactInfo = {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 	contactInfo: {
 		mobile: string;
 		email: string;
@@ -448,6 +544,7 @@ const contactInfo = {;
 		website?: string;
 	};
 
+<<<<<<< HEAD
 }
 export const marketValidatedServices: MarketValidatedService[] = [;
 	// AI and Assistants;
@@ -1231,7 +1328,14 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+const contactInfo = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React,{ useState,useRef,useEffect,useCallback } from';react''; import { motion,AnimatePresence,useMotionValue,useSpring,useTransform } from 'framer-motion';'; import { Eye,Heart,Share2,Play,Pause,RotateCcw,Grid,List,Search,Star,Zap,Shield,Globe,Rocket,Brain,Settings,TrendingUp,X } from 'lucide-react'; import { Button } from './button''';' import { Badge } from './badge''';' "export": function Card3DGallery({ enabled = true,items,columns = 3,autoPlay = false,showFilters = true,onCardClick,onAction,className = '' }) {} const [selectedItem,setSelectedItem] = useState(null)'; const [viewMode,setViewMode] = useState('';grid') const [filters,setFilters] = useState({} category[],status[],complexity[],"verified": 'fals',e,"featured": 'false'})'; const [searchQuery,setSearchQuery] = useState('';';)'; const [sortBy,setSortBy] = useState('';rating')'; const [sortOrder,setSortOrder] = useState('';desc') const [isPlaying,setIsPlaying] = useState(autoPlay) const [currentCarouselIndex,setCurrentCarouselIndex] = useState(0) const galleryRef = useRef(null)'';
 =======
 <<<<<<< HEAD
@@ -21,6 +22,8 @@ import _React,{ useState,useRef,useEffect,useCallback } from';react''; import { 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
@@ -60,4 +63,7 @@ import _React,{ useState,useRef,useEffect,useCallback } from';react''; import { 
 =
 import _React,{ useState,useRef,useEffect,useCallback } from';react''; import { motion,AnimatePresence,useMotionValue,useSpring,useTransform } from 'framer-motion';'; import { Eye,Heart,Share2,Play,Pause,RotateCcw,Grid,List,Search,Star,Zap,Shield,Globe,Rocket,Brain,Settings,TrendingUp,X } from 'lucide-react'; import { Button } from './button''';' import { Badge } from './badge''';' "export": function Card3DGallery({ enabled = true,items,columns = 3,autoPlay = false,showFilters = true,onCardClick,onAction,className = '' }) {} const [selectedItem,setSelectedItem] = useState(null)'; const [viewMode,setViewMode] = useState('';grid') const [filters,setFilters] = useState({} category[],status[],complexity[],"verified": 'fals',e,"featured": 'false'})'; const [searchQuery,setSearchQuery] = useState('';';)'; const [sortBy,setSortBy] = useState('';rating')'; const [sortOrder,setSortOrder] = useState('';desc') const [isPlaying,setIsPlaying] = useState(autoPlay) const [currentCarouselIndex,setCurrentCarouselIndex] = useState(0) const galleryRef = useRef(null)'';
 >import _React,{ useState,useRef,useEffect,useCallback } from';react''; import { motion,AnimatePresence,useMotionValue,useSpring,useTransform } from 'framer-motion';'; import { Eye,Heart,Share2,Play,Pause,RotateCcw,Grid,List,Search,Star,Zap,Shield,Globe,Rocket,Brain,Settings,TrendingUp,X } from 'lucide-react'; import { Button } from './button''';' import { Badge } from './badge''';' "export": function Card3DGallery({ enabled = true,items,columns = 3,autoPlay = false,showFilters = true,onCardClick,onAction,className = '' }) {} const [selectedItem,setSelectedItem] = useState(null)'; const [viewMode,setViewMode] = useState('';grid') const [filters,setFilters] = useState({} category[],status[],complexity[],"verified": 'fals',e,"featured": 'false'})'; const [searchQuery,setSearchQuery] = useState('';';)'; const [sortBy,setSortBy] = useState('';rating')'; const [sortOrder,setSortOrder] = useState('';desc') const [isPlaying,setIsPlaying] = useState(autoPlay) const [currentCarouselIndex,setCurrentCarouselIndex] = useState(0) const galleryRef = useRef(null)'';
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

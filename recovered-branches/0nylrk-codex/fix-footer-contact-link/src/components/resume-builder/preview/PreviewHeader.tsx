@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -19,6 +20,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button  } from '@/components/ui/button';
 import { ArrowLeft, FileText, Link  } from 'lucide-react';
 import { PdfExportButton  } from '../PdfExportButton';
@@ -40,6 +43,7 @@ import {ArrowLeft, FileText, Link} from 'lucide-react';
 import {PdfExportButton} from '../PdfExportButton';
 import {Resume} from '@/types/resume';
 import {useState} from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {useIsMobile} from '@/hooks/use-mobile';
 <<<<<<< HEAD
@@ -86,6 +90,12 @@ import {useIsMobile} from '@/hooks/use-mobile';interface PreviewHeaderProps {
   onBack: () => void;
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {useIsMobile} from '@/hooks/use-mobile';interface PreviewHeaderProps {
+  resume: Resume;
+  onBack: () => void;
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleBrowserPrint = () => {
@@ -107,6 +117,7 @@ interface PreviewHeaderProps {;
   onBack: () => void;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -209,6 +220,8 @@ function PreviewHeader() {
       @media print {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         body * {
           visibility: hidden;
         }
@@ -302,6 +315,7 @@ function PreviewHeader() {
       </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div
         className={`flex ${isMobile ? "flex-col" : "flex-row"} space-${isMobile ? "y-2" : "x-2"} no-print`}
       >
@@ -321,10 +335,13 @@ function PreviewHeader() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>
         <PdfExportButton resume={resume} />
         <Button 
           variant="outline" 
+<<<<<<< HEAD
           onClick={handleBrowserPrint} 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -344,6 +361,8 @@ function PreviewHeader() {
         <PdfExportButton resume={resume} />
         <Button 
           variant="outline" 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           onClick={handleBrowserPrint}           disabled={isPrinting}
           className="gap-2"
         >

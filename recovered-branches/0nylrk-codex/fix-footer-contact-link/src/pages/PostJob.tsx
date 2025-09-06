@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -9,6 +10,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Header} from "@/components/header";
 import {Footer} from "@/components/Footer";
 import {JobPostingForm} from "@/components/jobs";
@@ -45,6 +48,7 @@ import { Footer } from "@/components/Footer",
 import { JobPostingForm } from "@/components/jobs",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { SEO } from "@/components/SEO",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 <<<<<<< HEAD
@@ -103,11 +107,15 @@ import { Navigate } from "react-router-dom";
 =======
 import { useAuth } from "@/hooks/useAuth",import { Navigate } from "react-router-dom";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { useAuth } from "@/hooks/useAuth",import { Navigate } from "react-router-dom";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useIsMobile } from "@/hooks/use-mobile";
 export default function PostJob() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { isAuthenticated, isLoading } = useAuth();
   const isMobile = useIsMobile();
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -115,6 +123,8 @@ export default function PostJob() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-pulse">Loading...</div>
@@ -289,6 +299,7 @@ export default function PostJob() {;
   }
   ;
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (;
     <>;
       <SEO ;
@@ -390,3 +401,9 @@ if (isLoading) {
     </>);
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (;;
+      {is_mobile && <div className="h-16"></div>}
+    </>);
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

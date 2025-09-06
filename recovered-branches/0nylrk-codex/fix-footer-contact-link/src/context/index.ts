@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export { NotificationProvider } from './notifications/NotificationContext';
 export { NotificationProvider } from './notifications/NotificationContext';
@@ -48,6 +51,7 @@ export { NotificationProvider } from './notifications/NotificationContext';
 =======
 export { NotificationProvider } from './notifications/NotificationContext';
 export { AuthProvider } from './auth';
+<<<<<<< HEAD
 export { MessagingProvider } from './MessagingContext';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -61,3 +65,6 @@ export { NotificationProvider } from './notifications/NotificationContext';
 export { AuthProvider } from './auth';
 export { MessagingProvider } from './MessagingContext';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export { MessagingProvider } from './MessagingContext';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

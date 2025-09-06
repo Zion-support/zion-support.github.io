@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -61,6 +64,7 @@ import { useJobs } from "@/hooks/useJobs",
 import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps",
 import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
 =======
 import { useState, useEffect } from "react";
@@ -92,6 +96,9 @@ import { useIsMobile } from "@/hooks/use-mobile";
 =======
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",import { useIsMobile } from "@/hooks/use-mobile";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",import { useIsMobile } from "@/hooks/use-mobile";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
@@ -99,6 +106,7 @@ function ClientDashboardContent() {
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -126,6 +134,8 @@ import { useIsMobile } from "@/hooks/use-mobile",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
   const { jobs, isLoading } = useJobs(),
@@ -147,6 +157,7 @@ function ClientDashboardContent() {
   const handleJobSelect = (jobId: string, jobTitle: string) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     setSelectedJobId(jobId)
     setSelectedJobTitle(jobTitle)
 
@@ -166,6 +177,10 @@ function ClientDashboardContent() {
     (setSelectedJobId(jobId), setSelectedJobTitle(jobTitle))
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    (setSelectedJobId(jobId), setSelectedJobTitle(jobTitle))
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     setSelectedJobId(jobId)
@@ -176,6 +191,7 @@ function ClientDashboardContent() {
   }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -183,6 +199,8 @@ function ClientDashboardContent() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <SEO
@@ -411,6 +429,7 @@ function ClientDashboardContent() {;
             <p className="text-muted-foreground mt-1">Manage your job postings and talent applications</p>;
           </div>;
           <div className={`flex gap-2 ${isMobile ? 'flex-col' : ''}`}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' : ''}>;
 <<<<<<< HEAD
@@ -818,6 +837,9 @@ export default /**
 =======
             <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' : ''}>;export default /**
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' : ''}>;export default /**
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
  * ClientDashboard - Function description
  */
 function ClientDashboard() {
@@ -826,6 +848,7 @@ function ClientDashboard() {
       <ClientDashboardContent />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -864,3 +887,5 @@ export default function ClientDashboard() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

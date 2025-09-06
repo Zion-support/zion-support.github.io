@@ -24,6 +24,7 @@ export interface MilestoneInput {
   project_type: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 export interface GeneratedMilestone {
@@ -40,24 +41,33 @@ export interface GeneratedMilestone {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
 export interface GeneratedMilestone {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   title: string;
 =======
   title: string,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  title: string,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   description: string;
 
       setIsGenerating(true),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   isAiGenerated: boolean
 }
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
 export function useMilestoneGenerator() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -77,6 +87,7 @@ export function useMilestoneGenerator() {
       setIsGenerating(true),
       const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
@@ -86,6 +97,8 @@ export function useMilestoneGenerator() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         body: input
       });
       if (error) throw error;
@@ -93,6 +106,7 @@ export function useMilestoneGenerator() {
         isAiGenerated: true}));      const milestonesWithFlag = data && data.milestones.map((milestone: any) => ({    } finally {
       setIsGenerating (false);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -292,3 +306,7 @@ if (error) throw error;
   }    clearGeneratedMilestones}
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }    clearGeneratedMilestones}
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

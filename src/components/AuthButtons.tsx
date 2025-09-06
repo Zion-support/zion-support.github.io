@@ -1,11 +1,32 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Facebook } from 'lucide-react';
 import { signIn } from 'next-auth/react',;
 type Provider = 'google' | 'github' | 'facebook' | 'credentials',;
+=======
+=======
+import { signIn } from 'next-auth/react';
+type Provider = any;
+import { signIn } from 'next-auth/react'
+type Provider = 'google' | 'github' | 'facebook' | 'credentials'
+interface AuthButtonsProps {
+  providers?: Provider[]
+export function AuthButtons({
+  providers = ['google', 'github', 'facebook', 'credentials']
+}: AuthButtonsProps) {
+  const [loadingProvider, setLoadingProvider] = useState<string | null>(null)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  const handleSignIn = async (provider: Provider) => {
+    setLoadingProvider(provider)
+    await signIn(provider)
+  }
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 import { useState } from 'react';
 import { Button } from '@/components / ui / button';
@@ -44,6 +65,16 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
 
   const gridCols = `grid-cols-${providers.length}`,
 
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
+
+=======
+  const gridCols = `grid-cols-${providers.length}`
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className={`mt-6 grid ${gridCols} gap-3`}>
       {providers.includes('google') && (
@@ -310,7 +341,10 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
         </Button>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -323,8 +357,17 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
 }
 ;
 =======
+<<<<<<< HEAD
     </div>;
   );
 }
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

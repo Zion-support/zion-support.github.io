@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -46,10 +45,15 @@ interface Milestone {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -84,6 +88,8 @@ interface Milestone {
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
@@ -93,6 +99,7 @@ interface Milestone {;
   dueDate: string,;
   estimatedHours: number;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -370,11 +377,17 @@ serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req && req.method === 'OPTIONS') {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return new Response(null, { headers: corsHeaders })
   }
 
   try {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -384,6 +397,9 @@ serve(async (req) => {
 =======
 =======;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   try {;
     // Get the OpenAI API key from environment variables;
     const apiKey = Deno.env.get('OPENAI_API_KEY'),;
@@ -406,6 +422,7 @@ serve(async (req) => {
     } = await req.json(),;
     // Create the contract prompt for OpenAI;
     let prompt = `;
+<<<<<<< HEAD
 <<<<<<< HEAD
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:;
 <<<<<<< HEAD
@@ -522,6 +539,9 @@ if (milestones && milestones.length > 0) {prompt += `
 =======
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:;        `
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:;        `
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       });
       prompt += `
       Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.
@@ -573,6 +593,7 @@ if (milestones && milestones.length > 0) {prompt += `
             content: 'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.'}
           {
             role: 'user'
+<<<<<<< HEAD
 <<<<<<< HEAD
             content: prompt}];
 <<<<<<< HEAD
@@ -770,6 +791,12 @@ const response = await fetch('https://api.openai.com/v1/chat/completions', {
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+            content: prompt}];        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
+    )
+  }
+});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     console.error ('Error generating contract:', error);
     return new Response (
@@ -784,6 +811,7 @@ const response = await fetch('https://api.openai.com/v1/chat/completions', {
   }
 });
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -811,3 +839,6 @@ const response = await fetch('https://api.openai.com/v1/chat/completions', {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

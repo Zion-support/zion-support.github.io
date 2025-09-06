@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -19,11 +20,14 @@ function SecurityDocRedirect() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <>;
       <Head>;
         <meta http_equiv="refresh" content="0, url=/SECURITY.md" />;
       </Head>;
       <main style={{ padding: 24 }}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <p > Redirecting to Security documentation…</p>;
       </main>;
@@ -31,10 +35,16 @@ function SecurityDocRedirect() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+;
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
 =======
+<<<<<<< HEAD
     <>
       <Head>
         <meta httpEquiv="refresh" content="0, url=/SECURITY.md" />
@@ -96,3 +106,14 @@ export default function SecurityDocRedirect(req, res) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import Head from 'next/head';
+
+      </Head>
+      <main style={{ padding: 24 }}>
+        <p>Redirecting to Security documentation…</p>
+      </main>
+    </>
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

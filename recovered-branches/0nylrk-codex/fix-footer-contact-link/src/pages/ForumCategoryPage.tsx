@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -9,6 +10,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -20,6 +23,7 @@ import {ForumPost, ForumCategoryInfo} from "@/types/community";
 import {Badge} from "@/components/ui/badge";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/components/icons";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -107,6 +111,15 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     icon: "Briefcase"
   },
+=======
+
+    adminOnly: false
+
+    icon: "Briefcase"
+  }    adminOnly: false,
+    icon: "Briefcase"
+  },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   "project-help": {
 
     id: "project-help"
@@ -114,6 +127,7 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     description: "Get help with your ongoing projects and collaboration."
     adminOnly: false
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     icon: "MessageSquare"
 <<<<<<< HEAD
@@ -305,6 +319,9 @@ const postsByCategory: Record<string ForumPost[]> = {
 =======
     icon: "MessageSquare"    }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    icon: "MessageSquare"    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       id: "6"
       title: "Portfolio pieces that clients actually care about"
@@ -340,6 +357,7 @@ const postsByCategory: Record<string ForumPost[]> = {
 
       replyCount: 6
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -348,10 +366,13 @@ const postsByCategory: Record<string ForumPost[]> = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   ];
   "project - help": [;
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -553,6 +574,9 @@ const postsByCategory: Record<string ForumPost[]> = {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       id: "7",
       title: "Comparing different vector embedding models",
       content: "I've been experimenting with these different embedding models and here are my findings...",
@@ -565,6 +589,7 @@ const postsByCategory: Record<string ForumPost[]> = {
       upvotes: 31,
       downvotes: 0,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -660,6 +685,9 @@ const postsByCategory: Record<string ForumPost[]> = {
 =======
       replyCount: 9    {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      replyCount: 9    {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       id: "8",
       title: "Suggestion for improving the jobs matching algorithm",
       content: "I think the job matching could be improved by considering these additional factors...",
@@ -672,6 +700,7 @@ const postsByCategory: Record<string ForumPost[]> = {
       upvotes: 17,
       downvotes: 3,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -2308,3 +2337,13 @@ return (<AppLayout> <div className="container py-8"> <h1>Category not found</h1>
               className="pl-10"
               value={searchQuery}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      replyCount: 5  "Briefcase": Briefcase;
+  "MessageSquare": MessageSquare;
+  "Code": Code;
+  "FileText": FileText;              value={searchQuery}
+            <Input
+              placeholder="Search posts in this category..."
+              className="pl-10"
+              value={searchQuery}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

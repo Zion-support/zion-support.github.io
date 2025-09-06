@@ -4,6 +4,7 @@ export { VideoCallRoom } from "../video/VideoCallRoom";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 export { VideoCallRoom } from '../video/VideoCallRoom';
 // Stub implementation for any LiveKit exports that might be used
@@ -73,6 +74,14 @@ import React from 'react',;
 
 export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) => {import React from 'react',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+
+  return <div>{children}</div>
+};
+
+export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) => {import React from 'react',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export { VideoCallRoom } from '../video/VideoCallRoom',;
 
 export const LiveKitRoom: React.FC<{children?: React && React.ReactNode}> = ({children}) => {;
@@ -89,6 +98,7 @@ export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) 
   return <div>{children}</div>;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -137,3 +147,5 @@ export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

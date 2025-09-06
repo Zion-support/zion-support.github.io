@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Job {
 =======
 
@@ -34,11 +35,23 @@ export interface Job {;
 =======
   title: string,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+export interface Job {;
+
+export interface Job {export interface Job {;
+
+export interface Job {
+export interface Job {;
+  title: string,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   description: string;
   company_name?: string;
   budget?: string;
   client_id: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -82,6 +95,8 @@ export interface ApplyToJobModalProps {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface Job {;
   id: string,;
   title: string,,
@@ -93,6 +108,7 @@ export interface Job {;
 ;
 export interface ApplyToJobModalProps {;
   job: Job,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   isOpen: boolean,;
 <<<<<<< HEAD
@@ -129,3 +145,12 @@ export interface ApplyToJobModalProps {
 =======
   job: Job;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  isOpen: boolean,;  onClose: () => void;
+
+  onApplySuccess?: (jobId: string) => Promise<void>;
+}
+
+export interface ApplyToJobModalProps {
+  job: Job;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

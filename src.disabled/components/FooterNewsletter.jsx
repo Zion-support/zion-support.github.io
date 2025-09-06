@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,10 +21,14 @@
 =======
 '"export": function FooterNewsletter () {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = e => { e.preventDefault () '';"";""}'\"export\": function FooterNewsletter () {\' const [email,setEmail] = useState (\') \' const [isSubscribed,setIsSubscribed] = useState (false) \' const handleSubmit = e => { e && e.preventDefault () \'';\"";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+'\"export\": function FooterNewsletter () {\' const [email,setEmail] = useState (\') \' const [isSubscribed,setIsSubscribed] = useState (false) \' const handleSubmit = e => { e && e.preventDefault () \'';\"";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 "export: function FooterNewsletter () {" const [email,setEmail] = useState (") " const [isSubscribed,setIsSubscribed] = useState (false) " const handleSubmit = e => { e && e.preventDefault () "";"";"""
 
 '"export": function FooterNewsletter () {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = e => { e && e.preventDefault () '';"";""}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,3 +72,8 @@
 "export: function FooterNewsletter () {" const [email,setEmail] = useState (") " const [isSubscribed,setIsSubscribed] = useState (false) " const handleSubmit = e => { e.preventDefault () "";"";"""
 '"export": function FooterNewsletter () {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = e => { e.preventDefault () '';"";""}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+'\"export\": function FooterNewsletter () {\' const [email,setEmail] = useState (\') \' const [isSubscribed,setIsSubscribed] = useState (false) \' const handleSubmit = e => { e.preventDefault () \'';\"";
+"export: function FooterNewsletter () {" const [email,setEmail] = useState (") " const [isSubscribed,setIsSubscribed] = useState (false) " const handleSubmit = e => { e.preventDefault () "";"";"""
+'"export": function FooterNewsletter () {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = e => { e.preventDefault () '';"";""}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

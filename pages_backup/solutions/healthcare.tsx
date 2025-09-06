@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { Heart, Shield, Database, Users, Activity } from 'lucide-react';
 import React from 'react';
@@ -34,6 +35,8 @@ import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } fro
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import * as React from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
@@ -49,6 +52,7 @@ import {
   ArrowRight 
 } from 'lucide-react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
@@ -99,6 +103,8 @@ import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } fro
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const features = [
   {
     icon: Heart,
@@ -117,6 +123,7 @@ const features = [
   },
   {
     icon: Users,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     title: 'Provider Portal',
@@ -323,6 +330,8 @@ export default function HealthcareSolutions() {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Layout
       title="Healthcare Solutions - Zion Tech Group"
@@ -345,6 +354,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Transform healthcare delivery with secure, compliant, and intelligent technology solutions
+<<<<<<< HEAD
                 designed for modern healthcare providers.
 =======
 =======
@@ -389,6 +399,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Transform healthcare delivery with secure, compliant, and intelligent technology solutions
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 designed for modern healthcare providers.              </p>
             </motion.div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -442,6 +454,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <feature.icon className="w-6 h-6 text-blue-600" />
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
@@ -471,6 +484,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         {/* Solutions List */}
         <section className="py-20 bg-gray-800/30">"
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -690,6 +705,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 </button>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -700,6 +716,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de            </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de            </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
         </section>
 
@@ -726,6 +746,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de            </div>
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     </>
 
@@ -735,6 +756,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de            </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">;

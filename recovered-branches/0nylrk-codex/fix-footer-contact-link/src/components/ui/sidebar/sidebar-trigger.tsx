@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -16,6 +17,9 @@ import { useSidebar } from &quot;./sidebar-context&quot;
 import * as React from "react"
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { PanelLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -38,6 +42,7 @@ export const SidebarTrigger = React.forwardRef<
         toggle_sidebar ();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58,10 +63,13 @@ export const SidebarTrigger = React.forwardRef<
       ref={ref}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       data-sidebar="trigger"
       variant="ghost"
       size="icon"
       className={cn("h-7 w-7", props.className)}
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }}
@@ -73,6 +81,8 @@ SidebarTrigger.displayName = "SidebarTrigger"
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       onClick={(event) => {
         props.onClick?.(event)
@@ -98,6 +108,7 @@ SidebarTrigger.displayName = &quot;SidebarTrigger&quot;
 SidebarTrigger.displayName = "SidebarTrigger"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
       }}
@@ -106,3 +117,5 @@ SidebarTrigger.displayName = "SidebarTrigger"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

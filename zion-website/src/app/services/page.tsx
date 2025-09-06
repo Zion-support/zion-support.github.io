@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
 <<<<<<< HEAD
 =======
@@ -888,6 +891,7 @@ import {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -911,3 +915,9 @@ export default Page;
 
 export default Page;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )
+};
+
+export default Page;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

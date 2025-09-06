@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface BrowseItem {;
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components / ui / card';
@@ -15,6 +18,28 @@ import {
   DollarSign,
 } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
+=======
+
+import React, { useState } from "react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge";
+import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import React, { useState } from 'react'
+import { Card, CardContent } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import {
+  Bookmark
+  BookmarkCheck
+  ChevronRight
+  MapPin
+  Clock
+  DollarSign
+} from 'lucide-react'
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface BrowseItem {
   id: string;
   title: string;
@@ -104,6 +129,7 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                     </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -125,6 +151,8 @@ import { Badge } from "@/components/ui/badge",
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
@@ -168,12 +196,15 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <CardContent className="p-0">
             <div className="p-4">
               <div className="flex justify-between">
@@ -181,6 +212,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   {type === "talents" ? (
                     <Avatar className="h-12 w-12">
                       <AvatarImage src={item.image} alt={item.title} />
+<<<<<<< HEAD
                       <AvatarFallback>{item.title.charAt(0).toUpperCase()}</AvatarFallback>
                     </Avatar>
                   ) : (
@@ -248,10 +280,14 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 </button>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="mt-3 flex flex-wrap gap-1">
                 {item.badges.map((badge, index) => (
                   <Badge 
@@ -314,10 +350,13 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   )}
                   <div>;
                     <h3 className="font-medium">{item.title}</h3>;
@@ -347,10 +386,46 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     className="text-xs font-normal";
                   >;
 
+=======
+                      <AvatarFallback>
+                        {item.title.charAt(0).toUpperCase()}
+                      </AvatarFallback>
+                    </Avatar>
+                  ) : (
+                    <div className='h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center'>
+                      <span className='text-primary font-semibold'>JOB</span>
+                    </div>
+                  )}
+                  <div>
+                    <h3 className='font-medium'>{item.title}</h3>
+                    <p className='text-sm text-muted-foreground'>
+                      {item.subtitle}
+                    </p>
+                  </div>
+                </div>
+                <button
+                  className='h-8 w-8 flex items-center justify-center'
+                  onClick={() => toggleSaved(item.id)}                >
+                  {savedItems.includes(item.id) ? (
+                    <BookmarkCheck className='h-5 w-5 text-primary' />
+                  ) : (
+                    <Bookmark className='h-5 w-5 text-muted-foreground' />
+                  )}
+                </button>
+              </div>
+              <div className='mt-3 flex flex-wrap gap-1'>
+                {item.badges.map((badge, index) => (
+                  <Badge
+                    key={index}
+                    variant='outline'
+                    className='text-xs font-normal'
+                  >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     {badge}
                   </Badge>;
                 ))}
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               
               <p className="mt-3 text-sm line-clamp-2">{item.description}</p>
@@ -359,6 +434,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
 =======
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -390,19 +467,50 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
+=======
+<p className='mt-3 text-sm line-clamp-2'>{item.description}</p>
+
+              <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>
+                {item.location && (
+                  <div className='flex items-center gap-1'>
+                    <MapPin className='h-3 w-3' />
+                    <span>{item.location}</span>
+                  </div>
+                )}
+                {item.price && (
+                  <div className='flex items-center gap-1'>
+                    <DollarSign className='h-3 w-3' />
+                    <span>{item.price}</span>
+                  </div>
+                )}
+                {item.timePosted && (
+                  <div className='flex items-center gap-1'>
+                    <Clock className='h-3 w-3' />
+                    <span>{item.timePosted}</span>
+                  </div>
+                )}
+                {item.match && (
+                  <div className='ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     {item.match}% match
                   </div>
                 )}
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
               </div>;
 
@@ -479,8 +587,11 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
       ))}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="border-t border-border p-3 flex justify-end">
               <Button 
                 size="sm"
@@ -489,11 +600,21 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
               <Button 
                 size="sm"
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 onClick={() => onViewDetails(item.id)}
                 className="gap-1"
+=======
+<div className='border-t border-border p-3 flex justify-end'>
+              <Button
+                size='sm'
+                onClick={() => onViewDetails(item.id)}
+                className='gap-1'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
-                View Details <ChevronRight className="h-4 w-4" />
+                View Details <ChevronRight className='h-4 w-4' />
               </Button>
             </div>
           </CardContent>
@@ -646,11 +767,15 @@ function BrowseCards() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       ))}
+<<<<<<< HEAD
 
     </div>;
   );
@@ -658,5 +783,14 @@ function BrowseCards() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+;
+=======
+    </div>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -16,12 +17,17 @@ import {cn} from "@/lib/utils";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 import { Search } from "lucide-react",
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { cn } from "@/lib/utils",
 interface ApiDocsLayoutProps {
@@ -66,12 +72,16 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 =======
 import { cn } from "@/lib/utils",export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { cn } from "@/lib/utils",export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const location = useLocation();
   const currentPath = location.pathname;
   const location = useLocation(),
   const currentPath = location.pathname,
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -231,6 +241,8 @@ export default ApiDocsLayout;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import { Link, useLocation } from "react-router-dom",;
 import { Search } from "lucide-react",;
@@ -259,6 +271,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
           </div>;
           <span className="font-bold text-white">API Docs</span>;
         </Link>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -362,6 +375,8 @@ const navigationItems = [ return (<div className="flex min-h-screen bg-zinc-950"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {children}
       </div>;
     </div>;
@@ -370,6 +385,7 @@ const navigationItems = [ return (<div className="flex min-h-screen bg-zinc-950"
 
 export default ApiDocsLayout;;
 export default ApiDocsLayout;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -460,3 +476,5 @@ export default ApiDocsLayout;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

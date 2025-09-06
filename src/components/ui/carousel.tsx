@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 
 =======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -32,9 +36,12 @@ type CarouselContextProps = {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   orientation: "horizontal" | "vertical"
 } & Omit<CarouselProps "orientation">
 
@@ -91,6 +98,7 @@ const Carousel = React.forwardRef<
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -100,6 +108,11 @@ const Carousel = React.forwardRef<
 
       orientation = "horizontal",
 
+=======
+
+      orientation = "horizontal",
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       opts,
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setApi,
@@ -112,6 +125,7 @@ const Carousel = React.forwardRef<
   ) => {
     const [carouselRef, api] = useEmblaCarousel(
 <<<<<<< HEAD
+<<<<<<< HEAD
       {
 
 <<<<<<< HEAD
@@ -123,6 +137,10 @@ const Carousel = React.forwardRef<
 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+      {
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       plugins
     )
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
@@ -184,10 +202,13 @@ import { Button } from &quot;@/components / ui / button & quot;
       };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       },;
 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       [scrollPrev, scrollNext];
     );
     React.useEffect(() => {;
@@ -195,6 +216,7 @@ import { Button } from &quot;@/components / ui / button & quot;
         return;
       }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 type CarouselApi = ReturnType < typeof useEmblaCarousel>[1];
 type CarouselOptions = {
@@ -270,6 +292,9 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           canScrollNext}}
       >;
         <div;
@@ -277,11 +302,14 @@ if ( {) {
           onKeyDownCapture={handleKeyDown}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 className={cn(&quot;relative&quot; className)}
 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           role=&quot;region&quot;
 =======
       {          role=&quot;region&quot;
@@ -295,9 +323,12 @@ className={cn(&quot;relative&quot; className)}
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {...props}
         >;
           {children}
@@ -305,6 +336,7 @@ className={cn(&quot;relative&quot; className)}
       </CarouselContext.Provider>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 )
@@ -319,6 +351,9 @@ Carousel.displayName = "Carousel"
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const CarouselContent = React.forwardRef<
   HTMLDivElement,
 =======
@@ -351,6 +386,7 @@ const CarouselContent = React.forward_ref<;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           "flex",
           orientation === "horizontal"
@@ -360,12 +396,15 @@ const CarouselContent = React.forward_ref<;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           className
         )}
         {...props}
       />
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 })
 
@@ -378,6 +417,10 @@ CarouselContent.displayName = "CarouselContent"
 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+})
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const CarouselItem = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -387,6 +430,7 @@ const CarouselItem = React.forwardRef<
   return (
     <div
       ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
       role="group"
       aria-roledescription="slide"
@@ -398,6 +442,8 @@ const CarouselItem = React.forwardRef<
         "min-w-0 shrink-0 grow-0 basis-full snap-start",
         orientation === "horizontal" ? "pl-4" : "pt-4",
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className
@@ -406,6 +452,7 @@ const CarouselItem = React.forwardRef<
     />
   )
 })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -430,11 +477,15 @@ const CarouselPrevious = React.forwardRef<
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Button
       ref={ref}
       variant={variant}
       size={size}
+<<<<<<< HEAD
 <<<<<<< HEAD
       className={cn(
 <<<<<<< HEAD
@@ -448,15 +499,19 @@ const CarouselPrevious = React.forwardRef<
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         className
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     >
 =======
 })    >
@@ -474,6 +529,7 @@ const CarouselNext = React.forwardRef<
 =======
   HTMLButtonElement
   React.ComponentProps<typeof Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -497,6 +553,9 @@ const CarouselNext = React.forward_ref<;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 =======
   const { orientation, scrollNext, canScrollNext } = useCarousel()  return (
@@ -505,6 +564,7 @@ const CarouselNext = React.forward_ref<;
       ref={ref}
       variant={variant}
       size={size}
+<<<<<<< HEAD
 <<<<<<< HEAD
       className={cn(
 <<<<<<< HEAD
@@ -521,16 +581,22 @@ const CarouselNext = React.forward_ref<;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         className
       )}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
 <<<<<<< HEAD
+<<<<<<< HEAD
     >
       <ArrowRight className="h-4 w-4" />
       <span className="sr-only">Next slide</span>    </Button>
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     </Button>
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -543,6 +609,7 @@ export {
   Carousel,
   CarouselContent,
   CarouselItem,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -559,3 +626,6 @@ export {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

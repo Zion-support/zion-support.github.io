@@ -1,6 +1,7 @@
 import React,{ useState } from \'react\''\';\' import { Card,CardContent,CardDescription,CardHeader,CardTitle } from \'@/components/ui/card\''\';\' import { Input } from \'@/components/ui/input\''\';\' import { Button } from \'@/components/ui/button\''\';\' import { Tabs,TabsContent,TabsList,TabsTrigger } from \'@/components/ui/tabs\''\';\' import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue } from \'@/components/ui/select\''\';\' import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow } from \'@/components/ui/table\''\';\' import { Badge } from \'@/components/ui/badge\''\';\' import { Search,Filter } from \'lucide-react\''\';\' import SEO from \'@/components/SEO\'';\";\";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.pages.disabled/admin/SupportRequests.jsx
 import _React,{ useState } from 'react''';' import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card''';' import { Input } from '@/components/ui/input''';' import { Button } from '@/components/ui/button''';' import { Tabs,TabsContent,TabsList,TabsTrigger } from '@/components/ui/tabs''';' import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue } from '@/components/ui/select''';' import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow } from '@/components/ui/table''';' import { Badge } from '@/components/ui/badge''';' import { Search,Filter } from 'lucide-react''';' import SEO from '@/components/SEO'';";";
 =======
@@ -33,11 +34,14 @@ import _React,{ useState } from 'react''';' import { Card,CardContent,CardDescri
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import _React,{ useState } from 'react''';' import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card''';' import { Input } from '@/components/ui/input''';' import { Button } from '@/components/ui/button''';' import { Tabs,TabsContent,TabsList,TabsTrigger } from '@/components/ui/tabs''';' import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue } from '@/components/ui/select''';' import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow } from '@/components/ui/table''';' import { Badge } from '@/components/ui/badge''';' import { Search,Filter } from 'lucide-react''';' import SEO from '@/components/SEO'';";";
 ursor/add-new-services-and-deploy-updates-0462
 :src.pages.disabled/admin/SupportRequests.jsx
 import _React,{ useState } from 'react''';' import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card''';' import { Input } from '@/components/ui/input''';' import { Button } from '@/components/ui/button''';' import { Tabs,TabsContent,TabsList,TabsTrigger } from '@/components/ui/tabs''';' import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue } from '@/components/ui/select''';' import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow } from '@/components/ui/table''';' import { Badge } from '@/components/ui/badge''';' import { Search,Filter } from 'lucide-react''';' import SEO from '@/components/SEO'';";";
 :temp_exclude/src.pages.disabled/admin/SupportRequests.jsx
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -59,6 +63,8 @@ import _React,{ useState } from 'react''';' import { Card,CardContent,CardDescri
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import _React,{ useState } from 'react''';' import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card''';' import { Input } from '@/components/ui/input''';' import { Button } from '@/components/ui/button''';' import { Tabs,TabsContent,TabsList,TabsTrigger } from '@/components/ui/tabs''';' import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue } from '@/components/ui/select''';' import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow } from '@/components/ui/table''';' import { Badge } from '@/components/ui/badge''';' import { Search,Filter } from 'lucide-react''';' import SEO from '@/components/SEO'';";";
 import _React,{ useState } from 'react''';' import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card''';' import { Input } from '@/components/ui/input''';' import { Button } from '@/components/ui/button''';' import { Tabs,TabsContent,TabsList,TabsTrigger } from '@/components/ui/tabs''';' import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue } from '@/components/ui/select''';' import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow } from '@/components/ui/table''';' import { Badge } from '@/components/ui/badge''';' import { Search,Filter } from 'lucide-react''';' import SEO from '@/components/SEO'';";";
 import _React,{ useState } from 'react''';' import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card''';' import { Input } from '@/components/ui/input''';' import { Button } from '@/components/ui/button''';' import { Tabs,TabsContent,TabsList,TabsTrigger } from '@/components/ui/tabs''';' import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue } from '@/components/ui/select''';' import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow } from '@/components/ui/table''';' import { Badge } from '@/components/ui/badge''';' import { Search,Filter } from 'lucide-react''';' import SEO from '@/components/SEO'';";";

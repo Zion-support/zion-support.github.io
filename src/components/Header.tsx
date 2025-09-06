@@ -67,8 +67,11 @@ const Header: React.FC = () => {
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -81,6 +84,7 @@ const Header: React.FC = () => {
     { name: 'Contact', href: '/contact' }
   ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -288,21 +292,26 @@ const Header: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <header className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 sticky top-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">Z</span>
             </div>
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -314,6 +323,7 @@ const Header: React.FC = () => {
             ))}
           </nav>
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
           {/* Mobile Menu Button */}
           <button
@@ -325,11 +335,24 @@ const Header: React.FC = () => {
             </svg>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </button>
+=======
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-300 hover:text-white transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </div>
 
         {/* Mobile Navigation */}
 <<<<<<< HEAD
         {isMenuOpen && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -420,16 +443,21 @@ const Header: React.FC = () => {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
           <div className="md:hidden py-4 border-t border-slate-700">
             <nav className="flex flex-col space-y-4">
+=======
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-sm border-t border-slate-700">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
+<<<<<<< HEAD
             </nav>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -850,6 +878,9 @@ export default Header;
         )}
       </nav>
 =======
+=======
+            </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
         )}
       </div>
@@ -858,6 +889,7 @@ export default Header;
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -897,3 +929,6 @@ export default Header;
 export default Header;
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+export default Header;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

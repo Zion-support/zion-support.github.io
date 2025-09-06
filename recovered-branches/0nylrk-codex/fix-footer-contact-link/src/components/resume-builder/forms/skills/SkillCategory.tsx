@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { SkillCategoryProps  } from './types';
 import { SkillItem  } from './SkillItem';
 export const SkillCategory = ({
@@ -106,6 +107,11 @@ import {SkillCategoryProps} from './types';
 import {SkillItem} from './SkillItem';
 export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {;  if (!skills || skills.length === 0) return null;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {SkillCategoryProps} from './types';
+import {SkillItem} from './SkillItem';
+export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {;  if (!skills || skills.length === 0) return null;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <div className="space-y-2">
@@ -121,6 +127,7 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 };
@@ -194,5 +201,7 @@ category
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 };

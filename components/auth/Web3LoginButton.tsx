@@ -23,6 +23,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   const [open, setOpen] = useState(false);
@@ -34,6 +35,9 @@ import React, { useEffect, useState } from 'react';
   useEffect(() => {    return did.lens |did.ens |null
   } catch { return null }
 }
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
   const [open, setOpen] = useState(false);
@@ -94,6 +98,17 @@ async function resolveDisplayName(): any (addr: string): Promise<string | null> 
     const did = data?.payload || {};
     return did && did.lens || did && did.ens || null;
   } catch {;
+=======
+import dynamic from 'next/dynamic';
+const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {
+  ssr: false,
+});
+async function resolveDisplayName(addr: string): Promise<string | null> {
+  try {
+    const did = data?.payload || {};
+return did.lens || did.ens || null;
+  } catch {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return null;
   }
 
@@ -103,6 +118,7 @@ export default function Web3LoginButton() {;
   const [user, setUser] = useState<{;
     address: string;
     chain: 'evm' | 'sol';
+<<<<<<< HEAD
   } | null>(null);  const [displayName, setDisplayName] = useState<string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
 <<<<<<< HEAD
@@ -129,12 +145,22 @@ export default function Web3LoginButton() {
   const [displayName, setDisplayName] = useState<string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
   useEffect(() => {
+=======
+  } | null>(null);
+  const [displayName, setDisplayName] = useState<string | null>(null);
+  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
+  useEffect(() => {
+const saved =
+      typeof window !== 'undefined'
+        ? window.localStorage.getItem('zion-web3-user')
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         : null;
     if (saved) setUser(JSON && JSON.parse(saved));
     const pref =;
       typeof window !== 'undefined';
         ? window && window.localStorage.getItem('zion-web3-display');
         : null;
+<<<<<<< HEAD
     setDisplayWeb3(pref === 'true');  }, []);
       else setDisplayName(null);
     })();
@@ -148,6 +174,25 @@ export default function Web3LoginButton() {
   const disconnect = async () => {;
     window && window.localStorage.removeItem('zion-web3-user');
     try {;
+=======
+    setDisplayWeb3(pref === 'true');
+  }, []);
+
+  useEffect(() => {
+    (async () => {
+if (user && displayWeb3)
+        setDisplayName(await resolveDisplayName(user.address));
+      else setDisplayName(null);
+    })();
+  const onLoggedIn = (u: { address: string; chain: 'evm' | 'sol' }) => {
+    window.localStorage.setItem('zion-web3-user', JSON.stringify(u));
+    setUser(u);
+  };
+
+  const disconnect = async () => {
+    window.localStorage.removeItem('zion-web3-user');
+try {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       await fetch('/api/auth/logout', { method: 'POST' });
     } catch {}
     setUser(null);
@@ -158,11 +203,17 @@ export default function Web3LoginButton() {
   if (user) {
     const base =
       displayName |`${user.address.slice(0, 6)}…${user.address.slice(-4)}`;
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
       <div className='flex items-center gap-2'>;
         <span className='hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1 && 1.5 py-0 && 0.5'>;
@@ -184,6 +235,7 @@ export default function Web3LoginButton() {
             onLoggedIn={onLoggedIn}
           />;
         )}
+<<<<<<< HEAD
       </div>;
     );  }
   return (
@@ -192,6 +244,14 @@ export default function Web3LoginButton() {
   return (
     <>;
       <button
+=======
+      </div>
+    );
+  }
+  return (
+    <>
+<button
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         onClick={() => setOpen(true)}
         className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1 && 1.5 text-xs';
       >;
@@ -204,6 +264,7 @@ export default function Web3LoginButton() {
           onLoggedIn={onLoggedIn}
         />;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>
   );      <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-xs">Connect Wallet</button>
@@ -222,6 +283,8 @@ export default function Web3LoginButton() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </>;
   );      <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1 && 1.5 text-xs">Connect Wallet</button>;
 
@@ -390,4 +453,11 @@ if ( {) {
     </>);      <button on_click={() => set_open (true)} className="rounded - md bg - black text - white dark:bg - white dark:text - black px - 3 py-1.5 text-xs">Connect Wallet</button>;
       {open && <Web3LoginModal is_open={open} on_close={() => set_open (false)} onLoggedIn={onLoggedIn} />}
     </>);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+    </>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -17,6 +18,10 @@ import * as React from "react"
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import * as ContextMenuPrimitive from "@radix-ui/react-context-menu"
 import { Check, ChevronRight, Circle } from "lucide-react"
 
@@ -32,6 +37,7 @@ const ContextMenuRadioGroup = ContextMenuPrimitive.RadioGroup
 const ContextMenuSubTrigger = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.SubTrigger>
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubTrigger> & {
+<<<<<<< HEAD
 <<<<<<< HEAD
     inset?: boolean
 <<<<<<< HEAD
@@ -93,6 +99,9 @@ const ContextMenuSubTrigger = React.forwardRef<;
 =======
     inset?: boolean  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    inset?: boolean  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 >(({ class_name, inset, children, ...props }, ref) => (
   <ContextMenuPrimitive.SubTrigger;
     ref={ref}
@@ -107,6 +116,7 @@ const ContextMenuSubTrigger = React.forwardRef<;
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
       inset && "pl-8",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -149,11 +159,16 @@ className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
       inset && "pl-8",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
+      inset && "pl-8",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className
     )}
     {...props}
   >;
     {children}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -187,6 +202,11 @@ className={cn(
     <ChevronRight className="ml-auto h-4 w-4" />
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    <ChevronRight className="ml-auto h-4 w-4" />
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   </ContextMenuPrimitive.SubTrigger>
 ))
 ContextMenuSubTrigger.displayName = ContextMenuPrimitive.SubTrigger.displayName
@@ -196,6 +216,7 @@ const ContextMenuSubContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ContextMenuPrimitive.SubContent
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
     className={cn(
 <<<<<<< HEAD
@@ -222,11 +243,15 @@ const ContextMenuSubContent = React.forwardRef<
 =======
     className={cn(      className
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    className={cn(      className
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     )}
     {...props}
   />;
 ));
 ContextMenuSubContent.displayName = ContextMenuPrimitive.SubContent.displayName;
+<<<<<<< HEAD
 <<<<<<< HEAD
 const ContextMenuContent = React.forwardRef<;
 <<<<<<< HEAD
@@ -308,6 +333,9 @@ className={cn(
 =======
 const ContextMenuContent = React.forwardRef<;        className
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const ContextMenuContent = React.forwardRef<;        className
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       )}
       {...props}
     />;
@@ -315,6 +343,7 @@ const ContextMenuContent = React.forwardRef<;        className
 ));
 ContextMenuContent.displayName = ContextMenuPrimitive.Content.displayName;
 const ContextMenuItem = React.forwardRef<;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -327,6 +356,8 @@ const ContextMenuItem = React.forwardRef<;
 className={cn (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[state = open]:bg - accent data-[state = open]:text - accent - foreground & quot;,
       inset && &quot;pl - 8&quot;,
       class_name)}
@@ -430,6 +461,7 @@ const ContextMenuItem = React.forwardRef<;
       inset && "pl-8",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -468,6 +500,10 @@ className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      inset && "pl-8",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className
     )}
     {...props}
@@ -475,6 +511,7 @@ className={cn(
 ));
 ContextMenuItem.displayName = ContextMenuPrimitive.Item.displayName;
 const ContextMenuCheckboxItem = React.forwardRef<;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -548,6 +585,11 @@ className={cn(
   React.ElementRef<typeof ContextMenuPrimitive.CheckboxItem>,;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  React.ElementRef<typeof ContextMenuPrimitive.CheckboxItem>,;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
@@ -582,6 +624,7 @@ className={cn (
         <Check className=&quot;h - 4 w - 4&quot; />;
       </ContextMenuPrimitive.ItemIndicator>;
     </span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     {children}
 <<<<<<< HEAD
@@ -782,6 +825,9 @@ const ContextMenuLabel = React.forwardRef<;
 =======
     {children}  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    {children}  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 >(({ class_name, inset, ...props }, ref) => (
   <ContextMenuPrimitive.Label;
     ref={ref}
@@ -794,6 +840,7 @@ const ContextMenuLabel = React.forwardRef<;
       "px-2 py-1.5 text-sm font-semibold text-foreground",
       inset && "pl-8",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -843,6 +890,10 @@ className={cn(
       "px-2 py-1.5 text-sm font-semibold text-foreground",
       inset && "pl-8",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      "px-2 py-1.5 text-sm font-semibold text-foreground",
+      inset && "pl-8",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className
     )}
     {...props}
@@ -850,6 +901,7 @@ className={cn(
 ));
 ContextMenuLabel.displayName = ContextMenuPrimitive.Label.displayName;
 const ContextMenuSeparator = React.forwardRef<;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -871,6 +923,8 @@ const ContextMenuSeparator = React.forwardRef<;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
 =======className={cn (
@@ -889,6 +943,7 @@ const ContextMenuSeparator = React.forward_ref<;
     ref={ref}
     className={cn (&quot;-mx - 1 my - 1 h - px bg - border & quot;, class_name)}
     {...props}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1035,6 +1090,10 @@ export {
 ContextMenuShortcut.displayName = "ContextMenuShortcut"
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+ContextMenuShortcut.displayName = "ContextMenuShortcut"
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ContextMenu,
   ContextMenuTrigger,
   ContextMenuContent,
@@ -1051,6 +1110,7 @@ ContextMenuShortcut.displayName = "ContextMenuShortcut"
   ContextMenuSubTrigger,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1065,6 +1125,8 @@ ContextMenuShortcut.displayName = "ContextMenuShortcut"
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ContextMenuRadioGroup}
 ContextMenuShortcut.displayName = "ContextMenuShortcut";
 ;
@@ -1158,6 +1220,7 @@ React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator> > ( ({
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1168,3 +1231,6 @@ React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator> > ( ({
 =======
   ContextMenuRadioGroup}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  ContextMenuRadioGroup}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

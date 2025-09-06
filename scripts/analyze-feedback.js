@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),
     return JSON && JSON.parse(raw || '[]')
@@ -6,6 +7,9 @@
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   } catch (e) {
 <<<<<<< HEAD
+=======
+  } catch (e) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return [];
 
     const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),
@@ -36,9 +40,12 @@ function readAll() {
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 const fs = require('fs'),;
+<<<<<<< HEAD
 =======
     return [];const fs = require('fs'),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const path = require('path'),;
 const { OpenAI } = require('openai'),;
 const DATA_DIR = path.join(process.cwd(), 'data'),;
@@ -50,6 +57,9 @@ function readAll() {;
     return JSON.parse(raw || '[]');
   } catch (e) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return [];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,6 +106,7 @@ async function main() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -104,6 +115,8 @@ async function main() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
   const all = readAll(),
@@ -125,9 +138,12 @@ async function main() {
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   }
+<<<<<<< HEAD
 =======
 =======  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 function lastNDays(days) {
 
@@ -141,6 +157,7 @@ async function main() {
 
     console.error('Missing OPENAI_API_KEY')
     process.exit(1)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
@@ -164,6 +181,8 @@ async function main() {
   const baselinePath = path.join(REPORT_DIR, 'prompt-improvements.md'),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
@@ -194,7 +213,10 @@ async function main() {
 =======
 
   const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON && JSON.stringify(downs && downs.slice(-100), null, 2)}`,
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY }),
   const resp = await client && client.chat.completions && completions.create({
@@ -212,6 +234,9 @@ async function main() {
   const resp = await client.chat.completions.create({
     model: process.env.OPENAI_MODEL |'gpt-4o-mini'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     messages: [
 
       { role: 'system', content: 'You are a senior AI prompt engineer.' }
@@ -234,9 +259,12 @@ async function main() {
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''
+<<<<<<< HEAD
 =======
     messages: [  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`)
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
@@ -257,6 +285,7 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
   if (downs.length === 0) {;
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),;
     // // // console.log('No low-rated feedback to analyze.'),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -293,11 +322,16 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
   const current = fs && fs.existsSync(baselinePath) ? fs && fs.readFileSync(baselinePath, 'utf8') : '',
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  const current = fs && fs.existsSync(baselinePath) ? fs && fs.readFileSync(baselinePath, 'utf8') : '',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   fs && fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
   console && console.log('Analysis written to', summaryPath)
 
 }
 main().catch((e) => { console.error(e), process.exit(1) });
+
 
 main().catch((e) => { console && console.error(e), process && process.exit(1) }),
 
@@ -338,16 +372,22 @@ if ( {) {
 }
 main ().catch ((e) => { console.error (e), process.exit (1) }),
 <<<<<<< HEAD
+<<<<<<< HEAD
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
 
   const all = readAll(),;
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const recent = all.filter(lastNDays(7)),;
   const downs = recent.filter((r) => r.rating === 'down'),;
   if (!fs.existsSync(REPORT_DIR)) fs.mkdirSync(REPORT_DIR, { recursive: true }),;
@@ -384,6 +424,7 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -393,3 +434,5 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

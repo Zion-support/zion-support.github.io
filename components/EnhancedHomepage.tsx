@@ -1,10 +1,36 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import Link from 'next/link';
+import { ArrowRight;
+  TrendingUp;
+  Brain;
+  Shield;
+  Rocket;
+  Atom;
+  Sparkles;
+  Building;
+  Phone;
+  Mail;
+  MapPin;
+  ArrowUpRight
+ } from 'lucide-react';
+import Head from 'next/head',
+// Import our enhanced components
+import EnhancedNavigation from './layout/EnhancedNavigation',
+import EnhancedServiceCard from './ui/EnhancedServiceCard',
+import PerformanceMonitor from './PerformanceMonitor',
+//Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
@@ -31,6 +57,7 @@ import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 ...innovativeAIServicesExpansion2025V3...innovative2025ITInfrastructureServices;
 ...innovative2025AIAutonomousServices ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Filter services by category //Animation variants const containerVariants = {
   hidden: {
   opacity: 0
@@ -38,6 +65,8 @@ import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
   opacity: 0 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   opacity: 0 
 
@@ -59,6 +88,7 @@ const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 visible: {
   opacity: 1, transition: {
+<<<<<<< HEAD
   duration: 0.8, staggerChildren: 0.1
 }
 }
@@ -397,8 +427,11 @@ const EnhancedHomepage: React.FC = () => {
             {/* CTA Buttons */}
             <motion.div
 
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* CTA Buttons */}
             <motion&& motion.div 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -504,10 +537,13 @@ const EnhancedHomepage: React.FC = () => {
             <motion&& motion.div 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             
             <motion.div 
               className="flex flex-wrap justify-center gap-4 mb-12"
@@ -883,10 +919,13 @@ if ( {) {
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
@@ -925,6 +964,7 @@ if ( {) {
             <motion.h2
               className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
 
+<<<<<<< HEAD
               variants={itemVariants}
             >
               Ready to Transform Your Business?
@@ -940,6 +980,10 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <motion.p 
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               className="text-xl text-gray-300 mb-8"
               variants={itemVariants}
             >
@@ -1052,6 +1096,7 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Performance Monitor */}
       <AnimatePresence>
         {showPerformanceMonitor && (
@@ -1071,11 +1116,14 @@ export default EnhancedHomepage;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Performance Monitor */}
       <AnimatePresence>;
         {showPerformanceMonitor && (;
           <PerformanceMonitor />;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       </AnimatePresence>;
@@ -1093,3 +1141,31 @@ export default EnhancedHomepage;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  duration: 0.8, staggerChildren: 0.1 
+
+
+};
+
+};
+
+};
+
+};
+
+};
+export default EnhancedHomepage;
+import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
+// Import service data
+import { revolutionary2044AdvancedMicroSaas  } from '../data/revolutionary-2044-advanced-micro-saas';
+import { revolutionary2044ITServices  } from '../data/revolutionary-2044-it-services';
+import { revolutionary2044AIServices  } from '../data/revolutionary-2044-ai-services';
+import { realEnterpriseMicroSaas2025  } from '../data/2025-real-enterprise-micro-saas';
+import { innovativeITServicesExpansion2025V3  } from '../data/2025-innovative-it-services-expansion-v3';
+import { innovativeAIServicesExpansion2025V3  } from '../data/2025-innovative-ai-services-expansion-v3';
+import { innovative2025ITInfrastructureServices  } from '../data/2025-innovative-it-infrastructure-services';
+import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
+const EnhancedHomepage: React.FC;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Card } from "@/components/ui/card",
@@ -8,6 +9,8 @@ import { Search } from 'lucide-react'
 import { Input } from "@/components/ui/input",
 import { cn } from "@/lib/utils",
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function MobileConversationList({
 
   conversations,
@@ -121,6 +124,7 @@ function MobileConversationList() {
               'px-4',
               activeConversation === conversation && conversation.id && 'bg-primary/5'
 
+<<<<<<< HEAD
 export function MobileConversationList({
   conversations,
   activeConversation,
@@ -154,6 +158,40 @@ export function MobileConversationList({
             className={cn(
               "px-4",
               activeConversation === conversation.id && "bg-primary/5"
+=======
+=======
+import React from 'react';
+import { Card } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Search } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { cn } from '@/lib/utils';
+
+interface Conversation {
+  id: string;
+  name: string;
+  avatar?: string;
+  lastMessage: string;
+  timestamp: string;
+  unreadCount: number;
+  isTyping?: boolean
+}
+
+interface MobileConversationListProps {
+  conversations: Conversation[];
+  activeConversation?: string;
+  onSelectConversation: (id: string) => void
+export function MobileConversationList({
+  conversations;
+  activeConversation;
+  onSelectConversation
+}: MobileConversationListProps) {
+  return (
+    <div className;
+              activeConversation === conversation.id && "bg-primary/5"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             )}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -165,6 +203,7 @@ export function MobileConversationList({
                 <AvatarImage src={conversation.avatar} alt={conversation.name} />
 =======
                 <AvatarImage
+<<<<<<< HEAD
 
 =======
             onClick={() => onSelectConversation(conversation && conversation.id)}          >;
@@ -173,16 +212,27 @@ export function MobileConversationList({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD
                 <AvatarImage
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                  src={conversation.avatar}
+                  alt={conversation.name}
+                />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                   src={conversation && conversation.avatar}
                   alt={conversation && conversation.name}
@@ -238,6 +288,12 @@ export function MobileConversationList({
                   <h3 className="font-medium truncate">{conversation.name}</h3>
                   <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">
                     {conversation.timestamp}
+=======
+<div className='flex-1 min-w-0'>
+                <div className='flex justify-between items-baseline'>
+                  <h3 className='font-medium truncate'>{conversation.name}</h3>
+                  <span className='text-xs text-muted-foreground whitespace-nowrap ml-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   </span>
                 </div>
                 
@@ -257,7 +313,10 @@ export function MobileConversationList({
                   
                   {conversation.unreadCount > 0 && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -270,6 +329,9 @@ export function MobileConversationList({
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
+=======
+                    <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       {conversation.unreadCount}
                     </Badge>;
 
@@ -282,7 +344,10 @@ export function MobileConversationList({
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 
@@ -348,5 +413,18 @@ export function MobileConversationList({
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+;
+=======
+<div className='border-t border-border ml-12'></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

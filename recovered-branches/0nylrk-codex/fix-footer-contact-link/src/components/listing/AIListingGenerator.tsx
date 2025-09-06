@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -16,6 +17,8 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -23,6 +26,7 @@ import {Sparkles} from "lucide-react";
 import {supabase} from "@/integrations/supabase/client";
 import {AIListingForm} from "./AIListingForm";
 import {GeneratedContentDisplay} from "./GeneratedContentDisplay";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {LoadingContentSkeleton} from "./LoadingContentSkeleton";
 <<<<<<< HEAD
@@ -70,6 +74,9 @@ interface GeneratedContent {;
 =======
 import {LoadingContentSkeleton} from "./LoadingContentSkeleton",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {LoadingContentSkeleton} from "./LoadingContentSkeleton",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   description: string,;
   tags: string[],;
   suggestedPrice: {;
@@ -84,6 +91,7 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -231,6 +239,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         throw new Error(data.error)
       }      setGeneratedContent(data.generated);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      if (data.error) {
+        throw new Error(data.error)
+      }      setGeneratedContent(data.generated);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       toast({
         title: "Content Generated"
         description: "AI has created optimized listing content for you."
@@ -241,6 +254,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         title: "Generation Failed"
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
+<<<<<<< HEAD
 <<<<<<< HEAD
       })
 <<<<<<< HEAD
@@ -416,6 +430,9 @@ if ( {) {
 =======
       })    <div className="space-y-6">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      })    <div className="space-y-6">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
         <CardHeader>;
           <CardTitle className="flex items-center text-white">;
@@ -441,12 +458,15 @@ if ( {) {
             isLoading={isLoading} 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             initialValues={initialValues}
           />;
         </CardContent>;
@@ -578,6 +598,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -585,3 +606,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

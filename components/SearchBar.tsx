@@ -382,6 +382,7 @@ export default SearchBar;
     setQuery('');
     setResults([]);
     setIsOpen(false);
+<<<<<<< HEAD
     setSelectedIndex(-1);
   }, []);
 
@@ -411,6 +412,9 @@ export default SearchBar;
     }
   }, [isOpen, results, selectedIndex, handleResultClick]);
 
+=======
+  }
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
   return (
     <div className="relative w-full max-w-md">
       <div className="relative">

@@ -8,6 +8,7 @@ console.log(`Fixed ${fixedCount} files`)));
 <<<<<<< HEAD
 
 ;
+<<<<<<< HEAD
 =======
 console.log(`Fixed ${fixedCount} files`)));
 }
@@ -19,6 +20,8 @@ console.log(`Fixed ${fixedCount} files`)));
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -81,9 +84,12 @@ console.log(`Fixed ${fixedCount} files`)));
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 console.log(`Fixed ${fixedCount} files`)));
 ;
+<<<<<<< HEAD
 =======
 console.log(`Fixed ${fixedCount} files`),)),;;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 console.log(`Fixed ${fixedCount} files`),));
 ;
   }
@@ -95,6 +101,7 @@ console.log(`Fixed ${fixedCount} files`),)),
 console.log(`Fixed ${fixedCount} files`),)),;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
@@ -102,3 +109,5 @@ console.log(`Fixed ${fixedCount} files`),)),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

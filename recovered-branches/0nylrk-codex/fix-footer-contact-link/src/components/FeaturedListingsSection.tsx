@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -13,6 +14,8 @@ import { Link } from "react-router-dom",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { ProductListingCard } from '@/components / ProductListingCard';
 import { GradientHeading } from '@/components / GradientHeading';
 import { Button } from '@/components / ui / button';
@@ -27,6 +30,7 @@ function FeaturedListingsSection() {
   const featured_listings = [;
     {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -76,10 +80,13 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       id: "advanced-nlp-model",
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       title: "Advanced NLP Model for Text Analysis",
       description: "State-of-the-art natural language processing with 98% accuracy",
       price: 4999,
       currency: "$",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -152,12 +159,15 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       author: {
         name: "VisualAI"
         id: "visual-ai"
       }
 
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -521,6 +531,17 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       reviewCount: 72    <section id="featured" className="py - 12 px - 4 bg - zion - blue-dark">;
       <div className="container mx-auto">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      author: {
+        name: "DataMinds Consulting"
+        id: "dataminds-consulting"
+      }      tags: ["API", "Sentiment", "Analytics"];
+      images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"]
+      createdAt: "2024-01-05T11:15:00.000Z"
+      rating: 4.6
+      reviewCount: 72    <section id="featured" className="py - 12 px - 4 bg - zion - blue-dark">;
+      <div className="container mx-auto">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {show_title && (
           <div className="text - center mb-12">;
             <GradientHeading className="text - 3xl md:text - 4xl font - bold mb-4">;
@@ -534,6 +555,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
           {featured_listings.map ((listing) => (
             <ProductListingCard;
               key={listing.id}
+<<<<<<< HEAD
               listing={listing}
               key={listing.id}
               listing={listing}
@@ -546,6 +568,12 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              listing={listing}
+              key={listing.id}
+              listing={listing}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               view="grid"
               onRequestQuote={() => {}}              listing={listing}
               view="grid"
@@ -564,6 +592,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       </div>
     </section>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -705,3 +734,6 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

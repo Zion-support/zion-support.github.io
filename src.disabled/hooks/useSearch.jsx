@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,10 +21,14 @@ import { useState,useEffect,useCallback,useMemo } from react' export const useSe
 =======
 import { useState,useEffect,useCallback,useMemo } from react' export const useSearch = (data,options) => { const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options const [searchState,setSearchState] = useState({ "query": ',"filters": {},"sortBy": 'nul',l,"sortOrder": 'asc'; ,',"results": 'dat',a,"isLoading": 'fals',e,"totalResults": 'data.length'}) const [debouncedQuery,setDebouncedQuery] = useState('')'';'':src && src.disabled/hooks/useSearch && useSearch.js.jsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+:src && src.disabled/hooks/useSearch && useSearch.js.jsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const { useState,useEffect,useCallback,useMemo } from react" export const useSearch = (data,options) => { const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options const [searchState,setSearchState] = useState({ query: ",filters: {},sortBy: "nul",l,sortOrder: "asc"; ,",results: "dat",a,isLoading: "fals",e,totalResults: "data && data.length"}) const [debouncedQuery,setDebouncedQuery] = useState("")"";"""
 
 import { useState,useEffect,useCallback,useMemo } from react' export const useSearch = (data,options) => { const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options const [searchState,setSearchState] = useState({ "query": ',"filters": {},"sortBy": 'nul',l,"sortOrder": 'asc'; ,',"results": 'dat',a,"isLoading": 'fals',e,"totalResults": 'data && data.length'}) const [debouncedQuery,setDebouncedQuery] = useState('')'';''
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,3 +72,8 @@ import { useState,useEffect,useCallback,useMemo } from react' export const useSe
 const { useState,useEffect,useCallback,useMemo } from react" export const useSearch = (data,options) => { const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options const [searchState,setSearchState] = useState({ query: ",filters: {},sortBy: "nul",l,sortOrder: "asc"; ,",results: "dat",a,isLoading: "fals",e,totalResults: "data.length"}) const [debouncedQuery,setDebouncedQuery] = useState("")"";"""
 import { useState,useEffect,useCallback,useMemo } from react' export const useSearch = (data,options) => { const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options const [searchState,setSearchState] = useState({ "query": ',"filters": {},"sortBy": 'nul',l,"sortOrder": 'asc'; ,',"results": 'dat',a,"isLoading": 'fals',e,"totalResults": 'data.length'}) const [debouncedQuery,setDebouncedQuery] = useState('')'';''
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+:src.disabled/hooks/useSearch.js.jsx
+const { useState,useEffect,useCallback,useMemo } from react" export const useSearch = (data,options) => { const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options const [searchState,setSearchState] = useState({ query: ",filters: {},sortBy: "nul",l,sortOrder: "asc"; ,",results: "dat",a,isLoading: "fals",e,totalResults: "data.length"}) const [debouncedQuery,setDebouncedQuery] = useState("")"";"""
+import { useState,useEffect,useCallback,useMemo } from react' export const useSearch = (data,options) => { const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options const [searchState,setSearchState] = useState({ "query": ',"filters": {},"sortBy": 'nul',l,"sortOrder": 'asc'; ,',"results": 'dat',a,"isLoading": 'fals',e,"totalResults": 'data.length'}) const [debouncedQuery,setDebouncedQuery] = useState('')'';''
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

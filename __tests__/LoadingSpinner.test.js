@@ -80,6 +80,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 import _React from 'react"  import '@testing-library/jest-dom import LoadingSpinner from '../components/LoadingSpinner" describe('LoadingSpinner',() => {' test('renders without crashing',() => {' render(<LoadingSpinner / / />) expect(screen.getByTestId("loadingspinner")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<LoadingSpinner / / />) }) test('handles user interactions',() => {' render(<LoadingSpinner / / />) }) test('applies correct styling',() => {' render(<LoadingSpinner / / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import LoadingSpinner from '../components/LoadingSpinner" describe('LoadingSpinner',() => {' test('renders without crashing',() => {' render(<LoadingSpinner / / />) expect(screen.getByTestId("loadingspinner")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<LoadingSpinner / / />) }) test('handles user interactions',() => {' render(<LoadingSpinner / / />) }) test('applies correct styling',() => {' render(<LoadingSpinner / / />) }) })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 <<<<<<< HEAD
@@ -92,3 +93,5 @@ import _React from 'react"  import '@testing-library/jest-dom import LoadingSpin
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

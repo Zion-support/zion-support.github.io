@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export type FilterType =
   | "all"
@@ -41,6 +42,8 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import {Tabs, TabsList, TabsTrigger} from '@/components/ui/tabs';
 
@@ -74,6 +77,7 @@ export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system'
 interface NotificationFilterProps {;
   filter: FilterType,;
 <<<<<<< HEAD
+<<<<<<< HEAD
   onFilterChange: (filter: FilterType) => void;
 <<<<<<< HEAD
 =======
@@ -104,6 +108,9 @@ export type FilterType =
 =======
   onFilterChange: (filter: FilterType) => void;export type FilterType =
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  onFilterChange: (filter: FilterType) => void;export type FilterType =
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   | "all"
   | "unread"
   | "onboarding"
@@ -144,6 +151,7 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
         </TabsList>
       </Tabs>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -198,6 +206,8 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 
   )
@@ -220,9 +230,12 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({;
   )
 },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

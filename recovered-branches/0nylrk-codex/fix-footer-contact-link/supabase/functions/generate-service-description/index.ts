@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -92,6 +91,16 @@ const corsHeaders = {
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {Configuration, OpenAIApi} from "npm: openai@4 ;
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
@@ -139,6 +148,7 @@ serve(async (req) => {;
         });
         {
           status: 400
+<<<<<<< HEAD
 <<<<<<< HEAD
           headers: { ...corsHeaders, "Content-Type": "application/json" }
 <<<<<<< HEAD
@@ -215,10 +225,17 @@ if ( {) {
     }
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          headers: { ...corsHeaders, "Content-Type": "application/json" }        }
+      );
+    }
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const configuration = new Configuration({
       apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});
     const openai = new OpenAIApi(configuration);
     const prompt = `Create a professional and detailed service description for the following service:
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -250,10 +267,16 @@ Target Audience: ${targetAudience |"General users"}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
     const configuration = new Configuration({;
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
     const openai = new OpenAIApi(configuration),;
+<<<<<<< HEAD
 <<<<<<< HEAD
     const prompt = `Create a professional and detailed service description for the following service:;
 <<<<<<< HEAD
@@ -325,6 +348,11 @@ The description should: 1. Be approximately 200-300 words
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    const prompt = `Create a professional and detailed service description for the following service:;Title: ${title}
+Key Features: ${keyFeatures || "Not specified"}
+Target Audience: ${targetAudience || "General users"}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error ("Error in generate - service - description:", error);
 ;
     return new Response (
@@ -336,6 +364,7 @@ Target Audience: ${targetAudience || "General users"}
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }
 Key Features: ${keyFeatures || "Not specified"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 Target Audience: ${targetAudience || "General users"}
 ;
@@ -457,6 +486,9 @@ The description should: 1. Be approximately 200 - 300 words;
 =======
 Target Audience: ${targetAudience || "General users"}      }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+Target Audience: ${targetAudience || "General users"}      }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     );
 
 5. Include a compelling opening and closing statement`,
@@ -593,7 +625,10 @@ headers: {
   }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

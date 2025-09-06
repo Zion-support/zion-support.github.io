@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -25,6 +26,8 @@ import { motion } from 'framer-motion';
 import {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ArrowRight
   Brain
   Zap
@@ -231,6 +234,98 @@ const Enhanced2026ServicesShowcase = () => {;
         'Space Traffic Management',;
       ],;
     },;
+=======
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud  } from 'lucide-react';
+import Link from 'next/link';
+const Enhanced2026ServicesShowcase = null;
+    {
+      id: 'autonomous-ai-agents-platform-2026'
+      name: 'Autonomous AI Agents Platform 2026'
+      description:
+        'Build, deploy, and manage autonomous AI agents that can handle complex business tasks without human intervention.',
+      price: '$199',
+      period: '/month',
+      icon: Zap,
+      color: 'from-blue-500 to-cyan-500',
+      category: 'AI & Automation',
+features: [
+        'Task Automation',
+        'Process Optimization',
+        '24/7 Operation',
+        'Scalable Architecture',
+      ],
+    },
+    {
+      id: 'quantum-cybersecurity-suite-2026'
+      name: 'Quantum Cybersecurity Suite 2026'
+      description:
+        'Next-generation cybersecurity platform that uses quantum-resistant algorithms to protect against current and future cyber threats.',
+      price: '$599',
+      period: '/month',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      category: 'Security',
+features: [
+        'Quantum Encryption',
+        'Threat Detection',
+        'Zero Trust',
+        'Compliance Ready',
+      ],
+    },
+    {
+      id: 'neuromorphic-computing-platform-2026',
+      name: 'Neuromorphic Computing Platform 2026',
+      description:
+        'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.',
+      price: '$1,499',
+      period: '/month',
+      icon: Cpu,
+      color: 'from-green-500 to-emerald-500',
+      category: 'Emerging Tech',
+      features: [
+        'Brain-like Processing',
+        'Low Power',
+        'Real-time Learning',
+        'Cognitive Computing',
+      ],
+    },
+    {
+      id: 'dna-computing-platform-2026',
+      name: 'DNA Computing Platform 2026',
+      description:
+        'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.',
+      price: '$2,999',
+      period: '/month',
+      icon: Globe,
+      color: 'from-indigo-500 to-purple-500',
+      category: 'Emerging Tech',
+      features: [
+        'Molecular Processing',
+        'Exponential Speed',
+        'Complex Algorithms',
+        'Research Ready',
+      ],
+    },
+    {
+      id: 'space-debris-tracking-system',
+      name: 'Space Debris Tracking System 2026',
+      description:
+        'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',
+      price: '$899',
+      period: '/month',
+      icon: Rocket,
+      color: 'from-yellow-500 to-orange-500',
+      category: 'Space Tech',
+features: [
+        'Real-time Tracking',
+        'Collision Prediction',
+        'Satellite Safety',
+        'Space Traffic Management',
+      ],
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   const categories = [;
     {;
@@ -266,25 +361,41 @@ const Enhanced2026ServicesShowcase = () => {;
   return (
     <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
       {/* Background Effects */}
+<<<<<<< HEAD
     { name: 'IT Solutions', count: '200+', icon: Cloud, color: 'from-yellow-500 to-orange-500' }
   ];
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
       {/* Background Effects */}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10'></div>
+
+      <div className='max-w-7xl mx-auto relative z-10'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Section Header */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='text-center mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         >
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -293,6 +404,7 @@ const Enhanced2026ServicesShowcase = () => {;
           </h2>
           <p className='text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed'>
             Experience the future with our cutting-edge AI, quantum, and
+<<<<<<< HEAD
             emerging technology services designed to transform your business          </p>        >
 <<<<<<< HEAD
 =======
@@ -308,6 +420,9 @@ const Enhanced2026ServicesShowcase = () => {;
           </h2>
           <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
             Experience the future with our cutting-edge AI, quantum, and emerging technology services designed to transform your business
+=======
+            emerging technology services designed to transform your business
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </p>
         </motion.div>
 <<<<<<< HEAD
@@ -347,6 +462,7 @@ const Enhanced2026ServicesShowcase = () => {;
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -421,6 +537,7 @@ const Enhanced2026ServicesShowcase = () => {;
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         >
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -456,6 +573,21 @@ const Enhanced2026ServicesShowcase = () => {;
               key={category.name}
               initial={{ opacity: 0, scale: 0.8 }}
 =======
+=======
+=======
+className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
+        >
+          {categories.map((category, index) => (
+            <motion.div
+              key={category.name}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05, y: -5 }}
+className='group text-center'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               whileInView={{ opacity: 1, scale: 1 }}
@@ -497,6 +629,7 @@ const Enhanced2026ServicesShowcase = () => {;
               className='group text-center'>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div
+<<<<<<< HEAD
                 className={`w-16 h-16 bg-gradient-to-br ${category && category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>;
                 <category && category.icon className='w-8 h-8 text-white' />;
               </div>;
@@ -513,12 +646,34 @@ const Enhanced2026ServicesShowcase = () => {;
               <p className="text-2xl font-bold text-cyan-400">{category && category.count}</p>;
             </motion && motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
           ))}
         {/* Featured Services Grid */}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
+              >
+                <category.icon className='w-8 h-8 text-white' />
+              </div>
+              <h3 className='text-lg font-bold text-white mb-2'>
+                {category.name}
+              </h3>
+              <p className='text-2xl font-bold text-cyan-400'>
+                {category.count}
+              </p>
+            </motion.div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+          ))}
+        {/* Featured Services Grid */}
+<<<<<<< HEAD
+=======
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {featuredServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -528,9 +683,13 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.02, y: -5 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               className='group relative'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+className='group relative'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <div
                 className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}
@@ -539,6 +698,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 {/* Service Header */}
                 <div className='flex items-center space-x-3 mb-4'>
                   <div
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center`}
                   >
@@ -557,6 +717,8 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}></div>
               <div className="relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300">
                 {/* Service Header */}
@@ -571,12 +733,30 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 </div>
                 {/* Description */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                 <p className='text-gray-300 text-sm mb-4 leading-relaxed'>                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                    className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center`}
+                  >
+                    <service.icon className='w-6 h-6 text-white' />
+                  </div>
+                  <div>
+                    <h3 className='text-lg font-bold text-white'>
+                      {service.name}
+                    </h3>
+                    <p className='text-gray-400 text-sm'>{service.category}</p>
+                  </div>
+                </div>
+                {/* Description */}
+<p className='text-gray-300 text-sm mb-4 leading-relaxed'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   {service.description}
                 </p>
                     className={`w-12 h-12 bg-gradient-to-br ${service && service.color} rounded-xl flex items-center justify-center`}>;
@@ -607,11 +787,14 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 </p>;
                 {/* Features */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div className="mb-4">
                   <ul className="space-y-1">
                     {service.features.slice(0, 2).map((feature, i) => (
@@ -625,7 +808,21 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
                         {feature}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+<div className='mb-4'>
+                  <ul className='space-y-1'>
+                    {service.features.slice(0, 2).map((feature, i) => (
+                      <li
+                        key={i}
+                        className='flex items-center text-gray-400 text-xs'
+                      >
+                        <Star className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0' />
+                        {feature}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </li>
                     ))}
 <<<<<<< HEAD
@@ -637,10 +834,12 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* Price and CTA */}
+<<<<<<< HEAD
                 <div className='flex items-center justify-between'>
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -654,6 +853,11 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+<div className='flex items-center justify-between'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <div>
                     <span className='text-2xl font-bold text-cyan-400'>
                       {service.price}
@@ -675,6 +879,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   </div>;
                   <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
                     href={`/${service.id}`}
                     className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200'
                   >
@@ -682,6 +887,8 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                     <span className="text-gray-400 text-sm">{service.period}</span>
                   </div>
@@ -690,6 +897,12 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-1" />
+=======
+                    href={`/${service.id}`}
+                    className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200'
+                  >
+                    Learn More <ArrowRight className='w-4 h-4 ml-1' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   </Link>
                 </div>
               </div>
@@ -729,6 +942,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -758,16 +972,36 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               Join thousands of businesses already leveraging our revolutionary services to achieve unprecedented growth and innovation.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+=======
+className='text-center'
+        >
+          <div className='bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8'>
+            <h3 className='text-2xl font-bold text-white mb-4'>
+              Ready to Transform Your Business?
+            </h3>
+            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
+              Join thousands of businesses already leveraging our revolutionary
+              services to achieve unprecedented growth and innovation.
+            </p>
+            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.2 }}
               >
                 <Link
+<<<<<<< HEAD
                   href="/services"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-200"
                 >
                   <Rocket className="w-5 h-5 mr-2" />
+=======
+href='/services'
+                  className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-200'
+                >
+                  <Rocket className='w-5 h-5 mr-2' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   View All Services
                 </Link>
               </motion.div>
@@ -777,6 +1011,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 transition={{ duration: 0.2, delay: 0.1 }}
               >
                 <Link
+<<<<<<< HEAD
 <<<<<<< HEAD
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover: bg-cyan-500/10 transition-all duration-200"
@@ -800,6 +1035,8 @@ export default Enhanced2026ServicesShowcase;
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default Enhanced2026ServicesShowcase;  )
 }
 export default Enhanced2026ServicesShowcase;
@@ -1006,4 +1243,25 @@ export default Enhanced2026ServicesShowcase);
 ;
 export default Enhanced2026ServicesShowcase;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+href='/contact'
+                  className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-200'
+                >
+                  <Shield className='w-5 h-5 mr-2' />
+                  Get Started
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+);
+};
+
+export default Enhanced2026ServicesShowcase;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

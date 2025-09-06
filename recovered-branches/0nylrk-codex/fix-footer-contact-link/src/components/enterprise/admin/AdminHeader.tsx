@@ -3,6 +3,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
 =======
@@ -96,6 +97,9 @@ export function AdminHeader() {
 =======
 export function AdminHeader() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function AdminHeader() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function AdminHeader() {;
 
@@ -103,6 +107,7 @@ export function AdminHeader() {;
   const { company } = useCompanyWorkspace();
   return (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -114,6 +119,8 @@ export function AdminHeader() {;
 import React from "react",;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
 import { Download, Settings } from "lucide-react",;
@@ -136,6 +143,7 @@ export function AdminHeader() {;
             Settings;
           </Button>;
           <Button variant="outline" size="sm" className="gap-2">;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Download className="h-4 w-4" />;
 <<<<<<< HEAD
@@ -243,6 +251,13 @@ function AdminHeader() {
       </div>;
 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <Download className="h-4 w-4" />;            Export Data;
+          </Button>;
+        </div>;
+      </div>;
+}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 
 }
@@ -285,7 +300,10 @@ function AdminHeader() {
 ;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

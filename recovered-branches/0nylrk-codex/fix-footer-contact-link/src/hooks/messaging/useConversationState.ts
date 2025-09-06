@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,6 +62,12 @@ export function useConversationState() {;
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
   const [isLoading, setIsLoading] = useState(false);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  const [unreadCount, setUnreadCount] = useState(0);
+  const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
+  const [isLoading, setIsLoading] = useState(false);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from 'react';
 import {Conversation, Message} from '@/types / messaging';
 /**;
@@ -87,6 +94,7 @@ function useConversationState() {
     conversations;
     set_conversations;
     unread_count;
+<<<<<<< HEAD
 <<<<<<< HEAD
     setUnreadCount;
 <<<<<<< HEAD
@@ -115,6 +123,9 @@ function useConversationState() {
 =======
     setUnreadCount;    activeConversation;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    setUnreadCount;    activeConversation;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from 'react',;
 import { Conversation, Message } from '@/types/messaging',;
 /**;

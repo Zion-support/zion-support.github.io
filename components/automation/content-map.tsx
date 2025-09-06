@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ) )
 }</ul> </section> <section>) )
@@ -27,6 +30,7 @@ export default function ContentMap({ report }: Props) {
 export default function ContentMap({ report }: Props) {
   if (!report) return <div>No content map yet. Check back later.</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
 
 <<<<<<< HEAD
@@ -38,22 +42,34 @@ export default function ContentMap({ report }: Props) {
 =======
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1])
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1])
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 ) ) 
 }</ul> </section> <section>) ) 
 }</ul> </section> </div>) 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function ContentMap({ report }: Props) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default function ContentMap({ report }: Props) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!report) return <div>No content map yet. Check back later.</div>;
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
 
+=======
+import fs from 'fs',
+import path from 'path';
+import type { GetStaticProps } from 'next';
+type Entry = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">
       <header className="space-y-1">
@@ -104,6 +120,7 @@ export default function ContentMap(): any ({ report }: Props) {;
 
           ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
         </ul>
       </section>
     </div>
@@ -115,6 +132,8 @@ export default function ContentMap(): any ({ report }: Props) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ) );
 }</ul> </section> <section>) );
@@ -153,4 +172,14 @@ if (return <div > No content map yet. Check back later.</div>) {
         </ul>;
       </section>;
     </div>);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+        </ul>
+      </section>
+    </div>
+);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -5,6 +5,7 @@ import {z} from 'zod';
 export const certificationSchema = z.object({;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -15,12 +16,15 @@ export const certificationSchema = z.object({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { z } from 'zod';
 // Define schema for form validation
 
 export const certificationSchema = z.object({
 import {z} from 'zod';
 // Define schema for form validation
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const certificationSchema = z.object({;
 <<<<<<< HEAD
@@ -68,6 +72,9 @@ import { z } from 'zod',;
 =======
 export const certificationSchema = z.object({;import { z } from 'zod',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export const certificationSchema = z.object({;import { z } from 'zod',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Define schema for form validation;
 export const certificationSchema = z.object({;
   name: z.string().min(1, 'Certification name is required'),;
@@ -100,6 +107,7 @@ export const certificationSchema = z.object({;
 
 export type CertificationFormValues = z.infer<typeof certificationSchema>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -112,3 +120,5 @@ export type CertificationFormValues = z.infer<typeof certificationSchema>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

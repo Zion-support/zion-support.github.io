@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import { cn } from "@/lib/utils";
 import React from "react",
@@ -19,6 +22,7 @@ interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -88,6 +92,15 @@ import { cn  } from '@/lib / utils';
 interface SidebarSectionProps extends React.HTMLAttributes < HTMLDivElement> {
   class_name?: string;import React from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from "react",
+import { cn } from "@/lib/utils",
+
+  className?: string;import React from './react';
+import { cn  } from '@/lib / utils';
+interface SidebarSectionProps extends React.HTMLAttributes < HTMLDivElement> {
+  class_name?: string;import React from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { cn } from "@/lib/utils",;
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {;
   className?: string,;
@@ -100,6 +113,7 @@ export function SidebarSection({ className, title, children, ...props }: Sidebar
     <div className={cn("py-2", className)} {...props}>;
       {title && (;
         <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -136,12 +150,17 @@ export function SidebarSection({ className, title, children, ...props } SidebarS
 
           {title}        </h3>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+          {title}        </h3>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       )}
       <div className="space-y-1">{children}</div>
     </div>
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -228,3 +247,6 @@ children?: React.ReactNode
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -13,10 +14,18 @@ const LIVEKIT_HOST = process && process.env.LIVEKIT_HOST || "";
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { RoomServiceClient, CreateRoomOptions } from '[^']*';
+
+const LIVEKIT_API_KEY = null;
+    return res.status(500).json({ error: 'Failed to create room' })
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   if (req.method !== "POST") {;
@@ -73,10 +82,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== "POST") {;
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method not allowed" });
+=======
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   try {
     const { projectId, preferredName } = req.body |{}
     if (!projectId) {
+<<<<<<< HEAD
       return res.status(400).json({ error: "Missing projectId" });
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -151,11 +166,28 @@ import { RoomServiceClient, CreateRoomOptions } from 'livekit-server-sdk';
       const roomService = new RoomServiceClient(
         LIVEKIT_HOST
         LIVEKIT_API_KEY
+=======
+return res.status(400).json({ error: 'Missing projectId' });
+    }
+    if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
+      return res.status(500).json({ error: 'LiveKit env vars not configured' });
+    }
+
+    const date = new Date();
+    const pad = (n: number) => String(n).padStart(2, "0");
+    const roomName = `${projectId}-${date.getFullYear()}${pad(date.getMonth() + 1)}${pad(date.getDate())}-${pad(date.getHours())}${pad(date.getMinutes())}`;
+    // Attempt to create or ensure the room exists
+    try {
+const roomService = new RoomServiceClient(
+        LIVEKIT_HOST,
+        LIVEKIT_API_KEY,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         LIVEKIT_API_SECRET
       );
       const opts: CreateRoomOptions = {
         name: roomName
         emptyTimeout: 60 * 10, // 10 minutes
+<<<<<<< HEAD
         maxParticipants: 24
         metadata: JSON.stringify({
           projectId
@@ -288,3 +320,25 @@ import { RoomServiceClient, CreateRoomOptions } from 'livekit-server-sdk';
 >>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        maxParticipants: 24,
+metadata: JSON.stringify({
+          projectId,
+          createdBy: preferredName || 'host',
+        }),
+      };
+      await roomService.createRoom(opts).catch(() => Promise.resolve());
+    } catch (e) {
+      // In some deployments without server access, proceed with computed room name
+      console.warn(
+        "Room create skipped or failed, proceeding with roomName only"
+      );
+    }
+    return res.status(200).json({ roomName });
+  } catch (err: any) {
+    console.error("Room create error", err);
+    return res.status(500).json({ error: "Failed to create room" });
+  }
+
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

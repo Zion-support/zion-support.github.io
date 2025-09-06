@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -37,6 +38,8 @@ import {NavigationButtonsProps} from "./types";
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {Button} from "@/components/ui/button";
@@ -49,6 +52,7 @@ import {NavigationButtonsProps} from "./types";export const NavigationButtons = 
   nextLabel = "Next";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
 import { NavigationButtonsProps } from "./types",
@@ -63,6 +67,8 @@ import { NavigationButtonsProps } from "./types",
 import { Button } from "@/components/ui/button",
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Loader2 } from "lucide-react",
 import { NavigationButtonsProps } from "./types",
 
@@ -72,6 +78,7 @@ import { NavigationButtonsProps } from "./types",
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
 import { NavigationButtonsProps } from "./types",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -80,11 +87,14 @@ import { NavigationButtonsProps } from "./types",
 export const NavigationButtons = ({
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   onBack,
   onNext,
   isNextDisabled = false,
   backLabel = "Back",
   nextLabel = "Next",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -99,10 +109,13 @@ export const NavigationButtons = ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   isLoading = false}: NavigationButtonsProps) => {
   return (
     <div className="flex justify-between">
       {onBack && (
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Button variant="outline" onClick={onBack}>
 <<<<<<< HEAD
@@ -132,6 +145,9 @@ export const NavigationButtons = ({;
 =======
         <Button variant="outline" onClick={onBack}>  isLoading = false}: NavigationButtonsProps) => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        <Button variant="outline" onClick={onBack}>  isLoading = false}: NavigationButtonsProps) => {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="flex justify-between">;
       {onBack && (;
@@ -183,10 +199,13 @@ export const NavigationButtons = ({;
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {onNext && (
 
           {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
@@ -194,6 +213,7 @@ export const NavigationButtons = ({;
         </Button>
       )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 };
@@ -210,12 +230,15 @@ export const NavigationButtons = ({;
           {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {nextLabel}
         </Button>;
       )}
 
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -232,6 +255,8 @@ export const NavigationButtons = ({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </div>;
   )
 };
@@ -258,6 +283,7 @@ export const NavigationButtons = ({
         </Button>)}
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -307,3 +333,6 @@ isLoading = false
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -8,12 +9,28 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+
+=======
+import { useEffect, useState  } from 'react';
+export default function AdminPartners() {
+  const [partners, setPartners] = useState<any[]>([]),
+  const [selected, setSelected] = useState<string>(''),
+  const [flags, setFlags] = useState<any[]>([]);
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = null;
+    setFlags(json.flags || [])
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useEffect } from 'react';
 
 import Head from 'next / head';
 ;
 
 interface Partner {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react';
@@ -36,12 +53,16 @@ import Head from 'next/head';
 interface Partner {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface Partner {;
   id: string;
   code: string;
   name: string;
   status: 'active' | 'inactive' | 'pending';
   commission: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -90,10 +111,13 @@ const mockPartners: Partner[] = [;
 const AdminPartnersPage: React.FC = () => {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [partners, setPartners] = useState<Partner[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
+<<<<<<< HEAD
 <<<<<<< HEAD
   useEffect(() => {
     // Simulate loading partners
@@ -133,6 +157,11 @@ const AdminPartnersPage: React.FC = () => {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    const json = await res.json();
+    setFlags(json.flags |[]);
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useEffect, useState } from 'react';
 
 export default function AdminPartners() {
@@ -140,6 +169,9 @@ export default function AdminPartners() {
   const [selected, setSelected] = useState<string>('');
   const [flags, setFlags] = useState<any[]>([]);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import { useEffect, useState } from 'react';
@@ -153,6 +185,10 @@ export default function AdminPartners(req, res) {
     setTimeout(() => {;
       setPartners(mockPartners);
       setLoading(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }, 1000);  }, []);
 
   async function updatePartner(): any (code: string, updates: any) {;
@@ -160,6 +196,7 @@ export default function AdminPartners(req, res) {
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON && JSON.stringify({ code, ...updates }),;
+<<<<<<< HEAD
     });
     const res = await fetch('/api/admin/partners/list');
 <<<<<<< HEAD
@@ -178,13 +215,47 @@ export default function AdminPartners(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+=======
+    }, 1000);
+  }, []);
+
+  async function updatePartner(code: string, updates: any) {
+    await fetch('/api/admin/partners/update', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ code, ...updates }),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    });
+    const res = await fetch('/api/admin/partners/list');
+    const json = await res.json();
+    setPartners(json.partners || []);
+<<<<<<< HEAD
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+=======
+  }
+
+  async function viewFlags(code: string) {
+    setSelected(code);
+const res = await fetch(
+      `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
+    );
+    const json = await res.json();
+    setFlags(json.flags |[]);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
 ;
   async function viewFlags(code: string) {;
     setSelected(code);
     const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const json = await res.json();
     setFlags(json.flags || []);
     } catch (error) {
@@ -192,9 +263,12 @@ export default function AdminPartners(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <div className="space-y-6">
@@ -218,11 +292,20 @@ export default function AdminPartners(req, res) {
                 <td className="py-2 pr-4">{p.status}</td>
                 <td className="py-2 pr-4">
                   <input
+<<<<<<< HEAD
                     type='number'                    defaultValue={p.commission_rate}
                     min={0}
                     max={1}
                     step={0.01}
                     onBlur={e =>
+=======
+                    type='number'
+                    defaultValue={p.commission_rate}
+                    min={0}
+                    max={1}
+                    step={0.01}
+onBlur={e =>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       updatePartner(p.code, {
                         commission_rate: Number(e.target.value)
                       })
@@ -256,7 +339,10 @@ export default function AdminPartners(req, res) {
 }
                     className="w-24 border rounded px-2 py-1"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
   return (
@@ -319,6 +405,7 @@ export default function AdminPartners(req, res) {
                   </button>;
 
 
+<<<<<<< HEAD
 =======
 useEffect(() => {
     (async () => {
@@ -433,12 +520,18 @@ useEffect(() => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   />
                 </td>
+=======
+                  />
+                </td>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <td className="py-2 pr-4 space-x-2">
                   <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'approved' })}>Approve</button>
                   <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'rejected' })}>Reject</button>
                   <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
                 </td>
               </tr>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <div className="p-4 rounded border">
@@ -499,6 +592,73 @@ useEffect(() => {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                <td className='py-2 pr-4 space-x-2'>
+                  <button
+                    className='px-2 py-1 rounded border'
+                    onClick={() =>
+                      updatePartner(p.code, { status: 'approved' })
+                    }
+                  >
+                    Approve
+                  </button>
+                  <button
+                    className='px-2 py-1 rounded border'
+                    onClick={() =>
+                      updatePartner(p.code, { status: 'rejected' })
+                    }
+                  >
+                    Reject
+                  </button>
+                  <button
+                    className='px-2 py-1 rounded border'
+                    onClick={() => viewFlags(p.code)}
+                  >
+                    Fraud Flags
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {selected && (
+<div className='p-4 rounded border'>
+          <h2 className='font-semibold mb-2'>Fraud Flags • {selected}</h2>
+          <ul className='list-disc pl-6'>
+            {flags.map((f, idx) => (
+              <li key={idx}>
+                <span className='font-medium'>{f.type}</span> — {f.severity}{' '}
+                {f.note && <span className='text-gray-500'>({f.note})</span>}
+              </li>
+            ))}
+            {flags.length === 0 && (
+              <li className='text-gray-500 list-none'>No flags</li>
+            )}
+          </ul>
+        </div>
+{/* Stats Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+          <div className="bg-white rounded-lg shadow p-4">
+            <h3 className="text-sm font-medium text-gray-500">Total Partners</h3>
+            <p className="text-2xl font-bold">{totalPartners}</p>
+          </div>
+          <div className="bg-white rounded-lg shadow p-4">
+            <h3 className="text-sm font-medium text-gray-500">Active Partners</h3>
+            <p className="text-2xl font-bold text-green-600">{activePartners}</p>
+          </div>
+          <div className="bg-white rounded-lg shadow p-4">
+            <h3 className="text-sm font-medium text-gray-500">Total Referrals</h3>
+            <p className="text-2xl font-bold">{totalReferrals}</p>
+          </div>
+          <div className="bg-white rounded-lg shadow p-4">
+            <h3 className="text-sm font-medium text-gray-500">Total Earnings</h3>
+            <p className="text-2xl font-bold text-blue-600">${totalEarnings.toLocaleString()}</p>
+          </div>
+        </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Filters */}
         <div className="bg-white rounded-lg shadow p-6 mb-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -516,6 +676,7 @@ useEffect(() => {
               <label className="block text-sm font-medium mb-2">Filter by Status</label>;
               <select
                 value={statusFilter}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -596,6 +757,8 @@ useEffect(() => {
           </div>;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {loading ? (
             <div className="text - center py - 8">Loading partners...</div>) : filtered_partners.length === 0 ? (
             <div className="text - center py - 8 text - gray - 500">;
@@ -657,6 +820,7 @@ useEffect(() => {
                       <td className="px - 6 py - 4 whitespace - nowrap text - sm font - medium">;
                         <div className="flex space - x-2">;
                           {partner.status === 'pending' && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -742,6 +906,8 @@ useEffect(() => {
                             <>;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                               <button
                                 onClick={() => handleStatusChange(partner && partner.id, 'active')}
                                 className="text-green-600 hover:text-green-900";
@@ -773,11 +939,15 @@ useEffect(() => {
                             </button>;
                           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           )}
         </div>
       </main>
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -837,10 +1007,14 @@ useEffect(() => {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -852,6 +1026,9 @@ useEffect(() => {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -865,6 +1042,7 @@ useEffect(() => {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -872,3 +1050,7 @@ useEffect(() => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

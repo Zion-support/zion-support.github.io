@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import {glob} from 'glob'; const typeFixes = [ { pattern: /strin\s+g/g,replacement: 'string' },{ pattern: /numbe\s+r/g,replacement: 'number' },{ pattern: /boolea\s+n/g,replacement: 'boolean' },{ pattern: /ClassValu\s+e/g,replacement: 'ClassValue' },{ pattern: /EmergingTechService202\s+7/g,replacement: 'EmergingTechService2027' },{ pattern: /EMERGING_TECH_SERVICES_202\s+7/g,replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes && typeFixes.forEach(fix => { const newContent = fixedContent && fixedContent.replace(fix && fix.pattern,fix && fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs && fs.writeFileSync(filePath,fixedContent,'utf8');  return true} return false} catch (error) { console && console.error(`Error fixing ${filePath}:`,error && error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process && process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } } main().catch(console && console.error);
@@ -10,6 +11,8 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
@@ -113,6 +116,7 @@ main().catch(console && console.error);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/fix-type-names.js
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -127,3 +131,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

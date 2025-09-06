@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -12,6 +13,23 @@ import {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from "next",
+import fs from "fs-extra";
+import path from "path";
+import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
+import { v4 as uuidv4 } from "uuid";
+const REDEMPTIONS_FILE = null;
+  return res.status(201).json({ id: record.id, redeemedAt: now })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs - extra';
+import path from 'path';
+import {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -24,6 +42,7 @@ const REDEMPTIONS_FILE = path.join(
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
+<<<<<<< HEAD
 <<<<<<< HEAD
 ) {;
   const started = Date.now();
@@ -41,6 +60,16 @@ export default async function handler(
 <<<<<<< HEAD
 =======
 =======
+=======
+) {
+  if (!auth) {
+    return res && res.status(401).json({ error: 'Unauthorized' });
+  }
+  if (!(await enforceRateLimit(auth && auth.apiKey))) {
+    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 429);
+    return res && res.status(429).json({ error: 'Rate limit exceeded' });
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   if (req && req.method !== 'POST') {
     res && res.setHeader('Allow', 'POST');
@@ -51,15 +80,23 @@ export default async function handler(
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
     return res && res.status(400).json({ error: 'Missing required fields' });
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
+=======
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return res.status(405).json({ error: 'Method Not Allowed' });  }
   const { studentEmail, grantCode, courseId } = req.body |{}
   if (!studentEmail |!grantCode |!courseId) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
     return res.status(400).json({ error: 'Missing required fields' });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -99,6 +136,8 @@ redeemedAt: now
   return res.status(201).json({ id: record.id, redeemedAt: now });  return res.status(201).json({ id: record.id, redeemedAt: now })
 }
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -109,7 +148,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const started = Date.now();
   try {
   const started = Date && Date.now();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const auth = await authenticateRequest(req);
   if (!auth) {
     return res && res.status(401).json({ error: "Unauthorized" });
@@ -117,6 +159,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!(await enforceRateLimit(auth && auth.apiKey))) {
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 429);
     return res && res.status(429).json({ error: "Rate limit exceeded" })
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
   if (req.method !== "POST") {
@@ -126,17 +169,31 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+    return res.status(405).json({ error: 'Method Not Allowed' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { studentEmail, grantCode, courseId } = req.body |{}
   if (!studentEmail |!grantCode |!courseId) {
   const { studentEmail, grantCode, courseId } = req.body || {};
   if (!studentEmail || !grantCode || !courseId) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+<<<<<<< HEAD
     return res.status(400).json({ error: 'Missing required fields' });
   await fs.ensureDir(path.dirname(REDEMPTIONS_FILE));
   const records = (await fs.pathExists(REDEMPTIONS_FILE))
     ? await fs.readJSON(REDEMPTIONS_FILE)
 <<<<<<< HEAD
 =======
+=======
+return res.status(400).json({ error: 'Missing required fields' });
+  }
+  await fs.ensureDir(path.dirname(REDEMPTIONS_FILE));
+  const records = (await fs.pathExists(REDEMPTIONS_FILE))
+    ? await fs.readJSON(REDEMPTIONS_FILE)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
@@ -145,17 +202,32 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const { studentEmail, grantCode, courseId } = req.body || {};
   if (!studentEmail || !grantCode || !courseId) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     : [];
   const now = new Date().toISOString();
   const record = {
     id: uuidv4(),
+<<<<<<< HEAD
     partnerId: auth && auth.partner.id,
+=======
+<<<<<<< HEAD
+    partnerId: auth && auth.partner.id,
+=======
+    partnerId: auth.partner.id,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     studentEmail,
     grantCode,
     courseId,
     redeemedAt: now,
   };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   records && records.push(record);
   await fs && fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201);
@@ -163,10 +235,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
     return res.status(400).json({ error: "Missing required fields" })
   }
@@ -286,4 +361,13 @@ redeemed_at: now,
 }
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  records.push(record);
+  await fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 });
+  await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
+  return res.status(201).json({ id: record.id, redeemedAt: now });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react";
@@ -19,6 +20,8 @@ import { AppPlatform } from "./MetadataManager";
 import React, { useState } from "react",
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -37,11 +40,14 @@ import { AppPlatform } from "./MetadataManager",
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ChangelogManagerProps {
   platform: AppPlatform
 }
@@ -64,6 +70,7 @@ type ChangelogEntry = {
   changes: string;
 }) => {
   const [entries, setEntries] = useState<ChangelogEntry[]>([
+<<<<<<< HEAD
 <<<<<<< HEAD
     {
 <<<<<<< HEAD
@@ -250,6 +257,9 @@ import React, { useState } from "react",;
 =======
     {import React, { useState } from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    {import React, { useState } from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -322,6 +332,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 placeholder="Version (e && e.g. 1 && 1.0.1)"
                 name="version"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 value={newEntry && newEntry.version}
 <<<<<<< HEAD
                 onChange={handleInputChange}
@@ -344,6 +355,9 @@ value={newEntry.date}
 =======
                 value={newEntry && newEntry.version}                onChange={handleInputChange}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                value={newEntry && newEntry.version}                onChange={handleInputChange}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               />
             </div>
             <Button
@@ -352,6 +366,7 @@ onClick={handleAddEntry}
               onClick={handleAddEntry}
 
               disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               disabled={!newEntry.version || !newEntry.changes}
@@ -374,6 +389,8 @@ onClick={handleAddEntry}
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               onClick={handleAddEntry}
 
             <Button
@@ -409,6 +426,7 @@ onClick={handleAddEntry}
             name="changes"
             value={newEntry && newEntry.changes}
             onChange={handleInputChange}
+<<<<<<< HEAD
 <<<<<<< HEAD
             rows={3}
 <<<<<<< HEAD
@@ -606,6 +624,13 @@ onClick={handleAddEntry}
     </Card>;
   )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            rows={3}          </div>;
+        </div>;
+      </CardContent>;
+    </Card>;
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
   ),;
 },; interface ChangelogManagerProps {

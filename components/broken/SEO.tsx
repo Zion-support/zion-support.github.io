@@ -1,7 +1,34 @@
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 {
   /* Robots Meta */
+=======
+import React, { useEffect } from 'react';
+import Head from 'next/head';
+interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string | string[],
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'product',
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[],
+  structuredData?: any;
+  noindex?: boolean;
+  nofollow?: boolean
+}
+
+const SEO: React.FC<SEOProps> = ({
+  title;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }{
   noindex && <meta name="robots" content="noindex" />
 }{
@@ -226,6 +253,7 @@ const SEO: React.FC<SEOProps> = ({
     : `https://ziontechgroup.com${url}`;
   const fullImage = image.startsWith('http')
     ? image
+<<<<<<< HEAD
     : `https://ziontechgroup.com${image}`;  title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions';
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.';
   keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics';
@@ -240,6 +268,7 @@ const SEO: React.FC<SEOProps> = ({
   section;
   tags = [];
   structuredData;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -359,6 +388,23 @@ const SEO: React.FC < SEOProps> = ({
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+    : `https://ziontechgroup.com${image}`;
+
+  return (
+    <Head>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
+<meta name='description' content={description} />
+      <meta
+        name='keywords'
+        content={Array.isArray(keywords) ? keywords.join(', ') : keywords}
+      />
+      <meta name='author' content={author} />
+      <meta name='robots' content={noindex ? 'noindex' : 'index'} />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {nofollow && <meta name='robots' content='nofollow' />}
       {noindex && <meta name='robots' content='noindex' />}
       {nofollow && <meta name='robots' content='nofollow' />}
@@ -474,11 +520,14 @@ const SEO: React.FC < SEOProps> = ({
       <meta name='apple - mobile - web - app - title' content='Zion Tech Group' />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Structured Data */}
       <script;
         type='application / ld + json';
@@ -653,6 +702,7 @@ const SEO: React.FC < SEOProps> = ({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -663,6 +713,8 @@ const SEO: React.FC < SEOProps> = ({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
 
@@ -706,10 +758,12 @@ const SEO: React.FC < SEOProps> = ({
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
+<<<<<<< HEAD
             __html: JSON && JSON.stringify(structuredData),          }}
         />;
       )}
     </Head>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 <<<<<<< HEAD
@@ -744,18 +798,31 @@ const SEO: React.FC < SEOProps> = ({
 
 export default SEO;            __html: JSON && JSON.stringify(structuredData);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  )
+};
+
+export default SEO;            __html: JSON && JSON.stringify(structuredData);
+=======
+            __html: JSON.stringify(structuredData),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }}
         />
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     </Head>
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 export default SEO;  )
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -769,6 +836,8 @@ export default SEO;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </Head>
     </Head>
 
@@ -883,4 +952,14 @@ export default SEO);
 ;
 export default SEO;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+    </Head>
+);
+};
+
+export default SEO;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

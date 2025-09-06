@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -11,6 +12,8 @@
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect  } from './react';
 import { Skill  } from '@/types / resume';
 import { SkillCategory  } from './SkillCategory';
@@ -22,6 +25,7 @@ interface SkillsListProps {
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) =>: any {
   const [skillsByCategory, setSkillsByCategory] = useState<;
     Record < string, Skill[]>;
+<<<<<<< HEAD
   >({});
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,6 +69,9 @@ import { Skill  } from '@/types / resume';
 import { SkillCategory  } from './SkillCategory';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface SkillsListProps {
+=======
+  >({});interface SkillsListProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   skills: Skill[];
   onDeleteSkill: (id: string, category: string) => Promise < void>;
 
@@ -79,10 +86,14 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) =>: any {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
   const [skillsByCategory, setSkillsByCategory] = useState<
     Record<string, Skill[]>
   >({});
+<<<<<<< HEAD
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
   
@@ -116,10 +127,14 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   useEffect(() => {
     // Group skills by category
     const grouped = skills.reduce(
       (acc, skill) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -148,6 +163,8 @@ if ( {) {
 =======
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return null
 
 =======
@@ -259,6 +276,7 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
 <<<<<<< HEAD
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
 
@@ -339,6 +357,10 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
       },
       {} as Record < string, Skill[]>,

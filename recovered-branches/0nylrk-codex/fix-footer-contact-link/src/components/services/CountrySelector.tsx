@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -17,6 +18,8 @@ import {CountryPricing, onsiteServicePricing} from "@/data/onsiteServicePricing"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from "react",
 import { Globe } from "lucide-react",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -24,6 +27,7 @@ import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricin
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -79,6 +83,8 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       popular.includes(item.country)
     ).sort((a, b) => a.country.localeCompare(b.country));
     setTopCountries(top)
@@ -94,6 +100,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
 =======
   }, []);
   }, []),
+<<<<<<< HEAD
 <<<<<<< HEAD
   
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -128,6 +135,13 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    // Handle country selection
+  const handleCountryChange = (countryName: string) => {
+    const country = onsiteServicePricing.find(item => item.country === countryName) |null
+    onCountryChange(country)
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="mb-6">
       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
@@ -135,11 +149,15 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
         {selectedCountry ? `IT Onsite Service in ${selectedCountry.country}` : "Select Country for IT Onsite Service"}
       </h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       <Select 
         onValueChange={handleCountryChange} 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -159,6 +177,8 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         value={selectedCountry?.country}
       >
         <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
@@ -168,6 +188,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
           <div className="p-2 border-b border-zion-blue-light">
             <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>
             {topCountries.map((item) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
               <SelectItem key={item.country} value={item.country} className="text-white">
 <<<<<<< HEAD
@@ -192,6 +213,9 @@ import { useState, useEffect } from "react",;
 =======
               <SelectItem key={item.country} value={item.country} className="text-white">import { useState, useEffect } from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <SelectItem key={item.country} value={item.country} className="text-white">import { useState, useEffect } from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Globe } from "lucide-react",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",;
@@ -199,6 +223,7 @@ interface CountrySelectorProps {;
   onCountryChange: (country: CountryPricing | null) => void,;
   selectedCountry: CountryPricing | null;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -358,6 +383,8 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>;
         </SelectContent>;
       </Select>;
@@ -391,6 +418,7 @@ return (<div className="mb-6" > <h3 className="text-xl font-semibold text-white 
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -398,3 +426,6 @@ return (<div className="mb-6" > <h3 className="text-xl font-semibold text-white 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

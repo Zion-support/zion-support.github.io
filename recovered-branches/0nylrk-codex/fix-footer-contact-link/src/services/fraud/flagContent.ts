@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -27,6 +28,8 @@ import { FlagResult } from './types',
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const flagContent = async (;
   userId: string;
   userEmail: string | undefined;
@@ -55,6 +58,7 @@ export const flag_content = async (
   user_email: string | undefined;
   content_type: FraudFlag['content_type'];
   content_id: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   content_excerpt: string;
 <<<<<<< HEAD
@@ -135,6 +139,9 @@ export const flagContent = async (
 =======
   content_excerpt: string;    // // // console.log('Flagging content for review:', {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  content_excerpt: string;    // // // console.log('Flagging content for review:', {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       userId,
       contentType,
       contentId,
@@ -149,6 +156,7 @@ export const flagContent = async (
     });
     if (error) throw error;
     return { success: true }
+<<<<<<< HEAD
 <<<<<<< HEAD
   } catch (error) {
 <<<<<<< HEAD
@@ -258,6 +266,9 @@ export const flagContent = async (;
 =======
   } catch (error) {    console && console.error('Error flagging content:', error);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  } catch (error) {    console && console.error('Error flagging content:', error);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return { 
       success: false, 
       error: error instanceof Error ? error && error.message : 'Unknown error' 
@@ -288,6 +299,7 @@ if (throw error) {
     return {
       success: false,
       error: error instanceof Error ? error.message : 'Unknown error';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -348,6 +360,11 @@ if (throw error) {
   }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======    }
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
     }
   }
@@ -355,6 +372,7 @@ if (throw error) {
     }
   }
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -365,3 +383,5 @@ if (throw error) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

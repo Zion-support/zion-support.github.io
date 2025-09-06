@@ -1,5 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogDescription,;
+  DialogFooter,;
+  DialogHeader,;
+  DialogTitle,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
 import {
   Dialog
@@ -9,6 +21,7 @@ import {
   DialogHeader
   DialogTitle
 import React, { useState } from "react";
+<<<<<<< HEAD
 import {
   Dialog,
   DialogContent,
@@ -60,6 +73,8 @@ import {
   DialogHeader
   DialogTitle
 import React, { useState } from "react";
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {;
   Dialog,;
@@ -76,6 +91,7 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 
 import { Switch } from "@/components/ui/switch";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { toast } from "sonner";
 <<<<<<< HEAD
@@ -204,6 +220,9 @@ export function IntegrationConnectionModal(): any ({;
 =======
 import { toast } from "sonner";    // In a real application, this would revoke the OAuth token;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { toast } from "sonner";    // In a real application, this would revoke the OAuth token;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     toast && toast.info(`Disconnected from ${integration && integration.name}`);
     onClose()
 };
@@ -214,6 +233,7 @@ import { toast } from "sonner";    // In a real application, this would revoke t
 
     onClose();
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -229,6 +249,8 @@ import { toast } from "sonner";    // In a real application, this would revoke t
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleConnectOAuth = () => {
     setIsConnecting(true);
     // Simulate OAuth flow
@@ -293,10 +315,13 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
   const [isConnecting, setIsConnecting] = useState(false),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [syncSettings, setSyncSettings] = useState({
     autoCreateContacts: true,
     pushNotes: false,
@@ -351,6 +376,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
   
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -362,6 +388,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-md">;
@@ -372,6 +400,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
             className="h-12 w-12 rounded"
             onError={(e) => {;
               (e && e.target as HTMLImageElement).src = "/placeholder && placeholder.svg";
+<<<<<<< HEAD
 <<<<<<< HEAD
             }}
 <<<<<<< HEAD
@@ -425,6 +454,9 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 =======
             }}            </DialogDescription>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            }}            </DialogDescription>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
         </DialogHeader>
 
@@ -435,6 +467,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
         {(integration.status === "connected" || integration.status === "warning") ? (
 
         {(integration.status === "connected" || integration.status === "warning") ? (
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -506,16 +539,25 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
           <>
             <div className="grid gap-4 py-4">
               <div className="space-y-4">
+=======
+          <>
+            <div className="grid gap-4 py-4">
+              <div className="space-y-4">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <h3 className="text-sm font-medium">Sync Settings</h3>                  <Checkbox 
                     id="autoCreateContacts" 
                     checked={syncSettings.autoCreateContacts} 
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, autoCreateContacts: checked as boolean})                    }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   />
                   <Label htmlFor="autoCreateContacts">
                     Auto-create contacts in {integration.name}
                   </Label>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>
 <<<<<<< HEAD
@@ -560,6 +602,9 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 =======
                 </div>                  <Checkbox 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                </div>                  <Checkbox 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     id="pushNotes" 
                     checked={syncSettings.pushNotes} 
                     onCheckedChange={(checked) => 
@@ -567,6 +612,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                     }
                   />
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>
 <<<<<<< HEAD
@@ -610,12 +656,16 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 =======
                 </div>                  <Checkbox 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                </div>                  <Checkbox 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     id="syncJobDetails" 
                     checked={syncSettings.syncJobDetails} 
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, syncJobDetails: checked as boolean})                    }
                   />
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>
 <<<<<<< HEAD
@@ -662,6 +712,9 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 =======
                 </div>                  <Checkbox 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                </div>                  <Checkbox 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     id="syncApplicantData" 
                     checked={syncSettings.syncApplicantData} 
                     onCheckedChange={(checked) => 
@@ -670,6 +723,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                   />
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               </div>
 <<<<<<< HEAD
@@ -985,6 +1039,9 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration } Inte
 =======
               </div>              </Button>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              </div>              </Button>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <Button onClick={handleSaveSettings} type="button">
                 Save Settings
               </Button>
@@ -993,6 +1050,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration } Inte
         ) : (
           <>
             <div className="space-y-4 py-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
               <p className="text-sm">
 <<<<<<< HEAD
@@ -1060,12 +1118,16 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration } Inte
 =======
               <p className="text-sm">            <DialogFooter>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <p className="text-sm">            <DialogFooter>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <Button onClick={handleConnectOAuth} disabled={isConnecting}>
                 {isConnecting
                   ? "Connecting..."
                   : `Connect to ${integration.name}`}
               </Button>
             </DialogFooter>
+<<<<<<< HEAD
 <<<<<<< HEAD
           </>
 <<<<<<< HEAD
@@ -1302,6 +1364,9 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 =======
           </>  last_sync?: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          </>  last_sync?: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 interface IntegrationConnectionModalProps {
   is_open: boolean;
@@ -1483,6 +1548,7 @@ function IntegrationConnectionModal() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -1543,3 +1609,5 @@ return (<Dialog open= {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

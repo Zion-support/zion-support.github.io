@@ -1,4 +1,16 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',
+=======
+import type { NextApiRequest, NextApiResponse } from 'next'
+>>>>>>> main
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 export default async /**
  * handler - Function description
@@ -33,12 +45,30 @@ function escape_html() {
   const base64 = Buffer.from(html, 'utf-8').toString('base64')
   const url = `data: text/html,base64,${base64}`
 
+<<<<<<< HEAD
+=======
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { markdown, tokenName } = req.body || {},
+  if (!markdown || !tokenName) return res.status(400).json({ error: 'Missing markdown or tokenName' });
+  // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
+  const html = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  res.status(200).json({ url })
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 function escapeHtml(str: string) {
   return String(str)
     .replace(/&/g, '&amp,')
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 
@@ -78,3 +108,24 @@ function escape_html() {
   const url = `data: text/html,base64,${base64}`,
   res.status(200).json({ url })
 
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+function escapeHtml(str: string) {
+  return String(str)
+    .replace(/&/g, '&amp,')
+    .replace(/</g, '&lt,')
+    .replace(/>/g, '&gt,')
+};
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

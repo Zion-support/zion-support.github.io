@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -45,10 +46,15 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!requireSuperadminApi(req, res)) return;
+=======
+  if (!requireSuperadminApi(req, res)) return;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (req && req.method === 'GET') {
     const offerings = readJsonFile('deal/offerings && offerings.json', { safe: true, equity: true, token: false });
     return res && res.status(200).json(offerings)
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   if (req && req.method === 'POST') {
@@ -65,6 +71,8 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return res.status (200).json (offerings);
   }
   // Check condition
@@ -104,6 +112,7 @@ if ( {) {
     return res.status (200).json (offerings);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 return res.status (405).json ({ error: 'Method not allowed' });
 
 }
@@ -112,9 +121,21 @@ return res.status (405).json ({ error: 'Method not allowed' });
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return res.status(405).json({ error: 'Method not allowed' });
 }
 
 return res.status (405).json ({ error: 'Method not allowed' });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(200).json(offerings)
+  }
+return res.status(405).json({ error: 'Method not allowed' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

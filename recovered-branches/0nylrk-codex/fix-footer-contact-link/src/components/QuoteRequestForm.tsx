@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -9,6 +10,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from "react";
 import {useToast} from "@/hooks/use-toast";
 import {useNavigate} from "react-router-dom";
@@ -27,6 +30,7 @@ export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | 
 <<<<<<< HEAD
 export function QuoteRequestForm() {
 
+<<<<<<< HEAD
 export function QuoteRequestForm() {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -49,10 +53,15 @@ export function QuoteRequestForm() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function QuoteRequestForm() {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const navigate = useNavigate();
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -112,6 +121,9 @@ export function QuoteRequestForm() {
 =======
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
     serviceCategory: ""
@@ -124,6 +136,7 @@ export function QuoteRequestForm() {
     budget: {
       amount: 0
       type: "fixed"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -177,11 +190,16 @@ export function QuoteRequestForm() {
 
     },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const updateFormData = (data: Partial<QuoteFormData>) => {
     setFormData(prev => ({
       ...prev
       ...data
     }))
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -241,6 +259,12 @@ export function QuoteRequestForm() {
   },
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }
+  }
+  },
+  
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const handleNext = () => {
     switch (currentStep) {
@@ -276,10 +300,13 @@ export function QuoteRequestForm() {
   const handleNext = () => {;
     switch (currentStep) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       case "service": setCurrentStep("details");
         break;
       case "details":;
@@ -294,6 +321,7 @@ export function QuoteRequestForm() {
       default:;
         break;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -311,15 +339,25 @@ export function QuoteRequestForm() {
 =======
 
   const handleBack = () => {
+=======
+
+  },
+  
+
+  const handleBack = () => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     switch (currentStep) {  };
 
   const handleBack = () => {;
     switch (currentStep) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       case "details": setCurrentStep("service");
         break;
       case "timeline":;
@@ -336,6 +374,7 @@ export function QuoteRequestForm() {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -350,6 +389,9 @@ export function QuoteRequestForm() {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleSubmit = async () => {
     setIsSubmitting(true);
     try {
@@ -367,6 +409,7 @@ export function QuoteRequestForm() {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500)),
       
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -381,6 +424,9 @@ export function QuoteRequestForm() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       toast({
         title: "Quote Request Submitted"
         description: "We've received your request and will get back to you soon."})
@@ -393,6 +439,7 @@ export function QuoteRequestForm() {
         variant: "destructive"})    } finally {
       setIsSubmitting (false);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -482,6 +529,9 @@ export function QuoteRequestForm() {
 =======
   }        return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }        return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       case "details":;
         return <ProjectDetailsStep formData={formData} updateFormData={updateFormData} />;
       case "timeline":;
@@ -497,6 +547,7 @@ export function QuoteRequestForm() {
   
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -505,6 +556,8 @@ export function QuoteRequestForm() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-3xl mx-auto">
@@ -551,6 +604,7 @@ export function QuoteRequestForm() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -849,6 +903,8 @@ export function QuoteRequestForm() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="container mx-auto px-4 py-12">;
       <div className="max-w-3xl mx-auto">;
         <div className="text-center mb-8">;
@@ -874,6 +930,7 @@ export function QuoteRequestForm() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -896,6 +953,8 @@ export function QuoteRequestForm() {;
               {currentStep !== "summary" ? (;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <Button
                   onClick={handleNext}
                   className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
@@ -913,10 +972,13 @@ export function QuoteRequestForm() {;
         </Card>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>;
   );
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
 ;
@@ -970,6 +1032,7 @@ return (<div className="container mx-auto px-4 py-12" > <div className="max-w-3x
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -982,3 +1045,5 @@ return (<div className="container mx-auto px-4 py-12" > <div className="max-w-3x
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

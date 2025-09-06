@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,6 +19,9 @@ export function useJobMatches(jobId: string) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -26,6 +30,7 @@ import { JobMatch } from "@/types/jobs",
 export function useJobMatches(jobId: string) {
   const [matches, setMatches] = useState<JobMatch[]>([]),
   const [isLoading, setIsLoading] = useState(true),
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [isProcessing, setIsProcessing] = useState(false),
 <<<<<<< HEAD
@@ -109,6 +114,9 @@ function useJobMatches() {
 =======
   const [isProcessing, setIsProcessing] = useState(false),          talent_profile:talent_id(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [isProcessing, setIsProcessing] = useState(false),          talent_profile:talent_id(
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             id,
             user_id,
             full_name,
@@ -117,6 +125,7 @@ function useJobMatches() {
             hourly_rate,
             bio,
             years_experience,
+<<<<<<< HEAD
 <<<<<<< HEAD
             key_projects,
 <<<<<<< HEAD
@@ -136,12 +145,16 @@ function useJobMatches() {
 =======
             key_projects,            skills
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            key_projects,            skills
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           )
         `)
         .eq("job_id", jobId)  const triggerAIMatching = async () => {
     setIsProcessing(true),
     try {
       const response = await supabase.functions.invoke('job-talent-matcher', {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -164,11 +177,14 @@ function useJobMatches() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Refresh the matches list
       await fetchMatches()
     } catch (error) {
       console && console.error("Error triggering AI matching:", error);
       toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -414,6 +430,10 @@ export function useJobMatches(jobId: string) {;
   }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
       if (throw new Error (response.error.message)) {
   $2
@@ -452,6 +472,7 @@ export function useJobMatches(jobId: string) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
@@ -469,3 +490,6 @@ export function useJobMatches(jobId: string) {;
 =======
 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

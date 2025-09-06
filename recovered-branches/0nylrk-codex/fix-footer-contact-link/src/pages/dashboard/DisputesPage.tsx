@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -14,6 +15,8 @@ import React from 'react';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { SEO  } from '@/components/SEO';
 import { AppHeader  } from '@/layout/AppHeader';
 import { Footer  } from '@/components/Footer';
@@ -58,6 +61,7 @@ import { AppHeader } from '@/layout/AppHeader',
 import { Footer } from '@/components/Footer',
 import { DisputeDashboard } from '@/components/disputes',
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ProtectedRoute } from '@/components/ProtectedRoute',
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -86,6 +90,9 @@ function DisputesPage() {
 =======
 import { ProtectedRoute } from '@/components/ProtectedRoute',function DisputesPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { ProtectedRoute } from '@/components/ProtectedRoute',function DisputesPage() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <ProtectedRoute>
       <>
@@ -103,6 +110,7 @@ import { ProtectedRoute } from '@/components/ProtectedRoute',function DisputesPa
 
         <SEO
           title="Dispute Resolution Center | Zion AI Marketplace"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           description="View and manage disputes between clients and talents"
@@ -127,6 +135,8 @@ function DisputesPage() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           description="View and manage disputes between clients and talents"
 import React from 'react';
 import {SEO} from '@/components / SEO';
@@ -145,6 +155,7 @@ function DisputesPage() {
           title="Dispute Resolution Center | Zion AI Marketplace";
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -179,6 +190,8 @@ export default DisputesPage;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -186,6 +199,7 @@ export default DisputesPage;
 
 ;
 export default DisputesPage;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -197,3 +211,5 @@ export default DisputesPage;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

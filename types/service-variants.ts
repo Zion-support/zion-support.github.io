@@ -265,6 +265,7 @@ export default function Servicevariants({ }: ServicevariantsProps) {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -290,6 +291,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export type ServiceVariant =
 <<<<<<< HEAD
 =======
@@ -298,9 +301,12 @@ export type ServiceVariant =
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   | 'default'
+<<<<<<< HEAD
 =======
 export type ServiceVariant =  | 'default'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   | 'holographic'
   | 'quantum'
   | 'cyberpunk'
@@ -520,6 +526,7 @@ export type ServiceVariant =  | 'default'
   | 'real - estate - futuristic';
   | 'industrial - futuristic';
 <<<<<<< HEAD
+<<<<<<< HEAD
   | 'neural - futuristic';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -671,3 +678,6 @@ export interface ServiceVariantConfig {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+  | 'neural - futuristic';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

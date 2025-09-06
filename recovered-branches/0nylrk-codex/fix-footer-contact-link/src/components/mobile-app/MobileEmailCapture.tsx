@@ -48,6 +48,7 @@ if (return) {
     setIsSubmitting(true),;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {;
@@ -232,10 +233,14 @@ export const MobileEmailCapture:React.FC = () => {;
 =======
   },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <Input
               type="email"
               placeholder="Enter your email address"
               value={email}
+<<<<<<< HEAD
 <<<<<<< HEAD
               onChange={(e) => setEmail(e.target.value)}
               className="flex-grow bg-zion-blue-dark/70 text-white border-zion-purple/30 placeholder:text-gray-400"
@@ -354,6 +359,8 @@ export const MobileEmailCapture: React.FC = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setIsSubmitting (false);
     }
   }
@@ -390,6 +397,7 @@ export const MobileEmailCapture: React.FC = () => {;
           </p>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>;
 <<<<<<< HEAD
     </section>;
@@ -411,6 +419,9 @@ export const MobileEmailCapture: React.FC = () => {;
 =======
       </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
     </section>);
 }
@@ -440,6 +451,7 @@ return (<section className=" py-16 bg-gradient-to-r from-zion-blue-dark to-zion-
   )
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -447,3 +459,6 @@ return (<section className=" py-16 bg-gradient-to-r from-zion-blue-dark to-zion-
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

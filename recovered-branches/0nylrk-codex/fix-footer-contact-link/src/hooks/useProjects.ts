@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -26,6 +27,10 @@ export function useProjects() {;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
@@ -41,6 +46,7 @@ export function useProjects() {
   const { user } = useAuth(),
   const [projects, setProjects] = useState<Project[]>([]),
   const [isLoading, setIsLoading] = useState(true),
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [error, setError] = useState<string | null>(null),
 <<<<<<< HEAD
@@ -98,10 +104,14 @@ export function useProjects() {
 =======
   const [error, setError] = useState<string | null>(null),      // Build the query based on user type
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [error, setError] = useState<string | null>(null),      // Build the query based on user type
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // For clients, get projects they created
       // For talents, get projects they're hired for
       let query = supabase
         .from("projects")
+<<<<<<< HEAD
 <<<<<<< HEAD
         .select(`
 <<<<<<< HEAD
@@ -207,6 +217,12 @@ if (user && user.userType === "jobSeeker" || user && user.userType === "creator"
         query = query.eq("client_id", user.id)
       }      // Transform the data to match our project types
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        .select(`        query = query.eq("talent_id", user.id)
+      } else if (user.userType === "employer" |user.userType === "buyer") {
+        query = query.eq("client_id", user.id)
+      }      // Transform the data to match our project types
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const transformedData = data && data.map((project: any) => ({
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
@@ -269,9 +285,12 @@ if (throw fetch_error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         talent_profile: project && project.talent_profile ? {
           ...project && project.talent_profile,
@@ -291,6 +310,7 @@ if (throw fetch_error) {
 
 ;
   const getProjectById = async (project_id: string): Promise < Project | null> => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -321,6 +341,8 @@ if (throw fetch_error) {
     try {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const { data, error } = await supabase;
         .from ("projects");
         .select (`;
@@ -333,6 +355,7 @@ if (throw fetch_error) {
     } catch (err: any) {
       console.error("Error fetching projects:", err),
       setError("Failed to fetch projects: " + err.message),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -359,11 +382,14 @@ if (throw fetch_error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const getProjectById = async (projectId: string): Promise<Project | null> => {
     try {
       const { data, error } = await supabase
         .from("projects")
         .select(`
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -383,6 +409,8 @@ if (throw fetch_error) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           *,
           job:jobs(title, description),
           talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url),
@@ -393,6 +421,7 @@ if (throw fetch_error) {
       
       if (error) throw error,
       
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -403,6 +432,8 @@ if (throw fetch_error) {
 =======
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       // Transform the data to match our project types
       const transformedProject = {          job:jobs (title, description);
@@ -422,6 +453,7 @@ if (throw error) {
 
         talent_profile: data && data.talent_profile ? {
           ...data && data.talent_profile,
+<<<<<<< HEAD
 <<<<<<< HEAD
           full_name: data && data.talent_profile.display_name
 
@@ -542,10 +574,18 @@ if (throw error) {
         .from("projects")
         .update({ status })      return true
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          full_name: data && data.talent_profile.display_name  const updateProjectStatus = async (projectId: string, status: ProjectStatus): Promise<boolean> => {
+    try {
+      const { error } = await supabase
+        .from("projects")
+        .update({ status })      return true
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (err: any) {
       console && console.error("Error updating project status:", err);
       toast && toast.error("Failed to update project status");
       return false
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -559,6 +599,9 @@ if (throw error) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           ...data.talent_profile,
           full_name: data.talent_profile.display_name;
         } : undefined;
@@ -571,6 +614,7 @@ if (throw error) {
       return null;  return {
     projects;
     is_loading;
+<<<<<<< HEAD
 <<<<<<< HEAD
     error;
 <<<<<<< HEAD
@@ -812,4 +856,7 @@ updateProjectStatus
 =======
     error;  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    error;  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }

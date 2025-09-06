@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare module "cmdk";
 declare module "@radix-ui/react-context-menu";
 declare module "vaul";
@@ -41,6 +42,9 @@ declare module 'react - day - picker' {
 =======
 declare module '@tanstack/react-query';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+declare module '@tanstack/react-query';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 declare module '@tanstack/react-query';
 
   export interface DateRange {
@@ -54,6 +58,7 @@ declare module '@tanstack/react-query';
   // eslint - disable - next - line @typescript - eslint / no - explicit - any;
   export const DayPicker: any;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -78,6 +83,8 @@ declare module '@tanstack/react-query';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 declare module "cmdk",
 declare module "@radix-ui/react-context-menu",
 declare module "vaul",
@@ -89,6 +96,7 @@ declare module "@radix-ui/react-navigation-menu",
 declare module "react-resizable-panels",
 declare module "@radix-ui/react-toggle-group",
 declare module "@radix-ui/react-toggle",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -112,16 +120,24 @@ declare module 'react-day-picker' {
 
 declare module '@tanstack/react-query',
 declare module 'react-day-picker' {
+=======
+
+declare module '@tanstack/react-query',
+declare module 'react-day-picker' {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 declare module '@tanstack/react-query',
 declare module 'react-day-picker' {
 
 declare module '@tanstack/react-query',
 declare module 'react-day-picker' {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 declare module "cmdk",;
 declare module "@radix-ui/react-context-menu",;
 declare module "vaul",;
@@ -138,6 +154,7 @@ declare module 'react-day-picker' {;
   export interface DateRange {;
     from?: Date,;
 <<<<<<< HEAD
+<<<<<<< HEAD
     to?: Date;
 <<<<<<< HEAD
 =======
@@ -153,6 +170,9 @@ declare module 'react-day-picker' {;
 =======
     to?: Date
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    to?: Date
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
 declare module 'sonner';
@@ -164,6 +184,7 @@ import {FC, SVGProps} from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   export interface DateRange {;
     from?: Date;
+<<<<<<< HEAD
 <<<<<<< HEAD
     to?: Date
 =======
@@ -191,11 +212,15 @@ declare module 'lucide-react' {
 =======
     to?: Datedeclare module 'lucide-react' {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    to?: Datedeclare module 'lucide-react' {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {FC, SVGProps} from 'react';
 
   export type LucideProps = SVGProps < SVGSVGElement>;
   export type LucideIcon = FC < LucideProps>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 
@@ -438,6 +463,9 @@ import {FC, SVGProps} from 'react';
 =======
 ;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 declare module 'child_process';
 declare module 'date - fns';
 declare module 'jspdf' {
@@ -476,6 +504,7 @@ declare module 'clsx' {
   export type ClassValue = any;
   export default function clsx (...classes: ClassValue[]): string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 declare module 'embla - carousel - react';
 =======
@@ -921,6 +950,9 @@ declare module 'react-hook-form' {
 =======
 declare module 'embla - carousel - react';  export interface UseFormReturn<
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+declare module 'embla - carousel - react';  export interface UseFormReturn<
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   export interface UseFormReturn<;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -938,6 +970,7 @@ declare module 'embla - carousel - react';  export interface UseFormReturn<
   export function useFieldArray<
     TFieldValues extends FieldValues = FieldValues;
   >(options: any): any
+<<<<<<< HEAD
 <<<<<<< HEAD
   export interface ControllerProps<
 <<<<<<< HEAD
@@ -1334,6 +1367,9 @@ declare module 'react-hook-form' {;
 =======
   export interface ControllerProps<  > {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  export interface ControllerProps<  > {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     name: TName;
     control?: Control < TFieldValues>;
     rules?: any;
@@ -1373,6 +1409,7 @@ declare module 'recharts';
 
 declare module 'react - i18next';
 declare module 'react-dom / client';
+<<<<<<< HEAD
 <<<<<<< HEAD
   // eslint-disable-next-line @typescript-eslint/no-explicit-any;
   export const DayPicker:any;
@@ -1723,3 +1760,5 @@ declare module 'react-dom / client';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

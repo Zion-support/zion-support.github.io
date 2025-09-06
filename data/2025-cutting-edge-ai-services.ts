@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
@@ -433,6 +436,10 @@ export const cuttingEdgeAIServices2025 = [
   {
     id: 'ai-consciousness-evolution-pro'
     name: 'AI Consciousness Evolution Pro'
+=======
+id: 'ai-consciousness-evolution-pro',
+    name: 'AI Consciousness Evolution Pro',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Advanced AI consciousness development platform with emotional intelligence, self-awareness, and ethical decision-making capabilities for human-AI collaboration.'
       'Emotional intelligence development with 98% accuracy'
@@ -853,6 +860,7 @@ export const cuttingEdgeAIServices2025 = [
       'Collaboration tools'
     ]
     compliance: [
+<<<<<<< HEAD
       'SOC2'
       'ISO 27001'
       'GDPR'
@@ -901,13 +909,20 @@ export const cuttingEdgeAIServices2025 = [
     compliance: [;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'SOC2',
       'ISO 27001',
       'GDPR',
       'CCPA',
       'Intellectual property protection',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1190,6 +1205,14 @@ export const cuttingEdgeAIServices2025 = [;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  },
+];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

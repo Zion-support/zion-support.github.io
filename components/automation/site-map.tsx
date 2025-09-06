@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )
@@ -10,6 +11,8 @@ type RouteInfo = { path: string, lastModified: string }
 export async function getServerSideProps() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
  <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
 }</tbody> </table> </div> </div>) import fs from 'fs';
@@ -24,6 +27,16 @@ export async function getServerSideProps() {;
     routes = json.routes |[];
     generatedAt = json.generatedAt |''
 
+<<<<<<< HEAD
+=======
+
+=======
+import fs from 'fs';
+import path from 'path';
+type RouteInfo = any;
+    generatedAt = json.generatedAt || ''
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch {}
   return { props: { routes, generatedAt } }
 }
@@ -122,6 +135,7 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
 }
 );
 }
+<<<<<<< HEAD
   );
 }
 
@@ -151,4 +165,9 @@ function SiteMapIntelPage() {
         </table>;
       </div>;
     </div>);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

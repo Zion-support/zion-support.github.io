@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -9,6 +10,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from "react";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -18,6 +21,7 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -69,6 +73,8 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const profileSchema = z.object({
@@ -77,6 +83,7 @@ const profileSchema = z.object({
   headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")}),
 
 type ProfileFormValues = z.infer<typeof profileSchema>,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -92,6 +99,8 @@ type ProfileFormValues = z.infer<typeof profileSchema>,
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues) => void
   userType: string
@@ -118,10 +127,13 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       case "serviceProvider": return "Service Provider",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       case "talent":
         return "Talent",
       case "client":
@@ -129,6 +141,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       default:
         return "User"
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return (
@@ -140,6 +153,13 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
 
   return (
 
+=======
+
+  },
+
+  return (
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <FormField
             control={form.control}
             name="displayName"
@@ -170,6 +190,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(onComplete)} className="space-y-6">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
   }
@@ -177,6 +198,8 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <FormField
             control={form && form.control}
             name="displayName"
@@ -184,6 +207,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
               <FormItem>;
                 <FormLabel className="text-zion-slate-light">Full Name</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <div className="relative">;
 <<<<<<< HEAD
@@ -265,6 +289,9 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
 =======
                   <div className="relative">;                      placeholder={`e && e.g., ${
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  <div className="relative">;                      placeholder={`e && e.g., ${
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
                         userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
                         "Creative Director at XYZ Studios"
@@ -280,11 +307,15 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                     <Input;
                       placeholder="Your full name";
 <<<<<<< HEAD
+<<<<<<< HEAD
                       className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
                       className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion-purple";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                      className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion-purple";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       }`}
                       className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion-purple";
                       {...field}
@@ -324,6 +355,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                     {...field}
                   />;
                 </FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -394,11 +426,14 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           />;
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <Button
             type="submit"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
@@ -472,6 +507,12 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">;          >;
+          </Button>;
+        </form>;
+      </Form>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
     </div>);
@@ -509,6 +550,7 @@ getTypeLabel ()
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -520,3 +562,6 @@ getTypeLabel ()
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 =======
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+=======
+import React, { useEffect, useState } from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React, { useEffect, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout'
@@ -8,6 +14,7 @@ import React, { useEffect, useState } from 'react',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 import React, { useEffect, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -20,6 +27,10 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout'
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 type ProposalListItem = {
   id: string
   title: string
@@ -28,6 +39,7 @@ type ProposalListItem = {
   type: string
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
   createdAt: string
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -54,12 +66,19 @@ type ProposalListItem = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 },
+=======
+},
+=======
+type ProposalListItem = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function InternationalProposalsPage() {
   const [items, setItems] = useState<ProposalListItem[]>([]),
   const [filter, setFilter] = useState('All'),
 
   useEffect__(() => {
     fetch('/api/proposals')
+<<<<<<< HEAD
       .then((r) => r.json())
       .then((d) => setItems(d.items |[]))
       .catch(() => setItems([]))
@@ -72,6 +91,34 @@ export default function InternationalProposalsPage() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+      .then((r) => r.json())
+      .then((d) => setItems(d.items |[]))
+      .catch(() => setItems([]))
+=======
+.then(r => r.json())
+      .then(d => setItems(d.items || []))
+      .catch(() => setItems([]));
+  }, []);
+
+  const filtered = items.filter(i =>
+    filter === 'All' ? true : i.regionalScope === filter
+  );
+
+  return (
+    <EnhancedLayout>
+      <div className='space-y-4'>
+        <h1 className='text-2xl font-semibold'>International Proposals</h1>
+        <div className='flex items-center gap-2 text-sm'>
+          <span>Filter by region:</span>
+          <select
+            className='border rounded px-2 py-1'
+            value={filter}
+            onChange={e => setFilter(e.target.value)}
+          >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <EnhancedLayout>
       <div className="space-y-4">
@@ -87,6 +134,7 @@ export default function InternationalProposalsPage() {
             <option>EU</option>
           </select>
         </div>
+<<<<<<< HEAD
         <div className="divide-y border rounded">
           {filtered.map((i) => (
             <div key={i.id} className="p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
@@ -134,12 +182,77 @@ export default function InternationalProposalsPage() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<div className='divide-y border rounded'>
+          {filtered.map(i => (
+            <div
+              key={i.id}
+              className='p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2'
+            >
+              <div>
+                <div className='font-medium'>{i.title}</div>
+                <div className='text-sm text-gray-600'>
+                  {i.targetInstitution} • {i.type} • {i.regionalScope}
+                </div>
+                <div className='text-xs text-gray-500'>
+                  Created {new Date(i.createdAt).toLocaleString()}
+                </div>
+              </div>
+<<<<<<< HEAD
+              <div className="flex items-center gap-4 text-sm">
+                <span className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800">{i.status}</span>
+=======
+              <div className='flex items-center gap-4 text-sm'>
+                <span className='px-2 py-1 rounded bg-gray-100 dark:bg-gray-800'>
+                  {i.status}
+                </span>
+                <a
+                  className='text-blue-600 underline'
+                  href={`/api/proposals?id=${i.id}`}
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  JSON
+                </a>
+                <a
+                  className='text-blue-600 underline'
+                  href={`/proposals/${i.id}.md`}
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  Markdown
+                </a>
+                <a
+                  className='text-blue-600 underline'
+                  href={`/proposals/${i.id}.pdf`}
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  PDF
+                </a>
+              </div>
+            </div>
+          ))}
+          {filtered.length === 0 && (
+            <div className='p-4 text-sm text-gray-600'>No proposals yet.</div>
+          )}
+        </div>
+        <div className='text-sm text-gray-600'>
+          Community commentary per region coming next. For now, proposals expose
+          a comments API endpoint.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+        </div>
+      </div>
+    </EnhancedLayout>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -187,6 +300,8 @@ type ProposalListItem = {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   created_at: string;
 },
 export default /**
@@ -240,6 +355,7 @@ function InternationalProposalsPage() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -281,3 +397,8 @@ type ProposalListItem = {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

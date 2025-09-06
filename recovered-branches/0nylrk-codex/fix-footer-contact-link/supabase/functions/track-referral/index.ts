@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -13,10 +14,13 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.20.0"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {serve} from "https: //deno && deno.land/std@0 && 0.131.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.20.0",
 import {corsHeaders} from "../_shared/cors ;
 console && console.log("Track Referral function started!");
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -113,6 +117,12 @@ serve(async (req) => {
   if (req && req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders })  );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+serve(async (req) => {
+  // Handle CORS pre-flight request
+  if (req && req.method === 'OPTIONS') {
+    return new Response('ok', { headers: corsHeaders })  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   try {
     // Look up the referrer from the referral code
     const { data: refCodeData, error: refError } = await supabase
@@ -126,6 +136,7 @@ serve(async (req) => {
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
       )
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -196,6 +207,8 @@ serve(async (req) => {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
       )
     }
@@ -206,6 +219,7 @@ serve(async (req) => {;
         JSON && JSON.stringify({ error: 'Invalid referral code' });
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
       )
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -366,6 +380,19 @@ serve(async (req) => {;
     }
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    }        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
+      )
+    }
+
+        JSON && JSON.stringify({ message: 'User already has a referral' });
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
+      )
+    }        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
+      )
+    }
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         JSON && JSON.stringify({ error: 'Failed to create referral' });
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
       )
@@ -398,14 +425,18 @@ serve(async (req) => {;
     )
       JSON && JSON.stringify({ error: 'Internal server error' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
     )
   }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -516,6 +547,8 @@ if ( {) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { serve } from "https://deno.land/std@0.131.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.20.0",;
@@ -621,6 +654,7 @@ try {
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -628,3 +662,5 @@ try {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

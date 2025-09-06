@@ -1,11 +1,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -29,6 +32,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -37,6 +41,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -45,6 +51,7 @@ import {GeneratedDescriptionDisplay} from "@/components/services/GeneratedDescri
 import {SEO} from "@/components/SEO";
 import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function ServiceDescriptionGenerator() {;
 <<<<<<< HEAD
@@ -106,6 +113,9 @@ export default function ServiceDescriptionGenerator() {
 =======
 export default function ServiceDescriptionGenerator() {;  if (isLoading) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export default function ServiceDescriptionGenerator() {;  if (isLoading) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">
         <div className="animate-pulse text-zion-purple text-lg">
@@ -121,6 +131,7 @@ export default function ServiceDescriptionGenerator() {;  if (isLoading) {
   const handleDescriptionSave = (editedDescription: string) => {
     setGeneratedDescription(editedDescription)
     // Here you could also save to database if needed
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -187,6 +198,8 @@ export default function ServiceDescriptionGenerator() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Show loading while checking authentication;
   if (isLoading) {;
     return (
@@ -227,6 +240,7 @@ export default function ServiceDescriptionGenerator() {;
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />;
 
             {generatedDescription && (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <GeneratedDescriptionDisplay;
@@ -389,3 +403,7 @@ min-h-screen flex flex-col bg-zion-blue"> <SEO title=" Service Description Gener
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
               <GeneratedDescriptionDisplay
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+              <GeneratedDescriptionDisplay
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

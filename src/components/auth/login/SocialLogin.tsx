@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Facebook, Twitter, Loader2 } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -24,6 +25,8 @@ return (
 =======
 =======
 =======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -37,6 +40,14 @@ import { Button } from "@/components/ui/button";
 import { Web3Login } from "./Web3Login";
 import { useState } from "react";
 import { openAuthPopup } from "@/api/authSocial";
+=======
+import { Facebook, Twitter, Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Web3Login } from './Web3Login';
+import { useState } from 'react';
+import { openAuthPopup } from '@/api/authSocial';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export function SocialLogin() {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -275,6 +286,7 @@ function SocialLogin() {
         <Web3Login />
       </div>
     </div>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 =======
@@ -432,7 +444,13 @@ export function SocialLogin() {;
 ;
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

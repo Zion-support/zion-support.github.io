@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -37,6 +38,8 @@ export function AIEnhancementPanel(): any ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 export function AIEnhancementPanel({;
@@ -48,6 +51,7 @@ import React, { useState } from 'react';
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -115,6 +119,9 @@ export function AIEnhancementPanel({;
 =======
 export function AIEnhancementPanel({;    const result = await enhanceContent(options);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function AIEnhancementPanel({;    const result = await enhanceContent(options);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (result) {
       setGeneratedContent(result)
     }
@@ -123,12 +130,15 @@ export function AIEnhancementPanel({;    const result = await enhanceContent(opt
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   };
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
 import { Textarea } from '@/components/ui/textarea',;
@@ -162,10 +172,13 @@ export function AIEnhancementPanel({;
 
   const handleGenerate = async () => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const result = await enhanceContent(options);
     if (result) {;
       setGeneratedContent(result);
@@ -173,6 +186,7 @@ export function AIEnhancementPanel({;
 
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -192,10 +206,13 @@ export function AIEnhancementPanel({;
     const result = await enhanceContent(options);
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (result) {;
       setGeneratedContent(result);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -339,6 +356,9 @@ export function AIEnhancementPanel({;
 =======
   return (      <CardHeader>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (      <CardHeader>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <CardTitle className="flex items-center gap-2">;
           <Sparkles className="h-5 w-5 text-primary" />;
           {title}
@@ -359,6 +379,7 @@ export function AIEnhancementPanel({;
 
           />;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -495,6 +516,8 @@ export function AIEnhancementPanel({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         >
           {isEnhancing ? (
             <>

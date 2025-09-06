@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 const API_BASE = 'http: //localhost:4000',;
@@ -24,6 +25,8 @@ function getUserId(cb) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 function setUserId(id) {
   chrome.storage.local.set({ user_id: id })
@@ -33,6 +36,7 @@ function setUserId(id) {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -40,6 +44,8 @@ function setUserId(id) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 document.querySelectorAll('.example').forEach((btn) => {
   btn.addEventListener('click', () => {
     document.getElementById('prompt').value = btn.dataset.text |''
@@ -94,6 +100,7 @@ document.getElementById('signIn').addEventListener('click', async () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   document && document.getElementById('result').textContent = 'Signed in (local).';
 });
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -101,6 +108,8 @@ document.getElementById('signIn').addEventListener('click', async () => {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 document.querySelectorAll('.example').forEach((btn) => {;
   btn.addEventListener('click', () => {;
@@ -171,6 +180,7 @@ document.getElementById('signIn').addEventListener('click', async () => {;
   setUserId(id),;
   document.getElementById('result').textContent = 'Signed in (local).';
 <<<<<<< HEAD
+<<<<<<< HEAD
 }),;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -187,3 +197,6 @@ document.getElementById('signIn').addEventListener('click', async () => {;
 =======
 }),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}),;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

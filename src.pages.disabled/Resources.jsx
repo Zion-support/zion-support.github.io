@@ -30,6 +30,7 @@ import React from \'react\' export default Resources const Resources = () => { r
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -57,11 +58,14 @@ import _React from 'react' export default Resources const Resources = () => { re
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import _React from 'react' export default Resources const Resources = () => { return (<> <Helmet> <title > Resources - Zion Tech Group</title> <meta name='description' content='Access valuable resources,tools,and insights from Zion Tech Group. Download whitepapers,guides,and more.' / / /> </Helmet> <div className='min - h-screen bg - gray - 50 py - 12'> <div className='max - w-7xl mx - auto px - 4 "sm": px: - 6 lg:px: - 8'> <div className='text - center mb - 12'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 4'> Resources </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Access our library of resource,s,tools,and insights to help you stay ahead in technology. </p> </div> <div className='bg - white rounded - lg shadow - lg p - 8'> <p className='text - gray - 600 text - center'> Resources section coming soon. We"re building a comprehensive library of valuable content. </p> </div> </div> </div> </>) }'';
 ursor/add-new-services-and-deploy-updates-0462
 :src.pages.disabled/Resources.jsx
 import _React from 'react' export default Resources const Resources = () => { return (<> <Helmet> <title > Resources - Zion Tech Group</title> <meta name='description' content='Access valuable resources,tools,and insights from Zion Tech Group. Download whitepapers,guides,and more.' / / /> </Helmet> <div className='min - h-screen bg - gray - 50 py - 12'> <div className='max - w-7xl mx - auto px - 4 "sm": px: - 6 lg:px: - 8'> <div className='text - center mb - 12'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 4'> Resources </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Access our library of resource,s,tools,and insights to help you stay ahead in technology. </p> </div> <div className='bg - white rounded - lg shadow - lg p - 8'> <p className='text - gray - 600 text - center'> Resources section coming soon. We"re building a comprehensive library of valuable content. </p> </div> </div> </div> </>) }'';
 :temp_exclude/src.pages.disabled/Resources.jsx
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -83,6 +87,8 @@ import _React from 'react' export default Resources const Resources = () => { re
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import _React from 'react' export default Resources const Resources = () => { return (<> <Helmet> <title > Resources - Zion Tech Group</title> <meta name='description' content='Access valuable resources,tools,and insights from Zion Tech Group. Download whitepapers,guides,and more.' / / /> </Helmet> <div className='min - h-screen bg - gray - 50 py - 12'> <div className='max - w-7xl mx - auto px - 4 "sm": px: - 6 lg:px: - 8'> <div className='text - center mb - 12'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 4'> Resources </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Access our library of resource,s,tools,and insights to help you stay ahead in technology. </p> </div> <div className='bg - white rounded - lg shadow - lg p - 8'> <p className='text - gray - 600 text - center'> Resources section coming soon. We"re building a comprehensive library of valuable content. </p> </div> </div> </div> </>) }'';
 import _React from 'react' export default Resources const Resources = () => { return (<> <Helmet> <title > Resources - Zion Tech Group</title> <meta name='description' content='Access valuable resources,tools,and insights from Zion Tech Group. Download whitepapers,guides,and more.' / / /> </Helmet> <div className='min - h-screen bg - gray - 50 py - 12'> <div className='max - w-7xl mx - auto px - 4 "sm": px: - 6 lg:px: - 8'> <div className='text - center mb - 12'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 4'> Resources </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Access our library of resource,s,tools,and insights to help you stay ahead in technology. </p> </div> <div className='bg - white rounded - lg shadow - lg p - 8'> <p className='text - gray - 600 text - center'> Resources section coming soon. We"re building a comprehensive library of valuable content. </p> </div> </div> </div> </>) }'';
 import _React from 'react' export default Resources const Resources = () => { return (<> <Helmet> <title > Resources - Zion Tech Group</title> <meta name='description' content='Access valuable resources,tools,and insights from Zion Tech Group. Download whitepapers,guides,and more.' / / /> </Helmet> <div className='min - h-screen bg - gray - 50 py - 12'> <div className='max - w-7xl mx - auto px - 4 "sm": px: - 6 lg:px: - 8'> <div className='text - center mb - 12'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 4'> Resources </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Access our library of resource,s,tools,and insights to help you stay ahead in technology. </p> </div> <div className='bg - white rounded - lg shadow - lg p - 8'> <p className='text - gray - 600 text - center'> Resources section coming soon. We"re building a comprehensive library of valuable content. </p> </div> </div> </div> </>) }'';

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 <<<<<<< HEAD
@@ -133,23 +134,18 @@ import React, { useEffect, useState } from 'react';
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import { useEffect } from 'react';
+=======
+import React from 'react';
 
-export const PerformanceMonitor = () => {
-  useEffect(() => {
-    // Web Vitals monitoring
-    if (typeof window !== 'undefined') {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
-      });
-    }
-  }, []);
+interface PerformanceMonitorProps {
+  children: React.ReactNode;
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-  return null;
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
+  return <>{children}</>;
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -167,3 +163,7 @@ import React from 'react';
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+export default PerformanceMonitor;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

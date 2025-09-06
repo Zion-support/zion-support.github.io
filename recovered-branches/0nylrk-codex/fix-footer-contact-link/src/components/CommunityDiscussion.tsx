@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,12 +19,15 @@ import { Separator } from "@/components/ui/separator";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react",
 import { MessageCircle } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Avatar, AvatarFallback } from "@/components/ui/avatar",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -37,6 +41,8 @@ import { Separator } from "@/components/ui/separator";
 import React, { useState } from './react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { MessageCircle  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
@@ -46,6 +52,7 @@ import { Card, CardContent  } from '@/components / ui / card';
 import { Separator  } from '@/components / ui / separator';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface DiscussionPost {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -81,6 +88,8 @@ import { Separator } from "@/components/ui/separator",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface DiscussionPost {
   id: number,
   author: string,
@@ -174,6 +183,7 @@ export const CommunityDiscussion: React.FC = () => {const initialPosts: Discussi
             />
             <Textarea
               placeholder="What's on your mind?"
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]"
 <<<<<<< HEAD
@@ -547,6 +557,10 @@ disabled={!newTitle.trim() |!newBody.trim()}
               className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]"                disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
             <div className="flex gap - 3 justify-end">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]"                disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
+            <div className="flex gap - 3 justify-end">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <Button;
                 variant="secondary";
                 size="sm";
@@ -601,6 +615,7 @@ disabled={!newTitle.trim() |!newBody.trim()}
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -661,5 +676,9 @@ disabled={!newTitle.trim() |!newBody.trim()}
   )
 };}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )
+};}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

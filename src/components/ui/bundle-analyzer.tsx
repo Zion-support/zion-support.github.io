@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 totalSize: number;
   gzippedSize: number;
@@ -14,6 +15,8 @@ totalSize: number;
 
       localStorage.getItem('bundle-analyzer') === 'true'
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { user } = useAuth()
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
   const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
@@ -101,11 +104,39 @@ if (return) {
       let totalLoadTime = 0
       const chunkData: ChunkInfo[] = []
       const chunkData: ChunkInfo[] = []
+=======
+import React, { useState, useEffect } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+import { Progress  } from '@/components/ui/progress';
+import { AlertTriangle, Package, Zap } from 'lucide-react'
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface BundleInfo {
+  totalSize: number;
+  gzippedSize: number;
+  chunkCount: number;
+  loadTime: number;
+  cacheHitRate: number
+interface ChunkInfo {
+  name: string;
+  size: number;
+  loadTime: number;
+  cached: boolean
+export function BundleAnalyzer() {
+      let totalSize = 0;
+      let totalLoadTime = 0;
+      const chunkData: ChunkInfo[] = [];
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       scriptEntries.forEach(entry => {
-        const size = entry.transferSize |entry.encodedBodySize |0
-        const loadTime = entry.responseEnd - entry.requestStart
-        const cached = entry.transferSize === 0
-        totalLoadTime += loadTime
+        const size = entry.transferSize || entry.encodedBodySize || 0;
+        const loadTime = entry.responseEnd - entry.requestStart;
+        const cached = entry.transferSize === 0;
+totalSize += size;
+        totalLoadTime += loadTime;
+
         chunkData.push({
           name: entry.name.split('/').pop()?.split('?')[0] |'unknown'
           size
@@ -191,6 +222,7 @@ if (return) {
       collectBundleInfo()
     }
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -231,6 +263,10 @@ export function BundleAnalyzer() {;
   const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin,;
   if (!isAllowed) {;
     return null;
+=======
+  if (!shouldShow) {
+    return null
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ;
   const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null),;
@@ -565,6 +601,7 @@ if ( {) {
               {isCollecting ? 'Analyzing bundle...' : 'Click refresh to analyze'}
             </div>;
           )}
+<<<<<<< HEAD
 =======
 
 } 
@@ -684,9 +721,19 @@ if ( {) {
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+        </CardContent>
+      </Card>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

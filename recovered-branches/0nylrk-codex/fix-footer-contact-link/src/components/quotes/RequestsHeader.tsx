@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -20,6 +21,10 @@ import type { QuoteStatus } from "@/types/quotes";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { 
@@ -30,6 +35,7 @@ import {
   SelectValue 
 } from "@/components/ui/select",
 import type { QuoteStatus } from "@/types/quotes",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -45,6 +51,8 @@ import type { QuoteStatus } from "@/types/quotes",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 type RequestsHeaderProps = {
   unreadCount: number,
   statusFilter: QuoteStatus | 'all',
@@ -52,6 +60,7 @@ type RequestsHeaderProps = {
   archiveFilter: 'active' | 'archived' | 'all',
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
 },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -280,6 +289,11 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
 }) => {;
   return (},
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  setArchiveFilter;
+}) => {;
+  return (},
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import {;
@@ -318,6 +332,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
         <p className="text-zion-slate-light mt-2">;
           Manage client requests to hire your services;
         </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>;
 <<<<<<< HEAD
@@ -386,6 +401,9 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
 =======
       </div>;            <SelectValue placeholder="Active Only" />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </div>;            <SelectValue placeholder="Active Only" />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </SelectTrigger>;
           <SelectContent>;
             <SelectItem value="active">Active Only</SelectItem>;
@@ -393,6 +411,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
             <SelectItem value="all">All Requests</SelectItem>;
           </SelectContent>;
         </Select>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>;
 <<<<<<< HEAD
@@ -510,3 +529,6 @@ export default RequestsHeader;
 =======
       </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -9,6 +10,8 @@
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -17,13 +20,20 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { SeverityIndicator } from "../common/SeverityIndicator",
 import { useNavigate } from "react-router-dom";
+=======
+import { SeverityIndicator } from "../common/SeverityIndicator",import { useNavigate } from "react-router-dom";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { toast } from "sonner";
 import { useNavigate } from "react-router-dom",
 import { toast } from "sonner",
 interface Milestone {
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from './react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -118,6 +128,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
   status: "completed" | "in_progress" | "pending"
   paymentStatus: "paid" | "pending" | "overdue"
 
+<<<<<<< HEAD
   amount: string
 }
 interface ProjectViewProps {
@@ -202,6 +213,8 @@ interface Milestone {
   status: "completed" | "in_progress" | "pending"
   paymentStatus: "paid" | "pending" | "overdue"
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   amount: string}
 
 interface ProjectViewProps {
@@ -246,6 +259,7 @@ interface ProjectViewProps {;
   milestones: Milestone[];
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
@@ -301,6 +315,8 @@ interface Milestone {
     });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   const navigate = useNavigate(),
   
@@ -322,6 +338,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 
   },
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -561,6 +578,8 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   >
                     {milestone.paymentStatus}
                   </Badge>
@@ -591,6 +610,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 </div>
               </CardContent>
             </Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -655,6 +675,13 @@ import React from "react";
     </div>
   )import React from "react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+        </div>
+      </section>
+    </div>
+  )import React from "react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
@@ -832,6 +859,7 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 =======
@@ -839,6 +867,8 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       name: string,
       avatar?: string;
     }

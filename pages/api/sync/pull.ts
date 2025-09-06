@@ -117,9 +117,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     scope: requestedScope});
 };
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+    instanceId: state.config.instanceId
+    lastSyncedAt: state.lastSyncedAt
+    events
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  if (req.method !== "POST" && req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
+  const state = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     scope: requestedScope})
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";

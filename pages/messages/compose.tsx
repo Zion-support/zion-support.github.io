@@ -1,15 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 <<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { useCurrentUser } from '../../hooks/useCurrentUser';
 export default function ComposePage() {
+=======
+import { useRouter  } from 'next/router';
+import { useCurrentUser } from '../../hooks/useCurrentUser';
+export default function ComposePage() {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { useRouter } from 'next/router';
 import { useCurrentUser } from '../../hooks/useCurrentUser';
 export default function ComposePage(req, res) {
   try {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -19,10 +27,28 @@ export default function ComposePage(req, res) {
   const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
   const { user, loading } = useCurrentUser();
 
+=======
+
+
+  const router = useRouter();
+  const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
+=======
+    type,
+    recipientId,
+    recipientName,
+    jobId,
+    jobTitle,
+    talentId,
+    talentName,
+  } = router.query as Record<string, string>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  const { user, loading } = useCurrentUser();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [message, setMessage] = React.useState('');
   const [linkUrl, setLinkUrl] = React.useState('');
   const [file, setFile] = React.useState<File | null>(null);
   const [sending, setSending] = React.useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -50,6 +76,8 @@ export default function ComposePage() {;
   React && React.useEffect(() => {;
     if (!loading && !user) router && router.replace('/auth');  }, [loading, user, router]);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (!user) return null;
 
   const headerTitle =;
@@ -57,7 +85,24 @@ export default function ComposePage() {;
       ? `Invite ${recipientName || talentName || 'Talent'}`;
       : type === 'apply';
         ? `Apply to ${jobTitle || 'Job'}`;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  React.useEffect(() => {
+if (!loading && !user) router.replace('/auth');
+  }, [loading, user, router]);
+
+  if (!user) return null;
+
+const headerTitle =
+    type === 'invite'
+      ? `Invite ${recipientName |talentName |'Talent'}`
+      : type === 'apply'
+        ? `Apply to ${jobTitle |'Job'}`
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         : 'New Message';
   const context =;
     type === 'invite';
@@ -66,6 +111,7 @@ export default function ComposePage() {;
         ? { type: 'application', jobId, jobTitle }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 
   React.useEffect(() => {;
@@ -125,6 +171,25 @@ export default function ComposePage() {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       const mime = file.type || 'application/octet-stream';
+=======
+        : { type: 'general' };
+  const onSend = async () => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    if (!recipientId && !talentId) return alert('Missing recipient');
+    if (!message && message.trim() && !file && !linkUrl) return;
+    setSending(true);
+<<<<<<< HEAD
+
+    let attachmentBase64: string | undefined,
+=======
+let attachmentBase64: string | undefined;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    if (file) {
+      const buff = await file.arrayBuffer();
+      const base64 = Buffer.from(buff).toString('base64');
+      const mime = file.type || 'application/octet-stream';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       attachmentBase64 = `data:${mime};base64,${base64}`;    }
       attachmentBase64 = `data:${mime},base64,${base64}`;
       } catch (error) {
@@ -133,13 +198,17 @@ export default function ComposePage() {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const mime = file.type || 'application/octet-stream';
       attachmentBase64 = `data:${mime},base64,${base64}`
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -151,10 +220,17 @@ export default function ComposePage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+attachmentBase64 = `data:${mime};base64,${base64}`;
+    }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const res = await fetch('/api/messages/compose', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -243,6 +319,12 @@ export default function ComposePage() {;
         recipientId: recipientId || talentId,
         body: message,
         linkUrl: linkUrl || undefined,
+=======
+        recipientId: recipientId || talentId,
+        body: message,
+        linkUrl: linkUrl || undefined,
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         attachmentBase64;
         attachmentName: file?.name,
         context})});
@@ -251,6 +333,21 @@ export default function ComposePage() {;
     if (data?.conversation?.id) router.replace(`/messages/${data.conversation.id}`)
   };
 
+<<<<<<< HEAD
+=======
+=======
+attachmentBase64,
+        attachmentName: file?.name,
+        context,
+      }),
+    });
+    const data = await res.json();
+    setSending(false);
+    if (data?.conversation?.id)
+      router.replace(`/messages/${data.conversation.id}`);
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-2xl mx-auto p-4">
@@ -258,6 +355,7 @@ export default function ComposePage() {;
           <div className="p-4 border-b">
             <h1 className="text-xl font-semibold">{headerTitle}</h1>
             <p className="text-sm text-gray-500">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -303,6 +401,8 @@ export default function ComposePage() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             />
             <input type="url" value={linkUrl} onChange={(e) => setLinkUrl(e.target.value)} placeholder="Optional proposal or portfolio link" className="border rounded-lg p-2 w-full" />
             <input type="file" onChange={(e) => setFile(e.target.files?.[0] || null)} className="text-sm" />
@@ -310,6 +410,7 @@ export default function ComposePage() {;
           <div className="p-4 border-t flex justify-end">
             <button onClick={onSend} disabled={sending} className="px-4 py-2 rounded-lg bg-indigo-600 text-white shadow hover:bg-indigo-700 disabled:opacity-50">{sending ? 'Sending...' : 'Send'}</button>
           </div>
+<<<<<<< HEAD
         </div>
       </div>
     </div>
@@ -317,18 +418,30 @@ export default function ComposePage() {;
 );
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
 }
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   )
 }
@@ -368,6 +481,7 @@ if (return null) {
       ? `Invite ${recipient_name || talent_name || 'Talent'}`;
       : type === 'apply';
         ? `Apply to ${job_title || 'Job'}`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -426,6 +540,8 @@ export default function ComposePage(req, res) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         : 'New Message';
   const context =;
     type === 'invite';
@@ -433,6 +549,7 @@ export default function ComposePage(req, res) {
       : type === 'apply';
         ? { type: 'application', job_id, job_title }
         : { type: 'general' }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -491,11 +608,14 @@ if ( {) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setSending(true);
     let attachmentBase64: string | undefined;
     if (file) {;
       const buff = await file.arrayBuffer();
       const base64 = Buffer.from(buff).toString('base64');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -515,12 +635,15 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       attachmentBase64 = `data:${mime},base64,${base64}`;
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -530,10 +653,13 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const res = await fetch('/api/messages/compose', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             </p>
@@ -566,6 +692,8 @@ if ( {) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     });
     const data = await res.json ();
     set_sending (false);
@@ -585,6 +713,7 @@ if ( {) {
               {type === 'invite' && job_title;
                 ? `Hi ${talent_name || recipient_name || ''}, I’d like to invite you to discuss a project: ${job_title}`;
                 : null}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -635,6 +764,8 @@ if ( {) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               value={message}
               on_change={e => set_message (e.target.value)}
               rows={6}
@@ -643,6 +774,7 @@ if ( {) {
                 type === 'invite' && job_title;
                   ? `Hi ${talent_name || recipient_name || ''}, I’d like to invite you to discuss a project: ${job_title}`;
                   : 'Write your message...';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -683,3 +815,22 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+=======
+          <div className='p-4 border-t flex justify-end'>
+            <button
+              onClick={onSend}
+              disabled={sending}
+              className='px-4 py-2 rounded-lg bg-indigo-600 text-white shadow hover:bg-indigo-700 disabled:opacity-50'
+            >
+              {sending ? 'Sending...' : 'Send'}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

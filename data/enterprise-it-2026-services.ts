@@ -1,13 +1,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface EnterpriseIt2026Service {
 export interface EnterpriseIt2026Service {;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
+=======
+export interface EnterpriseIt2026Service {
+id: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string,
@@ -19,6 +26,7 @@ export interface EnterpriseIt2026Service {;
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 export interface EnterpriseIt2026Service {;
     address: string
 };
@@ -79,17 +87,35 @@ export const enterpriseIT2026Services: EnterpriseIt2026Service[] = [
       'Comprehensive enterprise IT solutions designed for 2026 and beyond.'
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+    address: string
+  }
+}
+
+export const enterpriseIT2026Services: EnterpriseIt2026Service[] = [
+  {
+    id: "2026-enterprise-it";
+    name: "2026 Enterprise IT Solutions";
+    tagline: "Future-ready enterprise IT";
+    price: "$399/month";
+    description: "Comprehensive enterprise IT solutions designed for 2026 and beyond.";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     features: [
       "Enterprise architecture";
       "Future-ready solutions";
       "Scalable infrastructure";
+<<<<<<< HEAD
       "Advanced security";
       "24/7 support"
     ];
     link: "/services/2026-enterprise-it", category: "Enterprise IT 2026",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
 <<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -104,16 +130,32 @@ export const enterpriseIT2026Services: EnterpriseIt2026Service[] = [
       email: "kleber@ziontechgroup.com",
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+      "Advanced security",
+      "24/7 support"
+    ],
+    link: "/services/2026-enterprise-it";
+    category: "Enterprise IT 2026";
+    realImplementation: true;
+    contactInfo: {
+      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -174,6 +216,7 @@ export const enterpriseIT2026Services: EnterpriseIt2026Service[] = [
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -181,3 +224,7 @@ export const enterpriseIT2026Services: EnterpriseIt2026Service[] = [
   }
 ];
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

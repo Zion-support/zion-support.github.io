@@ -16,6 +16,7 @@ import {
   TableHead
   TableHeader
 <<<<<<< HEAD
+<<<<<<< HEAD
   TableRow
 <<<<<<< HEAD
 =======
@@ -330,6 +331,11 @@ export function TeamActivity() {;
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  TableRow} from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
+import { CalendarIcon, Search } from "lucide-react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },
 
   const getCategoryBadge = (category: string) => {
@@ -508,6 +514,7 @@ export function TeamActivity() {;
     </div>);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
                 <TableCell>{getCategoryBadge(activity.category)}</TableCell>;
@@ -522,11 +529,15 @@ export function TeamActivity() {;
 =======
 }                  {formatDate(activity.timestamp)}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}                  {formatDate(activity.timestamp)}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>
 
@@ -688,3 +699,6 @@ return (<div className="space-y-6" > <div className="flex items-center justify-b
 =======
       </div>}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </div>}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

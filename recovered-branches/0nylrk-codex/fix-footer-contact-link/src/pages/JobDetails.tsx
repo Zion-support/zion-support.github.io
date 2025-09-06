@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -9,11 +10,14 @@
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { ApplyToJobModal  } from '@/components/messaging/job-application';
 import { SEO  } from '@/components/SEO';
 import { useWhitelabel  } from '@/context/WhitelabelContext';
 export default function JobDetails() {
   // Cast to specify the expected route param type since useParams may be untyped
+<<<<<<< HEAD
 <<<<<<< HEAD
   const { jobId } = useParams() as { jobId?: string }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -148,6 +152,9 @@ import React, { useState, useEffect } from 'react',
 =======
   const { jobId } = useParams() as { jobId?: string }import React, { useState, useEffect } from 'react',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const { jobId } = useParams() as { jobId?: string }import React, { useState, useEffect } from 'react',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useParams, useNavigate } from 'react-router-dom',
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
@@ -263,6 +270,7 @@ export default function JobDetails() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -278,6 +286,8 @@ export default function JobDetails() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <SEO
@@ -362,6 +372,7 @@ export default function JobDetails() {
               <CardContent className="space-y-6">;
                 <div>;
                   <h3 className="font-semibold text-lg mb-3">Job Description</h3>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <div className="whitespace-pre-wrap">;
 <<<<<<< HEAD
@@ -480,6 +491,9 @@ export default function JobDetails() {
 =======
                   <div className="whitespace-pre-wrap">;                <div className="flex items-start">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  <div className="whitespace-pre-wrap">;                <div className="flex items-start">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <Clock className="mt-1 h-5 w-5 text-muted-foreground" />;
                   <div className="ml-3">;
                     <p className="text-sm text-muted-foreground">Deadline</p>;
@@ -492,6 +506,7 @@ export default function JobDetails() {
                   </div>;
                 </div>;
                   <Button 
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className="w-full mt-4" 
 
@@ -547,6 +562,9 @@ export default function JobDetails() {
 =======
                     className="w-full mt-4"                 {isOwnJob && (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    className="w-full mt-4"                 {isOwnJob && (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <div className="text-center p-2 bg-muted rounded-md mt-4">
                     <p className="text-sm text-muted-foreground">This is your job posting</p>
                   </div>
@@ -556,6 +574,7 @@ export default function JobDetails() {
           </div>
         </div>
       </main>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Footer />
 <<<<<<< HEAD
@@ -894,3 +913,6 @@ const isOwnJob = user?.id === job.client id;
 =======
       <Footer />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <Footer />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -23,6 +24,8 @@ interface AIEnhancementDialogProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   title: string,
   isOpen: boolean,
   onClose: () => void,
@@ -37,6 +40,7 @@ import React from 'react';
   isOpen;
   onClose;
   onApply;
+<<<<<<< HEAD
 <<<<<<< HEAD
   defaultOptions;
 <<<<<<< HEAD
@@ -58,6 +62,9 @@ import React from 'react',;
 =======
   defaultOptions;import React from 'react',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  defaultOptions;import React from 'react',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {;
   Dialog,;
   DialogContent,;
@@ -73,6 +80,7 @@ interface AIEnhancementDialogProps {;
   defaultOptions: AIEnhancementOptions,;
   initialContent?: string;
 }
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 <<<<<<< HEAD
@@ -173,6 +181,14 @@ export function AIEnhancementDialog(): any ({;
     onClose()
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+}: AIEnhancementDialogProps) {;
+  const handleApply = (content: string) => {;
+    onApply(content),;
+    onClose()
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },
 
   return (
@@ -191,6 +207,7 @@ export function AIEnhancementDialog(): any ({;
       </DialogContent>;
     </Dialog>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -266,3 +283,6 @@ function AIEnhancementDialog() {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 'use client';
 import React, { Suspense, lazy, useState, useEffect, ComponentType } from 'react';
 =======
@@ -654,7 +659,61 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 //   () => import('three').then(module => ({ default: module.WebGLRenderer })),
+=======
+=======
+'use client';
+
+import React, {
+  Suspense
+  lazy
+  useState
+  useEffect
+  ComponentType
+} from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { cn } from '@/lib/utils'
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface LoadingState {
+  isLoading: boolean
+  error: Error | null
+  retryCount: number
+  isOnline: boolean
+interface DynamicLoaderProps {
+  importFn: () => Promise<{ default: ComponentType<any> }>
+  fallback?: React.ReactNode
+  errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>
+  loadingComponent?: React.ComponentType
+  enableRetry?: boolean
+  maxRetries?: number
+  prefetch?: boolean
+  className?: string
+  children?: React.ReactNode
+  [key: string]: any
+// Enhanced Loading Component
+const EnhancedLoading: React.FC<{
+  progress?: number
+  message?: string
+  showProgress?: boolean
+}> = ({ 
+  progress;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+//   {
+//     loadingComponent: () => (
+//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
+//         <span className="text-muted-foreground">Loading 3D renderer...</span>
+//       </div>
+//     )
+//   }
+// )
+<<<<<<< HEAD
+export default DynamicComponentLoader; export default DynamicComponentLoader
+// );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 // Advanced Dynamic Component Loader;
@@ -902,6 +961,7 @@ export default DynamicComponentLoader; export default DynamicComponentLoader;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default DynamicComponentLoader;
+<<<<<<< HEAD
 =======
 // )
 export default DynamicComponentLoader; export default DynamicComponentLoader
@@ -910,3 +970,10 @@ export default DynamicComponentLoader; export default DynamicComponentLoader
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+export default DynamicComponentLoader;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import React from "react",
@@ -16,6 +17,9 @@ import ApiWebhooks from "../pages/ApiWebhooks",
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -39,6 +43,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -49,6 +54,9 @@ import React from "react";
 =======
 }import React from "react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}import React from "react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Navigate, Route, Routes } from "react-router-dom";
 import DeveloperPortal from "../pages/DeveloperPortal";
 import ApiDocsHub from "../pages/ApiDocsHub";
@@ -65,6 +73,7 @@ import ApiSampleCode from "../pages/ApiSampleCode";
 import ApiErrorCodes from "../pages/ApiErrorCodes";
 import ApiSampleCode from "../pages/ApiSampleCode",
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ApiErrorCodes from "../pages/ApiErrorCodes",
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -80,6 +89,9 @@ export default function DeveloperRoutes() {
 =======
 import ApiErrorCodes from "../pages/ApiErrorCodes",  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import ApiErrorCodes from "../pages/ApiErrorCodes",  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <Routes>
       <Route path="/" element={<Navigate to="/developers/portal" />} />
       <Route path="/portal" element={<DeveloperPortal />} />
@@ -92,6 +104,9 @@ import ApiErrorCodes from "../pages/ApiErrorCodes",  return (
     </Routes>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 <<<<<<< HEAD
 =======
@@ -211,6 +226,7 @@ function DeveloperRoutes() {
       <Route path="/docs / samples" element={<ApiSampleCode />} />;
       <Route path="/docs / errors" element={<ApiErrorCodes />} />;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Routes>);
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -255,3 +271,6 @@ function DeveloperRoutes() {
 =======
     </Routes>);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </Routes>);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

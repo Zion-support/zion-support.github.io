@@ -6,6 +6,7 @@ import OpenAI from 'openai';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EPISODES_PATH = path && path.join(
   process && process.cwd(),
   'data',
@@ -32,6 +33,8 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -44,8 +47,20 @@ const EPISODES_PATH = path && path.join(
   'data',
   'podcast',
   'episodes && episodes.json'
+=======
+const EPISODES_PATH = null;
+    return res.status(500).json({ error: error?.message || 'Unknown error' })
+};
+const EPISODES_PATH = path.join(
+  process.cwd()
+  'data'
+  'podcast'
+  'episodes.json'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 );
+
 function ensureStorage() {
+<<<<<<< HEAD
   const dir = path && path.dirname(EPISODES_PATH);
   if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
   if (!fs && fs.existsSync(EPISODES_PATH))
@@ -57,6 +72,14 @@ function ensureStorage() {
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
 };
 episodes && episodes.unshift (episode);
+=======
+  const dir = path.dirname(EPISODES_PATH);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+if (!fs.existsSync(EPISODES_PATH))
+    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
+}
+episodes.unshift (episode);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 writeEpisodes (episodes);
 function writeEpisodes(episodes: any[]) {
   ensureStorage();
@@ -67,6 +90,7 @@ export default async function handler(
 ) {
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -111,12 +135,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+  const { persona, invitee, topic, operatorPrompt } = req.body || {};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 
@@ -133,10 +165,42 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+  const user = `Guest: ${invitee?.name || ''}\nBio: ${invitee?.bio || ''}\nTopic: ${topic || ''}\nOperator Prompt: ${operatorPrompt || ''}\nStyle Sample: ${persona?.cloneStyleText || ''}`;
+
+let generated: any = null;
+  try {
+    const apiKey = process.env.OPENAI_API_KEY;
+    let content: string;
+    if (apiKey) {
+      const openai = new OpenAI({ apiKey });
+      const completion = await openai.chat.completions.create({
+        model: process.env.ZION_GPT_MODEL |'gpt-4o-mini'
+        messages: [
+{ role: 'system', content: system },
+          { role: 'user', content: user },
+        ],
+        temperature: 0.8,
+        max_tokens: 2048,
+      });
+      content = completion.choices?.[0]?.message?.content |'';
+      content = JSON.stringify({
+        title: `Interview with ${invitee?.name |'Guest'} on ${topic |'Zion'}`
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         questions: [
           'What is the vision behind Zion as a global decentralized talent protocol?'
           'How does Zion practically onboard talent and organizations?'
@@ -299,10 +363,9 @@ Return a strict JSON object with keys: title, questions (array), time_markers { 
     if (!generated || !generated && generated.title || !generated && generated.transcript) {
       return res
         .status(500)
-        .json({ error: 'Failed to generate structured content' });    }
-    const episodes = readEpisodes();
-    const episode = {      return res.status(500).json({ error: 'Failed to generate structured content' });
+        .json({ error: 'Failed to generate structured content' });
     }
+
     const episodes = readEpisodes();
 
 
@@ -333,6 +396,7 @@ Return a strict JSON object with keys: title, questions (array), time_markers { 
           'Talent networks become protocols when incentives, reputation, and opportunity align.',
       });
     const episode = {
+<<<<<<< HEAD
       id
       createdAt: new Date().toISOString()
       persona
@@ -562,6 +626,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 }
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 }
@@ -569,3 +634,35 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+id,
+      createdAt: new Date().toISOString(),
+      persona,
+      invitee,
+      topic,
+      title: generated.title,
+      questions: generated.questions || [],
+      timeMarkers: generated.timeMarkers || {
+        intro: '00:00',
+        segments: [],
+        closing: '14:30',
+      },
+      transcript: generated.transcript,
+      youtubeDescription: generated.youtubeDescription || '',
+      spotifyDescription: generated.spotifyDescription || '',
+      bestQuote: generated.bestQuote || '',
+      audio: {},
+    };
+    episodes.unshift(episode);
+    writeEpisodes(episodes);
+    return res.status(200).json({ episode });
+  } catch (error: any) {
+    console.error(error);
+    return res.status(500).json({ error: error?.message || 'Unknown error' });
+  }
+}
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

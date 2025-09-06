@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type SyncScope = "full" | "dao" | "marketplace";
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export type SyncScope = "full" | "dao" | "marketplace",;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface Peer {;
@@ -20,6 +23,7 @@ export interface InstanceConfig {;
   paused: boolean;
   scope: SyncScope;
   peers: Peer[];
+<<<<<<< HEAD
 <<<<<<< HEAD
   secretConfigured: boolean;
 <<<<<<< HEAD
@@ -73,6 +77,9 @@ export interface ProposalVoteEntry {;
 =======
   secretConfigured: boolean;}  } catch (error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  secretConfigured: boolean;}  } catch (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -95,6 +102,7 @@ export interface TokenTransferPayload extends BaseEventPayload {;
   txId: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -106,6 +114,8 @@ export interface BaseEventPayload {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   token: string;
@@ -113,6 +123,7 @@ export interface BaseEventPayload {;
   fromSubnet: string;
   toSubnet: string;
   timestamp: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -134,11 +145,14 @@ export interface TalentMobilityPayload extends BaseEventPayload {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   fromNation: string;
   toNation: string;
   role: string;
   startDate: string;
   endDate?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -153,10 +167,13 @@ export interface BaseEventPayload {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -165,6 +182,8 @@ export interface BaseEventPayload {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ;
 export interface DaoEndorsementPayload extends BaseEventPayload {;
@@ -182,21 +201,27 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ;
 export interface LeaderboardEntryPayload extends BaseEventPayload {;
   subjectId: string, // userId or teamId;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   score: number;
   category: string, // e.g., grants, contributions;
   rank?: number;
@@ -208,6 +233,7 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -216,6 +242,8 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ;}
 ;
@@ -223,6 +251,7 @@ export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
   | TalentMobilityPayload;
+<<<<<<< HEAD
 <<<<<<< HEAD
   | DaoEndorsementPayload;
 <<<<<<< HEAD
@@ -320,3 +349,6 @@ export interface MultiverseState {;
 =======
   | DaoEndorsementPayload;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  | DaoEndorsementPayload;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

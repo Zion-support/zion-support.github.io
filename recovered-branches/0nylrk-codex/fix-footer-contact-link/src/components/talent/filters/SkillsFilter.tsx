@@ -12,6 +12,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
 import { Checkbox } from "@/components/ui/checkbox",
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { SkillsFilterProps } from "@/types/filters",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -85,6 +86,9 @@ import { ChevronDown, ChevronUp } from "lucide-react",;
 =======
 import { SkillsFilterProps } from "@/types/filters",import { ChevronDown, ChevronUp } from "lucide-react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { SkillsFilterProps } from "@/types/filters",import { ChevronDown, ChevronUp } from "lucide-react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { SkillsFilterProps } from "@/types/filters",;
@@ -128,8 +132,11 @@ const POPULAR_SKILLS = [;
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer">;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -138,6 +145,7 @@ const POPULAR_SKILLS = [;
             </div>;
           ))}
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       )}
 <<<<<<< HEAD
@@ -329,3 +337,6 @@ toggleSection
 =======
       )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

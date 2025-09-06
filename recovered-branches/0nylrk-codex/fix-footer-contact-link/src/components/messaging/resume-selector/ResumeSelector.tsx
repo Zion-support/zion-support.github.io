@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
@@ -55,6 +56,8 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useEffect } from './react';
 import { Button  } from '@/components / ui / button';
 import { RadioGroup, RadioGroupItem  } from '@/components / ui / radio - group';
@@ -63,7 +66,10 @@ import { Plus, Loader2  } from './lucide-react';
 import { use_resume  } from '@/hooks / use_resume';
 import { exportResumeToPDF  } from '@/utils / pdf_export';
 import { toast  } from '@/components / ui / use - toast';  );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
 
   const [customFile, setCustomFile] = useState<File | null>(null);
@@ -80,6 +86,7 @@ import { ResumePreviewCard } from "./ResumePreviewCard";
 import { UploadSection } from "./UploadSection";
 import { SelectResumeSection } from "./SelectResumeSection";
 import { ResumeOption, ResumeSelectorProps } from "./types";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -105,6 +112,9 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
@@ -126,6 +136,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const [isLoading, setIsLoading] = useState(false),
   
   const { resume, fetchResume } = useResume(),
+<<<<<<< HEAD
 <<<<<<< HEAD
   
 <<<<<<< HEAD
@@ -283,6 +294,13 @@ if ( {) {
     loadResumes();
   }, [fetchResume]);        setSelectedResume(options[0]);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          setIsLoading(false);
+      }
+    }
+    loadResumes();
+  }, [fetchResume]);        setSelectedResume(options[0]);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         onResumeSelected(options[0]);
 
 import React, { useState, useEffect } from 'react',;
@@ -395,6 +413,7 @@ export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;
       onResumeSelected(customOption),;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -415,6 +434,8 @@ export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   // Handle custom file upload
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -431,6 +452,7 @@ export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;
 
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -590,10 +612,13 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Handle custom file upload
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -611,6 +636,8 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       
       // Check if it's a PDF file
       if (file.type !== "application/pdf") {
@@ -647,6 +674,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
       setSelectedResume(customOption);
       onResumeSelected(customOption);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -736,6 +764,8 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           title: "Invalid file type",
           description: "Please upload a PDF file",
@@ -759,6 +789,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
       toast({
         title: "Success!",
+<<<<<<< HEAD
 <<<<<<< HEAD
         description: "Your resume has been downloaded."})
 <<<<<<< HEAD
@@ -856,6 +887,16 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
       setIsLoading(false)
     }      <RadioGroup
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        description: "Your resume has been downloaded."})        title: "Download failed",
+        description: "There was an error downloading your resume.",
+        variant: "destructive"
+      })
+
+    } finally {
+      setIsLoading(false)
+    }      <RadioGroup
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         value={selectedOption}
         onValueChange={(value) =>;
           handleOptionChange(value as "recent" | "select" | "upload");
@@ -881,6 +922,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
         value={selectedOption}
         onValueChange={(value) =>
           handleOptionChange(value as "recent" | "select" | "upload")
+<<<<<<< HEAD
 <<<<<<< HEAD
         }
 <<<<<<< HEAD
@@ -979,10 +1021,17 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="recent" id="recent" />          <RadioGroupItem value="upload" id="upload" />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        }        className="space-y-3"
+      >
+        <div className="flex items-center space-x-2">
+          <RadioGroupItem value="recent" id="recent" />          <RadioGroupItem value="upload" id="upload" />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Label htmlFor="upload" className="text-white">
             Upload a custom resume (PDF)
           </Label>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </RadioGroup>
 <<<<<<< HEAD
@@ -1037,6 +1086,9 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 =======
       </RadioGroup>      // Create download link;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </RadioGroup>      // Create download link;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const url = URL.createObjectURL(pdfBlob),;
       const link = document.createElement('a'),;
       link.href = url,;
@@ -1088,6 +1140,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
         <div className="flex items-center space-x-2">;
           <RadioGroupItem value="upload" id="upload" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Label htmlFor="upload" className="text-white">;
 =======
@@ -1251,6 +1304,9 @@ if ( {) {
 =======
           <Label htmlFor="upload" className="text-white">;            Upload a custom resume (PDF);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          <Label htmlFor="upload" className="text-white">;            Upload a custom resume (PDF);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </Label>;
         </div>;
       </RadioGroup>;
@@ -1274,6 +1330,7 @@ if ( {) {
 =======
 
       {selectedOption === "select" && (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1310,6 +1367,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           resumeOptions={resumeOptions}
           selectedResume={selectedResume}
           handleResumeSelect={handleResumeSelect}
@@ -1344,6 +1403,7 @@ if ( {) {
 
       {selectedOption === "upload" && (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1369,6 +1429,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           customFile={customFile}
           onFileUpload={handleFileUpload}
           customFile={customFile}
@@ -1395,6 +1457,7 @@ if ( {) {
 
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1494,6 +1557,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           className="text-zion-purple border-zion-purple/20"
         >
           <Plus className="h-4 w-4 mr-2" />
@@ -1595,7 +1660,10 @@ return (<div className="space-y-4" > <h3 className="text-lg font-medium text-whi
 ;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

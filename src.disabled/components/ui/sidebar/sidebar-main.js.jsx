@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import * as _React from';react''; import { Sheet,SheetContent } from '@/components/ui/sheet';'; import { cn } from '@/lib/utils';'; import { useSidebar } from './sidebar-context'; "export": const Sidebar = _React.forwardRef((props,ref) => {} const { isMobile,state,openMobile,setOpenMobile } = useSidebar()'; "if": (props.collapsible ==='';none') {} return() <div''; className={cn('';"flex": h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground',props.className )} ref={ref} {...props} > {props.children} </div> ) } if (isMobile) {} return() <Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}> <SheetContent data-sidebar='sidebar'''' data-mobile='true'''' className='w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]: hidden'' style={{}';';--sidebar-width'';: '18rem}}'' side={props.side}'''' >'''' <"div": className='flex h-full w-full flex-col'>{props.children}</div> </SheetContent> </Sheet> ) }' return()'' <div'''' ref={ref}'''' className='group peer hidden "md": block: text-sidebar-foreground'" data-state={stat,e}' data-collapsible={state ===,'; collapsed' ? props."collapsible": '} data-variant={props.variant} data-side={props.side} >,'; {}'''; <div''';'; className={cn('''';';duration-"200": relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear';';,group-data-[collapsible=offcanvas]: w-0,group-data-[side=right]: rotate-180,'; ,''';'; props."variant": === 'floating';'; || props.variant: === 'inset''''';'; ? 'group-data-[collapsible=icon]: w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]''''';'; :group-data-[collapsible=icon]: w-[--sidebar-width-icon] )}'; />'' <div''';'; className={cn('''';';duration-"200": 'fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left',right,width] ease-linear "md": 'fle',x,,'';';'; props."side": === 'left''''';'; ? 'left-0: group-data-[collapsible=offcanvas]: left-[calc(var(--sidebar-width)*-1)]''''';'; : 'right-0: group-data-[collapsible=offcanvas]: right-[calc(var(--sidebar-width)*-1)],''';';''; collapsed' ? props."collapsible": '} data-variant={props.variant} data-side={props.side} > {} ' <div'''; className={cn('''';duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear';,group-data-[collapsible=offcanvas]: w-0,group-data-[side=right]: rotate-180 ,'''; props.variant === 'floating'; || props.variant === 'inset'''''; ? 'group-data-[collapsible=icon]: w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]''''; :group-data-[collapsible=icon]: w-[--sidebar-width-icon] )} />' <div'''; className={cn('''';duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear "md": flex',''; props.side === 'left'''''; ? 'left-0 group-data-[collapsible=offcanvas]: left-[calc(var(--sidebar-width)*-1)]''''; : 'right-0 group-data-[collapsible=offcanvas]: right-[calc(var(--sidebar-width)*-1)],''';';
 
 
@@ -56,6 +59,7 @@ import * as _React from';react''; import { Sheet,SheetContent } from '@/componen
 :temp_exclude/src.disabled/components/ui/sidebar/sidebar-main.js.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -83,3 +87,5 @@ const * as React from"react"" import { Sheet,SheetContent } from "@/components/u
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

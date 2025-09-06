@@ -1,13 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
 
 const Pagination = ({ className, ...props }: React && React.ComponentProps<'nav'>) => (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -18,6 +22,8 @@ const Pagination = ({ className, ...props }: React && React.ComponentProps<'nav'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   <nav
     role='navigation'
     aria-label='pagination'
@@ -25,6 +31,7 @@ const Pagination = ({ className, ...props }: React && React.ComponentProps<'nav'
     {...props}
 
 import * as React from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
 =======
@@ -103,6 +110,9 @@ const PaginationContent = React && React.forwardRef<;
 =======
 import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';  <ul
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';  <ul
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 import {cn} from '@/lib / utils';
 import {ButtonProps, button_variants} from '@/components / ui / button';
@@ -137,6 +147,7 @@ type PaginationLinkProps = {
   />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   <ul
     ref={ref}
@@ -148,6 +159,8 @@ type PaginationLinkProps = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ));
 PaginationContent.displayName = 'PaginationContent';
 const PaginationItem = React.forwardRef<
@@ -186,6 +199,7 @@ const PaginationLink = ({
   size = "icon",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -196,6 +210,9 @@ const PaginationLink = ({
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ...props
 }: PaginationLinkProps) => (  ...props
 }: PaginationLinkProps) => (
@@ -226,6 +243,7 @@ type PaginationLinkProps = {
   <a
     aria-current={isActive ? 'page' : undefined}
     className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
       buttonVariants({
 <<<<<<< HEAD
@@ -387,6 +405,9 @@ const PaginationPrevious = ({
 =======
       buttonVariants({const PaginationPrevious = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      buttonVariants({const PaginationPrevious = ({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   className
   ...props
 }: React.ComponentProps<typeof PaginationLink>) => (
@@ -406,6 +427,7 @@ const PaginationPrevious = ({
 PaginationPrevious.displayName = "PaginationPrevious"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -419,6 +441,8 @@ PaginationPrevious.displayName = "PaginationPrevious"
 const PaginationNext = ({
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   className
   ...props
 }: React.ComponentProps<typeof PaginationLink>) => (
@@ -452,6 +476,7 @@ const PaginationEllipsis = ({;
 
 PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 );
@@ -481,11 +506,16 @@ PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
 
 PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
   >
     <MoreHorizontal className="h-4 w-4" />
     <span className="sr-only">More pages</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
   </span>
 <<<<<<< HEAD
@@ -652,6 +682,9 @@ export {
 =======
   </span>  />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  </span>  />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ));
 PaginationContent.displayName = "PaginationContent";
 const PaginationItem = React.forwardRef<;
@@ -782,6 +815,7 @@ PaginationEllipsis.displayName = "PaginationEllipsis";
   Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
@@ -793,3 +827,6 @@ PaginationEllipsis.displayName = "PaginationEllipsis";
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

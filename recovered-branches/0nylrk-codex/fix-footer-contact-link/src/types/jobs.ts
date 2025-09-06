@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -8,6 +9,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 ;
 export type JobCategory =;
@@ -41,6 +44,7 @@ export interface Job {
 =======
 
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
+<<<<<<< HEAD
 =======
 export type JobStatus = "new" | "in_progress" | "filled" | "closed";
 
@@ -66,6 +70,8 @@ export interface JobBudget {;
   min: number;
 =======
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export type JobCategory = 
   | 'development' 
@@ -77,6 +83,7 @@ export type JobCategory =
   | 'other';
 
 export interface JobBudget {;  min: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   max: number;
   currency: string;
@@ -117,6 +124,20 @@ export interface Job {;
 }
 export interface Job {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  max: number;
+  currency: string;
+}
+
+export interface Job {;
+
+}
+export interface Job {export interface Job {
+
+export interface Job {;
+}
+export interface Job {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   client_id: string;
   title: string,
@@ -126,6 +147,7 @@ export interface Job {
   budget: JobBudget;
   deadline: string;
   status: JobStatus;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   created_at: string,
@@ -143,6 +165,8 @@ export interface JobFormData {;
 =======
 export interface JobFormData {
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   created_at: string;
   updated_at: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -156,6 +180,7 @@ export interface JobFormData {;
 export interface JobFormData {
 
 export interface JobFormData {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -256,6 +281,16 @@ export interface ResumeAttachment {;
 
 export interface ResumeAttachment {export interface ResumeAttachment {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  title: string,
+  description: string;
+  category: JobCategory;
+  skills: string;
+
+export interface ResumeAttachment {;
+
+export interface ResumeAttachment {export interface ResumeAttachment {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   title: string;
   type: "ai_resume" | "custom_upload";
@@ -282,7 +317,10 @@ export type ApplicationStatus =
   | "interview"
   | "hired"
   | "rejected";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export interface JobApplication {
 export interface JobApplication {
@@ -298,10 +336,13 @@ export interface JobApplication {
 export interface JobApplication {;
 export interface JobApplication {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   job_id: string;
   talent_id: string;
@@ -330,6 +371,7 @@ export interface JobApplication {
   match_breakdown?: {
     skills_match?: {
       score: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -371,6 +413,8 @@ export interface JobApplication {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed',;
 export type JobCategory =;
   | 'development';
@@ -390,7 +434,7 @@ export interface JobBudget {;
 export interface Job {;
   id: string,;
   client_id: string,;
-  title: string,;
+  title: string,,
   description: string,;
   category: JobCategory,;
   skills: string[],;
@@ -402,7 +446,7 @@ export interface Job {;
 }
 ;
 export interface JobFormData {;
-  title: string,;
+  title: string,,
   description: string,;
   category: JobCategory,;
   skills: string,;
@@ -478,6 +522,7 @@ export interface JobApplication {;
     skills_match?: {;
       score: number,;
       matching: string[],;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -610,6 +655,8 @@ export interface JobApplication {;
       score: number,;
       matching: string[],;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       missing: string[];
     },;
     experience_match?: {;
@@ -631,7 +678,10 @@ export interface JobApplication {;
 ;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

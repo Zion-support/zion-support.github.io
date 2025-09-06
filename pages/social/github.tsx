@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -86,6 +87,19 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function GitHubRedirect() {
+=======
+  }
+}
+import React, { useEffect } from 'react';
+import Head from 'next/head';
+export default function GitHubRedirect() {
+<<<<<<< HEAD
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.location.replace('https: //github.com/Zion-Holdings')
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
 			window.location.replace('https: //github.com/Zion-Holdings')
@@ -107,6 +121,7 @@ export default function GitHubRedirect() {
 		</>
 	)
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -171,21 +186,38 @@ export default function GitHubRedirect() {
       window.location.replace('https: //github.com/Zion-Holdings'),
     };
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    }
+      window.location.replace('https: //github.com/Zion-Holdings'),
+    };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }, []);
   return (
     <>
       <Head>
         <title>GitHub | Zion Tech Group</title>
+<<<<<<< HEAD
         <link rel='canonical' href='https: //github.com/Zion-Holdings' />
         <meta
           httpEquiv='refresh'
           content='0,url=https://github.com/Zion-Holdings'
+=======
+        <link rel='canonical' href='https://github.com/Zion-Holdings' />
+        <meta
+          httpEquiv='refresh'
+          content='0;url=https://github.com/Zion-Holdings'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         />
         <meta name='robots' content='noindex, nofollow' />
       </Head>
       <div className='min-h-screen bg-black text-white flex items-center justify-center p-8'>
         <a
+<<<<<<< HEAD
           href='https: //github.com/Zion-Holdings'
+=======
+          href='https://github.com/Zion-Holdings'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           className='text-cyan-400 underline'
         >
           Continue to GitHub
@@ -194,7 +226,10 @@ export default function GitHubRedirect() {
     </>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
 export default function GitHubRedirect(req, res) {
@@ -225,16 +260,22 @@ class ErrorBoundary extends React.Component {
     }
     
     return this.props.children;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
 import React, { useEffect } from 'react';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Head from 'next / head';
 export default /**
  * GitHubRedirect - Function description
@@ -250,7 +291,10 @@ if ( {) {
       window.location.replace('https: //github.com/Zion-Holdings'),
     };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }, []);
   return (
     <>;
@@ -284,6 +328,7 @@ export default function GitHubRedirect() {
 	)
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -301,3 +346,10 @@ export default function GitHubRedirect() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

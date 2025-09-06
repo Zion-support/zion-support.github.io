@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
@@ -96,6 +97,8 @@ declare module 'lovable-tagger' {import { Plugin } from 'vite';
 interface ImportMetaEnv {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   readonly VITE_APP_TITLE: string,;
   readonly VITE_SUPABASE_URL: string,;
   readonly VITE_SUPABASE_ANON_KEY: string,;
@@ -129,6 +132,7 @@ declare module 'lovable-tagger' {;
   export function componentTagger(): Plugin;
 }
 // Add Node.js globals
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -196,3 +200,5 @@ declare let process: {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

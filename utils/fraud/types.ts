@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type MonitoredSource = 'signup' | 'job_post' | 'message' | 'quote' | 'review';
 export type GptClassificationLabel = 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
 export interface FraudEvent {;
 =======
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Fraud detection types
 export type AdminActionType =
   | "ban_user"
@@ -15,6 +18,7 @@ export type AdminActionType =
   | "dismiss"
   | "escalate";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export interface AdminAction {
@@ -108,6 +112,9 @@ export interface FraudDetectionResult {
 =======
 export interface AdminAction {  id: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export interface AdminAction {  id: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   case_id: string;
   type: AdminActionType;
   adminId: string;
@@ -116,6 +123,7 @@ export interface AdminAction {  id: string;
   createdAt: string;
   executedAt?: string;
   status: "pending" | "executed" | "failed";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -147,6 +155,9 @@ export interface FraudDetectionResult {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export interface FraudDetectionResult {;
   isFraud: boolean;
@@ -186,6 +197,7 @@ export interface FraudDetectionConfig {
 }}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -195,3 +207,5 @@ export interface FraudDetectionConfig {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

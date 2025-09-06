@@ -1,11 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { writeState, readState } from '[^']*';
+import { crm } from '[^']*';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { match } = req.body as { match?: { talentId: string, jobId: string, summary?: string } },
+  if (!match) return res.status(400).json({ error: 'Missing match payload' });
+  // record Zapier event
+  const eventId = null;
+    writeState(s => s.logs.push(log))
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import type { NextApiRequest, NextApiResponse } from "next";
 import { writeState, readState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -13,6 +28,11 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    s && s.events.push({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -35,6 +55,7 @@ export default async function handler(
       timestamp: Date && Date.now(),
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -73,6 +94,28 @@ function handler() {
     s && s.events.push({
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+      id: eventId
+      type: "zion && zion.talent.matched"
+      timestamp: Date && Date.now()
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  if (req.method !== "POST")
+    return res.status(405).json({ error: "Method not allowed" });
+  const { match } = req.body as {
+    match?: { talentId: string; jobId: string; summary?: string }
+  }
+  if (!match) return res.status(400).json({ error: "Missing match payload" });
+  // record Zapier event
+  const eventId = `${Date.now()}-talent-matched`;
+  writeState(s => {
+s.events.push({
+      id: eventId,
+      type: 'zion.talent.matched',
+      timestamp: Date.now(),
+      payload: { match },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     });
 =======
   const eventId = `${Date.now()}-talent-matched`;
@@ -84,6 +127,7 @@ function handler() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   });
+<<<<<<< HEAD
 
 ;
   // log to connected CRMs as a note;
@@ -154,6 +198,23 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+  // log to connected CRMs as a note
+  const state = readState();
+const crms = state.connections.filter(c =>
+    ['salesforce', 'hubspot', 'zoho', 'pipedrive'].includes(c.providerId)
+  );
+  const result = await crm.addProjectNote(conn, {
+      jobId: match.jobId,
+      note: `Talent ${match.talentId} matched. ${match.summary || ''}`.trim(),
+    });
+    writeState(s => s.logs.push(log));
+  }
+
+  res.status(200).json({ ok: true, eventId });
+  }
+  res.status(200).json({ ok: true, eventId });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }
 <<<<<<< HEAD
 =======

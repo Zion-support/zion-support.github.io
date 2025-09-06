@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Input } from "@/components/ui/input",
@@ -23,7 +24,21 @@ export default function HelpCenter() {
   const handleArticleSelect = (articleId: string) => {
     setSelectedArticle(articleId)
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Search } from 'lucide-react'
+=======
+import React, { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { HelpCategoryList } from './HelpCategoryList';
+import { HelpArticleList } from './HelpArticleList';
+import { HelpArticleView } from './HelpArticleView';
+import { HELP_CATEGORIES } from './help-content';
+import { Search } from 'lucide-react';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null)
@@ -54,6 +69,7 @@ function HelpCenter() {
   const handleArticleSelect = (articleId: string) => {
     setSelectedArticle(articleId)
   }
+<<<<<<< HEAD
 
 export default /**
  * HelpCenter - Function description
@@ -188,6 +204,51 @@ export default function HelpCenter() {;
 
   const handleArticleSelect = (articleId: string) => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  const handleCategorySelect = (categoryId: string,) => {;
+    setSelectedCategory(categoryId),;
+    setSelectedArticle(null);
+  },;
+
+  const handleArticleSelect = (articleId: string,) => {;
+    setSelectedArticle(articleId);
+  },;
+
+  const handleBackToCategories = () => {;
+    setSelectedCategory(null);
+    setSelectedArticle(null);
+  };
+
+  const handleBackToArticles = () => {;
+    setSelectedArticle(null);
+  };
+
+=======
+export default function HelpCenter() {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const handleCategorySelect = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+    <>;
+      <div className='container mx-auto px-4 py-8'>;
+        <div className='max-w-4xl mx-auto'>;
+          <h1 className='text-3xl font-bold mb-2 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'>;
+            Help Center;
+          </h1>;
+          <p className='text-zion-slate-light mb-6'>;
+            Find answers to common questions or get in touch with our support;
+            team.;
+=======
+  const handleCategorySelect = (categoryId: string) => {;
+    setSelectedCategory(categoryId),;
+    setSelectedArticle(null);
+  },;
+  const handleArticleSelect = (articleId: string) => {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setSelectedArticle(articleId);
   },;
   const handleBackToCategories = () => {;
@@ -825,5 +886,13 @@ export default function HelpCenter() {;
 
       </div>
     </>
+<<<<<<< HEAD
   )
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  )
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

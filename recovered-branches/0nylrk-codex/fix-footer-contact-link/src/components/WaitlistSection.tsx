@@ -16,6 +16,7 @@ export function WaitlistSection() {;
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { toast } = useToast();
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,12 +47,16 @@ export function WaitlistSection() {
 =======
   const { toast } = useToast();  const [email, setEmail] = useState(""),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const { toast } = useToast();  const [email, setEmail] = useState(""),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [name, setName] = useState(""),
   const [role, setRole] = useState(""),
   const [agreeTerms, setAgreeTerms] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { toast } = useToast(),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -86,6 +91,8 @@ export function WaitlistSection() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     
     setIsSubmitting(true),
     
@@ -142,6 +149,7 @@ export function WaitlistSection() {
                 type="email"
                 placeholder="you@company && company.com"
                 value={email}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -240,11 +248,14 @@ export function WaitlistSection() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             <Button 
               type="submit" 
               disabled={isSubmitting} 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -267,6 +278,8 @@ export function WaitlistSection() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
               {isSubmitting ? "Processing..." : "Complete Registration"}
@@ -276,6 +289,7 @@ export function WaitlistSection() {
       </div>
     </section>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -288,6 +302,8 @@ export function WaitlistSection() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -308,6 +324,7 @@ export function WaitlistSection() {;
     if (!email || !name || !role || !agreeTerms) {;
       toast({;
         variant: "destructive",;
+<<<<<<< HEAD
 <<<<<<< HEAD
         title: "Missing information",;
         description: "Please fill all fields and agree to the terms."}),;
@@ -358,11 +375,16 @@ export function WaitlistSection() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         title: "Missing information",,
   description: "Please fill all fields and agree to the terms."}),;
       return
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <section id="waitlist" className="py - 20 bg - zion - blue - dark relative overflow-hidden">;
       {/* Background elements */}
@@ -400,6 +422,7 @@ export function WaitlistSection() {;
                 className="text - sm text - zion - slate font-normal";              >;
                 I agree to receive updates about Zion and understand I can unsubscribe anytime.;
               </Label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             </div>;
 <<<<<<< HEAD
@@ -487,3 +510,6 @@ return (<section id="waitlist" className="py-20 bg-zion-blue-dark relative overf
 =======
             </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

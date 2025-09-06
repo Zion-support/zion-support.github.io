@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { default } from "./mobile-launch";
 export { default } from './mobile-launch';
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -29,3 +30,7 @@ export { default } from "./mobile - launch";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -7,7 +7,10 @@
 
 export function TokenDisplay() {;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { wallet, loading } = useWallet();
 import React from "react",
 import { BadgeDollarSign } from "lucide-react",
@@ -145,7 +148,10 @@ function TokenDisplay() {
               Use your tokens to boost visibility, access premium features, or convert to credits.;
             </p>;
             <div className="mt-2">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <Button variant="outline" size="sm">;
                 View Wallet;
               </Button>;

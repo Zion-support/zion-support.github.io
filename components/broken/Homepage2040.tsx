@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 //Enhanced animation variants for better performance const containerVariants = {
@@ -24,6 +25,7 @@ const Homepage2040: React.FC<Homepage2040Props> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 =======
@@ -36,6 +38,9 @@ const Homepage2040: React.FC<Homepage2040Props> = ({ className }) => {
 =======
   )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 visible: {
@@ -99,21 +104,35 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Star, 
+=======
+import React, { Suspense, lazy, useState, useEffect } from 'react',
+import Layout from './layout/Layout',
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Star;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   Brain, Atom, Shield, Zap, TrendingUp, Globe;
   Rocket, Target, Users, Cpu, Eye, Network;
   Car, Search, TestTube, Globe as PlanetIcon, Lock, Palette;
   FileText, BarChart3, Heart, Truck, ShieldCheck;
   Sparkles, Infinity as InfinityIcon, Zap as Lightning
+<<<<<<< HEAD
 } from 'lucide-react';
 
+=======
+ } from 'lucide-react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 // Import new service data
 import { innovativeMicroSaasServices2025V2  } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2';
 // Lazy load heavy components for better performance
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026'));
 const Homepage2040: React.FC = () => {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
@@ -416,16 +435,20 @@ const Homepage2040: React.FC = () => {
               <motion.h1 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 variants={itemVariants}
                 id="hero-heading"
                 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight"
               >
                 Zion Tech Group
               </motion.h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <motion.p
               <motion.p 
@@ -439,6 +462,11 @@ const Homepage2040: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+              <motion.p 
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 variants={itemVariants}
                 className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
               >
@@ -484,7 +512,10 @@ const Homepage2040: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {/* Enhanced Trust Indicators */}
               <motion.div
                 variants={itemVariants}
@@ -839,6 +870,7 @@ const Homepage2040: React.FC = () => {
               whileInView="visible"
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className="space-y-8"
@@ -865,6 +897,11 @@ const Homepage2040: React.FC = () => {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+              <motion.div 
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-6 justify-center"
               >
@@ -896,6 +933,7 @@ const Homepage2040: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
@@ -904,3 +942,10 @@ const Homepage2040: React.FC = () => {
 export default Homepage2040;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export default Homepage2040;
+
+=======
+const LazyServiceCard = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

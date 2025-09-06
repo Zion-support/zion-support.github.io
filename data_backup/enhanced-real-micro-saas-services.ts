@@ -59,6 +59,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -81,6 +82,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 module.exports = type EnhancedRealMicroSaasService = {; id: string; name: string; category?: string; description?: string; tagline?: string; price?: string | number; period?: string; features?: string[]; popular?: boolean; icon?: string; color?: string; textColor?: string; link?: string; marketPosition?: string; targetAudience?: string; trialDays?: number; setupTime?: string; realService?: boolean; technology?: string[]; integrations?: string[]; useCases?: string[]; roi?: string; competitors?: string[]; marketSize?: string; growthRate?: string; variant?: string; contactInfo?: { mobile: string; email: string; address: string; website: string}; realImplementation?: boolean; implementationDetails?: string; launchDate?: string; customers?: number; rating?: number; reviews?: number}; import { additionalEnhancedServices } from "./additional-real-services"; import { realMarketServices } from "./real-market-services"; const mapToEnhanced = (items: any[]): EnhancedRealMicroSaasService[] => (items | []).map((s) => ({ .s })); export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [.mapToEnhanced(realMarketServices as unknown as []),.mapToEnhanced(additionalEnhancedServices as unknown as []),]; export const serviceCategories: string[] = Array.from( new Set( enhancedRealMicroSaasServices .map((s) => s.category) .filter((v): v is string = > Boolean(v)); ); ).sort(); export const getServicesByCategory = (category: string) => {; if (!category | category === "All") return enhancedRealMicroSaasServices; return enhancedRealMicroSaasServices.filter((s) => s.category === category)}; export const getPopularServices = () => enhancedRealMicroSaasServices .filter((s) => !s.popular);.sort((a,b) => (b.rating | 0) - (a.rating | 0));'"'"
 import React from 'react';
 interface EnhancedrealmicrosaasservicesProps {
@@ -88,8 +91,11 @@ interface EnhancedrealmicrosaasservicesProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -147,15 +153,19 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 export default function Enhancedrealmicrosaasservices({ }: EnhancedrealmicrosaasservicesProps) {
+<<<<<<< HEAD
 =======
 }export default function Enhancedrealmicrosaasservices({ }: EnhancedrealmicrosaasservicesProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div>
       <h1>Enhancedrealmicrosaasservices</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,6 +221,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }
 <<<<<<< HEAD
 =======
+=======
+
+
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 }
@@ -289,9 +305,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 
 }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 }
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

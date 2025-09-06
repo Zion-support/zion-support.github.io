@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -53,14 +54,35 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import React from 'react';
+import EnhancedButton from './EnhancedButton';
+export type PaginationProps = any;
+export type PaginationProps = {
+  page: number;
+  pageSize: number;
+  total: number;
+  onChange: (nextPage: number) => void;
+}
+export default function Pagination({
+  page,
+  pageSize,
+  total,
+  onChange,
+}: PaginationProps) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
   const goTo = (p: number) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 };
@@ -99,6 +121,11 @@ export default function Pagination({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (p >= 1 && p <= totalPages) onChange(p);
   }
+=======
+if (p >= 1 && p <= totalPages) onChange(p);
+  };
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className='flex items-center justify-between gap-2 mt-4'>;
       <EnhancedButton
@@ -117,11 +144,20 @@ export default function Pagination({
         size='md'
         onClick={() => goTo(page + 1)}
         disabled={!canNext}
+<<<<<<< HEAD
       >        Next;
       </EnhancedButton>;
     </div>;
   );
 
+=======
+      >
+        Next
+      </EnhancedButton>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="flex items-center justify-between gap-2 mt-4">;
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page - 1)} disabled={!canPrev}>;
@@ -197,6 +233,7 @@ interface PaginationProps {;
 if ( {) {
   $2
 }
+<<<<<<< HEAD
       for (let index = 1; i <= total_pages; i++) {
         pages.push (i);
 }
@@ -311,4 +348,11 @@ if ( {) {
 
   );
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+export default Pagination;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

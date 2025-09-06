@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react";
 import FeedbackModal from "../../components/ui/FeedbackModal";
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -13,6 +14,8 @@ import FeedbackModal from "../../components/ui/FeedbackModal";
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from 'react';
 
 
@@ -21,12 +24,17 @@ import {useState} from 'react';
   const [agreementUrl, setAgreementUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any | null>(null),
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [showFeedback, setShowFeedback] = useState(false);
 
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  const [showFeedback, setShowFeedback] = useState(false);
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async function sendOffer() {;
     setLoading(true);
     setResult(null);
@@ -65,11 +73,15 @@ import {useState} from 'react';
 
       setShowFeedback(true);    }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       termsType === "hourly"
         ? { type: "hourly", hourlyRateUsd }
         : termsType === "fixed"
         ? { type: "fixed", fixedAmountUsd }
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from "react",
 import FeedbackModal from "../../components/ui/FeedbackModal",
@@ -92,12 +104,37 @@ export default function ClientHirePage() {
   const [hourlyRateUsd, setHourlyRateUsd] = useState(120);
   const [fixedAmountUsd, setFixedAmountUsd] = useState(5000);
   const [agreementUrl, setAgreementUrl] = useState("");
+=======
+import { useState } from "react",
+import FeedbackModal from "../../components/ui/FeedbackModal",
+=======
+import { useState } from 'react';
+import FeedbackModal from '../../components/ui/FeedbackModal';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+export default function ClientHirePage() {
+  const [talentSlug, setTalentSlug] = useState('ava-chen');
+  const [startDateIso, setStartDateIso] = useState<string>(
+    new Date().toISOString().slice(0, 10)
+  );
+  const [scopeSummary, setScopeSummary] = useState(
+    'Build AI-enabled reporting module'
+  );
+  const [termsType, setTermsType] = useState('hourly');
+  const [hourlyRateUsd, setHourlyRateUsd] = useState(120);
+  const [fixedAmountUsd, setFixedAmountUsd] = useState(5000);
+  const [agreementUrl, setAgreementUrl] = useState('');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any | null>(null),
   const [showFeedback, setShowFeedback] = useState(false);
   async function sendOffer() {
     setLoading(true);
     setResult(null);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const [scopeSummary, setScopeSummary] = useState("Build AI-enabled reporting module"),
   const [termsType, setTermsType] = useState("hourly"),
@@ -108,15 +145,19 @@ export default function ClientHirePage() {
   const [result, setResult] = useState<any | null>(null),
   const [showFeedback, setShowFeedback] = useState(false),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async function sendOffer() {
     setLoading(true),
     setResult(null),
     const paymentTerms =
+<<<<<<< HEAD
 <<<<<<< HEAD
       termsType === 'hourly'
         ? { type: 'hourly', hourlyRateUsd }
@@ -148,6 +189,8 @@ export default function ClientHirePage() {
       setShowFeedback(true);    }
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       termsType === "hourly"
         ? { type: "hourly", hourlyRateUsd   } catch (error) {
     console.error("Error:", error);
@@ -160,10 +203,27 @@ export default function ClientHirePage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         : { type: "milestone", milestones: [] },
     const res = await fetch("/api/marketplace/offers", {
       method: "POST",
+=======
+        : { type: "milestone", milestones: [] },
+    const res = await fetch("/api/marketplace/offers", {
+      method: "POST",
+=======
+    const paymentTerms = null;
+      setShowFeedback(true)
+    }
+        ? { type: 'hourly', hourlyRateUsd }
+        : termsType === 'fixed'
+          ? { type: 'fixed', fixedAmountUsd }
+          : { type: 'milestone', milestones: [] }
+    const res = await fetch('/api/marketplace/offers', {
+      method: 'POST'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       headers: {
        "Content-Type": "application/json", "x-demo-user-role": "client", "x-demo-user-id": "client-1" 
     },
@@ -174,6 +234,7 @@ export default function ClientHirePage() {
       alert(json.error || "Failed to send offer")
     } else {
       setResult(json.offer);
+<<<<<<< HEAD
       setShowFeedback(true)
     }
   }
@@ -344,10 +405,28 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+      setShowFeedback(true)
+    }
+  }
+
+=======
+      setShowFeedback(true);
+    }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  }
+  return (
+<div className='max-w-3xl mx-auto p-6 space-y-6'>
+      <h1 className='text-xl font-semibold'>Hire Talent</h1>
+      <div className='space-y-4 border rounded p-4'>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="max-w-3xl mx-auto p-6 space-y-6">
       <h1 className="text-xl font-semibold">Hire Talent</h1>
 
       <div className="space-y-4 border rounded p-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -361,6 +440,78 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div>
           <label className='block text-sm font-medium'>
+=======
+
+
+=======
+        <div>
+          <label className='block text-sm font-medium'>Talent</label>
+          <input
+            value={talentSlug}
+            onChange={e => setTalentSlug(e.target.value)}
+            className='w-full border rounded px-3 py-2'
+          />
+        </div>
+        <div>
+          <label className='block text-sm font-medium'>Start date</label>
+          <input
+            type='date'
+            value={startDateIso}
+            onChange={e => setStartDateIso(e.target.value)}
+            className='w-full border rounded px-3 py-2'
+          />
+        </div>
+        <div>
+          <label className='block text-sm font-medium'>Scope summary</label>
+          <input
+            value={scopeSummary}
+            onChange={e => setScopeSummary(e.target.value)}
+            className='w-full border rounded px-3 py-2'
+          />
+        </div>
+        <div>
+          <label className='block text-sm font-medium'>Payment terms</label>
+          <select
+            value={termsType}
+            onChange={e => setTermsType(e.target.value)}
+            className='w-full border rounded px-3 py-2'
+          >
+            <option value='hourly'>Hourly</option>
+            <option value='fixed'>Fixed</option>
+            <option value='milestone'>Milestone</option>
+          </select>
+        </div>
+        {termsType === 'hourly' && (
+          <div>
+            <label className='block text-sm font-medium'>
+              Hourly rate (USD)
+            </label>
+            <input
+              type='number'
+              value={hourlyRateUsd}
+              onChange={e => setHourlyRateUsd(Number(e.target.value))}
+              className='w-full border rounded px-3 py-2'
+            />
+          </div>
+        )}
+        {termsType === 'fixed' && (
+          <div>
+            <label className='block text-sm font-medium'>
+              Fixed amount (USD)
+            </label>
+            <input
+              type='number'
+              value={fixedAmountUsd}
+              onChange={e => setFixedAmountUsd(Number(e.target.value))}
+              className='w-full border rounded px-3 py-2'
+            />
+          </div>
+        )}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+        <div>
+<label className='block text-sm font-medium'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             Agreement URL (optional)
           </label>
           <input
@@ -370,6 +521,10 @@ if ( {) {
             className='w-full border rounded px-3 py-2'
           />
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </div>
 
         <div>
@@ -385,6 +540,7 @@ if ( {) {
             <option value="milestone">Milestone</option>
           </select>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -404,10 +560,16 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div>
             <label className="block text-sm font-medium">Hourly rate (USD)</label>
             <input type="number" value={hourlyRateUsd} onChange={(e) => setHourlyRateUsd(Number(e.target.value))} className="w-full border rounded px-3 py-2" />
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -415,12 +577,15 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -593,26 +758,55 @@ if ( {) {
         </div>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        <div>
+          <label className="block text-sm font-medium">Agreement URL (optional)</label>
+          <input value={agreementUrl} onChange={(e) => setAgreementUrl(e.target.value)} placeholder="https://..." className="w-full border rounded px-3 py-2" />
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className='flex justify-end'>
           <button
             onClick={sendOffer}
             disabled={loading}
             className='px-4 py-2 rounded bg-indigo-600 text-white'
           >
+<<<<<<< HEAD
             {loading ? 'Sending…' : 'Send Offer to Confirm'}          </button>
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+            {loading ? 'Sending…' : 'Send Offer to Confirm'}
+          </button>
+        </div>
+      </div>
+      {result && (
+<div className='border rounded p-4 bg-emerald-50'>
+          <div className='font-medium'>Offer sent</div>
+          <div className='text-sm'>Offer ID: {result.id}</div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+        </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       )}
       <FeedbackModal
         isOpen={showFeedback}
         onClose={() => setShowFeedback(false)}
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+defaultContext={{
+          actionType: 'listing_publish',
+          metadata: { talentSlug },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         }}
         userHeaders={{;
           'x-demo-user-role': 'client',;
           'x-demo-user-id': 'client-1',;
         }}
+<<<<<<< HEAD
 
 
         </div>
@@ -626,6 +820,13 @@ if ( {) {
       {result && (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        defaultContext={{ actionType: 'listing_publish', metadata: { talentSlug } }}
+        userHeaders={{ 'x-demo-user-role': 'clientx-demo-user-id': 'client-1' }}
+      />
+    </div>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className='border rounded p - 4 bg - emerald - 50'>;
           <div className='font - medium'>Offer sent</div>;
           <div className='text - sm'>Offer ID: {result.id}</div>        </div>)}
@@ -640,6 +841,7 @@ if ( {) {
           'x - demo - user - role': 'client',
           'x - demo - user - id': 'client - 1',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         }}
 <<<<<<< HEAD
@@ -652,15 +854,20 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       />
     </div>
 );
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="flex justify-end">
           <button onClick={sendOffer} disabled={loading} className="px-4 py-2 rounded bg-indigo-600 text-white">
             {loading ? "Sending…" : "Send Offer to Confirm"  } catch (error) {
@@ -673,10 +880,13 @@ if ( {) {
       </div>
       {result && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="border rounded p-4 bg-emerald-50">
           <div className="font-medium">Offer sent</div>
           <div className="text-sm">Offer ID: {result.id}</div>
@@ -805,6 +1015,7 @@ if ( {) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -814,3 +1025,8 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

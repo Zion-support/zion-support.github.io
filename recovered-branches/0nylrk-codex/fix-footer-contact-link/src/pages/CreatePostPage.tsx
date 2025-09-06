@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -154,6 +155,8 @@ interface PostFormValues {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useSearchParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -171,12 +174,16 @@ interface PostFormValues {
   categoryId: ForumCategory
 
   tags: string}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default function CreatePostPage() {;
   const navigate = useNavigate();
   const { toast } = useToast();
   const [searchParams] = useSearchParams();
+<<<<<<< HEAD
 export default function CreatePostPage() {
 
 <<<<<<< HEAD
@@ -234,13 +241,13 @@ export default function CreatePostPage() {
     <AppLayout>;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function CreatePostPage() {
-
-
-
 
   const navigate = useNavigate();
   const { toast } = useToast();
+<<<<<<< HEAD
   const [searchParams] = useSearchParams();
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -250,6 +257,9 @@ export default function CreatePostPage() {
   const { toast } = useToast();
   const [searchParams] = useSearchParams();  // Get category from URL query params if available
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [searchParams] = useSearchParams();  // Get category from URL query params if available
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const initialCategory = searchParams.get("category") as ForumCategory | null;
 
   const initialValues: Partial<PostFormValues> = {
@@ -291,6 +301,7 @@ export default function CreatePostPage() {
         title="Create New Post | Community Forum | Zion AI Marketplace"
         description="Create a new discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, create post, new thread"
+<<<<<<< HEAD
 <<<<<<< HEAD
       />
 
@@ -450,6 +461,8 @@ export default function CreatePostPage() {;
       <div className="container py-8">;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="flex items-center gap-3 mb-6">;
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
             Forum;
@@ -530,6 +543,7 @@ function CreatePostPage() {
     </AppLayout>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ;
@@ -579,3 +593,6 @@ return (<AppLayout> <SEO title="Create New Post | Community Forum | Zion AI Mark
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -14,6 +14,7 @@ import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -56,6 +57,8 @@ import { Review, ReviewStatus } from "@/types/reviews",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {
@@ -80,6 +83,7 @@ import {
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { Badge } from "@/components/ui/badge",
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
 
@@ -97,6 +101,9 @@ interface ReviewsModerationTableProps {
 =======
 import { Button } from "@/components/ui/button",interface ReviewsModerationTableProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Button } from "@/components/ui/button",interface ReviewsModerationTableProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   reviews: Review[]
   isLoading: boolean
 
@@ -110,6 +117,7 @@ export function ReviewsModerationTable({
   reviews,
   isLoading,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -180,6 +188,12 @@ export function ReviewsModerationTable({
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  onRefresh}: ReviewsModerationTableProps) {
+  const [selectedReview, setSelectedReview] = useState<Review | null>(null),
+  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
+  const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     onError: (error: Error) => {
       toast({
 
@@ -205,6 +219,7 @@ export function ReviewsModerationTable({
             key={star}
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -285,6 +300,8 @@ import { Button } from "@/components/ui/button",;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ReviewsModerationTableProps {;
   reviews: Review[],;
   isLoading: boolean,;
@@ -403,6 +420,7 @@ export function ReviewsModerationTable({;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const renderStars = (rating: number) => {;
 
 =======
@@ -445,6 +463,9 @@ import { useState } from './react';
 =======
   const renderStars = (rating: number) => {;import { useState } from './react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const renderStars = (rating: number) => {;import { useState } from './react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { use_mutation } from '@tanstack / react - query';
 import { Check, X, User, Star, MoreHorizontal } from './lucide-react';
 import { format } from './date - fns';
@@ -523,6 +544,7 @@ if ( {) {
         {[1, 2, 3, 4, 5].map ((star) => (
           <Star;
             key={star}
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
 <<<<<<< HEAD
@@ -614,6 +636,12 @@ if ( {) {
         <TableHeader>;
           <TableRow>;                          : <User className="h-4 w-4" />}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (    <>;
+      <Table>;
+        <TableHeader>;
+          <TableRow>;                          : <User className="h-4 w-4" />}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </AvatarFallback>;
                     )}
                     )}
@@ -752,6 +780,7 @@ if ( {) {
                           Mark as rejected;
                         </DropdownMenuItem>)}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       {review.status === "rejected" && (
 <<<<<<< HEAD
                         onClick={() => handleReject(review.id)}
@@ -844,6 +873,12 @@ if ( {) {
                 </div>;
               </TableCell>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                      {review.status === "rejected" && (                    </DropdownMenuContent>;
+                  </DropdownMenu>;
+                </div>;
+              </TableCell>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </TableBody>;
       </Table>;
                       <AvatarImage
@@ -884,6 +919,7 @@ if ( {) {
                   {selectedReview && selectedReview.communication_rating && (;
                     <Badge variant="outline">;
                       Communication: {selectedReview && selectedReview.communication_rating}/5;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </Badge>;
 
@@ -1473,3 +1509,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 =======
                     </Badge>;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                    </Badge>;}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

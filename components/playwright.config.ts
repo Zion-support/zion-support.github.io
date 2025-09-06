@@ -1,10 +1,18 @@
+<<<<<<< HEAD
  trace: on-first-retry'
 }
  trace: on-first-retry' 
 // Playwright.config utility
 export const Playwright.config = () => {
   // Implementation here
+<<<<<<< HEAD
   return null
+=======
+  return null;
+=======
+trace: on-first-retry' 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
 reporter: [ ['list'], ['json', {
@@ -36,6 +44,7 @@ reporter: [ ['list'], ['json', {
 // {
   // name: webkit', // use: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   // Configure the web server to be started by Playwright
   webServer: {
@@ -43,6 +52,8 @@ reporter: [ ['list'], ['json', {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     timeout: 120 * 1000, // 2 minutes timeout for server to start
     stdout: pipe', // Pipe stdout to the console'    stderr: pipe', // Pipe stderr to the console'  }
   // Optional: Define projects for different browsers
@@ -57,6 +68,7 @@ reporter: [ ['list'], ['json', {
   //     name: firefox',  //     use: { ...devices['Desktop Firefox'] },  //   }
   //   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -64,3 +76,12 @@ reporter: [ ['list'], ['json', {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   };
+  // ]
+});
+  //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   }
+  // ]
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

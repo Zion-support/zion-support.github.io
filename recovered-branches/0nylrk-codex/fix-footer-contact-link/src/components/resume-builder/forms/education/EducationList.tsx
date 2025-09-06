@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -207,6 +208,11 @@ if ( {) {
 import {Education} from '@/types/resume';
 import {EducationItem} from './EducationItem';
 
+=======
+import {Education} from '@/types/resume';
+import {EducationItem} from './EducationItem';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface EducationListProps {
   educationEntries: Education[];
   onEdit: (education: Education) => void;

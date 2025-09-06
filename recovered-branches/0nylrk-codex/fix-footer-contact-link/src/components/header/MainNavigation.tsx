@@ -4,6 +4,7 @@ import { NavLink } from './react-router-dom';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -28,10 +29,14 @@ import { Link  } from 'react-router-dom';
 =======
 =======import { Link  } from 'react-router-dom';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======import { Link  } from 'react-router-dom';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
 import {Link} from 'react-router-dom';
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {NavLink} from "react-router-dom";
 <<<<<<< HEAD
@@ -100,6 +105,9 @@ export function MainNavigation(): any ({ className }: MainNavigationProps) {;
 =======
 import {NavLink} from "react-router-dom";        className={({ isActive }) =>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {NavLink} from "react-router-dom";        className={({ isActive }) =>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           cn(;
             "text-sm font-medium transition-colors hover: text-primary",;
             isActive ? "text-zion-cyan" : "text-muted-foreground";
@@ -181,6 +189,7 @@ function MainNavigation() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -242,6 +251,8 @@ function MainNavigation() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             isActive ? "text-zion-cyan" : "text-muted-foreground"
           )
         }
@@ -267,6 +278,7 @@ function MainNavigation() {
         to="/partners"
         className={({ isActive }) =>
           cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -318,6 +330,10 @@ function MainNavigation() {
 
             "text-sm font-medium transition-colors hover:text-primary",          cn(;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+            "text-sm font-medium transition-colors hover:text-primary",          cn(;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             "text-sm font-medium transition-colors hover: text-primary";
             isActive ? "text-zion-cyan" : "text-muted-foreground",
             "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light"
@@ -409,6 +425,7 @@ isActive ? " text-zion-cyan": " text-muted-foreground";
 }> Register </NavLink> </nav>) 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
@@ -421,3 +438,6 @@ isActive ? " text-zion-cyan": " text-muted-foreground";
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

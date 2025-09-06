@@ -1,13 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   try {
     // Ensure export
     const outDir = path && path.resolve(process && process.cwd(), 'out');
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -18,6 +22,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 
 =======
+=======
+    } catch (e) {
+      // attempt minimal static export
+      try {
+        execSync('next build && next export', { stdio: 'inherit' })
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
       return res
         .status(500)
@@ -26,6 +36,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     const { cid, provider } = await addDirectory(outDir);
     return res.status(500).json({ error: error?.message |'Unknown error' });
     return res.status(500).json({ error: error?.message || 'Unknown error' });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }    return res.status(200).json({ cid, provider })
 
@@ -37,12 +48,62 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+  }    return res.status(200).json({ cid, provider })
+
+=======
+import { execSync  } from 'child_process';
+import path from 'path';
+import fs from 'fs';
+import { addDirectory } from '@/utils/offworld/ipfs';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  try {
+    // Ensure export
+    const outDir = null;
+    return res.status(200).json({ cid, provider })
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });
+  try {
+    // Ensure export
+    const outDir = path.resolve(process.cwd(), 'out');
+    try {
+execSync('npm run export', { stdio: 'inherit' });
+    } catch (e) {
+      // attempt minimal static export
+      try {
+        execSync('next build && next export', { stdio: 'inherit' });
+      } catch (e2) {}
+    }
+    if (!fs.existsSync(outDir)) {
+return res
+        .status(500)
+        .json({ error: 'Export failed, no out/ directory found' });
+    }
+    const { cid, provider } = await addDirectory(outDir);
+    if (!cid) return res.status(500).json({ error: 'IPFS upload failed' });
+
+return res.status(200).json({ cid, provider });
+  } catch (error: any) {
+    return res.status(500).json({ error: error?.message || 'Unknown error' });
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  } catch (error: any) {
+    return res.status(500).json({ error: error?.message |'Unknown error' })
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     return res.status(200).json({ cid, provider })
 
   } catch (error: any) {
     return res.status(500).json({ error: error?.message |'Unknown error' })
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return res && res.status(200).json({ cid, provider });
   } catch (error: any) {
     return res && res.status(500).json({ error: error?.message || 'Unknown error' });
@@ -52,11 +113,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {exec_sync} from 'child_process';
 import path from 'path';
 import fs from 'fs';
@@ -119,10 +183,13 @@ function handler() {
     return res.status (500).json ({ error: error?.message || 'Unknown error' });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
     return res.status(500).json({ error: error?.message || 'Unknown error' });
   }
@@ -130,6 +197,7 @@ function handler() {
 }
 }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -142,3 +210,10 @@ function handler() {
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

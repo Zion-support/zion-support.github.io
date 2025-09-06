@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from "fs";
 import path from "path";
 import { TokenConfig, TokenTransaction, Wallet } from "./types";
@@ -8,6 +9,24 @@ const STORE_FILE = path.join(DATA_DIR, "token_store.json");
 export interface TokenStoreData {;
   wallets: Record<string Wallet>;
 =======
+=======
+=======
+class TokenStore {
+  private config: any = {};
+
+  setConfig(config: any) {
+    this.config = config;
+  }
+
+  getConfig() {
+    return this.config;
+  }
+}
+
+export const tokenStore = new TokenStore();
+export interface TokenConfig {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   tokenName: string;
   tokenSymbol: string;
 
@@ -181,6 +200,7 @@ export const token_store = new TokenStore ();
   } catch {;
     return null;
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 ;
@@ -208,7 +228,27 @@ class InMemoryTokenStore {;
 ;
   save(): void {;
     writeToDisk(this.data);
+=======
+
+function writeToDisk(data: TokenStoreData): void {
+  try {
+    ensureDataDir();
+    fs.writeFileSync(STORE_FILE, JSON.stringify(data, null, 2), 'utf8');
+  } catch {}
+
+class InMemoryTokenStore {
+  private data: TokenStoreData;
+
+  constructor() {
+    const fromDisk = readFromDisk();
+    this.data = fromDisk ?? {
+      wallets: {},
+      transactions: [],
+      config: DEFAULT_TOKEN_CONFIG,
+    };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
+<<<<<<< HEAD
 }
 ;
 const store = new InMemoryTokenStore();
@@ -262,6 +302,55 @@ export const tokenStore = new TokenStore();
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+  getData(): TokenStoreData {
+    return this.data;
+  }
+
+  save(): void {
+    writeToDisk(this.data);
+  }
+
+const store = new InMemoryTokenStore();
+
+export const tokenStore = {
+  getConfig(): TokenConfig {
+    return store.getData().config;
+  },
+  setConfig(config: TokenConfig): void {
+    store.getData().config = config;
+    store.save();
+  },
+  getWallet(userId: string): Wallet {
+    const wallets = store.getData().wallets;
+    if (!wallets[userId]) {
+      wallets[userId] = { userId, balance: 0 };
+      store.save();
+    }
+    return wallets[userId];
+  },
+  setWalletBalance(userId: string, balance: number): Wallet {
+    const wallets = store.getData().wallets;
+    wallets[userId] = { userId, balance };
+    store.save();
+    return wallets[userId];
+  },
+  addTransaction(tx: TokenTransaction): void {
+    store.getData().transactions.unshift(tx);
+    store.save();
+  },
+  getTransactions(userId?: string): TokenTransaction[] {
+    const txs = store.getData().transactions;
+    if (!userId) return txs;
+    return txs.filter(t => t.userId === userId);
+  },
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
 import {AppSidebar} from "@/components/creator/CreatorSidebar";
 import {Header} from "@/components/Header";
@@ -25,6 +28,7 @@ import { AppSidebar } from "@/components/creator/CreatorSidebar",
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header",
+<<<<<<< HEAD
 import { Footer } from "@/components/Footer",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -46,6 +50,9 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",export default function CreatorDashboard() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Footer } from "@/components/Footer",export default function CreatorDashboard() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <SidebarProvider>
       <div className="min-h-screen flex w-full bg-zion-blue">
@@ -106,6 +113,7 @@ import { Footer } from "@/components/Footer",export default function CreatorDash
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -133,6 +141,10 @@ import { Footer } from "@/components/Footer",export default function CreatorDash
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
 import { AppSidebar } from "@/components/creator/CreatorSidebar",;
 import { Header } from "@/components/Header",;
@@ -193,13 +205,13 @@ export default /**
 function CreatorDashboard() {
   return (
     <SidebarProvider>;
-      <div className="min - h-screen flex w - full bg - zion - blue">;
+      <div className="min - h-screen flex w - full bg - zion-blue">;
         <AppSidebar />;
-        <div className="flex flex - col w - full">;
+        <div className="flex flex - col w-full">;
           <Header />;
-          <main className="flex - 1 p - 6 md:p - 10 bg - zion - blue">;
-            <h1 className="text - 2xl font - bold text - white mb - 8">Creator Dashboard</h1>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 mb - 8">;
+          <main className="flex - 1 p - 6 md:p - 10 bg - zion-blue">;
+            <h1 className="text - 2xl font - bold text - white mb-8">Creator Dashboard</h1>;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 mb-8">;
               {/* Example Stat Card */}
               <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 transition-shadow hover:shadow-lg">;
                 <div className="flex items-center gap-3 mb-2">;
@@ -243,6 +255,7 @@ function CreatorDashboard() {
           <Footer />;
         </div>;
       </div>;
+<<<<<<< HEAD
       <SidebarTrigger />;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -337,6 +350,10 @@ function CreatorDashboard() {
       <SidebarTrigger />;    </SidebarProvider>);
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <SidebarTrigger />;    </SidebarProvider>);
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </SidebarProvider>);
 }
     </SidebarProvider>;
@@ -353,9 +370,12 @@ function CreatorDashboard() {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

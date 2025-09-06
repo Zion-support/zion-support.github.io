@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,6 +13,8 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import NextAuth from './next - auth';,
 import CredentialsProvider from './next - auth / providers / credentials';,
 import { PrismaAdapter  } from '@auth / prisma - adapter';,
@@ -19,6 +22,7 @@ import { prisma  } from '@/lib / prisma';,
 import bcrypt from './bcryptjs';,
 const handler = NextAuth ({
   adapter: PrismaAdapter (prisma),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,6 +56,8 @@ const handler = NextAuth({adapter: PrismaAdapter(prisma);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   providers: [;
     CredentialsProvider ({
       name: "credentials",
@@ -118,6 +124,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     }}
@@ -136,6 +143,8 @@ const handler = NextAuth({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   providers: [;
     CredentialsProvider({;
       name: "credentials";
@@ -234,6 +243,7 @@ const handler = NextAuth({;
         session.user.id = token.sub!;
         session.user.role = token.role;
       }
+<<<<<<< HEAD
       return session;
 <<<<<<< HEAD
     }};
@@ -271,3 +281,6 @@ export { handler as GET, handler as POST };
       }
       return session;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      return session;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

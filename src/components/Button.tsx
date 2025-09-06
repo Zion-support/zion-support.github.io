@@ -53,6 +53,7 @@ const Button: React.FC<ButtonProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ghost: 'text-blue-600 hover:bg-blue-50 focus:ring-blue-500'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -61,6 +62,9 @@ const Button: React.FC<ButtonProps> = ({
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+    ghost: 'text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };
 =======
     ghost: 'text-blue-600 hover:bg-blue-50 focus:ring-blue-500'  };

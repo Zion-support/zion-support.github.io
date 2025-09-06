@@ -25,15 +25,19 @@ export function MyApplications() {;
   const { applications, isLoading, error } = useJobApplications();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const getStatusBadge = (status: ApplicationStatus) => {;
     switch (status) {;
     switch (status) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -63,6 +67,8 @@ function MyApplications() {
 import { useState } from "react",
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -148,6 +154,7 @@ export function MyApplications() {
       </Card>
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -177,6 +184,9 @@ export function MyApplications() {
 =======
   }      case "new": return <Badge variant="secondary">New</Badge>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }      case "new": return <Badge variant="secondary">New</Badge>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       case "viewed":;
         return <Badge variant="outline">Viewed</Badge>;
       case "shortlisted":;
@@ -317,6 +327,7 @@ export function MyApplications() {;
             </div>
             <p className="text-sm text-muted-foreground">
 <<<<<<< HEAD
+<<<<<<< HEAD
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
 <<<<<<< HEAD
             </p>;
@@ -350,6 +361,9 @@ export function MyApplications() {;
 =======
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}              <div className="flex justify-between items-center">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}              <div className="flex justify-between items-center">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <Button
                   variant="outline"
                   size="sm"
@@ -361,6 +375,7 @@ export function MyApplications() {;
                   </Link>
                 </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Button
                   variant="default"
                 <Button 
@@ -368,6 +383,8 @@ export function MyApplications() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <div className="grid gap-4 md:grid-cols-2">;
@@ -389,6 +406,7 @@ export function MyApplications() {;
 
                 <Button 
                   variant="default" 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -611,3 +629,5 @@ default: return <Badge variant="outline"> {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

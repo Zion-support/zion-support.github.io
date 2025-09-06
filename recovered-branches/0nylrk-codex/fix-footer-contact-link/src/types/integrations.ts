@@ -31,6 +31,7 @@ export type IntegrationStatus = "connected" | "warning" | "disconnected";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface Integration {
@@ -161,11 +162,20 @@ export interface SyncLog {
 
   details: string}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  id: string;
+  integration: string;
+  event: string;
+  status: "success" | "error" | "warning";
+
+  details: string}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export type CrmIntegrationEvents =
   | "contact_synced"
   | "deal_created"
   | "deal_updated"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -188,6 +198,8 @@ export type AtsIntegrationEvents =
   | "resume_uploaded"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   | "job_posted";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -196,7 +208,7 @@ export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",;
 export type IntegrationStatus = "connected" | "warning" | "disconnected",;
 export interface Integration {;
   id: string,;
-  name: string,;
+  name: string,,
   description: string,;
   logoUrl: string,;
   status: IntegrationStatus,;
@@ -297,9 +309,12 @@ export type AtsIntegrationEvents =;
   | "resume_uploaded";
   | "job_posted";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

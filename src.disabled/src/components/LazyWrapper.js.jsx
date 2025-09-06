@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,10 +21,14 @@ import React from \'react\'; const LazyWrapper = ({ children,threshold = 0 && 0.
 =======
 import _React from 'react'; const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading...",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ "amount": 'threshold' }); useEffect(() => {}}}})import React from \'react\'; const LazyWrapper = ({ children,threshold = 0 && 0.1,className = \",loadingVariant = \"default\",loadingText = \"Loading...\",loadingSize = \"md\"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ \"amount\": \'threshold\' }); useEffect(() => {}}}})
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from \'react\'; const LazyWrapper = ({ children,threshold = 0 && 0.1,className = \",loadingVariant = \"default\",loadingText = \"Loading...\",loadingSize = \"md\"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ \"amount\": \'threshold\' }); useEffect(() => {}}}})
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const React from "react"; const LazyWrapper = ({ children,threshold = 0 && 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ amount: "threshold" }); useEffect(() => {}}}})'"'"
 
 import _React from 'react'; const LazyWrapper = ({ children,threshold = 0 && 0.1,className = ",loadingVariant = "default",loadingText = "Loading...",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ "amount": 'threshold' }); useEffect(() => {}}}})
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,3 +72,8 @@ import React from \'react\'; const LazyWrapper = ({ children,threshold = 0.1,cla
 const React from "react"; const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ amount: "threshold" }); useEffect(() => {}}}})'"'"
 import _React from 'react'; const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading...",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ "amount": 'threshold' }); useEffect(() => {}}}})
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import React from \'react\'; const LazyWrapper = ({ children,threshold = 0.1,className = \",loadingVariant = \"default\",loadingText = \"Loading...\",loadingSize = \"md\"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ \"amount\": \'threshold\' }); useEffect(() => {}}}})
+const React from "react"; const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ amount: "threshold" }); useEffect(() => {}}}})'"'"
+import _React from 'react'; const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading...",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ "amount": 'threshold' }); useEffect(() => {}}}})
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

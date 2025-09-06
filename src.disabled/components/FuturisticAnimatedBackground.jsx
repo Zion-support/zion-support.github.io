@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/FuturisticAnimatedBackground.jsx
 "export\": const FuturisticAnimatedBackground = ({ className = \',intensity = \'medium\',colorScheme = \'multi\' }) => { const canvasRef = useRef (null) const animationRef = useRef () useEffect ( () => { \''\';\'"\";
 export: const FuturisticAnimatedBackground = ({ className = ",intensity = "medium",colorScheme = "multi" }) => { const canvasRef = useRef (null) const animationRef = useRef () useEffect ( () => { """;""";"""
@@ -41,6 +42,8 @@ import React from';react' "export": const FuturisticAnimatedBackground = ({ clas
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
@@ -48,6 +51,7 @@ import React from';react' "export": const FuturisticAnimatedBackground = ({ clas
 import React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return'';';''}
 import React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return'';';''}
 import React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return'';';''}
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
@@ -62,3 +66,6 @@ import React from';react' "export": const FuturisticAnimatedBackground = ({ clas
 =======
 import React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return'';';''}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return'';';''}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

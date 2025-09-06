@@ -2,11 +2,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/temp_broken_files/components.disabled/components/AIChatAssistant.test.ts
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const { render, screen } from "@testing-library/react"; render(<AIChatAssistant />);" expect(screen.getByRole("main")).toBeInTheDocument()});" it("displays correct content", () => {; render(<AIChatAssistant />); / Add specific content checks based on component functionality});" it("handles user interactions", () => {; render(<AIChatAssistant />); / Add interaction tests based on component functionality})})""
 =======
 =======
@@ -16,9 +19,12 @@ const { render, screen } from "@testing-library/react"; render(<AIChatAssistant 
 const { render, screen } from "@testing-library/react"; render(<AIChatAssistant />);" expect(screen.getByRole("main")).toBeInTheDocument()});" it("displays correct content", () => {; render(<AIChatAssistant />); / Add specific content checks based on component functionality});" it("handles user interactions", () => {; render(<AIChatAssistant />); / Add interaction tests based on component functionality})})""
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import { render, screen  } from "@testing-library/react"
+<<<<<<< HEAD
 =======
 const { render, screen } from "@testing-library/react"; render(<AIChatAssistant />);" expect(screen.getByRole("main")).toBeInTheDocument()});" it("displays correct content", () => {; render(<AIChatAssistant />); / Add specific content checks based on component functionality});" it("handles user interactions", () => {; render(<AIChatAssistant />); / Add interaction tests based on component functionality})})""import { render, screen  } from "@testing-library/react"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     expect(screen.getByRole("main"
   it("displays correct content"
 const { render, screen } from "@testing-library/react"; render(<AIChatAssistant />);" expect(screen.getByRole("main")).toBeInTheDocument()});" it('displays correct content', () => {; render(<AIChatAssistant />); / Add specific content checks based on component functionality});" it('handles user interactions', () => {; render(<AIChatAssistant />); / Add interaction tests based on component functionality})})""
@@ -28,6 +34,9 @@ import { render, screen  } from "@testing-library/react";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   it("displays correct content", () => {;
 <<<<<<< HEAD
 =======
@@ -51,8 +60,11 @@ import { render, screen  } from "@testing-library/react";",
   it("displays correct content", () => {;"}
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     render(<AIChatAssistant />);
     // Add specific content checks based on component functionality});,
   it("handles user interactions", () => {;"}
@@ -60,7 +72,11 @@ import { render, screen  } from "@testing-library/react";",
     render(<AIChatAssistant />);
 import { render,screen } from "@testing-library/react"; render(<AIChatAssistant />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => {; render(<AIChatAssistant />); it("handles user interactions",() => {; render(<AIChatAssistant />)})
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
     // Add interaction tests based on component functionality})});
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+    // Add interaction tests based on component functionality})});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

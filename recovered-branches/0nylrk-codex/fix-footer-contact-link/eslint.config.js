@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -41,6 +42,8 @@ import tseslint from "typescript-eslint",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default tseslint.config(
   { ignores: ["dist"] }
   {
@@ -48,6 +51,7 @@ export default tseslint.config(
     files: ["**/*.{ts,tsx}"]
     languageOptions: {
       ecmaVersion: 2020
+<<<<<<< HEAD
 <<<<<<< HEAD
       globals: globals.browser}
 <<<<<<< HEAD
@@ -76,6 +80,9 @@ export default tseslint && tseslint.config(
 =======
       globals: globals.browser}    plugins: {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      globals: globals.browser}    plugins: {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       "react-hooks": reactHooks
       "react-refresh": reactRefresh}
     rules: {      "react-refresh/only-export-components": [
@@ -83,6 +90,7 @@ export default tseslint && tseslint.config(
         "warn"
         { allowConstantExport: true }]
       "@typescript-eslint/no-unused-vars": "off"}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -99,6 +107,8 @@ export default tseslint && tseslint.config(
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import js from "@eslint/js",;
 import globals from "globals",;
 import reactHooks from "eslint-plugin-react-hooks",;
@@ -125,12 +135,15 @@ export default tseslint.config(;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 )
 import js from "@eslint / js";
@@ -181,6 +194,7 @@ export default tseslint.config(;
       "react-refresh/only-export-components":[;
         "warn",;
 <<<<<<< HEAD
+<<<<<<< HEAD
         { allowConstantExport:true }],;
       "@typescript-eslint/no-unused-vars":"off"}}
 ),; export default tseslint.config ("@typescript-eslint/no-unused-vars": "off" 
@@ -195,3 +209,8 @@ export default tseslint.config(;
       "@typescript-eslint/no-unused-vars": "off"}}
 );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        { allowConstantExport: true }];
+      "@typescript-eslint/no-unused-vars": "off"}}
+);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

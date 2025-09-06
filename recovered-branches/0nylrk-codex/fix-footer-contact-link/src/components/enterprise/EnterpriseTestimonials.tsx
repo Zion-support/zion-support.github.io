@@ -3,9 +3,12 @@
 import React from "react";
 import { Quote } from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import {
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   Carousel,;
   CarouselContent,;
@@ -41,6 +44,7 @@ const testimonials = [;
   },;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 =======
 
@@ -60,12 +64,16 @@ import {
 =======
 ];  Carousel,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+];  Carousel,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,;
 } from "@/components/ui/carousel";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -81,6 +89,8 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Carousel
   CarouselContent
   CarouselItem
@@ -113,6 +123,7 @@ const testimonials = [
     image: "/placeholder.svg"
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -169,6 +180,10 @@ export function EnterpriseTestimonials() {;
 export function EnterpriseTestimonials() {;
   return (                      <img
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function EnterpriseTestimonials() {;
+  return (                      <img
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         src={testimonial && testimonial.image}
                         alt={testimonial && testimonial.author}
                         className="h-full w-full object-cover"
@@ -218,6 +233,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components / ui / carousel';
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <img;
 =======
@@ -386,3 +402,6 @@ image: "/placeholder.svg"
 =======
                       <img;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                      <img;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

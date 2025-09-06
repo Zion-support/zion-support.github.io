@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -17,10 +18,14 @@ import {cn} from '@/lib/utils';
 =======
 import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import * as React from "react"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
 import * as React from "react"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -34,6 +39,8 @@ import * as AvatarPrimitive from "@radix-ui/react-avatar"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { cn } from "@/lib/utils"
 
@@ -54,6 +61,7 @@ const Avatar = React && React.forwardRef<;
   />;
 ));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -101,10 +109,13 @@ Avatar.displayName = AvatarPrimitive.Root.displayName;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const AvatarImage = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Image>
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive</typeof>.Image>
 >(({ className, ...props }, ref) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
   <AvatarPrimitive.Image
 <<<<<<< HEAD
@@ -128,17 +139,23 @@ const AvatarImage = React.forwardRef<;
 =======
   <AvatarPrimitive.Imageconst AvatarImage = React.forwardRef<;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  <AvatarPrimitive.Imageconst AvatarImage = React.forwardRef<;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   React.ElementRef<typeof AvatarPrimitive.Image>,;
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>;
 >(({ className, ...props }, ref) => (;
   <AvatarPrimitive.Image;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     ref={ref}
     className={cn('aspect-square h-full w-full', className)}
     {...props}
@@ -220,6 +237,7 @@ const AvatarImage = React.forward_ref<;
 >(({ className, ...props }, ref) => (;
   <AvatarPrimitive.Image;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -418,3 +436,5 @@ export { Avatar, AvatarImage, AvatarFallback }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,10 +10,13 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useUIState() {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -112,6 +116,8 @@ function useUIState() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return {
     isMobileFilterOpen;
     setIsMobileFilterOpen;
@@ -119,6 +125,7 @@ function useUIState() {
     setIsHireModalOpen;
     selected_talent;
     setSelectedTalent;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -134,6 +141,8 @@ function useUIState() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     selected_talent;
     setSelectedTalent;
 import { useState } from 'react',;
@@ -168,6 +177,7 @@ export function useUIState() {;
     setIsHireModalOpen,;
     selectedTalent,;
 <<<<<<< HEAD
+<<<<<<< HEAD
     setSelectedTalent,;
 <<<<<<< HEAD
 
@@ -180,6 +190,9 @@ export function useUIState() {;
 =======
     setSelectedTalent,;    expandedSections;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    setSelectedTalent,;    expandedSections;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     toggleSection;
     expanded_sections;
     toggle_section;

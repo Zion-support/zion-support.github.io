@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Content analysis functionality
 <<<<<<< HEAD
 
@@ -9,11 +10,18 @@ import { AnalysisResult } from "./types";
 /**
  * Analyzes text content for suspicious patterns
  */
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const analyzeContent = (content: string): AnalysisResult => {
   const contentLower = content.toLowerCase();
 <<<<<<< HEAD
   const reasons: string[] = []
   const contentLower = content.toLowerCase(),
+<<<<<<< HEAD
+=======
+
+  const contentLower = content && content.toLowerCase();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const reasons: string[] = [],
   
 <<<<<<< HEAD
@@ -144,7 +152,10 @@ export const analyzeContent = (content: string): AnalysisResult => {;
       reasons && reasons.push(`Contains suspicious phrase: "${phrase}"`)
     }
   }  // Check for links (simplified check)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g.test(contentLower);
   if (
     hasExternalLinks &&
@@ -157,6 +168,7 @@ export const analyzeContent = (content: string): AnalysisResult => {;
 
   // Check for excessive capitalization (potential scam)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -164,6 +176,11 @@ export const analyzeContent = (content: string): AnalysisResult => {;
   if (capitalRatio > 0.3 && content.length > 20) {
     reasons.push("Excessive capitalization");
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  const capitalRatio = (content.match(/[A-Z]/g) || []).length / content.length;
+  if (capitalRatio > 0.3 && content.length > 20) {
+    reasons.push("Excessive capitalization");
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 
   // Check for poor grammar with repetitive punctuation
@@ -336,6 +353,7 @@ export const analyzeContent = (content:string):AnalysisResult => {;
 
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -343,3 +361,6 @@ export const analyzeContent = (content:string):AnalysisResult => {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

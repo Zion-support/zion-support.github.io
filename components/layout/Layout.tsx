@@ -3,6 +3,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -17,11 +21,21 @@ import Head from 'next/head';
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 import React, { ReactNode } from 'react';
+<<<<<<< HEAD
 import Header from '../Header';
 import Footer from '../Footer';
 
 =======
 import React from 'react';import React, { ReactNode } from 'react';
+=======
+=======
+React from
+  'react'
+import Header from 'react'
+  './Header';import Footer from 'react'
+  './Footer'
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import Header from '../Header';
 import Footer from '../Footer';

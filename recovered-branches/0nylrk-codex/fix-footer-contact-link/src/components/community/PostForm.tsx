@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -50,6 +51,10 @@ import { useForm } from "react-hook-form",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Card;
@@ -68,6 +73,7 @@ import {
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -130,11 +136,17 @@ interface PostFormProps {
 import { Textarea } from "@/components/ui/textarea",
 import { ForumCategory } from "@/types/community",  onSubmit: (values: PostFormValues) => void,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import { Textarea } from "@/components/ui/textarea",
+import { ForumCategory } from "@/types/community",  onSubmit: (values: PostFormValues) => void,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   isEditing?: boolean
 }
 
 export const PostForm = ({;
   initialValues;
+<<<<<<< HEAD
 <<<<<<< HEAD
   onSubmit;
 <<<<<<< HEAD
@@ -198,12 +210,16 @@ interface PostFormProps {;
 =======
   onSubmit;  initialValues?: Partial<PostFormValues>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  onSubmit;  initialValues?: Partial<PostFormValues>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   onSubmit: (values: PostFormValues) => void
   isEditing?: boolean
 }
 export const PostForm = ({
   initialValues;
   onSubmit;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -220,10 +236,13 @@ export const PostForm = ({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   isEditing = false
 }: PostFormProps) => {
   const form = useForm<PostFormValues>({
     defaultValues: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -330,12 +349,18 @@ export const PostForm = ({
       await on_submit (values);
     } finally {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    try {
+      await on_submit (values);
+    } finally {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     }
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
     try {
       await on_submit (values);
+<<<<<<< HEAD
 <<<<<<< HEAD
     } finally {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -384,6 +409,10 @@ export const PostForm = ({
     } finally {    }
   }  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    } finally {    }
+  }  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <Card>;
       <CardHeader>;
         <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}</CardTitle>;
@@ -398,7 +427,10 @@ export const PostForm = ({
                 <FormItem>;
                   <FormLabel>Title</FormLabel>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setIsSubmitting (false);
     }
   }
@@ -417,7 +449,10 @@ export const PostForm = ({
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Title</FormLabel>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <FormControl>;
                     <Input placeholder="Enter post title..." {...field} />;
                   </FormControl>;
@@ -643,6 +678,7 @@ export const PostForm = ({
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -650,6 +686,8 @@ export const PostForm = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </FormItem>)}
             />;
             <FormField;
@@ -709,7 +747,10 @@ export const PostForm = ({
 export default PostForm,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

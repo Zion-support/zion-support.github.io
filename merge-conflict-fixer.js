@@ -14,10 +14,14 @@ function resolveMergeConflicts(filePath) {
         content = content.replace(/        
         // Remove any remaining conflict markers
 <<<<<<< HEAD
+<<<<<<< HEAD
         content = content.replace(/        content = content.replace(/=======\n/g, '');
 =======
         content = content.replace(/        content = content.replace(/\n/g, '');
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+        content = content.replace(/        content = content.replace(/\n/g, '');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         content = content.replace(/        
         // Clean up any duplicate content
         content = content.replace(/\n\n\n+/g, '\n\n');

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
 import { Briefcase } from 'lucide-react'
@@ -16,6 +17,8 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
         {experience.map((exp) => (
           <div key={exp.id} className="flex">
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <div key={exp.id} className="flex">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="mr-4">
@@ -30,9 +33,27 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+import { ProfileExperience as ProfileExperienceType } from '@/types/profile';
+import { Briefcase } from 'lucide-react';
+
+import { ProfileExperience as ProfileExperienceType } from "@/types/profile";
+import { Briefcase } from 'lucide-react'
+interface ProfileExperienceProps {
+  experience: ProfileExperienceType[]
+export function ProfileExperience({ experience }: ProfileExperienceProps) {
+  return (
+                <Briefcase className='h-5 w-5 text-zion-purple' />
+              </div>
+            </div>
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div>
               <h4 className='text-white font-medium'>{exp.role}</h4>
               <div className='text-zion-cyan mb-1'>{exp.company}</div>
@@ -40,18 +61,25 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
                 {exp.startDate} - {exp.current ? 'Present' : exp.endDate}
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <p className="text-zion-slate">{exp.description}</p>
             </div>
           </div>
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
               <p className="text-zion-slate">{exp.description}</p>
 
+=======
+              <p className='text-zion-slate'>{exp.description}</p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 
 import { ProfileExperience as ProfileExperienceType } from '@/types/profile';
 
@@ -137,5 +165,13 @@ export function ProfileExperience(): any ({ experience }: ProfileExperienceProps
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+;
+=======
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

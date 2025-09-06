@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Progress } from "@/components/ui/progress";
 import { ResumeProgressProps } from "./types";
@@ -15,12 +16,15 @@ import { ResumeProgressProps } from "./types";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { Progress } from "@/components/ui/progress",
 import { ResumeProgressProps } from "./types",
 import {Progress} from "@/components/ui/progress";
 import {ResumeProgressProps} from "./types";
 import { Progress } from "@/components/ui/progress",
+<<<<<<< HEAD
 import { ResumeProgressProps } from "./types",
 <<<<<<< HEAD
 =======
@@ -62,6 +66,10 @@ import {ResumeProgressProps} from "./types";
 };
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { ResumeProgressProps } from "./types",  )
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { Progress } from "@/components/ui/progress",
 import { ResumeProgressProps } from "./types",
@@ -78,6 +86,7 @@ import { ResumeProgressProps } from "./types",  )
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -88,6 +97,8 @@ import { ResumeProgressProps } from "./types",  )
   )
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 },
 import { Progress } from "@/components/ui/progress",;
 import { ResumeProgressProps } from "./types",;

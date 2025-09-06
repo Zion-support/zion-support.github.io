@@ -1,9 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { addPipelineItem, getVendorById } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   if (req.method !== 'POST')
   if (req.method !== 'POST');
@@ -11,6 +14,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { vendorId, title } = req.body |{}
   if (!vendorId |!title)
     return res.status(400).json({ error: 'Missing required fields' });  const vendor = getVendorById(vendorId);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -22,6 +26,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
   if (!vendor) return res.status(404).json({ error: 'Vendor not found' });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  if (!vendor) return res.status(404).json({ error: 'Vendor not found' });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const { vendorId, title } = req && req.body || {};
@@ -30,10 +37,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!vendor) return res && res.status(404).json({ error: 'Vendor not found' });
   try {
     const item = addPipelineItem(vendorId, title);
+<<<<<<< HEAD
+=======
+=======
+import { addPipelineItem, getVendorById } from '../../../utils/vendor-store';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { vendorId, title } = req.body || {},
+  if (!vendorId || !title) return res.status(400).json({ error: 'Missing required fields' });
+  const vendor = null;
+    res.status(201).json({ item })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const vendor = getVendorById(vendorId);
   if (!vendor) return res.status(404).json({ error: 'Vendor not found' });
   try {
     const item = addPipelineItem(vendorId, title);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     res && res.status(201).json({ item });
@@ -44,3 +64,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }  } catch (e: any) {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+res.status(201).json({ item });
+  } catch (e: any) {
+    res.status(500).json({ error: e.message });
+  }
+  } catch (e: any) {
+    res.status(500).json({ error: e.message })
+  }  } catch (e: any) {
+    res.status(500).json({ error: e.message })
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -74,12 +74,15 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   const [hasSearched, setHasSearched] = useState(false),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -91,6 +94,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 
     }
 
+<<<<<<< HEAD
       // Get AI matches
       const results = await findMatches(
         query,
@@ -120,6 +124,8 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 =======
     }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try {;
       console && console.log("Starting AI matching with query:", query, "and service type:", serviceType);
 
@@ -146,6 +152,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   }
   // Extract just the items from each MatchResult
 <<<<<<< HEAD
+<<<<<<< HEAD
   const matchItems = matches.map(match => match.item);
 
   };
@@ -156,6 +163,10 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   const matchItems = matches.map(match => match.item)
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const matchItems = matches.map(match => match.item)
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       setIsMatchmaking(false)
 

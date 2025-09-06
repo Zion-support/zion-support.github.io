@@ -1,11 +1,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -29,6 +32,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -37,6 +41,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -48,6 +54,7 @@ import {PageViewsChart} from "@/components/analytics/PageViewsChart";
 import {ConversionAnalysisChart} from "@/components/analytics/ConversionAnalysisChart";
 import {ExportPanel} from "@/components/analytics/ExportPanel";
 export default function Analytics() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [timeRange, setTimeRange] = useState('30d');
 <<<<<<< HEAD
@@ -196,6 +203,15 @@ import React, { useState } from "react",;
         .select('created_at, path')
         .eq('event_typepage_view')import React, { useState } from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [timeRange, setTimeRange] = useState('30d');    queryKey: ['page-views-trend', timeRange],
+    queryFn: async () => {
+      // Get daily page views for trend chart
+      const { data, error } = await supabase
+        .from('analytics_events')
+        .select('created_at, path')
+        .eq('event_typepage_view')import React, { useState } from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { AnalyticsContainer } from "@/components/analytics/AnalyticsContainer",;
@@ -218,6 +234,7 @@ export default function Analytics() {;
       const { data, error } = await supabase;
         .from('analytics_events');
         .select('created_at, path');
+<<<<<<< HEAD
 <<<<<<< HEAD
         .eq('event_typepage_view');
 <<<<<<< HEAD
@@ -263,11 +280,15 @@ export default function Analytics() {;
 =======
         .eq('event_typepage_view');        const date = new Date(),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        .eq('event_typepage_view');        const date = new Date(),;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         date.setDate(date.getDate() - i),;
         const dateStr = date.toISOString().split('T')[0],;
         if (viewsByDate[dateStr]) {;
           result.push(viewsByDate[dateStr]);
         } else {;
+<<<<<<< HEAD
 <<<<<<< HEAD
           result.push({ date: dateStr, views: 0 });
 <<<<<<< HEAD
@@ -399,11 +420,21 @@ export default function Analytics() {;
       const days = parseInt(timeRange && timeRange.replace('d', ''));
       const startDate = new Date();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          result.push({ date: dateStr, views: 0 });        }
+      }
+      return result.sort((a, b) => a.date.localeCompare(b.date))
+    }    queryKey: ['conversion-data', timeRange];
+    queryFn: async () => {;
+      const days = parseInt(timeRange && timeRange.replace('d', ''));
+      const startDate = new Date();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           conversionsByType[conversionType] = {}
         }
         if (!conversionsByType[conversionType][date]) {
           conversionsByType[conversionType][date] = 0
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         
@@ -418,6 +449,10 @@ export default function Analytics() {;
         
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         conversionsByType[conversionType][date]++
       });
       // Get all dates in range
@@ -440,12 +475,15 @@ export default function Analytics() {;
   });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         
 
@@ -540,6 +578,7 @@ export default function Analytics() {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -547,6 +586,8 @@ export default function Analytics() {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 
     <AnalyticsContainer>;
@@ -559,6 +600,7 @@ export default function Analytics() {;
           timeRange={timeRange}
           onTimeRangeChange={setTimeRange}
 <<<<<<< HEAD
+<<<<<<< HEAD
         />
         <PageViewsTable />
       </div>
@@ -568,13 +610,18 @@ export default function Analytics() {;
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
         <PageViewsChart
           data={pageViewTrends |[]}
           timeRange={timeRange}
           onTimeRangeChange={setTimeRange}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         />
         <ExportPanel />
       </div>
@@ -661,6 +708,7 @@ export default function Analytics() {;
         <ConversionAnalysisChart ;
           data={conversionData || []} ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           timeRange={timeRange}
 =======
@@ -673,6 +721,9 @@ import React, { useState } from './react';
 =======
           timeRange={timeRange}import React, { useState } from './react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          timeRange={timeRange}import React, { useState } from './react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { use_query } from '@tanstack / react - query';
 import { supabase } from '@/integrations / supabase / client';
 import { AnalyticsContainer } from '@/components / analytics / AnalyticsContainer';
@@ -810,6 +861,7 @@ if ( {) {
         />;
         <ExportPanel />;
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -884,3 +936,6 @@ return (<AnalyticsContainer> <AnalyticsSummary /> <div className="grid grid-cols
 =======
       </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

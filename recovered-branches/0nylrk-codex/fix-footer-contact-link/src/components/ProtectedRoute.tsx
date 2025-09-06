@@ -21,6 +21,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
   adminOnly = false;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -49,10 +50,13 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   children;
 
   adminOnly = false;
   tenantAdminAllowed = false
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   requiredUserType
@@ -80,6 +84,8 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
 
@@ -92,10 +98,13 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
   adminOnly = false;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',
 import { Navigate } from 'react-router-dom',
 import { useAuth } from '@/hooks/useAuth',
@@ -113,6 +122,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   adminOnly = false,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -124,6 +134,11 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   tenantAdminAllowed = false,
+=======
+  tenantAdminAllowed = false,
+  requiredUserType
+}) => {  tenantAdminAllowed = false,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   requiredUserType
 }) => {  tenantAdminAllowed = false,
   requiredUserType
@@ -134,6 +149,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 
   const isCheckingPermissions = isLoading || isCheckingTenantAdmin;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -154,6 +170,8 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Show loading state if auth or tenant admin status is still being checked
   if (isCheckingPermissions) {
     return <div className="flex h-screen w-full items-center justify-center">
@@ -173,6 +191,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   }
   // Check for specific user type if required
   if (requiredUserType && user.userType !== requiredUserType) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     return <Navigate to="/unauthorized" />
 <<<<<<< HEAD
@@ -205,6 +224,9 @@ export interface ProtectedRouteProps {;
 =======
     return <Navigate to="/unauthorized" />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    return <Navigate to="/unauthorized" />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
   children,;
   adminOnly = false,;
@@ -271,6 +293,7 @@ export default ProtectedRoute;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -334,3 +357,5 @@ export default ProtectedRoute;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

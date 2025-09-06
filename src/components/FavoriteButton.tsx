@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',;
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib/utils',;
@@ -15,6 +16,8 @@ interface FavoriteButtonProps {;
   itemId: string,;
   className?: string;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 return (
     <>;
       <TooltipProvider>;
@@ -121,10 +124,24 @@ import {
   TooltipTrigger
 } from '@/components/ui/tooltip'
 
+=======
+import React from 'react';
+import { Heart } from 'lucide-react'
+import { cn  } from '@/lib/utils';
+import { useWishlist  } from '@/hooks/useWishlist';
+import { useAuth  } from '@/hooks/useAuth';
+import { toast  } from '@/hooks/use-toast';
+import { LoginModal } from '@/components/auth/LoginModal';
+import { Tooltip;
+  TooltipContent;
+  TooltipProvider;
+  TooltipTrigger } from '@/components/ui/tooltip';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface FavoriteButtonProps {
   itemId: string;
   className?: string
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
+<<<<<<< HEAD
     e.stopPropagation();    if (!isAuthenticated) {
       setLoginOpen(true)
       return;
@@ -199,11 +216,23 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
                     : 'text-zion-slate'
                 )}              />
 
+=======
+  const { isWishlisted, toggle } = useWishlist();
+  const { isAuthenticated } = useAuth();
+  const [loginOpen, setLoginOpen] = React.useState(false);
+  const handleClick = null;
+                  active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate'
+                )}
+              />
+            </button>
+          </TooltipTrigger>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
         </Tooltip>
       </TooltipProvider>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
+<<<<<<< HEAD
   )
 }
       // Add to favorites`
@@ -353,6 +382,7 @@ class_name: {`w - 4 h - 4 transition - all duration - 300 ${
 <<<<<<< HEAD
 <<<<<<< HEAD
             <button
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -360,3 +390,9 @@ class_name: {`w - 4 h - 4 transition - all duration - 300 ${
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

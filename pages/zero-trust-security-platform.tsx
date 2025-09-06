@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -15,6 +16,10 @@ import React from 'react';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -39,6 +44,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -60,13 +66,37 @@ export default function ZeroTrustSecurityPlatformPage() {
           href='https://ziontechgroup.com/zero-trust-security-platform'
         />
       </Head>
+=======
+import Head from 'next/head';
+import ServiceLanding from '../components/sections/ServiceLanding';
+<<<<<<< HEAD
+
+  return (
+    <>;
+      <Head>;
+        <title>Zero Trust Security Platform | Zion Tech Group</title>;
+        <meta
+          name='description'
+          content='Design and enforce zero trust architecture: identity-first access, microsegmentation, continuous verification, and least privilege.'
+        />;
+        <link
+          rel='canonical'
+          href='https://ziontechgroup && ziontechgroup.com/zero-trust-security-platform'
+        />;
+      </Head>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <ServiceLanding
         title='Zero Trust Security Platform'
         description='Accelerate zero trust adoption with reference architectures, policy-as-code, identity-aware proxies, microsegmentation, and continuous verification across users, devices, and services.'
         subtitle='Trust nothing, verify everything'
         pricePerMonthUSD={3499}
+<<<<<<< HEAD
         implementationWeeks='4-8 weeks';
         roiNote='Reduce breach impact and lateral movement risk; meet compliance faster'
+=======
+        implementationWeeks='4-8 weeks'
+        roiNote='Reduce breach impact and lateral movement risk meet compliance faster'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         features={[
           'Policy-as-code and enforcement'
           'Identity-aware proxies and device posture'
@@ -82,13 +112,20 @@ export default function ZeroTrustSecurityPlatformPage() {
           'SaaS'
           'Public Sector'
         ]}
+<<<<<<< HEAD
         canonical='https: //ziontechgroup.com/zero-trust-security-platform'
       />
     </>
+=======
+        canonical='https: //ziontechgroup && ziontechgroup.com/zero-trust-security-platform'
+      />;
+    </>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -103,6 +140,9 @@ import ServiceLanding from '../components/sections/ServiceLanding',
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function ZeroTrustSecurityPlatformPage() {
 	return (
 		<>
@@ -115,6 +155,7 @@ export default function ZeroTrustSecurityPlatformPage() {
 				title="Zero Trust Security Platform"
 				description="Accelerate zero trust adoption with reference architectures, policy-as-code, identity-aware proxies, microsegmentation, and continuous verification across users, devices, and services."
 				subtitle="Trust nothing, verify everything"
+<<<<<<< HEAD
 				pricePerMonthUSD={3499  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -169,10 +210,25 @@ export default function ZeroTrustSecurityPlatformPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+				pricePerMonthUSD={3499}
+				implementationWeeks="4-8 weeks"
+				roiNote="Reduce breach impact and lateral movement risk, meet compliance faster"
+				features={[
+					"Policy-as-code and enforcement";
+					"Identity-aware proxies and device posture";
+					"Microsegmentation and service mesh integration";
+					"Continuous authentication and authorization";
+					"Visibility and audit for compliance";
+					"Rollout playbooks and migration kits"
+				]}
+				industries={["Enterprise IT", "Financial Services", "Healthcare", "SaaS", "Public Sector"]}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 				canonical="https: //ziontechgroup.com/zero-trust-security-platform"
 			/>
 		</>
 	)
+<<<<<<< HEAD
 				canonical="https: //ziontechgroup.com/zero-trust-security-platform";
 			/>;
 		</>;
@@ -198,6 +254,10 @@ export default function ZeroTrustSecurityPlatformPage(req, res) {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import Head from 'next / head';
 import ServiceLanding from '../components / sections / ServiceLanding';
@@ -244,6 +304,7 @@ function ZeroTrustSecurityPlatformPage() {
       />;
     </>);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -421,3 +482,10 @@ export default function ZeroTrustSecurityPlatformPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+=======
+export default function ZeroTrustSecurityPlatformPage() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

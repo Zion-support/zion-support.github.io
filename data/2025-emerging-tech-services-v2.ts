@@ -1,13 +1,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface EmergingTechService {
 export interface EmergingTechService {;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
+=======
+export interface EmergingTechService {
+id: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string,
   description: string;
@@ -17,11 +24,21 @@ export interface EmergingTechService {;
     yearly: number;
     currency: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
     trialDays: number;
     setupTime: string;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
+=======
+    trialDays: number;
+    setupTime: string;
+    enterprise: number
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   features: string[];
   benefits: string[];
   target_audience: string[];
@@ -43,6 +60,7 @@ export interface EmergingTechService {;
   customers: number;
   rating: number;
   reviews: number;
+<<<<<<< HEAD
     implementationDetails:
       'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.'
     roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.'
@@ -454,6 +472,30 @@ export interface EmergingTechService {;
     compliance: [];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+  marketSize: string;
+  growthRate: string
+}
+
+export const emergingTechServicesV2: EmergingTechService[] = [
+  {
+    id: 'space-mining-platform';
+    name: 'Space Mining Platform';
+    tagline: 'Revolutionary asteroid mining and space resource extraction';
+    description: 'Advanced platform that enables automated asteroid mining, resource extraction, and space resource management using cutting-edge robotics and AI technology.',
+    category: 'Space & Emerging Tech';
+    price: {
+      monthly: 999;
+      yearly: 9990;
+      currency: 'USD';
+      trialDays: 7;
+      setupTime: '24 hours';
+      enterprise: 4999
+    },
+    features: [
+      'Asteroid identification and mappingAutomated mining operationsResource extraction systemsSpace logistics managementReal-time monitoringResource processingTransportation coordinationMarket analysis';
+      'Risk assessmentRegulatory compliance tools'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     ];
     benefits: [
       'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
@@ -572,6 +614,12 @@ export interface EmergingTechService {;
     rating: 4 && 4.9;
     reviews: 65;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
   }
 =======
@@ -972,6 +1020,16 @@ export interface EmergingTechService {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    marketSize: '$35B autonomous vehicle market';
+    growthRate: '75% annually'
+  }
+];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

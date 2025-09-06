@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -8,12 +9,18 @@
 import React from 'react';
 import Head from 'next / head';
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next / head';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Cloud,
   Shield,
   Globe,
   Server,
   Database,
+<<<<<<< HEAD
 
 import React from 'react',
 <<<<<<< HEAD
@@ -27,6 +34,12 @@ import React from 'react',
   ArrowRight,
   Check,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  ArrowRight,;
+  Check,;
+} from 'lucide-react';
+import React from 'react',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 } from 'lucide-react';
 export default /**
@@ -35,6 +48,7 @@ export default /**
 function CloudPlatformPage() {
   const features = [;
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -50,6 +64,8 @@ export default function CloudPlatformPage() {
       title: 'Scalable Infrastructure',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       description: 'Auto-scaling compute resources that grow with your needs'
     }
     {
@@ -127,6 +143,7 @@ export default function CloudPlatformPage() {;
       description: 'SOC 2 compliant with advanced threat protection',;
     },;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -134,6 +151,10 @@ export default function CloudPlatformPage() {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function CloudPlatformPage() {
   const features = [
     {
@@ -154,6 +175,7 @@ export default function CloudPlatformPage() {
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Enterprise Security',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -209,10 +231,13 @@ export default function CloudPlatformPage() {_const _features = [
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const benefits = [
     '99.99% uptime guaranteeGlobal edge locationsReal-time monitoringAutomated scalingPay-as-you-go pricing24/7 expert support'
   ],
 =======
+<<<<<<< HEAD
     '99.99% uptime guarantee'
     'Global edge locations'
     'Real-time monitoring'
@@ -273,13 +298,35 @@ export default function CloudPlatformPage() {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import React from 'react',
+import Head from 'next/head';
+import { Cloud, Shield, Globe, Server, Database, ArrowRight, Check } from 'lucide-react';
+export default function CloudPlatformPage() {
+  const features = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     <>
       <Head>
         <title>Cloud Platform - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Enterprise-grade cloud infrastructure with global reach, automated scaling, and 99.99% uptime guarantee." />
       </Head>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <meta name="description" content="Enterprise-grade cloud infrastructure with global reach, automated scaling, and 99.99% uptime guarantee." />
+=======
+<meta
+          name='description'
+          content='Enterprise-grade cloud infrastructure with global reach, automated scaling, and 99.99% uptime guarantee.'
+        />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      </Head>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
             <div className='mb-8'>
@@ -288,6 +335,7 @@ export default function CloudPlatformPage() {
                 Enterprise Cloud Infrastructure
               </div>
             </div>
+<<<<<<< HEAD
 =======
 
       <div className="min-h-screen bg-black">
@@ -322,11 +370,14 @@ export default function CloudPlatformPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Cloud Platform
             </h1>
             <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
               Enterprise-grade cloud infrastructure with global reach, automated scaling, and 99.99% uptime guarantee.
             </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -346,10 +397,16 @@ export default function CloudPlatformPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <a
                 href="/contact" className="shadow-2xl shadow-blue-500/25">
                 Deploy Now
                 <ArrowRight className="w-5 h-5 ml-2" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -362,10 +419,23 @@ export default function CloudPlatformPage() {
                 href="/contact" className="border-white/20 hover:border-white/40">
                 View Documentation
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              </a>
+              <a
+<<<<<<< HEAD
+                href="/contact" className="border-white/20 hover:border-white/40">
+=======
+                href='/contact'
+                className='border-white/20 hover:border-white/40'
+              >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                View Documentation
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </a>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -485,10 +555,37 @@ export default function CloudPlatformPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+
+
+
+                Cloud Infrastructure Features
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+=======
+        {/* Features Section */}
+<section className='py-24'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center mb-20'>
+              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+                Cloud Infrastructure Features
+              </h2>
+              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                Built for scale, performance, and reliability
+              </p>
+            </div>
+
+<<<<<<< HEAD
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {features.map((feature, index) => (
                 <div
                   key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">
                   <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -505,6 +602,8 @@ export default function CloudPlatformPage() {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <p className="text-gray-400 leading-relaxed">
                     {feature.description  } catch (error) {
     console.error("Error:", error);
@@ -523,7 +622,10 @@ export default function CloudPlatformPage() {
           </div>;
         </section>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Benefits Section */}
         <section className='py-24 bg-gray-900'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -540,14 +642,18 @@ export default function CloudPlatformPage() {
                       </div>;
                       <span className='text-gray-300 text-lg'>{benefit}</span>                    </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         {/* Benefits Section */}
         <section className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -556,6 +662,34 @@ export default function CloudPlatformPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+<div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className='p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'
+                >
+                  <div className='w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center'>
+                    {feature.icon}
+                  </div>
+                  <h3 className='text-xl font-bold text-white mb-4'>
+                    {feature.title}
+                  </h3>
+                  <p className='text-gray-400 leading-relaxed'>
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Benefits Section */}
+<section className='py-24 bg-gray-900'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                   Why Choose Our Cloud Platform?
@@ -566,6 +700,7 @@ export default function CloudPlatformPage() {
                       <div className="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mr-4 mt-1">
                         <Check className="w-4 h-4 text-blue-500" />
                       </div>
+<<<<<<< HEAD
                       <span className="text-gray-300 text-lg">{benefit}</span>
                     </div>
 <<<<<<< HEAD
@@ -583,11 +718,17 @@ export default function CloudPlatformPage() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+                      <span className="text-gray-300 text-lg">{benefit}</span>
+                    </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="relative">
                 <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20">
                   <div className="text-center">
                     <Cloud className="w-24 h-24 mx-auto mb-6 text-blue-400" />
                     <h3 className="text-2xl font-bold text-white mb-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -596,6 +737,20 @@ export default function CloudPlatformPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+                      <span className='text-gray-300 text-lg'>{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+<div className='relative'>
+                <div className='bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20'>
+                  <div className='text-center'>
+                    <Cloud className='w-24 h-24 mx-auto mb-6 text-blue-400' />
+                    <h3 className='text-2xl font-bold text-white mb-4'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       Global Infrastructure
                     </h3>
                     <p className="text-gray-300 mb-6">
@@ -603,11 +758,18 @@ export default function CloudPlatformPage() {
                     </p>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 text-sm">
                       <Globe className="w-4 h-4 mr-2" />
                       15+ regions worldwide
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+                    <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 text-sm'>
+                      <Globe className='w-4 h-4 mr-2' />
+                      15+ regions worldwide
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </div>
                   </div>
                 </div>
@@ -616,6 +778,7 @@ export default function CloudPlatformPage() {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -624,6 +787,8 @@ export default function CloudPlatformPage() {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -634,7 +799,16 @@ export default function CloudPlatformPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+        {/* CTA Section */}
+<section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700'>
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Ready to Scale Your Infrastructure?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -646,25 +820,45 @@ export default function CloudPlatformPage() {
                 Start Free Trial
               </Link>
               <a
+<<<<<<< HEAD
                 href="/contact" className="border-white text-white hover:bg-white hover:text-blue-600">
                 Contact Sales
               </Link>
+=======
+<<<<<<< HEAD
+                href="/contact" className="border-white text-white hover:bg-white hover:text-blue-600">
+                Contact Sales
+              </Link>
+=======
+                href='/contact'
+                className='border-white text-white hover:bg-white hover:text-blue-600'
+              >
+                Contact Sales
+              </a>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
           </div>
         </section>
       </div>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 
 }
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
         <section className="py-24 bg-gray-900">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -686,8 +880,11 @@ export default function CloudPlatformPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>;
               </div>;
 
@@ -705,7 +902,10 @@ export default function CloudPlatformPage() {
                     <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 text-sm'>;
                       <Globe className='w-4 h-4 mr-2' />                      15+ regions worldwide;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       icon: <Server className='w - 8 h - 8 text - white' />,
       title: 'Scalable Infrastructure',
       description: 'Auto - scaling compute resources that grow with your needs',
@@ -836,7 +1036,10 @@ export default function CloudPlatformPage() {
                     </p>;
                     <div className='inline - flex items - center px - 4 py - 2 rounded - full bg - blue - 500 / 20 text - blue - 400 text - sm'>;
                       <Globe className='w - 4 h - 4 mr - 2' />                      15+ regions worldwide;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </div>;
                   </div>;
                 </div>;
@@ -845,6 +1048,7 @@ export default function CloudPlatformPage() {
           </div>;
         </section>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -872,11 +1076,15 @@ export default function CloudPlatformPage() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              <a
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 href='/contact'
                 className='bg-white text-blue-600 hover:bg-gray-100'>;
                 Start Free Trial;
               </a>;
               <a
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
             </div>
@@ -884,12 +1092,16 @@ export default function CloudPlatformPage() {
         </section>
       </div>
     </>
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
               </a>;
             </div>;
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -904,12 +1116,17 @@ export default function CloudPlatformPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -920,3 +1137,7 @@ export default function CloudPlatformPage() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

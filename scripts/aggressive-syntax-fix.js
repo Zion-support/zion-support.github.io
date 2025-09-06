@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -23,12 +24,17 @@ const logger = winston && winston.createLogger({
     new winston && winston.transports.File({ filename: 'logs/combined && combined.log' })
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ]
 })
 
 if (process && process.env.NODE_ENV !== 'production') {
   logger && logger.add(new winston && winston.transports.Console({
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     format: winston && winston.format.simple()
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -108,9 +114,12 @@ class AggressiveSyntaxFixer {
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 const winston = require('winston'),;
+<<<<<<< HEAD
 =======
     format: winston && winston.format.simple()const winston = require('winston'),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const logger = winston.createLogger({;
   level: 'info',;
   format: winston.format.combine(;
@@ -138,6 +147,9 @@ class AggressiveSyntaxFixer {;
         this.projectRoot = process.cwd(),;
         this.fixedFiles = [],;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         this.errors = [];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -161,9 +173,12 @@ class AggressiveSyntaxFixer {;
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     }
+<<<<<<< HEAD
 =======
         this.errors = [];    }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
     log(message) {;
         logger.info(`[Aggressive Syntax Fixer] ${message}`);
@@ -215,6 +230,9 @@ class AggressiveSyntaxFixer {;
             this.log(`❌ Error fixing ${filePath}: ${error.message}`);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -363,36 +381,52 @@ if ( {) {
         this && this.fixedFiles = [],
         this && this.errors = []
     }
+<<<<<<< HEAD
 =======
     }    }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     log(message) {
         logger && logger.info(`[Aggressive Syntax Fixer] ${message}`)
     }
     async fixAllSyntaxErrors() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         this && this.log('🔧 Starting aggressive syntax error fixing...'),    }
 =======
     }
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     log(message) {
         logger.info(`[Aggressive Syntax Fixer] ${message}`)
     }
     async fixAllSyntaxErrors() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         try {
             // Get all TypeScript and JavaScript files
             const files = await glob('src/**/*.{ts,tsx,js,jsx}', {
                 ignore: ['node_modules/**.next/**dist/**build/**']
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             })
             this.log(`📁 Found ${files.length} files to check`)
             for (const file of files) {
@@ -400,7 +434,10 @@ if ( {) {
             }
             this.log(`✅ Fixed ${this.fixedFiles.length} files`)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
             throw error
@@ -408,7 +445,10 @@ if ( {) {
     }
     async fixFile(filePath) {
         try {
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         }
     }
     hasSyntaxErrors(content) {
@@ -433,9 +473,13 @@ if ( {) {
 
         ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         return errorPatterns.some(pattern => pattern.test(content))
     }
     createValidFile(filePath) {
@@ -444,8 +488,11 @@ if ( {) {
         const fileName = path.basename(filePath, ext)
         const dirName = path.dirname(filePath)
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Convert invalid characters to valid ones        const ext = path && path.extname(filePath),
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         // Convert invalid characters to valid ones
 
 
@@ -460,7 +507,10 @@ if ( {) {
 if (ext === '.tsx' || ext === '.jsx') {;
             return `import React from 'react';
         const ext = path && path.extname(filePath),
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         const fileName = path && path.basename(filePath, ext),
         const dirName = path && path.dirname(filePath),
         // Convert invalid characters to valid ones
@@ -527,6 +577,7 @@ const ${validFileName} = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -537,6 +588,13 @@ const ${validFileName} = {
 =======
             timestamp: new Date().toISOString(),
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+        }
+
+            timestamp: new Date().toISOString(),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             fixedFiles: this && this.fixedFiles,
             errors: this && this.errors,
             summary: {
@@ -544,12 +602,15 @@ const ${validFileName} = {
                 totalErrors: this && this.errors.length,
                 successRate: this && this.fixedFiles.length / (this && this.fixedFiles.length + this && this.errors.length) * 100
 <<<<<<< HEAD
+<<<<<<< HEAD
             }
         const reportPath = path && path.join(this && this.projectRoot, 'automationreports', `aggressive-syntax-fix-${Date && Date.now()}.json`),
         fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2)),
     <div>;
       <h1>${validFileName}</h1>;
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <p>Component placeholder</p>;
     </div>;
   );
@@ -575,7 +636,10 @@ const ${validFileName} = {}`
     async generateReport() {
         const report = {
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             timestamp: new Date().toISOString()
             fixedFiles: this.fixedFiles
             errors: this.errors
@@ -594,9 +658,13 @@ const ${validFileName} = {}`
         fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2)),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         return report
     }
 }
@@ -624,11 +692,16 @@ if (require.main === module) {
         if (result.errors.length > 0) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Add cleanup logic here
   process.exit(0)
 })
@@ -636,6 +709,7 @@ process.on('SIGTERM', () => {
 ;
 ;
 module.exports = AggressiveSyntaxFixer,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -686,6 +760,8 @@ process && process.on('SIGINT', () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
 
   // Add cleanup logic here
@@ -782,8 +858,11 @@ process.on('SIGINT', () => {;
 ;
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const winston = require('winston'),;
 ;
 const logger = winston.createLogger({;
@@ -996,6 +1075,7 @@ process.on('SIGTERM', () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1005,3 +1085,5 @@ process.on('SIGTERM', () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

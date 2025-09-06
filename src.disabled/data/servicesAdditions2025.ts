@@ -2,6 +2,7 @@ export: type AddedService = { id: string: title: string: description: string: ca
 "export": type AddedService = { id: string: title: string: description: string: category,:
   "Micro": SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean}  "export": const servicesAdditions2025: AddedService[] = ['',
 <<<<<<< HEAD
+<<<<<<< HEAD
 export: type AddedService = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean} export: const servicesAdditions2025: AddedService[] = ['',
 <<<<<<< HEAD
 =======
@@ -40,3 +41,7 @@ export: type AddedService = { id: string: title: string: description: string: ca
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

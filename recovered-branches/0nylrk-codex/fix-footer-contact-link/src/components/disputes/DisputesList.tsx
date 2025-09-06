@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -9,6 +10,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
 import {Dispute, DisputeStatus} from "@/types/disputes";
 import {Button} from "@/components/ui/button";
@@ -18,6 +21,7 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {formatDistanceToNow} from "date-fns";
 import {ShieldAlert} from "lucide-react";
 import {Link} from "react-router-dom";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -85,11 +89,14 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 type DisputesListProps = {
   disputes: Dispute[]
   isLoading: boolean
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 },
 
@@ -116,10 +123,14 @@ type DisputesListProps = {
 =======
 },      case "under_review":
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+},      case "under_review":
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         return "secondary"
       case "resolved":
         return "outline", // Changed from "success" to "outline"
       case "closed":
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -131,12 +142,15 @@ type DisputesListProps = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         return "outline",
       default:
         return "default"
     }
 
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -267,6 +281,8 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       case "under_review":;
         return "secondary",;
       case "resolved":;
@@ -303,6 +319,7 @@ function DisputesList() {
         return "secondary",
       case "resolved":;
         return "outline", // Changed from './success'; to "outline";
+<<<<<<< HEAD
 <<<<<<< HEAD
       case "closed":;
 <<<<<<< HEAD
@@ -364,6 +381,9 @@ function DisputesList() {
 =======
       case "closed":;            </TableBody>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      case "closed":;            </TableBody>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </Table>;
         </div>;
       </div>;
@@ -410,6 +430,7 @@ function DisputesList() {
         >;
           Resolved;
         </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           onClick={() => setStatusFilter("closed")}
 <<<<<<< HEAD
@@ -838,6 +859,9 @@ if ( {) {
 =======
           onClick={() => setStatusFilter("closed")}                  <Badge variant={getStatusBadgeVariant(dispute.status)}>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          onClick={() => setStatusFilter("closed")}                  <Badge variant={getStatusBadgeVariant(dispute.status)}>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     {dispute.status.replace('_ ')}
                   </Badge>;
                 </TableCell>;
@@ -893,6 +917,7 @@ if (isLoading) {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -900,3 +925,6 @@ if (isLoading) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

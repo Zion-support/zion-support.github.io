@@ -2,6 +2,7 @@
 
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
 import {
 
@@ -74,12 +75,18 @@ import Layout from '../components/layout/Layout';import {
 import Layout from '../components/layout/Layout';import {
   Search, Filter, Star, CheckCircle, ArrowRight, ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import { Search, Filter, Star, CheckCircle, ArrowRight;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Phone, Mail, MapPin, TrendingUp, Users, Award;
   Zap, Globe, Cpu, Database, Lock, Cloud;
@@ -100,6 +107,7 @@ import { realMicroSaasServices2025  } from '../data/2025-real-micro-saas-service
 import { innovativeAIServices2025  } from '../data/2025-innovative-ai-services';
 import { innovativeITServices2025  } from '../data/2025-innovative-it-services';
 import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const contactInfo = {
@@ -221,12 +229,15 @@ const serviceCategories = [
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     id: 'micro - saas',
     title: '🎯 Micro SAAS',
     description: 'Innovative solutions for every business need',
     icon: Target,
     color: 'from - teal - 500 to - green - 500',
     services: [...realMicroSaasServices2025],
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -243,6 +254,18 @@ const serviceCategories = [
             .includes(searchTerm.toLowerCase()) |
           service.category.toLowerCase().includes(searchTerm.toLowerCase()))    )  const filteredServices = serviceCategories.flatMap(category =>
 =======
+=======
+=======
+const contactInfo = null;
+];
+export default function InnovativeServicesShowcase2025() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('name');
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const filteredServices = serviceCategories.flatMap(category => 
 
@@ -253,6 +276,19 @@ const serviceCategories = [
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
         service.category.toLowerCase().includes(searchTerm.toLowerCase()))
+=======
+const filteredServices = serviceCategories.flatMap(category =>
+    category.services.filter(
+      service =>
+        (selectedCategory === 'all' |category.id === selectedCategory) &&
+        (searchTerm === '' |
+          service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+          service.description
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase()) ||
+          service.category.toLowerCase().includes(searchTerm.toLowerCase()))
+    )
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   );
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -263,11 +299,14 @@ const serviceCategories = [
       case 'category':
         return a.category.localeCompare(b.category);
 <<<<<<< HEAD
+<<<<<<< HEAD
       default:
         return 0;    }      default: return 0
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     gradient: 'from - teal - 500 / 20 to - green - 500 / 20',
     badge: 'Popular',
   }, ];    badge: 'Popular';
@@ -315,10 +354,23 @@ function InnovativeServicesShowcase2025() {
 ;
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Layout>
       <Head>
         <title>Innovative Services Showcase 2025 | Zion Tech Group</title>
         <meta
+=======
+=======
+default:
+        return 0;
+    }
+  });
+  return (
+    <Layout>
+      <Head>
+        <title>Innovative Services Showcase 2025 | Zion Tech Group</title>
+<meta
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           name='description'
           content='Discover our comprehensive collection of innovative micro SAAS, AI, healthcare, fintech, and emerging technology services for 2025 and beyond.'
         />
@@ -339,12 +391,17 @@ function InnovativeServicesShowcase2025() {
           content='https://ziontechgroup.com/innovative-services-showcase-2025'
         />
       </Head>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
         <div className='absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black'></div>;
 
         {/* Background Elements */}
+<<<<<<< HEAD
         <div className='absolute inset-0 overflow-hidden pointer-events-none'>;
           <div className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>;
           <div className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>;
@@ -448,18 +505,61 @@ function InnovativeServicesShowcase2025() {
               Discover our comprehensive collection of revolutionary micro SAAS, AI, healthcare, fintech, and emerging technology services that are transforming industries worldwide.;
             </p>;
           </motion && motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+        <div className='absolute inset-0 overflow-hidden pointer-events-none'>
+          <div className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
+          <div className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
+          <div className='absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>
+        </div>
+
+        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto'>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+className='mb-8'
+          >
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6'>
+              <Star className='w-4 h-4 mr-2' />
+              Innovation Showcase 2025
+            </div>
+            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>
+              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+                Innovative Services
+              </span>
+              <br />
+              <span className='text-white'>Showcase</span>
+            </h1>
+            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
+              Discover our comprehensive collection of revolutionary micro SAAS
+              AI, healthcare, fintech, and emerging technology services that are
+              transforming industries worldwide.
+            </p>
+          </motion.div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+            transition={{ duration: 0.8, delay: 0.2 }}
+className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <div className='text-center'>
               <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>
@@ -487,6 +587,7 @@ function InnovativeServicesShowcase2025() {
               <div className='text-3xl md:text-4xl font-bold text-green-400 mb-2'>
                 99.9%
               </div>
+<<<<<<< HEAD
               <div className='text-gray-400'>Uptime</div>            </div>          >
 <<<<<<< HEAD
 
@@ -518,12 +619,18 @@ function InnovativeServicesShowcase2025() {
                 99.9%
               </div>
               <div className="text-gray-400">Uptime</div>
+=======
+              <div className='text-gray-400'>Uptime</div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </motion.div>
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'>;
             <div className='text-center'>;
@@ -594,6 +701,30 @@ function InnovativeServicesShowcase2025() {
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm}
+<<<<<<< HEAD
+=======
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50"
+=======
+      {/* Search and Filter Section */}
+<section className='py-16 bg-gradient-to-b from-black to-slate-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='bg-gradient-to-r from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-8'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+              {/* Search */}
+              <div className='relative'>
+                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
+                <input
+                  type='text'
+                  placeholder='Search services...'
+                  value={searchTerm}
+                  onChange={e => setSearchTerm(e.target.value)}
+                  className='w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                />
+              </div>
+                  className='w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50'                />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -611,6 +742,7 @@ function InnovativeServicesShowcase2025() {
               <div>;
                 <select
                   value={selectedCategory}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white focus:outline-none focus:border-cyan-500/50"
@@ -635,6 +767,8 @@ function InnovativeServicesShowcase2025() {
                   <option value='price'>Sort by Price</option>
                   <option value='category'>Sort by Category</option>                </select>                  onChange={(e) => setSortBy(e.target.value)}
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </select>;
               </div>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -646,6 +780,7 @@ function InnovativeServicesShowcase2025() {
                   <option value="price">Sort by Price</option>
                   <option value="category">Sort by Category</option>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               </div>
             </div>
@@ -659,10 +794,26 @@ function InnovativeServicesShowcase2025() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+onChange={e => setSelectedCategory(e.target.value)}
+                  className='w-full px-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white focus:outline-none focus:border-cyan-500/50'
+                >
+                  <option value='all'>All Categories</option>
+                  {serviceCategories.map(category => (
+                    <option key={category.id} value={category.id}>
+                      {category.title}
+                    </option>
+                  ))}
+                </select>
+              </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {/* Sort By */}
               <div>;
                 <select
                   value={sortBy}
+<<<<<<< HEAD
                 >;
                   <option value="name">Sort by Name</option>;
                   <option value="price">Sort by Price</option>;
@@ -672,6 +823,7 @@ function InnovativeServicesShowcase2025() {
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -683,11 +835,36 @@ function InnovativeServicesShowcase2025() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+onChange={e => setSortBy(e.target.value)}
+                  className='w-full px-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white focus:outline-none focus:border-cyan-500/50'
+                >
+                  <option value='name'>Sort by Name</option>
+                  <option value='price'>Sort by Price</option>
+                  <option value='category'>Sort by Category</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Services Grid */}
+<section className='py-20 bg-slate-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {sortedServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -695,6 +872,11 @@ function InnovativeServicesShowcase2025() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+className='group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 {/* Service Header */}
                 <div className='mb-6'>
@@ -715,6 +897,7 @@ function InnovativeServicesShowcase2025() {
                   <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                     {service.name}
                   </h3>
+<<<<<<< HEAD
 =======
               >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -737,6 +920,9 @@ function InnovativeServicesShowcase2025() {
                   <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                     {service.name}
                   </h3>
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <p className='text-gray-300 text-sm leading-relaxed'>                    {service.description}              >
                 className='group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>;
                 {/* Service Header */}
@@ -803,7 +989,14 @@ function InnovativeServicesShowcase2025() {
                   <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan-400 transition-colors">;
                     {service.name}
                   </h3>;
+<<<<<<< HEAD
                   <p className="text - gray - 300 text-sm leading-relaxed">;
+=======
+                  <p className="text - gray - 300 text - sm leading - relaxed">;
+=======
+                  <p className='text-gray-300 text-sm leading-relaxed'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     {service.description}
                   <p className='text-gray-300 text-sm leading-relaxed'>                    {service.description}
 
@@ -831,6 +1024,7 @@ function InnovativeServicesShowcase2025() {
                   </p>
                 </div>
                 {/* Features */}
+<<<<<<< HEAD
                   </p>
                 </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -849,6 +1043,28 @@ function InnovativeServicesShowcase2025() {
                     {service.features.length > 3 && (
                       <li className="text-sm text-cyan-400">
 =======
+<<<<<<< HEAD
+=======
+<div className='mb-6'>
+                  <h4 className='text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide'>
+                    Key Features
+                  </h4>
+                  <ul className='space-y-2'>
+                    {service.features
+                      .slice(0, 3)
+                      .map((feature, featureIndex) => (
+                        <li
+                          key={featureIndex}
+                          className='flex items-center text-sm text-gray-300'
+                        >
+                          <CheckCircle className='w-4 h-4 text-cyan-400 mr-2 flex-shrink-0' />
+                          {feature}
+                        </li>
+                      ))}
+                    {service.features.length > 3 && (
+                      <li className='text-sm text-cyan-400'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         +{service.features.length - 3} more features
                       </li>
 
@@ -856,11 +1072,13 @@ function InnovativeServicesShowcase2025() {
                   </ul>
                 </div>
                 {/* Market Info */}
+<<<<<<< HEAD
                 <div className='mb-6 grid grid-cols-2 gap-4 text-sm'>
 
                 {/* Market Info */}
                 <div className='mb-6 grid grid-cols-2 gap-4 text-sm'>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -869,6 +1087,11 @@ function InnovativeServicesShowcase2025() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+<div className='mb-6 grid grid-cols-2 gap-4 text-sm'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <div>
                     <div className='text-gray-400'>Market Size</div>
                     <div className='text-white font-semibold'>
@@ -879,6 +1102,7 @@ function InnovativeServicesShowcase2025() {
                     <div className='text-gray-400'>Target Audience</div>
                     <div className='text-white font-semibold truncate'>
                       {service.targetAudience}
+<<<<<<< HEAD
                     </div>                  </div>
                 </div>
 <<<<<<< HEAD
@@ -927,6 +1151,24 @@ function InnovativeServicesShowcase2025() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   >
                     <Mail className="w-5 h-5" />
+=======
+                    </div>
+                  </div>
+                </div>
+                {/* CTA */}
+<div className='flex gap-3'>
+                  <a
+                    href={service.website}
+                    className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-3 px-4 rounded-xl text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-300'
+                  >
+                    Learn More
+                  </a>
+                  <a
+                    href={`mailto:${service.contact.email}`}
+className='px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
+                  >
+                    <Mail className='w-5 h-5' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   </a>
                 </div>
               </motion.div>
@@ -956,18 +1198,29 @@ function InnovativeServicesShowcase2025() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='text-center py-20'
+=======
+=======
+className='text-center py-20'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <div className='text-gray-400 text-xl mb-4'>
                 No services found
               </div>
               <div className='text-gray-500'>
                 Try adjusting your search or filter criteria
+<<<<<<< HEAD
 
           {sortedServices.length === 0 && (
             <motion.div
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              </div>
+            </motion.div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           )}
 
         </div>;
@@ -992,10 +1245,12 @@ function InnovativeServicesShowcase2025() {
           )}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Contact Section */}
+<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-b from-slate-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-slate-900 to-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1012,11 +1267,20 @@ function InnovativeServicesShowcase2025() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+<section className='py-20 bg-gradient-to-b from-slate-900 to-black'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1031,6 +1295,11 @@ function InnovativeServicesShowcase2025() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='text-center mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Ready to Transform Your Business?
@@ -1040,6 +1309,7 @@ function InnovativeServicesShowcase2025() {
               can revolutionize your operations and drive growth.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div          >
 <<<<<<< HEAD
 
@@ -1055,6 +1325,10 @@ function InnovativeServicesShowcase2025() {
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
 <<<<<<< HEAD
 
@@ -1096,7 +1370,9 @@ function InnovativeServicesShowcase2025() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1111,11 +1387,17 @@ function InnovativeServicesShowcase2025() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='text-center'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Phone className='w-8 h-8 text-white' />
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>
+<<<<<<< HEAD
               <p className='text-gray-300'>{contactInfo.mobile}</p>            </motion.div>            >
 <<<<<<< HEAD
 
@@ -1128,6 +1410,9 @@ function InnovativeServicesShowcase2025() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">{contactInfo.mobile}</p>
+=======
+              <p className='text-gray-300'>{contactInfo.mobile}</p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
             <motion.div
 <<<<<<< HEAD
@@ -1157,13 +1442,21 @@ function InnovativeServicesShowcase2025() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='text-center'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Mail className='w-8 h-8 text-white' />
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>
+<<<<<<< HEAD
               <p className='text-gray-300'>{contactInfo.email}</p>            </motion.div>            >
 <<<<<<< HEAD
 
@@ -1176,6 +1469,9 @@ function InnovativeServicesShowcase2025() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">{contactInfo.email}</p>
+=======
+              <p className='text-gray-300'>{contactInfo.email}</p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
             <motion.div
               className='text-center'>;
@@ -1195,7 +1491,10 @@ function InnovativeServicesShowcase2025() {
               transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1206,12 +1505,19 @@ function InnovativeServicesShowcase2025() {
 
             >
               className='text-center'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+className='text-center'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <MapPin className='w-8 h-8 text-white' />
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Address</h3>
+<<<<<<< HEAD
               <p className='text-gray-300'>{contactInfo.address}</p>            </motion.div>            >
 <<<<<<< HEAD
 
@@ -1222,6 +1528,9 @@ function InnovativeServicesShowcase2025() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">{contactInfo.address}</p>
+=======
+              <p className='text-gray-300'>{contactInfo.address}</p>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </motion.div>
           </div>
         </div>
@@ -1245,6 +1554,7 @@ function InnovativeServicesShowcase2025() {
 =======
   );
 }
+<<<<<<< HEAD
 ;
 }
 
@@ -1432,4 +1742,9 @@ function InnovativeServicesShowcase2025() {
       </section>;
     </Layout>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -30,6 +31,10 @@ import ReputationDisplay from "@/components/community/ReputationDisplay";
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -45,6 +50,7 @@ import PostCard from "@/components/community/PostCard",
 import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
 import UserBadges from "@/components/community/UserBadges",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import ReputationDisplay from "@/components/community/ReputationDisplay",
 <<<<<<< HEAD
@@ -103,10 +109,14 @@ const mockUser: CommunityUser = {
 =======
 import ReputationDisplay from "@/components/community/ReputationDisplay",    {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import ReputationDisplay from "@/components/community/ReputationDisplay",    {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       id: "badge2"
       name: "Top Contributor"
       description: "Among the top 5% of contributors"
       icon: "Trophy"
+<<<<<<< HEAD
 <<<<<<< HEAD
       color: "#F59E0B"
 <<<<<<< HEAD
@@ -243,6 +253,9 @@ const userPosts: ForumPost[] = [
 =======
       color: "#F59E0B"  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      color: "#F59E0B"  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   {
     id: "11"
     title: "How to structure an AI prompt for best results"
@@ -258,6 +271,7 @@ const userPosts: ForumPost[] = [
     updatedAt: "2025-03-12T09:30:00Z"
     upvotes: 24
     downvotes: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     replyCount: 6
   }
@@ -422,6 +436,9 @@ import { useState, useEffect } from "react",;
 =======
     replyCount: 6import { useState, useEffect } from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    replyCount: 6import { useState, useEffect } from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
@@ -502,6 +519,7 @@ const userPosts: ForumPost[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ];
@@ -532,6 +550,8 @@ export default function CommunityProfilePage() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setUser(mockUser);
     setPosts(userPosts);
     setIsLoading(false);
@@ -544,6 +564,7 @@ export default function CommunityProfilePage() {;
         </div>;
       </AppLayout>;
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -615,6 +636,9 @@ export default function CommunityProfilePage() {;
 =======
   }    <AppLayout>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }    <AppLayout>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <SEO
         title={`${user && user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user && user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
@@ -648,6 +672,7 @@ export default function CommunityProfilePage() {;
                         <path fillRule="evenodd" d="M8 && M8.603 3 && 3.799A4.49 4 && 4.49 0 0112 2 && 2.25c1.357 0 2 && 2.573.6 3 && 3.397 1 && 1.549a4.49 4 && 4.49 0 013 && 013.498 1 && 1.307 4 && 4.491 4 && 4.491 0 011 && 011.307 3 && 3.497A4.49 4 && 4.49 0 0121 && 0121.75 12a4 && 12a4.49 4 && 4.49 0 01-1 && 1.549 3 && 3.397 4 && 4.491 4 && 4.491 0 01-1 && 1.307 3 && 3.497 4 && 4.491 4 && 4.491 0 01-3 && 3.497 1 && 1.307A4.49 4 && 4.49 0 0112 21 && 21.75a4.49 4 && 4.49 0 01-3 && 3.397-1 && 1.549 4 && 4.49 4 && 4.49 0 01-3 && 3.498-1 && 1.306 4 && 4.491 4 && 4.491 0 01-1 && 1.307-3 && 3.498A4.49 4 && 4.49 0 012 && 012.25 12c0-1 && 1.357.6-2 && 2.573 1 && 1.549-3 && 3.397a4.49 4 && 4.49 0 011 && 011.307-3 && 3.497 4 && 4.49 4 && 4.49 0 013 && 013.497-1 && 1.307zm7.007 6 && 6.387a.75 && 75.75 0 10-1 && 1.22-.872l-3 && 3.236 4 && 4.53L9.53 12 && 12.22a.75 && 75.75 0 00-1 && 1.06 1 && 1.06l2.25 2 && 2.25a.75 && 75.75 0 001 && 001.14-.094l3 && 094l3.75-5 && 5.25z" clipRule="evenodd" />;
                       </svg>;
                     </span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -796,6 +821,9 @@ export default function CommunityProfilePage() {;
 =======
   return (        </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (        </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>
     </AppLayout>
   )                      <p className="text-sm text-muted-foreground">Replies</p>;
@@ -813,6 +841,7 @@ export default function CommunityProfilePage() {;
               <TabsList>;
                 <TabsTrigger value="posts">Posts</TabsTrigger>;
                 <TabsTrigger value="activity">Recent Activity</TabsTrigger>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               </TabsList>;
 <<<<<<< HEAD
@@ -870,6 +899,9 @@ export default function CommunityProfilePage() {;
 =======
               </TabsList>;                          {formatDistanceToNow(new Date("2025-04-10T14:30:00Z"), { addSuffix: true })}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              </TabsList>;                          {formatDistanceToNow(new Date("2025-04-10T14:30:00Z"), { addSuffix: true })}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         </div>;
                         <div>;
                           <p>Replied to <Link to="/community/post/3" className="text-zion-purple hover:underline">Looking for feedback on my automated testing approach</Link></p>;
@@ -1031,6 +1063,7 @@ export default function CommunityProfilePage() {;
                         </div>;
                         <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                           <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover:underline">How to optimize RAG systems for better results</Link></p>;
                         </div>;
                         <div>;
@@ -1124,3 +1157,6 @@ isModerator: false
 =======
                           <p > Answer was accepted in <Link to="/community / post / 15" className="text - zion-purple hover: underline">How to optimize RAG systems for better results</Link></p>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                          <p > Answer was accepted in <Link to="/community / post / 15" className="text - zion-purple hover: underline">How to optimize RAG systems for better results</Link></p>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

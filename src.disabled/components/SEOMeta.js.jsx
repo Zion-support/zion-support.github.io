@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -20,11 +21,15 @@ import _React from';react' const SEOMeta = ({ title,description,keywords = 'AI,M
 =======
 import _React from';react' const SEOMeta = ({ title,description,keywords = 'AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group',image = '/images/zion-tech-group-og.jpg',url = window.location.href,type = 'website',structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';`
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import _React from';react' const SEOMeta = ({ title,description,keywords = 'AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group',image = '/images/zion-tech-group-og.jpg',url = window.location.href,type = 'website',structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';`
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
 
 import _React from';react' const SEOMeta = ({ title,description,keywords = 'AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group',image = '/images/zion-tech-group-og.jpg',url = window.location.href,type = 'website',structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';`
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -86,9 +91,14 @@ import _React from';react' const SEOMeta = ({ title,description,keywords = 'AI,M
 import _React from';react' const SEOMeta = ({ title,description,keywords = 'AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group',image = '/images/zion-tech-group-og && og.jpg',url = window && window.location.href,type = 'website',structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';`import _React from';react' const SEOMeta = ({ title,description,keywords = 'AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group',image = '/images/zion-tech-group-og && og.jpg',url = window && window.location.href,type = 'website',structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';`
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from\';react\' const SEOMeta = ({ title,description,keywords = \'AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group\',image = \'/images/zion-tech-group-og && og.jpg\',url = window && window.location.href,type = \'website\',structuredData }) => { const siteName = \'Zion Tech Group\' const fullTitle = `${title} | ${siteName}`\';`
 const React from";react" const SEOMeta = ({ title,description,keywords = "AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group",image = "/images/zion-tech-group-og && og.jpg",url = window && window.location.href,type = "website",structuredData }) => { const siteName = "Zion Tech Group" const fullTitle = `${title} | ${siteName}`";`"`"`
 import _React from';react' const SEOMeta = ({ title,description,keywords = 'AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group',image = '/images/zion-tech-group-og && og.jpg',url = window && window.location.href,type = 'website',structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';`
 import _React from';react' const SEOMeta = ({ title,description,keywords = 'AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group',image = '/images/zion-tech-group-og && og.jpg',url = window && window.location.href,type = 'website',structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';`
 import _React from';react' const SEOMeta = ({ title,description,keywords = 'AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group',image = '/images/zion-tech-group-og && og.jpg',url = window && window.location.href,type = 'website',structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';`
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

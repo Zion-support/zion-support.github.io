@@ -4,6 +4,7 @@
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,6 +47,22 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
 
 // Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
+=======
+import {completeSitemap, SitemapItem} from "@/config/sitemap";
+// Find a route by path in the complete sitemap
+export const findRouteByPath = (path: string): SitemapItem | undefined => {
+  return completeSitemap.find(route => route.path === path)
+};// Find a route by path in the complete sitemap
+
+export const findRouteByPath = (path: string): SitemapItem | undefined => {
+  return completeSitemap.find(route => route.path === path)
+
+// Check if a route requires authentication
+export const isProtectedRoute = (path: string): boolean => {
+  const route = findRouteByPath(path),
+  return route?.requiredAuth === true
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return route?.requiredAuth === true
 
@@ -53,16 +70,22 @@ export const isProtectedRoute = (path: string): boolean => {
 export const canAccessRoute = (
   path: string,
   isAuthenticated: boolean,
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 // Check if a route requires authentication
+=======
+},
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const isProtectedRoute = (path: string): boolean => {
   const route = findRouteByPath(path)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 }
 },
@@ -157,6 +180,10 @@ export const isProtectedRoute = (path: string): boolean => {
   }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const route = findRouteByPath(path),
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return true
 }
 // Get breadcrumb items for a path
@@ -175,6 +202,7 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
 
       breadcrumbs && breadcrumbs.push({
         label: route && route.label,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -306,6 +334,8 @@ userType?: string | null //If route doesn't exist in our sitemap if (!route) ret
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (route.requiredAuth && !isAuthenticated) return false,
   
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -317,7 +347,10 @@ userType?: string | null //If route doesn't exist in our sitemap if (!route) ret
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -401,6 +434,7 @@ if ( {) {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   return breadcrumbs;
 
 
@@ -446,3 +480,7 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return breadcrumbs
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

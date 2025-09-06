@@ -2,6 +2,7 @@ export { SkillsForm } from "./SkillsForm";
 export * from "./types";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export { SkillsForm } from './SkillsForm',;
 export { SkillsForm } from './SkillsForm';
@@ -15,3 +16,5 @@ export * from './types';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

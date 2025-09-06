@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -16,10 +17,15 @@ import {X} from "lucide-react";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { X } from "lucide-react";
 import { ClickableBadge } from "@/components/ui/clickable-badge",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { X } from "lucide-react",
 <<<<<<< HEAD
@@ -71,6 +77,9 @@ export function ActiveFiltersBar({;
 =======
 import { X } from "lucide-react",export function ActiveFiltersBar({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { X } from "lucide-react",export function ActiveFiltersBar({;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   selectedProductTypes;
   selectedLocations;
   selectedAvailability;
@@ -244,6 +253,7 @@ export function ActiveFiltersBar(): any ({;
       ))}          {location}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       ))}
 <<<<<<< HEAD
@@ -466,3 +476,6 @@ return (<div className="flex flex-wrap gap-2 items-center mb-4" > <span classNam
 =======
       ))}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      ))}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

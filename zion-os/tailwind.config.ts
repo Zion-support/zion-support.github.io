@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { Config } from 'tailwindcss'
 =======
 <<<<<<< HEAD
@@ -40,6 +41,11 @@ const config: Config = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   theme: {
+=======
+    &quot;./src / pages/**/*.{js, ts, jsx, tsx, mdx}&quot;,
+    &quot;./src / components/**/*.{js, ts, jsx, tsx, mdx}&quot;,
+    &quot;./src / app/**/*.{js, ts, jsx, tsx, mdx}&quot;],  theme: {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     extend: {
       colors: {
         'zion-blue': '#3b82f6zion-purple': '#8b5cf6zion-green': '#10b981zion-orange': '#f59e0bzion-red': '#ef4444zion-teal': '#14b8a6zion-cyan': '#06b6d4zion-indigo': '#6366f1zion-emerald': '#059669zion-pink': '#ec4899'},
@@ -90,4 +96,7 @@ export default config;
         xs: '2px'},
       background_image: {
         'gradient - radial': 'radial - gradient (var (--tw - gradient - stops))gradient - conic': 'conic - gradient (from 180deg at 50% 50%, var (--tw - gradient - stops))'}}},
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

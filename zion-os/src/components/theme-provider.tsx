@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 "use client",
 import { create_context, useContext, useEffect, useState  } from './react';,
@@ -32,6 +35,7 @@ function ThemeProvider() {
     // Check condition
 if ( {) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   $2
 =======
 <<<<<<< HEAD
@@ -46,6 +50,9 @@ type ThemeProviderProps = {children: React.ReactNode;
 =======
   $2}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  $2}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const stored_theme = local_storage.get_item (storage_key) as Theme,
       // Check condition
 if ( {) {
@@ -105,6 +112,7 @@ export const use_theme = () =>: any {
     throw new Error ("use_theme must be used within a ThemeProvider")) {
   $2
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -120,6 +128,11 @@ export const use_theme = () =>: any {
   return context;
 }"use client",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  return context;
+}"use client",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { createContext, useContext, useEffect, useState } from "react",;
 type Theme = "dark" | "light" | "system",;
 type ThemeProviderProps = {;
@@ -193,6 +206,7 @@ export const useTheme = () => {;
   if (context === undefined);
     throw new Error("useTheme must be used within a ThemeProvider");
 <<<<<<< HEAD
+<<<<<<< HEAD
   return context;
 <<<<<<< HEAD
 };
@@ -205,3 +219,8 @@ export const useTheme = () => {;
 };
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return context
+};
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

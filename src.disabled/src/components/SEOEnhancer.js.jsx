@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,10 +21,14 @@ import React from \'react\'; export const SEOEnhancer = ({ title = \"Zion Tech G
 =======
 import _React from 'react'; export const SEOEnhancer = ({ title = "Zion Tech Group - Leading AI & Technology Solutions",description = "Leading provider of innovative technology solutions,AI-powered services,and digital transformation expertise.We help businesses thrive in the digital age.",keywords = ["AI solutions",technology consulting",digital transformation",cloud computing",cybersecurity",machine learning"],image = "/images/zion-tech-group-og.jpg",url = "https:})import React from \'react\'; export const SEOEnhancer = ({ title = \"Zion Tech Group - Leading AI & Technology Solutions\",description = \"Leading provider of innovative technology solutions,AI-powered services,and digital transformation expertise && expertise.We help businesses thrive in the digital age.\",keywords = [\"AI solutions\",technology consulting\",digital transformation\",cloud computing\",cybersecurity\",machine learning\"],image = \"/images/zion-tech-group-og && og.jpg\",url = \"https:})
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from \'react\'; export const SEOEnhancer = ({ title = \"Zion Tech Group - Leading AI & Technology Solutions\",description = \"Leading provider of innovative technology solutions,AI-powered services,and digital transformation expertise && expertise.We help businesses thrive in the digital age.\",keywords = [\"AI solutions\",technology consulting\",digital transformation\",cloud computing\",cybersecurity\",machine learning\"],image = \"/images/zion-tech-group-og && og.jpg\",url = \"https:})
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const React from "react"; export const SEOEnhancer = ({ title = "Zion Tech Group - Leading AI & Technology Solutions",description = "Leading provider of innovative technology solutions,AI-powered services,and digital transformation expertise && expertise.We help businesses thrive in the digital age.",keywords = ["AI solutions",technology consulting",digital transformation",cloud computing",cybersecurity",machine learning"],image = "/images/zion-tech-group-og && og.jpg",url = "https:})'"'"
 
 import _React from 'react'; export const SEOEnhancer = ({ title = "Zion Tech Group - Leading AI & Technology Solutions",description = "Leading provider of innovative technology solutions,AI-powered services,and digital transformation expertise && expertise.We help businesses thrive in the digital age.",keywords = ["AI solutions",technology consulting",digital transformation",cloud computing",cybersecurity",machine learning"],image = "/images/zion-tech-group-og && og.jpg",url = "https:})
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,3 +72,8 @@ import React from \'react\'; export const SEOEnhancer = ({ title = \"Zion Tech G
 const React from "react"; export const SEOEnhancer = ({ title = "Zion Tech Group - Leading AI & Technology Solutions",description = "Leading provider of innovative technology solutions,AI-powered services,and digital transformation expertise.We help businesses thrive in the digital age.",keywords = ["AI solutions",technology consulting",digital transformation",cloud computing",cybersecurity",machine learning"],image = "/images/zion-tech-group-og.jpg",url = "https:})'"'"
 import _React from 'react'; export const SEOEnhancer = ({ title = "Zion Tech Group - Leading AI & Technology Solutions",description = "Leading provider of innovative technology solutions,AI-powered services,and digital transformation expertise.We help businesses thrive in the digital age.",keywords = ["AI solutions",technology consulting",digital transformation",cloud computing",cybersecurity",machine learning"],image = "/images/zion-tech-group-og.jpg",url = "https:})
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import React from \'react\'; export const SEOEnhancer = ({ title = \"Zion Tech Group - Leading AI & Technology Solutions\",description = \"Leading provider of innovative technology solutions,AI-powered services,and digital transformation expertise.We help businesses thrive in the digital age.\",keywords = [\"AI solutions\",technology consulting\",digital transformation\",cloud computing\",cybersecurity\",machine learning\"],image = \"/images/zion-tech-group-og.jpg\",url = \"https:})
+const React from "react"; export const SEOEnhancer = ({ title = "Zion Tech Group - Leading AI & Technology Solutions",description = "Leading provider of innovative technology solutions,AI-powered services,and digital transformation expertise.We help businesses thrive in the digital age.",keywords = ["AI solutions",technology consulting",digital transformation",cloud computing",cybersecurity",machine learning"],image = "/images/zion-tech-group-og.jpg",url = "https:})'"'"
+import _React from 'react'; export const SEOEnhancer = ({ title = "Zion Tech Group - Leading AI & Technology Solutions",description = "Leading provider of innovative technology solutions,AI-powered services,and digital transformation expertise.We help businesses thrive in the digital age.",keywords = ["AI solutions",technology consulting",digital transformation",cloud computing",cybersecurity",machine learning"],image = "/images/zion-tech-group-og.jpg",url = "https:})
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

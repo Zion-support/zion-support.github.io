@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from "fs";
 import path from "path";
 export type SourceNodeType = "folder" | "file";
@@ -9,6 +10,8 @@ export interface SourceNode {;
   type: SourceNodeType;
   children?: SourceNode[];
   exists?: boolean;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ;
 export interface SourceMapStatus {;
@@ -155,6 +158,40 @@ export interface DeployTemplateResult {
 
 // Mock source map utility
 export function getSourceMapWithExistence() {
+=======
+import fs from 'fs';
+import path from 'path';
+
+export type SourceNodeType = 'folder' | 'file';
+
+export interface SourceNode {
+  name: string;
+  path: string; // repo-relative path starting with '/'
+  type: SourceNodeType;
+  children?: SourceNode[];
+  exists?: boolean;
+
+export interface SourceMapStatus {
+  gitConnected: boolean;
+  gitBranch?: string;
+
+export interface SourceMapResponse {
+  nodes: SourceNode[];
+  status: SourceMapStatus;
+
+const ROOT = process.cwd();
+
+function withPath(base: string, segment: string): string {
+  if (base === '/') return `/${segment}`;
+  return `${base}/${segment}`;
+
+function folder(
+  name: string,
+  basePath: string,
+  children: string[] = []
+): SourceNode {
+  const fullPath = withPath(basePath, name);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return {
 <<<<<<< HEAD
     nodes: []
@@ -305,6 +342,13 @@ export function deployBasicTemplateForPath(
   }  } else {
     skippedPaths.push(readmeFile);
   }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return { createdPaths, skippedPaths };
 
@@ -337,6 +381,13 @@ export function ensure_directory (dir_path: string): void {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  return { createdPaths, skippedPaths };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

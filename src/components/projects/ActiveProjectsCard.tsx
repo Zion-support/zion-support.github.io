@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useEffect, useState } from "react",
 import Link from "next/link",
@@ -10,6 +11,15 @@ import { useProjects } from "@/hooks/useProjects",
 import { Project } from "@/types/projects",
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { useProjects } from "@/hooks/useProjects";
+import { Project } from "@/types/projects";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects(),
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
@@ -78,6 +88,7 @@ export function ActiveProjectsCard() {;
 
   if (isLoading) {;
     return (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -88,11 +99,18 @@ export function ActiveProjectsCard() {;
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <BriefcaseIcon className="h-5 w-5 text-primary" />
+=======
+      <Card>
+        <CardHeader>
+<CardTitle className='flex items-center gap-2'>
+            <BriefcaseIcon className='h-5 w-5 text-primary' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             <span>Active Projects</span>
           </CardTitle>
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
           <div className="space-y-2">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -163,6 +181,19 @@ export function ActiveProjectsCard() {;
 
   }
     );
+=======
+<div className='space-y-2'>
+            {[1, 2].map(idx => (
+              <div
+                key={idx}
+                className='h-16 animate-pulse bg-muted rounded'
+              ></div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
   }
@@ -173,7 +204,10 @@ export function ActiveProjectsCard() {;
       <Card>
         <CardHeader>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <CardTitle className="flex items-center gap-2">
@@ -185,15 +219,24 @@ export function ActiveProjectsCard() {;
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <BriefcaseIcon className="h-5 w-5 text-primary" />
+=======
+<CardTitle className='flex items-center gap-2'>
+            <BriefcaseIcon className='h-5 w-5 text-primary' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             <span>Active Projects</span>
           </CardTitle>
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   if (activeProjects && activeProjects.length === 0) {;
     return (
@@ -236,10 +279,24 @@ export function ActiveProjectsCard() {;
             <Link href="/jobs">Find Opportunities</Link>
           </Button>
 
+<<<<<<< HEAD
+=======
+
+=======
+<CardContent className='text-center py-6'>
+          <p className='text-muted-foreground mb-2'>
+            You don't have any active projects at the moment.
+          </p>
+          <Button variant='outline' asChild>
+            <Link href='/jobs'>Find Opportunities</Link>
+          </Button>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </CardContent>
       </Card>
     )
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   
@@ -247,6 +304,10 @@ export function ActiveProjectsCard() {;
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
   }
@@ -316,7 +377,35 @@ export function ActiveProjectsCard() {;
               <h3 className='font-medium text-sm'>{project && project.job?.title}</h3>;              <Badge
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+<<<<<<< HEAD
 
+=======
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <BriefcaseIcon className="h-5 w-5 text-primary" />
+        </CardTitle>
+        <CardDescription>Your ongoing work</CardDescription>
+      </CardHeader>
+      <CardContent className='space-y-4'>
+=======
+return (
+    <Card>
+      <CardHeader>
+        <CardTitle className='flex items-center gap-2'>
+          <BriefcaseIcon className='h-5 w-5 text-primary' />
+          <span>Active Projects</span>
+        </CardTitle>
+        <CardDescription>Your ongoing work</CardDescription>
+      </CardHeader>
+<CardContent className='space-y-4'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+        {activeProjects.map(project => (
+          <div key={project.id} className='border rounded-md p-3'>
+            <div className='flex justify-between items-start mb-2'>
+              <h3 className='font-medium text-sm'>{project.job?.title}</h3>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <Badge
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 variant={
@@ -328,6 +417,7 @@ export function ActiveProjectsCard() {;
                     : ''
 
                   : 'In Progress'}
+<<<<<<< HEAD
               </Badge>;
             </div>;
             <div className='flex items-center text-xs text-muted-foreground gap-2'>;
@@ -352,11 +442,26 @@ export function ActiveProjectsCard() {;
 
       )}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+              </Badge>
+            </div>
+            <div className='flex items-center text-xs text-muted-foreground gap-2'>
+              <Clock className='h-3 w-3' />
+              <span>
+                Started {new Date(project.start_date).toLocaleDateString()}
+              </span>
+            </div>
+            <Button size='sm' variant='outline' className='w-full mt-2' asChild>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <Link href={`/project/${project.id}`}>View Project</Link>
             </Button>
           </div>
         ))}
+<<<<<<< HEAD
 
 }
 
@@ -525,5 +630,30 @@ if ( {'") {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+;
+=======
+      </CardContent>
+      {activeProjects.length > 2 && (
+        <CardFooter>
+<Button variant='ghost' className='w-full' asChild>
+            <Link href='/projects'>View All Projects</Link>
+          </Button>
+        </CardFooter>
+      )}
+    </Card>
+  );
+}, [projects, isLoading]);
+return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> <CardContent>) ) ;
+}</div> </CardContent> </Card>) ;
+}if (activeProjects.length === 0) {'";
+  return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> <CardContent className="text-center py-6" > <p className="text-muted-foreground mb-2" >You don't have any active projects at the moment.</p> <Button variant="outline" asChild> <Link href="/jobs" >Find Opportunities</Link> </Button> </CardContent> </Card> return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> </Button> </div>) ) ;
+}</CardContent> {";
+  activeProjects.length > 2 && (<CardFooter> <Button variant="ghost" className="w-full" asChild> <Link href="/projects">View All Projects</Link> </Button> </CardFooter>) ;
+}</Card>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

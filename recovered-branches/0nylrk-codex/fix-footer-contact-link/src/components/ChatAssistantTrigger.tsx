@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -18,6 +19,8 @@ export function ChatAssistantTrigger() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",
 import { MessageSquare } from "lucide-react",
 import { Button } from "@/components/ui/button";
@@ -28,6 +31,7 @@ import { Button } from "@/components/ui/button",
 import { ChatAssistant } from "@/components/ChatAssistant",
 export function ChatAssistantTrigger() {
   const [isOpen, setIsOpen] = useState(false),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -78,6 +82,8 @@ export function ChatAssistantTrigger() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
@@ -99,9 +105,12 @@ import { Button } from "@/components/ui/button",;
 import { ChatAssistant } from "@/components/ChatAssistant",;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 <<<<<<< HEAD
@@ -127,11 +136,15 @@ import { ChatAssistant } from "@/components/ChatAssistant",;
     } catch (error) {;
       console && console.error("Error in AI chat:", error);
       return Promise && Promise.resolve();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   }
   return (
     <>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <Button;
@@ -201,6 +214,10 @@ import { ChatAssistant } from "@/components/ChatAssistant",;
       <Button
         onClick={() => setIsOpen(true)}        onClick={() => setIsOpen(true)}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <Button
+        onClick={() => setIsOpen(true)}        onClick={() => setIsOpen(true)}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from './react';
 import { MessageSquare } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -210,6 +227,7 @@ export /**
  */
 function ChatAssistantTrigger() {
   const [is_open, setIsOpen] = useState (false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -364,3 +382,6 @@ export function ChatAssistantTrigger() {;
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

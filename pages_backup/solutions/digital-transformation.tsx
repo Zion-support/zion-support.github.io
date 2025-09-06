@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 
@@ -125,6 +126,12 @@ import Layout from '../../components/Layout';
 import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
 import React from 'react';  const transformationServices = [;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { motion } from 'framer-motion';
+import Layout from '../../components/Layout';
+import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
+import React from 'react';  const transformationServices = [;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {}
       title: "Process Automation","
       description: "Streamline operations with intelligent automation","
@@ -149,6 +156,7 @@ import React from 'react';  const transformationServices = [;
       icon: TrendingUp,
       features: ["KPI Tracking", "Performance Analytics", "Continuous Improvement"]"
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -232,11 +240,25 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+=======
+;  ];
+  return (
+    <Layout)
+      title="Digital Transformation - Zion Tech Group""
+      description="Complete digital transformation solutions to modernize your business and drive innovation."">;
+      <div className="min-h-screen bg-gray-50">";          <div className="container mx-auto px-4">";
+            <motion.div;
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </p>;
             </motion && motion.div>;
           </div>;
         </section>;              className="text-center"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Digital{' '}
@@ -258,6 +280,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -305,6 +328,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="py-20">"
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 :pages/solutions/digital-transformation.tsx
               className="text-center";
             >;
@@ -340,13 +365,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <motion&& motion.div
                     key={index}
                     className="bg-gray-50 rounded-lg p-6 text-center"        <section className="py-20">"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {transformationServices.map((service, index) => {}
                 const IconComponent = service.icon;
                 return (;
                   <motion.div);
+<<<<<<< HEAD
 <<<<<<< HEAD
                     key={index}
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
@@ -384,6 +413,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   >,
                     <div className="text-purple-600 mb-4">";
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <section className="py-20">";
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
@@ -391,7 +422,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 const IconComponent = service && service.icon;
                 return (
                   <motion&& motion.div)                    <div className="text-purple-600 mb-4">";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <IconComponent className="w-10 h-10" />";
                     </div>;
                     <h3 className="text-xl font-bold text-gray-900 mb-4">";
@@ -413,12 +447,22 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               })}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             </div>
           </div>
         </section>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+            </div>,
+          </div>;
+        </section>;
+            </div>;
+          </div>;
+        </section>;
+:pages/solutions/digital-transformation && transformation.tsx;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -496,6 +540,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     <p className="text-gray-600">{industry.description}</p>
                   </motion.div>
                 );
+<<<<<<< HEAD
               })}
 
             </div>;
@@ -653,6 +698,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 );
               })}            </h2>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              })}            </h2>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <p className="text-xl mb-8 max-w-2xl mx-auto">";
               Ready to transform your business? Let our experts guide you through your digital transformation journey.;
             </p>;

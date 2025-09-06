@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -51,11 +52,19 @@ import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {StarIcon} from "lucide-react";interface ListingScoreCardProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import {cn} from "@/lib/utils";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {StarIcon} from "lucide-react";interface ListingScoreCardProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   title: string,
   description: string,
 
   image?: string;
   category: string,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -74,10 +83,15 @@ import {StarIcon} from "lucide-react";interface ListingScoreCardProps {
   image?: string;
   category: string,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  image?: string;
+  category: string,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   author?: string;
   author_image?: string;
   ai_score?: number;
   rating?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -151,6 +165,8 @@ import { StarIcon } from "lucide-react",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ListingScoreCardProps {
   title: string,
   description: string,
@@ -164,6 +180,7 @@ interface ListingScoreCardProps {
   reviewCount?: number,
   className?: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -187,6 +204,8 @@ export function ListingScoreCard({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   description, 
   image, 
   category, 
@@ -200,6 +219,7 @@ export function ListingScoreCard({
   className
 }: ListingScoreCardProps) {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className={cn(
 <<<<<<< HEAD
@@ -297,6 +317,9 @@ export function ListingScoreCard({ ;
 =======
     <div className={cn(            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    <div className={cn(            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           />;
         </div>;
       )}
@@ -311,6 +334,7 @@ export function ListingScoreCard({ ;
               <span>{aiScore}%</span>;
             </div>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -379,6 +403,8 @@ export function ListingScoreCard({ ;
 import { cn } from "@/lib/utils",;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { StarIcon } from "lucide-react",;
@@ -455,6 +481,7 @@ export function ListingScoreCard({;
                   key={star}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 <StarIcon;
@@ -476,6 +503,8 @@ export function ListingScoreCard({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   className={cn(
                     "h-4 w-4", 
                     star <= Math && Math.round(rating) 
@@ -486,6 +515,7 @@ export function ListingScoreCard({;
                       ? "text-zion-cyan fill-zion-cyan" 
                       : "text-zion-slate-light"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -506,6 +536,8 @@ export function ListingScoreCard({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   )}
                 />;
               ))}
@@ -514,6 +546,7 @@ export function ListingScoreCard({;
               ({reviewCount});
             </span>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         )}
 <<<<<<< HEAD
@@ -675,6 +708,9 @@ export function ListingScoreCard({;
 =======
         )}  review_count?: number;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        )}  review_count?: number;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   class_name?: string;
 }
 export /**
@@ -746,6 +782,7 @@ function ListingScoreCard() {
       </div>;
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -814,3 +851,6 @@ className)
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

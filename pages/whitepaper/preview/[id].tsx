@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,6 +31,20 @@ export default function WhitepaperPreview() {;
 
 
 =======
+=======
+import { useRouter  } from 'next/router';
+import { useEffect, useState } from 'react';
+export default function WhitepaperPreview() {
+<<<<<<< HEAD
+
+
+import {useRouter} from 'next/router';
+import {useEffect, useState} from 'react';
+
+export default function WhitepaperPreview() {;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useRouter } from 'next/router',
 import { useEffect, useState } from 'react',
 export default function WhitepaperPreview() {
@@ -37,26 +52,36 @@ export default function WhitepaperPreview() {
   const { id } = router.query,
   const [markdown, setMarkdown] = useState<string>(''),
   const [notFound, setNotFound] = useState(false),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const router = useRouter();
   const { id } = router.query;
   const [markdown, setMarkdown] = useState<string>('');
   const [notFound, setNotFound] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const router = useRouter();
   const { id } = router.query;
   const [markdown, setMarkdown] = useState<string>('');
   const [notFound, setNotFound] = useState(false);
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   useEffect(() => {
     if (!id |Array.isArray(id)) return;
     // Simple client fetch from a volatile in-memory store endpoint (for demo we echo in query)
     // In a production app, this would fetch from a real DB.
     fetch(`/api/whitepaper/get?id=${id}`)
+<<<<<<< HEAD
 <<<<<<< HEAD
       .then(r => (r.ok ? r.json() : Promise.reject()))
       .then(d => setMarkdown(d.markdown |''))
@@ -68,6 +93,11 @@ export default function WhitepaperPreview() {
 }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   useEffect(() => {;
     if (!id || Array && Array.isArray(id)) return;
     // Simple client fetch from a volatile in-memory store endpoint (for demo we echo in query);
@@ -75,6 +105,7 @@ export default function WhitepaperPreview() {
     fetch(`/api/whitepaper/get?id=${id}`);
       .then(r => (r && r.ok ? r && r.json() : Promise && Promise.reject()));
       .then(d => setMarkdown(d && d.markdown || ''));
+<<<<<<< HEAD
       .catch(() => setNotFound(true));
   }, [id]);
 <<<<<<< HEAD
@@ -160,6 +191,21 @@ function WhitepaperPreview() {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+.then(r => (r.ok ? r.json() : Promise.reject()))
+      .then(d => setMarkdown(d.markdown || ''))
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      .catch(() => setNotFound(true));
+  }, [id]);
+    return (
+      <div className='container mx-auto px-4 py-6'>;
+        Preview not available or expired.;
+      </div>;
+    );
+<<<<<<< HEAD
+  if (!markdown);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // In a production app, this would fetch from a real DB.;
     fetch (`/api / whitepaper / get?id=${id}`);
       .then (r => (r.ok ? r.json () : Promise.reject ()));
@@ -175,6 +221,7 @@ if (
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -255,10 +302,18 @@ export default function WhitepaperPreview(req, res) {
 
   return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+=======
+  if (!markdown)
+    return <div className='container mx-auto px-4 py-6'>Loading…</div>;
+  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className='container mx-auto px-4 py-6'>
       <h1 className='text-xl font-semibold mb-4'>Whitepaper Preview</h1>
       <pre className='whitespace-pre-wrap text-sm leading-6'>{markdown}</pre>
     </div>
+<<<<<<< HEAD
 );
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -291,3 +346,7 @@ export default function WhitepaperPreview(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

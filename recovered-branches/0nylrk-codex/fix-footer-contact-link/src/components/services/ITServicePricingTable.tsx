@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState, useMemo } from "react";
 import {
@@ -70,6 +71,8 @@ import { useState, useMemo  } from './react';
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useMemo } from "react";
 import {
   onsiteServicePricing,
@@ -94,6 +97,7 @@ export function ITServicePricingTable() {
   }>({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -104,6 +108,11 @@ export function ITServicePricingTable() {
     direction: "ascending",
   });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+    key: "country",
+    direction: "ascending",
+  });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing];

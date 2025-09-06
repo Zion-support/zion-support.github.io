@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -18,12 +19,17 @@ import {formatDistanceToNow} from "date-fns";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Card, CardContent } from "@/components/ui/card",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatDistanceToNow } from "date-fns";
 import { Skeleton } from "@/components/ui/skeleton",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns",
 <<<<<<< HEAD
@@ -176,10 +182,22 @@ import { formatDistanceToNow } from "date-fns",      // Get unique visitors (by 
         .select('count')
         .eq('event_typeconversion')      return {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { formatDistanceToNow } from "date-fns",      // Get unique visitors (by counting distinct user IDs)
+      const { data: uniqueVisitorsData, error: uniqueVisitorsError } = await supabase
+        .from('analytics_events')
+        .select('user_id')
+        .eq('event_typepage_view')      // Get conversion count
+      const { data: conversionsData, error: conversionsError } = await supabase
+        .from('analytics_events')
+        .select('count')
+        .eq('event_typeconversion')      return {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         totalPageViews: pageViewsData?.count |0
         uniqueVisitors: uniqueUserIds.size |0
         conversions: conversionsData?.count |0
         lastUpdated: lastEventData?.created_at ? new Date(lastEventData.created_at) : null}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -194,6 +212,8 @@ import { formatDistanceToNow } from "date-fns",      // Get unique visitors (by 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     },
     refetchInterval: 300000, // Refetch every 5 minutes
   }),
@@ -204,6 +224,7 @@ import { formatDistanceToNow } from "date-fns",      // Get unique visitors (by 
     ? ((stats.conversions / stats.totalPageViews) * 100).toFixed(2)
 
     : '0.00',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -506,6 +527,12 @@ interface StatCardProps {
   title: string
   value: React.ReactNode        value={isLoading ? <Skeleton className="h-8 w-20 bg-zion-blue-light" /> : `${conversionRate}%`}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+interface StatCardProps {
+  title: string
+  value: React.ReactNode        value={isLoading ? <Skeleton className="h-8 w-20 bg-zion-blue-light" /> : `${conversionRate}%`}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         icon={;
           <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m2 20 2-2"/><path d="M4 14a6 6 0 0 1 6-6"/><path d="M5 18a8 8 0 0 1 8-8"/><path d="M6 16a6 6 0 0 1 6-6"/><path d="m10 16 2-2v6"/><path d="m3 14 2-2"/><rect x="14" y="2" width="8" height="8" rx="2"/></svg>;
         }
@@ -518,6 +545,7 @@ interface StatCardProps {
       />;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -534,6 +562,8 @@ interface StatCardProps {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -546,6 +576,7 @@ interface StatCardProps {;
   title: string;
   value: React.ReactNode;
   icon: React.ReactNode;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -585,6 +616,9 @@ interface StatCardProps {;
 =======
 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardContent className="p-6">;

@@ -1,15 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -172,6 +176,12 @@ import { TalentProfile } from "@/types/talent";
 import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",    years_experience: 3, // Default value;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { ProfileData } from "@/types/profile";
+import { TalentProfile } from "@/types/talent";
+import { ProfileData } from "@/types/profile",
+import { TalentProfile } from "@/types/talent",    years_experience: 3, // Default value;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     skills: profile.skills?.map ((skill: { name: string }) => skill.name) || [];
     availability_type: profile.availability?.status === 'available' ? 'full_time' :;
                       profile.availability?.status === 'limited' ? 'part_time' : 'unavailable';
@@ -187,6 +197,7 @@ import { TalentProfile } from "@/types/talent",    years_experience: 3, // Defau
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -215,3 +226,6 @@ import { TalentProfile } from "@/types/talent",    years_experience: 3, // Defau
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

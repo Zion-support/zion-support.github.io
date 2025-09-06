@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -67,6 +68,13 @@ export function useAuthState() {
  */
 export function useAuthState() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+ * Custom hook to manage auth state
+ */
+export function useAuthState() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return {
     user,
     setUser,
@@ -79,6 +87,7 @@ export function useAuthState() {
 }
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,6 +105,8 @@ import type { UserProfile } from "@/types/auth",;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react",;
 import type { UserProfile } from "@/types/auth",;
   }
@@ -103,12 +114,15 @@ import type { UserProfile } from "@/types/auth",;
 import React, { useState } from "react",;
 import type { UserProfile } from "@/types/auth",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 /**;
  * Custom hook to manage auth state;
  */;
@@ -137,6 +151,7 @@ function useAuthState() {
     setOnboardingStep;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -150,6 +165,8 @@ function useAuthState() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -169,6 +186,7 @@ function useAuthState() {
     user;
     set_user;
     is_loading;
+<<<<<<< HEAD
 <<<<<<< HEAD
     setIsLoading;
 <<<<<<< HEAD
@@ -194,3 +212,6 @@ function useAuthState() {
 =======
     setIsLoading;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    setIsLoading;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

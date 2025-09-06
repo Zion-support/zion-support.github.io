@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 } from 'lucide-react'; import {
 <<<<<<< HEAD
   Sidebar
@@ -5,6 +6,7 @@
   SidebarGroup
   SidebarMenuItem
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 } from "@/components/ui/sidebar";
 
@@ -16,6 +18,14 @@ import {
   SidebarMenuItem,
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+  Sidebar;
+  SidebarContent;
+  SidebarGroup;
+  SidebarMenuItem;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // SidebarMenu, // Removed
   // SidebarMenuButton, // Removed
   // SidebarGroupLabel, // Not needed
@@ -42,9 +52,13 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <SidebarGroup title="Dashboard">
           <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>
             <span>Home</span>
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
         <SidebarGroup title="Dashboard">
@@ -89,15 +103,44 @@ export function AppSidebar() {
             <span>Profile</span>
           </SidebarMenuItem>
           <SidebarMenuItem href="/settings" icon={<Settings size={16} />}>
+=======
+<SidebarGroup title='Dashboard'>
+          <SidebarMenuItem href='/creator-dashboard' icon={<Home size={16} />}>
+            <span>Home</span>
+          </SidebarMenuItem>
+          <SidebarMenuItem href='/messaging' icon={<Mail size={16} />}>
+            <span>Messages</span>
+          </SidebarMenuItem>
+          <SidebarMenuItem href='/notifications' icon={<Bell size={16} />}>
+            <span>Notifications</span>
+          </SidebarMenuItem>
+        </SidebarGroup>
+        <SidebarGroup title='Content'>
+          <SidebarMenuItem href='/publish' icon={<FileText size={16} />}>
+            <span>My Content</span>
+          </SidebarMenuItem>
+          <SidebarMenuItem href='/analytics' icon={<Search size={16} />}>
+            <span>Analytics</span>
+          </SidebarMenuItem>
+        </SidebarGroup>
+        <SidebarGroup title='Settings'>
+          <SidebarMenuItem href='/profile' icon={<Users size={16} />}>
+            <span>Profile</span>
+          </SidebarMenuItem>
+          <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             <span>Settings</span>
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Sidebar>
   )
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react';
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -237,6 +280,7 @@ function AppSidebar() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -244,3 +288,11 @@ function AppSidebar() {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    </Sidebar>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

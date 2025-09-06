@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,9 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState  } from 'react';
 import { Resume  } from '@/types/resume';
 import { useFetchResume  } from './useFetchResume';
@@ -19,6 +23,7 @@ import { useEducation  } from './useEducation';
 import { useSkills  } from './useSkills';
 import { useCertifications  } from './useCertifications';
 import { useResumeList  } from './useResumeList';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function useResume() {
 <<<<<<< HEAD
@@ -58,6 +63,9 @@ export function useResume() {;
 =======
 export function useResume() {  const [resume, setResume] = useState<Resume | null>(null);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function useResume() {  const [resume, setResume] = useState<Resume | null>(null);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const fetchResumeOperations = useFetchResume();
   const resumeActions = useResumeActions();
@@ -75,6 +83,7 @@ export function useResume() {  const [resume, setResume] = useState<Resume | nul
       setResume(result)
     }
     return result
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -324,12 +333,16 @@ export * from './useResumeActions';
 =======
   }export * from './useResumeActions';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  }export * from './useResumeActions';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export * from './useWorkExperience';
 export * from './use_education';
 export * from './use_skills';
 export * from './use_certifications';
 export * from './useResumeList';
 export * from './useResumeUtils';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -391,6 +404,11 @@ export * from './useResumeUtils';
 ;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from 'react',;
 import { Resume } from '@/types/resume',;
 import { useFetchResume } from './useFetchResume',;
@@ -473,6 +491,7 @@ export * from './useSkills',;
 export * from './useCertifications',;
 export * from './useResumeList';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export * from './useResumeUtils';
 <<<<<<< HEAD
 
@@ -493,3 +512,6 @@ export * from './useResumeUtils';
 =======
 export * from './useResumeUtils';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export * from './useResumeUtils';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

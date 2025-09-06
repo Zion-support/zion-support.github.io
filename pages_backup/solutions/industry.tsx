@@ -2,12 +2,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Heart, CreditCard, Globe, GraduationCap, Factory, Home } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -19,6 +23,9 @@ import Link from 'next/link';';
 =======
 import React from 'react';import Link from 'next/link';';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from 'react';import Link from 'next/link';';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion';
 import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Heart, GraduationCap, Factory, Home, CreditCard } from 'lucide-react';
 import Layout from "../../components/Layout";";
@@ -173,6 +180,7 @@ export default function IndustrySolutionsPage() {
               <div className="flex items-center justify-center mb-6">";
                 <BarChart3 className="w-16 h-16 text-indigo-400 mr-4" />";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 <h1 className="text-5xl md: text-6xl font-bold">", Industry <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Solutions</span>",;
                 </h1>;
@@ -190,6 +198,8 @@ export default function IndustrySolutionsPage() {
                   className="px-8 py-4 border border-white text-white hover: bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"",>,;
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <h1 className="text-5xl md:text-6xl font-bold">";
                   Industry <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Solutions</span>";
                 </h1>;
@@ -209,7 +219,10 @@ export default function IndustrySolutionsPage() {
                   href="/case-studies"";
                   className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"";
                 >;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   Industry Case Studies;
                 </Link>;
               </div>;
@@ -232,6 +245,7 @@ export default function IndustrySolutionsPage() {
         <section className="py-16 bg-white">"
           <div className="container mx-auto px-4">";
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
               {stats.map((stat, index) => (,
                 <motion.div}),
@@ -240,6 +254,8 @@ export default function IndustrySolutionsPage() {
                   initial={{ opacity: 0, y: 30 }}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="text-center""
@@ -262,18 +278,24 @@ export default function IndustrySolutionsPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Industry <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Expertise</span>",;
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               transition={{ duration: 0.8 }}
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Industry <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Expertise</span>";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 We have deep expertise across multiple industries, delivering solutions that meet specific regulatory and business requirements,
@@ -289,6 +311,7 @@ export default function IndustrySolutionsPage() {
                   key={industry.name}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -309,6 +332,8 @@ export default function IndustrySolutionsPage() {
                     </div>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <div>;
                       <h3 className="text-2xl font-bold text-gray-900">{industry.name}</h3>"
                       <p className="text-gray-600">{industry.description}</p>"
@@ -342,18 +367,24 @@ export default function IndustrySolutionsPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Capabilities</span>",;
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               transition={{ duration: 0.8 }}
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Capabilities</span>";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Industry-specific capabilities that ensure your solutions meet regulatory requirements and business objectives;
@@ -369,6 +400,7 @@ export default function IndustrySolutionsPage() {
                   key={capability.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -389,6 +421,8 @@ export default function IndustrySolutionsPage() {
               ))}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>,
           </div>;
         </section>;
@@ -403,20 +437,27 @@ export default function IndustrySolutionsPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}>,;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready for Industry-Specific Solutions?,;
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               transition={{ duration: 0.8 }}
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready for Industry-Specific Solutions?;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </h2>;
               <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">";
                 Let's discuss how our industry expertise can help you build solutions that meet your specific regulatory and business requirements';
               </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -447,6 +488,8 @@ export default function IndustrySolutionsPage() {
                   View All Solutions;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </Link>;
               </div>;
             </motion.div>;

@@ -2,12 +2,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/src/pages.disabled/MobileDevelopment.jsx
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import _React from 'react'; const MobileDevelopment = () => { return ( <div> <h1>MobileDevelopment</h1> <p>Component placeholder</p> </div> )}; export default MobileDevelopment;
 =======
 import React from \'react\'; const MobileDevelopment = () => { return ( <div> <h1>MobileDevelopment</h1> <p>Component placeholder</p> </div> )}; export default MobileDevelopment;
@@ -56,6 +59,7 @@ import _React from 'react'; const MobileDevelopment = () => { return ( <div> <h1
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
@@ -100,3 +104,5 @@ import _React from 'react'; const MobileDevelopment = () => { return ( <div> <h1
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -20,11 +21,15 @@ import _React from';react' "export": const FuturisticAnimatedBackground = ({ cla
 =======
 import _React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return'';';
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import _React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return'';';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
 
 import _React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return'';';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -86,9 +91,14 @@ import _React from';react' "export": const FuturisticAnimatedBackground = ({ cla
 import _React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return'';';import _React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return'';';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from\';react\' \"export\": const FuturisticAnimatedBackground = ({ className = \',intensity = \'medium\',colorScheme = \'multi\'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext(\'2d\') if (!ctx) return\'';\';
 const React from";react" export: const FuturisticAnimatedBackground = ({ className = ",intensity = "medium",colorScheme = "multi"}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext("2d") if (!ctx) return"";";'"'"
 import _React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return'';';
 import _React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return'';';
 import _React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return'';';
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

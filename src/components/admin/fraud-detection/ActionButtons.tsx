@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -13,6 +14,8 @@ interface ActionButtonsProps {
 }
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
 interface ActionButtonsProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -88,17 +91,48 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
           variant="ghost"
           size="sm"
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 =======
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Eye, Info, AlertTriangle, Ban } from 'lucide-react';
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
+interface ActionButtonsProps {
+          size='sm'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           onClick={() => onAction(flagId, 'ignore')}
         >
           Ignore
         </Button>
       )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+    </div>
+<<<<<<< HEAD
+  )
+
+
+  );
+};
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from 'react';
 import { Button } from '@/components / ui / button';
@@ -174,6 +208,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
 };
 =======
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   )
@@ -182,3 +217,14 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+'"},
+  );
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+);
+};
+'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

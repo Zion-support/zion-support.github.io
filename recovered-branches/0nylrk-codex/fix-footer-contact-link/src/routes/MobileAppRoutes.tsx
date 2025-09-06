@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,10 +10,13 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Route, Routes } from "react-router-dom";
 import MobileAppPage from "../pages/MobileAppPage";
 import MobileLaunchPage from "../pages/MobileLaunchPage";
 import OpenAppRedirect from "../pages/OpenAppRedirect";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const MobileAppRoutes = () => {
@@ -25,6 +29,9 @@ import {Route, Routes} from "react-router-dom";
 =======
 const MobileAppRoutes = () => {import {Route, Routes} from "react-router-dom";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const MobileAppRoutes = () => {import {Route, Routes} from "react-router-dom";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import MobileAppPage from "../pages/MobileAppPage";
 import MobileLaunchPage from "../pages/MobileLaunchPage";
 import OpenAppRedirect from "../pages/OpenAppRedirect";
@@ -55,6 +62,7 @@ import { Route, Routes } from "react-router-dom",;
 import MobileAppPage from "../pages/MobileAppPage",;
 import MobileLaunchPage from "../pages/MobileLaunchPage",;
 import OpenAppRedirect from "../pages/OpenAppRedirect",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -94,6 +102,11 @@ export default MobileAppRoutes;
 =======
 const MobileAppRoutes = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+const MobileAppRoutes = () => {
+const MobileAppRoutes = () => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 import { Route, Routes } from './react-router-dom';
 import MobileAppPage from "../pages / MobileAppPage";
@@ -112,6 +125,7 @@ const MobileAppRoutes = () =>: any {
 ;
 export default MobileAppRoutes;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -142,3 +156,5 @@ export default MobileAppRoutes;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

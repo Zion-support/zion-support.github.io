@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -18,6 +19,10 @@ import * as SheetPrimitive from "@radix-ui/react-dialog"
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from "lucide-react"
 import * as React from "react"
@@ -34,6 +39,7 @@ const SheetOverlay = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Overlay
+<<<<<<< HEAD
 <<<<<<< HEAD
     className={cn(
 <<<<<<< HEAD
@@ -60,6 +66,9 @@ const SheetOverlay = React.forwardRef<
 =======
     className={cn(      className
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    className={cn(      className
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     )}
     {...props}
     ref={ref}
@@ -69,10 +78,13 @@ SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 const sheetVariants = cva(
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   {
     variants: {
@@ -95,10 +107,13 @@ const sheetVariants = cva(
           "inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm"}},
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     defaultVariants: {
       side: &quot;right&quot;}}    defaultVariants: {
@@ -109,6 +124,7 @@ interface SheetContentProps
   VariantProps<typeof sheetVariants> { }
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>
+<<<<<<< HEAD
 <<<<<<< HEAD
   SheetContentProps
 <<<<<<< HEAD
@@ -281,6 +297,9 @@ const SheetContent = React.forwardRef<;
 =======
   SheetContentProps      </SheetPrimitive.Close>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  SheetContentProps      </SheetPrimitive.Close>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </SheetPrimitive.Content>
   </SheetPortal>
 ))
@@ -290,6 +309,7 @@ const SheetHeader = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
+<<<<<<< HEAD
 <<<<<<< HEAD
     className={cn(
 <<<<<<< HEAD
@@ -339,11 +359,15 @@ const SheetFooter = ({
 =======
     className={cn(const SheetFooter = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    className={cn(const SheetFooter = ({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   className
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -392,10 +416,15 @@ SheetFooter.displayName = "SheetFooter"
 
       "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const SheetTitle = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Title>
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
 >(({ className, ...props }, ref) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
   <SheetPrimitive.Title
 <<<<<<< HEAD
@@ -455,6 +484,9 @@ const SheetTitle = React.forward_ref<;
 =======
   <SheetPrimitive.Title    ref={ref}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  <SheetPrimitive.Title    ref={ref}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     className={cn (&quot;text - lg font - semibold text - foreground & quot;, class_name)}
     {...props}
 
@@ -484,6 +516,7 @@ export {
 export {;
 
   Sheet, SheetClose;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -622,3 +655,6 @@ export {;
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

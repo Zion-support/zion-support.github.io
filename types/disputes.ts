@@ -46,6 +46,7 @@ export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -55,12 +56,15 @@ export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export type DisputeReason =;
   | 'Scope Disagreement';
   | 'Quality Issues';
   | 'Delivery Delay';
   | 'Payment Issue';
   | 'Communication Breakdown';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   | 'Other';
@@ -122,10 +126,13 @@ export type UserSummary = {;
   name: string,;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export type DisputeAttachment = {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
+<<<<<<< HEAD
   fileName: string;
   fileSize: number;
   mimeType: string;
@@ -212,9 +219,11 @@ export interface Dispute {
 =======
 export type DisputeAttachment = {  id: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   orderId: string;
   userId: string;
-  reason: string,
+  reason: string;
   description: string;
   status: 'open' | 'in_progress' | 'resolved' | 'closed';
   createdAt: Date;
@@ -223,6 +232,7 @@ export type DisputeAttachment = {  id: string;
   resolvedAt?: Date;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export interface DisputeResolution {
@@ -239,8 +249,13 @@ export interface DisputeResolution {
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   role: 'admin' | 'client' | 'talent';
 }
 };
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

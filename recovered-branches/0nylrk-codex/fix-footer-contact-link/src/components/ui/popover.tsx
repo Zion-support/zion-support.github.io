@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -19,6 +20,10 @@ import * as React from "react"
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import * as PopoverPrimitive from "@radix-ui/react-popover"
 
 import { cn } from "@/lib/utils"
@@ -35,6 +40,7 @@ const PopoverContent = React.forwardRef<
       ref={ref}
       align={align}
       sideOffset={sideOffset}
+<<<<<<< HEAD
 <<<<<<< HEAD
       className={cn(
 <<<<<<< HEAD
@@ -61,12 +67,16 @@ const PopoverContent = React.forwardRef<
 =======
       className={cn(        className
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      className={cn(        className
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       )}
       {...props}
     />;
   </PopoverPrimitive.Portal>;
 ));
 PopoverContent.displayName = PopoverPrimitive.Content.displayName;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -79,6 +89,8 @@ PopoverContent.displayName = PopoverPrimitive.Content.displayName;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export { Popover, PopoverTrigger, PopoverContent }
 export { Popover, PopoverTrigger, PopoverContent }
 ;
@@ -130,6 +142,7 @@ React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>)
 ;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 export { Popover, PopoverTrigger, PopoverContent }
@@ -137,3 +150,5 @@ export { Popover, PopoverTrigger, PopoverContent }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

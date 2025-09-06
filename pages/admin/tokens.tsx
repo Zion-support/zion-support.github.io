@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useEffect, useState } from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
@@ -274,6 +275,12 @@ import EnhancedLayout from "../../components/layout/EnhancedLayout",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from "react",;
 import EnhancedLayout from "../../components/layout/EnhancedLayout",;
+=======
+import React, { useEffect, useState } from "react",;
+import EnhancedLayout from "../../components/layout/EnhancedLayout",;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useState } from "react",
 import EnhancedLayout from "../../components/layout/EnhancedLayout",
 export default function AdminTokens() {
@@ -320,7 +327,10 @@ export default function AdminTokens() {
     return res.status(500).json({ error: "Internal server error" });
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   }
 }
@@ -329,9 +339,12 @@ export default function AdminTokens() {
   }, []),
   async function issue() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const res = await fetch("/api/admin/tokens/issue", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -340,6 +353,7 @@ export default function AdminTokens() {
     if (data.error) alert(data.error)
     await load()
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   async function revoke() {
     const res = await fetch("/api/admin/tokens/revoke", {
@@ -382,10 +396,13 @@ export default function AdminTokens() {
     const res = await fetch("/api/admin/tokens/config", {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(config)}),
     const data = await res.json(),
+<<<<<<< HEAD
     setConfig(data)
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -395,6 +412,12 @@ export default function AdminTokens() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+    const res = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    setConfig(data)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 
     } catch (error) {
@@ -403,23 +426,29 @@ export default function AdminTokens() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(config)}),
     const data = await res.json(),
     setConfig(data)
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <EnhancedLayout title="Admin: ZION$">
       <div className="max-w-4xl mx-auto space-y-6">
@@ -428,6 +457,7 @@ export default function AdminTokens() {
           <div className="grid sm:grid-cols-4 gap-2 text-sm">
             <input placeholder="userId" className="border rounded px-2 py-1" value={userId} onChange={(e) => setUserId(e.target.value)} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             <input type="number" placeholder="amount" className="border rounded px-2 py-1" value={amount} onChange={(e) => setAmount(parseInt(e.target.value |"0"))} />
@@ -458,6 +488,8 @@ export default function AdminTokens() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <input placeholder="reason" className="border rounded px-2 py-1" value={reason} onChange={(e) => setReason(e.target.value)} />
             <div className="flex gap-2">
               <button className="px-3 py-1 rounded border" onClick={issue}>Issue</button>
@@ -468,6 +500,7 @@ export default function AdminTokens() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -478,12 +511,15 @@ export default function AdminTokens() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
           <h2 className="font-medium mb-3">Conversion & Rules</h2>
           {config && (
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-2">
                 <label className="w-40">USD per Token</label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -511,12 +547,15 @@ export default function AdminTokens() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <button className="px-3 py-1 rounded border" onClick={saveConfig}>Save</button>
               </div>
               <div className="text-xs text-gray-500">Example: 0.05 means 100 ZION$ = $5 credit.</div>
             </div>
           )}
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -536,6 +575,9 @@ export default function AdminTokens() {
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        <div className="p-4 border rounded bg-white dark:bg-zinc-900">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <h2 className="font-medium mb-3">Transactions</h2>
           <div className="space-y-2 text-sm max-h-96 overflow-auto">
             {transactions.map((t) => (
@@ -545,6 +587,7 @@ export default function AdminTokens() {
                   <span className="text-gray-600">{t.userId}</span>
                   <span className="text-gray-500">{t.reason.replaceAll("_"," ")}</span>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className="font-medium">{t.type === "earn" |t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>
                 <div className="font-medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>
@@ -557,12 +600,18 @@ export default function AdminTokens() {
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))}
             {transactions.length === 0 && <div className="text-gray-500">No transactions.</div>}
           </div>
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 };
 ;
@@ -577,6 +626,7 @@ export default function AdminTokens() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -607,6 +657,10 @@ export default function AdminTokens() {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useState } from './react';,
 import EnhancedLayout from "../../components / layout / EnhancedLayout",
 export default /**
@@ -671,6 +725,7 @@ function save_config() {
     set_config (data);
   }
   return (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <EnhancedLayout title="Admin: ZION$">;
       <div className="max-w-4xl mx-auto space-y-6">;
@@ -758,12 +813,57 @@ function save_config() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    <EnhancedLayout title="Admin: ZION$">;
+      <div className="max - w-4xl mx - auto space - y-6">;
+        <div className="p - 4 border rounded bg - white dark:bg - zinc - 900">;
+          <h2 className="font - medium mb - 3">Issue / Revoke</h2>;
+          <div className="grid sm:grid - cols - 4 gap - 2 text - sm">;
+            <input placeholder="user_id" className="border rounded px - 2 py - 1" value={user_id} on_change={(e) => setUserId (e.target.value)} />;
+            <input type="number" placeholder="amount" className="border rounded px - 2 py - 1" value={amount} on_change={(e) => set_amount (parse_int (e.target.value || "0"))} />;
+            <input placeholder="reason" className="border rounded px - 2 py - 1" value={reason} on_change={(e) => set_reason (e.target.value)} />;
+            <div className="flex gap - 2">;
+              <button className="px - 3 py - 1 rounded border" on_click={issue}>Issue</button>;
+              <button className="px - 3 py - 1 rounded border" on_click={revoke}>Revoke</button>;
+            </div>;
+          </div>;
+        </div>;
+        <div className="p - 4 border rounded bg - white dark:bg - zinc - 900">;
+          <h2 className="font - medium mb - 3">Conversion & Rules</h2>;
+          {config && (
+            <div className="space - y-3 text - sm">;
+              <div className="flex items - center gap - 2">;
+                <label className="w - 40">USD per Token</label>;
+                <input type="number" step="0.01" className="border rounded px - 2 py - 1" value={config.usdPerToken} on_change={(e) => set_config ({ ...config, usdPerToken: parse_float (e.target.value || "0") })} />;
+                <button className="px - 3 py - 1 rounded border" on_click={save_config}>Save</button>;
+              </div>;
+              <div className="text - xs text - gray - 500">Example: 0.05 means 100 ZION$ = $5 credit.</div>;
+            </div>)}
+        </div>;
+        <div className="p - 4 border rounded bg - white dark:bg - zinc - 900">;
+          <h2 className="font - medium mb - 3">Transactions</h2>;
+          <div className="space - y-2 text - sm max - h-96 overflow - auto">;
+            {transactions.map ((t) => (
+              <div key={t.id} className="flex justify - between border rounded p - 2">;
+                <div className="flex gap - 2 items - center">;
+                  <span className={`px - 2 py - 0.5 rounded text - xs ${["earn", "issue"].includes (t.type) ? "bg - green - 100 text - green - 700" : "bg - red - 100 text - red - 700"}`}>{t.type}</span>;
+                  <span className="text - gray - 600">{t.user_id}</span>;
+                  <span className="text - gray - 500">{t.reason.replace_all ("_", " ")}</span>;
+                </div>;
+                <div className="font - medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>;
+              </div>))}
+            {transactions.length === 0 && <div className="text - gray - 500">No transactions.</div>}
+          </div>;
+        </div>;
+      </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                 <div className="font-medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>
 
               </div>
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -866,3 +966,9 @@ function save_config() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

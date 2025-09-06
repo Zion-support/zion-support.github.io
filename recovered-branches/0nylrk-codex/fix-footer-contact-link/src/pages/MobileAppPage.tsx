@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -133,13 +136,17 @@ import { AppScreenshots } from "@/components/mobile-app/AppScreenshots",
 import { AppTestimonials } from "@/components/mobile-app/AppTestimonials",
 import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",
 import { DownloadSection } from "@/components/mobile-app/DownloadSection",const MobileAppPage: React.FC = () => {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <AppLayout>
       <SEO
         title="Zion AI Marketplace App"
         description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now."
         keywords="AI freelancer app, hire tech, find IT jobs, tech marketplace app, mobile AI jobs"
+<<<<<<< HEAD
 <<<<<<< HEAD
       />
 
@@ -170,6 +177,10 @@ export default MobileAppPage;
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export default MobileAppPage;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default MobileAppPage,
 import React from "react",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -181,6 +192,7 @@ import { AppTestimonials } from "@/components/mobile-app/AppTestimonials",;
 import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",;
 import { DownloadSection } from "@/components/mobile-app/DownloadSection",;
 const MobileAppPage: React.FC = () => {;
+<<<<<<< HEAD
   return (;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -323,3 +335,6 @@ export default MobileAppPage;
 const MobileAppPage: React.FC = () => {;
   return (;export default MobileAppPage;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return (;export default MobileAppPage;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

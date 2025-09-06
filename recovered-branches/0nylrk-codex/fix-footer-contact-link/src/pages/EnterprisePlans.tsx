@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -41,6 +42,8 @@ import { SEO } from "@/components/SEO",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default function EnterprisePlans() {
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -53,7 +56,10 @@ import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestim
 import { SEO } from "@/components/SEO";
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",
 import { SEO } from "@/components/SEO",export default function EnterprisePlans() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <SEO
@@ -119,6 +125,7 @@ import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimon
 import {SEO} from "@/components/SEO";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -131,6 +138,8 @@ import {SEO} from "@/components/SEO";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -155,6 +164,7 @@ export default function EnterprisePlans() {;
         title="Enterprise Plans - Zion AI Marketplace";
         description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools.";
       />;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Header />;
 <<<<<<< HEAD
@@ -224,3 +234,8 @@ export default function EnterprisePlans() {;
 ;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <Header />;    </>);
+;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,4 +1,8 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // @ts-ignore
 import data from '../../data/dao-leaderboard.json';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -8,23 +12,35 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore;
 import data from '../../data/dao-leaderboard.json',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore;
 import data from '../../data/dao-leaderboard.json',
 
 
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function DaoLeaderboardPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 25)
 
+<<<<<<< HEAD
+=======
+=======
+  const items: any[] = (data?.items || []).slice(0, 25);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -39,6 +55,7 @@ export default function DaoLeaderboardPage() {
               <div className="text-sm font-semibold">Score {it.totalScore}</div>
             </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
           ))}
         </ul>
       </div>
@@ -47,10 +64,13 @@ export default function DaoLeaderboardPage() {
 };
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function DaoLeaderboardPage() {
@@ -86,6 +106,11 @@ export default function DaoLeaderboardPage() {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 // @ts - ignore;
 import data from '../../data / dao - leaderboard.json',
@@ -110,6 +135,7 @@ function DaoLeaderboardPage() {
             </li>))}
         </ul>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </EnhancedLayout>;
   );
@@ -171,10 +197,16 @@ export default function DaoLeaderboardPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           ))}
         </ul>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 
@@ -198,3 +230,8 @@ export default function DaoLeaderboardPage() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

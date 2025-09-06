@@ -18,6 +18,7 @@ export function getPdfThemeColors (theme: 'light' | 'dark'): PdfThemeColors {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -42,6 +43,8 @@ export interface PdfThemeColors {;
 /**;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 * Theme configuration for PDF export;
 */;
 export interface PdfThemeColors {
@@ -51,6 +54,7 @@ export interface PdfThemeColors {
     ? {
         background: '#ffffff';
         text: '#000000';
+<<<<<<< HEAD
 <<<<<<< HEAD
         heading: '#222222';
 <<<<<<< HEAD
@@ -117,4 +121,7 @@ export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {;
 =======
         heading: '#222222';      }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        heading: '#222222';      }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
