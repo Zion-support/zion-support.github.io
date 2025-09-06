@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -6,37 +5,6 @@ const Contact: React.FC = () => {
     email: '',
     subject: '',
     message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
-    
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-    setIsSubmitting(false);
-  };
-
-  return (
           </p>
         </div>
       </div>
@@ -118,7 +86,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

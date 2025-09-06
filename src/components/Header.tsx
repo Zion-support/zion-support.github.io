@@ -1,33 +1,3 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
-
-const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { 
-      name: 'Services', 
-      href: '/services',
-      dropdown: [
-        { name: 'Micro SaaS', href: '/services/micro-saas' },
-        { name: 'AI Services', href: '/services/ai-services' },
-        { name: 'IT Services', href: '/services/it-services' },
-        { name: 'Blockchain', href: '/services/blockchain' },
-        { name: 'Data Analytics', href: '/services/data-analytics' },
-      ]
-    },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Contact', href: '/contact' }
-  ];
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
@@ -172,7 +142,6 @@ const Header: React.FC = () => {
         )}
       </nav>
     </header>
-  );
-};
+  )
+}
 
-export default Header;

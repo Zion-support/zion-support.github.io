@@ -1,5 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Services: React.FC = () => {
   const services = [
@@ -123,7 +121,7 @@ const Services: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Services;
+export default Services
