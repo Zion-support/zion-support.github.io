@@ -205,17 +205,3 @@ function PricingCard({
   );
 }
 
-function StepCard({
-  title,
-  description,
-}: {
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="text-center">
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}

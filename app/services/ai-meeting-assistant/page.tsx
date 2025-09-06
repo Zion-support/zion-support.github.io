@@ -109,7 +109,7 @@ export default function AIMeetingAssistantPage() {
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
             <blockquote className="text-gray-600 mb-4">
-              "As a consultant, this tool is invaluable. I can focus on the conversation knowing that every detail is being captured perfectly."
+              &ldquo;As a consultant, this tool is invaluable. I can focus on the conversation knowing that every detail is being captured perfectly.&rdquo;
             </blockquote>
             <div>
               <p className="font-semibold text-gray-900">Lisa Thompson</p>

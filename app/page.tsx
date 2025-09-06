@@ -207,7 +207,7 @@ export default function HomePage() {
               What Our Clients Say
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our clients have to say about working with us.
+              Don&apos;t just take our word for it. Here&apos;s what our clients have to say about working with us.
             </p>
           </div>
 
