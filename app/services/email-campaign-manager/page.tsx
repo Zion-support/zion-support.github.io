@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "AI Email Campaign Manager | Zion Tech Group",
-  description: "Intelligent email marketing platform with AI-powered personalization, automation, and analytics. Boost engagement and drive conversions.",
+  description:
+    "Intelligent email marketing platform with AI-powered personalization, automation, and analytics. Boost engagement and drive conversions.",
 };
 
 export default function EmailCampaignManagerPage() {
@@ -13,14 +14,17 @@ export default function EmailCampaignManagerPage() {
           AI Email Campaign Manager
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Intelligent email marketing platform with AI-powered personalization, automation, and analytics. 
-          Boost engagement and drive conversions with smart email campaigns.
+          Intelligent email marketing platform with AI-powered personalization,
+          automation, and analytics. Boost engagement and drive conversions with
+          smart email campaigns.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Features</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Key Features
+          </h2>
           <div className="space-y-6">
             <FeatureItem
               icon="🤖"
@@ -68,7 +72,7 @@ export default function EmailCampaignManagerPage() {
                 "Basic automation",
                 "Email templates",
                 "Basic analytics",
-                "Email support"
+                "Email support",
               ]}
               popular={false}
             />
@@ -83,7 +87,7 @@ export default function EmailCampaignManagerPage() {
                 "AI personalization",
                 "Advanced analytics",
                 "Priority support",
-                "A/B testing"
+                "A/B testing",
               ]}
               popular={true}
             />
@@ -98,7 +102,7 @@ export default function EmailCampaignManagerPage() {
                 "Advanced AI features",
                 "24/7 support",
                 "Custom integrations",
-                "Dedicated account manager"
+                "Dedicated account manager",
               ]}
               popular={false}
             />
@@ -107,7 +111,9 @@ export default function EmailCampaignManagerPage() {
       </div>
 
       <div className="bg-gradient-to-r from-pink-50 to-purple-50 border border-pink-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Campaign Types</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Campaign Types
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <CampaignType
             icon="🎉"
@@ -143,7 +149,9 @@ export default function EmailCampaignManagerPage() {
       </div>
 
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Key Benefits</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Key Benefits
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <BenefitCard
             icon="📈"
@@ -179,7 +187,9 @@ export default function EmailCampaignManagerPage() {
       </div>
 
       <div className="bg-gradient-to-r from-blue-50 to-pink-50 border border-blue-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Integration Partners</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Integration Partners
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <IntegrationCard name="Shopify" icon="🛍️" />
           <IntegrationCard name="WooCommerce" icon="🛒" />
@@ -193,7 +203,9 @@ export default function EmailCampaignManagerPage() {
       </div>
 
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Perfect For</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Perfect For
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <UseCaseCard
             icon="🛍️"
@@ -219,7 +231,9 @@ export default function EmailCampaignManagerPage() {
       </div>
 
       <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Success Metrics</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Success Metrics
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <MetricCard
             metric="40%"
@@ -245,7 +259,15 @@ export default function EmailCampaignManagerPage() {
   );
 }
 
-function FeatureItem({ icon, title, description }: { icon: string; title: string; description: string }) {
+function FeatureItem({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="flex items-start space-x-4">
       <div className="text-2xl">{icon}</div>
@@ -257,7 +279,14 @@ function FeatureItem({ icon, title, description }: { icon: string; title: string
   );
 }
 
-function PricingCard({ title, price, period, description, features, popular }: {
+function PricingCard({
+  title,
+  price,
+  period,
+  description,
+  features,
+  popular,
+}: {
   title: string;
   price: string;
   period: string;
@@ -266,7 +295,9 @@ function PricingCard({ title, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
-    <div className={`border rounded-xl p-6 ${popular ? 'border-pink-500 bg-pink-50' : 'border-gray-200 bg-white'}`}>
+    <div
+      className={`border rounded-xl p-6 ${popular ? "border-pink-500 bg-pink-50" : "border-gray-200 bg-white"}`}
+    >
       {popular && (
         <div className="bg-pink-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
           Most Popular
@@ -286,18 +317,28 @@ function PricingCard({ title, price, period, description, features, popular }: {
           </li>
         ))}
       </ul>
-      <button className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
-        popular 
-          ? 'bg-pink-600 text-white hover:bg-pink-700' 
-          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-      }`}>
+      <button
+        className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
+          popular
+            ? "bg-pink-600 text-white hover:bg-pink-700"
+            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+        }`}
+      >
         Start Free Trial
       </button>
     </div>
   );
 }
 
-function CampaignType({ icon, title, description }: { icon: string; title: string; description: string }) {
+function CampaignType({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="text-center p-6 border border-gray-200 rounded-lg hover:border-pink-300 transition-colors">
       <div className="text-4xl mb-4">{icon}</div>
@@ -307,7 +348,15 @@ function CampaignType({ icon, title, description }: { icon: string; title: strin
   );
 }
 
-function BenefitCard({ icon, title, description }: { icon: string; title: string; description: string }) {
+function BenefitCard({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="text-center p-6 border border-gray-200 rounded-lg hover:border-pink-300 transition-colors">
       <div className="text-4xl mb-4">{icon}</div>
@@ -326,7 +375,15 @@ function IntegrationCard({ name, icon }: { name: string; icon: string }) {
   );
 }
 
-function UseCaseCard({ icon, title, description }: { icon: string; title: string; description: string }) {
+function UseCaseCard({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="p-6 border border-gray-200 rounded-lg hover:border-pink-300 transition-colors">
       <div className="text-4xl mb-4">{icon}</div>
@@ -336,7 +393,13 @@ function UseCaseCard({ icon, title, description }: { icon: string; title: string
   );
 }
 
-function MetricCard({ metric, description }: { metric: string; description: string }) {
+function MetricCard({
+  metric,
+  description,
+}: {
+  metric: string;
+  description: string;
+}) {
   return (
     <div className="text-center">
       <div className="text-4xl font-bold text-pink-600 mb-2">{metric}</div>
@@ -352,8 +415,8 @@ function CTA() {
         Ready to Transform Your Email Marketing?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Start your free trial today and experience the power of AI-driven email marketing. 
-        Send your first 1,000 emails for free.
+        Start your free trial today and experience the power of AI-driven email
+        marketing. Send your first 1,000 emails for free.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a

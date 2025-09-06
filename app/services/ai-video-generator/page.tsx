@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "AI Video Generator | Zion Tech Group",
-  description: "Create professional videos with AI-powered editing, voice synthesis, and automated content generation.",
+  description:
+    "Create professional videos with AI-powered editing, voice synthesis, and automated content generation.",
 };
 
 export default function AIVideoGeneratorPage() {
@@ -13,14 +14,17 @@ export default function AIVideoGeneratorPage() {
           AI Video Generator
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Create professional videos in minutes with AI-powered editing, voice synthesis, 
-          and automated content generation. Perfect for marketing, education, and social media.
+          Create professional videos in minutes with AI-powered editing, voice
+          synthesis, and automated content generation. Perfect for marketing,
+          education, and social media.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Video Creation Features</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Video Creation Features
+          </h2>
           <div className="space-y-6">
             <FeatureItem
               icon="🎬"
@@ -56,7 +60,9 @@ export default function AIVideoGeneratorPage() {
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Pricing Plans</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Pricing Plans
+          </h2>
           <div className="space-y-6">
             <PricingCard
               name="Creator"
@@ -68,7 +74,7 @@ export default function AIVideoGeneratorPage() {
                 "Basic templates",
                 "Standard quality",
                 "Email support",
-                "HD export"
+                "HD export",
               ]}
               popular={false}
             />
@@ -83,7 +89,7 @@ export default function AIVideoGeneratorPage() {
                 "4K export",
                 "Priority support",
                 "Custom branding",
-                "API access"
+                "API access",
               ]}
               popular={true}
             />
@@ -98,7 +104,7 @@ export default function AIVideoGeneratorPage() {
                 "White-label solution",
                 "Dedicated support",
                 "Team collaboration",
-                "Custom integrations"
+                "Custom integrations",
               ]}
               popular={false}
             />
@@ -107,35 +113,50 @@ export default function AIVideoGeneratorPage() {
       </div>
 
       <div className="bg-gradient-to-r from-pink-50 to-rose-50 border border-pink-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Video Types We Create</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Video Types We Create
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="text-center p-4">
             <div className="text-3xl mb-3">📺</div>
-            <h3 className="font-semibold text-gray-900 mb-2">Marketing Videos</h3>
-            <p className="text-sm text-gray-600">Product demos, ads, and promotional content</p>
+            <h3 className="font-semibold text-gray-900 mb-2">
+              Marketing Videos
+            </h3>
+            <p className="text-sm text-gray-600">
+              Product demos, ads, and promotional content
+            </p>
           </div>
           <div className="text-center p-4">
             <div className="text-3xl mb-3">🎓</div>
             <h3 className="font-semibold text-gray-900 mb-2">Educational</h3>
-            <p className="text-sm text-gray-600">Tutorials, courses, and training materials</p>
+            <p className="text-sm text-gray-600">
+              Tutorials, courses, and training materials
+            </p>
           </div>
           <div className="text-center p-4">
             <div className="text-3xl mb-3">📱</div>
             <h3 className="font-semibold text-gray-900 mb-2">Social Media</h3>
-            <p className="text-sm text-gray-600">Stories, reels, and platform-specific content</p>
+            <p className="text-sm text-gray-600">
+              Stories, reels, and platform-specific content
+            </p>
           </div>
           <div className="text-center p-4">
             <div className="text-3xl mb-3">🏢</div>
             <h3 className="font-semibold text-gray-900 mb-2">Corporate</h3>
-            <p className="text-sm text-gray-600">Presentations, announcements, and internal communications</p>
+            <p className="text-sm text-gray-600">
+              Presentations, announcements, and internal communications
+            </p>
           </div>
         </div>
       </div>
 
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Start Creating Videos Today</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          Start Creating Videos Today
+        </h2>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Join 1,800+ creators and businesses using our AI Video Generator to produce professional content at scale.
+          Join 1,800+ creators and businesses using our AI Video Generator to
+          produce professional content at scale.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -160,7 +181,11 @@ export default function AIVideoGeneratorPage() {
   );
 }
 
-function FeatureItem({ icon, title, description }: {
+function FeatureItem({
+  icon,
+  title,
+  description,
+}: {
   icon: string;
   title: string;
   description: string;
@@ -176,7 +201,14 @@ function FeatureItem({ icon, title, description }: {
   );
 }
 
-function PricingCard({ name, price, period, description, features, popular }: {
+function PricingCard({
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular,
+}: {
   name: string;
   price: string;
   period: string;
@@ -185,7 +217,9 @@ function PricingCard({ name, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
-    <div className={`border rounded-xl p-6 ${popular ? 'border-pink-500 bg-pink-50' : 'border-gray-200 bg-white'}`}>
+    <div
+      className={`border rounded-xl p-6 ${popular ? "border-pink-500 bg-pink-50" : "border-gray-200 bg-white"}`}
+    >
       {popular && (
         <div className="text-center mb-4">
           <span className="bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-semibold">

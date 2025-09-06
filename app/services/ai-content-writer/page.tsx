@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "AI Content Writer | Zion Tech Group",
-  description: "Advanced AI-powered content creation platform with SEO optimization, brand voice training, and multi-format support.",
+  description:
+    "Advanced AI-powered content creation platform with SEO optimization, brand voice training, and multi-format support.",
 };
 
 export default function AIContentWriterPage() {
@@ -13,14 +14,17 @@ export default function AIContentWriterPage() {
           AI Content Writer
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Create high-quality, SEO-optimized content at scale with our advanced AI writing platform. 
-          Generate blog posts, articles, social media content, and more in minutes.
+          Create high-quality, SEO-optimized content at scale with our advanced
+          AI writing platform. Generate blog posts, articles, social media
+          content, and more in minutes.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Writing Capabilities</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Writing Capabilities
+          </h2>
           <div className="space-y-6">
             <FeatureItem
               icon="✍️"
@@ -56,7 +60,9 @@ export default function AIContentWriterPage() {
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Pricing Plans</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Pricing Plans
+          </h2>
           <div className="space-y-6">
             <PricingCard
               name="Writer"
@@ -68,7 +74,7 @@ export default function AIContentWriterPage() {
                 "Basic templates",
                 "SEO suggestions",
                 "Email support",
-                "Standard formats"
+                "Standard formats",
               ]}
               popular={false}
             />
@@ -83,7 +89,7 @@ export default function AIContentWriterPage() {
                 "Advanced SEO",
                 "Priority support",
                 "Team collaboration",
-                "Content calendar"
+                "Content calendar",
               ]}
               popular={true}
             />
@@ -98,7 +104,7 @@ export default function AIContentWriterPage() {
                 "API access",
                 "White-label solution",
                 "Dedicated support",
-                "Custom integrations"
+                "Custom integrations",
               ]}
               popular={false}
             />
@@ -107,35 +113,50 @@ export default function AIContentWriterPage() {
       </div>
 
       <div className="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Content Types We Generate</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Content Types We Generate
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="text-center p-4">
             <div className="text-3xl mb-3">📝</div>
             <h3 className="font-semibold text-gray-900 mb-2">Blog Posts</h3>
-            <p className="text-sm text-gray-600">SEO-optimized articles and long-form content</p>
+            <p className="text-sm text-gray-600">
+              SEO-optimized articles and long-form content
+            </p>
           </div>
           <div className="text-center p-4">
             <div className="text-3xl mb-3">📱</div>
             <h3 className="font-semibold text-gray-900 mb-2">Social Media</h3>
-            <p className="text-sm text-gray-600">Captions, posts, and stories for all platforms</p>
+            <p className="text-sm text-gray-600">
+              Captions, posts, and stories for all platforms
+            </p>
           </div>
           <div className="text-center p-4">
             <div className="text-3xl mb-3">📧</div>
-            <h3 className="font-semibold text-gray-900 mb-2">Email Marketing</h3>
-            <p className="text-sm text-gray-600">Newsletters, campaigns, and sequences</p>
+            <h3 className="font-semibold text-gray-900 mb-2">
+              Email Marketing
+            </h3>
+            <p className="text-sm text-gray-600">
+              Newsletters, campaigns, and sequences
+            </p>
           </div>
           <div className="text-center p-4">
             <div className="text-3xl mb-3">🛍️</div>
             <h3 className="font-semibold text-gray-900 mb-2">E-commerce</h3>
-            <p className="text-sm text-gray-600">Product descriptions and marketing copy</p>
+            <p className="text-sm text-gray-600">
+              Product descriptions and marketing copy
+            </p>
           </div>
         </div>
       </div>
 
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Start Creating Amazing Content Today</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          Start Creating Amazing Content Today
+        </h2>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Join 3,000+ content creators and marketers using our AI Content Writer to scale their content production.
+          Join 3,000+ content creators and marketers using our AI Content Writer
+          to scale their content production.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -160,7 +181,11 @@ export default function AIContentWriterPage() {
   );
 }
 
-function FeatureItem({ icon, title, description }: {
+function FeatureItem({
+  icon,
+  title,
+  description,
+}: {
   icon: string;
   title: string;
   description: string;
@@ -176,7 +201,14 @@ function FeatureItem({ icon, title, description }: {
   );
 }
 
-function PricingCard({ name, price, period, description, features, popular }: {
+function PricingCard({
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular,
+}: {
   name: string;
   price: string;
   period: string;
@@ -185,7 +217,9 @@ function PricingCard({ name, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
-    <div className={`border rounded-xl p-6 ${popular ? 'border-indigo-500 bg-indigo-50' : 'border-gray-200 bg-white'}`}>
+    <div
+      className={`border rounded-xl p-6 ${popular ? "border-indigo-500 bg-indigo-50" : "border-gray-200 bg-white"}`}
+    >
       {popular && (
         <div className="text-center mb-4">
           <span className="bg-indigo-500 text-white px-3 py-1 rounded-full text-sm font-semibold">

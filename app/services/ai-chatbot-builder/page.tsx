@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "AI Chatbot Builder | Zion Tech Group",
-  description: "No-code AI chatbot platform with advanced NLP, multi-language support, and seamless integrations.",
+  description:
+    "No-code AI chatbot platform with advanced NLP, multi-language support, and seamless integrations.",
 };
 
 export default function AIChatbotBuilderPage() {
@@ -13,14 +14,17 @@ export default function AIChatbotBuilderPage() {
           AI Chatbot Builder
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Create intelligent, conversational AI chatbots in minutes with our no-code platform. 
-          Boost customer satisfaction and reduce support costs by 60%.
+          Create intelligent, conversational AI chatbots in minutes with our
+          no-code platform. Boost customer satisfaction and reduce support costs
+          by 60%.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Powerful Features</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Powerful Features
+          </h2>
           <div className="space-y-6">
             <FeatureItem
               icon="🤖"
@@ -56,7 +60,9 @@ export default function AIChatbotBuilderPage() {
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Pricing Plans</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Pricing Plans
+          </h2>
           <div className="space-y-6">
             <PricingCard
               name="Starter"
@@ -68,7 +74,7 @@ export default function AIChatbotBuilderPage() {
                 "1,000 conversations/month",
                 "Basic templates",
                 "Email support",
-                "Standard integrations"
+                "Standard integrations",
               ]}
               popular={false}
             />
@@ -83,7 +89,7 @@ export default function AIChatbotBuilderPage() {
                 "Custom training",
                 "Priority support",
                 "Advanced analytics",
-                "API access"
+                "API access",
               ]}
               popular={true}
             />
@@ -98,7 +104,7 @@ export default function AIChatbotBuilderPage() {
                 "White-label solution",
                 "Dedicated support",
                 "Custom integrations",
-                "SLA guarantee"
+                "SLA guarantee",
               ]}
               popular={false}
             />
@@ -107,7 +113,9 @@ export default function AIChatbotBuilderPage() {
       </div>
 
       <div className="bg-gradient-to-r from-green-50 to-teal-50 border border-green-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Proven Results</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Proven Results
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="text-center">
             <div className="text-4xl font-bold text-green-600 mb-2">60%</div>
@@ -129,9 +137,12 @@ export default function AIChatbotBuilderPage() {
       </div>
 
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Build Your AI Chatbot Today</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          Build Your AI Chatbot Today
+        </h2>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Join 2,000+ businesses using our AI Chatbot Builder to enhance customer experience and drive growth.
+          Join 2,000+ businesses using our AI Chatbot Builder to enhance
+          customer experience and drive growth.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -156,7 +167,11 @@ export default function AIChatbotBuilderPage() {
   );
 }
 
-function FeatureItem({ icon, title, description }: {
+function FeatureItem({
+  icon,
+  title,
+  description,
+}: {
   icon: string;
   title: string;
   description: string;
@@ -172,7 +187,14 @@ function FeatureItem({ icon, title, description }: {
   );
 }
 
-function PricingCard({ name, price, period, description, features, popular }: {
+function PricingCard({
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular,
+}: {
   name: string;
   price: string;
   period: string;
@@ -181,7 +203,9 @@ function PricingCard({ name, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
-    <div className={`border rounded-xl p-6 ${popular ? 'border-green-500 bg-green-50' : 'border-gray-200 bg-white'}`}>
+    <div
+      className={`border rounded-xl p-6 ${popular ? "border-green-500 bg-green-50" : "border-gray-200 bg-white"}`}
+    >
       {popular && (
         <div className="text-center mb-4">
           <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">

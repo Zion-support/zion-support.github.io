@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Website Analyzer | Zion Tech Group",
-  description: "Comprehensive website analysis tool with SEO audit, performance monitoring, and competitive intelligence.",
+  description:
+    "Comprehensive website analysis tool with SEO audit, performance monitoring, and competitive intelligence.",
 };
 
 export default function WebsiteAnalyzerPage() {
@@ -13,14 +14,17 @@ export default function WebsiteAnalyzerPage() {
           Website Analyzer
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Get comprehensive insights into your website's performance, SEO health, 
-          and competitive positioning with our advanced analysis platform.
+          Get comprehensive insights into your website's performance, SEO
+          health, and competitive positioning with our advanced analysis
+          platform.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Analysis Features</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Analysis Features
+          </h2>
           <div className="space-y-6">
             <FeatureItem
               icon="🔍"
@@ -56,7 +60,9 @@ export default function WebsiteAnalyzerPage() {
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Pricing Plans</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Pricing Plans
+          </h2>
           <div className="space-y-6">
             <PricingCard
               name="Basic"
@@ -68,7 +74,7 @@ export default function WebsiteAnalyzerPage() {
                 "Monthly reports",
                 "Basic SEO audit",
                 "Email support",
-                "Standard metrics"
+                "Standard metrics",
               ]}
               popular={false}
             />
@@ -83,7 +89,7 @@ export default function WebsiteAnalyzerPage() {
                 "Advanced analytics",
                 "Competitive analysis",
                 "Priority support",
-                "API access"
+                "API access",
               ]}
               popular={true}
             />
@@ -98,7 +104,7 @@ export default function WebsiteAnalyzerPage() {
                 "White-label reports",
                 "Custom dashboards",
                 "Dedicated support",
-                "Bulk analysis"
+                "Bulk analysis",
               ]}
               popular={false}
             />
@@ -107,30 +113,45 @@ export default function WebsiteAnalyzerPage() {
       </div>
 
       <div className="bg-gradient-to-r from-cyan-50 to-blue-50 border border-cyan-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">What We Analyze</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          What We Analyze
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="text-center">
             <div className="text-4xl mb-4">🎯</div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">SEO Health</h3>
-            <p className="text-gray-600">Comprehensive SEO audit covering technical, on-page, and off-page factors</p>
+            <p className="text-gray-600">
+              Comprehensive SEO audit covering technical, on-page, and off-page
+              factors
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Performance</h3>
-            <p className="text-gray-600">Page speed, Core Web Vitals, and performance optimization recommendations</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              Performance
+            </h3>
+            <p className="text-gray-600">
+              Page speed, Core Web Vitals, and performance optimization
+              recommendations
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-4">🔒</div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Security</h3>
-            <p className="text-gray-600">Security vulnerabilities, SSL status, and compliance monitoring</p>
+            <p className="text-gray-600">
+              Security vulnerabilities, SSL status, and compliance monitoring
+            </p>
           </div>
         </div>
       </div>
 
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Optimize Your Website Today</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          Optimize Your Website Today
+        </h2>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Join 2,500+ website owners using our Website Analyzer to improve their online presence and rankings.
+          Join 2,500+ website owners using our Website Analyzer to improve their
+          online presence and rankings.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -155,7 +176,11 @@ export default function WebsiteAnalyzerPage() {
   );
 }
 
-function FeatureItem({ icon, title, description }: {
+function FeatureItem({
+  icon,
+  title,
+  description,
+}: {
   icon: string;
   title: string;
   description: string;
@@ -171,7 +196,14 @@ function FeatureItem({ icon, title, description }: {
   );
 }
 
-function PricingCard({ name, price, period, description, features, popular }: {
+function PricingCard({
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular,
+}: {
   name: string;
   price: string;
   period: string;
@@ -180,7 +212,9 @@ function PricingCard({ name, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
-    <div className={`border rounded-xl p-6 ${popular ? 'border-cyan-500 bg-cyan-50' : 'border-gray-200 bg-white'}`}>
+    <div
+      className={`border rounded-xl p-6 ${popular ? "border-cyan-500 bg-cyan-50" : "border-gray-200 bg-white"}`}
+    >
       {popular && (
         <div className="text-center mb-4">
           <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">

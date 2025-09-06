@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from "react";
+import Head from "next/head";
 
 interface SEOProps {
   title?: string;
@@ -7,10 +7,10 @@ interface SEOProps {
   canonical?: string;
 }
 
-const SEO: React.FC<SEOProps> = ({ 
-  title = 'Zion Tech Group - Technology Solutions',
-  description = 'Leading provider of AI services, IT solutions, and micro SaaS development.',
-  canonical 
+const SEO: React.FC<SEOProps> = ({
+  title = "Zion Tech Group - Technology Solutions",
+  description = "Leading provider of AI services, IT solutions, and micro SaaS development.",
+  canonical,
 }) => {
   return (
     <Head>

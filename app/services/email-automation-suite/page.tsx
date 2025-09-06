@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Email Automation Suite | Zion Tech Group",
-  description: "AI-powered email marketing automation platform with advanced segmentation, personalization, and analytics.",
+  description:
+    "AI-powered email marketing automation platform with advanced segmentation, personalization, and analytics.",
 };
 
 export default function EmailAutomationSuitePage() {
@@ -13,14 +14,17 @@ export default function EmailAutomationSuitePage() {
           Email Automation Suite
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Transform your email marketing with AI-powered automation, advanced segmentation, 
-          and personalized campaigns that drive 3x higher engagement rates.
+          Transform your email marketing with AI-powered automation, advanced
+          segmentation, and personalized campaigns that drive 3x higher
+          engagement rates.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Features</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Key Features
+          </h2>
           <div className="space-y-6">
             <FeatureItem
               icon="🤖"
@@ -56,7 +60,9 @@ export default function EmailAutomationSuitePage() {
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Pricing Plans</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Pricing Plans
+          </h2>
           <div className="space-y-6">
             <PricingCard
               name="Starter"
@@ -68,7 +74,7 @@ export default function EmailAutomationSuitePage() {
                 "5 email campaigns",
                 "Basic automation",
                 "Email support",
-                "Standard templates"
+                "Standard templates",
               ]}
               popular={false}
             />
@@ -83,7 +89,7 @@ export default function EmailAutomationSuitePage() {
                 "Advanced automation",
                 "AI personalization",
                 "Priority support",
-                "A/B testing"
+                "A/B testing",
               ]}
               popular={true}
             />
@@ -98,7 +104,7 @@ export default function EmailAutomationSuitePage() {
                 "Custom integrations",
                 "Dedicated support",
                 "White-label options",
-                "API access"
+                "API access",
               ]}
               popular={false}
             />
@@ -107,30 +113,50 @@ export default function EmailAutomationSuitePage() {
       </div>
 
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Why Choose Our Email Automation Suite?</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Why Choose Our Email Automation Suite?
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center">
             <div className="text-4xl mb-4">📈</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">3x Higher Engagement</h3>
-            <p className="text-gray-600">Our AI-powered personalization increases email engagement rates by 300% on average.</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              3x Higher Engagement
+            </h3>
+            <p className="text-gray-600">
+              Our AI-powered personalization increases email engagement rates by
+              300% on average.
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-4">💰</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">ROI Optimization</h3>
-            <p className="text-gray-600">Advanced analytics help you optimize campaigns for maximum return on investment.</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              ROI Optimization
+            </h3>
+            <p className="text-gray-600">
+              Advanced analytics help you optimize campaigns for maximum return
+              on investment.
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Time Saving</h3>
-            <p className="text-gray-600">Automate 80% of your email marketing tasks and focus on strategy and growth.</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              Time Saving
+            </h3>
+            <p className="text-gray-600">
+              Automate 80% of your email marketing tasks and focus on strategy
+              and growth.
+            </p>
           </div>
         </div>
       </div>
 
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your Email Marketing?</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          Ready to Transform Your Email Marketing?
+        </h2>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Join 500+ businesses already using our Email Automation Suite to increase engagement and drive growth.
+          Join 500+ businesses already using our Email Automation Suite to
+          increase engagement and drive growth.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -155,7 +181,11 @@ export default function EmailAutomationSuitePage() {
   );
 }
 
-function FeatureItem({ icon, title, description }: {
+function FeatureItem({
+  icon,
+  title,
+  description,
+}: {
   icon: string;
   title: string;
   description: string;
@@ -171,7 +201,14 @@ function FeatureItem({ icon, title, description }: {
   );
 }
 
-function PricingCard({ name, price, period, description, features, popular }: {
+function PricingCard({
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular,
+}: {
   name: string;
   price: string;
   period: string;
@@ -180,7 +217,9 @@ function PricingCard({ name, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
-    <div className={`border rounded-xl p-6 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'}`}>
+    <div
+      className={`border rounded-xl p-6 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200 bg-white"}`}
+    >
       {popular && (
         <div className="text-center mb-4">
           <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">

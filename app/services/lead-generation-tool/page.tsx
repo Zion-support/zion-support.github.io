@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Lead Generation Tool | Zion Tech Group",
-  description: "AI-powered lead generation platform with automated prospecting, qualification, and CRM integration.",
+  description:
+    "AI-powered lead generation platform with automated prospecting, qualification, and CRM integration.",
 };
 
 export default function LeadGenerationToolPage() {
@@ -13,14 +14,17 @@ export default function LeadGenerationToolPage() {
           Lead Generation Tool
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Automate your lead generation process with AI-powered prospecting, 
-          qualification, and nurturing. Generate 5x more qualified leads in half the time.
+          Automate your lead generation process with AI-powered prospecting,
+          qualification, and nurturing. Generate 5x more qualified leads in half
+          the time.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Core Capabilities</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Core Capabilities
+          </h2>
           <div className="space-y-6">
             <FeatureItem
               icon="🎯"
@@ -56,7 +60,9 @@ export default function LeadGenerationToolPage() {
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Pricing Plans</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Pricing Plans
+          </h2>
           <div className="space-y-6">
             <PricingCard
               name="Starter"
@@ -68,7 +74,7 @@ export default function LeadGenerationToolPage() {
                 "Basic prospecting",
                 "Email automation",
                 "Standard CRM integration",
-                "Email support"
+                "Email support",
               ]}
               popular={false}
             />
@@ -83,7 +89,7 @@ export default function LeadGenerationToolPage() {
                 "Multi-channel outreach",
                 "Lead scoring",
                 "Priority support",
-                "Advanced analytics"
+                "Advanced analytics",
               ]}
               popular={true}
             />
@@ -98,7 +104,7 @@ export default function LeadGenerationToolPage() {
                 "White-label solution",
                 "Dedicated support",
                 "API access",
-                "Custom integrations"
+                "Custom integrations",
               ]}
               popular={false}
             />
@@ -107,30 +113,50 @@ export default function LeadGenerationToolPage() {
       </div>
 
       <div className="bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Success Metrics</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Success Metrics
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center">
             <div className="text-4xl font-bold text-orange-600 mb-2">5x</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">More Qualified Leads</h3>
-            <p className="text-gray-600">Our AI identifies and qualifies prospects 5x more effectively than manual methods.</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              More Qualified Leads
+            </h3>
+            <p className="text-gray-600">
+              Our AI identifies and qualifies prospects 5x more effectively than
+              manual methods.
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-orange-600 mb-2">50%</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Time Savings</h3>
-            <p className="text-gray-600">Automate repetitive tasks and focus on closing deals instead of finding prospects.</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              Time Savings
+            </h3>
+            <p className="text-gray-600">
+              Automate repetitive tasks and focus on closing deals instead of
+              finding prospects.
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-orange-600 mb-2">300%</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">ROI Increase</h3>
-            <p className="text-gray-600">Average customer sees 300% increase in lead generation ROI within 90 days.</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              ROI Increase
+            </h3>
+            <p className="text-gray-600">
+              Average customer sees 300% increase in lead generation ROI within
+              90 days.
+            </p>
           </div>
         </div>
       </div>
 
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Start Generating More Leads Today</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          Start Generating More Leads Today
+        </h2>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Join 1,500+ sales teams using our Lead Generation Tool to accelerate their pipeline and close more deals.
+          Join 1,500+ sales teams using our Lead Generation Tool to accelerate
+          their pipeline and close more deals.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -155,7 +181,11 @@ export default function LeadGenerationToolPage() {
   );
 }
 
-function FeatureItem({ icon, title, description }: {
+function FeatureItem({
+  icon,
+  title,
+  description,
+}: {
   icon: string;
   title: string;
   description: string;
@@ -171,7 +201,14 @@ function FeatureItem({ icon, title, description }: {
   );
 }
 
-function PricingCard({ name, price, period, description, features, popular }: {
+function PricingCard({
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular,
+}: {
   name: string;
   price: string;
   period: string;
@@ -180,7 +217,9 @@ function PricingCard({ name, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
-    <div className={`border rounded-xl p-6 ${popular ? 'border-orange-500 bg-orange-50' : 'border-gray-200 bg-white'}`}>
+    <div
+      className={`border rounded-xl p-6 ${popular ? "border-orange-500 bg-orange-50" : "border-gray-200 bg-white"}`}
+    >
       {popular && (
         <div className="text-center mb-4">
           <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">

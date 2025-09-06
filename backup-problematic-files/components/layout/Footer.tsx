@@ -1,33 +1,41 @@
-import React from 'react';
-import Link from 'next/link';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import React from "react";
+import Link from "next/link";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+} from "lucide-react";
 
 const services = [
-  { name: 'AI Services', href: '/ai-services' },
-  { name: 'Web Development', href: '/web-development' },
-  { name: 'Mobile Apps', href: '/mobile-apps' },
-  { name: 'Cloud Solutions', href: '/cloud-solutions' }
+  { name: "AI Services", href: "/ai-services" },
+  { name: "Web Development", href: "/web-development" },
+  { name: "Mobile Apps", href: "/mobile-apps" },
+  { name: "Cloud Solutions", href: "/cloud-solutions" },
 ];
 
 const company = [
-  { name: 'About Us', href: '/about' },
-  { name: 'Our Team', href: '/team' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'Contact', href: '/contact' }
+  { name: "About Us", href: "/about" },
+  { name: "Our Team", href: "/team" },
+  { name: "Careers", href: "/careers" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const resources = [
-  { name: 'Blog', href: '/blog' },
-  { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Documentation', href: '/docs' },
-  { name: 'Support', href: '/support' }
+  { name: "Blog", href: "/blog" },
+  { name: "Case Studies", href: "/case-studies" },
+  { name: "Documentation", href: "/docs" },
+  { name: "Support", href: "/support" },
 ];
 
 const socialLinks = [
-  { name: 'Facebook', href: '#', icon: Facebook },
-  { name: 'Twitter', href: '#', icon: Twitter },
-  { name: 'LinkedIn', href: '#', icon: Linkedin },
-  { name: 'Instagram', href: '#', icon: Instagram }
+  { name: "Facebook", href: "#", icon: Facebook },
+  { name: "Twitter", href: "#", icon: Twitter },
+  { name: "LinkedIn", href: "#", icon: Linkedin },
+  { name: "Instagram", href: "#", icon: Instagram },
 ];
 
 export default function Footer() {
@@ -44,7 +52,8 @@ export default function Footer() {
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-4">
-              Leading technology solutions provider specializing in AI, web development, and digital transformation.
+              Leading technology solutions provider specializing in AI, web
+              development, and digital transformation.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -115,7 +124,10 @@ export default function Footer() {
             <div className="space-y-2">
               <div className="flex items-center text-gray-300">
                 <Mail className="h-4 w-4 mr-2" />
-                <a href="mailto:info@ziontechgroup.com" className="hover:text-blue-400">
+                <a
+                  href="mailto:info@ziontechgroup.com"
+                  className="hover:text-blue-400"
+                >
                   info@ziontechgroup.com
                 </a>
               </div>
@@ -128,7 +140,8 @@ export default function Footer() {
               <div className="flex items-start text-gray-300">
                 <MapPin className="h-4 w-4 mr-2 mt-0.5" />
                 <span>
-                  364 E Main St STE 1008<br />
+                  364 E Main St STE 1008
+                  <br />
                   Middletown, DE 19709
                 </span>
               </div>
@@ -140,13 +153,19 @@ export default function Footer() {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-               2024 Zion Tech Group. All rights reserved.
+              2024 Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
+              <Link
+                href="/privacy"
+                className="text-gray-400 hover:text-blue-400 text-sm transition-colors"
+              >
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
+              <Link
+                href="/terms"
+                className="text-gray-400 hover:text-blue-400 text-sm transition-colors"
+              >
                 Terms of Service
               </Link>
             </div>

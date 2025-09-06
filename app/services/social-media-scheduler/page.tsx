@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Social Media Scheduler | Zion Tech Group",
-  description: "AI-powered social media management platform with intelligent scheduling, content optimization, and analytics.",
+  description:
+    "AI-powered social media management platform with intelligent scheduling, content optimization, and analytics.",
 };
 
 export default function SocialMediaSchedulerPage() {
@@ -13,14 +14,17 @@ export default function SocialMediaSchedulerPage() {
           Social Media Scheduler
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Streamline your social media presence with AI-powered content scheduling, 
-          optimal timing recommendations, and comprehensive analytics across all platforms.
+          Streamline your social media presence with AI-powered content
+          scheduling, optimal timing recommendations, and comprehensive
+          analytics across all platforms.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Platform Features</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Platform Features
+          </h2>
           <div className="space-y-6">
             <FeatureItem
               icon="📅"
@@ -56,7 +60,9 @@ export default function SocialMediaSchedulerPage() {
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Pricing Plans</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Pricing Plans
+          </h2>
           <div className="space-y-6">
             <PricingCard
               name="Solo"
@@ -68,7 +74,7 @@ export default function SocialMediaSchedulerPage() {
                 "30 posts per month",
                 "Basic analytics",
                 "Email support",
-                "Content calendar"
+                "Content calendar",
               ]}
               popular={false}
             />
@@ -83,7 +89,7 @@ export default function SocialMediaSchedulerPage() {
                 "Advanced analytics",
                 "AI content suggestions",
                 "Team collaboration",
-                "Priority support"
+                "Priority support",
               ]}
               popular={true}
             />
@@ -98,7 +104,7 @@ export default function SocialMediaSchedulerPage() {
                 "Client reporting",
                 "API access",
                 "Dedicated support",
-                "Custom integrations"
+                "Custom integrations",
               ]}
               popular={false}
             />
@@ -107,30 +113,50 @@ export default function SocialMediaSchedulerPage() {
       </div>
 
       <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Success Stories</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Success Stories
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center">
             <div className="text-4xl mb-4">📱</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">E-commerce Brand</h3>
-            <p className="text-gray-600">Increased social media engagement by 250% and sales by 180% in 3 months.</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              E-commerce Brand
+            </h3>
+            <p className="text-gray-600">
+              Increased social media engagement by 250% and sales by 180% in 3
+              months.
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-4">🏢</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">B2B Company</h3>
-            <p className="text-gray-600">Generated 40% more qualified leads through optimized LinkedIn and Twitter campaigns.</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              B2B Company
+            </h3>
+            <p className="text-gray-600">
+              Generated 40% more qualified leads through optimized LinkedIn and
+              Twitter campaigns.
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-4">🎯</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Content Creator</h3>
-            <p className="text-gray-600">Grew Instagram following by 300% and TikTok views by 500% with AI-optimized content.</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              Content Creator
+            </h3>
+            <p className="text-gray-600">
+              Grew Instagram following by 300% and TikTok views by 500% with
+              AI-optimized content.
+            </p>
           </div>
         </div>
       </div>
 
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Start Growing Your Social Presence Today</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          Start Growing Your Social Presence Today
+        </h2>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Join 1,000+ businesses and creators using our Social Media Scheduler to maximize their social media impact.
+          Join 1,000+ businesses and creators using our Social Media Scheduler
+          to maximize their social media impact.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -155,7 +181,11 @@ export default function SocialMediaSchedulerPage() {
   );
 }
 
-function FeatureItem({ icon, title, description }: {
+function FeatureItem({
+  icon,
+  title,
+  description,
+}: {
   icon: string;
   title: string;
   description: string;
@@ -171,7 +201,14 @@ function FeatureItem({ icon, title, description }: {
   );
 }
 
-function PricingCard({ name, price, period, description, features, popular }: {
+function PricingCard({
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular,
+}: {
   name: string;
   price: string;
   period: string;
@@ -180,7 +217,9 @@ function PricingCard({ name, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
-    <div className={`border rounded-xl p-6 ${popular ? 'border-purple-500 bg-purple-50' : 'border-gray-200 bg-white'}`}>
+    <div
+      className={`border rounded-xl p-6 ${popular ? "border-purple-500 bg-purple-50" : "border-gray-200 bg-white"}`}
+    >
       {popular && (
         <div className="text-center mb-4">
           <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">

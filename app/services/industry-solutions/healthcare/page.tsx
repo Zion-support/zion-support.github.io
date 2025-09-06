@@ -1,7 +1,9 @@
-export const metadata = { 
-  title: 'Healthcare IT Solutions | Zion Tech Group',
-  description: 'HIPAA-compliant healthcare technology solutions including telemedicine platforms, medical imaging systems, patient data management, and healthcare AI applications.',
-  keywords: 'healthcare IT, HIPAA compliance, telemedicine, medical imaging, healthcare AI, patient data management, healthcare software'
+export const metadata = {
+  title: "Healthcare IT Solutions | Zion Tech Group",
+  description:
+    "HIPAA-compliant healthcare technology solutions including telemedicine platforms, medical imaging systems, patient data management, and healthcare AI applications.",
+  keywords:
+    "healthcare IT, HIPAA compliance, telemedicine, medical imaging, healthcare AI, patient data management, healthcare software",
 };
 
 export default function HealthcareSolutionsPage() {
@@ -12,74 +14,140 @@ export default function HealthcareSolutionsPage() {
           Healthcare IT Solutions
         </h1>
         <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-          HIPAA-compliant technology solutions that improve patient care, streamline operations, 
-          and enhance healthcare delivery. Built with security, compliance, and scalability in mind.
+          HIPAA-compliant technology solutions that improve patient care,
+          streamline operations, and enhance healthcare delivery. Built with
+          security, compliance, and scalability in mind.
         </p>
       </section>
 
       <section className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Healthcare Technology Solutions</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Healthcare Technology Solutions
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <HealthcareServiceCard
             title="Telemedicine Platform"
             description="Complete virtual care solution with video consultations, appointment scheduling, and patient management"
-            features={["Video consultations", "Appointment scheduling", "Patient records", "Prescription management", "HIPAA compliance", "Mobile app"]}
+            features={[
+              "Video consultations",
+              "Appointment scheduling",
+              "Patient records",
+              "Prescription management",
+              "HIPAA compliance",
+              "Mobile app",
+            ]}
             price="$25,000-75,000"
             icon="🏥"
           />
           <HealthcareServiceCard
             title="Medical Imaging AI"
             description="AI-powered medical image analysis for faster and more accurate diagnoses"
-            features={["X-ray analysis", "MRI interpretation", "CT scan analysis", "AI diagnostics", "Integration APIs", "Radiologist tools"]}
+            features={[
+              "X-ray analysis",
+              "MRI interpretation",
+              "CT scan analysis",
+              "AI diagnostics",
+              "Integration APIs",
+              "Radiologist tools",
+            ]}
             price="$40,000-120,000"
             icon="🔬"
           />
           <HealthcareServiceCard
             title="Patient Portal System"
             description="Comprehensive patient engagement platform with health records and communication tools"
-            features={["Health records", "Appointment booking", "Prescription refills", "Lab results", "Secure messaging", "Health tracking"]}
+            features={[
+              "Health records",
+              "Appointment booking",
+              "Prescription refills",
+              "Lab results",
+              "Secure messaging",
+              "Health tracking",
+            ]}
             price="$15,000-45,000"
             icon="👤"
           />
           <HealthcareServiceCard
             title="Electronic Health Records (EHR)"
             description="Modern EHR system with interoperability and advanced analytics capabilities"
-            features={["Patient records", "Clinical notes", "Medication tracking", "Interoperability", "Analytics dashboard", "Mobile access"]}
+            features={[
+              "Patient records",
+              "Clinical notes",
+              "Medication tracking",
+              "Interoperability",
+              "Analytics dashboard",
+              "Mobile access",
+            ]}
             price="$50,000-150,000"
             icon="📋"
           />
           <HealthcareServiceCard
             title="Healthcare Analytics Platform"
             description="Advanced analytics for population health, outcomes tracking, and operational efficiency"
-            features={["Population health", "Outcomes tracking", "Cost analysis", "Quality metrics", "Predictive analytics", "Reporting tools"]}
+            features={[
+              "Population health",
+              "Outcomes tracking",
+              "Cost analysis",
+              "Quality metrics",
+              "Predictive analytics",
+              "Reporting tools",
+            ]}
             price="$30,000-80,000"
             icon="📊"
           />
           <HealthcareServiceCard
             title="Pharmacy Management System"
             description="Complete pharmacy operations management with inventory and prescription tracking"
-            features={["Inventory management", "Prescription tracking", "Insurance verification", "Patient profiles", "Reporting", "Compliance tools"]}
+            features={[
+              "Inventory management",
+              "Prescription tracking",
+              "Insurance verification",
+              "Patient profiles",
+              "Reporting",
+              "Compliance tools",
+            ]}
             price="$20,000-60,000"
             icon="💊"
           />
           <HealthcareServiceCard
             title="Healthcare AI Chatbot"
             description="Intelligent patient support with symptom checking and appointment scheduling"
-            features={["Symptom checking", "Appointment scheduling", "Medication reminders", "Health education", "Triage assistance", "Multi-language"]}
+            features={[
+              "Symptom checking",
+              "Appointment scheduling",
+              "Medication reminders",
+              "Health education",
+              "Triage assistance",
+              "Multi-language",
+            ]}
             price="$12,000-35,000"
             icon="🤖"
           />
           <HealthcareServiceCard
             title="Remote Patient Monitoring"
             description="IoT-based patient monitoring with real-time health data collection and alerts"
-            features={["Vital signs monitoring", "Wearable integration", "Alert systems", "Data visualization", "Provider dashboard", "Mobile app"]}
+            features={[
+              "Vital signs monitoring",
+              "Wearable integration",
+              "Alert systems",
+              "Data visualization",
+              "Provider dashboard",
+              "Mobile app",
+            ]}
             price="$35,000-90,000"
             icon="📱"
           />
           <HealthcareServiceCard
             title="Healthcare Compliance Management"
             description="Automated compliance monitoring for HIPAA, HITECH, and other healthcare regulations"
-            features={["HIPAA compliance", "Audit trails", "Risk assessment", "Policy management", "Training modules", "Incident reporting"]}
+            features={[
+              "HIPAA compliance",
+              "Audit trails",
+              "Risk assessment",
+              "Policy management",
+              "Training modules",
+              "Incident reporting",
+            ]}
             price="$18,000-50,000"
             icon="⚖️"
           />
@@ -87,7 +155,9 @@ export default function HealthcareSolutionsPage() {
       </section>
 
       <section className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Healthcare Compliance & Security</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Healthcare Compliance & Security
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <ComplianceCard
             title="HIPAA Compliance"
@@ -113,31 +183,52 @@ export default function HealthcareSolutionsPage() {
       </section>
 
       <section className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Healthcare AI Applications</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Healthcare AI Applications
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AICard
             title="Diagnostic AI"
             description="Machine learning models for medical diagnosis and treatment recommendations"
-            applications={["Radiology", "Pathology", "Cardiology", "Dermatology", "Ophthalmology"]}
+            applications={[
+              "Radiology",
+              "Pathology",
+              "Cardiology",
+              "Dermatology",
+              "Ophthalmology",
+            ]}
             icon="🧠"
           />
           <AICard
             title="Predictive Analytics"
             description="AI-powered prediction of patient outcomes and health risks"
-            applications={["Readmission risk", "Sepsis prediction", "Fall risk", "Medication adherence", "Chronic disease management"]}
+            applications={[
+              "Readmission risk",
+              "Sepsis prediction",
+              "Fall risk",
+              "Medication adherence",
+              "Chronic disease management",
+            ]}
             icon="📈"
           />
           <AICard
             title="Natural Language Processing"
             description="AI for processing clinical notes and extracting meaningful insights"
-            applications={["Clinical documentation", "Coding assistance", "Quality measures", "Research data extraction"]}
+            applications={[
+              "Clinical documentation",
+              "Coding assistance",
+              "Quality measures",
+              "Research data extraction",
+            ]}
             icon="💬"
           />
         </div>
       </section>
 
       <section className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Implementation Process</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Implementation Process
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <ProcessStep
             step="1"
@@ -163,9 +254,11 @@ export default function HealthcareSolutionsPage() {
       </section>
 
       <Pricing />
-      
+
       <section className="mt-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose Our Healthcare Solutions?</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Why Choose Our Healthcare Solutions?
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <BenefitCard
             title="HIPAA Compliant"
@@ -205,12 +298,18 @@ export default function HealthcareSolutionsPage() {
   );
 }
 
-function HealthcareServiceCard({ title, description, features, price, icon }: { 
-  title: string; 
-  description: string; 
-  features: string[]; 
-  price: string; 
-  icon: string; 
+function HealthcareServiceCard({
+  title,
+  description,
+  features,
+  price,
+  icon,
+}: {
+  title: string;
+  description: string;
+  features: string[];
+  price: string;
+  icon: string;
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white">
@@ -228,8 +327,8 @@ function HealthcareServiceCard({ title, description, features, price, icon }: {
           </li>
         ))}
       </ul>
-      <a 
-        href="tel:+13024640950" 
+      <a
+        href="tel:+13024640950"
         className="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
       >
         Get Started
@@ -238,10 +337,14 @@ function HealthcareServiceCard({ title, description, features, price, icon }: {
   );
 }
 
-function ComplianceCard({ title, description, icon }: { 
-  title: string; 
-  description: string; 
-  icon: string; 
+function ComplianceCard({
+  title,
+  description,
+  icon,
+}: {
+  title: string;
+  description: string;
+  icon: string;
 }) {
   return (
     <div className="text-center p-6 border border-gray-200 rounded-xl bg-white hover:shadow-lg transition-shadow">
@@ -252,11 +355,16 @@ function ComplianceCard({ title, description, icon }: {
   );
 }
 
-function AICard({ title, description, applications, icon }: { 
-  title: string; 
-  description: string; 
-  applications: string[]; 
-  icon: string; 
+function AICard({
+  title,
+  description,
+  applications,
+  icon,
+}: {
+  title: string;
+  description: string;
+  applications: string[];
+  icon: string;
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -274,10 +382,14 @@ function AICard({ title, description, applications, icon }: {
   );
 }
 
-function ProcessStep({ step, title, description }: { 
-  step: string; 
-  title: string; 
-  description: string; 
+function ProcessStep({
+  step,
+  title,
+  description,
+}: {
+  step: string;
+  title: string;
+  description: string;
 }) {
   return (
     <div className="text-center p-6">
@@ -290,10 +402,14 @@ function ProcessStep({ step, title, description }: {
   );
 }
 
-function BenefitCard({ title, description, icon }: { 
-  title: string; 
-  description: string; 
-  icon: string; 
+function BenefitCard({
+  title,
+  description,
+  icon,
+}: {
+  title: string;
+  description: string;
+  icon: string;
 }) {
   return (
     <div className="text-center p-6 border border-gray-200 rounded-xl bg-white hover:shadow-lg transition-shadow">
@@ -307,24 +423,44 @@ function BenefitCard({ title, description, icon }: {
 function Pricing() {
   return (
     <section className="mb-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Healthcare Solution Pricing</h2>
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        Healthcare Solution Pricing
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="Compliance Assessment" 
-          price="$5k–$15k" 
-          features={["HIPAA audit", "Risk assessment", "Compliance roadmap", "Security review", "Recommendations"]} 
+        <Plan
+          name="Compliance Assessment"
+          price="$5k–$15k"
+          features={[
+            "HIPAA audit",
+            "Risk assessment",
+            "Compliance roadmap",
+            "Security review",
+            "Recommendations",
+          ]}
           popular={false}
         />
-        <Plan 
-          name="Solution Development" 
-          price="$25k–$100k" 
-          features={["Custom development", "HIPAA compliance", "Integration", "Testing", "Training"]} 
+        <Plan
+          name="Solution Development"
+          price="$25k–$100k"
+          features={[
+            "Custom development",
+            "HIPAA compliance",
+            "Integration",
+            "Testing",
+            "Training",
+          ]}
           popular={true}
         />
-        <Plan 
-          name="Managed Services" 
-          price="$3k+/mo" 
-          features={["24/7 monitoring", "Compliance management", "Updates", "Support", "Security"]} 
+        <Plan
+          name="Managed Services"
+          price="$3k+/mo"
+          features={[
+            "24/7 monitoring",
+            "Compliance management",
+            "Updates",
+            "Support",
+            "Security",
+          ]}
           popular={false}
         />
       </div>
@@ -332,17 +468,26 @@ function Pricing() {
   );
 }
 
-function Plan({ name, price, features, popular }: { 
-  name: string; 
-  price: string; 
-  features: string[]; 
-  popular: boolean; 
+function Plan({
+  name,
+  price,
+  features,
+  popular,
+}: {
+  name: string;
+  price: string;
+  features: string[];
+  popular: boolean;
 }) {
   return (
-    <div className={`border rounded-xl p-8 relative ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'}`}>
+    <div
+      className={`border rounded-xl p-8 relative ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200 bg-white"}`}
+    >
       {popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
+          <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+            Most Popular
+          </span>
         </div>
       )}
       <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
@@ -354,12 +499,12 @@ function Plan({ name, price, features, popular }: {
           </li>
         ))}
       </ul>
-      <a 
-        href="tel:+13024640950" 
+      <a
+        href="tel:+13024640950"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-          popular 
-            ? 'bg-blue-600 text-white hover:bg-blue-700' 
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+          popular
+            ? "bg-blue-600 text-white hover:bg-blue-700"
+            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
         }`}
       >
         Get Started
@@ -375,8 +520,9 @@ function CTASection() {
         Ready to Transform Healthcare with Technology?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let's discuss your healthcare technology needs and create a compliant, secure solution 
-        that improves patient care and operational efficiency. Our healthcare IT experts are ready to help.
+        Let's discuss your healthcare technology needs and create a compliant,
+        secure solution that improves patient care and operational efficiency.
+        Our healthcare IT experts are ready to help.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a
