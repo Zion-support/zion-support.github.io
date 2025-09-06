@@ -97,17 +97,171 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Services Preview Section */}
+      <div className="py-20 bg-white/5 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
+            <p className="text-xl text-gray-300">Comprehensive technology solutions for every business need</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 group">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-xl font-bold text-white mb-3">Micro SaaS Development</h3>
+              <p className="text-gray-300 mb-4">End-to-end product development with billing, auth, and analytics</p>
+              <Link to="/services/micro-saas" className="text-blue-400 hover:text-blue-300 font-semibold">Learn More →</Link>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 group">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-xl font-bold text-white mb-3">AI Services</h3>
+              <p className="text-gray-300 mb-4">LLM applications, RAG systems, and MLOps pipelines</p>
+              <Link to="/services/ai-services" className="text-blue-400 hover:text-blue-300 font-semibold">Learn More →</Link>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 group">
+              <div className="text-4xl mb-4">🔒</div>
+              <h3 className="text-xl font-bold text-white mb-3">Cybersecurity</h3>
+              <p className="text-gray-300 mb-4">Comprehensive security solutions to protect your digital assets</p>
+              <Link to="/services/cybersecurity" className="text-blue-400 hover:text-blue-300 font-semibold">Learn More →</Link>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 group">
+              <div className="text-4xl mb-4">☁️</div>
+              <h3 className="text-xl font-bold text-white mb-3">Cloud Migration</h3>
+              <p className="text-gray-300 mb-4">Seamless migration to AWS, Azure, or Google Cloud</p>
+              <Link to="/services/cloud-migration" className="text-blue-400 hover:text-blue-300 font-semibold">Learn More →</Link>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 group">
+              <div className="text-4xl mb-4">🔧</div>
+              <h3 className="text-xl font-bold text-white mb-3">DevOps & SRE</h3>
+              <p className="text-gray-300 mb-4">CI/CD pipelines, infrastructure automation, and monitoring</p>
+              <Link to="/services/devops" className="text-blue-400 hover:text-blue-300 font-semibold">Learn More →</Link>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 group">
+              <div className="text-4xl mb-4">📱</div>
+              <h3 className="text-xl font-bold text-white mb-3">Mobile Development</h3>
+              <p className="text-gray-300 mb-4">Native and cross-platform mobile applications</p>
+              <Link to="/services/mobile-development" className="text-blue-400 hover:text-blue-300 font-semibold">Learn More →</Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Testimonials Section */}
+      <div className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
+            <p className="text-xl text-gray-300">Trusted by industry leaders worldwide</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  JS
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-white font-semibold">John Smith</h4>
+                  <p className="text-gray-400 text-sm">CEO, TechCorp</p>
+                </div>
+              </div>
+              <p className="text-gray-300 italic">"Zion Tech transformed our entire infrastructure. Their AI solutions increased our efficiency by 300% and reduced costs by 40%. Absolutely outstanding work!"</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  MJ
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-white font-semibold">Maria Johnson</h4>
+                  <p className="text-gray-400 text-sm">CTO, InnovateLabs</p>
+                </div>
+              </div>
+              <p className="text-gray-300 italic">"The cybersecurity solutions provided by Zion Tech are top-notch. We've had zero security incidents since implementation. Highly recommended!"</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  DW
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-white font-semibold">David Wilson</h4>
+                  <p className="text-gray-400 text-sm">Founder, StartupXYZ</p>
+                </div>
+              </div>
+              <p className="text-gray-300 italic">"Their micro SaaS development expertise helped us launch our product in record time. The team is professional, responsive, and delivers exceptional results."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Process Section */}
+      <div className="py-20 bg-white/5 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">How We Work</h2>
+            <p className="text-xl text-gray-300">Our proven process ensures successful project delivery</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Discovery</h3>
+              <p className="text-gray-300">We analyze your business needs and challenges to understand your goals</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">2</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Strategy</h3>
+              <p className="text-gray-300">We develop a comprehensive strategy tailored to your specific requirements</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">3</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Development</h3>
+              <p className="text-gray-300">Our expert team builds and implements your solution with precision</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">4</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Support</h3>
+              <p className="text-gray-300">We provide ongoing support and optimization to ensure your success</p>
+            </div>
+          </div>
+        </div>
+      </div>
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl text-blue-100 mb-8">Join thousands of companies already using Zion Tech to accelerate their digital transformation.</p>
-          <Link
-            to="/contact"
-            className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl inline-block"
-          >
-            Start Your Journey Today
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
+            >
+              Get Free Consultation
+            </Link>
+            <Link
+              to="/pricing"
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
+            >
+              View Pricing
+            </Link>
+            <a
+              href="tel:+13024640950"
+              className="bg-green-600 text-white px-8 py-4 rounded-xl hover:bg-green-700 transition-all duration-300 font-semibold text-lg shadow-2xl"
+            >
+              Call Now: +1 302 464 0950
+            </a>
+          </div>
+          <div className="mt-8 text-blue-100">
+            <p className="text-sm">📧 Email: kleber@ziontechgroup.com</p>
+            <p className="text-sm">📍 Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
+          </div>
         </div>
       </div>
     </div>
