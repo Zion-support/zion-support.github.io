@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -30,13 +34,20 @@
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 export async function connectMetaMask(): Promise<string[]> {
-  if (typeof window === 'undefined' |!window.ethereum) {
-  if (typeof window === 'undefined' || !window.ethereum) {;
-    throw new Error('MetaMask is not installed');
+  if (typeof window === "undefined" || !window.ethereum) {
+    throw new Error("MetaMask is not installed");
   }
   try {
     const accounts = await window.ethereum.request({
+<<<<<<< HEAD
+      method: "eth_requestAccounts",
+=======
+<<<<<<< HEAD
+      method: "eth_requestAccounts",
+=======
       method: 'eth_requestAccounts'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -58,10 +69,12 @@ if ( {) {
       method: 'eth_requestAccounts',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
     });
     return accounts;
   } catch (error) {
-    throw new Error ('Failed to connect to MetaMask');
+    throw new Error("Failed to connect to MetaMask");
   }
 }
 <<<<<<< HEAD
@@ -70,6 +83,14 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
+export async function getAccounts(): Promise<string[]> {
+  if (typeof window === "undefined" || !window.ethereum) {
+=======
+<<<<<<< HEAD
+export async function getAccounts(): Promise<string[]> {
+  if (typeof window === "undefined" || !window.ethereum) {
+=======
   if (typeof window === 'undefined' || !window && window.ethereum) {
 
 =======
@@ -110,10 +131,18 @@ if ( {) {
 =======
   if (typeof window === 'undefined' |!window.ethereum) {
   if (typeof window === 'undefined' || !window.ethereum) {;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
     return [];
   }
   try {
     const accounts = await window.ethereum.request({
+<<<<<<< HEAD
+      method: "eth_accounts",
+=======
+<<<<<<< HEAD
+      method: "eth_accounts",
+=======
       method: 'eth_accounts'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -121,6 +150,8 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
     });
     return accounts;
   } catch (error) {
@@ -133,6 +164,21 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+export async function getBalance(address: string): Promise<string> {
+  if (typeof window === "undefined" || !window.ethereum) {
+    throw new Error("MetaMask is not installed");
+  }
+  try {
+    const balance = await window.ethereum.request({
+      method: "eth_getBalance",
+      params: [address, "latest"],
+<<<<<<< HEAD
+=======
+=======
   if (typeof window === 'undefined' || !window && window.ethereum) {
 
 =======
@@ -192,10 +238,12 @@ if ( {) {
       params: [address, 'latest'],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
     });
     return balance;
   } catch (error) {
-    throw new Error ('Failed to get balance');
+    throw new Error("Failed to get balance");
   }
 }
 <<<<<<< HEAD
@@ -204,6 +252,23 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+export async function signMessage(
+  message: string,
+  address: string,
+): Promise<string> {
+  if (typeof window === "undefined" || !window.ethereum) {
+    throw new Error("MetaMask is not installed");
+  }
+  try {
+    const signature = await window.ethereum.request({
+      method: "personal_sign",
+<<<<<<< HEAD
+=======
+=======
   if (typeof window === 'undefined' || !window && window.ethereum) {
 
 =======
@@ -227,6 +292,8 @@ export async function signMessage(message: string, address: string): Promise<str
   try {
 <<<<<<< HEAD
       method: 'personal_sign',
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
       params: [message, address],
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -264,7 +331,7 @@ if ( {) {
     });
     return signature;
   } catch (error) {
-    throw new Error ('Failed to sign message');
+    throw new Error("Failed to sign message");
   }
 }
 <<<<<<< HEAD
@@ -289,6 +356,17 @@ declare global {
       request: (args: { method: string; params?: any[] }) => Promise < any>;
       on: (event: string, callback: (accounts: string[]) => void) => void;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+      removeListener: (
+        event: string,
+        callback: (accounts: string[]) => void,
+      ) => void;
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -310,6 +388,8 @@ declare global {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
     };
 =======
 

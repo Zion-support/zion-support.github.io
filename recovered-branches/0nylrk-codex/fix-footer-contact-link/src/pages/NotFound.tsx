@@ -1,19 +1,7 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import {useLocation} from "react-router-dom";
-import {useEffect} from "react";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 const NotFound = () => {
   const location = useLocation();
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-import { useLocation } from "react-router-dom",
-import { useEffect } from "react",
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -47,15 +35,10 @@ const NotFound = () => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     console.error(
-      "404 Error: User attempted to access non-existent route:"
-      location.pathname
-    )
-<<<<<<< HEAD
-
-
-  }, [location.pathname]),
-
-
+      "404 Error: User attempted to access non-existent route:",
+      location.pathname,
+    );
+  }, [location.pathname]);
 
 <<<<<<< HEAD
 =======
@@ -80,78 +63,6 @@ const NotFound = () => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>
     </div>
-  )
-export default NotFound,
-import { useLocation } from "react-router-dom",;
-import { useEffect } from "react",;
-const NotFound = () => {;
-  const location = useLocation(),;
-  useEffect(() => {;
-    console && console.error(;
-      "404 Error: User attempted to access non-existent route:",;
-      location && location.pathname;
-    );
-  }, [location && location.pathname]);
-
-  return (
-<<<<<<< HEAD
-=======
-        </Link>
-      </div>
-    </div>
-  )
-}
-export default NotFound;
-
-},
-
-export default NotFound,
-import { useLocation } from "react-router-dom",;
-import { useEffect } from "react",;
-const NotFound = () => {;
-  const location = useLocation(),;
-
-  useEffect(() => {;
-import { useLocation } from "react-router-dom",;
-import { useEffect } from "react",;
-;
-const NotFound = () => {;
-  const location = useLocation(),;
-;
-  useEffect(() => {;
-    console.error(;
-      "404 Error:User attempted to access non-existent route:",;
-      location.pathname;
-    );
-  }, [location.pathname]),;
-;
-  return (;
-  useEffect(() => {;
-    console.error(;
-      "404 Error: User attempted to access non-existent route:",;
-      location.pathname;
-    );
-  }, [location.pathname]),;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">;
-      <div className="text-center">;
-        <h1 className="text-4xl font-bold mb-4">404</h1>;
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        <a href="/" className="text-blue-500 hover: text-blue-700 underline">;
-          Return to Home;
-        </a>;
-      </div>;
-    </div>;
   );
 };
 

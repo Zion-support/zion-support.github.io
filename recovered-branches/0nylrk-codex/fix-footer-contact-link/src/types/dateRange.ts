@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
+export interface DateRange {
+  from?: Date;
   to?: Date;
-
 }
 =======
 

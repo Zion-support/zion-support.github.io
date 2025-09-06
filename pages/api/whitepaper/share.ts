@@ -1,179 +1,32 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-// In-memory store for demo purposes. Replace with persistent storage in production.
-const store: Record<string, { markdown: string, createdAt: number, public: boolean }> = {};
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { markdown, publicPreview } = req.body || {};
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  store[id] = { markdown, createdAt: Date.now(), public: !!publicPreview };
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { randomUUID } from 'crypto',;
-// In-memory store for demo purposes. Replace with persistent storage in production.
-const store: Record<string, { markdown: string, createdAt: number, public: boolean }> = {},
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-import { randomUUID } from 'crypto';
-
-// In-memory store for demo purposes. Replace with persistent storage in production.
-const store: Record<string, { markdown: string, createdAt: number, public: boolean }> = {}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
-  const { markdown, publicPreview } = req.body |{}
-  if (!markdown) return res.status(400).json({ error: 'Missing markdown' })
-  const id = randomUUID()
-  store[id] = { markdown, createdAt: Date.now(), public: !!publicPreview }
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL |''}/whitepaper/preview/${id}`
-
-  res.status(200).json({ id, url })
-}
-export function getShared(id: string) {
-  return store[id]
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
-}
-
-=======
-<<<<<<< HEAD
-=======
-}
-
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-}
-  return store[id];
-};
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { randomUUID } from 'crypto';
-// In-memory store for demo purposes. Replace with persistent storage in production.;
-const store: Record<string { markdown: string, createdAt: number, public: boolean }> = {};
-export default async function handler(req, res) {
-  try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  const { markdown, publicPreview } = req.body || {};
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  store[id] = { markdown, createdAt: Date.now(), public: !!publicPreview };
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`;
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { randomUUID } from 'crypto',
-// In - memory store for demo purposes. Replace with persistent storage in production.;
-const store: Record < string, { markdown: string, created_at: number, public: boolean }> = {},
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
-  $2
-}
-  const { markdown, public_preview } = req.body || {},
-  if (return res.status (400).json ({ error: 'Missing markdown' }), ) {
-  $2
-}
-  const id = randomUUID (),
-  store[id] = { markdown, created_at: Date.now (), public: !!public_preview },
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper / preview/${id}`,
-  res.status (200).json ({ id, url });
-}
-export /**
- * get_shared - Function description
- */
-function get_shared() {
-  return store[id];
-<<<<<<< HEAD
-}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-
-
-import type { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { randomUUID } from 'crypto',;
 // In-memory store for demo purposes. Replace with persistent storage in production.
 const store: Record<string, { markdown: string, createdAt: number, public: boolean }> = {},
 
-import { randomUUID } from 'crypto';
-
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
+  const { markdown, publicPreview } = req.body || {},
+  if (!markdown) return res.status(400).json({ error: 'Missing markdown' }),
+  const id = randomUUID(),
+  store[id] = { markdown, createdAt: Date.now(), public: !!publicPreview },
+  const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`,
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { randomUUID } from 'crypto',;
 // In-memory store for demo purposes. Replace with persistent storage in production.
 const store: Record<string, { markdown: string, createdAt: number, public: boolean }> = {}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
-  const { markdown, publicPreview } = req.body |{}
+  const { markdown, publicPreview } = req.body || {}
   if (!markdown) return res.status(400).json({ error: 'Missing markdown' })
   const id = randomUUID()
   store[id] = { markdown, createdAt: Date.now(), public: !!publicPreview }
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL |''}/whitepaper/preview/${id}`
-
+  const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`
+>>>>>>> main
   res.status(200).json({ id, url })
 }
 export function getShared(id: string) {
   return store[id]
-}
-  return store[id];
 };
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { randomUUID } from 'crypto';
-// In-memory store for demo purposes. Replace with persistent storage in production.;
-const store: Record<string { markdown: string, createdAt: number, public: boolean }> = {};
-export default async function handler(req, res) {
-  try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  const { markdown, publicPreview } = req.body || {};
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  store[id] = { markdown, createdAt: Date.now(), public: !!publicPreview };
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`;
-  res.status(200).json({ id, url });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export function getShared(id: string) {;
-  return store[id];
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

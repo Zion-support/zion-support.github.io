@@ -6,6 +6,10 @@ const { execSync } = require('child_process');
 console.log('🔧 Resolving New Merge Conflicts');
 console.log('=================================');
 
+<<<<<<< HEAD:backup-problematic-files/scripts/final-critical-fix.cjs
+<<<<<<< HEAD:scripts/resolve-new-merge-conflicts.cjs
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:scripts/resolve-new-merge-conflicts.cjs
 // Function to resolve merge conflicts by keeping the first version
 function resolveMergeConflicts(content) {
   return content
@@ -14,6 +18,13 @@ function resolveMergeConflicts(content) {
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
+<<<<<<< HEAD:backup-problematic-files/scripts/final-critical-fix.cjs
+=======
+// Function to fix all remaining critical syntax errors
+function fixCriticalSyntax(content) {
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/scripts/final-critical-fix.cjs
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:scripts/resolve-new-merge-conflicts.cjs
   return content
     // Fix malformed JSX tags
     .replace(/<h3([^>]*)>([^<]+)><\/h3>/gm, '<h3$1>$2</h3>')
@@ -86,6 +97,65 @@ for (const file of conflictFiles) {
     }
 
     let content = fs.readFileSync(file, 'utf8');
+<<<<<<< HEAD:backup-problematic-files/scripts/final-critical-fix.cjs
+<<<<<<< HEAD:scripts/resolve-new-merge-conflicts.cjs
     let modified = false;
 
     // Check for merge conflict markers
+=======
+    const originalContent = content;
+    
+    content = fixCriticalSyntax(content);
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(file, content);
+      console.log(`✅ Fixed ${file}`);
+      totalFixed++;
+    }
+  } catch (error) {
+    console.log(`❌ Error fixing ${file}: ${error.message}`);
+  }
+}
+
+console.log(`\n✅ Fixed ${totalFixed} files`);
+
+// Try to build
+console.log('\n🔨 Testing build...');
+try {
+  execSync('npm run build', { cwd: '/workspace', stdio: 'pipe' }
+});
+  console.log('✅ Build successful!');
+} catch (error) {
+  console.log('⚠️  Build still has issues, but syntax was fixed');
+  console.log('Error:', error.message);
+}
+
+// Commit the fixes
+console.log('\n📝 Committing syntax fixes...');
+try {
+  execSync('git add .', { cwd: '/workspace' }
+});
+  execSync('git commit -m "fix: Final critical syntax fix for all remaining errors"', { cwd: '/workspace' }
+});
+  console.log('✅ Syntax fixes committed');
+} catch (error) {
+  console.log('⚠️  Failed to commit syntax fixes:', error.message);
+}
+
+// Push changes
+console.log('\n🚀 Pushing syntax fixes to main branch...');
+try {
+  execSync('git push origin main', { cwd: '/workspace' }
+});
+  console.log('✅ Syntax fixes pushed to main branch');
+} catch (error) {
+  console.log('⚠️  Failed to push syntax fixes:', error.message);
+}
+
+console.log('\n🎉 Final critical fix completed!');
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/scripts/final-critical-fix.cjs
+=======
+    let modified = false;
+
+    // Check for merge conflict markers
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:scripts/resolve-new-merge-conflicts.cjs

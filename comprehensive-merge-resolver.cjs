@@ -2,6 +2,10 @@
 const fs = require('fs')
 const path = require('path')
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
@@ -114,8 +118,12 @@ function pushChanges() {
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const { execSync } = require('child_process')
 console.log('� Starting Comprehensive Merge Conflict Resolver...')
   log(message, level = 'INFO')
@@ -136,6 +144,10 @@ console.log('� Starting Comprehensive Merge Conflict Resolver...')
   console.error(' Merge conflict resolution "failed")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 }
 
 if (require.main === module) {
@@ -143,5 +155,9 @@ if (require.main === module) {
 }
 
 module.exports = { resolveConflicts, commitMerge, pushChanges };
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

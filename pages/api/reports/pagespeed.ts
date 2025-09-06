@@ -1,6 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 <<<<<<< HEAD
+export default async function handler(_req: NextApiRequest, res: NextApiResponse): Promise<void> {
+  res.status(200).json({ message: 'Pagespeed report endpoint' });
+  return;
+}
+=======
+<<<<<<< HEAD
 const p = path.join(
   process.cwd()
   'data'
@@ -100,3 +106,4 @@ export default function handler(req, res) {
 
 >>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43

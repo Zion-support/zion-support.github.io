@@ -1,28 +1,30 @@
 import React from 'react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 const HowItWorksSection = () => {
   const steps = [
     {
-      number: "01",
-      title: "Consultation",
-      description: "We start with a detailed consultation to understand your business needs and challenges."
+      number: '01',
+      title: 'Consultation',
+      description: 'We start with a detailed consultation to understand your business needs and challenges.',
     },
     {
-      number: "02",
-      title: "Strategy & Planning",
-      description: "Our experts develop a customized strategy and implementation plan tailored to your goals."
+      number: '02',
+      title: 'Strategy & Planning',
+      description: 'Our experts develop a customized strategy and implementation plan tailored to your goals.',
     },
     {
-      number: "03",
-      title: "Implementation",
-      description: "We implement the solution with minimal disruption to your existing operations."
+      number: '03',
+      title: 'Implementation',
+      description: 'We implement the solution with minimal disruption to your existing operations.',
     },
     {
-      number: "04",
-      title: "Support & Optimization",
-      description: "Ongoing support and continuous optimization to ensure maximum value and performance."
-    }
+      number: '04',
+      title: 'Support & Optimization',
+      description: 'Ongoing support and continuous optimization to ensure maximum value and performance.',
+    },
   ];
 
   return (
@@ -49,6 +51,7 @@ const HowItWorksSection = () => {
       </div>
     </section>
 =======
+>>>>>>> main
 import { GradientHeading } from "./GradientHeading";
 
 import { Check, Handshake, Search, Send } from 'lucide-react'
@@ -593,13 +596,18 @@ function HowItWorksSection() {
         </div>;
       </div>;
     </section>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   );
 };
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export default HowItWorksSection;
 =======
+<<<<<<< HEAD
+export default HowItWorksSection;
+=======
+>>>>>>> main
 export default Component;
 
 }
@@ -634,4 +642,8 @@ export default Component;
 }
 }
 ;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main

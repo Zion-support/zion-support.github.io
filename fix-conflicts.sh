@@ -1,11 +1,21 @@
 #!/bin/bash
 
 # Find all files with merge conflicts
+<<<<<<< HEAD:backup-problematic-files/fix-conflicts.sh
+<<<<<<< HEAD:fix-conflicts.sh
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:fix-conflicts.sh
 <<<<<<< HEAD
 conflicted_files=$(find ./pages -name "*.tsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
 =======
 files=$(find pages components -name "*.tsx" -o -name "*.ts" | xargs grep -l "")
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD:backup-problematic-files/fix-conflicts.sh
+=======
+files=$(find pages components -name "*.tsx" -o -name "*.ts" | xargs grep -l "")
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/fix-conflicts.sh
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:fix-conflicts.sh
 
 for file in $conflicted_files; do
     echo "Fixing $file..."
@@ -47,6 +57,13 @@ done
     sed -i '/^
     sed -i '/^/d' "$file"
     sed -i '/^done
+<<<<<<< HEAD:backup-problematic-files/fix-conflicts.sh
+<<<<<<< HEAD:fix-conflicts.sh
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/fix-conflicts.sh
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:fix-conflicts.sh
 
 echo "Fixed all conflicted files"

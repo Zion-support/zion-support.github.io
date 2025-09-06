@@ -1,30 +1,4 @@
-export type ReferralStatus = 'pending' | 'completed' | 'expired';
-;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-export interface ReferralCode {
-export type ReferralStatus = 'pending' | 'completed' | 'expired';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-export interface ReferralCode {;
-export interface ReferralCode {
-  id: string;
-  user_id: string;
-  code: string;
-}
-  id: string;
-  user_id: string;
-  code: string;
-  created_at: string
-  updated_at: string
-}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export type ReferralStatus = 'pending' | 'completed' | 'expired';
-;
+export type ReferralStatus = "pending" | "completed" | "expired";
 
 export interface ReferralCode {
 
@@ -33,12 +7,8 @@ export interface ReferralCode {;
   id: string;
   user_id: string;
   code: string;
-
-  created_at: string,
+  created_at: string;
   updated_at: string;
-
-}
-export interface Referral {
 }
 
 
@@ -68,17 +38,8 @@ export interface Referral {
   referrer_user_type: string | null;
   created_at: string;
   completed_at: string | null;
-<<<<<<< HEAD
-
-  reward_issued: boolean,
+  reward_issued: boolean;
   reward_issued_at: string | null;
-
-}
-export interface ReferralReward {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
 
@@ -104,8 +65,11 @@ export interface ReferralReward {
   id: string;
   user_id: string;
   referral_id: string;
-  reward_type: 'credit' | 'visibility';
+  reward_type: "credit" | "visibility";
   amount: number | null;
+  created_at: string;
+  expires_at: string | null;
+}
 
 
 
@@ -126,49 +90,8 @@ export interface ReferralStats {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   totalReferrals: number;
   pendingReferrals: number;
-  completedReferrals: number
-
-  totalRewards: number
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-}
-export type ReferralStatus = 'pending' | 'completed' | 'expired',;
-export interface ReferralCode {;
-  id: string,;
-  user_id: string,;
-  code: string,;
-  created_at: string,;
-  updated_at: string;
-}
-;
-export interface Referral {;
-  id: string,;
-  referrer_id: string,;
-  referred_id: string | null,;
-  referral_code: string,;
-  status: ReferralStatus,;
-  ip_address: string | null,;
-  email: string | null,;
-  referred_user_type: string | null,;
-  referrer_user_type: string | null,;
-  created_at: string,;
-  completed_at: string | null,;
-  reward_issued: boolean,;
-  reward_issued_at: string | null;
-}
-;
-export interface ReferralReward {;
-  id: string,;
-  user_id: string,;
-  referral_id: string,;
-  reward_type: 'credit' | 'visibility',;
-  amount: number | null,;
-  created_at: string,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  created_at: string,
-  expires_at: string | null;
+  completedReferrals: number;
+  totalRewards: number;
 }
 
 <<<<<<< HEAD

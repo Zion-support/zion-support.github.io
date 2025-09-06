@@ -1,35 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
+import {
   FormField,
-
-<<<<<<< HEAD
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Control } from "react-hook-form";
+import { BasicInfoFormData } from "./schema";
 interface ContactFieldsProps {
-  control: Control < BasicInfoFormData>;
+  control: Control<BasicInfoFormData>;
 }
-
-=======
-
-
-=======
-<<<<<<< HEAD
-
-
-interface ContactFieldsProps {
-  control: Control < BasicInfoFormData>;
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Control} from "react-hook-form";
-import {BasicInfoFormData} from "./schema";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 =======
@@ -250,14 +231,17 @@ export function ContactFields({ control } ContactFieldsProps) {;
       <FormField
         control={control}
         name="linkedin"
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>LinkedIn</FormLabel>;
-            <FormControl>;
-              <Input placeholder="https://linkedin && linkedin.com/in/username" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>;
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>LinkedIn</FormLabel>
+            <FormControl>
+              <Input
+                placeholder="https://linkedin.com/in/username"
+                {...field}
+              />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
         )}
       />;
 
@@ -301,37 +285,9 @@ export function ContactFields({ control } ContactFieldsProps) {;
             <FormMessage />;
           </FormItem>;
         )}
-<<<<<<< HEAD
-
-      />;
-    </div>;
+      />
+    </div>
   );
-}
-
-=======
-              />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>)}
-      />;
-      <FormField;
-        control={control}
-        name="github";
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > GitHub</FormLabel>;
-            <FormControl>;
-              <Input placeholder="https://github.com / username" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>)}
-      />;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  )
 }
 ;
 

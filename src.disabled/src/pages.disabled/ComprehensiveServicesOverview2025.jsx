@@ -1,6 +1,17 @@
 <<<<<<< HEAD
-<<<<<<<< HEAD:src.disabled/src/pages.disabled/ComprehensiveServicesOverview2025.jsx
+=======
 <<<<<<< HEAD
+<<<<<<<< HEAD:src.disabled/src/pages.disabled/ComprehensiveServicesOverview2025.jsx
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+import _React,{ useState } from 'react';'''; import { Link } from 'react-router-dom'; const ComprehensiveServicesOverview2025 = () => {}}; const [selectedService,setSelectedService] = useState(null); const [selectedCategory,setSelectedCategory] = useState('all'); const categories = [; 'all',; 'AI & Business Intelligence',; 'Cybersecurity & Quantum Computing',; 'DevOps & Infrastructure',; 'Blockchain & Supply Chain',; 'Healthcare & AI',; 'Quantum Computing & AI',; 'FinTech & AI',; 'IoT & Edge Computing',; 'Legal Tech & AI',; 'Marketing & AI',; 'Energy & Sustainability',; 'Logistics & Transportation'; ]; const filteredServices = allEnhancedServices.filter(service => selectedCategory === 'all' || service.category === selectedCategory); const getCategoryIcon = (category) => {}; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }}}}
+=======
+import React,{ useState } from \'react\';\''\'; import { Link } from \'react-router-dom\'; const ComprehensiveServicesOverview2025 = () => {}}; const [selectedService,setSelectedService] = useState(null); const [selectedCategory,setSelectedCategory] = useState(\'all\'); const categories = [; \'all\',; \'AI & Business Intelligence\',; \'Cybersecurity & Quantum Computing\',; \'DevOps & Infrastructure\',; \'Blockchain & Supply Chain\',; \'Healthcare & AI\',; \'Quantum Computing & AI\',; \'FinTech & AI\',; \'IoT & Edge Computing\',; \'Legal Tech & AI\',; \'Marketing & AI\',; \'Energy & Sustainability\',; \'Logistics & Transportation\'; ]; const filteredServices = allEnhancedServices.filter(service => selectedCategory === \'all\' || service.category === selectedCategory); const getCategoryIcon = (category) => {}; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }}}}
+const React,{ useState } from "react";"""; import { Link } from "react-router-dom"; const ComprehensiveServicesOverview2025 = () => {}}; const [selectedService,setSelectedService] = useState(null); const [selectedCategory,setSelectedCategory] = useState("all"); const categories = [; "all",; "AI & Business Intelligence",; "Cybersecurity & Quantum Computing",; "DevOps & Infrastructure",; "Blockchain & Supply Chain",; "Healthcare & AI",; "Quantum Computing & AI",; "FinTech & AI",; "IoT & Edge Computing",; "Legal Tech & AI",; "Marketing & AI",; "Energy & Sustainability",; "Logistics & Transportation"; ]; const filteredServices = allEnhancedServices.filter(service => selectedCategory === "all" | service.category === selectedCategory); const getCategoryIcon = (category) => {}; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }}}}""
+import _React,{ useState } from 'react';'''; import { Link } from 'react-router-dom'; const ComprehensiveServicesOverview2025 = () => {}}; const [selectedService,setSelectedService] = useState(null); const [selectedCategory,setSelectedCategory] = useState('all'); const categories = [; 'all',; 'AI & Business Intelligence',; 'Cybersecurity & Quantum Computing',; 'DevOps & Infrastructure',; 'Blockchain & Supply Chain',; 'Healthcare & AI',; 'Quantum Computing & AI',; 'FinTech & AI',; 'IoT & Edge Computing',; 'Legal Tech & AI',; 'Marketing & AI',; 'Energy & Sustainability',; 'Logistics & Transportation'; ]; const filteredServices = allEnhancedServices.filter(service => selectedCategory === 'all' || service.category === selectedCategory); const getCategoryIcon = (category) => {}; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }}}}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
 
 <<<<<<< HEAD
 
@@ -18,6 +29,9 @@ import _React,{ useState } from 'react';'''; import { Link } from 'react-router-
 ursor/add-new-services-and-deploy-updates-0462
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 ========
 <<<<<<< HEAD:src.pages.disabled/ComprehensiveServicesOverview2025.jsx
 import React from 'react';
@@ -57,3 +71,4 @@ const React,{ useState } from "react";"""; import { Link } from "react-router-do
 import _React,{ useState } from 'react';'''; import { Link } from 'react-router-dom'; const ComprehensiveServicesOverview2025 = () => {}}; const [selectedService,setSelectedService] = useState(null); const [selectedCategory,setSelectedCategory] = useState('all'); const categories = [; 'all',; 'AI & Business Intelligence',; 'Cybersecurity & Quantum Computing',; 'DevOps & Infrastructure',; 'Blockchain & Supply Chain',; 'Healthcare & AI',; 'Quantum Computing & AI',; 'FinTech & AI',; 'IoT & Edge Computing',; 'Legal Tech & AI',; 'Marketing & AI',; 'Energy & Sustainability',; 'Logistics & Transportation'; ]; const filteredServices = allEnhancedServices.filter(service => selectedCategory === 'all' || service.category === selectedCategory); const getCategoryIcon = (category) => {}; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }}}}
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

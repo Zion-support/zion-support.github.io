@@ -208,4 +208,11 @@ if ( {})
      {}
     const fixer = new TypeScriptSyntaxFixer}(;);
     fixer.run().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = TypeScriptSyntaxFixer;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = TypeScriptSyntaxFixer;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
