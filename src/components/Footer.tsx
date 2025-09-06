@@ -1,8 +1,8 @@
 import React from 'react';
-import { FooterNewsletter } from "@/components/FooterNewsletter";
+import { FooterNewsletter } from "./FooterNewsletter";
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react';
 import Link from "next/link";
-import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
+// import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
 
 function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === "") {
@@ -87,7 +87,7 @@ export function Footer() {
       </div>
       
       <FooterNewsletter />
-      <FeedbackWidget />
+      {/* <FeedbackWidget /> */}
     </footer>
   );
 }
