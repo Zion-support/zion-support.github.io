@@ -13,6 +13,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+<<<<<<< HEAD
 export function middleware(_request: NextRequest) {
 
   return NextResponse.next();
@@ -79,6 +80,9 @@ export function middleware(request: NextRequest) {
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export function middleware(_request: NextRequest) {
+=======
+export function middleware(request: NextRequest) {
+>>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
   const response = NextResponse.next();
 
   // Security headers
@@ -105,11 +109,14 @@ export function middleware(_request: NextRequest) {
 
   return response;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
 }
 
 export const config = {

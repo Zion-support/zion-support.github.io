@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -46,15 +47,16 @@ export const metadata = {
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
 =======
+=======
+>>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
   description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
   keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],
@@ -158,25 +160,25 @@ function Header() {
 
 <<<<<<< HEAD
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
+=======
+  title: 'Zion Tech Group - AI-Powered Solutions',
+  description: 'Leading provider of AI-powered business solutions, automation tools, and digital transformation services.',
+  keywords: 'AI solutions, business automation, digital transformation, software development, tech consulting',
+};
+
+>>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-<<<<<<< HEAD
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
-      </body>
-    </html>
-  );
-=======
         {children}
       </body>
     </html>
+<<<<<<< HEAD
   )
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
 =======
@@ -305,3 +307,7 @@ function RootLayout() { return ( <html lang="en"> <body className="min - h-scree
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 }
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+  );
+}
+>>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955

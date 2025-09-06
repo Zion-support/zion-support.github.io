@@ -1,12 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
 import React from 'react';
 
-export default function AboutPage() {
-  return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-=======
 export const metadata = {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -274,11 +272,11 @@ function AboutPage() {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             About Zion Tech Group
           </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 <<<<<<< HEAD
@@ -298,12 +296,16 @@ function AboutPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+=======
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+>>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
             We are a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
             <p className="text-lg text-gray-600 mb-6">
@@ -389,6 +391,8 @@ function AboutPage() {
         </div>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
             <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
             <p className="text-gray-300 text-lg mb-6">
               To empower businesses with cutting-edge technology solutions that
@@ -458,6 +462,7 @@ function AboutPage() {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
 =======
 
@@ -479,6 +484,8 @@ function AboutPage() {
           </div>
         </div>
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+=======
+>>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
       </div>
     </div>
   );

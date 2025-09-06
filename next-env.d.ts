@@ -24,6 +24,7 @@
 /// <reference types="next" />
 /// <reference types="next/image-types/global" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -109,10 +110,13 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
 /// <reference types="next/navigation-types/compat/navigation" />
 
 // NOTE: This file should not be edited
 // see https://nextjs.org/docs/app/building-your-application/configuring/typescript for more information.
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -138,3 +142,5 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955

@@ -9,6 +9,7 @@ module.exports = {
   content: [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     './pages/**/*.{js,ts,jsx,tsx}./components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -1050,6 +1051,14 @@ module.exports = {
       },
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     },
+=======
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {},
+>>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
   },
   plugins: [],
 };
